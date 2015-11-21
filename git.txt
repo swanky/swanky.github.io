@@ -1,3 +1,11 @@
+
+https://pages.github.com/
+
+git add --all
+git commit -m “xxx”
+git push -u origin master
+
+==========
 http://stackoverflow.com/questions/11577147/how-to-fix-page-404-on-github-page
 
 Today I tried again
