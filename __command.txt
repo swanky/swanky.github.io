@@ -1,0 +1,35 @@
+https://pages.github.com/
+
+git add --all
+git commit -m "xxx"
+git push -u origin master
+==========
+https://jekyllrb.com/
+
+jekyll serve
+==========
+http://stackoverflow.com/questions/11577147/how-to-fix-page-404-on-github-page
+
+Today I tried again
+
+I deleted the gh-pages branch on github
+
+git push origin --delete gh-pages
+
+I deleted the gh-pages branch on local
+
+git branch -D gh-pages
+
+I reinitialized git
+
+git init
+
+I recreated the branch on local
+
+git branch gh-pages
+
+I pushed the gh-pages branch to github
+
+git push origin gh-pages
+
+Works fine, I can finally update my files on the page.
