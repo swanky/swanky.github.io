@@ -18,4 +18,4 @@ gh-pages problem
 http://stackoverflow.com/questions/11577147/how-to-fix-page-404-on-github-page
 ==========
 
-swanky.github.io/ug3/girls.htm
+http://swanky.github.io/ug3/girls.htm
