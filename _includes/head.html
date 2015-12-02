@@ -13,37 +13,48 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <style type="text/css">
-  @import url(/css/social.css);
-
-  /* for carousel */
-  .carousel-indicators {
-    bottom:-50px;
-  }
-  .carousel-inner {
-    margin-bottom:50px;
-  }
-
-  /* for sidebar */
-  .affix-top,.affix{
-    position: static;
-  }
-
-  @media (min-width: 768px) {
-    #sidebar.affix-top {
+  <style>
+    @import url(/css/social.css);
+    
+    /* for carousel */
+    .carousel-indicators {
+      bottom: -50px;
+    }
+    
+    .carousel-inner {
+      margin-bottom: 50px;
+    }
+    /* for sidebar */
+    
+    .affix-top,
+    .affix {
       position: static;
-      margin-top:30px;
     }
-
-    #sidebar.affix {
-      position: fixed;
-      top:70px;
+    
+    @media (min-width: 768px) {
+      #sidebar.affix-top {
+        position: static;
+        margin-top: 30px;
+      }
+      #sidebar.affix {
+        position: fixed;
+        top: 70px;
+      }
     }
-  }
-
-  #sidebar li.active {
-    border:0 #eee solid;
-    border-right-width:5px;
-  }
+    
+    #sidebar li.active {
+      border: 0 #eee solid;
+      border-right-width: 5px;
+    }
   </style>
+
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+    * {
+      font-size: 19px;
+      font-family: 'cwTeXFangSong', serif;
+    }
+  </style>
+
+  <script src="//load.sumome.com/" data-sumo-site-id="8496465d12fced42f31497c380d0ec9d48c5e9cc5544460bed384217ebdcf2f2" async="async"></script>
 </head>
