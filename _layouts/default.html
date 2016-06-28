@@ -1,69 +1,12 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  <head>
+  {% include html_head.html %}
+  </head>
   <body>
-    {% include header.html %}
+    {% include body_header.html %}
     {{ content }}
-    {% include footer.html %}
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      $('.carousel').carousel({
-        interval: 3000
-      })
-
-      /* activate sidebar */
-      $('#sidebar').affix({
-        offset: {
-          top: 520
-        }
-      });
-
-      /* activate scrollspy menu */
-      var $body   = $(document.body);
-      var navHeight = $('.navbar').outerHeight(true) + 10;
-      $body.scrollspy({
-        target: '#leftCol',
-        offset: navHeight
-      });
-
-      /* smooth scrolling sections */
-      $('a[href^=#sec]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 50
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-    </script>
-
-
-    <!--Start of Zopim Live Chat Script-->
-    <script type="text/javascript">
-    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-    $.src="//v2.zopim.com/?3UTs39skshk31DS0B3CsBBAI5iu5zAPS";z.t=+new Date;$.
-    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-    </script>
-    <!--End of Zopim Live Chat Script-->
-    
-    <style>
-    @import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
-    @import url(https://fonts.googleapis.com/css?family=Crimson+Text);
-    
-    body, p, div, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-      font-size: 18px;
-      font-family: 'cwTeXFangSong', 'Crimson Text', Helvetica, Arial, sans-serif!important;
-    }
-  </style>
+    {% include body_footer.html %}
+    {% include body_botton.html %}
   </body>
 </html>
