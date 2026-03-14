@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(do:*)",
-      "Bash(sed:*)"
-    ]
-  }
-}
