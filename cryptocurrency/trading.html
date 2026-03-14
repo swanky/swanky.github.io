@@ -1,88 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-    <title>Swanky Studio 史旺基工作室</title>
-    <meta content="史旺基工作室加密貨幣交易課程介紹現貨、合約與量化策略操作流程，涵蓋交易所選擇、資金管理、技術分析指標與自動化工具應用，透過實作演練、風控模組與案例拆解，另提供交易心理調適、即時市場追蹤與顧問諮詢管道，協助學員建立穩健交易紀律並掌握市場趨勢。" name="description">
-    <meta content="加密貨幣交易,量化策略,風險控管,技術分析,交易心理,史旺基" name="keywords">
-    
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/1749ce5893.js" crossorigin="anonymous"></script>
-
-    <!-- Favicons -->
-    <link href="../assets/img/Swanky_logo_icon32.png" rel="icon">
-    <link href="../assets/img/Swanky_logo_icon180.png" rel="apple-touch-icon">
-  
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
-      rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
-    <!-- Template Main CSS File -->
-    <link href="../assets/css/style.css" rel="stylesheet">
-  
-  </head>
-
-<body>
-
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center">
-  <div class="container d-flex justify-content-between align-items-center">
-
-    <div class="logo">
-      <!-- <h1 class="text-light"><a href="index.html"><span>Swanky</span></a></h1>-->
-      <a href="../index.html"><img src="../assets/img/Swanky_Logo_w.svg" alt="Swanky Studio 品牌標誌" class="img-fluid"></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    </div>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="" href="../index.html">主頁</a></li>         
-        <!-- <li><a href="portfolio.html">課程</a></li>-->
-        <!-- <li><a href="team.html">Team</a></li>-->
-        <!-- <li><a href="blog.html">Blog</a></li>-->
-        <li class="dropdown"><a href="../photography/"><span>攝影寫真</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="../photography/">總覽</a></li>
-            <li><a href="../photography/photo-albums.html">出版</a></li>
-            <li><a href="../photography/awards.html">獎項</a></li>
-            <li class="dropdown"><a><span>作品</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="../photography/personal-works.html">個人</a></li>
-                <li><a href="../photography/commercial-works.html">商業</a></li>
-                <li><a href="../photography/flickr-gallery.html">Flickr 相簿</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="../technical-adviser.html">技術顧問</a></li>
-        <li class="dropdown"><a href="../education-training.html"><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="../education-training.html">總覽</a></li>
-            <li><a href="../modeling/">模特兒課程</a></li>
-            <li><a href="../cryptocurrency/" class="active ">加密貨幣課程</a></li>
-          </ul>
-        </li>
-        <li><a href="../nft/">NFT策展</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
+---
+layout: home
+title: Swanky Studio 史旺基工作室
+description: 史旺基工作室加密貨幣交易課程介紹現貨、合約與量化策略操作流程，涵蓋交易所選擇、資金管理、技術分析指標與自動化工具應用，透過實作演練、風控模組與案例拆解，另提供交易心理調適、即時市場追蹤與顧問諮詢管道，協助學員建立穩健交易紀律並掌握市場趨勢。
+keywords: 加密貨幣交易,量化策略,風險控管,技術分析,交易心理,史旺基
+nav_active: education
+---
 
   <main id="main">
     <div class="section-title works">
@@ -96,14 +18,14 @@
         <a href="#" class="btn-get-started animate__animated animate__fadeInUp">立即報名</a>
     </div>
     </section><!-- fillpic-edub Section -->
-    
+
     <!-- ======= Facts Section ======= -->
     <section class="facts section-bg" data-aos="fade-up">
       <div class="container">
 
         <div class="row facts-text">
         <div class="col-lg-4 col-12">
-          <img src="../assets/img/About_r.jpg" class="img-fluid" alt="史旺基蕭宇程的肖像照片">
+          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片">
         </div>
         <div class="col-lg-8 col-12 text-left">
           <h4>講師 / 史旺基 (Swanky Hsiao)</h4>
@@ -130,7 +52,7 @@
             <i class="fas fa-arrow-up"></i>
             <p>參與人數</p>
           </div>
-          
+
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
             <p>拍攝經驗</p>
@@ -172,7 +94,7 @@
               <h4 class="title">技術資訊管道介紹</h4>
               <p class="description">比特幣最近這麼熱門，但正反意見這麼多，有人說他會改變世界、也有人說他是泡沫是詐騙，到底真相為何？
                 本課程以簡單易懂的介紹帶你快速瞭解比特幣及其他加密貨幣背後的區塊鍊技術，也會介紹相關看盤與新聞資訊來源，讓你透析局勢取得投資先機。
-                
+
               </p>
             </div>
           </div>
@@ -183,7 +105,7 @@
               <h4 class="title">實務操作經驗分享</h4>
               <p class="description">價格已經漲得這麼高了，現在買還來得及嗎？該如何才能賺到懷疑人生？
                 本課程以系統實務操作的角度，手把手帶你一步一步實際進行演練。
-                
+
               </p>
             </div>
           </div>
@@ -208,7 +130,7 @@
                 <!-- <p>來自各方名人給予的評價回饋。</p> -->
               </div>
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="吳小博推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="吳小博推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>吳小博 <a href="https://www.facebook.com/permalink.php?story_fbid=1819695151382680&id=100000266386130"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -217,11 +139,11 @@
                   精簡扼要地講授了虛擬幣的基本知識與實際應用，是非常適合初心者的入門課程。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="劉遇推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="劉遇推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>劉遇 <a href="https://www.facebook.com/yu.liu.509994/posts/1728489510508840"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -230,12 +152,12 @@
                   我認為這並不是一個很難上手的東西，甚至國中生都可以操作。前提是你有人能夠帶領，那個人可以是基哥。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
-      
+
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="Anthony Chen 推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="Anthony Chen 推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>Anthony Chen <a href="https://www.facebook.com/notes/anthony-chen/10214381054061306/"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -245,11 +167,11 @@
                   要知道，好的老師帶你上天堂，看看史旺基最近懷疑人生的頻率，就知道大師不是浪得虛名的 XD
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="林柄錦推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="林柄錦推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>林柄錦 <a href="https://medium.com/@bingjin.lin/c11bd1390127"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -258,11 +180,11 @@
                   深入了解「史旺基」，原來是資訊工程博士，這讓我對於這個實戰班有著高度興趣，於是就這麼參加了。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-F.png" class="testimonial-img" alt="白家芸推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-F.png' | relative_url }}" class="testimonial-img" alt="白家芸推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>白家芸 <a href="https://www.facebook.com/chiayun.pai/posts/10156168043144658"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -272,11 +194,11 @@
                   而是他們都是我印象中相對務實的人。是什麼樣東西，讓務實個性的人都能如此肯定，這引起了我的好奇心。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="Yves Lin 推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="Yves Lin 推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>Yves Lin <a href="https://www.facebook.com/yves.lin888/posts/10155749977765751"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -288,11 +210,11 @@
                   感謝 Swanky Hsiao 的 #虛擬貨幣班 讓我有機會反思，推荐給想了解加密貨幣的朋友。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="Shayne Teh Yin Hean 推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="Shayne Teh Yin Hean 推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>Shayne Teh Yin Hean <a href="https://www.facebook.com/shayne.hean/posts/10154772096596706"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -301,11 +223,11 @@
                   上完課後會有種大媽去百貨公司買到便宜東西的感覺。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="楊士弘推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="楊士弘推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>楊士弘 <a href="http://yangtwosu.pixnet.net/blog/post/224390354"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -316,11 +238,11 @@
                   也可以補充很多和區塊鍊技術相關的知識，多看看另外一個精彩的世界。十分推薦大家這個班！
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="Vince Huang 推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="Vince Huang 推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>Vince Huang <a href="https://medium.com/%E7%94%9F%E5%91%BD%E4%B8%AD%E7%9A%84543/d53222a8e65e"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -331,11 +253,11 @@
                   想默默將『機密資料』私自的保留下來。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="賴學誠推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="賴學誠推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>賴學誠 <a href="http://codingwithkyo.blogspot.tw/2018/01/blog-post.html"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -345,11 +267,11 @@
                   我讓我的投資標的又多了一個可能，感覺非常值得。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="陳翊華推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="陳翊華推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>陳翊華 <a href="https://medium.com/@thirmoon/4f95b24a3a0f"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -358,24 +280,24 @@
                   想要搞懂區塊鏈嗎?你花個十萬塊去買買看就可以了! 若沒有十萬塊，不妨考慮考慮這堂課吧。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-              
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-M.png" class="testimonial-img" alt="Eviler Chuang 推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-M.png' | relative_url }}" class="testimonial-img" alt="Eviler Chuang 推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>Eviler Chuang <a href="https://ithelp.ithome.com.tw/articles/10192008"><i class="bx bx-link-external"></i></a></h3>
-                </div>          
+                </div>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   投資有風險，加密貨幣有賺有賠
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-      
+
               <div class="testimonial-item col-lg-4 col-md-6">
-                <img src="../assets/img/testimonials/Charactor-F.png" class="testimonial-img" alt="侯嘉柔推薦者插畫頭像">
+                <img src="{{ '/assets/img/testimonials/Charactor-F.png' | relative_url }}" class="testimonial-img" alt="侯嘉柔推薦者插畫頭像">
                 <div class="icon-box_no">
                 <h3>侯嘉柔 <a href="https://www.jiaty.net/swankycourse/"><i class="bx bx-link-external"></i></a></h3>
                 </div>
@@ -386,14 +308,14 @@
                   如果你去上過一次課，以後不管遇到任何問題都可以各種打擾他，他一定會認真的回答。
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-      
+
               </div>
-        
-        <!-- <div class="testimonial-item col-lg-4 col-md-5"> 
-          <img src="../assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="Yves Lin 推薦者照片">
+
+        <!-- <div class="testimonial-item col-lg-4 col-md-5">
+          <img src="{{ '/assets/img/testimonials/testimonials-1.jpg' | relative_url }}" class="testimonial-img" alt="Yves Lin 推薦者照片">
           <h3>Yves Lin</h3>
           <h4></h4>
-          
+
           <p>
             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
             網路技術改變我們的生活，但別忘了2000年的互聯網泡沫，可是掛了一狗票 dot com 公司。
@@ -402,12 +324,12 @@
             感謝 Swanky Hsiao 的 #虛擬貨幣班 讓我有機會反思，推荐給想了解加密貨幣的朋友。
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          
+
         </div>
         <div class="col-lg-2 col-md-1">
         </div>
         -->
-        
+
         </div>
       </div>
     </section>
@@ -421,78 +343,14 @@
           <h2>學員回饋</h2>
         </div>
         <div class="col-lg-6 col-md-12">
-          <img src="../assets/img/class_1_2_nps.jpeg" alt="加密貨幣課程學員實作合照" class="img-fluid">
+          <img src="{{ '/assets/img/class_1_2_nps.jpeg' | relative_url }}" alt="加密貨幣課程學員實作合照" class="img-fluid">
         </div>
         <div class="col-lg-6 col-md-12">
-          <img src="../assets/img/class_1_1_nps.jpeg" alt="加密貨幣課程教學現場照片" class="img-fluid">
+          <img src="{{ '/assets/img/class_1_1_nps.jpeg' | relative_url }}" alt="加密貨幣課程教學現場照片" class="img-fluid">
         </div>
-        
+
     </section>
     -->
     <!-- pics Section -->
 
   </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 footer-contact">
-          <h4>聯絡方式</h4>
-          <p>
-            <strong>Email:</strong> swanky.hsiao@gmail.com<br>
-          </p>
-
-        </div>
-
-        <div class="col-lg-6 col-md-6 footer-info">
-          <h3>社群平台</h3>
-          <p>熱愛攝影、研究區塊鏈，有什麼新奇有趣的項目嗎？任何合作歡迎洽詢聯繫。</p>
-          <div class="social-links mt-3">
-            <a href="https://www.youtube.com/user/swanbear" class="youtube"><i class="bx bxl-youtube"></i></a>
-            <a href="https://www.facebook.com/SwankyParty" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://x.com/swanky" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/swanky" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://www.flickr.com/photos/swanky-hsiao/" class="flickr"><i class="bx bxl-flickr"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Swanky</span></strong>. All Rights Reserved
-    </div>
-    <!--<div class="credits">-->
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-      <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-    <!--</div>-->
-  </div>
-</footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../assets/vendor/purecounter/purecounter.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
-
-</body>
-
-</html>

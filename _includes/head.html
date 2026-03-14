@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta content="{{ page.description | default: site.description }}" name="description">
+{% if page.keywords %}<meta content="{{ page.keywords }}" name="keywords">{% endif %}
+
+<!-- Open Graph -->
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:image" content="{{ page.og_image | default: '/assets/img/About_r.jpg' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="zh_TW">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://kit.fontawesome.com">
+<link rel="preconnect" href="https://ka-f.fontawesome.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/1749ce5893.js" crossorigin="anonymous"></script>
+
+<!-- Favicons -->
+<link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+<link href="{{ '/assets/img/Swanky_logo_icon180.png' | relative_url }}" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+  rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/aos/aos.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' | relative_url }}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">

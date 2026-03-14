@@ -1,0 +1,31 @@
+---
+layout: page
+title: "作品誌"
+description: "史旺基攝影作品誌，收錄歷年攝影作品與精選寫真。"
+keywords: "史旺基,攝影作品,寫真"
+nav_active: blog
+---
+
+<div class="section-title">
+  <h2>作品誌</h2>
+  <p>歷年攝影作品精選</p>
+</div>
+
+<div class="container">
+  <div class="row g-4">
+    {% for post in site.posts %}
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+          <p class="text-muted">{{ post.date | date: "%Y-%m-%d" }}{% if post.model_name %} · MD: {{ post.model_name }}{% endif %}</p>
+          {% if post.flickr_album %}
+          <a href="{{ post.flickr_album }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">Flickr 相簿</a>
+          {% endif %}
+          <a href="{{ post.url | relative_url }}" class="btn btn-color btn-sm">瀏覽作品</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

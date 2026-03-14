@@ -1,0 +1,44 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center{% if page.header_transparent %} header-transparent{% endif %}">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/Swanky_Logo_w.svg' | relative_url }}" alt="Swanky Studio 品牌標誌" class="img-fluid"></a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a {% if page.nav_active == 'home' %}class="active" {% endif %}href="{{ '/' | relative_url }}">主頁</a></li>
+        <li class="dropdown"><a href="{{ '/photography/' | relative_url }}"{% if page.nav_active == 'photography' %} class="active"{% endif %}><span>攝影寫真</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{{ '/photography/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/photography/photo-albums.html' | relative_url }}">出版</a></li>
+            <li><a href="{{ '/photography/awards.html' | relative_url }}">獎項</a></li>
+            <li class="dropdown"><a href="{{ '/photography/personal-works.html' | relative_url }}"><span>作品</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="{{ '/photography/personal-works.html' | relative_url }}">個人</a></li>
+                <li><a href="{{ '/photography/commercial-works.html' | relative_url }}">商業</a></li>
+                <li><a href="{{ '/photography/flickr-gallery.html' | relative_url }}">Flickr 相簿</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a {% if page.nav_active == 'technical' %}class="active" {% endif %}href="{{ '/technical-adviser.html' | relative_url }}">技術顧問</a></li>
+        <li class="dropdown"><a href="{{ '/education-training.html' | relative_url }}"{% if page.nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{{ '/education-training.html' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/modeling/' | relative_url }}">模特兒課程</a></li>
+            <li><a href="{{ '/cryptocurrency/' | relative_url }}">加密貨幣課程</a></li>
+          </ul>
+        </li>
+        <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
+        <li><a {% if page.nav_active == 'archive' %}class="active" {% endif %}href="{{ '/archive.html' | relative_url }}">歷年記錄</a></li>
+        {% if site.posts.size > 0 %}
+        <li><a {% if page.nav_active == 'blog' %}class="active" {% endif %}href="{{ '/blog.html' | relative_url }}">作品誌</a></li>
+        {% endif %}
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->

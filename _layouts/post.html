@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<main id="main">
+
+  <section class="blog-post">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.date | date: "%Y-%m-%d" }}{% if page.model_name %} · MD: {{ page.model_name }}{% endif %}</p>
+      </div>
+
+      {% if page.flickr_album %}
+      <div class="text-center mb-4">
+        <a href="{{ page.flickr_album }}" class="btn-get-started">Flickr 相簿</a>
+      </div>
+      {% endif %}
+
+      {% if page.model_social %}
+      <div class="text-center mb-4">
+        {% for link in page.model_social %}
+        <a href="{{ link.url }}"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>&nbsp;
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+    </div>
+  </section>
+
+</main><!-- End #main -->
