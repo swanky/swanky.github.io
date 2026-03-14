@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Flickr 攝影作品集 | Swanky Studio 史旺基工作室</title>
-    <meta content="史旺基歷年重要攝影作品集，涵蓋制服女孩系列、For Your Safety 得獎系列等，完整相簿收錄於 Flickr，呈現人像攝影美學與創作理念。" name="description">
-    <meta content="攝影作品集,Flickr相簿,制服女孩,For Your Safety,史旺基,人像攝影" name="keywords">
+    <title>攝影作品精選 | Swanky Studio 史旺基工作室</title>
+    <meta content="史旺基歷年重要攝影作品精選，24 件橫跨 2006–2023 的代表作，涵蓋人像、制服系列、次文化紀錄、概念系列與近年新題材，完整相簿收錄於 Flickr。" name="description">
+    <meta content="攝影作品集,Flickr精選,制服女孩,For Your Safety,史旺基,人像攝影,次文化" name="keywords">
 
     <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://kit.fontawesome.com">
@@ -40,7 +40,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
 
     <style>
-      /* Album card styles */
+      /* ----- Card with image ----- */
       .album-card {
         position: relative;
         border-radius: 8px;
@@ -70,15 +70,97 @@
       }
       .album-card-body h4 {
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 600;
         margin-bottom: 6px;
         line-height: 1.4;
       }
       .album-card-body p {
         color: #aaa;
-        font-size: 0.85rem;
-        margin-bottom: 12px;
+        font-size: 0.82rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      /* ----- Card WITHOUT image ----- */
+      .album-card-text {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        background: #1a1a1a;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 3px solid #E5A300;
+        padding: 20px;
+        min-height: 255px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .album-card-text:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      }
+      .card-bg-year {
+        position: absolute;
+        top: 4px;
+        right: 14px;
+        font-size: 4.5rem;
+        font-weight: 900;
+        color: rgba(255,255,255,0.04);
+        line-height: 1;
+        user-select: none;
+        pointer-events: none;
+      }
+      .album-card-text h4 {
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        line-height: 1.4;
+        position: relative;
+        z-index: 1;
+      }
+      .album-card-text p {
+        color: #999;
+        font-size: 0.82rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        flex: 1;
+        position: relative;
+        z-index: 1;
+      }
+      .card-meta {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ----- Milestone badges ----- */
+      .milestone-badges {
+        margin-bottom: 10px;
+      }
+      .milestone-badge {
+        display: inline-block;
+        background: rgba(245,197,59,0.10);
+        color: #c8921a;
+        font-size: 0.65rem;
+        padding: 2px 7px;
+        border-radius: 4px;
+        margin: 0 3px 3px 0;
+        border: 1px solid rgba(229,163,0,0.22);
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+
+      /* ----- Shared ----- */
+      .category-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #E5A300;
+        font-weight: 600;
+        margin-bottom: 4px;
       }
       .album-badge {
         display: inline-block;
@@ -91,6 +173,24 @@
         vertical-align: middle;
         font-weight: 600;
       }
+      .btn-flickr {
+        background: #ff0084;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+      .btn-flickr:hover { background: #cc006a; color: #fff; text-decoration: none; }
+
+      /* ----- Featured card (FYS) ----- */
       .featured-card {
         position: relative;
         border-radius: 8px;
@@ -101,87 +201,48 @@
       }
       .featured-card img {
         width: 100%;
-        height: 380px;
+        height: 360px;
         object-fit: cover;
         object-position: top;
         opacity: 0.75;
         transition: opacity 0.3s;
+        display: block;
       }
       .featured-card:hover img { opacity: 0.6; }
       .featured-card-overlay {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        bottom: 0; left: 0; right: 0;
         padding: 30px 24px 24px;
-        background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        background: linear-gradient(transparent, rgba(0,0,0,0.88));
       }
       .featured-card-overlay h3 {
         color: #fff;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 700;
         margin-bottom: 6px;
       }
       .featured-card-overlay p {
-        color: rgba(255,255,255,0.75);
-        font-size: 0.9rem;
+        color: rgba(255,255,255,0.72);
+        font-size: 0.88rem;
         margin-bottom: 14px;
       }
+
+      /* ----- Layout utilities ----- */
       .flickr-profile-banner {
         background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
         border: 1px solid #333;
         border-radius: 10px;
-        padding: 24px 30px;
+        padding: 22px 28px;
         margin-bottom: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 14px;
       }
-      .flickr-profile-banner .flickr-info {
-        color: #ccc;
-        font-size: 0.95rem;
-      }
-      .flickr-profile-banner .flickr-info strong {
-        color: #fff;
-        display: block;
-        font-size: 1.1rem;
-        margin-bottom: 4px;
-      }
-      .btn-flickr {
-        background: #ff0084;
-        color: #fff;
-        border: none;
-        border-radius: 50px;
-        padding: 8px 20px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: background 0.2s;
-        white-space: nowrap;
-      }
-      .btn-flickr:hover {
-        background: #cc006a;
-        color: #fff;
-        text-decoration: none;
-      }
-      .section-divider {
-        border: none;
-        border-top: 1px solid #2a2a2a;
-        margin: 20px 0 40px;
-      }
-      .category-label {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: #E5A300;
-        font-weight: 600;
-        margin-bottom: 4px;
-      }
+      .flickr-profile-banner .flickr-info { color: #ccc; font-size: 0.92rem; }
+      .flickr-profile-banner .flickr-info strong { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 3px; }
+      .section-divider { border: none; border-top: 1px solid #2a2a2a; margin: 16px 0 40px; }
     </style>
 
   </head>
@@ -191,11 +252,9 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
   <div class="container d-flex justify-content-between align-items-center">
-
     <div class="logo">
       <a href="../index.html"><img src="../assets/img/Swanky_Logo_w.svg" alt="Swanky Studio 品牌標誌" class="img-fluid"></a>
     </div>
-
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="" href="../index.html">主頁</a></li>
@@ -224,221 +283,604 @@
         <li><a href="../nft/">NFT策展</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
+    </nav>
   </div>
-</header><!-- End Header -->
+</header>
 
-  <main id="main">
+<main id="main">
 
-    <div class="section-title works">
-      <h2>攝影作品集</h2>
-      <p>史旺基歷年重要攝影系列，完整相簿收錄於 Flickr。</p>
-    </div>
+  <div class="section-title works">
+    <h2>攝影作品精選</h2>
+    <p>精選 24 件歷年重要作品，橫跨 2006–2023，以人像為核心延伸至制服、次文化、概念系列與新題材實驗。</p>
+  </div>
 
-    <section class="portfolio" style="padding-top:0;">
-      <div class="container">
+  <section class="portfolio" style="padding-top:0;">
+    <div class="container">
 
-        <!-- Flickr Profile Banner -->
-        <div class="flickr-profile-banner" data-aos="fade-up" data-aos-duration="400">
-          <div class="flickr-info">
-            <strong>swanky-hsiao @ Flickr</strong>
-            人像攝影作品集，涵蓋制服女孩、藝術人像等系列
-          </div>
-          <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener" class="btn-flickr">
-            <i class="bx bxl-flickr"></i> 前往 Flickr 相簿
-          </a>
+      <!-- Flickr Profile Banner -->
+      <div class="flickr-profile-banner" data-aos="fade-up" data-aos-duration="400">
+        <div class="flickr-info">
+          <strong>swanky-hsiao @ Flickr</strong>
+          Most Favorited · Most Views · Explore · 競賽得獎 · 2006–2023
         </div>
-
-        <hr class="section-divider">
-
-        <!-- ===== 精選系列 ===== -->
-        <div class="section-title" style="padding-bottom:20px;">
-          <h2>精選系列</h2>
-          <p>獲國際攝影大獎肯定的代表作品</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-duration="500">
-          <!-- For Your Safety -->
-          <div class="col-lg-6 col-md-12 mb-4">
-            <div class="featured-card">
-              <img src="../assets/img/sec/001_Zoey_1.jpg" alt="For Your Safety 系列代表作品 Zoey">
-              <div class="featured-card-overlay">
-                <div class="category-label">IPA 榮譽獎 ✦ PX3 二等獎</div>
-                <h3>For Your Safety｜安全起見 <span class="album-badge">得獎系列</span></h3>
-                <p>29 位模特兒人像攝影系列 · 2011–2013　曾舉辦個展，獲 IPA 榮譽獎及 PX3 第二名。</p>
-                <a href="for-your-safety.html" class="btn btn-color btn-sm me-2">查看完整系列</a>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener" class="btn-flickr btn-sm" style="padding:6px 16px;font-size:0.82rem;">
-                  <i class="bx bxl-flickr"></i> Flickr
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bikini-aholic / Px3 2011 -->
-          <div class="col-lg-6 col-md-12 mb-4">
-            <div class="featured-card">
-              <img src="../assets/img/portfolio/px3_2011.jpeg" alt="2011 Px3 巴黎攝影獎榮譽提名作品 Bikini-aholic" style="object-position:center;">
-              <div class="featured-card-overlay">
-                <div class="category-label">2011 Px3 巴黎攝影獎</div>
-                <h3>Bikini-aholic <span class="album-badge">榮譽提名</span></h3>
-                <p>Px3 Prix de la Photographie Paris 榮譽提名作品</p>
-                <a href="awards.html" class="btn btn-color btn-sm">查看獎項紀錄</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr class="section-divider">
-
-        <!-- ===== 制服女孩系列 ===== -->
-        <div class="section-title" style="padding-bottom:20px;">
-          <h2>制服女孩系列</h2>
-          <p>以制服為主題，記錄青春與美好</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-duration="500">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg" alt="2018 李婷婷×史旺基制服女孩攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">制服女孩</div>
-                <h4>李婷婷 × 史旺基「制服女孩」</h4>
-                <p>2018</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../assets/img/portfolio/33645452611_56b9253b61_k.jpeg" alt="2017 李昱×史旺基制服女孩攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">制服女孩</div>
-                <h4>李昱 × 史旺基「制服女孩」</h4>
-                <p>2017</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157678709082784" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" alt="2017 小潔Mina×史旺基制服女孩攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">制服女孩</div>
-                <h4>小潔 (Mina) × 史旺基「制服女孩」</h4>
-                <p>2017</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157677811587193" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../old/images/2016-02-10/img_00001.jpg" alt="2016 宇彤×史旺基 unicorn wears uniform 制服女孩攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">制服女孩</div>
-                <h4>宇彤 × 史旺基「unicorn wears uniform」</h4>
-                <p>2016</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157662260290273" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../old/images/2016-03-10/img_00001.jpg" alt="2016 劉家靜×史旺基 @Studio 人像攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">制服女孩</div>
-                <h4>劉家靜 × 史旺基「＠Studio」</h4>
-                <p>2016</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/sets/72157665815276842" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <hr class="section-divider">
-
-        <!-- ===== 其他作品 ===== -->
-        <div class="section-title" style="padding-bottom:20px;">
-          <h2>其他作品</h2>
-          <p>跨越不同主題的攝影創作</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-duration="500">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../assets/img/portfolio/51133994574_dfc8e53f9e_k.jpeg" alt="2021 黃帛瑜×史旺基比特幣女孩攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">藝術人像</div>
-                <h4>黃帛瑜 × 史旺基「比特幣女孩」</h4>
-                <p>2021</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157719012170802" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="album-card">
-              <img src="../assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg" alt="2017 果子×史旺基星空復古攝影" loading="lazy">
-              <div class="album-card-body">
-                <div class="category-label">藝術人像</div>
-                <h4>果子 × 史旺基「星空復古」</h4>
-                <p>2017</p>
-                <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157676809872014" target="_blank" rel="noopener" class="btn-flickr" style="font-size:0.82rem;padding:6px 16px;">
-                  <i class="bx bxl-flickr"></i> 查看相簿
-                </a>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- More on Flickr CTA -->
-        <div class="text-center mt-3 mb-5" data-aos="fade-up" data-aos-duration="400">
-          <p style="color:#aaa;margin-bottom:16px;">更多作品請前往 Flickr 相簿瀏覽</p>
-          <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener" class="btn-get-started animate__animated animate__fadeInUp">
-            查看全部 Flickr 相簿
-          </a>
-        </div>
-
+        <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener" class="btn-flickr" style="padding:8px 20px;font-size:0.9rem;">
+          <i class="bx bxl-flickr"></i> 前往 Flickr 相簿
+        </a>
       </div>
-    </section>
 
-  </main><!-- End #main -->
+      <hr class="section-divider">
+
+      <!-- ===================== 1. 人像代表作 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>人像代表作</h2>
+        <p>2006–2011 · 社群高互動、競賽入選、Explore 里程碑</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <!-- Daphny 2006 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2006</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>Daphny｜黑白里程碑</h4>
+              <p>以黑白語彙完成早期代表作，首次登上 Flickr Explore Calendar 的生涯節點作品。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Explore Calendar 首次</span>
+                <span class="milestone-badge">Most Favorited</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/309437621/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 小翼 2006 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2006</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>小翼｜第一次 Explore</h4>
+              <p>作品頁直接註記「First Photo in Explore」，早期被看見的關鍵節點。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">First Photo in Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/195785358/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Misia 2006 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2006</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>Misia｜早期高收藏人像</h4>
+              <p>早期人像代表之一，以穩定收藏數積累成為帳號前期的代表臉孔。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/333927985/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Akina 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2007</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>Akina｜高人氣人像經典</h4>
+              <p>高瀏覽與高收藏的人像作品，2007 年風格的社群共識代表，具大量留言互動。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/435225311/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pinky 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2007</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>Pinky｜招牌代表作</h4>
+              <p>極高瀏覽、收藏與留言量的招牌作品，帳號「社群共識代表作」的核心錨點。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/2089504883/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 果子 CAPA 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2007</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>果子｜CAPA 競賽優選</h4>
+              <p>2007 CAPA 特輯美少女攝影競賽第一回優選，具明確獲獎標記的履歷型作品。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">CAPA 優選</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/1664024637/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 柚子 CAPA 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2007</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>柚子｜CAPA 佳作 · 完整 EXIF</h4>
+              <p>CAPA 競賽佳作，具完整 EXIF（EF85mm · ƒ/4.0 · 1/200 · ISO 200），技術說服力強。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">CAPA 佳作</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/1663939881/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 洪詩 2008 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2008</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>洪詩｜早期高瀏覽人像</h4>
+              <p>2008 年拍攝的高瀏覽人像作品，接續 2007 代表作段落的年代節點。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/3306668902/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Momo 2010 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2010</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>Momo｜成熟期的人像節點</h4>
+              <p>2010 年人像作品，以收藏數承接早期高人氣，標記進入較成熟產出的段落。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/4624112041/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 丁小雨 2010 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2010</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>丁小雨｜女版宅T宣傳照</h4>
+              <p>結合人像與社群文化的宣傳照形式，高瀏覽量呈現人像商用與社群內容的能力範圍。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/4801811916/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 林采緹 阿宅電台 2011 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2011</span>
+            <div>
+              <div class="category-label">人像代表作</div>
+              <h4>阿宅反抗軍電台｜來賓 林采緹</h4>
+              <p>電台來賓主題事件人像，兼具現場把握能力與明確事件性，兩大精選脈絡同時收錄。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Favorited</span>
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/6152334817/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 人像代表作 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 2. 次文化紀錄 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>次文化紀錄</h2>
+        <p>Cosplay · 幽默瞬間 · 現場活動 · 跨圈層傳播力</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <!-- WoW Cosplay 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2007</span>
+            <div>
+              <div class="category-label">次文化紀錄</div>
+              <h4>World of Warcraft Cosplay Girls</h4>
+              <p>遊戲 Cosplay 主題現場攝影，高瀏覽量顯示其跨圈層傳播力，為「人像以外」的題材擴張。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/385543290/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- McDonald vs KFC 2008 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2008</span>
+            <div>
+              <div class="category-label">次文化紀錄</div>
+              <h4>McDonald's vs KFC｜高擴散幽默瞬間</h4>
+              <p>接近百萬瀏覽的幽默街頭瞬間，帳號最具網路擴散力的作品，EXIF 可引用（17–50mm）。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/2268323299/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 北一女樂儀隊 2014 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2014</span>
+            <div>
+              <div class="category-label">次文化紀錄</div>
+              <h4>北一女中樂儀隊｜現場紀錄</h4>
+              <p>表演事件現場攝影，高互動數字與明確題材辨識度，展示非棚拍的活動紀錄能力。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">2014 Most Interesting 100</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/15354228461/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 次文化 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 3. 概念系列 For Your Safety ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>概念系列</h2>
+        <p>For Your Safety｜安全起見 · 2011–2013 · IPA · PX3 · 個展</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="col-lg-8 col-md-12 mb-4">
+          <div class="featured-card">
+            <img src="../assets/img/sec/001_Zoey_1.jpg" alt="For Your Safety — Zoey 人像攝影代表作">
+            <div class="featured-card-overlay">
+              <div class="category-label" style="margin-bottom:6px;">
+                <span class="milestone-badge" style="font-size:0.7rem;">IPA 榮譽獎</span>
+                <span class="milestone-badge" style="font-size:0.7rem;">PX3 二等獎</span>
+                <span class="milestone-badge" style="font-size:0.7rem;">Explore</span>
+              </div>
+              <h3>For Your Safety｜安全起見 <span class="album-badge">概念系列</span></h3>
+              <p>29 位模特兒人像攝影系列，2011 年於台北個展，探索人與安全感的關係，獲 IPA 榮譽獎及 PX3 第二名。</p>
+              <a href="for-your-safety.html" class="btn btn-color btn-sm me-2">查看完整系列</a>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/6347336372/" target="_blank" rel="noopener" class="btn-flickr" style="padding:6px 14px;font-size:0.8rem;">
+                <i class="bx bxl-flickr"></i> Flickr 原作
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4 d-flex flex-column gap-3">
+          <div class="album-card-text" style="flex:1;min-height:0;">
+            <span class="card-bg-year" style="font-size:3rem;">2011</span>
+            <div>
+              <div class="category-label">系列說明</div>
+              <h4>For Your Safety #11</h4>
+              <p>概念系列代表作，作品頁明確標示系列標號，適合做為系列敘事入口。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/6347336372/" target="_blank" rel="noopener" class="btn-flickr" style="padding:6px 14px;font-size:0.8rem;">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+          <div style="background:#1a1a1a;border-radius:8px;padding:16px;border-left:3px solid #555;">
+            <p style="color:#777;font-size:0.8rem;margin:0;">展覽花絮相簿</p>
+            <a href="https://www.flickr.com/photos/swanky-hsiao/sets/72157628385587065/" target="_blank" rel="noopener" style="color:#aaa;font-size:0.82rem;text-decoration:none;">
+              <i class="bx bxl-flickr" style="color:#ff0084;"></i> 2011 個展現場紀錄 →
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /row 概念系列 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 4. 制服系列 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>制服系列</h2>
+        <p>2013–2018 · 青春符號 · 出版推廣 · 高互動</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <!-- Zamy 制服 2013 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2013</span>
+            <div>
+              <div class="category-label">制服系列</div>
+              <h4>Zamy 奎丁｜百齡高中制服＠台灣大學</h4>
+              <p>完整情境的制服人像（時間／地點／主題），制服系列的代表入口節點。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/9833170045/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 自拍制服少女 2014 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2014</span>
+            <div>
+              <div class="category-label">制服系列</div>
+              <h4>自拍制服少女｜年度爆款</h4>
+              <p>超高瀏覽與收藏的年度代表作，可作為首頁吸睛入口再導回制服系列長篇。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">2014 Most Interesting 100</span>
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/15262345956/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 小敬 制服書 2014 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2014</span>
+            <div>
+              <div class="category-label">制服系列</div>
+              <h4>小敬 × 制服．女孩｜書系推廣節點</h4>
+              <p>與攝影作品書推廣連結的里程碑作品，可作為出版段落的可引用里程碑。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/12832894814/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 熊熊吳暐榕 2015 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2015</span>
+            <div>
+              <div class="category-label">制服系列</div>
+              <h4>熊熊吳暐榕｜制服書系擴散證明</h4>
+              <p>制服．女孩 II 出版活動的社群推薦記錄，具明確被推薦與出版活動脈絡。</p>
+            </div>
+            <div class="card-meta">
+              <div class="milestone-badges">
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/16436300806/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 李婷婷 制服 2018 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <img src="../assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg" alt="2018 李婷婷×史旺基制服女孩攝影" loading="lazy">
+            <div class="album-card-body">
+              <div class="category-label">制服系列</div>
+              <h4>李婷婷 × 史旺基｜制服女孩</h4>
+              <p>2018 · 較近期制服系列代表，原始尺寸 3840×5760，多尺寸輸出節點。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/43748488334/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 制服系列 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 5. 近年新題材 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>近年新題材</h2>
+        <p>2021–2023 · 跨界符號 · 場景人像 · 持續創作</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <!-- 黃帛瑜 比特幣女孩 2021 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <img src="../assets/img/portfolio/51133994574_dfc8e53f9e_k.jpeg" alt="2021 黃帛瑜×史旺基比特幣女孩攝影" loading="lazy">
+            <div class="album-card-body">
+              <div class="category-label">近年新題材</div>
+              <h4>黃帛瑜 × 史旺基｜比特幣女孩</h4>
+              <p>2021 · 以比特幣符號介入人像敘事，標記新題材實驗的起始節點。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/51133433643/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 姍姍 華山 2021 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2021</span>
+            <div>
+              <div class="category-label">近年新題材</div>
+              <h4>姍姍｜華山藝文特區現地人像</h4>
+              <p>城市場景作為背景的人像作品，展示地景與人物結合的當代風格面向。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/51663243696/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CloneX 2022 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2022</span>
+            <div>
+              <div class="category-label">近年新題材</div>
+              <h4>李婷婷 × 史旺基｜CloneX #18974</h4>
+              <p>以 CloneX 為題的跨界人像實驗，呈現作品從制服到新語境符號的延伸路徑。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/52597378703/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Uni 與光 2023 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2023</span>
+            <div>
+              <div class="category-label">近年新題材</div>
+              <h4>Uni｜與光</h4>
+              <p>2023 年 12 月近作，以「與光」為副標，作為網站近期風格的收束展示。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/55010017465/" target="_blank" rel="noopener" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 近年 -->
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-3 mb-5" data-aos="fade-up" data-aos-duration="400">
+        <p style="color:#777;font-size:0.88rem;margin-bottom:16px;">完整相簿收錄於 Flickr</p>
+        <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener" class="btn-get-started animate__animated animate__fadeInUp">
+          查看全部 Flickr 相簿
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <!-- ======= Footer ======= -->
 <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
   <div class="footer-top">
     <div class="container">
       <div class="row">
-
         <div class="col-lg-6 col-md-6 footer-contact">
           <h4>聯絡方式</h4>
-          <p>
-            <strong>Email:</strong> swanky.hsiao@gmail.com<br>
-          </p>
+          <p><strong>Email:</strong> swanky.hsiao@gmail.com<br></p>
         </div>
-
         <div class="col-lg-6 col-md-6 footer-info">
           <h3>社群平台</h3>
           <p>熱愛攝影、研究區塊鏈，有什麼新奇有趣的項目嗎？任何合作歡迎洽詢聯繫。</p>
@@ -450,33 +892,30 @@
             <a href="https://www.flickr.com/photos/swanky-hsiao/" class="flickr"><i class="bx bxl-flickr"></i></a>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
   <div class="container">
     <div class="copyright">
       &copy; Copyright <strong><span>Swanky</span></strong>. All Rights Reserved
     </div>
   </div>
-</footer><!-- End Footer -->
+</footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../assets/vendor/purecounter/purecounter.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/purecounter/purecounter.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="../assets/js/main.js"></script>
 
 </body>
-
 </html>
