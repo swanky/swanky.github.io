@@ -1,0 +1,94 @@
+- name: "Portrait | 人像"
+  collection_id: "72157594587159217"
+  count: 619
+  description: "歷年人像攝影完整記錄"
+
+- name: "Beauty | 美女"
+  collection_id: "72157603754424250"
+  count: 128
+  description: "依模特兒分類的個人相簿集"
+
+- name: "School Uniform Girls | 制服女孩"
+  collection_id: "72157635182110152"
+  count: 87
+  description: "制服系列攝影專案完整紀錄"
+
+- name: "Zoey | 丁小雨"
+  collection_id: "72157624763412824"
+  count: 69
+  description: "與丁小雨長期合作攝影記錄"
+
+- name: "On-Location Shooting | 攝影網站外拍"
+  collection_id: "72157600006096410"
+  count: 63
+  description: "各攝影網站外拍活動紀錄"
+
+- name: "Mikako | 果子"
+  collection_id: "72157621178210950"
+  count: 50
+  description: "與果子長期合作攝影記錄"
+
+- name: "Celebrity | 名人"
+  collection_id: "72157622562858201"
+  count: 33
+  description: "名人合作攝影紀錄"
+
+- name: "Wedding | 婚禮記錄"
+  collection_id: "72157614525020580"
+  count: 27
+  description: "歷年婚禮紀錄與婚紗側拍"
+
+- name: "Subject | 主題"
+  collection_id: "72157594587210603"
+  count: 27
+  description: "按主題分類：黑白、風景、建築、街道等"
+
+- name: "New | 新作品"
+  collection_id: "72157594587266013"
+  count: 26
+  description: "2016–2022 近期人像創作"
+
+- name: "OTAKU ARMY | 阿宅反抗軍"
+  collection_id: "72157623127841560"
+  count: 219
+  description: "朱學恒「阿宅反抗軍」電台與活動紀錄"
+
+- name: "Show | 展場活動"
+  collection_id: "72157603940119806"
+  count: 18
+  description: "電玩展、電腦展、攝影展等展場紀錄"
+
+- name: "Flickr Selection"
+  collection_id: "72157594587149599"
+  count: 18
+  description: "Explore、Most Interesting、Most Favorited 精選集"
+
+- name: "For Your Safety | 安全起見"
+  collection_id: "72157627878323198"
+  count: 12
+  description: "概念系列拍攝紀錄與展覽花絮"
+
+- name: "Exhibitions | 展覽經歷"
+  collection_id: "72157628275745795"
+  count: 6
+  description: "GEISAI、ArtfN.fair、個展紀錄"
+
+- name: "Cosplay | 角色扮演"
+  collection_id: "72157603939970472"
+  count: 6
+  description: "Fancy Frontier、Cosplay 大賽紀錄"
+
+- name: "Film Camera | 底片機"
+  collection_id: "72157623879241471"
+  count: 7
+  description: "Hasselblad、Yashica、LOMO 底片作品"
+
+- name: "Travel | 旅行"
+  collection_id: "72157603940234814"
+  count: 4
+  description: "台灣、日本、美國、中國旅行攝影"
+
+- name: "Family | 家"
+  collection_id: "72157602879126169"
+  count: 33
+  description: "家庭生活紀錄"

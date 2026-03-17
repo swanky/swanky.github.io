@@ -2,8 +2,8 @@
 layout: home
 title: 攝影作品精選 | Swanky Studio 史旺基工作室
 description: >
-  史旺基歷年重要攝影作品精選，24 件橫跨 2006–2023 的代表作，涵蓋人像、制服系列、次文化紀錄、概念系列與近年新題材，完整相簿收錄於 Flickr。
-keywords: 攝影作品集,Flickr精選,制服女孩,For Your Safety,史旺基,人像攝影,次文化
+  史旺基歷年攝影作品精選與 Flickr 相簿集總覽，涵蓋人像代表作、制服系列、概念系列、名人合作、展覽經歷及 30 個主題相簿集，完整收錄於 Flickr。
+keywords: 攝影作品集,Flickr精選,制服女孩,For Your Safety,史旺基,人像攝影,名人合作,展覽
 nav_active: photography
 extra_css: >
   /* ----- Card with image ----- */
@@ -203,13 +203,49 @@ extra_css: >
   .flickr-profile-banner .flickr-info { color: #ccc; font-size: 0.92rem; }
   .flickr-profile-banner .flickr-info strong { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 3px; }
   .section-divider { border: none; border-top: 1px solid #2a2a2a; margin: 16px 0 40px; }
+  /* ----- Collection directory cards ----- */
+  .collection-link {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    border-left: 3px solid #E5A300;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .collection-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    text-decoration: none;
+  }
+  .collection-link h5 {
+    color: #fff;
+    font-size: 0.88rem;
+    margin: 0 0 2px;
+    font-weight: 600;
+  }
+  .collection-link .col-desc {
+    color: #888;
+    font-size: 0.75rem;
+    margin: 0;
+  }
+  .collection-link .col-count {
+    color: #E5A300;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
 ---
 
 <main id="main">
 
   <div class="section-title works">
-    <h2>攝影作品精選</h2>
-    <p>精選 24 件歷年重要作品，橫跨 2006–2023，以人像為核心延伸至制服、次文化、概念系列與新題材實驗。</p>
+    <h2>攝影作品精選 & Flickr 相簿集</h2>
+    <p>精選歷年重要作品與完整 Flickr 相簿集，橫跨 2006–2023，涵蓋人像、制服、概念系列、名人合作、展覽經歷及更多主題。</p>
   </div>
 
   <section class="portfolio" style="padding-top:0;">
@@ -735,11 +771,462 @@ extra_css: >
 
       </div><!-- /row 近年 -->
 
+      <hr class="section-divider">
+
+      <!-- ===================== 6. 更多人像相簿 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>更多人像相簿</h2>
+        <p>2016–2022 · 精選未收錄的近期人像拍攝相簿</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2022</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>Swanky by Wind.</h4>
+              <p>由 Wind 掌鏡的史旺基個人形象攝影，從攝影師轉為被攝者的角色交換紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72177720299863165/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2021</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>藻╳史旺基「寶藏巖」</h4>
+              <p>以寶藏巖歷史聚落為背景的場景人像創作，光影與斑駁牆面交織出獨特氛圍。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157720087332688/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2021</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>Kiki詩芸╳史旺基「制服女孩@國父紀念館週邊」</h4>
+              <p>國父紀念館周邊街拍制服人像，延續制服系列的城市場景探索。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157719947707658/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2021</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>羽葶╳史旺基「台大邊緣」</h4>
+              <p>以台灣大學校園為場景的人像拍攝，捕捉校園光影與青春氛圍。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157718999694018/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2019</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>Zoe@228+城中</h4>
+              <p>228 公園與城中區域的城市人像寫真，結合歷史街廓與現代人像。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157709088340532/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2018</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>李婷婷╳史旺基「制服女孩」</h4>
+              <p>2018 年制服系列代表作，展現成熟期的制服人像風格與高品質影像。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2017</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>Alice╳史旺基「台大艾瑪華森」</h4>
+              <p>以台灣大學為場景、向 Emma Watson 致敬的概念人像拍攝企劃。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157683235514605/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2016</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>劉家靜╳史旺基「淡水線制服之旅」</h4>
+              <p>沿淡水捷運線取景的制服之旅，結合鐵道風景與制服人像的企劃攝影。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673127456475/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2016</span>
+            <div>
+              <div class="category-label">人像相簿</div>
+              <h4>Becky╳史旺基「文科女孩」</h4>
+              <p>以「文科女孩」為主題的概念人像，清新文藝風格的創作拍攝。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157674946364643/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 更多人像相簿 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 7. 名人合作 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>名人合作</h2>
+        <p>藝人 · 音樂人 · 作家 · 主持人 · 33 組名人攝影記錄</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>蒼井空 Sora Aoi</h4>
+              <p>國際知名日本藝人來台活動攝影紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157622792590578/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>陳綺貞 Cheer Chen</h4>
+              <p>知名創作歌手活動紀錄攝影。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157606287012866/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>九把刀 Giddens</h4>
+              <p>知名作家九把刀攝影紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157626270298724/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>盧廣仲 Crowd Lu</h4>
+              <p>金曲歌王盧廣仲活動紀錄攝影。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157628697577909/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>施文彬 Michael Shih</h4>
+              <p>知名音樂人施文彬合作攝影紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157628697545943/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>BY2</h4>
+              <p>雙胞胎歌手 BY2 活動紀錄攝影。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157637539450473/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>Dream Girls</h4>
+              <p>女子團體 Dream Girls 活動紀錄攝影。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157626450325933/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>馮媛甄 Abby</h4>
+              <p>知名藝人馮媛甄人像攝影紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157618879775787/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">名人</span>
+            <div>
+              <div class="category-label">Celebrity</div>
+              <h4>林采緹 Sunny Lin</h4>
+              <p>藝人林采緹人像攝影紀錄，阿宅反抗軍電台來賓。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157627524923159/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 名人 -->
+
+      <div class="text-center mt-2 mb-4">
+        <a href="https://www.flickr.com/photos/swanky-hsiao/collections/72157622562858201/" target="_blank" rel="noopener noreferrer" class="btn-flickr" style="padding:8px 20px;font-size:0.85rem;">
+          <i class="bx bxl-flickr"></i> 查看全部 33 組名人相簿
+        </a>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- ===================== 8. 展覽經歷 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>展覽經歷</h2>
+        <p>GEISAI TAIWAN · ArtfN.fair · 個展 · 2010–2022</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2022</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>ArtfN.fair 台北藝術新銳博覽會</h4>
+              <p>2022 年 5 月參展台北藝術新銳博覽會，展出攝影作品。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72177720299529278/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2011</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>「For Your Safety｜安全起見」個展開幕</h4>
+              <p>2011 年 12 月於搖咖啡舉辦個展開幕活動紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157628416537191/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2011</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>「For Your Safety｜安全起見」@搖咖啡</h4>
+              <p>個展展場佈置與作品陳列紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157628385587065/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2011</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>史旺基@GEISAI TAIWAN#3</h4>
+              <p>第三屆 GEISAI TAIWAN 藝術祭參展紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157628274279281/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2011</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>史旺基@亂調BAR</h4>
+              <p>2011 年於亂調 BAR 的攝影展出紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157625952736670/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card-text">
+            <span class="card-bg-year">2010</span>
+            <div>
+              <div class="category-label">展覽</div>
+              <h4>史旺基@GEISAI TAIWAN#2</h4>
+              <p>第二屆 GEISAI TAIWAN 藝術祭參展紀錄。</p>
+            </div>
+            <div class="card-meta">
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157625363874657/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看相簿
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 展覽 -->
+
+      <hr class="section-divider">
+
+      <!-- ===================== 9. Flickr 相簿集總覽 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>Flickr 相簿集總覽</h2>
+        <p>依主題分類的完整相簿集，點擊前往 Flickr 瀏覽</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+        {% for col in site.data.flickr_collections %}
+        <div class="col-lg-4 col-md-6">
+          <a href="https://www.flickr.com/photos/swanky-hsiao/collections/{{ col.collection_id }}/" target="_blank" rel="noopener noreferrer" class="collection-link">
+            <div>
+              <h5>{{ col.name }}</h5>
+              <p class="col-desc">{{ col.description }}</p>
+            </div>
+            <span class="col-count">{{ col.count }} 冊</span>
+          </a>
+        </div>
+        {% endfor %}
+      </div><!-- /row 總覽 -->
+
       <!-- Bottom CTA -->
       <div class="text-center mt-3 mb-5" data-aos="fade-up" data-aos-duration="400">
-        <p style="color:#777;font-size:0.88rem;margin-bottom:16px;">完整相簿收錄於 Flickr</p>
-        <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener noreferrer" class="btn-get-started animate__animated animate__fadeInUp">
-          查看全部 Flickr 相簿
+        <p style="color:#777;font-size:0.88rem;margin-bottom:16px;">以上僅為精選，完整作品收錄於 Flickr</p>
+        <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener noreferrer" class="btn-get-started animate__animated animate__fadeInUp me-2">
+          前往 Flickr 相簿
+        </a>
+        <a href="https://www.flickr.com/photos/swanky-hsiao/collections/" target="_blank" rel="noopener noreferrer" class="btn-flickr" style="padding:10px 22px;font-size:0.9rem;">
+          <i class="bx bxl-flickr"></i> 瀏覽全部相簿集
         </a>
       </div>
 
