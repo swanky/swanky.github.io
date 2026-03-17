@@ -1,31 +1,109 @@
 ---
-layout: page
-title: "作品誌"
-description: "史旺基攝影作品誌，收錄歷年攝影作品與精選寫真。"
-keywords: "史旺基,攝影作品,寫真"
-nav_active: blog
+layout: home
+title: "精選寫真 | Swanky Studio 史旺基工作室"
+description: "史旺基精選寫真集，收錄歷年攝影作品，可直接在線上瀏覽完整照片。"
+keywords: "史旺基,精選寫真,攝影作品,人像攝影"
+nav_active: photography
+extra_css: >
+  .photo-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  }
+  .photo-card img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    display: block;
+  }
+  .photo-card:hover img { opacity: 0.75; }
+  .photo-card-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 30px 24px 24px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.88));
+  }
+  .photo-card-overlay h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .photo-card-overlay .meta {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  .photo-card-overlay .meta span { margin-right: 12px; }
+  .btn-view {
+    display: inline-block;
+    background: #E5A300;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-right: 8px;
+  }
+  .btn-view:hover { background: #c48900; color: #fff; text-decoration: none; }
+  .btn-flickr-sm {
+    display: inline-block;
+    background: transparent;
+    color: #ff0084;
+    border: 1px solid #ff0084;
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-flickr-sm:hover { background: #ff0084; color: #fff; text-decoration: none; }
 ---
 
-<div class="section-title">
-  <h2>作品誌</h2>
-  <p>歷年攝影作品精選</p>
-</div>
+  <main id="main">
 
-<div class="container">
-  <div class="row g-4">
-    {% for post in site.posts %}
-    <div class="col-md-6">
-      <div class="card h-100">
-        <div class="card-body">
-          <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-          <p class="text-muted">{{ post.date | date: "%Y-%m-%d" }}{% if post.model_name %} · MD: {{ post.model_name }}{% endif %}</p>
-          {% if post.flickr_album %}
-          <a href="{{ post.flickr_album }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">Flickr 相簿</a>
-          {% endif %}
-          <a href="{{ post.url | relative_url }}" class="btn btn-color btn-sm">瀏覽作品</a>
+    <div class="section-title works">
+      <h2>精選寫真</h2>
+      <p>攝影作品精選，可直接在線上瀏覽完整照片</p>
+    </div>
+
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          {% for post in site.posts %}
+          <div class="col-md-6 mb-4">
+            <div class="photo-card">
+              {% if post.cover_image %}
+              <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}">
+              {% endif %}
+              <div class="photo-card-overlay">
+                <h3>{{ post.title }}</h3>
+                <div class="meta">
+                  <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+                  {% if post.model_name %}<span>MD: {{ post.model_name }}</span>{% endif %}
+                  {% if post.photo_count %}<span>{{ post.photo_count }} 張照片</span>{% endif %}
+                </div>
+                <a href="{{ post.url | relative_url }}" class="btn-view">瀏覽作品</a>
+                {% if post.flickr_album %}
+                <a href="{{ post.flickr_album }}" target="_blank" rel="noopener" class="btn-flickr-sm">Flickr 相簿</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+    </section>
+
+  </main><!-- End #main -->

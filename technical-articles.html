@@ -1,0 +1,44 @@
+---
+layout: home
+title: Swanky Studio 史旺基工作室
+description: >
+  史旺基工作室技術專欄文章，涵蓋 AI 開發工具、軟體團隊管理、Web3 趨勢觀察與區塊鏈應用的深度分析。
+keywords: 技術專欄,AI,Web3,軟體管理,區塊鏈,NFT,史旺基
+nav_active: technical
+---
+
+  <main id="main">
+    <div class="section-title works">
+      <h2>專欄文章</h2>
+      <p>技術趨勢觀察、軟體管理與 Web3 領域的深度分析</p>
+    </div>
+
+  <section class="service-details">
+    <div class="container">
+
+      <div class="row">
+        {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+        {% for article in sorted_articles %}
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
+          <div class="card">
+            {% if article.cover_image %}
+            <div class="card-img">
+              <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}"></a>
+            </div>
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h5>
+              <p class="card-text">{{ article.date | date: "%Y-%m-%d" }}</p>
+              {% if article.description %}
+              <p class="card-text" style="font-size:14px; color:#666;">{{ article.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  </main><!-- End #main -->

@@ -12,6 +12,12 @@ github_username: swanky
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+
 # Exclude from processing
 exclude:
   - Gemfile

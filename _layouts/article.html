@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<main id="main">
+
+  <section class="blog-post">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.date | date: "%Y-%m-%d" }} · 作者 / 史旺基</p>
+      </div>
+
+      {% if page.cover_image %}
+      <div class="text-center mb-4">
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" style="max-width:100%; border-radius:4px;">
+      </div>
+      {% endif %}
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      {% if page.source_url %}
+      <div class="text-center mt-4 mb-4" style="padding: 20px; background: #f7f7f7; border-radius: 4px;">
+        <p style="margin-bottom: 10px; color: #444;">本文同步發佈於</p>
+        <a href="{{ page.source_url }}" target="_blank" rel="noopener" class="btn-get-started" style="display:inline-block; padding:10px 30px; background:#E5A300; color:#fff; border-radius:4px; text-decoration:none;">閱讀 LinkedIn 原文</a>
+      </div>
+      {% endif %}
+
+      <div class="text-center mt-4">
+        <a href="{{ '/technical-articles' | relative_url }}" style="color:#E5A300;">&larr; 返回專欄文章列表</a>
+      </div>
+
+    </div>
+  </section>
+
+</main><!-- End #main -->

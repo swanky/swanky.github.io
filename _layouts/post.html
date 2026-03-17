@@ -9,25 +9,36 @@ layout: default
 
       <div class="section-title">
         <h2>{{ page.title }}</h2>
-        <p>{{ page.date | date: "%Y-%m-%d" }}{% if page.model_name %} · MD: {{ page.model_name }}{% endif %}</p>
+        <p>
+          {{ page.date | date: "%Y-%m-%d" }}
+          {% if page.model_name %} · MD: {{ page.model_name }}{% endif %}
+          {% if page.photo_count %} · {{ page.photo_count }} 張照片{% endif %}
+        </p>
       </div>
-
-      {% if page.flickr_album %}
-      <div class="text-center mb-4">
-        <a href="{{ page.flickr_album }}" class="btn-get-started">Flickr 相簿</a>
-      </div>
-      {% endif %}
 
       {% if page.model_social %}
       <div class="text-center mb-4">
         {% for link in page.model_social %}
-        <a href="{{ link.url }}"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>&nbsp;
+        <a href="{{ link.url }}" target="_blank" rel="noopener" style="color:#E5A300; margin: 0 8px;"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>
         {% endfor %}
       </div>
       {% endif %}
 
+      <div class="text-center mb-4">
+        {% if page.flickr_album %}
+        <a href="{{ page.flickr_album }}" target="_blank" rel="noopener" style="display:inline-block; background:#ff0084; color:#fff; border-radius:50px; padding:8px 20px; font-size:0.85rem; font-weight:600; text-decoration:none; margin-right:8px;">
+          <i class="bx bxl-flickr"></i> Flickr 相簿
+        </a>
+        {% endif %}
+        <a href="{{ '/blog/' | relative_url }}" style="display:inline-block; color:#E5A300; font-size:0.85rem; text-decoration:none;">&larr; 返回精選寫真</a>
+      </div>
+
       <div class="post-content">
         {{ content }}
+      </div>
+
+      <div class="text-center mt-4 mb-4">
+        <a href="{{ '/blog/' | relative_url }}" style="color:#E5A300;">&larr; 返回精選寫真</a>
       </div>
 
     </div>
