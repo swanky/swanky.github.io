@@ -47,3 +47,8 @@ defaults:
       path: "nft"
     values:
       layout: null
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed

@@ -19,14 +19,14 @@ layout: default
       {% if page.model_social %}
       <div class="text-center mb-4">
         {% for link in page.model_social %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener" style="color:#E5A300; margin: 0 8px;"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" style="color:#E5A300; margin: 0 8px;"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>
         {% endfor %}
       </div>
       {% endif %}
 
       <div class="text-center mb-4">
         {% if page.flickr_album %}
-        <a href="{{ page.flickr_album }}" target="_blank" rel="noopener" style="display:inline-block; background:#ff0084; color:#fff; border-radius:50px; padding:8px 20px; font-size:0.85rem; font-weight:600; text-decoration:none; margin-right:8px;">
+        <a href="{{ page.flickr_album }}" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ff0084; color:#fff; border-radius:50px; padding:8px 20px; font-size:0.85rem; font-weight:600; text-decoration:none; margin-right:8px;">
           <i class="bx bxl-flickr"></i> Flickr 相簿
         </a>
         {% endif %}

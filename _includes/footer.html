@@ -17,11 +17,9 @@
           <h3>社群平台</h3>
           <p>熱愛攝影、研究區塊鏈，有什麼新奇有趣的項目嗎？任何合作歡迎洽詢聯繫。</p>
           <div class="social-links mt-3">
-            <a href="https://www.youtube.com/user/swanbear" class="youtube"><i class="bx bxl-youtube"></i></a>
-            <a href="https://www.facebook.com/SwankyParty" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://x.com/swanky" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/swanky" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://www.flickr.com/photos/swanky-hsiao/" class="flickr"><i class="bx bxl-flickr"></i></a>
+            {% for link in site.data.social_links %}
+            <a href="{{ link.url }}" class="{{ link.class }}" target="_blank" rel="noopener noreferrer" aria-label="{{ link.name }}"><i class="bx {{ link.icon }}"></i></a>
+            {% endfor %}
           </div>
         </div>
 
@@ -31,7 +29,7 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong><span>Swanky</span></strong>. All Rights Reserved
+      &copy; {{ 'now' | date: '%Y' }} <strong><span>Swanky Studio</span></strong>. All Rights Reserved
     </div>
   </div>
 </footer><!-- End Footer -->

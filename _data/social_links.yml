@@ -1,0 +1,24 @@
+- name: YouTube
+  url: https://www.youtube.com/user/swanbear
+  icon: bxl-youtube
+  class: youtube
+
+- name: Facebook
+  url: https://www.facebook.com/SwankyParty
+  icon: bxl-facebook
+  class: facebook
+
+- name: X (Twitter)
+  url: https://x.com/swanky
+  icon: bxl-twitter
+  class: twitter
+
+- name: LinkedIn
+  url: https://www.linkedin.com/in/swanky
+  icon: bxl-linkedin
+  class: linkedin
+
+- name: Flickr
+  url: https://www.flickr.com/photos/swanky-hsiao/
+  icon: bxl-flickr
+  class: flickr

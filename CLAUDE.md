@@ -4,32 +4,71 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Jekyll-based portfolio site for Swanky Studio (史旺基工作室) hosted on GitHub Pages. Uses Jekyll's template system with layouts, includes, and front matter. All content is in Traditional Chinese (zh-TW).
+Jekyll-based portfolio site for Swanky Studio (史旺基工作室) hosted on GitHub Pages. Based on the Moderna template (BootstrapMade). All content is in Traditional Chinese (zh-TW).
+
+## Development Commands
+
+```bash
+bundle install                  # Install dependencies
+bundle exec jekyll serve        # Local dev server at http://127.0.0.1:4000
+bundle exec jekyll serve --drafts  # Include _drafts/ posts
+bundle exec jekyll build        # Build to _site/
+```
+
+Deployment is automatic — GitHub Pages rebuilds on push to `master`.
 
 ## Architecture
 
-- **`_config.yml`** — Jekyll site configuration
-- **`Gemfile`** — GitHub Pages gem dependency
-- **`_layouts/`** — Page templates: `default.html` (base), `home.html` (pass-through), `page.html` (standard), `post.html` (blog)
-- **`_includes/`** — Shared partials: `head.html`, `header.html`, `footer.html`, `scripts.html`
-- **`_posts/`** — Blog posts (photo gallery entries)
-- **`assets/`** — Static files: CSS, JS, vendor libs, images
-- **`nft/`** — Separate mini-site (not processed by Jekyll, has its own CSS/JS)
+### Layout Inheritance
+
+All layouts extend `default.html`, which assembles the page from includes:
+
+```
+default.html  →  head.html + header.html + {{ content }} + footer.html + scripts.html
+  ├─ home.html      — Pass-through (used by index, blog, technical, education pages)
+  ├─ page.html      — Standard page wrapper
+  ├─ post.html      — Blog/photo gallery posts
+  └─ article.html   — Articles collection entries
+```
+
+### Content Collections
+
+- **`_posts/`** — Photo gallery blog posts (HTML). Front matter includes `model_name`, `model_social`, `flickr_album`, `photo_count`, `cover_image`.
+- **`_articles/`** — Technical/Web3 articles (Markdown). Front matter includes `source_url` (LinkedIn link), `cover_image`, `description`.
+- **Subdirectory pages** — `photography/`, `modeling/`, `cryptocurrency/` contain nested HTML pages for each section.
 
 ### Front Matter Variables
 
-Pages use these custom front matter fields:
+Pages use these custom fields:
 - `nav_active` — Highlights the active nav item (`home`, `photography`, `technical`, `education`, `nft`, `archive`, `blog`)
 - `header_transparent` — Set to `true` for transparent header (only on index.html)
 - `extra_css` — Inline CSS injected into `<style>` tag in head
 - `extra_head` — Additional HTML injected into `<head>`
+- `use_isotope` — Loads Isotope JS (photography grid pages)
+- `use_glightbox` — Loads GLightbox CSS+JS (photography lightbox pages)
+- `use_purecounter` — Loads PureCounter JS (cryptocurrency/modeling pages)
 
 ### Asset Paths
 
-Always use Jekyll's `relative_url` filter for asset paths:
-```
+Always use Jekyll's `relative_url` filter:
+```liquid
 {{ '/assets/img/example.jpg' | relative_url }}
 ```
+
+### Data Files (`_data/`)
+
+- `services.yml` — Homepage service cards (title, icon, color, description)
+- `social_links.yml` — Footer social media links (used via `{% for %}` loop)
+
+### Vendor Libraries (bundled in assets/vendor/)
+
+Bootstrap (grid/components), AOS (scroll animations via `data-aos`), Isotope (masonry grids, conditional), GLightbox (lightboxes, conditional), PureCounter (animated counters, conditional), Animate.css, Boxicons, Bootstrap Icons. Isotope/GLightbox/PureCounter are loaded conditionally via front matter flags — see Front Matter Variables above.
+
+### Brand Colors
+
+- Primary gold: `#E5A300`
+- Secondary yellow: `#F5C53B`
+- Accent blue: `#4fa6d5`
 
 ## Content & Tone Guidelines (內容與語氣規範)
 
