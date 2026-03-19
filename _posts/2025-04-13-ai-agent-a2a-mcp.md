@@ -1,6 +1,7 @@
 ---
 title: "AI Agent 協作的未來：Google A2A × Anthropic MCP 架構整合解析"
 date: 2025-04-13
+categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/ai-agent-a2a-mcp.svg
 source_url: "https://www.linkedin.com/pulse/ai-agent-%E5%8D%94%E4%BD%9C%E7%9A%84%E6%9C%AA%E4%BE%86google-a2a-anthropic-mcp-%E6%9E%B6%E6%A7%8B%E6%95%B4%E5%90%88%E8%A7%A3%E6%9E%90-swanky-hsiao-cl8ac"

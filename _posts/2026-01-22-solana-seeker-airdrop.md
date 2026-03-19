@@ -1,6 +1,7 @@
 ---
 title: "Web3 的下個入口在手機？解析 Solana Seeker 如何用「硬體＋空投」改寫用戶分發邏輯"
 date: 2026-01-22
+categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/solana-seeker.jpg
 source_url: "https://www.linkedin.com/pulse/web3-%E7%9A%84%E4%B8%8B%E5%80%8B%E5%85%A5%E5%8F%A3%E5%9C%A8%E6%89%8B%E6%A9%9F%E8%A7%A3%E6%9E%90-solana-seeker-%E5%A6%82%E4%BD%95%E7%94%A8%E7%A1%AC%E9%AB%94%E7%A9%BA%E6%8A%95%E6%94%B9%E5%AF%AB%E7%94%A8%E6%88%B6%E5%88%86%E7%99%BC%E9%82%8F%E8%BC%AF-swanky-hsiao-tcjxc"

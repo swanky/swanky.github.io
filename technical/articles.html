@@ -17,7 +17,7 @@ nav_active: technical
     <div class="container">
 
       <div class="row">
-        {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+        {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
         {% for article in sorted_articles %}
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
           <div class="card">

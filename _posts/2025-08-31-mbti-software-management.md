@@ -1,6 +1,7 @@
 ---
 title: "用 MBTI 看見差異：從溫伯格的軟體管理學談軟體團隊管理"
 date: 2025-08-31
+categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/mbti-management.jpg
 source_url: "https://www.linkedin.com/pulse/%E7%94%A8-mbti-%E7%9C%8B%E8%A6%8B%E5%B7%AE%E7%95%B0%E5%BE%9E%E6%BA%AB%E4%BC%AF%E6%A0%BC%E7%9A%84%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E5%AD%B8%E8%AB%87%E8%BB%9F%E9%AB%94%E5%9C%98%E9%9A%8A%E7%AE%A1%E7%90%86-swanky-hsiao-4tync"

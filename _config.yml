@@ -10,13 +10,7 @@ github_username: swanky
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
-
-# Collections
-collections:
-  articles:
-    output: true
-    permalink: /articles/:title/
+permalink: /:categories/:title/
 
 # Exclude from processing
 exclude:

@@ -19,27 +19,28 @@
                 <li><a href="{{ '/photography/personal-works/' | relative_url }}">個人</a></li>
                 <li><a href="{{ '/photography/commercial-works/' | relative_url }}">商業</a></li>
                 <li><a href="{{ '/photography/flickr-gallery/' | relative_url }}">Flickr 相簿</a></li>
-                {% if site.posts.size > 0 %}
-                <li><a href="{{ '/blog/' | relative_url }}">精選寫真</a></li>
+                {% if site.categories.photography.size > 0 %}
+                <li><a href="{{ '/photography/gallery/' | relative_url }}">精選寫真</a></li>
                 {% endif %}
               </ul>
             </li>
-            <li><a href="{{ '/archive/' | relative_url }}">歷年記錄</a></li>
+            <li><a href="{{ '/photography/archive/' | relative_url }}">歷年記錄</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="{{ '/technical-adviser/' | relative_url }}"{% if page.nav_active == 'technical' %} class="active"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/technical/' | relative_url }}"{% if page.nav_active == 'technical' %} class="active"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ '/technical-adviser/' | relative_url }}">總覽</a></li>
-            <li><a href="{{ '/technical-articles/' | relative_url }}">專欄文章</a></li>
+            <li><a href="{{ '/technical/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/technical/articles/' | relative_url }}">專欄文章</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="{{ '/education-training/' | relative_url }}"{% if page.nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/education/' | relative_url }}"{% if page.nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ '/education-training/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/education/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/modeling/' | relative_url }}">模特兒課程</a></li>
             <li><a href="{{ '/cryptocurrency/' | relative_url }}">加密貨幣課程</a></li>
           </ul>
         </li>
+        <li><a {% if page.nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
         <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>

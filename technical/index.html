@@ -121,7 +121,7 @@ nav_active: technical
       </div>
 
       <div class="row">
-        {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+        {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
         {% for article in sorted_articles limit:6 %}
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
           <div class="card">
@@ -140,7 +140,7 @@ nav_active: technical
       </div>
 
       <div class="text-center mt-4">
-        <a href="{{ '/technical-articles' | relative_url }}" class="btn-get-started" style="display:inline-block; padding:10px 30px; background:#E5A300; color:#fff; border-radius:4px; text-decoration:none;">查看所有專欄文章</a>
+        <a href="{{ '/technical/articles/' | relative_url }}" class="btn-get-started" style="display:inline-block; padding:10px 30px; background:#E5A300; color:#fff; border-radius:4px; text-decoration:none;">查看所有專欄文章</a>
       </div>
 
     </div>
