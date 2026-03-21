@@ -3742,3 +3742,34 @@ section.testimonials {
     padding: 10px 12px;
   }
 }
+
+/*--------------------------------------------------------------
+# Performance: disable parallax on touch/iOS devices
+# background-attachment: fixed causes repaint every scroll frame
+# on iOS Safari, which ignores it anyway and falls back to scroll
+--------------------------------------------------------------*/
+@media (pointer: coarse) {
+  .reviews-area,
+  .reviews_a,
+  .reviews_b,
+  .reviews_c,
+  .about .container,
+  .fillpic,
+  .fillpic-edub,
+  .fillpic-edub-NFT {
+    background-attachment: scroll;
+  }
+}
+
+/*--------------------------------------------------------------
+# Accessibility: respect prefers-reduced-motion for AOS
+# Users with vestibular disorders need motion to be disabled
+--------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

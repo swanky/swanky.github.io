@@ -175,7 +175,8 @@
       duration: 1000,
       easing: "ease-in-out",
       once: true,
-      mirror: false
+      mirror: false,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
     });
   });
 
