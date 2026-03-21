@@ -3272,7 +3272,7 @@ section.team {
 
 /* --- Font & scale tokens --- */
 :root {
-  --font-display: "Playfair Display", "Songti SC", "STSong", "PMingLiU", "新細明體", Georgia, serif;
+  --font-display: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", "PMingLiU", "新細明體", Georgia, serif;
   --font-sans:    "Lato", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 
   --text-xs:   0.8rem;    /* ~12.8px — captions, labels      */
@@ -3348,10 +3348,20 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   font-family: var(--font-sans);
 }
 
-/* --- Service titles: inherit display (h4 → Playfair) --- */
+/* --- Service titles: UI labels, not editorial — use sans --- */
 .services .title {
+  font-family: var(--font-sans);
   font-size: var(--text-xl);
   line-height: 1.3;
+}
+
+/* --- Review strip headings: category labels, not editorial --- */
+/* "攝影寫真", "技術顧問", "教育訓練" are navigation labels     */
+.work-right-text h2 {
+  font-family: var(--font-sans);
+}
+.work-right-text h5 {
+  font-family: var(--font-sans);
 }
 
 /* --- Bio section labels: UI, not editorial — keep sans --- */
