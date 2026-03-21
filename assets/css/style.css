@@ -3285,3 +3285,122 @@ section.team {
     font-size: 22px;
   }
 }
+
+/*--------------------------------------------------------------
+# Typography — Editorial Identity
+--------------------------------------------------------------*/
+
+/* --- Font & scale tokens --- */
+:root {
+  --font-display: "Playfair Display", "Songti SC", "STSong", "PMingLiU", "新細明體", Georgia, serif;
+  --font-sans:    "Lato", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+
+  --text-xs:   0.8rem;    /* ~12.8px — captions, labels      */
+  --text-sm:   0.9rem;    /* ~14.4px — secondary text        */
+  --text-base: 1rem;      /*  16px   — body                  */
+  --text-lg:   1.125rem;  /*  18px   — subheadings, labels   */
+  --text-xl:   1.375rem;  /*  22px   — card headings         */
+  --text-2xl:  1.75rem;   /*  28px   — section titles        */
+  --text-3xl:  2.25rem;   /*  36px   — major headings        */
+  --text-4xl:  3rem;      /*  48px   — hero                  */
+}
+
+/* --- Base body --- */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- All headings: editorial serif --- */
+h1, h2, h3, h4, h5, h6, .font-primary {
+  font-family: var(--font-display);
+  line-height: 1.25;
+}
+
+/* --- Navigation: UI element, stays sans --- */
+.navbar a,
+.navbar-mobile a {
+  font-family: var(--font-sans);
+}
+
+/* --- Buttons: action labels stay sans --- */
+.hero .btn-get-started,
+#hero-no-slider .btn-get-started,
+.fillpic .btn-get-started,
+.fillpic-edub .btn-get-started,
+.reviews_a .btn-get-started,
+.reviews_b .btn-get-started,
+.reviews_c .btn-get-started,
+.portfolio .btn-get-started,
+.pricing .get-started-btn {
+  font-family: var(--font-sans);
+}
+
+/* --- Portfolio filter tabs --- */
+.portfolio #portfolio-flters li {
+  font-family: var(--font-sans);
+}
+
+/* --- Counter/stat labels --- */
+.facts .counters p {
+  font-family: var(--font-sans);
+}
+
+/* --- Hero: fluid display heading --- */
+#hero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* --- Section titles: more presence, refined tracking --- */
+.section-title h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* --- Service card numbers: sans for numerical clarity --- */
+.services .icon-box::before {
+  font-family: var(--font-sans);
+}
+
+/* --- Service titles: inherit display (h4 → Playfair) --- */
+.services .title {
+  font-size: var(--text-xl);
+  line-height: 1.3;
+}
+
+/* --- Bio section labels: UI, not editorial — keep sans --- */
+.why-us .icon-box .title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+/* --- Bio body text: full 16px for Chinese readability --- */
+.why-us .icon-box .description {
+  font-size: var(--text-base);
+  line-height: 1.75;
+}
+
+/* --- Testimonial quote body --- */
+.testimonials .testimonial-item p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.85;
+}
+
+/* --- Team body text --- */
+.team .member .member-info p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.75;
+}
+
+/* --- Footer: consistent sans --- */
+#footer {
+  font-family: var(--font-sans);
+}
