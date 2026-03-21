@@ -3404,3 +3404,43 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #footer {
   font-family: var(--font-sans);
 }
+
+/*--------------------------------------------------------------
+# Color — Warm Intentional Palette
+--------------------------------------------------------------*/
+
+/* Body: subtle warm tint replaces cold #f7f7f7
+   Barely perceptible, but creates subconscious cohesion
+   with the team section (#faf8f5) and cream tints below */
+body {
+  background-color: #faf9f7;
+}
+
+/* Links: warm amber replaces jarring cool blue (#4fa6d5)
+   #8B5E00 on white = 5.7:1 contrast — WCAG AA passes ✓
+   Stays firmly in the gold/amber family, never cold */
+a {
+  color: #8B5E00;
+}
+
+/* Hover: brand gold flash — satisfying, on-brand */
+a:hover {
+  color: #E5A300;
+}
+
+/* Alternating section-bg: warm neutral, not cold office gray */
+.section-bg {
+  background-color: #f5f2ee;
+}
+
+/* Services section: warm cream so white icon-box cards read
+   as floating islands rather than invisible on white body */
+section.services {
+  background-color: #fdf8f2;
+}
+
+/* Testimonials: carves out its own warm zone between
+   the bio panel and the dark parallax strips */
+section.testimonials {
+  background-color: #fdf8f2;
+}
