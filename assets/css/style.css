@@ -3272,7 +3272,7 @@ section.team {
 
 /* --- Font & scale tokens --- */
 :root {
-  --font-display: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", "PMingLiU", "新細明體", Georgia, serif;
+  --font-display: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif;
   --font-sans:    "Lato", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 
   --text-xs:   0.8rem;    /* ~12.8px — captions, labels      */
