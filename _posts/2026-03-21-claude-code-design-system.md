@@ -3,7 +3,7 @@ title: "從工程師到設計通才：利用 Claude Code 與三層架構打造 A
 date: 2026-03-21 12:00:00 +0800
 categories: [claude-code]
 layout: article
-nav_active: ai-tutorial
+nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-design-system.svg
 description: "透過三層設計裝備系統（Skills、Canvas、Inspiration）與 Claude Code，任何工程師都能穩定交付高品質、具備專業感的產品介面。"
 ---

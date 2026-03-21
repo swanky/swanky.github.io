@@ -4,7 +4,7 @@ date: 2026-03-21
 categories: [claude-code]
 tags: [claude-code]
 layout: article
-nav_active: ai-tutorial
+nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-magic-guide.svg
 description: "從對話品質管理、成本優化到跨裝置協作，以顧問實戰視角整理 Claude Code 最值得掌握的進階用法。"
 ---
