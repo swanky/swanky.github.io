@@ -112,6 +112,39 @@ nav_active: technical
     </div>
   </section><!-- End Why Us Section -->
 
+  <!-- ======= Claude Code Section ======= -->
+  <section class="service-details section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Claude Code 學習分享</h2>
+        <p>終端機 AI 協作開發的實戰技巧與指令速查，帶你從初學到進階掌握開發加速魔法</p>
+      </div>
+
+      <div class="row">
+        {% assign claude_code_articles = site.categories.technical | where_exp: "item", "item.tags contains 'claude-code'" | sort: "date" | reverse %}
+        {% for article in claude_code_articles %}
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
+          <div class="card">
+            {% if article.cover_image %}
+            <div class="card-img">
+              <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}"></a>
+            </div>
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h5>
+              <p class="card-text">{{ article.date | date: "%Y-%m-%d" }}</p>
+              {% if article.description %}
+              <p class="card-text text-muted small">{{ article.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section><!-- End Claude Code Section -->
+
   <!-- ======= Articles Section ======= -->
   <section class="service-details">
     <div class="container">
