@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 1030;
   background: #F5C53B;
   width: 40px;
   height: 40px;
@@ -422,7 +422,9 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   text-decoration: none;
 }
 
-.fillpic .btn-get-started {
+.fillpic .btn-get-started,
+.fillpic-edub .btn-get-started,
+.fillpic-edub-NFT .btn-get-started {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -440,31 +442,9 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   border: 2px solid #E5A300;
 }
 
-.fillpic .btn-get-started:hover {
-  background: #000;
-  color: #F5C53B;
-  border: 2px solid #000;
-  text-decoration: none;
-}
-.fillpic-edub .btn-get-started {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #FFF;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  background: #E5A300;
-  border: 2px solid #E5A300;
-}
-
-.fillpic-edub .btn-get-started:hover {
+.fillpic .btn-get-started:hover,
+.fillpic-edub .btn-get-started:hover,
+.fillpic-edub-NFT .btn-get-started:hover {
   background: #000;
   color: #F5C53B;
   border: 2px solid #000;
@@ -669,7 +649,7 @@ section {
 
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
-    display: block !important;
+    display: block;
   }
   .breadcrumbs ol {
     display: block;
@@ -2848,7 +2828,7 @@ padding-bottom: 56.25%;
   background: #222;
   padding: 0 0 30px 0;
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 #footer .footer-newsletter {
@@ -3510,6 +3490,8 @@ section.testimonials {
   font-size: var(--text-base);
   line-height: 1.85;
   color: #2d2926;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .post-content > p {
