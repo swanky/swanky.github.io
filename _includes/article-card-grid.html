@@ -3,7 +3,7 @@
   <div class="card">
     {% if article.cover_image %}
     <div class="card-img">
-      <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}"></a>
+      <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy"></a>
     </div>
     {% endif %}
     <div class="card-body">

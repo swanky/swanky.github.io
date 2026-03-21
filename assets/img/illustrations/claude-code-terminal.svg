@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" fill="none">
+  <!-- Background -->
+  <rect width="360" height="240" fill="#1a1a2e"/>
+  <!-- Terminal window -->
+  <rect x="30" y="30" width="300" height="180" rx="10" fill="#16213e"/>
+  <!-- Title bar -->
+  <rect x="30" y="30" width="300" height="32" rx="10" fill="#0f3460"/>
+  <rect x="30" y="48" width="300" height="14" fill="#0f3460"/>
+  <!-- Traffic lights -->
+  <circle cx="55" cy="46" r="6" fill="#ff5f57"/>
+  <circle cx="74" cy="46" r="6" fill="#febc2e"/>
+  <circle cx="93" cy="46" r="6" fill="#28c840"/>
+  <!-- Terminal title -->
+  <text x="180" y="51" text-anchor="middle" font-family="monospace" font-size="11" fill="#8892b0">claude — bash</text>
+  <!-- Prompt lines -->
+  <text x="50" y="88" font-family="monospace" font-size="12" fill="#E5A300">$ </text>
+  <text x="68" y="88" font-family="monospace" font-size="12" fill="#cdd6f4">claude "幫我重構這段程式碼"</text>
+  <!-- Response -->
+  <text x="50" y="110" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 已分析 3 個檔案</text>
+  <text x="50" y="128" font-family="monospace" font-size="11" fill="#89dceb">  重構完成，效能提升 40%</text>
+  <!-- Second prompt -->
+  <text x="50" y="152" font-family="monospace" font-size="12" fill="#E5A300">$ </text>
+  <text x="68" y="152" font-family="monospace" font-size="12" fill="#cdd6f4">claude "寫測試"</text>
+  <text x="50" y="172" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 新增 12 個單元測試</text>
+  <!-- Blinking cursor -->
+  <rect x="50" y="186" width="8" height="14" fill="#E5A300" opacity="0.8"/>
+</svg>
