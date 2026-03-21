@@ -77,6 +77,34 @@ Bootstrap (grid/components), AOS (scroll animations via `data-aos`), Isotope (ma
 - **Tone**: Maintain a professional, experienced, yet passionate tone suitable for a studio portfolio and a technical leader.
 - **SEO & Accessibility**: Always ensure new images (especially photography works) have descriptive `alt` attributes for SEO and accessibility.
 
+## Design Context
+
+### Users
+Four overlapping audiences visit this site:
+1. **Photography clients** — individuals or brands considering hiring Swanky for portrait/commercial shoots
+2. **Tech/corporate partners** — companies seeking blockchain consulting, agile coaching, or technical leadership
+3. **Photography fans and followers** — people who follow Swanky's award-winning work (PX3, IPA, TIME Magazine)
+4. **Media and press** — journalists, editors, publishers looking for bio, coverage, and contact info
+
+### Brand Personality
+**親切 × 多才多藝** — Approachable and Versatile. Three-word personality: **Genuine · Multifaceted · Distinguished**
+
+Swanky spans two worlds: award-winning portrait photographer (TIME Magazine, PX3 France, IPA USA) and senior tech leader (Taiwan Mobile manager, PhD NTNU, blockchain researcher, agile coach). Warm and human, not cold and corporate; accomplished but not arrogant.
+
+### Aesthetic Direction
+**Mixed creative professional** — editorial warmth, art + tech. Not purely a photographer's portfolio nor a tech consultant's site. Think editorial magazine: visual, curated, human — with enough gravitas for serious professional credentials.
+
+- **Theme**: Light mode, editorial warmth. Gold (#E5A300) is a signature, not just a button color.
+- **Photography**: Award-winning work should be the hero. Images should breathe and dominate.
+- **NOT**: Cold blue tech startup, dark mode with glowing accents, generic Bootstrap template feel.
+
+### Design Principles
+1. **Lead with craft** — The photography is TIME Magazine level. The site should feel worthy of that work.
+2. **One identity, many facets** — Present one coherent, multi-dimensional person — not siloed "photographer" vs. "tech guy."
+3. **Gold as signature** — Use #E5A300 with intention as accent, highlight, and identity marker.
+4. **Editorial rhythm** — Vary section treatments dramatically to create a magazine-like reading experience.
+5. **Chinese-first confidence** — Fully commit to zh-TW. Mixed Chinese/English CTAs should be resolved.
+
 ## Known Gotchas
 
 - **Isotope + `loading="lazy"` conflict**: On pages using Isotope grid layout (like `for-your-safety.html`), do NOT use `loading="lazy"` on images. Lazy images don't block `window.load`, causing Isotope to calculate layout before images have dimensions, resulting in collapsed layouts.

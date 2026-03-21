@@ -3017,3 +3017,271 @@ padding-bottom: 56.25%;
 #footer .credits a {
   color: #E5A300;
 }
+
+/*--------------------------------------------------------------
+# Layout Improvements — Editorial Rhythm & Spatial Hierarchy
+--------------------------------------------------------------*/
+
+/* Spacing scale — named tokens so variations are intentional */
+:root {
+  --sw-tight:    40px;
+  --sw-base:     60px;
+  --sw-open:     90px;
+  --sw-generous: 120px;
+}
+
+/* --- Varied Section Cadence ---
+   Services  : tighter — it's an intro panel, not a destination
+   Why-Us    : most generous — anchor content about the person
+   Testimonials: quiet / contained
+   Team      : open, airy
+*/
+section.services {
+  padding-top: var(--sw-open);
+  padding-bottom: var(--sw-tight);
+}
+
+section.why-us {
+  padding-top: var(--sw-generous);
+  padding-bottom: var(--sw-generous);
+}
+
+section.testimonials {
+  padding: var(--sw-open) 0;
+}
+
+section.team {
+  padding-top: var(--sw-open);
+  padding-bottom: var(--sw-base);
+}
+
+/* --- Service Cards: Editorial Numbered Style --- */
+
+/* Counter setup: 01 / 02 / 03 */
+.services .row {
+  counter-reset: service-card;
+}
+.services .row > div {
+  counter-increment: service-card;
+}
+
+/* Hide the circular colored icon — it's the core anti-pattern */
+.services .icon {
+  display: none;
+}
+
+/* Left-align, remove colored border, add quiet top rule */
+.services .icon-box {
+  text-align: left;
+  padding: 40px 36px 36px;
+  border: none;
+  border-top: 3px solid #ececec;
+  box-shadow: 0 2px 20px 0 rgba(200, 200, 200, 0.35);
+  transition: border-top-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Large editorial number before the title */
+.services .icon-box::before {
+  content: counter(service-card, decimal-leading-zero);
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #E5A300;
+  line-height: 1;
+  margin-bottom: 22px;
+  letter-spacing: -1px;
+  opacity: 0.8;
+}
+
+/* Unified gold hover — replaces pink/cyan/green */
+.services .icon-box-pink:hover,
+.services .icon-box-cyan:hover,
+.services .icon-box-green:hover,
+.services .icon-box-blue:hover {
+  border-top-color: #E5A300;
+  box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
+}
+
+/* Title: slightly more presence */
+.services .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Description: Chinese-optimized line height */
+.services .description {
+  line-height: 1.8;
+  color: #555;
+  font-size: 15px;
+}
+
+/* --- Bio Section (Why-Us): Tighter Rhythm, Less Mechanical --- */
+
+/* Reduce gap between icon-boxes slightly */
+.why-us .icon-box {
+  margin-top: 36px;
+}
+
+/* Soften icon backgrounds — warm tint instead of cold gray */
+.why-us .icon-box .icon {
+  background: #fdf5e0;
+  border-radius: 8px;
+}
+.why-us .icon-box:hover .icon {
+  background: #E5A300;
+}
+
+/* Remove ALL-CAPS from bio section titles */
+.why-us .icon-box .title {
+  text-transform: none;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: #2a2a2a;
+}
+
+/* Description: better line height for Chinese text */
+.why-us .icon-box .description {
+  line-height: 1.75;
+  color: #555;
+}
+
+/* --- Testimonials: Left-Aligned, One Centered Column --- */
+
+/* Left-align and constrain the single testimonial block */
+.testimonials .testimonial-item {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Large opening quote mark — the visual anchor */
+.testimonials .testimonial-item .quote-icon-left {
+  font-size: 52px;
+  color: #E5A300;
+  opacity: 0.45;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+/* Hide the closing quote — redundant visual noise */
+.testimonials .testimonial-item .quote-icon-right {
+  display: none;
+}
+
+/* Body: more readable, slightly larger */
+.testimonials .testimonial-item p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3a3a3a;
+}
+
+/* Attribution: left-aligned */
+.testimonials .testimonial-item h3 {
+  text-align: left;
+  margin-top: 28px;
+  font-size: 18px;
+}
+.testimonials .testimonial-item h4 {
+  text-align: left;
+  font-size: 13px;
+  color: #888;
+}
+
+/* --- Reviews (Parallax Strips): Softer, More Readable Text --- */
+
+/* Remove aggressive uppercase from strip headings */
+.work-right-text h2 {
+  text-transform: none;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+/* Subheading: lighter weight, better line height */
+.work-right-text h5 {
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* --- Team / Other Experiences: Warmer Background & Better Cards --- */
+
+/* Replace cold #f7f7f7 with warm off-white */
+.team {
+  background: #faf8f5;
+}
+
+/* More breathing between cards */
+.team .member {
+  margin-bottom: 36px;
+}
+
+/* Member title: slightly more breathing above */
+.team .member .member-info h4 {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* Span/date: refined — gold, small, uppercase */
+.team .member .member-info span {
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #C47F00;
+  margin-bottom: 10px;
+}
+
+/* Italic description: better rhythm */
+.team .member .member-info p {
+  line-height: 1.75;
+  font-size: 14px;
+  color: #666;
+}
+
+/* --- Section Title: Slightly More Refined Underline --- */
+
+/* Subtler accent line: 2px height, slightly shorter */
+.section-title h2::after {
+  width: 28px;
+  height: 2px;
+}
+
+/* More intentional breathing below title */
+.section-title {
+  padding-bottom: 44px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+  :root {
+    --sw-tight:    32px;
+    --sw-base:     48px;
+    --sw-open:     64px;
+    --sw-generous: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services .icon-box::before {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .testimonials .testimonial-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .work-right-text h2 {
+    font-size: 22px;
+  }
+}
