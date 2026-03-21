@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#ede4d4"/>
+    </linearGradient>
+    <linearGradient id="chalkboard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3320"/>
+      <stop offset="100%" stop-color="#0f2218"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="370" width="800" height="80" fill="#ddd5c4"/>
+  <line x1="0" y1="370" x2="800" y2="370" stroke="#c4b89c" stroke-width="2"/>
+
+  <!-- Chalkboard -->
+  <rect x="160" y="60" width="480" height="280" rx="4" fill="#0d1f15"/>
+  <rect x="168" y="68" width="464" height="264" rx="2" fill="url(#chalkboard)"/>
+
+  <!-- Board frame decorative screws -->
+  <circle cx="168" cy="68" r="5" fill="#8B5E00" opacity="0.5"/>
+  <circle cx="632" cy="68" r="5" fill="#8B5E00" opacity="0.5"/>
+  <circle cx="168" cy="332" r="5" fill="#8B5E00" opacity="0.5"/>
+  <circle cx="632" cy="332" r="5" fill="#8B5E00" opacity="0.5"/>
+
+  <!-- Chalk writing on board -->
+  <!-- Title line -->
+  <text x="400" y="112" text-anchor="middle" font-size="14" fill="rgba(255,255,255,0.85)" font-family="monospace" letter-spacing="2">區塊鏈技術與應用</text>
+  <line x1="220" y1="120" x2="580" y2="120" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+
+  <!-- Blockchain diagram on board -->
+  <!-- Block 1 -->
+  <g transform="translate(210, 135)">
+    <rect width="80" height="54" rx="3" fill="rgba(229,163,0,0.15)" stroke="#E5A300" stroke-width="1.5"/>
+    <text x="40" y="18" text-anchor="middle" font-size="7" fill="#E5A300" font-family="monospace">Block #N-1</text>
+    <text x="40" y="30" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.6)" font-family="monospace">Hash: 0x3f2a</text>
+    <text x="40" y="42" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.5)" font-family="monospace">Prev: 0x1c9e</text>
+  </g>
+  <!-- Arrow -->
+  <line x1="295" y1="162" x2="320" y2="162" stroke="#E5A300" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <polygon points="315,158 325,162 315,166" fill="#E5A300"/>
+
+  <!-- Block 2 -->
+  <g transform="translate(328, 135)">
+    <rect width="80" height="54" rx="3" fill="rgba(229,163,0,0.25)" stroke="#F5C53B" stroke-width="2"/>
+    <text x="40" y="18" text-anchor="middle" font-size="7" fill="#F5C53B" font-family="monospace" font-weight="bold">Block #N</text>
+    <text x="40" y="30" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.7)" font-family="monospace">Hash: 0x9c4b</text>
+    <text x="40" y="42" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.6)" font-family="monospace">Prev: 0x3f2a</text>
+  </g>
+  <!-- Arrow -->
+  <polygon points="413,158 423,162 413,166" fill="#E5A300"/>
+
+  <!-- Block 3 -->
+  <g transform="translate(432, 135)">
+    <rect width="80" height="54" rx="3" fill="rgba(229,163,0,0.15)" stroke="#E5A300" stroke-width="1.5"/>
+    <text x="40" y="18" text-anchor="middle" font-size="7" fill="#E5A300" font-family="monospace">Block #N+1</text>
+    <text x="40" y="30" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.6)" font-family="monospace">Hash: 0x7d1f</text>
+    <text x="40" y="42" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.5)" font-family="monospace">Prev: 0x9c4b</text>
+  </g>
+
+  <!-- Distributed ledger diagram lower -->
+  <text x="400" y="225" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.6)" font-family="monospace" letter-spacing="1">— 分散式帳本 · Distributed Ledger —</text>
+
+  <!-- Nodes -->
+  <circle cx="260" cy="270" r="14" fill="none" stroke="rgba(229,163,0,0.6)" stroke-width="1.5"/>
+  <circle cx="260" cy="270" r="5" fill="#E5A300" opacity="0.6"/>
+  <circle cx="340" cy="250" r="14" fill="none" stroke="rgba(229,163,0,0.6)" stroke-width="1.5"/>
+  <circle cx="340" cy="250" r="5" fill="#E5A300" opacity="0.6"/>
+  <circle cx="400" cy="280" r="14" fill="none" stroke="rgba(229,163,0,0.6)" stroke-width="1.5"/>
+  <circle cx="400" cy="280" r="5" fill="#E5A300" opacity="0.6"/>
+  <circle cx="460" cy="250" r="14" fill="none" stroke="rgba(229,163,0,0.6)" stroke-width="1.5"/>
+  <circle cx="460" cy="250" r="5" fill="#E5A300" opacity="0.6"/>
+  <circle cx="540" cy="270" r="14" fill="none" stroke="rgba(229,163,0,0.6)" stroke-width="1.5"/>
+  <circle cx="540" cy="270" r="5" fill="#E5A300" opacity="0.6"/>
+  <!-- Node connections -->
+  <g stroke="rgba(229,163,0,0.3)" stroke-width="1">
+    <line x1="274" y1="270" x2="326" y2="254"/>
+    <line x1="354" y1="254" x2="386" y2="276"/>
+    <line x1="414" y1="276" x2="446" y2="254"/>
+    <line x1="474" y1="254" x2="526" y2="268"/>
+    <line x1="274" y1="268" x2="386" y2="274"/>
+    <line x1="414" y1="274" x2="526" y2="268"/>
+  </g>
+
+  <!-- Chalk tray -->
+  <rect x="168" y="332" width="464" height="10" rx="2" fill="#0f1a10"/>
+  <rect x="200" y="334" width="20" height="6" rx="2" fill="rgba(255,255,255,0.7)"/>
+  <rect x="228" y="334" width="12" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <rect x="248" y="334" width="16" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- Lectern -->
+  <polygon points="360,370 440,370 450,420 350,420" fill="#c4a26e"/>
+  <rect x="350" y="418" width="100" height="8" rx="2" fill="#b08050"/>
+  <rect x="362" y="380" width="76" height="50" rx="2" fill="#d4b27e"/>
+  <!-- Book on lectern -->
+  <rect x="368" y="384" width="64" height="44" rx="2" fill="#E5A300" opacity="0.8"/>
+  <line x1="400" y1="384" x2="400" y2="428" stroke="#8B5E00" stroke-width="1"/>
+  <text x="400" y="406" text-anchor="middle" font-size="7" fill="#1a0a2e" font-weight="bold" font-family="serif">區塊鏈</text>
+  <text x="400" y="418" text-anchor="middle" font-size="6" fill="#1a0a2e" font-family="serif">課程</text>
+
+  <!-- Graduation cap icon top-right -->
+  <g transform="translate(630, 60)" opacity="0.4">
+    <ellipse cx="30" cy="22" rx="28" ry="8" fill="#E5A300"/>
+    <rect x="18" y="6" width="24" height="16" rx="2" fill="#E5A300"/>
+    <rect x="26" y="0" width="8" height="8" rx="1" fill="#E5A300"/>
+    <line x1="50" y1="18" x2="58" y2="36" stroke="#E5A300" stroke-width="2"/>
+    <circle cx="58" cy="38" r="4" fill="#E5A300"/>
+  </g>
+
+  <!-- Label bottom -->
+  <text x="400" y="438" text-anchor="middle" font-size="11" fill="#5a4020" font-family="'Lato', sans-serif" letter-spacing="2">東吳大學 · 兼任助理教授 · 第 8 年</text>
+</svg>

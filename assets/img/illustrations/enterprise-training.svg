@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f4ee"/>
+      <stop offset="100%" stop-color="#ede6d8"/>
+    </linearGradient>
+    <linearGradient id="whiteboard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0ece4"/>
+      <stop offset="100%" stop-color="#e8e0d0"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#E5A300"/>
+      <stop offset="100%" stop-color="#F5C53B"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4fa6d5"/>
+      <stop offset="100%" stop-color="#7fc4e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background room -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#e0d5c0"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#c8b898" stroke-width="2"/>
+
+  <!-- Wall panel accent -->
+  <rect x="0" y="0" width="16" height="450" fill="rgba(229,163,0,0.15)"/>
+  <rect x="784" y="0" width="16" height="450" fill="rgba(229,163,0,0.15)"/>
+
+  <!-- Whiteboard -->
+  <rect x="160" y="40" width="480" height="270" rx="4" fill="#ddd8cc" stroke="#c8b898" stroke-width="3"/>
+  <rect x="168" y="48" width="464" height="254" rx="2" fill="url(#whiteboard)"/>
+
+  <!-- Tray -->
+  <rect x="160" y="310" width="480" height="12" rx="2" fill="#c8b898"/>
+  <rect x="180" y="312" width="30" height="8" rx="2" fill="#E5A300" opacity="0.6"/>
+
+  <!-- Board content: training agenda + bar chart -->
+
+  <!-- Title on board -->
+  <text x="400" y="82" text-anchor="middle" font-size="15" fill="#2d2926" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">企業區塊鏈培訓計畫</text>
+  <line x1="200" y1="90" x2="600" y2="90" stroke="#E5A300" stroke-width="2"/>
+
+  <!-- Bar chart area -->
+  <g transform="translate(200, 110)">
+    <!-- Y axis -->
+    <line x1="40" y1="0" x2="40" y2="130" stroke="#8B5E00" stroke-width="1.5"/>
+    <!-- X axis -->
+    <line x1="40" y1="130" x2="360" y2="130" stroke="#8B5E00" stroke-width="1.5"/>
+
+    <!-- Bars -->
+    <rect x="55" y="44" width="34" height="86" rx="2" fill="url(#bar1)" opacity="0.8"/>
+    <rect x="105" y="26" width="34" height="104" rx="2" fill="url(#bar1)" opacity="0.9"/>
+    <rect x="155" y="10" width="34" height="120" rx="2" fill="url(#bar1)"/>
+    <rect x="205" y="34" width="34" height="96" rx="2" fill="url(#bar2)" opacity="0.8"/>
+    <rect x="255" y="18" width="34" height="112" rx="2" fill="url(#bar2)" opacity="0.9"/>
+    <rect x="305" y="6" width="34" height="124" rx="2" fill="url(#bar2)"/>
+
+    <!-- X labels -->
+    <text x="72" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2021Q1</text>
+    <text x="122" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2021Q2</text>
+    <text x="172" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2021Q3</text>
+    <text x="222" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2021Q4</text>
+    <text x="272" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2022Q1</text>
+    <text x="322" y="145" text-anchor="middle" font-size="7" fill="#5a4020" font-family="sans-serif">2022Q2</text>
+
+    <!-- Legend -->
+    <rect x="60" y="158" width="10" height="8" rx="1" fill="#E5A300"/>
+    <text x="76" y="166" font-size="8" fill="#5a4020" font-family="sans-serif">科技業</text>
+    <rect x="130" y="158" width="10" height="8" rx="1" fill="#4fa6d5"/>
+    <text x="146" y="166" font-size="8" fill="#5a4020" font-family="sans-serif">設計業</text>
+    <text x="220" y="166" font-size="8" fill="#8B5E00" font-family="sans-serif" font-weight="bold">共 7 場培訓</text>
+  </g>
+
+  <!-- Key topics list right side -->
+  <g transform="translate(430, 100)">
+    <text x="0" y="0" font-size="10" fill="#5a4020" font-family="'Lato', sans-serif" font-weight="700">培訓主題</text>
+    <line x1="0" y1="6" x2="140" y2="6" stroke="#E5A300" stroke-width="1"/>
+    <text x="10" y="22" font-size="9" fill="#2d2926" font-family="sans-serif">▸ 區塊鏈基礎架構</text>
+    <text x="10" y="38" font-size="9" fill="#2d2926" font-family="sans-serif">▸ NFT 商業應用</text>
+    <text x="10" y="54" font-size="9" fill="#2d2926" font-family="sans-serif">▸ Web3 趨勢分析</text>
+    <text x="10" y="70" font-size="9" fill="#2d2926" font-family="sans-serif">▸ DeFi 實務操作</text>
+    <text x="10" y="86" font-size="9" fill="#2d2926" font-family="sans-serif">▸ 智能合約入門</text>
+  </g>
+
+  <!-- Trainer silhouette (left of board) -->
+  <ellipse cx="118" cy="220" rx="18" ry="26" fill="#2d2926" opacity="0.75"/>
+  <circle cx="118" cy="188" r="14" fill="#2d2926" opacity="0.75"/>
+  <!-- Pointing arm to board -->
+  <line x1="132" y1="208" x2="168" y2="195" stroke="#2d2926" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Trainee desks — row 1 -->
+  <g transform="translate(0, 10)">
+    <!-- Desk 1 -->
+    <rect x="50" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="72" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="72" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <!-- Laptop on desk 1 -->
+    <rect x="68" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="70" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+
+    <!-- Desk 2 -->
+    <rect x="180" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="202" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="202" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="198" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="200" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+
+    <!-- Desk 3 -->
+    <rect x="310" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="332" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="332" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="328" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="330" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+
+    <!-- Desk 4 -->
+    <rect x="440" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="462" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="462" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="458" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="460" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+
+    <!-- Desk 5 -->
+    <rect x="570" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="592" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="592" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="588" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="590" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+
+    <!-- Desk 6 -->
+    <rect x="688" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="710" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="710" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="706" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="708" y="354" width="24" height="14" rx="1" fill="#1a3a6e" opacity="0.5"/>
+  </g>
+
+  <!-- Badge label -->
+  <rect x="570" y="388" width="210" height="38" rx="4" fill="rgba(229,163,0,0.15)"/>
+  <text x="675" y="404" text-anchor="middle" font-size="10" fill="#8B5E00" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">企業內訓</text>
+  <text x="675" y="419" text-anchor="middle" font-size="8" fill="#8B5E00" font-family="'Lato', sans-serif">7 場 · 科技 &amp; 設計產業</text>
+</svg>

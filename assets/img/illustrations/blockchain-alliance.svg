@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1c36"/>
+      <stop offset="100%" stop-color="#1a2f52"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5C53B"/>
+      <stop offset="100%" stop-color="#E5A300"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#1e3a6e" stroke-width="0.5" opacity="0.6">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Connection lines between nodes -->
+  <g stroke="#E5A300" stroke-width="1.5" opacity="0.4">
+    <line x1="220" y1="225" x2="400" y2="150"/>
+    <line x1="220" y1="225" x2="400" y2="300"/>
+    <line x1="400" y1="150" x2="580" y2="225"/>
+    <line x1="400" y1="300" x2="580" y2="225"/>
+    <line x1="400" y1="150" x2="400" y2="300"/>
+    <line x1="220" y1="225" x2="100" y2="150"/>
+    <line x1="220" y1="225" x2="100" y2="300"/>
+    <line x1="580" y1="225" x2="700" y2="150"/>
+    <line x1="580" y1="225" x2="700" y2="300"/>
+  </g>
+
+  <!-- Blockchain blocks — hex style via rotated rect -->
+  <!-- Central top node -->
+  <g filter="url(#glow)">
+    <rect x="368" y="118" width="64" height="64" rx="8" fill="none" stroke="url(#gold)" stroke-width="2" transform="rotate(0 400 150)"/>
+    <rect x="372" y="122" width="56" height="56" rx="6" fill="#0f1c36" opacity="0.8"/>
+    <text x="400" y="154" text-anchor="middle" font-size="22" fill="#E5A300" font-family="monospace" font-weight="bold">⛓</text>
+  </g>
+
+  <!-- Central bottom node -->
+  <g filter="url(#glow)">
+    <rect x="368" y="268" width="64" height="64" rx="8" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    <rect x="372" y="272" width="56" height="56" rx="6" fill="#0f1c36" opacity="0.8"/>
+    <text x="400" y="304" text-anchor="middle" font-size="22" fill="#E5A300" font-family="monospace" font-weight="bold">⛓</text>
+  </g>
+
+  <!-- Left node -->
+  <g filter="url(#glow)">
+    <rect x="188" y="193" width="64" height="64" rx="8" fill="none" stroke="#4fa6d5" stroke-width="2"/>
+    <rect x="192" y="197" width="56" height="56" rx="6" fill="#0f1c36" opacity="0.8"/>
+    <text x="220" y="229" text-anchor="middle" font-size="20" fill="#4fa6d5" font-family="monospace">◈</text>
+  </g>
+
+  <!-- Right node -->
+  <g filter="url(#glow)">
+    <rect x="548" y="193" width="64" height="64" rx="8" fill="none" stroke="#4fa6d5" stroke-width="2"/>
+    <rect x="552" y="197" width="56" height="56" rx="6" fill="#0f1c36" opacity="0.8"/>
+    <text x="580" y="229" text-anchor="middle" font-size="20" fill="#4fa6d5" font-family="monospace">◈</text>
+  </g>
+
+  <!-- Small satellite nodes -->
+  <circle cx="100" cy="150" r="16" fill="none" stroke="#E5A300" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="100" cy="150" r="6" fill="#E5A300" opacity="0.5"/>
+  <circle cx="100" cy="300" r="16" fill="none" stroke="#E5A300" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="100" cy="300" r="6" fill="#E5A300" opacity="0.5"/>
+  <circle cx="700" cy="150" r="16" fill="none" stroke="#E5A300" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="700" cy="150" r="6" fill="#E5A300" opacity="0.5"/>
+  <circle cx="700" cy="300" r="16" fill="none" stroke="#E5A300" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="700" cy="300" r="6" fill="#E5A300" opacity="0.5"/>
+
+  <!-- TBSI Label -->
+  <rect x="280" y="390" width="240" height="40" rx="4" fill="#E5A300" opacity="0.12"/>
+  <text x="400" y="416" text-anchor="middle" font-size="13" fill="#E5A300" font-family="'Lato', sans-serif" letter-spacing="4" font-weight="700">TBSI · 區塊鏈聯盟</text>
+
+  <!-- Top label -->
+  <text x="400" y="44" text-anchor="middle" font-size="11" fill="#4fa6d5" font-family="monospace" letter-spacing="3" opacity="0.8">BLOCKCHAIN INNOVATION ALLIANCE</text>
+</svg>
