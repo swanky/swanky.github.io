@@ -1,8 +1,9 @@
 ---
 title: "Claude Code 初體驗：不到兩小時，我做出了熱錢包前後端"
 date: 2026-03-07
-categories: [technical]
+categories: [claude-code]
 layout: article
+nav_active: ai-tutorial
 cover_image: /assets/img/linkedin/claude-code.jpg
 source_url: "https://www.linkedin.com/pulse/claude-code-%E5%88%9D%E9%AB%94%E9%A9%97%E4%B8%8D%E5%88%B0%E5%85%A9%E5%B0%8F%E6%99%82%E6%88%91%E5%81%9A%E5%87%BA%E4%BA%86%E7%86%B1%E9%8C%A2%E5%8C%85%E5%89%8D%E5%BE%8C%E7%AB%AF-swanky-hsiao-rmrlc"
 description: "用 Claude Code 搭配 Spring Boot，不到兩小時完成熱錢包前後端的實測體驗與未來軟體開發角色轉變的思考。"

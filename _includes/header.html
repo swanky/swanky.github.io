@@ -40,6 +40,7 @@
             <li><a href="{{ '/cryptocurrency/' | relative_url }}">加密貨幣課程</a></li>
           </ul>
         </li>
+        <li><a {% if page.nav_active == 'ai-tutorial' %}class="active" {% endif %}href="{{ '/ai-tutorial/' | relative_url }}">AI工具學習分享</a></li>
         <li><a {% if page.nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
         <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
       </ul>

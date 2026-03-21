@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" width="1200" height="628">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d1a"/>
+      <stop offset="100%" stop-color="#14141f"/>
+    </linearGradient>
+    <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E5A300"/>
+      <stop offset="100%" stop-color="#F5C53B"/>
+    </linearGradient>
+    <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4fa6d5"/>
+      <stop offset="100%" stop-color="#7fc4e8"/>
+    </linearGradient>
+    <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6a5acd"/>
+      <stop offset="100%" stop-color="#9b8fe8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="628" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#1e2035" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="628"/>
+    <line x1="400" y1="0" x2="400" y2="628"/>
+    <line x1="600" y1="0" x2="600" y2="628"/>
+    <line x1="800" y1="0" x2="800" y2="628"/>
+    <line x1="1000" y1="0" x2="1000" y2="628"/>
+  </g>
+
+  <!-- LEFT: Title block -->
+  <text x="80" y="130" font-size="13" fill="#E5A300" font-family="'Lato', monospace" letter-spacing="3" opacity="0.8">CLAUDE CODE × DESIGN SYSTEM</text>
+  <line x1="80" y1="145" x2="380" y2="145" stroke="#E5A300" stroke-width="1.5" opacity="0.5"/>
+
+  <text x="80" y="210" font-size="38" fill="white" font-family="'Lato', sans-serif" font-weight="700">從工程師到</text>
+  <text x="80" y="260" font-size="38" fill="white" font-family="'Lato', sans-serif" font-weight="700">設計通才</text>
+  <text x="80" y="310" font-size="22" fill="#E5A300" font-family="'Lato', sans-serif" font-weight="400" filter="url(#softglow)">利用 Claude Code 與三層架構</text>
+  <text x="80" y="342" font-size="22" fill="#E5A300" font-family="'Lato', sans-serif" font-weight="400" filter="url(#softglow)">打造 AI 設計系統全攻略</text>
+
+  <!-- Author line -->
+  <text x="80" y="410" font-size="13" fill="rgba(255,255,255,0.45)" font-family="'Lato', sans-serif">Swanky Hsiao · 史旺基工作室</text>
+
+  <!-- RIGHT: Three-layer architecture diagram -->
+  <!-- Layer 1: Skills -->
+  <rect x="620" y="80" width="520" height="120" rx="8" fill="rgba(229,163,0,0.08)" stroke="url(#layer1)" stroke-width="1.5"/>
+  <rect x="620" y="80" width="6" height="120" rx="3" fill="url(#layer1)"/>
+  <text x="646" y="116" font-size="11" fill="#E5A300" font-family="monospace" letter-spacing="2">LAYER 1</text>
+  <text x="646" y="140" font-size="18" fill="white" font-family="'Lato', sans-serif" font-weight="700">Skills 專業知識</text>
+  <text x="646" y="162" font-size="12" fill="rgba(255,255,255,0.55)" font-family="'Lato', sans-serif">Impeccable · Design Engineer Skill · Audit / Typeset / Delight</text>
+  <!-- Tags -->
+  <rect x="950" y="96" width="90" height="22" rx="11" fill="rgba(229,163,0,0.2)" stroke="#E5A300" stroke-width="1" opacity="0.8"/>
+  <text x="995" y="112" text-anchor="middle" font-size="10" fill="#E5A300" font-family="monospace">/impeccable</text>
+  <rect x="950" y="126" width="80" height="22" rx="11" fill="rgba(229,163,0,0.2)" stroke="#E5A300" stroke-width="1" opacity="0.8"/>
+  <text x="990" y="142" text-anchor="middle" font-size="10" fill="#E5A300" font-family="monospace">/audit</text>
+
+  <!-- Connector arrow -->
+  <line x1="880" y1="200" x2="880" y2="232" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <polygon points="876,232 880,242 884,232" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Layer 2: Canvas -->
+  <rect x="620" y="248" width="520" height="120" rx="8" fill="rgba(79,166,213,0.08)" stroke="url(#layer2)" stroke-width="1.5"/>
+  <rect x="620" y="248" width="6" height="120" rx="3" fill="url(#layer2)"/>
+  <text x="646" y="284" font-size="11" fill="#4fa6d5" font-family="monospace" letter-spacing="2">LAYER 2</text>
+  <text x="646" y="308" font-size="18" fill="white" font-family="'Lato', sans-serif" font-weight="700">Canvas 協作介面</text>
+  <text x="646" y="330" font-size="12" fill="rgba(255,255,255,0.55)" font-family="'Lato', sans-serif">Paper · Pencil · Git-diffable .pen 格式 · Swarm Mode</text>
+  <!-- Tags -->
+  <rect x="950" y="264" width="70" height="22" rx="11" fill="rgba(79,166,213,0.2)" stroke="#4fa6d5" stroke-width="1" opacity="0.8"/>
+  <text x="985" y="280" text-anchor="middle" font-size="10" fill="#4fa6d5" font-family="monospace">Paper</text>
+  <rect x="950" y="294" width="70" height="22" rx="11" fill="rgba(79,166,213,0.2)" stroke="#4fa6d5" stroke-width="1" opacity="0.8"/>
+  <text x="985" y="310" text-anchor="middle" font-size="10" fill="#4fa6d5" font-family="monospace">Pencil</text>
+
+  <!-- Connector arrow -->
+  <line x1="880" y1="368" x2="880" y2="400" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <polygon points="876,400 880,410 884,400" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Layer 3: Inspiration -->
+  <rect x="620" y="416" width="520" height="120" rx="8" fill="rgba(106,90,205,0.08)" stroke="url(#layer3)" stroke-width="1.5"/>
+  <rect x="620" y="416" width="6" height="120" rx="3" fill="url(#layer3)"/>
+  <text x="646" y="452" font-size="11" fill="#9b8fe8" font-family="monospace" letter-spacing="2">LAYER 3</text>
+  <text x="646" y="476" font-size="18" fill="white" font-family="'Lato', sans-serif" font-weight="700">Inspiration 審美訓練</text>
+  <text x="646" y="498" font-size="12" fill="rgba(255,255,255,0.55)" font-family="'Lato', sans-serif">Variant · Mobbin · Awwwards · Style Dropper · 視覺 DNA</text>
+  <!-- Tags -->
+  <rect x="940" y="432" width="90" height="22" rx="11" fill="rgba(106,90,205,0.2)" stroke="#9b8fe8" stroke-width="1" opacity="0.8"/>
+  <text x="985" y="448" text-anchor="middle" font-size="10" fill="#9b8fe8" font-family="monospace">Mobbin</text>
+  <rect x="940" y="462" width="90" height="22" rx="11" fill="rgba(106,90,205,0.2)" stroke="#9b8fe8" stroke-width="1" opacity="0.8"/>
+  <text x="985" y="478" text-anchor="middle" font-size="10" fill="#9b8fe8" font-family="monospace">Awwwards</text>
+
+  <!-- Bottom label -->
+  <text x="880" y="576" text-anchor="middle" font-size="13" fill="#E5A300" font-family="monospace" letter-spacing="2" filter="url(#softglow)">The Design Harness Framework</text>
+  <line x1="700" y1="582" x2="1060" y2="582" stroke="#E5A300" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Left bottom: Claude Code logo mark area -->
+  <rect x="80" y="460" width="180" height="48" rx="24" fill="rgba(229,163,0,0.1)" stroke="#E5A300" stroke-width="1" opacity="0.7"/>
+  <text x="170" y="490" text-anchor="middle" font-size="14" fill="#E5A300" font-family="monospace" font-weight="bold">Claude Code</text>
+
+  <rect x="280" y="460" width="180" height="48" rx="24" fill="rgba(79,166,213,0.1)" stroke="#4fa6d5" stroke-width="1" opacity="0.7"/>
+  <text x="370" y="490" text-anchor="middle" font-size="14" fill="#4fa6d5" font-family="monospace">Design Engineer</text>
+</svg>

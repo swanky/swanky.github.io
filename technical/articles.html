@@ -18,24 +18,7 @@ nav_active: technical
 
       <div class="row">
         {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
-        {% for article in sorted_articles %}
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
-          <div class="card">
-            {% if article.cover_image %}
-            <div class="card-img">
-              <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}"></a>
-            </div>
-            {% endif %}
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h5>
-              <p class="card-text">{{ article.date | date: "%Y-%m-%d" }}</p>
-              {% if article.description %}
-              <p class="card-text" style="font-size:14px; color:#666;">{{ article.description }}</p>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
+        {% include article-card-grid.html articles=sorted_articles %}
       </div>
 
     </div>

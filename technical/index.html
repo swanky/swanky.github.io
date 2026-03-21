@@ -116,12 +116,12 @@ nav_active: technical
   <section class="service-details section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Claude Code 學習分享</h2>
+        <h2>AI工具學習分享</h2>
         <p>終端機 AI 協作開發的實戰技巧與指令速查，帶你從初學到進階掌握開發加速魔法</p>
       </div>
 
       <div class="row">
-        {% assign claude_code_articles = site.categories.technical | where_exp: "item", "item.tags contains 'claude-code'" | sort: "date" | reverse %}
+        {% assign claude_code_articles = site.categories['claude-code'] | sort: "date" | reverse %}
         {% for article in claude_code_articles %}
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
           <div class="card">

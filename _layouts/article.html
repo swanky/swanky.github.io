@@ -30,7 +30,11 @@ layout: default
       {% endif %}
 
       <div class="article-footer-nav">
+        {% if page.categories contains 'claude-code' %}
+        <a href="{{ '/ai-tutorial/' | relative_url }}">&larr; 返回AI工具學習分享</a>
+        {% else %}
         <a href="{{ '/technical/articles/' | relative_url }}">&larr; 返回專欄文章列表</a>
+        {% endif %}
       </div>
 
     </div>
