@@ -3083,12 +3083,7 @@ section.team {
   box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
 }
 
-/* Title: slightly more presence */
-.services .title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
+/* (consolidated into typography block below) */
 
 /* Description: Chinese-optimized line height */
 .services .description {
@@ -3174,8 +3169,9 @@ section.team {
 
 /* --- Reviews (Parallax Strips): Softer, More Readable Text --- */
 
-/* Remove aggressive uppercase from strip headings */
+/* Strip headings: UI category labels ("攝影寫真" etc.) — sans, no uppercase */
 .work-right-text h2 {
+  font-family: var(--font-sans);
   text-transform: none;
   font-size: 26px;
   font-weight: 600;
@@ -3185,6 +3181,7 @@ section.team {
 
 /* Subheading: lighter weight, better line height */
 .work-right-text h5 {
+  font-family: var(--font-sans);
   text-transform: none;
   font-size: 15px;
   font-weight: 400;
@@ -3352,16 +3349,9 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .services .title {
   font-family: var(--font-sans);
   font-size: var(--text-xl);
+  font-weight: 700;
   line-height: 1.3;
-}
-
-/* --- Review strip headings: category labels, not editorial --- */
-/* "攝影寫真", "技術顧問", "教育訓練" are navigation labels     */
-.work-right-text h2 {
-  font-family: var(--font-sans);
-}
-.work-right-text h5 {
-  font-family: var(--font-sans);
+  margin-bottom: 14px;
 }
 
 /* --- Bio section labels: UI, not editorial — keep sans --- */
