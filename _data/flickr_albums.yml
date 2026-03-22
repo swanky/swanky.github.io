@@ -1,7 +1,7 @@
 # Flickr 相簿列表 — swanky-hsiao
 # 來源: https://www.flickr.com/photos/swanky-hsiao/albums
 # 最後更新: 2026-03-22
-# 總計: 1119 個相簿（由新到舊）
+# 總計: 1110 個公開相簿（由新到舊）
 
 albums:
   - id: "72177720304869243"
@@ -21,7 +21,7 @@ albums:
     title: "U_U"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720302005346"
     date: "2022-09-11"
-    photos: 290
+    photos: 291
     description: "<a href=\"https://www.instagram.com/u_u_2019/\" rel=\"noreferrer nofollow\">www.instagram.com/u_u_2019/</a>"
 
   - id: "72177720299863165"
@@ -59,7 +59,7 @@ albums:
     title: "2021-04-11 羽葶╳史旺基「台大邊緣」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157718999694018"
     date: "2021-04-23"
-    photos: 73
+    photos: 75
 
   - id: "72157719012170802"
     title: "2021-04-04 黃帛瑜╳史旺基「比特幣女孩」"
@@ -125,7 +125,7 @@ albums:
     title: "2019-11-21 AgileGirls 2019 十一月聚會: 做最好的自己The Potential Me"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157712086127387"
     date: "2019-12-06"
-    photos: 165
+    photos: 166
 
   - id: "72157712013513856"
     title: "2019-10-29 AgileGirls 2019 十月聚會: Paper Prototyping Game"
@@ -161,7 +161,7 @@ albums:
     title: "2019-04-14 Zoe@小春日和動物雜貨咖啡"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157709088672773"
     date: "2019-06-15"
-    photos: 30
+    photos: 42
 
   - id: "72157709088340532"
     title: "2019-04-04 Zoe@228+城中"
@@ -198,7 +198,7 @@ albums:
     title: "2018-04-06 邱邱╳史旺基「制服女孩＠公館」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157667529524388"
     date: "2018-04-07"
-    photos: 27
+    photos: 28
     description: "MD: <a href=\"https://www.instagram.com/fly.bb/\" rel=\"nofollow\">www.instagram.com/fly.bb/</a>"
 
   - id: "72157663551810377"
@@ -219,7 +219,7 @@ albums:
     title: "2018-02-08 高橋翔子直播側拍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157691543979241"
     date: "2018-02-10"
-    photos: 57
+    photos: 76
 
   - id: "72157690287304332"
     title: "2018-02-08 嘉柔╳史旺基「MAJI 集食行樂」"
@@ -286,13 +286,7 @@ albums:
     title: "2017-03-30~31 Bom-Bom-Pa惠比壽麝香葡萄魅力滿爆假面嘉年華"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157678795441933"
     date: "2017-04-01"
-    photos: 216
-
-  - id: "72157681538319566"
-    title: "2017-03-18 鮑玉╳史旺基「韓國制服小可愛」"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157681538319566"
-    date: "2017-03-20"
-    photos: 17
+    photos: 220
 
   - id: "72157677811587193"
     title: "2017-02-25 小潔Mina╳史旺基「制服女孩」"
@@ -573,7 +567,7 @@ albums:
     title: "2015-07-21 范峻銘╳辜莞允╳史旺基「范峻銘樂園攝影集宣傳照」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157655819720479"
     date: "2015-07-23"
-    photos: 37
+    photos: 38
     description: "模特兒： 范峻銘 <a href=\"https://www.facebook.com/FanJunMingJimmy\" rel=\"nofollow\">www.facebook.com/FanJunMingJimmy</a> 辜莞允 <a href=\"https://www.facebook.com/NonoKunono\" rel=\"nofollow\">www.facebook.com/NonoKunono</a>"
 
   - id: "72157654700608129"
@@ -712,7 +706,7 @@ albums:
     title: "2015-04-23 阿宅反抗軍宅T宣傳照：熊熊 吳暐榕"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157652174626865"
     date: "2015-04-25"
-    photos: 314
+    photos: 315
     description: "<a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅福利社</a> Model: <a href=\"https://www.flickr.com/photos/swanky-hsiao/sets/72157648865638070/\">熊熊 吳暐榕</a>"
 
   - id: "72157651965373976"
@@ -872,7 +866,7 @@ albums:
     title: "2014-11-14 南強工商╳史旺基╳制服地圖"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157649317737311"
     date: "2014-11-17"
-    photos: 162
+    photos: 189
     description: "感謝以下同學~ :)  林芸茜 <a href=\"https://www.facebook.com/yunqian.lin1\" rel=\"nofollow\">www.facebook.com/yunqian.lin1</a>  游翔捷 <a href=\"https://www.facebook.com/angela.you.3\" rel=\"nofollow\">www.facebook.com/angela.you.3</a>  鄭羽庭 <a href=\"https://www.facebook.com/profile.php?id=100001415577349\" rel=\"nofollow\">www.facebook.com/profile.php?id=100001415577349</a>  鄭佳慧 <a href=\"https://www.facebook.com/tai.a.chao\" rel=\"nofollow\">www.facebook.com/tai.a.chao</a>  曾意晴 <a href=\"https://www.facebook.com/v892397\" rel=\"nofollow\">www.facebook.com/v892397</a>  林瑜靜 <a href=\"https://www.facebook.com/profile.php?id=100000835053089\" rel=\"nofollow\">www.facebook.com/profile.php?id=100000835053089</a>  洪寶寶 <a href=\"https://www.facebook.com/angel9640318\" rel=\"nofollow\">www.facebook.com/angel9640318</a>  黃庭華 <a href=\"https://www.facebook.com/ting.hua.92\" rel=\"nofollow\">www.facebook.com/ting.hua.92</a>  陳德瑄 <a href=\"https://www.facebook.com/profile.php?id=100002243605930\" rel=\"nofollow\">www.facebook.com/profile.php?id=100002243605930</a>"
 
   - id: "72157648895754938"
@@ -891,7 +885,7 @@ albums:
     title: "熊熊 吳暐榕"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157648865638070"
     date: "2014-11-13"
-    photos: 545
+    photos: 546
     description: "<a href=\"https://www.facebook.com/hsuwu1216\" rel=\"nofollow\">熊熊 吳暐榕</a>"
 
   - id: "72157646877834613"
@@ -904,7 +898,7 @@ albums:
     title: "2014-11-03 阿宅福利社2015藍色掀裙月曆"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157649058524926"
     date: "2014-11-04"
-    photos: 7
+    photos: 12
     description: "商品連結 <a href=\"http://shop.lucifer.tw/products-detail.php?id=178\" rel=\"nofollow\">shop.lucifer.tw/products-detail.php?id=178</a>  阿宅福利社 <a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">shop.lucifer.tw/</a>"
 
   - id: "72157648697963297"
@@ -917,7 +911,7 @@ albums:
     title: "2014-10-19 阿宅反抗軍宅T宣傳照：思嫺"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157648884140332"
     date: "2014-10-21"
-    photos: 362
+    photos: 363
     description: "<a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅福利社</a> Model: <a href=\"https://www.flickr.com/photos/swanky-hsiao/sets/72157635182065102/\">思嫺</a>"
 
   - id: "72157648280905998"
@@ -1005,7 +999,7 @@ albums:
     title: "2014-06-09 制服地圖啟英高中頒獎"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157644758127217"
     date: "2014-06-14"
-    photos: 17
+    photos: 18
 
   - id: "72157644271859909"
     title: "2014-05-14 阿宅反抗軍宅T宣傳照：徐柑仔"
@@ -1371,7 +1365,7 @@ albums:
     title: "Fay | 王子妃"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635253621669"
     date: "2013-08-27"
-    photos: 377
+    photos: 390
     description: "<a href=\"https://www.facebook.com/FayPrinceMAGIC\" rel=\"nofollow\">www.facebook.com/FayPrinceMAGIC</a>"
 
   - id: "72157635223503531"
@@ -1385,7 +1379,7 @@ albums:
     title: "2013-08-24 乳洨展"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635213266796"
     date: "2013-08-24"
-    photos: 68
+    photos: 86
     description: "乳洨瀏覽器-圖文惡搞聯展"
 
   - id: "72157635182065122"
@@ -1398,7 +1392,7 @@ albums:
     title: "Si-Xian | 李思嫺"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635182065102"
     date: "2013-08-22"
-    photos: 716
+    photos: 717
 
   - id: "72157635133023288"
     title: "2013-08-18 阿宅反抗軍電台：凱凱夢想篇"
@@ -1437,7 +1431,7 @@ albums:
     title: "2013-08-07 拉拉(鄭卉晏)╳史旺基「信義區朱銘人間系列、布蘭梅德國茶館」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634999834141"
     date: "2013-08-10"
-    photos: 123
+    photos: 124
 
   - id: "72157634984791908"
     title: "2013-07-28 孝承、璟涵文定"
@@ -1455,7 +1449,7 @@ albums:
     title: "Irem Cheng | 鄭卉晏"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634939049215"
     date: "2013-08-05"
-    photos: 381
+    photos: 382
 
   - id: "72157634924433717"
     title: "2013-08-04 阿宅反抗軍電台：Bella彤彤篇"
@@ -1468,7 +1462,7 @@ albums:
     title: "2013-08-03 凱道萬人送仲丘"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634916426222"
     date: "2013-08-03"
-    photos: 72
+    photos: 74
 
   - id: "72157634877398254"
     title: "2013-07-27 布萊兒╳史旺基「淡水」"
@@ -1486,14 +1480,14 @@ albums:
     title: "Dee Dee | 蒂蒂"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634826549573"
     date: "2013-07-28"
-    photos: 64
+    photos: 65
     description: "<a href=\"http://www.facebook.com/dee.wang1\" rel=\"nofollow\">FB</a>"
 
   - id: "72157634833004668"
     title: "2013-07-28 阿宅反抗軍電台：蒂蒂篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634833004668"
     date: "2013-07-28"
-    photos: 77
+    photos: 78
     description: "來賓: 蒂蒂"
 
   - id: "72157634729835831"
@@ -1526,7 +1520,7 @@ albums:
     title: "2013-07-18 阿宅反抗軍宅T宣傳照：Julie張齊郡"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634717265196"
     date: "2013-07-20"
-    photos: 125
+    photos: 144
     description: "<a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157633179120632/\">Julie張齊郡</a>"
 
   - id: "72157634639705258"
@@ -1635,7 +1629,7 @@ albums:
     title: "2013-05-30 阿宅反抗軍宅T宣傳照：王子妃"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157633857451663"
     date: "2013-06-01"
-    photos: 175
+    photos: 191
     description: "<a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: 王子妃"
 
   - id: "72157633845971849"
@@ -1655,7 +1649,7 @@ albums:
     title: "2013-05-24 朱學恒講座-創意與熱情@大安高工"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157633713788360"
     date: "2013-05-26"
-    photos: 171
+    photos: 187
 
   - id: "72157633469036170"
     title: "2013-05-10 拉拉(梁惟翔)╳史旺基「微風之夜-迪士尼公主」"
@@ -1801,7 +1795,7 @@ albums:
     title: "Julie | 張齊郡"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157633179120632"
     date: "2013-04-06"
-    photos: 293
+    photos: 300
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157633179120632/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://www.facebook.com/julie.chang.946\" rel=\"nofollow\">facebook</a> | <a href=\"http://www.facebook.com/julie1989320\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157633179007776"
@@ -1927,7 +1921,7 @@ albums:
     title: "2013-03-03 Bebe╳史旺基「No Nuke！我是人，我反核！」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632915652958"
     date: "2013-03-04"
-    photos: 27
+    photos: 31
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632915652958/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157632906207553"
@@ -1969,14 +1963,14 @@ albums:
     title: "Bebe | 張小木"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632874474980"
     date: "2013-02-27"
-    photos: 541
+    photos: 556
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632874474980/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/talovebe0212\" rel=\"nofollow\">facebook</a> | <a href=\"https://www.facebook.com/groups/107652369405538/\" rel=\"nofollow\">facebook club</a> | <a href=\"http://www.wretch.cc/album/talovebe0212\" rel=\"nofollow\">wretch</a>"
 
   - id: "72157632874037816"
     title: "2013-02-24 Bebe╳史旺基「西門町空姐」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632874037816"
     date: "2013-02-27"
-    photos: 106
+    photos: 121
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632874037816/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157632865864894"
@@ -2011,7 +2005,7 @@ albums:
     title: "2013-02-06 岑岑╳史旺基「華山普立茲」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632761760943"
     date: "2013-02-14"
-    photos: 81
+    photos: 82
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632761760943/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157632739835809"
@@ -2021,32 +2015,25 @@ albums:
     photos: 108
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632739835809/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://uniform.wingzero.tw/blog/uniform-photos/2013-02-05-swanky/\" rel=\"nofollow\">uniform.wingzero.tw/blog/uniform-photos/2013-02-05-swanky/</a>"
 
-  - id: "72157632737131545"
-    title: "2012-09-09 N2O『Top model』MACHI官方MV側拍工作照"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632737131545"
-    date: "2013-02-11"
-    photos: 363
-    description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632737131545/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/N2OOFFICIAL\" rel=\"nofollow\">N2O facebook page</a> <a href=\"http://youtu.be/oBfGeKhuVP4\" rel=\"nofollow\">N2O 超級主打 TopModel 網路限定版(MACHI官方HD)</a>"
-
   - id: "72157632736808865"
     title: "2012-05-07 N2O『超級掰』MACHI官方MV側拍工作照"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632736808865"
     date: "2013-02-11"
-    photos: 259
+    photos: 263
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632736808865/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/N2OOFFICIAL\" rel=\"nofollow\">N2O facebook page</a> <a href=\"http://youtu.be/JFaEtkzhUA4\" rel=\"nofollow\">N2O 超級 掰 (MACHI官方MV) HD</a>"
 
   - id: "72157632741060822"
     title: "2012-03-04 N2O『幹什麼』MACHI官方MV側拍工作照"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632741060822"
     date: "2013-02-11"
-    photos: 294
+    photos: 306
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632741060822/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/N2OOFFICIAL\" rel=\"nofollow\">N2O facebook page</a> <a href=\"http://youtu.be/a71eabjc5QQ\" rel=\"nofollow\">N2O﹣幹什麼 （MACHI官方MV）HD</a>"
 
   - id: "72157632683685081"
     title: "2013-02-04 星彤╳史旺基「糖果女孩」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632683685081"
     date: "2013-02-04"
-    photos: 58
+    photos: 59
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632683685081/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157632679853182"
@@ -2123,7 +2110,7 @@ albums:
     title: "Sandy | 岑岑"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632530316323"
     date: "2013-01-16"
-    photos: 241
+    photos: 245
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632530316323/\" rel=\"nofollow\">flickriver</a> | <a href=\"https://www.facebook.com/tsen527\" rel=\"nofollow\">facebook</a>  陳姮岑"
 
   - id: "72157632534762502"
@@ -2144,7 +2131,7 @@ albums:
     title: "2013-01-06 阿宅反抗軍電台：四枝筆樂團篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632449596245"
     date: "2013-01-06"
-    photos: 61
+    photos: 62
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632449596245/\" rel=\"nofollow\">flickriver</a>  來賓: 四枝筆樂團"
 
   - id: "72157632443392254"
@@ -2172,14 +2159,14 @@ albums:
     title: "2012-12-30 阿宅反抗軍電台：林綾篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632385604934"
     date: "2012-12-30"
-    photos: 63
+    photos: 64
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632385604934/\" rel=\"nofollow\">flickriver</a>  來賓: 林綾"
 
   - id: "72157632318318199"
     title: "2012-12-23 阿宅反抗軍電台：媽媽城堡黃敏次老闆篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632318318199"
     date: "2012-12-23"
-    photos: 37
+    photos: 39
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632318318199/\" rel=\"nofollow\">flickriver</a>  來賓: 媽媽城堡黃敏次老闆"
 
   - id: "72157632222699538"
@@ -2193,14 +2180,14 @@ albums:
     title: "2012-12-06 阿宅反抗軍宅T宣傳照：阿喜"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632196649618"
     date: "2012-12-08"
-    photos: 208
+    photos: 220
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632196649618/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157632196635048/\">阿喜</a>"
 
   - id: "72157632196635048"
     title: "阿喜"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632196635048"
     date: "2012-12-08"
-    photos: 298
+    photos: 306
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632196635048/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/bc.ashi\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157632181957293"
@@ -2214,7 +2201,7 @@ albums:
     title: "2012-12-02 阿宅反抗軍電台：女魔術師王子妃篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632151121733"
     date: "2012-12-02"
-    photos: 80
+    photos: 101
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157632151121733/\" rel=\"nofollow\">flickriver</a>  來賓: 女魔術師王子妃"
 
   - id: "72157632139676571"
@@ -2277,7 +2264,7 @@ albums:
     title: "2012-11-11 阿宅反抗軍電台：阿喜篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631982992262"
     date: "2012-11-11"
-    photos: 98
+    photos: 99
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631982992262/\" rel=\"nofollow\">flickriver</a>  來賓: 阿喜"
 
   - id: "72157631974086697"
@@ -2298,7 +2285,7 @@ albums:
     title: "2012-11-04 阿宅反抗軍電台：醬油夢想篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631927204566"
     date: "2012-11-04"
-    photos: 70
+    photos: 71
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631927204566/\" rel=\"nofollow\">flickriver</a>  來賓: 醬油"
 
   - id: "72157631923149742"
@@ -2333,14 +2320,14 @@ albums:
     title: "2012-10-28 阿宅反抗軍電台：萱野可芬可芳篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631876774732"
     date: "2012-10-29"
-    photos: 66
+    photos: 68
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631876774732/\" rel=\"nofollow\">flickriver</a> 來賓: 萱野可芬 萱野可芳"
 
   - id: "72157631820692022"
     title: "2012-10-21 阿宅反抗軍電台：不老騎士導演華天灝篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631820692022"
     date: "2012-10-21"
-    photos: 52
+    photos: 64
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631820692022/\" rel=\"nofollow\">flickriver</a>  來賓: 不老騎士導演華天灝"
 
   - id: "72157631803547698"
@@ -2354,35 +2341,35 @@ albums:
     title: "Singtone | 劉星彤"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631792409778"
     date: "2012-10-17"
-    photos: 294
+    photos: 396
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631792409778/\" rel=\"nofollow\">flickriver</a>  <a href=\"https://www.facebook.com/singtone.liu\" rel=\"nofollow\">facebook</a>"
 
   - id: "72157631792327498"
     title: "2012-10-14 Hasselblad 503CX"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631792327498"
     date: "2012-10-17"
-    photos: 32
+    photos: 36
     description: "Kodak 400VC * 2 Kodak E100VS"
 
   - id: "72157631792327486"
     title: "寧寧"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631792327486"
     date: "2012-10-17"
-    photos: 334
+    photos: 338
     description: "<a href=\"http://www.facebook.com/ningning0000\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157631782886616"
     title: "2012-10-10 寧寧╳史旺基「淡水」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631782886616"
     date: "2012-10-16"
-    photos: 93
+    photos: 97
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631782886616/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157631775042200"
     title: "2012-10-13 星彤╳史旺基「西門町」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631775042200"
     date: "2012-10-15"
-    photos: 52
+    photos: 70
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631775042200/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://issuu.com/swanky/docs/singtone-ximending\" rel=\"nofollow\">issuu</a>"
 
   - id: "72157631772276761"
@@ -2403,7 +2390,7 @@ albums:
     title: "2012-10-07 阿宅反抗軍電台：鄭茵聲篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631712749900"
     date: "2012-10-07"
-    photos: 32
+    photos: 33
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631712749900/\" rel=\"nofollow\">flickriver</a>  來賓: 鄭茵聲"
 
   - id: "72157631709104096"
@@ -2424,7 +2411,7 @@ albums:
     title: "2012-09-30 阿宅反抗軍電台：喬治夢想篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631658610539"
     date: "2012-09-30"
-    photos: 43
+    photos: 49
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631658610539/\" rel=\"nofollow\">flickriver</a> 來賓: 喬治"
 
   - id: "72157631647685682"
@@ -2445,7 +2432,7 @@ albums:
     title: "2012-09-24 阿宅反抗軍宅T宣傳照：可艾"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631619739234"
     date: "2012-09-25"
-    photos: 119
+    photos: 130
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631619739234/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630914069426/\">可艾</a>"
 
   - id: "72157631603924710"
@@ -2459,7 +2446,7 @@ albums:
     title: "2012-09-17 朱學恒講座-創意與熱情@新民高中"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631567558806"
     date: "2012-09-18"
-    photos: 194
+    photos: 197
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631567558806/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157631565672524"
@@ -2480,7 +2467,7 @@ albums:
     title: "2012-09-09 阿宅反抗軍電台：王可可篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631493764808"
     date: "2012-09-10"
-    photos: 38
+    photos: 40
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631493764808/\" rel=\"nofollow\">flickriver</a>  來賓: 王可可"
 
   - id: "72157631467185238"
@@ -2501,7 +2488,7 @@ albums:
     title: "2012-09-02 阿宅反抗軍電台：大肚皮Jason主廚篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631381169320"
     date: "2012-09-03"
-    photos: 126
+    photos: 130
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631381169320/\" rel=\"nofollow\">flickriver</a> 來賓: 大肚皮Jason主廚"
 
   - id: "72157631379591820"
@@ -2529,7 +2516,7 @@ albums:
     title: "阿宅反抗軍福利社宣傳照"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631332508336"
     date: "2012-08-31"
-    photos: 3422
+    photos: 3450
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631332508336/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/\" rel=\"nofollow\">阿宅反抗軍福利社</a> <a href=\"http://blogs.myoops.org/lucifer.php\" rel=\"nofollow\">朱學恒的阿宅萬事通事務所</a> | <a href=\"https://www.facebook.com/Geekfirm\" rel=\"nofollow\">facebook page</a>  <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157634717265196/\">2013-07-18 Julie張齊郡</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157633857451663/\">2013-05-30 王子妃</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157633170938590/\">2013-04-04 Bebe張小木</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157632196649618/\">2012-12-06 阿喜</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157632094008902/\">2012-11-23 劉星彤</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157631880867378/\">2012-10-26 寧寧</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157631619739234/\">2012-09-24 可艾</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157631191557580/\">2012-08-22 小敬</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630736470982/\">2012-07-24 林千又</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630649845206/\">2012-07-18 可藍</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630049676353/\">2012-06-12 蘇笠汶</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157629741824236/\">2012-05-15 方語昕</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157629694982631/\">2012-03-28 黃小容</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157629301586457/\">2012-02-13 林小安</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157628466278245/\">2011-12-16 Olivia兔子</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157629356433199/\">2011-11-28,12-08 林采緹</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157628058543570/\">2011-11-04 朱學恒</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157627944790700/\">2011-10-14 丁小雨</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157624520534798/\">2010-07-16 丁小雨</a> <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157622761241783/\">2009-11-27 可藍</a>"
 
   - id: "72157631253758420"
@@ -2543,28 +2530,28 @@ albums:
     title: "2012-08-22 阿宅反抗軍宅T宣傳照：小敬"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631191557580"
     date: "2012-08-22"
-    photos: 194
+    photos: 204
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631191557580/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157631191478858/\">小敬</a>"
 
   - id: "72157631191478858"
     title: "Evelyn Yu | 虞成敬"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631191478858"
     date: "2012-08-22"
-    photos: 801
+    photos: 810
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631191478858/\" rel=\"nofollow\">flickriver</a>  小敬| Evelyn Yu | 虞成敬 <a href=\"http://www.facebook.com/profile.php?id=100001603870154\" rel=\"nofollow\">facebook</a>"
 
   - id: "72157631034560168"
     title: "2012-08-12 阿宅反抗軍電台：Akina小貓篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631034560168"
     date: "2012-08-12"
-    photos: 55
+    photos: 58
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157631034560168/\" rel=\"nofollow\">flickriver</a>  來賓: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157603754437302/\">Akina小貓</a>"
 
   - id: "72157630914069426"
     title: "Keai | 可艾"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630914069426"
     date: "2012-08-05"
-    photos: 351
+    photos: 362
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630914069426/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157630913491894"
@@ -2606,7 +2593,7 @@ albums:
     title: "2012-07-24 阿宅反抗軍宅T宣傳照：林千又"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630736470982"
     date: "2012-07-25"
-    photos: 111
+    photos: 112
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630736470982/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630736411468/\">林千又</a>"
 
   - id: "72157630736411468"
@@ -2620,14 +2607,14 @@ albums:
     title: "2012-07-22 阿宅反抗軍電台：火星熊篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630704700086"
     date: "2012-07-23"
-    photos: 44
+    photos: 55
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630704700086/\" rel=\"nofollow\">flickriver</a> 來賓: 火星熊"
 
   - id: "72157630649845206"
     title: "2012-07-18 阿宅反抗軍可藍T宣傳照"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630649845206"
     date: "2012-07-19"
-    photos: 73
+    photos: 81
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630649845206/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157622885624398/\">可藍</a> <a href=\"http://youtu.be/yc1yPexI2uk\" rel=\"nofollow\">宣傳影片</a>"
 
   - id: "72157630481638096"
@@ -2648,14 +2635,14 @@ albums:
     title: "2012-06-24 昆霖、佳盈婚宴"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630326026262"
     date: "2012-06-28"
-    photos: 98
+    photos: 99
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630326026262/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157630266819934"
     title: "2012-06-24 阿宅反抗軍電台：魏暉倪篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630266819934"
     date: "2012-06-24"
-    photos: 35
+    photos: 36
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630266819934/\" rel=\"nofollow\">flickriver</a>  來賓: 魏暉倪"
 
   - id: "72157630237823130"
@@ -2676,14 +2663,14 @@ albums:
     title: "2012-06-17 阿宅反抗軍電台：宋芸樺篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630161260824"
     date: "2012-06-17"
-    photos: 31
+    photos: 32
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630161260824/\" rel=\"nofollow\">flickriver</a> 來賓: 宋芸樺"
 
   - id: "72157630049676353"
     title: "2012-06-12 阿宅反抗軍宅T宣傳照：蘇笠汶"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630049676353"
     date: "2012-06-12"
-    photos: 76
+    photos: 77
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630049676353/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157630111906524/\">蘇笠汶</a>"
 
   - id: "72157630111906524"
@@ -2697,7 +2684,7 @@ albums:
     title: "2012-06-10 阿宅反抗軍電台：寶米恰恰篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630033486473"
     date: "2012-06-10"
-    photos: 38
+    photos: 40
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630033486473/\" rel=\"nofollow\">flickriver</a> 來賓: 寶米恰恰"
 
   - id: "72157630045465588"
@@ -2711,7 +2698,7 @@ albums:
     title: "2012-06-03 阿宅反抗軍電台：DenKa地下室少年篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630029678182"
     date: "2012-06-03"
-    photos: 37
+    photos: 39
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157630029678182/\" rel=\"nofollow\">flickriver</a> 來賓: DenKa地下室少年"
 
   - id: "72157629920009336"
@@ -2725,7 +2712,7 @@ albums:
     title: "2012-05-15 阿宅反抗軍宅T宣傳照：方語昕"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629741824236"
     date: "2012-05-15"
-    photos: 119
+    photos: 148
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629741824236/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157629720629801/\">方語昕</a>"
 
   - id: "72157629979701389"
@@ -2746,7 +2733,7 @@ albums:
     title: "2012-04-19 Fujifilm GA645 Roll 36~39"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629489378202"
     date: "2012-04-19"
-    photos: 18
+    photos: 64
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629489378202/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157629845315571"
@@ -2823,35 +2810,35 @@ albums:
     title: "2012-04-06 Kate╳史旺基「淡水」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629388357762"
     date: "2012-04-06"
-    photos: 52
+    photos: 61
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629388357762/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157629731264123"
     title: "2012-03-30 Kate╳史旺基「西門町」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629731264123"
     date: "2012-04-03"
-    photos: 81
+    photos: 118
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629731264123/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://swanbear.blogspot.com/2012/04/2012-03-30-kate.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157629366278180"
     title: "2012-03-31 范蟀勾╳史旺基「寶藏巖」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629366278180"
     date: "2012-04-03"
-    photos: 23
+    photos: 70
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629366278180/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157629358729570"
     title: "2012-04-02 Hasselblad 503CX Roll 118~122"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629358729570"
     date: "2012-04-02"
-    photos: 21
+    photos: 58
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629358729570/\" rel=\"nofollow\">flickriver</a>  Kodak EKTAR 100 Kodak 400VC * 3 Kodak 400TX"
 
   - id: "72157629720629801"
     title: "Aiko | 方語昕"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629720629801"
     date: "2012-04-02"
-    photos: 187
+    photos: 195
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629720629801/\" rel=\"nofollow\">flickriver</a>  Aiko | 方語昕 | 方嘟嘟 <a href=\"http://www.facebook.com/FangYuXin\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157629355988088"
@@ -2886,14 +2873,14 @@ albums:
     title: "2012-03-23 Kate╳史旺基「平溪線」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629285455434"
     date: "2012-03-23"
-    photos: 84
+    photos: 121
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629285455434/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://swanbear.blogspot.com/2012/04/2012-03-23-kate.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157629203838480"
     title: "Kate Lee | 阿貓"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629203838480"
     date: "2012-03-12"
-    photos: 261
+    photos: 344
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629203838480/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157629203791508"
@@ -2907,7 +2894,7 @@ albums:
     title: "Swanky iPhone 4S"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629107787590"
     date: "2012-02-28"
-    photos: 135
+    photos: 138
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629107787590/\" rel=\"nofollow\">flickriver</a>  Hipstamatic"
 
   - id: "72157629387399341"
@@ -2928,7 +2915,7 @@ albums:
     title: "2011-11-28,12-08 阿宅反抗軍宅T宣傳照：林采緹"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629356433199"
     date: "2012-02-17"
-    photos: 158
+    photos: 180
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629356433199/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://swanbear.blogspot.com/2012/02/2011-11-2812-08-t.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a> Model: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157627524923159/\">林采緹</a>  <a href=\"http://blogs.myoops.org/lucifer.php/2011/12/18/lovet\" rel=\"nofollow\">愛T的十萬種方法.....</a>"
 
   - id: "72157629301586457"
@@ -2942,20 +2929,20 @@ albums:
     title: "2012-02-09 Hasselblad 503CX Roll 115~117"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629243549967"
     date: "2012-02-09"
-    photos: 24
+    photos: 36
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629243549967/\" rel=\"nofollow\">flickriver</a> Kodak 160NC * 2 Kodak 400VC"
 
   - id: "72157629184494099"
     title: "茂茂"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629184494099"
     date: "2012-02-05"
-    photos: 41
+    photos: 49
 
   - id: "72157629183355277"
     title: "2012-02-05 Fancy Frontier 19"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629183355277"
     date: "2012-02-05"
-    photos: 91
+    photos: 103
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157629183355277/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157629168673439"
@@ -3163,7 +3150,7 @@ albums:
     title: "2011-11-13 阿宅反抗軍電台：陳菁徽篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627997160327"
     date: "2011-11-14"
-    photos: 40
+    photos: 41
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627997160327/\" rel=\"nofollow\">flickriver</a> 來賓: 陳菁徽醫師"
 
   - id: "72157627957521567"
@@ -3191,14 +3178,14 @@ albums:
     title: "2011-09-25 For Your Safety"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627940525649"
     date: "2011-11-06"
-    photos: 8
+    photos: 38
     description: "[#7] Sheyuti (徐小花): 拖比兔、粉紅T-Shirt"
 
   - id: "72157628065181422"
     title: "2011-09-23 For Your Safety"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157628065181422"
     date: "2011-11-06"
-    photos: 7
+    photos: 13
     description: "[#6] Arching (姿嬙): 蘆葦草、藍洋裝"
 
   - id: "72157627940513917"
@@ -3212,7 +3199,7 @@ albums:
     title: "2011-11-04 阿宅反抗軍宅T宣傳照"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157628058543570"
     date: "2011-11-05"
-    photos: 12
+    photos: 18
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157628058543570/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://shop.lucifer.tw/goods_list.php\" rel=\"nofollow\">阿宅反抗軍福利社</a>"
 
   - id: "72157628052125746"
@@ -3261,7 +3248,7 @@ albums:
     title: "2011-09-07~08 For Your Safety"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627997934990"
     date: "2011-10-28"
-    photos: 62
+    photos: 63
     description: "[#1.1] Zoey (丁小雨): 吃便當 [#3] Hiconcon (廖康宏): 臘腸狗、迷彩服 [#1.2] Zoey (丁小雨): 黑色連身裝"
 
   - id: "72157627995793584"
@@ -3289,7 +3276,7 @@ albums:
     title: "2011-06-01 For Your Safety"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627983206024"
     date: "2011-10-26"
-    photos: 2
+    photos: 46
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627983206024/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://swanbear.blogspot.com/2011/10/for-your-safety-1-zoey.html\" rel=\"nofollow\">blog post</a>  [#1] Zoey (丁小雨): 枯花、白手套、銀手鐲"
 
   - id: "72157627949899796"
@@ -3331,42 +3318,42 @@ albums:
     title: "2011-10-14 阿宅遊艇趴"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627777985941"
     date: "2011-10-16"
-    photos: 122
+    photos: 123
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627777985941/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.youtube.com/playlist?list=PLC4CCFD0D988FDC69\" rel=\"nofollow\">youtube</a> 慶祝農友生日!"
 
   - id: "72157627753806321"
     title: "2011-10-01 Hasselblad 503CX Roll 105"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627753806321"
     date: "2011-10-12"
-    photos: 3
+    photos: 12
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627753806321/\" rel=\"nofollow\">flickriver</a> Kodak 400VC"
 
   - id: "72157627878136934"
     title: "Pinkguitar | 徐幼庭"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627878136934"
     date: "2011-10-12"
-    photos: 24
+    photos: 54
     description: "<a href=\"http://www.facebook.com/PINKGUITARandTOBY\" rel=\"nofollow\">Facebook Page</a>"
 
   - id: "72157627753718125"
     title: "2011-09-27 Hasselblad 503CX Roll 99~104"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627753718125"
     date: "2011-10-12"
-    photos: 26
+    photos: 72
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627753718125/\" rel=\"nofollow\">flickriver</a> Kodak 400VC * 3 Kodak EKTAR 100 Kodak 400NC * 2"
 
   - id: "72157627753685255"
     title: "2011-10-02 ZABU看展"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627753685255"
     date: "2011-10-12"
-    photos: 7
+    photos: 9
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627753685255/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157627806273016"
     title: "2011-10-02 阿宅反抗軍電台：豆花妹篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627806273016"
     date: "2011-10-03"
-    photos: 120
+    photos: 121
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627806273016/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.youtube.com/watch?v=ZlOLQO2sa6o\" rel=\"nofollow\">youtube</a>  來賓: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157624612253888/\">豆花妹 蔡黃汝</a>"
 
   - id: "72157627672722937"
@@ -3387,7 +3374,7 @@ albums:
     title: "2011-09-07~08 拍作品日"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627737969628"
     date: "2011-09-24"
-    photos: 124
+    photos: 131
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627737969628/\" rel=\"nofollow\">flickriver</a>  #3"
 
   - id: "72157627614039155"
@@ -3408,14 +3395,14 @@ albums:
     title: "Sunny Lin | 林采緹"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627524923159"
     date: "2011-09-11"
-    photos: 348
+    photos: 363
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627524923159/\" rel=\"nofollow\">flickriver</a> <a href=\"http://www.facebook.com/sunnylin168\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157627646642924"
     title: "2011-09-11 阿宅反抗軍電台：女帝蛇姬篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627646642924"
     date: "2011-09-11"
-    photos: 80
+    photos: 89
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627646642924/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.youtube.com/watch?v=Fa53E9NA0zw\" rel=\"nofollow\">youtube 1</a> | <a href=\"http://www.youtube.com/watch?v=k5n0DLFMYLQ\" rel=\"nofollow\">youbute 2</a> | <a href=\"http://blogs.myoops.org/lucifer.php/2011/09/13/milktea\" rel=\"nofollow\">post</a> | <a href=\"http://www.youtube.com/watch?v=ZNAz2R4m6Ug\" rel=\"nofollow\">news</a> 來賓: <a href=\"http://www.flickr.com/photos/swanky-hsiao/sets/72157627524923159/\">Sunny Lin (林采緹)</a>"
 
   - id: "72157627641673478"
@@ -3485,7 +3472,7 @@ albums:
     title: "Hsuan | 郭瑄"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627393391338"
     date: "2011-08-09"
-    photos: 60
+    photos: 69
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627393391338/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157627393382784"
@@ -3520,7 +3507,7 @@ albums:
     title: "2011-07-23 舊琴復燃 - 政大吉他社100年尋根聯展@NCCU"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627138160171"
     date: "2011-07-23"
-    photos: 53
+    photos: 55
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157627138160171/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157627159009842"
@@ -3539,7 +3526,7 @@ albums:
     title: "2011-06-09 Hasselblad 503CX Roll 80~88"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626864479797"
     date: "2011-06-18"
-    photos: 93
+    photos: 108
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626864479797/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC * 4 Kodak 160NC * 3 Kodak EKTAR 100 Kodak 400TX"
 
   - id: "72157626864460301"
@@ -3573,7 +3560,7 @@ albums:
     title: "Patty | 小豬"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626774948421"
     date: "2011-06-06"
-    photos: 86
+    photos: 101
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626774948421/\" rel=\"nofollow\">flickriver</a> <a href=\"http://www.facebook.com/pages/Patty-小豬/215449341800625\" rel=\"nofollow\">facebook page</a> | <a href=\"http://www.wretch.cc/album/dodopatty\" rel=\"nofollow\">wretch</a>"
 
   - id: "72157626773541549"
@@ -3587,7 +3574,7 @@ albums:
     title: "2011-06-05 Patty小豬╳史旺基「忠義」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626898091422"
     date: "2011-06-06"
-    photos: 91
+    photos: 106
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626898091422/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://swanbear.blogspot.com/2011/06/2011-06-05-patty.html\" rel=\"nofollow\">blog post</a>  NSP"
 
   - id: "72157626850888028"
@@ -3601,21 +3588,21 @@ albums:
     title: "2011-05-26 Canon AE-1"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626816311512"
     date: "2011-05-27"
-    photos: 10
+    photos: 67
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626816311512/\" rel=\"nofollow\">flickriver</a>  Kodak GC 400 (ULTRA MAX 400) Fuji S-400 (X-TRA 400)"
 
   - id: "72157626691559571"
     title: "Hana | 涵"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626691559571"
     date: "2011-05-27"
-    photos: 107
+    photos: 140
     description: "<a href=\"http://www.wretch.cc/album/hana57\" rel=\"nofollow\">album</a>  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626691559571/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626678825187"
     title: "2011-05-24 Hana╳史旺基「閑隅 T.Loafer」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626678825187"
     date: "2011-05-25"
-    photos: 42
+    photos: 99
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626678825187/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626786631980"
@@ -3650,14 +3637,14 @@ albums:
     title: "2011-05-12 Hasselblad 503CX Roll 69~73"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626587071913"
     date: "2011-05-13"
-    photos: 31
+    photos: 61
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626587071913/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC Kodak PORTRA 400 * 2 Kodak E100G * 2"
 
   - id: "72157626670780762"
     title: "2011-05-03 Hasselblad 503CX Roll 67~68"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626670780762"
     date: "2011-05-08"
-    photos: 3
+    photos: 24
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626670780762/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157626533112943"
@@ -3671,14 +3658,14 @@ albums:
     title: "2011-04-30 卓蘭桐花之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626525424455"
     date: "2011-05-05"
-    photos: 84
+    photos: 104
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626525424455/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626514276751"
     title: "大元"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626514276751"
     date: "2011-05-03"
-    photos: 28
+    photos: 29
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626514276751/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626638833042"
@@ -3692,27 +3679,27 @@ albums:
     title: "2011-04-30 Hasselblad 503CX Roll 64~66"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626620175978"
     date: "2011-05-01"
-    photos: 24
+    photos: 36
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626620175978/\" rel=\"nofollow\">flickriver</a>  Kodak EKTAR 100 Kodak 160NC Kodak 400VC"
 
   - id: "72157626490098055"
     title: "Rosa Chen"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626490098055"
     date: "2011-04-30"
-    photos: 31
+    photos: 55
 
   - id: "72157626614629276"
     title: "2011-04-29 Rosa╳史旺基「貳拾陸巷、西門町」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626614629276"
     date: "2011-04-30"
-    photos: 31
+    photos: 55
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626614629276/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626467391483"
     title: "2011-04-27 Hasselblad 503CX Roll 62~63"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626467391483"
     date: "2011-04-27"
-    photos: 21
+    photos: 24
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626467391483/\" rel=\"nofollow\">flickriver</a>  Kodak PORTRA 400 Kodak 400VC"
 
   - id: "72157626462422783"
@@ -3761,21 +3748,14 @@ albums:
     title: "2011-04-24 阿宅反抗軍電台：Dream Girls篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626574341720"
     date: "2011-04-25"
-    photos: 131
+    photos: 132
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626574341720/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.youtube.com/watch?v=TK8d8GVRWrQ\" rel=\"nofollow\">youtube</a>  <a href=\"http://swanbear.blogspot.com/2011/05/blog-post.html\" rel=\"nofollow\">blog post</a> 來賓: Dream Girls (李毓芬、郭雪芙、宋米秦)"
-
-  - id: "72157626532804086"
-    title: "2011-04-19 Hasselblad 503CX Roll 61"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626532804086"
-    date: "2011-04-19"
-    photos: 2
-    description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626532804086/\" rel=\"nofollow\">flickriver</a>  Kodak PORTRA 400"
 
   - id: "72157626531836348"
     title: "2011-04-13 Fujifilm GA645 Roll 31"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626531836348"
     date: "2011-04-19"
-    photos: 7
+    photos: 16
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626531836348/\" rel=\"nofollow\">flickriver</a>  Kodak 400TX"
 
   - id: "72157626399714779"
@@ -3796,21 +3776,21 @@ albums:
     title: "2011-04-15 吳瑪麗╳史旺基「貳拾陸巷、西門町」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626506996576"
     date: "2011-04-16"
-    photos: 80
+    photos: 90
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626506996576/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626362263873"
     title: "2011-04-11 Fujifilm GA645 Roll 30"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626362263873"
     date: "2011-04-13"
-    photos: 10
+    photos: 15
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626362263873/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157626354396077"
     title: "Mary Wu | 吳瑪麗"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626354396077"
     date: "2011-04-12"
-    photos: 469
+    photos: 479
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626354396077/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://www.wretch.cc/album/maryndevi\" rel=\"nofollow\">wretch</a> | <a href=\"http://maryndevi.pixnet.net/album/list\" rel=\"nofollow\">pixnet</a>"
 
   - id: "72157626354324571"
@@ -3831,7 +3811,7 @@ albums:
     title: "Abby | 盛香珍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626458022692"
     date: "2011-04-09"
-    photos: 213
+    photos: 230
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626458022692/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626457944022"
@@ -3845,7 +3825,7 @@ albums:
     title: "2011-04-05 春假九份之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626327808263"
     date: "2011-04-08"
-    photos: 134
+    photos: 139
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626327808263/\" rel=\"nofollow\">flickriver</a>  Abby 盛香珍 + Zoey 丁小雨"
 
   - id: "72157626427259386"
@@ -3873,21 +3853,21 @@ albums:
     title: "2011-03-31 Fujifilm GA645 Roll 29"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626402828756"
     date: "2011-04-01"
-    photos: 12
+    photos: 16
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626402828756/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157626395515230"
     title: "2011-03-29 小佳╳史旺基「士林官邸、雙溪公園」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626395515230"
     date: "2011-03-30"
-    photos: 39
+    photos: 43
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626395515230/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626356935474"
     title: "2011-03-26 【 聚賢迎春 — 十位當代藝術家聯展 】 開幕酒會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626356935474"
     date: "2011-03-26"
-    photos: 3
+    photos: 6
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626356935474/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157626145305823"
@@ -3914,7 +3894,7 @@ albums:
     title: "2011-03-09 丁小雨╳史旺基「天元宮賞櫻」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626229962510"
     date: "2011-03-09"
-    photos: 27
+    photos: 29
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157626229962510/\" rel=\"nofollow\">flickriver</a>  FP-100C Kodak PORTRA 400 Kodak 400VC"
 
   - id: "72157626075509019"
@@ -3956,7 +3936,7 @@ albums:
     title: "2011-02-02 貳零壹壹年我們家的年夜飯!"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625834706383"
     date: "2011-02-02"
-    photos: 9
+    photos: 11
     description: "<a href=\"http://swanbear.blogspot.com/2011/02/blog-post.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157625952736670"
@@ -3983,14 +3963,14 @@ albums:
     title: "2011-01-25 范蟀勾╳史旺基「淡水」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625915207858"
     date: "2011-01-27"
-    photos: 3
+    photos: 62
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625915207858/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625840044712"
     title: "2011-01-16 阿宅反抗軍電台：大元篇"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625840044712"
     date: "2011-01-17"
-    photos: 41
+    photos: 42
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625840044712/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.youtube.com/watch?v=JmxWDQzoZvE\" rel=\"nofollow\">youtube 1</a> | <a href=\"http://www.youtube.com/watch?v=JM3GvJ0Go6I\" rel=\"nofollow\">youtube 2</a>  <a href=\"http://swanbear.blogspot.com/2011/05/blog-post.html\" rel=\"nofollow\">blog post</a> 來賓: 大元"
 
   - id: "72157625642404677"
@@ -4003,14 +3983,14 @@ albums:
     title: "2010-12-23 Hasselblad 503CX Roll 51~55"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625752232178"
     date: "2011-01-05"
-    photos: 59
+    photos: 60
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625752232178/\" rel=\"nofollow\">flickriver</a>  Kodak EKTAR 100 * 2 Kodak 400NC * 2 Kodak 160NC * 1"
 
   - id: "72157625626746533"
     title: "2010-12-21 熊將DIGIPHOTO雜誌封面人物陽明山側拍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625626746533"
     date: "2011-01-05"
-    photos: 148
+    photos: 149
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625626746533/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://swanbear.blogspot.com/2011/01/2010-12-21-digiphoto.html\" rel=\"nofollow\">blog post</a>  Digiphoto第47期 / 2011 1.2月號"
 
   - id: "72157625625124355"
@@ -4038,21 +4018,21 @@ albums:
     title: "2010-12-23 Fujifilm GA645 Roll 27 Ruby+丁小雨"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625676272260"
     date: "2010-12-26"
-    photos: 14
+    photos: 16
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625676272260/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157625676265690"
     title: "2010-12-23 Yashica-D Roll 29 Ruby+丁小雨"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625676265690"
     date: "2010-12-26"
-    photos: 10
+    photos: 12
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625676265690/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157625676250172"
     title: "2010-12-19 Ruby、丁小雨╳史旺基「四四南村」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625676250172"
     date: "2010-12-26"
-    photos: 66
+    photos: 70
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625676250172/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625491521191"
@@ -4066,7 +4046,7 @@ albums:
     title: "2010-12-15 Hasselblad 503CX Roll 47~50"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625491495027"
     date: "2010-12-17"
-    photos: 39
+    photos: 48
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625491495027/\" rel=\"nofollow\">flickriver</a>  Fujifilm PRO 400H * 2 Fujifilm Provia 100F * 2"
 
   - id: "72157625475327865"
@@ -4080,7 +4060,7 @@ albums:
     title: "2010-12-10 熊將試鏡側拍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625462225469"
     date: "2010-12-13"
-    photos: 22
+    photos: 31
     description: "<a href=\"http://swanbear.blogspot.com/2010/12/blog-post.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625462225469/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625429524137"
@@ -4101,7 +4081,7 @@ albums:
     title: "2010-11-19 Ruby、丁小雨╳史旺基「伊莎貝拉」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625540474138"
     date: "2010-12-06"
-    photos: 68
+    photos: 69
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625540474138/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625530622730"
@@ -4129,28 +4109,28 @@ albums:
     title: "ArChing | 姿嬙"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625400547480"
     date: "2010-11-16"
-    photos: 86
+    photos: 121
     description: "<a href=\"http://lovearching.pixnet.net/blog\" rel=\"nofollow\">blog</a>"
 
   - id: "72157625278600345"
     title: "2010-11-15 Hasselblad 503CX Roll 41~43"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625278600345"
     date: "2010-11-16"
-    photos: 17
+    photos: 36
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625278600345/\" rel=\"nofollow\">flickriver</a>  Fujifilm PRO 400H (+1) Kodak EKTAR 100 (+1) * 2"
 
   - id: "72157625266859095"
     title: "2010-11-13 Hasselblad 503CX Roll 40"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625266859095"
     date: "2010-11-14"
-    photos: 4
+    photos: 12
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625266859095\" rel=\"nofollow\">flickriver</a>  Kodak E100VS"
 
   - id: "72157625368370270"
     title: "2010-11-12 姿嬙╳史旺基「四四南村」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625368370270"
     date: "2010-11-12"
-    photos: 43
+    photos: 62
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625368370270/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625346678478"
@@ -4164,7 +4144,7 @@ albums:
     title: "2010-11-03 Fujifilm GA645 Roll 19~21"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625337458480"
     date: "2010-11-08"
-    photos: 8
+    photos: 47
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625337458480/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC Kodak Ektacolor PRO 160 Kodak E100VS"
 
   - id: "72157625196535527"
@@ -4178,35 +4158,35 @@ albums:
     title: "2010-10-31 BONANZA 2010年度形象拍攝側拍紀錄"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625287954050"
     date: "2010-11-01"
-    photos: 31
+    photos: 67
     description: "<a href=\"http://swanbear.blogspot.com/2010/12/blog-post.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625287954050/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://www.facebook.com/koalabearchan\" rel=\"nofollow\">水精靈~熊將 (熊チャン)</a>"
 
   - id: "72157625139059045"
     title: "KB | 熊將"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625139059045"
     date: "2010-10-29"
-    photos: 293
+    photos: 348
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625139059045/\" rel=\"nofollow\">flickriver</a>  facebook page: <a href=\"http://www.facebook.com/koalabearchan\" rel=\"nofollow\">水精靈~熊將 (熊チャン)</a>"
 
   - id: "72157625263401672"
     title: "2010-10-28 Yashica-D Roll 28 丁小雨+熊將"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625263401672"
     date: "2010-10-29"
-    photos: 4
+    photos: 24
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625263401672/\" rel=\"nofollow\">flickriver</a> Kodak 400NC"
 
   - id: "72157625114631769"
     title: "2010-10-25 與熊將丁小雨討論"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625114631769"
     date: "2010-10-25"
-    photos: 17
+    photos: 30
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625114631769/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625205414256"
     title: "Fujifilm Instant Photo"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625205414256"
     date: "2010-10-20"
-    photos: 149
+    photos: 183
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625205414256/\" rel=\"nofollow\">flickriver</a> Fujifilm Instax mini 50S"
 
   - id: "72157625197175976"
@@ -4220,7 +4200,7 @@ albums:
     title: "2010-10-16 5D2"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625054277251"
     date: "2010-10-17"
-    photos: 7
+    photos: 13
     description: "中午 西門河岸看大炮趨勢熱音社成果發表  晚上 王建揚攝影展"
 
   - id: "72157625050628405"
@@ -4241,28 +4221,28 @@ albums:
     title: "2010-10-09 Fujifilm GA645 Roll 18"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625005140261"
     date: "2010-10-10"
-    photos: 1
+    photos: 16
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625005140261/\" rel=\"nofollow\">flickriver</a>  Kodak 400VC"
 
   - id: "72157624975332423"
     title: "2010-10-05 Fujifilm GA645 Roll 17"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624975332423"
     date: "2010-10-05"
-    photos: 15
+    photos: 16
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624975332423/\" rel=\"nofollow\">flickriver</a>  Kodak 400TX"
 
   - id: "72157624967811039"
     title: "2010-10-03 旺福暫別演唱會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624967811039"
     date: "2010-10-04"
-    photos: 48
+    photos: 49
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624967811039/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624957794877"
     title: "2010-09-08,10 「文跡奇武②麻雀雖小」MV側拍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624957794877"
     date: "2010-10-03"
-    photos: 80
+    photos: 81
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624957794877/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157625052460428"
@@ -4276,7 +4256,7 @@ albums:
     title: "2010-09-28 Rollei 35AFM"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625052240228"
     date: "2010-09-28"
-    photos: 23
+    photos: 37
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625052240228/\" rel=\"nofollow\">flickriver</a>  Solaris 800"
 
   - id: "72157624906820795"
@@ -4290,14 +4270,14 @@ albums:
     title: "2010-09-17,26 丁小雨╳史旺基「青年公園」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625016194582"
     date: "2010-09-23"
-    photos: 40
+    photos: 50
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625016194582/\" rel=\"nofollow\">flickriver</a>  Hasselblad 503CX Fujifilm PRO 400H Kodak EKTAR 100  Rollei 35AFM Solaris 800"
 
   - id: "72157625016182258"
     title: "2010-09-22 Hasselblad 503CX Roll 38"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625016182258"
     date: "2010-09-23"
-    photos: 8
+    photos: 13
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157625016182258/\" rel=\"nofollow\">flickriver</a>  Fujifilm PRO 400H"
 
   - id: "72157624939001626"
@@ -4318,14 +4298,14 @@ albums:
     title: "2010-08-26 Fujifilm GA645 Roll 13~16"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624691409647"
     date: "2010-08-27"
-    photos: 53
+    photos: 64
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624691409647/\" rel=\"nofollow\">flickriver</a>  Kodak EKTAR 100 Kodak 400NC * 3  0811故宮 0820北美館+阿宅預演 0821阿宅"
 
   - id: "72157624812740816"
     title: "2010-08-26 Hasselblad 503CX Roll 35~37"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624812740816"
     date: "2010-08-26"
-    photos: 35
+    photos: 36
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624812740816/\" rel=\"nofollow\">flickriver</a>  Fujifilm PRO 400H Fujifilm Provia 100F (RDP III) Kodak EKTAR 100"
 
   - id: "72157624678173857"
@@ -4339,21 +4319,21 @@ albums:
     title: "2010-08-21 中正紀念堂八二一阿宅反抗軍股東會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624777931726"
     date: "2010-08-22"
-    photos: 662
+    photos: 673
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624777931726/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://swanbear.blogspot.com/2010/08/blog-post.html\" rel=\"nofollow\">blog post: 阿宅反抗軍股東會之行前會+彩排</a>  <a href=\"http://swanbear.blogspot.com/2010/09/2010-08-21.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157624643299557"
     title: "2010-08-20 中正紀念堂八二一阿宅反抗軍股東會彩排"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624643299557"
     date: "2010-08-20"
-    photos: 96
+    photos: 97
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624643299557/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://swanbear.blogspot.com/2010/08/blog-post.html\" rel=\"nofollow\">blog post: 阿宅反抗軍股東會之行前會+彩排</a>  還有爵士音樂節"
 
   - id: "72157624633253653"
     title: "2010-08-18 中正紀念堂八二一阿宅反抗軍行前會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624633253653"
     date: "2010-08-19"
-    photos: 42
+    photos: 48
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624633253653/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://swanbear.blogspot.com/2010/08/blog-post.html\" rel=\"nofollow\">blog post: 阿宅反抗軍股東會之行前會+彩排</a>"
 
   - id: "72157624752432734"
@@ -4367,7 +4347,7 @@ albums:
     title: "2010-08-13 盧廣仲電影音樂會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624618010739"
     date: "2010-08-17"
-    photos: 11
+    photos: 12
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624618010739/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624602556877"
@@ -4381,7 +4361,7 @@ albums:
     title: "2010-08-07 光華商場年度封面女郎見面會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624699876714"
     date: "2010-08-11"
-    photos: 131
+    photos: 136
 
   - id: "72157624542014133"
     title: "2010-08-06 丁小雨╳史旺基「九份、重慶南路」"
@@ -4413,21 +4393,21 @@ albums:
     title: "2010-07-31 Hasselblad 503CX Roll 31~34 Nicole@伊莎貝拉"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624621371790"
     date: "2010-07-31"
-    photos: 26
+    photos: 47
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624621371790/\" rel=\"nofollow\">flickriver</a> Kodak 400VC"
 
   - id: "72157624488384433"
     title: "2010-07-27 Nicole@伊莎貝拉"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624488384433"
     date: "2010-07-30"
-    photos: 91
+    photos: 112
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624488384433/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624612253888"
     title: "豆花妹 蔡黃汝"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624612253888"
     date: "2010-07-30"
-    photos: 124
+    photos: 125
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624612253888/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.facebook.com/boommini\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157624485020979"
@@ -4441,7 +4421,7 @@ albums:
     title: "2010-07-27 Hasselblad 503CX Roll 29~30 丁小雨"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624469593021"
     date: "2010-07-27"
-    photos: 6
+    photos: 24
     description: "Fujifilm PRO 400H"
 
   - id: "72157624574108256"
@@ -4476,7 +4456,7 @@ albums:
     title: "2010-07-16 丁小雨╳史旺基「沐蘭」"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624520534798"
     date: "2010-07-17"
-    photos: 58
+    photos: 65
     description: "<a href=\"http://swanbear.blogspot.com/2010/07/t.html\" rel=\"nofollow\">blog post 1</a> <a href=\"http://swanbear.blogspot.com/2010/08/2010-07-16.html\" rel=\"nofollow\">blog post 2</a>  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624520534798/\" rel=\"nofollow\">flickriver</a> 沐蘭"
 
   - id: "72157624520373632"
@@ -4495,7 +4475,7 @@ albums:
     title: "2010-07-12 世界盃足球總決賽"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624475414292"
     date: "2010-07-12"
-    photos: 37
+    photos: 57
     description: "@上菜dishdish  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624475414292/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624339566455"
@@ -4571,7 +4551,7 @@ albums:
     title: "Zoey | 丁小雨"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624154925043"
     date: "2010-06-15"
-    photos: 1596
+    photos: 1874
     description: "<a href=\"http://www.wretch.cc/blog/lroin\" rel=\"nofollow\">blog</a> | <a href=\"http://www.wretch.cc/album/lroin\" rel=\"nofollow\">album</a> | <a href=\"http://www.facebook.com/rain0830\" rel=\"nofollow\">facebook page</a>  前阿宅萬事通事務所正妹管理員"
 
   - id: "72157624279425114"
@@ -4580,13 +4560,6 @@ albums:
     date: "2010-06-15"
     photos: 36
     description: "翁滋蔓"
-
-  - id: "72157624271545180"
-    title: "2010-06-14 Hasselblad 503CX Roll 18~26 Momo。走在信義。走在文化"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624271545180"
-    date: "2010-06-14"
-    photos: 61
-    description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624271545180/\" rel=\"nofollow\">flickriver</a>  Fujifilm PRO 400H * 8 Kodak EKTAR 100"
 
   - id: "72157624264342128"
     title: "2010-06-13 政大EMBA 96級畢業典禮"
@@ -4623,14 +4596,14 @@ albums:
     title: "2010-06-08 Momo。走在信義"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624231021564"
     date: "2010-06-08"
-    photos: 138
+    photos: 141
     description: "<a href=\"http://swanbear.blogspot.com/2010/06/2010-06-08-momo.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624231021564/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://hizebe2.blogspot.com/2010/06/2010-06-08-momo.html\" rel=\"nofollow\">margaret blog post</a>  Fujifilm PRO 400H * 5 Kodak EKTAR 100"
 
   - id: "72157624214665504"
     title: "2010-06-06 阿宅聚會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624214665504"
     date: "2010-06-06"
-    photos: 150
+    photos: 151
     description: "築空間  <a href=\"http://darckr.com/set?setid=72157624214665504&amp;format=Large\" rel=\"nofollow\">Large</a>"
 
   - id: "72157624207709652"
@@ -4678,21 +4651,21 @@ albums:
     title: "2010-05-20 Hasselblad 503CX Roll 7~11 Momo。走在淡水"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623977196061"
     date: "2010-05-20"
-    photos: 47
+    photos: 60
     description: "<a href=\"http://darckr.com/set?setid=72157623977196061&amp;format=Large\" rel=\"nofollow\">Large</a>  Kodak EKTAR 100 Kodak 400NC * 2 Fujifilm PRO 400H Kodak 400VC"
 
   - id: "72157624101504122"
     title: "2010-05-20 Fujifilm GA645 Roll 9~10 Momo。走在淡水"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624101504122"
     date: "2010-05-20"
-    photos: 22
+    photos: 32
     description: "<a href=\"http://darckr.com/set?setid=72157624101504122&amp;format=Large\" rel=\"nofollow\">Large</a>  Kodak 400TX"
 
   - id: "72157624085641414"
     title: "2010-05-17 Momo。走在淡水"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624085641414"
     date: "2010-05-18"
-    photos: 138
+    photos: 158
     description: "<a href=\"http://swanbear.blogspot.com/2010/06/2010-05-17-momo.html\" rel=\"nofollow\">blog post</a>  向佐內正史致敬系列 鄰家女孩  捷運、淡水  <a href=\"http://darckr.com/set?setid=72157624085641414&amp;format=Large\" rel=\"nofollow\">Large</a>  5D2 + Tamron A09  Fujifilm GA645 (<a href=\"http://darckr.com/set?setid=72157624101504122&amp;format=Large\" rel=\"nofollow\">Large</a>) Kodak 400TX  Hasselblad 503CX + 80mm f/2.8 CF T*‎ + A24 (<a href=\"http://darckr.com/set?setid=72157623977196061&amp;format=Large\" rel=\"nofollow\">Large</a>) Kodak EKTAR 100 Kodak 400NC * 2 Fujifilm PRO 400H Kodak 400VC"
 
   - id: "72157624078793256"
@@ -4706,15 +4679,8 @@ albums:
     title: "2010-05-15 Hasselblad 503CX Roll 2~6 Momo。走在台北"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624068483160"
     date: "2010-05-16"
-    photos: 59
+    photos: 60
     description: "<a href=\"http://swanbear.blogspot.com/2010/05/2010-05-11-momo.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://darckr.com/set?setid=72157624068483160&amp;format=Large\" rel=\"nofollow\">Large</a>  Hasselblad 503CX Hasselblad 80mm  f/2.8 CF T*‎ Kodak 400VC"
-
-  - id: "72157623941414913"
-    title: "2010-05-15 Fujifilm GA645 Roll 7~8 動物園之旅"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623941414913"
-    date: "2010-05-15"
-    photos: 9
-    description: "<a href=\"http://swanbear.blogspot.com/2010/05/2-weeks-with-fujifilm-ga645.html\" rel=\"nofollow\">blog post</a>  Fujifilm GA645 + lomography black &amp; white negative 120 film 100 +2"
 
   - id: "72157623941337307"
     title: "2010-05-15 Fujifilm GA645 Roll 5~6 Momo。走在台北"
@@ -4730,13 +4696,6 @@ albums:
     photos: 16
     description: "<a href=\"http://swanbear.blogspot.com/2010/05/2-weeks-with-fujifilm-ga645.html\" rel=\"nofollow\">blog post</a>  2010-05-08@河岸留言  Kodak 400VC +2"
 
-  - id: "72157623939300059"
-    title: "2010-05-12 Fujifilm GA645 Roll 3 Kelly讀書會"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623939300059"
-    date: "2010-05-15"
-    photos: 3
-    description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157623939300059/\" rel=\"nofollow\">flickriver</a> Ilford hp5 plus 400"
-
   - id: "72157623938490091"
     title: "2010-05-14 2046六福村門口與薰衣草森林之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623938490091"
@@ -4748,7 +4707,7 @@ albums:
     title: "Christine Lee | 小佳"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624051675094"
     date: "2010-05-13"
-    photos: 152
+    photos: 156
 
   - id: "72157623923331703"
     title: "2010-05-12 音樂之夜原創音樂劇-走過四季"
@@ -4761,27 +4720,27 @@ albums:
     title: "Momo Lin"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623914688499"
     date: "2010-05-11"
-    photos: 463
+    photos: 630
 
   - id: "72157624039026020"
     title: "2010-05-11 Momo。走在台北"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624039026020"
     date: "2010-05-11"
-    photos: 117
+    photos: 118
     description: "<a href=\"http://swanbear.blogspot.com/2010/05/2010-05-11-momo.html\" rel=\"nofollow\">blog post</a>  向佐內正史致敬系列 鄰家女孩  南陽街、228  <a href=\"http://darckr.com/set?setid=72157624039026020&amp;format=Large\" rel=\"nofollow\">Large</a>  5D2 + Tamron A09 Fujifilm GA645 + Kodak 400TX (<a href=\"http://darckr.com/set?setid=72157623941337307&amp;format=Large\" rel=\"nofollow\">Large</a>) Hasselblad 503CX + 80mm f/2.8 CF T*‎ + A24 + Kodak 400VC (<a href=\"http://darckr.com/set?setid=72157624068483160&amp;format=Large\" rel=\"nofollow\">Large</a>)"
 
   - id: "72157623906359521"
     title: "2010-05-10 Fujifilm GA645 Roll 2 長庚探病第二天"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623906359521"
     date: "2010-05-10"
-    photos: 13
+    photos: 16
     description: "<a href=\"http://swanbear.blogspot.com/2010/05/2-weeks-with-fujifilm-ga645.html\" rel=\"nofollow\">blog post</a>  2010-05-05 那天晚上我當看護  這捲也是賣家送的 Kodak Ektacolor PRO 160"
 
   - id: "72157624018539974"
     title: "Swanky Fujifilm GA645"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624018539974"
     date: "2010-05-08"
-    photos: 404
+    photos: 538
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157624018539974/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624018536848"
@@ -4795,7 +4754,7 @@ albums:
     title: "Swanky Hasselblad 503CX"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623879237227"
     date: "2010-05-06"
-    photos: 918
+    photos: 1256
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157623879237227/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157624003542722"
@@ -4809,14 +4768,14 @@ albums:
     title: "2010-05-04 Yashica-D Roll 23~26 剝皮寮之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623982142402"
     date: "2010-05-03"
-    photos: 35
+    photos: 48
     description: "Kodak Ektar 100  <a href=\"http://swanbear.blogspot.com/2010/05/blog-post.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157623843435781"
     title: "2010-05-01 剝皮寮鋼鐵人2之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623843435781"
     date: "2010-05-01"
-    photos: 59
+    photos: 72
     description: "<a href=\"http://swanbear.blogspot.com/2010/05/blog-post.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157623830133229"
@@ -4932,21 +4891,21 @@ albums:
     title: "2010-04-01 Yashica-D Roll 3~5"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623626143303"
     date: "2010-04-02"
-    photos: 32
+    photos: 33
     description: "Kodak 400VC  <a href=\"http://swanbear.blogspot.com/2010/04/blog-post.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157623726537760"
     title: "2010-03-28 琪琪@台大"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623726537760"
     date: "2010-03-29"
-    photos: 101
+    photos: 102
     description: "Kelly同事的小朋友~"
 
   - id: "72157623725751796"
     title: "2010-03-29 Yashica-D Roll 2"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623725751796"
     date: "2010-03-29"
-    photos: 12
+    photos: 17
     description: "Kodak Portra 400VC  <a href=\"http://swanbear.blogspot.com/2010/03/blog-post_29.html\" rel=\"nofollow\">blog post</a>"
 
   - id: "72157623595962635"
@@ -4972,7 +4931,7 @@ albums:
     title: "Swanky Yashica-D"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623579185283"
     date: "2010-03-26"
-    photos: 291
+    photos: 314
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157623579185283/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157623566596303"
@@ -5045,28 +5004,21 @@ albums:
     title: "2010-02-19~20 小蜜酥虎妹妹虎虎生風虎年虎爆生日趴＠DISHDISH上菜"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623358814343"
     date: "2010-02-22"
-    photos: 181
+    photos: 195
     description: "2046斜對面團榮譽團員,大家永遠的小蜜酥虎妹妹生日到了！  為慶祝壽星小蜜酥生日以及應觀眾及老闆要求，  女性來賓請著『性感窄裙＋絲襪』or 直接以『秘書造型』登場，  男性來賓只要自詡為『硬漢』者皆可參加！  夭壽簡單吧！馬上行動,不准等心動！   2/19 週五 pm10:00,一起來幫虎妹妹慶生的呦！  男硬漢價/$550 女蜜酥價/$250  啤酒/調酒 無限暢飲，伍告送！   ps.由於壽星虎妹妹最近身體欠安不勝酒力，當晚請大家高抬貴手，&quot;盡量&quot;不要弄她（尤其禁止&quot;長島冰茶&quot;此類飲料），不過如果一定要弄，請先找擋酒護法 愷愷 與 鳥崔，灌的醉他們，再來弄虎妹，感恩！"
 
   - id: "72157623404769338"
     title: "2010-01-30 果子@四四南村+大安森林公園"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623404769338"
     date: "2010-02-11"
-    photos: 54
+    photos: 55
     description: "DCView"
-
-  - id: "72157623363418620"
-    title: "2010-02-05~09 台北國際電玩展"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623363418620"
-    date: "2010-02-06"
-    photos: 40
-    description: "Taipei Game Show"
 
   - id: "72157623361466598"
     title: "2010-02-05 First Day with GRD3"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623361466598"
     date: "2010-02-06"
-    photos: 50
+    photos: 51
 
   - id: "72157623236737429"
     title: "沙繪"
@@ -5109,13 +5061,13 @@ albums:
     title: "小珊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623154588459"
     date: "2010-01-25"
-    photos: 73
+    photos: 92
 
   - id: "72157623279212016"
     title: "2010-01-23~24 珊果誌之情定北海岸"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623279212016"
     date: "2010-01-25"
-    photos: 62
+    photos: 65
     description: "<a href=\"http://www.facebook.com/group.php?gid=123841957534\" rel=\"nofollow\">Lets Daily Shoot Photo Club</a>  <a href=\"http://www.facebook.com/event.php?eid=248036753697\" rel=\"nofollow\">活動頁面</a>  民宿: <a href=\"http://www.沐藍棧.tw/\" rel=\"nofollow\">沐藍棧</a>"
 
   - id: "72157623242806694"
@@ -5183,7 +5135,7 @@ albums:
     title: "2010-01-02 新年阿宅聚會"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622997798827"
     date: "2010-01-02"
-    photos: 325
+    photos: 331
     description: "<a href=\"http://swanbear.blogspot.com/2010/01/2010-01-02.html\" rel=\"nofollow\">blog post</a>  活動目的: <b>寫新年新希望卡片!!!</b> <del>舉辦追悼Miles Quaritch上校的儀式</del>  講師: <a href=\"http://bremen.blogspot.com/\" rel=\"nofollow\">米奇鰻</a> <a href=\"http://blog.xuite.net/big.max/Polo\" rel=\"nofollow\">波蘿日報 洨記者</a> <a href=\"http://www.wretch.cc/blog/GINAGREEN\" rel=\"nofollow\">愛情小隊 艾青</a> <a href=\"http://www.wretch.cc/blog/enigmaze\" rel=\"nofollow\">柘榴堂 石榴</a> <a href=\"http://blog.roodo.com/henrynipplecity/\" rel=\"nofollow\">亨利乳頭市 亨利</a> <a href=\"http://blog.yam.com/lanman\" rel=\"nofollow\">美麗君 陳麗君</a> <a href=\"http://www.plurk.com/queenofsmile\" rel=\"nofollow\">尾行女王 憋尿達人</a> 御宅夫婦 大佛與跳跳 史丹佛Hendrick Lee"
 
   - id: "72157622989497445"
@@ -5210,7 +5162,7 @@ albums:
     title: "2009-12-19 品果兔和服遊拍@宜蘭"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157623049587168"
     date: "2009-12-22"
-    photos: 86
+    photos: 87
     description: "外拍同樂會 <a href=\"http://wepi.club.tw/viewthread.php?tid=658\" rel=\"nofollow\">活動頁面</a>  宜蘭設治記念館 羅東林業文化園區  和服師: 紀子小姐 (<a href=\"http://blog.roodo.com/jihuangs\" rel=\"nofollow\">網站</a>)"
 
   - id: "72157622878675505"
@@ -5277,21 +5229,21 @@ albums:
     title: "2009-11-28~12-06 資訊月"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622765815029"
     date: "2009-11-28"
-    photos: 248
+    photos: 314
     description: "<a href=\"http://swanbear.blogspot.com/2009/12/2009.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://www.youtube.com/view_play_list?p=6A7B1595D7FF2540\" rel=\"nofollow\">all videos</a>"
 
   - id: "72157622761276371"
     title: "Lucifer Chu | 朱學恒"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622761276371"
     date: "2009-11-27"
-    photos: 2263
+    photos: 2266
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157622761276371/\" rel=\"nofollow\">flickriver</a> <a href=\"http://blogs.myoops.org/lucifer.php\" rel=\"nofollow\">blog</a> | <a href=\"http://www.plurk.com/luciferchu/\" rel=\"nofollow\">plurk</a> | <a href=\"http://www.facebook.com/Geekfirm\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157622885624398"
     title: "Colleen Wei | 可藍"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622885624398"
     date: "2009-11-27"
-    photos: 539
+    photos: 548
     description: "<a href=\"http://www.wretch.cc/blog/colleen4526\" rel=\"nofollow\">blog</a> | <a href=\"http://www.wretch.cc/album/colleen4526\" rel=\"nofollow\">album</a> | <a href=\"https://www.facebook.com/LoveColleenWei\" rel=\"nofollow\">facebook</a> | <a href=\"http://www.plurk.com/colleen4526\" rel=\"nofollow\">plurk</a>"
 
   - id: "72157622761241783"
@@ -5391,14 +5343,14 @@ albums:
     title: "Lusia Tseng | 舒舒"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622687281852"
     date: "2009-10-29"
-    photos: 133
+    photos: 136
     description: "<a href=\"http://www.wretch.cc/blog/lusia0220\" rel=\"nofollow\">blog</a> | <a href=\"http://www.wretch.cc/album/lusia0220\" rel=\"nofollow\">album</a> | <a href=\"http://www.facebook.com/pages/shu-shu-lusia/188216905438\" rel=\"nofollow\">facebook page</a>"
 
   - id: "72157622562751445"
     title: "2009-10-28 WHOAMI"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622562751445"
     date: "2009-10-29"
-    photos: 109
+    photos: 111
     description: "<a href=\"http://swanbear.blogspot.com/2009/11/whoami-good-job.html\" rel=\"nofollow\">blog post</a>  <a href=\"http://www.wretch.cc/blog/fprinceluke&amp;category_id=11999787\" rel=\"nofollow\">WHOAMI角色扮演 </a>  李玖哲、舒舒、三角酷  @Primo"
 
   - id: "72157622649158572"
@@ -5654,7 +5606,7 @@ albums:
     title: "2009-06-03 乘吉嘶喊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157619493458358"
     date: "2009-06-09"
-    photos: 794
+    photos: 795
     description: "政大吉他社49屆年度公演  <a href=\"http://darckr.com/set?setid=72157619493458358\" rel=\"nofollow\">整頁圖</a>"
 
   - id: "72157619340888869"
@@ -5804,7 +5756,7 @@ albums:
     title: "2009-04-06 億華遊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157616335947607"
     date: "2009-04-06"
-    photos: 6
+    photos: 7
     description: "神兵終於入手了 Canon 5D Mark II Tamron A09"
 
   - id: "72157616168859480"
@@ -5825,7 +5777,7 @@ albums:
     title: "Doublelove | 雙雙"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157615487084763"
     date: "2009-03-18"
-    photos: 26
+    photos: 29
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157615487084763/\" rel=\"nofollow\">flickriver</a> | <a href=\"http://www.wretch.cc/album/doublelove\" rel=\"nofollow\">album</a>"
 
   - id: "72157615363953651"
@@ -5949,7 +5901,7 @@ albums:
     title: "2008-11-30 全家淡水遊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157613863659817"
     date: "2009-02-16"
-    photos: 7
+    photos: 8
     description: "參加完表姊的訂婚 跑去淡水喝咖啡!"
 
   - id: "72157613392154074"
@@ -6106,7 +6058,7 @@ albums:
     title: "2008-08-24~26 墾丁陽光男孩之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157607108226059"
     date: "2008-09-04"
-    photos: 417
+    photos: 464
 
   - id: "72157607006757378"
     title: "2008-08-15 Katrina@國父紀念館"
@@ -6126,7 +6078,7 @@ albums:
     title: "2008-08-12 宜蘭衝浪之旅"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157606843651710"
     date: "2008-08-20"
-    photos: 204
+    photos: 206
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157606843651710/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157606826466788"
@@ -6408,7 +6360,7 @@ albums:
     title: "2008-03-01 新竹一日遊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157604035766553"
     date: "2008-03-03"
-    photos: 285
+    photos: 288
     description: "我、QQ、大砲、小慢、冷鵬、瑪格莉特、小魚、小婷"
 
   - id: "72157603918464896"
@@ -6428,7 +6380,7 @@ albums:
     title: "Most Views"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603910529747"
     date: "2008-02-14"
-    photos: 158
+    photos: 159
     description: "Over 10000 Views  <a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157603910529747/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157603904626376"
@@ -6448,20 +6400,20 @@ albums:
     title: "2008-02-09 大年初三"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603878654673"
     date: "2008-02-09"
-    photos: 35
+    photos: 36
 
   - id: "72157603811133177"
     title: "Dollshin | 虎牙妹"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603811133177"
     date: "2008-01-28"
-    photos: 18
+    photos: 19
     description: "<a href=\"http://www.wretch.cc/album/dollshin\">無名相簿</a>"
 
   - id: "72157603807560016"
     title: "2008-01-26 台北國際電玩展"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603807560016"
     date: "2008-01-28"
-    photos: 71
+    photos: 72
 
   - id: "72157603793726678"
     title: "真希"
@@ -6506,7 +6458,7 @@ albums:
     title: "Ann | 林小安"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603780423443"
     date: "2008-01-23"
-    photos: 68
+    photos: 307
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157603780423443/\" rel=\"nofollow\">flickriver</a> <a href=\"http://www.facebook.com/annbaby0603\" rel=\"nofollow\">facebook</a> | <a href=\"http://www.wretch.cc/blog/cuteayumi\" rel=\"nofollow\">blog</a> | <a href=\"http://www.plurk.com/ann0603\" rel=\"nofollow\">plurk</a>"
 
   - id: "72157603776483839"
@@ -6574,7 +6526,7 @@ albums:
     title: "Mikako | 果子"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603757904337"
     date: "2008-01-20"
-    photos: 3545
+    photos: 3635
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157603757904337/\" rel=\"nofollow\">flickriver</a> 1984/12/05  <a href=\"http://www.flickr.com/photos/swanky-hsiao/collections/72157621178210950/\">Mikako Collection</a>  <a href=\"http://www.wretch.cc/blog/mikako1984\" rel=\"nofollow\">Blog</a> | <a href=\"http://www.wretch.cc/album/mikako1984\" rel=\"nofollow\">Album</a> | <a href=\"http://www.flickr.com/groups/mikako/\">Group</a> | <a href=\"http://ip-calendar.blogspot.com/\" rel=\"nofollow\">Calendar</a> <a href=\"http://www.facebook.com/mikako1984\" rel=\"nofollow\">Facebook Fans Page</a>  Mikako in <a href=\"http://swanbear.blogspot.com/search/label/%e6%9e%9c%e5%ad%90\" rel=\"nofollow\">my blog post</a>"
 
   - id: "72157603754441984"
@@ -6588,7 +6540,7 @@ albums:
     title: "Akina | 小貓"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603754437302"
     date: "2008-01-20"
-    photos: 462
+    photos: 465
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157603754437302/\" rel=\"nofollow\">flickriver</a>  <a href=\"http://www.facebook.com/emiruemirue\" rel=\"nofollow\">facebook</a> | <a href=\"http://www.wretch.cc/album/emiruemirue\" rel=\"nofollow\">Album</a>"
 
   - id: "72157603754431546"
@@ -6643,7 +6595,7 @@ albums:
     title: "Swanky Nokia N73"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157602935961041"
     date: "2007-11-05"
-    photos: 231
+    photos: 236
 
   - id: "72157602874958920"
     title: "2007-11-03 吃橘色"
@@ -6733,7 +6685,7 @@ albums:
     title: "2007-08-03 好樂迪"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157601209169499"
     date: "2007-08-04"
-    photos: 10
+    photos: 11
 
   - id: "72157601074343374"
     title: "2007-06-10 Daphny雨過天晴@西門町"
@@ -6746,7 +6698,7 @@ albums:
     title: "2007-07-21 Java User Group"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157600961238629"
     date: "2007-07-23"
-    photos: 22
+    photos: 25
 
   - id: "72157600600598711"
     title: "2007-06-24~07-01 Las Vegas報告之旅"
@@ -6798,7 +6750,7 @@ albums:
     title: "2007-03-17 Java User Group"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157600005970347"
     date: "2007-03-18"
-    photos: 42
+    photos: 43
     description: "<a href=\"http://www.javaworld.com.tw/jute/post/view?bid=48&amp;id=184466&amp;sty=1&amp;tpg=1&amp;age=0\">3/17(六) Taiwan JUG</a> 第一次公開舉辦的Java User Group"
 
   - id: "72157594588209820"
@@ -6981,7 +6933,7 @@ albums:
     title: "Swanky LOMO Fisheye2"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594531029612"
     date: "2007-02-12"
-    photos: 502
+    photos: 508
 
   - id: "72157594528706090"
     title: "2007-02-10 台北國際電玩展"
@@ -6994,7 +6946,7 @@ albums:
     title: "Cosplay | 角色扮演"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594524812905"
     date: "2007-02-08"
-    photos: 798
+    photos: 803
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157594524812905/\" rel=\"nofollow\">flickriver</a> ACG"
 
   - id: "72157594524800894"
@@ -7055,7 +7007,7 @@ albums:
     title: "Show Girl | 展場美女"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594503437304"
     date: "2007-01-28"
-    photos: 941
+    photos: 1038
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157594503437304/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157594503338726"
@@ -7166,7 +7118,7 @@ albums:
     title: "Portrait | 人像"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594412906864"
     date: "2006-12-10"
-    photos: 378
+    photos: 394
     description: "Selected portrait works  <a href=\"http://www.flickr.com/photos/swanky-hsiao/tags/portrait/\">all portrait</a>"
 
   - id: "72157594412903640"
@@ -7388,7 +7340,7 @@ albums:
     title: "Black & White | 黑白"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594209846041"
     date: "2006-07-24"
-    photos: 534
+    photos: 600
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157594209846041/\" rel=\"nofollow\">flickriver</a>"
 
   - id: "72157594208228377"
@@ -7443,7 +7395,7 @@ albums:
     title: "2006-06-17 95級畢業典禮"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594186424335"
     date: "2006-07-04"
-    photos: 4
+    photos: 6
 
   - id: "72157594186422552"
     title: "2006-06-18 磨菇坊大學同學會"
@@ -7451,18 +7403,11 @@ albums:
     date: "2006-07-04"
     photos: 11
 
-  - id: "72157594186421840"
-    title: "2006-06-02~08 GCCCE 2006"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594186421840"
-    date: "2006-07-04"
-    photos: 34
-    description: "我和怡君去大陸發表論文"
-
   - id: "72157594185669462"
     title: "2006-06-26 生日淡水遊"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594185669462"
     date: "2006-07-03"
-    photos: 14
+    photos: 27
     description: "我的23歲生日"
 
   - id: "72157594185624909"
@@ -7489,14 +7434,14 @@ albums:
     title: "Family | 家"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594183513767"
     date: "2006-07-01"
-    photos: 764
+    photos: 775
     description: "家人、親戚、跟我家有關的任何東西"
 
   - id: "72157594183413250"
     title: "Me | 我"
     url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594183413250"
     date: "2006-07-01"
-    photos: 1152
+    photos: 1232
     description: "<a href=\"http://www.flickriver.com/photos/swanky-hsiao/sets/72157594183413250/\" rel=\"nofollow\">flickriver</a>  It's ME!"
 
   - id: "72157594183394147"
@@ -7505,11 +7450,4 @@ albums:
     date: "2006-07-01"
     photos: 78
     description: "我在台北市立師範學院的日子"
-
-  - id: "80755"
-    title: "swanky & shumi | 熊寶與兔寶"
-    url: "https://www.flickr.com/photos/swanky-hsiao/albums/80755"
-    date: "1970-01-01"
-    photos: 28
-    description: "一段過去的千日愛情 2003-07-27 ~ 2006-04-22  曾經擁有的<a href=\"http://ciyawasay.blogspot.com/\" rel=\"nofollow\">Ciyawasay</a>  譜打開了，小提琴的弦斷了，布拉姆斯哭了 只有一千日的愛情並不算什麼 因為再分離一千多日後的我根本就不是同個人 流蕩旋律中我想起妳 閉起眼來就埋藏在回憶"
 
