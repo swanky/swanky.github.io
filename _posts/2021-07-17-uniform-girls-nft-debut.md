@@ -4,6 +4,7 @@ date: 2021-07-17 12:00:00 +0800
 categories: [technical]
 layout: article
 nav_active: technical
+cover_image: /assets/facebook-archive/photos/2021-07-17_197165862418222_0.jpg
 description: "2021 年，我在 OurSong 平台發行了第一個制服女孩 NFT。這篇記錄了那個決定背後的思考：為什麼要做、怎麼做、以及學到了什麼。"
 keywords: NFT,制服女孩,OurSong,加密貨幣,區塊鏈,Web3,史旺基,Swanky Studio
 ---
