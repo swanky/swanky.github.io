@@ -4,7 +4,6 @@ date: 2019-07-09 12:00:00 +0800
 categories: [photography]
 layout: article
 nav_active: photography
-cover_image: /assets/facebook-archive/photos/2019-07-09_10159101519745329_0.jpg
 description: "工程師、技術書、制服——三個意象的意外組合。模特兒李婷婷。"
 keywords: 制服女孩,人像攝影,區塊鏈,敏捷,攝影作品,史旺基,Swanky Studio
 ---
