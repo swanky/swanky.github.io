@@ -1,0 +1,62 @@
+{
+  "archived_at": "2026-03-22",
+  "source_url": "https://www.facebook.com/SwankyParty",
+  "disclaimer": "本封存僅包含本次執行時可公開取得的內容，不代表完整備份。",
+  "runs": [
+    {
+      "actor": "apify/facebook-pages-scraper",
+      "run_id": "xGH38WVy4FE1Yu5qU",
+      "items": 1,
+      "result": "頁面基本資訊",
+      "cu": 0.0058
+    },
+    {
+      "actor": "apify/facebook-posts-scraper",
+      "run_id": "3sdorK7GYlvalTmep",
+      "items": 100,
+      "result": "最新 100 篇",
+      "cu": 0.2625
+    },
+    {
+      "actor": "apify/facebook-posts-scraper",
+      "run_id": "zzpcsu3vFwkCTio8F",
+      "items": 500,
+      "result": "最新 500 篇（含 2017-2023）",
+      "cu": 0.9993
+    },
+    {
+      "actor": "apify/facebook-posts-scraper",
+      "run_id": "hgAqs5Gyz0GYAA5NH",
+      "items": 394,
+      "result": "子集確認（無新增內容）",
+      "cu": 0.6758
+    }
+  ],
+  "summary": {
+    "total_posts": 500,
+    "date_range": "2017-04-02 to 2025-03-28",
+    "posts_by_year": {
+      "2025": 4,
+      "2024": 10,
+      "2023": 107,
+      "2022": 143,
+      "2021": 74,
+      "2020": 10,
+      "2019": 43,
+      "2018": 38,
+      "2017": 71
+    },
+    "photos_total": 535,
+    "image_failures": 0,
+    "total_cu_used": 1.9434,
+    "estimated_cost_usd": 0.583,
+    "remaining_free_credit_usd": 4.42
+  },
+  "known_gaps": [
+    "2017-04-02 之前的所有貼文（Facebook 未登入存取限制）",
+    "留言（maxPostComments=0）",
+    "限時動態（Facebook 不保留）",
+    "私人貼文（未登入無法存取）",
+    "影片檔案（僅保留封面圖）"
+  ]
+}

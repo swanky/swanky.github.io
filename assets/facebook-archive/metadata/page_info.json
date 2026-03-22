@@ -1,0 +1,34 @@
+{
+  "source": "apify/facebook-pages-scraper",
+  "archived_at": "2026-03-22",
+  "page_url": "https://www.facebook.com/SwankyParty",
+  "page_id": "100063744278797",
+  "page_name": "SwankyParty",
+  "title": "史旺基",
+  "categories": [
+    "Page",
+    "Public figure"
+  ],
+  "likes": 8583,
+  "followers": 8583,
+  "followings": 21,
+  "intro": "2 talking about this. 《制服．女孩 × 史旺基》系列與 《高校制服戀物論》攝影作者、朱學恒「阿宅反抗軍」及「制服地圖」特約攝影師。多次獲法國 PX3 和美國 IPA 攝影獎，攝影作品曾登上美國時代雜誌。",
+  "info_lines": [
+    "史旺基. 8,583 likes",
+    "2 talking about this. 《制服．女孩 × 史旺基》系列與 《高校制服戀物論》攝影作者、朱學恒「阿宅反抗軍」及「制服地圖」特約攝影師。多次獲法國 PX3 和美國 IPA 攝影獎，攝影作品曾登上美國時代雜誌。"
+  ],
+  "email": "swanky.hsiao@gmail.com",
+  "website": "https://swanky.github.io/",
+  "websites": [
+    "https://swanky.github.io/"
+  ],
+  "location": "Taipei, Taiwan",
+  "creation_date": "September 5, 2009",
+  "services": "Online classes,In-person classes",
+  "ad_status": "This Page isn't currently running ads.",
+  "profile_picture_url": "https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-1/468258865_10164594104160329_2337347522782468494_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=f907e8&_nc_ohc=K08IObg4s1UQ7kNvwHXDr9U&_nc_oc=Adp6bQxSJ5sbJ2lq5j_WmUrvry9Awn0wIR-XDRswy3c7vvmznM4bBV0xBC3U4e8KzpM9vtjRcdY3-b2z_-p4O0Qa&_nc_zt=24&_nc_ht=scontent-man2-1.xx&_nc_gid=k6xBn9q0neqfwo05aFXEgQ&_nc_ss=7a30f&oh=00_AfyUy9Lb9pm6ZBSSc7850y4Oi_Y7KfiqsGJWIMRD9I264Q&oe=69C53A26",
+  "cover_photo_url": "https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/468549588_10164757750795329_440798492210435240_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2a1932&_nc_ohc=0zdjx6TCC3YQ7kNvwHyQNTk&_nc_oc=AdqqxupN6VjELvi9YxAG_N_jPYkV5VodDz67fB-lO5QExRLhIYZhQPClac1ST_7js2488woIddGMUyX6ClvPFJhu&_nc_zt=23&_nc_ht=scontent-man2-1.xx&_nc_gid=k6xBn9q0neqfwo05aFXEgQ&_nc_ss=7a30f&oh=00_AfxhLIKbpij4MN9bXsQuV6HHPQzWDlptxDMZOXLd4mDhbA&oe=69C5493F",
+  "rating": "Not yet rated (0 reviews)",
+  "messenger": null,
+  "ad_library_id": "172447000328"
+}
