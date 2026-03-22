@@ -20,6 +20,7 @@ exclude:
   - changelog.txt
   - node_modules
   - vendor
+  - docs
 
 # Keep these files even though they start with underscore or dot
 include:
