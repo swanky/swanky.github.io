@@ -22,3 +22,8 @@
   url: https://www.flickr.com/photos/swanky-hsiao/
   icon: bxl-flickr
   class: flickr
+
+- name: Pinterest
+  url: https://www.pinterest.com/swanbear/
+  icon: bxl-pinterest
+  class: pinterest
