@@ -6,6 +6,7 @@ layout: article
 nav_active: education
 cover_image: /assets/facebook-archive/photos/2025-03-27_1201814241953374_1.jpg
 description: "當 ChatGPT 4o 能用一句話重繪圖片，我想起了過去研究 Blender、找繪師、發行 NFT 的那段日子——以及這一切對創作者意味著什麼。"
+keywords: ChatGPT,GPT-4o,吉卜力,CloneX,AI生圖,NFT,AI學習,史旺基,Swanky Studio
 ---
 
 ## 指令：「以吉卜力動畫風格重畫這張圖片」

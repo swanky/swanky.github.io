@@ -7,6 +7,7 @@ layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-magic-guide.svg
 description: "從對話品質管理、成本優化到跨裝置協作，以顧問實戰視角整理 Claude Code 最值得掌握的進階用法。"
+keywords: Claude Code,終端機,AI coding,開發加速,AI工具,AI學習,史旺基,Swanky Studio
 ---
 
 ## 真正的差距，從來不在工具本身

@@ -6,6 +6,7 @@ layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-governance.svg
 description: "Claude Code 不是聊天機器人，是一套可以治理的工程代理系統。深入解析六層架構、上下文工程、Skills/Hooks/Subagents 設計，以及 Prompt Caching 與驗證閉環。"
+keywords: Claude Code,AI治理,工程代理,AI coding,技術管理,AI學習,史旺基,Swanky Studio
 ---
 
 很多人第一次用 Claude Code，都用 ChatBot 的直覺在操作：
