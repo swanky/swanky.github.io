@@ -3,3 +3,5 @@ _site
 .jekyll-metadata
 .claude/
 .gstack/
+.env
+assets/facebook-archive/.env
