@@ -86,9 +86,14 @@ Current logic checks only `page.og_image`, falling back to `/assets/img/About_r.
 
 Apply the same three-way fallback to `twitter:image`.
 
-**d. Article OG metadata**
+**d. Article OG metadata + `og:type` fix**
 
-For post pages (`page.layout == 'post'` or `page.layout == 'article'`), add:
+The existing `og:type` tag in `head.html` only promotes to `article` when `page.layout == 'post'`, missing `layout: article` pages. Update that condition to:
+```liquid
+{% if page.layout == 'post' or page.layout == 'article' %}article{% else %}website{% endif %}
+```
+
+For post pages (`page.layout == 'post'` or `page.layout == 'article'`), also add:
 
 ```liquid
 {% if page.layout == 'post' or page.layout == 'article' %}
@@ -186,7 +191,11 @@ Create `_includes/breadcrumbs-jsonld.html`:
 {% endif %}
 ```
 
-Include in `_layouts/page.html` and `_layouts/home.html` (which covers all section and subsection pages).
+Include in `_layouts/page.html` and `_layouts/home.html`.
+
+Layout coverage note:
+- `layout: home` covers: `photography/index.html`, `technical/index.html`, `education/index.html`, `press/index.html`, `photography/awards.html`, `photography/personal-works.html`, `photography/commercial-works.html`, `photography/photo-albums.html`, `photography/flickr-gallery.html`, `photography/uniform/index.html`, and education subsection pages.
+- `layout: page` covers: `photography/archive.html` and other flat `.html` pages.
 
 Add `breadcrumbs` front matter to the following pages:
 
@@ -196,17 +205,17 @@ Add `breadcrumbs` front matter to the following pages:
 - `education/index.html`
 - `press/index.html`
 
-**Photography subsections (3-item breadcrumbs):**
-- `photography/photo-albums/index.html`
-- `photography/awards/index.html`
-- `photography/personal-works/index.html`
-- `photography/commercial-works/index.html`
-- `photography/flickr-works/index.html`
+**Photography subsections (3-item breadcrumbs, all flat `.html` files in `photography/`):**
+- `photography/photo-albums.html`
+- `photography/awards.html`
+- `photography/personal-works.html`
+- `photography/commercial-works.html`
+- `photography/flickr-gallery.html`
 - `photography/archive.html`
 - `photography/uniform/index.html`
 
 **Technical subsections:**
-- `technical/articles/index.html`
+- `technical/articles.html`
 
 **Education subsections:**
 - `education/modeling/index.html`
@@ -239,7 +248,7 @@ Add `keywords` front matter to all posts in `_posts/` that are currently missing
 - Include brand terms (史旺基, Swanky Studio) on all posts
 - Draw from the existing title and description — no invented terms
 
-Approximate count: ~20 posts need keywords added.
+All 25 posts in `_posts/` are missing keywords front matter. Note that two posts are `.html` files (`2016-02-10-unicorn-wears-uniform.html`, `2016-03-10-*`) — these need keywords added as well, not just the `.md` files.
 
 ---
 
@@ -260,7 +269,7 @@ Approximate count: ~20 posts need keywords added.
 | `education/index.html` | title: 教育訓練, breadcrumbs front matter |
 | `press/index.html` | breadcrumbs front matter only |
 | ~11 subsection pages | breadcrumbs front matter |
-| ~20 `_posts/*.md` | keywords front matter |
+| all 25 `_posts/` files (23 `.md` + 2 `.html`) | keywords front matter |
 | `robots.txt` | Create new |
 
 ---
