@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C53B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#E5A300;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4fa6d5;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#4fa6d5;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3fb950;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#3fb950;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Grid -->
+  <g opacity="0.05" stroke="#4fa6d5" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105" /><line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" /><line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="200" y1="0" x2="200" y2="630" /><line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" /><line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+
+  <!-- Right: Six-layer stack diagram -->
+  <!-- Stack container -->
+  <rect x="580" y="60" width="580" height="510" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5" />
+  <text x="870" y="90" font-family="monospace" font-size="12" fill="#8b949e" text-anchor="middle" letter-spacing="2">CLAUDE CODE — 六層架構</text>
+
+  <!-- Layer 1: CLAUDE.md -->
+  <rect x="600" y="105" width="540" height="62" rx="6" fill="url(#layer1)" stroke="#E5A300" stroke-width="1" stroke-opacity="0.6" />
+  <text x="620" y="128" font-family="monospace" font-size="11" fill="#E5A300" letter-spacing="1">L1 · CLAUDE.md / rules / memory</text>
+  <text x="620" y="148" font-family="monospace" font-size="11" fill="#8b949e">協作契約、常駐上下文、專案約束</text>
+
+  <!-- Layer 2: Tools / MCP -->
+  <rect x="600" y="177" width="540" height="62" rx="6" fill="url(#layer2)" stroke="#4fa6d5" stroke-width="1" stroke-opacity="0.6" />
+  <text x="620" y="200" font-family="monospace" font-size="11" fill="#4fa6d5" letter-spacing="1">L2 · Tools / MCP</text>
+  <text x="620" y="220" font-family="monospace" font-size="11" fill="#8b949e">動作能力、外部連接、資料讀寫</text>
+
+  <!-- Layer 3: Skills -->
+  <rect x="600" y="249" width="540" height="62" rx="6" fill="url(#layer3)" stroke="#3fb950" stroke-width="1" stroke-opacity="0.6" />
+  <text x="620" y="272" font-family="monospace" font-size="11" fill="#3fb950" letter-spacing="1">L3 · Skills</text>
+  <text x="620" y="292" font-family="monospace" font-size="11" fill="#8b949e">工作流程、按需載入、方法論</text>
+
+  <!-- Layer 4: Hooks -->
+  <rect x="600" y="321" width="540" height="62" rx="6" fill="url(#layer1)" stroke="#E5A300" stroke-width="1" stroke-opacity="0.4" />
+  <text x="620" y="344" font-family="monospace" font-size="11" fill="#E5A300" letter-spacing="1">L4 · Hooks</text>
+  <text x="620" y="364" font-family="monospace" font-size="11" fill="#8b949e">硬性插入、審計點、確定性控制</text>
+
+  <!-- Layer 5: Subagents -->
+  <rect x="600" y="393" width="540" height="62" rx="6" fill="url(#layer2)" stroke="#4fa6d5" stroke-width="1" stroke-opacity="0.4" />
+  <text x="620" y="416" font-family="monospace" font-size="11" fill="#4fa6d5" letter-spacing="1">L5 · Subagents</text>
+  <text x="620" y="436" font-family="monospace" font-size="11" fill="#8b949e">隔離執行、平行探索、主線保護</text>
+
+  <!-- Layer 6: Verifiers -->
+  <rect x="600" y="465" width="540" height="62" rx="6" fill="url(#layer3)" stroke="#3fb950" stroke-width="1" stroke-opacity="0.4" />
+  <text x="620" y="488" font-family="monospace" font-size="11" fill="#3fb950" letter-spacing="1">L6 · Verifiers</text>
+  <text x="620" y="508" font-family="monospace" font-size="11" fill="#8b949e">驗證閉環、可回滾、可審查</text>
+
+  <!-- Left side -->
+  <text x="55" y="120" font-size="26" fill="#E5A300" opacity="0.7">✦</text>
+  <text x="490" y="180" font-size="16" fill="#F5C53B" opacity="0.5">✦</text>
+  <text x="85" y="535" font-size="13" fill="#4fa6d5" opacity="0.4">◆</text>
+
+  <!-- Label badge -->
+  <rect x="50" y="145" width="230" height="36" rx="4" fill="none" stroke="url(#gold)" stroke-width="1.5" />
+  <rect x="50" y="145" width="230" height="36" rx="4" fill="#E5A300" fill-opacity="0.08" />
+  <text x="165" y="168" font-family="sans-serif" font-size="13" font-weight="bold" fill="#F5C53B" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+
+  <!-- Title -->
+  <text x="50" y="240" font-family="sans-serif" font-size="42" font-weight="bold" fill="#ffffff">你不知道的</text>
+  <text x="50" y="295" font-family="sans-serif" font-size="42" font-weight="bold" fill="#ffffff">Claude Code</text>
+
+  <!-- Divider -->
+  <rect x="50" y="320" width="490" height="2" fill="url(#gold)" opacity="0.4" />
+
+  <!-- Subtitle -->
+  <text x="50" y="350" font-family="sans-serif" font-size="17" fill="#c9d1d9">從聊天工具到工程代理</text>
+  <text x="50" y="376" font-family="sans-serif" font-size="17" fill="#c9d1d9">你真正該學的是治理</text>
+
+  <!-- Tag pills -->
+  <rect x="50" y="405" width="100" height="28" rx="14" fill="#E5A300" opacity="0.15" />
+  <text x="100" y="423" font-family="sans-serif" font-size="12" fill="#E5A300" text-anchor="middle">上下文工程</text>
+
+  <rect x="162" y="405" width="80" height="28" rx="14" fill="#4fa6d5" opacity="0.15" />
+  <text x="202" y="423" font-family="sans-serif" font-size="12" fill="#4fa6d5" text-anchor="middle">Hooks</text>
+
+  <rect x="254" y="405" width="80" height="28" rx="14" fill="#3fb950" opacity="0.15" />
+  <text x="294" y="423" font-family="sans-serif" font-size="12" fill="#3fb950" text-anchor="middle">Skills</text>
+
+  <rect x="346" y="405" width="100" height="28" rx="14" fill="#E5A300" opacity="0.15" />
+  <text x="396" y="423" font-family="sans-serif" font-size="12" fill="#E5A300" text-anchor="middle">Subagents</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
+  <text x="50" y="614" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
+  <text x="1150" y="614" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>
+</svg>
