@@ -33,20 +33,62 @@ default.html  →  head.html + header.html + {{ content }} + footer.html + scrip
 
 ### Content Collections
 
-- **`_posts/`** — Photo gallery blog posts (HTML). Front matter includes `model_name`, `model_social`, `flickr_album`, `photo_count`, `cover_image`.
+- **`_posts/`** — Two types:
+  - Photo gallery posts (`.html`): front matter includes `model_name`, `model_social`, `flickr_album`, `photo_count`, `cover_image`.
+  - Article posts (`.md`): front matter includes `layout: article`, `categories`, `cover_image`, `source_url`, `description`. Use `categories: [technical]` for 技術顧問 articles, `categories: [claude-code]` for AI學習分享 articles.
 - **`_articles/`** — Technical/Web3 articles (Markdown). Front matter includes `source_url` (LinkedIn link), `cover_image`, `description`.
-- **Subdirectory pages** — `photography/`, `modeling/`, `cryptocurrency/` contain nested HTML pages for each section.
+- **Subdirectory pages** — nested HTML pages organised by section (see Site Structure below).
+
+### Site Structure
+
+Navigation has four top-level sections, each with sub-pages:
+
+```
+主頁          /
+攝影寫真      /photography/
+  ├─ 總覽                   /photography/
+  ├─ 出版                   /photography/photo-albums/
+  ├─ 獎項                   /photography/awards/
+  ├─ 作品 (個人/商業/Flickr) /photography/personal-works/ etc.
+  ├─ 歷年記錄               /photography/archive/
+  └─ 制服．女孩 × 史旺基   /photography/uniform/   ← (nav: 攝影寫真→作品; images in assets/img/uniform/)
+
+技術顧問      /technical/
+  ├─ 總覽                   /technical/
+  └─ 專欄文章               /technical/articles/
+
+教育訓練      /education/
+  ├─ 總覽                   /education/
+  ├─ 模特兒課程             /education/modeling/
+  ├─ 加密貨幣課程           /education/crypto/
+  │    ├─ trading           /education/crypto/trading/
+  │    ├─ defi              /education/crypto/defi/
+  │    └─ nft               /education/crypto/nft/
+  └─ AI學習分享             /education/ai/
+
+媒體報導      /press/
+NFT策展       /nft/   ← separate mini-site, excluded from Jekyll
+```
+
+### nav_active Values
+
+- `photography` — all photography section pages
+- `technical` — technical consultant pages and `categories: [technical]` posts
+- `education` — education pages and `categories: [claude-code]` posts
+- `press` — press/media pages
+- `nft` — NFT pages
+- `home` — homepage only
 
 ### Front Matter Variables
 
 Pages use these custom fields:
-- `nav_active` — Highlights the active nav item (`home`, `photography`, `technical`, `education`, `nft`, `archive`, `blog`)
+- `nav_active` — Highlights the active nav item (see values above)
 - `header_transparent` — Set to `true` for transparent header (only on index.html)
 - `extra_css` — Inline CSS injected into `<style>` tag in head
 - `extra_head` — Additional HTML injected into `<head>`
 - `use_isotope` — Loads Isotope JS (photography grid pages)
 - `use_glightbox` — Loads GLightbox CSS+JS (photography lightbox pages)
-- `use_purecounter` — Loads PureCounter JS (cryptocurrency/modeling pages)
+- `use_purecounter` — Loads PureCounter JS (education/crypto, education/modeling pages)
 
 ### Asset Paths
 
