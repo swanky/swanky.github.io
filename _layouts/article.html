@@ -32,6 +32,8 @@ layout: default
       <div class="article-footer-nav">
         {% if page.categories contains 'claude-code' %}
         <a href="{{ '/education/ai/' | relative_url }}">&larr; 返回AI學習分享</a>
+        {% elsif page.categories contains 'photography' %}
+        <a href="{{ '/photography/archive/' | relative_url }}">&larr; 返回歷年作品與記錄</a>
         {% else %}
         <a href="{{ '/technical/articles/' | relative_url }}">&larr; 返回專欄文章列表</a>
         {% endif %}
