@@ -1,0 +1,113 @@
+# Flickr 相簿列表 — swanky-hsiao
+# 來源: https://www.flickr.com/photos/swanky-hsiao/albums
+# 最後更新: 2026-03-22
+
+# 精選與年度最佳
+highlights:
+  - title: "Explore"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594218480315"
+
+  - title: "Most Interesting 500"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594568509362"
+
+# 年度 Most Interesting 100
+annual:
+  - title: "2006 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157614746269516"
+    year: 2006
+
+  - title: "2007 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157614674614107"
+    year: 2007
+
+  - title: "2008 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157614674637141"
+    year: 2008
+
+  - title: "2009 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157614674644335"
+    year: 2009
+
+  - title: "2010 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157622989497445"
+    year: 2010
+
+  - title: "2011 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157625625124355"
+    year: 2011
+
+  - title: "2012 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157628955522187"
+    year: 2012
+
+  - title: "2013 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632443392254"
+    year: 2013
+
+  - title: "2014 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157646687102970"
+    year: 2014
+
+  - title: "2015 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157651755664520"
+    year: 2015
+
+  - title: "2016 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157666304213871"
+    year: 2016
+
+  - title: "2017 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157690322291592"
+    year: 2017
+
+  - title: "2018 Most Interesting 100"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157663551810377"
+    year: 2018
+
+# 人像寫真拍攝
+portrait_sessions:
+  - title: "2021-04-11 羽葶╳史旺基「台大邊緣」"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157718999694018"
+    date: "2021-04-11"
+    model: "羽葶"
+    location: "台大邊緣"
+
+  - title: "2021-10-03 Kiki詩芸╳史旺基「制服女孩@國父紀念館週邊」"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157719947707658"
+    date: "2021-10-03"
+    model: "Kiki詩芸"
+    location: "國父紀念館週邊"
+
+  - title: "2021-10-23 藻╳史旺基「寶藏巖」"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157720087332688"
+    date: "2021-10-23"
+    model: "藻"
+    location: "寶藏巖"
+
+  - title: "2021-10-31 姍姍╳史旺基「華山藝文特區」"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157720119051229"
+    date: "2021-10-31"
+    model: "姍姍"
+    location: "華山藝文特區"
+
+  - title: "2022-12-12 李婷婷Tina╳史旺基「CloneX #18974」"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720304869243"
+    date: "2022-12-12"
+    model: "李婷婷Tina"
+    location: "CloneX #18974"
+
+# NFT / 展覽 / 其他
+events:
+  - title: "2022-05-6~8 ArtfN.fair 台北藝術新銳博覽會"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720299529278"
+    date: "2022-05-06"
+
+  - title: "2022-06-14 Swanky by Wind."
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720299863165"
+    date: "2022-06-14"
+
+  - title: "U_U"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720302005346"
+
+  - title: "Taiwan Uniform CloneX"
+    url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720303076043"
