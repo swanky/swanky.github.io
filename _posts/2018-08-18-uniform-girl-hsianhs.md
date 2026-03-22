@@ -6,6 +6,7 @@ layout: article
 nav_active: photography
 cover_image: /assets/facebook-archive/photos/2018-08-18_10158075093130329_0.jpg
 description: "一張修了許久、塵封在硬碟裡的制服女孩照片。模特兒嫺嫺。"
+keywords: 制服女孩,人像攝影,攝影作品,台灣攝影師,史旺基,Swanky Studio
 ---
 
 有些照片，拍完之後會先放著。

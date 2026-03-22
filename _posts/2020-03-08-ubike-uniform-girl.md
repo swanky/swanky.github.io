@@ -6,6 +6,7 @@ layout: article
 nav_active: photography
 cover_image: /assets/facebook-archive/photos/2020-03-08_10160006143465329_0.jpg
 description: "2020 年春天，台北街頭，制服女孩與 YouBike 的一幀快照。"
+keywords: 制服女孩,人像攝影,台北攝影,YouBike,攝影作品,史旺基,Swanky Studio
 ---
 
 台北的 UBike 已經成為街景的一部分。
