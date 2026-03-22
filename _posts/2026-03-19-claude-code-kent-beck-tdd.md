@@ -7,6 +7,7 @@ nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-kent-beck.jpg
 source_url: "https://www.linkedin.com/pulse/claude-code-%E6%99%82%E4%BB%A3kent-beck-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%8F%90%E9%86%92%E6%88%91%E5%80%91%E4%B8%8D%E8%A6%81%E5%8F%AA%E7%9C%8B80-%E5%AE%8C%E6%88%90-swanky-hsiao-wuf3c"
 description: "從 Kent Beck 對 TDD 的觀點出發，探討在 Claude Code 與 AI coding 工具時代，為何測試與規格比以往更加重要，80% 完成的系統不等於可交付的系統。"
+keywords: Claude Code,TDD,Kent Beck,AI coding,軟體工程,技術顧問,史旺基,Swanky Studio
 ---
 
 最近看到 Kent Beck 一段話，我覺得非常值得在今天這個 Claude Code 與 AI coding 工具快速普及的時代，再重新讀一次。

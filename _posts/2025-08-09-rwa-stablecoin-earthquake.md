@@ -6,6 +6,7 @@ layout: article
 cover_image: /assets/img/linkedin/rwa-stablecoin.jpg
 source_url: "https://www.linkedin.com/pulse/%E9%87%91%E8%9E%8D%E9%9C%87%E5%A4%AE%E9%80%BC%E8%BF%91%E5%A4%A9%E6%89%8D%E6%B3%95%E6%A1%88%E6%96%B0%E5%8F%B0%E5%B9%A3%E7%A9%A9%E5%AE%9A%E5%B9%A3%E8%88%87-rwa-%E5%BC%95%E7%88%86%E7%9A%84%E7%94%A2%E6%A5%AD%E5%9C%B0%E9%9C%87-swanky-hsiao-yezkc"
 description: "解析美國天才法案對穩定幣的監管框架，以及新台幣穩定幣與 RWA 對台灣金融業的潛在衝擊。"
+keywords: RWA,穩定幣,加密貨幣,DeFi,天才法案,區塊鏈,史旺基,Swanky Studio
 ---
 
 穩定幣，曾經只是加密貨幣市場的避險工具，如今正逼近全球金融的核心。它掛鉤法幣、價格穩定、跨境秒傳，全年無休——這些特性，對傳統金融來說，不只是挑戰，而是潛在的顛覆力量。

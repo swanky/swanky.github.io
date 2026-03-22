@@ -6,6 +6,7 @@ layout: article
 nav_active: technical
 cover_image: /assets/facebook-archive/photos/2022-12-15_576144351187036_1.jpg
 description: "從 2021 年的第一個制服女孩 NFT，到 2022 年底 UCX（Uniform CloneX）社群正式出道——這是一段用 Web3 工具實踐攝影 IP 的真實紀錄。"
+keywords: NFT,UCX,Uniform CloneX,Web3,區塊鏈,制服女孩,史旺基,Swanky Studio
 ---
 
 ## 起點：制服女孩遇上 NFT

@@ -6,6 +6,7 @@ layout: article
 cover_image: /assets/img/linkedin/mbti-management.jpg
 source_url: "https://www.linkedin.com/pulse/%E7%94%A8-mbti-%E7%9C%8B%E8%A6%8B%E5%B7%AE%E7%95%B0%E5%BE%9E%E6%BA%AB%E4%BC%AF%E6%A0%BC%E7%9A%84%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E5%AD%B8%E8%AB%87%E8%BB%9F%E9%AB%94%E5%9C%98%E9%9A%8A%E7%AE%A1%E7%90%86-swanky-hsiao-4tync"
 description: "結合 MBTI 人格理論與溫伯格《軟體管理學》，探討如何理解團隊成員差異並設計有效的管理流程。"
+keywords: MBTI,軟體管理,溫伯格,軟體團隊,敏捷,技術顧問,史旺基,Swanky Studio
 ---
 
 之前為了更進一步了解團隊成員，我設計了一個 Persona 資料範本，裡面除了角色定位、工作動機，也放進了 MBTI。原本只是想幫大家增加一點自我覺察與交流的切入點，沒想到今天翻讀 溫伯格的《軟體管理學》第三卷〈關照全局的管理作為〉，發現他早就完整討論過這個主題，還講得比我嚴肅許多。於是，我決定把這兩者結合，整理出一些對軟體團隊管理有用的啟發。
