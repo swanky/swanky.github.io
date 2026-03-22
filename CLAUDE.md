@@ -6,6 +6,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Jekyll-based portfolio site for Swanky Studio (史旺基工作室) hosted on GitHub Pages. Based on the Moderna template (BootstrapMade). All content is in Traditional Chinese (zh-TW).
 
+## Working Style
+
+Execute tasks autonomously. Do not ask for confirmation before starting.
+
+1. **Read first** — Study the relevant code and config before making any changes.
+2. **Assume and proceed** — Make reasonable assumptions rather than stopping to ask.
+3. **Do the full job** — Edit files, add tests where applicable, run lint/test/build.
+4. **Prefer minimal changes** — When multiple approaches are viable, choose the one with the smallest diff and highest maintainability.
+5. **No mid-task check-ins** — Proceed without confirmation unless the action would delete data, modify production config, push to a remote, or touch secrets.
+6. **Report once at the end:**
+   - Which files changed and why
+   - Test/build results
+   - Any remaining risks or follow-up recommendations
+
 ## Development Commands
 
 ```bash
