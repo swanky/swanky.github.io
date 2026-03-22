@@ -1,0 +1,29 @@
+{% if page.title %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  {% if page.description %}"description": {{ page.description | jsonify }},{% endif %}
+  {% if page.cover_image %}"image": "{{ page.cover_image | absolute_url }}",{% endif %}
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "蕭宇程",
+    "alternateName": "Swanky Hsiao",
+    "url": "https://swanky.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Swanky Studio 史旺基工作室",
+    "url": "https://swanky.github.io"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+{% endif %}
