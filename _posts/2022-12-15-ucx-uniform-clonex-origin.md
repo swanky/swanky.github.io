@@ -45,6 +45,14 @@ CloneX 的核心概念是：每一個 NFT 是一個可穿戴、可在虛擬世�
 
 ![UCX 出道日](/assets/facebook-archive/photos/2022-12-15_576144351187036_1.jpg)
 
+![UCX 出道日](/assets/facebook-archive/photos/2022-12-15_576144351187036_2.jpg)
+
+![UCX 出道日](/assets/facebook-archive/photos/2022-12-15_576144351187036_3.jpg)
+
+![UCX 出道日](/assets/facebook-archive/photos/2022-12-15_576144351187036_4.jpg)
+
+![UCX 出道日](/assets/facebook-archive/photos/2022-12-15_576144351187036_5.jpg)
+
 展位、UCX 的識別視覺、第一批成員的集合——這是一個很小的開始，但對我來說意義重大。
 
 那天，還有朋友 cosplay 成她的 CloneX 角色來參加。那個畫面，讓我覺得：**虛擬 IP 和真實人物之間的距離，並不像想象中那麼遠。**

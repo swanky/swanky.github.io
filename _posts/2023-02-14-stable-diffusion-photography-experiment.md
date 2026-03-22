@@ -21,6 +21,14 @@ keywords: Stable Diffusion,AI生圖,攝影師,AI繪圖,AI學習,史旺基,Swanky
 
 ![AI 生圖實驗第一週](/assets/facebook-archive/photos/2023-02-14_629017969233007_1.jpg)
 
+![AI 生圖實驗第一週](/assets/facebook-archive/photos/2023-02-14_629017969233007_2.jpg)
+
+![AI 生圖實驗第一週](/assets/facebook-archive/photos/2023-02-14_629017969233007_3.jpg)
+
+![AI 生圖實驗第一週](/assets/facebook-archive/photos/2023-02-14_629017969233007_4.jpg)
+
+![AI 生圖實驗第一週](/assets/facebook-archive/photos/2023-02-14_629017969233007_5.jpg)
+
 ## 第二週：效果太好，開始認真研究
 
 隔天我又貼了一篇，標題大概是：「昨天貼文的效果太好，讓我覺得以後是不是用生成的圖來騙讚也不錯，反正跟我的攝影差不多也是從一堆照片中選來貼。」
@@ -32,6 +40,14 @@ keywords: Stable Diffusion,AI生圖,攝影師,AI繪圖,AI學習,史旺基,Swanky
 第二週，我開始系統性地研究 Stable Diffusion 的工作流程。
 
 ![AI 生圖實驗第二週](/assets/facebook-archive/photos/2023-02-15_630136942454443_1.jpg)
+
+![AI 生圖實驗第二週](/assets/facebook-archive/photos/2023-02-15_630136942454443_2.jpg)
+
+![AI 生圖實驗第二週](/assets/facebook-archive/photos/2023-02-15_630136942454443_3.jpg)
+
+![AI 生圖實驗第二週](/assets/facebook-archive/photos/2023-02-15_630136942454443_4.jpg)
+
+![AI 生圖實驗第二週](/assets/facebook-archive/photos/2023-02-15_630136942454443_5.jpg)
 
 ## 第三週：Stable Diffusion + 模型組合
 
@@ -50,6 +66,14 @@ Stable Diffusion + ChilloutMix + Korean Doll Likeness + Taiwan Doll Likeness + U
 - **提示詞工程（Prompt Engineering）**和攝影的「場景設定」有驚人的相似之處——你要告訴 AI 光線、角度、情緒、服裝，就像在現場指導一場拍攝
 
 ![Stable Diffusion 模型組合實驗](/assets/facebook-archive/photos/2023-02-20_634292428705561_1.jpg)
+
+![Stable Diffusion 模型組合實驗](/assets/facebook-archive/photos/2023-02-20_634292428705561_2.jpg)
+
+![Stable Diffusion 模型組合實驗](/assets/facebook-archive/photos/2023-02-20_634292428705561_3.jpg)
+
+![Stable Diffusion 模型組合實驗](/assets/facebook-archive/photos/2023-02-20_634292428705561_4.jpg)
+
+![Stable Diffusion 模型組合實驗](/assets/facebook-archive/photos/2023-02-20_634292428705561_5.jpg)
 
 ## 第四週：九頭身美少女與視覺疲勞
 

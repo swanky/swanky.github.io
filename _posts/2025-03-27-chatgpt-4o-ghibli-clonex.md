@@ -19,6 +19,8 @@ keywords: ChatGPT,GPT-4o,吉卜力,CloneX,AI生圖,NFT,AI學習,史旺基,Swanky
 
 ![ChatGPT 4o 吉卜力風格重繪](/assets/facebook-archive/photos/2025-03-27_1201814241953374_1.jpg)
 
+![ChatGPT 4o 吉卜力風格重繪](/assets/facebook-archive/photos/2025-03-27_1201814241953374_2.jpg)
+
 不是說吉卜力風格本身有多特別——它在 AI 圖像社群裡已經被玩了很多次。讓我驚訝的是**執行的門檻**：過去需要調教模型、寫複雜 prompt、反覆迭代才能做到的效果，現在一句話就完成了。
 
 而且是在 ChatGPT 的對話框裡，不需要安裝任何東西。
@@ -39,6 +41,8 @@ keywords: ChatGPT,GPT-4o,吉卜力,CloneX,AI生圖,NFT,AI學習,史旺基,Swanky
 現在，ChatGPT 4o 可以直接拿 CloneX 截圖，生成各種風格的衍生圖——而且品質比當年做的好得多。
 
 ![ChatGPT 4o 與 CloneX IP 開發](/assets/facebook-archive/photos/2025-03-28_1202891541845644_1.jpg)
+
+![ChatGPT 4o 與 CloneX IP 開發](/assets/facebook-archive/photos/2025-03-28_1202891541845644_2.jpg)
 
 ## 創作者的角色正在改變
 
