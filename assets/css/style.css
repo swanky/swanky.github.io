@@ -1880,7 +1880,6 @@ padding-bottom: 56.25%;
   background: #343a40;
   overflow: hidden;
   max-width: 80%;
-  max-height: 320px;
   left: 10%;
   position: relative;
   border-radius: 4px;
@@ -1890,7 +1889,6 @@ padding-bottom: 56.25%;
   background: #343a40;
   overflow: hidden;
   max-width: 70%;
-  max-height: 196px;
   left: 15%;
   position: relative;
   border-radius: 4px;
@@ -2330,7 +2328,6 @@ padding-bottom: 56.25%;
 }
 
 .blog .entry .entry-img {
-  max-height: 440px;
   margin: -30px -30px 20px -30px;
   overflow: hidden;
 }
