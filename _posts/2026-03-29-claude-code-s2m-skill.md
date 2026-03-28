@@ -126,19 +126,25 @@ flowchart LR
 
 ## 三、安裝與下載
 
-### 方法 A：手動建立（推薦）
+### 方法 A：一鍵下載（推薦）
 
-在你的專案目錄下建立檔案：
+<a href="{{ '/assets/downloads/skills/s2m/SKILL.md.download' | relative_url }}" download="SKILL.md" class="btn btn-warning btn-lg mb-3" style="background-color: #E5A300; border-color: #E5A300; color: #fff; font-weight: bold; text-decoration: none;">
+  <i class="bi bi-download"></i>&nbsp; 下載 SKILL.md
+</a>
+
+下載後，放到你的專案目錄下：
 
 ```bash
 mkdir -p .claude/skills/s2m
+# 把下載的 SKILL.md 移到這裡
+mv ~/Downloads/SKILL.md .claude/skills/s2m/
 ```
 
-然後建立 `.claude/skills/s2m/SKILL.md`，貼入完整的 Skill 定義內容。
+### 方法 B：手動建立
 
-完整的 SKILL.md 原始碼放在本文最後的「附錄」段落，你可以直接複製使用。
+如果你偏好手動操作，在專案目錄下建立 `.claude/skills/s2m/SKILL.md`，貼入本文最後「附錄」段落的完整內容。
 
-### 方法 B：從既有專案複製
+### 方法 C：從既有專案複製
 
 如果你已經有一個包含 s2m Skill 的專案，直接複製整個目錄：
 
