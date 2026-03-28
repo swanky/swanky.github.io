@@ -2,8 +2,8 @@
 layout: home
 title: 攝影作品精選 | Swanky Studio 史旺基工作室
 description: >
-  史旺基歷年攝影作品精選與 Flickr 相簿集總覽，涵蓋人像代表作、制服系列、概念系列、成名前作品、名人合作、展覽經歷及 30 個主題相簿集，完整收錄於 Flickr。
-keywords: 攝影作品集,Flickr精選,制服女孩,For Your Safety,史旺基,人像攝影,名人合作,林襄,熊熊,洪詩,奎丁,展覽
+  史旺基歷年攝影作品精選與 Flickr 相簿集總覽，涵蓋成名前模特兒、人像代表作、制服女孩試鏡群像、長期合作模特兒、概念系列、名人合作、展覽經歷，收錄超過 50 位模特兒與 1,100 個相簿。
+keywords: 攝影作品集,Flickr精選,制服女孩,For Your Safety,史旺基,人像攝影,名人合作,林襄,洪詩,奎丁,制服試鏡,模特兒,展覽
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -271,6 +271,20 @@ extra_css: >
 
       <hr class="section-divider">
 
+      <!-- ===================== 她們後來都成名了 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>她們後來都成名了</h2>
+        <p>這些模特兒當年拍攝時還是素人，現已成為台灣知名藝人、網紅與公眾人物</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+        {% for model in site.data.flickr_models.became_famous %}
+        {% include flickr-model-card.html model=model type="became-famous" %}
+        {% endfor %}
+      </div><!-- /row 她們後來都成名了 -->
+
+      <hr class="section-divider">
+
       <!-- ===================== 1. 人像代表作 ===================== -->
       <div class="section-title" style="padding-bottom:20px;">
         <h2>人像代表作</h2>
@@ -485,73 +499,6 @@ extra_css: >
 
       <hr class="section-divider">
 
-      <!-- ===================== 2. 次文化紀錄 ===================== -->
-      <div class="section-title" style="padding-bottom:20px;">
-        <h2>次文化紀錄</h2>
-        <p>Cosplay · 幽默瞬間 · 現場活動 · 跨圈層傳播力</p>
-      </div>
-
-      <div class="row" data-aos="fade-up" data-aos-duration="500">
-
-        <!-- WoW Cosplay 2007 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/385543290/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/385543290.jpg' | relative_url }}" alt="World of Warcraft Cosplay Girls 次文化紀錄攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">次文化紀錄</div>
-              <h4>World of Warcraft Cosplay Girls</h4>
-              <p>遊戲 Cosplay 主題現場攝影，高瀏覽量顯示其跨圈層傳播力，為「人像以外」的題材擴張。</p>
-              <div class="milestone-badges">
-                <span class="milestone-badge">Most Views</span>
-              </div>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/385543290/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
-                <i class="bx bxl-flickr"></i> 查看作品
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- McDonald vs KFC 2008 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/2268323299/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/2268323299.jpg' | relative_url }}" alt="McDonald's vs KFC 高擴散幽默瞬間攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">次文化紀錄</div>
-              <h4>McDonald's vs KFC｜高擴散幽默瞬間</h4>
-              <p>接近百萬瀏覽的幽默街頭瞬間，帳號最具網路擴散力的作品，EXIF 可引用（17–50mm）。</p>
-              <div class="milestone-badges">
-                <span class="milestone-badge">Most Views</span>
-                <span class="milestone-badge">Explore</span>
-              </div>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/2268323299/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
-                <i class="bx bxl-flickr"></i> 查看作品
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 北一女樂儀隊 2014 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/15354228461/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/15354228461.jpg' | relative_url }}" alt="北一女中樂儀隊現場紀錄攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">次文化紀錄</div>
-              <h4>北一女中樂儀隊｜現場紀錄</h4>
-              <p>表演事件現場攝影，高互動數字與明確題材辨識度，展示非棚拍的活動紀錄能力。</p>
-              <div class="milestone-badges">
-                <span class="milestone-badge">2014 Most Interesting 100</span>
-              </div>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/15354228461/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
-                <i class="bx bxl-flickr"></i> 查看作品
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /row 次文化 -->
-
-      <hr class="section-divider">
-
       <!-- ===================== 3. 概念系列 For Your Safety ===================== -->
       <div class="section-title" style="padding-bottom:20px;">
         <h2>概念系列</h2>
@@ -708,93 +655,45 @@ extra_css: >
 
       <hr class="section-divider">
 
-      <!-- ===================== 4.5 她們後來都成名了 ===================== -->
+      <!-- ===================== 制服女孩試鏡群像 ===================== -->
       <div class="section-title" style="padding-bottom:20px;">
-        <h2>她們後來都成名了</h2>
-        <p>這些模特兒當年拍攝時還是素人，現已成為台灣知名藝人、網紅與公眾人物</p>
+        <h2>制服女孩試鏡群像</h2>
+        <p>2015 年夏天，《制服．女孩》第三集公開募集試鏡，近 20 位女孩在短短一個月內完成拍攝</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-duration="500">
+        {% for model in site.data.flickr_models.uniform_trial %}
+        {% include flickr-model-card.html model=model type="uniform-trial" %}
+        {% endfor %}
+      </div><!-- /row 制服女孩試鏡群像 -->
 
-        <!-- 林襄 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157655012548483/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157655012548483.jpg' | relative_url }}" alt="林襄╳史旺基 制服女孩試鏡 2015"></a>
-            <div class="album-card-body">
-              <div class="category-label">成名前作品</div>
-              <h4>林襄 Mizuki</h4>
-              <p>2015 制服女孩試鏡 · 2021 年加入 Rakuten Girls 後爆紅，曾入圍 TC Candler 全球百大美女，出版寫真集《與你襄遇》，2024 年轉入味全龍 Dragon Beauties。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157655012548483/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
+      <hr class="section-divider">
 
-        <!-- 洪詩 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157607392481999.jpg' | relative_url }}" alt="洪詩╳史旺基 北美館人像攝影 2008"></a>
-            <div class="album-card-body">
-              <div class="category-label">藝人合作</div>
-              <h4>洪詩</h4>
-              <p>2008 北美館拍攝 · 當時已是《我愛黑澀會》第一批成員，後加入 Popu Lady 與星期三女團，並跨足餐飲創業。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
+      <!-- ===================== 長期合作模特兒 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>長期合作模特兒</h2>
+        <p>多次合作、共同成長的模特兒夥伴，橫跨 2008–2022 年</p>
+      </div>
 
-        <!-- 奎丁 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157635679986683/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/9833170045.jpg' | relative_url }}" alt="Zamy奎丁╳史旺基 百齡高中制服 2013"></a>
-            <div class="album-card-body">
-              <div class="category-label">成名前作品</div>
-              <h4>奎丁 Zamy</h4>
-              <p>2013 百齡高中制服拍攝 · 現為 YouTuber 與社群創作者，以大膽直率風格走紅，IG 追蹤超過 75 萬。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157635679986683/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+        {% for model in site.data.flickr_models.featured_collab %}
+        {% include flickr-model-card.html model=model type="featured-collab" %}
+        {% endfor %}
+      </div><!-- /row 長期合作模特兒 -->
 
-        <!-- 黃琳 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157662072260563.jpg' | relative_url }}" alt="制服女孩III簽書會 黃琳"></a>
-            <div class="album-card-body">
-              <div class="category-label">成名前作品</div>
-              <h4>黃琳 琳琳</h4>
-              <p>《制服．女孩 III》合作模特兒 · 世新大學期間以「世新女神」、「台版 Angelababy」走紅，現為知名網拍模特兒，IG 追蹤近 80 萬。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
+      <hr class="section-divider">
 
-        <!-- 啾比特 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157656733511982/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157656733511982.jpg' | relative_url }}" alt="啾比特張嘉庭╳史旺基 妳好學妹側拍 2015"></a>
-            <div class="album-card-body">
-              <div class="category-label">成名前作品</div>
-              <h4>啾比特 張嘉庭</h4>
-              <p>2015 妳好學妹側拍 · 曾獲 JKF 百大女郎，現為社群創作者與平面模特兒，IG 追蹤超過 35 萬。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157656733511982/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
+      <!-- ===================== 更多制服系列 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>更多人像相簿</h2>
+        <p>2016–2018 · 精選制服系列與人像拍攝相簿</p>
+      </div>
 
-        <!-- 阮糖 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157662072260563.jpg' | relative_url }}" alt="制服女孩III簽書會 阮靖貽"></a>
-            <div class="album-card-body">
-              <div class="category-label">成名前作品</div>
-              <h4>阮糖 阮靖貽</h4>
-              <p>《制服．女孩 III》合作模特兒 · 2015 年八仙塵爆首位出院傷者，康復後投入演藝工作，曾加入女團 5TEAM。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /row 她們後來都成名了 -->
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+        {% for model in site.data.flickr_models.uniform_more %}
+        {% include flickr-model-card.html model=model type="uniform-more" %}
+        {% endfor %}
+      </div><!-- /row 更多制服系列 -->
 
       <hr class="section-divider">
 
@@ -867,114 +766,6 @@ extra_css: >
         </div>
 
       </div><!-- /row 近年 -->
-
-      <hr class="section-divider">
-
-      <!-- ===================== 6. 更多人像相簿 ===================== -->
-      <div class="section-title" style="padding-bottom:20px;">
-        <h2>更多人像相簿</h2>
-        <p>2016–2022 · 精選未收錄的近期人像拍攝相簿</p>
-      </div>
-
-      <div class="row" data-aos="fade-up" data-aos-duration="500">
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157720087332688/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157720087332688.jpg' | relative_url }}" alt="藻╳史旺基 寶藏巖人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>藻╳史旺基「寶藏巖」</h4>
-              <p>2021 · 以寶藏巖歷史聚落為背景的場景人像創作，光影與斑駁牆面交織出獨特氛圍。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157720087332688/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157719947707658/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157719947707658.jpg' | relative_url }}" alt="Kiki詩芸╳史旺基 制服女孩國父紀念館攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>Kiki詩芸╳史旺基「制服女孩@國父紀念館週邊」</h4>
-              <p>2021 · 國父紀念館周邊街拍制服人像，延續制服系列的城市場景探索。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157719947707658/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157718999694018/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157718999694018.jpg' | relative_url }}" alt="羽葶╳史旺基 台大邊緣人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>羽葶╳史旺基「台大邊緣」</h4>
-              <p>2021 · 以台灣大學校園為場景的人像拍攝，捕捉校園光影與青春氛圍。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157718999694018/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157709088340532/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157709088340532.jpg' | relative_url }}" alt="Zoe 228公園城中人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>Zoe@228+城中</h4>
-              <p>2019 · 228 公園與城中區域的城市人像寫真，結合歷史街廓與現代人像。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157709088340532/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157673051651878.jpg' | relative_url }}" alt="李婷婷╳史旺基 制服女孩攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>李婷婷╳史旺基「制服女孩」</h4>
-              <p>2018 · 制服系列代表作，展現成熟期的制服人像風格與高品質影像。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157683235514605/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157683235514605.jpg' | relative_url }}" alt="Alice╳史旺基 台大艾瑪華森概念人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>Alice╳史旺基「台大艾瑪華森」</h4>
-              <p>2017 · 以台灣大學為場景、向 Emma Watson 致敬的概念人像拍攝企劃。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157683235514605/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673127456475/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157673127456475.jpg' | relative_url }}" alt="劉家靜╳史旺基 淡水線制服之旅攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>劉家靜╳史旺基「淡水線制服之旅」</h4>
-              <p>2016 · 沿淡水捷運線取景的制服之旅，結合鐵道風景與制服人像的企劃攝影。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157673127456475/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157674946364643/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157674946364643.jpg' | relative_url }}" alt="Becky╳史旺基 文科女孩人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">人像相簿</div>
-              <h4>Becky╳史旺基「文科女孩」</h4>
-              <p>2016 · 以「文科女孩」為主題的概念人像，清新文藝風格的創作拍攝。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157674946364643/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /row 更多人像相簿 -->
 
       <hr class="section-divider">
 
@@ -1082,18 +873,6 @@ extra_css: >
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
-          <div class="album-card">
-            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157627524923159/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157627524923159.jpg' | relative_url }}" alt="林采緹 Sunny Lin 人像攝影"></a>
-            <div class="album-card-body">
-              <div class="category-label">Celebrity</div>
-              <h4>林采緹 Sunny Lin</h4>
-              <p>藝人林采緹人像攝影紀錄，阿宅反抗軍電台來賓。</p>
-              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157627524923159/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
-            </div>
-          </div>
-        </div>
-
       </div><!-- /row 名人 -->
 
       <div class="text-center mt-2 mb-4">
@@ -1101,6 +880,73 @@ extra_css: >
           <i class="bx bxl-flickr"></i> 查看全部 33 組名人相簿
         </a>
       </div>
+
+      <hr class="section-divider">
+
+      <!-- ===================== 次文化紀錄 ===================== -->
+      <div class="section-title" style="padding-bottom:20px;">
+        <h2>次文化紀錄</h2>
+        <p>Cosplay · 幽默瞬間 · 現場活動 · 跨圈層傳播力</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
+
+        <!-- WoW Cosplay 2007 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/385543290/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/385543290.jpg' | relative_url }}" alt="World of Warcraft Cosplay Girls 次文化紀錄攝影"></a>
+            <div class="album-card-body">
+              <div class="category-label">次文化紀錄</div>
+              <h4>World of Warcraft Cosplay Girls</h4>
+              <p>遊戲 Cosplay 主題現場攝影，高瀏覽量顯示其跨圈層傳播力，為「人像以外」的題材擴張。</p>
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/385543290/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- McDonald vs KFC 2008 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/2268323299/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/2268323299.jpg' | relative_url }}" alt="McDonald's vs KFC 高擴散幽默瞬間攝影"></a>
+            <div class="album-card-body">
+              <div class="category-label">次文化紀錄</div>
+              <h4>McDonald's vs KFC｜高擴散幽默瞬間</h4>
+              <p>接近百萬瀏覽的幽默街頭瞬間，帳號最具網路擴散力的作品，EXIF 可引用（17–50mm）。</p>
+              <div class="milestone-badges">
+                <span class="milestone-badge">Most Views</span>
+                <span class="milestone-badge">Explore</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/2268323299/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 北一女樂儀隊 2014 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/15354228461/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/15354228461.jpg' | relative_url }}" alt="北一女中樂儀隊現場紀錄攝影"></a>
+            <div class="album-card-body">
+              <div class="category-label">次文化紀錄</div>
+              <h4>北一女中樂儀隊｜現場紀錄</h4>
+              <p>表演事件現場攝影，高互動數字與明確題材辨識度，展示非棚拍的活動紀錄能力。</p>
+              <div class="milestone-badges">
+                <span class="milestone-badge">2014 Most Interesting 100</span>
+              </div>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/15354228461/" target="_blank" rel="noopener noreferrer" class="btn-flickr">
+                <i class="bx bxl-flickr"></i> 查看作品
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row 次文化 -->
 
       <hr class="section-divider">
 
@@ -1188,7 +1034,7 @@ extra_css: >
 
       <!-- Bottom CTA -->
       <div class="text-center mt-5 mb-5" data-aos="fade-up" data-aos-duration="400">
-        <p style="color:#999;font-size:0.92rem;margin-bottom:16px;">以上僅為精選，Flickr 上依主題分為人像、制服女孩、名人、展覽等 30 個相簿集，收錄完整作品。</p>
+        <p style="color:#999;font-size:0.92rem;margin-bottom:16px;">以上僅為精選，Flickr 上共有 1,110 個公開相簿，依主題分為人像、制服女孩、名人、展覽等 30 個相簿集，收錄完整作品。</p>
         <a href="https://www.flickr.com/photos/swanky-hsiao/collections/" target="_blank" rel="noopener noreferrer" class="btn-get-started animate__animated animate__fadeInUp">
           瀏覽全部 Flickr 相簿集
         </a>

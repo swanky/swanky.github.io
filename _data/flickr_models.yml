@@ -1,0 +1,536 @@
+# Flickr 模特兒資料
+# 用於 photography/flickr-gallery.html 資料驅動卡片渲染
+# 最後更新: 2026-03-29
+
+# =====================================================
+# Section: became-famous — 她們後來都成名了
+# =====================================================
+became_famous:
+  - id: "lin-xiang"
+    name_zh: "林襄"
+    name_en: "Mizuki"
+    shoot_year: 2015
+    shoot_context: "制服女孩試鏡"
+    bio_zh: "2015 制服女孩試鏡 · 2021 年加入 Rakuten Girls 後爆紅，曾入圍 TC Candler 全球百大美女，出版寫真集《與你襄遇》，2024 年轉入味全龍 Dragon Beauties。"
+    achievements: ["TC Candler 全球百大美女", "寫真集《與你襄遇》"]
+    flickr_album_id: "72157655012548483"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157655012548483/"
+    cover_image: "album_72157655012548483.jpg"
+    category_label: "成名前作品"
+
+  - id: "hong-shi"
+    name_zh: "洪詩"
+    name_en: ""
+    shoot_year: 2008
+    shoot_context: "北美館人像攝影"
+    bio_zh: "2008 北美館拍攝 · 當時已是《我愛黑澀會》第一批成員，後加入 Popu Lady 與星期三女團，並跨足餐飲創業。"
+    achievements: ["Popu Lady", "星期三女團"]
+    flickr_album_id: "72157607392481999"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/"
+    cover_image: "album_72157607392481999.jpg"
+    category_label: "藝人合作"
+
+  - id: "zamy"
+    name_zh: "奎丁"
+    name_en: "Zamy"
+    shoot_year: 2013
+    shoot_context: "百齡高中制服拍攝"
+    bio_zh: "2013 百齡高中制服拍攝 · 現為 YouTuber 與社群創作者，以大膽直率風格走紅，IG 追蹤超過 75 萬。"
+    achievements: ["YouTuber", "IG 75萬+"]
+    flickr_album_id: "72157635679986683"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635679986683/"
+    cover_image: "9833170045.jpg"
+    category_label: "成名前作品"
+
+  - id: "huang-lin"
+    name_zh: "黃琳"
+    name_en: "琳琳"
+    shoot_year: 2016
+    shoot_context: "《制服．女孩 III》合作模特兒"
+    bio_zh: "《制服．女孩 III》合作模特兒 · 世新大學期間以「世新女神」、「台版 Angelababy」走紅，現為知名網拍模特兒，IG 追蹤近 80 萬。"
+    achievements: ["世新女神", "IG 80萬+"]
+    flickr_album_id: "72157662072260563"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/"
+    cover_image: "album_72157662072260563.jpg"
+    category_label: "成名前作品"
+
+  - id: "jupiter"
+    name_zh: "啾比特"
+    name_en: "張嘉庭"
+    shoot_year: 2015
+    shoot_context: "妳好學妹側拍"
+    bio_zh: "2015 妳好學妹側拍 · 曾獲 JKF 百大女郎，現為社群創作者與平面模特兒，IG 追蹤超過 35 萬。"
+    achievements: ["JKF 百大女郎", "IG 35萬+"]
+    flickr_album_id: "72157656733511982"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157656733511982/"
+    cover_image: "album_72157656733511982.jpg"
+    category_label: "成名前作品"
+
+  - id: "ruan-tang"
+    name_zh: "阮糖"
+    name_en: "阮靖貽"
+    shoot_year: 2015
+    shoot_context: "《制服．女孩 III》合作模特兒"
+    bio_zh: "《制服．女孩 III》合作模特兒 · 2015 年八仙塵爆首位出院傷者，康復後投入演藝工作，曾加入女團 5TEAM。"
+    achievements: ["八仙塵爆生還者", "5TEAM"]
+    flickr_album_id: "72157662072260563"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/"
+    cover_image: "album_72157662072260563.jpg"
+    category_label: "成名前作品"
+
+  - id: "lin-caiti"
+    name_zh: "林采緹"
+    name_en: "Sunny Lin"
+    shoot_year: 2011
+    shoot_context: "阿宅反抗軍電台來賓"
+    bio_zh: "2011 阿宅反抗軍電台來賓 · 後跨足戲劇與綜藝，成為知名藝人與演員，活躍於各大電視節目。"
+    achievements: ["藝人/演員", "綜藝節目常客"]
+    flickr_album_id: "72157627524923159"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157627524923159/"
+    cover_image: "album_72157627524923159.jpg"
+    category_label: "成名前作品"
+
+  - id: "xiongxiong-zhuoyutong"
+    name_zh: "熊熊"
+    name_en: "卓毓彤"
+    shoot_year: 2013
+    shoot_context: "阿宅反抗軍電台來賓"
+    bio_zh: "2013 阿宅反抗軍電台來賓 · 後成為一線藝人、演員，出版多本暢銷寫真集，活躍於戲劇與綜藝圈。"
+    achievements: ["一線藝人/演員", "多本暢銷寫真集"]
+    flickr_album_id: "72157634639705258"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157634639705258/"
+    cover_image: "album_72157634639705258.jpg"
+    category_label: "成名前作品"
+
+  - id: "song-yunhua"
+    name_zh: "宋芸樺"
+    name_en: ""
+    shoot_year: 2012
+    shoot_context: "阿宅反抗軍電台來賓"
+    bio_zh: "2012 阿宅反抗軍電台來賓 · 後以電影《我的少女時代》爆紅，成為金馬獎入圍電影演員。"
+    achievements: ["《我的少女時代》女主角", "電影演員"]
+    flickr_album_id: "72157630161260824"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630161260824/"
+    cover_image: "album_72157630161260824.jpg"
+    category_label: "成名前作品"
+
+  - id: "a-xi"
+    name_zh: "阿喜"
+    name_en: ""
+    shoot_year: 2012
+    shoot_context: "阿宅反抗軍宅T宣傳照模特兒"
+    bio_zh: "2012 阿宅反抗軍宅T宣傳照模特兒 · 後以搞笑藝人身份走紅，跨足主持、戲劇與網路節目。"
+    achievements: ["藝人/主持人", "宅T宣傳模特兒"]
+    flickr_album_id: "72157632196635048"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632196635048/"
+    cover_image: "album_72157632196635048.jpg"
+    category_label: "成名前作品"
+
+  - id: "shao-ting"
+    name_zh: "邵庭"
+    name_en: "Nikki"
+    shoot_year: 2008
+    shoot_context: "人像攝影"
+    bio_zh: "2008 人像攝影合作 · 後成為購物台知名主持人與網路名人，經營自有品牌，社群影響力廣泛。"
+    achievements: ["購物台主持人", "網路名人/品牌經營"]
+    flickr_album_id: "72157606571456436"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157606571456436/"
+    cover_image: "album_72157606571456436.jpg"
+    category_label: "成名前作品"
+
+  - id: "yuan-aifei"
+    name_zh: "袁艾菲"
+    name_en: "Phoebe"
+    shoot_year: 2011
+    shoot_context: "人像攝影"
+    bio_zh: "2011 人像攝影合作 · 後以演員身份活躍於台灣戲劇圈，參演多部電視劇與電影。"
+    achievements: ["演員", "多部電視劇與電影"]
+    flickr_album_id: "72157626608183463"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157626608183463/"
+    cover_image: "album_72157626608183463.jpg"
+    category_label: "成名前作品"
+
+# =====================================================
+# Section: featured-collab — 長期合作模特兒
+# =====================================================
+featured_collab:
+  - id: "zoey"
+    name_zh: "丁小雨"
+    name_en: "Zoey"
+    shoot_years: "2010–2011"
+    album_count: 10
+    bio_zh: "最核心的早期合作模特兒，橫跨 10 組相簿，足跡遍及台北各處。同時也是「For Your Safety｜安全起見」概念系列的關鍵人物。"
+    flickr_album_id: "72157624154925043"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157624154925043/"
+    cover_image: "album_72157624154925043.jpg"
+
+  - id: "sandy"
+    name_zh: "岑岑"
+    name_en: "Sandy"
+    shoot_years: "2013"
+    album_count: 4
+    bio_zh: "2013 年活躍合作模特兒，拍攝風格涵蓋制服系列、淡水街拍、展覽紀錄等多元場景。"
+    flickr_album_id: "72157632530316323"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632530316323/"
+    cover_image: "album_72157632530316323.jpg"
+
+  - id: "kate"
+    name_zh: "Kate"
+    name_en: "阿貓"
+    shoot_years: "2012"
+    album_count: 4
+    bio_zh: "2012 年密集合作，拍攝據點涵蓋淡水、西門町、平溪線、布蘭梅德國茶館等經典場景。"
+    flickr_album_id: "72157629203838480"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629203838480/"
+    cover_image: "album_72157629203838480.jpg"
+
+  - id: "mikako"
+    name_zh: "果子"
+    name_en: "Mikako"
+    shoot_years: "2008–2017"
+    album_count: 3
+    bio_zh: "跨越近十年的長期合作夥伴，從早期 CAPA 競賽作品到 2017「星空復古＠萬鏡寫真館」棚拍企劃。"
+    flickr_album_id: "72157603757904337"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157603757904337/"
+    cover_image: "album_72157603757904337.jpg"
+
+  - id: "liu-jiajing"
+    name_zh: "劉家靜"
+    name_en: ""
+    shoot_years: "2016"
+    album_count: 3
+    bio_zh: "2016 年三次合作，風格從棚拍到「淡水線制服之旅」沿線取景企劃，展現多元場景的合作默契。"
+    flickr_album_id: "72157673127456475"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157673127456475/"
+    cover_image: "album_72157673127456475.jpg"
+
+  - id: "rose"
+    name_zh: "若慈"
+    name_en: "Rose"
+    shoot_years: "2013"
+    album_count: 3
+    bio_zh: "2013 年制服與場景人像合作，拍攝涵蓋城市街拍與校園風格。"
+    flickr_album_id: "72157635310022714"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635310022714/"
+    cover_image: "album_72157635310022714.jpg"
+
+  - id: "singtone"
+    name_zh: "星彤"
+    name_en: "Singtone"
+    shoot_years: "2012–2014"
+    album_count: 3
+    bio_zh: "「糖果女孩」系列代表，合作橫跨西門町、布蘭梅德國茶館等場景。"
+    flickr_album_id: "72157631792409778"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631792409778/"
+    cover_image: "album_72157631792409778.jpg"
+
+  - id: "keai"
+    name_zh: "可艾"
+    name_en: "Keai"
+    shoot_years: "2012"
+    album_count: 3
+    bio_zh: "2012 年合作模特兒，拍攝據點包含寶藏巖、師大分部、一滴水博物館與滬尾砲台。"
+    flickr_album_id: "72157630914069426"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630914069426/"
+    cover_image: "album_72157630914069426.jpg"
+
+  - id: "bebe"
+    name_zh: "Bebe"
+    name_en: "張小木"
+    shoot_years: "2013"
+    album_count: 3
+    bio_zh: "2013 年合作模特兒，拍攝主題涵蓋「No Nuke! 反核」概念、「西門町空姐」與「哆啦Be夢」等企劃。"
+    flickr_album_id: "72157632874474980"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632874474980/"
+    cover_image: "album_72157632874474980.jpg"
+
+  - id: "huang-boyu"
+    name_zh: "黃帛瑜"
+    name_en: ""
+    shoot_years: "2018–2021"
+    album_count: 2
+    bio_zh: "從 2018 年制服女孩到 2021 年「比特幣女孩」，見證創作題材從傳統制服系列跨入加密貨幣新語境。"
+    flickr_album_id: "72157700670410182"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157700670410182/"
+    cover_image: "album_72157700670410182.jpg"
+
+  - id: "li-tingting"
+    name_zh: "李婷婷"
+    name_en: "Tina"
+    shoot_years: "2018–2022"
+    album_count: 3
+    bio_zh: "跨越四年的長期合作，從 2018 制服女孩到 2022「CloneX #18974」NFT 跨界企劃，見證攝影風格演進。"
+    flickr_album_id: "72157673051651878"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/"
+    cover_image: "album_72157673051651878.jpg"
+
+  - id: "si-xian"
+    name_zh: "思嫺"
+    name_en: "Si-Xian"
+    shoot_years: "2013"
+    album_count: 2
+    bio_zh: "2013 年合作模特兒，拍攝主題包含北一女中制服＠博愛特區、實踐大學等場景。"
+    flickr_album_id: "72157635182065102"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635182065102/"
+    cover_image: "album_72157635182065102.jpg"
+
+# =====================================================
+# Section: uniform-trial — 制服女孩試鏡群像 (2015)
+# =====================================================
+uniform_trial:
+  - id: "wan-jingwen"
+    name_zh: "萬璟雯"
+    shoot_date: "2015-08-31"
+    photos: 126
+    flickr_album_id: "72157660401528395"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157660401528395/"
+    cover_image: "album_72157660401528395.jpg"
+
+  - id: "chen-peiwen"
+    name_zh: "陳姵雯 Peggy"
+    shoot_date: "2015-08-15"
+    school: "彰化高商"
+    photos: 85
+    flickr_album_id: "72157657440152415"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157657440152415/"
+    cover_image: "album_72157657440152415.jpg"
+
+  - id: "xu-yuting"
+    name_zh: "許郁亭"
+    shoot_date: "2015-08-19"
+    school: "穀保家商"
+    photos: 91
+    flickr_album_id: "72157657437997536"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157657437997536/"
+    cover_image: "album_72157657437997536.jpg"
+
+  - id: "yang-yami"
+    name_zh: "楊雅妤 YuMi"
+    shoot_date: "2015-09-12"
+    school: "家齊女中"
+    photos: 22
+    flickr_album_id: "72157658506120981"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157658506120981/"
+    cover_image: "album_72157658506120981.jpg"
+
+  - id: "you-xiaorou"
+    name_zh: "尤曉柔"
+    shoot_date: "2015-08-17"
+    school: "穀保家商"
+    photos: 33
+    flickr_album_id: "72157655144334133"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157655144334133/"
+    cover_image: "album_72157655144334133.jpg"
+
+  - id: "ji-xi"
+    name_zh: "紀希"
+    shoot_date: "2015-08-17"
+    school: "泰山高中"
+    photos: 26
+    flickr_album_id: "72157657397989876"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157657397989876/"
+    cover_image: "album_72157657397989876.jpg"
+
+  - id: "jingjing"
+    name_zh: "精精"
+    shoot_date: "2015-08-10"
+    photos: 47
+    flickr_album_id: "72157657074998126"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157657074998126/"
+    cover_image: "album_72157657074998126.jpg"
+
+  - id: "qiu-yuning"
+    name_zh: "邱榆甯"
+    shoot_date: "2015-08-10"
+    school: "新店高中"
+    photos: 25
+    flickr_album_id: "72157657184385195"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157657184385195/"
+    cover_image: "album_72157657184385195.jpg"
+
+  - id: "lemon"
+    name_zh: "檸檬 黃禹琋"
+    shoot_date: "2015-08-09"
+    photos: 66
+    flickr_album_id: "72157656674033179"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157656674033179/"
+    cover_image: "album_72157656674033179.jpg"
+
+  - id: "wang-yizhi"
+    name_zh: "王怡之"
+    shoot_date: "2015-07-26"
+    photos: 94
+    flickr_album_id: "72157654038890884"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157654038890884/"
+    cover_image: "album_72157654038890884.jpg"
+
+  - id: "lin-yixuan"
+    name_zh: "林苡瑄"
+    shoot_date: "2015-07-19"
+    school: "育達高職"
+    photos: 17
+    flickr_album_id: "72157656220121382"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157656220121382/"
+    cover_image: "album_72157656220121382.jpg"
+
+  - id: "zhuzhu"
+    name_zh: "朱朱"
+    shoot_date: "2015-04-26"
+    photos: 33
+    flickr_album_id: "72157656361186740"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157656361186740/"
+    cover_image: "album_72157656361186740.jpg"
+
+  - id: "lin-baibai"
+    name_zh: "林白白"
+    shoot_date: "2015-08-01"
+    photos: 55
+    flickr_album_id: "72157654295010974"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157654295010974/"
+    cover_image: "album_72157654295010974.jpg"
+
+  - id: "sun-ting"
+    name_zh: "孫婷"
+    shoot_date: "2015-06-12"
+    photos: 49
+    flickr_album_id: "72157652126159754"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157652126159754/"
+    cover_image: "album_72157652126159754.jpg"
+
+  - id: "shanshan-2015"
+    name_zh: "姍姍"
+    shoot_date: "2015-08-05"
+    photos: 25
+    flickr_album_id: "72157654485366793"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157654485366793/"
+    cover_image: "album_72157654485366793.jpg"
+
+# =====================================================
+# Section: uniform-more — 更多制服系列 (2016–2018)
+# =====================================================
+uniform_more:
+  - id: "su-tuotuo"
+    name_zh: "蘇托托"
+    shoot_context: "蟾蜍山聚落"
+    shoot_year: 2016
+    photos: 61
+    flickr_album_id: "72157675063457182"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157675063457182/"
+    cover_image: "album_72157675063457182.jpg"
+
+  - id: "zhu-rouyi"
+    name_zh: "朱柔懿 Rabii"
+    shoot_context: "Uniform | !Uniform"
+    shoot_year: 2016
+    photos: 47
+    flickr_album_id: "72157666904173690"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157666904173690/"
+    cover_image: "album_72157666904173690.jpg"
+
+  - id: "yu-tong"
+    name_zh: "宇彤"
+    shoot_context: "unicorn wears uniform"
+    shoot_year: 2016
+    photos: 228
+    flickr_album_id: "72157662260290273"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157662260290273/"
+    cover_image: "album_72157662260290273.jpg"
+
+  - id: "zhan-xie"
+    name_zh: "詹宛儒 × 謝艾霖"
+    shoot_context: "＠實踐大學"
+    shoot_year: 2016
+    photos: 35
+    flickr_album_id: "72157666323746675"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157666323746675/"
+    cover_image: "album_72157666323746675.jpg"
+
+  - id: "jessica-cai"
+    name_zh: "蔡昀潔 Jessica"
+    shoot_context: "阿宅反抗軍宅T宣傳照"
+    shoot_year: 2016
+    photos: 141
+    flickr_album_id: "72157665835900245"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157665835900245/"
+    cover_image: "album_72157665835900245.jpg"
+
+  - id: "cecilia"
+    name_zh: "Cecilia"
+    shoot_context: "制服女孩"
+    shoot_year: 2017
+    photos: 22
+    flickr_album_id: "72157685064825576"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157685064825576/"
+    cover_image: "album_72157685064825576.jpg"
+
+  - id: "diandian"
+    name_zh: "點點"
+    shoot_context: "制服女孩蟾蜍山遊記"
+    shoot_year: 2017
+    photos: 75
+    flickr_album_id: "72157683385033986"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157683385033986/"
+    cover_image: "album_72157683385033986.jpg"
+
+  - id: "jiajia"
+    name_zh: "佳佳"
+    shoot_context: "制服女孩"
+    shoot_year: 2017
+    photos: 81
+    flickr_album_id: "72157683262157435"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157683262157435/"
+    cover_image: "album_72157683262157435.jpg"
+
+  - id: "tanghua"
+    name_zh: "糖花"
+    shoot_context: "制服女孩"
+    shoot_year: 2017
+    photos: 105
+    flickr_album_id: "72157680440954380"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157680440954380/"
+    cover_image: "album_72157680440954380.jpg"
+
+  - id: "li-yu"
+    name_zh: "李昱"
+    shoot_context: "制服女孩"
+    shoot_year: 2017
+    photos: 45
+    flickr_album_id: "72157678709082784"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157678709082784/"
+    cover_image: "album_72157678709082784.jpg"
+
+  - id: "xiaojie-mina"
+    name_zh: "小潔 Mina"
+    shoot_context: "制服女孩"
+    shoot_year: 2017
+    photos: 77
+    flickr_album_id: "72157677811587193"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157677811587193/"
+    cover_image: "album_72157677811587193.jpg"
+
+  - id: "jiarou"
+    name_zh: "嘉柔"
+    shoot_context: "MAJI 集食行樂"
+    shoot_year: 2018
+    photos: 24
+    flickr_album_id: "72157690287304332"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157690287304332/"
+    cover_image: "album_72157690287304332.jpg"
+
+  - id: "huang-qianyu"
+    name_zh: "黃千育"
+    shoot_context: "大安"
+    shoot_year: 2016
+    photos: 35
+    flickr_album_id: "72157678631624725"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157678631624725/"
+    cover_image: "album_72157678631624725.jpg"
+
+  - id: "becky"
+    name_zh: "Becky"
+    shoot_context: "文科女孩"
+    shoot_year: 2016
+    photos: 15
+    flickr_album_id: "72157674946364643"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157674946364643/"
+    cover_image: "album_72157674946364643.jpg"

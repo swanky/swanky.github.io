@@ -1,0 +1,88 @@
+{% comment %}
+  Flickr Model Card — reusable card component
+
+  Usage:
+    {% include flickr-model-card.html model=model type="became-famous" %}
+    {% include flickr-model-card.html model=model type="featured-collab" %}
+    {% include flickr-model-card.html model=model type="uniform-trial" %}
+    {% include flickr-model-card.html model=model type="uniform-more" %}
+{% endcomment %}
+
+{% assign m = include.model %}
+{% assign card_type = include.type %}
+
+{% if card_type == "became-famous" %}
+{%- comment -%} 她們後來都成名了 — Enhanced card with bio + achievements {%- endcomment -%}
+<div class="col-lg-4 col-md-6">
+  <div class="album-card">
+    <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/img/flickr/' | append: m.cover_image | relative_url }}" alt="{{ m.name_zh }}{{ m.name_en | prepend: ' ' }}╳史旺基 攝影作品" loading="lazy">
+    </a>
+    <div class="album-card-body">
+      <div class="category-label">{{ m.category_label }}</div>
+      <h4>{{ m.name_zh }}{% if m.name_en != "" %} {{ m.name_en }}{% endif %}</h4>
+      <p>{{ m.bio_zh }}</p>
+      {% if m.achievements.size > 0 %}
+      <div class="milestone-badges">
+        {% for a in m.achievements %}
+        <span class="milestone-badge">{{ a }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+    </div>
+  </div>
+</div>
+
+{% elsif card_type == "featured-collab" %}
+{%- comment -%} 長期合作模特兒 — Card with album count + year range {%- endcomment -%}
+<div class="col-lg-4 col-md-6">
+  <div class="album-card">
+    <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/img/flickr/' | append: m.cover_image | relative_url }}" alt="{{ m.name_zh }}╳史旺基 人像攝影" loading="lazy">
+    </a>
+    <div class="album-card-body">
+      <div class="category-label">長期合作</div>
+      <h4>{{ m.name_zh }}{% if m.name_en != "" %} {{ m.name_en }}{% endif %} <span class="album-badge">{{ m.album_count }} 組相簿</span></h4>
+      <p>{{ m.bio_zh }}</p>
+      <div class="milestone-badges">
+        <span class="milestone-badge">{{ m.shoot_years }}</span>
+      </div>
+      <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿集</a>
+    </div>
+  </div>
+</div>
+
+{% elsif card_type == "uniform-trial" %}
+{%- comment -%} 制服女孩試鏡群像 — Compact 4-column card {%- endcomment -%}
+<div class="col-lg-3 col-md-4 col-6">
+  <div class="album-card">
+    <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/img/flickr/' | append: m.cover_image | relative_url }}" alt="{{ m.name_zh }}╳史旺基 制服女孩試鏡" loading="lazy">
+    </a>
+    <div class="album-card-body" style="padding:12px;">
+      <h4 style="font-size:0.85rem;margin-bottom:4px;">{{ m.name_zh }}</h4>
+      {% if m.school %}<p style="margin-bottom:6px;">{{ m.school }}</p>{% endif %}
+      <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr" style="padding:4px 12px;font-size:0.75rem;">
+        <i class="bx bxl-flickr"></i> {{ m.photos }} 張
+      </a>
+    </div>
+  </div>
+</div>
+
+{% elsif card_type == "uniform-more" %}
+{%- comment -%} 更多制服系列 — Standard 3-column card {%- endcomment -%}
+<div class="col-lg-4 col-md-6">
+  <div class="album-card">
+    <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/img/flickr/' | append: m.cover_image | relative_url }}" alt="{{ m.name_zh }}╳史旺基 {{ m.shoot_context }}" loading="lazy">
+    </a>
+    <div class="album-card-body">
+      <div class="category-label">人像相簿</div>
+      <h4>{{ m.name_zh }}╳史旺基「{{ m.shoot_context }}」</h4>
+      <p>{{ m.shoot_year }} · {{ m.photos }} 張照片</p>
+      <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+    </div>
+  </div>
+</div>
+{% endif %}
