@@ -1,4 +1,7 @@
 ---
+layout: null
+---
+---
 name: s2m
 description: 將 PPTX 或 PDF 簡報逐頁轉為 Markdown 文件，每頁含原始頁面截圖與 AI 解讀內容；圖形/流程圖以 Mermaid 格式呈現。當使用者提到「簡報轉 markdown」、「pptx 轉文字」、「pdf 簡報解讀」、「slides to markdown」、「把簡報整理成文件」時觸發。
 argument-hint: <pptx-or-pdf-path>

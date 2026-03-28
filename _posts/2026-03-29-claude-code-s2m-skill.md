@@ -379,7 +379,11 @@ s2m 只是一個起點。你完全可以根據自己的工作流，寫出更多�
 
 以下是 s2m Skill 的完整定義，你可以直接複製到 `.claude/skills/s2m/SKILL.md` 使用。
 
-<details>
+<a href="{{ '/assets/downloads/skills/s2m/SKILL.md.download' | relative_url }}" download="SKILL.md" class="btn btn-warning btn-lg mb-3" style="background-color: #E5A300; border-color: #E5A300; color: #fff; font-weight: bold; text-decoration: none;">
+  <i class="bi bi-download"></i>&nbsp; 下載 SKILL.md
+</a>
+
+<details markdown="1">
 <summary>點擊展開完整 SKILL.md</summary>
 
 ````markdown
