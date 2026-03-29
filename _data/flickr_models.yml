@@ -27,7 +27,7 @@ became_famous:
     achievements: ["Popu Lady", "星期三女團"]
     flickr_album_id: "72157607392481999"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/"
-    cover_image: "album_72157607392481999.jpg"
+    cover_image: "2877481598.jpg"
     category_label: "藝人合作"
 
   - id: "zamy"
@@ -39,7 +39,7 @@ became_famous:
     achievements: ["YouTuber", "IG 75萬+"]
     flickr_album_id: "72157635679986683"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635679986683/"
-    cover_image: "9833170045.jpg"
+    cover_image: "9833028974.jpg"
     category_label: "成名前作品"
 
   - id: "huang-lin"
@@ -51,7 +51,7 @@ became_famous:
     achievements: ["世新女神", "IG 80萬+"]
     flickr_album_id: "72157662072260563"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157662072260563/"
-    cover_image: "album_72157662072260563.jpg"
+    cover_image: "20241043374.jpg"
     category_label: "成名前作品"
 
   - id: "jupiter"
