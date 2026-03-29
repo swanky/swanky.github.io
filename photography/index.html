@@ -11,6 +11,26 @@ breadcrumbs:
     url: /photography/
 use_isotope: true
 use_glightbox: true
+extra_css: |
+  .page-cta .btn-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: 2px solid #E5A300;
+    background: #E5A300;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .page-cta .btn-cta:hover {
+    background: transparent;
+    color: #E5A300;
+    text-decoration: none;
+  }
 ---
 <!-- Modal-a -->
 <div class="modal fade" id="modal-a" tabindex="-1" aria-labelledby="modal-a-label" aria-hidden="true">
@@ -368,13 +388,13 @@ use_glightbox: true
   </section><!-- End Media Section -->
 
   <!-- ======= Contact CTA ======= -->
-  <section class="why-us" data-aos="fade-up">
+  <section class="why-us page-cta" data-aos="fade-up">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center py-5">
           <h4>對攝影合作有興趣？</h4>
           <p class="mb-4">提供人像寫真、企業形象、活動紀錄等委託服務，歡迎來信洽詢。</p>
-          <a href="mailto:swanky.hsiao@gmail.com" class="btn-get-started">聯繫委託</a>
+          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">聯繫委託</a>
         </div>
       </div>
     </div>
