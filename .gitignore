@@ -4,5 +4,6 @@ _site
 .claude/
 .gstack/
 .agents/
+.agnix.toml
 .env
 assets/facebook-archive/.env

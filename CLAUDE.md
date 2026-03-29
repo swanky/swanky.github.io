@@ -1,14 +1,12 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Overview
 
 Jekyll-based portfolio site for Swanky Studio (史旺基工作室) hosted on GitHub Pages. Based on the Moderna template (BootstrapMade). All content is in Traditional Chinese (zh-TW).
 
 ## Working Style
 
-Execute tasks autonomously. Do not ask for confirmation before starting.
+Execute tasks autonomously. Start immediately without asking for confirmation.
 
 1. **Read first** — Study the relevant code and config before making any changes.
 2. **Assume and proceed** — Make reasonable assumptions rather than stopping to ask.
@@ -55,33 +53,13 @@ default.html  →  head.html + header.html + {{ content }} + footer.html + scrip
 
 ### Site Structure
 
-Navigation has four top-level sections, each with sub-pages:
-
 ```
 主頁          /
-攝影寫真      /photography/
-  ├─ 總覽                   /photography/
-  ├─ 出版                   /photography/photo-albums/
-  ├─ 獎項                   /photography/awards/
-  ├─ 作品 (個人/商業/Flickr) /photography/personal-works/ etc.
-  ├─ 歷年記錄               /photography/archive/
-  └─ 制服．女孩 × 史旺基   /photography/uniform/   ← (nav: 攝影寫真→作品; images in assets/img/uniform/)
-
-技術顧問      /technical/
-  ├─ 總覽                   /technical/
-  └─ 專欄文章               /technical/articles/
-
-教育訓練      /education/
-  ├─ 總覽                   /education/
-  ├─ 模特兒課程             /education/modeling/
-  ├─ 加密貨幣課程           /education/crypto/
-  │    ├─ trading           /education/crypto/trading/
-  │    ├─ defi              /education/crypto/defi/
-  │    └─ nft               /education/crypto/nft/
-  └─ AI學習分享             /education/ai/
-
+攝影寫真      /photography/  → photo-albums/ awards/ personal-works/ archive/ uniform/
+技術顧問      /technical/    → articles/
+教育訓練      /education/    → modeling/ crypto/ (trading/ defi/ nft/) ai/
 媒體報導      /press/
-NFT策展       /nft/   ← separate mini-site, excluded from Jekyll
+NFT策展       /nft/          ← separate mini-site, excluded from Jekyll
 ```
 
 ### nav_active Values
@@ -118,7 +96,7 @@ Always use Jekyll's `relative_url` filter:
 
 ### Vendor Libraries (bundled in assets/vendor/)
 
-Bootstrap (grid/components), AOS (scroll animations via `data-aos`), Isotope (masonry grids, conditional), GLightbox (lightboxes, conditional), PureCounter (animated counters, conditional), Animate.css, Boxicons, Bootstrap Icons. Isotope/GLightbox/PureCounter are loaded conditionally via front matter flags — see Front Matter Variables above.
+Bootstrap, AOS (`data-aos`), Isotope, GLightbox, PureCounter, Animate.css, Boxicons, Bootstrap Icons. Isotope/GLightbox/PureCounter loaded conditionally via front matter flags.
 
 ### Brand Colors
 
@@ -126,7 +104,7 @@ Bootstrap (grid/components), AOS (scroll animations via `data-aos`), Isotope (ma
 - Secondary yellow: `#F5C53B`
 - Accent blue: `#4fa6d5`
 
-## Content & Tone Guidelines (內容與語氣規範)
+## Content & Tone Guidelines
 
 - **Language**: All website copy, blog posts, and text content MUST be written in Traditional Chinese (zh-TW).
 - **Domain Focus**: Content primarily revolves around professional photography, Web3 ecosystem development, and tech management insights.
@@ -135,34 +113,16 @@ Bootstrap (grid/components), AOS (scroll animations via `data-aos`), Isotope (ma
 
 ## Design Context
 
-### Users
-Four overlapping audiences visit this site:
-1. **Photography clients** — individuals or brands considering hiring Swanky for portrait/commercial shoots
-2. **Tech/corporate partners** — companies seeking blockchain consulting, agile coaching, or technical leadership
-3. **Photography fans and followers** — people who follow Swanky's award-winning work (PX3, IPA, TIME Magazine)
-4. **Media and press** — journalists, editors, publishers looking for bio, coverage, and contact info
+**Audiences**: Photography clients, tech/corporate partners, photography fans, media/press.
 
-### Brand Personality
-**親切 × 多才多藝** — Approachable and Versatile. Three-word personality: **Genuine · Multifaceted · Distinguished**
+**Brand**: 親切 × 多才多藝 — Genuine · Multifaceted · Distinguished. Award-winning photographer (TIME Magazine, PX3, IPA) + senior tech leader (Taiwan Mobile, PhD NTNU, blockchain). Warm and accomplished, not cold and corporate.
 
-Swanky spans two worlds: award-winning portrait photographer (TIME Magazine, PX3 France, IPA USA) and senior tech leader (Taiwan Mobile manager, PhD NTNU, blockchain researcher, agile coach). Warm and human, not cold and corporate; accomplished but not arrogant.
+**Aesthetic**: Editorial magazine warmth — light mode, gold (#E5A300) as signature accent, photography as hero. Avoid cold tech-startup feel or generic Bootstrap look.
 
-### Aesthetic Direction
-**Mixed creative professional** — editorial warmth, art + tech. Not purely a photographer's portfolio nor a tech consultant's site. Think editorial magazine: visual, curated, human — with enough gravitas for serious professional credentials.
-
-- **Theme**: Light mode, editorial warmth. Gold (#E5A300) is a signature, not just a button color.
-- **Photography**: Award-winning work should be the hero. Images should breathe and dominate.
-- **NOT**: Cold blue tech startup, dark mode with glowing accents, generic Bootstrap template feel.
-
-### Design Principles
-1. **Lead with craft** — The photography is TIME Magazine level. The site should feel worthy of that work.
-2. **One identity, many facets** — Present one coherent, multi-dimensional person — not siloed "photographer" vs. "tech guy."
-3. **Gold as signature** — Use #E5A300 with intention as accent, highlight, and identity marker.
-4. **Editorial rhythm** — Vary section treatments dramatically to create a magazine-like reading experience.
-5. **Chinese-first confidence** — Fully commit to zh-TW. Mixed Chinese/English CTAs should be resolved.
+**Principles**: Lead with craft. One coherent identity. Gold used with intention. Vary section treatments for editorial rhythm. Commit fully to zh-TW.
 
 ## Known Gotchas
 
-- **Isotope + `loading="lazy"` conflict**: On pages using Isotope grid layout (like `for-your-safety.html`), do NOT use `loading="lazy"` on images. Lazy images don't block `window.load`, causing Isotope to calculate layout before images have dimensions, resulting in collapsed layouts.
+- **Isotope + `loading="lazy"` conflict**: Omit `loading="lazy"` on Isotope grid pages — lazy images cause collapsed layouts because Isotope runs before image dimensions are known.
 - **Flickr image URLs**: Local copies use pattern `{photo_id}_{secret}_{size}.jpeg`. Flickr photo links use `https://www.flickr.com/photos/swanky-hsiao/{photo_id}/`.
-- **nft/ directory**: This is a separate mini-site with its own build system (Prepros/SCSS). It is excluded from Jekyll processing via `_config.yml` defaults (`layout: null`). Do not add Jekyll front matter to nft/ files.
+- **nft/ directory**: Separate mini-site (Prepros/SCSS), excluded from Jekyll via `_config.yml`. Keep Jekyll front matter out of nft/ files.
