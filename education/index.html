@@ -9,17 +9,53 @@ breadcrumbs:
     url: /
   - name: 教育訓練
     url: /education/
+extra_css: |
+  .page-cta .btn-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: 2px solid #E5A300;
+    background: #E5A300;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .page-cta .btn-cta:hover {
+    background: transparent;
+    color: #E5A300;
+    text-decoration: none;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E5A300;
+    margin-bottom: 8px;
+  }
+  .section-divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0 40px;
+  }
 ---
 
   <main id="main">
     <div class="section-title works">
       <h2>教育訓練</h2>
-      <p>具多年教育及教案設計規畫經驗，曾擔任 Z Institute 課程總講師、多所大學校園講座講者及企業內訓講師，可依據客戶需求提供攝影或技術相關等課程。</p>
+      <p>東吳大學兼任助理教授連續 8 年、企業內訓 7 場、多所大學校園講座。提供攝影、模特兒、加密貨幣與 AI 課程——個人小班制或企業客製化內訓皆可安排。</p>
     </div>
 
-  <!-- ======= Service Details Section ======= -->
+  <!-- ======= Courses Section ======= -->
   <section class="service-details">
     <div class="container">
+
+      <p class="section-label">開放報名 / 洽詢課程</p>
+      <hr class="section-divider">
 
       <div class="row">
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
@@ -29,7 +65,7 @@ breadcrumbs:
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="{{ '/education/modeling/' | relative_url }}">模特兒課程</a></h5>
-              <p class="card-text">從素人晉升網美，獨家傳授模特兒擺姿技巧、保養化妝要點、接案模式、社群經營方向...。</p>
+              <p class="card-text">從素人晉升網美，傳授擺姿技巧、保養化妝要點、接案模式、社群經營方向。適合個人小班制。</p>
             </div>
           </div>
         </div>
@@ -40,7 +76,7 @@ breadcrumbs:
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="{{ '/education/crypto/' | relative_url }}">加密貨幣課程</a></h5>
-              <p class="card-text">馬上搞懂加密貨幣買賣，跟上本世紀最大的資產轉移潮流！</p>
+              <p class="card-text">涵蓋 DeFi、NFT、交易策略與 Web3 趨勢。具備業界實戰與學術背景，適合個人進修或企業團隊培訓。</p>
             </div>
           </div>
         </div>
@@ -50,48 +86,58 @@ breadcrumbs:
               <a href="{{ '/education/crypto/soochow/' | relative_url }}"><img src="{{ '/assets/img/illustrations/soochow-professor.svg' | relative_url }}" alt="東吳大學資料科學系區塊鏈課程示意圖"></a>
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學資料科學系區塊鏈課程</a></h5>
-              <p class="card-text">連續第 8 年（107~114 學年）開授，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重。</p>
+              <h5 class="card-title"><a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學區塊鏈課程</a></h5>
+              <p class="card-text">連續第 8 年（107–114 學年）開授，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重。</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+    </div>
+  </section>
+
+  <!-- ======= Teaching Record Section ======= -->
+  <section class="service-details section-bg" data-aos="fade-up">
+    <div class="container">
+
+      <p class="section-label mt-2">教學紀錄</p>
+      <hr class="section-divider">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
           <div class="card">
             <div class="card-img">
               <img src="{{ '/assets/img/illustrations/z-institute-nft.svg' | relative_url }}" alt="Z Institute NFT GameFi 實戰課程示意圖" loading="lazy">
             </div>
             <div class="card-body">
-              <h5 class="card-title">Z Institute NFT & GameFi 課程總講師</h5>
-              <p class="card-text">2022 年擔任 Z Institute「NFT & GameFi 實戰人才加速器」課程總講師，教授 NFT 發行、GameFi 機制設計與 Web3 實務應用。</p>
+              <h5 class="card-title">Z Institute 課程總講師</h5>
+              <p class="card-text">2022 年擔任「NFT & GameFi 實戰人才加速器」課程總講師，教授 NFT 發行、GameFi 機制設計與 Web3 實務應用。</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
           <div class="card">
             <div class="card-img">
               <img src="{{ '/assets/img/illustrations/campus-lecture.svg' | relative_url }}" alt="校園巡迴區塊鏈講座示意圖" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">校園講座</h5>
-              <p class="card-text">2022 年受邀至光復商工、銘傳大學、實踐資工、臺北市立大學資訊科學系、元智大學、台東大學等校進行區塊鏈主題校園講座。</p>
+              <p class="card-text">2022 年受邀至光復商工、銘傳大學、實踐資工、臺北市立大學、元智大學、台東大學等校進行區塊鏈主題講座。</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
           <div class="card">
             <div class="card-img">
               <img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="企業內訓區塊鏈 Web3 培訓計畫示意圖" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">企業內訓</h5>
-              <p class="card-text">2021~2022 年執行 7 場企業內訓，合作對象包含多為科技、設計公司，內容涵蓋區塊鏈技術、NFT 應用與 Web3 趨勢。</p>
+              <p class="card-text">2021–2022 年執行 7 場企業內訓，合作對象涵蓋科技、設計公司，內容包含區塊鏈技術、NFT 應用與 Web3 趨勢。</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
           <div class="card">
             <div class="card-img">
               <a href="{{ '/education/ai/' | relative_url }}"><img src="{{ '/assets/img/illustrations/claude-code-terminal.svg' | relative_url }}" alt="AI 學習分享 Claude Code 實戰心得" loading="lazy"></a>
@@ -105,6 +151,20 @@ breadcrumbs:
       </div>
 
     </div>
-  </section><!-- End Service Details Section -->
+  </section><!-- End Teaching Record Section -->
+
+  <!-- ======= Contact CTA ======= -->
+  <section class="why-us page-cta" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center py-5">
+          <h4>有課程、演講或企業內訓需求？</h4>
+          <p class="mb-2">個人小班制或企業客製化培訓皆可安排，歡迎來信討論需求。</p>
+          <p class="text-muted small mb-4">個人學員請直接來信；企業內訓請說明公司規模與課程主題，將提供客製化方案。</p>
+          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">洽詢合作</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Contact CTA -->
 
   </main><!-- End #main -->
