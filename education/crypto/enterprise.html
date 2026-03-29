@@ -1,0 +1,885 @@
+---
+layout: home
+title: Web3 企業培訓課程 | Swanky Studio 史旺基工作室
+description: 從區塊鏈基礎到產業應用的完整知識體系。13 個模組、800+ 頁教材，涵蓋 DeFi、NFT、RWA、GameFi、Web3 策略，由學術＋產業＋政府三重背景講師親授，為企業量身打造 Web3 培訓方案。
+keywords: Web3企業培訓,區塊鏈企業內訓,DeFi課程,NFT品牌策略,RWA資產代幣化,企業數位轉型,史旺基
+nav_active: education
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: 加密貨幣課程
+    url: /education/crypto/
+  - name: Web3 企業培訓
+    url: /education/crypto/enterprise/
+extra_css: |
+  .enterprise-hero {
+    background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%);
+    padding: 60px 0 50px;
+  }
+  .enterprise-hero h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+  }
+  .enterprise-hero .lead {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  .pain-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .pain-point i {
+    color: #E5A300;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .pain-point strong {
+    color: #111;
+  }
+  .module-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .module-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .module-table thead th {
+    background: #E5A300;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .module-table thead th:first-child,
+  .module-table thead th:nth-child(4) {
+    text-align: center;
+  }
+  .module-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  .module-table tbody tr:hover {
+    background: #fffbf0;
+  }
+  .module-table tbody td:first-child {
+    text-align: center;
+    font-weight: 600;
+    color: #E5A300;
+  }
+  .module-table tbody td:nth-child(4) {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .module-tag {
+    display: inline-block;
+    background: #fff3cd;
+    color: #7a5500;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin: 1px 2px;
+  }
+  .plan-card {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    height: 100%;
+    transition: border-color 0.3s;
+  }
+  .plan-card:hover {
+    border-color: #E5A300;
+  }
+  .plan-card.featured {
+    border-color: #E5A300;
+    background: #fffbf0;
+  }
+  .plan-card h4 {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  .plan-card .plan-hours {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #E5A300;
+    margin: 12px 0 4px;
+  }
+  .plan-card .plan-modules {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 16px;
+  }
+  .plan-card p {
+    font-size: 0.93rem;
+    color: #555;
+  }
+  .path-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    height: 100%;
+  }
+  .path-box h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .path-box .path-meta {
+    font-size: 0.85rem;
+    color: #E5A300;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .path-box .path-flow {
+    font-size: 0.88rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  .path-box .path-audience {
+    font-size: 0.82rem;
+    color: #999;
+  }
+  .industry-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    height: 100%;
+  }
+  .industry-card h5 {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .industry-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  .advantage-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fffbf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .advantage-icon i {
+    font-size: 1.3rem;
+    color: #E5A300;
+  }
+  .btn-cta-enterprise {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: 2px solid #E5A300;
+    background: #E5A300;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .btn-cta-enterprise:hover {
+    background: transparent;
+    color: #E5A300;
+    text-decoration: none;
+  }
+  .format-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .format-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+  }
+  .format-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  .faq-section .accordion-button {
+    font-weight: 600;
+    color: #111;
+    font-size: 0.95rem;
+  }
+  .faq-section .accordion-button:not(.collapsed) {
+    color: #E5A300;
+    background-color: #fffbf0;
+    box-shadow: inset 0 -1px 0 rgba(229, 163, 0, 0.25);
+  }
+  .faq-section .accordion-body {
+    color: #555;
+    line-height: 1.75;
+    font-size: 0.93rem;
+  }
+---
+
+<main id="main">
+
+  <!-- ======= Hero Section ======= -->
+  <section class="enterprise-hero" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2>讓團隊讀懂 Web3，從決策盲區到戰略佈局</h2>
+          <p class="lead">從區塊鏈基礎到產業應用的完整知識體系<br>13 個模組 &#183; 800+ ��教材 &#183; 學術＋產業＋政府三重背景講師親授</p>
+
+          <div class="pain-point">
+            <i class="bi bi-exclamation-triangle"></i>
+            <div><strong>決策盲區</strong>——無法評估區塊鏈相關商業機會與風險</div>
+          </div>
+          <div class="pain-point">
+            <i class="bi bi-people"></i>
+            <div><strong>人才斷層</strong>——團隊不具備與 Web3 合作夥伴、客戶溝通的語言能力</div>
+          </div>
+          <div class="pain-point">
+            <i class="bi bi-graph-down-arrow"></i>
+            <div><strong>競爭落後</strong>——同業已佈局 NFT 品牌策略、RWA 資產上鏈、DeFi 財務工具</div>
+          </div>
+
+          <a href="mailto:swanky.hsiao@gmail.com?subject=%5B企業培訓洽詢%5D%20Web3%20課程需求&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E5%80%91%E5%B0%8D%20Web3%20%E4%BC%81%E6%A5%AD%E5%9F%B9%E8%A8%93%E8%AA%B2%E7%A8%8B%E6%9C%89%E8%88%88%E8%B6%A3%E3%80%82%0A%0A%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A8%B1%EF%BC%9A%0A%E5%9C%98%E9%9A%8A%E8%A6%8F%E6%A8%A1%EF%BC%9A%0A%E6%9C%9F%E6%9C%9B%E4%B8%BB%E9%A1%8C%EF%BC%9A%0A" class="btn-cta-enterprise mt-3">免費索取課程建議方案</a>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" class="img-fluid" alt="Web3 企業培訓課程示意圖" style="max-height: 320px;">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Stats Bar ======= -->
+  <section class="facts" data-aos="fade-up" style="padding: 40px 0;">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6 col-lg-3 mb-3 mb-lg-0">
+          <div style="font-size:2rem; font-weight:700; color:#E5A300;">8 年</div>
+          <div style="font-size:0.85rem; color:#888;">東吳大學連續授課</div>
+        </div>
+        <div class="col-6 col-lg-3 mb-3 mb-lg-0">
+          <div style="font-size:2rem; font-weight:700; color:#E5A300;">13 模組</div>
+          <div style="font-size:0.85rem; color:#888;">800+ 頁完整教材</div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div style="font-size:2rem; font-weight:700; color:#E5A300;">7+ 場</div>
+          <div style="font-size:0.85rem; color:#888;">企業內訓實績</div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div style="font-size:2rem; font-weight:700; color:#E5A300;">3 重背景</div>
+          <div style="font-size:0.85rem; color:#888;">新創 &#183; 政府 &#183; 企業</div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Stats Bar -->
+
+  <!-- ======= 13 Module Overview ======= -->
+  <section class="facts section-bg" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>13 模組總覽</h2>
+        <p>涵蓋 Web3 完整知識體系，從基礎概念到進階實戰</p>
+      </div>
+
+      <div class="module-table-wrap">
+        <table class="module-table">
+          <thead>
+            <tr>
+              <th>模組</th>
+              <th>主題</th>
+              <th>核心關鍵字</th>
+              <th>企業相關度</th>
+              <th>建議對象</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Web3 演進與區塊鏈基礎</td>
+              <td>
+                <span class="module-tag">Web1/2/3</span>
+                <span class="module-tag">六層架構</span>
+                <span class="module-tag">代幣分類</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>全員</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>加密貨幣錢包與交易所實戰</td>
+              <td>
+                <span class="module-tag">錢包分類</span>
+                <span class="module-tag">私鑰安全</span>
+                <span class="module-tag">CEX/DEX</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;</td>
+              <td>財務 / 合規</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>元宇宙概論與產業應用</td>
+              <td>
+                <span class="module-tag">Metaverse</span>
+                <span class="module-tag">品牌虛擬體驗</span>
+                <span class="module-tag">AR/VR</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;</td>
+              <td>行銷 / 創新</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>NFT 技術架構與品牌策略</td>
+              <td>
+                <span class="module-tag">ERC-721</span>
+                <span class="module-tag">BAYC</span>
+                <span class="module-tag">Nike RTFKT</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>行銷 / 品牌</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>迷因幣文化與鏈上代幣經濟</td>
+              <td>
+                <span class="module-tag">DOGE</span>
+                <span class="module-tag">PEPE</span>
+                <span class="module-tag">Pump.fun</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;</td>
+              <td>風控 / 社群</td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td>比特幣運作原理與白皮書精讀</td>
+              <td>
+                <span class="module-tag">UTXO</span>
+                <span class="module-tag">挖礦</span>
+                <span class="module-tag">共識機制</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;</td>
+              <td>技術 / CTO</td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td>密碼學與數位安全基礎</td>
+              <td>
+                <span class="module-tag">SHA-256</span>
+                <span class="module-tag">對稱/非對稱加密</span>
+                <span class="module-tag">數位簽章</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;</td>
+              <td>資安 / 技術</td>
+            </tr>
+            <tr>
+              <td>08</td>
+              <td>以太坊與智能合約開發</td>
+              <td>
+                <span class="module-tag">EVM</span>
+                <span class="module-tag">DApp</span>
+                <span class="module-tag">Gas</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>技術 / 產品</td>
+            </tr>
+            <tr>
+              <td>09</td>
+              <td>DeFi 去中心化金融革命</td>
+              <td>
+                <span class="module-tag">AMM</span>
+                <span class="module-tag">TVL</span>
+                <span class="module-tag">穩定幣</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>金融 / 策略</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>DeFi 進階協議與實戰操作</td>
+              <td>
+                <span class="module-tag">MakerDAO</span>
+                <span class="module-tag">Aave</span>
+                <span class="module-tag">Uniswap</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;</td>
+              <td>金融 / 技術</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>RWA 現實世界資產代幣化</td>
+              <td>
+                <span class="module-tag">鏈上股票</span>
+                <span class="module-tag">Ondo Finance</span>
+                <span class="module-tag">麥肯錫預測</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>金融 / 法務</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>GameFi 遊戲經濟與代幣激勵</td>
+              <td>
+                <span class="module-tag">P2E</span>
+                <span class="module-tag">Axie Infinity</span>
+                <span class="module-tag">STEPN</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;</td>
+              <td>產品 / 遊戲</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Web3 願景與網路未來</td>
+              <td>
+                <span class="module-tag">Read Write Own</span>
+                <span class="module-tag">網路效應</span>
+                <span class="module-tag">科技宅 vs 賭徒</span>
+              </td>
+              <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              <td>C-suite / 策略</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section><!-- End Module Overview -->
+
+  <!-- ======= 3 Plans Section ======= -->
+  <section class="pricing" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>三種導入方案</h2>
+        <p>依企業需求與時程彈性選擇</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="plan-card">
+            <h4>專題工作坊</h4>
+            <div class="plan-hours">2-3 小時</div>
+            <div class="plan-modules">1 個模組</div>
+            <p>針對特定議題進行深度研討，適合高階主管 Briefing 或單一主題快速導入。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="plan-card featured">
+            <h4>精選模組</h4>
+            <div class="plan-hours">8-24 小時</div>
+            <div class="plan-modules">4-8 個模組</div>
+            <p>依團隊角色與產業需求挑選模組，適合特定部門的專業提升與主題式深潛。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="plan-card">
+            <h4>全方位培訓</h4>
+            <div class="plan-hours">26-39 小時</div>
+            <div class="plan-modules">全 13 個模組</div>
+            <p>完整 Web3 知識體系建構，適合組織級數位轉型與跨部門深度培訓。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Plans -->
+
+  <!-- ======= Learning Paths Section ======= -->
+  <section class="facts section-bg" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>建議學習路徑</h2>
+        <p>依角色與目標選擇最適合的模組組合</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="path-box">
+            <h5><i class="bi bi-briefcase me-2" style="color:#E5A300"></i>路徑 A：高階主管概覽</h5>
+            <div class="path-meta">8-12 小時 / 4 模組</div>
+            <div class="path-flow">
+              M01 Web3 基礎 &rarr; M09 DeFi 金融革命 &rarr; M11 RWA 資產代幣化 &rarr; M13 Web3 願景
+            </div>
+            <div class="path-audience">適合：C-suite、策略部門、董事會簡報</div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="path-box">
+            <h5><i class="bi bi-code-slash me-2" style="color:#E5A300"></i>路徑 B：技術團隊深潛</h5>
+            <div class="path-meta">16-24 小時 / 8 模組</div>
+            <div class="path-flow">
+              M01 &rarr; M06 比特幣 &rarr; M07 密碼學 &rarr; M08 以太坊 &rarr; M04 NFT &rarr; M09 DeFi &rarr; M10 DeFi 進階 &rarr; M11 RWA
+            </div>
+            <div class="path-audience">適合：CTO、技術團隊、產品經理</div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="path-box">
+            <h5><i class="bi bi-diagram-3 me-2" style="color:#E5A300"></i>路徑 C：全方位培訓</h5>
+            <div class="path-meta">26-39 小時 / 全 13 模組</div>
+            <div class="path-flow">
+              Module 01 至 Module 13 完整依序學習，建構組織級 Web3 知識體系
+            </div>
+            <div class="path-audience">適合：數位轉型團隊、跨部門深度培訓</div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="path-box">
+            <h5><i class="bi bi-lightning-charge me-2" style="color:#E5A300"></i>路徑 D：專題工作坊</h5>
+            <div class="path-meta">2-3 小時 / 單一模組</div>
+            <div class="path-flow">
+              熱門主題：DeFi 入門（M09）/ NFT 品牌策略（M04）/ RWA 代幣化（M11）/ Web3 策略（M13）
+            </div>
+            <div class="path-audience">適合：主管半日研習、特定議題快速導入</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Learning Paths -->
+
+  <!-- ======= Mid-page CTA ======= -->
+  <section class="why-us" data-aos="fade-up" style="padding: 40px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p style="font-size:1.05rem; color:#555; margin-bottom:16px;">不確定哪種方案最適合？講師將依據貴公司產業與團隊角色提供免費建議。</p>
+          <a href="mailto:swanky.hsiao@gmail.com?subject=%5B企業培訓洽詢%5D%20Web3%20課程需求&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E5%80%91%E5%B0%8D%20Web3%20%E4%BC%81%E6%A5%AD%E5%9F%B9%E8%A8%93%E8%AA%B2%E7%A8%8B%E6%9C%89%E8%88%88%E8%B6%A3%E3%80%82%0A%0A%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A8%B1%EF%BC%9A%0A%E5%9C%98%E9%9A%8A%E8%A6%8F%E6%A8%A1%EF%BC%9A%0A%E6%9C%9F%E6%9C%9B%E4%B8%BB%E9%A1%8C%EF%BC%9A%0A" class="btn-cta-enterprise">聊聊您的培訓需求</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Mid-page CTA -->
+
+  <!-- ======= Instructor Section (moved up for trust) ======= -->
+  <section data-aos="fade-up" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>授課講師</h2>
+      </div>
+      <div class="row facts-text">
+        <div class="col-lg-4 col-12">
+          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片" loading="lazy">
+        </div>
+        <div class="col-lg-8 col-12 text-left">
+          <h4>蕭宇程（史旺基）</h4>
+          <h5>現職</h5>
+          <p>
+            台灣大哥大 TWEX 虛擬資產交易所技術主管<br>
+            東吳大學巨量資料管理學院資料科學系兼任助理教授（第 8 年）
+          </p>
+          <h5>產業經歷</h5>
+          <p>
+            <strong>企業</strong>：台灣大哥大 TWEX 技術主管，領導虛擬資產交易所技術團隊<br>
+            <strong>政府</strong>：資策會計畫主持人，主持數位發展部區塊鏈創新產業計畫<br>
+            <strong>新創</strong>：ITM 國際信任機器技術研發總監，獲高通創新競賽第二名、聯發科投資
+          </p>
+          <h5>學歷</h5>
+          <p>國立臺灣師範大學資訊工程博士</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Instructor (moved) -->
+
+  <!-- ======= Industry Section ======= -->
+  <section data-aos="fade-up" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>產業別推薦模組</h2>
+        <p>針對不同產業的核心需求，推薦最相關的模組組合</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="industry-card">
+            <h5><i class="bi bi-bank me-2" style="color:#E5A300"></i>金融 / 銀行</h5>
+            <p>DeFi 衝擊評估、RWA 策略、合規準備</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M02</span>
+              <span class="module-tag">M09</span>
+              <span class="module-tag">M10</span>
+              <span class="module-tag">M11</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="industry-card">
+            <h5><i class="bi bi-cpu me-2" style="color:#E5A300"></i>科技 / 軟體</h5>
+            <p>區塊鏈技術選型、智能合約開發</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M06</span>
+              <span class="module-tag">M07</span>
+              <span class="module-tag">M08</span>
+              <span class="module-tag">M10</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="industry-card">
+            <h5><i class="bi bi-bag me-2" style="color:#E5A300"></i>零售 / 時尚</h5>
+            <p>NFT 品牌策略、元宇宙行銷、忠誠度代幣</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M03</span>
+              <span class="module-tag">M04</span>
+              <span class="module-tag">M12</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="industry-card">
+            <h5><i class="bi bi-controller me-2" style="color:#E5A300"></i>遊戲 / 娛樂</h5>
+            <p>GameFi 經濟設計、NFT 資產系統</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M04</span>
+              <span class="module-tag">M05</span>
+              <span class="module-tag">M12</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="industry-card">
+            <h5><i class="bi bi-building me-2" style="color:#E5A300"></i>政府 / 公部門</h5>
+            <p>區塊鏈存證、數位治理、RWA 監管</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M06</span>
+              <span class="module-tag">M07</span>
+              <span class="module-tag">M11</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+          <div class="industry-card">
+            <h5><i class="bi bi-journal-text me-2" style="color:#E5A300"></i>法律 / 會計</h5>
+            <p>加密資產合規、DeFi 監管、RWA 法律框架</p>
+            <div>
+              <span class="module-tag">M01</span>
+              <span class="module-tag">M02</span>
+              <span class="module-tag">M05</span>
+              <span class="module-tag">M09</span>
+              <span class="module-tag">M11</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Industry -->
+
+  <!-- ======= Advantages Section ======= -->
+  <section class="edu-services" id="edu-services">
+    <div class="container">
+      <div class="section-title">
+        <h2>課程特色</h2>
+        <p>為什麼選擇這門企業培訓課程</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="icon-box icon-box-pink">
+            <div class="icon"><i class="bi bi-mortarboard"></i></div>
+            <h4 class="title">學術嚴謹 + 產業深度</h4>
+            <p class="description">講師同時擁有資訊工程博士學位與虛擬資產交易所技術主管實務經歷，能在技術原理與商業應用之間建立橋樑。</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box icon-box-cyan">
+            <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
+            <h4 class="title">八年持續迭代</h4>
+            <p class="description">自 2018 年起連續八年於東吳大學授課，教材每年全面更新。</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box icon-box-green">
+            <div class="icon"><i class="bi bi-diagram-3"></i></div>
+            <h4 class="title">三重產業實戰</h4>
+            <p class="description">橫跨新創（ITM / 高通創新競賽）、政府（資策會 / 數位發展部計畫）、企業（台灣大哥大 TWEX）三大領域。</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-box icon-box-blue">
+            <div class="icon"><i class="bi bi-shield-check"></i></div>
+            <h4 class="title">平衡觀點</h4>
+            <p class="description">Nike $1.86 億 NFT 營收與 Axie $6.2 億駭客事件並列呈現。企業需要的不是被說服，而是被充分告知。</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon-box icon-box-pink">
+            <div class="icon"><i class="bi bi-tools"></i></div>
+            <h4 class="title">從理論到動手</h4>
+            <p class="description">錢包建立、交易所下單、代幣發行、DeFi 協議互動——學員離開教室時，手機裡已有一個真實的區塊鏈錢包。</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon-box icon-box-cyan">
+            <div class="icon"><i class="bi bi-translate"></i></div>
+            <h4 class="title">全繁中在地化</h4>
+            <p class="description">全繁體中文教材、台灣法規環境、本地案例——不是翻譯的外國教材，而是為台灣企業量身設計。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Advantages -->
+
+  <!-- ======= Training Format Section ======= -->
+  <section class="facts section-bg" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>培訓形式</h2>
+        <p>多種授課方式，滿足不同團隊需求</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <table class="format-table">
+            <thead>
+              <tr>
+                <th style="width:25%">形式</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>企業內訓</strong></td>
+                <td>講師親至企業現場授課，可客製化案例與產業聚焦</td>
+              </tr>
+              <tr>
+                <td><strong>線上直播</strong></td>
+                <td>即時互動式線上培訓，適合跨區域團隊</td>
+              </tr>
+              <tr>
+                <td><strong>混合模式</strong></td>
+                <td>線上預習 + 現場實作工作坊</td>
+              </tr>
+              <tr>
+                <td><strong>顧問諮詢</strong></td>
+                <td>一對一 Web3 策略顧問服務</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Training Format -->
+
+  <!-- ======= FAQ Section ======= -->
+  <section class="facts section-bg faq-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>常見問題</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-h1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c1">
+                  學員需要具備程式設計背景嗎？
+                </button>
+              </h2>
+              <div id="faq-c1" class="accordion-collapse collapse" aria-labelledby="faq-h1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  不需要。課程從概念層開始，技術深度可依企業需求調整。路徑 A（高階主管概覽）完全不涉及程式碼。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-h2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c2">
+                  課程內容多久更新一次？
+                </button>
+              </h2>
+              <div id="faq-c2" class="accordion-collapse collapse" aria-labelledby="faq-h2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  每學期全面更新。2026 年版本包含最新市場數據、案例與趨勢分析。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-h3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c3">
+                  可以只選一個模組進行培訓嗎？
+                </button>
+              </h2>
+              <div id="faq-c3" class="accordion-collapse collapse" aria-labelledby="faq-h3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  可以。每個模組設計為可獨立教授的單元。推薦先以 M01 建立基礎，再選擇專題模組深入。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-h4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c4">
+                  企業內訓可以客製化案例嗎？
+                </button>
+              </h2>
+              <div id="faq-c4" class="accordion-collapse collapse" aria-labelledby="faq-h4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  可以。講師具備金融、科技、政府等多產業經驗，可針對貴公司所屬產業調整案例與討論方向。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq-h5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c5">
+                  培訓後有哪些延續學習管道？
+                </button>
+              </h2>
+              <div id="faq-c5" class="accordion-collapse collapse" aria-labelledby="faq-h5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  可安排定期顧問諮詢、追蹤市場動態分享，或規劃進階工作坊。
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End FAQ -->
+
+  <!-- ======= Contact CTA ======= -->
+  <section id="contact-cta" class="why-us" data-aos="fade-up" style="padding: 60px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center py-4">
+          <h4>為您的團隊量身打造 Web3 培訓方案</h4>
+          <p class="mb-2">來信說明公司規模、團隊角色與期望主題，講師將在 1-2 個工作日內回覆客製化課程建議。</p>
+          <a href="mailto:swanky.hsiao@gmail.com?subject=%5B企業培訓洽詢%5D%20Web3%20課程需求&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E5%80%91%E5%B0%8D%20Web3%20%E4%BC%81%E6%A5%AD%E5%9F%B9%E8%A8%93%E8%AA%B2%E7%A8%8B%E6%9C%89%E8%88%88%E8%B6%A3%E3%80%82%0A%0A%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A8%B1%EF%BC%9A%0A%E5%9C%98%E9%9A%8A%E8%A6%8F%E6%A8%A1%EF%BC%9A%0A%E6%9C%9F%E6%9C%9B%E4%B8%BB%E9%A1%8C%EF%BC%9A%0A" class="btn-cta-enterprise">免費索取課程建議方案</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Contact CTA -->
+
+</main><!-- End #main -->
