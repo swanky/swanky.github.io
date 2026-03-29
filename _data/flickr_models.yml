@@ -267,6 +267,33 @@ featured_collab:
       - title: "2007-10 CAPA美少女攝影競賽"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157602568409406/"
 
+  - id: "daphny"
+    name_zh: "安達熙"
+    name_en: "Daphny"
+    shoot_years: "2006–2009"
+    album_count: 8
+    bio_zh: "早期重要合作模特兒，從 2006 年台大外拍到 2009 年內湖港墘，橫跨多場 DCView 外拍活動，累積超過 550 張照片。"
+    flickr_album_id: "72157603754431546"
+    flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/collections/72157603754431546/"
+    cover_image: "305685307.jpg"
+    albums:
+      - title: "2009-08 內湖港墘"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157621851484441/"
+      - title: "2009-06 小琉球"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157619873083661/"
+      - title: "2009-04 Murano"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157617545688146/"
+      - title: "2008-09 至善園"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157607552887339/"
+      - title: "2008-05 貳拾陸巷"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157604981412963/"
+      - title: "2007-06 西門町"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157601074343374/"
+      - title: "2006-11 台大(Lightroom)"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594397392129/"
+      - title: "2006-11 台大"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157594391973954/"
+
   - id: "singtone"
     name_zh: "星彤"
     name_en: "Singtone"
@@ -432,6 +459,8 @@ featured_collab:
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/"
     cover_image: "album_72157673051651878.jpg"
     albums:
+      - title: "2022-12 CloneX #18974"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720304869243/"
       - title: "2018-09 制服女孩"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157673051651878/"
 
@@ -445,6 +474,8 @@ featured_collab:
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157700670410182/"
     cover_image: "album_72157700670410182.jpg"
     albums:
+      - title: "2021-04 比特幣女孩"
+        url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157719012170802/"
       - title: "2018-10 制服女孩"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157700670410182/"
 
