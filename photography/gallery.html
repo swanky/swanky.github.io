@@ -169,9 +169,7 @@ extra_css: >
   }
   .featured-card img {
     width: 100%;
-    height: 360px;
-    object-fit: cover;
-    object-position: top;
+    height: auto;
     opacity: 0.75;
     transition: opacity 0.3s;
     display: block;
@@ -246,75 +244,62 @@ extra_css: >
     font-weight: 700;
     white-space: nowrap;
   }
-  /* ----- Photo card (精選寫真) ----- */
-  .photo-card {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #1a1a1a;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .photo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  }
-  .photo-card img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
-    display: block;
-  }
-  .photo-card:hover img { opacity: 0.75; }
-  .photo-card-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 30px 24px 24px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.88));
-  }
-  .photo-card-overlay h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  .photo-card-overlay .meta {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.85rem;
-    margin-bottom: 12px;
-  }
-  .photo-card-overlay .meta span { margin-right: 12px; }
-  .btn-view {
-    display: inline-block;
+  /* ----- Inline view button (站內瀏覽) ----- */
+  .btn-view-inline {
     background: #E5A300;
     color: #fff;
     border: none;
     border-radius: 50px;
-    padding: 8px 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s;
-    margin-right: 8px;
-  }
-  .btn-view:hover { background: #c48900; color: #fff; text-decoration: none; }
-  .btn-flickr-sm {
-    display: inline-block;
-    background: transparent;
-    color: #ff0084;
-    border: 1px solid #ff0084;
-    border-radius: 50px;
-    padding: 7px 16px;
+    padding: 6px 16px;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+    white-space: nowrap;
+    margin-right: 6px;
   }
-  .btn-flickr-sm:hover { background: #ff0084; color: #fff; text-decoration: none; }
+  .btn-view-inline:hover { background: #c48900; color: #fff; text-decoration: none; }
+  /* ----- Banner badges ----- */
+  .banner-badges {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .banner-badge {
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+  }
+  /* ----- Album list buttons ----- */
+  .album-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 8px 0;
+  }
+  .album-link-btn {
+    background: #2a2a2a;
+    color: #ccc;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .album-link-btn:hover {
+    background: #E5A300;
+    color: #fff;
+    text-decoration: none;
+  }
   /* ----- Pinterest-style masonry layout ----- */
   .masonry {
     display: block !important;
     column-gap: 0;
+    column-fill: balance;
   }
   .masonry.cols-3 { column-count: 3; }
   .masonry.cols-4 { column-count: 4; }
@@ -324,6 +309,7 @@ extra_css: >
     max-width: 100% !important;
     flex: none !important;
     break-inside: avoid;
+    padding: 0 15px;
   }
   @media (max-width: 991.98px) {
     .masonry.cols-3 { column-count: 2; }
@@ -351,9 +337,17 @@ extra_css: >
 
       <!-- Flickr Profile Banner -->
       <div class="flickr-profile-banner" data-aos="fade-up" data-aos-duration="400">
-        <div class="flickr-info">
+        <div class="flickr-info" style="flex:1;">
           <strong>swanky-hsiao @ Flickr</strong>
-          Most Favorited · Most Views · Explore · 競賽得獎 · 2006–2023
+          1,110+ 相簿 · 50+ 模特兒 · 2006–2023
+          <div class="banner-badges">
+            <span class="milestone-badge banner-badge">IPA 榮譽獎</span>
+            <span class="milestone-badge banner-badge">PX3 二等獎</span>
+            <span class="milestone-badge banner-badge">TIME Magazine</span>
+            <span class="milestone-badge banner-badge">Explore Calendar</span>
+            <span class="milestone-badge banner-badge">3 本攝影書出版</span>
+            <span class="milestone-badge banner-badge">6 場展覽</span>
+          </div>
         </div>
         <a href="https://www.flickr.com/photos/swanky-hsiao/" target="_blank" rel="noopener noreferrer" class="btn-flickr" style="padding:8px 20px;font-size:0.9rem;">
           <i class="bx bxl-flickr"></i> 前往 Flickr 相簿
@@ -362,42 +356,10 @@ extra_css: >
 
       <hr class="section-divider">
 
-      <!-- ===================== 精選寫真 ===================== -->
-      <div class="section-title" style="padding-bottom:20px;">
-        <h2>精選寫真</h2>
-        <p>攝影作品精選，可直接在線上瀏覽完整照片</p>
-      </div>
-
-      <div class="row" data-aos="fade-up" data-aos-duration="500">
-        {% for post in site.categories.photography %}
-        <div class="col-md-6 mb-4">
-          <div class="photo-card">
-            {% if post.cover_image %}
-            <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-            {% endif %}
-            <div class="photo-card-overlay">
-              <h3>{{ post.title }}</h3>
-              <div class="meta">
-                <span>{{ post.date | date: "%Y-%m-%d" }}</span>
-                {% if post.model_name %}<span>MD: {{ post.model_name }}</span>{% endif %}
-                {% if post.photo_count %}<span>{{ post.photo_count }} 張照片</span>{% endif %}
-              </div>
-              <a href="{{ post.url | relative_url }}" class="btn-view">瀏覽作品</a>
-              {% if post.flickr_album %}
-              <a href="{{ post.flickr_album }}" target="_blank" rel="noopener noreferrer" class="btn-flickr-sm">Flickr 相簿</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div><!-- /row 精選寫真 -->
-
-      <hr class="section-divider">
-
       <!-- ===================== 她們後來都成名了 ===================== -->
       <div class="section-title" style="padding-bottom:20px;">
         <h2>她們後來都成名了</h2>
-        <p>這些模特兒當年拍攝時還是素人，現已成為台灣知名藝人、網紅與公眾人物</p>
+        <p>這些模特兒當年拍攝時還是素人，現已成為知名網紅與公眾人物</p>
       </div>
 
       <div class="row masonry cols-3" data-aos="fade-up" data-aos-duration="500">
@@ -826,7 +788,7 @@ extra_css: >
         <p>2021–2023 · 跨界符號 · 場景人像 · 持續創作</p>
       </div>
 
-      <div class="row masonry cols-3" data-aos="fade-up" data-aos-duration="500">
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
 
         <!-- 黃帛瑜 比特幣女孩 2021 -->
         <div class="col-lg-4 col-md-6">
@@ -895,7 +857,7 @@ extra_css: >
       <!-- ===================== 7. 名人合作 ===================== -->
       <div class="section-title" style="padding-bottom:20px;">
         <h2>名人合作</h2>
-        <p>藝人 · 音樂人 · 作家 · 主持人 · 33 組名人攝影記錄</p>
+        <p>藝人 · 音樂人 · 作家 · 主持人 · 名人攝影記錄</p>
       </div>
 
       <div class="row masonry cols-3" data-aos="fade-up" data-aos-duration="500">
@@ -996,6 +958,78 @@ extra_css: >
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/2877481598.jpg' | relative_url }}" alt="洪詩 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>洪詩</h4>
+              <p>《我愛黑澀會》第一批成員，後加入 Popu Lady 與星期三女團，並跨足餐飲創業。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157607392481999/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157634639705258/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157634639705258.jpg' | relative_url }}" alt="熊熊 卓毓彤 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>熊熊 卓毓彤</h4>
+              <p>一線藝人、演員，出版多本暢銷寫真集，活躍於戲劇與綜藝圈。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157634639705258/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157630161260824/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157630161260824.jpg' | relative_url }}" alt="宋芸樺 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>宋芸樺</h4>
+              <p>以電影《我的少女時代》爆紅，成為金馬獎入圍電影演員。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157630161260824/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157632196635048/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157632196635048.jpg' | relative_url }}" alt="阿喜 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>阿喜</h4>
+              <p>搞笑藝人，跨足主持、戲劇與網路節目。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157632196635048/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157606571456436/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157606571456436.jpg' | relative_url }}" alt="邵庭 Nikki 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>邵庭 Nikki</h4>
+              <p>購物台知名主持人與網路名人，經營自有品牌，社群影響力廣泛。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157606571456436/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="album-card">
+            <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157626608183463/" target="_blank" rel="noopener noreferrer"><img src="{{ '/assets/img/flickr/album_72157626608183463.jpg' | relative_url }}" alt="袁艾菲 Phoebe 攝影紀錄"></a>
+            <div class="album-card-body">
+              <div class="category-label">Celebrity</div>
+              <h4>袁艾菲 Phoebe</h4>
+              <p>演員，活躍於台灣戲劇圈，參演多部電視劇與電影。</p>
+              <a href="https://www.flickr.com/photos/swanky-hsiao/albums/72157626608183463/" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
+            </div>
+          </div>
+        </div>
+
       </div><!-- /row 名人 -->
 
       <div class="text-center mt-2 mb-4">
@@ -1012,7 +1046,7 @@ extra_css: >
         <p>Cosplay · 幽默瞬間 · 現場活動 · 跨圈層傳播力</p>
       </div>
 
-      <div class="row masonry cols-3" data-aos="fade-up" data-aos-duration="500">
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
 
         <!-- WoW Cosplay 2007 -->
         <div class="col-lg-4 col-md-6">

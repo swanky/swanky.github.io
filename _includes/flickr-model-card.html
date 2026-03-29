@@ -48,6 +48,16 @@
       <div class="milestone-badges">
         <span class="milestone-badge">{{ m.shoot_years }}</span>
       </div>
+      {% if m.albums.size > 0 %}
+      <div class="album-list">
+        {% for album in m.albums %}
+        <a href="{{ album.url }}" target="_blank" rel="noopener noreferrer" class="album-link-btn">{{ album.title }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if m.post_url %}
+      <a href="{{ m.post_url | relative_url }}" class="btn-view-inline">瀏覽圖文</a>
+      {% endif %}
       <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿集</a>
     </div>
   </div>
@@ -81,6 +91,9 @@
       <div class="category-label">人像相簿</div>
       <h4>{{ m.name_zh }}╳史旺基「{{ m.shoot_context }}」</h4>
       <p>{{ m.shoot_year }} · {{ m.photos }} 張照片</p>
+      {% if m.post_url %}
+      <a href="{{ m.post_url | relative_url }}" class="btn-view-inline">瀏覽圖文</a>
+      {% endif %}
       <a href="{{ m.flickr_album_url }}" target="_blank" rel="noopener noreferrer" class="btn-flickr"><i class="bx bxl-flickr"></i> 查看相簿</a>
     </div>
   </div>
