@@ -7,3 +7,4 @@ _site
 .agnix.toml
 .env
 assets/facebook-archive/.env
+docs/
