@@ -1,7 +1,7 @@
 ---
 layout: home
 title: 教育訓練
-description: 東吳大學連續 8 年授課、企業內訓 7 場。提供攝影、模特兒、加密貨幣與 AI 相關課程，個人小班或企業內訓皆可。
+description: 東吳大學連續 8 年授課、企業內訓 7 場。提供攝影、模特兒、Web3 與 AI 相關課程，個人小班或企業內訓皆可。
 keywords: 教育訓練,攝影課程,模特兒課程,加密貨幣教學,企業內訓,史旺基
 nav_active: education
 breadcrumbs:
@@ -42,12 +42,97 @@ extra_css: |
     border-top: 1px solid #eee;
     margin: 10px 0 40px;
   }
+  .badge-audience {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: #fff8e6;
+    color: #b8860b;
+    border: 1px solid #f0d77a;
+    margin-right: 4px;
+    margin-bottom: 8px;
+  }
+  .btn-card {
+    display: inline-block;
+    margin-top: auto;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #E5A300;
+    border: 1.5px solid #E5A300;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .btn-card:hover {
+    background: #E5A300;
+    color: #fff;
+    text-decoration: none;
+  }
+  .instructor-bio {
+    padding: 50px 0 30px;
+  }
+  .instructor-bio img {
+    border-radius: 12px;
+    max-width: 220px;
+  }
+  .instructor-bio h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+  }
+  .instructor-bio .title-line {
+    font-size: 0.9rem;
+    color: #E5A300;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .instructor-bio p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px 0 10px;
+  }
+  .stats-row .stat-item {
+    text-align: center;
+  }
+  .stats-row .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #E5A300;
+    display: block;
+  }
+  .stats-row .stat-label {
+    font-size: 0.82rem;
+    color: #777;
+    margin-top: 2px;
+  }
+  .inline-cta {
+    font-size: 0.92rem;
+    color: #E5A300;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .inline-cta:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
 ---
 
   <main id="main">
     <div class="section-title works">
       <h2>教育訓練</h2>
-      <p>東吳大學兼任助理教授連續 8 年、企業內訓 7 場、多所大學校園講座。提供攝影、模特兒、加密貨幣與 AI 課程——個人小班制或企業客製化內訓皆可安排。</p>
+      <p>師大博士 × 東吳大學連續 8 年授課 × 企業內訓 7 場。從加密貨幣到模特兒培訓，結合業界實戰與學術深度——個人小班制或企業客製化方案皆可安排。</p>
+      <p class="mt-2"><a href="mailto:swanky.hsiao@gmail.com" class="inline-cta">有需求？立即來信洽詢 →</a></p>
     </div>
 
   <!-- ======= Courses Section ======= -->
@@ -63,9 +148,11 @@ extra_css: |
             <div class="card-img">
               <a href="{{ '/education/modeling/' | relative_url }}"><img src="{{ '/assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg' | relative_url }}" alt="模特兒課程實拍作品照"></a>
             </div>
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
+              <span class="badge-audience">個人</span>
               <h5 class="card-title"><a href="{{ '/education/modeling/' | relative_url }}">模特兒課程</a></h5>
               <p class="card-text">從素人晉升網美，傳授擺姿技巧、保養化妝要點、接案模式、社群經營方向。適合個人小班制。</p>
+              <a href="{{ '/education/modeling/' | relative_url }}" class="btn-card mt-auto">了解課程內容 →</a>
             </div>
           </div>
         </div>
@@ -74,20 +161,24 @@ extra_css: |
             <div class="card-img">
               <a href="{{ '/education/crypto/' | relative_url }}"><img src="{{ '/assets/img/MG_0080_ps.jpg' | relative_url }}" alt="加密貨幣課程教學現場照片"></a>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ '/education/crypto/' | relative_url }}">加密貨幣課程</a></h5>
+            <div class="card-body d-flex flex-column">
+              <span class="badge-audience">個人</span><span class="badge-audience">企業</span>
+              <h5 class="card-title"><a href="{{ '/education/crypto/' | relative_url }}">Web3 課程</a></h5>
               <p class="card-text">涵蓋 DeFi、NFT、交易策略與 Web3 趨勢。具備業界實戰與學術背景，適合個人進修或企業團隊培訓。</p>
+              <a href="{{ '/education/crypto/' | relative_url }}" class="btn-card mt-auto">了解課程內容 →</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
           <div class="card">
             <div class="card-img">
-              <a href="{{ '/education/crypto/soochow/' | relative_url }}"><img src="{{ '/assets/img/illustrations/soochow-professor.svg' | relative_url }}" alt="東吳大學資料科學系區塊鏈課程示意圖"></a>
+              <a href="{{ '/education/crypto/enterprise/' | relative_url }}"><img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="企業內訓區塊鏈 Web3 培訓計畫示意圖"></a>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學區塊鏈課程</a></h5>
-              <p class="card-text">連續第 8 年（107–114 學年）開授，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重。</p>
+            <div class="card-body d-flex flex-column">
+              <span class="badge-audience">企業</span>
+              <h5 class="card-title"><a href="{{ '/education/crypto/enterprise/' | relative_url }}">企業內訓方案</a></h5>
+              <p class="card-text">13 個模組、800+ 頁教材，涵蓋 DeFi、NFT、RWA、GameFi 與 Web3 策略。提供全方位培訓、精選模組與專題工作坊三種方案。</p>
+              <a href="{{ '/education/crypto/enterprise/' | relative_url }}" class="btn-card mt-auto">查看培訓方案 →</a>
             </div>
           </div>
         </div>
@@ -95,6 +186,40 @@ extra_css: |
 
     </div>
   </section>
+
+  <!-- ======= Instructor Bio Section ======= -->
+  <section class="instructor-bio" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-4 text-center mb-4 mb-md-0">
+          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片" loading="lazy">
+        </div>
+        <div class="col-lg-9 col-md-8">
+          <h4>講師｜史旺基 Swanky Hsiao</h4>
+          <p class="title-line">師大資工博士・東吳大學兼任助理教授・台灣大哥大部經理・CSM 認證</p>
+          <p>國立臺灣師範大學資訊工程博士，現職台灣大哥大部經理，東吳大學巨量資料管理學院區塊鏈課程兼任助理教授（連續第 8 年）。曾任財團法人資訊工業策進會、國際信任機器(ITM)技術研發總監。擅長 Java 企業架構、敏捷開發、區塊鏈技術應用，並為 TBSI 區塊鏈聯盟共同創辦人。同時是國際攝影得獎者（TIME Magazine、PX3、IPA），以跨域視角讓技術課程更具深度與說服力。</p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-number">8</span>
+          <span class="stat-label">年大學連續授課</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7</span>
+          <span class="stat-label">場企業內訓</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">800+</span>
+          <span class="stat-label">頁教材</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">13</span>
+          <span class="stat-label">個課程模組</span>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Instructor Bio Section -->
 
   <!-- ======= Teaching Record Section ======= -->
   <section class="service-details section-bg" data-aos="fade-up">
@@ -107,6 +232,18 @@ extra_css: |
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
           <div class="card">
             <div class="card-img">
+              <a href="{{ '/education/crypto/soochow/' | relative_url }}"><img src="{{ '/assets/img/illustrations/soochow-professor.svg' | relative_url }}" alt="東吳大學資料科學系區塊鏈課程示意圖" loading="lazy"></a>
+            </div>
+            <div class="card-body">
+              <span class="badge-audience">大學</span>
+              <h5 class="card-title"><a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學區塊鏈課程</a></h5>
+              <p class="card-text">連續第 8 年（107–114 學年）開授，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <div class="card-img">
               <img src="{{ '/assets/img/illustrations/z-institute-nft.svg' | relative_url }}" alt="Z Institute NFT GameFi 實戰課程示意圖" loading="lazy">
             </div>
             <div class="card-body">
@@ -115,7 +252,7 @@ extra_css: |
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
           <div class="card">
             <div class="card-img">
               <img src="{{ '/assets/img/illustrations/campus-lecture.svg' | relative_url }}" alt="校園巡迴區塊鏈講座示意圖" loading="lazy">
@@ -123,17 +260,6 @@ extra_css: |
             <div class="card-body">
               <h5 class="card-title">校園講座</h5>
               <p class="card-text">2022 年受邀至光復商工、銘傳大學、實踐資工、臺北市立大學、元智大學、台東大學等校進行區塊鏈主題講座。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/crypto/enterprise/' | relative_url }}"><img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="企業內訓區塊鏈 Web3 培訓計畫示意圖" loading="lazy"></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ '/education/crypto/enterprise/' | relative_url }}">企業內訓</a></h5>
-              <p class="card-text">13 個模組、800+ 頁教材，涵蓋 DeFi、NFT、RWA、GameFi 與 Web3 策略。提供全方位培訓、精選模組與專題工作坊三種方案。</p>
             </div>
           </div>
         </div>
@@ -158,10 +284,10 @@ extra_css: |
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center py-5">
-          <h4>有課程、演講或企業內訓需求？</h4>
-          <p class="mb-2">個人小班制或企業客製化培訓皆可安排，歡迎來信討論需求。</p>
-          <p class="text-muted small mb-4">個人學員請直接來信；企業內訓請說明公司規模與課程主題，將提供客製化方案。</p>
-          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">洽詢合作</a>
+          <h4>讓我們為您量身規劃課程方案</h4>
+          <p class="mb-2">個人小班制或企業客製化培訓皆可安排，歡迎來信討論您的培訓目標。</p>
+          <p class="text-muted small mb-4">個人學員歡迎直接來信詢問；企業內訓請簡述公司規模與課程主題，將儘速回覆客製化方案。</p>
+          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">免費諮詢課程方案</a>
         </div>
       </div>
     </div>
