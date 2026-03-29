@@ -1,0 +1,17 @@
+{% if page.course_name %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": {{ page.course_name | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "Person",
+    "name": "蕭宇程",
+    "alternateName": "Swanky Hsiao",
+    "url": "https://swanky.github.io"
+  },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+{% endif %}
