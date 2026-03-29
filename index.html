@@ -39,6 +39,7 @@ nav_active: home
               <div class="icon"><i class="bi {{ service.icon }}"></i></div>
               <h4 class="title">{{ service.title }}</h4>
               <p class="description">{{ service.description }}</p>
+              {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3">{{ service.cta_text }}</a>{% endif %}
             </div>
           </div>
           {% endfor %}
@@ -137,7 +138,7 @@ nav_active: home
         <div class="col-lg-6 work-right-text d-flex align-items-center">
           <div class="px-5 py-5 py-lg-0">
             <h2>技術顧問</h2>
-            <h5>曾擔任技術講座講者、工作坊主辦人。</h5>
+            <h5>JCConf 2017–2019 講者、主持數位發展部區塊鏈計畫、推動成立可信區塊鏈應用基礎建設聯盟（TBSI）。</h5>
             <a href="{{ '/technical/' | relative_url }}" class="btn-get-started">了解技術服務</a>
           </div>
         </div>
@@ -150,7 +151,7 @@ nav_active: home
         <div class="col-lg-6 work-right-text d-flex align-items-center">
           <div class="px-5 py-5 py-lg-0">
             <h2>教育訓練</h2>
-            <h5>多年攝影指導經驗，曾舉辦模特兒課程、區塊鏈加密貨幣課程。</h5>
+            <h5>東吳大學區塊鏈課程連續 8 年授課、企業內訓 7 場（2021–2022），課程涵蓋加密貨幣、NFT、Web3 與 AIGC。</h5>
             <a href="{{ '/education/' | relative_url }}" class="btn-get-started">瀏覽課程介紹</a>
           </div>
         </div>

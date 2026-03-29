@@ -2,6 +2,8 @@
   icon: bi-camera
   color: pink
   description: 拍攝經驗豐富、風格清新自然，作品遍及人像寫真、活動紀錄、自助婚紗、企業/個人形象宣傳、商業攝影。
+  url: /photography/
+  cta_text: 欣賞作品集
   aos_delay: 0
 
 - title: 技術顧問
@@ -9,6 +11,8 @@
   color: cyan
   description: >
     擅長 Java 程式設計與企業級服務架構、物件導向程式設計與架構、敏捷方法與敏捷軟體開發、資料科學應用規畫、成長駭客、區塊鏈技術應用規畫及研發。
+  url: /technical/
+  cta_text: 了解服務範疇
   aos_delay: 100
 
 - title: 教育訓練
@@ -16,4 +20,6 @@
   color: green
   description: >
     具多年教育及教案設計規畫經驗，可依據客戶需求提供攝影或技術相關等課程，型式可為個人小班制或企業內訓。
+  url: /education/
+  cta_text: 瀏覽課程
   aos_delay: 200
