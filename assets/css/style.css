@@ -1696,8 +1696,8 @@ padding-bottom: 56.25%;
 
   min-height: 500px;
   max-width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-  url("../img/cover.jpeg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  url("../img/cover.jpeg") center center no-repeat;
   background-attachment: fixed;
   background-size:cover;
 }
@@ -1720,7 +1720,7 @@ padding-bottom: 56.25%;
   min-height: 500px;
   max-width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-  url("../img/51134332665_2fac442f7b_k.jpeg") center top no-repeat;
+  url("../img/51134332665_2fac442f7b_k.jpeg") center center no-repeat;
   background-attachment: fixed;
   background-size:cover;
 }
@@ -1759,7 +1759,7 @@ padding-bottom: 56.25%;
   min-height: 600px;
   max-width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-  url("../img/ug3_act.jpeg") center top no-repeat;
+  url("../img/ug3_act.jpeg") center center no-repeat;
   background-size:cover;
 }
 /*--------------------------------------------------------------
@@ -1775,7 +1775,7 @@ padding-bottom: 56.25%;
   min-height: 600px;
   max-width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-  url("../img/MG_0080_ps.jpg") center top no-repeat;
+  url("../img/MG_0080_ps.jpg") center center no-repeat;
   background-size:cover;
 }
 .fillpic-noani-edub-NFT {
