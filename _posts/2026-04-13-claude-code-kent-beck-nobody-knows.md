@@ -1,9 +1,9 @@
 ---
 title: "【好文分享】AI 時代的軟體工程：Kent Beck《Nobody Knows》重點翻譯與省思"
 date: 2026-04-13
-categories: [claude-code]
+categories: [technical]
 layout: article
-nav_active: education
+nav_active: technical
 cover_image: /assets/img/linkedin/kent-beck-nobody-knows.jpg
 source_url: "https://www.linkedin.com/pulse/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%ABai-%E6%99%82%E4%BB%A3%E7%9A%84%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8Bkent-becknobody-knows%E9%87%8D%E9%BB%9E%E7%BF%BB%E8%AD%AF%E8%88%87%E7%9C%81%E6%80%9D-swanky-hsiao-ukzac"
 description: "Kent Beck 在 Podcast《Still Burning》首集《Nobody Knows》中，談 AI 時代軟體工程的巨變：精細雕琢程式碼的時代已過，適應力、低成本實驗與社群共學才是關鍵。"
