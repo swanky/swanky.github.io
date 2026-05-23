@@ -372,6 +372,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: 0;
 }
 
+#hero h1,
 #hero h2 {
   color: #fff;
   margin-bottom: 30px;
