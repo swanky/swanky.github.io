@@ -22,6 +22,15 @@ exclude:
   - node_modules
   - vendor
   - docs
+  # Facebook archive: keep photos accessible (referenced from posts), exclude
+  # 500+ markdown files that would otherwise inflate the sitemap to 585 URLs
+  # (87% archived FB posts). Photos directory stays in _site for image refs.
+  - assets/facebook-archive/posts
+  - assets/facebook-archive/indexes
+  - assets/facebook-archive/metadata
+  - assets/facebook-archive/logs
+  - assets/facebook-archive/README.md
+  - assets/facebook-archive/process_results.py
 
 # Keep these files even though they start with underscore or dot
 include:
