@@ -8,3 +8,6 @@ _site
 .env
 assets/facebook-archive/.env
 docs/
+
+# Local-only image backups (pre-compression originals)
+assets/img/*.original.*
