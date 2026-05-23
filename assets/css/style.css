@@ -19,7 +19,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
 }
 
 .btn-color {
@@ -381,10 +381,13 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 #hero p {
   width: 80%;
+  max-width: 720px;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
+  font-size: var(--text-lg);
+  line-height: 1.7;
 }
 
 #hero .carousel-control-prev, #hero .carousel-control-next {
@@ -400,7 +403,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -425,7 +428,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .fillpic .btn-get-started,
 .fillpic-edub .btn-get-started,
 .fillpic-edub-NFT .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -534,7 +537,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero-no-slider .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1155,7 +1158,7 @@ padding-bottom: 56.25%;
   position: relative;
 }
 .reviews_a .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -1177,7 +1180,7 @@ padding-bottom: 56.25%;
   text-decoration: none;
 }
 .reviews_b .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -1199,7 +1202,7 @@ padding-bottom: 56.25%;
   text-decoration: none;
 }
 .reviews_c .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -1364,7 +1367,7 @@ padding-bottom: 56.25%;
 .facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
 }
 
@@ -1634,7 +1637,7 @@ padding-bottom: 56.25%;
 }
 
 .pricing .get-started-btn {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -1816,7 +1819,7 @@ padding-bottom: 56.25%;
 }
 
 .portfolio .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -1858,7 +1861,7 @@ padding-bottom: 56.25%;
   color: #444;
   transition: all 0.3s ease-in-out;
   border-bottom: 2px solid #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
@@ -2819,7 +2822,7 @@ padding-bottom: 56.25%;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   color: #fff;
 }
 
@@ -2980,7 +2983,7 @@ section.team {
 .services .icon-box::before {
   content: counter(service-card, decimal-leading-zero);
   display: block;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-sans);
   font-size: 44px;
   font-weight: 700;
   color: #E5A300;
