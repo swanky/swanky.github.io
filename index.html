@@ -37,7 +37,7 @@ nav_active: home
           <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up"{% if service.aos_delay > 0 %} data-aos-delay="{{ service.aos_delay }}"{% endif %}>
             <div class="icon-box icon-box-{{ service.color }}">
               <div class="icon"><i class="bi {{ service.icon }}"></i></div>
-              <h4 class="title">{{ service.title }}</h4>
+              <h3 class="title">{{ service.title }}</h3>
               <p class="description">{{ service.description }}</p>
               {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3">{{ service.cta_text }}</a>{% endif %}
             </div>
