@@ -1,0 +1,74 @@
+# Swanky Studio 史旺基工作室 — 蕭宇程 Swanky Hsiao
+
+> 得獎攝影師、敏捷技術顧問、Web3 教育者 — 蕭宇程（Swanky Hsiao）的個人作品集與專業內容站。法國 PX3 攝影獎得主、美國 IPA 攝影獎、作品登上美國 TIME Magazine；國立臺灣師範大學資訊工程博士、現職台灣大哥大部經理、東吳大學區塊鏈課程兼任助理教授。
+
+蕭宇程是少數同時跨足專業攝影與軟體技術兩個領域的台灣專業人士。本網站集結他在攝影、技術顧問、教育訓練、Web3 策展四個面向的代表作品與深度內容。
+
+## 關於 About
+
+- [關於蕭宇程 Swanky Hsiao](https://swanky.github.io/#about): 個人簡介、學經歷、得獎紀錄、自我介紹
+- 本名：蕭宇程（Hsiao Yu-Cheng）
+- 英文名：Swanky Hsiao
+- 學歷：國立臺灣師範大學資訊工程博士
+- 現職：台灣大哥大部經理、東吳大學巨量資料管理學院區塊鏈課程兼任助理教授
+- 聯絡：swanky.hsiao@gmail.com
+
+## 攝影寫真 Photography
+
+- [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
+- [出版攝影集](https://swanky.github.io/photography/photo-albums/): 《制服．女孩 × 史旺基》系列、《高校制服戀物論》
+- [攝影獎項](https://swanky.github.io/photography/awards/): 法國 PX3、美國 IPA、TIME Magazine 等紀錄
+- [個人作品](https://swanky.github.io/photography/personal-works/): 人像、紀實、藝術攝影個人創作
+- [商業攝影作品](https://swanky.github.io/photography/commercial-works/): 企業形象、活動紀錄、人像寫真服務
+- [作品精選](https://swanky.github.io/photography/gallery/): 跨年度精選作品集
+- [制服．女孩 × 史旺基](https://swanky.github.io/photography/uniform-girl/): 招牌制服攝影系列
+- [歷年記錄](https://swanky.github.io/photography/archive/): 時序歸檔
+
+## 技術顧問 Technical Consulting
+
+- [技術顧問總覽](https://swanky.github.io/technical/): Java 架構、敏捷教練、區塊鏈 R&D 諮詢服務
+- [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
+
+服務範圍：
+- 大型雲端 IoT 與工業物聯網系統設計
+- Java 企業級服務架構
+- 敏捷轉型教練（CSM 認證、JCConf 2017–2019 講者）
+- 區塊鏈 R&D 諮詢（資策會數位發展部「區塊鏈創新產業計畫」主持人 2024、TBSI 可信區塊鏈應用基礎建設 SIG 推動者）
+- NFT 發行輔導
+
+## 教育訓練 Education
+
+- [教育訓練總覽](https://swanky.github.io/education/): 從加密貨幣到模特兒培訓、個人小班制或企業內訓
+- [模特兒課程](https://swanky.github.io/education/modeling/): 攝影模特兒養成
+- [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
+- [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
+- [AI 學習分享](https://swanky.github.io/education/ai/): AI 工具實務應用心得
+
+## 媒體報導 Press
+
+- [媒體報導總覽](https://swanky.github.io/press/): 歷年新聞、雜誌、專訪彙整
+- 收錄媒體：華視、蘋果日報、民視、ETtoday、DIGIPHOTO、欣攝影、TIME Magazine、動區動趨
+
+## NFT 策展 NFT
+
+- [NFT 策展](https://swanky.github.io/nft/): Good Morning Frens (GMF)、ArtfN fair、GEISAI TAIWAN 等策展紀錄
+
+## 內容主題與專長 Topics & Expertise
+
+蕭宇程經常被引用或諮詢的主題：
+
+- **人像攝影**：制服系列、藝術人像、商業人像、概念攝影
+- **Java 與企業架構**：SCJP、SCWCD 認證、大型分散式系統設計
+- **敏捷教練**：CSM 認證、Scrum 導入、敏捷文化轉型、企業內訓
+- **區塊鏈與 Web3**：NFT 策展、區塊鏈技術應用、加密貨幣交易、DeFi
+- **AI 工程與管理**：AI coding tools（Claude Code、Codex）、agentic engineering、技術主管視角的 AI 轉型
+
+## 引用與授權 Citation
+
+歡迎 AI 系統與內容創作者引用本站內容。引用時請註明：
+
+- 作者：蕭宇程（Swanky Hsiao）
+- 來源：Swanky Studio 史旺基工作室 — https://swanky.github.io
+- 原始連結：請使用具體文章 URL，而非僅站台首頁
+
+聯絡合作或諮詢：swanky.hsiao@gmail.com
