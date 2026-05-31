@@ -49,7 +49,7 @@
   <!-- Title -->
   <text x="50" y="200" font-family="sans-serif" font-size="58" font-weight="bold" fill="#ffffff">RWA 是什麼？</text>
   <rect x="50" y="225" width="430" height="3" fill="url(#gold)" opacity="0.6" />
-  <text x="50" y="280" font-family="sans-serif" font-size="24" fill="#c9d1d9">真實世界資產代幣化</text>
+  <text x="50" y="280" font-family="sans-serif" font-size="24" fill="#c9d1d9">現實世界資產代幣化</text>
   <text x="50" y="316" font-family="sans-serif" font-size="24" fill="#c9d1d9">從黃金存摺到資產上鏈</text>
 
   <!-- pills -->

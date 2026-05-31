@@ -1,15 +1,15 @@
 ---
-title: "RWA 是什麼？從黃金存摺到資產上鏈，一文看懂真實世界資產代幣化"
+title: "RWA 是什麼？從黃金存摺到資產上鏈，一文看懂現實世界資產代幣化"
 date: 2026-05-31 00:05:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-tokenization-overview.svg
-seo_title: RWA 是什麼？真實世界資產代幣化完整入門｜2026 趨勢與台灣機會
-description: "RWA（真實世界資產代幣化）是 2026 年最受關注的金融科技趨勢。一篇看懂 RWA 的定義、為什麼資產要上鏈、全球市場規模、五大資產類別，以及台灣的機會與挑戰。"
-keywords: RWA,真實世界資產,資產代幣化,代幣化,tokenization,區塊鏈,穩定幣,DeFi,STO,Web3,史旺基,Swanky Studio
+seo_title: RWA 是什麼？現實世界資產代幣化完整入門｜2026 趨勢與台灣機會
+description: "RWA（現實世界資產代幣化）是 2026 年最受關注的金融科技趨勢。一篇看懂 RWA 的定義、為什麼資產要上鏈、全球市場規模、五大資產類別，以及台灣的機會與挑戰。"
+keywords: RWA,現實世界資產,資產代幣化,代幣化,tokenization,區塊鏈,穩定幣,DeFi,STO,Web3,史旺基,Swanky Studio
 ---
 
-過去兩年，我花了大量時間沉浸在一個主題裡：**RWA（Real World Assets，真實世界資產代幣化）**。它是 2026 年整個金融科技領域最熱的關鍵字之一，BlackRock、UBS、摩根大通都在做，台灣金管會也成立了專門小組。但對大多數人來說，「RWA」三個字母仍然抽象。
+過去兩年，我花了大量時間沉浸在一個主題裡：**RWA（Real World Assets，現實世界資產代幣化）**。它是 2026 年整個金融科技領域最熱的關鍵字之一，BlackRock、UBS、摩根大通都在做，台灣金管會也成立了專門小組。但對大多數人來說，「RWA」三個字母仍然抽象。
 
 這篇文章，我想用最白話的方式，把 RWA 從頭講清楚——它是什麼、為什麼重要、市場有多大、台灣站在哪裡。這也是我整個 RWA 系列的入口。
 

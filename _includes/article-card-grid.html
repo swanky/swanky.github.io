@@ -1,6 +1,7 @@
 {% for article in include.articles %}
 <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
   <div class="card">
+    {% if include.number %}<span class="card-step">{{ include.number }}</span>{% endif %}
     {% if article.cover_image %}
     <div class="card-img">
       <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy"></a>

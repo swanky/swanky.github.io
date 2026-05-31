@@ -6,7 +6,7 @@ layout: article
 cover_image: /assets/img/rwa/rwa-taiwan-finance-opinion.svg
 seo_title: RWA 對台灣金融業的真實意義｜資產上鏈的機會、挑戰與時間窗口（觀點）
 description: "RWA 不是又一個會泡沫化的加密熱詞。從參加機構、金融監理到技術三個視角，談資產代幣化對台灣金融業的真實意義，以及為什麼 2026 是台灣不能錯過的時間窗口。一位資工博士兼金融科技工作者的觀點。"
-keywords: RWA,真實世界資產,資產代幣化,台灣金融,金融科技,區塊鏈,DvP,集保,CBDC,穩定幣,觀點,史旺基,Swanky Studio
+keywords: RWA,現實世界資產,資產代幣化,台灣金融,金融科技,區塊鏈,DvP,集保,CBDC,穩定幣,觀點,史旺基,Swanky Studio
 ---
 
 這是我 [RWA 系列]({{ '/technical/rwa/' | relative_url }})的最後一篇，也是唯一一篇純觀點文。前面幾篇我盡量保持中立、把[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})、[基建]({{ '/technical/rwa-infrastructure-hsm-pqc/' | relative_url }})與[全球監管]({{ '/technical/rwa-global-regulation/' | relative_url }})講清楚。這一篇，我想直接回答一個我最常被問到的問題：

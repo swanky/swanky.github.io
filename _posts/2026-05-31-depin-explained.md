@@ -60,6 +60,6 @@ DePIN 真正迷人的地方，在於它的成長邏輯——一個由三股力�
 
 DePIN 之所以重要，是因為它示範了區塊鏈最務實的一種用法——**不是炒作虛擬代幣，而是用代幣激勵去解決「協調大量陌生人共建基礎設施」這個自古以來的難題**。
 
-它和 [RWA（真實世界資產代幣化）]({{ '/technical/rwa-tokenization-overview/' | relative_url }}) 是一體兩面：RWA 把真實「資產」搬上鏈，DePIN 把真實「基礎設施」接上鏈。兩者都在做同一件事——**讓區塊鏈走出加密圈，真正觸碰實體世界**。
+它和 [RWA（現實世界資產代幣化）]({{ '/technical/rwa-tokenization-overview/' | relative_url }}) 是一體兩面：RWA 把真實「資產」搬上鏈，DePIN 把真實「基礎設施」接上鏈。兩者都在做同一件事——**讓區塊鏈走出加密圈，真正觸碰實體世界**。
 
 想更系統地理解 Web3 的各個賽道？歡迎接著讀我的 [Web3 入門精選]({{ '/education/crypto/web3-essentials/' | relative_url }}) 系列，或了解我的 [Web3 企業內訓]({{ '/education/crypto/' | relative_url }})。

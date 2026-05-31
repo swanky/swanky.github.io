@@ -1,9 +1,9 @@
 ---
 layout: home
 title: RWA 代幣化系列
-seo_title: RWA 真實世界資產代幣化系列｜黃金・債券・標準・監管全解
-description: 史旺基的 RWA（真實世界資產代幣化）系列文章。從黃金、債券代幣化，到 ERC-3643／CMTAT 合規標準與全球監管——一套用台灣視角看懂資產上鏈的完整脈絡。
-keywords: RWA,真實世界資產,資產代幣化,代幣化,黃金代幣化,債券代幣化,ERC-3643,CMTAT,DvP,穩定幣,區塊鏈,史旺基,Swanky
+seo_title: RWA 現實世界資產代幣化系列｜黃金・債券・標準・監管全解
+description: 史旺基的 RWA（現實世界資產代幣化）系列文章。從黃金、債券代幣化，到 ERC-3643／CMTAT 合規標準與全球監管——一套用台灣視角看懂資產上鏈的完整脈絡。
+keywords: RWA,現實世界資產,資產代幣化,代幣化,黃金代幣化,債券代幣化,ERC-3643,CMTAT,DvP,穩定幣,區塊鏈,史旺基,Swanky
 nav_active: technical
 breadcrumbs:
   - name: 主頁
@@ -42,22 +42,34 @@ extra_css: |
   @media (max-width: 575px) {
     .rwa-identity { flex-direction: column; text-align: center; }
   }
-rwa_posts:
-  - rwa-tokenization-overview
-  - rwa-gold-tokenization
-  - rwa-bond-tokenization
-  - rwa-standards-evolution
-  - rwa-compliant-token-standards
-  - rwa-infrastructure-hsm-pqc
-  - rwa-global-regulation
-  - rwa-taiwan-finance-opinion
+rwa_groups:
+  - heading: 總論 — 先看懂什麼是資產上鏈
+    intro: 在深入任何單一資產前，先建立全貌：定義、為什麼要上鏈、市場規模與五大資產類別。
+    posts:
+      - rwa-tokenization-overview
+  - heading: 兩大資產 — 黃金與債券
+    intro: 從最直觀的黃金，到機構最積極代幣化的債券，看信任如何在鏈上轉移。
+    posts:
+      - rwa-gold-tokenization
+      - rwa-bond-tokenization
+  - heading: 標準與基建 — 撐起信任的底層
+    intro: 十二年的標準演進、合規型代幣的設計哲學，以及看不見卻最關鍵的 HSM 與後量子密碼學。
+    posts:
+      - rwa-standards-evolution
+      - rwa-compliant-token-standards
+      - rwa-infrastructure-hsm-pqc
+  - heading: 監管與在地觀點 — 接上台灣市場
+    intro: 攤開全球監管地圖，最後收在一篇台灣金融業的真實意義。
+    posts:
+      - rwa-global-regulation
+      - rwa-taiwan-finance-opinion
 ---
 
   <main id="main">
 
     <div class="section-title works">
       <h1>RWA 代幣化系列</h1>
-      <p>真實世界資產上鏈——用台灣視角看懂這場金融基礎設施的改寫</p>
+      <p>現實世界資產上鏈——用台灣視角看懂這場金融基礎設施的改寫</p>
     </div>
 
     <section class="service-details">
@@ -71,17 +83,25 @@ rwa_posts:
         </div>
 
         <div class="agentic-thesis" data-aos="fade-up">
-          <p>RWA（Real World Assets，真實世界資產代幣化）是 2026 年金融科技最熱的關鍵字。但它的本質，從來不是技術問題，而是<strong>「如何讓區塊鏈聽法律的話」</strong>——如何在數位世界裡，重建對黃金、債券、基金這些真實資產的信任。</p>
+          <p>RWA（Real World Assets，現實世界資產代幣化）是 2026 年金融科技最熱的關鍵字。但它的本質，從來不是技術問題，而是<strong>「如何讓區塊鏈聽法律的話」</strong>——如何在數位世界裡，重建對黃金、債券、基金這些真實資產的信任。</p>
           <p>這個系列從<strong>總論</strong>切入，分別深入<strong>黃金與債券</strong>兩大資產、拆解<strong>十二年的標準演進</strong>與<strong>合規型代幣標準</strong>的設計哲學，再往下挖到撐住信任的<strong>隱形基建（HSM 與後量子密碼學）</strong>、攤開<strong>全球監管地圖</strong>，最後收在一篇<strong>台灣金融業的觀點</strong>。不是加密圈的炒作話術，而是一套接得上台灣市場制度的真實知識。</p>
           <p class="agentic-thesis-cta">想為團隊建立 RWA／Web3 的知識基礎？<a href="{{ '/education/crypto/' | relative_url }}">企業內訓</a> 與 <a href="{{ '/technical/' | relative_url }}">技術顧問</a> 歡迎洽詢。</p>
         </div>
 
-        <div class="row">
-          {% for slug in page.rwa_posts %}
-            {% assign match = site.posts | where_exp: "p", "p.url contains slug" %}
-            {% include article-card-grid.html articles=match %}
-          {% endfor %}
-        </div>
+        {% assign step = 0 %}
+        {% for group in page.rwa_groups %}
+          <div class="series-group-title" data-aos="fade-up">
+            <h2>{{ group.heading }}</h2>
+            <p>{{ group.intro }}</p>
+          </div>
+          <div class="row">
+            {% for slug in group.posts %}
+              {% assign step = step | plus: 1 %}
+              {% assign match = site.posts | where_exp: "p", "p.url contains slug" %}
+              {% include article-card-grid.html articles=match number=step %}
+            {% endfor %}
+          </div>
+        {% endfor %}
 
       </div>
     </section>
