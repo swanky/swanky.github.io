@@ -4,6 +4,7 @@ _site
 .claude/
 .gstack/
 .agents/
+.playwright-mcp/
 .agnix.toml
 .env
 assets/facebook-archive/.env
