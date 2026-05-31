@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C53B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g opacity="0.05" stroke="#4fa6d5" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157" /><line x1="0" y1="315" x2="1200" y2="315" /><line x1="0" y1="472" x2="1200" y2="472" />
+    <line x1="300" y1="0" x2="300" y2="630" /><line x1="600" y1="0" x2="600" y2="630" /><line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+  <!-- three ascending layers -->
+  <g transform="translate(800,420)">
+    <rect x="-30" y="-70" width="220" height="64" rx="10" fill="#4fa6d5" fill-opacity="0.15" stroke="#4fa6d5" stroke-width="1.5" /><text x="80" y="-30" font-family="sans-serif" font-size="22" fill="#4fa6d5" text-anchor="middle" font-weight="bold">讀 Read</text>
+    <rect x="0" y="-150" width="220" height="64" rx="10" fill="#4fa6d5" fill-opacity="0.22" stroke="#4fa6d5" stroke-width="1.5" /><text x="110" y="-110" font-family="sans-serif" font-size="22" fill="#7cc4ec" text-anchor="middle" font-weight="bold">寫 Write</text>
+    <rect x="30" y="-230" width="220" height="64" rx="10" fill="#E5A300" fill-opacity="0.2" stroke="url(#gold)" stroke-width="2" /><text x="140" y="-190" font-family="sans-serif" font-size="22" fill="#F5C53B" text-anchor="middle" font-weight="bold">擁有 Own</text>
+  </g>
+  <!-- badge -->
+  <rect x="50" y="70" width="200" height="34" rx="17" fill="none" stroke="#4fa6d5" stroke-width="1.5" />
+  <text x="150" y="92" font-family="sans-serif" font-size="13" font-weight="bold" fill="#4fa6d5" text-anchor="middle" letter-spacing="2">Web3 入門精選</text>
+  <!-- title -->
+  <text x="50" y="210" font-family="sans-serif" font-size="58" font-weight="bold" fill="#ffffff">Web3 三時代</text>
+  <rect x="50" y="232" width="420" height="3" fill="url(#gold)" opacity="0.6" />
+  <text x="50" y="290" font-family="sans-serif" font-size="26" fill="#c9d1d9">從唯讀、讀寫，到擁有</text>
+  <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
+  <text x="50" y="615" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
+  <text x="1150" y="615" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>
+</svg>

@@ -1,0 +1,240 @@
+---
+layout: home
+title: GMF · 簽名 Feed 協議
+seo_title: GMF — Good Morning, Frens｜NFT 社交與「簽名 Feed」開放協議
+description: GMF（Good Morning, Frens）是史旺基重啟中的 Web3 項目——從 NFT 社交平台，演進為「簽名 Feed」開放協議：用錢包簽章證明內容作者、由訂閱者本地驗證，建立可攜的信任圖譜。
+keywords: GMF,Good Morning Frens,Signed Feed,簽名 Feed,開放協議,NFT 社交,Web3,EIP-191,SIWE,信任圖譜,區塊鏈,史旺基,Swanky Studio
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 技術顧問
+    url: /technical/
+  - name: GMF · 簽名 Feed 協議
+    url: /projects/gmf/
+extra_css: |
+  .gmf-hero {
+    background: radial-gradient(120% 120% at 70% 0%, #14233f 0%, #0a1024 55%, #070a16 100%);
+    color: #e6edf6;
+    padding: 96px 0 72px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .gmf-hero .gmf-title { max-width: 540px; width: 80%; margin: 0 auto 6px; }
+  .gmf-hero .gmf-stage {
+    display: inline-block; margin-bottom: 20px; padding: 5px 16px; border-radius: 20px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1px;
+    color: #C9ED4C; border: 1px solid rgba(201,237,76,0.45); background: rgba(201,237,76,0.08);
+  }
+  .gmf-hero .gmf-lede { max-width: 680px; margin: 0 auto 30px; font-size: 19px; line-height: 1.8; color: #b9c4d4; }
+  .gmf-hero .gmf-lede strong { color: #6DEFDE; font-weight: 600; }
+  .gmf-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .gmf-btn { display: inline-block; padding: 12px 26px; border-radius: 30px; font-weight: 600; font-size: 15px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+  .gmf-btn-primary { background: linear-gradient(90deg, #E5A300, #F5C53B); color: #1a1a2e; }
+  .gmf-btn-ghost { border: 1px solid rgba(230,237,246,0.35); color: #e6edf6; }
+  .gmf-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+
+  .gmf-section { padding: 60px 0; }
+  .gmf-section h2 { font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+  .gmf-section .gmf-sub { color: #777; margin-bottom: 34px; font-size: 16px; }
+  .gmf-accent { color: #2b9c8a; }
+
+  .gmf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .gmf-card { background: #fff; border: 1px solid #ececec; border-radius: 14px; padding: 24px; box-shadow: 0 2px 14px rgba(0,0,0,0.04); }
+  .gmf-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+  .gmf-card p { font-size: 15px; line-height: 1.75; color: #555; margin: 0; }
+  .gmf-card .gmf-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2b9c8a; margin-bottom: 10px; }
+
+  .gmf-band { background: #0e1626; color: #d6deea; border-radius: 18px; padding: 40px; }
+  .gmf-band h2 { color: #fff; }
+  .gmf-band .gmf-sub { color: #9aa6b8; }
+  .gmf-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 26px; }
+  .gmf-step { background: rgba(255,255,255,0.04); border: 1px solid rgba(109,239,222,0.2); border-radius: 12px; padding: 18px; }
+  .gmf-step .gmf-num { color: #6DEFDE; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
+  .gmf-step h4 { color: #fff; font-size: 16px; margin: 6px 0 6px; }
+  .gmf-step p { font-size: 14px; line-height: 1.7; color: #9aa6b8; margin: 0; }
+
+  .gmf-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+  .gmf-phase { border-left: 3px solid #ececec; padding: 6px 0 6px 16px; }
+  .gmf-phase.done { border-color: #2b9c8a; }
+  .gmf-phase.doing { border-color: #E5A300; }
+  .gmf-phase .gmf-pstat { font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+  .gmf-phase.done .gmf-pstat { color: #2b9c8a; }
+  .gmf-phase.doing .gmf-pstat { color: #c2870a; }
+  .gmf-phase.plan .gmf-pstat { color: #aaa; }
+  .gmf-phase h4 { font-size: 15px; margin: 4px 0; color: #1a1a2e; }
+  .gmf-phase p { font-size: 13px; line-height: 1.6; color: #777; margin: 0; }
+
+  .gmf-stack { display: flex; flex-wrap: wrap; gap: 10px; }
+  .gmf-stack span { background: #f3f6fa; border: 1px solid #e4e9f0; border-radius: 8px; padding: 7px 14px; font-size: 14px; color: #44506a; }
+
+  .gmf-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; text-align: center; }
+  .gmf-metric .gmf-num { font-size: 34px; font-weight: 800; color: #E5A300; line-height: 1.1; }
+  .gmf-metric p { font-size: 14px; color: #666; margin: 6px 0 0; }
+
+  .gmf-wire { width: 100%; border-radius: 14px; border: 1px solid #ececec; display: block; }
+  .gmf-cap { font-size: 13px; color: #999; text-align: center; margin-top: 10px; }
+
+  .gmf-note { background: #fff8e8; border: 1px solid #f0dca8; border-radius: 12px; padding: 16px 20px; font-size: 14px; line-height: 1.7; color: #7a5b13; }
+
+  .gmf-cta { text-align: center; padding: 56px 0 8px; }
+  .gmf-cta h2 { font-size: 26px; margin-bottom: 22px; }
+  @media (max-width: 575px) { .gmf-hero { padding: 70px 0 54px; } .gmf-band { padding: 28px 20px; } }
+---
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="gmf-hero">
+      <div class="container">
+        <span class="gmf-stage">進行中的開放協議實驗 · 2026 重啟</span>
+        <img class="gmf-title" src="{{ '/assets/img/gmf/gmf-hero-title.svg' | relative_url }}" alt="GMF — Good Morning, Frens">
+        <p class="gmf-lede">為 NFT 持有者打造的鏈上驗證社交層，正演進成一套<strong>「簽名 Feed」開放協議</strong>——讓區塊鏈只做它最該做的事：<strong>身份與真實性</strong>。</p>
+        <div class="gmf-btns">
+          <a class="gmf-btn gmf-btn-primary" href="https://youtu.be/yN_MLmCWO9U" target="_blank" rel="noopener">觀看 Pitch 影片（2022 原始願景）</a>
+          <a class="gmf-btn gmf-btn-ghost" href="mailto:swanky.hsiao@gmail.com">聊聊這個項目</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="gmf-section">
+      <div class="container">
+        <h2>它想解決什麼問題？</h2>
+        <p class="gmf-sub">NFT 市場龐大，但這個社群的「社交基礎設施」其實是斷裂的。</p>
+        <div class="gmf-grid">
+          <div class="gmf-card">
+            <span class="gmf-tag">身份無法驗證</span>
+            <h3>PFP 可以被冒用</h3>
+            <p>任何人都能複製一張頭像當作自己的 PFP，沒有機制能證明「你真的持有這個 NFT」。</p>
+          </div>
+          <div class="gmf-card">
+            <span class="gmf-tag">中心化風險</span>
+            <h3>Discord 被駭損失慘重</h3>
+            <p>光是 Discord 社群遭駭，跨 NFT 社群累積的損失就超過 2,200 萬美元。</p>
+          </div>
+          <div class="gmf-card">
+            <span class="gmf-tag">單向溝通</span>
+            <h3>公告工具，不是社交平台</h3>
+            <p>Discord、Telegram 本質是群發公告，難以建立真實的「人對人」連結。</p>
+          </div>
+          <div class="gmf-card">
+            <span class="gmf-tag">社群碎片化</span>
+            <h3>每個項目各自為政</h3>
+            <p>每個 NFT 項目經營各自封閉的頻道，無法跨系列發現志同道合的人。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="gmf-section" style="background:#f7f9fc;">
+      <div class="container">
+        <h2>解法：一層「可驗證」的去中心化社交</h2>
+        <p class="gmf-sub">GMF 把 NFT 生態最缺的三件事補起來——Verified、Social、Fun。</p>
+        <div class="gmf-grid">
+          <div class="gmf-card">
+            <span class="gmf-tag">VERIFIED</span>
+            <h3>鏈上直接驗證</h3>
+            <p>透過 ERC-721 的 <code>balanceOf()</code> 直接在鏈上驗證 NFT 持有，<strong>零信任假設、零第三方 API 依賴</strong>。</p>
+          </div>
+          <div class="gmf-card">
+            <span class="gmf-tag">SOCIAL</span>
+            <h3>為持有者打造的社交圖譜</h3>
+            <p>發現與你持有相同系列的「frens」，把鏈上身份連結到真實世界的個人檔案。</p>
+          </div>
+          <div class="gmf-card">
+            <span class="gmf-tag">FUN</span>
+            <h3>GM 文化變成配對</h3>
+            <p>「GM（Good Morning）」是加密圈的招呼儀式——互相 GM 即配對成功、解鎖聯絡方式。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIVOT / SIGNED FEED -->
+    <section class="gmf-section">
+      <div class="container">
+        <div class="gmf-band">
+          <h2>2026 的樞紐：從「平台」到「開放協議」</h2>
+          <p class="gmf-sub">最重要的一次認知轉移——區塊鏈不該當內容或支付層，它該當「身份與真實性」層。</p>
+          <p style="line-height:1.85; max-width:760px;">於是 GMF 從一個託管式的社交 App，演進為 <strong style="color:#6DEFDE;">Signed Feed（簽名 Feed）開放協議</strong>：每個身份（就是你的錢包）用私鑰<strong style="color:#6DEFDE;">簽署</strong>自己發佈的內容；訂閱者執行<strong style="color:#6DEFDE;">本地 Agent</strong> 把訂閱的 feed 抓回來、驗證簽章、過濾與摘要。內容存在鏈外，鏈只負責證明「這確實是某個身份簽的」。最關鍵的是——這張「信任圖譜」<strong style="color:#6DEFDE;">屬於訂閱者本人、可攜帶可匯出</strong>，不被任何平台綁架。</p>
+          <div class="gmf-flow">
+            <div class="gmf-step"><div class="gmf-num">VERIFIED</div><h4>已驗證</h4><p>簽章回推的地址＝宣稱的作者，內容可信。</p></div>
+            <div class="gmf-step"><div class="gmf-num">MISMATCH</div><h4>地址不符</h4><p>簽章成功回推但地址對不上——可能被竄改或盜簽。</p></div>
+            <div class="gmf-step"><div class="gmf-num">MALFORMED</div><h4>格式損壞</h4><p>簽章無法回推、或 payload 損壞。</p></div>
+            <div class="gmf-step"><div class="gmf-num">UNSIGNED</div><h4>未簽名</h4><p>沒有簽章（Web2／RSS 來源）——<strong style="color:#6DEFDE;">永遠不會被偽裝成已驗證</strong>。</p></div>
+          </div>
+          <p style="margin-top:22px; font-size:14px; color:#9aa6b8;">簽章採用 EIP-191（錢包 <code>personal_sign</code>），對的是內容的 <code>sha256</code> 雜湊而非原始內文——所以內容可以被搬移、鏡像到任何地方，只要雜湊對得上就依然可驗證。原本的「互相 GM 配對」，在新模型裡只是「一則指定給單一對象的 Feed Item」的特例。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="gmf-section" style="background:#f7f9fc;">
+      <div class="container">
+        <h2>技術棧</h2>
+        <p class="gmf-sub">2026 全新重寫，以現代全端架構與工程紀律打底。</p>
+        <div class="gmf-stack">
+          <span>Next.js 16（App Router）</span>
+          <span>TypeScript</span>
+          <span>SIWE（EIP-4361）+ NextAuth 5</span>
+          <span>wagmi 2 · viem · RainbowKit</span>
+          <span>PostgreSQL 16 · Prisma 6</span>
+          <span>EIP-191 簽章驗證</span>
+          <span>ERC-721A 合約</span>
+          <span>DDD 六邊形架構</span>
+          <span>BDD · TDD</span>
+          <span>Tailwind CSS 4</span>
+        </div>
+        <p style="margin-top:18px; font-size:14px; color:#777; line-height:1.7;">附帶一段務實的工程決策：2022 年的舊版程式碼經安全檢視，發現登入未驗證錢包簽章、JWT 存在 <code>localStorage</code>、CORS 全開等結構性缺陷——重建比修補更划算。這也是 GMF 今天改用 SIWE + Next.js 全端架構的原因。</p>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="gmf-section">
+      <div class="container">
+        <h2>進度與路線圖</h2>
+        <p class="gmf-sub">誠實地說：新版仍在開發中，尚未重新上線。這是一個進行中的實驗，不是成品宣傳。</p>
+        <div class="gmf-status">
+          <div class="gmf-phase done"><div class="gmf-pstat">✅ 已完成</div><h4>Phase 0 · 基礎</h4><p>沉浸式著陸頁、SIWE 登入、CloneX NFT onboarding（選 PFP、編輯檔案）、安全標頭與中介層守衛。</p></div>
+          <div class="gmf-phase doing"><div class="gmf-pstat">🔨 進行中</div><h4>Phase 1 · 核心 MVP</h4><p>Discover 瀏覽篩選、GM 收發、Inbox、Matches 聯絡解鎖、檔案檢視編輯、排行榜。</p></div>
+          <div class="gmf-phase plan"><div class="gmf-pstat">📋 規劃中</div><h4>Phase 2–3</h4><p>行動優先 RWD、多系列 NFT 支援、檔案 NFT 展示、SocialFi 與 XP 系統。</p></div>
+          <div class="gmf-phase plan"><div class="gmf-pstat">📋 規劃中</div><h4>Phase 4–5</h4><p>Agentic 支付、SBT 聲譽系統、$GMF 代幣、多鏈（L2）與訊息群聊。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACTION -->
+    <section class="gmf-section" style="background:#f7f9fc;">
+      <div class="container">
+        <h2>過往驗證</h2>
+        <p class="gmf-sub">2022 年由七人團隊共同打造、史旺基為共同創辦人之一；2026 由本人單獨重啟。</p>
+        <div class="gmf-metrics">
+          <div class="gmf-metric"><div class="gmf-num">300+</div><p>Beta 早期採用者<br>（含藍籌持有者）</p></div>
+          <div class="gmf-metric"><div class="gmf-num">20+</div><p>支援的藍籌 NFT 系列<br>（CryptoPunks、BAYC、CloneX…）</p></div>
+          <div class="gmf-metric"><div class="gmf-num">Mainnet</div><p>曾上以太坊主網<br>真實鏈上驗證</p></div>
+          <div class="gmf-metric"><div class="gmf-num">G Camp</div><p>入選加速器計畫</p></div>
+        </div>
+        <div style="max-width:840px; margin:40px auto 0;">
+          <img class="gmf-wire" src="{{ '/assets/img/gmf/gmf-wireframe.jpg' | relative_url }}" alt="GMF 產品 wireframe 設計稿">
+          <p class="gmf-cap">GMF 產品流程 wireframe（設計稿）</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="gmf-section">
+      <div class="container">
+        <div class="gmf-cta">
+          <h2>對 Web3 產品、協議設計或區塊鏈顧問有興趣？</h2>
+          <div class="gmf-btns">
+            <a class="gmf-btn gmf-btn-primary" href="{{ '/technical/' | relative_url }}">技術顧問服務</a>
+            <a class="gmf-btn gmf-btn-ghost" style="border-color:#ccc; color:#444;" href="{{ '/education/crypto/' | relative_url }}">Web3 企業內訓</a>
+          </div>
+          <p style="margin-top:22px; color:#999; font-size:14px;">GMF 也是我 <a href="{{ '/technical/rwa/' | relative_url }}" style="color:#c2870a; font-weight:600;">RWA 代幣化研究</a> 之外的另一條實作線——研究資產上鏈的同時，也親手在建協議。</p>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->

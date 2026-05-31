@@ -1,0 +1,90 @@
+---
+layout: home
+title: Web3 入門精選
+seo_title: Web3 入門精選｜DePIN、DeFi、NFT、預言機、AI×加密一次讀懂
+description: 史旺基的 Web3 入門知識精選。用白話拆解 Web3 三時代、DePIN、DeFi 真實收益、NFT 技術、預言機與 AI×加密——大學兼課第 8 年、企業內訓講師為你打底的常青概念課。
+keywords: Web3 入門,區塊鏈教學,DePIN,DeFi,NFT,預言機,AI Crypto,Web3 課程,加密貨幣科普,史旺基,Swanky Studio
+nav_active: education
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: Web3 課程
+    url: /education/crypto/
+  - name: Web3 入門精選
+    url: /education/crypto/web3-essentials/
+extra_css: |
+  .w3e-identity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    padding: 16px 20px;
+    background: linear-gradient(120deg, rgba(79,166,213,0.10), rgba(79,166,213,0.04));
+    border: 1px solid rgba(79,166,213,0.30);
+    border-radius: 14px;
+  }
+  .w3e-identity img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid #4fa6d5;
+    box-shadow: 0 0 0 3px rgba(79,166,213,0.15);
+  }
+  .w3e-identity .w3e-identity-text {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: #555;
+  }
+  .w3e-identity .w3e-identity-text strong { color: #2b6cb0; }
+  @media (max-width: 575px) {
+    .w3e-identity { flex-direction: column; text-align: center; }
+  }
+essentials_posts:
+  - web3-three-eras
+  - depin-explained
+  - defi-real-yield
+  - nft-token-standards
+  - oracle-architecture-risks
+  - ai-decentralized-compute
+---
+
+  <main id="main">
+
+    <div class="section-title works">
+      <h1>Web3 入門精選</h1>
+      <p>用白話把 Web3 的核心概念，一篇一篇講清楚</p>
+    </div>
+
+    <section class="service-details">
+      <div class="container">
+
+        <div class="w3e-identity" data-aos="fade-up">
+          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" alt="史旺基 蕭宇程">
+          <div class="w3e-identity-text">
+            我是史旺基，<strong>大學兼任助理教授第 8 年</strong>、企業 Web3 內訓講師，也是資工博士。這個系列，是我把課堂與內訓裡最常被問、也最值得搞懂的<strong>常青概念</strong>整理成的公開科普——不追時事熱點，只把「會一直有用」的基礎打扎實。
+          </div>
+        </div>
+
+        <div class="agentic-thesis" data-aos="fade-up">
+          <p>Web3 的詞彙多到讓人卻步：DePIN、DeFi、NFT、預言機、AI×加密……但它們其實都長在同一條主線上——<strong>「所有權」的下放與「信任」的遷移</strong>。</p>
+          <p>這個系列從 <strong>Web3 三時代</strong>的大圖開始，帶你認識撐起真實世界的 <strong>DePIN</strong>、看穿 <strong>DeFi 收益</strong>的真假、搞懂 <strong>NFT</strong> 與 <strong>預言機</strong>的運作，最後望向 <strong>AI×加密</strong>的未來。每一篇都可獨立讀，但連起來就是一張完整的 Web3 入門地圖。</p>
+          <p class="agentic-thesis-cta">想為團隊系統性地建立 Web3 知識？<a href="{{ '/education/crypto/' | relative_url }}">企業內訓</a>、<a href="{{ '/education/crypto/soochow/' | relative_url }}">大學課程</a> 與 <a href="{{ '/technical/' | relative_url }}">技術顧問</a> 歡迎洽詢。</p>
+        </div>
+
+        <div class="row">
+          {% for slug in page.essentials_posts %}
+            {% assign match = site.posts | where_exp: "p", "p.url contains slug" %}
+            {% include article-card-grid.html articles=match %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
