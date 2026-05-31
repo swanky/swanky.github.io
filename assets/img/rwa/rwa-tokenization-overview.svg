@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C53B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8c8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7fb0e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g opacity="0.05" stroke="#7fb0e8" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157" /><line x1="0" y1="315" x2="1200" y2="315" /><line x1="0" y1="472" x2="1200" y2="472" />
+    <line x1="300" y1="0" x2="300" y2="630" /><line x1="600" y1="0" x2="600" y2="630" /><line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+
+  <!-- Right: RWA hub-and-spoke -->
+  <g transform="translate(870,300)">
+    <circle r="160" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3 5" />
+    <!-- center -->
+    <circle r="58" fill="url(#clone)" fill-opacity="0.15" stroke="url(#clone)" stroke-width="2" />
+    <text y="-2" font-family="sans-serif" font-size="26" font-weight="bold" fill="#a8c8ff" text-anchor="middle">RWA</text>
+    <text y="22" font-family="monospace" font-size="11" fill="#8b949e" text-anchor="middle">on-chain</text>
+    <!-- spokes -->
+    <g font-family="sans-serif" font-size="13" fill="#c9d1d9" text-anchor="middle">
+      <line x1="0" y1="-58" x2="0" y2="-130" stroke="#E5A300" stroke-opacity="0.5" />
+      <circle cx="0" cy="-150" r="26" fill="#E5A300" fill-opacity="0.12" stroke="#E5A300" stroke-width="1" /><text x="0" y="-146" fill="#E5A300">穩定幣</text>
+      <line x1="55" y1="-18" x2="120" y2="-46" stroke="#7fb0e8" stroke-opacity="0.5" />
+      <circle cx="143" cy="-55" r="26" fill="#7fb0e8" fill-opacity="0.12" stroke="#7fb0e8" stroke-width="1" /><text x="143" y="-51">債券</text>
+      <line x1="55" y1="18" x2="120" y2="46" stroke="#7fb0e8" stroke-opacity="0.5" />
+      <circle cx="143" cy="55" r="26" fill="#7fb0e8" fill-opacity="0.12" stroke="#7fb0e8" stroke-width="1" /><text x="143" y="59">基金</text>
+      <line x1="-55" y1="18" x2="-120" y2="46" stroke="#E5A300" stroke-opacity="0.5" />
+      <circle cx="-143" cy="55" r="26" fill="#E5A300" fill-opacity="0.12" stroke="#E5A300" stroke-width="1" /><text x="-143" y="59" fill="#E5A300">黃金</text>
+      <line x1="-55" y1="-18" x2="-120" y2="-46" stroke="#7fb0e8" stroke-opacity="0.5" />
+      <circle cx="-143" cy="-55" r="26" fill="#7fb0e8" fill-opacity="0.12" stroke="#7fb0e8" stroke-width="1" /><text x="-143" y="-51">股票</text>
+    </g>
+  </g>
+
+  <!-- Series badge -->
+  <rect x="50" y="70" width="220" height="34" rx="17" fill="none" stroke="url(#clone)" stroke-width="1.5" />
+  <text x="160" y="92" font-family="sans-serif" font-size="13" font-weight="bold" fill="#a8c8ff" text-anchor="middle" letter-spacing="2">RWA 代幣化系列</text>
+
+  <!-- Title -->
+  <text x="50" y="200" font-family="sans-serif" font-size="58" font-weight="bold" fill="#ffffff">RWA 是什麼？</text>
+  <rect x="50" y="225" width="430" height="3" fill="url(#gold)" opacity="0.6" />
+  <text x="50" y="280" font-family="sans-serif" font-size="24" fill="#c9d1d9">真實世界資產代幣化</text>
+  <text x="50" y="316" font-family="sans-serif" font-size="24" fill="#c9d1d9">從黃金存摺到資產上鏈</text>
+
+  <!-- pills -->
+  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+    <rect x="50" y="370" width="92" height="30" rx="15" fill="#E5A300" opacity="0.15" /><text x="96" y="390" fill="#E5A300">代幣化</text>
+    <rect x="152" y="370" width="92" height="30" rx="15" fill="#7fb0e8" opacity="0.15" /><text x="198" y="390" fill="#7fb0e8">穩定幣</text>
+    <rect x="254" y="370" width="108" height="30" rx="15" fill="#E5A300" opacity="0.15" /><text x="308" y="390" fill="#E5A300">麥肯錫 2030</text>
+  </g>
+
+  <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
+  <text x="50" y="615" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
+  <text x="1150" y="615" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>
+</svg>

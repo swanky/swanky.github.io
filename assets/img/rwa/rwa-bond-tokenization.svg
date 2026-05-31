@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C53B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8c8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7fb0e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g opacity="0.05" stroke="#7fb0e8" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157" /><line x1="0" y1="315" x2="1200" y2="315" /><line x1="0" y1="472" x2="1200" y2="472" />
+    <line x1="300" y1="0" x2="300" y2="630" /><line x1="600" y1="0" x2="600" y2="630" /><line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+
+  <!-- Right: DvP atomic swap -->
+  <g transform="translate(700,250)">
+    <text x="190" y="0" font-family="monospace" font-size="14" fill="#8b949e" text-anchor="middle" letter-spacing="2">DvP · 原子交割</text>
+    <!-- bond box -->
+    <rect x="40" y="30" width="130" height="90" rx="10" fill="#7fb0e8" fill-opacity="0.12" stroke="#7fb0e8" stroke-width="1.5" />
+    <text x="105" y="70" font-family="sans-serif" font-size="18" font-weight="bold" fill="#a8c8ff" text-anchor="middle">券</text>
+    <text x="105" y="98" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Bond Token</text>
+    <!-- payment box -->
+    <rect x="210" y="30" width="130" height="90" rx="10" fill="#E5A300" fill-opacity="0.12" stroke="#E5A300" stroke-width="1.5" />
+    <text x="275" y="70" font-family="sans-serif" font-size="18" font-weight="bold" fill="#E5A300" text-anchor="middle">款</text>
+    <text x="275" y="98" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Stablecoin</text>
+    <!-- swap arrows -->
+    <line x1="170" y1="58" x2="210" y2="58" stroke="#a8c8ff" stroke-width="2" /><polygon points="210,58 199,52 199,64" fill="#a8c8ff" />
+    <line x1="210" y1="92" x2="170" y2="92" stroke="#E5A300" stroke-width="2" /><polygon points="170,92 181,86 181,98" fill="#E5A300" />
+    <!-- atomic bracket -->
+    <rect x="25" y="15" width="330" height="120" rx="14" fill="none" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="190" y="165" font-family="sans-serif" font-size="14" fill="#3fb950" text-anchor="middle">同一筆交易 · 全成功或全回滾</text>
+    <text x="190" y="195" font-family="monospace" font-size="20" fill="#3fb950" text-anchor="middle">T+0</text>
+  </g>
+
+  <rect x="50" y="70" width="220" height="34" rx="17" fill="none" stroke="url(#clone)" stroke-width="1.5" />
+  <text x="160" y="92" font-family="sans-serif" font-size="13" font-weight="bold" fill="#a8c8ff" text-anchor="middle" letter-spacing="2">RWA 代幣化系列</text>
+
+  <text x="50" y="200" font-family="sans-serif" font-size="56" font-weight="bold" fill="#ffffff">債券代幣化</text>
+  <rect x="50" y="225" width="360" height="3" fill="url(#gold)" opacity="0.6" />
+  <text x="50" y="280" font-family="sans-serif" font-size="23" fill="#c9d1d9">為什麼債券是</text>
+  <text x="50" y="314" font-family="sans-serif" font-size="23" fill="#c9d1d9">RWA 的主戰場？</text>
+
+  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+    <rect x="50" y="370" width="72" height="30" rx="15" fill="#E5A300" opacity="0.15" /><text x="86" y="390" fill="#E5A300">DvP</text>
+    <rect x="132" y="370" width="92" height="30" rx="15" fill="#7fb0e8" opacity="0.15" /><text x="178" y="390" fill="#7fb0e8">台灣公債</text>
+    <rect x="234" y="370" width="104" height="30" rx="15" fill="#7fb0e8" opacity="0.15" /><text x="286" y="390" fill="#7fb0e8">原子交割</text>
+  </g>
+
+  <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
+  <text x="50" y="615" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
+  <text x="1150" y="615" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>
+</svg>

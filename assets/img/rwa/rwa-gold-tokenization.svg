@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5A300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C53B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldfill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5C53B;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#E5A300;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="clone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8c8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7fb0e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g opacity="0.05" stroke="#7fb0e8" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157" /><line x1="0" y1="315" x2="1200" y2="315" /><line x1="0" y1="472" x2="1200" y2="472" />
+    <line x1="300" y1="0" x2="300" y2="630" /><line x1="600" y1="0" x2="600" y2="630" /><line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+
+  <!-- Right: physical bar -> token -->
+  <g transform="translate(700,290)">
+    <!-- gold bar (trapezoid) -->
+    <polygon points="40,40 200,40 180,120 60,120" fill="url(#goldfill)" stroke="#F5C53B" stroke-width="1.5" />
+    <text x="120" y="90" font-family="sans-serif" font-size="16" font-weight="bold" fill="#3a2a00" text-anchor="middle">999.9</text>
+    <text x="120" y="160" font-family="sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">實體金庫</text>
+    <!-- arrow -->
+    <line x1="225" y1="80" x2="315" y2="80" stroke="#7fb0e8" stroke-width="2.5" />
+    <polygon points="315,80 303,73 303,87" fill="#7fb0e8" />
+    <text x="270" y="65" font-family="monospace" font-size="13" fill="#a8c8ff" text-anchor="middle">1:1</text>
+    <!-- token -->
+    <circle cx="390" cy="80" r="60" fill="url(#clone)" fill-opacity="0.15" stroke="url(#clone)" stroke-width="2" />
+    <text x="390" y="74" font-family="sans-serif" font-size="22" font-weight="bold" fill="#a8c8ff" text-anchor="middle">GOLD</text>
+    <text x="390" y="100" font-family="monospace" font-size="12" fill="#8b949e" text-anchor="middle">on-chain</text>
+    <text x="390" y="160" font-family="sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">鏈上代幣</text>
+  </g>
+
+  <rect x="50" y="70" width="220" height="34" rx="17" fill="none" stroke="url(#clone)" stroke-width="1.5" />
+  <text x="160" y="92" font-family="sans-serif" font-size="13" font-weight="bold" fill="#a8c8ff" text-anchor="middle" letter-spacing="2">RWA 代幣化系列</text>
+
+  <text x="50" y="200" font-family="sans-serif" font-size="56" font-weight="bold" fill="#ffffff">黃金代幣化</text>
+  <rect x="50" y="225" width="360" height="3" fill="url(#gold)" opacity="0.6" />
+  <text x="50" y="280" font-family="sans-serif" font-size="23" fill="#c9d1d9">從黃金存摺到鏈上黃金</text>
+  <text x="50" y="314" font-family="sans-serif" font-size="23" fill="#c9d1d9">信任如何轉移？</text>
+
+  <g font-family="sans-serif" font-size="13" text-anchor="middle">
+    <rect x="50" y="370" width="92" height="30" rx="15" fill="#E5A300" opacity="0.15" /><text x="96" y="390" fill="#E5A300">黃金存摺</text>
+    <rect x="152" y="370" width="80" height="30" rx="15" fill="#7fb0e8" opacity="0.15" /><text x="192" y="390" fill="#7fb0e8">PAXG</text>
+    <rect x="242" y="370" width="96" height="30" rx="15" fill="#7fb0e8" opacity="0.15" /><text x="290" y="390" fill="#7fb0e8">孿生代幣</text>
+  </g>
+
+  <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
+  <text x="50" y="615" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
+  <text x="1150" y="615" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>
+</svg>

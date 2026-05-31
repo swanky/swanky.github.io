@@ -1,0 +1,86 @@
+---
+layout: home
+title: RWA 代幣化系列
+seo_title: RWA 真實世界資產代幣化系列｜黃金・債券・標準・監管全解
+description: 史旺基的 RWA（真實世界資產代幣化）系列文章。從黃金、債券代幣化，到 ERC-3643／CMTAT 合規標準與全球監管——一套用台灣視角看懂資產上鏈的完整脈絡。
+keywords: RWA,真實世界資產,資產代幣化,代幣化,黃金代幣化,債券代幣化,ERC-3643,CMTAT,DvP,穩定幣,區塊鏈,史旺基,Swanky
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 技術顧問
+    url: /technical/
+  - name: RWA 代幣化系列
+    url: /technical/rwa/
+extra_css: |
+  .rwa-identity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    padding: 16px 20px;
+    background: linear-gradient(120deg, rgba(168,200,255,0.10), rgba(127,176,232,0.04));
+    border: 1px solid rgba(127,176,232,0.35);
+    border-radius: 14px;
+  }
+  .rwa-identity img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 2px solid #7fb0e8;
+    box-shadow: 0 0 0 3px rgba(168,200,255,0.15);
+  }
+  .rwa-identity .rwa-identity-text {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: #555;
+  }
+  .rwa-identity .rwa-identity-text strong { color: #2b6cb0; }
+  @media (max-width: 575px) {
+    .rwa-identity { flex-direction: column; text-align: center; }
+  }
+rwa_posts:
+  - rwa-tokenization-overview
+  - rwa-gold-tokenization
+  - rwa-bond-tokenization
+  - rwa-standards-evolution
+  - rwa-compliant-token-standards
+---
+
+  <main id="main">
+
+    <div class="section-title works">
+      <h1>RWA 代幣化系列</h1>
+      <p>真實世界資產上鏈——用台灣視角看懂這場金融基礎設施的改寫</p>
+    </div>
+
+    <section class="service-details">
+      <div class="container">
+
+        <div class="rwa-identity" data-aos="fade-up">
+          <img src="{{ '/assets/img/clonex-pfp.jpg' | relative_url }}" alt="史旺基的 CloneX 鏈上身分頭像">
+          <div class="rwa-identity-text">
+            這個系列，是我這兩年沉浸在 RWA 領域的研究筆記與觀點整理。頭像是我的鏈上身分 <strong>CloneX #17152</strong>——一個帶有村上隆元素的 PFP，也是我在 Web3 世界的另一張名片。
+          </div>
+        </div>
+
+        <div class="agentic-thesis" data-aos="fade-up">
+          <p>RWA（Real World Assets，真實世界資產代幣化）是 2026 年金融科技最熱的關鍵字。但它的本質，從來不是技術問題，而是<strong>「如何讓區塊鏈聽法律的話」</strong>——如何在數位世界裡，重建對黃金、債券、基金這些真實資產的信任。</p>
+          <p>這個系列從<strong>總論</strong>切入，分別深入<strong>黃金與債券</strong>兩大資產、拆解<strong>十二年的標準演進</strong>，再到工程師關心的<strong>合規型代幣標準設計哲學</strong>。不是加密圈的炒作話術，而是一套接得上台灣市場制度的真實知識。</p>
+          <p class="agentic-thesis-cta">想為團隊建立 RWA／Web3 的知識基礎？<a href="{{ '/education/crypto/' | relative_url }}">企業內訓</a> 與 <a href="{{ '/technical/' | relative_url }}">技術顧問</a> 歡迎洽詢。</p>
+        </div>
+
+        <div class="row">
+          {% for slug in page.rwa_posts %}
+            {% assign match = site.posts | where_exp: "p", "p.url contains slug" %}
+            {% include article-card-grid.html articles=match %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
