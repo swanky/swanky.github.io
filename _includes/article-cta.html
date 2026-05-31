@@ -1,0 +1,22 @@
+<!-- 文章結尾 CTA：暖性邀請，依分類切換；點擊埋 gtag 事件供 GA4 標記為關鍵事件 -->
+{% assign cta_context = include.context | default: '' %}
+{% if cta_context == 'photography' or page.categories contains 'photography' %}
+<div class="article-cta">
+  <h4>喜歡這些影像？</h4>
+  <p>人像寫真、形象照、活動紀錄與商業攝影皆可預約。先聊聊你想留下的樣子，再談怎麼拍。</p>
+  <div class="article-cta-actions">
+    <a href="mailto:swanky.hsiao@gmail.com?subject=攝影預約洽詢" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'photography',from_page:'{{ page.url }}'});}">來信預約</a>
+    <a href="{{ '/photography/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
+  </div>
+</div>
+{% else %}
+<div class="article-cta">
+  <h4>有技術顧問、內訓或講座需求？</h4>
+  <p>提供技術架構與 AI／Agentic Engineering 導入顧問、企業內訓，以及區塊鏈與 Web3 課程。有需求歡迎來信聊聊——先對齊你的場景，再談怎麼做。</p>
+  <div class="article-cta-actions">
+    <a href="mailto:swanky.hsiao@gmail.com?subject=技術顧問／內訓洽詢" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'technical',from_page:'{{ page.url }}'});}">來信聊聊</a>
+    <a href="{{ '/technical/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'technical',from_page:'{{ page.url }}'});}">技術顧問 &rarr;</a>
+    <a href="{{ '/education/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'education',from_page:'{{ page.url }}'});}">教育訓練 &rarr;</a>
+  </div>
+</div>
+{% endif %}

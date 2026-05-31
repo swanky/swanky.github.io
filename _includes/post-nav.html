@@ -1,0 +1,17 @@
+<!-- 上一篇／下一篇：依時間序，提供續讀路徑 -->
+{% if page.previous or page.next %}
+<nav class="post-nav" aria-label="文章導覽">
+  {% if page.next %}
+  <a class="post-nav-link post-nav-prev" href="{{ page.next.url | relative_url }}">
+    <span class="post-nav-label">&larr; 較新的文章</span>
+    <span class="post-nav-title">{{ page.next.title }}</span>
+  </a>
+  {% endif %}
+  {% if page.previous %}
+  <a class="post-nav-link post-nav-next" href="{{ page.previous.url | relative_url }}">
+    <span class="post-nav-label">較舊的文章 &rarr;</span>
+    <span class="post-nav-title">{{ page.previous.title }}</span>
+  </a>
+  {% endif %}
+</nav>
+{% endif %}

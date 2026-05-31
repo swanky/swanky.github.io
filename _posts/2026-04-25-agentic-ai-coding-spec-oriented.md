@@ -1,5 +1,6 @@
 ---
 title: "從組合語言到 Agentic AI Coding Agent：AI 時代，程式設計正在變成什麼？"
+seo_title: "SDD 規格驅動開發：Agentic AI Coding 是什麼？"
 date: 2026-04-25
 categories: [technical]
 layout: article

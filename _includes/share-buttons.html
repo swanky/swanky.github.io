@@ -1,0 +1,7 @@
+<!-- 分享按鈕：社群擴散冷啟動；點擊埋 gtag 事件 -->
+<div class="share-buttons">
+  <span class="share-label">分享：</span>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="分享到 LinkedIn" onclick="if(window.gtag){gtag('event','share_click',{network:'linkedin',from_page:'{{ page.url }}'});}"><i class="bx bxl-linkedin"></i></a>
+  <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="分享到 X" onclick="if(window.gtag){gtag('event','share_click',{network:'x',from_page:'{{ page.url }}'});}"><i class="bx bxl-twitter"></i></a>
+  <button type="button" class="share-copy" data-url="{{ page.url | absolute_url }}" aria-label="複製連結" onclick="navigator.clipboard.writeText(this.dataset.url);this.classList.add('copied');if(window.gtag){gtag('event','share_click',{network:'copy',from_page:'{{ page.url }}'});}"><i class="bx bx-link"></i></button>
+</div>

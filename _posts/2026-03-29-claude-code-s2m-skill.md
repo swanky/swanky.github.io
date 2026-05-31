@@ -1,5 +1,6 @@
 ---
 title: "一鍵把簡報變文件：我寫了一個 Claude Code Skill 自動解讀 PPTX / PDF 每一頁"
+seo_title: "Claude Code Skill 教學：自動把 PPTX／PDF 簡報轉文件"
 date: 2026-03-29
 categories: [claude-code]
 tags: [claude-code]

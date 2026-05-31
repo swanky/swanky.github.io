@@ -39,6 +39,10 @@ layout: default
         {{ content }}
       </div>
 
+      {% include share-buttons.html %}
+      {% include author-bio.html %}
+      {% include article-cta.html context='photography' %}
+
       <div class="text-center mt-4 mb-4">
         <a href="{{ '/photography/gallery/' | relative_url }}" style="color:#E5A300;">&larr; 返回攝影作品精選</a>
       </div>

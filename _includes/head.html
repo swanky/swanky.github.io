@@ -10,13 +10,14 @@
   gtag('config', 'G-SB1R6G61LY');
 </script>
 
-<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+{% assign seo_title = page.seo_title | default: page.title %}
+<title>{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta content="{{ page.description | default: site.description }}" name="description">
 {% if page.keywords %}<meta content="{{ page.keywords }}" name="keywords">{% endif %}
 
 <!-- Open Graph -->
 <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'article' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
 <meta property="og:image" content="{{ page.og_image | absolute_url }}">
@@ -31,7 +32,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
 <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">

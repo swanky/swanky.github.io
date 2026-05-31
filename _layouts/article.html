@@ -24,6 +24,12 @@ layout: default
       </div>
       {% endif %}
 
+      {% include share-buttons.html %}
+      {% include author-bio.html %}
+      {% include article-cta.html %}
+      {% include related-posts.html %}
+      {% include post-nav.html %}
+
       <div class="article-footer-nav">
         {% if page.categories contains 'claude-code' %}
         <a href="{{ '/education/ai/' | relative_url }}">&larr; 返回AI學習分享</a>

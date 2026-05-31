@@ -1,5 +1,6 @@
 ---
 title: "AI Agent 協作的未來：Google A2A × Anthropic MCP 架構整合解析"
+seo_title: "AI Agent 是什麼？Google A2A 與 Anthropic MCP 架構解析"
 date: 2025-04-13
 categories: [technical]
 layout: article

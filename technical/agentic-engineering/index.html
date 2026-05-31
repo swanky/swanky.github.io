@@ -1,0 +1,61 @@
+---
+layout: home
+title: Agentic Engineering 系列
+description: 史旺基的 Agentic Engineering 系列文章。從帶團隊導入 AI、ORID 引導法、SDD 規格驅動開發，到 Claude Code 實戰工作流——一套把 AI 當「高級實習生」帶領、用軟體工程紀律交付的完整方法。
+keywords: AgenticEngineering,ClaudeCode,AI開發,SDD,規格驅動開發,ORID,軟體工程,團隊導入AI,技術領導,史旺基,Swanky
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 技術顧問
+    url: /technical/
+  - name: Agentic Engineering 系列
+    url: /technical/agentic-engineering/
+agentic_posts:
+  - agentic-engineering-mindset
+  - ai-faster-engineer-misconception
+  - mid-manager-becomes-builder
+  - agentic-ai-coding-spec-oriented
+  - ai-coding-design-boundaries
+  - ai-document-human-comprehension
+  - claude-code-kent-beck-tdd
+  - claude-code-kent-beck-nobody-knows
+  - ai-executor-orchestrator
+  - gstack-workflow-guide
+  - claude-code-terminal-magic-guide
+  - claude-code-40-best-practices
+  - claude-code-engineer-types
+  - claude-code-governance
+  - claude-code-design-system
+  - claude-code-s2m-skill
+  - claude-code-hot-wallet
+  - ai-agent-a2a-mcp
+---
+
+  <main id="main">
+
+    <div class="section-title works">
+      <h1>Agentic Engineering 系列</h1>
+      <p>把 AI 當「高級實習生」帶領，用軟體工程紀律交付</p>
+    </div>
+
+    <section class="service-details">
+      <div class="container">
+
+        <div class="agentic-thesis" data-aos="fade-up">
+          <p>在公司推 Claude Code 的這段時間，我觀察到一個違反直覺的現象：<strong>越懂軟體工程、越有專案管理底子的人，越能把 AI 用出價值</strong>。AI 沒有把所有人拉到同一條起跑線，它放大了一個人原本怎麼思考、怎麼拆解、怎麼判斷品質的差異。</p>
+          <p>這個系列就是這套方法的完整記錄——從<strong>心法</strong>（為什麼建造者勝過衡量者）、<strong>引導法</strong>（ORID、SDD 規格驅動開發），到<strong>實戰工作流</strong>（Claude Code 的治理、設計、最佳實踐）。不是工具教學的集合，而是一套「慢即是快」的交付紀律。</p>
+          <p class="agentic-thesis-cta">需要把這套方法帶進你的團隊？<a href="{{ '/education/' | relative_url }}">企業內訓</a> 與 <a href="{{ '/technical/' | relative_url }}">導入顧問</a> 歡迎洽詢。</p>
+        </div>
+
+        <div class="row">
+          {% for slug in page.agentic_posts %}
+            {% assign match = site.posts | where_exp: "p", "p.url contains slug" %}
+            {% include article-card-grid.html articles=match %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->

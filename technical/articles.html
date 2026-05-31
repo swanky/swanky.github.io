@@ -22,6 +22,14 @@ breadcrumbs:
   <section class="service-details">
     <div class="container">
 
+      <div class="hub-banner" data-aos="fade-up">
+        <div class="hub-banner-text">
+          <h3>Agentic Engineering 系列</h3>
+          <p>把 AI 當「高級實習生」帶領、用軟體工程紀律交付——一套完整的方法體系。</p>
+        </div>
+        <a href="{{ '/technical/agentic-engineering/' | relative_url }}" class="btn-cta">閱讀系列 &rarr;</a>
+      </div>
+
       <div class="row">
         {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
         {% include article-card-grid.html articles=sorted_articles %}

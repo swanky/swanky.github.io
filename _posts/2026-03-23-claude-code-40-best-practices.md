@@ -1,5 +1,6 @@
 ---
 title: "這 40 個實戰技巧，才是真正把 AI Coding 工具用到飛起來的方法"
+seo_title: "Claude Code 最佳實踐：40 個 AI Coding 實戰技巧"
 date: 2026-03-23
 categories: [claude-code]
 tags: [claude-code]

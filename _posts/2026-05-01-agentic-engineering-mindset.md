@@ -1,5 +1,6 @@
 ---
 title: "Agentic Engineering 學得好的人，不是技術最強的人"
+seo_title: "Agentic Engineering 是什麼？導入 Claude Code 的關鍵思維"
 date: 2026-05-01
 categories: [technical]
 layout: article

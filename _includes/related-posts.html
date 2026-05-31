@@ -1,0 +1,15 @@
+<!-- 延伸閱讀：同分類取最新 3 篇（排除當前文章），複用 article-card-grid -->
+{% if page.categories.size > 0 %}
+  {% assign cur_url = page.url %}
+  {% assign primary_cat = page.categories | first %}
+  {% assign pool = site.categories[primary_cat] %}
+  {% assign related = pool | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
+  {% if related.size > 0 %}
+  <div class="related-posts">
+    <h3 class="related-posts-title">延伸閱讀</h3>
+    <div class="row">
+      {% include article-card-grid.html articles=related %}
+    </div>
+  </div>
+  {% endif %}
+{% endif %}

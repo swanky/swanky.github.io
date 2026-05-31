@@ -1,5 +1,6 @@
 ---
 title: "Claude Code 終端機魔法書：初學者的開發加速指南"
+seo_title: "Claude Code 終端機教學：初學者開發加速指南（中文）"
 date: 2026-03-21
 categories: [claude-code]
 tags: [claude-code]

@@ -1,5 +1,6 @@
 ---
 title: "gstack 教學：把 Claude Code 變成完整的 AI 開發工作流"
+seo_title: "Claude Code 教學：用 gstack 打造完整 AI 開發工作流"
 date: 2026-03-22 00:00:00 +0000
 categories: [claude-code]
 layout: article

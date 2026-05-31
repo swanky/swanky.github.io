@@ -57,3 +57,4 @@ defaults:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
