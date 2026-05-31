@@ -4051,3 +4051,178 @@ section.testimonials {
     animation: none !important;
   }
 }
+
+/*--------------------------------------------------------------
+# Editorial system — eyebrow + 區塊編號（借鏡 huasheng.ai 的編輯式分區，
+# 用亮色金 #E5A300 重譯。與既有 .section-title 並存，不覆蓋舊樣式）
+--------------------------------------------------------------*/
+.section-eyebrow {
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.section-eyebrow .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #E5A300;
+  margin: 0 0 16px 0;
+}
+
+.section-eyebrow .eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: #E5A300;
+  display: inline-block;
+}
+
+.section-eyebrow .section-num {
+  float: right;
+  font-family: var(--font-sans, monospace);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #bcbcbc;
+  margin-top: 2px;
+}
+
+.section-eyebrow h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #222;
+  line-height: 1.25;
+}
+
+.section-eyebrow h2 em {
+  color: #E5A300;
+  font-style: italic;
+}
+
+.section-eyebrow .lead {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+@media (max-width: 768px) {
+  .section-eyebrow .section-num { display: none; }
+  .section-eyebrow h2 { font-size: 25px; }
+}
+
+/*--------------------------------------------------------------
+# Selected works — 雜誌目錄式清單（編號 + 標題 + 年份 + meta 標籤）
+--------------------------------------------------------------*/
+.selected-works {
+  padding: 70px 0;
+}
+
+.works-list {
+  border-top: 1px solid #ececec;
+}
+
+.work-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 28px 10px;
+  border-bottom: 1px solid #ececec;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color .25s ease, padding-left .25s ease;
+}
+
+.work-row:hover {
+  background-color: #faf6ec;
+  padding-left: 22px;
+}
+
+.work-row .w-num {
+  min-width: 34px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c9a23a;
+}
+
+.work-row .w-body {
+  flex: 1;
+}
+
+.work-row .w-title {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+  transition: color .25s ease;
+}
+
+.work-row:hover .w-title {
+  color: #E5A300;
+}
+
+.work-row .w-desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #777;
+}
+
+.work-row .w-meta {
+  min-width: 140px;
+  text-align: right;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.work-row .w-year {
+  display: block;
+  font-weight: 600;
+  color: #c9a23a;
+}
+
+@media (max-width: 768px) {
+  .work-row { flex-wrap: wrap; gap: 6px 16px; padding: 20px 6px; }
+  .work-row .w-meta { width: 100%; min-width: 0; text-align: left; }
+  .work-row .w-title { font-size: 17px; }
+}
+
+/*--------------------------------------------------------------
+# Facts band — 數據證明區（複用既有 .facts .counters 樣式）
+--------------------------------------------------------------*/
+.facts.facts-band {
+  padding: 70px 0;
+}
+
+.facts.facts-band .counters {
+  padding-top: 10px;
+}
+
+.facts.facts-band .facts-caption {
+  margin: 28px 0 0 0;
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/*--------------------------------------------------------------
+# Services eyebrow — 服務卡上的英文小標
+--------------------------------------------------------------*/
+.services .icon-box .svc-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #E5A300;
+  margin-bottom: 8px;
+}

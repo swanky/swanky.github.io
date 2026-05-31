@@ -1,0 +1,43 @@
+# 代表作品 / 精選歷程 —— 跨領域揉成一條敘事，承載「多才多藝 × 單一身分」。
+# 用於首頁 selected-works 區（雜誌目錄式清單）。
+- num: "01"
+  title: 登上美國《TIME》時代雜誌
+  year: "2012"
+  desc: RedBall Project 專題作品刊登於 TIME Magazine 美國版、iPad 版與 TIME For Kids，攝影作品躍上國際媒體版面。
+  meta: PRESS · PHOTOGRAPHY
+  url: /press/
+
+- num: "02"
+  title: 法國 PX3 × 美國 IPA 國際攝影獎
+  year: "2015–2024"
+  desc: 人像與寫真作品多次獲法國 PX3（Prix de la Photographie Paris）與美國 IPA 國際攝影獎肯定。
+  meta: PHOTOGRAPHY · AWARD
+  url: /photography/awards/
+
+- num: "03"
+  title: 資策會 — 區塊鏈創新產業計畫
+  year: "2022–2025"
+  desc: 主持數位發展部「區塊鏈創新產業科管理應用計畫」，協助建立可信區塊鏈應用基礎建設聯盟（TBSI），推動產業標準化。
+  meta: WEB3 · GOVTECH
+  url: /technical/
+
+- num: "04"
+  title: 東吳大學 區塊鏈課程兼任助理教授
+  year: "連續 8 年"
+  desc: 於巨量資料管理學院開設區塊鏈課程，內容涵蓋加密貨幣、DeFi、NFT 與 Web3，並完成多場企業內訓。
+  meta: EDUCATION · WEB3
+  url: /education/crypto/soochow.html
+
+- num: "05"
+  title: Good Morning Frens（GMF）共同創辦人
+  year: "2022"
+  desc: 共同創辦 Web3 交友項目，透過掃描用戶 NFT 收藏建立鏈上身份，結合 Web2 個人資料促成人們交流。
+  meta: WEB3 · FOUNDER
+  url: /nft/
+
+- num: "06"
+  title: Agentic Engineering ＆ RWA 技術專欄
+  year: "2025–2026"
+  desc: 持續撰寫 AI 代理工程與真實世界資產（RWA）代幣化系列，將第一線實作經驗整理成公開觀點與教學。
+  meta: TECH · WRITING
+  url: /technical/

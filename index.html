@@ -5,6 +5,7 @@ description: 得獎攝影師蕭宇程（Swanky Hsiao）官方網站。法國 PX3
 keywords: "史旺基,Swanky Studio,攝影寫真,技術顧問,教育訓練,NFT策展"
 header_transparent: true
 nav_active: home
+use_purecounter: true
 ---
 
   <!-- ======= Hero Section ======= -->
@@ -15,11 +16,9 @@ nav_active: home
       <div class="carousel-item active">
         <div class="carousel-container">
           <h1>Swanky <span>Studio</span></h1>
-          <p>《制服．女孩 × 史旺基》系列與
-            《高校制服戀物論》攝影作者、朱學恒「阿宅反抗軍」及「制服地圖」特約攝影師。本名蕭宇程，巨蟹座Ａ型，國立臺灣師範大學資訊工程博士。
-            擅長 Java 程式設計與人像攝影，興趣吃巧克力。近年來多次獲法國 PX3 和美國 IPA 攝影獎，攝影作品曾登上美國時代雜誌。
-          </p>
-          <a href="#services" class="btn-get-started">探索服務</a>
+          <p>得獎攝影師 × 資深技術主管 × Web3 教育者。<br>
+            TIME 雜誌刊登、法國 PX3 與美國 IPA 得獎攝影師，師大資工博士，現任台灣大哥大部經理、東吳大學區塊鏈兼任助理教授。</p>
+          <a href="#facts" class="btn-get-started">認識史旺基</a>
         </div>
       </div>
 
@@ -28,33 +27,47 @@ nav_active: home
 
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
-    <section class="services" id="services">
+    <!-- ======= Facts / 數據證明 Section ======= -->
+    <section class="facts facts-band section-bg" id="facts">
       <div class="container">
 
-        <div class="row">
-          {% for service in site.data.services %}
-          <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up"{% if service.aos_delay > 0 %} data-aos-delay="{{ service.aos_delay }}"{% endif %}>
-            <div class="icon-box icon-box-{{ service.color }}">
-              <div class="icon"><i class="bi {{ service.icon }}"></i></div>
-              <h3 class="title">{{ service.title }}</h3>
-              <p class="description">{{ service.description }}</p>
-              {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3">{{ service.cta_text }}</a>{% endif %}
-            </div>
+        {% include section-eyebrow.html num="01 / 06" en="Facts &amp; Proof" zh="用<em>數據</em>說話" lead="得獎肯定、教學年資與作品累積——先讓數字說明專業底氣。" %}
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center" data-aos="fade-up">
+            <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+            <p>位以上・模特兒拍攝經驗</p>
           </div>
-          {% endfor %}
+
+          <div class="col-lg-3 col-6 text-center" data-aos="fade-up" data-aos-delay="100">
+            <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+            <p>年・大學區塊鏈授課</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+            <p>場・企業內訓講座</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center" data-aos="fade-up" data-aos-delay="300">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p>屆・JCConf 技術年會講者</p>
+          </div>
+
         </div>
 
+        <p class="facts-caption text-center">攝影作品曾登上美國《TIME》時代雜誌，並多次獲法國 PX3、美國 IPA 國際攝影獎肯定。</p>
+
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Facts Section -->
     <!-- ======= why us Section ======= -->
-    <section class="why-us section-bg" data-aos="fade-up" data-aos-delay="200">
+    <section class="why-us" data-aos="fade-up" data-aos-delay="200">
       <div class="container">
 
+        {% include section-eyebrow.html num="02 / 06" en="About" zh="認識<em>史旺基</em>" lead="一個橫跨鏡頭與程式碼的多重身分。" %}
+
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>史旺基 Swanky Hsiao</h2>
-          </div>
           <div class="col-lg-6 video-box">
             <img loading="lazy" src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片">
           </div>
@@ -95,14 +108,33 @@ nav_active: home
       </div>
     </section><!-- End why us Section -->
 
+    <!-- ======= Selected Works / 精選歷程 Section ======= -->
+    <section class="selected-works" id="selected-works">
+      <div class="container">
+
+        {% include section-eyebrow.html num="03 / 06" en="Selected Works" zh="精選<em>歷程</em>" lead="從攝影、媒體到區塊鏈與教學——跨領域累積的代表里程碑。" %}
+
+        <div class="works-list">
+          {% for w in site.data.selected_works %}
+          <a class="work-row" href="{{ w.url | relative_url }}" data-aos="fade-up">
+            <div class="w-num">{{ w.num }}</div>
+            <div class="w-body">
+              <div class="w-title">{{ w.title }}</div>
+              <p class="w-desc">{{ w.desc }}</p>
+            </div>
+            <div class="w-meta"><span class="w-year">{{ w.year }}</span>{{ w.meta }}</div>
+          </a>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Selected Works Section -->
+
     <!-- ======= Testimonials Section ======= -->
     <section class="testimonials" data-aos="fade-up">
       <div class="container">
 
-        <div class="section-title">
-          <h2>他人評語</h2>
-          <p>朋友眼中的史旺基。</p>
-        </div>
+        {% include section-eyebrow.html num="04 / 06" en="Testimonial" zh="他人<em>評語</em>" lead="朋友眼中的史旺基。" %}
         <div class="testimonial-item">
           <h3>劉揚銘</h3>
           <h4>編輯、寫作者、自由人</h4>
@@ -162,13 +194,34 @@ nav_active: home
       </div>
     </div><!-- End Reviews Section -->
 
+    <!-- ======= Services / 合作方式 Section ======= -->
+    <section class="services section-bg" id="services">
+      <div class="container">
+
+        {% include section-eyebrow.html num="05 / 06" en="Work With Me" zh="合作<em>方式</em>" lead="攝影委託、技術顧問、講師與企業內訓——選擇最適合的合作起點。" %}
+
+        <div class="row">
+          {% for service in site.data.services %}
+          <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up"{% if service.aos_delay > 0 %} data-aos-delay="{{ service.aos_delay }}"{% endif %}>
+            <div class="icon-box icon-box-{{ service.color }}">
+              <div class="icon"><i class="bi {{ service.icon }}"></i></div>
+              {% if service.eyebrow %}<span class="svc-eyebrow">{{ service.eyebrow }}</span>{% endif %}
+              <h3 class="title">{{ service.title }}</h3>
+              <p class="description">{{ service.description }}</p>
+              {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3" onclick="if(window.gtag){gtag('event','service_page_click',{'service':'{{ service.title }}'});}">{{ service.cta_text }}</a>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
 <!-- ======= Team Section ======= -->
 <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-  <div class="section-title">
-    <h2>其他亮點</h2>
-    <p>專訪影片、講座、展覽、書籍雜誌、Web3 社群專案。</p>
-  </div>
   <div class="container">
+
+    {% include section-eyebrow.html num="06 / 06" en="More Highlights" zh="其他<em>亮點</em>" lead="專訪影片、講座、展覽、書籍雜誌、Web3 社群專案。" %}
 
     <div class="row">
 

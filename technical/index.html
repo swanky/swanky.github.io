@@ -76,10 +76,7 @@ extra_css: |
   <!-- ======= Highlights Section ======= -->
   <section class="why-us section-bg" data-aos="fade-up" data-aos-delay="100">
     <div class="container">
-      <div class="section-title">
-        <h2>重點計畫與現職</h2>
-        <p>具備學術研究、企業管理與政府計畫三重背景。</p>
-      </div>
+      {% include section-eyebrow.html en="Key Roles" zh="重點<em>計畫</em>與現職" lead="具備學術研究、企業管理與政府計畫三重背景。" %}
       <div class="row">
 
         <div class="col-lg-3 col-md-6 text-center mb-4" data-aos="fade-up">
@@ -121,10 +118,7 @@ extra_css: |
   <!-- ======= Lectures Section ======= -->
    <section class="why-us" data-aos="fade-up">
     <div class="container">
-      <div class="section-title">
-        <h2>技術講座影片</h2>
-        <p>JCConf Taiwan 年會演講紀錄與 NFT 技術實作示範。</p>
-      </div>
+      {% include section-eyebrow.html en="Talks" zh="技術<em>講座</em>影片" lead="JCConf Taiwan 年會演講紀錄與 NFT 技術實作示範。" %}
 
       <div class="row">
         <div class="col-lg-12 d-flex flex-column justify-content-center p-5 text-center">
@@ -220,10 +214,7 @@ extra_css: |
   <!-- ======= Articles Section ======= -->
   <section class="service-details section-bg">
     <div class="container">
-      <div class="section-title">
-        <h2>專欄文章</h2>
-        <p>技術趨勢觀察、軟體管理與 Web3 領域的深度分析</p>
-      </div>
+      {% include section-eyebrow.html en="Writing" zh="專欄<em>文章</em>" lead="技術趨勢觀察、軟體管理與 Web3 領域的深度分析" %}
 
       <div class="row">
         {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
