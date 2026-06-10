@@ -31,6 +31,12 @@ exclude:
   - assets/facebook-archive/logs
   - assets/facebook-archive/README.md
   - assets/facebook-archive/process_results.py
+  # Dev-tool artifacts written into the repo during sessions. Without this,
+  # every browse command touches .gstack/ and triggers a watch regenerate,
+  # whose static-file mtime skip leaves the implicit primer theme's
+  # style.scss output in _site and breaks local styling until a full build.
+  - .gstack
+  - .playwright-mcp
 
 # Keep these files even though they start with underscore or dot
 include:
