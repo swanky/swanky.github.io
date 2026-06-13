@@ -3810,9 +3810,12 @@ section.testimonials {
   margin: 0 0 28px 0;
 }
 
-/* 卡片圖：強制橫式 16:9 縮圖（related-posts 不在 .service-details 範圍，
-   無法繼承該處的 card-img 樣式，否則橫圖會被 flex 卡片拉成直式裁切） */
-.related-posts .card-img {
+/* article-card-grid 卡片封面：統一橫式 16:9 cover 縮圖。
+   比例約束跟著 article-card-grid 模板（.article-card-img）走、而非綁定容器，
+   涵蓋延伸閱讀、related-posts 及 technical/education 各文章列表，
+   避免封面來源混用 SVG(16:9) 與 LinkedIn JPG(直式) 時被 flex 卡片拉成不一致高度。
+   刻意不套用於首頁服務卡 .service-details .card-img（其有獨立版面）。 */
+.article-card-img {
   width: 100%;
   margin: 0;
   aspect-ratio: 16 / 9;
@@ -3820,7 +3823,7 @@ section.testimonials {
   border-radius: 6px 6px 0 0;
 }
 
-.related-posts .card-img img {
+.article-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3828,7 +3831,7 @@ section.testimonials {
   transition: transform 0.3s ease;
 }
 
-.related-posts .card:hover .card-img img {
+.card:hover .article-card-img img {
   transform: scale(1.05);
 }
 
