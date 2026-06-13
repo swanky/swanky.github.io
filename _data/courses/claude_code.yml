@@ -15,7 +15,7 @@ pain_points:
   - icon: "bi bi-box-seam"
     strong: "工具發了 ≠ 有人會用"
     text: "——採用需要意識、反饋迴圈、時間動機與管理層支持四件事到位"
-  - icon: "bi bi-person-gear"
+  - icon: "bi bi-gear"
     strong: "會用工具 ≠ 會交付"
     text: "——多數教學停在指令操作，沒有人教「從需求到上線」怎麼走完"
   - icon: "bi bi-people"
@@ -30,7 +30,7 @@ pillars:
     color: "pink"
   - title: "工具會變、心法不變"
     desc: "LLM 與工具進展很快，重心放可長期複利的心法——工具一律「示範→試過→自選」，不綁單一工具鏈。"
-    icon: "bi bi-infinity"
+    icon: "bi bi-gem"
     color: "cyan"
   - title: "一條龍 E2E 交付"
     desc: "人人能獨立走完需求分析到上線的全生命週期，AI 當你的團隊，你當指揮。"
@@ -127,13 +127,13 @@ rhythm:
 
 # 學成（帶得走的東西）
 outcomes:
-  - icon: "bi bi-rocket-takeoff"
+  - icon: "bi bi-box-arrow-up"
     title: "一次完整的 E2E 交付"
     desc: "每人獨立把貫穿專案從需求做到上線——不是看過，是自己走完一遍。"
   - icon: "bi bi-map"
     title: "自己專案的 CLAUDE.md 與 Skill"
     desc: "課堂產出就是工程資產，回到工作直接沿用、持續累積。"
-  - icon: "bi bi-graph-up-arrow"
+  - icon: "bi bi-graph-up"
     title: "一個 before／after 指標"
     desc: "用自己的數據回答「AI 到底快多少」——跟主管溝通有憑有據。"
   - icon: "bi bi-arrow-repeat"
