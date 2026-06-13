@@ -4,11 +4,9 @@
   參數：
     en   — 英文 eyebrow（small-caps，必填）
     zh   — 中文大標（必填，可用 <em> 標金色強調）
-    num  — 區塊編號，如 "01 / 06"（選填）
     lead — 副標說明（選填）
 {%- endcomment -%}
 <div class="section-eyebrow" data-aos="fade-up">
-  {% if include.num %}<span class="section-num">{{ include.num }}</span>{% endif %}
   <span class="eyebrow">{{ include.en }}</span>
   <h2>{{ include.zh }}</h2>
   {% if include.lead %}<p class="lead">{{ include.lead }}</p>{% endif %}

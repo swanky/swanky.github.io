@@ -3087,7 +3087,7 @@ section.team {
 .testimonials .testimonial-item h4 {
   text-align: left;
   font-size: 13px;
-  color: #888;
+  color: var(--c-muted); /* 原 #888 僅 3.36:1 */
 }
 
 /* --- Reviews (Parallax Strips): Softer, More Readable Text --- */
@@ -3136,7 +3136,7 @@ section.team {
   font-size: 11px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #C47F00;
+  color: var(--c-gold-deep); /* 原 #C47F00 在暖白上僅 3.1:1 */
   margin-bottom: 10px;
 }
 
@@ -3203,6 +3203,15 @@ section.team {
   --text-2xl:  1.75rem;   /*  28px   — section titles        */
   --text-3xl:  2.25rem;   /*  36px   — major headings        */
   --text-4xl:  3rem;      /*  48px   — hero                  */
+}
+
+/* --- 顏色 token — 集中品牌金與墨階；次要文字一律達 WCAG AA（補齊原本只有間距/字體 token 的缺口） --- */
+:root {
+  --c-gold:       #E5A300;  /* 品牌金：大字強調、CTA、裝飾線（大尺寸/裝飾用，保留鮮亮） */
+  --c-gold-deep:  #8a5d00;  /* 深金：小字標籤達 AA（eyebrow、日期標籤） */
+  --c-ink:        #232020;  /* 主標題（微暖黑，向品牌色偏一點 chroma） */
+  --c-body:       #4a463f;  /* 正文與重要次要文字 */
+  --c-muted:      #5f5b53;  /* 次要說明文字，達 AA 下限 */
 }
 
 /* --- Base body --- */
@@ -4120,7 +4129,7 @@ section.testimonials {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #E5A300;
+  color: var(--c-gold-deep); /* 原 #E5A300 僅 1.97:1；深金達 AA */
   margin: 0 0 16px 0;
 }
 
@@ -4132,14 +4141,8 @@ section.testimonials {
   display: inline-block;
 }
 
-.section-eyebrow .section-num {
-  float: right;
-  font-family: var(--font-sans, monospace);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  color: #bcbcbc;
-  margin-top: 2px;
-}
+/* section-num（01/06…06/06 目錄式編號）已移除：零資訊、每段重複的編號是
+   impeccable v3.5.0 點名的 scaffolding，且 #bcbcbc 僅 1.7:1。保留 .eyebrow 英文小標即足以標識分區。 */
 
 .section-eyebrow h2 {
   font-size: 32px;
@@ -4150,20 +4153,20 @@ section.testimonials {
 }
 
 .section-eyebrow h2 em {
-  color: #E5A300;
+  color: var(--c-gold-deep); /* 強調詞與 eyebrow 同用深金：達 AA（5.16:1）且標題區色彩系統一致。
+                                鮮金 --c-gold 只保留給 CTA／裝飾線／hover 等非文字用途 */
   font-style: italic;
 }
 
 .section-eyebrow .lead {
   margin: 0;
-  color: #777;
+  color: var(--c-muted); /* 原 #777 僅 4.01:1 */
   font-size: 15px;
   line-height: 1.7;
   max-width: 680px;
 }
 
 @media (max-width: 768px) {
-  .section-eyebrow .section-num { display: none; }
   .section-eyebrow h2 { font-size: 25px; }
 }
 
@@ -4260,7 +4263,7 @@ section.testimonials {
 .facts.facts-band .facts-caption {
   margin: 28px 0 0 0;
   font-size: 14px;
-  color: #999;
+  color: var(--c-body); /* 「作品登上 TIME」是核心 social proof，原 #999 僅 2.55:1，幾乎看不清 */
   font-style: italic;
 }
 
@@ -4273,6 +4276,6 @@ section.testimonials {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #E5A300;
+  color: var(--c-gold-deep); /* services 卡片小標 11px，深金達 AA */
   margin-bottom: 8px;
 }

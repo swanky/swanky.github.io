@@ -74,3 +74,10 @@
 
 <!-- Template Main CSS File -->
 <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+
+<!-- 無 JS 兜底：AOS 進場動畫用 opacity:0 鎖住 [data-aos] 內容，靠 JS scroll 才顯現。
+     無 JS（含部分 SEO/OG 截圖爬蟲不執行或不捲動）時強制顯示，避免分享卡與爬蟲看到空白頁。
+     有 JS 時此規則不生效，AOS 照常運作。 -->
+<noscript>
+  <style>[data-aos]{opacity:1!important;transform:none!important;}</style>
+</noscript>
