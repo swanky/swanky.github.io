@@ -5,6 +5,7 @@ import { searchCities } from './hd-cities.js';
 import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
 import { CENTERS, CENTER_IDS } from './hd-data-centers.js';
 import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS } from './hd-data-texts.js';
+import { GATES } from './hd-data-gates.js';
 
 const $ = (id) => document.getElementById(id);
 const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
@@ -158,7 +159,7 @@ function renderResult(chart, stability) {
     `<div class="hd-sum-card"><div class="hd-sum-label">${l}</div><div class="hd-sum-value">${v}</div></div>`).join('');
 
   const t = TYPES[chart.type];
-  $('hd-strategy').innerHTML = `<strong>策略：</strong>${t.strategy}　·　<strong>非自己主題：</strong>${t.notSelf}`;
+  $('hd-strategy').innerHTML = `<strong>策略：</strong>${t.strategy}　·　<strong>順流信號：</strong>${t.signature}　·　<strong>逆流警訊：</strong>${t.notSelf}`;
 
   // 穩定性面板（未知時間模式）
   const stab = $('hd-stability');
@@ -193,29 +194,78 @@ function renderResult(chart, stability) {
       `<div class="hd-chan-item"><span class="hd-chan-name">${c.nameZh}</span><span class="hd-chan-id">${c.id}</span><div class="hd-chan-desc">${c.desc}</div></div>`).join('')
     : '<p style="color:#aaa;font-size:0.88rem;">沒有完整定義的通道（反映者特質）。</p>';
 
-  // 九中心
+  // 設計重點解讀（類型／權威／角色／定義 的白話展開）
+  $('hd-readout').innerHTML = renderReadout(chart);
+
+  // 九中心（逐一解讀：有定義＝穩定發送，開放＝吸收放大）
   $('hd-centers-list').innerHTML = CENTER_IDS.map((id) => {
     const defined = chart.definedCenters.includes(id);
-    return `<div class="hd-center-item"><span class="hd-cc-name">${CENTERS[id].nameZh}</span> <span class="${defined ? 'hd-cc-defined' : 'hd-cc-open'}">${defined ? '● 已定義' : '○ 開放'}</span></div>`;
+    const c = CENTERS[id];
+    return `<div class="hd-center-item">
+      <span class="hd-cc-name">${c.nameZh}</span> <span class="${defined ? 'hd-cc-defined' : 'hd-cc-open'}">${defined ? '● 已定義' : '○ 開放'}</span>
+      <div class="hd-cc-desc">${defined ? c.definedDesc : c.openDesc}</div>
+    </div>`;
   }).join('');
 
-  // 輪迴交叉
+  // 輪迴交叉（框架說明 + 你的交叉 + 角度取向；逐一交叉細解留付費）
   const ang = chart.crossAngle ? CROSS_ANGLES[chart.crossAngle] : '';
-  $('hd-cross').innerHTML = `<div style="font-size:0.9rem;color:#555;">閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}　<span style="color:#E5A300;">${ang}</span></div>`;
+  const angMeaning = {
+    right: '能量會把你帶向完成「屬於自己」的人生主題',
+    juxtaposition: '帶著一條固定而專注的軌道前進',
+    left: '人生主題與「他人、互動」深深交織',
+  }[chart.crossAngle] || '';
+  $('hd-cross').innerHTML = `
+    <p class="hd-cross-intro">輪迴交叉是人類圖格局最大的一層，由你出生時與出生前的太陽、地球四個閘門組成，勾勒你這一生整體的主題與舞台。</p>
+    <div class="hd-cross-data">你的交叉：<strong>閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}</strong>　<span class="hd-cross-angle">${ang}</span></div>
+    ${angMeaning ? `<p class="hd-cross-meaning">${angMeaning}。</p>` : ''}
+    <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在付費解讀裡細談。</p>`;
 
-  // 行動版行星表
-  $('hd-mobile-planets').innerHTML = renderPlanetTable(chart);
+  // 進階：完整行星位置與啟動閘門（可收合）
+  $('hd-planets-advanced').innerHTML = renderPlanetsAdvanced(chart);
 
   // 顯示並捲動
   $('hd-result').classList.add('is-show');
   $('hd-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function renderPlanetTable(chart) {
+// 設計重點：把已算出的類型／權威／角色／定義原創解讀文案展開
+function renderReadout(chart) {
+  const t = TYPES[chart.type];
+  const a = AUTHORITIES[chart.authority];
+  const p = PROFILES[chart.profile];
+  const d = DEFINITIONS[chart.definition];
+  const item = (label, name, en, desc) =>
+    `<div class="hd-readout-item">
+      <h4><span class="hd-ro-label">${label}</span> <span class="hd-ro-name">${name}</span>${en ? ` <span class="hd-ro-en">${en}</span>` : ''}</h4>
+      <p>${desc}</p>
+    </div>`;
+  const typeDesc = t.desc + (t.signatureLine ? `<br><span class="hd-ro-signal">順流時：${t.signatureLine}</span>` : '');
+  return `<h3 class="hd-readout-title">你的設計重點</h3>
+    <div class="hd-readout-grid">
+      ${item('類型', t.nameZh, t.nameEn, typeDesc)}
+      ${item('內在權威', a.nameZh, a.nameEn, a.desc)}
+      ${item('人生角色', p ? p.nameZh : chart.profile, '', p ? p.desc : '')}
+      ${item('個人定義', d.nameZh, '', d.desc)}
+    </div>`;
+}
+
+// 進階行星表：補上啟動閘門的卦名＋關鍵詞（資料來自 hd-data-gates.js，輪廓層；逐閘深解屬付費）
+function renderPlanetsAdvanced(chart) {
+  const cell = (pos, cls) => {
+    const g = GATES[pos.gate];
+    const kw = g ? ` <span class="hd-pt-kw">${g.hexZh}·${g.keyword}</span>` : '';
+    return `<td class="${cls}">${pos.gate}.${pos.line}${kw}</td>`;
+  };
   const rows = PLANETS.map((pl) =>
-    `<tr><td>${pl.glyph} ${pl.nameZh}</td><td class="hd-pt-d">${chart.design[pl.id].gate}.${chart.design[pl.id].line}</td><td class="hd-pt-p">${chart.personality[pl.id].gate}.${chart.personality[pl.id].line}</td></tr>`).join('');
-  return `<h4 style="font-size:1rem;font-weight:700;margin:20px 0 8px;">行星位置表</h4>
-    <table class="hd-planet-table"><thead><tr><th>行星</th><th class="hd-pt-d">設計(紅)</th><th class="hd-pt-p">個性(黑)</th></tr></thead><tbody>${rows}</tbody></table>`;
+    `<tr><td>${pl.glyph} ${pl.nameZh}</td>${cell(chart.design[pl.id], 'hd-pt-d')}${cell(chart.personality[pl.id], 'hd-pt-p')}</tr>`).join('');
+  return `<details class="hd-advanced-planets">
+    <summary>完整行星位置與啟動閘門（進階）</summary>
+    <p class="hd-planets-note"><strong class="hd-pt-p">個性（黑）</strong>＝出生當下的你（意識層）；<strong class="hd-pt-d">設計（紅）</strong>＝出生前約 88 天（無意識、身體層）。每格為該行星落入的「閘門.爻」，後方是閘門的卦名與關鍵詞——逐閘與逐爻的深入解讀屬付費報告。</p>
+    <table class="hd-planet-table">
+      <thead><tr><th>行星</th><th class="hd-pt-d">設計（紅）</th><th class="hd-pt-p">個性（黑）</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </details>`;
 }
 
 // ---- PNG / 分享 / 重置 ----

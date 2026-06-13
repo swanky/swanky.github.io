@@ -4,7 +4,7 @@
 
 export const CENTERS = {
   head: {
-    nameZh: '頭部中心', nameEn: 'Head', motor: false,
+    nameZh: '頭腦中心', nameEn: 'Head', motor: false,
     gates: [64, 61, 63],
     definedDesc: '有一套固定的靈感與提問方式，腦中常自帶「值得想清楚的問題」，思考的壓力來自內在而非外界。',
     openDesc: '容易接收周圍環境的疑問與焦慮，常替別人的問題想答案。分辨「這是誰的問題」是你一生的功課，也是天賦——你能比當事人更看清問題本身。',
@@ -52,7 +52,7 @@ export const CENTERS = {
     openDesc: '像情緒的接收器，會放大身邊人的喜怒哀樂，常為了避免衝突而妥協。分清「這是誰的情緒」，你就能從吸收者變成最懂人的觀察者。',
   },
   root: {
-    nameZh: '根部中心', nameEn: 'Root', motor: true,
+    nameZh: '根中心', nameEn: 'Root', motor: true,
     gates: [58, 38, 54, 53, 60, 52, 19, 39, 41],
     definedDesc: '有固定的腎上腺素節奏，壓力對你是可駕馭的燃料，能在自己的步調裡持續推進。',
     openDesc: '容易被環境的急迫感推著跑，「快點做完就輕鬆了」是你最熟悉的幻覺——事情永遠做不完。練習以自己的步調工作，而不是以壓力的步調。',

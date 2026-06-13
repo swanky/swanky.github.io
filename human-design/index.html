@@ -31,6 +31,7 @@ extra_head: |
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      { "@type": "Question", "name": "什麼是人類圖？需要先相信它才有用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "人類圖是一套把占星、易經、脈輪與卡巴拉整合成的自我認識框架。你不需要先相信它——把它當成一組可驗證的假設，用幾天觀察自己的決策與精力起伏，看哪些描述對你成立、哪些不成立。對工程師與主管而言，它的價值在於提供一套談論「我怎麼做決定、怎麼分配精力、怎麼跟人協作」的共同語言，而不是預測未來。" } },
       { "@type": "Question", "name": "不確定出生時間可以算嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。勾選「不確定出生時間」後，系統會以一天五個時段試算，並標示哪些結果（類型、內在權威、人生角色）整天穩定、哪些會隨時間改變，讓你知道哪些資訊可信、哪些需要查證出生時間。" } },
       { "@type": "Question", "name": "我的出生資料會被上傳或儲存嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有天文計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。" } },
       { "@type": "Question", "name": "這個排盤準確嗎？", "acceptedAnswer": { "@type": "Answer", "text": "計算引擎採用 astronomy-engine 高精度星曆，並與業界人類圖排盤網站逐筆交叉驗證一致。出生時間每差幾分鐘，部分結果可能落在閘門邊界而改變，因此出生時間越精確越好。" } }
@@ -102,7 +103,42 @@ extra_css: |
   .hd-planet-table th { background: #faf8f3; color: #777; font-weight: 600; }
   .hd-pt-d { color: #C0392B; font-weight: 600; }
   .hd-pt-p { color: #1d1d1f; font-weight: 600; }
-  .hd-mobile-planets { display: none; }
+  /* 設計重點 readout */
+  .hd-readout-title { font-size: 1.15rem; font-weight: 700; color: #111; margin: 34px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0e9d8; }
+  .hd-readout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 26px; }
+  .hd-readout-item h4 { font-size: 0.95rem; font-weight: 700; color: #111; margin-bottom: 7px; }
+  .hd-ro-label { display: inline-block; font-size: 0.7rem; font-weight: 700; color: #fff; background: #E5A300; border-radius: 4px; padding: 2px 7px; vertical-align: middle; }
+  .hd-ro-name { color: #111; }
+  .hd-ro-en { font-size: 0.76rem; font-weight: 400; color: #bbb; }
+  .hd-readout-item p { font-size: 0.9rem; color: #555; line-height: 1.7; margin: 0; }
+  .hd-ro-signal { color: #1f8a4c; font-size: 0.85rem; }
+  /* 九中心逐一解讀 */
+  .hd-cc-desc { font-size: 0.83rem; color: #888; line-height: 1.6; margin-top: 4px; }
+  /* 輪迴交叉 */
+  .hd-cross-intro { font-size: 0.86rem; color: #777; line-height: 1.65; margin: 0 0 10px; }
+  .hd-cross-data { font-size: 0.92rem; color: #444; margin-bottom: 6px; }
+  .hd-cross-angle { color: #E5A300; font-weight: 600; }
+  .hd-cross-meaning { font-size: 0.88rem; color: #555; margin: 0 0 8px; }
+  .hd-cross-note { font-size: 0.8rem; color: #aaa; margin: 0; }
+  /* 進階行星表（可收合） */
+  .hd-advanced-planets { margin-top: 28px; border: 1px solid #f0e9d8; border-radius: 10px; padding: 0 16px; background: #FFFDF7; }
+  .hd-advanced-planets summary { padding: 14px 0; font-size: 0.92rem; font-weight: 600; color: #c98f00; cursor: pointer; }
+  .hd-advanced-planets[open] summary { border-bottom: 1px solid #f0e9d8; margin-bottom: 4px; }
+  .hd-planets-note { font-size: 0.82rem; color: #888; line-height: 1.65; margin: 12px 0; }
+  .hd-pt-kw { color: #b89a4e; font-size: 0.78rem; }
+  /* 教育性「什麼是人類圖」 */
+  .hd-explain { padding: 30px 0 0; }
+  .hd-explain-card { max-width: 760px; margin: 0 auto; background: #fff; border: 1px solid #f0e9d8; border-radius: 14px; padding: 26px 28px; }
+  .hd-explain-card h2 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 10px; }
+  .hd-explain-lead { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 4px; }
+  .hd-glossary { margin-top: 14px; }
+  .hd-glossary summary { font-size: 0.9rem; font-weight: 600; color: #c98f00; cursor: pointer; padding: 6px 0; }
+  .hd-glossary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; padding-top: 14px; margin: 0; }
+  .hd-gloss-item { font-size: 0.86rem; line-height: 1.6; }
+  .hd-gloss-item dt { font-weight: 700; color: #E5A300; margin-bottom: 2px; }
+  .hd-gloss-item dd { color: #666; margin: 0; }
+  /* 付費區誠實提醒 */
+  .hd-funnel-note { max-width: 680px; margin: 26px auto 0; font-size: 0.84rem; color: #999; line-height: 1.7; }
   .hd-positioning { background: #fafafa; }
   .hd-positioning .hd-pos-item { display: flex; gap: 14px; margin-bottom: 22px; }
   .hd-positioning .hd-pos-item i { font-size: 1.5rem; color: #E5A300; flex-shrink: 0; }
@@ -129,8 +165,8 @@ extra_css: |
     .hd-summary-grid { grid-template-columns: repeat(2, 1fr); }
     .hd-detail-grid { grid-template-columns: 1fr; }
     .hd-products { grid-template-columns: 1fr; }
-    .hd-desktop-planets { display: none; }
-    .hd-mobile-planets { display: block; }
+    .hd-readout-grid { grid-template-columns: 1fr; }
+    .hd-glossary-grid { grid-template-columns: 1fr; }
   }
 ---
 
@@ -143,6 +179,31 @@ extra_css: |
       <h1>免費人類圖生成器</h1>
       <p class="lead">輸入出生年月日、時間與地點，立即生成你的人類圖——<br class="d-none d-md-block">類型、內在權威、人生角色、九大中心與 36 條通道，一次看懂你的能量設計。</p>
       <a href="#hd-form" class="hd-btn-generate" style="display:inline-block; width:auto; padding:13px 36px;">開始生成 ↓</a>
+    </div>
+  </section>
+
+  <!-- ======= 什麼是人類圖 ======= -->
+  <section class="hd-explain" data-aos="fade-up">
+    <div class="container">
+      <div class="hd-explain-card">
+        <h2>什麼是人類圖？</h2>
+        <p class="hd-explain-lead">人類圖把占星、易經、脈輪與卡巴拉這幾套古老系統，重新組裝成一張可以讀的個人能量地圖。把它當成一份自我使用說明書——告訴你怎麼做決定、怎麼安排工作節奏、怎麼跟不同的人協作——而不是一份預測未來的命盤。</p>
+        <details class="hd-glossary">
+          <summary>▸ 人類圖名詞速查（類型、權威、角色、定義…）</summary>
+          <dl class="hd-glossary-grid">
+            <div class="hd-gloss-item"><dt>類型</dt><dd>四大能量類型——生產者、顯示者、投射者、反映者（生產者再細分出顯示生產者），決定你和世界互動最省力的方式。</dd></div>
+            <div class="hd-gloss-item"><dt>內在權威</dt><dd>你身上最可信的決策訊號來源——可能是薦骨回應、情緒週期或當下直覺，是你做對決定的內建依據。</dd></div>
+            <div class="hd-gloss-item"><dt>人生角色</dt><dd>由兩條爻線組成的數字（如 6/3），描述你天生扮演的角色與認識世界的方式。</dd></div>
+            <div class="hd-gloss-item"><dt>人生策略</dt><dd>配合你的類型、最不會撞牆的行動原則，例如「等待回應」或「行動前告知」。</dd></div>
+            <div class="hd-gloss-item"><dt>個人定義</dt><dd>你被定義的中心彼此連不連得起來，分成一分人到四分人，影響你能獨立運作還是需要他人補位。</dd></div>
+            <div class="hd-gloss-item"><dt>能量中心</dt><dd>圖上九個區塊，有定義代表能量穩定固定，開放代表會吸收與放大環境，各有各的功課。</dd></div>
+            <div class="hd-gloss-item"><dt>通道與閘門</dt><dd>閘門是 64 個能量點，兩端閘門都啟動就連成一條通道，代表你穩定持有的某種天賦。</dd></div>
+            <div class="hd-gloss-item"><dt>非自己主題</dt><dd>當你偏離設計時反覆出現的負面感受（挫敗、憤怒、苦澀、失望），是提醒你走錯路的儀表板警示。</dd></div>
+            <div class="hd-gloss-item"><dt>正面信號</dt><dd>當你走在對的路上時浮現的內在訊號（滿足、平和、成功、驚喜），是確認方向正確的綠燈。</dd></div>
+            <div class="hd-gloss-item"><dt>輪迴交叉</dt><dd>由太陽與地球四個閘門組成的組合，勾勒你這一生整體的人生主題與發揮方向。</dd></div>
+          </dl>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -211,7 +272,7 @@ extra_css: |
       </div>
       <div class="hd-share-note" id="hd-share-note"></div>
 
-      <div class="hd-mobile-planets" id="hd-mobile-planets"></div>
+      <div id="hd-readout"></div>
 
       <div class="hd-detail-grid">
         <div class="hd-detail-block">
@@ -225,6 +286,8 @@ extra_css: |
           <div id="hd-cross"></div>
         </div>
       </div>
+
+      <div id="hd-planets-advanced"></div>
     </div>
   </section>
 
@@ -258,10 +321,10 @@ extra_css: |
           <div class="hd-prod-price">NT$1,280<small> / 份</small></div>
           <p class="hd-prod-desc">針對你的圖，選一個主題（職涯定位或團隊協作）做 10+ 頁的客製化書面解讀，AI 輔助生成、人工校稿，3 個工作天交付。</p>
           <ul>
-            <li>類型・權威・角色的職場實戰翻譯</li>
-            <li>你的決策方式與最佳工作節奏</li>
-            <li>容易被誤解之處與盲點提醒</li>
-            <li>7 天自我觀察的行動清單</li>
+            <li>把你的類型、內在權威、人生角色、定義，翻譯成職場與生活的具體做法</li>
+            <li>針對你選的主題（職涯定位或團隊協作）逐項拆解，不是套版罐頭</li>
+            <li>點出你容易被誤解的地方，以及最該留意的能量盲點</li>
+            <li>附上 7 天自我觀察清單，用日常情境驗證圖上描述準不準</li>
           </ul>
           <a class="hd-prod-cta" id="hd-cta-report" href="mailto:swanky.hsiao@gmail.com?subject=%E4%BA%BA%E9%A1%9E%E5%9C%96%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%E8%A9%A2%E5%95%8F&body=%E5%97%A8%E5%96%AE%E5%9F%BA%EF%BC%8C%E6%88%91%E6%83%B3%E8%B3%BC%E8%B2%B7%E4%B8%BB%E9%A1%8C%E5%BC%8F%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%EF%BC%88NT%241%2C280%EF%BC%89%E3%80%82%0A%0A%E6%83%B3%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%88%E8%81%B7%E6%B6%AF%2F%E5%B8%B6%E4%BA%BA%EF%BC%89%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E6%99%82%E9%96%93%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%9C%B0%E9%BB%9E%EF%BC%9A%0A%0A%EF%BC%88%E6%82%A8%E7%9A%84%E5%87%BA%E7%94%9F%E8%B3%87%E6%96%99%E5%83%85%E7%94%A8%E6%96%BC%E8%A3%BD%E4%BD%9C%E5%A0%B1%E5%91%8A%EF%BC%8C%E4%B8%8D%E6%9C%83%E5%85%AC%E9%96%8B%EF%BC%89">來信洽詢報告 →</a>
         </div>
@@ -272,14 +335,16 @@ extra_css: |
           <div class="hd-prod-price">NT$3,600<small> / 90 分鐘</small></div>
           <p class="hd-prod-desc">視訊一對一，帶著你的圖一起讀。事前問卷對齊你最在意的題目，會後附重點摘要，讓你帶得走、用得上。</p>
           <ul>
-            <li>90 分鐘視訊，可錄影留存</li>
-            <li>事前問卷＋客製化議題聚焦</li>
-            <li>職涯決策、關係、團隊協作皆可談</li>
-            <li>會後重點摘要與行動建議</li>
+            <li>90 分鐘視訊一對一，全程可錄影留存，事後重看不漏接</li>
+            <li>事前問卷先對齊你最在意的題目，時間花在你真正想解的問題上</li>
+            <li>可深聊職涯決策、關係相處、團隊協作等實際處境，不只是念圖</li>
+            <li>會後附重點摘要與行動建議，讓你帶得走、用得上</li>
           </ul>
           <a class="hd-prod-cta" id="hd-cta-session" href="mailto:swanky.hsiao@gmail.com?subject=1%3A1%20%E4%BA%BA%E9%A1%9E%E5%9C%96%E8%A7%A3%E8%AE%80%E9%A0%90%E7%B4%84&body=%E5%97%A8%E5%96%AE%E5%9F%BA%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%201%3A1%20%E7%B7%9A%E4%B8%8A%E4%BA%BA%E9%A1%9E%E5%9C%96%E8%A7%A3%E8%AE%80%EF%BC%88NT%243%2C600%20%2F%2090%20%E5%88%86%E9%90%98%EF%BC%89%E3%80%82%0A%0A%E6%9C%80%E6%83%B3%E8%81%8A%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E6%99%82%E9%96%93%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%9C%B0%E9%BB%9E%EF%BC%9A%0A%E6%96%B9%E4%BE%BF%E7%9A%84%E6%99%82%E6%AE%B5%EF%BC%9A">來信預約解讀 →</a>
         </div>
       </div>
+
+      <p class="hd-funnel-note">提醒：這是自我探索與決策輔助的參考框架，不是算命，也不保證任何結果——它幫你把選擇看得更清楚，決定仍然在你手上。如果你想要的是「直接給我答案」，這裡可能會讓你失望；如果你要的是一張更好用的自我地圖，那就來對了。</p>
     </div>
   </section>
 
@@ -288,6 +353,10 @@ extra_css: |
     <div class="container">
       <h2 style="font-size:1.5rem; font-weight:700; color:#111; text-align:center; margin-bottom:28px;">常見問題</h2>
       <div class="accordion" id="hdFaq" style="max-width:760px; margin:0 auto;">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq0">什麼是人類圖？需要先相信它才有用嗎？</button></h2>
+          <div id="hdfaq0" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">人類圖是一套把占星、易經、脈輪與卡巴拉整合成的自我認識框架。你不需要先相信它——把它當成一組可驗證的假設，用幾天觀察自己的決策與精力起伏，看哪些描述對你成立、哪些不成立。對工程師與主管而言，它的價值在於提供一套談論「我怎麼做決定、怎麼分配精力、怎麼跟人協作」的共同語言，而不是預測未來。</div></div>
+        </div>
         <div class="accordion-item">
           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq1">不確定出生時間，可以算嗎？</button></h2>
           <div id="hdfaq1" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">可以。勾選「不確定出生時間」後，系統會以一天五個時段試算，並標示哪些結果（類型、內在權威、人生角色、定義）整天穩定、哪些會隨時間改變。月亮相關的結果變動最快，太陽相關的最穩定。若想要完全精確，建議查證出生證明上的時間。</div></div>

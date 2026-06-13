@@ -2,7 +2,7 @@
 // 視覺自成一格：定義中心填品牌金 #E5A300、Personality 黑 / Design 紅 半段、
 // 同段雙激活＝紅外膛+黑內芯雙描邊。所有樣式內嵌於 SVG <style>，頁面顯示與 PNG 匯出共用。
 
-import { VIEWBOX, CENTER_SHAPES, GATE_ANCHORS, CENTER_DRAW_ORDER, CENTER_LABEL_POS } from './hd-geometry.js';
+import { VIEWBOX, CENTER_SHAPES, GATE_ANCHORS, CENTER_DRAW_ORDER, CENTER_LABEL_POS, CHANNEL_VIA } from './hd-geometry.js';
 import { CENTERS } from './hd-data-centers.js';
 import { CHANNELS } from './hd-data-channels.js';
 import { PLANETS } from './hd-data-texts.js';
@@ -92,8 +92,13 @@ export function mountChartCard(container) {
   for (const ch of CHANNELS) {
     const a = GATE_ANCHORS[ch.gates[0]];
     const b = GATE_ANCHORS[ch.gates[1]];
-    const m = midpoint(a, b);
-    el('path', { class: 'hd-chan-base', d: `M${a[0]},${a[1]} L${b[0]},${b[1]}` }, chanG);
+    // 預設兩端點直線；少數會穿過第三中心者改以 CHANNEL_VIA 路徑點繞行（半段以此點分段，著色不變）。
+    const via = CHANNEL_VIA[ch.id];
+    const m = via || midpoint(a, b);
+    const baseD = via
+      ? `M${a[0]},${a[1]} L${m[0]},${m[1]} L${b[0]},${b[1]}`
+      : `M${a[0]},${a[1]} L${b[0]},${b[1]}`;
+    el('path', { class: 'hd-chan-base', d: baseD }, chanG);
     el('path', { class: 'hd-chan-half', 'data-channel': ch.id, 'data-gate': ch.gates[0], d: `M${a[0]},${a[1]} L${m[0]},${m[1]}` }, chanG);
     el('path', { class: 'hd-chan-half', 'data-channel': ch.id, 'data-gate': ch.gates[1], d: `M${b[0]},${b[1]} L${m[0]},${m[1]}` }, chanG);
     // 雙激活內芯（紅外黑內）：兩條半段的內芯
