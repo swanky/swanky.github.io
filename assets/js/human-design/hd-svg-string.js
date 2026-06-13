@@ -8,11 +8,12 @@
 //   import { renderBodygraphSvg } from './hd-svg-string.js';
 //   const svg = renderBodygraphSvg(computeChart(input), { theme: 'report' });
 
-import { CENTER_SHAPES, GATE_ANCHORS, CENTER_DRAW_ORDER, CENTER_LABEL_POS, CHANNEL_VIA, VIEWBOX } from './hd-geometry.js';
+import {
+  CENTER_SHAPES, GATE_ANCHORS, CENTER_DRAW_ORDER, CENTER_LABEL_POS,
+  CHANNEL_PATHS, OUTSIDE_LABELS, VIEWBOX, channelFullD, channelHalfDs,
+} from './hd-geometry.js';
 import { CHANNELS } from './hd-data-channels.js';
 import { CENTERS } from './hd-data-centers.js';
-
-const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
 
 // 相對亮度 → 決定中心標籤用深色或白色（讓任何皮膚配色都自動可讀）
 function luminance(hex) {
@@ -25,18 +26,18 @@ function luminance(hex) {
 
 // ---- 皮膚 -------------------------------------------------------------
 export const THEMES = {
-  // 精緻報告版：標準人類圖「逐中心」配色（即參考報告那張圖的配色由來）
+  // 精緻報告版：標準人類圖「逐中心」配色（與離線報告產生器 bodygraph.py 同一份色票）
   report: {
     bg: 'transparent',
-    base: '#e7e0d0',
+    base: '#e2dbc9',
     design: '#c14b42', personality: '#23252a',
     doubleStyle: 'stripe', // 紅實線 + 黑虛線疊出條紋
     centerColors: {
-      head: ['#e7dd56', '#9a9a3e'], ajna: ['#8fb84e', '#5f7f34'], throat: ['#b08a5e', '#7a5f3c'],
+      head: ['#f0d873', '#9a8a2e'], ajna: ['#a9c97e', '#5f7a3a'], throat: ['#bf9263', '#7c5a34'],
       g: ['#d8e25e', '#76803a'], heart: ['#d9534f', '#8e2f2c'], sacral: ['#d9534f', '#8e2f2c'],
-      spleen: ['#ad8a64', '#71573b'], solar: ['#ad8a64', '#71573b'], root: ['#ad8a64', '#71573b'],
+      spleen: ['#ad8a64', '#71573b'], solar: ['#c79a64', '#7c5a34'], root: ['#ad8a64', '#71573b'],
     },
-    open: ['#ffffff', '#b3ab9a'],
+    open: ['#ffffff', '#b4b4ac'],
   },
   // 站台品牌金（與線上工具 hd-svg.js 同一視覺語言）
   gold: {
@@ -50,14 +51,12 @@ export const THEMES = {
   },
 };
 
-// chart：computeChart() 的輸出（含 gateActivations / definedChannels / definedCenters）
+// chart：computeChart() 的輸出（含 gateActivations / definedCenters）
 // opts.theme：'report' | 'gold'（預設 report）
 export function renderBodygraphSvg(chart, opts = {}) {
   const theme = THEMES[opts.theme] || THEMES.report;
-  const { w, h } = VIEWBOX;
-  const A = GATE_ANCHORS;
+  const { minX, minY, w, h } = VIEWBOX;
   const ga = chart.gateActivations || {};
-  const definedIds = new Set((chart.definedChannels || []).map((c) => c.id));
   const definedCenters = new Set(chart.definedCenters || []);
   const centerFill = (id) => {
     if (!definedCenters.has(id)) return theme.open;
@@ -65,79 +64,86 @@ export function renderBodygraphSvg(chart, opts = {}) {
   };
   const out = [];
 
-  out.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="人類圖 bodygraph">`);
+  out.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${minX} ${minY} ${w} ${h}" role="img" aria-label="人類圖 bodygraph">`);
   out.push('<style>text{font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}</style>');
   if (theme.bg && theme.bg !== 'transparent') {
-    out.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${theme.bg}"/>`);
+    out.push(`<rect x="${minX}" y="${minY}" width="${w}" height="${h}" fill="${theme.bg}"/>`);
   }
 
-  // ---- 1) 通道（底層）：底線恆畫；已定義者再疊兩段著色（半段以 via/中點分段）----
+  // ---- 1) 通道底層：全 36 條弧線（淺色），長通道往外彎、互不交叉 ----
   for (const ch of CHANNELS) {
-    const a = A[ch.gates[0]];
-    const b = A[ch.gates[1]];
-    const via = CHANNEL_VIA[ch.id];
-    const m = via || mid(a, b);
-    const baseD = via
-      ? `M${a[0]},${a[1]} L${m[0]},${m[1]} L${b[0]},${b[1]}`
-      : `M${a[0]},${a[1]} L${b[0]},${b[1]}`;
-    out.push(`<path d="${baseD}" fill="none" stroke="${theme.base}" stroke-width="2.5" stroke-linecap="round"/>`);
-    if (!definedIds.has(ch.id)) continue;
-    for (const [g, end] of [[ch.gates[0], a], [ch.gates[1], b]]) {
-      const act = ga[g];
-      if (!act) continue;
-      const seg = `M${end[0]},${end[1]} L${m[0]},${m[1]}`;
-      if (act.p && act.d) {
-        out.push(`<path d="${seg}" fill="none" stroke="${theme.design}" stroke-width="11" stroke-linecap="round"/>`);
-        if (theme.doubleStyle === 'stripe') {
-          out.push(`<path d="${seg}" fill="none" stroke="${theme.personality}" stroke-width="11" stroke-linecap="butt" stroke-dasharray="6 6"/>`);
-        } else {
-          out.push(`<path d="${seg}" fill="none" stroke="${theme.personality}" stroke-width="4.5" stroke-linecap="round"/>`);
-        }
-      } else {
-        out.push(`<path d="${seg}" fill="none" stroke="${act.p ? theme.personality : theme.design}" stroke-width="11" stroke-linecap="round"/>`);
-      }
-    }
+    const p = CHANNEL_PATHS[ch.id];
+    if (!p) continue;
+    out.push(`<path d="${channelFullD(p)}" fill="none" stroke="${theme.base}" stroke-width="4.5" stroke-linecap="round"/>`);
   }
 
-  // ---- 2) 中心 ----
+  // ---- 2) 啟動／懸掛半段：任一端閘門啟動，那半線就上色（含未連通的懸掛閘門，呈現顯隱關係）----
+  const drawHalf = (seg, act) => {
+    if (act.p && act.d) {
+      out.push(`<path d="${seg}" fill="none" stroke="${theme.design}" stroke-width="7.5" stroke-linecap="round"/>`);
+      if (theme.doubleStyle === 'stripe') {
+        out.push(`<path d="${seg}" fill="none" stroke="${theme.personality}" stroke-width="7.5" stroke-linecap="butt" stroke-dasharray="5 5"/>`);
+      } else {
+        out.push(`<path d="${seg}" fill="none" stroke="${theme.personality}" stroke-width="3" stroke-linecap="round"/>`);
+      }
+    } else {
+      out.push(`<path d="${seg}" fill="none" stroke="${act.p ? theme.personality : theme.design}" stroke-width="7.5" stroke-linecap="round"/>`);
+    }
+  };
+  for (const ch of CHANNELS) {
+    const p = CHANNEL_PATHS[ch.id];
+    if (!p) continue;
+    const [h0, h1] = channelHalfDs(p); // h0↔ch.gates[0]（小）、h1↔ch.gates[1]（大）
+    const a0 = ga[ch.gates[0]];
+    const a1 = ga[ch.gates[1]];
+    if (a0) drawHalf(h0, a0);
+    if (a1) drawHalf(h1, a1);
+  }
+
+  // ---- 3) 九大中心 ----
   for (const id of CENTER_DRAW_ORDER) {
     const s = CENTER_SHAPES[id];
     const [fill, stroke] = centerFill(id);
     if (s.kind === 'rect') {
-      out.push(`<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" rx="6" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/>`);
+      out.push(`<rect x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" rx="10" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/>`);
     } else {
-      out.push(`<polygon points="${s.points.map((p) => p.join(',')).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/>`);
+      out.push(`<polygon points="${s.points.map((q) => q.join(',')).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/>`);
     }
   }
 
-  // ---- 3) 閘門（頂層）：未啟動＝空心；個性=黑、設計=紅、雙重=左黑右紅 ----
-  const r = 10;
-  for (const [gStr, pos] of Object.entries(A)) {
+  // ---- 4) 閘門（頂層）：未啟動＝空心；設計=紅、個性=黑、雙重=左紅右黑＋白圈框 ----
+  const r = 8;
+  for (const [gStr, pos] of Object.entries(GATE_ANCHORS)) {
     const [x, y] = pos;
     const act = ga[gStr];
     if (!act) {
-      out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff" stroke="#c2c2c2" stroke-width="1"/>`);
-      out.push(`<text x="${x}" y="${y}" font-size="9" text-anchor="middle" dominant-baseline="central" fill="#9a8e63">${gStr}</text>`);
+      out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff" stroke="#c7c7c0" stroke-width="1"/>`);
+      out.push(`<text x="${x}" y="${y}" font-size="8.5" text-anchor="middle" dominant-baseline="central" fill="#9aa0ab">${gStr}</text>`);
       continue;
     }
     if (act.p && act.d) {
-      out.push(`<path d="M${x},${y - r} A${r},${r} 0 0 0 ${x},${y + r} Z" fill="${theme.personality}"/>`);
-      out.push(`<path d="M${x},${y - r} A${r},${r} 0 0 1 ${x},${y + r} Z" fill="${theme.design}"/>`);
+      out.push(`<path d="M${x},${y - r} A${r},${r} 0 0 0 ${x},${y + r} Z" fill="${theme.design}"/>`);
+      out.push(`<path d="M${x},${y - r} A${r},${r} 0 0 1 ${x},${y + r} Z" fill="${theme.personality}"/>`);
     } else {
       out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="${act.p ? theme.personality : theme.design}"/>`);
     }
-    out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#fff" stroke-width="1"/>`);
-    out.push(`<text x="${x}" y="${y}" font-size="9" font-weight="600" text-anchor="middle" dominant-baseline="central" fill="#fff">${gStr}</text>`);
+    out.push(`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#fff" stroke-width="1.2"/>`);
+    out.push(`<text x="${x}" y="${y}" font-size="8.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#fff">${gStr}</text>`);
   }
 
-  // ---- 4) 中心標籤 ----
+  // ---- 5) 中心標籤 ----
   for (const id of CENTER_DRAW_ORDER) {
     const [lx, ly] = CENTER_LABEL_POS[id];
+    const name = CENTERS[id].nameZh.replace('中心', '');
+    if (OUTSIDE_LABELS.includes(id)) {
+      // 三角太小：標籤畫在中心右外側、左對齊、固定深色（白底也看得見）
+      out.push(`<text x="${lx}" y="${ly}" font-size="11" font-weight="600" text-anchor="start" dominant-baseline="middle" fill="#555">${name}</text>`);
+      continue;
+    }
     const [fill] = centerFill(id);
     const def = definedCenters.has(id);
-    const labelColor = def ? (luminance(fill) > 0.62 ? '#4a4a30' : '#ffffff') : '#8a8170';
-    const name = CENTERS[id].nameZh.replace('中心', '');
-    out.push(`<text x="${lx}" y="${ly}" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="${labelColor}">${name}</text>`);
+    const labelColor = def ? (luminance(fill) > 0.62 ? '#4a4a30' : '#ffffff') : '#9aa0ab';
+    out.push(`<text x="${lx}" y="${ly}" font-size="11" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="${labelColor}">${name}</text>`);
   }
 
   out.push('</svg>');

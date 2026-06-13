@@ -2,19 +2,22 @@
 // 規則：共用同一閘門的兩通道在該閘門相接，不算交叉；其餘為真正的線段交叉。
 // 目標模板（站主依標準盤觀察）：只允許 G↔薦骨織紋 {2-14,5-15,29-46,10-34} 互相交叉、以及 26-44。
 // 執行：node tools/hd-channel-crossings.mjs
-import { GATE_ANCHORS, CHANNEL_VIA, CENTER_SHAPES } from '../assets/js/human-design/hd-geometry.js';
+import { CHANNEL_PATHS } from '../assets/js/human-design/hd-geometry.js';
 import { CHANNELS } from '../assets/js/human-design/hd-data-channels.js';
 
-const A = GATE_ANCHORS;
 const WEAVE = new Set(['2-14', '5-15', '29-46', '10-34']);
 const isExpected = (id1, id2) =>
   (WEAVE.has(id1) && WEAVE.has(id2)) || id1 === '26-44' || id2 === '26-44';
 
-// 通道折線（via 則三點）
+// 通道折線：沿實際路徑取樣（直線 2 點、貝茲弧線取多點近似）
 function polyline(ch) {
-  const a = A[ch.gates[0]], b = A[ch.gates[1]];
-  const v = CHANNEL_VIA[ch.id];
-  return v ? [a, v, b] : [a, b];
+  const p = CHANNEL_PATHS[ch.id];
+  if (!p) return [];
+  if (p.t === 'L') return [p.s, p.e];
+  const out = [];
+  const n = 16;
+  for (let i = 0; i <= n; i++) { const t = i / n, u = 1 - t; out.push([u * u * p.s[0] + 2 * u * t * p.c[0] + t * t * p.e[0], u * u * p.s[1] + 2 * u * t * p.c[1] + t * t * p.e[1]]); }
+  return out;
 }
 function segments(pts) {
   const segs = [];

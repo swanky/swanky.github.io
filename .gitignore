@@ -13,3 +13,6 @@ docs/
 # Local-only image backups (pre-compression originals)
 assets/img/**/*.original.*
 assets/img/*.original.*
+
+# 人類圖 bodygraph 離線渲染／驗證暫存產物（截圖、SVG、比對頁）
+tools/_render/
