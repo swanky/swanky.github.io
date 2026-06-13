@@ -67,6 +67,7 @@ NFT策展       /nft/          ← separate mini-site, excluded from Jekyll
 - `photography` — all photography section pages
 - `technical` — technical consultant pages and `categories: [technical]` posts
 - `education` — education pages and `categories: [claude-code]` posts
+- `human-design` — human design generator page (`/human-design/`)
 - `press` — press/media pages
 - `nft` — NFT pages
 - `home` — homepage only

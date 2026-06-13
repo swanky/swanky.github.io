@@ -36,6 +36,7 @@
         <li class="dropdown"><a href="{{ '/education/' | relative_url }}"{% if page.nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/education/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/education/claude-code/' | relative_url }}">Claude Code 內訓課程</a></li>
             <li><a href="{{ '/education/modeling/' | relative_url }}">模特兒課程</a></li>
             <li><a href="{{ '/education/crypto/' | relative_url }}">Web3 課程</a></li>
             <li><a href="{{ '/education/crypto/web3-essentials/' | relative_url }}">Web3 入門精選</a></li>
@@ -43,6 +44,7 @@
             <li><a href="{{ '/education/ai/' | relative_url }}">AI學習分享</a></li>
           </ul>
         </li>
+        <li><a {% if page.nav_active == 'human-design' %}class="active" {% endif %}href="{{ '/human-design/' | relative_url }}">人類圖</a></li>
         <li><a {% if page.nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
         <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
       </ul>

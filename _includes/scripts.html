@@ -11,3 +11,9 @@
 <!-- Template Main JS File -->
 <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 
+{% if page.use_human_design %}
+<!-- Human Design tool: vendor UMD (global Astronomy) loads before the ES module by spec -->
+<script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/human-design/hd-ui.js' | relative_url }}"></script>
+{% endif %}
+

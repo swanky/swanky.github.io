@@ -1,0 +1,6 @@
+astronomy-engine 2.1.19 (MIT License, Don Cross)
+Source: https://registry.npmjs.org/astronomy-engine/-/astronomy-engine-2.1.19.tgz
+File: astronomy.browser.min.js (UMD build, exposes global `Astronomy`)
+Extracted: 2026-06-13
+Update: download newer tarball from npm registry, replace astronomy.browser.min.js,
+        re-run `node --test tests/human-design/` to confirm golden fixtures still pass.

@@ -1,0 +1,320 @@
+---
+layout: home
+title: 免費人類圖生成器
+seo_title: 免費人類圖生成器｜線上排盤・類型・內在權威・人生角色（資料不上傳）
+description: 輸入出生年月日時與地點，立即生成你的人類圖：類型、內在權威、人生角色、定義、36 條通道與九大能量中心。純前端天文計算，出生資料不離開你的瀏覽器，並可加購職涯／團隊主題的深度解讀。
+keywords: 人類圖,人類圖生成器,人類圖排盤,免費人類圖,Human Design,生產者,投射者,顯示者,反映者,內在權威,人生角色,職涯
+nav_active: human-design
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 人類圖生成器
+    url: /human-design/
+use_human_design: true
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "史旺基人類圖生成器",
+    "url": "https://swanky.github.io/human-design/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "description": "純前端天文計算的人類圖排盤工具，出生資料不離開瀏覽器。",
+    "inLanguage": "zh-TW",
+    "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "不確定出生時間可以算嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。勾選「不確定出生時間」後，系統會以一天五個時段試算，並標示哪些結果（類型、內在權威、人生角色）整天穩定、哪些會隨時間改變，讓你知道哪些資訊可信、哪些需要查證出生時間。" } },
+      { "@type": "Question", "name": "我的出生資料會被上傳或儲存嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有天文計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。" } },
+      { "@type": "Question", "name": "這個排盤準確嗎？", "acceptedAnswer": { "@type": "Answer", "text": "計算引擎採用 astronomy-engine 高精度星曆，並與業界人類圖排盤網站逐筆交叉驗證一致。出生時間每差幾分鐘，部分結果可能落在閘門邊界而改變，因此出生時間越精確越好。" } }
+    ]
+  }
+  </script>
+extra_css: |
+  .hd-hero { background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%); padding: 60px 0 44px; }
+  .hd-hero h1 { font-size: 2.1rem; font-weight: 700; color: #111; margin-bottom: 14px; }
+  .hd-hero .lead { font-size: 1.08rem; color: #555; margin-bottom: 22px; line-height: 1.7; }
+  .hd-privacy-pill { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #f0dca8; border-radius: 50px; padding: 6px 16px; font-size: 0.85rem; color: #7a5500; margin-bottom: 24px; }
+  .hd-privacy-pill i { color: #E5A300; }
+  .hd-section { padding: 50px 0; }
+  .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); max-width: 720px; margin: 0 auto; }
+  .hd-form-card h3 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .hd-form-card .form-hint { font-size: 0.85rem; color: #999; margin-bottom: 22px; }
+  .hd-field { margin-bottom: 18px; }
+  .hd-field > label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin-bottom: 7px; }
+  .hd-selects { display: flex; gap: 8px; flex-wrap: wrap; }
+  .hd-selects .hd-sel-wrap { display: flex; align-items: center; gap: 4px; }
+  .hd-selects select, .hd-city-input, #hd-manual-tz { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
+  .hd-selects select:focus, .hd-city-input:focus, #hd-manual-tz:focus { outline: none; border-color: #E5A300; box-shadow: 0 0 0 3px rgba(229,163,0,0.12); }
+  .hd-selects .hd-unit { font-size: 0.85rem; color: #888; }
+  .hd-city-wrap { position: relative; }
+  .hd-city-input { width: 100%; }
+  .hd-city-list { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); max-height: 240px; overflow-y: auto; z-index: 20; display: none; margin-top: 4px; }
+  .hd-city-list.is-open { display: block; }
+  .hd-city-item { padding: 9px 14px; cursor: pointer; font-size: 0.92rem; display: flex; justify-content: space-between; }
+  .hd-city-item:hover, .hd-city-item.is-active { background: #fffbf0; }
+  .hd-city-item .hd-city-group { font-size: 0.78rem; color: #aaa; }
+  .hd-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #555; cursor: pointer; }
+  .hd-check input { width: 16px; height: 16px; accent-color: #E5A300; }
+  .hd-advanced { margin-top: 12px; }
+  .hd-advanced summary { font-size: 0.85rem; color: #888; cursor: pointer; }
+  .hd-advanced .hd-adv-body { padding-top: 12px; }
+  .hd-btn-generate { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; margin-top: 6px; }
+  .hd-btn-generate:hover { background: #c98f00; }
+  .hd-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; display: none; }
+  .hd-error.is-show { display: block; }
+  #hd-result { display: none; }
+  #hd-result.is-show { display: block; }
+  .hd-result-meta { text-align: center; font-size: 0.9rem; color: #888; margin-bottom: 26px; }
+  .hd-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px; }
+  .hd-sum-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 14px; text-align: center; }
+  .hd-sum-card .hd-sum-label { font-size: 0.78rem; color: #999; margin-bottom: 6px; }
+  .hd-sum-card .hd-sum-value { font-size: 1.15rem; font-weight: 700; color: #E5A300; }
+  .hd-strategy-line { text-align: center; font-size: 0.95rem; color: #555; background: #fffbf0; border-radius: 10px; padding: 14px; margin-bottom: 24px; }
+  .hd-stability { background: #f4f9fd; border: 1px solid #d6e8f5; border-radius: 10px; padding: 16px; margin-bottom: 24px; font-size: 0.88rem; color: #456; }
+  .hd-stability h5 { font-size: 0.95rem; font-weight: 700; color: #2c5f86; margin-bottom: 10px; }
+  .hd-stability .hd-stab-item { display: flex; gap: 8px; margin-bottom: 5px; }
+  .hd-card-scroll { overflow-x: auto; text-align: center; background: #FFFDF7; border-radius: 14px; border: 1px solid #f0e9d8; padding: 10px; }
+  .hd-card-scroll svg { max-width: 100%; height: auto; }
+  .hd-result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 22px 0; }
+  .hd-result-actions button { padding: 11px 22px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid #E5A300; background: #fff; color: #c98f00; transition: 0.25s; }
+  .hd-result-actions button.is-primary { background: #E5A300; color: #fff; }
+  .hd-result-actions button:hover { background: #E5A300; color: #fff; }
+  .hd-share-note { text-align: center; font-size: 0.8rem; color: #aaa; margin-top: -10px; margin-bottom: 10px; }
+  .hd-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
+  .hd-detail-block h4 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0e9d8; }
+  .hd-chan-item, .hd-center-item { padding: 9px 0; border-bottom: 1px solid #f5f5f5; font-size: 0.9rem; }
+  .hd-chan-item .hd-chan-name { font-weight: 600; color: #333; }
+  .hd-chan-item .hd-chan-id { color: #E5A300; font-size: 0.82rem; margin-left: 6px; }
+  .hd-chan-item .hd-chan-desc { color: #888; font-size: 0.84rem; margin-top: 3px; }
+  .hd-center-item .hd-cc-name { font-weight: 600; }
+  .hd-center-item .hd-cc-defined { color: #E5A300; }
+  .hd-center-item .hd-cc-open { color: #aaa; }
+  .hd-planet-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 10px; }
+  .hd-planet-table th, .hd-planet-table td { padding: 5px 8px; border-bottom: 1px solid #f0f0f0; text-align: center; }
+  .hd-planet-table th { background: #faf8f3; color: #777; font-weight: 600; }
+  .hd-pt-d { color: #C0392B; font-weight: 600; }
+  .hd-pt-p { color: #1d1d1f; font-weight: 600; }
+  .hd-mobile-planets { display: none; }
+  .hd-positioning { background: #fafafa; }
+  .hd-positioning .hd-pos-item { display: flex; gap: 14px; margin-bottom: 22px; }
+  .hd-positioning .hd-pos-item i { font-size: 1.5rem; color: #E5A300; flex-shrink: 0; }
+  .hd-positioning .hd-pos-item h4 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+  .hd-positioning .hd-pos-item p { font-size: 0.92rem; color: #666; line-height: 1.65; margin: 0; }
+  .hd-products { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 880px; margin: 30px auto 0; }
+  .hd-product-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
+  .hd-product-card.is-featured { border-color: #E5A300; box-shadow: 0 10px 34px rgba(229,163,0,0.12); }
+  .hd-product-card .hd-prod-tag { font-size: 0.76rem; font-weight: 700; color: #E5A300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .hd-product-card h4 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+  .hd-product-card .hd-prod-price { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .hd-product-card .hd-prod-price small { font-size: 0.85rem; color: #999; font-weight: 400; }
+  .hd-product-card .hd-prod-desc { font-size: 0.9rem; color: #666; line-height: 1.7; margin-bottom: 16px; }
+  .hd-product-card ul { list-style: none; padding: 0; margin: 0 0 22px; }
+  .hd-product-card ul li { font-size: 0.88rem; color: #555; padding: 5px 0 5px 24px; position: relative; }
+  .hd-product-card ul li::before { content: "✓"; position: absolute; left: 0; color: #E5A300; font-weight: 700; }
+  .hd-product-card .hd-prod-cta { margin-top: auto; display: block; text-align: center; padding: 12px; border-radius: 8px; background: #E5A300; color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; }
+  .hd-product-card .hd-prod-cta:hover { background: #c98f00; color: #fff; text-decoration: none; }
+  .hd-product-card.is-outline .hd-prod-cta { background: #fff; border: 1.5px solid #E5A300; color: #c98f00; }
+  .hd-product-card.is-outline .hd-prod-cta:hover { background: #E5A300; color: #fff; }
+  .hd-disclaimer { font-size: 0.82rem; color: #999; line-height: 1.75; max-width: 820px; margin: 0 auto; background: #fafafa; border-radius: 10px; padding: 20px 24px; }
+  .hd-disclaimer strong { color: #777; }
+  @media (max-width: 768px) {
+    .hd-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .hd-detail-grid { grid-template-columns: 1fr; }
+    .hd-products { grid-template-columns: 1fr; }
+    .hd-desktop-planets { display: none; }
+    .hd-mobile-planets { display: block; }
+  }
+---
+
+<main id="main">
+
+  <!-- ======= Hero ======= -->
+  <section class="hd-hero" data-aos="fade-up">
+    <div class="container text-center">
+      <span class="hd-privacy-pill"><i class="bi bi-shield-lock-fill"></i> 純前端計算・出生資料不離開你的瀏覽器</span>
+      <h1>免費人類圖生成器</h1>
+      <p class="lead">輸入出生年月日、時間與地點，立即生成你的人類圖——<br class="d-none d-md-block">類型、內在權威、人生角色、九大中心與 36 條通道，一次看懂你的能量設計。</p>
+      <a href="#hd-form" class="hd-btn-generate" style="display:inline-block; width:auto; padding:13px 36px;">開始生成 ↓</a>
+    </div>
+  </section>
+
+  <!-- ======= 表單 ======= -->
+  <section class="hd-section" id="hd-form">
+    <div class="container">
+      <div class="hd-form-card">
+        <h3>輸入你的出生資料</h3>
+        <p class="form-hint">越精確的出生時間，排盤越準確。不確定也沒關係，可勾選下方選項。</p>
+
+        <div class="hd-field">
+          <label>出生日期（西元）</label>
+          <div class="hd-selects">
+            <div class="hd-sel-wrap"><select id="hd-year" aria-label="出生年"></select><span class="hd-unit">年</span></div>
+            <div class="hd-sel-wrap"><select id="hd-month" aria-label="出生月"></select><span class="hd-unit">月</span></div>
+            <div class="hd-sel-wrap"><select id="hd-day" aria-label="出生日"></select><span class="hd-unit">日</span></div>
+          </div>
+        </div>
+
+        <div class="hd-field">
+          <label>出生時間（24 小時制）</label>
+          <div class="hd-selects">
+            <div class="hd-sel-wrap"><select id="hd-hour" aria-label="出生時"></select><span class="hd-unit">時</span></div>
+            <div class="hd-sel-wrap"><select id="hd-minute" aria-label="出生分"></select><span class="hd-unit">分</span></div>
+          </div>
+          <label class="hd-check" style="margin-top:12px;">
+            <input type="checkbox" id="hd-unknown-time"> 我不知道確切出生時間（以正午試算，並標示哪些結果會變動）
+          </label>
+        </div>
+
+        <div class="hd-field">
+          <label>出生地點</label>
+          <div class="hd-city-wrap">
+            <input type="text" class="hd-city-input" id="hd-city-search" placeholder="輸入城市名稱，例如：台北、Tokyo、紐約" autocomplete="off">
+            <div class="hd-city-list" id="hd-city-list" role="listbox"></div>
+          </div>
+          <details class="hd-advanced">
+            <summary>找不到出生地？手動指定時區</summary>
+            <div class="hd-adv-body">
+              <label for="hd-manual-tz" style="font-size:0.85rem; color:#666;">出生地當時的 UTC 偏移：</label>
+              <select id="hd-manual-tz"></select>
+            </div>
+          </details>
+        </div>
+
+        <button class="hd-btn-generate" id="hd-submit">生成我的人類圖</button>
+        <div class="hd-error" id="hd-error"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 結果（JS 填充）======= -->
+  <section class="hd-section" id="hd-result" style="padding-top:0;">
+    <div class="container">
+      <div class="hd-result-meta" id="hd-meta"></div>
+      <div class="hd-stability" id="hd-stability" style="display:none;"></div>
+      <div class="hd-summary-grid" id="hd-summary"></div>
+      <div class="hd-strategy-line" id="hd-strategy"></div>
+
+      <div class="hd-card-scroll" id="hd-card-container"></div>
+
+      <div class="hd-result-actions">
+        <button class="is-primary" id="hd-download-png">下載人類圖圖卡 (PNG)</button>
+        <button id="hd-share-link">複製分享連結</button>
+        <button id="hd-reset">重新輸入</button>
+      </div>
+      <div class="hd-share-note" id="hd-share-note"></div>
+
+      <div class="hd-mobile-planets" id="hd-mobile-planets"></div>
+
+      <div class="hd-detail-grid">
+        <div class="hd-detail-block">
+          <h4>已定義的通道</h4>
+          <div id="hd-channels-list"></div>
+        </div>
+        <div class="hd-detail-block">
+          <h4>九大能量中心</h4>
+          <div id="hd-centers-list"></div>
+          <h4 style="margin-top:24px;">輪迴交叉</h4>
+          <div id="hd-cross"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 定位 ======= -->
+  <section class="hd-section hd-positioning" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h2 style="font-size:1.6rem; font-weight:700; color:#111; margin-bottom:10px;">不只是算一張圖</h2>
+          <p style="color:#666; line-height:1.75;">人類圖最有價值的地方，不在「我是什麼類型」這個標籤，而在它怎麼幫你做決定、怎麼安排工作節奏、怎麼跟不同的人協作。這個工具由一位技術主管打造，帶著工程師與帶人者的視角。</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="hd-pos-item"><i class="bi bi-cpu"></i><div><h4>給工程師與知識工作者</h4><p>你適合深度專精還是跨域整合？是該主動開局，還是等待對的機會回應？什麼樣的工作節奏會讓你發光、什麼會讓你耗損？</p></div></div>
+          <div class="hd-pos-item"><i class="bi bi-people"></i><div><h4>給帶團隊的主管</h4><p>團隊裡誰適合發起、誰適合回應、誰能看見系統盲點？怎麼從「我以為我在帶人，其實我在燒人」的循環裡走出來。</p></div></div>
+          <div class="hd-pos-item"><i class="bi bi-shield-check"></i><div><h4>隱私優先的設計</h4><p>所有天文計算都在你的瀏覽器內完成，出生資料不上傳、不記錄。這是一個把「可驗證、可提問」放在玄學之前的工具。</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 付費產品 ======= -->
+  <section class="hd-section" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 style="font-size:1.7rem; font-weight:700; color:#111; margin-bottom:8px;">想更深入理解你的設計？</h2>
+      <p style="color:#777; max-width:620px; margin:0 auto;">免費版讓你看見輪廓，付費解讀帶你走進細節——把人類圖結構，轉成你職涯與關係裡能用的具體建議。</p>
+
+      <div class="hd-products">
+        <div class="hd-product-card is-featured is-outline">
+          <div class="hd-prod-tag">主題式深度報告</div>
+          <h4>職涯／帶人 深度解讀報告</h4>
+          <div class="hd-prod-price">NT$1,280<small> / 份</small></div>
+          <p class="hd-prod-desc">針對你的圖，選一個主題（職涯定位或團隊協作）做 10+ 頁的客製化書面解讀，AI 輔助生成、人工校稿，3 個工作天交付。</p>
+          <ul>
+            <li>類型・權威・角色的職場實戰翻譯</li>
+            <li>你的決策方式與最佳工作節奏</li>
+            <li>容易被誤解之處與盲點提醒</li>
+            <li>7 天自我觀察的行動清單</li>
+          </ul>
+          <a class="hd-prod-cta" id="hd-cta-report" href="mailto:swanky.hsiao@gmail.com?subject=%E4%BA%BA%E9%A1%9E%E5%9C%96%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%E8%A9%A2%E5%95%8F&body=%E5%97%A8%E5%96%AE%E5%9F%BA%EF%BC%8C%E6%88%91%E6%83%B3%E8%B3%BC%E8%B2%B7%E4%B8%BB%E9%A1%8C%E5%BC%8F%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%EF%BC%88NT%241%2C280%EF%BC%89%E3%80%82%0A%0A%E6%83%B3%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%88%E8%81%B7%E6%B6%AF%2F%E5%B8%B6%E4%BA%BA%EF%BC%89%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E6%99%82%E9%96%93%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%9C%B0%E9%BB%9E%EF%BC%9A%0A%0A%EF%BC%88%E6%82%A8%E7%9A%84%E5%87%BA%E7%94%9F%E8%B3%87%E6%96%99%E5%83%85%E7%94%A8%E6%96%BC%E8%A3%BD%E4%BD%9C%E5%A0%B1%E5%91%8A%EF%BC%8C%E4%B8%8D%E6%9C%83%E5%85%AC%E9%96%8B%EF%BC%89">來信洽詢報告 →</a>
+        </div>
+
+        <div class="hd-product-card is-featured">
+          <div class="hd-prod-tag">一對一線上解讀</div>
+          <h4>1:1 線上人類圖解讀</h4>
+          <div class="hd-prod-price">NT$3,600<small> / 90 分鐘</small></div>
+          <p class="hd-prod-desc">視訊一對一，帶著你的圖一起讀。事前問卷對齊你最在意的題目，會後附重點摘要，讓你帶得走、用得上。</p>
+          <ul>
+            <li>90 分鐘視訊，可錄影留存</li>
+            <li>事前問卷＋客製化議題聚焦</li>
+            <li>職涯決策、關係、團隊協作皆可談</li>
+            <li>會後重點摘要與行動建議</li>
+          </ul>
+          <a class="hd-prod-cta" id="hd-cta-session" href="mailto:swanky.hsiao@gmail.com?subject=1%3A1%20%E4%BA%BA%E9%A1%9E%E5%9C%96%E8%A7%A3%E8%AE%80%E9%A0%90%E7%B4%84&body=%E5%97%A8%E5%96%AE%E5%9F%BA%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%201%3A1%20%E7%B7%9A%E4%B8%8A%E4%BA%BA%E9%A1%9E%E5%9C%96%E8%A7%A3%E8%AE%80%EF%BC%88NT%243%2C600%20%2F%2090%20%E5%88%86%E9%90%98%EF%BC%89%E3%80%82%0A%0A%E6%9C%80%E6%83%B3%E8%81%8A%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E6%99%82%E9%96%93%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%9C%B0%E9%BB%9E%EF%BC%9A%0A%E6%96%B9%E4%BE%BF%E7%9A%84%E6%99%82%E6%AE%B5%EF%BC%9A">來信預約解讀 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="hd-section faq-section section-bg" data-aos="fade-up" style="background:#f8f9fa;">
+    <div class="container">
+      <h2 style="font-size:1.5rem; font-weight:700; color:#111; text-align:center; margin-bottom:28px;">常見問題</h2>
+      <div class="accordion" id="hdFaq" style="max-width:760px; margin:0 auto;">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq1">不確定出生時間，可以算嗎？</button></h2>
+          <div id="hdfaq1" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">可以。勾選「不確定出生時間」後，系統會以一天五個時段試算，並標示哪些結果（類型、內在權威、人生角色、定義）整天穩定、哪些會隨時間改變。月亮相關的結果變動最快，太陽相關的最穩定。若想要完全精確，建議查證出生證明上的時間。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq2">我的出生資料會被上傳嗎？</button></h2>
+          <div id="hdfaq2" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">不會。所有天文計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。「複製分享連結」是唯一會把資料寫進網址的動作，且需要你主動點擊——請只把連結分享給你信任的人。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq3">這個排盤準確嗎？</button></h2>
+          <div id="hdfaq3" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">計算引擎採用高精度天文星曆，並與業界人類圖排盤網站逐筆交叉驗證一致。需要注意的是，出生時間每差幾分鐘，個別行星可能落在閘門或爻線的邊界而改變結果，因此出生時間越精確越好。本工具也正確處理了台灣歷史上的夏令時間（如 1975、1979 年），這是許多排盤工具會忽略的細節。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hdfaq4">付費報告與 1:1 解讀怎麼進行？</button></h2>
+          <div id="hdfaq4" class="accordion-collapse collapse" data-bs-parent="#hdFaq"><div class="accordion-body">來信後會先與你確認主題與出生資料，報告於 3 個工作天內交付；1:1 解讀會先寄事前問卷，約定視訊時間。出生資料僅用於製作你的解讀，不會公開或另作他用。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 免責 ======= -->
+  <section class="hd-section" style="padding-top:30px;">
+    <div class="container">
+      <div class="hd-disclaimer">
+        <strong>使用說明與免責聲明：</strong>本服務為自我探索與教育用途，不作為醫療、心理、法律或投資建議。人類圖（Human Design）為一套自我認識的參考框架，本工具的計算、文案與圖像皆為史旺基工作室原創製作，與 Jovian Archive、IHDS 或任何人類圖官方機構無隸屬或認證關係。出生資料於瀏覽器內運算，不會上傳。請以開放但保留的態度看待結果——它是理解自己的一面鏡子，不是決定的藉口。
+      </div>
+    </div>
+  </section>
+
+</main>

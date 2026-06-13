@@ -1,0 +1,4 @@
+{
+  "_comment": "Marks this vendored UMD bundle as CommonJS, overriding the repo-root \"type\":\"module\". Lets Node's createRequire() load it via module.exports for tests. Browsers ignore this file and load astronomy.browser.min.js as a classic script (global Astronomy).",
+  "type": "commonjs"
+}
