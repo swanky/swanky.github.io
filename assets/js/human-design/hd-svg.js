@@ -10,17 +10,31 @@ import {
 import { CENTERS } from './hd-data-centers.js';
 import { CHANNELS } from './hd-data-channels.js';
 import { PLANETS } from './hd-data-texts.js';
+import { QR } from './hd-data-qr.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 // 卡片 = 左 Design 行星欄 + 中央 bodygraph（幾何 viewBox 0 20 520 712）+ 右 Personality 行星欄
+// + 底部圖例。PNG 匯出再於卡片下方追加 CTA 區（QR + 網址）。
 const CARD = { w: 820, h: 800, graphX: 170, graphY: -4 };
 const COL = { titleY: 46, top: 74, rowH: 44, leftX: 26, rightX: 690 };
+const LEGEND_Y = 766;       // 底部圖例中線
+const CTA_H = 150;          // PNG 匯出時卡片下方追加的 CTA 區高度
 
 const COLORS = {
   gold: '#E5A300', goldGate: '#5C4400', personality: '#1d1d1f', design: '#C0392B',
   track: '#e6ddc9', openStroke: '#C9C2B4', cardBg: '#FFFDF7', text: '#3a3a3a',
   labelOn: '#4a4a30', labelOff: '#9aa0ab', labelOutside: '#555',
+  legendOpenBg: '#efe9dc', legendOpenText: '#8a7f63', ctaUrl: '#c98f00',
 };
+
+// 底部圖例（與離線報告產生器同一套語彙）：色塊＝實際卡片用色
+const LEGEND_ITEMS = [
+  { t: '設計（無意識）', fill: COLORS.design, fg: '#fff' },
+  { t: '個性（意識）', fill: COLORS.personality, fg: '#fff' },
+  { t: '雙重啟動', fill: 'url(#hd-split)', fg: '#fff' },
+  { t: '有定義的中心', fill: COLORS.gold, fg: '#fff' },
+  { t: '開放的中心', fill: COLORS.legendOpenBg, fg: COLORS.legendOpenText },
+];
 
 const FONT = '"Noto Sans TC","Microsoft JhengHei","PingFang TC","Heiti TC",sans-serif';
 
@@ -76,6 +90,12 @@ export function mountChartCard(container) {
 
   const style = el('style', {}, svg);
   style.textContent = styleText();
+
+  // 雙重啟動圖例用：左紅右黑漸層
+  const defs = el('defs', {}, svg);
+  const grad = el('linearGradient', { id: 'hd-split', x1: 0, y1: 0, x2: 1, y2: 0 }, defs);
+  el('stop', { offset: '50%', 'stop-color': COLORS.design }, grad);
+  el('stop', { offset: '50%', 'stop-color': COLORS.personality }, grad);
 
   el('rect', { class: 'hd-card-bg', x: 0, y: 0, width: CARD.w, height: CARD.h, rx: 16 }, svg);
 
@@ -135,7 +155,28 @@ export function mountChartCard(container) {
   buildPlanetColumn(svg, 'design', COL.leftX, 'Design 設計');
   buildPlanetColumn(svg, 'personality', COL.rightX, 'Personality 個性');
 
+  // 6) 底部圖例（頁面與 PNG 共用）
+  buildLegend(svg);
+
   return svg;
+}
+
+// 底部圖例：5 顆色塊 pill，置中橫排（中文字寬近似 1em，依字數估寬）
+function buildLegend(svg) {
+  const g = el('g', { class: 'hd-legend' }, svg);
+  const fs = 12, chW = 14, padX = 11, gap = 9, ph = 24, ls = 0.8;
+  const widths = LEGEND_ITEMS.map((it) => it.t.length * chW + padX * 2);
+  const total = widths.reduce((a, b) => a + b, 0) + gap * (LEGEND_ITEMS.length - 1);
+  let x = (CARD.w - total) / 2;
+  LEGEND_ITEMS.forEach((it, i) => {
+    const w = widths[i];
+    el('rect', { x, y: LEGEND_Y - ph / 2, width: w, height: ph, rx: ph / 2, fill: it.fill }, g);
+    el('text', {
+      x: x + w / 2, y: LEGEND_Y, 'text-anchor': 'middle', 'dominant-baseline': 'central',
+      fill: it.fg, style: `font:600 ${fs}px ${FONT};letter-spacing:${ls}px`,
+    }, g).textContent = it.t;
+    x += w + gap;
+  });
 }
 
 function buildPlanetColumn(svg, side, x, title) {
@@ -212,21 +253,40 @@ export function renderChartCard(svg, chart) {
   return svg;
 }
 
+// 建構匯出用 SVG clone（卡片 + 底部 CTA 區：QR + 摘要 + 網址）。
+// 抽出成可匯出函式，便於離線預覽/測試（不必觸發實際下載即可檢視版面）。
+export function buildExportSvg(svg, opts = {}) {
+  const fullH = CARD.h + CTA_H;
+  const clone = svg.cloneNode(true);
+  clone.setAttribute('viewBox', `0 0 ${CARD.w} ${fullH}`);
+  clone.setAttribute('width', CARD.w);
+  clone.setAttribute('height', fullH);
+
+  // CTA 區（卡片下方）：QR Code + 圖卡摘要 + 網址，引導觀者也來生成
+  const cta = el('g', { class: 'hd-cta' }, clone);
+  el('line', { x1: 70, y1: CARD.h + 2, x2: CARD.w - 70, y2: CARD.h + 2, stroke: '#ece7da', 'stroke-width': 1 }, cta);
+  // QR（含 3 模組 quiet zone，確保可掃）
+  const qb = 3, qtot = QR.modules + qb * 2, qsize = 112, qx = 204, qy = CARD.h + 18;
+  const qg = el('g', { transform: `translate(${qx},${qy}) scale(${(qsize / qtot).toFixed(4)})` }, cta);
+  el('rect', { x: 0, y: 0, width: qtot, height: qtot, fill: '#fff' }, qg);
+  el('path', { d: QR.path, fill: COLORS.personality, transform: `translate(${qb},${qb})` }, qg);
+  // 文字塊（QR 右側）
+  const tx = qx + qsize + 28;
+  el('text', { x: tx, y: CARD.h + 42, style: `font:700 18px ${FONT}`, fill: '#1d1d1f' }, cta)
+    .textContent = opts.titleText || '我的人類圖';
+  el('text', { x: tx, y: CARD.h + 66, style: `font:400 12.5px ${FONT}`, fill: '#888' }, cta)
+    .textContent = opts.subText || '';
+  el('text', { x: tx, y: CARD.h + 98, style: `font:700 18px ${FONT}`, fill: COLORS.ctaUrl }, cta)
+    .textContent = QR.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  el('text', { x: tx, y: CARD.h + 120, style: `font:400 11px ${FONT}`, fill: '#aaa' }, cta)
+    .textContent = '掃描 QR 或輸入網址，免費生成你的人類圖 · 出生資料不上傳';
+  return { clone, fullH };
+}
+
 // ---- PNG 匯出（SVG → canvas → PNG）----
 export function exportChartPng(svg, chart, opts = {}) {
   const scale = Math.min(opts.scale || 2, 2);
-  const clone = svg.cloneNode(true);
-
-  // 標頭：類型 + 生日 + 浮水印
-  const header = el('g', {});
-  const title = el('text', { class: 'hd-card-title', x: CARD.w / 2, y: CARD.h - 44, 'text-anchor': 'middle' });
-  title.textContent = opts.titleText || '我的人類圖';
-  const sub = el('text', { class: 'hd-card-sub', x: CARD.w / 2, y: CARD.h - 24, 'text-anchor': 'middle' });
-  sub.textContent = opts.subText || '';
-  const wm = el('text', { class: 'hd-watermark', x: CARD.w / 2, y: CARD.h - 8, 'text-anchor': 'middle' });
-  wm.textContent = 'swanky.github.io/human-design';
-  header.appendChild(title); header.appendChild(sub); header.appendChild(wm);
-  clone.appendChild(header);
+  const { clone, fullH } = buildExportSvg(svg, opts);
 
   const xml = new XMLSerializer().serializeToString(clone);
   const svgBlob = new Blob([xml], { type: 'image/svg+xml;charset=utf-8' });
@@ -235,7 +295,7 @@ export function exportChartPng(svg, chart, opts = {}) {
   img.onload = () => {
     const canvas = document.createElement('canvas');
     canvas.width = CARD.w * scale;
-    canvas.height = CARD.h * scale;
+    canvas.height = fullH * scale;
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
