@@ -41,6 +41,7 @@ exclude:
   # package.json only marks assets/js/human-design/*.js as ES modules for Node)
   - package.json
   - tests
+  - tools
 
 # Keep these files even though they start with underscore or dot
 include:

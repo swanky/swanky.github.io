@@ -37,7 +37,7 @@ function centerPathPoints(shape) {
 function styleText() {
   return `
     .hd-card-bg { fill: ${COLORS.cardBg}; }
-    .hd-chan-base { stroke: #f0ebdf; stroke-width: 6; fill: none; stroke-linecap: round; }
+    .hd-chan-base { stroke: #f3eee3; stroke-width: 2.5; fill: none; stroke-linecap: round; }
     .hd-chan-half { stroke-width: 11; fill: none; stroke-linecap: round; visibility: hidden; }
     .hd-chan-half.is-p { stroke: ${COLORS.personality}; visibility: visible; }
     .hd-chan-half.is-d { stroke: ${COLORS.design}; visibility: visible; }
