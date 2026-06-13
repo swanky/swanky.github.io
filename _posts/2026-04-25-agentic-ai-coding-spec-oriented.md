@@ -3,6 +3,7 @@ title: "從組合語言到 Agentic AI Coding Agent：AI 時代，程式設計正
 seo_title: "SDD 規格驅動開發：Agentic AI Coding 是什麼？"
 date: 2026-04-25
 categories: [technical]
+tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/agentic-ai-coding-spec-oriented.jpg
 source_url: "https://www.linkedin.com/pulse/%E5%BE%9E%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80%E5%88%B0-agentic-ai-coding-agentai-%E6%99%82%E4%BB%A3%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E6%AD%A3%E5%9C%A8%E8%AE%8A%E6%88%90%E4%BB%80%E9%BA%BC-swanky-hsiao-kiuyc/"

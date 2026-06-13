@@ -3,6 +3,7 @@ title: "Agentic Engineering 學得好的人，不是技術最強的人"
 seo_title: "Agentic Engineering 是什麼？導入 Claude Code 的關鍵思維"
 date: 2026-05-01
 categories: [technical]
+tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/agentic-engineering-mindset.jpg
 source_url: "https://www.linkedin.com/pulse/agentic-engineering-%E5%AD%B8%E5%BE%97%E5%A5%BD%E7%9A%84%E4%BA%BA%E4%B8%8D%E6%98%AF%E6%8A%80%E8%A1%93%E6%9C%80%E5%BC%B7%E7%9A%84%E4%BA%BA-swanky-hsiao-fscvc/"

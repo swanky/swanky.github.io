@@ -2,6 +2,7 @@
 title: "【好文分享】AI 時代的軟體工程：Kent Beck《Nobody Knows》重點翻譯與省思"
 date: 2026-04-13
 categories: [technical]
+tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/kent-beck-nobody-knows.jpg

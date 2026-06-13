@@ -2,6 +2,7 @@
 title: "AI 時代，職場真正的分水嶺，已經不是 Junior / Senior，而是 Executor / Orchestrator"
 date: 2026-03-22 00:00:02 +0000
 categories: [technical]
+tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/ai-executor-orchestrator.jpg

@@ -2,6 +2,7 @@
 title: "Claude Code 時代，Kent Beck 為什麼提醒我們不要只看「80% 完成」"
 date: 2026-03-19
 categories: [technical]
+tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-kent-beck.jpg

@@ -9,6 +9,15 @@
     <a href="{{ '/photography/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
   </div>
 </div>
+{% elsif cta_context == 'claude-code' or page.categories contains 'claude-code' or page.tags contains 'claude-code' %}
+<div class="article-cta">
+  <h4>想把 AI 帶進你的工作流？</h4>
+  <p>這些方法已經整理成一門 9 堂的內訓課程——「Claude Code 一條龍 AI 交付力」，不分職稱、不分前後端，課綱與教學法完整公開。</p>
+  <div class="article-cta-actions">
+    <a href="{{ '/education/claude-code/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'claude_code_course',from_page:'{{ page.url }}'});}">看課程設計 &rarr;</a>
+    <a href="mailto:swanky.hsiao@gmail.com?subject=Claude%20Code%20%E8%AA%B2%E7%A8%8B%E4%BA%A4%E6%B5%81" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'claude_code',from_page:'{{ page.url }}'});}">來信聊聊</a>
+  </div>
+</div>
 {% else %}
 <div class="article-cta">
   <h4>有技術顧問、內訓或講座需求？</h4>

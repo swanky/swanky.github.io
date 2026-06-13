@@ -2,6 +2,7 @@
 title: "AI 寫 Code 越快，守住設計邊界的工程師越貴"
 date: 2026-05-10
 categories: [technical]
+tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-coding-design-boundaries.jpg
 source_url: "https://www.linkedin.com/pulse/ai-%E5%AF%AB-code-%E8%B6%8A%E5%BF%AB%E5%AE%88%E4%BD%8F%E8%A8%AD%E8%A8%88%E9%82%8A%E7%95%8C%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%B6%8A%E8%B2%B4-swanky-hsiao-i6n4c"

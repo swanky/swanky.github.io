@@ -23,6 +23,14 @@ breadcrumbs:
   <section class="service-details">
     <div class="container">
 
+      <div class="hub-banner" data-aos="fade-up">
+        <div class="hub-banner-text">
+          <h3>Claude Code 內訓課程</h3>
+          <p>這些實戰心得已經整理成一門 9 堂的課——課綱與教學法完整公開。</p>
+        </div>
+        <a href="{{ '/education/claude-code/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'claude_code_course',from_page:'{{ page.url }}'});}">看課程設計 &rarr;</a>
+      </div>
+
       <div class="row">
         {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
         {% include article-card-grid.html articles=sorted_articles %}

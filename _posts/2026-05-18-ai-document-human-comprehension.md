@@ -2,6 +2,7 @@
 title: "我們不缺 AI 寫的文件，我們缺願意被讀完的文件"
 date: 2026-05-18
 categories: [technical]
+tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-document-human-comprehension.jpg
 source_url: "https://www.linkedin.com/pulse/%E6%88%91%E5%80%91%E4%B8%8D%E7%BC%BA-ai-%E5%AF%AB%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%91%E5%80%91%E7%BC%BA%E9%A1%98%E6%84%8F%E8%A2%AB%E8%AE%80%E5%AE%8C%E7%9A%84%E6%96%87%E4%BB%B6-swanky-hsiao-69xzc"

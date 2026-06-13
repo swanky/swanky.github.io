@@ -1,0 +1,199 @@
+# Claude Code 內訓課程 — 課程介紹資料單一真相（介紹頁・不招生）
+# 由 /education/claude-code/index.html 以 Liquid 讀取生成頁面。
+# 課綱對齊教學 repo docs/00_課程總覽.md（2026-06 版）；課綱定稿前以「課程設計公開」定位呈現。
+
+name: "Claude Code 一條龍 AI 交付力"
+tagline: "不分職稱、不分前後端，讓每個人都能用 AI 一條龍獨立交付需求"
+subtitle: "需求分析 → 設計 → 開發 → QA → 交付，全生命週期一個人扛，AI 當你的團隊"
+lead: >
+  一套 9 堂、每堂約 60 分鐘、線上遠距、全程實機的企業內訓課程設計，
+  把「規格驅動 × 測試驗證」的開發方式，變成每個人都做得到的肌肉記憶。
+  這一頁完整公開它的課綱與教學法。
+
+# Hero 痛點（導入 AI 開發最常見的三個落差）
+pain_points:
+  - icon: "bi bi-box-seam"
+    strong: "工具發了 ≠ 有人會用"
+    text: "——採用需要意識、反饋迴圈、時間動機與管理層支持四件事到位"
+  - icon: "bi bi-person-gear"
+    strong: "會用工具 ≠ 會交付"
+    text: "——多數教學停在指令操作，沒有人教「從需求到上線」怎麼走完"
+  - icon: "bi bi-people"
+    strong: "個人提速 ≠ 團隊能力"
+    text: "——少了共同的工作法與驗證紀律，AI 產出的品質無法收斂"
+
+# 三條貫穿主軸
+pillars:
+  - title: "判斷力是你最大的槓桿"
+    desc: "Claude Code 解決「怎麼寫」，但「寫什麼」是你的判斷。課程練的是拆解需求、設定驗收條件的能力。"
+    icon: "bi bi-compass"
+    color: "pink"
+  - title: "工具會變、心法不變"
+    desc: "LLM 與工具進展很快，重心放可長期複利的心法——工具一律「示範→試過→自選」，不綁單一工具鏈。"
+    icon: "bi bi-infinity"
+    color: "cyan"
+  - title: "一條龍 E2E 交付"
+    desc: "人人能獨立走完需求分析到上線的全生命週期，AI 當你的團隊，你當指揮。"
+    icon: "bi bi-diagram-3"
+    color: "green"
+
+# 課程形式
+format:
+  - "9 堂 × 每堂約 60 分鐘，每週一堂"
+  - "線上遠距・全個人制・全程實機"
+  - "課間 20–40 分鐘作業，持續推進專案"
+  - "每人一條貫穿專案，9 堂逐堂加一塊"
+  - "小班制（約 16–20 人），講師＋助教雙支援"
+
+# 適合對象
+audience:
+  - "想拉開效率差距的工程師（不分前後端）"
+  - "想自己做出 MVP 的 PM／企劃"
+  - "想導入 AI 開發、提升交付力的團隊"
+
+# 9 堂課綱（id / 課名 / 一條龍階段 / 當堂演練 / 學成帶走）
+lessons:
+  - id: "L1"
+    name: "為什麼是 Claude Code＋10 分鐘上手"
+    stage: "心態＋環境"
+    practice: "環境驗收＋第一句對話＋定下你的專案題目"
+    takeaway: "環境就緒、你的貫穿專案題目"
+  - id: "L2"
+    name: "你的第一個專案：對話式編程實戰"
+    stage: "第一次 E2E"
+    practice: "用對話式編程做出能跑的 v0"
+    takeaway: "一個能跑的 v0"
+  - id: "L3"
+    name: "核心工作流：五個拉開效率的模式"
+    stage: "工作法"
+    practice: "Plan 模式 → 自動執行 → commit／PR 全流程"
+    takeaway: "Plan／Auto／Git／會話管理上手"
+  - id: "L4"
+    name: "CLAUDE.md：給專案寫一張地圖"
+    stage: "設計（SD）"
+    practice: "為自己的專案寫一份精簡 CLAUDE.md"
+    takeaway: "你專案的 CLAUDE.md"
+  - id: "L5"
+    name: "進階對話技巧：需求分析與規格"
+    stage: "需求分析"
+    practice: "用採訪／Example Mapping 把需求寫成 SPEC"
+    takeaway: "一份可驗證的 SPEC"
+  - id: "L6"
+    name: "擴展能力：Skills／Hooks／MCP"
+    stage: "開發加速"
+    practice: "幫自己的專案寫一個 Skill"
+    takeaway: "你專案的第一個 Skill"
+  - id: "L7"
+    name: "多 Agent 協作：一人指揮 AI 團隊"
+    stage: "規模化開發"
+    practice: "用 worktree＋subagent 並行推進一塊功能"
+    takeaway: "並行開發＋subagent review 經驗"
+  - id: "L8"
+    name: "Example Mapping × TDD 驗測閉環"
+    stage: "QA・驗測"
+    practice: "對一個需求跑「先寫測試→實作到綠→gate 收斂」"
+    takeaway: "一個需求的測試＋驗證 gate"
+  - id: "L9"
+    name: "從零構建完整產品（Capstone）＋心智模型"
+    stage: "交付・上線"
+    practice: "部署上線＋量測 before／after 指標"
+    takeaway: "上線的專案＋你的 ROI 數據"
+
+# 教學法（線上遠距・全個人制）
+method:
+  - strong: "示範 → 放手 → 收斂"
+    text: "講師主畫面 demo 一次，全班各自實機演練，最後抽志願者分享螢幕當場除錯——全班一起學最有效的教學時刻。"
+  - strong: "每堂只做一個演練"
+    text: "25–30 分鐘做得完的單一主線演練，保證不趕課；其餘只示範，下放課間作業。"
+  - strong: "求救頻道常駐"
+    text: "卡住就貼錯誤訊息，講師＋助教即時回，不打斷全班節奏。"
+  - strong: "貫穿專案"
+    text: "每人一條主線專案（可帶自己的真實需求），9 堂逐堂加一塊，連起來就是一次完整的需求→上線。"
+  - strong: "環境健診＋網頁版備援"
+    text: "課前辦線上環境健診協助安裝；裝不起來也有 claude.ai/code 網頁版備援，環境問題不拖垮第一堂。"
+
+# 每堂 60 分鐘節奏
+rhythm:
+  - time: "00–08"
+    what: "上堂回顧＋本堂在一條龍的位置"
+  - time: "08–25"
+    what: "觀念講解＋講師主畫面 demo"
+  - time: "25–50"
+    what: "單一主線演練（個人實機）＋求救頻道支援"
+  - time: "50–57"
+    what: "成果分享＋常見的坑＋軟工心法"
+  - time: "57–60"
+    what: "課間作業＋下堂預告"
+
+# 學成（帶得走的東西）
+outcomes:
+  - icon: "bi bi-rocket-takeoff"
+    title: "一次完整的 E2E 交付"
+    desc: "每人獨立把貫穿專案從需求做到上線——不是看過，是自己走完一遍。"
+  - icon: "bi bi-map"
+    title: "自己專案的 CLAUDE.md 與 Skill"
+    desc: "課堂產出就是工程資產，回到工作直接沿用、持續累積。"
+  - icon: "bi bi-graph-up-arrow"
+    title: "一個 before／after 指標"
+    desc: "用自己的數據回答「AI 到底快多少」——跟主管溝通有憑有據。"
+  - icon: "bi bi-arrow-repeat"
+    title: "可長期複利的心法"
+    desc: "判斷力是槓桿、工具會變心法不變、驗證比開發更重要。"
+
+# 能力指標（學成檢核）
+capabilities:
+  - ability: "需求分析"
+    indicator: "能用採訪／Example Mapping 把需求寫成可驗證的 SPEC"
+    lessons: "L5"
+  - ability: "系統設計（SA／SD）"
+    indicator: "能用 Plan 模式討論架構、用 CLAUDE.md 固化設計約束"
+    lessons: "L3、L4"
+  - ability: "開發"
+    indicator: "能用對話式編程做出能跑的功能、用 Skill 自動化重複流程"
+    lessons: "L2、L6"
+  - ability: "規模化"
+    indicator: "能用 worktree／subagent 並行推進、用 review 把關"
+    lessons: "L7"
+  - ability: "QA"
+    indicator: "能對一個需求寫測試、用 gate 收斂（紅綠重構）"
+    lessons: "L8"
+  - ability: "交付"
+    indicator: "能部署上線、配 CI/CD、量 before／after"
+    lessons: "L9"
+  - ability: "心法"
+    indicator: "能說出「判斷力是槓桿」「工具會變心法不變」「驗證比開發重要」"
+    lessons: "全程"
+
+# 課後飛輪（一句帶過）
+flywheel: "課程設計也包含課後機制：學員產出的 Skill／CLAUDE.md 收進團隊共享庫，搭配常駐 Q&A、定期 office hours 與種子成員（champions）——讓一次性課程變成持續能力。"
+
+# 可驗證數據（不含場次／學員數——課程尚未開課）
+stats:
+  - number: "9 堂"
+    label: "完整課程設計・一條龍交付鏈"
+  - number: "36 份"
+    label: "教材四件套（投影片・演練・帶課手冊・規劃）"
+  - number: "19+ 篇"
+    label: "Claude Code／Agentic 公開專欄"
+  - number: "8 年"
+    label: "大學連續授課經驗"
+
+# FAQ（資訊性，不涉招生）
+faq:
+  - q: "沒寫過程式也能上嗎？"
+    a: "可以。課程主張「不分職稱、不分前後端」——PM／企劃也能用對話式編程完成自己的專案。需要的只是願意動手：每堂都有實機演練，跟著做就能跟上。"
+  - q: "需要先準備什麼環境？"
+    a: "開課前會有一場線上「環境健診」，由講師與助教協助安裝與登入；真的裝不起來也有 claude.ai/code 網頁版備援，當天一樣能上手。"
+  - q: "和坊間的 AI 工具教學差在哪？"
+    a: "多數教學停在「工具怎麼用」。這門課教的是「一條龍交付」：需求分析、規格、測試、上線的完整流程，搭配每堂一則軟體工程心法——工具會變，心法不變。"
+  - q: "課程可以依團隊情境調整嗎？"
+    a: "可以。貫穿專案鼓勵學員帶自己的真實需求進來；課綱深度與案例也能依團隊的技術棧與產業脈絡調整。"
+
+# 延伸閱讀（站內策展，slug 對應 _posts）
+reading:
+  - claude-code-terminal-magic-guide
+  - claude-code-40-best-practices
+  - agentic-ai-coding-spec-oriented
+  - claude-code-kent-beck-tdd
+  - agentic-engineering-mindset
+  - claude-code-governance

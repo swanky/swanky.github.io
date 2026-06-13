@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" fill="none">
+  <!-- Background -->
+  <rect width="360" height="240" fill="#1a1a2e"/>
+  <!-- Terminal window -->
+  <rect x="30" y="22" width="300" height="132" rx="10" fill="#16213e"/>
+  <!-- Title bar -->
+  <rect x="30" y="22" width="300" height="28" rx="10" fill="#0f3460"/>
+  <rect x="30" y="38" width="300" height="12" fill="#0f3460"/>
+  <!-- Traffic lights -->
+  <circle cx="52" cy="36" r="5" fill="#ff5f57"/>
+  <circle cx="69" cy="36" r="5" fill="#febc2e"/>
+  <circle cx="86" cy="36" r="5" fill="#28c840"/>
+  <!-- Terminal title -->
+  <text x="180" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#8892b0">claude — 一條龍交付</text>
+  <!-- Prompt lines -->
+  <text x="46" y="72" font-family="monospace" font-size="11" fill="#E5A300">$ </text>
+  <text x="62" y="72" font-family="monospace" font-size="11" fill="#cdd6f4">claude "把這個需求做到上線"</text>
+  <text x="46" y="93" font-family="monospace" font-size="10" fill="#a6e3a1">✓ 需求分析 → SPEC 完成</text>
+  <text x="46" y="111" font-family="monospace" font-size="10" fill="#a6e3a1">✓ 測試先行 → 實作到綠</text>
+  <text x="46" y="129" font-family="monospace" font-size="10" fill="#89dceb">✓ 部署上線，before/after 已記錄</text>
+  <!-- Blinking cursor -->
+  <rect x="46" y="137" width="7" height="11" fill="#E5A300" opacity="0.8"/>
+  <!-- Nine-node delivery chain -->
+  <line x1="40" y1="192" x2="320" y2="192" stroke="#E5A300" stroke-width="2" opacity="0.45"/>
+  <circle cx="40" cy="192" r="6" fill="#E5A300"/>
+  <circle cx="75" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="110" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="145" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="180" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="215" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="250" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="285" cy="192" r="5" fill="#E5A300" opacity="0.85"/>
+  <circle cx="320" cy="192" r="6" fill="#E5A300"/>
+  <!-- Node labels -->
+  <text x="40" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L1</text>
+  <text x="75" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L2</text>
+  <text x="110" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L3</text>
+  <text x="145" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L4</text>
+  <text x="180" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L5</text>
+  <text x="215" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L6</text>
+  <text x="250" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L7</text>
+  <text x="285" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L8</text>
+  <text x="320" y="178" text-anchor="middle" font-family="monospace" font-size="8" fill="#8892b0">L9</text>
+  <!-- Chain endpoints -->
+  <text x="40" y="214" text-anchor="middle" font-family="monospace" font-size="10" fill="#E5A300">需求</text>
+  <text x="320" y="214" text-anchor="middle" font-family="monospace" font-size="10" fill="#E5A300">上線</text>
+  <!-- Caption -->
+  <text x="180" y="230" text-anchor="middle" font-family="monospace" font-size="9" fill="#8892b0">9 堂 × 一條龍 AI 交付鏈</text>
+</svg>

@@ -2,6 +2,7 @@
 title: "當工程團隊開始導入 Claude Code：16 型工程師的真實反應圖鑑"
 date: 2026-03-22 00:00:02 +0000
 categories: [technical]
+tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-engineer-types.jpg

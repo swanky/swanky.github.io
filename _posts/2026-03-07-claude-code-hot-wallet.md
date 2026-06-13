@@ -2,6 +2,7 @@
 title: "Claude Code 初體驗：不到兩小時，我做出了熱錢包前後端"
 date: 2026-03-07
 categories: [technical]
+tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/claude-code.jpg

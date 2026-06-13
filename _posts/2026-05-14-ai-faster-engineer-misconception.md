@@ -2,6 +2,7 @@
 title: "把 AI 當成「更快的工程師」，是 IT 團隊最貴的誤解"
 date: 2026-05-14
 categories: [technical]
+tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-faster-engineer-misconception.jpg
 source_url: "https://www.linkedin.com/pulse/%E6%8A%8A-ai-%E7%95%B6%E6%88%90%E6%9B%B4%E5%BF%AB%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%98%AF-%E5%9C%98%E9%9A%8A%E6%9C%80%E8%B2%B4%E7%9A%84%E8%AA%A4%E8%A7%A3-swanky-hsiao-7tkhc"
