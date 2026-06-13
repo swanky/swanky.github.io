@@ -8,12 +8,19 @@ import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS } from
 import { GATES } from './hd-data-gates.js';
 
 const $ = (id) => document.getElementById(id);
+// 防呆 DOM 寫入：容器不存在就略過、不拋錯。避免部署期間「新版 JS × 舊快取 HTML」
+// 缺少新容器（如 #hd-readout）時，renderResult 撞上 null 而中斷整個排盤。
+const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
+const setText = (id, txt) => { const e = $(id); if (e) e.textContent = txt; };
+const setVal = (id, v) => { const e = $(id); if (e) e.value = v; };
+const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
 const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
 
 const state = { tz: null, cityLabel: null, lastChart: null, svg: null };
 
 // ---- 填充表單選項 ----
 function fillSelect(sel, items) {
+  if (!sel) return;
   sel.innerHTML = items.map((it) => `<option value="${it.v}">${it.t}</option>`).join('');
 }
 function range(a, b) { const r = []; for (let i = a; i <= b; i++) r.push(i); return r; }
@@ -24,28 +31,30 @@ function initForm() {
   fillSelect($('hd-month'), range(1, 12).map((m) => ({ v: m, t: m })));
   fillSelect($('hd-hour'), range(0, 23).map((h) => ({ v: h, t: String(h).padStart(2, '0') })));
   fillSelect($('hd-minute'), range(0, 59).map((m) => ({ v: m, t: String(m).padStart(2, '0') })));
-  $('hd-year').value = 1990;
-  $('hd-month').value = 1;
-  $('hd-hour').value = 12;
-  $('hd-minute').value = 0;
+  setVal('hd-year', 1990);
+  setVal('hd-month', 1);
+  setVal('hd-hour', 12);
+  setVal('hd-minute', 0);
   refreshDays();
-  $('hd-year').addEventListener('change', refreshDays);
-  $('hd-month').addEventListener('change', refreshDays);
+  on('hd-year', 'change', refreshDays);
+  on('hd-month', 'change', refreshDays);
 
   // 手動 UTC 偏移：-12:00 ~ +14:00（含 :30/:45）
   const offsets = [-720, -660, -600, -540, -480, -420, -360, -300, -240, -210, -180, -120, -60, 0,
     60, 120, 180, 210, 240, 270, 300, 330, 345, 360, 390, 420, 480, 540, 570, 600, 630, 660, 720, 765, 780, 840];
   fillSelect($('hd-manual-tz'), offsets.map((o) => ({ v: o, t: offsetLabel(o) })));
-  $('hd-manual-tz').value = 480;
+  setVal('hd-manual-tz', 480);
 }
 
 function refreshDays() {
-  const y = +$('hd-year').value;
-  const m = +$('hd-month').value;
-  const prev = +$('hd-day').value || 1;
+  const yEl = $('hd-year'), mEl = $('hd-month'), dEl = $('hd-day');
+  if (!yEl || !mEl || !dEl) return;
+  const y = +yEl.value;
+  const m = +mEl.value;
+  const prev = +dEl.value || 1;
   const max = daysInMonth(y, m);
-  fillSelect($('hd-day'), range(1, max).map((d) => ({ v: d, t: d })));
-  $('hd-day').value = Math.min(prev, max);
+  fillSelect(dEl, range(1, max).map((d) => ({ v: d, t: d })));
+  dEl.value = Math.min(prev, max);
 }
 
 function offsetLabel(min) {
@@ -58,6 +67,7 @@ function offsetLabel(min) {
 function initCitySearch() {
   const input = $('hd-city-search');
   const list = $('hd-city-list');
+  if (!input || !list) return;
   let activeIdx = -1;
   let results = [];
 
@@ -98,33 +108,36 @@ function initCitySearch() {
 
 // ---- 提交 ----
 function readInput() {
+  const v = (id) => +($(id)?.value || 0);
   return {
-    year: +$('hd-year').value, month: +$('hd-month').value, day: +$('hd-day').value,
-    hour: +$('hd-hour').value, minute: +$('hd-minute').value,
+    year: v('hd-year'), month: v('hd-month'), day: v('hd-day'),
+    hour: v('hd-hour'), minute: v('hd-minute'),
   };
 }
 
 function resolveTz() {
   if (state.tz) return state.tz;
   // 城市未選但展開了手動偏移
-  const adv = $('hd-city-search').closest('.hd-field').querySelector('.hd-advanced');
-  if (adv && adv.open) return { offsetMinutes: +$('hd-manual-tz').value };
+  const field = $('hd-city-search')?.closest('.hd-field');
+  const adv = field ? field.querySelector('.hd-advanced') : null;
+  if (adv && adv.open) return { offsetMinutes: +($('hd-manual-tz')?.value || 0) };
   return null;
 }
 
 function showError(msg) {
   const e = $('hd-error');
+  if (!e) { console.warn('[hd] 缺少 #hd-error 容器：', msg); return; }
   e.textContent = msg;
   e.classList.add('is-show');
 }
-function clearError() { $('hd-error').classList.remove('is-show'); }
+function clearError() { $('hd-error')?.classList.remove('is-show'); }
 
 function onSubmit() {
   clearError();
   const input = readInput();
   const tz = resolveTz();
   if (!tz) { showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。'); return; }
-  const unknownTime = $('hd-unknown-time').checked;
+  const unknownTime = !!$('hd-unknown-time')?.checked;
 
   try {
     if (unknownTime) {
@@ -146,7 +159,7 @@ function renderResult(chart, stability) {
   state.lastChart = chart;
   const { input, tzInfo } = chart;
   const dateStr = `${input.year}/${String(input.month).padStart(2, '0')}/${String(input.day).padStart(2, '0')} ${String(input.hour).padStart(2, '0')}:${String(input.minute).padStart(2, '0')}`;
-  $('hd-meta').innerHTML = `出生：${dateStr}　|　時區：${tzInfo.labelZh}${state.cityLabel ? '（' + state.cityLabel + '）' : ''}`;
+  setHTML('hd-meta', `出生：${dateStr}　|　時區：${tzInfo.labelZh}${state.cityLabel ? '（' + state.cityLabel + '）' : ''}`);
 
   // 摘要卡
   const sums = [
@@ -155,15 +168,15 @@ function renderResult(chart, stability) {
     ['人生角色', PROFILES[chart.profile] ? PROFILES[chart.profile].nameZh.split(' ')[0] : chart.profile],
     ['定義', DEFINITIONS[chart.definition].nameZh],
   ];
-  $('hd-summary').innerHTML = sums.map(([l, v]) =>
-    `<div class="hd-sum-card"><div class="hd-sum-label">${l}</div><div class="hd-sum-value">${v}</div></div>`).join('');
+  setHTML('hd-summary', sums.map(([l, v]) =>
+    `<div class="hd-sum-card"><div class="hd-sum-label">${l}</div><div class="hd-sum-value">${v}</div></div>`).join(''));
 
   const t = TYPES[chart.type];
-  $('hd-strategy').innerHTML = `<strong>策略：</strong>${t.strategy}　·　<strong>順流信號：</strong>${t.signature}　·　<strong>逆流警訊：</strong>${t.notSelf}`;
+  setHTML('hd-strategy', `<strong>策略：</strong>${t.strategy}　·　<strong>順流信號：</strong>${t.signature}　·　<strong>逆流警訊：</strong>${t.notSelf}`);
 
   // 穩定性面板（未知時間模式）
   const stab = $('hd-stability');
-  if (stability) {
+  if (stab && stability) {
     const zhMap = {
       type: (v) => (TYPES[v] ? TYPES[v].nameZh : v),
       authority: (v) => (AUTHORITIES[v] ? AUTHORITIES[v].nameZh : v),
@@ -180,32 +193,33 @@ function renderResult(chart, stability) {
       + item('人生角色', 'profile', stability.profile) + item('定義', 'definition', stability.definition)
       + `<div style="margin-top:8px;color:#789;font-size:0.82rem;">月亮相關的閘門變動最快，若標示為會改變，建議查證出生時間以取得精確結果。</div>`;
     stab.style.display = 'block';
-  } else {
+  } else if (stab) {
     stab.style.display = 'none';
   }
 
   // bodygraph
-  if (!state.svg) state.svg = mountChartCard($('hd-card-container'));
-  renderChartCard(state.svg, chart);
+  const cardC = $('hd-card-container');
+  if (cardC && !state.svg) state.svg = mountChartCard(cardC);
+  if (state.svg) renderChartCard(state.svg, chart);
 
   // 通道清單
-  $('hd-channels-list').innerHTML = chart.definedChannels.length
+  setHTML('hd-channels-list', chart.definedChannels.length
     ? chart.definedChannels.map((c) =>
       `<div class="hd-chan-item"><span class="hd-chan-name">${c.nameZh}</span><span class="hd-chan-id">${c.id}</span><div class="hd-chan-desc">${c.desc}</div></div>`).join('')
-    : '<p style="color:#aaa;font-size:0.88rem;">沒有完整定義的通道（反映者特質）。</p>';
+    : '<p style="color:#aaa;font-size:0.88rem;">沒有完整定義的通道（反映者特質）。</p>');
 
   // 設計重點解讀（類型／權威／角色／定義 的白話展開）
-  $('hd-readout').innerHTML = renderReadout(chart);
+  setHTML('hd-readout', renderReadout(chart));
 
   // 九中心（逐一解讀：有定義＝穩定發送，開放＝吸收放大）
-  $('hd-centers-list').innerHTML = CENTER_IDS.map((id) => {
+  setHTML('hd-centers-list', CENTER_IDS.map((id) => {
     const defined = chart.definedCenters.includes(id);
     const c = CENTERS[id];
     return `<div class="hd-center-item">
       <span class="hd-cc-name">${c.nameZh}</span> <span class="${defined ? 'hd-cc-defined' : 'hd-cc-open'}">${defined ? '● 已定義' : '○ 開放'}</span>
       <div class="hd-cc-desc">${defined ? c.definedDesc : c.openDesc}</div>
     </div>`;
-  }).join('');
+  }).join(''));
 
   // 輪迴交叉（框架說明 + 你的交叉 + 角度取向；逐一交叉細解留付費）
   const ang = chart.crossAngle ? CROSS_ANGLES[chart.crossAngle] : '';
@@ -214,18 +228,21 @@ function renderResult(chart, stability) {
     juxtaposition: '帶著一條固定而專注的軌道前進',
     left: '人生主題與「他人、互動」深深交織',
   }[chart.crossAngle] || '';
-  $('hd-cross').innerHTML = `
+  setHTML('hd-cross', `
     <p class="hd-cross-intro">輪迴交叉是人類圖格局最大的一層，由你出生時與出生前的太陽、地球四個閘門組成，勾勒你這一生整體的主題與舞台。</p>
     <div class="hd-cross-data">你的交叉：<strong>閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}</strong>　<span class="hd-cross-angle">${ang}</span></div>
     ${angMeaning ? `<p class="hd-cross-meaning">${angMeaning}。</p>` : ''}
-    <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在付費解讀裡細談。</p>`;
+    <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在付費解讀裡細談。</p>`);
 
   // 進階：完整行星位置與啟動閘門（可收合）
-  $('hd-planets-advanced').innerHTML = renderPlanetsAdvanced(chart);
+  setHTML('hd-planets-advanced', renderPlanetsAdvanced(chart));
 
   // 顯示並捲動
-  $('hd-result').classList.add('is-show');
-  $('hd-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const res = $('hd-result');
+  if (res) {
+    res.classList.add('is-show');
+    res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 // 設計重點：把已算出的類型／權威／角色／定義原創解讀文案展開
@@ -293,16 +310,16 @@ function onShareLink() {
   else if (typeof c.tzInfo.offsetMin === 'number') params.set('o', c.tzInfo.offsetMin);
   const url = `${location.origin}${location.pathname}#${params.toString()}`;
   navigator.clipboard.writeText(url).then(() => {
-    $('hd-share-note').textContent = '✓ 連結已複製。注意：連結含出生資料，請只分享給信任的人。';
+    setText('hd-share-note', '✓ 連結已複製。注意：連結含出生資料，請只分享給信任的人。');
   }).catch(() => {
-    $('hd-share-note').textContent = url;
+    setText('hd-share-note', url);
   });
 }
 
 function onReset() {
-  $('hd-result').classList.remove('is-show');
-  $('hd-share-note').textContent = '';
-  $('hd-form').scrollIntoView({ behavior: 'smooth' });
+  $('hd-result')?.classList.remove('is-show');
+  setText('hd-share-note', '');
+  $('hd-form')?.scrollIntoView({ behavior: 'smooth' });
 }
 
 // 載入時偵測分享 hash → 預填並自動計算
@@ -314,13 +331,14 @@ function applyHash() {
   const [y, mo, day] = d.split('-').map(Number);
   const [h, mi] = t.split(':').map(Number);
   if (!y) return;
-  $('hd-year').value = y; $('hd-month').value = mo; refreshDays();
-  $('hd-day').value = day; $('hd-hour').value = h; $('hd-minute').value = mi;
+  setVal('hd-year', y); setVal('hd-month', mo); refreshDays();
+  setVal('hd-day', day); setVal('hd-hour', h); setVal('hd-minute', mi);
   if (p.get('tz')) state.tz = p.get('tz');
   else if (p.get('o') !== null) {
-    const adv = $('hd-city-search').closest('.hd-field').querySelector('.hd-advanced');
+    const field = $('hd-city-search')?.closest('.hd-field');
+    const adv = field ? field.querySelector('.hd-advanced') : null;
     if (adv) adv.open = true;
-    $('hd-manual-tz').value = p.get('o');
+    setVal('hd-manual-tz', p.get('o'));
   }
   onSubmit();
 }
@@ -328,14 +346,15 @@ function applyHash() {
 function init() {
   initForm();
   initCitySearch();
-  $('hd-submit').addEventListener('click', onSubmit);
-  $('hd-unknown-time').addEventListener('change', (e) => {
+  on('hd-submit', 'click', onSubmit);
+  on('hd-unknown-time', 'change', (e) => {
     const dis = e.target.checked;
-    $('hd-hour').disabled = dis; $('hd-minute').disabled = dis;
+    const h = $('hd-hour'); if (h) h.disabled = dis;
+    const mi = $('hd-minute'); if (mi) mi.disabled = dis;
   });
-  $('hd-download-png').addEventListener('click', onDownloadPng);
-  $('hd-share-link').addEventListener('click', onShareLink);
-  $('hd-reset').addEventListener('click', onReset);
+  on('hd-download-png', 'click', onDownloadPng);
+  on('hd-share-link', 'click', onShareLink);
+  on('hd-reset', 'click', onReset);
   applyHash();
 }
 
