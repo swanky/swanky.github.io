@@ -64,4 +64,8 @@ export const ART_IDS = new Set([
   'swords-08',
   'swords-09',
   'swords-10',
+  'swords-11',
+  'swords-12',
+  'swords-13',
+  'swords-14',
 ]);
