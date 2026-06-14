@@ -2,6 +2,7 @@
 // 純程式化 SVG（牌面也是向量），故 canvas 不會被外部圖檔汙染，離線、跨瀏覽器一致。
 // 底部追加 QR + 網址 CTA，沿用 hd-svg.js 的匯出模式。
 import { cardFaceInner, FACE_W, FACE_H } from './tarot-card-svg.js';
+import { framedImageInner, hasArt, fetchArtDataUrl } from './tarot-card-image.js';
 import { CARDS } from './tarot-deck.js';
 import { QR } from './tarot-data-qr.js';
 
@@ -37,7 +38,7 @@ function wrapCJK(s, max, maxLines) {
 }
 
 // 回傳 { svg, w, h }
-export function buildExportSvg(draw, meta = {}) {
+export function buildExportSvg(draw, meta = {}, artMap = {}) {
   const n = draw.length;
   const margin = 60;
   const avail = W - margin * 2;
@@ -86,7 +87,8 @@ export function buildExportSvg(draw, meta = {}) {
     const x = startX + i * (cardW + gap);
     const cxCard = x + cardW / 2;
     body += `<text x="${cxCard}" y="${cardsTop + 20}" text-anchor="middle" style="font:700 14px ${FONT}" fill="${GOLD_DK}">${esc(d.slotLabel || '')}</text>`;
-    body += `<g transform="translate(${x} ${cardsTop + labelH}) scale(${scale.toFixed(4)})">${cardFaceInner(card, d.reversed)}</g>`;
+    const inner = artMap[d.cardId] ? framedImageInner(card, d.reversed, artMap[d.cardId]) : cardFaceInner(card, d.reversed);
+    body += `<g transform="translate(${x} ${cardsTop + labelH}) scale(${scale.toFixed(4)})">${inner}</g>`;
   });
 
   // CTA：QR + 網址
@@ -100,13 +102,19 @@ export function buildExportSvg(draw, meta = {}) {
   body += `<text x="${tx}" y="${ctaTop + 98}" style="font:700 18px ${FONT}" fill="${GOLD_DK}">${esc(QR.url.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</text>`;
   body += `<text x="${tx}" y="${ctaTop + 120}" style="font:400 11px ${FONT}" fill="#aaa">掃描 QR 或輸入網址，免費抽牌 · 抽牌於瀏覽器內完成、不收集個資</text>`;
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">${body}</svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">${body}</svg>`;
   return { svg, w: W, h: H };
 }
 
-// 匯出 PNG（SVG 字串 → Blob → Image → canvas → PNG 下載）
-export function exportReadingPng(draw, meta = {}, opts = {}) {
-  const { svg, w, h } = buildExportSvg(draw, meta);
+// 匯出 PNG（SVG 字串 → Blob → Image → canvas → PNG 下載）。
+// 有 AI 牌面的牌先抓圖轉 dataURL 內嵌，故為 async。
+export async function exportReadingPng(draw, meta = {}, opts = {}) {
+  const artMap = {};
+  for (const d of draw) {
+    const card = CARDS[d.cardId];
+    if (card && hasArt(card)) { const url = await fetchArtDataUrl(card); if (url) artMap[d.cardId] = url; }
+  }
+  const { svg, w, h } = buildExportSvg(draw, meta, artMap);
   const scale = Math.min(opts.scale || 2, 2);
   const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
   const url = URL.createObjectURL(blob);

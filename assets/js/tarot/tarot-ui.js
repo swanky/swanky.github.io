@@ -6,7 +6,7 @@ import { drawSpread } from './tarot-draw.js';
 import { SPREADS, SPREAD_KEYS, recommendSpread, TOPICS, TOPIC_KEYS, recommendTopic } from './tarot-spreads.js';
 import { CARDS } from './tarot-deck.js';
 import { READINGS } from './tarot-data-texts.js';
-import { faceSvg, backSvg } from './tarot-card-svg.js';
+import { faceSvg, backSvg } from './tarot-card-image.js';
 import { exportReadingPng } from './tarot-export-svg.js';
 
 const $ = (id) => document.getElementById(id);
@@ -223,7 +223,7 @@ function doDownload() {
   }, {
     filename: `tarot-${state.topic}-${state.spread}-${dateText().replace(/\//g, '')}.png`,
     onError: () => { setText('tarot-error', '圖卡產生失敗，請改用瀏覽器截圖。'); show('tarot-error', true); },
-  });
+  }).catch(() => {});
   gtag('event', 'tarot_download', { spread: state.spread, topic: state.topic });
 }
 
