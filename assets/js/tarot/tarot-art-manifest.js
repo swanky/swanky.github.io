@@ -31,4 +31,9 @@ export const ART_IDS = new Set([
   'wands-03',
   'wands-04',
   'wands-05',
+  'wands-06',
+  'wands-07',
+  'wands-08',
+  'wands-09',
+  'wands-10',
 ]);
