@@ -4,6 +4,7 @@
 // 純前端、零第三方相依；含自製極簡 lightbox（點圖放大、Esc／點背景關閉）。
 import { CARDS, buildDeck } from './tarot-deck.js';
 import { faceSvg } from './tarot-card-image.js';
+import { createOverlay } from './tarot-overlay.js';
 
 const RWS_DIR = '/assets/img/tarot/rws/';
 // 目前以 Gemini 暫代、待 ChatGPT 重生的牌（顯示小標記）。
@@ -40,29 +41,16 @@ function cardBlock(card) {
   </article>`;
 }
 
-function closeLightbox() {
-  const ov = document.getElementById('cmp-lightbox');
-  if (ov) { ov.classList.remove('is-open'); document.body.style.overflow = ''; }
-}
-
-function ensureLightbox() {
-  let ov = document.getElementById('cmp-lightbox');
-  if (ov) return ov;
-  ov = document.createElement('div');
-  ov.id = 'cmp-lightbox';
-  ov.className = 'cmp-lightbox';
-  ov.innerHTML = '<button class="cmp-lb-close" type="button" aria-label="關閉放大檢視">×</button>'
-    + '<div class="cmp-lb-stage"></div><div class="cmp-lb-cap"></div>';
-  document.body.appendChild(ov);
-  ov.addEventListener('click', (e) => {
-    if (e.target === ov || e.target.closest('.cmp-lb-close')) closeLightbox();
-  });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-  return ov;
-}
+const lightbox = createOverlay({
+  id: 'cmp-lightbox',
+  className: 'cmp-lightbox',
+  closeSelector: '.cmp-lb-close',
+  innerHTML: '<button class="cmp-lb-close" type="button" aria-label="關閉放大檢視">×</button>'
+    + '<div class="cmp-lb-stage"></div><div class="cmp-lb-cap"></div>',
+});
 
 function openLightbox(cell) {
-  const ov = ensureLightbox();
+  const ov = lightbox.ensure();
   const stage = ov.querySelector('.cmp-lb-stage');
   if (cell.dataset.zoomImg) {
     stage.innerHTML = `<img src="${cell.dataset.zoomImg}" alt="">`;
@@ -70,8 +58,7 @@ function openLightbox(cell) {
     stage.innerHTML = faceSvg(CARDS[cell.dataset.zoomSvg], false, 'cmp-lb-svg');
   }
   ov.querySelector('.cmp-lb-cap').textContent = cell.dataset.zoomLabel || '';
-  ov.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  lightbox.open(cell);
 }
 
 function render() {

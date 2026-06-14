@@ -8,6 +8,7 @@ import { CARDS } from './tarot-deck.js';
 import { READINGS } from './tarot-data-texts.js';
 import { faceSvg, backSvg } from './tarot-card-image.js';
 import { exportReadingPng } from './tarot-export-svg.js';
+import { createOverlay } from './tarot-overlay.js';
 
 const $ = (id) => document.getElementById(id);
 const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
@@ -210,67 +211,30 @@ function revealAllNow() {
   renderReadings();
 }
 
-// ---- 卡片放大 modal：大圖 ＋ 這張牌的完整解讀（沿用 compare 的 lightbox 慣例：Esc／點背景關閉、鎖捲動，並還原焦點）----
-// 背景以原生 inert 隔離：開啟時把 #main 等 body 子節點全設 inert，Tab 焦點自然鎖在 modal 內、背景對螢幕報讀也隱藏（取代手寫 focus trap）。
-let modalLastFocus = null;
-let bodyOverflowPrev = '';
-let inertedEls = [];
-function setBackgroundInert(on) {
-  if (on) {
-    if (inertedEls.length) return;
-    inertedEls = Array.from(document.body.children).filter(
-      (el) => el.id !== 'tarot-card-modal' && !el.hasAttribute('inert'));
-    inertedEls.forEach((el) => el.setAttribute('inert', ''));
-  } else {
-    inertedEls.forEach((el) => el.removeAttribute('inert'));
-    inertedEls = [];
-  }
-}
-function closeCardModal() {
-  const ov = $('tarot-card-modal');
-  if (ov) ov.classList.remove('is-open');
-  setBackgroundInert(false);
-  document.body.style.overflow = bodyOverflowPrev;
-  bodyOverflowPrev = '';
-  if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
-  modalLastFocus = null;
-}
-function ensureCardModal() {
-  let ov = $('tarot-card-modal');
-  if (ov) return ov;
-  ov = document.createElement('div');
-  ov.id = 'tarot-card-modal';
-  ov.className = 'tarot-modal';
-  ov.innerHTML = `<div class="tarot-modal-card" role="dialog" aria-modal="true" aria-label="塔羅牌詳解">
+// ---- 卡片放大 modal：大圖 ＋ 這張牌的完整解讀。外殼（Esc／點背景關閉、鎖捲動、背景 inert、還原焦點）走共用的 tarot-overlay。----
+const cardModal = createOverlay({
+  id: 'tarot-card-modal',
+  className: 'tarot-modal',
+  closeSelector: '.tarot-modal-close',
+  innerHTML: `<div class="tarot-modal-card" role="dialog" aria-modal="true" aria-label="塔羅牌詳解">
       <button class="tarot-modal-close" type="button" aria-label="關閉">×</button>
       <div class="tarot-modal-grid">
         <div class="tarot-modal-art"></div>
         <div class="tarot-modal-info"></div>
       </div>
-    </div>`;
-  document.body.appendChild(ov);
-  ov.addEventListener('click', (e) => {
-    if (e.target === ov || e.target.closest('.tarot-modal-close')) closeCardModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && ov.classList.contains('is-open')) closeCardModal();
-  });
-  return ov;
-}
+    </div>`,
+});
+function closeCardModal() { cardModal.close(); }
 // trigger＝被點的卡片元素，關閉後焦點還原回它（用 document.activeElement 在 Safari 滑鼠點 div 時會落在 <body>）。
 function openCardModal(i, trigger) {
   const d = state.draw && state.draw[i];
   if (!d) return;
   const card = CARDS[d.cardId];
   if (!card) return;
-  const ov = ensureCardModal();
+  const ov = cardModal.ensure();
   ov.querySelector('.tarot-modal-art').innerHTML = faceSvg(card, d.reversed);
   ov.querySelector('.tarot-modal-info').innerHTML = cardReadingInner(d);
-  modalLastFocus = trigger || document.activeElement;
-  bodyOverflowPrev = document.body.style.overflow;
-  ov.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
-  setBackgroundInert(true);
+  cardModal.open(trigger);
   // 捲動歸零必須在 is-open（display:flex）之後——元素要有 layout box，設 scrollTop 才生效；
   // 桌機的捲動容器是 .tarot-modal-info，手機（≤640px）是 .tarot-modal-grid，兩者都歸零。
   ov.querySelector('.tarot-modal-grid').scrollTop = 0;
