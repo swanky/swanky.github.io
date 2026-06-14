@@ -3,7 +3,11 @@
 // 再把該 id 加進下面的 ART_IDS，這張牌就會自動改用你的圖（套金色品牌框＋牌名），未列入的維持現有素牌面。
 export const ART_DIR = '/assets/img/tarot/';
 export const ART_IDS = new Set([
-  'major-01', // 魔術師 The Magician（ink 復古風 art-only）
-  'major-17', // 星星 The Star（暫為手繪版，待換 ink）
+  'major-00', // 愚者 The Fool
+  'major-01', // 魔術師 The Magician
+  'major-17', // 星星 The Star（暫為舊版，待換 ink）
   // 生好一張就加一個 id
+  'major-02',
+  'major-03',
+  'major-04',
 ]);
