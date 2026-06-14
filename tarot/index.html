@@ -102,6 +102,28 @@ extra_css: |
   .tarot-card-face { transform: rotateY(180deg); }
   .tarot-card-back svg, .tarot-card-face svg { width: 100%; height: 100%; display: block; }
   .tarot-flip-hint { text-align: center; font-size: 0.8rem; color: #b3b0a6; margin: 4px 0 24px; }
+  .tarot-flip-hint i { color: #E5A300; }
+
+  /* 卡片放大 modal：大圖 + 這張牌的完整解讀 */
+  .tarot-modal { position: fixed; inset: 0; z-index: 1080; background: rgba(22,17,8,0.82); display: none; align-items: center; justify-content: center; padding: 22px; }
+  .tarot-modal.is-open { display: flex; }
+  .tarot-modal-card { position: relative; background: #fff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.45); }
+  .tarot-modal-close { position: absolute; top: 12px; right: 12px; z-index: 3; width: 38px; height: 38px; border: none; border-radius: 50%; background: rgba(0,0,0,0.07); color: #555; font-size: 1.45rem; line-height: 1; cursor: pointer; transition: 0.2s; }
+  .tarot-modal-close:hover { background: #E5A300; color: #fff; }
+  .tarot-modal-grid { display: grid; grid-template-columns: 250px 1fr; max-height: 90vh; }
+  .tarot-modal-art { background: linear-gradient(135deg,#fffaf0,#fdf3e0); display: flex; align-items: center; justify-content: center; padding: 26px 22px; }
+  .tarot-modal-art svg { width: 100%; height: auto; max-height: 360px; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+  .tarot-modal-info { padding: 30px; overflow-y: auto; max-height: 90vh; }
+  .tarot-modal-info .tarot-reading-head { margin-bottom: 12px; }
+  .tarot-modal-info > *:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) {
+    .tarot-modal { padding: 14px; }
+    .tarot-modal-card { max-height: 90vh; }
+    .tarot-modal-grid { grid-template-columns: 1fr; max-height: 90vh; overflow-y: auto; }
+    .tarot-modal-art { padding: 22px 22px 6px; }
+    .tarot-modal-art svg { width: auto; max-width: 62%; max-height: 300px; }
+    .tarot-modal-info { padding: 20px 22px 26px; overflow-y: visible; max-height: none; }
+  }
 
   .tarot-readings { display: flex; flex-direction: column; gap: 18px; }
   .tarot-reading { background: #fff; border: 1px solid #eee; border-radius: 13px; padding: 22px 24px; border-left: 4px solid #E5A300; }
@@ -250,7 +272,7 @@ extra_css: |
       <div id="tarot-result" class="tarot-result" style="display:none;">
         <div class="tarot-question-echo" id="tarot-question-echo"></div>
         <div class="tarot-cards" id="tarot-cards"></div>
-        <p class="tarot-flip-hint">點一下卡片，可以自己翻牌</p>
+        <p class="tarot-flip-hint"><i class="bi bi-zoom-in"></i> 點任一張牌，看大圖與這張牌的完整解讀</p>
         <div class="tarot-readings" id="tarot-readings"></div>
         <div class="tarot-result-actions" id="tarot-actions" style="display:none;">
           <button class="is-primary" id="tarot-download">下載這次的塔羅圖卡 (PNG)</button>

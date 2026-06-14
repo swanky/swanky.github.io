@@ -115,7 +115,7 @@ function doDraw() {
     const card = CARDS[d.cardId];
     return `<div class="tarot-card-slot">
       <div class="tarot-card-pos">${esc(d.slotLabel)}</div>
-      <div class="tarot-card" data-i="${i}" tabindex="0" role="button" aria-label="第 ${i + 1} 張・${esc(d.slotLabel)}，點擊翻牌">
+      <div class="tarot-card" data-i="${i}" tabindex="0" role="button" aria-label="第 ${i + 1} 張・${esc(d.slotLabel)}，點擊看大圖與解讀">
         <div class="tarot-card-inner">
           <div class="tarot-card-back">${backSvg()}</div>
           <div class="tarot-card-face">${faceSvg(card, d.reversed)}</div>
@@ -131,9 +131,9 @@ function doDraw() {
 
   const cardEls = $('tarot-cards') ? Array.from($('tarot-cards').querySelectorAll('.tarot-card')) : [];
   cardEls.forEach((el) => {
-    const flip = () => el.classList.add('is-flipped');
-    el.addEventListener('click', flip);
-    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+    const openModal = () => openCardModal(Number(el.getAttribute('data-i')));
+    el.addEventListener('click', openModal);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
   });
 
   const res = $('tarot-result');
@@ -157,42 +157,90 @@ function domainOf(reading) {
   return reading.domains[state.topic] || reading.domains.work || null;
 }
 
-function renderReadings() {
-  if (!state.draw) return;
+// 單張牌的四段解讀（不含外層 .tarot-reading 容器）——下方解讀流與卡片放大 modal 共用，確保兩處一致。
+function cardReadingInner(d) {
+  const card = CARDS[d.cardId];
+  const r = READINGS[d.cardId];
+  const dom = domainOf(r);
   const topicLabel = TOPICS[state.topic].label;
-  const blocks = state.draw.map((d) => {
-    const card = CARDS[d.cardId];
-    const r = READINGS[d.cardId];
-    const dom = domainOf(r);
-    const nameLine = `${esc(card.nameZh)}${d.reversed ? '（逆位）' : ''} <span class="tarot-r-en">${esc(card.nameEn)}</span>`;
-    if (!r || !dom) {
-      return `<div class="tarot-reading">
-        <div class="tarot-reading-head"><span class="tarot-reading-pos">${esc(d.slotLabel)}</span>
-        <span class="tarot-reading-card">${nameLine}</span></div>
-        <p class="tarot-reading-symbol">${esc(r && r.symbol ? r.symbol : '這張牌的詳細解讀正在補上。先記下你抽到它的當下，心裡浮現的第一個念頭。')}</p>
-      </div>`;
-    }
-    const reflectHtml = Array.isArray(dom.reflect) && dom.reflect.length
-      ? `<div class="tarot-reading-reflect"><h5>可以問自己的</h5><ul>${dom.reflect.map((q) => `<li>「${esc(q)}」</li>`).join('')}</ul></div>` : '';
-    const reversedHtml = d.reversed && r.reversed
-      ? `<p class="tarot-reading-reversed"><b>這次是逆位——換個角度看：</b>${esc(r.reversed)}</p>` : '';
-    return `<div class="tarot-reading">
-      <div class="tarot-reading-head">
+  const nameLine = `${esc(card.nameZh)}${d.reversed ? '（逆位）' : ''} <span class="tarot-r-en">${esc(card.nameEn)}</span>`;
+  const head = `<div class="tarot-reading-head">
         <span class="tarot-reading-pos">${esc(d.slotLabel)}</span>
         <span class="tarot-reading-card">${nameLine}</span>
-      </div>
+      </div>`;
+  if (!r || !dom) {
+    return `${head}
+      <p class="tarot-reading-symbol">${esc(r && r.symbol ? r.symbol : '這張牌的詳細解讀正在補上。先記下你抽到它的當下，心裡浮現的第一個念頭。')}</p>`;
+  }
+  const reflectHtml = Array.isArray(dom.reflect) && dom.reflect.length
+    ? `<div class="tarot-reading-reflect"><h5>可以問自己的</h5><ul>${dom.reflect.map((q) => `<li>「${esc(q)}」</li>`).join('')}</ul></div>` : '';
+  const reversedHtml = d.reversed && r.reversed
+    ? `<p class="tarot-reading-reversed"><b>這次是逆位——換個角度看：</b>${esc(r.reversed)}</p>` : '';
+  return `${head}
       <p class="tarot-reading-frame">${esc(d.frame)} <b>${esc(card.nameZh)}</b>。</p>
       <p class="tarot-reading-symbol">${esc(r.symbol)}</p>
       <div class="tarot-reading-work"><h5>從「${esc(topicLabel)}」來看你的處境</h5><p>${esc(dom.connect)}</p></div>
       ${reversedHtml}
       ${reflectHtml}
-      <p class="tarot-reading-action"><b>這週可以做的一步　</b>${esc(dom.action)}</p>
-    </div>`;
-  });
+      <p class="tarot-reading-action"><b>這週可以做的一步　</b>${esc(dom.action)}</p>`;
+}
+
+function renderReadings() {
+  if (!state.draw) return;
+  const blocks = state.draw.map((d) => `<div class="tarot-reading">${cardReadingInner(d)}</div>`);
   setHTML('tarot-readings', blocks.join(''));
   show('tarot-actions', true);
   renderFunnel();
   gtag('event', 'tarot_reading_shown', { spread: state.spread, topic: state.topic });
+}
+
+// ---- 卡片放大 modal：大圖 ＋ 這張牌的完整解讀（沿用 compare 的 lightbox 慣例：Esc／點背景關閉、鎖捲動，並還原焦點）----
+let modalLastFocus = null;
+function closeCardModal() {
+  const ov = $('tarot-card-modal');
+  if (ov) ov.classList.remove('is-open');
+  document.body.style.overflow = '';
+  if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
+  modalLastFocus = null;
+}
+function ensureCardModal() {
+  let ov = $('tarot-card-modal');
+  if (ov) return ov;
+  ov = document.createElement('div');
+  ov.id = 'tarot-card-modal';
+  ov.className = 'tarot-modal';
+  ov.innerHTML = `<div class="tarot-modal-card" role="dialog" aria-modal="true" aria-label="塔羅牌詳解">
+      <button class="tarot-modal-close" type="button" aria-label="關閉">×</button>
+      <div class="tarot-modal-grid">
+        <div class="tarot-modal-art"></div>
+        <div class="tarot-modal-info"></div>
+      </div>
+    </div>`;
+  document.body.appendChild(ov);
+  ov.addEventListener('click', (e) => {
+    if (e.target === ov || e.target.closest('.tarot-modal-close')) closeCardModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && ov.classList.contains('is-open')) closeCardModal();
+  });
+  return ov;
+}
+function openCardModal(i) {
+  const d = state.draw && state.draw[i];
+  if (!d) return;
+  const card = CARDS[d.cardId];
+  if (!card) return;
+  const ov = ensureCardModal();
+  const art = ov.querySelector('.tarot-modal-art');
+  const info = ov.querySelector('.tarot-modal-info');
+  if (art) art.innerHTML = faceSvg(card, d.reversed);
+  if (info) { info.innerHTML = cardReadingInner(d); info.scrollTop = 0; }
+  modalLastFocus = document.activeElement;
+  ov.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  const closeBtn = ov.querySelector('.tarot-modal-close');
+  if (closeBtn && closeBtn.focus) closeBtn.focus();
+  gtag('event', 'tarot_card_zoom', { spread: state.spread, topic: state.topic, card: card.id });
 }
 
 // ---- 串接付費引導：mailto 預填本次主題、問題與抽到的牌 ----
