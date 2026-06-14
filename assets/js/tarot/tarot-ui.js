@@ -19,7 +19,7 @@ const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</
 
 const REDUCED = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const state = { spread: 'single', spreadManual: false, topic: 'life', topicManual: false, allowReversed: true, draw: null, question: '', revealTimers: [] };
+const state = { spread: 'single', spreadManual: false, topic: 'life', topicManual: false, allowReversed: true, draw: null, question: '', revealTimers: [], revealed: false };
 
 function dateText() {
   const d = new Date();
@@ -91,6 +91,7 @@ function updateReco() {
 
 // ---- 抽牌與翻牌 ----
 function doDraw() {
+  closeCardModal(); // 重抽前先收掉可能還開著的放大 modal（含還原 body 捲動、背景 inert、焦點）
   state.question = ($('tarot-question') ? $('tarot-question').value : '').trim();
   const allow = $('tarot-allow-reversed') ? $('tarot-allow-reversed').checked : true;
   state.allowReversed = allow;
@@ -131,7 +132,11 @@ function doDraw() {
 
   const cardEls = $('tarot-cards') ? Array.from($('tarot-cards').querySelectorAll('.tarot-card')) : [];
   cardEls.forEach((el) => {
-    const openModal = () => openCardModal(Number(el.getAttribute('data-i')));
+    const openModal = () => {
+      const idx = Number(el.getAttribute('data-i'));
+      if (!state.revealed) revealAllNow(); // 翻牌動畫途中就點：先快轉揭示並補上下方解讀，再開這張的大圖（避免 modal 有解讀但下方還空白）
+      openCardModal(idx, el);
+    };
     el.addEventListener('click', openModal);
     el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); } });
   });
@@ -141,6 +146,7 @@ function doDraw() {
 
   state.revealTimers.forEach((t) => clearTimeout(t));
   state.revealTimers = [];
+  state.revealed = false;
   if (REDUCED) {
     cardEls.forEach((el) => el.classList.add('is-flipped'));
     renderReadings();
@@ -191,15 +197,41 @@ function renderReadings() {
   setHTML('tarot-readings', blocks.join(''));
   show('tarot-actions', true);
   renderFunnel();
+  state.revealed = true;
   gtag('event', 'tarot_reading_shown', { spread: state.spread, topic: state.topic });
 }
 
+// 翻牌動畫途中使用者就想看牌：清掉剩餘的揭示計時器、立刻把所有牌翻開並渲染解讀。
+function revealAllNow() {
+  state.revealTimers.forEach((t) => clearTimeout(t));
+  state.revealTimers = [];
+  const cardEls = $('tarot-cards') ? $('tarot-cards').querySelectorAll('.tarot-card') : [];
+  cardEls.forEach((el) => el.classList.add('is-flipped'));
+  renderReadings();
+}
+
 // ---- 卡片放大 modal：大圖 ＋ 這張牌的完整解讀（沿用 compare 的 lightbox 慣例：Esc／點背景關閉、鎖捲動，並還原焦點）----
+// 背景以原生 inert 隔離：開啟時把 #main 等 body 子節點全設 inert，Tab 焦點自然鎖在 modal 內、背景對螢幕報讀也隱藏（取代手寫 focus trap）。
 let modalLastFocus = null;
+let bodyOverflowPrev = '';
+let inertedEls = [];
+function setBackgroundInert(on) {
+  if (on) {
+    if (inertedEls.length) return;
+    inertedEls = Array.from(document.body.children).filter(
+      (el) => el.id !== 'tarot-card-modal' && !el.hasAttribute('inert'));
+    inertedEls.forEach((el) => el.setAttribute('inert', ''));
+  } else {
+    inertedEls.forEach((el) => el.removeAttribute('inert'));
+    inertedEls = [];
+  }
+}
 function closeCardModal() {
   const ov = $('tarot-card-modal');
   if (ov) ov.classList.remove('is-open');
-  document.body.style.overflow = '';
+  setBackgroundInert(false);
+  document.body.style.overflow = bodyOverflowPrev;
+  bodyOverflowPrev = '';
   if (modalLastFocus && modalLastFocus.focus) modalLastFocus.focus();
   modalLastFocus = null;
 }
@@ -225,21 +257,25 @@ function ensureCardModal() {
   });
   return ov;
 }
-function openCardModal(i) {
+// trigger＝被點的卡片元素，關閉後焦點還原回它（用 document.activeElement 在 Safari 滑鼠點 div 時會落在 <body>）。
+function openCardModal(i, trigger) {
   const d = state.draw && state.draw[i];
   if (!d) return;
   const card = CARDS[d.cardId];
   if (!card) return;
   const ov = ensureCardModal();
-  const art = ov.querySelector('.tarot-modal-art');
-  const info = ov.querySelector('.tarot-modal-info');
-  if (art) art.innerHTML = faceSvg(card, d.reversed);
-  if (info) { info.innerHTML = cardReadingInner(d); info.scrollTop = 0; }
-  modalLastFocus = document.activeElement;
+  ov.querySelector('.tarot-modal-art').innerHTML = faceSvg(card, d.reversed);
+  ov.querySelector('.tarot-modal-info').innerHTML = cardReadingInner(d);
+  modalLastFocus = trigger || document.activeElement;
+  bodyOverflowPrev = document.body.style.overflow;
   ov.classList.add('is-open');
   document.body.style.overflow = 'hidden';
-  const closeBtn = ov.querySelector('.tarot-modal-close');
-  if (closeBtn && closeBtn.focus) closeBtn.focus();
+  setBackgroundInert(true);
+  // 捲動歸零必須在 is-open（display:flex）之後——元素要有 layout box，設 scrollTop 才生效；
+  // 桌機的捲動容器是 .tarot-modal-info，手機（≤640px）是 .tarot-modal-grid，兩者都歸零。
+  ov.querySelector('.tarot-modal-grid').scrollTop = 0;
+  ov.querySelector('.tarot-modal-info').scrollTop = 0;
+  ov.querySelector('.tarot-modal-close').focus();
   gtag('event', 'tarot_card_zoom', { spread: state.spread, topic: state.topic, card: card.id });
 }
 

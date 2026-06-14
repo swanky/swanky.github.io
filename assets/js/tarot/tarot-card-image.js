@@ -24,9 +24,11 @@ export function artUrl(card) { return ART_DIR + card.id + '.jpg'; }
 // href 可為同源網址（頁面顯示）或 dataURL（PNG 匯出）。逆位＝圖旋轉 180，框與文字維持正向。
 // 復古襯紙模板（matte）：米黃畫紙襯底，完整藝術圖置中「不被框蓋、不裁切」，上放編號、下放 serif 牌名。
 // 框＝圖外圍的留白邊與細墨線，色調暖褐＋米黃，與 ink 復古畫風相搭。逆位＝只旋轉圖。
+// clipId 須在整份文件唯一：同一張牌可能同時出現在牌陣格與放大 modal，若共用 'tcimg-{id}' 會產生重複 id（無效 DOM）。用遞增序號讓每個 SVG 自帶唯一 clip。
+let clipSeq = 0;
 export function framedImageInner(card, reversed, href) {
   const w = FACE_W, h = FACE_H, cx = w / 2;
-  const clipId = 'tcimg-' + card.id;
+  const clipId = 'tcimg-' + card.id + '-' + (++clipSeq);
   const ax = 24, aw = w - 48;          // 藝術區 192 寬
   const ah = Math.round(aw * 1.5);     // 288 高（2:3，完整不裁）
   const ay = 36;                        // 36..324
