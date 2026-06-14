@@ -24,4 +24,6 @@ export const ART_IDS = new Set([
   'major-16',
   'major-18',
   'major-19',
+  'major-20',
+  'major-21',
 ]);
