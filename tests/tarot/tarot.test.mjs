@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { secureRandomInt, secureBool, secureShuffle } from '../../assets/js/tarot/tarot-rng.js';
 import { CARDS, buildDeck, DECK_SIZE } from '../../assets/js/tarot/tarot-deck.js';
-import { SPREADS, SPREAD_KEYS, recommendSpread } from '../../assets/js/tarot/tarot-spreads.js';
+import { SPREADS, SPREAD_KEYS, recommendSpread, TOPIC_KEYS, recommendTopic } from '../../assets/js/tarot/tarot-spreads.js';
 import { drawSpread } from '../../assets/js/tarot/tarot-draw.js';
 import { READINGS } from '../../assets/js/tarot/tarot-data-texts.js';
 
@@ -55,16 +55,21 @@ test('drawSpread allowReversed:false → 全部正位', () => {
   assert.ok(d.every((c) => c.reversed === false));
 });
 
-test('每張牌都有完整四段牌義', () => {
+test('每張牌都有 symbol/reversed 與四領域完整視角', () => {
   for (const id of buildDeck()) {
     const r = READINGS[id];
     assert.ok(r, '缺牌義：' + id);
     assert.ok(r.symbol && r.symbol.length > 10, 'symbol 太短：' + id);
-    assert.ok(r.work && r.work.length > 10, 'work 太短：' + id);
-    assert.ok(Array.isArray(r.reflect) && r.reflect.length >= 2 && r.reflect.length <= 3, 'reflect 需 2-3 題：' + id);
-    r.reflect.forEach((q) => assert.ok(q && q.length > 4, 'reflect 問題太短：' + id));
-    assert.ok(r.action && r.action.length > 8, 'action 太短：' + id);
     assert.ok(r.reversed && r.reversed.length > 8, 'reversed 太短：' + id);
+    assert.ok(r.domains, '缺 domains：' + id);
+    for (const dk of TOPIC_KEYS) {
+      const d = r.domains[dk];
+      assert.ok(d, `缺領域 ${dk}：${id}`);
+      assert.ok(d.connect && d.connect.length > 8, `${dk}.connect 太短：${id}`);
+      assert.ok(Array.isArray(d.reflect) && d.reflect.length >= 2 && d.reflect.length <= 3, `${dk}.reflect 需 2-3 題：${id}`);
+      d.reflect.forEach((q) => assert.ok(q && q.length > 4, `${dk}.reflect 問題太短：${id}`));
+      assert.ok(d.action && d.action.length > 8, `${dk}.action 太短：${id}`);
+    }
   }
 });
 
@@ -74,12 +79,24 @@ test('牌義無孤兒、總數＝78', () => {
   assert.equal(Object.keys(READINGS).length, 78);
 });
 
-test('牌義不含禁用恐嚇字眼', () => {
+test('全部牌義（含四領域）不含禁用恐嚇字眼', () => {
   const banned = ['厄運', '災難', '注定', '命中註定', '報應', '劫數'];
   for (const [id, r] of Object.entries(READINGS)) {
-    const blob = [r.symbol, r.work, r.action, r.reversed, ...(r.reflect || [])].join(' ');
+    const parts = [r.symbol, r.reversed];
+    for (const dk of TOPIC_KEYS) {
+      const d = r.domains[dk];
+      if (d) parts.push(d.connect, d.action, ...(d.reflect || []));
+    }
+    const blob = parts.join(' ');
     for (const w of banned) assert.ok(!blob.includes(w), `禁用字「${w}」出現在 ${id}`);
   }
+});
+
+test('recommendTopic 依關鍵字對應主題', () => {
+  assert.equal(recommendTopic('我跟男友最近常吵架'), 'love');
+  assert.equal(recommendTopic('該不該把存款拿去投資'), 'money');
+  assert.equal(recommendTopic('要不要換工作、跟主管談談'), 'work');
+  assert.equal(recommendTopic('我最近覺得很迷惘'), 'life');
 });
 
 test('recommendSpread 依複雜度對應牌陣', () => {

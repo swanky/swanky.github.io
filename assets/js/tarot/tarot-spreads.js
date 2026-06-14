@@ -62,3 +62,22 @@ export function recommendSpread(question) {
   }
   return { key: 'single', reason: '你的問題很聚焦——用單張牌給你一個清楚的提醒就夠了。' };
 }
+
+// ---- 主題領域（決定用哪一套牌義視角）----
+export const TOPICS = {
+  work:  { key: 'work',  label: '職場・職涯', hint: '工作、職涯、帶人、決策' },
+  love:  { key: 'love',  label: '感情・關係', hint: '伴侶、曖昧、家人、友誼' },
+  life:  { key: 'life',  label: '生活・自我', hint: '方向、習慣、內在狀態' },
+  money: { key: 'money', label: '財務・抉擇', hint: '金錢觀、風險、重大取捨' },
+};
+export const TOPIC_KEYS = ['work', 'love', 'life', 'money'];
+
+// 依問題文字猜測主題（使用者可手動覆蓋）。先比對感情／財務／職場，皆無則歸生活。
+export function recommendTopic(question) {
+  const q = (question || '').trim();
+  if (!q) return 'life';
+  if (/(男友|女友|男朋友|女朋友|伴侶|對象|曖昧|喜歡的人|愛情|戀|分手|復合|前任|前男友|前女友|感情|另一半|老公|老婆|配偶|結婚|離婚|暗戀|告白|劈腿|外遇|家人|父母|爸媽|孩子|朋友|友情)/.test(q)) return 'love';
+  if (/(錢|薪水|薪資|加薪|投資|理財|買房|買車|財務|資金|報酬|存款|花費|負債|貸款|風險|創業|成本|預算|收入|金錢|破產|股票|基金)/.test(q)) return 'money';
+  if (/(工作|職場|主管|老闆|老板|同事|部屬|下屬|專案|職涯|升遷|轉職|跳槽|團隊|加班|面試|離職|上班|績效|客戶|簡報|KPI)/.test(q)) return 'work';
+  return 'life';
+}

@@ -1,9 +1,9 @@
 ---
 layout: home
-title: 職場塔羅・反思一張牌
-seo_title: 職場塔羅・反思一張牌｜給工程師與主管的線上抽牌反思工具（不是占卜）
-description: 寫下你卡住的職場議題，依複雜度挑牌陣、線上抽牌，把牌面象徵翻成你能談、能做的下一步。這不是占卜、不預測運勢——是一位技術主管用在 1:1 對話裡的反思引導框架。抽牌於瀏覽器內完成，不收集個資。
-keywords: 職場塔羅,塔羅,線上抽牌,塔羅牌義,職場反思,一對一引導,team coaching,職涯,帶人,技術主管
+title: 塔羅・反思一張牌
+seo_title: 塔羅・反思一張牌｜線上抽牌．職場感情生活的反思工具（不是占卜）
+description: 寫下你卡住的事——職場、感情、生活，或一個難的決定——選主題、挑牌陣、線上抽牌，把牌面翻成你能談、能做的下一步。不是占卜、不預測運勢，抽牌於瀏覽器內完成，不收集個資。
+keywords: 塔羅,線上塔羅,塔羅抽牌,塔羅牌義,塔羅反思,感情,職場,生活,自我成長,財務決策,一對一引導
 nav_active: tarot
 breadcrumbs:
   - name: 主頁
@@ -16,12 +16,12 @@ extra_head: |
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "職場塔羅・反思一張牌",
+    "name": "塔羅・反思一張牌",
     "url": "https://swanky.github.io/tarot/",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Web",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
-    "description": "把塔羅當反思工具的線上抽牌頁：寫下職場議題、抽牌、把牌面翻成可行的下一步。不是占卜、不預測運勢，抽牌於瀏覽器內完成。",
+    "description": "把塔羅當反思工具的線上抽牌頁：選主題（職場／感情／生活／財務）、寫下問題、抽牌，把牌面翻成可行的下一步。不是占卜、不預測運勢，抽牌於瀏覽器內完成。",
     "inLanguage": "zh-TW",
     "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
   }
@@ -31,7 +31,8 @@ extra_head: |
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "這是占卜嗎？會算我的運勢或未來嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不是。這裡把塔羅當成一種反思工具，不是占卜——它不預測升遷、裁員、專案成敗這類具體結果。牌面的象徵幫你把模糊的處境具象化、看見原本沒留意的角度，決定永遠在你手上。" } },
+      { "@type": "Question", "name": "這是占卜嗎？會算我的運勢或未來嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不是。這裡把塔羅當成一種反思工具，不是占卜——它不預測升遷、裁員、感情、財運這類具體結果。牌面的象徵幫你把模糊的處境具象化、看見原本沒留意的角度，決定永遠在你手上。" } },
+      { "@type": "Question", "name": "可以問感情、生活或財務的問題嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。選好上方的主題（職場、感情、生活或財務），同一張牌就會給你那個面向的反思視角。但無論哪個主題，它都不預測結果——感情不算對方的心意、財務不是投資建議——只幫你把自己的處境想清楚。" } },
       { "@type": "Question", "name": "我需要相信塔羅才能用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不用。你可以把每張牌當成一組有畫面的提問。對工程師與主管而言，它的價值在於把一個卡住的感受，翻成可以談、可以行動的語言，而不是預測未來。" } },
       { "@type": "Question", "name": "牌是真的隨機抽的嗎？", "acceptedAnswer": { "@type": "Answer", "text": "是。洗牌與抽牌使用瀏覽器內建的密碼學亂數（crypto.getRandomValues），公平、不可預測。整個過程在你的瀏覽器內完成，不會收集或上傳任何資料。" } },
       { "@type": "Question", "name": "抽到逆位，或死神、高塔這類牌，是壞事嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不是。逆位只是同一張牌換個角度看，不代表壞事。死神講的是某個階段的謝幕與騰出空間，高塔講的是看清一個本來就不太穩的結構、趁早重蓋——它們談的是轉變與成長，不是預兆或恐嚇。" } },
@@ -69,6 +70,12 @@ extra_css: |
   .tarot-spread-name { font-size: 0.98rem; font-weight: 700; color: #111; }
   .tarot-spread-count { font-size: 0.74rem; font-weight: 700; color: #E5A300; letter-spacing: 1px; }
   .tarot-spread-blurb { font-size: 0.8rem; color: #888; line-height: 1.5; }
+  .tarot-topic-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 8px 0 6px; }
+  .tarot-topic-btn { text-align: center; background: #fff; border: 1.5px solid #e8e2d4; border-radius: 11px; padding: 12px 8px; cursor: pointer; transition: 0.2s; display: flex; flex-direction: column; gap: 3px; }
+  .tarot-topic-btn:hover { border-color: #E5A300; }
+  .tarot-topic-btn.is-active { border-color: #E5A300; background: #fffaf0; box-shadow: 0 4px 14px rgba(229,163,0,0.12); }
+  .tarot-topic-label { font-size: 0.92rem; font-weight: 700; color: #111; }
+  .tarot-topic-hint { font-size: 0.72rem; color: #999; line-height: 1.4; }
   .tarot-check { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #666; cursor: pointer; margin: 14px 0 18px; }
   .tarot-check input { width: 16px; height: 16px; accent-color: #E5A300; }
   .tarot-draw-btn { margin-top: 4px; }
@@ -167,6 +174,7 @@ extra_css: |
 
   @media (max-width: 768px) {
     .tarot-spread-options { grid-template-columns: 1fr; }
+    .tarot-topic-options { grid-template-columns: repeat(2, 1fr); }
     .tarot-products { grid-template-columns: 1fr; }
     .tarot-card { width: 132px; height: 198px; }
   }
@@ -177,9 +185,9 @@ extra_css: |
   <!-- ======= Hero ======= -->
   <section class="tarot-hero" data-aos="fade-up">
     <div class="container text-center">
-      <span class="tarot-pill"><i class="bi bi-moon-stars"></i> 不是占卜，是給工程師與主管的一面鏡子</span>
-      <h1>職場塔羅・反思一張牌</h1>
-      <p class="lead">先寫下你正卡住的職場議題，依複雜度挑一個牌陣，抽牌——讓牌面把模糊的處境，翻成你能談、能做的下一步。</p>
+      <span class="tarot-pill"><i class="bi bi-moon-stars"></i> 不是占卜，是把心裡的事想清楚的一面鏡子</span>
+      <h1>塔羅・反思一張牌</h1>
+      <p class="lead">先寫下你正卡住的事——職場、感情、生活，還是一個難的決定都可以——選主題、挑牌陣、抽牌，讓牌面把模糊的處境，翻成你能談、能做的下一步。</p>
       <a href="#tarot-tool" class="tarot-btn-primary" style="display:inline-block; width:auto; padding:13px 36px;">開始抽牌 ↓</a>
     </div>
   </section>
@@ -189,7 +197,7 @@ extra_css: |
     <div class="container">
       <div class="tarot-explain-card">
         <h2>這不是占卜，是一種反思的方式</h2>
-        <p>塔羅在這裡不是用來預測未來，而是一面鏡子——牌面的象徵幫你把模糊的感受具象化，看見自己原本沒留意的角度。每次抽牌會給你四件事：<b>牌面象徵</b>、對照你處境的<b>職場連結</b>、可以問自己的<b>反思問題</b>，以及一個一週內可以做的<b>小行動</b>。這套作法，來自一位帶過團隊的技術主管，在 1:1 對話裡實際用來幫同事釐清思緒的引導框架。</p>
+        <p>塔羅在這裡不是用來預測未來，而是一面鏡子——牌面的象徵幫你把模糊的感受具象化，看見自己原本沒留意的角度。每次抽牌會給你四件事：<b>牌面象徵</b>、對照你處境的<b>連結</b>、可以問自己的<b>反思問題</b>，以及一個一週內可以做的<b>小行動</b>。這套作法源自一位帶過團隊的技術主管在 1:1 對話裡用的引導框架——現在不只用在工作，<b>感情、生活、重大決策</b>都可以用同一種方式好好想一想。</p>
       </div>
     </div>
   </section>
@@ -203,12 +211,16 @@ extra_css: |
         <textarea id="tarot-question" rows="3" placeholder="例如：團隊一直加班但產出沒變好，我該先處理流程，還是先跟主管談人力？"></textarea>
         <div class="tarot-reco" id="tarot-reco"></div>
 
-        <h3 style="margin-top:24px;">② 選一個牌陣</h3>
+        <h3 style="margin-top:24px;">② 這件事跟哪方面有關？</h3>
+        <p class="tarot-hint">選一個主題，同一張牌會給你對應的反思視角。系統也會依你的問題自動猜一個。</p>
+        <div class="tarot-topic-options" id="tarot-topic-options"></div>
+
+        <h3 style="margin-top:24px;">③ 選一個牌陣</h3>
         <p class="tarot-hint">系統會依你的問題建議一個，你也可以自己改。</p>
         <div class="tarot-spread-options" id="tarot-spread-options"></div>
         <label class="tarot-check"><input type="checkbox" id="tarot-allow-reversed" checked> 包含逆位牌（只是換個角度看，不代表壞事）</label>
 
-        <button class="tarot-btn-primary tarot-draw-btn" id="tarot-draw">③ 洗牌並抽牌</button>
+        <button class="tarot-btn-primary tarot-draw-btn" id="tarot-draw">④ 洗牌並抽牌</button>
         <div class="tarot-error" id="tarot-error" style="display:none;"></div>
       </div>
 
@@ -233,12 +245,12 @@ extra_css: |
       <div class="row">
         <div class="col-lg-5">
           <h2 style="font-size:1.6rem; font-weight:700; color:#111; margin-bottom:10px;">牌只是引子，思考是你的</h2>
-          <p style="color:#666; line-height:1.75;">這個工具由一位技術主管打造，帶著工程師與帶人者的視角。它不替你決定，而是幫你把一個說不清楚的卡點，變成一個想得清楚、做得出來的下一步。</p>
+          <p style="color:#666; line-height:1.75;">這個工具由一位帶過團隊的技術主管打造，帶著一種冷靜、不神棍的視角。它不替你決定，而是幫你把一個說不清楚的卡點，變成一個想得清楚、做得出來的下一步——無論那是工作、感情，還是一個放在心上很久的選擇。</p>
         </div>
         <div class="col-lg-7">
-          <div class="tarot-pos-item"><i class="bi bi-cpu"></i><div><h4>給工程師與知識工作者</h4><p>卡在某個技術決策、職涯岔路，還是要不要跳出舒適圈？抽一張牌，把你心裡那個一直繞不過去的問題攤開來看。</p></div></div>
-          <div class="tarot-pos-item"><i class="bi bi-people"></i><div><h4>給帶團隊的主管</h4><p>1:1 不知道怎麼開場、同事總說「還好」？用一張牌當引子，讓對話從客套，變成真正聊得進去的反思。</p></div></div>
-          <div class="tarot-pos-item"><i class="bi bi-compass"></i><div><h4>反思，不是預測</h4><p>這裡沒有運勢、吉凶、命定。牌是鏡子，照見的是你的選擇與盲點——不預測升遷裁員，也不替你決定。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-signpost-split"></i><div><h4>給正在做選擇的你</h4><p>該不該換工作、要不要投入一段關係、一筆錢花不花得下去——把難以言喻的猶豫，攤成可以衡量、可以談的選項。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-heart"></i><div><h4>給關係裡卡住的你</h4><p>伴侶、曖昧、家人、朋友——它不算「對方愛不愛你」，而是幫你看清自己在這段關係裡真正的需求與界線。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-compass"></i><div><h4>反思，不是預測</h4><p>這裡沒有運勢、吉凶、命定，也不預測升遷、感情或財運。牌是鏡子，照見的是你的選擇與盲點——決定永遠在你手上。</p></div></div>
         </div>
       </div>
     </div>
@@ -248,19 +260,19 @@ extra_css: |
   <section class="tarot-tool" data-aos="fade-up">
     <div class="container text-center">
       <h2 style="font-size:1.7rem; font-weight:700; color:#111; margin-bottom:8px;">想把一個議題，聊得更深？</h2>
-      <p style="color:#777; max-width:620px; margin:0 auto;">線上抽牌給你一面快速的鏡子。若你想針對某個真正的卡點，由我帶你跑一遍完整的職場塔羅反思，這裡有兩種方式。目前為首批驗證階段，以早鳥價回饋前幾位願意給回饋的人。</p>
+      <p style="color:#777; max-width:620px; margin:0 auto;">線上抽牌給你一面快速的鏡子。若你想針對某個真正的卡點（職場、感情、生活或一個難的決定），由我帶你跑一遍完整的塔羅反思，這裡有兩種方式。目前為首批驗證階段，以早鳥價回饋前幾位願意給回饋的人。</p>
 
       <div class="tarot-products">
         <div class="tarot-product-card is-featured is-outline">
           <div class="tarot-prod-tag">非同步・email 交付</div>
-          <h4>職場塔羅・客製文字解讀</h4>
+          <h4>塔羅・客製文字解讀</h4>
           <div class="tarot-prod-price"><span class="tarot-prod-was">NT$980</span>NT$680<small> / 一個議題</small></div>
           <div class="tarot-prod-badge">首批限量驗證價</div>
           <a class="tarot-prod-crypto-hint" href="#tarot-crypto">💎 用穩定幣付款更省 → 6.99 USDC</a>
-          <p class="tarot-prod-desc">把你的職場議題與抽到的牌寄給我，我用職場塔羅的四段框架，為你寫一份客製的書面反思，AI 輔助、人工校稿，3 個工作天交付。</p>
+          <p class="tarot-prod-desc">把你的議題與抽到的牌寄給我（職場、感情、生活或一個決定都可以），我用塔羅反思的四段框架，為你寫一份客製的書面反思，AI 輔助、人工校稿，3 個工作天交付。</p>
           <ul>
             <li>把抽到的每張牌，翻成你這個處境裡能用的提醒</li>
-            <li>四段結構：牌面象徵 → 職場連結 → 反思問題 → 一週行動</li>
+            <li>四段結構：牌面象徵 → 對照你的處境 → 反思問題 → 一週行動</li>
             <li>不算吉凶、不預測結果，幫你把卡點想清楚</li>
           </ul>
           <a class="tarot-prod-cta" id="tarot-cta-report" href="#">來信洽詢文字解讀 →</a>
@@ -268,14 +280,14 @@ extra_css: |
 
         <div class="tarot-product-card is-featured">
           <div class="tarot-prod-tag">即時・線上一對一</div>
-          <h4>職場塔羅・1:1 線上引導</h4>
+          <h4>塔羅・1:1 線上引導</h4>
           <div class="tarot-prod-price">NT$2,400<small> / 60 分鐘</small></div>
           <div class="tarot-prod-badge">名額有限・本人親自進行</div>
           <p class="tarot-prod-desc">視訊一對一，帶著你當下的議題，用塔羅當引子跑完整套四段反思對話，會後附上重點摘要，幫你收斂成可執行的下一步。</p>
           <ul>
-            <li>適合卡在職涯抉擇、帶人難題、或想被好好問幾個問題的時候</li>
-            <li>由帶過團隊的技術主管引導，談的是職場，不是命理</li>
-            <li>不預測升遷裁員、不算吉凶，決定永遠在你手上</li>
+            <li>適合卡在一個選擇、一段關係、或想被好好問幾個問題的時候</li>
+            <li>由帶過團隊的技術主管引導，談的是你的處境，不是命理</li>
+            <li>不預測結果、不算吉凶，決定永遠在你手上</li>
           </ul>
           <a class="tarot-prod-cta" id="tarot-cta-session" href="#">來信預約 1:1 引導 →</a>
         </div>
@@ -309,7 +321,11 @@ extra_css: |
       <div class="accordion" id="tarotFaq" style="max-width:760px; margin:0 auto;">
         <div class="accordion-item">
           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq0">這是占卜嗎？會算我的運勢或未來嗎？</button></h2>
-          <div id="tfaq0" class="accordion-collapse collapse" data-bs-parent="#tarotFaq"><div class="accordion-body">不是。這裡把塔羅當成一種反思工具，不是占卜——它不預測升遷、裁員、專案成敗這類具體結果。牌面的象徵幫你把模糊的處境具象化、看見原本沒留意的角度，決定永遠在你手上。</div></div>
+          <div id="tfaq0" class="accordion-collapse collapse" data-bs-parent="#tarotFaq"><div class="accordion-body">不是。這裡把塔羅當成一種反思工具，不是占卜——它不預測升遷、裁員、感情、財運這類具體結果。牌面的象徵幫你把模糊的處境具象化、看見原本沒留意的角度，決定永遠在你手上。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaqTopic">可以問感情、生活或財務的問題嗎？</button></h2>
+          <div id="tfaqTopic" class="accordion-collapse collapse" data-bs-parent="#tarotFaq"><div class="accordion-body">可以。選好上方的主題（職場、感情、生活或財務），同一張牌就會給你那個面向的反思視角。但無論哪個主題，它都不預測結果——感情不算對方的心意、財務不是投資建議——只幫你把自己的處境想清楚。</div></div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tfaq1">我需要相信塔羅才能用嗎？</button></h2>
@@ -347,11 +363,11 @@ extra_css: |
 (function(){
   function mailto(subject, body){ return 'mailto:swanky.hsiao@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); }
   var report = document.getElementById('tarot-cta-report');
-  if (report) report.href = mailto('職場塔羅・文字解讀洽詢',
-    '嗨 史旺基，我想預約「職場塔羅・客製文字解讀」（NT$680 早鳥）。\n\n我想釐清的職場議題：\n（若已在線上抽過牌，可附上你的問題與抽到的牌）\n\n（我了解這是職場反思引導，不是占卜、不預測具體結果。）');
+  if (report) report.href = mailto('塔羅・文字解讀洽詢',
+    '嗨 史旺基，我想預約「塔羅・客製文字解讀」（NT$680 早鳥）。\n\n主題（職場／感情／生活／財務）：\n我想釐清的議題：\n（若已在線上抽過牌，可附上你的問題與抽到的牌）\n\n（我了解這是反思引導，不是占卜、不預測具體結果。）');
   var session = document.getElementById('tarot-cta-session');
-  if (session) session.href = mailto('職場塔羅・1:1 引導預約',
-    '嗨 史旺基，我想預約「職場塔羅・1:1 線上引導」（NT$2,400 / 60 分鐘）。\n\n我最近卡住、想聊的職場議題：\n方便的時段：\n\n（我了解這是職場反思引導，不是占卜、不預測具體結果。）');
+  if (session) session.href = mailto('塔羅・1:1 引導預約',
+    '嗨 史旺基，我想預約「塔羅・1:1 線上引導」（NT$2,400 / 60 分鐘）。\n\n主題（職場／感情／生活／財務）：\n我最近卡住、想聊的議題：\n方便的時段：\n\n（我了解這是反思引導，不是占卜、不預測具體結果。）');
   // 複製錢包地址
   var copy = document.querySelector('.tarot-wallet-copy');
   if (copy && navigator.clipboard) copy.addEventListener('click', function(){
