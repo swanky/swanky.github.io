@@ -22,3 +22,8 @@
 <script type="module" src="{{ '/assets/js/tarot/tarot-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_tarot_compare %}
+<!-- 塔羅牌組對照藝廊：重用 tarot-deck／faceSvg，純前端 ES module -->
+<script type="module" src="{{ '/assets/js/tarot/tarot-compare.js' | relative_url }}"></script>
+{% endif %}
+

@@ -54,6 +54,14 @@ extra_css: |
   .tarot-explain-card h2 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 10px; }
   .tarot-explain-card p { font-size: 0.96rem; color: #555; line-height: 1.8; margin: 0; }
 
+  .tarot-compare-banner { display:flex; align-items:center; gap:16px; max-width:760px; margin:0 auto; background:linear-gradient(135deg,#fff,#fffaf0); border:1px solid #f0dca8; border-radius:14px; padding:18px 22px; text-decoration:none; transition:.25s; }
+  .tarot-compare-banner:hover { border-color:#E5A300; box-shadow:0 8px 26px rgba(229,163,0,0.14); transform:translateY(-2px); }
+  .tarot-compare-ico { flex-shrink:0; width:46px; height:46px; border-radius:11px; background:#fff3d6; display:flex; align-items:center; justify-content:center; }
+  .tarot-compare-ico i { font-size:1.4rem; color:#E5A300; }
+  .tarot-compare-txt { flex:1; font-size:0.9rem; color:#6b5a2a; line-height:1.6; }
+  .tarot-compare-txt b { display:block; font-size:1.02rem; color:#111; margin-bottom:2px; }
+  .tarot-compare-arrow { flex-shrink:0; font-size:1.3rem; color:#E5A300; font-weight:700; }
+
   .tarot-tool { padding: 40px 0; }
   .tarot-q-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; max-width: 760px; margin: 0 auto; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
   .tarot-q-card h3 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; }
@@ -199,6 +207,20 @@ extra_css: |
         <h2>這不是占卜，是一種反思的方式</h2>
         <p>塔羅在這裡不是用來預測未來，而是一面鏡子——牌面的象徵幫你把模糊的感受具象化，看見自己原本沒留意的角度。每次抽牌會給你四件事：<b>牌面象徵</b>、對照你處境的<b>連結</b>、可以問自己的<b>反思問題</b>，以及一個一週內可以做的<b>小行動</b>。這套作法源自一位帶過團隊的技術主管在 1:1 對話裡用的引導框架——現在不只用在工作，<b>感情、生活、重大決策</b>都可以用同一種方式好好想一想。</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ======= 牌組對照入口 ======= -->
+  <section class="tarot-explain" style="padding:6px 0 0;" data-aos="fade-up">
+    <div class="container">
+      <a class="tarot-compare-banner" href="{{ '/tarot/compare/' | relative_url }}">
+        <span class="tarot-compare-ico"><i class="bi bi-images"></i></span>
+        <span class="tarot-compare-txt">
+          <b>看看這副牌長什麼樣？</b>
+          78 張全副牌面——經典偉特 × 史旺基制服女孩版，一張一張並排對照、點圖放大。
+        </span>
+        <span class="tarot-compare-arrow">→</span>
+      </a>
     </div>
   </section>
 
