@@ -1,0 +1,209 @@
+============================================================
+史旺基塔羅・重生 PROMPT 清單（二審定案 2026-06-14）
+============================================================
+
+【使用方式】
+1. 每次生圖前，先在 ChatGPT 上傳角色設定圖： tools/character-ref.jpg
+   （確保制服女孩臉孔／服裝一致）
+2. 從下方挑一張，整段英文 prompt 複製貼上（已內含統一風格＋場景＋數量鎖定）。
+3. 生完貼連結給 Claude，壓圖換檔＋更新 manifest，再做下一張。
+4. ★自檢★ 每張數字牌生完，自己先數一次花色符號數量＝牌的數字，不對就重生。
+
+【為何用英文】這次核心是「數量精準」，圖像模型對 EXACTLY N 的英文指令遵循度遠高於中文。
+【統一風格】每段開頭的 [STYLE] 都一樣，是為了全套一致；若某次生圖風格跑掉，把 [STYLE] 那段再貼一次提醒模型。
+【花色科技母題】權杖=能量微光／聖杯=金杯連結／寶劍=劍身鏨刻電路-資料紋／錢幣=金色六角形鏈上代幣(幾何鏈紋，非圓幣、非Metatron立方體)。
+
+執行順序：大牌4 → 權杖5 → 聖杯3 → 寶劍5 → 錢幣6 →（收尾低優先4）
+共 23 張核心 ＋ 4 張收尾。
+
+════════════════════════════════════════════════════════
+A. 大牌（4 張）
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔1〕major-03　皇后 The Empress　— 心形盾補上清楚的金星符號 ♀
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] The Empress: the schoolgirl sits on a plush cushioned throne in a lush field of golden wheat and abundant flowers, a stream flowing nearby, forest behind. She holds a scepter topped with a golden orb. Beside her throne stands a heart-shaped shield CLEARLY engraved with one large, unmistakable Venus symbol ♀ (a circle above a cross). Roses and lilies, fertile abundance, serene maternal expression.
+
+────────────────────────────────────────────────
+〔2〕major-10　命運之輪 Wheel of Fortune　— 中央改回「真正的輪」＋輪上三獸；四角四方獸維持
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] The Wheel of Fortune: dominating the center is a large, RECOGNIZABLE medieval wheel of fortune — a round wheel with spokes, its outer rim inscribed with the letters T-A-R-O and the alchemical symbols of the four elements. Atop the wheel sits a sphinx holding a sword; a serpent descends down the left side of the wheel; a jackal-headed Anubis figure rises up the right side. In the FOUR CORNERS rest the four winged living creatures — an angel, an eagle, a lion and a bull — each reading a book on clouds. The schoolgirl stands to one side gazing up at the wheel.
+
+────────────────────────────────────────────────
+〔3〕major-14　節制 Temperance　— 改回「雙杯互倒、水違反重力斜流」
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Temperance: the schoolgirl stands with one foot on land and one foot resting in a stream. She holds a golden chalice in EACH hand and pours water flowing in an impossible diagonal stream BETWEEN the two cups — water arcing upward against gravity from one cup to the other (the classic Temperance miracle of two interflowing cups). A glowing point of light on her forehead. Irises by the stream, a winding path to a distant sunrise between mountains. Calm, balanced mood.
+
+────────────────────────────────────────────────
+〔4〕major-16　高塔 The Tower　— 加回「兩個從塔頂倒栽墜落的人形」
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] The Tower: a tall stone tower struck at its crown by a bolt of golden lightning, the crown blasted off and flying away, stones and flames falling. TWO human figures tumble headfirst down from the top of the tower (rendered as dramatic falling silhouettes — dynamic but NOT gory, no blood). Dark stormy night sky. The schoolgirl stands at the base looking up in alarm. Sense of sudden upheaval and revelation.
+
+════════════════════════════════════════════════════════
+B. 權杖 Wands（5 張）— staffs faintly glow with energy
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔5〕wands-05　權杖五 Five of Wands　— EXACTLY 5，排清楚不交叉打結
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Five of Wands: five young people (the schoolgirl in the center plus four others) each hold EXACTLY ONE wooden staff, raised in a lively, playful mock-battle / competition. EXACTLY FIVE STAFFS TOTAL — one per person — spread apart and clearly arranged so all five are easily countable; AVOID tangled overlapping crossing. The staffs faintly glow with energy. Grassy field, bright sky, energetic but good-natured mood.
+
+────────────────────────────────────────────────
+〔6〕wands-06　權杖六 Six of Wands　— EXACTLY 6（手持1帶花環＋群眾5）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Six of Wands: the schoolgirl rides forward in triumph, holding ONE staff crowned with a laurel victory wreath. Behind her a cheering crowd raises EXACTLY FIVE more staffs. EXACTLY SIX STAFFS TOTAL — one held by her plus five in the crowd — all clearly countable and spread apart. The staffs faintly glow with energy. Victory procession, celebratory mood.
+
+────────────────────────────────────────────────
+〔7〕wands-08　權杖八 Eight of Wands　— EXACTLY 8 平行飛行
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Eight of Wands: EXACTLY EIGHT staffs fly in parallel through the open sky over a green river valley, all angled diagonally as if in swift flight. Count them clearly — eight, no more, no less, evenly spaced and parallel. The schoolgirl stands below looking up. The staffs trail faint energy. Open, airy, fast-moving feeling.
+
+────────────────────────────────────────────────
+〔8〕wands-09　權杖九 Nine of Wands　— EXACTLY 9（手持1＋左4＋右4，對稱）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Nine of Wands: the schoolgirl stands holding ONE staff defensively, looking wary and resilient. Behind her stand EIGHT more staffs planted upright like a fence — EXACTLY FOUR on her LEFT and EXACTLY FOUR on her RIGHT (symmetrical), making NINE staffs total including the one she holds. All nine evenly spaced and clearly countable. The staffs faintly glow with energy. Watchful, last-stand expression.
+
+────────────────────────────────────────────────
+〔9〕wands-10　權杖十 Ten of Wands　— EXACTLY 10，頂端散開可數
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Ten of Wands: the schoolgirl carries a heavy bundle of EXACTLY TEN staffs in her arms, walking toward a distant village. The TOPS of the ten staffs fan out clearly like a spread so all ten are individually countable (AVOID a tight, unreadable bundle). She bends slightly under the load — the burden of responsibility. The staffs faintly glow with energy.
+
+════════════════════════════════════════════════════════
+C. 聖杯 Cups（3 張）— golden chalices
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔10〕cups-06　聖杯六 Six of Cups　— EXACTLY 6，每杯插白色五瓣花
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Six of Cups: a nostalgic manor courtyard. The schoolgirl (the older child) kindly offers a golden chalice holding a white five-petaled flower to a small younger child. EXACTLY SIX golden chalices in total, EACH holding one white five-petaled flower, arranged clearly around the scene (some on a low stone wall, some on the ground) — all six easily countable. Warm, tender, innocent, nostalgic mood.
+
+────────────────────────────────────────────────
+〔11〕cups-08　聖杯八 Eight of Cups　— 改「背影離去」＋8杯（上排留缺口）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Eight of Cups: under a large moon at night, the schoolgirl walks AWAY from the viewer — seen FROM BEHIND, her back to us, face NOT visible — heading up a mountain path in quiet departure. On the ground she leaves behind EXACTLY EIGHT golden chalices stacked: five on the bottom row and three on top, with a clear visible GAP in the upper row (one cup's space left empty, symbolizing what she abandons). All eight countable. Melancholy, resolute mood.
+
+────────────────────────────────────────────────
+〔12〕cups-10　聖杯十 Ten of Cups　— 加「家庭群像」＋彩虹上 EXACTLY 10
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Ten of Cups: a joyful FAMILY scene — two parents and children (the schoolgirl among them) raising their arms in celebration and gratitude toward the sky. Above them arcs a rainbow holding EXACTLY TEN golden chalices, evenly spaced along the rainbow and clearly countable. A cozy country house and green rolling fields. Warm, blissful, family-harmony mood.
+
+════════════════════════════════════════════════════════
+D. 寶劍 Swords（5 張）— blades etched with fine glowing circuit-board / data patterns
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔13〕swords-05　寶劍五 Five of Swords　— EXACTLY 5，所有劍有人持或落地（不憑空懸浮）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Five of Swords: a gloomy field under stormy clouds. The schoolgirl in the foreground holds swords with a faintly smug look; two defeated figures walk away with bowed heads in the distance. EXACTLY FIVE swords total — every single sword is either HELD in someone's hand or RESTING on the ground; ABSOLUTELY NO swords floating in mid-air. All five clearly countable. The blades are etched with fine glowing circuit-board / data patterns. Tense, hollow-victory mood.
+
+────────────────────────────────────────────────
+〔14〕swords-07　寶劍七 Seven of Swords　— EXACTLY 7（懷抱5清楚＋插地2）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Seven of Swords: the schoolgirl tiptoes away from a camp of tents, sneakily carrying FIVE swords gathered in her arms — the five blades clearly separated and individually countable, NOT a blurry bundle — glancing back over her shoulder. TWO more swords remain planted upright in the ground behind her. EXACTLY SEVEN swords total (five carried + two planted). The blades are etched with fine glowing circuit-board / data patterns. Stealthy, cunning mood, dawn light.
+
+────────────────────────────────────────────────
+〔15〕swords-08　寶劍八 Eight of Swords　— EXACTLY 8（左4＋右4 對稱劍柵）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Eight of Swords: the schoolgirl stands blindfolded and LOOSELY bound (the bindings clearly escapable), surrounded by swords planted upright in the ground like a cage. EXACTLY EIGHT swords — FOUR on her LEFT and FOUR on her RIGHT (symmetrical), all evenly spaced and clearly countable. A distant castle on a cliff. The blades are etched with fine glowing circuit-board / data patterns. Mood of self-imposed entrapment, the way out unseen.
+
+────────────────────────────────────────────────
+〔16〕swords-09　寶劍九 Nine of Swords　— EXACTLY 9 水平排列（全部可見不被頭擋）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Nine of Swords: night. The schoolgirl sits up in bed, one hand to her face in anguish and sleepless worry. On the dark wall behind her hang EXACTLY NINE swords arranged HORIZONTALLY in parallel, stacked one above another — all nine fully visible and clearly countable (keep them ALL visible, none hidden behind her head). The blades are etched with fine glowing circuit-board / data patterns. A candle and books on the nightstand. Mood of anxiety, nightmares, dread.
+
+────────────────────────────────────────────────
+〔17〕swords-10　寶劍十 Ten of Swords　— EXACTLY 10 ＋強化「徹底終結」意象（俯臥、不血腥）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Ten of Swords: a scene of utter finality at dawn. The schoolgirl lies FACE-DOWN, collapsed on the ground in total defeat, while EXACTLY TEN swords are planted in a dramatic row/arc in the EARTH around and behind her body (symbolic rock-bottom ending — the swords stuck in the GROUND framing her, NOT piercing her body, NO blood, NOT gory). All ten clearly countable. The blades are etched with fine glowing circuit-board / data patterns. A faint sunrise glows on the horizon — the worst is over. Make this pose UNMISTAKABLY different from the seated Nine and the standing Eight.
+
+════════════════════════════════════════════════════════
+E. 錢幣 Pentacles（6 張）— golden HEXAGONAL on-chain blockchain tokens
+   （每枚六角形＋幾何鏈紋；非圓幣、非 Metatron 立方體）
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔18〕pentacles-05　錢幣五 Five of Pentacles　— 補「第二個貧病同伴」＋窗上 EXACTLY 5
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Five of Pentacles: a cold snowy night. TWO poor, weary figures trudge past the glowing stained-glass window of a church — the schoolgirl AND a second companion beside her (one of them limping or leaning, wrapped against the cold). They are shut out in the cold: hardship shared in companionship. The stained-glass window displays EXACTLY FIVE golden HEXAGONAL on-chain blockchain tokens (each engraved with a geometric chain-link / circuit motif), clearly countable. Snow falling; warm light inside contrasts their cold exclusion.
+
+────────────────────────────────────────────────
+〔19〕pentacles-06　錢幣六 Six of Pentacles　— EXACTLY 6（施捨場景）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Six of Pentacles: the schoolgirl stands holding a balance scale in one hand and giving a golden hexagonal token to two kneeling figures who reach up with open hands. EXACTLY SIX golden HEXAGONAL on-chain blockchain tokens (each engraved with a geometric chain-link / circuit motif) — distributed clearly (e.g. a few floating around her, one being handed over), all six countable. Theme of charity, fairness, the balance of giving and receiving.
+
+────────────────────────────────────────────────
+〔20〕pentacles-07　錢幣七 Seven of Pentacles　— EXACTLY 7（藤上不被葉遮）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Seven of Pentacles: the schoolgirl leans on a hoe, chin resting on her hands, gazing thoughtfully at a lush vine. Growing on the vine are EXACTLY SEVEN golden HEXAGONAL on-chain blockchain tokens (each engraved with a geometric chain-link / circuit motif), all fully visible and countable — NOT hidden behind leaves. Theme of patience, waiting for an investment to mature. Tilled garden.
+
+────────────────────────────────────────────────
+〔21〕pentacles-08　錢幣八 Eight of Pentacles　— EXACTLY 8（牆掛7＋手中1；清掉桌面成堆）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Eight of Pentacles: the schoolgirl as a diligent craftsman sits at a workbench, hammer and chisel in hand, carving a golden hexagonal token. EXACTLY EIGHT golden HEXAGONAL on-chain blockchain tokens total — SEVEN already finished and mounted/hung on the wall or post, plus ONE she is currently working on at the bench. NO extra piles or scattered tokens anywhere (remove all clutter). All eight countable. Each token engraved with a geometric chain-link / circuit motif. Theme of skill, apprenticeship, focused craft.
+
+────────────────────────────────────────────────
+〔22〕pentacles-09　錢幣九 Nine of Pentacles　— EXACTLY 9（左5＋右4）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Nine of Pentacles: the schoolgirl stands elegantly in a lush vineyard / manor garden, wearing a falconry glove with a hooded falcon perched on her arm. Among the grapevines are EXACTLY NINE golden HEXAGONAL on-chain blockchain tokens (each engraved with a geometric chain-link / circuit motif) — arranged FIVE on one side and FOUR on the other, all nine clearly countable. A manor house in the background. Theme of self-sufficiency, refined independent abundance.
+
+────────────────────────────────────────────────
+〔23〕pentacles-10　錢幣十 Ten of Pentacles　— EXACTLY 10（生命之樹分布）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Ten of Pentacles: a multi-generational FAMILY scene — an elderly couple, parents, and a child (the schoolgirl among them) gathered under an ivy-covered stone archway of a prosperous estate, with a golden retriever dog. EXACTLY TEN golden HEXAGONAL on-chain blockchain tokens (each engraved with a geometric chain-link / circuit motif) arranged across the scene in the classic Tree-of-Life pattern, all ten clearly countable. Theme of legacy, family wealth, lasting prosperity.
+
+════════════════════════════════════════════════════════
+F. 收尾・低優先（4 張）
+════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+〔24〕pentacles-13　錢幣皇后 Queen of Pentacles　— 代幣改回「統一六角鏈紋」（現為圓 Metatron 不一致）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Queen of Pentacles: the schoolgirl as a nurturing queen sits on a throne adorned with carved roses and lush greenery, cradling in her lap ONE large golden HEXAGONAL on-chain blockchain token engraved with a geometric chain-link / circuit motif (it MUST be a hexagon — NOT a round coin, NOT a Metatron's-cube sphere). A rabbit by her feet, roses and abundant flora all around. Warm, grounded, generous expression.
+
+────────────────────────────────────────────────
+〔25〕swords-13　寶劍皇后 Queen of Swords　— 改 3/4 側身姿勢（設計偏好）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] Queen of Swords: the schoolgirl as queen sits on a stone throne, holding ONE upright sword, shown in a THREE-QUARTER / SIDE profile pose (her body turned to the side rather than facing fully forward). The throne is carved with butterfly motifs; birds fly in the clouds above; one hand is raised. The blade is etched with fine glowing circuit-board / data patterns. Expression of clear-eyed, independent wisdom.
+
+────────────────────────────────────────────────
+〔26〕pentacles-14　錢幣國王 King of Pentacles　— 低優先（元素已對，僅求風格統一）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] King of Pentacles: the schoolgirl as a stately king sits on a throne carved with BULL'S HEADS and grapevines, holding a scepter in one hand and resting the other hand on ONE golden HEXAGONAL on-chain blockchain token (geometric chain-link / circuit motif). Background of a castle and vineyards. Theme of material mastery, abundance, stability and security.
+
+────────────────────────────────────────────────
+〔27〕major-12　倒吊人 The Hanged Man　— 低優先（頭髮已OK，僅讓裙襬更自然朝下垂）
+────────────────────────────────────────────────
+[STYLE] Ink-vintage tarot illustration, hand-drawn pen-and-ink linework with cross-hatching, muted earthy palette, aged parchment paper texture, antique storybook mood. The main character is the SAME schoolgirl as the uploaded reference image (navy sailor-collar seifuku with red neckerchief, brown hair with red ribbons, white knee-high socks, brown loafers) — keep face and outfit consistent. ART ONLY: no border, no frame, no text, no title, no numerals. Vertical 2:3 full-bleed composition.
+[SCENE] The Hanged Man: the schoolgirl hangs upside-down, suspended by ONE ankle tied to a horizontal tree branch, head pointing down, the other leg bent behind the knee forming a "4" shape. A golden halo of light glows behind her head. CRUCIAL: both her long hair AND her pleated skirt hang DOWNWARD toward her head / toward the ground, following gravity naturally — the skirt drapes down toward her head, it must NOT puff out stiffly into a bell shape. Serene, peaceful expression of willing surrender and a new perspective. Calm sky.
+
+============================================================
+完。23 張核心（01–23）＋ 4 張收尾（24–27）。
+重生後每張數字牌，本人會再親自逐支點數一次才算過。
+============================================================
