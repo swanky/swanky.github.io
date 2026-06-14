@@ -78,4 +78,8 @@ export const ART_IDS = new Set([
   'pentacles-08',
   'pentacles-09',
   'pentacles-10',
+  'pentacles-11',
+  'pentacles-12',
+  'pentacles-13', // ⚠ Gemini 暫代（343×512 放大，含內建邊框會雙框）；待 ChatGPT 額度回復重生
+  'pentacles-14', // ⚠ Gemini 暫代（343×512 放大，含內建邊框會雙框）；待 ChatGPT 額度回復重生
 ]);
