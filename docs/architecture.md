@@ -30,6 +30,7 @@ default.html  →  head.html + header.html + {{ content }} + footer.html + scrip
 技術顧問      /technical/    → articles/
 教育訓練      /education/    → modeling/ crypto/ (trading/ defi/ nft/) ai/ claude-code/
 人類圖        /human-design/ ← client-side tool (see Human Design Generator below)
+職場塔羅      /tarot/        ← client-side tool (see Tarot Reflection Tool below)
 媒體報導      /press/
 NFT策展       /nft/          ← separate mini-site, excluded from Jekyll
 ```
@@ -40,6 +41,7 @@ NFT策展       /nft/          ← separate mini-site, excluded from Jekyll
 - `technical` — technical consultant pages and `categories: [technical]` posts
 - `education` — education pages and `categories: [claude-code]` posts
 - `human-design` — human design generator page (`/human-design/`)
+- `tarot` — workplace tarot reflection tool (`/tarot/`)
 - `press` — press/media pages
 - `nft` — NFT pages
 - `home` — homepage only
@@ -81,6 +83,16 @@ A self-contained, client-side app — no backend; birth data never leaves the br
 - **Tests** (`tests/human-design/*.test.mjs`): run with `npm test` (`node --test`). Covers astro, timezone, geometry, mandala, judge, and golden fixtures.
 - **Tooling** (`tools/`): render & geometry-validation POCs, including `hd-report-poc.*` (paid-report prototype).
 - **astronomy-engine loading** (non-obvious — see Known Gotchas in `CLAUDE.md`): browser uses the UMD global `Astronomy`; Node tests use `createRequire()` via the vendored `assets/vendor/astronomy-engine/package.json` `"type":"commonjs"` override.
+
+## Tarot Reflection Tool (`/tarot/`)
+
+A client-side tool framed as a **workplace reflection** aid (not fortune-telling / divination): write a question → spread is recommended by question complexity → draw (crypto-shuffled) → per-position readings → funnels to paid async/1:1 guidance (mailto + stablecoin), mirroring the HD funnel. Positioning, copy, and safety boundaries come from the owner's `tarot-1on1` skill (tarot as a reflection mirror).
+
+- **Page**: `tarot/index.html` — sets `use_tarot: true`; injects `WebApplication` + `FAQPage` JSON-LD via `extra_head`. Loaded by `_includes/scripts.html`; no third-party vendor, so it avoids the HD `type:module`/UMD gotcha.
+- **Engine** (`assets/js/tarot/`, ES modules, DOM-free logic layer is Node-testable): `tarot-rng` (crypto.getRandomValues + Fisher-Yates), `tarot-deck` (78-card structure), `tarot-spreads` (single/three/five + `recommendSpread` complexity heuristic), `tarot-draw`, `tarot-data-texts` (merges `tarot-text-{major,wands,cups,swords,pentacles}.js` — original zh-TW four-part readings), `tarot-card-svg` (programmatic card faces), `tarot-export-svg` (PNG + QR/CTA), `tarot-ui` (browser entry; defensive `setHTML`/`setText` like `hd-ui`).
+- **Tests** (`tests/tarot/tarot.test.mjs`, `node --test`): deck integrity, shuffle/draw fairness, reading completeness (all 78 have 4 parts), and a banned-scare-word regression.
+- **Content spec**: `tools/tarot-writing-spec.md` — voice + 7 safety rules used to author the card readings (no event prediction, no scare words, reversed = another angle, refer out when needed).
+- **Gotcha**: the card-face SVG is re-parsed as **strict XML** for PNG export, so font-family names inside `style="…"` MUST use single quotes — double quotes break the attribute and the export silently fails to decode (on-page HTML render is lenient and hides the bug).
 
 ## Education — Claude Code course page (`/education/claude-code/`)
 

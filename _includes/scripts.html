@@ -17,3 +17,8 @@
 <script type="module" src="{{ '/assets/js/human-design/hd-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_tarot %}
+<!-- 職場塔羅工具：純前端 ES module（無第三方 vendor、無 type:module 衝突） -->
+<script type="module" src="{{ '/assets/js/tarot/tarot-ui.js' | relative_url }}"></script>
+{% endif %}
+
