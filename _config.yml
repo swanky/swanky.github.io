@@ -42,6 +42,9 @@ exclude:
   - package.json
   - tests
   - tools
+  # Print-resolution tarot originals (1024×1536 PNG): kept in git for future
+  # print use, but excluded from the build so they don't bloat the deployed _site.
+  - assets/img/tarot-print
 
 # Keep these files even though they start with underscore or dot
 include:
