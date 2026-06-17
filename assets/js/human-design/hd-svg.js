@@ -19,6 +19,7 @@ const CARD = { w: 820, h: 800, graphX: 170, graphY: -4 };
 const COL = { titleY: 46, top: 74, rowH: 44, leftX: 26, rightX: 690 };
 const LEGEND_Y = 766;       // 底部圖例中線
 const CTA_H = 150;          // PNG 匯出時卡片下方追加的 CTA 區高度
+const HEADER_H = 64;        // PNG 匯出時卡片上方追加的標題帶高度（放姓名／預設標題）
 
 const COLORS = {
   gold: '#E5A300', goldGate: '#5C4400', personality: '#1d1d1f', design: '#C0392B',
@@ -256,11 +257,24 @@ export function renderChartCard(svg, chart) {
 // 建構匯出用 SVG clone（卡片 + 底部 CTA 區：QR + 摘要 + 網址）。
 // 抽出成可匯出函式，便於離線預覽/測試（不必觸發實際下載即可檢視版面）。
 export function buildExportSvg(svg, opts = {}) {
-  const fullH = CARD.h + CTA_H;
+  // 有標題文字才追加頂部標題帶（無則維持原高度，向下相容）
+  const headerH = opts.headerTitle ? HEADER_H : 0;
+  const fullH = headerH + CARD.h + CTA_H;
   const clone = svg.cloneNode(true);
-  clone.setAttribute('viewBox', `0 0 ${CARD.w} ${fullH}`);
+  clone.setAttribute('viewBox', `0 ${-headerH} ${CARD.w} ${fullH}`);
   clone.setAttribute('width', CARD.w);
   clone.setAttribute('height', fullH);
+
+  // 頂部標題帶（卡片上方）：放姓名或預設標題。延伸卡片米白底到頂部，圓角自然落在最上緣。
+  if (headerH) {
+    const bg = clone.querySelector('.hd-card-bg');
+    if (bg) { bg.setAttribute('y', -headerH); bg.setAttribute('height', CARD.h + headerH); }
+    const hg = el('g', { class: 'hd-header' }, clone);
+    el('text', {
+      x: CARD.w / 2, y: -headerH / 2, 'text-anchor': 'middle', 'dominant-baseline': 'central',
+      style: `font:700 30px ${FONT}`, fill: '#1d1d1f',
+    }, hg).textContent = opts.headerTitle;
+  }
 
   // CTA 區（卡片下方）：QR Code + 圖卡摘要 + 網址，引導觀者也來生成
   const cta = el('g', { class: 'hd-cta' }, clone);

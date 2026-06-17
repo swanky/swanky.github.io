@@ -311,12 +311,21 @@ function onDownloadPng() {
 
   // 卡片可見字幕：人/Claude 一眼可讀，也是 metadata 遺失時的退路。
   const dateLabel = `${c.input.year}/${pad(c.input.month)}/${pad(c.input.day)}`;
-  const placeLabel = state.cityLabel ? `　・　${state.cityLabel}` : '';
+  const tzLabel = c.tzInfo?.labelZh || '';
+  // 地點：有城市顯示「城市（時區）」、無城市（手動時區）只顯示時區——避免可見層只剩日期
+  const locLabel = state.cityLabel ? `${state.cityLabel}（${tzLabel}）` : tzLabel;
+  const locPart = locLabel ? `　・　${locLabel}` : '';
   const sub = unknownTime
-    ? `${dateLabel}（未提供時間・以正午計）${placeLabel}`
-    : `${dateLabel} ${hm}${placeLabel}`;
+    ? `${dateLabel}（未提供時間・以正午計）${locPart}`
+    : `${dateLabel} ${hm}${locPart}`;
+
+  // 頂部標題帶文字：優先用使用者填的姓名，未填則用預設值。
+  // 未來若改為「必填姓名」或想換預設語，改這兩行即可（彈性集中於此）。
+  const DEFAULT_CHART_TITLE = '我的人類圖';
+  const headerTitle = name || DEFAULT_CHART_TITLE;
 
   exportChartPng(state.svg, c, {
+    headerTitle,
     titleText: `${TYPES[c.type].nameZh}・${AUTHORITIES[c.authority].nameZh}・${c.profile}`,
     subText: sub,
     filename: `human-design-${c.type}-${c.input.year}${pad(c.input.month)}${pad(c.input.day)}-${pad(c.input.hour)}${pad(c.input.minute)}.png`,
