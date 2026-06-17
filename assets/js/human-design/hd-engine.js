@@ -6,13 +6,16 @@ import { positionsAt, designTimeMs, PLANET_IDS } from './hd-astro.js';
 import { lonToGateLine, lonToZodiac } from './hd-mandala.js';
 import { zonedToUtc, zonedToUtcManual } from './hd-timezone.js';
 import { judge } from './hd-judge.js';
+import { getFixing } from './hd-data-fixing.js';
 
-// 行星黃經組 → { sun: { lon, gate, line, degInGate, zodiacLabel }, ... }
+// 行星黃經組 → { sun: { lon, gate, line, degInGate, zodiacLabel, fixing }, ... }
+// fixing：'exalted'（固定於擢升 ▲）| 'detriment'（固定於衰落 ▼）| null（含交點皆 null）
 function mapPositions(lons) {
   const out = {};
   for (const id of PLANET_IDS) {
     const lon = lons[id];
-    out[id] = { lon, ...lonToGateLine(lon), zodiacLabel: lonToZodiac(lon).label };
+    const gl = lonToGateLine(lon);
+    out[id] = { lon, ...gl, zodiacLabel: lonToZodiac(lon).label, fixing: getFixing(id, gl.gate, gl.line) };
   }
   return out;
 }

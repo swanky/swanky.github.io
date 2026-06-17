@@ -271,13 +271,14 @@ function renderPlanetsAdvanced(chart) {
   const cell = (pos, cls) => {
     const g = GATES[pos.gate];
     const kw = g ? ` <span class="hd-pt-kw">${g.hexZh}·${g.keyword}</span>` : '';
-    return `<td class="${cls}">${pos.gate}.${pos.line}${kw}</td>`;
+    const fix = pos.fixing ? ` <span class="hd-pt-fix">${pos.fixing === 'exalted' ? '▲' : '▼'}</span>` : '';
+    return `<td class="${cls}">${pos.gate}.${pos.line}${fix}${kw}</td>`;
   };
   const rows = PLANETS.map((pl) =>
     `<tr><td>${pl.glyph} ${pl.nameZh}</td>${cell(chart.design[pl.id], 'hd-pt-d')}${cell(chart.personality[pl.id], 'hd-pt-p')}</tr>`).join('');
   return `<details class="hd-advanced-planets">
     <summary>完整行星位置與啟動閘門（進階）</summary>
-    <p class="hd-planets-note"><strong class="hd-pt-p">個性（黑）</strong>＝出生當下的你（意識層）；<strong class="hd-pt-d">設計（紅）</strong>＝出生前約 88 天（無意識、身體層）。每格為該行星落入的「閘門.爻」，後方是閘門的卦名與關鍵詞——逐閘與逐爻的深入解讀屬付費報告。</p>
+    <p class="hd-planets-note"><strong class="hd-pt-p">個性（黑）</strong>＝出生當下的你（意識層）；<strong class="hd-pt-d">設計（紅）</strong>＝出生前約 88 天（無意識、身體層）。每格為該行星落入的「閘門.爻」，後方是閘門的卦名與關鍵詞——逐閘與逐爻的深入解讀屬付費報告。<br>數字旁的 <span class="hd-pt-fix">▲</span> 表示該行星「固定於擢升」、<span class="hd-pt-fix">▼</span> 表示「固定於衰落」（依標準，南北交點不計）。</p>
     <table class="hd-planet-table">
       <thead><tr><th>行星</th><th class="hd-pt-d">設計（紅）</th><th class="hd-pt-p">個性（黑）</th></tr></thead>
       <tbody>${rows}</tbody>

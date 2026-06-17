@@ -74,6 +74,9 @@ function styleText() {
     .hd-pl-val { font: 600 14px ${FONT}; dominant-baseline: central; fill: ${COLORS.text}; }
     .hd-pl-row.is-d .hd-pl-glyph { fill: ${COLORS.design}; }
     .hd-pl-row.is-p .hd-pl-glyph { fill: ${COLORS.personality}; }
+    .hd-pl-fix { font-size: 11px; }
+    .hd-pl-row.is-d .hd-pl-fix { fill: ${COLORS.design}; }
+    .hd-pl-row.is-p .hd-pl-fix { fill: ${COLORS.personality}; }
     .hd-card-title { font: 700 18px ${FONT}; fill: #111; }
     .hd-card-sub { font: 400 12px ${FONT}; fill: #888; }
     .hd-watermark { font: 400 11px ${FONT}; fill: #b8b8b8; }
@@ -243,13 +246,17 @@ export function renderChartCard(svg, chart) {
     core.classList.toggle('is-on', !!(act && act.p && act.d));
   }
 
-  // 行星雙欄
+  // 行星雙欄（gate.line ＋ 固定箭頭：▲ 擢升 / ▼ 衰落）
   for (const row of svg.querySelectorAll('.hd-pl-row')) {
     const side = row.getAttribute('data-side');
     const planet = row.getAttribute('data-planet');
     const data = side === 'design' ? chart.design : chart.personality;
     const cell = row.querySelector('[data-role="val"]');
-    cell.textContent = `${data[planet].gate}.${data[planet].line}`;
+    const pos = data[planet];
+    cell.textContent = `${pos.gate}.${pos.line}`; // 賦值會清掉舊 tspan，重繪安全
+    if (pos.fixing) {
+      el('tspan', { class: 'hd-pl-fix', dx: 4 }, cell).textContent = pos.fixing === 'exalted' ? '▲' : '▼';
+    }
   }
   return svg;
 }
