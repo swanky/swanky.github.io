@@ -289,10 +289,38 @@ function renderPlanetsAdvanced(chart) {
 function onDownloadPng() {
   if (!state.lastChart || !state.svg) return;
   const c = state.lastChart;
+  const pad = (n) => String(n).padStart(2, '0');
+  const ymd = `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`;
+  const hm = `${pad(c.input.hour)}:${pad(c.input.minute)}`;
+  const unknownTime = !!$('hd-unknown-time')?.checked;
+  const name = ($('hd-name')?.value || '').trim();
+
+  // 內嵌 PNG 的出生資料：欄位對齊報告端 build_data_auto.py（date/time/place 為核心，
+  // place 城市名即足以重解析時區）。詳見 docs/plan-hd-png-birth-metadata.md。
+  const meta = {
+    v: 1,
+    name: name || null,
+    date: ymd,
+    time: hm,
+    place: state.cityLabel || null,
+    tz: (typeof c.input.tz === 'string') ? c.input.tz : null,
+    offset: (c.tzInfo && typeof c.tzInfo.offsetMin === 'number') ? c.tzInfo.offsetMin : null,
+    unknown_time: unknownTime,
+    source: 'swanky.github.io/human-design',
+  };
+
+  // 卡片可見字幕：人/Claude 一眼可讀，也是 metadata 遺失時的退路。
+  const dateLabel = `${c.input.year}/${pad(c.input.month)}/${pad(c.input.day)}`;
+  const placeLabel = state.cityLabel ? `　・　${state.cityLabel}` : '';
+  const sub = unknownTime
+    ? `${dateLabel}（未提供時間・以正午計）${placeLabel}`
+    : `${dateLabel} ${hm}${placeLabel}`;
+
   exportChartPng(state.svg, c, {
     titleText: `${TYPES[c.type].nameZh}・${AUTHORITIES[c.authority].nameZh}・${c.profile}`,
-    subText: `${c.input.year}/${c.input.month}/${c.input.day}`,
-    filename: `human-design-${c.type}-${c.input.year}${String(c.input.month).padStart(2, '0')}${String(c.input.day).padStart(2, '0')}.png`,
+    subText: sub,
+    filename: `human-design-${c.type}-${c.input.year}${pad(c.input.month)}${pad(c.input.day)}-${pad(c.input.hour)}${pad(c.input.minute)}.png`,
+    meta,
     onError: () => showError('圖卡匯出失敗，請改用瀏覽器截圖。'),
   });
   gtag('event', 'hd_download_png', { type: c.type });
