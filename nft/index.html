@@ -48,6 +48,8 @@
 	.clonex-meta { padding:10px 12px; color:#e8e6f0; font-size:.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 	.clonex-skeleton { aspect-ratio:1/1; background:#1d1a2b; border-radius:12px; animation:clonexpulse 1.4s ease-in-out infinite; }
 	@keyframes clonexpulse { 0%,100%{opacity:.5;} 50%{opacity:1;} }
+	/* 桌面讓精選收藏排成一行（5 欄），消除 4+1 孤兒行 */
+	@media (min-width:992px){ #clonex-grid > [class*="col-"]{ flex:0 0 20%; max-width:20%; } }
 	</style>
 </head>
 <body>
