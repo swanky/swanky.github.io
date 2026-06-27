@@ -29,6 +29,26 @@
 	<link rel="stylesheet" href="../nft/assets/css/style.css">
 
 	<title>Swanky NFT &mdash; Art Collection</title>
+
+	<style>
+	.clonex-section { background:#13111C; }
+	.clonex-section .heading { color:#fff; }
+	.clonex-lead { color:#b8b3c7; max-width:640px; margin:0 auto; }
+	.clonex-controls { margin:22px 0 6px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+	.btn-clonex { background:#6E56CF; color:#fff; border:none; border-radius:8px; padding:12px 24px; font-weight:700; cursor:pointer; transition:background .2s; }
+	.btn-clonex:hover { background:#5a45b0; }
+	.btn-clonex-ghost { background:transparent; color:#b8b3c7; border:1px solid #3a3550; border-radius:8px; padding:12px 22px; cursor:pointer; transition:color .2s,border-color .2s; }
+	.btn-clonex-ghost:hover { color:#fff; border-color:#6E56CF; }
+	.clonex-status { color:#b8b3c7; font-size:.95rem; margin-top:14px; min-height:1.4em; }
+	.clonex-status strong { color:#fff; }
+	.clonex-card { display:block; background:#1d1a2b; border:1px solid #2a2640; border-radius:12px; overflow:hidden; text-decoration:none; transition:transform .2s,border-color .2s; }
+	.clonex-card:hover { transform:translateY(-4px); border-color:#6E56CF; }
+	.clonex-card img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+	.clonex-noimg { width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; color:#6E56CF; font-weight:700; background:#15131f; }
+	.clonex-meta { padding:10px 12px; color:#e8e6f0; font-size:.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	.clonex-skeleton { aspect-ratio:1/1; background:#1d1a2b; border-radius:12px; animation:clonexpulse 1.4s ease-in-out infinite; }
+	@keyframes clonexpulse { 0%,100%{opacity:.5;} 50%{opacity:1;} }
+	</style>
 </head>
 <body>
 
@@ -264,6 +284,24 @@
 		</div>
 	</div>
 
+	<!-- Section: 鏈上 CloneX 收藏（連結錢包・即時讀取） -->
+	<div class="section clonex-section">
+		<div class="container">
+			<div class="row justify-content-center mb-4">
+				<div class="col-lg-8 text-center">
+					<h2 class="heading">鏈上 CloneX 收藏</h2>
+					<p class="clonex-lead">以下收藏直接從以太坊鏈上即時讀取。你也可以連結自己的錢包，展示你持有的 CloneX。</p>
+					<div class="clonex-controls">
+						<button id="clonex-connect" class="btn-clonex" type="button">🦊 連結錢包看我的收藏</button>
+						<button id="clonex-back" class="btn-clonex-ghost" type="button" style="display:none;">← 返回史旺基的收藏</button>
+					</div>
+					<p id="clonex-status" class="clonex-status"></p>
+				</div>
+			</div>
+			<div id="clonex-grid" class="row g-4 justify-content-center"></div>
+		</div>
+	</div>
+
 	<div class="site-footer bg-light">
 		<div class="container">
 			<div class="row justify-content-center copyright">
@@ -315,5 +353,6 @@
 		<script src="../nft/assets/js/navbar.js"></script>
 		<script src="../nft/assets/js/counter.js"></script>
 		<script src="../nft/assets/js/custom.js"></script>
+		<script type="module" src="../nft/assets/js/clonex-gallery.js"></script>
 	</body>
 	</html>
