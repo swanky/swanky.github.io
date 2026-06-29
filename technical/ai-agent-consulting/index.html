@@ -12,9 +12,12 @@ breadcrumbs:
   - name: AI Agent 導入顧問
     url: /technical/ai-agent-consulting/
 extra_css: |
+  /* 統一限寬 760 並水平置中，讓區塊標題與項目清單左緣對齊（與 .agentic-thesis 同寬），修正原本約 150px 的錯位 */
+  .service-details .series-group-title,
+  .service-details .service-list { max-width: 760px; margin-left: auto; margin-right: auto; }
   .service-details .series-group-title { margin-top: 2.4rem; }
-  .service-details ul { margin: .4rem 0 0; padding-left: 1.3rem; }
-  .service-details ul li { margin-bottom: .6rem; line-height: 1.75; }
+  .service-details .service-list { margin-top: .4rem; margin-bottom: 0; padding-left: 1.3rem; }
+  .service-details .service-list li { margin-bottom: .6rem; line-height: 1.75; }
   .service-details .cta-block { text-align: center; margin: 2.5rem 0 1rem; }
   .service-details .cta-block .btn-get-started { display: inline-block; padding: 12px 34px; border-radius: 50px; background: #E5A300; color: #fff; font-weight: 600; letter-spacing: 1px; text-decoration: none; transition: background .3s; }
   .service-details .cta-block .btn-get-started:hover { background: #F5C53B; color: #fff; }
