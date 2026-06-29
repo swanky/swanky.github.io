@@ -12,9 +12,9 @@
   icon: bi-pen
   color: cyan
   description: >
-    Java 企業級架構、敏捷轉型教練，以及區塊鏈／Web3 技術應用規畫與研發顧問。曾主持政府區塊鏈計畫、任職 ITM 技術研發總監。
-  url: /technical/
-  cta_text: 洽談技術顧問
+    主力服務：AI Agent／Claude Code 團隊導入——把 AI 變成可重複、可驗證、可交付的工程流程。另提供 Java 企業級架構、敏捷轉型與區塊鏈／Web3 技術顧問。
+  url: /technical/ai-agent-consulting/
+  cta_text: 看 AI Agent 導入顧問
   aos_delay: 100
 
 - title: 教育訓練
