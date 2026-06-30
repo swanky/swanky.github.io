@@ -13,6 +13,12 @@ layout: default
         <p class="article-meta">{{ page.date | date: "%Y-%m-%d" }} · 作者 / 史旺基</p>
       </div>
 
+      {% if page.hero_image and page.cover_image %}
+      <div class="article-cover">
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+      </div>
+      {% endif %}
+
       <div class="post-content">
         {{ content }}
       </div>
