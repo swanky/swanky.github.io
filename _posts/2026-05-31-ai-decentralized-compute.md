@@ -4,6 +4,7 @@ date: 2026-05-31 00:14:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/web3/ai-decentralized-compute.svg
+hero_image: true
 seo_title: AI × 加密：去中心化算力網路（DCN）完整解析｜開源 AI 與 GPU 共享的新機會
 description: "AI 需要海量算力，加密提供了協調算力的激勵機制——當兩者相遇，去中心化算力網路（DCN）成為熱門賽道。一文看懂 DCN 在解決什麼問題、技術突破與真實挑戰。AI × Crypto 入門。"
 keywords: AI Crypto,去中心化算力,DCN,GPU 共享,開源 AI,Bittensor,AI 推理,DePIN,Web3,區塊鏈,史旺基,Swanky Studio

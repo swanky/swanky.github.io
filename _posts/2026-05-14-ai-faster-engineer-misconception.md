@@ -5,6 +5,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-faster-engineer-misconception.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E6%8A%8A-ai-%E7%95%B6%E6%88%90%E6%9B%B4%E5%BF%AB%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%98%AF-%E5%9C%98%E9%9A%8A%E6%9C%80%E8%B2%B4%E7%9A%84%E8%AA%A4%E8%A7%A3-swanky-hsiao-7tkhc"
 description: "把 AI 當成「更快的工程師」是 IT 團隊最貴的誤解。AI 越強，工程紀律越不能消失，必須升級——清晰需求、明確驗收、架構邊界、自動化 gates，才是 AI 協作能跑得快又跑得穩的關鍵。"
 keywords: Claude Code, Agentic AI, 工程紀律, Example Mapping, OpenSpec, TDD, CI/CD, BDD, 軟體工程, Swanky Hsiao, 架構設計, 自動化測試, 工程管理, DevOps, 代碼品質

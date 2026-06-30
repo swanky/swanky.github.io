@@ -4,6 +4,7 @@ date: 2026-05-31 00:03:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-bond-tokenization.svg
+hero_image: true
 seo_title: 債券代幣化全解｜DvP 原子交割、台灣公債市場與 RWA 機會
 description: "債券是機構最積極代幣化的資產。一文看懂債券的本質、台灣公債與櫃買中心制度、FOP 與 DvP 交割模式的差異，以及為什麼債券代幣化是台灣 RWA 的主戰場。"
 keywords: 債券代幣化,RWA,DvP,券款對付,公債,台灣債券市場,櫃買中心,集保,代幣化債券,T+0,區塊鏈,史旺基,Swanky Studio

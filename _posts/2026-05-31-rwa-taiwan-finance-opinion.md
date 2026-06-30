@@ -4,6 +4,7 @@ date: 2026-05-31 00:08:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-taiwan-finance-opinion.svg
+hero_image: true
 seo_title: RWA 對台灣金融業的真實意義｜資產上鏈的機會、挑戰與時間窗口（觀點）
 description: "RWA 不是又一個會泡沫化的加密熱詞。從參加機構、金融監理到技術三個視角，談資產代幣化對台灣金融業的真實意義，以及為什麼 2026 是台灣不能錯過的時間窗口。一位資工博士兼金融科技工作者的觀點。"
 keywords: RWA,現實世界資產,資產代幣化,台灣金融,金融科技,區塊鏈,DvP,集保,CBDC,穩定幣,觀點,史旺基,Swanky Studio

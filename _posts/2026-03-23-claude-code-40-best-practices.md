@@ -7,6 +7,7 @@ tags: [claude-code]
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-40-practices.svg
+hero_image: true
 description: "40 個 Claude Code 最值得先學起來的最佳實踐，從基礎設定、工作流加速、上下文管理，到自動化驗證與平行多代理協作，幫你把 AI 開發工具從補字工具升級為完整的協作作業系統。"
 keywords: Claude Code,AI coding,最佳實踐,開發加速,工作流優化,技術顧問,史旺基,Swanky Studio
 ---

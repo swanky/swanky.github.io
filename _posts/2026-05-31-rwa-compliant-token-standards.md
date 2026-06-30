@@ -4,6 +4,7 @@ date: 2026-05-31 00:01:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-compliant-token-standards.svg
+hero_image: true
 seo_title: ERC-3643 vs ERC-1404 設計哲學｜合規型代幣標準與 CMTAT 解析
 description: "ERC-3643 與 ERC-1404 代表 RWA 合規型代幣的兩種哲學：整合派框架 vs 簡化派介面。一文看懂兩者的取捨、gas 與授權差異，以及 CMTAT 為何選擇同時支援兩者。"
 keywords: ERC-3643,ERC-1404,CMTAT,合規型代幣,證券代幣標準,RWA,T-REX,RuleEngine,ONCHAINID,智能合約,區塊鏈,史旺基

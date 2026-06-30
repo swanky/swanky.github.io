@@ -6,6 +6,7 @@ tags: [claude-code]
 layout: article
 nav_active: technical
 cover_image: /assets/img/linkedin/ai-executor-orchestrator.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/ai-%E6%99%82%E4%BB%A3%E8%81%B7%E5%A0%B4%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%88%86%E6%B0%B4%E5%B6%BA%E5%B7%B2%E7%B6%93%E4%B8%8D%E6%98%AF-junior-senior%E8%80%8C%E6%98%AF-executor-swanky-hsiao-hviec"
 description: "AI 快速壓縮執行成本，卻放大了判斷與編排的價值。職場分水嶺不再是年資，而是你停留在 Executor，還是已經成為 Orchestrator。"
 keywords: AI,職場技能,AI工具,技術管理,Orchestrator,Executor,史旺基,Swanky Studio

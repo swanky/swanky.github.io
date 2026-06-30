@@ -4,6 +4,7 @@ date: 2026-05-31 00:06:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-infrastructure-hsm-pqc.svg
+hero_image: true
 seo_title: HSM 與後量子密碼學：RWA 資產代幣化的隱形基建｜私鑰保管與量子威脅
 description: "RWA 把真實資產搬上鏈，但真正撐住信任的是看不見的基礎建設：HSM 硬體保管與後量子密碼學（PQC）。一文看懂 Mt. Gox 的教訓、FIPS 140-3 等級、量子威脅與 NIST PQC 標準。"
 keywords: HSM,硬體安全模組,後量子密碼學,PQC,FIPS 140-3,ML-DSA,ML-KEM,NIST,私鑰保管,RWA,資產代幣化,量子計算,史旺基,Swanky Studio

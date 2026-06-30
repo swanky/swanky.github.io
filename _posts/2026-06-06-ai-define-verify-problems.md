@@ -5,6 +5,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-define-verify-problems.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/ai-%E6%AD%A3%E5%9C%A8%E6%94%B9%E5%AF%AB%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E7%9A%84%E7%93%B6%E9%A0%B8%E5%BE%9E%E8%AA%B0%E6%9C%83%E5%AF%AB-code%E5%88%B0%E8%AA%B0%E8%83%BD%E5%AE%9A%E7%BE%A9%E8%88%87%E9%A9%97%E8%AD%89%E5%95%8F%E9%A1%8C-swanky-hsiao-dks8c"
 description: "AI 讓寫 code 變便宜，卻讓判斷變昂貴。軟體開發的瓶頸正從「誰會寫 code」移到「誰能定義與驗證問題」——規格化、測試先行與工程治理，才是團隊真正稀缺的能力。"
 keywords: AI代碼生成, 軟體工程, 工程治理, Claude Code, Example Mapping, OpenSpec, TDD, Amdahl 定律, 需求規格化, 代碼審查, Agentic Engineering, Kent Beck, 軟體開發瓶頸, 史旺基, Swanky Hsiao, Swanky Studio

@@ -5,6 +5,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-coding-design-boundaries.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/ai-%E5%AF%AB-code-%E8%B6%8A%E5%BF%AB%E5%AE%88%E4%BD%8F%E8%A8%AD%E8%A8%88%E9%82%8A%E7%95%8C%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%B6%8A%E8%B2%B4-swanky-hsiao-i6n4c"
 description: "在 AI 編程時代，代碼生成變便宜，但工程師的價值轉向守住設計邊界、建立規範流程、維持代碼品質，成熟的工程團隊因此變得更有槓桿。"
 keywords: AI Coding, Claude Code, 軟體工程, 設計邊界, 代碼品質, TDD, DDD, Swanky Hsiao, 技術債, 工程流程, 模組化, 需求對齊, 工程管理

@@ -7,6 +7,7 @@ tags: [claude-code]
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/agentic-engineering-patterns-guide.svg
+hero_image: true
 description: "Django 共同作者 Simon Willison 把「代理式工程」整理成一份系統性的活文件指南。我讀完全文，挑出對台灣技術團隊最有用的重點——從 agentic engineering 的定義、vibe coding 的分界、好程式的成本，到子代理、測試閉環與把提示詞變資產——並對照我自己帶團隊導入 Claude Code 的經驗。"
 keywords: Agentic Engineering,Simon Willison,Claude Code,vibe coding,AI coding,coding agent,subagents,TDD,提示詞,技術領導,團隊導入AI,史旺基,Swanky Studio
 ---

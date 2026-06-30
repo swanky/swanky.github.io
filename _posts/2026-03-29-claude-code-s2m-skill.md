@@ -7,6 +7,7 @@ tags: [claude-code]
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-s2m-skill.svg
+hero_image: true
 description: "自製 Claude Code Skill：s2m（slides-to-markdown），一句指令將 PPTX 或 PDF 簡報逐頁截圖、AI 解讀、Mermaid 圖表還原，產出完整 Markdown 文件。含安裝教學與技術解析。"
 keywords: Claude Code,Skill,簡報轉Markdown,PPTX,PDF,Mermaid,slides-to-markdown,AI工具,史旺基
 ---

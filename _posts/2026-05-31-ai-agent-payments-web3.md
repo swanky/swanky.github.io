@@ -4,6 +4,7 @@ date: 2026-05-31
 categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/ai-agent-payments-web3.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%AD%89-ai-agent-%E9%96%8B%E5%A7%8B%E8%87%AA%E5%B7%B1%E4%BB%98%E9%8C%A2%E5%AE%83%E5%80%91%E5%B0%B1%E6%9C%83%E5%9B%9E%E9%A0%AD%E6%89%BE%E4%B8%8A-web3-swanky-hsiao-agu3c"
 description: "Web3 的人都在學 AI，AI 的人卻不學 Web3。但當 AI Agent 開始自己付錢，這條單行道就會反轉——加密軌道將成為機器經濟的必要基礎建設。"
 keywords: AI Agent, Web3, 穩定幣, 機器對機器支付, x402, Google AP2, Agentic Engineering, Swanky Hsiao, 信任基礎設施, 自動化治理

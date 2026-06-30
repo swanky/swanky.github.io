@@ -4,6 +4,7 @@ date: 2026-05-31 00:07:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-global-regulation.svg
+hero_image: true
 seo_title: 全球 RWA 監管地圖｜Project Guardian・Project Ensemble・美國 DTC・台灣 STO 全解
 description: "RWA 沒有國界，但監理有。一文看懂全球資產代幣化的監管版圖：新加坡 Project Guardian、香港 Project Ensemble、美國 DTC 試點、歐盟 DORA，以及台灣 STO 的教訓與機會。"
 keywords: RWA 監管,Project Guardian,Project Ensemble,DTC,Canton Network,GENIUS Act,DORA,STO,金管會,CBDC,資產代幣化,MAS,HKMA,史旺基,Swanky Studio

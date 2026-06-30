@@ -4,6 +4,7 @@ date: 2026-01-10
 categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/etherfi-cashflow.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E5%BE%9E%E8%B3%87%E7%94%A2%E5%83%B9%E6%A0%BC%E5%88%B0%E8%B3%87%E7%94%A2%E8%B2%A0%E5%82%B5%E8%A1%A8%E5%A6%82%E4%BD%95%E7%94%A8-etherfi-%E6%8A%8A%E5%8A%A0%E5%AF%86%E8%B3%87%E7%94%A2%E8%AE%8A%E6%88%90%E5%8F%AF%E7%94%A8%E7%9A%84%E7%8F%BE%E9%87%91%E6%B5%81-swanky-hsiao-2dohc"
 description: "實測 ether.fi Cash Card，探索加密資產如何透過 DeFi 借貸與穩定幣支付，成為日常可用的現金流工具。"
 keywords: DeFi,ether.fi,加密貨幣,穩定幣,現金流,Web3,史旺基,Swanky Studio

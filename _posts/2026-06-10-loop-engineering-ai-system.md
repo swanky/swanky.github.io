@@ -5,6 +5,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/loop-engineering-ai-system.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/loop-engineering%E4%BD%A0%E4%B8%8D%E5%86%8D%E6%8F%90%E7%A4%BA-ai%E8%80%8C%E6%98%AF%E8%A8%AD%E8%A8%88%E4%B8%80%E5%80%8B%E6%8F%90%E7%A4%BA-ai-%E7%9A%84%E7%B3%BB%E7%B5%B1-swanky-hsiao-najic"
 description: "Addy Osmani 為 AI 協作開發定名 Loop Engineering：不再由人提示 AI，而是設計一個提示 AI 的系統。本文補完從 Prompt、Context 到 Loop 的脈絡，並談如何與 Spec-Driven Development 整合落地。"
 keywords: Loop Engineering, Prompt Engineering, Context Engineering, Agentic Engineering, Claude Code, Spec-Driven Development, SDD, OpenSpec, TDD, Example Mapping, Addy Osmani, AI Coding, 代理式開發, 軟體工程, 工程治理, 史旺基, Swanky Hsiao, Swanky Studio

@@ -4,6 +4,7 @@ date: 2025-10-03
 categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/too-busy.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E6%89%93%E7%A0%B4%E5%A4%AA%E5%BF%99%E7%9A%84%E8%A9%9B%E5%92%92%E5%BE%9E%E8%BB%9F%E5%B7%A5%E5%A4%A7%E5%B8%AB%E5%88%B0ai%E6%99%82%E4%BB%A3%E7%9A%84%E6%AD%A3%E5%90%91%E5%BE%AA%E7%92%B0-swanky-hsiao-zhdrc"
 description: "引用 Kent Beck、Martin Fowler 等軟工大師的智慧，結合 AI 工具的應用，探討如何打破忙碌惡性循環。"
 keywords: 軟體工程,敏捷,AI工具,Kent Beck,Martin Fowler,技術管理,史旺基,Swanky Studio

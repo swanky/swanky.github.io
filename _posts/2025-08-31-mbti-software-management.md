@@ -4,6 +4,7 @@ date: 2025-08-31
 categories: [technical]
 layout: article
 cover_image: /assets/img/linkedin/mbti-management.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%94%A8-mbti-%E7%9C%8B%E8%A6%8B%E5%B7%AE%E7%95%B0%E5%BE%9E%E6%BA%AB%E4%BC%AF%E6%A0%BC%E7%9A%84%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E5%AD%B8%E8%AB%87%E8%BB%9F%E9%AB%94%E5%9C%98%E9%9A%8A%E7%AE%A1%E7%90%86-swanky-hsiao-4tync"
 description: "結合 MBTI 人格理論與溫伯格《軟體管理學》，探討如何理解團隊成員差異並設計有效的管理流程。"
 keywords: MBTI,軟體管理,溫伯格,軟體團隊,敏捷,技術顧問,史旺基,Swanky Studio

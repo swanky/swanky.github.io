@@ -5,6 +5,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/mid-manager-becomes-builder.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E6%88%91%E4%B9%9F%E6%98%AF-prince-%E5%8F%A3%E4%B8%AD%E9%82%A3%E7%A8%AE%E8%A9%B2%E8%A2%AB%E8%A3%81%E6%8E%89%E7%9A%84%E4%B8%AD%E9%9A%8E%E4%B8%BB%E7%AE%A1%E6%89%80%E4%BB%A5%E6%B1%BA%E5%AE%9A%E9%87%8D%E6%96%B0%E8%AE%8A%E5%9B%9E%E5%BB%BA%E9%80%A0%E8%80%85-swanky-hsiao-fxzsc"
 description: "回應 Cloudflare CEO Matthew Prince 的裁員論述，從中階主管視角談 AI 時代如何從衡量者轉變為建造者。"
 keywords: 中階主管, AI 時代職場, 建造者與衡量者, Matthew Prince, Cloudflare, Agentic Engineering, Claude Code, SDD, 工程管理, 史旺基, Swanky Studio

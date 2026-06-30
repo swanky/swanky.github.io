@@ -5,6 +5,7 @@ categories: [claude-code]
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-design-system.svg
+hero_image: true
 description: "透過三層設計裝備系統（Skills、Canvas、Inspiration）與 Claude Code，任何工程師都能穩定交付高品質、具備專業感的產品介面。"
 keywords: Claude Code,設計系統,AI coding,前端設計,AI學習,史旺基,Swanky Studio
 ---

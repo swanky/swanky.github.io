@@ -6,6 +6,7 @@ categories: [technical]
 tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/agentic-engineering-mindset.jpg
+hero_image: true
 source_url: "https://www.linkedin.com/pulse/agentic-engineering-%E5%AD%B8%E5%BE%97%E5%A5%BD%E7%9A%84%E4%BA%BA%E4%B8%8D%E6%98%AF%E6%8A%80%E8%A1%93%E6%9C%80%E5%BC%B7%E7%9A%84%E4%BA%BA-swanky-hsiao-fscvc/"
 description: "使用 Claude Code 的成功關鍵不在技術能力，而在系統性思維、軟體工程觀念與專案管理能力，需要培養完整的工作閉環與任務定義能力。"
 keywords: AgenticEngineering,ClaudeCode,Cursor,ORID,專案管理,軟體工程,工作流程,團隊協作,AI工具導入,技術顧問,史旺基,Swanky Studio

@@ -6,6 +6,7 @@ categories: [claude-code]
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/gstack-workflow-guide.svg
+hero_image: true
 description: "gstack 不是一包 prompt，而是一套把 AI 開發流程角色化、階段化的工作流。從需求定義、工程規劃、PR 審查、QA 測試到出貨，每個階段都有明確分工的 slash commands。"
 keywords: gstack,Claude Code,AI工作流,開發流程,AI工具,AI學習,史旺基,Swanky Studio
 ---
