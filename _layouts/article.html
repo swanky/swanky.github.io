@@ -23,10 +23,19 @@ layout: default
         {{ content }}
       </div>
 
-      {% if page.source_url %}
+      {% if page.source_url or page.source_url_x %}
       <div class="article-source-link">
+        {% if page.source_url and page.source_url_x %}
+        <p>本文同步發佈於 LinkedIn 與 X</p>
+        <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">LinkedIn 原文 &rarr;</a>
+        <a href="{{ page.source_url_x }}" target="_blank" rel="noopener noreferrer">X 原文 &rarr;</a>
+        {% elsif page.source_url_x %}
+        <p>本文同步發佈於 X</p>
+        <a href="{{ page.source_url_x }}" target="_blank" rel="noopener noreferrer">閱讀原文 &rarr;</a>
+        {% else %}
         <p>本文同步發佈於 LinkedIn</p>
         <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">閱讀原文 &rarr;</a>
+        {% endif %}
       </div>
       {% endif %}
 
