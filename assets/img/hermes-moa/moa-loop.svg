@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 548" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <rect width="720" height="548" fill="#ffffff"/>
+  <defs>
+    <marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#374151"/>
+    </marker>
+    <marker id="arG" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#0E7568"/>
+    </marker>
+  </defs>
+
+  <!-- 使用者提示 -->
+  <rect x="280" y="20" width="160" height="48" rx="6" fill="#F1F5F9" stroke="#334155" stroke-width="1.4"/>
+  <text x="360" y="41" text-anchor="middle" font-size="15" fill="#1F2937">使用者提示</text>
+  <text x="360" y="58" text-anchor="middle" font-size="10.5" fill="#64748B">user prompt</text>
+  <line x1="360" y1="68" x2="360" y2="90" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- 解析 preset -->
+  <rect x="258" y="90" width="204" height="48" rx="6" fill="#EFF6FF" stroke="#2C5B8F" stroke-width="1.4"/>
+  <text x="360" y="111" text-anchor="middle" font-size="15" fill="#1F2937">解析 MoA preset</text>
+  <text x="360" y="128" text-anchor="middle" font-size="10.5" fill="#64748B">agent loop 起點</text>
+  <line x1="360" y1="138" x2="360" y2="162" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- reference models 容器 -->
+  <rect x="40" y="164" width="640" height="96" rx="8" fill="#F7FAFF" stroke="#2C5B8F" stroke-width="1.2"/>
+  <rect x="40" y="164" width="640" height="24" rx="8" fill="#2C5B8F"/>
+  <text x="360" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Reference Models（平行分析，不接觸工具）</text>
+  <rect x="64" y="200" width="178" height="48" rx="5" fill="#ffffff" stroke="#2C5B8F" stroke-width="1.2"/>
+  <text x="153" y="221" text-anchor="middle" font-size="13" fill="#1F2937">Reference Model 1</text>
+  <text x="153" y="238" text-anchor="middle" font-size="9.5" fill="#4B5563">只讀 user／assistant text</text>
+  <rect x="271" y="200" width="178" height="48" rx="5" fill="#ffffff" stroke="#2C5B8F" stroke-width="1.2"/>
+  <text x="360" y="221" text-anchor="middle" font-size="13" fill="#1F2937">Reference Model 2</text>
+  <text x="360" y="238" text-anchor="middle" font-size="9.5" fill="#4B5563">只讀 user／assistant text</text>
+  <rect x="478" y="200" width="178" height="48" rx="5" fill="#ffffff" stroke="#2C5B8F" stroke-width="1.2"/>
+  <text x="567" y="221" text-anchor="middle" font-size="13" fill="#1F2937">Reference Model 3</text>
+  <text x="567" y="238" text-anchor="middle" font-size="9.5" fill="#4B5563">只讀 user／assistant text</text>
+  <line x1="360" y1="260" x2="360" y2="288" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- private context -->
+  <rect x="250" y="290" width="220" height="48" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.3"/>
+  <text x="360" y="311" text-anchor="middle" font-size="14" fill="#1F2937">匯整成 private context</text>
+  <text x="360" y="328" text-anchor="middle" font-size="10" fill="#64748B">reference 分析結果</text>
+  <line x1="360" y1="338" x2="360" y2="362" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- aggregator（品牌金強調） -->
+  <rect x="238" y="364" width="244" height="56" rx="8" fill="#FFF8E7" stroke="#E5A300" stroke-width="2.2"/>
+  <text x="360" y="389" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#1F2937">Aggregator（acting model）</text>
+  <text x="360" y="407" text-anchor="middle" font-size="10.5" fill="#7C5A00">帶完整 tool schema · 負責行動</text>
+  <line x1="360" y1="420" x2="360" y2="442" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+
+  <!-- 決策菱形 -->
+  <polygon points="360,444 434,480 360,516 286,480" fill="#FFF7ED" stroke="#B45309" stroke-width="1.4"/>
+  <text x="360" y="485" text-anchor="middle" font-size="13.5" fill="#1F2937">需要工具？</text>
+
+  <!-- 是 → 工具執行 → 回 loop -->
+  <rect x="44" y="456" width="176" height="48" rx="6" fill="#ECFDF5" stroke="#0E7568" stroke-width="1.3"/>
+  <text x="132" y="477" text-anchor="middle" font-size="14" fill="#1F2937">工具執行</text>
+  <text x="132" y="494" text-anchor="middle" font-size="10" fill="#4B5563">發出 tool call</text>
+  <line x1="286" y1="480" x2="224" y2="480" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="255" y="473" text-anchor="middle" font-size="12" font-weight="bold" fill="#B45309">是</text>
+  <path d="M132,456 L132,394 L232,394" fill="none" stroke="#0E7568" stroke-width="1.3" marker-end="url(#arG)"/>
+  <text x="140" y="388" text-anchor="start" font-size="10.5" fill="#0E7568">結果回到 loop</text>
+
+  <!-- 否 → 最終回應（品牌金強調） -->
+  <rect x="500" y="456" width="176" height="48" rx="6" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="588" y="477" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F2937">最終回應</text>
+  <text x="588" y="494" text-anchor="middle" font-size="10" fill="#7C5A00">assistant response</text>
+  <line x1="434" y1="480" x2="496" y2="480" stroke="#374151" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="465" y="473" text-anchor="middle" font-size="12" font-weight="bold" fill="#B45309">否</text>
+</svg>
