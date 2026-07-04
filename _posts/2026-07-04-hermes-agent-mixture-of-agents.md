@@ -400,12 +400,12 @@ MoA 則是 Hermes 中很有代表性的設計：它不是取代 agent loop，而
 
 ## 參考資料
 
-- Nous Research，Hermes Agent GitHub README。
-- Hermes Agent 官方文件：Mixture of Agents。
-- Wang et al., 2024, *Mixture-of-Agents Enhances Large Language Model Capabilities*。
-- Li et al., 2025, *Rethinking Mixture-of-Agents: Is Mixing Different Large Language Models Beneficial?*。
-- Yao et al., 2022, *ReAct: Synergizing Reasoning and Acting in Language Models*。
-- Mialon et al., 2023, *GAIA: A Benchmark for General AI Assistants*。
-- Jimenez et al., 2023, *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*。
-- Belcak et al., 2025, *Small Language Models are the Future of Agentic AI*。
-- Zhong and Zhu, 2026, *AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents*。
+- [Nous Research，Hermes Agent GitHub README](https://github.com/NousResearch/hermes-agent)。
+- [Hermes Agent 官方文件：Mixture of Agents](https://hermes-agent.nousresearch.com/docs/user-guide/features/mixture-of-agents)。
+- [Wang et al., 2024, *Mixture-of-Agents Enhances Large Language Model Capabilities*](https://arxiv.org/abs/2406.04692)。
+- [Li et al., 2025, *Rethinking Mixture-of-Agents: Is Mixing Different Large Language Models Beneficial?*](https://arxiv.org/abs/2502.00674)。
+- [Yao et al., 2022, *ReAct: Synergizing Reasoning and Acting in Language Models*](https://arxiv.org/abs/2210.03629)。
+- [Mialon et al., 2023, *GAIA: A Benchmark for General AI Assistants*](https://arxiv.org/abs/2311.12983)。
+- [Jimenez et al., 2023, *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*](https://arxiv.org/abs/2310.06770)。
+- [Belcak et al., 2025, *Small Language Models are the Future of Agentic AI*](https://arxiv.org/abs/2506.02153)。
+- [Zhong and Zhu, 2026, *AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents*](https://arxiv.org/abs/2605.13357)。
