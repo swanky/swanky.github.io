@@ -62,3 +62,4 @@ Violating these is the top cause of failed first attempts — they override defa
 - `docs/architecture.md` — site structure, layouts, collections, `nav_active`, front matter, `_data/`, vendor libs, Human Design / Tarot / NFT apps. **Read before changing layouts, collections, front matter, or the HD engine.**
 - `docs/design.md` — brand, colors, tone, audiences, aesthetic. **Read before visual/design work.**
 - `docs/gstack-skills.md` — recommended gstack skills + when to offer them.
+- **Private docs**: all other `docs/` files (manuals, proposals, content plans — excluded from this public repo) are versioned by a **nested private git repo inside `docs/`** (remote `dropbox`, a Dropbox-synced bare repo). After editing them, commit+push from within `docs/`. Setup & new-machine restore: `docs/README-private.md` (local-only).
