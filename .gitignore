@@ -1,11 +1,10 @@
 _site
 .sass-cache
 .jekyll-metadata
-.claude/
+# Claude Code：skills 與共享設定入庫（跨電腦沿用）；僅本機權限設定不入庫
+.claude/settings.local.json
 .gstack/
-.agents/
 .playwright-mcp/
-.agnix.toml
 .env
 assets/facebook-archive/.env
 docs/*

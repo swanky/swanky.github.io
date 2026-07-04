@@ -1,0 +1,8 @@
+tools = ["claude-code"]
+
+exclude = [
+  "assets/facebook-archive/**",
+  "_posts/**",
+  "node_modules/**",
+  ".git/**",
+]
