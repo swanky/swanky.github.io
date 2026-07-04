@@ -1,3 +1,4 @@
+{% assign explore_navs = 'explore,human-design,astrology,bazi,ziwei,tarot,iching,qimen,bird-oracle,numerology' | split: ',' %}
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center{% if page.header_transparent %} header-transparent{% endif %}">
   <div class="container d-flex justify-content-between align-items-center">
@@ -45,8 +46,17 @@
             <li><a href="{{ '/education/ai/' | relative_url }}">AI學習分享</a></li>
           </ul>
         </li>
-        <li><a {% if page.nav_active == 'human-design' %}class="active" {% endif %}href="{{ '/human-design/' | relative_url }}">人類圖</a></li>
-        <li><a {% if page.nav_active == 'tarot' %}class="active" {% endif %}href="{{ '/tarot/' | relative_url }}">塔羅</a></li>
+        <li class="dropdown"><a href="{{ '/explore/' | relative_url }}"{% if explore_navs contains page.nav_active %} class="active"{% endif %}><span>自我探索</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{{ '/explore/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/human-design/' | relative_url }}">人類圖</a></li>
+            <li><a href="{{ '/astrology/' | relative_url }}">星座命盤</a></li>
+            <li><a href="{{ '/bazi/' | relative_url }}">八字排盤</a></li>
+            <li><a href="{{ '/tarot/' | relative_url }}">塔羅</a></li>
+            <li><a href="{{ '/iching/' | relative_url }}">易經問卦</a></li>
+            <li><a href="{{ '/qimen/' | relative_url }}">奇門策略地圖</a></li>
+          </ul>
+        </li>
         <li><a {% if page.nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
         <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
       </ul>

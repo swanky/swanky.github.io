@@ -1,0 +1,142 @@
+---
+layout: home
+title: 今日一牌
+seo_title: 今日一牌｜每日塔羅・給你一個今日提醒（線上抽牌．不占卜）
+description: 每天為自己抽一張塔羅牌，得到一個今日提醒。不是預測運勢，是給你一個今天可以留意的角度。抽牌於瀏覽器內完成、不收集個資；當日重訪同一張，一天可換一次。
+keywords: 今日一牌,每日塔羅,今日塔羅,塔羅抽牌,每日提醒,塔羅反思
+nav_active: tarot
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 自我探索實驗室
+    url: /explore/
+  - name: 職場塔羅
+    url: /tarot/
+  - name: 今日一牌
+    url: /tarot/daily/
+use_tarot_daily: true
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "今日一牌",
+    "url": "https://swanky.github.io/tarot/daily/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "description": "每天抽一張塔羅牌，得到一個今日提醒。不是占卜、不預測運勢，抽牌於瀏覽器內完成、不收集個資。",
+    "inLanguage": "zh-TW",
+    "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "今日一牌和一般塔羅有什麼不同？", "acceptedAnswer": { "@type": "Answer", "text": "今日一牌是輕量版：不用寫問題、不用選牌陣，一天抽一張，給你一個今天可以留意的角度。想針對某個具體處境做完整反思，可以用職場塔羅完整抽牌。兩者都不是占卜、不預測運勢。" } },
+      { "@type": "Question", "name": "為什麼一天只能抽一次？可以換一張嗎？", "acceptedAnswer": { "@type": "Answer", "text": "今日一牌的用意是給你一個安靜的今日提醒，而不是一直抽到滿意為止。所以同一天回訪會看到同一張；如果第一張真的很難連結，可以換一張，但一天只能換一次，明天會有新的牌。" } },
+      { "@type": "Question", "name": "抽到的牌會上傳或被記錄嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。抽牌使用瀏覽器內建的密碼學亂數，當日抽到的結果只記錄在你自己瀏覽器的本機儲存空間（localStorage），不會上傳，也不會離開你的裝置。" } }
+    ]
+  }
+  </script>
+extra_css: |
+  .daily-hero { background: linear-gradient(135deg, #fffaf0, #fdf3e0); padding: 56px 0 40px; text-align: center; }
+  .daily-hero h1 { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 12px; }
+  .daily-hero .lead { font-size: 1.02rem; color: #5a5346; max-width: 560px; margin: 0 auto 18px; line-height: 1.75; }
+  .daily-section { padding: 40px 0; }
+  .daily-intro { text-align: center; }
+  .daily-draw-btn { padding: 15px 44px; border: none; border-radius: 12px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1.08rem; cursor: pointer; transition: 0.25s; }
+  .daily-draw-btn:hover { background: #c98f00; }
+  .daily-card-wrap { display: flex; justify-content: center; margin: 6px 0 26px; }
+  .tarot-card { width: 200px; height: 300px; perspective: 1000px; }
+  .tarot-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.7s cubic-bezier(.4,0,.2,1); }
+  .tarot-card.is-flipped .tarot-card-inner { transform: rotateY(180deg); }
+  .tarot-card-back, .tarot-card-face { position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .tarot-card-face { transform: rotateY(180deg); }
+  .tarot-card-back svg, .tarot-card-face svg { width: 100%; height: 100%; display: block; }
+  .daily-reading { max-width: 640px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; border-left: 4px solid #E5A300; padding: 24px 26px; }
+  .daily-reading-head { margin-bottom: 12px; }
+  .daily-reading-name { font-size: 1.2rem; font-weight: 700; color: #111; }
+  .tarot-r-en { font-size: 0.78rem; font-weight: 400; color: #bbb; }
+  .daily-symbol { font-size: 0.96rem; color: #444; line-height: 1.85; margin: 0 0 14px; }
+  .daily-reversed { font-size: 0.9rem; color: #6b6457; background: #fffaf0; border: 1px dashed #ecd9a6; border-radius: 9px; padding: 11px 14px; line-height: 1.75; margin: 0 0 14px; }
+  .daily-remind { background: #fafafa; border-radius: 10px; padding: 14px 16px; }
+  .daily-remind h5 { font-size: 0.82rem; font-weight: 700; color: #b6820a; margin: 0 0 6px; letter-spacing: 0.5px; }
+  .daily-remind p { font-size: 0.92rem; color: #444; line-height: 1.8; margin: 0; }
+  .daily-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0 8px; }
+  .daily-actions button { padding: 11px 22px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid #E5A300; background: #fff; color: #c98f00; transition: 0.25s; }
+  .daily-actions button.is-primary { background: #E5A300; color: #fff; }
+  .daily-actions button:hover { background: #E5A300; color: #fff; }
+  .daily-reroll-used { text-align: center; font-size: 0.85rem; color: #a99; margin: 8px 0; }
+  .daily-link { text-align: center; margin-top: 20px; }
+  .daily-link a { color: #c98f00; border-bottom: 1px dashed #e6c879; font-size: 0.92rem; text-decoration: none; }
+  .daily-link a:hover { color: #E5A300; }
+---
+
+<main id="main">
+
+  <!-- ======= Hero ======= -->
+  <section class="daily-hero" data-aos="fade-up">
+    <div class="container">
+      {% include tool-privacy.html style='pill' %}
+      <h1>今日一牌</h1>
+      <p class="lead">每天為自己抽一張牌，得到一個今日提醒。不是預測運勢，是給你一個今天可以留意的角度。</p>
+    </div>
+  </section>
+
+  <!-- ======= 抽牌 / 結果 ======= -->
+  <section class="daily-section">
+    <div class="container">
+      <div class="daily-intro" id="daily-intro">
+        <button class="daily-draw-btn" id="daily-draw">抽今日一牌</button>
+        <p style="font-size:0.85rem; color:#999; margin-top:14px;">一天一張——抽完當天回訪會看到同一張；可以換一張，但一天只能換一次。</p>
+      </div>
+
+      <div id="daily-result" style="display:none;">
+        <div class="daily-card-wrap"><div id="daily-card"></div></div>
+        <div class="daily-reading" id="daily-reading"></div>
+        <div class="daily-actions">
+          <button class="is-primary" id="daily-download">下載今日圖卡 (PNG)</button>
+          <button id="daily-reroll">換一張（限一次）</button>
+        </div>
+        <p class="daily-reroll-used" id="daily-reroll-used" style="display:none;">今天已經換過一次囉，明天再來抽新的一張。</p>
+        <div class="daily-link">
+          <a href="{{ '/tarot/' | relative_url }}">想問一個更完整的問題？用職場塔羅完整抽牌 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 隱私 / 免責 ======= -->
+  <section class="daily-section" style="background:#fff; padding-top:20px;">
+    <div class="container">
+      {% include tool-privacy.html daily=true %}
+      <div style="margin-top:18px;">{% include tool-disclaimer.html %}</div>
+      <p style="text-align:center; margin-top:20px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 回到自我探索實驗室</a></p>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="daily-section" style="background:#f8f9fa;">
+    <div class="container">
+      <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
+      <div class="accordion" id="dailyFaq" style="max-width:720px; margin:0 auto;">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dfaq0">今日一牌和一般塔羅有什麼不同？</button></h2>
+          <div id="dfaq0" class="accordion-collapse collapse" data-bs-parent="#dailyFaq"><div class="accordion-body">今日一牌是輕量版：不用寫問題、不用選牌陣，一天抽一張，給你一個今天可以留意的角度。想針對某個具體處境做完整反思，可以用職場塔羅完整抽牌。兩者都不是占卜、不預測運勢。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dfaq1">為什麼一天只能抽一次？可以換一張嗎？</button></h2>
+          <div id="dfaq1" class="accordion-collapse collapse" data-bs-parent="#dailyFaq"><div class="accordion-body">今日一牌的用意是給你一個安靜的今日提醒，而不是一直抽到滿意為止。所以同一天回訪會看到同一張；如果第一張真的很難連結，可以換一張，但一天只能換一次，明天會有新的牌。</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dfaq2">抽到的牌會上傳或被記錄嗎？</button></h2>
+          <div id="dfaq2" class="accordion-collapse collapse" data-bs-parent="#dailyFaq"><div class="accordion-body">不會。抽牌使用瀏覽器內建的密碼學亂數，當日抽到的結果只記錄在你自己瀏覽器的本機儲存空間（localStorage），不會上傳，也不會離開你的裝置。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main><!-- End #main -->

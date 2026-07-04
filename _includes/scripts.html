@@ -27,3 +27,35 @@
 <script type="module" src="{{ '/assets/js/tarot/tarot-compare.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_qimen_demo %}
+<!-- 奇門示意九宮格：純前端 ES module（示意資料，非真實排盤） -->
+<script type="module" src="{{ '/assets/js/qimen/qimen-ui.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.use_tarot_daily %}
+<!-- 今日一牌：復用塔羅引擎＋core-daily 每日鎖，純前端 ES module -->
+<script type="module" src="{{ '/assets/js/tarot/tarot-daily.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.use_astrology %}
+<!-- 星座命盤：vendor UMD（global Astronomy）先載，再 ES module（同 HD 模式） -->
+<script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/astrology/astro-ui.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.use_bazi %}
+<!-- 八字排盤：節氣＝太陽黃經（vendor UMD SearchSunLongitude），vendor 先載再 ES module -->
+<script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/bazi/bazi-ui.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.use_bazi_daily %}
+<!-- 今日五行：純日柱算術（不需天文引擎），純前端 ES module -->
+<script type="module" src="{{ '/assets/js/bazi/bazi-daily.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.use_iching %}
+<!-- 易經問卦：core-rng（crypto）起卦，純前端 ES module（無天文 vendor） -->
+<script type="module" src="{{ '/assets/js/iching/iching-ui.js' | relative_url }}"></script>
+{% endif %}
+

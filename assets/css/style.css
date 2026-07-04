@@ -4283,3 +4283,256 @@ section.testimonials {
   color: var(--c-gold-deep); /* services 卡片小標 11px，深金達 AA */
   margin-bottom: 8px;
 }
+
+/*--------------------------------------------------------------
+# 自我探索實驗室（/explore/ hub＋共用工具元件三件套）
+# 調色板沿用職場塔羅頁：金 #E5A300 / 暖底 #fffaf0→#fdf3e0
+--------------------------------------------------------------*/
+
+/* --- 共用：隱私 pill / 隱私框 / 免責框 / 方法手風琴 --- */
+.tool-privacy-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1px solid #f0dca8; border-radius: 50px;
+  padding: 6px 16px; font-size: 0.85rem; color: #7a5500;
+}
+.tool-privacy-pill i { color: #E5A300; }
+.tool-privacy {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: #f6faf5; border: 1px solid #d9ecd6; border-radius: 12px;
+  padding: 16px 18px; max-width: 820px; margin: 0 auto;
+}
+.tool-privacy-ico { color: #4a9d4a; font-size: 1.15rem; margin-top: 2px; flex-shrink: 0; }
+.tool-privacy p { font-size: 0.88rem; color: #4a5a48; line-height: 1.75; margin: 0; }
+
+.tool-disclaimer {
+  font-size: 0.82rem; color: #999; line-height: 1.75;
+  max-width: 820px; margin: 0 auto; background: #fafafa;
+  border-radius: 10px; padding: 20px 24px;
+}
+.tool-disclaimer strong { color: #777; }
+
+.tool-method { max-width: 820px; margin: 0 auto; }
+.tool-method .accordion-button { font-weight: 600; color: #444; }
+.tool-method .accordion-button:not(.collapsed) { background: #fffaf0; color: #b6820a; }
+.tool-method .accordion-button i { margin-right: 8px; color: #E5A300; }
+.tool-method .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,0.12); border-color: #f0dca8; }
+.tool-method-rules { margin: 0; padding-left: 20px; }
+.tool-method-rules li { font-size: 0.88rem; color: #555; line-height: 1.8; }
+.tool-method-extra { font-size: 0.84rem; color: #888; margin: 10px 0 0; }
+
+/* --- Hub Hero --- */
+.explore-hero {
+  background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%);
+  padding: 66px 0 50px; text-align: center;
+}
+.explore-hero h1 { font-size: 2.25rem; font-weight: 700; color: #111; margin-bottom: 14px; }
+.explore-hero .lead {
+  font-size: 1.08rem; color: #5a5346; max-width: 640px;
+  margin: 0 auto 20px; line-height: 1.8;
+}
+
+/* --- Hub 區塊通用 --- */
+.explore-section { padding: 48px 0; }
+.explore-section.alt { background: #fff; }
+.explore-section-title { text-align: center; font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+.explore-section-lead {
+  text-align: center; font-size: 0.96rem; color: #777;
+  max-width: 660px; margin: 0 auto 30px; line-height: 1.7;
+}
+
+/* --- 分類區塊 --- */
+.explore-cat { margin-bottom: 36px; }
+.explore-cat:last-child { margin-bottom: 0; }
+.explore-cat-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.explore-cat-letter {
+  flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px;
+  background: #E5A300; color: #fff; font-weight: 700; font-size: 1.1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.explore-cat-title { font-size: 1.2rem; font-weight: 700; color: #111; margin: 0; }
+.explore-cat-sub { font-size: 0.86rem; color: #888; margin: 2px 0 0; }
+
+/* --- 工具卡 grid --- */
+.explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 16px; }
+.explore-card {
+  display: flex; flex-direction: column; gap: 12px;
+  background: #fff; border: 1px solid #eee; border-radius: 14px;
+  padding: 22px 22px 20px; text-decoration: none; transition: 0.22s; height: 100%;
+}
+a.explore-card:hover { border-color: #E5A300; box-shadow: 0 10px 30px rgba(229,163,0,0.12); transform: translateY(-3px); }
+.explore-card-ico {
+  width: 46px; height: 46px; border-radius: 12px;
+  background: linear-gradient(135deg, #fff6e0, #fdeecb);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.explore-card-ico i { font-size: 1.4rem; color: #E5A300; }
+.explore-card-main { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.explore-card-title { font-size: 1.06rem; font-weight: 700; color: #111; line-height: 1.4; }
+.explore-card-sub { font-size: 0.88rem; color: #6b6357; line-height: 1.6; }
+.explore-badge {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; border-radius: 5px;
+  padding: 2px 8px; vertical-align: middle; white-space: nowrap; letter-spacing: 0.3px;
+}
+.explore-badge.is-live { background: #E5A300; color: #fff; }
+.explore-badge.is-manual { background: #e8f4fb; color: #2f80b0; }
+.explore-badge.is-soon { background: #f0efec; color: #8a8578; }
+.explore-badge.is-beta { background: #efeafb; color: #6b5aa0; }
+.explore-card-cta { font-size: 0.9rem; font-weight: 700; color: #c98f00; margin-top: auto; }
+.explore-card-cta.as-link { text-decoration: none; }
+.explore-card-cta.as-link:hover { color: #E5A300; }
+.explore-card-more { margin-top: auto; }
+.explore-card-more summary { font-size: 0.86rem; font-weight: 600; color: #8a8578; cursor: pointer; list-style: none; }
+.explore-card-more summary::-webkit-details-marker { display: none; }
+.explore-card-more summary::before { content: "＋ "; color: #E5A300; font-weight: 700; }
+.explore-card-more[open] summary::before { content: "－ "; }
+.explore-card-note { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 10px 0 8px; }
+.explore-signal { display: inline-block; font-size: 0.85rem; font-weight: 600; color: #c98f00; border-bottom: 1px dashed #e6c879; }
+.explore-signal:hover { color: #E5A300; }
+
+/* --- 產品藍圖 roadmap --- */
+.explore-roadmap { max-width: 780px; margin: 0 auto; }
+.explore-roadmap-item { display: flex; gap: 18px; padding: 13px 0; border-bottom: 1px dashed #eadfc4; }
+.explore-roadmap-item:last-child { border-bottom: none; }
+.explore-roadmap-phase { flex-shrink: 0; width: 96px; font-size: 0.82rem; font-weight: 700; color: #E5A300; }
+.explore-roadmap-text { font-size: 0.92rem; color: #555; line-height: 1.6; }
+.explore-roadmap-text b { color: #111; }
+
+/* --- 倫理邊界區（中性色、不恐嚇）--- */
+.explore-ethics { background: #faf9f7; }
+.explore-ethics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; max-width: 980px; margin: 0 auto; }
+.explore-ethic { background: #fff; border: 1px solid #ececec; border-left: 3px solid #d9cfc0; border-radius: 10px; padding: 14px 16px; }
+.explore-ethic-title { font-size: 0.95rem; font-weight: 700; color: #444; margin: 0 0 4px; display: flex; align-items: center; gap: 7px; }
+.explore-ethic-title i { color: #b9b0a2; flex-shrink: 0; }
+.explore-ethic-note { font-size: 0.82rem; color: #888; line-height: 1.6; margin: 0; }
+
+/* --- 技術透明區 --- */
+.explore-tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; max-width: 920px; margin: 0 auto; }
+.explore-tech-item { text-align: center; padding: 8px; }
+.explore-tech-item i { font-size: 1.8rem; color: #E5A300; }
+.explore-tech-item h4 { font-size: 1rem; font-weight: 700; color: #111; margin: 10px 0 6px; }
+.explore-tech-item p { font-size: 0.86rem; color: #777; line-height: 1.65; margin: 0; }
+
+/* --- 母工具頁返回 hub 的輕量交叉連結 --- */
+.explore-backlink {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.86rem; color: #b6820a; text-decoration: none;
+  border: 1px solid #f0dca8; border-radius: 50px; padding: 5px 15px; transition: 0.2s;
+}
+.explore-backlink:hover { background: #fffaf0; border-color: #E5A300; color: #c98f00; }
+
+/* --- 首頁「自我探索實驗室」入口 banner --- */
+.explore-home-cta {
+  display: flex; align-items: center; gap: 18px; margin: 30px auto 0; max-width: 900px;
+  background: linear-gradient(135deg, #fff, #fffaf0); border: 1px solid #f0dca8;
+  border-radius: 16px; padding: 22px 26px; text-decoration: none; transition: 0.25s;
+}
+.explore-home-cta:hover { border-color: #E5A300; box-shadow: 0 10px 30px rgba(229,163,0,0.14); transform: translateY(-2px); }
+.explore-home-cta-ico { flex-shrink: 0; width: 52px; height: 52px; border-radius: 13px; background: #fff3d6; display: inline-flex; align-items: center; justify-content: center; }
+.explore-home-cta-ico i { font-size: 1.6rem; color: #E5A300; }
+.explore-home-cta-txt { flex: 1; font-size: 0.9rem; color: #6b5a2a; line-height: 1.65; }
+.explore-home-cta-txt b { display: block; font-size: 1.1rem; color: #111; margin-bottom: 3px; }
+.explore-home-cta-arrow { flex-shrink: 0; font-size: 1.4rem; color: #E5A300; font-weight: 700; }
+
+@media (max-width: 768px) {
+  .explore-hero h1 { font-size: 1.85rem; }
+  .explore-grid { grid-template-columns: 1fr; }
+  .explore-ethics-grid { grid-template-columns: 1fr; }
+  .explore-roadmap-item { flex-direction: column; gap: 4px; }
+  .explore-roadmap-phase { width: auto; }
+  .explore-home-cta { flex-direction: column; text-align: center; gap: 12px; }
+}
+
+/*--------------------------------------------------------------
+# 奇門策略地圖（/qimen/、/qimen/tool/）＋九宮格元件
+# 教育展示／示意資料；tone 用金／灰藍／中性，刻意不用紅色凶煞視覺
+--------------------------------------------------------------*/
+.qimen-hero { background: linear-gradient(135deg, #f7f4ee 0%, #efe9dd 100%); padding: 60px 0 46px; }
+.qimen-hero h1 { font-size: 2.1rem; font-weight: 700; color: #111; margin-bottom: 14px; text-align: center; }
+.qimen-hero .lead { font-size: 1.05rem; color: #555; max-width: 740px; margin: 0 auto; line-height: 1.8; text-align: center; }
+.qimen-section { padding: 46px 0; }
+.qimen-section.alt { background: #fff; }
+.qimen-section-title { text-align: center; font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+.qimen-section-lead { text-align: center; font-size: 0.95rem; color: #777; max-width: 700px; margin: 0 auto 28px; line-height: 1.7; }
+
+/* 概念轉譯 */
+.qimen-concept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; max-width: 940px; margin: 0 auto; }
+.qimen-concept { background: #fff; border: 1px solid #eee; border-radius: 11px; padding: 15px 17px; border-left: 3px solid #E5A300; }
+.qimen-concept b { display: block; font-size: 0.96rem; color: #111; margin-bottom: 3px; }
+.qimen-concept span { font-size: 0.86rem; color: #777; line-height: 1.6; }
+
+/* 適合情境 */
+.qimen-scenarios { display: grid; grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 10px; max-width: 960px; margin: 0 auto; }
+.qimen-scenario { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 13px 14px; font-size: 0.9rem; color: #444; display: flex; align-items: center; gap: 9px; }
+.qimen-scenario i { color: #E5A300; font-size: 1.05rem; flex-shrink: 0; }
+
+/* 工具比較表 */
+.qimen-compare { max-width: 840px; margin: 0 auto; overflow-x: auto; }
+.qimen-compare table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 460px; }
+.qimen-compare th, .qimen-compare td { text-align: left; padding: 11px 14px; border-bottom: 1px solid #eee; }
+.qimen-compare th { background: #faf7f0; color: #b6820a; font-weight: 700; white-space: nowrap; }
+.qimen-compare td:first-child { font-weight: 700; color: #111; white-space: nowrap; }
+.qimen-compare tr.is-highlight td { background: #fffaf0; }
+.qimen-compare tr.is-highlight td:first-child { color: #b6820a; }
+
+/* 九宮格元件 */
+.qimen-grid { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 560px; margin: 0 auto; }
+.qimen-grid.is-demo::after { content: attr(data-watermark); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: 700; color: rgba(180,150,60,0.10); pointer-events: none; letter-spacing: 0.3em; transform: rotate(-18deg); z-index: 5; }
+.qimen-cell { position: relative; background: #fff; border: 1px solid #eee; border-top: 3px solid #cfc8ba; border-radius: 12px; padding: 12px 10px; display: flex; flex-direction: column; gap: 5px; cursor: pointer; transition: 0.2s; min-height: 118px; }
+.qimen-cell:hover, .qimen-cell:focus { outline: none; border-color: #E5A300; box-shadow: 0 6px 18px rgba(0,0,0,0.09); z-index: 6; }
+.qimen-cell.tone-auspicious { border-top-color: #E5A300; }
+.qimen-cell.tone-caution { border-top-color: #7fa8c4; }
+.qimen-cell.tone-neutral { border-top-color: #cfc8ba; }
+.qimen-cell-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.72rem; color: #999; }
+.qimen-cell-head .qc-palace { font-weight: 700; color: #b6820a; }
+.qimen-cell-main { display: flex; align-items: baseline; gap: 6px; }
+.qimen-cell-main .qc-men { font-size: 1.15rem; font-weight: 700; color: #111; }
+.qimen-cell-main .qc-star { font-size: 0.82rem; color: #666; }
+.qimen-cell-sub { display: flex; gap: 8px; font-size: 0.74rem; color: #888; }
+.qimen-tone { align-self: flex-start; margin-top: auto; font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 1px 7px; }
+.tone-auspicious .qimen-tone { background: #fff3d6; color: #b6820a; }
+.tone-caution .qimen-tone { background: #eaf1f7; color: #4a7a9c; }
+.tone-neutral .qimen-tone { background: #f0efec; color: #8a8578; }
+.qimen-tip { position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); width: 200px; max-width: 74vw; background: #2a2a2a; color: #fff; border-radius: 9px; padding: 10px 12px; font-size: 0.78rem; line-height: 1.6; opacity: 0; visibility: hidden; transition: 0.18s; z-index: 20; pointer-events: none; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+.qimen-tip b { display: block; color: #ffd67a; margin-bottom: 3px; font-size: 0.8rem; }
+.qimen-cell:hover .qimen-tip, .qimen-cell:focus .qimen-tip, .qimen-cell.is-open .qimen-tip { opacity: 1; visibility: visible; }
+.qimen-center { background: linear-gradient(135deg, #fffaf0, #fdf3e0); border: 1px dashed #E5A300; border-top: 1px dashed #E5A300; cursor: default; align-items: center; justify-content: center; text-align: center; }
+.qimen-center-label { font-size: 0.72rem; font-weight: 700; color: #b6820a; letter-spacing: 1px; }
+.qimen-center-summary { font-size: 0.8rem; color: #6b5a2a; line-height: 1.55; margin: 6px 0 0; }
+.qimen-grid-caption { text-align: center; font-size: 0.82rem; color: #999; margin: 16px auto 0; max-width: 560px; }
+
+/* CTA 四階 */
+.qimen-cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 16px; max-width: 960px; margin: 0 auto; }
+.qimen-cta-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 24px 22px; display: flex; flex-direction: column; }
+.qimen-cta-card.is-featured { border-color: #E5A300; box-shadow: 0 10px 30px rgba(229,163,0,0.1); }
+.qimen-cta-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; color: #E5A300; text-transform: uppercase; margin-bottom: 8px; }
+.qimen-cta-card h4 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+.qimen-cta-price { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+.qimen-cta-price small { font-size: 0.8rem; color: #999; font-weight: 400; }
+.qimen-cta-card p { font-size: 0.87rem; color: #666; line-height: 1.7; margin-bottom: 16px; flex: 1; }
+.qimen-cta-btn { display: block; text-align: center; padding: 11px; border-radius: 8px; background: #E5A300; color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; margin-top: auto; }
+.qimen-cta-btn:hover { background: #c98f00; color: #fff; }
+.qimen-cta-btn.is-outline { background: #fff; border: 1.5px solid #E5A300; color: #c98f00; }
+.qimen-cta-btn.is-outline:hover { background: #E5A300; color: #fff; }
+
+/* 教育展示 banner（tool 頁頂部）＋示意表單 */
+.qimen-demo-banner { background: #fff8e6; border-bottom: 1px solid #f3e2b8; }
+.qimen-demo-banner .container { display: flex; align-items: center; gap: 10px; padding-top: 12px; padding-bottom: 12px; font-size: 0.9rem; font-weight: 600; color: #b07a00; }
+.qimen-demo-banner i { font-size: 1.15rem; flex-shrink: 0; }
+.qimen-form-card { max-width: 640px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; }
+.qimen-form-card label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin: 14px 0 6px; }
+.qimen-form-card label:first-child { margin-top: 0; }
+.qimen-form-card input, .qimen-form-card select, .qimen-form-card textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 10px 12px; font-size: 0.95rem; color: #333; font-family: inherit; }
+.qimen-form-card input:focus, .qimen-form-card select:focus, .qimen-form-card textarea:focus { outline: none; border-color: #E5A300; box-shadow: 0 0 0 3px rgba(229,163,0,0.12); }
+.qimen-form-btn { margin-top: 18px; width: 100%; padding: 13px; border: none; border-radius: 9px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.25s; }
+.qimen-form-btn:hover { background: #c98f00; }
+.qimen-demo-notice { display: none; margin-top: 18px; background: #fff8e6; border: 1px solid #f3e2b8; border-radius: 10px; padding: 16px 18px; font-size: 0.9rem; color: #8a6a00; line-height: 1.75; }
+
+@media (max-width: 480px) {
+  .qimen-grid { gap: 6px; }
+  .qimen-cell { padding: 8px 6px; border-radius: 9px; min-height: 96px; }
+  .qimen-cell-main .qc-men { font-size: 0.98rem; }
+  .qimen-cell-main .qc-star { font-size: 0.66rem; }
+  .qimen-cell-sub { display: none; }
+  .qimen-tone { font-size: 0.6rem; padding: 1px 5px; }
+  .qimen-grid.is-demo::after { font-size: 2rem; }
+}

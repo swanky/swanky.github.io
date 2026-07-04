@@ -1,0 +1,21 @@
+{% comment %}
+  分類區塊：從 _data/divination_services.yml 篩出某 category 的公開卡片並渲染。
+  參數：
+    category: birth-map | inquiry | ritual | service
+    letter:   A / B / C / D（區塊標記，選填）
+    title:    區塊標題
+    subtitle: 區塊副標（選填）
+{% endcomment %}{% assign cards = site.data.divination_services | where: 'category', include.category | where: 'visibility', 'public' %}{% if cards.size > 0 %}
+<div class="explore-cat" id="cat-{{ include.category }}">
+  <div class="explore-cat-head">
+    {% if include.letter %}<span class="explore-cat-letter">{{ include.letter }}</span>{% endif %}
+    <div class="explore-cat-headtext">
+      <h3 class="explore-cat-title">{{ include.title }}</h3>
+      {% if include.subtitle %}<p class="explore-cat-sub">{{ include.subtitle }}</p>{% endif %}
+    </div>
+  </div>
+  <div class="explore-grid">
+    {% for it in cards %}{% include explore-card.html item=it %}{% endfor %}
+  </div>
+</div>
+{% endif %}

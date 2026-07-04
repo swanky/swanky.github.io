@@ -1,0 +1,32 @@
+{% comment %}
+  單張工具／服務卡（吃 _data/divination_services.yml 的一筆）。
+  參數：item = 一筆服務資料
+  行為（advice §5.3）：
+    live／manual-service 且有 route → 整卡連結到該頁
+    manual-service 無 route      → 卡內「預約服務」mailto（人工收單）
+    coming-soon 無 route         → <details> 展開說明＋「想先看到這個？」需求訊號 mailto＋gtag
+  visibility != public 的卡由 explore-category 先過濾掉，不會傳進來。
+{% endcomment %}{% assign it = include.item %}{% assign mail = 'swanky.hsiao@gmail.com' %}{% capture inner %}<span class="explore-card-ico"><i class="bi {{ it.icon }}"></i></span>
+  <span class="explore-card-main">
+    <span class="explore-card-title">{{ it.title }}{% case it.status %}{% when 'live' %} <span class="explore-badge is-live">立即使用</span>{% when 'beta' %} <span class="explore-badge is-beta">beta · {{ it.phase }}</span>{% when 'manual-service' %} <span class="explore-badge is-manual">人工服務</span>{% when 'coming-soon' %} <span class="explore-badge is-soon">規劃中 · {{ it.phase }}</span>{% endcase %}</span>
+    <span class="explore-card-sub">{{ it.subtitle }}</span>
+  </span>{% endcapture %}{% if it.route != '' and it.route %}
+<a class="explore-card is-{{ it.status }}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});}"{% endif %}>
+  {{ inner }}
+  <span class="explore-card-cta">{{ it.cta_label }} →</span>
+</a>
+{% elsif it.status == 'manual-service' %}
+<div class="explore-card is-manual">
+  {{ inner }}
+  <a class="explore-card-cta as-link" href="mailto:{{ mail }}?subject={{ '預約：' | append: it.title | url_encode }}&body={{ '嗨 史旺基，我想了解「' | append: it.title | append: '」服務，想先聊聊我的情境。' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_service_inquiry',{'tool':'{{ it.id }}'});}">{{ it.cta_label }} →</a>
+</div>
+{% else %}
+<div class="explore-card is-soon">
+  {{ inner }}
+  <details class="explore-card-more">
+    <summary>了解更多</summary>
+    {% if it.note %}<p class="explore-card-note">{{ it.note }}</p>{% endif %}
+    <a class="explore-signal" href="mailto:{{ mail }}?subject={{ '敲碗：想先看到「' | append: it.title | append: '」' | url_encode }}&body={{ '嗨 史旺基，我想先看到「' | append: it.title | append: '」這個工具上線。' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_signal',{'tool':'{{ it.id }}'});}">想先看到這個？告訴我 →</a>
+  </details>
+</div>
+{% endif %}

@@ -1,0 +1,364 @@
+# 自我探索實驗室・服務資料檔（公開呈現用）
+#
+# 公私分離原則：本檔只放「頁面呈現需要」的欄位；內部評估矩陣（契合度／難度／
+# 變現／風險分數）留在私有規劃文件 docs/self-discovery-tools-plan.md §12，不入本檔。
+#
+# 每筆 shape：
+#   id:         kebab-case 唯一鍵
+#   title:      顯示名稱
+#   subtitle:   一句定位（禁詞見 §13 語氣鐵律：不神準、不斷吉凶、不恐嚇）
+#   category:   birth-map | inquiry | ritual | service | ethical-boundary
+#   status:     live | coming-soon | manual-service | not-recommended
+#   visibility: public | hidden | internal（只有 public 會渲染到公開頁）
+#   priority:   P0 | P1 | P2 | backlog（roadmap 呈現用；ethical-boundary 免填）
+#   phase:      預計上線 Phase（coming-soon 卡顯示「預計順位」；已上線者標「已上線」）
+#   route:      內部連結；live／已建頁才填，未建頁留空字串避免死鏈（advice §5.3）
+#   icon:       Bootstrap Icons class（用前已 grep vendored CSS 確認 glyph 存在）
+#   input_type: birth | question | none | name（工具輸入型態，供未來擴充）
+#   use_cases:  應用情境標籤（陣列）
+#   cta_label:  卡片行動鈕文字
+#   note:       選填說明（ethical-boundary 的公開理由必填）
+#   related:    相關工具 id（選填，內鏈用）
+#   partner_cta: 選填，奇門合作導流用 {enabled,label,url}；enabled=false 時 fallback 自營 mailto
+#
+# 狀態維護註記：
+#   - qimen 於 Phase 1B 建立 /qimen/ 後補 route。
+#   - tarot-daily 於 Phase 1C 建立 /tarot/daily/ 後改 status: live 並補 route。
+
+# ── A. 出生地圖：根據出生資料建立個人結構地圖 ─────────────────────────
+- id: human-design
+  title: 人類圖
+  subtitle: 你的能量與決策設計圖
+  category: birth-map
+  status: live
+  visibility: public
+  priority: P0
+  phase: 已上線
+  route: /human-design/
+  icon: bi-diagram-3
+  input_type: birth
+  use_cases: [決策策略, 能量類型, 自我認識]
+  cta_label: 立即產生
+  note: ''
+  related: [astrology, bazi]
+
+- id: astrology
+  title: 星座命盤
+  subtitle: 心理結構與關係模式的地圖
+  category: birth-map
+  status: beta
+  visibility: public
+  priority: P0
+  phase: Phase 2
+  route: /astrology/
+  icon: bi-stars
+  input_type: birth
+  use_cases: [職涯定位, 關係模式, 溝通風格]
+  cta_label: 立即排盤（beta）
+  note: 上升與宮位公式驗證中（beta）；行星星座落點已可信賴。
+  related: [human-design, bazi]
+
+- id: bazi
+  title: 八字排盤
+  subtitle: 五行結構與人生節奏的觀察
+  category: birth-map
+  status: beta
+  visibility: public
+  priority: P0
+  phase: Phase 3
+  route: /bazi/
+  icon: bi-hourglass-split
+  input_type: birth
+  use_cases: [五行結構, 人生節奏, 職涯步調]
+  cta_label: 立即排盤（beta）
+  note: 四柱五行十神大運已可排；日柱排法與真太陽時驗證中（beta）。不做吉凶斷語與用神推薦。
+  related: [ziwei, human-design]
+
+- id: ziwei
+  title: 紫微斗數
+  subtitle: 十二宮位看人生主題
+  category: birth-map
+  status: coming-soon
+  visibility: public
+  priority: P1
+  phase: Phase 6
+  route: ''
+  icon: bi-moon-stars
+  input_type: birth
+  use_cases: [人生宮位, 職涯主題, 關係主題]
+  cta_label: 規劃中
+  note: ''
+  related: [bazi, astrology]
+
+- id: numerology
+  title: 生命靈數
+  subtitle: 出生日期的數字化自我觀察
+  category: birth-map
+  status: coming-soon
+  visibility: public
+  priority: P2
+  phase: Phase 7
+  route: ''
+  icon: bi-hash
+  input_type: birth
+  use_cases: [自我觀察, 入門導引]
+  cta_label: 規劃中
+  note: ''
+  related: [human-design]
+
+# ── B. 當下問事：針對當下問題與時間進行反思 ─────────────────────────
+- id: tarot
+  title: 職場塔羅
+  subtitle: 用圖像把卡住的處境想清楚
+  category: inquiry
+  status: live
+  visibility: public
+  priority: P0
+  phase: 已上線
+  route: /tarot/
+  icon: bi-collection
+  input_type: question
+  use_cases: [職場反思, 感情, 生活決策]
+  cta_label: 立即抽牌
+  note: ''
+  related: [tarot-daily, iching]
+
+- id: iching
+  title: 易經問卦
+  subtitle: 六十四種處境的變化與進退
+  category: inquiry
+  status: live
+  visibility: public
+  priority: P1
+  phase: 已上線
+  route: /iching/
+  icon: bi-hexagon
+  input_type: question
+  use_cases: [變化趨勢, 進退取捨, 處境觀察]
+  cta_label: 立即問卦
+  note: 整合梅花易數與六爻式起卦；四段解讀為精簡版，逐爻深度解卦為付費。
+  related: [tarot, qimen]
+
+- id: qimen
+  title: 奇門策略地圖
+  subtitle: 把時間、方位與行動放進同一張策略地圖
+  category: inquiry
+  status: manual-service
+  visibility: public
+  priority: P0
+  phase: Phase 1
+  route: /qimen/
+  icon: bi-compass
+  input_type: question
+  use_cases: [提案時機, 談判決策, 商業策略]
+  cta_label: 了解奇門服務
+  note: 策略內容與人工解讀服務先行；正式排盤工具開發中。
+  related: [iching, qimen-pro]
+  partner_cta:
+    enabled: false
+    label: ''
+    url: ''
+
+# ── C. 行動儀式：輕量、每日、可分享，提升回訪 ─────────────────────────
+- id: tarot-daily
+  title: 今日一牌
+  subtitle: 每天一張牌，一個今日提醒
+  category: ritual
+  status: live
+  visibility: public
+  priority: P0
+  phase: 已上線
+  route: /tarot/daily/
+  icon: bi-card-heading
+  input_type: none
+  use_cases: [每日反思, 快速提醒]
+  cta_label: 立即抽牌
+  note: ''
+  related: [tarot]
+
+- id: wuxing-daily
+  title: 今日五行
+  subtitle: 今天適合的節奏與提醒
+  category: ritual
+  status: live
+  visibility: public
+  priority: P2
+  phase: 已上線
+  route: /bazi/daily/
+  icon: bi-tree
+  input_type: none
+  use_cases: [每日節奏, 五行提醒]
+  cta_label: 看今日五行
+  note: ''
+  related: [bazi]
+
+- id: qimen-daily
+  title: 每日奇門方位
+  subtitle: 今天把重要行動放在哪個時段與方向
+  category: ritual
+  status: coming-soon
+  visibility: public
+  priority: P2
+  phase: Phase 5
+  route: ''
+  icon: bi-signpost-2
+  input_type: none
+  use_cases: [行動時機, 方位參考]
+  cta_label: 規劃中
+  note: 依奇門排盤引擎評估結果決定是否推出。
+  related: [qimen]
+
+- id: bird-oracle
+  title: 今日鳥籤
+  subtitle: 從一隻台灣的鳥，得到今天的提醒
+  category: ritual
+  status: coming-soon
+  visibility: public
+  priority: P2
+  phase: Phase 7
+  route: ''
+  icon: bi-sunrise
+  input_type: none
+  use_cases: [每日提醒, 生態反思]
+  cta_label: 規劃中
+  note: 原創反思卡設計，向這片土地的鳥類與文化致意，不模擬任何族群傳統儀式。
+  related: []
+
+# ── D. 商業與策略服務：高價值人工顧問服務（不追求全自動化）───────────
+- id: qimen-pro
+  title: 奇門問事 Pro
+  subtitle: 針對一件具體問題，給你時機、方位、風險與下一步
+  category: service
+  status: manual-service
+  visibility: public
+  priority: P0
+  phase: Phase 1
+  route: ''
+  icon: bi-chat-square-text
+  input_type: question
+  use_cases: [單一問題, 人工解讀, 行動策略]
+  cta_label: 預約服務
+  note: 交付一份文字報告，含局勢摘要、風險、建議行動與 7 天觀察清單。
+  related: [qimen, qimen-strategy]
+
+- id: qimen-strategy
+  title: 奇門商業策略局
+  subtitle: 把奇門遁甲轉譯成商業決策地圖
+  category: service
+  status: manual-service
+  visibility: public
+  priority: P1
+  phase: Phase 1
+  route: ''
+  icon: bi-briefcase
+  input_type: question
+  use_cases: [提案, 談判, 產品上線, 合作案]
+  cta_label: 預約服務
+  note: 交付一次 60 分鐘諮詢與一份策略摘要。
+  related: [qimen-pro]
+
+- id: naming
+  title: 公司／品牌命名
+  subtitle: 不只算筆畫，也看品牌能不能被記住
+  category: service
+  status: manual-service
+  visibility: public
+  priority: P1
+  phase: Phase 1
+  route: ''
+  icon: bi-fonts
+  input_type: name
+  use_cases: [公司命名, 品牌命名, 產業語感]
+  cta_label: 預約服務
+  note: 交付 10–20 組名稱候選、命名邏輯、品牌語感與 SEO／記憶點分析。
+  related: []
+
+- id: triple-map
+  title: 三重自我地圖
+  subtitle: 從三套系統看你的決策模式、職涯定位與關係盲點
+  category: service
+  status: coming-soon
+  visibility: public
+  priority: P1
+  phase: Phase 3.5
+  route: ''
+  icon: bi-layers
+  input_type: birth
+  use_cases: [整合報告, 決策模式, 職涯定位]
+  cta_label: 規劃中
+  note: 人類圖＋星座＋八字整合報告（旗艦）。
+  related: [human-design, astrology, bazi]
+
+- id: monthly-rhythm
+  title: 每月行動節奏報告
+  subtitle: 每個月給你一份行動節奏地圖
+  category: service
+  status: coming-soon
+  visibility: public
+  priority: P2
+  phase: Phase 5+
+  route: ''
+  icon: bi-calendar-month
+  input_type: birth
+  use_cases: [每月提醒, 行動節奏, 訂閱]
+  cta_label: 規劃中
+  note: 八字流月＋星象觀察＋奇門行動建議；先以人工 email 交付驗證需求。
+  related: [qimen, bazi]
+
+# ── 倫理邊界：有些事，我們選擇不做（公開立場即品牌資產）─────────────
+# UI 獨立渲染成「有些事，我們選擇不做」區塊，不與工具卡混在同一 grid（advice §5.2）。
+- id: eth-cesarean-timing
+  title: 剖腹擇日
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 涉及醫療倫理與重大決策，應由醫療專業與家庭決定。
+
+- id: eth-disease-divination
+  title: 疾病占卜
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 健康問題請找醫療專業，不是占卜。
+
+- id: eth-death-disaster
+  title: 死亡災厄預測
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 容易造成心理傷害，我們不做恐懼生意。
+
+- id: eth-investment-timing
+  title: 投資買賣點占卜
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 涉及金融責任；工具只談風險體質，不給買賣點。
+
+- id: eth-medium
+  title: 通靈亡者
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 心理與信任風險過高。
+
+- id: eth-ai-physiognomy
+  title: AI 面相判命
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 外貌歧視與生物特徵隱私風險。
+
+- id: eth-ritual-service
+  title: 祭改補運代辦
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 宗教服務與效果宣稱風險，不在能力與誠信範圍。
+
+- id: eth-yin-fengshui
+  title: 陰宅風水
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 情境高度敏感，不適合自動化與遠端判斷。

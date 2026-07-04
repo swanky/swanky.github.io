@@ -1,0 +1,8 @@
+{% comment %}
+  免責聲明元件（自我探索實驗室共用）。
+  參數：
+    variant: 'default'（預設）｜ 'medical-legal'（醫療法務加強版，追加轉介句）
+  文字方向固定：docs/self-discovery-tools-plan.md §13.2
+{% endcomment %}<div class="tool-disclaimer">
+  <strong>免責聲明：</strong>本工具以自我探索、教育與反思為目的；不預測命運、不保證結果；不取代醫療、法律、財務、心理諮商等專業建議；重大決策請結合現實資訊、專業意見與你自己的判斷。{% if include.variant == 'medical-legal' %}若問題涉及疾病、生死、訴訟或投資買賣，請諮詢醫療、法律或財務專業——這些不在本工具能協助的範圍。{% endif %}
+</div>

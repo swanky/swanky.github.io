@@ -1,0 +1,136 @@
+---
+layout: home
+title: 自我探索實驗室
+seo_title: 自我探索工具館｜人類圖、塔羅、星座命盤、八字與奇門策略地圖
+description: Swanky 自我探索實驗室——不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。人類圖、職場塔羅、星座命盤、八字、奇門策略地圖等工具，純前端計算、資料不上傳，把象徵系統當成反思工具與決策輔助。
+keywords: 自我探索,線上排盤,人類圖,塔羅,星座命盤,八字,紫微斗數,奇門遁甲,易經,生命靈數,決策輔助
+nav_active: explore
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 自我探索實驗室
+    url: /explore/
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Swanky 自我探索實驗室",
+    "url": "https://swanky.github.io/explore/",
+    "description": "不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。人類圖、職場塔羅、星座命盤、八字、奇門策略地圖等工具，純前端計算、資料不上傳。",
+    "inLanguage": "zh-TW",
+    "isPartOf": { "@type": "WebSite", "name": "Swanky Studio 史旺基工作室", "url": "https://swanky.github.io" },
+    "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
+  }
+  </script>
+---
+
+<main id="main">
+
+  <!-- ======= Hero ======= -->
+  <section class="explore-hero" data-aos="fade-up">
+    <div class="container">
+      {% include tool-privacy.html style='pill' %}
+      <h1>Swanky 自我探索實驗室</h1>
+      <p class="lead">不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。<br>這裡把人類圖、塔羅、星座、八字、奇門這些象徵系統，當成反思工具與決策輔助——由一位工程師打造，演算法透明、可驗證，未驗證的功能一律標示開發中。</p>
+    </div>
+  </section>
+
+  <!-- ======= 四大分類 ======= -->
+  <section class="explore-section">
+    <div class="container">
+      <h2 class="explore-section-title">工具與服務</h2>
+      <p class="explore-section-lead">依你想探索的方向分成四類：從出生資料看結構、針對當下問題反思、每日輕量提醒，以及高價值的人工顧問服務。</p>
+
+      {% include explore-category.html category='birth-map' letter='A' title='出生地圖' subtitle='根據出生資料，建立你的個人結構地圖' %}
+      {% include explore-category.html category='inquiry' letter='B' title='當下問事' subtitle='針對當下的問題與時間，進行反思與觀察' %}
+      {% include explore-category.html category='ritual' letter='C' title='行動儀式' subtitle='輕量、每日、可分享的小提醒' %}
+      {% include explore-category.html category='service' letter='D' title='商業與策略服務' subtitle='不追求全自動化的高價值人工顧問服務' %}
+    </div>
+  </section>
+
+  <!-- ======= 產品藍圖 ======= -->
+  <section class="explore-section alt" data-aos="fade-up">
+    <div class="container">
+      <h2 class="explore-section-title">產品藍圖</h2>
+      <p class="explore-section-lead">這是一個有計畫的產品，不是玩具堆。我們先把整座實驗室的架構與藍圖端上來，再一個一個把工具從「規劃中」點亮成「立即使用」。</p>
+      <div class="explore-roadmap">
+        <div class="explore-roadmap-item">
+          <span class="explore-roadmap-phase">已上線</span>
+          <span class="explore-roadmap-text"><b>人類圖</b>、<b>職場塔羅</b>——純前端計算、與參考站交叉驗證。</span>
+        </div>
+        <div class="explore-roadmap-item">
+          <span class="explore-roadmap-phase">進行中</span>
+          <span class="explore-roadmap-text"><b>奇門策略地圖</b>與<b>今日一牌</b>上線，<b>商業與策略服務</b>開始收單。</span>
+        </div>
+        <div class="explore-roadmap-item">
+          <span class="explore-roadmap-phase">接下來</span>
+          <span class="explore-roadmap-text"><b>星座命盤</b>、<b>八字排盤</b>，以及三者整合的<b>三重自我地圖</b>。</span>
+        </div>
+        <div class="explore-roadmap-item">
+          <span class="explore-roadmap-phase">規劃中</span>
+          <span class="explore-roadmap-text"><b>易經問卦</b>、<b>紫微斗數</b>、<b>生命靈數</b>、<b>今日鳥籤</b>，逐步點亮。</span>
+        </div>
+        <div class="explore-roadmap-item">
+          <span class="explore-roadmap-phase">評估中</span>
+          <span class="explore-roadmap-text">奇門<b>正式排盤</b>需通過排盤演算法的可行性與正確性驗證才會推出；在那之前，只做教育型示意與人工解讀。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 倫理邊界 ======= -->
+  <section class="explore-section explore-ethics" data-aos="fade-up">
+    <div class="container">
+      <h2 class="explore-section-title">有些事，我們選擇不做</h2>
+      <p class="explore-section-lead">公開自己的邊界，是我們的原則。有些題目就算做得出來，也不該用工具或遠端判斷來回答——這些我們不碰。</p>
+      {% assign ethics = site.data.divination_services | where: 'category', 'ethical-boundary' | where: 'visibility', 'public' %}
+      <div class="explore-ethics-grid">
+        {% for e in ethics %}
+        <div class="explore-ethic">
+          <h4 class="explore-ethic-title"><i class="bi bi-slash-circle"></i> {{ e.title }}</h4>
+          <p class="explore-ethic-note">{{ e.note }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 技術透明 ======= -->
+  <section class="explore-section alt" data-aos="fade-up">
+    <div class="container">
+      <h2 class="explore-section-title">為什麼是工程師做的玄學工具</h2>
+      <p class="explore-section-lead">把象徵系統當成可觀察、可驗證的假設，而不是命運審判。</p>
+      <div class="explore-tech-grid">
+        <div class="explore-tech-item">
+          <i class="bi bi-shield-check"></i>
+          <h4>純前端，資料不上傳</h4>
+          <p>所有計算都在你的瀏覽器內完成，出生資料與你輸入的問題不會上傳或儲存。</p>
+        </div>
+        <div class="explore-tech-item">
+          <i class="bi bi-graph-up"></i>
+          <h4>演算法透明、交叉驗證</h4>
+          <p>排盤邏輯與參考站逐筆交叉驗證；未驗證的功能一律標示「示意資料／開發中」。</p>
+        </div>
+        <div class="explore-tech-item">
+          <i class="bi bi-clipboard-data"></i>
+          <h4>自動化測試把關</h4>
+          <p>核心邏輯有單元測試與 golden 樣本，避免改一處壞另一處。</p>
+        </div>
+        <div class="explore-tech-item">
+          <i class="bi bi-lightbulb"></i>
+          <h4>原創解讀、可行動</h4>
+          <p>解讀文案全原創，給的是「可觀察的假設」與 7 天觀察清單，不是罐頭斷語。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 免責 ======= -->
+  <section class="explore-section" style="padding-top:10px;">
+    <div class="container">
+      {% include tool-disclaimer.html %}
+    </div>
+  </section>
+
+</main><!-- End #main -->

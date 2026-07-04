@@ -1,0 +1,26 @@
+{% comment %}
+  排盤／方法透明手風琴（自我探索實驗室共用）。
+  參數：
+    id:    accordion 唯一鍵（同頁多個時必填，預設 methodNote）
+    title: 標題（預設「排盤規則說明」）
+    rules: 規則要點，以 | 分隔（例："宮位制：Placidus｜換月：以節氣為準"）
+    note:  結尾補充句（選填；建議提醒「不同流派可能有不同算法」）
+  用途：docs/self-discovery-tools-plan.md §13.5——把規則寫明是專業感，不是免責小字。
+{% endcomment %}{% assign mn_id = include.id | default: 'methodNote' %}
+<div class="tool-method accordion" id="{{ mn_id }}">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ mn_id }}-body" aria-expanded="false" aria-controls="{{ mn_id }}-body">
+        <i class="bi bi-clipboard-data"></i> {{ include.title | default: '排盤規則說明' }}
+      </button>
+    </h2>
+    <div id="{{ mn_id }}-body" class="accordion-collapse collapse" data-bs-parent="#{{ mn_id }}">
+      <div class="accordion-body">
+        {% if include.rules %}<ul class="tool-method-rules">{% assign mn_rules = include.rules | split: '|' %}{% for r in mn_rules %}
+          <li>{{ r | strip }}</li>{% endfor %}
+        </ul>{% endif %}
+        {% if include.note %}<p class="tool-method-extra">{{ include.note }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
