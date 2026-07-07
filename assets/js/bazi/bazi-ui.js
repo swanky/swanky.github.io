@@ -8,14 +8,7 @@ import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf }
 import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
 import { CITIES } from '../core/core-cities.js';
 import { zonedToUtc } from '../human-design/hd-timezone.js';
-
-const $ = (id) => document.getElementById(id);
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, t) => { const e = $(id); if (e) e.textContent = t; };
-const show = (id, on) => { const e = $(id); if (e) e.style.display = on ? '' : 'none'; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
-const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 function fillSelect(id, from, to, pad) {
   const el = $(id);

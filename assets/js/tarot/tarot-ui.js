@@ -9,14 +9,7 @@ import { READINGS } from './tarot-data-texts.js';
 import { faceSvg, backSvg } from './tarot-card-image.js';
 import { exportReadingPng } from './tarot-export-svg.js';
 import { createOverlay } from './tarot-overlay.js';
-
-const $ = (id) => document.getElementById(id);
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, txt) => { const e = $(id); if (e) e.textContent = txt; };
-const show = (id, on) => { const e = $(id); if (e) e.style.display = on ? '' : 'none'; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
-const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const REDUCED = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 

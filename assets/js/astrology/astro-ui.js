@@ -7,14 +7,7 @@ import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';
 import { buildChartSvg } from './astro-svg.js';
 import { CITIES } from '../core/core-cities.js';
 import { zonedToUtc } from '../human-design/hd-timezone.js';
-
-const $ = (id) => document.getElementById(id);
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, t) => { const e = $(id); if (e) e.textContent = t; };
-const show = (id, on) => { const e = $(id); if (e) e.style.display = on ? '' : 'none'; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
-const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
 const DEG = (d) => `${Math.floor(d)}°${String(Math.round((d % 1) * 60)).padStart(2, '0')}′`;

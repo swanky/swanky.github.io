@@ -6,15 +6,7 @@ import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
 import { CENTERS, CENTER_IDS } from './hd-data-centers.js';
 import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS } from './hd-data-texts.js';
 import { GATES } from './hd-data-gates.js';
-
-const $ = (id) => document.getElementById(id);
-// 防呆 DOM 寫入：容器不存在就略過、不拋錯。避免部署期間「新版 JS × 舊快取 HTML」
-// 缺少新容器（如 #hd-readout）時，renderResult 撞上 null 而中斷整個排盤。
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, txt) => { const e = $(id); if (e) e.textContent = txt; };
-const setVal = (id, v) => { const e = $(id); if (e) e.value = v; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
+import { $, setHTML, setText, setVal, on, gtag } from '../core/core-dom.js';
 
 const state = { tz: null, cityLabel: null, lastChart: null, svg: null };
 

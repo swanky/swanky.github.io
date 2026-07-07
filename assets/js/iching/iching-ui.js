@@ -6,14 +6,8 @@ import { castCoins, castNumbers, castTime } from './iching-cast.js';
 import { buildReading } from './iching-data-texts.js';
 import { buildHexSvg } from './iching-svg.js';
 import { recommendTopic, TOPICS } from '../tarot/tarot-spreads.js';
+import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
-const $ = (id) => document.getElementById(id);
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, t) => { const e = $(id); if (e) e.textContent = t; };
-const show = (id, on) => { const e = $(id); if (e) e.style.display = on ? '' : 'none'; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
-const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const MAIL = 'swanky.hsiao@gmail.com';
 
 let lastCast = null;

@@ -3,14 +3,8 @@
 // 沿用 iching-ui/tarot-ui 的防禦式 DOM 寫入。純前端、資料不上傳；不預測吉凶、不斷命定。
 import { computeNumerology } from './numerology-core.js';
 import { buildProfile } from './numerology-data-texts.js';
+import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
-const $ = (id) => document.getElementById(id);
-const setHTML = (id, html) => { const e = $(id); if (e) e.innerHTML = html; };
-const setText = (id, t) => { const e = $(id); if (e) e.textContent = t; };
-const show = (id, isOn) => { const e = $(id); if (e) e.style.display = isOn ? '' : 'none'; };
-const on = (id, ev, fn) => { const e = $(id); if (e) e.addEventListener(ev, fn); };
-const gtag = (...a) => { if (window.gtag) window.gtag(...a); };
-const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const MAIL = 'swanky.hsiao@gmail.com';
 
 let last = null;
