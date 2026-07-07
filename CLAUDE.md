@@ -11,9 +11,9 @@ Execute autonomously; start without asking. Read relevant code first; make reaso
 ## Development Commands
 
 - `bundle install` — install dependencies
-- `bundle exec jekyll serve` — local dev at http://127.0.0.1:4000 (add `--drafts` for _drafts/)
+- `bundle exec jekyll serve` — local dev at http://127.0.0.1:4000
 - `bundle exec jekyll build` — build to _site/
-- `npm test` — engine tests via `node --test` (human-design + tarot; no npm install needed)
+- `npm test` — engine tests via `node --test` over `tests/` (7 suites: human-design, tarot, astrology, bazi, iching, qimen, core; no npm install needed)
 - Deploy is automatic on push to `master`. Production URL is **https://swanky.github.io** — the Flickr username `swanky-hsiao` is NOT part of the domain.
 - Deploy status: `gh run list --limit 5`. If the **build** job fails → debug the repo. If build is green but **deploy** fails at `syncing_files` with "Deployment failed, try again later" → GitHub Pages transient; just `gh run rerun <id> --failed`.
 
@@ -32,13 +32,14 @@ Violating these is the top cause of failed first attempts — they override defa
 - **Language**: all site copy MUST be Traditional Chinese (zh-TW).
 - **Asset paths**: always `{{ '/path' | relative_url }}`.
 - **RWA**: always write 「現實世界資產」 (never 真實世界資產); keep the RWA acronym + English term.
+- **Personal title in site copy**: always 「大型電信業技術主管」 — never the employer's company name or internal title (deliberate brand/employer separation; `index.html` JSON-LD `worksFor` is the one intentional exception).
 - **Two 熊熊 — never confuse**: 吳暐榕 = 制服模特兒; 卓毓彤 = 一線藝人.
 - **Don't** put Jekyll front matter in `nft/` files (separate mini-site, excluded from Jekyll).
 - **Don't** hand-edit vendored libs in `assets/vendor/`.
 
 ## Content Conventions (articles & images)
 
-- Article posts live in `_posts/YYYY-MM-DD-slug.md` with `layout: article`; `categories: [technical]` (技術顧問) or `[claude-code]` (AI學習分享).
+- Article posts live in `_posts/YYYY-MM-DD-slug.md` with `layout: article`; `categories: [technical]` (技術顧問), `[claude-code]` (AI學習分享), or `[photography]` (攝影作品).
 - `cover_image` is always a `.jpg` (convert PNG sources to JPEG); list cards crop covers to 16:9 — pick/crop accordingly.
 - Synced LinkedIn/X articles: set `hero_image: true` (site-wide convention); `source_url` = LinkedIn (always `www.` subdomain), `source_url_x` = X. Layout renders single- or dual-source links automatically.
 - 標點: Chinese prose uses full-width `，：；？！`; keep half-width inside English quotes and code.
