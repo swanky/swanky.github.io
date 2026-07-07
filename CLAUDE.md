@@ -6,14 +6,14 @@ Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep st
 
 Execute autonomously; start without asking. Read relevant code first; make reasonable assumptions and proceed. Do the full job (edit, test, build); prefer the smallest maintainable diff. No mid-task check-ins unless the action would delete data, modify production config, push to a remote, or touch secrets. Report once at the end: files changed + why, test/build results, remaining risks.
 
-**Definition of done**: `bundle exec jekyll build` passes AND the rendered output is verified (grep `_site/` HTML, or browser check) before commit. Never report「已完成」on an unverified change.
+**Definition of done**: never report「已完成」on an unverified change — but **batch the verification, don't run it per-change**. During dev use cheap checks only (`npm test`, Grep on source, `git diff`, Read). Run the one full `bundle exec jekyll build` + `_site/` grep (or browser) pass **once before push**, over all changes together. Never `jekyll serve --watch` in agent runs (see Environment Rules).
 
 ## Development Commands
 
 - `bundle install` — install dependencies
-- `bundle exec jekyll serve` — local dev at http://127.0.0.1:4000
+- `bundle exec jekyll serve` — local dev at http://127.0.0.1:4000 (avoid in agent runs — the `--watch` residual reverts working files between tool calls; see Environment Rules)
 - `bundle exec jekyll build` — build to _site/
-- `npm test` — engine tests via `node --test` over `tests/` (7 suites: human-design, tarot, astrology, bazi, iching, qimen, core; no npm install needed)
+- `npm test` — engine tests via `node --test` over recursive glob `tests/**/*.test.mjs` (8 suites: human-design, tarot, astrology, bazi, iching, qimen, core, numerology; no npm install needed). Cheap + reliable — the primary dev-time verification.
 - Deploy is automatic on push to `master`. Production URL is **https://swanky.github.io** — the Flickr username `swanky-hsiao` is NOT part of the domain.
 - Deploy status: `gh run list --limit 5`. If the **build** job fails → debug the repo. If build is green but **deploy** fails at `syncing_files` with "Deployment failed, try again later" → GitHub Pages transient; just `gh run rerun <id> --failed`.
 
@@ -22,7 +22,8 @@ Execute autonomously; start without asking. Read relevant code first; make reaso
 Violating these is the top cause of failed first attempts — they override default habits:
 
 - **git via the Bash tool**, never PowerShell (quoting/encoding mangles commit messages and paths).
-- **Verify critical edits**: Edit can report success without writing, and a renamed/moved file counts as unread. After important edits, confirm with `git diff --stat` or re-Read before building on top.
+- **Verify writes with an independent tool**: after an important Edit/Write, confirm with `git diff --stat`, Read, or Grep before building on top. A「success」you didn't independently verify is not done — never narrate a result you didn't actually receive.
+- **Never `jekyll serve --watch` in agent runs**: a leftover watcher regenerates/clears working-dir files in the gap between tool calls (stable within one call, reverts between calls) — this is the real「寫入不穩」, not a broken machine. Use one-shot `bundle exec jekyll build`, batched before push. If files mysteriously revert, `Get-Process ruby | Stop-Process -Force` first.
 - **Python with Chinese output**: always `python -X utf8` (default cp950 throws UnicodeEncodeError). Git Bash `/tmp` is MSYS-virtual — native Windows programs can't see it; use real Windows paths (e.g. the scratchpad dir).
 - **Waiting on CI/long jobs**: bare `sleep N && cmd` is blocked by the harness — use an `until`-loop poll (e.g. `until [ "$(gh run view <id> --json status --jq .status)" = "completed" ]; do sleep 15; done`) with `run_in_background`.
 - **Playwright page checks**: `browser_evaluate` runs against about:blank — use `browser_run_code_unsafe` + `page.evaluate` on the real page.
