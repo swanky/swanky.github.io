@@ -59,3 +59,8 @@
 <script type="module" src="{{ '/assets/js/iching/iching-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_numerology %}
+<!-- 生命靈數：純算術（無天文 vendor、無亂數），純前端 ES module -->
+<script type="module" src="{{ '/assets/js/numerology/numerology-ui.js' | relative_url }}"></script>
+{% endif %}
+

@@ -94,15 +94,15 @@
   title: 生命靈數
   subtitle: 出生日期的數字化自我觀察
   category: birth-map
-  status: coming-soon
+  status: live
   visibility: public
   priority: P2
   phase: Phase 7
-  route: ''
+  route: /numerology/
   icon: bi-hash
   input_type: birth
   use_cases: [自我觀察, 入門導引]
-  cta_label: 規劃中
+  cta_label: 立即計算
   note: ''
   related: [human-design]
 

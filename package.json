@@ -4,6 +4,6 @@
   "type": "module",
   "description": "Metadata only: lets Node treat assets/js/human-design/*.js as ES modules for tests. No npm install needed.",
   "scripts": {
-    "test": "node --test \"tests/human-design/*.test.mjs\" \"tests/tarot/*.test.mjs\" \"tests/qimen/*.test.mjs\" \"tests/core/*.test.mjs\" \"tests/astrology/*.test.mjs\" \"tests/bazi/*.test.mjs\" \"tests/iching/*.test.mjs\""
+    "test": "node --test \"tests/human-design/*.test.mjs\" \"tests/tarot/*.test.mjs\" \"tests/qimen/*.test.mjs\" \"tests/core/*.test.mjs\" \"tests/astrology/*.test.mjs\" \"tests/bazi/*.test.mjs\" \"tests/iching/*.test.mjs\" \"tests/numerology/*.test.mjs\""
   }
 }
