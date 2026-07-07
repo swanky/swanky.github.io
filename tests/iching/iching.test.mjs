@@ -6,6 +6,7 @@ import {
   HEXAGRAMS, TRIGRAMS, linesToHex, trigramBits, hexByNo,
 } from '../../assets/js/iching/iching-hexagrams.js';
 import { castCoins, castNumbers, castTime } from '../../assets/js/iching/iching-cast.js';
+import { buildHexSvg } from '../../assets/js/iching/iching-svg.js';
 
 test('64 卦：no 1-64 唯一、上下卦組合唯一、lines 合法', () => {
   assert.equal(HEXAGRAMS.length, 64);
@@ -76,4 +77,22 @@ test('時間起卦：確定性、結構完整', () => {
 test('64 卦義無吉凶恐嚇禁詞', () => {
   const banned = /(大凶|大吉|災難|喪|絕命|破財|血光|必然|注定|一定會|橫財)/;
   for (const h of HEXAGRAMS) assert.ok(!banned.test(h.oneLine), `${h.name}: ${h.oneLine}`);
+});
+
+test('buildHexSvg：有之卦（castNumbers 恆有動爻），本卦/之卦各 6 條爻圖元、動爻含品牌金', () => {
+  const cast = castNumbers(3, 5);
+  const svg = buildHexSvg(cast);
+  assert.ok(svg.includes('<svg'));
+  assert.equal((svg.match(/data-ben-line="/g) || []).length, 6);
+  assert.equal((svg.match(/data-zhi-line="/g) || []).length, 6);
+  assert.ok(svg.includes('#E5A300'));
+});
+
+test('buildHexSvg：無動爻/無之卦的自製 cast 不拋錯，只畫本卦 6 爻', () => {
+  const ben = hexByNo(1); // 乾
+  const cast = { lines: ben.lines, moving: [], ben, zhi: null, method: 'coins' };
+  const svg = buildHexSvg(cast);
+  assert.ok(svg.includes('<svg'));
+  assert.equal((svg.match(/data-ben-line="/g) || []).length, 6);
+  assert.equal((svg.match(/data-zhi-line="/g) || []).length, 0);
 });

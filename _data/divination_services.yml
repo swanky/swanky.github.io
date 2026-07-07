@@ -139,16 +139,18 @@
   title: 易經問卦
   subtitle: 六十四種處境的變化與進退
   category: inquiry
-  status: coming-soon
+  status: live
   visibility: public
   priority: P1
-  phase: 修復中
-  route: ''
+  phase: 已上線
+  route: /iching/
+  nav_order: 5
+  nav_label: 易經
   icon: bi-hexagon
   input_type: question
   use_cases: [變化趨勢, 進退取捨, 處境觀察]
   cta_label: 立即問卦
-  note: 互動起卦暫時停用（缺 iching-svg.js 卦象模組，補回後復原 live）；整合梅花易數與六爻式起卦。
+  note: 整合梅花易數與六爻式起卦；四段解讀為精簡版，逐爻深度解卦為付費。
   related: [tarot, qimen]
 
 - id: qimen
