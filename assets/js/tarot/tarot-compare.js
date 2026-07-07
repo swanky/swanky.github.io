@@ -84,5 +84,7 @@ function render() {
   });
 }
 
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
-else render();
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
+  else render();
+}
