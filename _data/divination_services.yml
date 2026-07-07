@@ -13,6 +13,8 @@
 #   priority:   P0 | P1 | P2 | backlog（roadmap 呈現用；ethical-boundary 免填）
 #   phase:      預計上線 Phase（coming-soon 卡顯示「預計順位」；已上線者標「已上線」）
 #   route:      內部連結；live／已建頁才填，未建頁留空字串避免死鏈（advice §5.3）
+#   nav_order:  選填整數；有填才進「自我探索」下拉選單＋父層高亮，數字決定順序（header.html 由此單一資料源生成，兩清單不再 drift）
+#   nav_label:  下拉選單顯示名（常比 title 短，如 職場塔羅→塔羅）；有 nav_order 時必填
 #   icon:       Bootstrap Icons class（用前已 grep vendored CSS 確認 glyph 存在）
 #   input_type: birth | question | none | name（工具輸入型態，供未來擴充）
 #   use_cases:  應用情境標籤（陣列）
@@ -35,6 +37,8 @@
   priority: P0
   phase: 已上線
   route: /human-design/
+  nav_order: 1
+  nav_label: 人類圖
   icon: bi-diagram-3
   input_type: birth
   use_cases: [決策策略, 能量類型, 自我認識]
@@ -51,6 +55,8 @@
   priority: P0
   phase: Phase 2
   route: /astrology/
+  nav_order: 2
+  nav_label: 星座命盤
   icon: bi-stars
   input_type: birth
   use_cases: [職涯定位, 關係模式, 溝通風格]
@@ -67,6 +73,8 @@
   priority: P0
   phase: Phase 3
   route: /bazi/
+  nav_order: 3
+  nav_label: 八字排盤
   icon: bi-hourglass-split
   input_type: birth
   use_cases: [五行結構, 人生節奏, 職涯步調]
@@ -99,6 +107,8 @@
   priority: P2
   phase: Phase 7
   route: /numerology/
+  nav_order: 6
+  nav_label: 生命靈數
   icon: bi-hash
   input_type: birth
   use_cases: [自我觀察, 入門導引]
@@ -116,6 +126,8 @@
   priority: P0
   phase: 已上線
   route: /tarot/
+  nav_order: 4
+  nav_label: 塔羅
   icon: bi-collection
   input_type: question
   use_cases: [職場反思, 感情, 生活決策]
@@ -127,16 +139,16 @@
   title: 易經問卦
   subtitle: 六十四種處境的變化與進退
   category: inquiry
-  status: live
+  status: coming-soon
   visibility: public
   priority: P1
-  phase: 已上線
-  route: /iching/
+  phase: 修復中
+  route: ''
   icon: bi-hexagon
   input_type: question
   use_cases: [變化趨勢, 進退取捨, 處境觀察]
   cta_label: 立即問卦
-  note: 整合梅花易數與六爻式起卦；四段解讀為精簡版，逐爻深度解卦為付費。
+  note: 互動起卦暫時停用（缺 iching-svg.js 卦象模組，補回後復原 live）；整合梅花易數與六爻式起卦。
   related: [tarot, qimen]
 
 - id: qimen
@@ -148,6 +160,8 @@
   priority: P0
   phase: Phase 1
   route: /qimen/
+  nav_order: 7
+  nav_label: 奇門策略地圖
   icon: bi-compass
   input_type: question
   use_cases: [提案時機, 談判決策, 商業策略]
