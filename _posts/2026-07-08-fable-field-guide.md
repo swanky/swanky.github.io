@@ -7,6 +7,8 @@ tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/fable-field-guide.jpg
 hero_image: true
+source_url: "https://www.linkedin.com/posts/swanky_1-anthropic-%E7%9A%84-thariq-%E5%9C%A8-ai-engineer-%E8%AC%9Bfield-activity-7480388401741987840-Nntx/"
+source_url_x: "https://x.com/swanky/status/2074623018098466833"
 description: "Anthropic 技術團隊成員 Thariq Shihipar 在 AI Engineer 大會的演講〈Field Guide to Fable〉，把新一代模型 Fable 形容成 RPG 從新手村走進開放世界。本文整理演講四大主題——解除 Claude 的束縛、找出你的未知、面對開發手感的失落、學會不那麼合理——並補上台灣技術團隊的六個實戰落地方法。"
 keywords: Fable, Field Guide to Fable, Thariq Shihipar, Anthropic, Claude Code, capability overhang, unhobbling, agentic workflow, 代理式開發, prompt engineering, reference engineering, blind spot pass, unknown unknowns, implementation notes, quiz me, tradeoffs are not real, AI Engineer, AI 協作開發, 史旺基, Swanky Hsiao, Swanky Studio
 ---
