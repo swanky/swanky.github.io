@@ -6,7 +6,7 @@ import { computeChart, SIGNS, POINT_IDS, POINT_ZH, signOf } from './astro-chart.
 import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';
 import { buildChartSvg } from './astro-svg.js';
 import { CITIES } from '../core/core-cities.js';
-import { zonedToUtc } from '../human-design/hd-timezone.js';
+import { zonedToUtc } from '../core/core-timezone.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];

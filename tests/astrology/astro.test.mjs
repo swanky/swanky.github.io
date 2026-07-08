@@ -3,11 +3,7 @@
 //       本檔只驗證引擎不崩、範圍合理、太陽星座正確；未過 golden 前頁面標 beta。
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createRequire } from 'node:module';
-import { _injectAstronomy } from '../../assets/js/core/core-astro.js';
-
-const require = createRequire(import.meta.url);
-_injectAstronomy(require('../../assets/vendor/astronomy-engine/astronomy.browser.min.js'));
+import '../_setup-astronomy.mjs';
 
 import { signOf, computeChart, SIGNS, POINT_IDS } from '../../assets/js/astrology/astro-chart.js';
 import { houseCusps, houseOf, computeAngles, isPolar } from '../../assets/js/astrology/astro-houses.js';

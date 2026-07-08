@@ -35,23 +35,9 @@ const LATLON = {
   奈洛比: [-1.29, 36.82],
 };
 
+// 星座／八字只用整包 CITIES（含經緯度）；城市搜尋由各頁自理（hd-cities 有自己的 searchCities）。
+// 舊有的 normalize／searchCities 為零消費者的 dead export，已於 P3 移除。
 export const CITIES = HD_CITIES.map((c) => {
   const ll = LATLON[c.zh];
   return { ...c, lat: ll ? ll[0] : null, lon: ll ? ll[1] : null };
 });
-
-function normalize(s) {
-  return s.toLowerCase().replace(/臺/g, '台').replace(/\s+/g, '');
-}
-
-// 搜尋（含經緯度結果）；台灣群組優先，缺經緯度者排後。
-export function searchCities(query, limit = 12) {
-  const q = normalize(query);
-  if (!q) return [];
-  const hits = CITIES.filter((c) =>
-    normalize(c.zh).includes(q) ||
-    normalize(c.en).includes(q) ||
-    c.aliases.some((a) => normalize(a).includes(q)));
-  hits.sort((a, b) => (a.group === '台灣' ? 0 : 1) - (b.group === '台灣' ? 0 : 1));
-  return hits.slice(0, limit);
-}

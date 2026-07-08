@@ -3,11 +3,7 @@
 // 誠實：跨排盤站 10+ 筆 golden（§7.6）屬人工／外部驗證步驟，未過前頁面日柱標 beta。
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createRequire } from 'node:module';
-import { _injectAstronomy } from '../../assets/js/core/core-astro.js';
-
-const require = createRequire(import.meta.url);
-_injectAstronomy(require('../../assets/vendor/astronomy-engine/astronomy.browser.min.js'));
+import '../_setup-astronomy.mjs';
 
 import {
   GAN, ZHI, ZHI_HIDDEN, NAYIN, gzName, ganZhiToGz, ganOf, zhiOf,

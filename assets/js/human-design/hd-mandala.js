@@ -6,6 +6,7 @@
 // GATE_ORDER 已以公開星曆錨點交叉驗證：
 //   春分點 0° 落 Gate 25（雙魚 28°15' → 牡羊 3°52'30"）、
 //   冬至點 270° 落 Gate 10、Gate 60 結束於 302° 接回 Gate 41。
+import { norm360 } from '../core/core-astro.js'; // 實作一致；本檔零外部消費者，不再自帶 export
 
 export const START_LON = 302.0; // Gate 41 起點黃經（單一可調常數；golden 測試裁決）
 export const GATE_DEG = 5.625;
@@ -17,11 +18,6 @@ export const GATE_ORDER = [
   31, 33, 7, 4, 29, 59, 40, 64, 47, 6, 46, 18, 48, 57, 32, 50,
   28, 44, 1, 43, 14, 34, 9, 5, 26, 11, 10, 58, 38, 54, 61, 60,
 ];
-
-export function norm360(deg) {
-  const x = deg % 360;
-  return x < 0 ? x + 360 : x;
-}
 
 // 黃經 → { gate, line, degInGate }
 export function lonToGateLine(lon) {

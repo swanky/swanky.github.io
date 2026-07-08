@@ -7,7 +7,7 @@ import { analyzeChart, tenGod, TEN_GODS } from './bazi-shishen.js';
 import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf } from './bazi-data-texts.js';
 import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
 import { CITIES } from '../core/core-cities.js';
-import { zonedToUtc } from '../human-design/hd-timezone.js';
+import { zonedToUtc } from '../core/core-timezone.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 function fillSelect(id, from, to, pad) {
