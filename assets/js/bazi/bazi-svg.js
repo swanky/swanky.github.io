@@ -4,6 +4,7 @@
 // PNG payload schema 對齊三重地圖統一格式 {tool:'bazi',v:1,…}（§10.3），報告端可零打字消費。
 // iTXt 注入（crc32／IEND 定位）內聯，八字模組自包含、不牽連 HD 引擎。
 import { WUXING_COLOR } from './bazi-ganzhi.js';
+import { downloadPngFromSvg } from '../core/core-export.js';
 
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const FONT = "font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif"; // 單引號＝嚴格 XML 安全
@@ -78,74 +79,15 @@ export function buildMingCard(chart, analysis, meta = {}) {
 }
 
 // ── PNG 匯出（SVG → canvas → PNG ＋ iTXt payload）────────────────────
+// canvas→下載尾段與 iTXt 注入已收斂至 core/core-export.js；本函式只負責八字專屬的呼叫組態。
 export function exportMingCardPng({ svg, w, h }, { filename = 'bazi-mingpan.png', payload = null, scale = 2 } = {}) {
-  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const img = new Image();
-  img.onload = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = w * scale; canvas.height = h * scale;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#fffaf0'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    URL.revokeObjectURL(url);
-    canvas.toBlob(async (out) => {
-      let final = out;
-      if (payload) {
-        try {
-          const bytes = new Uint8Array(await out.arrayBuffer());
-          final = new Blob([injectPngText(bytes, 'bazi', JSON.stringify(payload))], { type: 'image/png' });
-        } catch (e) { /* 注入失敗仍下載原圖 */ }
-      }
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(final);
-      a.download = filename;
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-    }, 'image/png');
-  };
-  img.onerror = () => URL.revokeObjectURL(url);
-  img.src = url;
-}
-
-// ── iTXt 注入（內聯，PNG metadata；與 hd-svg 同格式）──────────────────
-const CRC_TABLE = (() => {
-  const t = new Uint32Array(256);
-  for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; }
-  return t;
-})();
-function crc32(bytes) {
-  let c = 0xffffffff;
-  for (let i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
-  return (c ^ 0xffffffff) >>> 0;
-}
-function findIENDOffset(png) {
-  for (let i = png.length - 8; i >= 0; i--)
-    if (png[i] === 0x49 && png[i + 1] === 0x45 && png[i + 2] === 0x4e && png[i + 3] === 0x44) return i - 4;
-  return png.length - 12;
-}
-function injectPngText(png, keyword, text) {
-  const enc = new TextEncoder();
-  const kw = enc.encode(keyword);
-  const txt = enc.encode(text);
-  const data = new Uint8Array(kw.length + 5 + txt.length);
-  let o = 0;
-  data.set(kw, o); o += kw.length;
-  data[o++] = 0; data[o++] = 0; data[o++] = 0; data[o++] = 0; data[o++] = 0;
-  data.set(txt, o);
-  const type = enc.encode('iTXt');
-  const chunk = new Uint8Array(8 + data.length + 4);
-  const dv = new DataView(chunk.buffer);
-  dv.setUint32(0, data.length, false);
-  chunk.set(type, 4);
-  chunk.set(data, 8);
-  const crcInput = new Uint8Array(4 + data.length);
-  crcInput.set(type, 0); crcInput.set(data, 4);
-  dv.setUint32(8 + data.length, crc32(crcInput), false);
-  const iend = findIENDOffset(png);
-  const out = new Uint8Array(png.length + chunk.length);
-  out.set(png.subarray(0, iend), 0);
-  out.set(chunk, iend);
-  out.set(png.subarray(iend), iend + chunk.length);
-  return out;
+  downloadPngFromSvg({
+    svg,
+    width: w,
+    height: h,
+    scale,
+    background: '#fffaf0',
+    filename,
+    itxt: payload ? { keyword: 'bazi', json: payload } : null,
+  });
 }

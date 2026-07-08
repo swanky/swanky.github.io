@@ -11,6 +11,7 @@ import { CENTERS } from './hd-data-centers.js';
 import { CHANNELS } from './hd-data-channels.js';
 import { PLANETS } from './hd-data-texts.js';
 import { QR } from './hd-data-qr.js';
+import { downloadPngFromSvg } from '../core/core-export.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 // 卡片 = 左 Design 行星欄 + 中央 bodygraph（幾何 viewBox 0 20 520 712）+ 右 Personality 行星欄
@@ -304,109 +305,19 @@ export function buildExportSvg(svg, opts = {}) {
   return { clone, fullH };
 }
 
-// ---- PNG iTXt metadata 注入（純 JS，無相依；不碰 DOM，可在 Node 直接測）----
-// 把出生資料（UTF-8 JSON）寫進下載 PNG 的一個 iTXt chunk，讓外部報告管線零打字直接消費。
-// 設計與契約見 docs/plan-hd-png-birth-metadata.md（報告端 gen/ingest_png.py 解析同一鍵）。
-const CRC_TABLE = (() => {
-  const t = new Uint32Array(256);
-  for (let n = 0; n < 256; n++) {
-    let c = n;
-    for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
-    t[n] = c >>> 0;
-  }
-  return t;
-})();
-function crc32(bytes) {
-  let c = 0xFFFFFFFF;
-  for (let i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xFF] ^ (c >>> 8);
-  return (c ^ 0xFFFFFFFF) >>> 0;
-}
-
-// 從尾端掃描 'IEND'（PNG 標準恆在末尾，掃描以求穩健），回傳其 length 欄位起點（type 前 4 bytes）。
-function findIENDOffset(png) {
-  for (let i = png.length - 8; i >= 8; i--) {
-    if (png[i] === 0x49 && png[i + 1] === 0x45 && png[i + 2] === 0x4E && png[i + 3] === 0x44) return i - 4;
-  }
-  return png.length; // 理論上不會發生：找不到就附加在最後
-}
-
-// 在 IEND 前插入一個未壓縮 iTXt(UTF-8) chunk。keyword 須為 ASCII。回傳新的 Uint8Array。
-export function injectPngText(png, keyword, text) {
-  const enc = new TextEncoder();
-  const kw = enc.encode(keyword);   // ASCII keyword（與 Latin-1 同碼位）
-  const txt = enc.encode(text);     // UTF-8 文字（中文出生地安全）
-  // iTXt data：keyword \0 compFlag(0) compMethod(0) langTag \0 transKeyword \0 text(UTF-8)
-  const data = new Uint8Array(kw.length + 5 + txt.length);
-  let o = 0;
-  data.set(kw, o); o += kw.length;
-  data[o++] = 0;  // keyword 結尾 null
-  data[o++] = 0;  // compression flag = 0（未壓縮）
-  data[o++] = 0;  // compression method = 0
-  data[o++] = 0;  // language tag = "" 結尾 null
-  data[o++] = 0;  // translated keyword = "" 結尾 null
-  data.set(txt, o);
-
-  const type = enc.encode('iTXt');
-  const chunk = new Uint8Array(8 + data.length + 4);
-  const dv = new DataView(chunk.buffer);
-  dv.setUint32(0, data.length, false);          // length（big-endian）
-  chunk.set(type, 4);
-  chunk.set(data, 8);
-  const crcInput = new Uint8Array(4 + data.length);
-  crcInput.set(type, 0);
-  crcInput.set(data, 4);
-  dv.setUint32(8 + data.length, crc32(crcInput), false); // CRC over type+data
-
-  const iend = findIENDOffset(png);
-  const out = new Uint8Array(png.length + chunk.length);
-  out.set(png.subarray(0, iend), 0);
-  out.set(chunk, iend);
-  out.set(png.subarray(iend), iend + chunk.length);
-  return out;
-}
-
 // ---- PNG 匯出（SVG → canvas → PNG）----
+// iTXt 注入與 canvas→下載尾段已收斂至 core/core-export.js；本函式只負責 HD 專屬的組版與序列化。
 export function exportChartPng(svg, chart, opts = {}) {
-  const scale = Math.min(opts.scale || 2, 2);
   const { clone, fullH } = buildExportSvg(svg, opts);
-
   const xml = new XMLSerializer().serializeToString(clone);
-  const svgBlob = new Blob([xml], { type: 'image/svg+xml;charset=utf-8' });
-  const url = URL.createObjectURL(svgBlob);
-  const img = new Image();
-  img.onload = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = CARD.w * scale;
-    canvas.height = fullH * scale;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    URL.revokeObjectURL(url);
-    canvas.toBlob(async (blob) => {
-      let outBlob = blob;
-      // 把出生資料寫進 PNG metadata（可被報告端零打字消費）。注入失敗不致命：仍下載原圖（字幕本身已可讀）。
-      if (opts.meta) {
-        try {
-          const bytes = new Uint8Array(await blob.arrayBuffer());
-          const withMeta = injectPngText(bytes, 'hd-birth', JSON.stringify(opts.meta));
-          outBlob = new Blob([withMeta], { type: 'image/png' });
-        } catch (e) {
-          console.warn('[hd] PNG metadata 注入失敗，下載無 metadata 版本：', e);
-        }
-      }
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(outBlob);
-      a.download = opts.filename || 'human-design-chart.png';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-    }, 'image/png');
-  };
-  img.onerror = () => {
-    URL.revokeObjectURL(url);
-    if (opts.onError) opts.onError();
-  };
-  img.src = url;
+  downloadPngFromSvg({
+    svg: xml,
+    width: CARD.w,
+    height: fullH,
+    scale: opts.scale,
+    background: '#fff',
+    filename: opts.filename || 'human-design-chart.png',
+    itxt: opts.meta ? { keyword: 'hd-birth', json: opts.meta } : null,
+    onError: opts.onError,
+  });
 }

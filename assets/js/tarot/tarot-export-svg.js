@@ -5,6 +5,7 @@ import { cardFaceInner, FACE_W, FACE_H } from './tarot-card-svg.js';
 import { framedImageInner, hasArt, fetchArtDataUrl } from './tarot-card-image.js';
 import { CARDS } from './tarot-deck.js';
 import { QR } from './tarot-data-qr.js';
+import { downloadPngFromSvg } from '../core/core-export.js';
 
 const GOLD = '#E5A300';
 const GOLD_DK = '#b6820a';
@@ -115,29 +116,13 @@ export async function exportReadingPng(draw, meta = {}, opts = {}) {
     if (card && hasArt(card)) { const url = await fetchArtDataUrl(card); if (url) artMap[d.cardId] = url; }
   }
   const { svg, w, h } = buildExportSvg(draw, meta, artMap);
-  const scale = Math.min(opts.scale || 2, 2);
-  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const img = new Image();
-  img.onload = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = w * scale;
-    canvas.height = h * scale;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    URL.revokeObjectURL(url);
-    canvas.toBlob((png) => {
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(png);
-      a.download = opts.filename || 'tarot-reading.png';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-    }, 'image/png');
-  };
-  img.onerror = () => { URL.revokeObjectURL(url); if (opts.onError) opts.onError(); };
-  img.src = url;
+  downloadPngFromSvg({
+    svg,
+    width: w,
+    height: h,
+    scale: opts.scale,
+    background: '#fff',
+    filename: opts.filename || 'tarot-reading.png',
+    onError: opts.onError,
+  });
 }

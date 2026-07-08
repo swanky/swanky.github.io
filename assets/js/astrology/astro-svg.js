@@ -1,4 +1,4 @@
-// astro-svg.js — 圓形命盤 SVG（星座環＋宮位線＋行星＋相位線）。純字串產生，可離線匯出 PNG。
+// astro-svg.js — 圓形命盤 SVG（星座環＋宮位線＋行星＋相位線）。純字串產生、零外部資源（尚無 PNG 匯出）。
 import { POINT_IDS } from './astro-chart.js';
 
 const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
