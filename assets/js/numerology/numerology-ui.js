@@ -4,8 +4,7 @@
 import { computeNumerology } from './numerology-core.js';
 import { buildProfile } from './numerology-data-texts.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
-
-const MAIL = 'swanky.hsiao@gmail.com';
+import { inquiryMailto } from '../core/core-funnel.js';
 
 let last = null;
 
@@ -61,7 +60,7 @@ function render(result) {
   const subject = `深度數字報告：生命靈數 ${result.lifePath}`;
   const bodyMail = `嗨 史旺基，我的生命靈數是 ${result.lifePath}（${p.keyword}），生日數 ${result.birthday}。\n想要一份更完整的數字組合解讀（生命靈數＋生日數＋流年）。`;
   const cta = $('num-cta-link');
-  if (cta) cta.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyMail)}`;
+  if (cta) cta.href = inquiryMailto(subject, bodyMail);
 
   show('num-result', true);
 }

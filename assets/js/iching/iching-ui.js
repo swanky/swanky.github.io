@@ -7,8 +7,7 @@ import { buildReading } from './iching-data-texts.js';
 import { buildHexSvg } from './iching-svg.js';
 import { recommendTopic, TOPICS } from '../tarot/tarot-spreads.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
-
-const MAIL = 'swanky.hsiao@gmail.com';
+import { inquiryMailto } from '../core/core-funnel.js';
 
 let lastCast = null;
 
@@ -82,7 +81,7 @@ function render(cast, method) {
   const subject = `深度解卦：${cast.ben.name}卦${changed}`;
   const bodyMail = `嗨 史旺基，我用易經問卦抽到「${cast.ben.name}卦」${changed}。\n我的問題是：${q || '（想深入聊聊）'}\n想要一份深度解卦（爻辭與行動建議）。`;
   const cta = $('iching-cta-link');
-  if (cta) cta.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyMail)}`;
+  if (cta) cta.href = inquiryMailto(subject, bodyMail);
 
   show('iching-result', true);
 }

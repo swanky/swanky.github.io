@@ -10,6 +10,7 @@ import { faceSvg, backSvg } from './tarot-card-image.js';
 import { exportReadingPng } from './tarot-export-svg.js';
 import { createOverlay } from './tarot-overlay.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
+import { inquiryMailto } from '../core/core-funnel.js';
 
 const REDUCED = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -243,7 +244,7 @@ function renderFunnel() {
   const spreadName = SPREADS[state.spread].nameZh;
   const cardsLines = state.draw.map((d) => `・${d.slotLabel}：${CARDS[d.cardId].nameZh}${d.reversed ? '（逆位）' : ''}`).join('\n');
   const body = `嗨 史旺基，我在線上抽了一次塔羅，想針對這個結果，做一次更深入的反思引導。\n\n主題：${topicLabel}\n我問的是：${state.question || '（當時沒有特別寫下問題）'}\n牌陣：${spreadName}\n${cardsLines}\n\n我想預約（擇一）：\n□ 客製文字解讀（非同步，email 交付）\n□ 1:1 線上引導（名額有限）\n方便的時段或聯絡方式：\n\n（我了解這是反思引導，不是占卜、不預測具體結果。）`;
-  const href = `mailto:swanky.hsiao@gmail.com?subject=${encodeURIComponent('塔羅・反思引導預約')}&body=${encodeURIComponent(body)}`;
+  const href = inquiryMailto('塔羅・反思引導預約', body);
   setHTML('tarot-funnel',
     `<div class="tarot-funnel-card">
       <h4>想把這次的牌，聊得更深一點？</h4>
