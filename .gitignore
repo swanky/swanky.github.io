@@ -15,3 +15,5 @@ docs/*
 
 # 人類圖 bodygraph 離線渲染／驗證暫存產物（截圖、SVG、比對頁）
 tools/_render/
+# 行銷 context（含正職職稱，2026-07-10 遷出公開 repo；正本在 docs/ 私有 repo，此處僅供本機工具讀取）
+.agents/
