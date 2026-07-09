@@ -2,6 +2,7 @@
 // 座標系：地心視黃經、true ecliptic of date（core-astro.positionsAt）。
 // 「不確定出生時間」模式（withTime=false）：只出行星星座，不算 ASC/宮位。
 import { positionsAt, norm360, wrapPM180 } from '../core/core-astro.js';
+import { zonedToUtc } from '../core/core-timezone.js';
 import { computeAngles, houseCusps, houseOf, isPolar } from './astro-houses.js';
 import { detectAspects } from './astro-aspects.js';
 
@@ -42,7 +43,16 @@ function pointObj(lonDeg, withHouse) {
   return o;
 }
 
-// input: { utcMs, lat, lon, houseSystem?, withTime? }
+// 由出生「牆鐘時刻」直接排盤（對齊 golden 端到端縫，與頁面吃同一條時區→UTC 縫）：
+// 內部解時區 → utcMs → 既有 computeChart。zonedToUtc 失敗會拋 HdError（code TZ_*）。
+// input: { year, month, day, hour, minute, tz, lat, lon, houseSystem?, noTime? }
+export function computeChartFromBirth(input) {
+  const { year, month, day, hour, minute, tz, lat, lon, houseSystem = 'whole', noTime = false } = input;
+  const { utcMs } = zonedToUtc(year, month, day, hour, minute, tz);
+  return computeChart({ utcMs, lat, lon, houseSystem, withTime: !noTime });
+}
+
+// input: { utcMs, lat, lon, houseSystem?, withTime? }（internal seam；牆鐘入口見 computeChartFromBirth）
 export function computeChart(input) {
   const { utcMs, lat, lon, houseSystem = 'whole', withTime = true } = input;
   const pos = positionsAt(utcMs);

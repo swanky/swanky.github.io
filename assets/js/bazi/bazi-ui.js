@@ -1,13 +1,12 @@
 // bazi-ui.js — 八字排盤頁面入口（ES module）。
-// 流程：出生表單 → 城市時區轉 UTC（hd-timezone）→ computePillars → analyzeChart → 渲染
+// 流程：出生表單 → computePillarsFromBirth（engine 內解時區）→ analyzeChart → 渲染
 //       命式卡（SVG）／摘要／日主小傳／五行解讀／十神表／大運／PNG。沿用防禦式 DOM 寫入。
 // beta（誠實紅線）：日柱排法待跨排盤站 golden 逐筆複核，頁面明示「beta・驗證中」，不宣稱正式。
-import { computePillars } from './bazi-pillars.js';
+import { computePillarsFromBirth } from './bazi-pillars.js';
 import { analyzeChart, tenGod, TEN_GODS } from './bazi-shishen.js';
 import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf } from './bazi-data-texts.js';
 import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
 import { CITIES } from '../core/core-cities.js';
-import { zonedToUtc } from '../core/core-timezone.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 function fillSelect(id, from, to, pad) {
@@ -54,21 +53,20 @@ function doCompute() {
   show('bazi-error', false);
   const inp = collect();
   if (!inp.city) { setText('bazi-error', '請選擇出生城市。'); show('bazi-error', true); return; }
-  let tz;
-  try { tz = zonedToUtc(inp.y, inp.mo, inp.d, inp.h, inp.mi, inp.city.tz); }
-  catch (e) { setText('bazi-error', '時區換算失敗，請確認出生日期與城市。'); show('bazi-error', true); return; }
-
-  // 真太陽時用的當地時區偏移：由「當地牆鐘視為 UTC」與實際 utcMs 反算（不依賴時區庫內部結構）
-  const offsetMin = Math.round((Date.UTC(inp.y, inp.mo - 1, inp.d, inp.h, inp.mi) - tz.utcMs) / 60000);
-
   let chart;
   try {
-    chart = computePillars({
-      y: inp.y, mo: inp.mo, d: inp.d, h: inp.h, mi: inp.mi, utcMs: tz.utcMs,
-      gender: inp.gender, withTime: !inp.timeUnknown, dayBoundary: inp.dayBoundary,
-      trueSolarTime: inp.trueSolarTime, lon: inp.city.lon, tzOffsetMin: offsetMin,
+    chart = computePillarsFromBirth({
+      year: inp.y, month: inp.mo, day: inp.d, hour: inp.h, minute: inp.mi, tz: inp.city.tz,
+      gender: inp.gender, noTime: inp.timeUnknown, dayBoundary: inp.dayBoundary,
+      trueSolarTime: inp.trueSolarTime, lon: inp.city.lon,
     });
-  } catch (e) { setText('bazi-error', '排盤失敗，請確認出生資料（支援 1900–2100）。'); show('bazi-error', true); return; }
+  } catch (e) {
+    setText('bazi-error', String(e && e.code || '').startsWith('TZ')
+      ? '時區換算失敗，請確認出生日期與城市。'
+      : '排盤失敗，請確認出生資料（支援 1900–2100）。');
+    show('bazi-error', true);
+    return;
+  }
 
   const analysis = analyzeChart(chart.pillars);
   render(chart, analysis, inp);

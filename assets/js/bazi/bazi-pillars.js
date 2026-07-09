@@ -12,6 +12,7 @@ import {
 } from './bazi-ganzhi.js';
 import { sunLonToMonthZhi, sunLonToJieName, baziYearNumber, nextJieMs, prevJieMs } from './bazi-solar.js';
 import { sunLonAt } from '../core/core-astro.js';
+import { zonedToUtc } from '../core/core-timezone.js';
 
 const DAY_MS = 86400000;
 
@@ -136,6 +137,23 @@ export function computePillars(o) {
     pillars,
     luck,
   };
+}
+
+// 由出生「牆鐘時刻」直接排盤（對齊 golden 端到端縫）：內部解時區 → utcMs，並反算 tzOffsetMin
+// （真太陽時校正用；由「當地牆鐘視為 UTC」與實際 utcMs 反算，收自原 bazi-ui）→ 既有 computePillars。
+// input: { year, month, day, hour, minute, tz, gender?, noTime?, dayBoundary?, trueSolarTime?, lon?, luckSteps? }
+export function computePillarsFromBirth(input) {
+  const {
+    year, month, day, hour, minute, tz,
+    gender = 'male', noTime = false, dayBoundary = 'zi23',
+    trueSolarTime = false, lon = null, luckSteps = 10,
+  } = input;
+  const { utcMs } = zonedToUtc(year, month, day, hour, minute, tz);
+  const tzOffsetMin = Math.round((Date.UTC(year, month - 1, day, hour, minute) - utcMs) / 60000);
+  return computePillars({
+    y: year, mo: month, d: day, h: hour, mi: minute, utcMs,
+    gender, withTime: !noTime, dayBoundary, trueSolarTime, lon, tzOffsetMin, luckSteps,
+  });
 }
 
 // 大運：陽年男／陰年女順排，反之逆排；起運＝到鄰節天數÷3（3 天＝1 年）。

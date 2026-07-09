@@ -1,12 +1,11 @@
 // astro-ui.js — 星座命盤頁面入口（ES module）。
-// 流程：出生表單 → 城市時區轉 UTC（hd-timezone）→ computeChart → 渲染摘要/圓盤/落座表/解讀/相位。
+// 流程：出生表單 → computeChartFromBirth（engine 內解時區）→ 渲染摘要/圓盤/落座表/解讀/相位。
 // beta：ASC/宮位公式尚未通過 astro.com golden 驗證，頁面明示「beta・待驗證」，不宣稱正式（誠實紅線）。
 // 深度解讀為精簡版（星座特質庫），完整 172 條文案為後續。沿用 hd-ui/tarot-ui 防禦式 DOM 寫入。
-import { computeChart, SIGNS, POINT_IDS, POINT_ZH, signOf } from './astro-chart.js';
+import { computeChartFromBirth, SIGNS, POINT_IDS, POINT_ZH, signOf } from './astro-chart.js';
 import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';
 import { buildChartSvg } from './astro-svg.js';
 import { CITIES } from '../core/core-cities.js';
-import { zonedToUtc } from '../core/core-timezone.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
@@ -60,22 +59,17 @@ function doCompute() {
     show('astro-error', true);
     return;
   }
-  let tz;
-  try {
-    tz = zonedToUtc(inp.y, inp.mo, inp.d, inp.h, inp.mi, inp.city.tz);
-  } catch (e) {
-    setText('astro-error', '時區換算失敗，請確認出生日期與城市。');
-    show('astro-error', true);
-    return;
-  }
   let chart;
   try {
-    chart = computeChart({
-      utcMs: tz.utcMs, lat: inp.city.lat, lon: inp.city.lon,
-      houseSystem: inp.houseSystem, withTime: !inp.timeUnknown,
+    chart = computeChartFromBirth({
+      year: inp.y, month: inp.mo, day: inp.d, hour: inp.h, minute: inp.mi,
+      tz: inp.city.tz, lat: inp.city.lat, lon: inp.city.lon,
+      houseSystem: inp.houseSystem, noTime: inp.timeUnknown,
     });
   } catch (e) {
-    setText('astro-error', '命盤計算失敗，請稍後再試。');
+    setText('astro-error', String(e && e.code || '').startsWith('TZ')
+      ? '時區換算失敗，請確認出生日期與城市。'
+      : '命盤計算失敗，請稍後再試。');
     show('astro-error', true);
     return;
   }
