@@ -157,19 +157,17 @@
   title: 奇門策略地圖
   subtitle: 把時間、方位與行動放進同一張策略地圖
   category: inquiry
-  status: manual-service
+  status: content
   visibility: public
   priority: P0
   phase: Phase 1
   route: /qimen/
-  nav_order: 7
-  nav_label: 奇門策略地圖
   icon: bi-compass
   input_type: question
   use_cases: [提案時機, 談判決策, 商業策略]
-  cta_label: 了解奇門服務
-  note: 策略內容與人工解讀服務先行；正式排盤工具開發中。
-  related: [iching, qimen-pro]
+  cta_label: 了解奇門
+  note: 以概念導讀與示意盤認識奇門；正式排盤工具評估中。
+  related: [iching]
   partner_cta:
     enabled: false
     label: ''
@@ -213,7 +211,7 @@
   subtitle: 今天把重要行動放在哪個時段與方向
   category: ritual
   status: coming-soon
-  visibility: public
+  visibility: hidden
   priority: P2
   phase: Phase 5
   route: ''
@@ -246,7 +244,7 @@
   subtitle: 針對一件具體問題，給你時機、方位、風險與下一步
   category: service
   status: manual-service
-  visibility: public
+  visibility: hidden
   priority: P0
   phase: Phase 1
   route: ''
@@ -262,7 +260,7 @@
   subtitle: 把奇門遁甲轉譯成商業決策地圖
   category: service
   status: manual-service
-  visibility: public
+  visibility: hidden
   priority: P1
   phase: Phase 1
   route: ''
@@ -277,7 +275,7 @@
   title: 公司／品牌命名
   subtitle: 不只算筆畫，也看品牌能不能被記住
   category: service
-  status: manual-service
+  status: coming-soon
   visibility: public
   priority: P1
   phase: Phase 1
@@ -285,7 +283,7 @@
   icon: bi-fonts
   input_type: name
   use_cases: [公司命名, 品牌命名, 產業語感]
-  cta_label: 預約服務
+  cta_label: 規劃中
   note: 交付 10–20 組名稱候選、命名邏輯、品牌語感與 SEO／記憶點分析。
   related: []
 
@@ -318,8 +316,8 @@
   input_type: birth
   use_cases: [每月提醒, 行動節奏, 訂閱]
   cta_label: 規劃中
-  note: 八字流月＋星象觀察＋奇門行動建議；先以人工 email 交付驗證需求。
-  related: [qimen, bazi]
+  note: 以八字五行與人類圖流日節奏為基礎的每月行動報告，形式規劃中。
+  related: [bazi]
 
 # ── 倫理邊界：有些事，我們選擇不做（公開立場即品牌資產）─────────────
 # UI 獨立渲染成「有些事，我們選擇不做」區塊，不與工具卡混在同一 grid（advice §5.2）。
@@ -378,3 +376,10 @@
   status: not-recommended
   visibility: public
   note: 情境高度敏感，不適合自動化與遠端判斷。
+
+- id: eth-unverifiable-reading
+  title: 自己無法驗證品質的人工解讀
+  category: ethical-boundary
+  status: not-recommended
+  visibility: public
+  note: 我們只提供自己學過、能親自把關品質的人工服務；沒有把握的科目，只做教育內容與可驗證的自動化工具。

@@ -2,7 +2,7 @@
 layout: home
 title: 奇門示意工具
 seo_title: 奇門示意工具｜教育展示・示意資料（正式排盤開發中）
-description: 奇門遁甲盤面的教育示意工具。看看奇門的輸入與九宮輸出長什麼樣子、每個元素怎麼讀。目前為教育展示與示意資料，正式排盤演算法開發中；想針對具體問題得到解讀，可預約奇門問事 Pro 人工服務。
+description: 奇門遁甲盤面的教育示意工具。看看奇門的輸入與九宮輸出長什麼樣子、每個元素怎麼讀。目前為教育展示與示意資料，不會依你的輸入起出真實盤面；正式排盤演算法開發中。
 keywords: 奇門遁甲,奇門排盤,奇門工具,九宮,八門九星八神,奇門示意
 nav_active: qimen
 breadcrumbs:
@@ -16,9 +16,6 @@ breadcrumbs:
     url: /qimen/tool/
 use_qimen_demo: true
 ---
-{% assign qimen_item = site.data.divination_services | where: 'id', 'qimen' | first %}
-{% assign pcta = qimen_item.partner_cta %}
-
 <main id="main">
 
   <!-- ======= 教育展示 banner ======= -->
@@ -67,7 +64,7 @@ use_qimen_demo: true
         <button type="submit" class="qimen-form-btn">排出示意盤</button>
 
         <div class="qimen-demo-notice" id="qimen-demo-notice">
-          <b>⚠ 正式排盤開發中。</b>目前奇門工具為教育展示，還不會依你的輸入起出真實盤面。下面這張是固定的教學示意盤，先看看盤面怎麼讀；如果你有具體問題想現在就得到解讀，可以預約下方的「奇門問事 Pro」人工服務。
+          <b>⚠ 正式排盤開發中。</b>目前奇門工具為教育展示，還不會依你的輸入起出真實盤面。若未來推出正式排盤，會在此頁公開排盤規則與驗證方式。
         </div>
       </form>
     </div>
@@ -102,18 +99,9 @@ use_qimen_demo: true
     </div>
   </section>
 
-  <!-- ======= 想現在就用 ======= -->
+  <!-- ======= 回到策略地圖 ======= -->
   <section class="qimen-section alt">
     <div class="container">
-      <div class="qimen-cta-grid" style="max-width:640px;">
-        <div class="qimen-cta-card is-featured">
-          <span class="qimen-cta-tag">想現在就用・人工</span>
-          <h4>奇門問事 Pro</h4>
-          <div class="qimen-cta-price">NT$1,680<small> / 一題</small></div>
-          <p>正式工具還在開發，但如果你現在就有一件具體的事想問，可以交給人工解讀：起局＋問題整理＋一份文字報告，含局勢摘要、風險、建議行動與 7 天觀察清單。</p>
-          <a class="qimen-cta-btn" href="{% if pcta.enabled %}{{ pcta.url }}{% else %}mailto:swanky.hsiao@gmail.com?subject={{ '預約：奇門問事 Pro' | url_encode }}&body={{ '嗨 史旺基，我想預約「奇門問事 Pro」（NT$1,680／一題）。我想問的具體問題是：' | url_encode }}{% endif %}" onclick="if(window.gtag){gtag('event','explore_service_inquiry',{'tool':'qimen-pro'});}">{% if pcta.enabled %}{{ pcta.label }}{% else %}來信預約 →{% endif %}</a>
-        </div>
-      </div>
       <p style="text-align:center; margin-top:24px;"><a class="explore-backlink" href="{{ '/qimen/' | relative_url }}">← 回到奇門策略地圖</a></p>
     </div>
   </section>
