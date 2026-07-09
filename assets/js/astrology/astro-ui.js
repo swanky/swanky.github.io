@@ -6,35 +6,11 @@ import { computeChartFromBirth, SIGNS, POINT_IDS, POINT_ZH, signOf } from './ast
 import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';
 import { buildChartSvg } from './astro-svg.js';
 import { CITIES } from '../core/core-cities.js';
+import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
 const DEG = (d) => `${Math.floor(d)}°${String(Math.round((d % 1) * 60)).padStart(2, '0')}′`;
-
-function fillSelect(id, from, to, pad) {
-  const el = $(id);
-  if (!el) return;
-  let html = '';
-  for (let i = from; i <= to; i++) html += `<option value="${i}">${pad ? String(i).padStart(2, '0') : i}</option>`;
-  el.innerHTML = html;
-}
-
-function fillCities() {
-  const el = $('astro-city');
-  if (!el) return;
-  const groups = {};
-  CITIES.forEach((c, i) => {
-    if (c.lat == null) return; // 只放有經緯度的
-    (groups[c.group] = groups[c.group] || []).push({ i, zh: c.zh });
-  });
-  let html = '';
-  for (const g of Object.keys(groups)) {
-    html += `<optgroup label="${esc(g)}">`;
-    for (const { i, zh } of groups[g]) html += `<option value="${i}">${esc(zh)}</option>`;
-    html += '</optgroup>';
-  }
-  el.innerHTML = html;
-}
 
 function collect() {
   const y = +$('astro-y').value;
@@ -134,13 +110,7 @@ function render(chart, inp) {
 }
 
 function init() {
-  const now = new Date();
-  fillSelect('astro-y', 1920, now.getFullYear(), false);
-  fillSelect('astro-mo', 1, 12, false);
-  fillSelect('astro-d', 1, 31, false);
-  fillSelect('astro-h', 0, 23, true);
-  fillSelect('astro-mi', 0, 59, true);
-  fillCities();
+  fillBirthSelects('astro', { requireLatLon: true }); // 星座需經緯度算宮位
   if ($('astro-y')) $('astro-y').value = 1990;
   on('astro-compute', 'click', doCompute);
   on('astro-time-unknown', 'change', () => {

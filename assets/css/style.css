@@ -4320,6 +4320,29 @@ section.testimonials {
 .tool-method-rules li { font-size: 0.88rem; color: #555; line-height: 1.8; }
 .tool-method-extra { font-size: 0.84rem; color: #888; margin: 10px 0 0; }
 
+/* --- 共用：出生表單（_includes/birth-form.html）---
+   主色由頁面 extra_css 在 #main 覆寫 --tool-accent 三變數（預設＝實驗室金）。 */
+#main {
+  --tool-accent: #E5A300;
+  --tool-accent-hover: #cc9000;
+  --tool-accent-ring: rgba(229, 163, 0, 0.14);
+  --tool-heading: #111;
+}
+.tool-form-card { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+.tool-form-card h3 { font-size: 1.12rem; font-weight: 700; color: var(--tool-heading); margin: 0 0 16px; }
+.tool-field { margin-bottom: 16px; }
+.tool-field > label { display: block; font-size: 0.86rem; font-weight: 600; color: #444; margin-bottom: 7px; }
+.tool-selects { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tool-selects select, .tool-form-card input[type=text] { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
+.tool-selects select:focus, .tool-form-card input:focus { outline: none; border-color: var(--tool-accent); box-shadow: 0 0 0 3px var(--tool-accent-ring); }
+.tool-selects .tool-city { width: 100%; max-width: 320px; }
+.tool-form-card .tool-name { width: 100%; }
+.tool-check { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #666; cursor: pointer; margin: 6px 0 14px; }
+.tool-check input { width: 16px; height: 16px; accent-color: var(--tool-accent); }
+.tool-compute-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: var(--tool-accent); color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; }
+.tool-compute-btn:hover { background: var(--tool-accent-hover); color: #fff; }
+.tool-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; }
+
 /* --- Hub Hero --- */
 .explore-hero {
   background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%);

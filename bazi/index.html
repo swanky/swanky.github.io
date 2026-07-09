@@ -28,42 +28,27 @@ extra_head: |
     "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "不確定出生時辰可以排嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。勾選「不確定時辰」後，系統會略過時柱，並以中午近似估算大運起運（精度會略降）；年柱、月柱、日柱與五行分布照常呈現。" } },
-      { "@type": "Question", "name": "我的出生資料會上傳嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有排盤計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。" } },
-      { "@type": "Question", "name": "為什麼標示 beta？", "acceptedAnswer": { "@type": "Answer", "text": "四柱的天文基礎（立春換年、節氣換月＝太陽黃經）採高精度計算；但日柱錨點與真太陽時，我們正在與多個知名排盤站逐筆交叉驗證。在驗證完成前，我們誠實標示 beta，不把未驗證的排盤裝作正式功能。" } },
-      { "@type": "Question", "name": "用真太陽時嗎？子時怎麼換日？", "acceptedAnswer": { "@type": "Answer", "text": "預設採用標準時間（與多數線上排盤一致）、以 23:00 換日。你可以在「進階選項」切換真太陽時（經度差＋均時差校正）與晚子時規則。不同流派做法可能不同，頁面會標示採用的規則。" } },
-      { "@type": "Question", "name": "會告訴我五行缺什麼、要補什麼嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。我們呈現五行分布與日主強弱「傾向」，但不做「缺 X 補 X」的斷言，也不做用神推薦、吉凶判斷或命定預測。八字在這裡是自我觀察與討論的地圖，不是命運的判決。" } }
-    ]
-  }
-  </script>
+faq:
+  - q: "不確定出生時辰可以排嗎？"
+    a: "可以。勾選「不確定時辰」後，系統會略過時柱，並以中午近似估算大運起運（精度會略降）；年柱、月柱、日柱與五行分布照常呈現。"
+  - q: "我的出生資料會上傳嗎？"
+    a: "不會。所有排盤計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。"
+  - q: "為什麼標示 beta？"
+    a: "四柱的天文基礎（立春換年、節氣換月＝太陽黃經）採高精度計算；但日柱錨點與真太陽時，我們正在與多個知名排盤站逐筆交叉驗證。在驗證完成前，我們誠實標示 beta，不把未驗證的排盤裝作正式功能。"
+  - q: "用真太陽時嗎？子時怎麼換日？"
+    a: "預設採用標準時間（與多數線上排盤一致）、以 23:00 換日。你可以在「進階選項」切換真太陽時（經度差＋均時差校正）與晚子時規則。不同流派做法可能不同，頁面會標示採用的規則。"
+  - q: "會告訴我五行缺什麼、要補什麼嗎？"
+    a: "不會。我們呈現五行分布與日主強弱「傾向」，但不做「缺 X 補 X」的斷言，也不做用神推薦、吉凶判斷或命定預測。八字在這裡是自我觀察與討論的地圖，不是命運的判決。"
 extra_css: |
   .bazi-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; text-align: center; }
   .bazi-hero h1 { font-size: 2rem; font-weight: 700; color: #3a3226; margin-bottom: 12px; }
   .bazi-hero .lead { font-size: 1.02rem; color: #6b6252; max-width: 620px; margin: 0 auto 16px; line-height: 1.75; }
   .bazi-beta { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #e8d49a; border-radius: 50px; padding: 5px 15px; font-size: 0.82rem; color: #a5791f; }
   .bazi-section { padding: 38px 0; }
-  .bazi-form-card { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-  .bazi-form-card h3 { font-size: 1.12rem; font-weight: 700; color: #3a3226; margin: 0 0 16px; }
-  .bazi-field { margin-bottom: 16px; }
-  .bazi-field > label { display: block; font-size: 0.86rem; font-weight: 600; color: #444; margin-bottom: 7px; }
-  .bazi-selects { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .bazi-selects select, .bazi-form-card input[type=text] { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
-  .bazi-selects select:focus, .bazi-form-card input:focus { outline: none; border-color: #E5A300; box-shadow: 0 0 0 3px rgba(229,163,0,0.14); }
-  #bazi-city { width: 100%; max-width: 320px; }
-  #bazi-name { width: 100%; }
-  .bazi-check { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #666; cursor: pointer; margin: 6px 0 14px; }
-  .bazi-check input { width: 16px; height: 16px; accent-color: #E5A300; }
+  #main { --tool-heading: #3a3226; }
   .bazi-adv { border: 1px solid #f0e7d2; border-radius: 10px; padding: 6px 14px; margin-bottom: 16px; background: #fffdf8; }
   .bazi-adv summary { font-size: 0.9rem; font-weight: 600; color: #a5791f; cursor: pointer; padding: 8px 0; }
-  .bazi-adv .bazi-field { margin: 10px 0; }
-  .bazi-compute-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; }
-  .bazi-compute-btn:hover { background: #cc9000; }
-  .bazi-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; }
+  .bazi-adv .tool-field { margin: 10px 0; }
   .bazi-result { max-width: 900px; margin: 30px auto 0; }
   .bazi-beta-note { background: #fdf3e0; border: 1px solid #ecd9a8; color: #8a6a1a; border-radius: 10px; padding: 13px 16px; font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
   .bazi-mingpan-wrap { display: flex; justify-content: center; margin: 4px 0 18px; }
@@ -108,31 +93,10 @@ extra_css: |
   <!-- ======= 表單 ======= -->
   <section class="bazi-section">
     <div class="container">
-      <div class="bazi-form-card">
-        <h3>輸入出生資料</h3>
-        <div class="bazi-field">
-          <label>出生日期（國曆）</label>
-          <div class="bazi-selects">
-            <select id="bazi-y"></select> 年
-            <select id="bazi-mo"></select> 月
-            <select id="bazi-d"></select> 日
-          </div>
-        </div>
-        <div class="bazi-field" id="bazi-time-row">
-          <label>出生時間</label>
-          <div class="bazi-selects">
-            <select id="bazi-h"></select> 時
-            <select id="bazi-mi"></select> 分
-          </div>
-        </div>
-        <label class="bazi-check"><input type="checkbox" id="bazi-time-unknown"> 不確定時辰（略過時柱，大運以中午近似）</label>
-        <div class="bazi-field">
-          <label>出生城市</label>
-          <div class="bazi-selects"><select id="bazi-city"></select></div>
-        </div>
-        <div class="bazi-field">
+      {% capture bazi_form_extra %}
+        <div class="tool-field">
           <label>性別（大運順逆排法需要）</label>
-          <div class="bazi-selects">
+          <div class="tool-selects">
             <select id="bazi-gender">
               <option value="male">男</option>
               <option value="female">女</option>
@@ -141,24 +105,24 @@ extra_css: |
         </div>
         <details class="bazi-adv">
           <summary>進階選項（子時規則・真太陽時）</summary>
-          <div class="bazi-field">
+          <div class="tool-field">
             <label>子時換日規則</label>
-            <div class="bazi-selects">
+            <div class="tool-selects">
               <select id="bazi-day-boundary">
                 <option value="zi23">23:00 換日（預設，與多數線上工具一致）</option>
                 <option value="late-zi">晚子時不換日（23:00–23:59 仍算當日）</option>
               </select>
             </div>
           </div>
-          <label class="bazi-check"><input type="checkbox" id="bazi-true-solar"> 使用真太陽時（經度差＋均時差校正；預設關閉）</label>
+          <label class="tool-check"><input type="checkbox" id="bazi-true-solar"> 使用真太陽時（經度差＋均時差校正；預設關閉）</label>
         </details>
-        <div class="bazi-field">
-          <label>姓名（選填）</label>
-          <input type="text" id="bazi-name" placeholder="會顯示在你的命式卡上">
-        </div>
-        <button class="bazi-compute-btn" id="bazi-compute">產生八字命盤</button>
-        <div class="bazi-error" id="bazi-error" style="display:none;"></div>
-      </div>
+      {% endcapture %}
+      {% include birth-form.html prefix='bazi'
+         date_label='出生日期（國曆）'
+         time_unknown_label='不確定時辰（略過時柱，大運以中午近似）'
+         name_placeholder='會顯示在你的命式卡上'
+         submit_label='產生八字命盤'
+         extra=bazi_form_extra %}
 
       <!-- 結果 -->
       <div class="bazi-result" id="bazi-result" style="display:none;">
@@ -198,7 +162,7 @@ extra_css: |
     <div class="container text-center">
       <h2 style="font-size:1.4rem; font-weight:700; color:#3a3226; margin-bottom:8px;">想要一份五行・職涯節奏的深度報告？</h2>
       <p style="color:#777; max-width:600px; margin:0 auto 18px;">「八字五行・職涯節奏報告」（人工撰寫，早鳥 NT$980）正在籌備中。留下需求，正式上線時以早鳥價通知你。</p>
-      <a class="bazi-compute-btn" style="display:inline-block; width:auto; padding:12px 30px; text-decoration:none;" href="mailto:swanky.hsiao@gmail.com?subject={{ '早鳥候補：八字五行職涯節奏報告' | url_encode }}&body={{ '嗨 史旺基，八字五行職涯節奏報告上線時請通知我。我最想釐清的是（職涯步調／轉職時機／個人節奏）：' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_signal',{'tool':'bazi-report'});}">加入早鳥候補 →</a>
+      <a class="tool-compute-btn" style="display:inline-block; width:auto; padding:12px 30px; text-decoration:none;" href="mailto:swanky.hsiao@gmail.com?subject={{ '早鳥候補：八字五行職涯節奏報告' | url_encode }}&body={{ '嗨 史旺基，八字五行職涯節奏報告上線時請通知我。我最想釐清的是（職涯步調／轉職時機／個人節奏）：' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_signal',{'tool':'bazi-report'});}">加入早鳥候補 →</a>
     </div>
   </section>
 
@@ -206,28 +170,8 @@ extra_css: |
   <section class="bazi-section" style="background:#f8f9fa;">
     <div class="container">
       <h2 style="font-size:1.4rem; font-weight:700; color:#3a3226; text-align:center; margin-bottom:24px;">常見問題</h2>
-      <div class="accordion" id="baziFaq" style="max-width:760px; margin:0 auto;">
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bfaq0">不確定出生時辰可以排嗎？</button></h2>
-          <div id="bfaq0" class="accordion-collapse collapse" data-bs-parent="#baziFaq"><div class="accordion-body">可以。勾選「不確定時辰」後，系統會略過時柱，並以中午近似估算大運起運（精度會略降）；年柱、月柱、日柱與五行分布照常呈現。</div></div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bfaq1">我的出生資料會上傳嗎？</button></h2>
-          <div id="bfaq1" class="accordion-collapse collapse" data-bs-parent="#baziFaq"><div class="accordion-body">不會。所有排盤計算都在你的瀏覽器內完成，出生資料不會傳送到任何伺服器，也不會被記錄。</div></div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bfaq2">為什麼標示 beta？</button></h2>
-          <div id="bfaq2" class="accordion-collapse collapse" data-bs-parent="#baziFaq"><div class="accordion-body">四柱的天文基礎（立春換年、節氣換月＝太陽黃經）採高精度計算；但日柱錨點與真太陽時，我們正在與多個知名排盤站逐筆交叉驗證。在驗證完成前，我們誠實標示 beta，不把未驗證的排盤裝作正式功能。</div></div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bfaq3">用真太陽時嗎？子時怎麼換日？</button></h2>
-          <div id="bfaq3" class="accordion-collapse collapse" data-bs-parent="#baziFaq"><div class="accordion-body">預設採用標準時間（與多數線上排盤一致）、以 23:00 換日。你可以在「進階選項」切換真太陽時（經度差＋均時差校正）與晚子時規則。不同流派做法可能不同，頁面會標示採用的規則。</div></div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bfaq4">會告訴我五行缺什麼、要補什麼嗎？</button></h2>
-          <div id="bfaq4" class="accordion-collapse collapse" data-bs-parent="#baziFaq"><div class="accordion-body">不會。我們呈現五行分布與日主強弱「傾向」，但不做「缺 X 補 X」的斷言，也不做用神推薦、吉凶判斷或命定預測。八字在這裡是自我觀察與討論的地圖，不是命運的判決。</div></div>
-        </div>
-      </div>
+      {% include faq-accordion.html faq=page.faq id='baziFaq' %}
+      {% include faq-jsonld.html faq=page.faq %}
     </div>
   </section>
 

@@ -1,0 +1,12 @@
+{% comment %}
+faq-accordion.html — FAQ 手風琴（與 faq-jsonld.html 吃同一份 page.faq，漂移結構性消滅）。
+參數：faq（[{q, a}, …]）、id（accordion 容器 id，兼作項目 id 前綴）
+{% endcomment %}
+<div class="accordion" id="{{ include.id }}" style="max-width:760px; margin:0 auto;">
+  {% for item in include.faq %}
+  <div class="accordion-item">
+    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ include.id }}{{ forloop.index0 }}">{{ item.q }}</button></h2>
+    <div id="{{ include.id }}{{ forloop.index0 }}" class="accordion-collapse collapse" data-bs-parent="#{{ include.id }}"><div class="accordion-body">{{ item.a }}</div></div>
+  </div>
+  {% endfor %}
+</div>

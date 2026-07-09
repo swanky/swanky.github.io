@@ -7,29 +7,8 @@ import { analyzeChart, tenGod, TEN_GODS } from './bazi-shishen.js';
 import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf } from './bazi-data-texts.js';
 import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
 import { CITIES } from '../core/core-cities.js';
+import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
-
-function fillSelect(id, from, to, pad) {
-  const el = $(id);
-  if (!el) return;
-  let html = '';
-  for (let i = from; i <= to; i++) html += `<option value="${i}">${pad ? String(i).padStart(2, '0') : i}</option>`;
-  el.innerHTML = html;
-}
-
-function fillCities() {
-  const el = $('bazi-city');
-  if (!el) return;
-  const groups = {};
-  CITIES.forEach((c, i) => { (groups[c.group] = groups[c.group] || []).push({ i, zh: c.zh }); });
-  let html = '';
-  for (const g of Object.keys(groups)) {
-    html += `<optgroup label="${esc(g)}">`;
-    for (const { i, zh } of groups[g]) html += `<option value="${i}">${esc(zh)}</option>`;
-    html += '</optgroup>';
-  }
-  el.innerHTML = html;
-}
 
 function collect() {
   const y = +$('bazi-y').value;
@@ -142,13 +121,7 @@ function doDownload() {
 }
 
 function init() {
-  const now = new Date();
-  fillSelect('bazi-y', 1920, now.getFullYear(), false);
-  fillSelect('bazi-mo', 1, 12, false);
-  fillSelect('bazi-d', 1, 31, false);
-  fillSelect('bazi-h', 0, 23, true);
-  fillSelect('bazi-mi', 0, 59, true);
-  fillCities();
+  fillBirthSelects('bazi'); // 八字只需時區與經度，不過濾無座標城市
   if ($('bazi-y')) $('bazi-y').value = 1990;
   on('bazi-compute', 'click', doCompute);
   on('bazi-download', 'click', doDownload);

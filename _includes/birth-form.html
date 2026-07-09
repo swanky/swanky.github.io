@@ -1,0 +1,41 @@
+{% comment %}
+birth-form.html — 自我探索實驗室共用出生表單（astrology / bazi / 未來紫微）。
+參數：
+  prefix             元素 id 前綴（astro / bazi / ziwei），JS 以 `${prefix}-y` 等 id 讀值
+  date_label         日期欄標籤（預設「出生日期」）
+  time_unknown_label 「不確定時間」勾選文案
+  name_placeholder   姓名欄 placeholder
+  submit_label       送出按鈕文字
+  extra              城市欄之後、姓名欄之前插入的頁面專屬欄位（capture 傳入）
+主色：頁面 extra_css 於 #main 覆寫 --tool-accent 系列變數；JS 對應 core/core-form.js fillBirthSelects。
+{% endcomment %}
+<div class="tool-form-card">
+  <h3>輸入出生資料</h3>
+  <div class="tool-field">
+    <label>{{ include.date_label | default: '出生日期' }}</label>
+    <div class="tool-selects">
+      <select id="{{ include.prefix }}-y"></select> 年
+      <select id="{{ include.prefix }}-mo"></select> 月
+      <select id="{{ include.prefix }}-d"></select> 日
+    </div>
+  </div>
+  <div class="tool-field" id="{{ include.prefix }}-time-row">
+    <label>出生時間</label>
+    <div class="tool-selects">
+      <select id="{{ include.prefix }}-h"></select> 時
+      <select id="{{ include.prefix }}-mi"></select> 分
+    </div>
+  </div>
+  <label class="tool-check"><input type="checkbox" id="{{ include.prefix }}-time-unknown"> {{ include.time_unknown_label }}</label>
+  <div class="tool-field">
+    <label>出生城市</label>
+    <div class="tool-selects"><select id="{{ include.prefix }}-city" class="tool-city"></select></div>
+  </div>
+  {{ include.extra }}
+  <div class="tool-field">
+    <label>姓名（選填）</label>
+    <input type="text" id="{{ include.prefix }}-name" class="tool-name" placeholder="{{ include.name_placeholder }}">
+  </div>
+  <button class="tool-compute-btn" id="{{ include.prefix }}-compute">{{ include.submit_label }}</button>
+  <div class="tool-error" id="{{ include.prefix }}-error" style="display:none;"></div>
+</div>
