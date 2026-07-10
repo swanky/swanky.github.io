@@ -7,6 +7,8 @@ tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/ai-model-wave-agentic-shift.jpg
 hero_image: true
+source_url: "https://www.linkedin.com/posts/swanky_gpt-56grok-45muse-spark-11-%E7%99%BC%E5%B8%83%E8%A7%A3%E8%AE%80ai-%E4%B8%BB%E6%88%B0%E5%A0%B4%E5%BE%9E%E8%81%8A%E5%A4%A9%E6%A1%86%E8%BD%89%E5%90%91-activity-7481143165073244160-CqlM/"
+source_url_x: "https://x.com/swanky/status/2075377540399792438"
 description: "2026 年 7 月 8 日至 9 日，Grok 4.5、GPT-5.6 與 Muse Spark 1.1 在 48 小時內接連發布，OpenAI 同時把 Codex 扶正成桌面主入口、聊天框降級成 ChatGPT Classic。本文從每天用 Claude Code 與多模型工作流的實踐者視角，解讀這波發布潮的分工、benchmark 的口徑陷阱，以及對台灣團隊的 model routing 建議。"
 keywords: GPT-5.6, Grok 4.5, Muse Spark, Claude Fable 5, Codex, ChatGPT Classic, agentic coding, model routing, SWE-Bench, Terminal-Bench, Claude Code, Hermes Agent, agentic engineering, AI agent, 史旺基, Swanky Studio
 ---
