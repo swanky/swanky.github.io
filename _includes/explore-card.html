@@ -11,17 +11,17 @@
     <span class="explore-card-title">{{ it.title }}{% case it.status %}{% when 'live' %} <span class="explore-badge is-live">立即使用</span>{% when 'beta' %} <span class="explore-badge is-beta">beta · {{ it.phase }}</span>{% when 'manual-service' %} <span class="explore-badge is-manual">人工服務</span>{% when 'coming-soon' %} <span class="explore-badge is-soon">規劃中 · {{ it.phase }}</span>{% endcase %}</span>
     <span class="explore-card-sub">{{ it.subtitle }}</span>
   </span>{% endcapture %}{% if it.route != '' and it.route %}
-<a class="explore-card is-{{ it.status }}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});}"{% endif %}>
+<a class="explore-card is-{{ it.status }}{% if it.flagship %} is-flagship{% endif %}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});}"{% endif %}>
   {{ inner }}
   <span class="explore-card-cta">{{ it.cta_label }} →</span>
 </a>
 {% elsif it.status == 'manual-service' %}
-<div class="explore-card is-manual">
+<div class="explore-card is-manual{% if it.flagship %} is-flagship{% endif %}">
   {{ inner }}
   <a class="explore-card-cta as-link" href="mailto:{{ mail }}?subject={{ '預約：' | append: it.title | url_encode }}&body={{ '嗨 史旺基，我想了解「' | append: it.title | append: '」服務，想先聊聊我的情境。' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_service_inquiry',{'tool':'{{ it.id }}'});}">{{ it.cta_label }} →</a>
 </div>
 {% else %}
-<div class="explore-card is-soon">
+<div class="explore-card is-soon{% if it.flagship %} is-flagship{% endif %}">
   {{ inner }}
   <details class="explore-card-more">
     <summary>了解更多</summary>

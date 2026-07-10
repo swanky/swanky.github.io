@@ -33,6 +33,7 @@
   subtitle: 你的能量與決策設計圖
   category: birth-map
   status: live
+  flagship: true
   visibility: public
   priority: P0
   phase: 已上線
@@ -122,6 +123,7 @@
   subtitle: 用圖像把卡住的處境想清楚
   category: inquiry
   status: live
+  flagship: true
   visibility: public
   priority: P0
   phase: 已上線
