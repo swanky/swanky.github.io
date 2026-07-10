@@ -34,6 +34,16 @@ export const TYPES = {
   },
 };
 
+// 順流信號／逆流警訊的白話補充句（結果頁策略行下方）。
+// 措辭對齊 TYPES 的 notSelf/signature（挫敗／滿足等），只補一句「怎麼用」，不重複標籤本身。
+export const TYPE_SIGNAL_NOTES = {
+  generator: '反覆的挫敗感，多半是回應之外硬去發起的訊號；帶著滿足感收工，才是回應對了地方。',
+  mg: '挫敗感通常代表回應錯了方向，憤怒則常是該告知卻沒告知；滿足與平和同時出現，才是這條路走對了。',
+  manifestor: '憤怒多半代表發起被攔截、或忘了先告知；平和感出現，代表阻力真的變小了。',
+  projector: '苦澀感通常是在沒有邀請的地方用力過猛；被認可的成功感，才代表力氣花在對的人身上。',
+  reflector: '失望感多半來自身處不適合的環境；每天都有新鮮感的驚喜，才是這個環境適合你的訊號。',
+};
+
 export const AUTHORITIES = {
   emotional: {
     nameZh: '情緒權威', nameEn: 'Emotional',

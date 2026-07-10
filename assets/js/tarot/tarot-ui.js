@@ -243,13 +243,16 @@ function renderFunnel() {
   const topicLabel = TOPICS[state.topic].label;
   const spreadName = SPREADS[state.spread].nameZh;
   const cardsLines = state.draw.map((d) => `・${d.slotLabel}：${CARDS[d.cardId].nameZh}${d.reversed ? '（逆位）' : ''}`).join('\n');
-  const body = `嗨 史旺基，我在線上抽了一次塔羅，想針對這個結果，做一次更深入的反思引導。\n\n主題：${topicLabel}\n我問的是：${state.question || '（當時沒有特別寫下問題）'}\n牌陣：${spreadName}\n${cardsLines}\n\n我想預約（擇一）：\n□ 客製文字解讀（非同步，email 交付）\n□ 1:1 線上引導（名額有限）\n方便的時段或聯絡方式：\n\n（我了解這是反思引導，不是占卜、不預測具體結果。）`;
+  const body = `嗨 史旺基，我在線上抽了一次塔羅，想針對這個結果，做一次更深入的反思引導。\n\n主題：${topicLabel}\n我問的是：${state.question || '（當時沒有特別寫下問題）'}\n牌陣：${spreadName}\n${cardsLines}\n\n我想預約（擇一）：\n□ 客製文字解讀（NT$680 早鳥，非同步，email 交付）\n□ 1:1 線上引導（NT$2,400 / 60 分鐘，名額有限）\n方便的時段或聯絡方式：\n\n（我了解這是反思引導，不是占卜、不預測具體結果。）`;
   const href = inquiryMailto('塔羅・反思引導預約', body);
   setHTML('tarot-funnel',
     `<div class="tarot-funnel-card">
       <h4>想把這次的牌，聊得更深一點？</h4>
       <p>線上抽牌給你的是一面快速的鏡子。若你想針對「${esc(state.question || '你正在面對的處境')}」，由一位帶過團隊、習慣陪人把事情想清楚的人陪你跑完整套反思——把牌面翻成你能用的下一步——可以來信，我會帶著你這次抽到的牌一起談。</p>
-      <a class="tarot-funnel-cta" id="tarot-cta-guide" href="${href}">把這次的牌帶去做一次引導 →</a>
+      <div class="tarot-funnel-actions">
+        <a class="tarot-funnel-cta" id="tarot-cta-guide" href="${href}">把這次的牌帶去做一次引導 →</a>
+        <a class="tarot-funnel-plans" href="#tarot-plans">查看引導方案與定價 ↓</a>
+      </div>
       <p class="tarot-funnel-mini">已自動把你的主題、問題與抽到的牌填進信件，送出前可自行增刪。</p>
     </div>`);
   on('tarot-cta-guide', 'click', () => gtag('event', 'tarot_funnel_click', { spread: state.spread, topic: state.topic }));

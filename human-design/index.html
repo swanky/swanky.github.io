@@ -43,7 +43,7 @@ extra_css: |
   .hd-hero h1 { font-size: 2.1rem; font-weight: 700; color: #111; margin-bottom: 14px; }
   .hd-hero .lead { font-size: 1.08rem; color: #555; margin-bottom: 22px; line-height: 1.7; }
   .hd-privacy-pill { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #f0dca8; border-radius: 50px; padding: 6px 16px; font-size: 0.85rem; color: #7a5500; margin-bottom: 24px; }
-  .hd-privacy-pill i { color: #E5A300; }
+  .hd-privacy-pill i { color: var(--c-gold); }
   .hd-section { padding: 50px 0; }
   .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); max-width: 720px; margin: 0 auto; }
   .hd-form-card h3 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 4px; }
@@ -53,7 +53,7 @@ extra_css: |
   .hd-selects { display: flex; gap: 8px; flex-wrap: wrap; }
   .hd-selects .hd-sel-wrap { display: flex; align-items: center; gap: 4px; }
   .hd-selects select, .hd-city-input, #hd-manual-tz { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
-  .hd-selects select:focus, .hd-city-input:focus, #hd-manual-tz:focus { outline: none; border-color: #E5A300; box-shadow: 0 0 0 3px rgba(229,163,0,0.12); }
+  .hd-selects select:focus, .hd-city-input:focus, #hd-manual-tz:focus { outline: none; border-color: var(--c-gold); box-shadow: 0 0 0 3px rgba(229,163,0,0.12); }
   .hd-selects .hd-unit { font-size: 0.85rem; color: #888; }
   .hd-city-wrap { position: relative; }
   .hd-city-input { width: 100%; }
@@ -63,11 +63,11 @@ extra_css: |
   .hd-city-item:hover, .hd-city-item.is-active { background: #fffbf0; }
   .hd-city-item .hd-city-group { font-size: 0.78rem; color: #aaa; }
   .hd-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #555; cursor: pointer; }
-  .hd-check input { width: 16px; height: 16px; accent-color: #E5A300; }
+  .hd-check input { width: 16px; height: 16px; accent-color: var(--c-gold); }
   .hd-advanced { margin-top: 12px; }
   .hd-advanced summary { font-size: 0.85rem; color: #888; cursor: pointer; }
   .hd-advanced .hd-adv-body { padding-top: 12px; }
-  .hd-btn-generate { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; margin-top: 6px; }
+  .hd-btn-generate { width: 100%; padding: 14px; border: none; border-radius: 10px; background: var(--c-gold); color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; margin-top: 6px; }
   .hd-btn-generate:hover { background: #c98f00; }
   .hd-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; display: none; }
   .hd-error.is-show { display: block; }
@@ -77,7 +77,7 @@ extra_css: |
   .hd-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px; }
   .hd-sum-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px 14px; text-align: center; }
   .hd-sum-card .hd-sum-label { font-size: 0.78rem; color: #999; margin-bottom: 6px; }
-  .hd-sum-card .hd-sum-value { font-size: 1.15rem; font-weight: 700; color: #E5A300; }
+  .hd-sum-card .hd-sum-value { font-size: 1.15rem; font-weight: 700; color: var(--c-gold); }
   .hd-strategy-line { text-align: center; font-size: 0.95rem; color: #555; background: #fffbf0; border-radius: 10px; padding: 14px; margin-bottom: 24px; }
   .hd-stability { background: #f4f9fd; border: 1px solid #d6e8f5; border-radius: 10px; padding: 16px; margin-bottom: 24px; font-size: 0.88rem; color: #456; }
   .hd-stability h5 { font-size: 0.95rem; font-weight: 700; color: #2c5f86; margin-bottom: 10px; }
@@ -85,18 +85,18 @@ extra_css: |
   .hd-card-scroll { overflow-x: auto; text-align: center; background: #FFFDF7; border-radius: 14px; border: 1px solid #f0e9d8; padding: 10px; }
   .hd-card-scroll svg { max-width: 100%; height: auto; }
   .hd-result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 22px 0; }
-  .hd-result-actions button { padding: 11px 22px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid #E5A300; background: #fff; color: #c98f00; transition: 0.25s; }
-  .hd-result-actions button.is-primary { background: #E5A300; color: #fff; }
-  .hd-result-actions button:hover { background: #E5A300; color: #fff; }
+  .hd-result-actions button, .hd-result-actions a { padding: 11px 22px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; text-decoration: none; display: inline-block; }
+  .hd-result-actions button.is-primary { background: var(--c-gold); color: #fff; }
+  .hd-result-actions button:hover, .hd-result-actions a:hover { background: var(--c-gold); color: #fff; }
   .hd-share-note { text-align: center; font-size: 0.8rem; color: #aaa; margin-top: -10px; margin-bottom: 10px; }
   .hd-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
   .hd-detail-block h4 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0e9d8; }
   .hd-chan-item, .hd-center-item { padding: 9px 0; border-bottom: 1px solid #f5f5f5; font-size: 0.9rem; }
   .hd-chan-item .hd-chan-name { font-weight: 600; color: #333; }
-  .hd-chan-item .hd-chan-id { color: #E5A300; font-size: 0.82rem; margin-left: 6px; }
+  .hd-chan-item .hd-chan-id { color: var(--c-gold); font-size: 0.82rem; margin-left: 6px; }
   .hd-chan-item .hd-chan-desc { color: #888; font-size: 0.84rem; margin-top: 3px; }
   .hd-center-item .hd-cc-name { font-weight: 600; }
-  .hd-center-item .hd-cc-defined { color: #E5A300; }
+  .hd-center-item .hd-cc-defined { color: var(--c-gold); }
   .hd-center-item .hd-cc-open { color: #aaa; }
   .hd-planet-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 10px; }
   .hd-planet-table th, .hd-planet-table td { padding: 5px 8px; border-bottom: 1px solid #f0f0f0; text-align: center; }
@@ -107,7 +107,7 @@ extra_css: |
   .hd-readout-title { font-size: 1.15rem; font-weight: 700; color: #111; margin: 34px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0e9d8; }
   .hd-readout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 26px; }
   .hd-readout-item h4 { font-size: 0.95rem; font-weight: 700; color: #111; margin-bottom: 7px; }
-  .hd-ro-label { display: inline-block; font-size: 0.7rem; font-weight: 700; color: #fff; background: #E5A300; border-radius: 4px; padding: 2px 7px; vertical-align: middle; }
+  .hd-ro-label { display: inline-block; font-size: 0.7rem; font-weight: 700; color: #fff; background: var(--c-gold); border-radius: 4px; padding: 2px 7px; vertical-align: middle; }
   .hd-ro-name { color: #111; }
   .hd-ro-en { font-size: 0.76rem; font-weight: 400; color: #bbb; }
   .hd-readout-item p { font-size: 0.9rem; color: #555; line-height: 1.7; margin: 0; }
@@ -117,7 +117,7 @@ extra_css: |
   /* 輪迴交叉 */
   .hd-cross-intro { font-size: 0.86rem; color: #777; line-height: 1.65; margin: 0 0 10px; }
   .hd-cross-data { font-size: 0.92rem; color: #444; margin-bottom: 6px; }
-  .hd-cross-angle { color: #E5A300; font-weight: 600; }
+  .hd-cross-angle { color: var(--c-gold); font-weight: 600; }
   .hd-cross-meaning { font-size: 0.88rem; color: #555; margin: 0 0 8px; }
   .hd-cross-note { font-size: 0.8rem; color: #aaa; margin: 0; }
   /* 進階行星表（可收合） */
@@ -136,35 +136,38 @@ extra_css: |
   .hd-glossary summary { font-size: 0.9rem; font-weight: 600; color: #c98f00; cursor: pointer; padding: 6px 0; }
   .hd-glossary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; padding-top: 14px; margin: 0; }
   .hd-gloss-item { font-size: 0.86rem; line-height: 1.6; }
-  .hd-gloss-item dt { font-weight: 700; color: #E5A300; margin-bottom: 2px; }
+  .hd-gloss-item dt { font-weight: 700; color: var(--c-gold); margin-bottom: 2px; }
   .hd-gloss-item dd { color: #666; margin: 0; }
+  .hd-step3-item { margin-bottom: 18px; }
+  .hd-step3-item h4 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .hd-step3-item p { font-size: 0.9rem; color: #666; line-height: 1.7; margin: 0; }
   /* 付費區誠實提醒 */
   .hd-funnel-note { max-width: 680px; margin: 26px auto 0; font-size: 0.84rem; color: #999; line-height: 1.7; }
   .hd-positioning { background: #fafafa; }
   .hd-positioning .hd-pos-item { display: flex; gap: 14px; margin-bottom: 22px; }
-  .hd-positioning .hd-pos-item i { font-size: 1.5rem; color: #E5A300; flex-shrink: 0; }
+  .hd-positioning .hd-pos-item i { font-size: 1.5rem; color: var(--c-gold); flex-shrink: 0; }
   .hd-positioning .hd-pos-item h4 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
   .hd-positioning .hd-pos-item p { font-size: 0.92rem; color: #666; line-height: 1.65; margin: 0; }
   .hd-products { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 880px; margin: 30px auto 0; }
   .hd-product-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
-  .hd-product-card.is-featured { border-color: #E5A300; box-shadow: 0 10px 34px rgba(229,163,0,0.12); }
-  .hd-product-card .hd-prod-tag { font-size: 0.76rem; font-weight: 700; color: #E5A300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .hd-product-card.is-featured { border-color: var(--c-gold); box-shadow: 0 10px 34px rgba(229,163,0,0.12); }
+  .hd-product-card .hd-prod-tag { font-size: 0.76rem; font-weight: 700; color: var(--c-gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
   .hd-product-card h4 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
   .hd-product-card .hd-prod-price { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .hd-product-card .hd-prod-price small { font-size: 0.85rem; color: #999; font-weight: 400; }
   .hd-product-card .hd-prod-desc { font-size: 0.9rem; color: #666; line-height: 1.7; margin-bottom: 16px; }
   .hd-product-card ul { list-style: none; padding: 0; margin: 0 0 22px; }
   .hd-product-card ul li { font-size: 0.88rem; color: #555; padding: 5px 0 5px 24px; position: relative; }
-  .hd-product-card ul li::before { content: "✓"; position: absolute; left: 0; color: #E5A300; font-weight: 700; }
-  .hd-product-card .hd-prod-cta { margin-top: auto; display: block; text-align: center; padding: 12px; border-radius: 8px; background: #E5A300; color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; }
+  .hd-product-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--c-gold); font-weight: 700; }
+  .hd-product-card .hd-prod-cta { margin-top: auto; display: block; text-align: center; padding: 12px; border-radius: 8px; background: var(--c-gold); color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; }
   .hd-product-card .hd-prod-cta:hover { background: #c98f00; color: #fff; text-decoration: none; }
-  .hd-product-card.is-outline .hd-prod-cta { background: #fff; border: 1.5px solid #E5A300; color: #c98f00; }
-  .hd-product-card.is-outline .hd-prod-cta:hover { background: #E5A300; color: #fff; }
+  .hd-product-card.is-outline .hd-prod-cta { background: #fff; border: 1.5px solid var(--c-gold); color: #c98f00; }
+  .hd-product-card.is-outline .hd-prod-cta:hover { background: var(--c-gold); color: #fff; }
   /* 早鳥驗證價／徽章／crypto 導流 */
   .hd-product-card .hd-prod-was { text-decoration: line-through; color: #bbb; font-size: 1rem; font-weight: 600; margin-right: 7px; }
   .hd-product-card .hd-prod-badge { display: inline-block; font-size: 0.74rem; font-weight: 700; color: #c0392b; background: #fdecec; border-radius: 5px; padding: 3px 9px; margin-bottom: 10px; }
   .hd-product-card .hd-prod-crypto-hint { display: inline-block; font-size: 0.8rem; color: #c98f00; text-decoration: none; margin: 0 0 14px; border-bottom: 1px dashed #e6c879; }
-  .hd-product-card .hd-prod-crypto-hint:hover { color: #E5A300; }
+  .hd-product-card .hd-prod-crypto-hint:hover { color: var(--c-gold); }
   /* 穩定幣付款區 */
   .hd-crypto-pay { max-width: 880px; margin: 30px auto 0; background: linear-gradient(135deg,#fffaf0,#fff6e3); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px 28px; text-align: center; }
   .hd-crypto-pay h3 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 8px; }
@@ -172,15 +175,15 @@ extra_css: |
   .hd-crypto-card { display: flex; flex-direction: column; align-items: center; gap: 11px; background: #fff; border: 1px solid #f0e9d8; border-radius: 14px; padding: 24px; max-width: 460px; margin: 0 auto; }
   .hd-crypto-card h4 { font-size: 1rem; font-weight: 700; color: #111; margin: 0; }
   .hd-crypto-card > p { font-size: 0.82rem; color: #888; margin: 0; line-height: 1.55; }
-  .hd-wallet-ens { font-size: 1.3rem; font-weight: 700; color: #E5A300; letter-spacing: 0.5px; }
+  .hd-wallet-ens { font-size: 1.3rem; font-weight: 700; color: var(--c-gold); letter-spacing: 0.5px; }
   .hd-wallet-qr { width: 140px; height: 140px; background: #fff; border: 1px solid #f0e9d8; border-radius: 8px; padding: 7px; }
   .hd-wallet-qr svg { width: 100%; height: 100%; display: block; }
   .hd-wallet-addr { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.74rem; color: #555; word-break: break-all; background: #faf8f3; border: 1px solid #f0e9d8; border-radius: 8px; padding: 8px 10px; max-width: 360px; }
-  .hd-wallet-copy { font-size: 0.82rem; font-weight: 600; color: #c98f00; background: #fff; border: 1.5px solid #E5A300; border-radius: 7px; padding: 6px 18px; cursor: pointer; transition: 0.25s; }
-  .hd-wallet-copy:hover { background: #E5A300; color: #fff; }
+  .hd-wallet-copy { font-size: 0.82rem; font-weight: 600; color: #c98f00; background: #fff; border: 1.5px solid var(--c-gold); border-radius: 7px; padding: 6px 18px; cursor: pointer; transition: 0.25s; }
+  .hd-wallet-copy:hover { background: var(--c-gold); color: #fff; }
   .hd-crypto-amounts { font-size: 0.92rem; color: #444; margin: 20px auto 6px; line-height: 1.6; }
   .hd-crypto-note { font-size: 0.8rem; color: #b07a00; background: #fff8e6; border: 1px solid #f3e2b8; border-radius: 8px; padding: 10px 14px; max-width: 560px; margin: 0 auto 20px; line-height: 1.6; }
-  .hd-crypto-pay .hd-prod-cta { display: inline-block; padding: 12px 28px; border-radius: 8px; background: #E5A300; color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; }
+  .hd-crypto-pay .hd-prod-cta { display: inline-block; padding: 12px 28px; border-radius: 8px; background: var(--c-gold); color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; }
   .hd-crypto-pay .hd-prod-cta:hover { background: #c98f00; color: #fff; }
   .hd-disclaimer { font-size: 0.82rem; color: #999; line-height: 1.75; max-width: 820px; margin: 0 auto; background: #fafafa; border-radius: 10px; padding: 20px 24px; }
   .hd-disclaimer strong { color: #777; }
@@ -298,6 +301,7 @@ extra_css: |
         <button class="is-primary" id="hd-download-png">下載人類圖圖卡 (PNG)</button>
         <button id="hd-share-link">複製分享連結</button>
         <button id="hd-reset">重新輸入</button>
+        <a href="#hd-report" id="hd-report-link">深入解讀：付費報告 ↓</a>
       </div>
       <div class="hd-share-note" id="hd-share-note"></div>
 
@@ -320,6 +324,29 @@ extra_css: |
     </div>
   </section>
 
+  <!-- ======= 拿到圖之後：怎麼讀 ======= -->
+  <section class="hd-explain" data-aos="fade-up">
+    <div class="container">
+      <div class="hd-explain-card">
+        <h2>拿到圖之後：三步讀圖</h2>
+        <p class="hd-explain-lead">圖表資訊量大，不用一次讀完。建議照這個順序，從最基本的互動規則，一層一層看到細部的能量特質。</p>
+        <div class="hd-step3-item">
+          <h4><span class="hd-ro-label">STEP 1</span> 看類型與策略</h4>
+          <p>先確認你的類型與對應的人生策略——這是你和世界互動最基本的規則：等待回應、行動前告知、等待邀請，或等一輪月亮週期，決定了你該主動出擊還是按兵不動。多數的內耗，其實是規則用反了。</p>
+        </div>
+        <div class="hd-step3-item">
+          <h4><span class="hd-ro-label">STEP 2</span> 看內在權威</h4>
+          <p>內在權威是你做決定時最該信任的訊號來源——可能是薦骨的直覺反應、情緒的週期起伏，或某個當下一閃而過的念頭。找到它，你就有一套不假外求的決策工具。</p>
+        </div>
+        <div class="hd-step3-item">
+          <h4><span class="hd-ro-label">STEP 3</span> 看已定義中心與通道</h4>
+          <p>已定義的中心與通道，是你身上穩定不變的能量特質，不太會隨心情或環境改變；開放的中心則是你吸收與放大外界的地方，值得留意，但不必當成缺陷。</p>
+        </div>
+        <p class="hd-strategy-line">日常校準看這一組訊號：反覆出現的挫敗、憤怒、苦澀、失望，是偏航警示；滿足、平和、成功、驚喜，才是在軌確認——這就是「非自己主題」與「正面信號」的整合觀。</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ======= 定位 ======= -->
   <section class="hd-section hd-positioning" data-aos="fade-up">
     <div class="container">
@@ -338,7 +365,7 @@ extra_css: |
   </section>
 
   <!-- ======= 付費產品 ======= -->
-  <section class="hd-section" data-aos="fade-up">
+  <section class="hd-section" id="hd-report" data-aos="fade-up">
     <div class="container text-center">
       <h2 style="font-size:1.7rem; font-weight:700; color:#111; margin-bottom:8px;">想更深入理解你的設計？</h2>
       <p style="color:#777; max-width:620px; margin:0 auto;">免費版讓你看見輪廓，付費解讀帶你走進細節——把人類圖結構，轉成你職涯與關係裡能用的具體建議。目前為首批驗證階段，以早鳥價回饋前 10 位願意提供使用回饋的人。</p>

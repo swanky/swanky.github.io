@@ -4,7 +4,7 @@ import { HdError } from './hd-astro.js';
 import { searchCities } from './hd-cities.js';
 import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
 import { CENTERS, CENTER_IDS } from './hd-data-centers.js';
-import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS } from './hd-data-texts.js';
+import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS, TYPE_SIGNAL_NOTES } from './hd-data-texts.js';
 import { GATES } from './hd-data-gates.js';
 import { $, setHTML, setText, setVal, on, gtag } from '../core/core-dom.js';
 
@@ -164,7 +164,9 @@ function renderResult(chart, stability) {
     `<div class="hd-sum-card"><div class="hd-sum-label">${l}</div><div class="hd-sum-value">${v}</div></div>`).join(''));
 
   const t = TYPES[chart.type];
-  setHTML('hd-strategy', `<strong>策略：</strong>${t.strategy}　·　<strong>順流信號：</strong>${t.signature}　·　<strong>逆流警訊：</strong>${t.notSelf}`);
+  const sigNote = TYPE_SIGNAL_NOTES[chart.type];
+  const sigBlock = sigNote ? `<p class="hd-cross-note" style="margin-top:6px;">${sigNote}</p>` : '';
+  setHTML('hd-strategy', `<div><strong>策略：</strong>${t.strategy}　·　<strong>順流信號：</strong>${t.signature}　·　<strong>逆流警訊：</strong>${t.notSelf}</div>${sigBlock}`);
 
   // 穩定性面板（未知時間模式）
   const stab = $('hd-stability');
@@ -224,7 +226,7 @@ function renderResult(chart, stability) {
     <p class="hd-cross-intro">輪迴交叉是人類圖格局最大的一層，由你出生時與出生前的太陽、地球四個閘門組成，勾勒你這一生整體的主題與舞台。</p>
     <div class="hd-cross-data">你的交叉：<strong>閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}</strong>　<span class="hd-cross-angle">${ang}</span></div>
     ${angMeaning ? `<p class="hd-cross-meaning">${angMeaning}。</p>` : ''}
-    <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在付費解讀裡細談。</p>`);
+    <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在<a href="#hd-report">付費解讀</a>裡細談。</p>`);
 
   // 進階：完整行星位置與啟動閘門（可收合）
   setHTML('hd-planets-advanced', renderPlanetsAdvanced(chart));
@@ -270,7 +272,7 @@ function renderPlanetsAdvanced(chart) {
     `<tr><td>${pl.glyph} ${pl.nameZh}</td>${cell(chart.design[pl.id], 'hd-pt-d')}${cell(chart.personality[pl.id], 'hd-pt-p')}</tr>`).join('');
   return `<details class="hd-advanced-planets">
     <summary>完整行星位置與啟動閘門（進階）</summary>
-    <p class="hd-planets-note"><strong class="hd-pt-p">個性（黑）</strong>＝出生當下的你（意識層）；<strong class="hd-pt-d">設計（紅）</strong>＝出生前約 88 天（無意識、身體層）。每格為該行星落入的「閘門.爻」，後方是閘門的卦名與關鍵詞——逐閘與逐爻的深入解讀屬付費報告。<br>數字旁的 <span class="hd-pt-fix">▲</span> 表示該行星「固定於擢升」、<span class="hd-pt-fix">▼</span> 表示「固定於衰落」（依標準，南北交點不計）。</p>
+    <p class="hd-planets-note"><strong class="hd-pt-p">個性（黑）</strong>＝出生當下的你（意識層）；<strong class="hd-pt-d">設計（紅）</strong>＝出生前約 88 天（無意識、身體層）。每格為該行星落入的「閘門.爻」，後方是閘門的卦名與關鍵詞——逐閘與逐爻的深入解讀屬<a href="#hd-report">付費報告</a>。<br>數字旁的 <span class="hd-pt-fix">▲</span> 表示該行星「固定於擢升」、<span class="hd-pt-fix">▼</span> 表示「固定於衰落」（依標準，南北交點不計）。</p>
     <table class="hd-planet-table">
       <thead><tr><th>行星</th><th class="hd-pt-d">設計（紅）</th><th class="hd-pt-p">個性（黑）</th></tr></thead>
       <tbody>${rows}</tbody>

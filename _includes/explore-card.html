@@ -13,6 +13,7 @@
   </span>{% endcapture %}{% if it.route != '' and it.route %}
 <a class="explore-card is-{{ it.status }}{% if it.flagship %} is-flagship{% endif %}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});}"{% endif %}>
   {{ inner }}
+  {% if it.price %}<span class="explore-card-price">{{ it.price }}</span>{% endif %}
   <span class="explore-card-cta">{{ it.cta_label }} →</span>
 </a>
 {% elsif it.status == 'manual-service' %}

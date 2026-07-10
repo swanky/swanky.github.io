@@ -4411,6 +4411,8 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .explore-badge.is-manual { background: #e8f4fb; color: #2f80b0; }
 .explore-badge.is-soon { background: #f0efec; color: #8a8578; }
 .explore-badge.is-beta { background: rgba(229,163,0,.08); border: 1px solid var(--c-gold); color: var(--c-gold-deep); }
+.explore-card-price { font-size: 0.85rem; font-weight: 600; color: var(--c-gold-deep); margin-top: auto; padding-top: 10px; }
+.explore-card-price + .explore-card-cta { margin-top: 4px; }
 .explore-card-cta { font-size: 0.9rem; font-weight: 700; color: #c98f00; margin-top: auto; }
 .explore-card-cta.as-link { text-decoration: none; }
 .explore-card-cta.as-link:hover { color: var(--c-gold); }
