@@ -18,6 +18,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - CLAUDE.md
+  - AGENTS.md
   - changelog.txt
   - node_modules
   - vendor

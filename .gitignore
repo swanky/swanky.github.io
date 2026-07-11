@@ -16,4 +16,8 @@ docs/*
 # 人類圖 bodygraph 離線渲染／驗證暫存產物（截圖、SVG、比對頁）
 tools/_render/
 # 行銷 context（含正職職稱，2026-07-10 遷出公開 repo；正本在 docs/ 私有 repo，此處僅供本機工具讀取）
-.agents/
+# 例外：.agents/skills/ 是跨 agent 共用 skill 正本（見 AGENTS.md），入庫
+.agents/*
+!.agents/skills/
+# Hermes 本機工作檔（plans 等會話產物，不入公開 repo）
+.hermes/

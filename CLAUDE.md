@@ -1,6 +1,14 @@
 # CLAUDE.md
 
+@AGENTS.md
+
 Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep structure & design context live in `docs/` — see Rules Routing.
+
+## Claude Code Adapter
+
+- 共用專案規範的**單一真相來源是 `AGENTS.md`**（上行已匯入）——跨 agent 事實（建置指令、內容規範、gotchas）改那裡，不要只改本檔。本檔其餘段落＝Claude 適配（Commander mode、派工路由、harness 環境規則）＋過渡期暫留的重複共用段；待 Claude `/memory`、Hermes 新 session 兩方載入驗證通過後，依 `docs/agents/cross-agent-sharing.md` §7 步驟 9 去重。
+- Claude 專屬 permissions／hooks 在 `.claude/settings*.json`。
+- `.claude/skills/` 是由 `.agents/skills/`（正本）經 `node tools/sync-agent-skills.mjs` 產生的鏡像——**勿手動編輯鏡像**；改正本後重跑同步（drift 檢查已含在 `npm test`）。
 
 ## Working Style
 
