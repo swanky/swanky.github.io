@@ -1,8 +1,11 @@
 ---
 layout: home
 title: AI Agent 導入顧問
-description: 協助技術團隊把 Claude Code 與 AI Agent 導入成可重複、可驗證、可交付的工程流程。從導入評估、試行帶領到流程文件化，用軟體工程紀律讓 AI 產出可審計、可複製、可交接。
-keywords: AI Agent導入,Claude Code導入,導入顧問,Agentic Engineering,SDD,規格驅動開發,TDD,團隊導入AI,技術顧問,史旺基,Swanky
+seo_title: AI Agent 導入顧問｜從評估、小範圍試行到團隊規範
+permalink: /technical/ai-agent-consulting/
+description: 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。提供導入評估、小範圍實際試行、團隊規範與持續優化；不綁定 Claude Code、Codex 或單一工具。
+keywords: AI Agent導入顧問,Agentic Engineering,AI Coding,Claude Code,Codex,企業AI導入,軟體工程流程,史旺基
+og_image: /assets/img/linkedin/agentic-engineering-mindset-hq.jpg
 nav_active: technical
 breadcrumbs:
   - name: 主頁
@@ -11,108 +14,137 @@ breadcrumbs:
     url: /technical/
   - name: AI Agent 導入顧問
     url: /technical/ai-agent-consulting/
-extra_css: |
-  /* 統一限寬 760 並水平置中，讓區塊標題與項目清單左緣對齊（與 .agentic-thesis 同寬），修正原本約 150px 的錯位 */
-  .service-details .series-group-title,
-  .service-details .service-list { max-width: 760px; margin-left: auto; margin-right: auto; }
-  .service-details .series-group-title { margin-top: 2.4rem; }
-  .service-details .service-list { margin-top: .4rem; margin-bottom: 0; padding-left: 1.3rem; }
-  .service-details .service-list li { margin-bottom: .6rem; line-height: 1.75; }
-  .service-details .cta-block { text-align: center; margin: 2.5rem 0 1rem; }
-  .service-details .cta-block .btn-get-started { display: inline-block; padding: 12px 34px; border-radius: 50px; background: #E5A300; color: #fff; font-weight: 600; letter-spacing: 1px; text-decoration: none; transition: background .3s; }
-  .service-details .cta-block .btn-get-started:hover { background: #F5C53B; color: #fff; }
 ---
 
-  <main id="main">
+<main id="main" class="technical-page">
+{% capture hero_title %}讓 AI Agent 進入<em>可交付的工程流程</em>{% endcapture %}
+{% include technical/hero.html
+  theme="ai"
+  status="AI-first · 技術團隊導入"
+  eyebrow="AI Agent Adoption"
+  title=hero_title
+  lead="不是多裝一個工具，也不是追求一次產出更多程式碼。先找出適合團隊的 Agent 工作流程，再用小範圍實際試行檢查品質、風險與協作方式。"
+  image="/assets/img/linkedin/agentic-engineering-mindset-hq.jpg"
+  alt="AI Coding 團隊從現況、痛點、分析到行動的情境示意圖"
+  caption="AI 生成情境示意圖｜AI Coding 導入與工作流程設計"
+  primary_href="#contact"
+  primary_label="免費來信洽詢 AI 導入"
+  secondary_href="#starting-points"
+  secondary_label="查看合作方式"
+%}
 
-    <div class="section-title works">
-      <h1>AI Agent 導入顧問</h1>
-      <p>把 Claude Code 與 AI Agent，導入成可重複、可驗證、可交付的工程流程</p>
+<section class="tech-section">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">When It Fits</span>
+      <h2>真正的問題通常不在 prompt</h2>
+      <p>企業導入 AI Coding 後，瓶頸常轉移到問題定義、背景資訊、審查、測試、權限與責任邊界。顧問工作從這些工程問題開始。</p>
+    </header>
+    <div class="tech-deliverable-grid">
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-signpost-split"></i></span><div><h3>不知道從哪條工作流程開始</h3><p>工具很多，卻不知道該先從需求、開發、測試、程式碼審查還是維運開始。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-shield-check"></i></span><div><h3>產出變快，品質卻不可預測</h3><p>程式碼增加了，審查、回歸驗證與安全檢查沒有跟上，風險只是在後移。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-people"></i></span><div><h3>每個人各用各的，無法複製</h3><p>個人高手有成果，但團隊沒有共同背景資訊、操作規範、停止條件與驗收方式。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-lock"></i></span><div><h3>權限、資料與責任邊界不清</h3><p>Agent 能讀什麼、改什麼、誰負責驗證，以及哪些資料不能進模型，都需要先定義。</p></div></article>
     </div>
+  </div>
+</section>
 
-    <section class="service-details">
-      <div class="container">
+<section class="tech-section tech-section--paper" id="starting-points">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Ways to Work</span>
+      <h2>三種合作方式，依你的現況選擇</h2>
+      <p>你不需要先決定要買哪一項。可以先免費來信說明現況；實際範圍與費用會在需求分析後確認。</p>
+    </header>
+    <div class="tech-start-grid">
+      <article class="tech-start-card"><span class="tech-start-no">01 · ASSESS</span><h3>AI 導入評估</h3><p>盤點角色、工作流程、品質風險與工具現況，找出值得先試的場景及不該碰的邊界。</p><span class="tech-start-tag">先決定從哪裡開始</span></article>
+      <article class="tech-start-card"><span class="tech-start-no">02 · PILOT</span><h3>小範圍實際試行</h3><p>選一段小而真實的工作流程，由你的團隊在自己的程式碼庫（repo）操作；我負責方法、帶跑、審查與驗證。</p><span class="tech-start-tag">用一段真實流程驗證</span></article>
+      <article class="tech-start-card"><span class="tech-start-no">03 · STANDARDIZE</span><h3>建立團隊規範</h3><p>把有效做法整理成可重複的規範、操作模組（skill）／範本、程式碼審查關卡與成效檢查方式。</p><span class="tech-start-tag">從個人做法變成團隊能力</span></article>
+    </div>
+  </div>
+</section>
 
-        <div class="agentic-thesis" data-aos="fade-up">
-          <p>很多團隊已經在用 AI 寫程式，卻說不清楚一件事：<strong>導入之後到底快了多少、品質有沒有失控、新人能不能接手？</strong></p>
-          <p>我把這幾年在企業內部推動 Claude Code 與 AI Agent 的經驗，整理成一套可落地的導入方法——不是再給你一份工具清單，而是把 AI 嵌進既有的工程流程，讓產出<strong>可審計、可複製、可交接</strong>。一句話：把「AI 寫得快」變成「團隊交付得對」。</p>
-        </div>
+<section class="tech-section">
+  <div class="tech-shell">
+    <header class="tech-section-head"><span class="tech-eyebrow">What You Receive</span><h2>你會拿到能繼續執行的導入方法</h2></header>
+    <div class="tech-deliverable-grid">
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-map"></i></span><div><h3>導入評估與路線圖</h3><p>適用場景、優先順序、依賴、風險、成功條件與下一步。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-diagram-3"></i></span><div><h3>AI Agent 工作流程規範</h3><p>背景資訊、角色分工、工具權限、執行循環、停止條件與人工驗證點。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-file-earmark-code"></i></span><div><h3>可重用的操作模組與範本</h3><p>把一次成功轉成團隊能複製、維護與持續改善的操作資產。</p></div></article>
+      <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-clipboard-data"></i></span><div><h3>成效與風險檢查方式</h3><p>不只看速度，也觀察返工、程式碼審查負擔、缺陷、可理解性與風險。</p></div></article>
+    </div>
+  </div>
+</section>
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>我解決什麼問題</h2>
-          <p>導入 AI 最常見的三個卡點，也是這套顧問服務的起點。</p>
-        </div>
-        <ul class="service-list">
-          <li>團隊各用各的 AI，成效無法衡量、品質參差不齊。</li>
-          <li>導入後缺乏規範，AI 產出的程式碼難審查、難維護、難交接。</li>
-          <li>想推 SDD（規格驅動開發）、TDD 或 Agentic 工作流，卻缺一套團隊跟得上的紀律。</li>
-        </ul>
+<section class="tech-section tech-section--dark">
+  <div class="tech-shell tech-split">
+    <div class="tech-feature-media tech-feature-media--contain"><img src="{{ '/assets/img/hermes-openrouter-video/pipeline.svg' | relative_url }}" alt="Hermes Agent 串接 OpenRouter 非同步影片生成與驗證流程" loading="lazy"></div>
+    <div class="tech-feature-copy">
+      <span class="tech-eyebrow">Small-Scale Pilot</span>
+      <h2>可以用真實工作流程小規模試行，但不是外包開發</h2>
+      <p>若要使用真實工作流程，保密、資料處理與可接觸範圍會先另行約定。你的團隊在自己的程式碼庫（repo）操作並保留程式碼與決策權；我負責方法設計、帶跑、審查、驗證與整理操作文件。</p>
+      <p>若不能接觸真實環境，就改用公開或非敏感範例，並誠實標示尚未驗證客戶環境。</p>
+      <div class="tech-boundary"><strong>不是外包開發：</strong>不以完成多少功能計價，也不接手產品程式碼。</div>
+    </div>
+  </div>
+</section>
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>適合誰</h2>
-          <p>如果你正面對下面任一情境，我們大概聊得起來。</p>
-        </div>
-        <ul class="service-list">
-          <li>想把 AI 從「個人外掛」升級為「團隊產線」的技術主管、工程經理。</li>
-          <li>要評估 Claude Code／AI Agent 導入可行性與風險的 PM、創辦人。</li>
-          <li>正在擴張、需要讓 AI 產出可被審計與交接的工程團隊。</li>
-        </ul>
+<section class="tech-section" id="evidence">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Public Evidence</span>
+      <h2>方法、實作與美感，都能公開驗證</h2>
+      <p>以下公開成果涵蓋複雜軟體、Agent 整合與生成式視覺，可直接操作或查閱。</p>
+    </header>
+    <div class="tech-proof-grid">
+      <article class="tech-proof-card"><div class="tech-proof-media tech-proof-media--contain"><img src="{{ '/assets/img/human-design/og-relationship.jpg' | relative_url }}" alt="人類圖合盤工具與視覺化" loading="lazy"></div><div class="tech-proof-body"><span class="tech-proof-label">Complex Software</span><h3>人類圖引擎與合盤測試</h3><p>複雜規則、SVG 渲染與回歸驗證的公開軟體實作。</p><a class="tech-text-link" href="{{ '/human-design/relationship/' | relative_url }}">操作工具 <i class="bi bi-arrow-up-right"></i></a></div></article>
+      <article class="tech-proof-card"><div class="tech-proof-media"><img src="{{ '/assets/img/hermes-openrouter-video/hermes-openrouter-video-banner.jpg' | relative_url }}" alt="Hermes Agent 與 OpenRouter 影片產線" loading="lazy"></div><div class="tech-proof-body"><span class="tech-proof-label">Agent Integration</span><h3>Hermes × OpenRouter</h3><p>Agent、API、非同步工作與產物驗證的完整實作紀錄。</p><a class="tech-text-link" href="{% post_url 2026-07-11-hermes-agent-openrouter-video-generation %}">閱讀紀錄 <i class="bi bi-arrow-up-right"></i></a></div></article>
+      <article class="tech-proof-card"><div class="tech-proof-media tech-proof-media--portrait"><img src="{{ '/assets/img/tarot/major-03.jpg' | relative_url }}" alt="制服女孩塔羅牌皇后牌面" loading="lazy"></div><div class="tech-proof-body"><span class="tech-proof-label">Generative Visuals</span><h3>制服女孩塔羅牌</h3><p>78 張一致角色、構圖轉譯與復古風格，結合生成式影像與攝影美感。</p><a class="tech-text-link" href="{{ '/tarot/compare/' | relative_url }}">查看牌組 <i class="bi bi-arrow-up-right"></i></a></div></article>
+    </div>
+  </div>
+</section>
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>服務內容</h2>
-          <p>依團隊現況選擇起點，可單獨進行，也可從評估一路帶到落地。</p>
-        </div>
-        <ul class="service-list">
-          <li><strong>導入評估</strong>：盤點現況、流程與風險，產出一份可執行的導入路線圖。</li>
-          <li><strong>試行帶領</strong>：挑一條真實的工作流，陪團隊實際跑一輪 SDD／Claude Code 實戰。</li>
-          <li><strong>流程文件化</strong>：把跑得通的做法固化成團隊規範與可重複的 skill／範本。</li>
-          <li><strong>形式</strong>：短期顧問、單次流程健檢、線上或實體工作坊，可依需求客製。</li>
-        </ul>
+<section class="tech-section tech-section--compact tech-section--blue">
+  <div class="tech-shell tech-split tech-split--reverse">
+    <div class="tech-feature-copy"><span class="tech-eyebrow">Engineering Foundation</span><h2>深厚工程底子，才看得懂 AI Coding 的後半段</h2><p>Java、企業架構、敏捷、Code Review 與 JCConf 技術演講經驗，讓我能從程式碼理解、測試、審查、維護與交付的角度評估 AI Coding。</p></div>
+    <div class="tech-boundary"><strong>工具中立：</strong>Claude Code、Codex 或其他 coding agent 都只是工具。方案以流程、風險與可驗證成果為核心，不綁定單一品牌。</div>
+  </div>
+</section>
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>交付物</h2>
-          <p>看得到、帶得走、團隊能繼續沿用的東西。</p>
-        </div>
-        <ul class="service-list">
-          <li>導入評估報告與導入路線圖。</li>
-          <li>團隊適用的 Agentic 工作流規範（含程式審查、測試與文件的邊界）。</li>
-          <li>可重複使用的 Claude Code skill 與範本。</li>
-          <li>流程健檢清單與後續優化建議。</li>
-        </ul>
+{% include technical/process.html %}
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>過去經驗</h2>
-          <p>方法不是憑空來的，是工程、教學與第一線導入累積出來的。</p>
-        </div>
-        <ul class="service-list">
-          <li>國立臺灣師範大學資訊工程博士；大學區塊鏈課程兼任助理教授（連續多年授課）。</li>
-          <li>JCConf 台灣 Java 技術年會 2017–2019 講者；長期深耕 Java 企業級架構與敏捷開發。</li>
-          <li>主持政府（數位發展部）區塊鏈創新產業計畫，推動成立可信區塊鏈應用基礎建設聯盟（TBSI）。</li>
-          <li>在企業內部推動 Claude Code／AI Agent 團隊導入，並將整套方法整理成
-            <a href="{{ '/technical/agentic-engineering/' | relative_url }}">Agentic Engineering 系列</a>
-            與 <a href="{{ '/education/agentic-engineering/' | relative_url }}">Agentic Engineering 企業培訓</a>。</li>
-        </ul>
+<section class="tech-section tech-section--paper" id="faq">
+  <div class="tech-shell">
+    <header class="tech-section-head"><span class="tech-eyebrow">AI Advisory FAQ</span><h2>AI 導入常見問題</h2></header>
+    <div class="tech-faq">
+      <details><summary>一定要使用 Claude Code 嗎？</summary><div class="tech-faq-answer"><p>不用。會依現有技術環境、權限、成本與流程評估 Claude Code、Codex 或其他工具；方法與品質邊界比品牌重要。</p></div></details>
+      <details><summary>顧問會直接修改我們的程式碼嗎？</summary><div class="tech-faq-answer"><p>小範圍試行可在另行約定的範圍內檢視與協作，但由你的團隊操作自己的程式碼庫（repo）。服務重點是導入方法、審查與驗證，不是代寫功能。</p></div></details>
+      <details><summary>完全沒有 AI Coding 經驗也能開始嗎？</summary><div class="tech-faq-answer"><p>可以。先用 Email 說明現況即可；後續通常從導入評估與非敏感範例開始，不必一開始就開放正式環境或大型程式碼庫。</p></div></details>
+      <details><summary>可以只辦一場工作坊嗎？</summary><div class="tech-faq-answer"><p>若目標是學習工具或建立共同認知，較適合 Agentic Engineering 企業培訓；顧問工作坊則必須連到組織的實際決策或工作流程。</p></div></details>
+      <details><summary>如何處理權限與機密？</summary><div class="tech-faq-answer"><p>Email 不收機密。進入試行前才另行約定 NDA、資料處理、可接觸範圍、工具權限與人工核准點。</p></div></details>
+    </div>
+    <p style="margin:28px 0 0;"><a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}">如果需求是企業培訓，查看 Agentic Engineering 課程 <i class="bi bi-arrow-right"></i></a></p>
+  </div>
+</section>
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>如何合作</h2>
-          <p>來信描述你的團隊規模、目前的 AI 使用狀況，以及最想解決的問題，我會回覆適合的合作起點與下一步。</p>
-        </div>
-        <div class="cta-block">
-          <a href="mailto:swanky.hsiao@gmail.com?subject=AI%20Agent%20導入顧問諮詢" class="btn-get-started">來信洽談導入</a>
-        </div>
+{% capture ai_subject %}[顧問洽詢] AI Agent 導入{% endcapture %}
+{% capture ai_body %}您好，我想詢問 AI Agent 導入顧問。
 
-        <div class="series-group-title" data-aos="fade-up">
-          <h2>常見問題</h2>
-          <p>動手前最常被問到的幾件事。</p>
-        </div>
-        <ul class="service-list">
-          <li><strong>我們團隊還沒用過 Claude Code，可以導入嗎？</strong><br>可以。導入評估就是從你的現況開始，不需要先具備任何 AI 工具基礎。</li>
-          <li><strong>一定要用 Claude Code 嗎？</strong><br>不綁特定工具。重點是工程紀律與可交付的流程；Claude Code 是目前最順手的載體之一，但方法可以移植。</li>
-          <li><strong>可以線上進行嗎？</strong><br>可以。評估、試行帶領與工作坊都能線上進行。</li>
-          <li><strong>會接觸到我們的程式碼或機密嗎？</strong><br>顧問以方法與流程為主。若需要接觸實際 repo，會另行約定範圍與保密條件。</li>
-        </ul>
+組織／團隊：
+聯絡人與職務：
+目前想改善的工作流程或問題：
+希望做出的決策或達成的目標：
+目前使用的 AI 工具（若有）：
+預計時程：
+是否願意先從付費需求分析開始（是／否／想先了解）：
+預算區間（選填）：
+其他補充（選填）：
 
-      </div>
-    </section>
-
-  </main><!-- End #main -->
+請勿在 Email 附上程式碼、架構圖、帳密或其他機密資料。{% endcapture %}
+<section class="tech-section tech-section--dark" id="contact">
+  <div class="tech-shell">
+    <header class="tech-section-head tech-section-head--center"><span class="tech-eyebrow">Free Inquiry</span><h2>先用 Email 免費來信洽詢</h2><p>簡單說明目前遇到的問題與預計時程即可，不用先準備完整需求，也不要寄敏感資料。</p></header>
+    <div class="tech-cta-card tech-cta-card--ai" style="max-width:760px;margin:0 auto;"><h3>來信洽詢 AI Agent 導入</h3><p>我會先確認是否能協助，並回覆建議的下一步。深入需求分析、具體方案與合作規劃屬付費服務。</p><a class="tech-btn tech-btn--primary" href="mailto:swanky.hsiao@gmail.com?subject={{ ai_subject | url_encode | replace: '+', '%20' }}&body={{ ai_body | url_encode | replace: '+', '%20' }}">用 Email 免費洽詢</a></div>
+  </div>
+</section>
+</main>

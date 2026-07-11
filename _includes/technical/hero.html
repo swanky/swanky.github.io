@@ -1,0 +1,26 @@
+<section class="tech-hero tech-hero--{{ include.theme | default: 'ai' }}">
+  <div class="tech-shell tech-hero-grid">
+    <div class="tech-hero-copy">
+      {% if include.status %}<span class="tech-hero-status">{{ include.status }}</span>{% endif %}
+      {% if include.eyebrow %}<span class="tech-eyebrow{% if include.theme == 'web3' %} tech-eyebrow--gold{% endif %}">{{ include.eyebrow }}</span>{% endif %}
+      <h1>{{ include.title }}</h1>
+      <p class="tech-hero-lead">{{ include.lead }}</p>
+      <div class="tech-hero-actions">
+        {% if include.primary_href %}<a class="tech-btn {% if include.theme == 'web3' %}tech-btn--gold{% else %}tech-btn--primary{% endif %}" href="{{ include.primary_href }}">{{ include.primary_label }}</a>{% endif %}
+        {% if include.secondary_href %}<a class="tech-btn tech-btn--ghost" href="{{ include.secondary_href }}">{{ include.secondary_label }}</a>{% endif %}
+      </div>
+    </div>
+    <div class="tech-hero-media">
+      <figure class="tech-hero-shot {% if include.image_secondary %}tech-hero-shot--primary{% else %}tech-hero-shot--single{% endif %}{% if include.contain %} tech-hero-shot--contain{% endif %}">
+        <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}">
+        {% if include.caption %}<figcaption class="tech-hero-caption">{{ include.caption }}</figcaption>{% endif %}
+      </figure>
+      {% if include.image_secondary %}
+      <figure class="tech-hero-shot tech-hero-shot--secondary">
+        <img src="{{ include.image_secondary | relative_url }}" alt="{{ include.alt_secondary }}">
+        {% if include.caption_secondary %}<figcaption class="tech-hero-caption">{{ include.caption_secondary }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+    </div>
+  </div>
+</section>
