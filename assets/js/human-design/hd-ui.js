@@ -1,7 +1,7 @@
 // hd-ui.js — 表單與結果渲染（頁面入口 ES module）
 import { computeChart, computeChartSamples } from './hd-engine.js';
 import { HdError } from './hd-astro.js';
-import { searchCities } from './hd-cities.js';
+import { createBirthForm } from './hd-form.js';
 import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
 import { toHumanDesignChart } from './hd-adapter.js';
 import { renderBodygraph } from './hd-bodygraph.js';
@@ -11,9 +11,11 @@ import { CHANNELS } from './hd-data-channels.js';
 import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS, TYPE_SIGNAL_NOTES } from './hd-data-texts.js';
 import { GATES } from './hd-data-gates.js';
 import { exportBodygraphSvg, exportTransparentPng, exportBrandCard, exportSocialCard } from './hd-export-v2.js';
-import { $, setHTML, setText, setVal, on, gtag } from '../core/core-dom.js';
+import { $, setHTML, setText, on, gtag } from '../core/core-dom.js';
 
-const state = { tz: null, cityLabel: null, lastChart: null, hdChart: null, svg: null, v2: false, sel: null };
+const state = { lastChart: null, hdChart: null, svg: null, v2: false, sel: null };
+// 表單（年月日時分/城市/手動時區/未知時間）＝hd-form.js factory；tz 與城市標籤狀態在 form 內
+const form = createBirthForm({ prefix: 'hd' });
 
 // ---- Feature flag：bodygraph v2（新管線）vs v1（舊 SVG DOM）----
 // 預設 v2；URL 覆寫：?bodygraph=v1 強制舊版、?bodygraph=v2 強制新版。
@@ -28,112 +30,7 @@ function useV2() {
   return HD_V2;
 }
 
-// ---- 填充表單選項 ----
-function fillSelect(sel, items) {
-  if (!sel) return;
-  sel.innerHTML = items.map((it) => `<option value="${it.v}">${it.t}</option>`).join('');
-}
-function range(a, b) { const r = []; for (let i = a; i <= b; i++) r.push(i); return r; }
-function daysInMonth(y, m) { return new Date(y, m, 0).getDate(); }
-
-function initForm() {
-  fillSelect($('hd-year'), range(1900, 2100).reverse().map((y) => ({ v: y, t: y })));
-  fillSelect($('hd-month'), range(1, 12).map((m) => ({ v: m, t: m })));
-  fillSelect($('hd-hour'), range(0, 23).map((h) => ({ v: h, t: String(h).padStart(2, '0') })));
-  fillSelect($('hd-minute'), range(0, 59).map((m) => ({ v: m, t: String(m).padStart(2, '0') })));
-  setVal('hd-year', 1990);
-  setVal('hd-month', 1);
-  setVal('hd-hour', 12);
-  setVal('hd-minute', 0);
-  refreshDays();
-  on('hd-year', 'change', refreshDays);
-  on('hd-month', 'change', refreshDays);
-
-  // 手動 UTC 偏移：-12:00 ~ +14:00（含 :30/:45）
-  const offsets = [-720, -660, -600, -540, -480, -420, -360, -300, -240, -210, -180, -120, -60, 0,
-    60, 120, 180, 210, 240, 270, 300, 330, 345, 360, 390, 420, 480, 540, 570, 600, 630, 660, 720, 765, 780, 840];
-  fillSelect($('hd-manual-tz'), offsets.map((o) => ({ v: o, t: offsetLabel(o) })));
-  setVal('hd-manual-tz', 480);
-}
-
-function refreshDays() {
-  const yEl = $('hd-year'), mEl = $('hd-month'), dEl = $('hd-day');
-  if (!yEl || !mEl || !dEl) return;
-  const y = +yEl.value;
-  const m = +mEl.value;
-  const prev = +dEl.value || 1;
-  const max = daysInMonth(y, m);
-  fillSelect(dEl, range(1, max).map((d) => ({ v: d, t: d })));
-  dEl.value = Math.min(prev, max);
-}
-
-function offsetLabel(min) {
-  const sign = min < 0 ? '-' : '+';
-  const abs = Math.abs(min);
-  return `UTC${sign}${String(Math.floor(abs / 60)).padStart(2, '0')}:${String(abs % 60).padStart(2, '0')}`;
-}
-
-// ---- 城市搜尋 ----
-function initCitySearch() {
-  const input = $('hd-city-search');
-  const list = $('hd-city-list');
-  if (!input || !list) return;
-  let activeIdx = -1;
-  let results = [];
-
-  const close = () => { list.classList.remove('is-open'); activeIdx = -1; };
-  const render = () => {
-    if (!results.length) { close(); return; }
-    list.innerHTML = results.map((c, i) =>
-      `<div class="hd-city-item${i === activeIdx ? ' is-active' : ''}" data-idx="${i}" role="option">
-        <span>${c.zh}<span style="color:#bbb;font-size:0.8rem;"> ${c.en}</span></span>
-        <span class="hd-city-group">${c.group}</span></div>`).join('');
-    list.classList.add('is-open');
-  };
-  const pick = (c) => {
-    state.tz = c.tz; state.cityLabel = c.zh;
-    input.value = c.zh;
-    close();
-  };
-
-  input.addEventListener('input', () => {
-    state.tz = null; // 重新輸入即清除已選
-    results = searchCities(input.value);
-    activeIdx = -1;
-    render();
-  });
-  input.addEventListener('keydown', (e) => {
-    if (!list.classList.contains('is-open')) return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, results.length - 1); render(); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); render(); }
-    else if (e.key === 'Enter') { e.preventDefault(); if (activeIdx >= 0) pick(results[activeIdx]); }
-    else if (e.key === 'Escape') close();
-  });
-  list.addEventListener('mousedown', (e) => {
-    const item = e.target.closest('.hd-city-item');
-    if (item) pick(results[+item.dataset.idx]);
-  });
-  document.addEventListener('click', (e) => { if (!e.target.closest('.hd-city-wrap')) close(); });
-}
-
-// ---- 提交 ----
-function readInput() {
-  const v = (id) => +($(id)?.value || 0);
-  return {
-    year: v('hd-year'), month: v('hd-month'), day: v('hd-day'),
-    hour: v('hd-hour'), minute: v('hd-minute'),
-  };
-}
-
-function resolveTz() {
-  if (state.tz) return state.tz;
-  // 城市未選但展開了手動偏移
-  const field = $('hd-city-search')?.closest('.hd-field');
-  const adv = field ? field.querySelector('.hd-advanced') : null;
-  if (adv && adv.open) return { offsetMinutes: +($('hd-manual-tz')?.value || 0) };
-  return null;
-}
-
+// ---- 提交 ----（表單初始化/讀值/時區解析已抽至 hd-form.js，本檔經 form 實例使用）
 function showError(msg) {
   const e = $('hd-error');
   if (!e) { console.warn('[hd] 缺少 #hd-error 容器：', msg); return; }
@@ -144,10 +41,10 @@ function clearError() { $('hd-error')?.classList.remove('is-show'); }
 
 function onSubmit() {
   clearError();
-  const input = readInput();
-  const tz = resolveTz();
+  const input = form.readInput();
+  const tz = form.resolveTz();
   if (!tz) { showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。'); return; }
-  const unknownTime = !!$('hd-unknown-time')?.checked;
+  const unknownTime = form.isUnknownTime();
 
   try {
     if (unknownTime) {
@@ -169,7 +66,7 @@ function renderResult(chart, stability) {
   state.lastChart = chart;
   const { input, tzInfo } = chart;
   const dateStr = `${input.year}/${String(input.month).padStart(2, '0')}/${String(input.day).padStart(2, '0')} ${String(input.hour).padStart(2, '0')}:${String(input.minute).padStart(2, '0')}`;
-  setHTML('hd-meta', `出生：${dateStr}　|　時區：${tzInfo.labelZh}${state.cityLabel ? '（' + state.cityLabel + '）' : ''}`);
+  setHTML('hd-meta', `出生：${dateStr}　|　時區：${tzInfo.labelZh}${form.cityLabel ? '（' + form.cityLabel + '）' : ''}`);
 
   // 摘要卡
   const sums = [
@@ -527,7 +424,7 @@ function buildBirthPresentation() {
   const pad = (n) => String(n).padStart(2, '0');
   const ymd = `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`;
   const hm = `${pad(c.input.hour)}:${pad(c.input.minute)}`;
-  const unknownTime = !!$('hd-unknown-time')?.checked;
+  const unknownTime = form.isUnknownTime();
   const name = ($('hd-name')?.value || '').trim();
 
   // 內嵌 PNG 的出生資料：欄位對齊報告端 build_data_auto.py（date/time/place 為核心，
@@ -537,7 +434,7 @@ function buildBirthPresentation() {
     name: name || null,
     date: ymd,
     time: hm,
-    place: state.cityLabel || null,
+    place: form.cityLabel || null,
     tz: (typeof c.input.tz === 'string') ? c.input.tz : null,
     offset: (c.tzInfo && typeof c.tzInfo.offsetMin === 'number') ? c.tzInfo.offsetMin : null,
     unknown_time: unknownTime,
@@ -548,7 +445,7 @@ function buildBirthPresentation() {
   const dateLabel = `${c.input.year}/${pad(c.input.month)}/${pad(c.input.day)}`;
   const tzLabel = c.tzInfo?.labelZh || '';
   // 地點：有城市顯示「城市（時區）」、無城市（手動時區）只顯示時區——避免可見層只剩日期
-  const locLabel = state.cityLabel ? `${state.cityLabel}（${tzLabel}）` : tzLabel;
+  const locLabel = form.cityLabel ? `${form.cityLabel}（${tzLabel}）` : tzLabel;
   const locPart = locLabel ? `　・　${locLabel}` : '';
   const subText = unknownTime
     ? `${dateLabel}（未提供時間・以正午計）${locPart}`
@@ -599,7 +496,7 @@ function onShareLink() {
     d: `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`,
     t: `${pad(c.input.hour)}:${pad(c.input.minute)}`,
   });
-  if (state.tz && typeof state.tz === 'string') params.set('tz', state.tz);
+  if (form.tz && typeof form.tz === 'string') params.set('tz', form.tz);
   else if (typeof c.tzInfo.offsetMin === 'number') params.set('o', c.tzInfo.offsetMin);
   const url = `${location.origin}${location.pathname}#${params.toString()}`;
   navigator.clipboard.writeText(url).then(() => {
@@ -624,21 +521,15 @@ function applyHash() {
   const [y, mo, day] = d.split('-').map(Number);
   const [h, mi] = t.split(':').map(Number);
   if (!y) return;
-  setVal('hd-year', y); setVal('hd-month', mo); refreshDays();
-  setVal('hd-day', day); setVal('hd-hour', h); setVal('hd-minute', mi);
-  if (p.get('tz')) state.tz = p.get('tz');
-  else if (p.get('o') !== null) {
-    const field = $('hd-city-search')?.closest('.hd-field');
-    const adv = field ? field.querySelector('.hd-advanced') : null;
-    if (adv) adv.open = true;
-    setVal('hd-manual-tz', p.get('o'));
-  }
+  form.setDate(y, mo, day);
+  form.setTime(h, mi);
+  if (p.get('tz')) form.tz = p.get('tz');
+  else if (p.get('o') !== null) form.setManualOffset(p.get('o'));
   onSubmit();
 }
 
 function init() {
-  initForm();
-  initCitySearch();
+  form.init();
   // Feature flag 分流：設模式 class（CSS 版面據此切換）＋v2 頁籤／v1 攤平 Layer 2。
   // 必須在 applyHash()（可能觸發 renderResult）之前設定 state.v2。
   state.v2 = useV2();
@@ -647,11 +538,7 @@ function init() {
   if (state.v2) { initTabs(); initBgInteraction(); }
   else $('hd-layer2')?.setAttribute('open', ''); // v1：Layer 2 攤平（維持舊觀）
   on('hd-submit', 'click', onSubmit);
-  on('hd-unknown-time', 'change', (e) => {
-    const dis = e.target.checked;
-    const h = $('hd-hour'); if (h) h.disabled = dis;
-    const mi = $('hd-minute'); if (mi) mi.disabled = dis;
-  });
+  // 未知時間的時分停用鉤已由 form.init() 內建
   on('hd-download-png', 'click', onDownloadPng); // v1 單鈕（v2 由 CSS 隱藏）
   // v2 匯出四式（按鈕在 HTML，v1 模式由 CSS 隱藏；handler 皆先檢查 state.lastChart）
   on('hd-dl-card', 'click', () => onDownloadV2('card'));
@@ -660,6 +547,24 @@ function init() {
   on('hd-dl-svg', 'click', () => onDownloadV2('svg'));
   on('hd-share-link', 'click', onShareLink);
   on('hd-reset', 'click', onReset);
+  // 單人→合盤帶入：存「表單輸入」（非計算結果）進 sessionStorage 再導頁（同分頁有效、關閉即清）
+  on('hd-goto-composite', 'click', () => {
+    const c = state.lastChart;
+    if (!c) return;
+    const pad = (n) => String(n).padStart(2, '0');
+    const payload = {
+      date: `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`,
+      time: `${pad(c.input.hour)}:${pad(c.input.minute)}`,
+      tz: typeof c.input.tz === 'string' ? c.input.tz : null,
+      offsetMinutes: typeof c.input.tz === 'string' ? null : (c.tzInfo?.offsetMin ?? null),
+      place: form.cityLabel || null,
+      name: ($('hd-name')?.value || '').trim() || null,
+      unknownTime: form.isUnknownTime(),
+    };
+    try { sessionStorage.setItem('hd:composite:a', JSON.stringify(payload)); } catch (_) { /* 隱私模式失敗照樣導頁 */ }
+    gtag('event', 'hd_goto_composite', {});
+    location.href = new URL('relationship/', location.href).href;
+  });
   applyHash();
 }
 
