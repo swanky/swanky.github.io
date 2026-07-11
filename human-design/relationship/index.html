@@ -135,8 +135,10 @@ extra_css: |
   .hdc-edu-item b { color: #111; }
   .hdc-edu-item p { font-size: 0.92rem; color: #555; line-height: 1.75; margin: 4px 0 0; }
   .hdc-report { max-width: 860px; margin: 0 auto; background: linear-gradient(135deg, #fffbf0, #fff6de); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px; }
-  .hdc-report table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+  .hdc-report .hdc-table-scroll { overflow-x: auto; margin: 14px 0; }
+  .hdc-report table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 0.9rem; }
   .hdc-report th, .hdc-report td { border-bottom: 1px solid #eee2c0; padding: 9px 10px; text-align: left; color: #444; }
+  .hdc-report td:first-child { white-space: nowrap; }
   .hdc-report th { color: #7a5500; font-weight: 600; white-space: nowrap; }
   .hdc-report .price { font-size: 1.5rem; color: #7a5500; font-weight: 800; }
   .hdc-report .hdc-note-s { font-size: 0.8rem; color: #999; margin-top: 10px; }
@@ -307,6 +309,7 @@ extra_css: |
       <div class="hdc-report">
         <h3>合盤深度報告：把「你們的圖」讀成「你們的相處說明書」</h3>
         <p style="font-size:0.94rem;color:#555;line-height:1.8;">免費合盤給你完整的結構；深度報告由真人針對你們兩人逐條展開——每條連結的機制、天賦與相處提醒、九大中心的關係化學、整體相處建議，人工校稿後交付。</p>
+        <div class="hdc-table-scroll">
         <table>
           <tr><th></th><th>免費合盤（本頁）</th><th>深度報告</th></tr>
           <tr><td>合盤圖與四類連結</td><td>✔ 完整</td><td>✔ 完整</td></tr>
@@ -315,6 +318,7 @@ extra_css: |
           <tr><td>綜合相處建議</td><td>—</td><td>✔ 含你們的獨特之處</td></tr>
           <tr><td>製作方式</td><td>即時生成</td><td>真人撰寫＋人工校稿</td></tr>
         </table>
+        </div>
         <div><span class="price">NT$1,080</span>　<span style="font-size:0.85rem;color:#999;">早鳥驗證價・也支援穩定幣付款</span></div>
         <button type="button" class="hd-btn-generate" id="hdc-report-end" style="max-width:420px;margin-top:16px;">用 Email 申請合盤深度報告</button>
         <p class="hdc-note-s">申請時只需附上兩人出生資料（或直接傳本頁下載的合盤圖卡）。報告不做好壞判定、不替你們做關係決策；如需退款請於交付前提出。</p>
