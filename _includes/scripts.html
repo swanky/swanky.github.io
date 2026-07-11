@@ -17,6 +17,12 @@
 <script type="module" src="{{ '/assets/js/human-design/hd-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_hd_composite %}
+<!-- Human Design 合盤：vendor UMD（global Astronomy）先載，再 ES module（同 HD 模式） -->
+<script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/human-design/hd-composite-ui.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.use_tarot %}
 <!-- 職場塔羅工具：純前端 ES module（無第三方 vendor、無 type:module 衝突） -->
 <script type="module" src="{{ '/assets/js/tarot/tarot-ui.js' | relative_url }}"></script>

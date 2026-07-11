@@ -1,0 +1,345 @@
+---
+layout: home
+title: 免費人類圖合盤（關係合圖）
+seo_title: 免費人類圖合盤｜兩人關係合圖・電磁／同伴／主導／妥協四類連結（資料不上傳）
+description: 輸入兩人的出生資料，立即生成人類圖合盤：36 條通道形成的電磁、同伴、主導、妥協四類連結，與九大中心的關係化學。純前端計算，出生資料不離開瀏覽器，適合伴侶、家人、朋友與工作搭檔。
+keywords: 人類圖合盤,關係合圖,人類圖 關係,合盤,Connection Chart,電磁連結,同伴關係,人類圖 伴侶,關係分析
+nav_active: human-design
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 人類圖生成器
+    url: /human-design/
+  - name: 關係合盤
+    url: /human-design/relationship/
+use_hd_composite: true
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "史旺基人類圖合盤",
+    "url": "https://swanky.github.io/human-design/relationship/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "description": "免登入的人類圖關係合盤工具：兩人出生資料在瀏覽器內合成關係圖，呈現電磁、同伴、主導、妥協四類連結。",
+    "inLanguage": "zh-TW",
+    "author": { "@type": "Person", "name": "蕭宇程 Swanky Hsiao" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "人類圖合盤是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "把兩個人的人類圖疊在一起，看 36 條通道在你們之間形成哪四種連結（電磁、同伴、主導、妥協），以及哪些能量中心因為在一起而改變。它描述互動的能量結構，幫助你們理解彼此，不是算命，也不做吉凶判斷。" } },
+      { "@type": "Question", "name": "合盤能判斷兩個人適不適合嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不能，也不應該。合盤沒有分數、沒有好壞判定——每一種連結都有它的甜與澀。沒有不合的兩個人，只有還沒被理解的設計；合盤的價值在於讓你們更快理解彼此的運作方式。" } },
+      { "@type": "Question", "name": "不知道其中一人的出生時間怎麼辦？", "acceptedAnswer": { "@type": "Answer", "text": "出生時間會影響部分閘門的啟動。可以勾選「不確定出生時間」先以中午試算，結果頁會標示「部分合盤結果可能隨出生時間改變」，把它當方向參考即可。想要精確版本，建議先向戶政事務所申請出生登記資料查證時間。" } },
+      { "@type": "Question", "name": "我們的出生資料會被上傳嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有計算都在你的瀏覽器裡完成，本站不上傳、不儲存兩人的出生資料，重新整理頁面就清空。提醒一點：你下載的圖卡檔案內含你輸入的出生資料（方便日後接續使用或申請報告），分享檔案給別人前請先想一下。" } },
+      { "@type": "Question", "name": "可以用在朋友、親子或工作搭檔嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。四種連結描述的是任意兩個人之間的能量結構，不限伴侶。輸入時可以選擇關係情境（伴侶、家人、朋友、工作夥伴），部分解讀提示會跟著調整措辭。" } },
+      { "@type": "Question", "name": "免費合盤與付費報告差在哪裡？", "acceptedAnswer": { "@type": "Answer", "text": "免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）由真人針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，並經人工校稿後交付。" } }
+    ]
+  }
+  </script>
+extra_css: |
+  .hd-hero { background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%); padding: 56px 0 40px; }
+  .hd-hero h1 { font-size: 2.05rem; font-weight: 700; color: #111; margin-bottom: 14px; }
+  .hd-hero .lead { font-size: 1.06rem; color: #555; margin-bottom: 20px; line-height: 1.7; max-width: 46em; }
+  .hd-privacy-pill { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #f0dca8; border-radius: 50px; padding: 6px 16px; font-size: 0.85rem; color: #7a5500; margin-bottom: 8px; }
+  .hd-privacy-pill i { color: var(--c-gold); }
+  .hd-section { padding: 44px 0; }
+  .hdc-wizard { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
+  @media (max-width: 820px) { .hdc-wizard { grid-template-columns: 1fr; } }
+  .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+  .hd-form-card h3 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .hdc-step { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--c-gold, #E5A300); color: #fff; font-size: 0.85rem; flex: none; }
+  .hd-form-card .form-hint { font-size: 0.84rem; color: #999; margin-bottom: 18px; }
+  .hdc-consent { font-size: 0.82rem; color: #8a6d1f; background: #fffaef; border: 1px solid #f0dca8; border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; line-height: 1.6; }
+  .hd-field { margin-bottom: 16px; }
+  .hd-field > label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin-bottom: 7px; }
+  .hd-selects { display: flex; gap: 8px; flex-wrap: wrap; }
+  .hd-selects .hd-sel-wrap { display: flex; align-items: center; gap: 4px; }
+  .hd-selects select, .hd-city-input, .hdc-relation-sel { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
+  .hd-unit { font-size: 0.85rem; color: #888; }
+  .hd-check { display: flex; align-items: flex-start; gap: 7px; font-size: 0.85rem; color: #666; cursor: pointer; }
+  .hd-check input { margin-top: 3px; }
+  .hd-city-wrap { position: relative; }
+  .hd-city-input { width: 100%; }
+  .hd-city-list { position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.10); max-height: 260px; overflow-y: auto; display: none; z-index: 30; }
+  .hd-city-list.is-open { display: block; }
+  .hd-city-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 14px; font-size: 0.92rem; cursor: pointer; }
+  .hd-city-item:hover, .hd-city-item.is-active { background: #fff8e6; }
+  .hd-city-group { font-size: 0.78rem; color: #aaa; flex: none; }
+  .hd-advanced { margin-top: 10px; font-size: 0.85rem; }
+  .hd-advanced summary { color: #888; cursor: pointer; }
+  .hd-adv-body { margin-top: 10px; }
+  .hdc-shared-row { max-width: 1000px; margin: 18px auto 0; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 20px 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+  .hd-btn-generate { display: block; width: 100%; margin-top: 16px; background: var(--c-gold, #E5A300); border: none; color: #fff; font-size: 1.05rem; font-weight: 700; border-radius: 10px; padding: 14px; cursor: pointer; transition: filter .15s; }
+  .hd-btn-generate:hover { filter: brightness(1.06); }
+  .hd-error { display: none; margin-top: 12px; color: #b3261e; background: #fdecea; border-radius: 8px; padding: 10px 14px; font-size: 0.9rem; }
+  .hd-error.is-show { display: block; }
+  .hdc-carryover { display: none; font-size: 0.84rem; color: #2e7d32; background: #edf7ee; border-radius: 8px; padding: 8px 12px; margin-bottom: 14px; }
+  #hdc-result { display: none; }
+  .hdc-meta { font-size: 1.05rem; color: #333; margin-bottom: 6px; }
+  .hdc-unknown-note { display: none; font-size: 0.86rem; color: #8a6d1f; background: #fffaef; border: 1px solid #f0dca8; border-radius: 8px; padding: 8px 12px; margin: 8px 0; }
+  .hdc-toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+  .hdc-btn { border: 1px solid #ddd; background: #fff; border-radius: 8px; padding: 8px 16px; font-size: 0.9rem; color: #444; cursor: pointer; }
+  .hdc-btn.is-active { border-color: var(--c-gold, #E5A300); color: #7a5500; background: #fff8e6; }
+  .hdc-btn-gold { background: var(--c-gold, #E5A300); border-color: var(--c-gold, #E5A300); color: #fff; font-weight: 600; }
+  .hdc-graph { max-width: 560px; margin: 0 auto; }
+  .hdc-graph svg { width: 100%; height: auto; display: block; }
+  .hdc-side { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hdc-side figure { margin: 0; }
+  .hdc-side figcaption { text-align: center; font-size: 0.9rem; color: #666; margin-top: 6px; }
+  .hdc-legend { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; font-size: 0.85rem; color: #555; margin: 12px 0 4px; }
+  .hdc-lg { display: inline-flex; align-items: center; gap: 6px; }
+  .hdc-lg i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+  .hdc-lg-open { background: #fff; border: 1px solid #bbb; }
+  .hdc-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+  @media (max-width: 820px) { .hdc-summary { grid-template-columns: 1fr; } }
+  .hdc-sum-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 18px; }
+  .hdc-sum-title { font-weight: 700; color: #111; margin-bottom: 8px; }
+  .hdc-sum-card p { font-size: 0.92rem; color: #444; line-height: 1.75; margin: 0 0 8px; }
+  .hdc-sum-hint { font-size: 0.78rem; color: #aaa; }
+  .hdc-cat { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 20px 22px; margin-bottom: 16px; border-left: 4px solid #ddd; }
+  .hdc-cat[data-cat="electromagnetic"] { border-left-color: #D4A017; }
+  .hdc-cat[data-cat="companionship"] { border-left-color: #3A8A3A; }
+  .hdc-cat[data-cat="dominance"] { border-left-color: #7A4FB5; }
+  .hdc-cat[data-cat="compromise"] { border-left-color: #C4632A; }
+  .hdc-cat h4 { font-size: 1.05rem; color: #111; display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+  .hdc-cat-en { font-size: 0.8rem; color: #bbb; font-weight: 400; }
+  .hdc-cat-count { margin-left: auto; background: #f5f2ea; border-radius: 20px; padding: 2px 12px; font-size: 0.9rem; color: #7a5500; }
+  .hdc-cat-tag { font-size: 0.84rem; color: #999; margin: 0 0 10px; }
+  .hdc-cat-desc, .hdc-cat-advice { font-size: 0.92rem; color: #444; line-height: 1.75; margin: 0 0 8px; }
+  .hdc-cat-advice { color: #7a5500; }
+  .hdc-empty { font-size: 0.9rem; color: #999; background: #fafaf8; border-radius: 8px; padding: 10px 14px; }
+  .hdc-ch { border-top: 1px solid #f0f0ee; padding: 10px 0; }
+  .hdc-ch summary { cursor: pointer; font-size: 0.94rem; color: #333; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+  .hdc-ch-hold { margin-left: auto; font-size: 0.8rem; color: #999; }
+  .hdc-ch-body { padding: 8px 2px 2px; }
+  .hdc-ch-body p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 0 0 6px; }
+  .hdc-ch-centers { color: #aaa; font-size: 0.8rem; }
+  .hdc-neutral { color: #8a6d1f; font-size: 0.85rem; }
+  .hdc-centers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 820px) { .hdc-centers { grid-template-columns: 1fr; } }
+  .hdc-center { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 14px 16px; }
+  .hdc-center.is-def { border-color: #eadfc2; background: #fffdf7; }
+  .hdc-center.is-magic { border-color: var(--c-gold, #E5A300); box-shadow: 0 0 0 1px var(--c-gold, #E5A300) inset; }
+  .hdc-center-name { font-weight: 700; font-size: 0.95rem; color: #111; }
+  .hdc-center-dyn { font-size: 0.8rem; color: #7a5500; margin: 2px 0 6px; }
+  .hdc-center p { font-size: 0.86rem; color: #555; line-height: 1.7; margin: 0; }
+  .hdc-edu { max-width: 860px; margin: 0 auto; }
+  .hdc-edu h3, .hdc-report h3, .hdc-faq h3 { font-size: 1.3rem; font-weight: 700; color: #111; margin-bottom: 16px; }
+  .hdc-edu-item { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
+  .hdc-edu-item b { color: #111; }
+  .hdc-edu-item p { font-size: 0.92rem; color: #555; line-height: 1.75; margin: 4px 0 0; }
+  .hdc-report { max-width: 860px; margin: 0 auto; background: linear-gradient(135deg, #fffbf0, #fff6de); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px; }
+  .hdc-report table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+  .hdc-report th, .hdc-report td { border-bottom: 1px solid #eee2c0; padding: 9px 10px; text-align: left; color: #444; }
+  .hdc-report th { color: #7a5500; font-weight: 600; white-space: nowrap; }
+  .hdc-report .price { font-size: 1.5rem; color: #7a5500; font-weight: 800; }
+  .hdc-report .hdc-note-s { font-size: 0.8rem; color: #999; margin-top: 10px; }
+  .hdc-faq { max-width: 860px; margin: 0 auto; }
+  .hdc-faq details { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  .hdc-faq summary { font-weight: 600; color: #222; cursor: pointer; font-size: 0.95rem; }
+  .hdc-faq p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 10px 0 0; }
+  .hdc-method { max-width: 860px; margin: 0 auto; font-size: 0.82rem; color: #999; line-height: 1.7; }
+---
+
+<main id="main">
+  <!-- ======= Hero ======= -->
+  <section class="hd-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb" style="margin-bottom:16px;">
+        <span style="font-size:0.85rem;color:#999;"><a href="{{ '/human-design/' | relative_url }}" style="color:#7a5500;">人類圖生成器</a>　›　關係合盤</span>
+      </nav>
+      <h1>免費人類圖合盤（關係合圖）</h1>
+      <p class="lead">輸入兩個人的出生資料，看你們的 36 條通道之間形成哪四種連結——<b>電磁</b>的吸引、<b>同伴</b>的相似、<b>主導</b>的單向流動、<b>妥協</b>的重疊地帶，以及哪些能量中心因為在一起而改變。適合伴侶、家人、朋友與工作搭檔。</p>
+      <div class="hd-privacy-pill"><i class="bi bi-shield-lock"></i> 兩人的出生資料都只在你的瀏覽器內計算，不上傳、不儲存</div>
+    </div>
+  </section>
+
+  <!-- ======= 雙人表單 ======= -->
+  <section class="hd-section" id="hdc-form">
+    <div class="container">
+      <div class="hdc-wizard">
+        <!-- A -->
+        <div class="hd-form-card">
+          <h3><span class="hdc-step">1</span> 你的出生資料</h3>
+          <p class="form-hint">若你剛在單人排盤輸入過，這裡會自動帶入。</p>
+          <div class="hdc-carryover" id="hdc-carryover"></div>
+          <div class="hd-field">
+            <label>出生日期（西元）</label>
+            <div class="hd-selects">
+              <div class="hd-sel-wrap"><select id="hd-a-year" aria-label="A 出生年"></select><span class="hd-unit">年</span></div>
+              <div class="hd-sel-wrap"><select id="hd-a-month" aria-label="A 出生月"></select><span class="hd-unit">月</span></div>
+              <div class="hd-sel-wrap"><select id="hd-a-day" aria-label="A 出生日"></select><span class="hd-unit">日</span></div>
+            </div>
+          </div>
+          <div class="hd-field">
+            <label>出生時間（24 小時制）</label>
+            <div class="hd-selects">
+              <div class="hd-sel-wrap"><select id="hd-a-hour" aria-label="A 出生時"></select><span class="hd-unit">時</span></div>
+              <div class="hd-sel-wrap"><select id="hd-a-minute" aria-label="A 出生分"></select><span class="hd-unit">分</span></div>
+            </div>
+            <label class="hd-check" style="margin-top:10px;"><input type="checkbox" id="hd-a-unknown-time"> 不確定出生時間（以正午試算）</label>
+          </div>
+          <div class="hd-field">
+            <label>出生地點</label>
+            <div class="hd-city-wrap">
+              <input type="text" class="hd-city-input" id="hd-a-city-search" placeholder="輸入城市名稱，例如：台北、Tokyo" autocomplete="off">
+              <div class="hd-city-list" id="hd-a-city-list" role="listbox"></div>
+            </div>
+            <details class="hd-advanced">
+              <summary>找不到出生地？手動指定時區</summary>
+              <div class="hd-adv-body">
+                <label for="hd-a-manual-tz" style="font-size:0.85rem;color:#666;">出生地當時的 UTC 偏移：</label>
+                <select id="hd-a-manual-tz"></select>
+              </div>
+            </details>
+          </div>
+          <div class="hd-field">
+            <label for="hd-a-name">你的稱呼 <span style="font-weight:400;color:#aaa;">（選填）</span></label>
+            <input type="text" class="hd-city-input" id="hd-a-name" placeholder="會顯示在結果與圖卡上" autocomplete="off" maxlength="20">
+          </div>
+        </div>
+        <!-- B -->
+        <div class="hd-form-card">
+          <h3><span class="hdc-step">2</span> 對方的出生資料</h3>
+          <p class="form-hint">任何關係都可以合：伴侶、家人、朋友、工作夥伴。</p>
+          <div class="hdc-consent"><i class="bi bi-info-circle"></i> 請先取得對方同意再輸入其出生資料。所有計算只在你的瀏覽器內進行，不會上傳。</div>
+          <div class="hd-field">
+            <label>出生日期（西元）</label>
+            <div class="hd-selects">
+              <div class="hd-sel-wrap"><select id="hd-b-year" aria-label="B 出生年"></select><span class="hd-unit">年</span></div>
+              <div class="hd-sel-wrap"><select id="hd-b-month" aria-label="B 出生月"></select><span class="hd-unit">月</span></div>
+              <div class="hd-sel-wrap"><select id="hd-b-day" aria-label="B 出生日"></select><span class="hd-unit">日</span></div>
+            </div>
+          </div>
+          <div class="hd-field">
+            <label>出生時間（24 小時制）</label>
+            <div class="hd-selects">
+              <div class="hd-sel-wrap"><select id="hd-b-hour" aria-label="B 出生時"></select><span class="hd-unit">時</span></div>
+              <div class="hd-sel-wrap"><select id="hd-b-minute" aria-label="B 出生分"></select><span class="hd-unit">分</span></div>
+            </div>
+            <label class="hd-check" style="margin-top:10px;"><input type="checkbox" id="hd-b-unknown-time"> 不確定出生時間（以正午試算）</label>
+          </div>
+          <div class="hd-field">
+            <label>出生地點</label>
+            <div class="hd-city-wrap">
+              <input type="text" class="hd-city-input" id="hd-b-city-search" placeholder="輸入城市名稱，例如：高雄、New York" autocomplete="off">
+              <div class="hd-city-list" id="hd-b-city-list" role="listbox"></div>
+            </div>
+            <details class="hd-advanced">
+              <summary>找不到出生地？手動指定時區</summary>
+              <div class="hd-adv-body">
+                <label for="hd-b-manual-tz" style="font-size:0.85rem;color:#666;">出生地當時的 UTC 偏移：</label>
+                <select id="hd-b-manual-tz"></select>
+              </div>
+            </details>
+          </div>
+          <div class="hd-field">
+            <label for="hd-b-name">對方的稱呼 <span style="font-weight:400;color:#aaa;">（選填）</span></label>
+            <input type="text" class="hd-city-input" id="hd-b-name" placeholder="會顯示在結果與圖卡上" autocomplete="off" maxlength="20">
+          </div>
+        </div>
+      </div>
+      <!-- 共用列：關係情境＋送出 -->
+      <div class="hdc-shared-row">
+        <div class="hd-field" style="margin-bottom:0;">
+          <label for="hdc-relation">你們的關係 <span style="font-weight:400;color:#aaa;">（選填，用於調整解讀措辭）</span></label>
+          <select id="hdc-relation" class="hdc-relation-sel">
+            <option value="">不指定</option>
+            <option value="伴侶">伴侶</option>
+            <option value="家人">家人</option>
+            <option value="朋友">朋友</option>
+            <option value="工作夥伴">工作夥伴</option>
+          </select>
+        </div>
+        <button class="hd-btn-generate" id="hdc-submit">生成我們的合盤</button>
+        <div class="hd-error" id="hdc-error"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 結果 ======= -->
+  <section class="hd-section" id="hdc-result" style="padding-top:0;">
+    <div class="container">
+      <div class="hdc-meta" id="hdc-meta"></div>
+      <div class="hdc-unknown-note" id="hdc-unknown-note"></div>
+      <div class="hdc-toolbar">
+        <button type="button" class="hdc-btn is-active" id="hdc-view-merged">合併顯示</button>
+        <button type="button" class="hdc-btn" id="hdc-view-side">並排顯示</button>
+        <span style="flex:1"></span>
+        <button type="button" class="hdc-btn" id="hdc-download-svg"><i class="bi bi-download"></i> 下載合盤圖</button>
+        <button type="button" class="hdc-btn" id="hdc-share"><i class="bi bi-share"></i> 分享工具</button>
+        <button type="button" class="hdc-btn hdc-btn-gold" id="hdc-report-top">深入解讀 ↓</button>
+      </div>
+      <div class="hdc-graph" id="hdc-graph"></div>
+      <div class="hdc-legend" id="hdc-legend"></div>
+      <div class="hdc-summary" id="hdc-summary"></div>
+
+      <h3 style="font-size:1.3rem;font-weight:700;color:#111;margin:30px 0 14px;">四種連結，逐條看</h3>
+      <div id="hdc-cats"></div>
+      <div style="text-align:center;margin:20px 0 34px;">
+        <button type="button" class="hdc-btn hdc-btn-gold" id="hdc-report-mid" style="padding:12px 28px;">想知道每條連結在你們身上怎麼運作？看看深度報告 →</button>
+      </div>
+
+      <h3 style="font-size:1.3rem;font-weight:700;color:#111;margin:30px 0 14px;">九大中心的關係化學</h3>
+      <div class="hdc-centers" id="hdc-centers"></div>
+    </div>
+  </section>
+
+  <!-- ======= 怎麼讀合盤 ======= -->
+  <section class="hd-section" style="background:#faf9f6;">
+    <div class="container hdc-edu">
+      <h3>怎麼讀合盤？</h3>
+      <div class="hdc-edu-item"><b>先看整體，再看單條。</b><p>先看合盤圖與四類數量的分布，感受你們是「相似型」（同伴多）、「互補型」（電磁多）還是「單向流動型」（主導多）——再進到單條通道細讀。</p></div>
+      <div class="hdc-edu-item"><b>每一類都是中性的。</b><p>四種連結沒有好壞排序。電磁多不代表激情就好，同伴多不代表無聊，主導與妥協更不是誰欺負誰——它們只是四種不同的能量接法。</p></div>
+      <div class="hdc-edu-item"><b>拿回你們的主導權。</b><p>合盤描述的是能量傾向，不是劇本。把它當成理解彼此的地圖，實際怎麼走，永遠由你們自己決定。</p></div>
+    </div>
+  </section>
+
+  <!-- ======= 付費報告 ======= -->
+  <section class="hd-section" id="hdc-report">
+    <div class="container">
+      <div class="hdc-report">
+        <h3>合盤深度報告：把「你們的圖」讀成「你們的相處說明書」</h3>
+        <p style="font-size:0.94rem;color:#555;line-height:1.8;">免費合盤給你完整的結構；深度報告由真人針對你們兩人逐條展開——每條連結的機制、天賦與相處提醒、九大中心的關係化學、整體相處建議，人工校稿後交付。</p>
+        <table>
+          <tr><th></th><th>免費合盤（本頁）</th><th>深度報告</th></tr>
+          <tr><td>合盤圖與四類連結</td><td>✔ 完整</td><td>✔ 完整</td></tr>
+          <tr><td>逐通道深度解讀</td><td>短述</td><td>每條 300–450 字：機制→天賦→提醒</td></tr>
+          <tr><td>九大中心關係化學</td><td>提要</td><td>逐中心展開＋具名建議</td></tr>
+          <tr><td>綜合相處建議</td><td>—</td><td>✔ 含你們的獨特之處</td></tr>
+          <tr><td>製作方式</td><td>即時生成</td><td>真人撰寫＋人工校稿</td></tr>
+        </table>
+        <div><span class="price">NT$1,080</span>　<span style="font-size:0.85rem;color:#999;">早鳥驗證價・也支援穩定幣付款</span></div>
+        <button type="button" class="hd-btn-generate" id="hdc-report-end" style="max-width:420px;margin-top:16px;">用 Email 申請合盤深度報告</button>
+        <p class="hdc-note-s">申請時只需附上兩人出生資料（或直接傳本頁下載的合盤圖卡）。報告不做好壞判定、不替你們做關係決策；如需退款請於交付前提出。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="hd-section" style="background:#faf9f6;">
+    <div class="container hdc-faq">
+      <h3>常見問題</h3>
+      <details><summary>人類圖合盤是什麼？</summary><p>把兩個人的人類圖疊在一起，看 36 條通道在你們之間形成哪四種連結（電磁、同伴、主導、妥協），以及哪些能量中心因為在一起而改變。它描述互動的能量結構，幫助你們理解彼此，不是算命，也不做吉凶判斷。</p></details>
+      <details><summary>合盤能判斷兩個人適不適合嗎？</summary><p>不能，也不應該。合盤沒有分數、沒有好壞判定——每一種連結都有它的甜與澀。沒有不合的兩個人，只有還沒被理解的設計；合盤的價值在於讓你們更快理解彼此的運作方式。</p></details>
+      <details><summary>不知道其中一人的出生時間怎麼辦？</summary><p>出生時間會影響部分閘門的啟動。可以勾選「不確定出生時間」先以中午試算，結果頁會標示「部分合盤結果可能隨出生時間改變」，把它當方向參考即可。想要精確版本，建議先向戶政事務所申請出生登記資料查證時間。</p></details>
+      <details><summary>我們的出生資料會被上傳嗎？</summary><p>不會。所有計算都在你的瀏覽器裡完成，本站不上傳、不儲存兩人的出生資料，重新整理頁面就清空。提醒一點：你下載的圖卡檔案內含你輸入的出生資料（方便日後接續使用或申請報告），分享檔案給別人前請先想一下。</p></details>
+      <details><summary>可以用在朋友、親子或工作搭檔嗎？</summary><p>可以。四種連結描述的是任意兩個人之間的能量結構，不限伴侶。輸入時可以選擇關係情境（伴侶、家人、朋友、工作夥伴），部分解讀提示會跟著調整措辭。</p></details>
+      <details><summary>免費合盤與付費報告差在哪裡？</summary><p>免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）由真人針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，並經人工校稿後交付。</p></details>
+      <p style="margin-top:18px;"><a href="{{ '/human-design/' | relative_url }}" style="color:#7a5500;">← 還沒排過自己的人類圖？先從單人排盤開始</a></p>
+    </div>
+  </section>
+
+  <!-- ======= 方法與免責 ======= -->
+  <section class="hd-section" style="padding-top:0;">
+    <div class="container hdc-method">
+      <p>本工具以天文曆法計算兩人出生時刻的行星位置，對應人類圖 64 閘門與 36 通道，依連結類型規則（電磁／同伴／主導／妥協）合成關係圖。計算全程在瀏覽器內完成。結果描述能量結構的傾向，不構成心理、醫療、法律或重大人生決策建議；關係的樣貌，永遠以你們真實的相處為準。</p>
+    </div>
+  </section>
+</main>
