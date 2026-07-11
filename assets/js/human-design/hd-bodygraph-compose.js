@@ -5,7 +5,8 @@
 //   electromagnetic＝兩半段各上 owner 色＋中點接合圓；companionship＝A 底實線＋B 虛線疊（報告端 both 語彙）；
 //   dominance／compromise＝完整方全長線（差異由閘門圓呈現：妥協的對方端＝左右半圓 both 圓）。
 //   未啟動通道＝白管＋插座照舊。閘門圓：A 色／B 色／both 左右半圓／未啟動插座。
-// variant 鉤子（B2 選型輪限定，拍板後固化刪除）：'a' 預設；'b' 啟動線 casing 改四類色；'c' 通道中點加四類色徽記。
+//   四類辨識＝啟動線 casing 上四類語意色（電磁金／同伴綠／主導紫／妥協橙）——B2 選型「案 B」，
+//   站主 2026-07-11 看圖拍板（選型材料 docs/hd-redesign/composite-visual-proposals.html）。
 // 與報告端同級紅線：輸出不得含 polygon/style=/class=/gradient（assertComposeReportSafe，回傳前 throw）。
 import {
   VIEWBOX2, CENTER_SHAPES2, GATE_ANCHORS2, CHANNEL_PATHS2, CENTER_DRAW_ORDER2,
@@ -41,7 +42,6 @@ export function renderCompositeBodygraph(composite, opts = {}) {
   if (!theme) throw new Error(`未知主題 ${themeId}`);
   const ct = theme.compose;
   const skin = theme.skin;
-  const variant = opts.variant || 'a';
   const interactive = !!opts.interactive;
   const background = opts.background !== false;
   const ariaLabel = opts.ariaLabel || '人類圖合盤 BodyGraph';
@@ -80,18 +80,17 @@ export function renderCompositeBodygraph(composite, opts = {}) {
     }
   }
 
-  // L4 啟動線層（四類）
+  // L4 啟動線層（四類）：casing＝四類語意色（案 B）、內線＝owner 色（A 實／B 虛）
   const ac = skin.active;
   const dashB = ` stroke-dasharray="${ct.bDash}"`;
-  const casingColorFor = (state) => (variant === 'b' ? ct.categories[state] : ac.casing);
-  const joints = []; // 電磁接合圓／variant c 徽記，最後畫（壓在線上、閘門圓下）
+  const casingW = ac.width + 2 * ac.casingW + 1.5;
+  const joints = []; // 電磁中點接合圓，最後畫（壓在線上、閘門圓下）
   for (const ch of CHANNELS) {
     const info = composite.channels[ch.id];
     if (!info || info.state === 'off') continue;
     const g = CHANNEL_PATHS2[ch.id];
     const fullD = channelFullD2(g);
-    const casing = casingColorFor(info.state);
-    const casingW = ac.width + 2 * ac.casingW + (variant === 'b' ? 1.5 : 0);
+    const casing = ct.categories[info.state];
 
     if (info.state === 'electromagnetic') {
       const [dA, dB] = channelHalfDs2(g); // [gateA 側, gateB 側]
@@ -102,24 +101,20 @@ export function renderCompositeBodygraph(composite, opts = {}) {
       out.push(`<path d="${dA}" fill="none" stroke="${ownerColor(ownerG1, ct)}" stroke-width="${ac.width}" stroke-linecap="round"${ownerG1 === 'b' ? dashB : ''}/>`);
       out.push(`<path d="${dB}" fill="none" stroke="${ownerColor(ownerG2, ct)}" stroke-width="${ac.width}" stroke-linecap="round"${ownerG2 === 'b' ? dashB : ''}/>`);
       const m = midPointOf(dB);
-      if (m) joints.push({ m, state: 'electromagnetic' });
+      if (m) joints.push({ m });
     } else if (info.state === 'companionship') {
       out.push(`<path d="${fullD}" fill="none" stroke="${casing}" stroke-width="${casingW}" stroke-linecap="round"/>`);
       out.push(`<path d="${fullD}" fill="none" stroke="${ct.a.color}" stroke-width="${ac.width}" stroke-linecap="round"/>`);
       out.push(`<path d="${fullD}" fill="none" stroke="${ct.b.color}" stroke-width="${ac.width}" stroke-linecap="round"${dashB}/>`);
-      if (variant === 'c') { const m = midPointOf(channelHalfDs2(g)[1]); if (m) joints.push({ m, state: 'companionship' }); }
     } else { // dominance / compromise：完整方全長
       const who = info.completeFor[0];
       out.push(`<path d="${fullD}" fill="none" stroke="${casing}" stroke-width="${casingW}" stroke-linecap="round"/>`);
       out.push(`<path d="${fullD}" fill="none" stroke="${ownerColor(who, ct)}" stroke-width="${ac.width}" stroke-linecap="round"${who === 'b' ? dashB : ''}/>`);
-      if (variant === 'c') { const m = midPointOf(channelHalfDs2(g)[1]); if (m) joints.push({ m, state: info.state }); }
     }
   }
-  // 接合圓／類別徽記
+  // 電磁中點接合圓（兩半段在此接通的視覺徵記）
   for (const j of joints) {
-    const fill = j.state === 'electromagnetic' && variant !== 'c' ? skin.surface : ct.categories[j.state];
-    const stroke = j.state === 'electromagnetic' && variant !== 'c' ? skin.socket.stroke : skin.surface;
-    out.push(`<circle cx="${j.m[0]}" cy="${j.m[1]}" r="${ct.jointR}" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`);
+    out.push(`<circle cx="${j.m[0]}" cy="${j.m[1]}" r="${ct.jointR}" fill="${skin.surface}" stroke="${skin.socket.stroke}" stroke-width="1.5"/>`);
   }
 
   // L5 閘門圓層（64 門：owner 上色／both 左右半圓／未啟動插座）

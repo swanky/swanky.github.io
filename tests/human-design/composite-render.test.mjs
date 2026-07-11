@@ -1,10 +1,10 @@
-// composite-render.test.mjs — 合盤渲染器（hd-bodygraph-compose.js）結構測試。
+// composite-render.test.mjs — 合盤渲染器（hd-bodygraph-compose.js）結構＋視覺回歸測試。
 // 驗：XML 良構、報告安全紅線（no polygon/style=/class=/gradient）、無 id 汙染、
-// fixtures 逐案視覺語意斷言（A 實線/B 虛線、both 半圓、接合圓、插座）、interactive hit 層 opt-in、
-// 三主題全過。視覺快照（byte-identical）待 B2 站主拍板 variant 後固化（比照單人 24 快照法）。
+// fixtures 逐案視覺語意斷言（A 實線/B 虛線、both 半圓、接合圓、插座、案 B 四類色 casing）、
+// interactive hit 層 opt-in、三主題全過；末段＝24 張視覺快照 byte-identical（案 B 拍板後固化）。
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { makeChart, assertWellFormedXml } from './_composite-helpers.mjs';
 import { computeComposite } from '../../assets/js/human-design/hd-composite.js';
 import { renderCompositeBodygraph, assertComposeReportSafe } from '../../assets/js/human-design/hd-bodygraph-compose.js';
@@ -95,15 +95,17 @@ test('interactive：hit 層 opt-in（預設無 data-hit；開啟後有 channel/g
   assertComposeReportSafe(on);
 });
 
-test('variant b/c（選型輪）：輸出仍過紅線與 XML；c 有類別徽記', () => {
-  for (const v of ['b', 'c']) {
-    const svg = render(byId('mixed-four'), { variant: v });
-    assertWellFormedXml(svg);
-    assertComposeReportSafe(svg);
-  }
+test('案 B 四類色 casing：各類啟動線外框上對應語意色', () => {
   const ct = THEMES_V2.modern.compose;
-  const svgC = render(byId('mixed-four'), { variant: 'c' });
-  assert.ok(svgC.includes(`fill="${ct.categories.dominance}"`), 'variant c 應有主導徽記色');
+  const svg = render(byId('mixed-four')); // 四類皆有的 fixture
+  for (const k of ['electromagnetic', 'companionship', 'dominance', 'compromise']) {
+    assert.ok(svg.includes(`stroke="${ct.categories[k]}"`), `mixed-four 應有 ${k} casing 色 ${ct.categories[k]}`);
+  }
+  // 未成類的通道不得出現四類色（empty fixture 全白管）
+  const empty = render(byId('empty'));
+  for (const k of ['electromagnetic', 'companionship', 'dominance', 'compromise']) {
+    assert.ok(!empty.includes(`stroke="${ct.categories[k]}"`), `empty 不應有 ${k} casing 色`);
+  }
 });
 
 test('background=false：無頁底／卡面／金框', () => {
@@ -115,3 +117,20 @@ test('壞輸入：非 composite 物件應 throw', () => {
   assert.throws(() => renderCompositeBodygraph({}), /computeComposite/);
   assert.throws(() => renderCompositeBodygraph(null), /computeComposite/);
 });
+
+// ── 視覺回歸快照（案 B 拍板後固化；比照單人 visual-regression.test.mjs 慣例）──
+// 8 fixtures × 3 主題 byte-identical；快照缺失＝fail（防假綠）。
+// 重生（僅限刻意視覺改版且經人工看圖確認後）：等效程式碼＝對每個 fixture×theme 呼叫
+// renderCompositeBodygraph(computeComposite(makeChart(f.a), makeChart(f.b)), { theme }) 寫入
+// fixtures/composite/snapshots/{id}-{theme}.golden.svg，git diff 覆核。
+const SNAP = new URL('./fixtures/composite/snapshots/', import.meta.url);
+for (const fix of FIX) {
+  for (const theme of Object.keys(THEMES_V2)) {
+    test(`合盤視覺回歸：${fix.id} × ${theme} byte-identical 於 golden 快照`, () => {
+      const snapUrl = new URL(`${fix.id}-${theme}.golden.svg`, SNAP);
+      assert.ok(existsSync(snapUrl), `快照缺失：composite/snapshots/${fix.id}-${theme}.golden.svg`);
+      assert.equal(render(fix, { theme }), readFileSync(snapUrl, 'utf8'),
+        `${fix.id} × ${theme} 與 golden 快照不符：刻意改版請重生快照並 git diff 覆核；否則為非預期視覺漂移。`);
+    });
+  }
+}
