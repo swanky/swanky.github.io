@@ -12,8 +12,8 @@ import { CHANNELS } from '../../assets/js/human-design/hd-data-channels.js';
 import { CENTERS } from '../../assets/js/human-design/hd-data-centers.js';
 import { renderBodygraphSvg, THEMES } from '../../assets/js/human-design/hd-svg-string.js';
 
-test('VIEWBOX 為 0 20 520 712（與參考端 bodygraph.py 一致）', () => {
-  assert.deepEqual(VIEWBOX, { minX: 0, minY: 20, w: 520, h: 712 });
+test('VIEWBOX 為 0 20 600 700（直線格陣範式，中軸 x=300）', () => {
+  assert.deepEqual(VIEWBOX, { minX: 0, minY: 20, w: 600, h: 700 });
 });
 
 test('36 通道路徑與 CHANNELS 一一對應、鍵＝「小-大」', () => {
@@ -62,7 +62,7 @@ test('9 中心形狀／標籤齊備；外側標籤為合法中心 id', () => {
 
 test('channelFullD / channelHalfDs 產出合法 path d', () => {
   const line = CHANNEL_PATHS['1-8'];   // L
-  const arc = CHANNEL_PATHS['10-34'];  // Q
+  const arc = CHANNEL_PATHS['26-44'];  // Q（繞過 G 下尖的弧線；整合 10-34 已改直線）
   assert.match(channelFullD(line), /^M[\d.,-]+ L[\d.,-]+$/);
   assert.match(channelFullD(arc), /^M[\d.,-]+ Q[\d.,-]+ [\d.,-]+$/);
   // 直線半段：兩段在中點相接
@@ -87,10 +87,10 @@ test('renderBodygraphSvg 兩種皮膚皆產出合法 SVG（含正確 viewBox 與
   for (const theme of ['report', 'gold']) {
     const svg = renderBodygraphSvg(chart, { theme });
     assert.match(svg, /^<svg /, `${theme} 應以 <svg 開頭`);
-    assert.ok(svg.includes('viewBox="0 20 520 712"'), `${theme} viewBox 錯誤`);
+    assert.ok(svg.includes('viewBox="0 20 600 700"'), `${theme} viewBox 錯誤`);
     assert.ok(svg.trim().endsWith('</svg>'), `${theme} 未正確收尾`);
-    // 36 條底層通道弧線
-    assert.equal((svg.match(/stroke-width="4.5"/g) || []).length, 36, `${theme} 底層通道應 36 條`);
+    // 36 條底層通道弧線（未啟動通道調細至 3.5，與啟動半段 7.5 拉開對比）
+    assert.equal((svg.match(/stroke-width="3.5"/g) || []).length, 36, `${theme} 底層通道應 36 條`);
     // 啟動半段（7.5）至少出現（10/34/17 各有半段）
     assert.ok((svg.match(/stroke-width="7.5"/g) || []).length >= 3, `${theme} 缺啟動半段`);
     // 定義中心填色（report 用 CENTER_FILL、gold 用品牌金）

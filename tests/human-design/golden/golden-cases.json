@@ -1,0 +1,1019 @@
+{
+  "_meta": {
+    "description": "Golden 交叉驗證固定測資：輸入 + 參考站(humandesignasia.org / Maia 引擎)實測期望值",
+    "collectedAt": "2026-07-11",
+    "collectedBy": "Playwright 逐筆實測（期望值非模型推算）",
+    "referenceSite": "https://humandesignasia.org/get-your-chart/",
+    "note": "僅收錄「已採集且與本地引擎逐欄一致」之組；差異組見 chart-validation-report.md（本批 0 差異）。比對欄位：type/profile/definition/authority/crossAngle/crossGates(4 閘門)。中心/通道/全行星啟動門僅存在於參考站 PNG（無文字版），以 chartImg 截圖存證，不做文字比對。"
+  },
+  "cases": [
+    {
+      "id": "tw-normal",
+      "input": {
+        "date": "1988-09-03",
+        "time": "21:10",
+        "tz": "Asia/Taipei"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "200",
+        "city": "262146 Kaohsiung City",
+        "chartImg": "hd_627248922000000000.png"
+      },
+      "expected": {
+        "type": "manifestor",
+        "profile": "6/2",
+        "definition": "triple",
+        "authority": "emotional",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 40,
+          "pEarth": 37,
+          "dSun": 35,
+          "dEarth": 5
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示者",
+        "profile": "6/2",
+        "definition": "三分人",
+        "authority": "情緒型權威",
+        "notSelf": "憤怒",
+        "cross": "左角度交叉之遷移2 (40/37 | 35/5)"
+      }
+    },
+    {
+      "id": "tw-hist-jst",
+      "input": {
+        "date": "1943-03-10",
+        "time": "08:20",
+        "tz": "Asia/Taipei"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "200",
+        "city": "262141 Taipei City",
+        "chartImg": "hd_612893964000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "2/4",
+        "definition": "single",
+        "authority": "sacral",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 22,
+          "pEarth": 47,
+          "dSun": 26,
+          "dEarth": 45
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "2/4",
+        "definition": "一分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之統領 (22/47 | 26/45)"
+      }
+    },
+    {
+      "id": "tw-hist-dst",
+      "input": {
+        "date": "1975-06-15",
+        "time": "14:30",
+        "tz": "Asia/Taipei"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "200",
+        "city": "262141 Taipei City",
+        "chartImg": "hd_623076390000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "1/4",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 12,
+          "pEarth": 11,
+          "dSun": 36,
+          "dEarth": 6
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "1/4",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之伊甸園2 (12/11 | 36/6)"
+      }
+    },
+    {
+      "id": "refl-bangkok",
+      "input": {
+        "date": "1962-01-08",
+        "time": "13:00",
+        "tz": "Asia/Bangkok"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "203",
+        "city": "91731 Bangkok > Krung Thep",
+        "chartImg": "hd_618837624000000000.png"
+      },
+      "expected": {
+        "type": "reflector",
+        "profile": "3/5",
+        "definition": "none",
+        "authority": "lunar",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 54,
+          "pEarth": 53,
+          "dSun": 57,
+          "dEarth": 51
+        }
+      },
+      "siteRawZh": {
+        "type": "反映者",
+        "profile": "3/5",
+        "definition": "無",
+        "authority": "無內在權威",
+        "notSelf": "失望",
+        "cross": "右角度交叉之滲透4 (54/53 | 57/51)"
+      }
+    },
+    {
+      "id": "ego-tokyo",
+      "input": {
+        "date": "1962-07-02",
+        "time": "03:00",
+        "tz": "Asia/Tokyo"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "98",
+        "city": "61204 Tokyo",
+        "chartImg": "hd_618988392000000000.png"
+      },
+      "expected": {
+        "type": "manifestor",
+        "profile": "6/3",
+        "definition": "single",
+        "authority": "ego",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 52,
+          "pEarth": 58,
+          "dSun": 21,
+          "dEarth": 48
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示者",
+        "profile": "6/3",
+        "definition": "一分人",
+        "authority": "意志力型權威",
+        "notSelf": "憤怒",
+        "cross": "左角度交叉之要求 (52/58 | 21/48)"
+      }
+    },
+    {
+      "id": "mental-kolkata",
+      "input": {
+        "date": "1962-02-06",
+        "time": "23:30",
+        "tz": "Asia/Kolkata"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "89",
+        "city": "48426 Calcutta",
+        "chartImg": "hd_618863112000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "5/1",
+        "definition": "single",
+        "authority": "mental",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 13,
+          "pEarth": 7,
+          "dSun": 43,
+          "dEarth": 23
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "5/1",
+        "definition": "一分人",
+        "authority": "無內在權威",
+        "notSelf": "苦澀",
+        "cross": "左角度交叉之面具 (13/7 | 43/23)"
+      }
+    },
+    {
+      "id": "gate-bound-before",
+      "input": {
+        "date": "1990-05-15",
+        "time": "22:20",
+        "tz": "Asia/Taipei"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "200",
+        "city": "262141 Taipei City",
+        "chartImg": "hd_627783780000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "6/3",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 23,
+          "pEarth": 43,
+          "dSun": 30,
+          "dEarth": 29
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "6/3",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "苦澀",
+        "cross": "左角度交叉之奉獻 (23/43 | 30/29)"
+      }
+    },
+    {
+      "id": "gate-bound-after",
+      "input": {
+        "date": "1990-05-15",
+        "time": "22:50",
+        "tz": "Asia/Taipei"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "200",
+        "city": "262141 Taipei City",
+        "chartImg": "hd_627783798000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "1/3",
+        "definition": "triple",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 8,
+          "pEarth": 14,
+          "dSun": 30,
+          "dEarth": 29
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "1/3",
+        "definition": "三分人",
+        "authority": "情緒型權威",
+        "notSelf": "苦澀",
+        "cross": "右角度交叉之傳染2 (8/14 | 30/29)"
+      }
+    },
+    {
+      "id": "us-edt",
+      "input": {
+        "date": "1985-07-04",
+        "time": "10:15",
+        "tz": "America/New_York"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "250",
+        "city": "190210 New York",
+        "chartImg": "hd_626249313000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "4/6",
+        "definition": "split",
+        "authority": "sacral",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 39,
+          "pEarth": 38,
+          "dSun": 21,
+          "dEarth": 48
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "4/6",
+        "definition": "二分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之張力2 (39/38 | 21/48)"
+      }
+    },
+    {
+      "id": "us-dst-springfwd",
+      "input": {
+        "date": "1999-04-04",
+        "time": "03:30",
+        "tz": "America/New_York"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "250",
+        "city": "190210 New York",
+        "chartImg": "hd_630588078000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "5/2",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 21,
+          "pEarth": 48,
+          "dSun": 54,
+          "dEarth": 53
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "5/2",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之努力 (21/48 | 54/53)"
+      }
+    },
+    {
+      "id": "us-pst-mid",
+      "input": {
+        "date": "1972-01-15",
+        "time": "00:00",
+        "tz": "America/Los_Angeles"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "222",
+        "city": "114718 Los Angeles",
+        "chartImg": "hd_621999072000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "4/6",
+        "definition": "single",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 61,
+          "pEarth": 62,
+          "dSun": 32,
+          "dEarth": 42
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "4/6",
+        "definition": "一分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之馬雅4 (61/62 | 32/42)"
+      }
+    },
+    {
+      "id": "leap-1996",
+      "input": {
+        "date": "1996-02-29",
+        "time": "23:30",
+        "tz": "America/Chicago"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "231",
+        "city": "132698 Chicago",
+        "chartImg": "hd_629612550000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "6/2",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 37,
+          "pEarth": 40,
+          "dSun": 5,
+          "dEarth": 35
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "6/2",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之遷移 (37/40 | 5/35)"
+      }
+    },
+    {
+      "id": "eu-bst",
+      "input": {
+        "date": "1980-06-21",
+        "time": "12:00",
+        "tz": "Europe/London"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "216",
+        "city": "98078 London",
+        "chartImg": "hd_624660300000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "3/5",
+        "definition": "single",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 15,
+          "pEarth": 10,
+          "dSun": 25,
+          "dEarth": 46
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "3/5",
+        "definition": "一分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之愛之船2 (15/10 | 25/46)"
+      }
+    },
+    {
+      "id": "eu-cest",
+      "input": {
+        "date": "1991-08-14",
+        "time": "23:59",
+        "tz": "Europe/Berlin"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "72",
+        "city": "40925 Berlin",
+        "chartImg": "hd_628178039400000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "3/6",
+        "definition": "split",
+        "authority": "splenic",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 4,
+          "pEarth": 49,
+          "dSun": 23,
+          "dEarth": 43
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "3/6",
+        "definition": "二分人",
+        "authority": "直覺型權威",
+        "notSelf": "苦澀",
+        "cross": "右角度交叉之解釋3 (4/49 | 23/43)"
+      }
+    },
+    {
+      "id": "leap-2000",
+      "input": {
+        "date": "2000-02-29",
+        "time": "12:00",
+        "tz": "Europe/Paris"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "66",
+        "city": "38508 Paris",
+        "chartImg": "hd_630874188000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "5/1",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 37,
+          "pEarth": 40,
+          "dSun": 5,
+          "dEarth": 35
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "5/1",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之遷移 (37/40 | 5/35)"
+      }
+    },
+    {
+      "id": "de-munich-mid",
+      "input": {
+        "date": "2010-06-15",
+        "time": "00:00",
+        "tz": "Europe/Berlin"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "72",
+        "city": "43932 München",
+        "chartImg": "hd_634121496000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "2/4",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 12,
+          "pEarth": 11,
+          "dSun": 36,
+          "dEarth": 6
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "2/4",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之伊甸園2 (12/11 | 36/6)"
+      }
+    },
+    {
+      "id": "au-syd-dst",
+      "input": {
+        "date": "1995-12-25",
+        "time": "16:45",
+        "tz": "Australia/Sydney"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "10",
+        "city": "4591 Sydney",
+        "chartImg": "hd_629554671000000000.png"
+      },
+      "expected": {
+        "type": "generator",
+        "profile": "6/2",
+        "definition": "single",
+        "authority": "sacral",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 10,
+          "pEarth": 15,
+          "dSun": 18,
+          "dEarth": 17
+        }
+      },
+      "siteRawZh": {
+        "type": "生產者",
+        "profile": "6/2",
+        "definition": "一分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之預防2 (10/15 | 18/17)"
+      }
+    },
+    {
+      "id": "nz-auckland",
+      "input": {
+        "date": "1993-11-11",
+        "time": "07:07",
+        "tz": "Pacific/Auckland"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "146",
+        "city": "69629 Auckland",
+        "chartImg": "hd_628885516200000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "6/2",
+        "definition": "single",
+        "authority": "sacral",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 1,
+          "pEarth": 2,
+          "dSun": 4,
+          "dEarth": 49
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "6/2",
+        "definition": "一分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之挑戰2 (1/2 | 4/49)"
+      }
+    },
+    {
+      "id": "hi-honolulu",
+      "input": {
+        "date": "1982-06-18",
+        "time": "20:00",
+        "tz": "Pacific/Honolulu"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "229",
+        "city": "130041 Honolulu",
+        "chartImg": "hd_625289112000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "6/2",
+        "definition": "single",
+        "authority": "sacral",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 12,
+          "pEarth": 11,
+          "dSun": 25,
+          "dEarth": 46
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "6/2",
+        "definition": "一分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之教育 (12/11 | 25/46)"
+      }
+    },
+    {
+      "id": "jp-tokyo-mid",
+      "input": {
+        "date": "1977-10-31",
+        "time": "23:59",
+        "tz": "Asia/Tokyo"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "98",
+        "city": "61204 Tokyo",
+        "chartImg": "hd_623827547400000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "1/3",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 44,
+          "pEarth": 24,
+          "dSun": 33,
+          "dEarth": 19
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "1/3",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之四方之路3 (44/24 | 33/19)"
+      }
+    },
+    {
+      "id": "in-kolkata",
+      "input": {
+        "date": "1987-05-30",
+        "time": "15:15",
+        "tz": "Asia/Kolkata"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "89",
+        "city": "48426 Calcutta",
+        "chartImg": "hd_626849631000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "3/6",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 16,
+          "pEarth": 9,
+          "dSun": 37,
+          "dEarth": 40
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "3/6",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之計畫2 (16/9 | 37/40)"
+      }
+    },
+    {
+      "id": "ar-baires",
+      "input": {
+        "date": "1978-02-14",
+        "time": "06:30",
+        "tz": "America/Argentina/Buenos_Aires"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "8",
+        "city": "1219 Buenos Aires",
+        "chartImg": "hd_623918934000000000.png"
+      },
+      "expected": {
+        "type": "manifestor",
+        "profile": "1/4",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 30,
+          "pEarth": 29,
+          "dSun": 14,
+          "dEarth": 8
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示者",
+        "profile": "1/4",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "憤怒",
+        "cross": "右角度交叉之感染 (30/29 | 14/8)"
+      }
+    },
+    {
+      "id": "za-capetown",
+      "input": {
+        "date": "2003-10-10",
+        "time": "09:00",
+        "tz": "Africa/Johannesburg"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "190",
+        "city": "86284 Cape Town (Kaapstad)",
+        "chartImg": "hd_632013660000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "2/4",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 57,
+          "pEarth": 51,
+          "dSun": 53,
+          "dEarth": 54
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "2/4",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "苦澀",
+        "cross": "右角度交叉之滲透3 (57/51 | 53/54)"
+      }
+    },
+    {
+      "id": "np-kathmandu",
+      "input": {
+        "date": "2001-03-19",
+        "time": "11:45",
+        "tz": "Asia/Kathmandu"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "142",
+        "city": "68780 Kathmandu",
+        "chartImg": "hd_631205784000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "1/3",
+        "definition": "split",
+        "authority": "emotional",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 25,
+          "pEarth": 46,
+          "dSun": 10,
+          "dEarth": 15
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "1/3",
+        "definition": "二分人",
+        "authority": "情緒型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之愛之船 (25/46 | 10/15)"
+      }
+    },
+    {
+      "id": "mx-mexcity",
+      "input": {
+        "date": "1990-05-05",
+        "time": "05:05",
+        "tz": "America/Mexico_City"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "130",
+        "city": "65707 Ciudad de México (Mexico City)",
+        "chartImg": "hd_627775023000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "2/4",
+        "definition": "split",
+        "authority": "selfProjected",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 2,
+          "pEarth": 1,
+          "dSun": 13,
+          "dEarth": 7
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "2/4",
+        "definition": "二分人",
+        "authority": "自我投射型權威",
+        "notSelf": "苦澀",
+        "cross": "右角度交叉之人面獅身2 (2/1 | 13/7)"
+      }
+    },
+    {
+      "id": "ru-moscow",
+      "input": {
+        "date": "1984-01-07",
+        "time": "13:00",
+        "tz": "Europe/Moscow"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "169",
+        "city": "81002 Moskva (Moscow)",
+        "chartImg": "hd_625779144000000000.png"
+      },
+      "expected": {
+        "type": "projector",
+        "profile": "2/4",
+        "definition": "single",
+        "authority": "splenic",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 54,
+          "pEarth": 53,
+          "dSun": 57,
+          "dEarth": 51
+        }
+      },
+      "siteRawZh": {
+        "type": "投射者",
+        "profile": "2/4",
+        "definition": "一分人",
+        "authority": "直覺型權威",
+        "notSelf": "苦澀",
+        "cross": "右角度交叉之滲透4 (54/53 | 57/51)"
+      }
+    },
+    {
+      "id": "ca-vancouver",
+      "input": {
+        "date": "2015-03-08",
+        "time": "02:30",
+        "tz": "America/Vancouver"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "33",
+        "city": "19044 Vancouver",
+        "chartImg": "hd_635614074000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "1/3",
+        "definition": "split",
+        "authority": "sacral",
+        "crossAngle": "right",
+        "crossGates": {
+          "pSun": 22,
+          "pEarth": 47,
+          "dSun": 26,
+          "dEarth": 45
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "1/3",
+        "definition": "二分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "右角度交叉之統領 (22/47 | 26/45)"
+      }
+    },
+    {
+      "id": "br-saopaulo",
+      "input": {
+        "date": "1969-08-22",
+        "time": "18:20",
+        "tz": "America/Sao_Paulo"
+      },
+      "source": {
+        "site": "humandesignasia.org (Maia engine)",
+        "collectedAt": "2026-07-11",
+        "country": "26",
+        "city": "10684 São Paulo",
+        "chartImg": "hd_621242688000000000.png"
+      },
+      "expected": {
+        "type": "mg",
+        "profile": "6/2",
+        "definition": "single",
+        "authority": "sacral",
+        "crossAngle": "left",
+        "crossGates": {
+          "pSun": 29,
+          "pEarth": 30,
+          "dSun": 20,
+          "dEarth": 34
+        }
+      },
+      "siteRawZh": {
+        "type": "顯示生產者",
+        "profile": "6/2",
+        "definition": "一分人",
+        "authority": "薦骨型權威",
+        "notSelf": "挫敗感",
+        "cross": "左角度交叉之勤奮2 (29/30 | 20/34)"
+      }
+    }
+  ]
+}

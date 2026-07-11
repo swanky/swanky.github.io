@@ -66,9 +66,9 @@ export function injectPngText(png, keyword, text) {
 
 // ---- PNG 匯出（SVG 字串 → canvas → PNG → 觸發下載；需瀏覽器環境）----
 // svg：完整 SVG 字串（呼叫方負責組好、含 xmlns）；width/height：SVG 邏輯尺寸（canvas 再乘 scale）。
-// scale 一律 clamp ≤2（沿用 hd 行為）；background：canvas 底色，drawImage 前無條件填一次
-// （三家皆顯式傳色值：hd/tarot=#fff、bazi=#fffaf0）。本函式不支援透明輸出——ctx.fillStyle 對
-// null/'' 會保留前值（預設黑）而非變透明，未來若要透明需把 fillRect 條件化，勿只靠傳空值。
+// scale 一律 clamp ≤2（沿用 hd 行為）；background：canvas 底色，drawImage 前填一次
+// （hd/tarot=#fff、bazi=#fffaf0）。**background 傳 falsy（null/false/''）＝透明輸出**：略過 fillRect，
+// 保留 canvas 透明像素、輸出 PNG 帶 alpha（人類圖 v2 透明卡用）。既有呼叫方皆傳實色，行為不變。
 // itxt={keyword, json}（json 為物件，內部 JSON.stringify）時注入 metadata，null 則不注入。
 // 注入失敗不致命：仍下載無 metadata 版並 console.warn（畫面字幕本身已可讀）。
 export function downloadPngFromSvg({
@@ -88,8 +88,11 @@ export function downloadPngFromSvg({
     canvas.width = width * s;
     canvas.height = height * s;
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = background;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // background falsy（null/false/''）＝透明：略過填色，保留透明像素（PNG 帶 alpha）。
+    if (background) {
+      ctx.fillStyle = background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     URL.revokeObjectURL(url);
     canvas.toBlob(async (out) => {
@@ -118,4 +121,17 @@ export function downloadPngFromSvg({
     if (onError) onError();
   };
   img.src = url;
+}
+
+// ---- SVG 原始向量檔下載（完整 SVG 字串 → .svg blob）----
+// 給需要下載向量原檔的呼叫方（人類圖 v2 匯出四式之一）。純瀏覽器（Blob/URL/anchor），不碰 canvas。
+export function downloadSvgString({ svg, filename = 'export.svg' }) {
+  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }

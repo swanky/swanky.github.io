@@ -42,7 +42,7 @@ export const THEMES = {
   // 站台品牌金（與線上工具 hd-svg.js 同一視覺語言）
   gold: {
     bg: '#FFFDF7',
-    base: '#efe9dc',
+    base: '#ece4d2',
     design: '#C0392B', personality: '#1d1d1f',
     doubleStyle: 'core', // 紅外圈 + 黑內芯
     centerColors: null, // 一律品牌金
@@ -74,7 +74,7 @@ export function renderBodygraphSvg(chart, opts = {}) {
   for (const ch of CHANNELS) {
     const p = CHANNEL_PATHS[ch.id];
     if (!p) continue;
-    out.push(`<path d="${channelFullD(p)}" fill="none" stroke="${theme.base}" stroke-width="4.5" stroke-linecap="round"/>`);
+    out.push(`<path d="${channelFullD(p)}" fill="none" stroke="${theme.base}" stroke-width="3.5" stroke-linecap="round"/>`);
   }
 
   // ---- 2) 啟動／懸掛半段：任一端閘門啟動，那半線就上色（含未連通的懸掛閘門，呈現顯隱關係）----

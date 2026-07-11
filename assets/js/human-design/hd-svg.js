@@ -14,17 +14,18 @@ import { QR } from './hd-data-qr.js';
 import { downloadPngFromSvg } from '../core/core-export.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
-// 卡片 = 左 Design 行星欄 + 中央 bodygraph（幾何 viewBox 0 20 520 712）+ 右 Personality 行星欄
+// 卡片 = 左 Design 行星欄 + 中央 bodygraph（幾何 viewBox 0 20 600 700）+ 右 Personality 行星欄
 // + 底部圖例。PNG 匯出再於卡片下方追加 CTA 區（QR + 網址）。
-const CARD = { w: 820, h: 800, graphX: 170, graphY: -4 };
-const COL = { titleY: 46, top: 74, rowH: 44, leftX: 26, rightX: 690 };
+// 貼齊邏輯：graphX(170) + 幾何寬 600 = 770 ＝右欄 x（graph 右緣貼齊右欄）；CARD.w 留右欄約 130px 揮灑。
+const CARD = { w: 900, h: 800, graphX: 170, graphY: -4 };
+const COL = { titleY: 46, top: 74, rowH: 44, leftX: 26, rightX: 770 };
 const LEGEND_Y = 766;       // 底部圖例中線
 const CTA_H = 150;          // PNG 匯出時卡片下方追加的 CTA 區高度
 const HEADER_H = 64;        // PNG 匯出時卡片上方追加的標題帶高度（放姓名／預設標題）
 
 const COLORS = {
   gold: '#E5A300', goldGate: '#5C4400', personality: '#1d1d1f', design: '#C0392B',
-  track: '#e6ddc9', openStroke: '#C9C2B4', cardBg: '#FFFDF7', text: '#3a3a3a',
+  track: '#ece4d2', openStroke: '#C9C2B4', cardBg: '#FFFDF7', text: '#3a3a3a',
   labelOn: '#4a4a30', labelOff: '#9aa0ab', labelOutside: '#555',
   legendOpenBg: '#efe9dc', legendOpenText: '#8a7f63', ctaUrl: '#c98f00',
 };
@@ -51,7 +52,7 @@ function el(name, attrs = {}, parent = null) {
 function styleText() {
   return `
     .hd-card-bg { fill: ${COLORS.cardBg}; }
-    .hd-chan-base { stroke: ${COLORS.track}; stroke-width: 4.5; fill: none; stroke-linecap: round; }
+    .hd-chan-base { stroke: ${COLORS.track}; stroke-width: 3.5; fill: none; stroke-linecap: round; }
     .hd-chan-half { stroke-width: 7.5; fill: none; stroke-linecap: round; visibility: hidden; }
     .hd-chan-half.is-p { stroke: ${COLORS.personality}; visibility: visible; }
     .hd-chan-half.is-d { stroke: ${COLORS.design}; visibility: visible; }

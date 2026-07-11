@@ -1,11 +1,12 @@
 // hd-channel-crossings.mjs — 量測全 36 通道兩兩的視覺交叉（含 via 折線），驅動模板重排。
 // 規則：共用同一閘門的兩通道在該閘門相接，不算交叉；其餘為真正的線段交叉。
-// 目標模板（站主依標準盤觀察）：只允許 G↔薦骨織紋 {2-14,5-15,29-46,10-34} 互相交叉、以及 26-44。
+// 目標模板（站主依標準盤觀察）：只允許整合織紋束 {10-20,10-34,10-57,20-34,20-57,34-57}
+// （閘門 10/20/34/57 互連的 K4）互相交叉、以及 26-44。
 // 執行：node tools/hd-channel-crossings.mjs
 import { CHANNEL_PATHS } from '../assets/js/human-design/hd-geometry.js';
 import { CHANNELS } from '../assets/js/human-design/hd-data-channels.js';
 
-const WEAVE = new Set(['2-14', '5-15', '29-46', '10-34']);
+const WEAVE = new Set(['10-20', '10-34', '10-57', '20-34', '20-57', '34-57']);
 const isExpected = (id1, id2) =>
   (WEAVE.has(id1) && WEAVE.has(id2)) || id1 === '26-44' || id2 === '26-44';
 

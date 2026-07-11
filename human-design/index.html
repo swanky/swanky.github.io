@@ -187,12 +187,176 @@ extra_css: |
   .hd-crypto-pay .hd-prod-cta:hover { background: #c98f00; color: #fff; }
   .hd-disclaimer { font-size: 0.82rem; color: #999; line-height: 1.75; max-width: 820px; margin: 0 auto; background: #fafafa; border-radius: 10px; padding: 20px 24px; }
   .hd-disclaimer strong { color: #777; }
+  /* ============================================================
+     v2 版面（feature flag ?bodygraph=v2；預設）— THEMES_V2.modern 色調
+     ============================================================ */
+  #hd-result.is-v2 { background: #E8E4DC; }
+  /* v2 專屬元素預設隱藏（v1 用不到）；v2 才開啟 */
+  .hd-tabs { display: none; }
+  #hd-layer3 { display: none; }
+  #hd-result.is-v2 #hd-layer3 { display: block; }
+  #hd-result.is-v2 #hd-strategy { display: none; } /* 策略併入右側屬性面板＋設計重點，避免重複 */
+  /* v1：隱藏 v2 面板、攤平 Layer 2（維持舊觀） */
+  #hd-result.is-v1 .hd-tabs,
+  #hd-result.is-v1 .hd-col-left,
+  #hd-result.is-v1 .hd-col-right,
+  #hd-result.is-v1 .hd-legend-html { display: none; }
+  #hd-result.is-v1 .hd-layer2 { border: none; background: transparent; padding: 0; margin-top: 0; }
+  #hd-result.is-v1 .hd-layer2 > summary { display: none; }
+  #hd-result.is-v1 .hd-layer2-body { padding: 0; }
+
+  /* 主區：手機優先＝縱向堆疊（bodygraph→頁籤→面板） */
+  #hd-result.is-v2 .hd-main { display: flex; flex-direction: column; gap: 16px; margin: 8px 0 4px; }
+  #hd-result.is-v2 .hd-col-center { order: 1; }
+  #hd-result.is-v2 .hd-tabs { order: 2; }
+  #hd-result.is-v2 .hd-col-left,
+  #hd-result.is-v2 .hd-col-right,
+  #hd-result.is-v2 .hd-legend-html { order: 3; }
+
+  /* v2 bodygraph 卡（白圓角卡＋淡陰影；SVG 自帶 surface 底＋金框） */
+  #hd-result.is-v2 .hd-card-scroll { background: transparent; border: none; padding: 0; overflow: visible; }
+  #hd-result.is-v2 #hd-card-container svg { width: 100%; height: auto; display: block; border-radius: 20px; border: 1px solid #E8E4DC; box-shadow: 0 12px 36px rgba(35,31,25,0.08); }
+
+  /* 行星欄面板（HTML；13 天體 × 設計/個性 雙欄 gate.line＋Fixing▲▼） */
+  .hd-pp-panel { background: #F1EEE7; border: 1px solid #E1DCD2; border-radius: 14px; padding: 16px 15px; }
+  .hd-pp-title { font-size: 0.92rem; font-weight: 700; color: #3B3730; margin: 0 0 10px; }
+  .hd-pp-head, .hd-pp-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 6px; align-items: center; }
+  .hd-pp-head { font-size: 0.72rem; font-weight: 700; color: #8a8577; padding-bottom: 6px; border-bottom: 1px solid #E1DCD2; }
+  .hd-pp-head .hd-pp-d, .hd-pp-head .hd-pp-p { text-align: center; }
+  .hd-pp-row { padding: 5px 0; border-bottom: 1px solid #ECE8E0; font-size: 0.84rem; }
+  .hd-pp-row:last-child { border-bottom: none; }
+  .hd-pp-planet { color: #555; white-space: nowrap; }
+  .hd-pp-planet .hd-pp-glyph { color: #9a9484; margin-right: 4px; }
+  .hd-pp-d { color: #C8453C; font-weight: 600; font-variant-numeric: tabular-nums; text-align: center; }
+  .hd-pp-p { color: #202124; font-weight: 600; font-variant-numeric: tabular-nums; text-align: center; }
+  .hd-pp-fix { font-size: 0.85em; } /* 顏色繼承所在欄位（設計紅／個性黑）＝與 v1 契約一致 */
+  .hd-pp-note { font-size: 0.74rem; color: #8a8577; line-height: 1.6; margin: 10px 0 0; }
+
+  /* 屬性面板（桌機右欄／手機「屬性」頁籤） */
+  .hd-attr-panel { background: #F1EEE7; border: 1px solid #E1DCD2; border-radius: 14px; padding: 18px 16px; }
+  .hd-attr-title { font-size: 0.92rem; font-weight: 700; color: #3B3730; margin: 0 0 12px; }
+  .hd-attr-row { padding: 9px 0; border-bottom: 1px solid #ECE8E0; }
+  .hd-attr-row:last-child { border-bottom: none; }
+  .hd-attr-label { font-size: 0.72rem; color: #8a8577; font-weight: 700; margin-bottom: 3px; }
+  .hd-attr-value { font-size: 0.96rem; color: #2b2b2b; font-weight: 600; line-height: 1.45; }
+  .hd-attr-value small { display: block; font-weight: 400; color: #999; font-size: 0.78rem; margin-top: 2px; }
+  .hd-attr-value .hd-attr-gold { color: var(--c-gold); }
+
+  /* HTML 圖例（桌機圖下方／手機「圖例」頁籤） */
+  .hd-legend-html { display: flex; flex-wrap: wrap; gap: 8px 14px; justify-content: center; align-content: flex-start; padding: 12px 10px; }
+  .hd-lg-item { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; color: #5a564c; }
+  .hd-lg-sw { width: 22px; height: 12px; border-radius: 6px; display: inline-block; flex-shrink: 0; }
+
+  /* 手機頁籤 */
+  .hd-tabs { gap: 6px; }
+  .hd-tab { flex: 1; padding: 9px 6px; border: 1px solid #E1DCD2; background: #F1EEE7; color: #6b6659; font-size: 0.86rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+  .hd-tab.is-active { background: var(--c-gold); color: #fff; border-color: var(--c-gold); }
+
+  /* Layer 2（摺疊，預設收合） */
+  .hd-layer2 { margin-top: 22px; border: 1px solid #E1DCD2; border-radius: 12px; background: #F1EEE7; padding: 0 18px; }
+  .hd-layer2 > summary { padding: 16px 0; font-size: 0.98rem; font-weight: 700; color: #3B3730; cursor: pointer; list-style: none; }
+  .hd-layer2 > summary::-webkit-details-marker { display: none; }
+  .hd-layer2 > summary::before { content: '▸ '; color: var(--c-gold); }
+  .hd-layer2[open] > summary::before { content: '▾ '; }
+  .hd-layer2[open] > summary { border-bottom: 1px solid #E1DCD2; }
+  .hd-layer2-body { padding: 8px 0 20px; }
+
+  /* Layer 3（規劃中占位；引擎不算，不臆測數值） */
+  .hd-layer3 { margin-top: 16px; border: 1px dashed #cfc9bd; border-radius: 12px; padding: 0 18px; background: #efece5; }
+  .hd-layer3 > summary { padding: 15px 0; font-size: 0.92rem; font-weight: 600; color: #8a8577; cursor: pointer; list-style: none; }
+  .hd-layer3 > summary::-webkit-details-marker { display: none; }
+  .hd-layer3 > summary::before { content: '▸ '; color: #b7ad97; }
+  .hd-layer3[open] > summary::before { content: '▾ '; }
+  .hd-layer3-note { font-size: 0.84rem; color: #9a9484; line-height: 1.7; margin: 0 0 12px; }
+  .hd-layer3-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 18px; padding-bottom: 16px; }
+  .hd-layer3-item { font-size: 0.85rem; color: #8a8577; }
+  .hd-l3-badge { font-size: 0.68rem; color: #b07a00; background: #fff5e0; border-radius: 4px; padding: 1px 6px; margin-left: 6px; white-space: nowrap; }
+
+  /* 平板（768–1023）：bodygraph 置頂全寬，行星欄／屬性並列，圖例全寬 */
+  @media (min-width: 768px) {
+    #hd-result.is-v2 .hd-main { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+    #hd-result.is-v2 .hd-col-center { grid-column: 1 / 3; }
+    #hd-result.is-v2 .hd-col-left { grid-column: 1; }
+    #hd-result.is-v2 .hd-col-right { grid-column: 2; }
+    #hd-result.is-v2 .hd-legend-html { grid-column: 1 / 3; }
+    #hd-result.is-v2 #hd-card-container svg { max-width: 600px; margin: 0 auto; }
+  }
+  /* 手機（<768）：頁籤顯示，非作用面板隱藏 */
+  @media (max-width: 767px) {
+    #hd-result.is-v2 .hd-tabs { display: flex; }
+    #hd-result.is-v2 .hd-col-left:not(.is-active),
+    #hd-result.is-v2 .hd-col-right:not(.is-active),
+    #hd-result.is-v2 .hd-legend-html:not(.is-active) { display: none; }
+  }
+  /* 桌機（≥1024）：三欄 grid（行星欄｜bodygraph｜屬性），撐寬 container */
+  @media (min-width: 1024px) {
+    #hd-result.is-v2 > .container { max-width: min(1240px, 95vw); }
+    #hd-result.is-v2 .hd-main { display: grid; grid-template-columns: 248px minmax(0, 1fr) 288px; grid-template-rows: auto auto; gap: 24px; align-items: start; }
+    #hd-result.is-v2 .hd-col-left { grid-column: 1; grid-row: 1 / 3; }
+    #hd-result.is-v2 .hd-col-center { grid-column: 2; grid-row: 1; }
+    #hd-result.is-v2 .hd-legend-html { grid-column: 2; grid-row: 2; }
+    #hd-result.is-v2 .hd-col-right { grid-column: 3; grid-row: 1 / 3; }
+    #hd-result.is-v2 #hd-card-container svg { max-width: none; }
+  }
+  @media (min-width: 1280px) {
+    #hd-result.is-v2 > .container { max-width: min(1280px, 95vw); }
+    #hd-result.is-v2 .hd-main { grid-template-columns: 280px minmax(0, 1fr) 320px; gap: 28px; }
+  }
   @media (max-width: 768px) {
     .hd-summary-grid { grid-template-columns: repeat(2, 1fr); }
     .hd-detail-grid { grid-template-columns: 1fr; }
     .hd-products { grid-template-columns: 1fr; }
     .hd-readout-grid { grid-template-columns: 1fr; }
     .hd-glossary-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     v2 互動層（hit 高亮 / focus / reduced-motion）＋ 匯出四式 ＋ 選取解讀面板
+     ============================================================ */
+  /* hit 層：透明疊加，CSS 屬性選擇器上色（.is-hl 由 JS 加，DOM 端；不進 renderBodygraph 字串） */
+  #hd-result.is-v2 [data-hit] { cursor: pointer; transition: fill 160ms ease, stroke 160ms ease; }
+  #hd-result.is-v2 [data-hit="gate"] { outline: none; }
+  #hd-result.is-v2 [data-hit="gate"]:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 2px; }
+  #hd-result.is-v2 [data-hit="gate"].is-hl { fill: rgba(229,163,0,0.16); stroke: var(--c-gold); stroke-width: 3; }
+  #hd-result.is-v2 [data-hit="chan"].is-hl { stroke: rgba(229,163,0,0.55); }
+  #hd-result.is-v2 [data-hit="center"].is-hl { fill: rgba(229,163,0,0.08); stroke: var(--c-gold); stroke-width: 3.5; }
+
+  /* 匯出四式按鈕列（v1 隱藏；v2 顯示、單鈕收起） */
+  .hd-download-v2 { display: none; }
+  #hd-result.is-v2 .hd-download-v2 { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 22px 0 2px; }
+  #hd-result.is-v2 #hd-download-png { display: none; }
+  .hd-download-v2 .hd-dl-label { font-size: 0.9rem; font-weight: 700; color: #6b6659; margin-right: 2px; }
+  .hd-download-v2 button { padding: 11px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
+  .hd-download-v2 button.is-primary { background: var(--c-gold); color: #fff; }
+  .hd-download-v2 button:hover { background: var(--c-gold); color: #fff; }
+
+  /* 選取解讀面板（JS 移至 body；預設手機 bottom sheet） */
+  .hd-sheet-backdrop { position: fixed; inset: 0; background: rgba(20,18,14,0.34); z-index: 1200; opacity: 0; pointer-events: none; transition: opacity 180ms ease; }
+  .hd-sheet-backdrop.is-open { opacity: 1; pointer-events: auto; }
+  .hd-select-detail { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1210; background: #F1EEE7; border-top-left-radius: 18px; border-top-right-radius: 18px; box-shadow: 0 -12px 36px rgba(35,31,25,0.18); padding: 22px 20px 26px; max-height: 76vh; overflow-y: auto; transform: translateY(110%); opacity: 0; pointer-events: none; transition: transform 200ms ease, opacity 200ms ease; }
+  .hd-select-detail.is-open { transform: none; opacity: 1; pointer-events: auto; }
+  .hd-sd-close { position: absolute; top: 12px; right: 14px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid #E1DCD2; background: #fff; color: #6b6659; font-size: 1.3rem; line-height: 1; cursor: pointer; }
+  .hd-sd-close:hover { border-color: var(--c-gold); color: var(--c-gold); }
+  .hd-sd-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; color: var(--c-gold); }
+  .hd-sd-head h4 { font-size: 1.28rem; font-weight: 700; color: #2b2b2b; margin: 5px 0 14px; }
+  .hd-sd-head h4 small { font-size: 0.86rem; font-weight: 500; color: #9a9484; margin-left: 8px; }
+  .hd-sd-meta { font-size: 0.9rem; color: #5a564c; margin-bottom: 6px; }
+  .hd-sd-meta strong { color: #2b2b2b; }
+  .hd-sd-desc { font-size: 0.9rem; color: #666; line-height: 1.75; margin: 12px 0 0; }
+  .hd-sd-note { font-size: 0.86rem; color: #9a9484; margin: 10px 0 0; }
+  .hd-sd-sub { font-size: 0.74rem; font-weight: 700; color: #8a8577; margin: 16px 0 8px; }
+  .hd-sd-link { display: block; width: 100%; text-align: left; background: #fff; border: 1px solid #E1DCD2; border-radius: 8px; padding: 9px 12px; margin-bottom: 6px; font-size: 0.86rem; color: #3B3730; cursor: pointer; transition: 0.2s; }
+  .hd-sd-link:hover { border-color: var(--c-gold); color: #c98f00; }
+  @media (min-width: 1024px) {
+    .hd-sheet-backdrop { display: none; } /* 桌機右抽屜、不需遮罩 */
+    .hd-select-detail { left: auto; right: 20px; bottom: auto; top: 96px; width: 340px; max-height: 82vh; border-radius: 16px; border: 1px solid #E1DCD2; box-shadow: 0 16px 40px rgba(35,31,25,0.16); transform: translateY(8px); }
+    .hd-select-detail.is-open { transform: none; }
+  }
+
+  /* 動畫尊重使用者偏好：關閉所有過場 */
+  @media (prefers-reduced-motion: reduce) {
+    #hd-result.is-v2 [data-hit],
+    .hd-select-detail, .hd-sheet-backdrop, .hd-download-v2 button { transition: none !important; }
   }
 ---
 
@@ -292,10 +456,34 @@ extra_css: |
     <div class="container">
       <div class="hd-result-meta" id="hd-meta"></div>
       <div class="hd-stability" id="hd-stability" style="display:none;"></div>
+
+      <!-- Layer 1：摘要卡（類型／權威／角色／定義）——手機亦為頂部摘要卡 -->
       <div class="hd-summary-grid" id="hd-summary"></div>
       <div class="hd-strategy-line" id="hd-strategy"></div>
 
-      <div class="hd-card-scroll" id="hd-card-container"></div>
+      <!-- 主區：v2＝桌機三欄／平板兩欄／手機縱排+頁籤；v1＝單欄 bodygraph -->
+      <div class="hd-main" id="hd-main">
+        <div class="hd-tabs" id="hd-tabs" role="tablist">
+          <button type="button" class="hd-tab is-active" data-tab="planet" role="tab" aria-selected="true">行星欄</button>
+          <button type="button" class="hd-tab" data-tab="attr" role="tab" aria-selected="false">屬性</button>
+          <button type="button" class="hd-tab" data-tab="legend" role="tab" aria-selected="false">圖例</button>
+        </div>
+        <div class="hd-col hd-col-left is-active" id="hd-planet-panel" data-tabpanel="planet"></div>
+        <div class="hd-col hd-col-center">
+          <div class="hd-card-scroll" id="hd-card-container"></div>
+          <div class="hd-legend-html" id="hd-legend" data-tabpanel="legend"></div>
+        </div>
+        <div class="hd-col hd-col-right" id="hd-attr-panel" data-tabpanel="attr"></div>
+      </div>
+
+      <!-- v2 匯出四式（v1 模式由 CSS 隱藏，改用下方單鈕） -->
+      <div class="hd-download-v2" id="hd-download-v2" role="group" aria-label="下載你的人類圖">
+        <span class="hd-dl-label">下載</span>
+        <button type="button" id="hd-dl-card" class="is-primary">品牌卡 PNG</button>
+        <button type="button" id="hd-dl-social">社群卡 PNG（1200×1500）</button>
+        <button type="button" id="hd-dl-transparent">透明去背 PNG</button>
+        <button type="button" id="hd-dl-svg">向量原檔 SVG</button>
+      </div>
 
       <div class="hd-result-actions">
         <button class="is-primary" id="hd-download-png">下載人類圖圖卡 (PNG)</button>
@@ -305,22 +493,49 @@ extra_css: |
       </div>
       <div class="hd-share-note" id="hd-share-note"></div>
 
+      <!-- v2 選取解讀：手機 bottom sheet／桌機右側抽屜。JS 於 v2 移至 body 以確保 viewport-fixed -->
+      <div class="hd-sheet-backdrop" id="hd-sheet-backdrop" aria-hidden="true"></div>
+      <aside class="hd-select-detail" id="hd-select-detail" role="dialog" aria-label="元素解讀" aria-hidden="true"></aside>
+
+      <!-- Layer 1 續：設計重點白話展開 -->
       <div id="hd-readout"></div>
 
-      <div class="hd-detail-grid">
-        <div class="hd-detail-block">
-          <h4>已定義的通道</h4>
-          <div id="hd-channels-list"></div>
+      <!-- Layer 2：通道 / 中心 / 輪迴交叉 / 行星細節（v2 摺疊預設收合；v1 攤平） -->
+      <details class="hd-layer2" id="hd-layer2">
+        <summary>深入探索：通道、中心與行星細節</summary>
+        <div class="hd-layer2-body">
+          <div class="hd-detail-grid">
+            <div class="hd-detail-block">
+              <h4>已定義的通道</h4>
+              <div id="hd-channels-list"></div>
+            </div>
+            <div class="hd-detail-block">
+              <h4>九大能量中心</h4>
+              <div id="hd-centers-list"></div>
+              <h4 style="margin-top:24px;">輪迴交叉</h4>
+              <div id="hd-cross"></div>
+            </div>
+          </div>
+          <div id="hd-planets-advanced"></div>
         </div>
-        <div class="hd-detail-block">
-          <h4>九大能量中心</h4>
-          <div id="hd-centers-list"></div>
-          <h4 style="margin-top:24px;">輪迴交叉</h4>
-          <div id="hd-cross"></div>
-        </div>
-      </div>
+      </details>
 
-      <div id="hd-planets-advanced"></div>
+      <!-- Layer 3：進階分析層（引擎尚未計算，僅標「規劃中」占位，不臆測數值）——v2 顯示 -->
+      <details class="hd-layer3" id="hd-layer3">
+        <summary>進階分析層（規劃中）</summary>
+        <p class="hd-layer3-note">以下維度屬人類圖進階系統，本工具的計算引擎目前尚未納入。列於此僅為完整性說明，實際數值待未來版本開放，不做臆測。</p>
+        <div class="hd-layer3-grid">
+          <div class="hd-layer3-item">Variables 四箭頭<span class="hd-l3-badge">規劃中</span></div>
+          <div class="hd-layer3-item">Digestion 消化方式<span class="hd-l3-badge">規劃中</span></div>
+          <div class="hd-layer3-item">Environment 環境<span class="hd-l3-badge">規劃中</span></div>
+          <div class="hd-layer3-item">Perspective 觀點<span class="hd-l3-badge">規劃中</span></div>
+          <div class="hd-layer3-item">Motivation 動機<span class="hd-l3-badge">規劃中</span></div>
+          <div class="hd-layer3-item">Color / Tone / Base 色調基底<span class="hd-l3-badge">規劃中</span></div>
+        </div>
+      </details>
+
+      <!-- v2 圖卡匯出用隱藏掛載點：v2 模式下 PNG 匯出沿用 v1 卡片（匯出四式＋iTXt＝5b） -->
+      <div id="hd-v1-export-holder" style="position:absolute;left:-9999px;top:0;width:0;height:0;overflow:hidden;" aria-hidden="true"></div>
     </div>
   </section>
 

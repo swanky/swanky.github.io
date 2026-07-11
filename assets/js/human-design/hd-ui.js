@@ -3,12 +3,30 @@ import { computeChart, computeChartSamples } from './hd-engine.js';
 import { HdError } from './hd-astro.js';
 import { searchCities } from './hd-cities.js';
 import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
+import { toHumanDesignChart } from './hd-adapter.js';
+import { renderBodygraph } from './hd-bodygraph.js';
+import { THEMES_V2 } from './hd-theme.js';
 import { CENTERS, CENTER_IDS } from './hd-data-centers.js';
+import { CHANNELS } from './hd-data-channels.js';
 import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS, TYPE_SIGNAL_NOTES } from './hd-data-texts.js';
 import { GATES } from './hd-data-gates.js';
+import { exportBodygraphSvg, exportTransparentPng, exportBrandCard, exportSocialCard } from './hd-export-v2.js';
 import { $, setHTML, setText, setVal, on, gtag } from '../core/core-dom.js';
 
-const state = { tz: null, cityLabel: null, lastChart: null, svg: null };
+const state = { tz: null, cityLabel: null, lastChart: null, hdChart: null, svg: null, v2: false, sel: null };
+
+// ---- Feature flag：bodygraph v2（新管線）vs v1（舊 SVG DOM）----
+// 預設 v2；URL 覆寫：?bodygraph=v1 強制舊版、?bodygraph=v2 強制新版。
+// v1 路徑完整保留、隨時可全退——flag 只是分流，兩條渲染路徑並存。
+const HD_V2 = true;
+function useV2() {
+  try {
+    const p = new URLSearchParams(location.search).get('bodygraph');
+    if (p === 'v1') return false;
+    if (p === 'v2') return true;
+  } catch (_) { /* 無 location 時走預設 */ }
+  return HD_V2;
+}
 
 // ---- 填充表單選項 ----
 function fillSelect(sel, items) {
@@ -191,10 +209,21 @@ function renderResult(chart, stability) {
     stab.style.display = 'none';
   }
 
-  // bodygraph
+  // bodygraph（v2＝新管線字串渲染掛 innerHTML＋互動 hit 層；v1＝舊 DOM 卡）
   const cardC = $('hd-card-container');
-  if (cardC && !state.svg) state.svg = mountChartCard(cardC);
-  if (state.svg) renderChartCard(state.svg, chart);
+  if (state.v2) {
+    state.hdChart = toHumanDesignChart(chart);
+    if (cardC) cardC.innerHTML = renderBodygraph(state.hdChart, { theme: 'modern', interactive: true });
+    clearSelection(); // 新盤重繪＝清掉前一盤的選取/高亮狀態
+    // 行星欄移出 SVG → HTML 面板；屬性面板；圖例（皆 v2 專屬，資料與 v1 SVG 行星欄同源）
+    // v2 圖卡匯出＝hd-export-v2.js 四式（字串組裝＋iTXt），不再掛 v1 DOM 卡
+    setHTML('hd-planet-panel', renderPlanetPanel(chart));
+    setHTML('hd-attr-panel', renderAttrPanel(chart));
+    setHTML('hd-legend', renderLegendHtml());
+  } else {
+    if (cardC && !state.svg) state.svg = mountChartCard(cardC);
+    if (state.svg) renderChartCard(state.svg, chart);
+  }
 
   // 通道清單
   setHTML('hd-channels-list', chart.definedChannels.length
@@ -280,9 +309,220 @@ function renderPlanetsAdvanced(chart) {
   </details>`;
 }
 
+// ---- v2 HTML 面板（行星欄移出 SVG／屬性／圖例）----
+// v2 行星欄：13 天體 × 設計（紅）/個性（黑）雙欄，每行 gate.line＋Fixing▲▼。
+// 資料與 v1 SVG 行星欄完全同源（同一 chart.design / chart.personality），僅呈現改 HTML。
+function renderPlanetPanel(chart) {
+  const cell = (pos, cls) => {
+    const fix = pos.fixing ? ` <span class="hd-pp-fix">${pos.fixing === 'exalted' ? '▲' : '▼'}</span>` : '';
+    return `<span class="${cls}">${pos.gate}.${pos.line}${fix}</span>`;
+  };
+  const rows = PLANETS.map((pl) =>
+    `<div class="hd-pp-row">
+      <span class="hd-pp-planet"><span class="hd-pp-glyph">${pl.glyph}</span>${pl.nameZh}</span>
+      ${cell(chart.design[pl.id], 'hd-pp-d')}
+      ${cell(chart.personality[pl.id], 'hd-pp-p')}
+    </div>`).join('');
+  return `<div class="hd-pp-panel">
+    <div class="hd-pp-title">行星啟動位置</div>
+    <div class="hd-pp-head"><span>行星</span><span class="hd-pp-d">設計</span><span class="hd-pp-p">個性</span></div>
+    ${rows}
+    <p class="hd-pp-note">每格為該行星落入的「閘門.爻」。<span class="hd-pp-d">設計（紅）</span>＝出生前約 88 天（無意識）；<span class="hd-pp-p">個性（黑）</span>＝出生當下（意識）。<span class="hd-pp-fix">▲</span>／<span class="hd-pp-fix">▼</span>＝固定於擢升／衰落（南北交點不計）。</p>
+  </div>`;
+}
+
+// v2 屬性面板：現有結果欄位重組（不新增計算）——類型/內在權威/人生角色/定義/策略/非自己主題/輪迴交叉。
+function renderAttrPanel(chart) {
+  const t = TYPES[chart.type];
+  const a = AUTHORITIES[chart.authority];
+  const p = PROFILES[chart.profile];
+  const d = DEFINITIONS[chart.definition];
+  const cg = chart.crossGates;
+  const ang = chart.crossAngle ? CROSS_ANGLES[chart.crossAngle] : '';
+  const row = (label, value, sub) =>
+    `<div class="hd-attr-row"><div class="hd-attr-label">${label}</div><div class="hd-attr-value">${value}${sub ? `<small>${sub}</small>` : ''}</div></div>`;
+  return `<div class="hd-attr-panel">
+    <div class="hd-attr-title">你的設計屬性</div>
+    ${row('類型', `<span class="hd-attr-gold">${t.nameZh}</span>`, t.nameEn)}
+    ${row('內在權威', a.nameZh, a.nameEn)}
+    ${row('人生角色', p ? p.nameZh : chart.profile)}
+    ${row('定義', d.nameZh)}
+    ${row('人生策略', t.strategy)}
+    ${row('非自己主題', t.notSelf)}
+    ${row('輪迴交叉', `閘門 ${cg.pSun}/${cg.pEarth} | ${cg.dSun}/${cg.dEarth}`, ang)}
+  </div>`;
+}
+
+// v2 圖例：色票取自 THEMES_V2.modern（與 bodygraph 同源，避免漂移）。
+function renderLegendHtml() {
+  const M = THEMES_V2.modern;
+  const item = (bg, label) => `<span class="hd-lg-item"><span class="hd-lg-sw" style="${bg}"></span>${label}</span>`;
+  return item(`background:${M.channel.design}`, '設計（無意識）')
+    + item(`background:${M.channel.personality}`, '個性（意識）')
+    + item(`background:linear-gradient(90deg,${M.channel.design} 50%,${M.channel.personality} 50%)`, '雙重啟動')
+    + item(`background:${M.centerDefined.g}`, '有定義中心')
+    + item(`background:${M.centerUndefined.fill};border:1px solid ${M.centerUndefined.stroke}`, '開放中心');
+}
+
+// v2 手機頁籤切換（行星欄／屬性／圖例）——桌機/平板頁籤隱藏、面板全顯，此為版面互動非圖表互動。
+function initTabs() {
+  const bar = $('hd-tabs');
+  if (!bar) return;
+  const tabs = Array.from(bar.querySelectorAll('.hd-tab'));
+  const panelOf = (key) => document.querySelector(`[data-tabpanel="${key}"]`);
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('.hd-tab');
+    if (!btn) return;
+    const key = btn.dataset.tab;
+    tabs.forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    ['planet', 'attr', 'legend'].forEach((k) => panelOf(k)?.classList.toggle('is-active', k === key));
+  });
+}
+
+// ---- v2 bodygraph 互動（hover/focus 高亮、click/tap 解讀面板、鍵盤、Esc、點空白取消）----
+// 高亮走 DOM 端 class（不進 renderBodygraph 字串／不觸報告端紅線）：hit 層元素被加 .is-hl，
+// 頁面 CSS 以屬性選擇器 [data-hit] 上色。解讀內容全部取自 hd-data-*（禁編造）。只在 v2 路徑掛。
+const HIT_SEL = '[data-hit]';
+const bgSvg = () => $('hd-card-container')?.querySelector('svg') || null;
+const channelsOfGate = (g) => CHANNELS.filter((c) => c.gates.includes(g));
+
+function hitInfo(el) {
+  const hit = el.getAttribute('data-hit');
+  if (hit === 'gate') return { kind: 'gate', id: el.getAttribute('data-gate') };
+  if (hit === 'chan') return { kind: 'chan', id: el.getAttribute('data-channel') };
+  return { kind: 'center', id: el.getAttribute('data-center') };
+}
+function clearHl() { bgSvg()?.querySelectorAll('.is-hl').forEach((el) => el.classList.remove('is-hl')); }
+function hl(svg, sel) { svg.querySelectorAll(sel).forEach((el) => el.classList.add('is-hl')); }
+
+// 閘門→門＋相連通道＋另一端門；通道→整條＋兩端門；中心→中心＋所屬通道
+function applyHl(kind, id) {
+  const svg = bgSvg(); if (!svg) return;
+  if (kind === 'gate') {
+    const g = +id;
+    hl(svg, `[data-hit="gate"][data-gate="${g}"]`);
+    channelsOfGate(g).forEach((c) => {
+      hl(svg, `[data-hit="chan"][data-channel="${c.id}"]`);
+      const other = c.gates[0] === g ? c.gates[1] : c.gates[0];
+      hl(svg, `[data-hit="gate"][data-gate="${other}"]`);
+    });
+  } else if (kind === 'chan') {
+    const c = CHANNELS.find((x) => x.id === id); if (!c) return;
+    hl(svg, `[data-hit="chan"][data-channel="${id}"]`);
+    c.gates.forEach((g) => hl(svg, `[data-hit="gate"][data-gate="${g}"]`));
+  } else if (kind === 'center') {
+    hl(svg, `[data-hit="center"][data-center="${id}"]`);
+    CHANNELS.filter((c) => c.centers.includes(id)).forEach((c) => hl(svg, `[data-hit="chan"][data-channel="${c.id}"]`));
+  }
+}
+
+function gateStateZh(g) {
+  const gg = state.hdChart && state.hdChart.gates[g];
+  if (!gg || !gg.activated) return '未啟動';
+  if (gg.personality && gg.design) return '雙重啟動（個性＋設計）';
+  return gg.personality ? '個性啟動（意識）' : '設計啟動（無意識）';
+}
+const chanStateZh = (id) => ({ off: '未啟動', personality: '個性（意識）', design: '設計（無意識）', mixed: '雙重啟動' }[(state.hdChart && state.hdChart.channels[id]) || 'off']);
+
+// 解讀面板 HTML（資料源：GATES / CHANNELS / CENTERS＋本盤 hdChart 狀態）
+function detailHtml(kind, id) {
+  if (kind === 'gate') {
+    const g = +id; const info = GATES[g]; const cid = info && info.center;
+    const chans = channelsOfGate(g);
+    const chanBlock = chans.length
+      ? `<div class="hd-sd-sub">此閘門所在的通道</div>` + chans.map((c) =>
+          `<button type="button" class="hd-sd-link" data-jump-chan="${c.id}"><strong>${c.nameZh}</strong>（${c.id}）· ${chanStateZh(c.id)}</button>`).join('')
+      : `<p class="hd-sd-note">此閘門目前不在任何完整通道上。</p>`;
+    return `<div class="hd-sd-head"><span class="hd-sd-kicker">閘門 GATE</span><h4>${g} · ${info ? info.hexZh : ''}<small>${info ? info.keyword : ''}</small></h4></div>
+      <div class="hd-sd-meta">所屬中心：<strong>${cid ? CENTERS[cid].nameZh : '—'}</strong></div>
+      <div class="hd-sd-meta">啟動狀態：<strong>${gateStateZh(g)}</strong></div>
+      ${chanBlock}`;
+  }
+  if (kind === 'chan') {
+    const c = CHANNELS.find((x) => x.id === id); if (!c) return '';
+    const [a, b] = c.gates; const ga = GATES[a], gb = GATES[b]; const [ca, cb] = c.centers;
+    return `<div class="hd-sd-head"><span class="hd-sd-kicker">通道 CHANNEL</span><h4>${c.nameZh}<small>${c.id}</small></h4></div>
+      <div class="hd-sd-meta">兩端閘門：<strong>${a} ${ga ? ga.hexZh : ''}</strong> ↔ <strong>${b} ${gb ? gb.hexZh : ''}</strong></div>
+      <div class="hd-sd-meta">連結中心：<strong>${CENTERS[ca].nameZh}</strong> ↔ <strong>${CENTERS[cb].nameZh}</strong></div>
+      <div class="hd-sd-meta">啟動狀態：<strong>${chanStateZh(c.id)}</strong></div>
+      <p class="hd-sd-desc">${c.desc}</p>`;
+  }
+  const c = CENTERS[id]; if (!c) return '';
+  const defined = state.hdChart && state.hdChart.centers[id] === 'defined';
+  return `<div class="hd-sd-head"><span class="hd-sd-kicker">能量中心 CENTER</span><h4>${c.nameZh}<small>${c.nameEn}</small></h4></div>
+    <div class="hd-sd-meta">定義狀態：<strong>${defined ? '● 已定義（穩定發送）' : '○ 開放（吸收放大）'}</strong></div>
+    <p class="hd-sd-desc">${defined ? c.definedDesc : c.openDesc}</p>`;
+}
+
+function showDetail(html) {
+  const d = $('hd-select-detail'); if (!d) return;
+  d.innerHTML = `<button type="button" class="hd-sd-close" id="hd-sd-close" aria-label="關閉解讀">×</button>${html}`;
+  d.classList.add('is-open'); d.setAttribute('aria-hidden', 'false');
+  $('hd-sheet-backdrop')?.classList.add('is-open');
+}
+function hideDetail() {
+  const d = $('hd-select-detail'); if (!d) return;
+  d.classList.remove('is-open'); d.setAttribute('aria-hidden', 'true');
+  $('hd-sheet-backdrop')?.classList.remove('is-open');
+}
+function clearSelection() {
+  state.sel = null; clearHl(); hideDetail();
+  bgSvg()?.classList.remove('is-selecting');
+}
+function selectEl(kind, id) {
+  if (state.sel && state.sel.kind === kind && state.sel.id === id) { clearSelection(); return; } // 再點同一個＝取消
+  state.sel = { kind, id };
+  clearHl(); applyHl(kind, id);
+  bgSvg()?.classList.add('is-selecting');
+  showDetail(detailHtml(kind, id));
+}
+
+function initBgInteraction() {
+  const c = $('hd-card-container'); if (!c) return;
+  // 選取面板／遮罩移至 body：保證 viewport-fixed（規避祖先 transform／display:none 影響），且不受頁籤隱藏
+  const sd = $('hd-select-detail'); if (sd) document.body.appendChild(sd);
+  const bd = $('hd-sheet-backdrop'); if (bd) document.body.appendChild(bd);
+
+  const previewFrom = (t) => { const { kind, id } = hitInfo(t); clearHl(); applyHl(kind, id); };
+  const restore = () => { clearHl(); if (state.sel) applyHl(state.sel.kind, state.sel.id); };
+  c.addEventListener('pointerover', (e) => { const t = e.target.closest(HIT_SEL); if (t) previewFrom(t); });
+  c.addEventListener('pointerout', (e) => { if (e.target.closest(HIT_SEL)) restore(); });
+  c.addEventListener('focusin', (e) => { const t = e.target.closest(HIT_SEL); if (t) previewFrom(t); });
+  c.addEventListener('focusout', restore);
+  c.addEventListener('click', (e) => {
+    const t = e.target.closest(HIT_SEL); if (!t) return;
+    const { kind, id } = hitInfo(t); selectEl(kind, id);
+  });
+  c.addEventListener('keydown', (e) => {
+    const t = e.target.closest('[data-hit="gate"]'); if (!t) return;
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault(); const { kind, id } = hitInfo(t); selectEl(kind, id);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && state.sel) clearSelection(); });
+  document.addEventListener('click', (e) => {
+    if (!state.sel) return;
+    if (e.target.closest('#hd-card-container')) return;            // 圖內點擊交給委派
+    const inDetail = e.target.closest('#hd-select-detail');
+    if (inDetail) {
+      if (e.target.closest('#hd-sd-close')) { clearSelection(); return; }
+      const jump = e.target.closest('[data-jump-chan]');
+      if (jump) selectEl('chan', jump.getAttribute('data-jump-chan'));
+      return;
+    }
+    clearSelection();                                              // 點空白處取消
+  });
+  bd?.addEventListener('click', clearSelection);
+}
+
 // ---- PNG / 分享 / 重置 ----
-function onDownloadPng() {
-  if (!state.lastChart || !state.svg) return;
+// 出生資料的匯出呈現（iTXt payload＋標題帶／字幕／檔名基底）——v1 單鈕與 v2 四式共用，避免漂移。
+function buildBirthPresentation() {
   const c = state.lastChart;
   const pad = (n) => String(n).padStart(2, '0');
   const ymd = `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`;
@@ -310,24 +550,45 @@ function onDownloadPng() {
   // 地點：有城市顯示「城市（時區）」、無城市（手動時區）只顯示時區——避免可見層只剩日期
   const locLabel = state.cityLabel ? `${state.cityLabel}（${tzLabel}）` : tzLabel;
   const locPart = locLabel ? `　・　${locLabel}` : '';
-  const sub = unknownTime
+  const subText = unknownTime
     ? `${dateLabel}（未提供時間・以正午計）${locPart}`
     : `${dateLabel} ${hm}${locPart}`;
 
   // 頂部標題帶文字：優先用使用者填的姓名，未填則用預設值。
-  // 未來若改為「必填姓名」或想換預設語，改這兩行即可（彈性集中於此）。
-  const DEFAULT_CHART_TITLE = '我的人類圖';
-  const headerTitle = name || DEFAULT_CHART_TITLE;
+  const headerTitle = name || '我的人類圖';
+  const titleText = `${TYPES[c.type].nameZh}・${AUTHORITIES[c.authority].nameZh}・${c.profile}`;
+  const filenameBase = `human-design-${c.type}-${c.input.year}${pad(c.input.month)}${pad(c.input.day)}-${pad(c.input.hour)}${pad(c.input.minute)}`;
+  return { meta, headerTitle, titleText, subText, filenameBase };
+}
 
-  exportChartPng(state.svg, c, {
-    headerTitle,
-    titleText: `${TYPES[c.type].nameZh}・${AUTHORITIES[c.authority].nameZh}・${c.profile}`,
-    subText: sub,
-    filename: `human-design-${c.type}-${c.input.year}${pad(c.input.month)}${pad(c.input.day)}-${pad(c.input.hour)}${pad(c.input.minute)}.png`,
-    meta,
+// v1 匯出：舊金卡單鈕（?bodygraph=v1；行為完全不變）
+function onDownloadPng() {
+  if (!state.lastChart || !state.svg) return;
+  const p = buildBirthPresentation();
+  exportChartPng(state.svg, state.lastChart, {
+    headerTitle: p.headerTitle,
+    titleText: p.titleText,
+    subText: p.subText,
+    filename: `${p.filenameBase}.png`,
+    meta: p.meta,
     onError: () => showError('圖卡匯出失敗，請改用瀏覽器截圖。'),
   });
-  gtag('event', 'hd_download_png', { type: c.type });
+  gtag('event', 'hd_download_png', { type: state.lastChart.type });
+}
+
+// v2 匯出四式（SVG／透明 PNG／品牌卡 2x／社群卡 1200×1500）；三 PNG 皆注入 hd-birth iTXt。
+function onDownloadV2(kind) {
+  if (!state.lastChart) return;
+  const p = buildBirthPresentation();
+  const bundle = {
+    hdChart: state.hdChart || toHumanDesignChart(state.lastChart),
+    chart: state.lastChart,
+    meta: p.meta, headerTitle: p.headerTitle, titleText: p.titleText, subText: p.subText,
+    filenameBase: p.filenameBase,
+    onError: () => showError('圖卡匯出失敗，請改用瀏覽器截圖。'),
+  };
+  ({ svg: exportBodygraphSvg, transparent: exportTransparentPng, card: exportBrandCard, social: exportSocialCard }[kind])?.(bundle);
+  gtag('event', 'hd_download_v2', { type: state.lastChart.type, format: kind });
 }
 
 function onShareLink() {
@@ -378,13 +639,25 @@ function applyHash() {
 function init() {
   initForm();
   initCitySearch();
+  // Feature flag 分流：設模式 class（CSS 版面據此切換）＋v2 頁籤／v1 攤平 Layer 2。
+  // 必須在 applyHash()（可能觸發 renderResult）之前設定 state.v2。
+  state.v2 = useV2();
+  const resEl = $('hd-result');
+  if (resEl) resEl.classList.add(state.v2 ? 'is-v2' : 'is-v1');
+  if (state.v2) { initTabs(); initBgInteraction(); }
+  else $('hd-layer2')?.setAttribute('open', ''); // v1：Layer 2 攤平（維持舊觀）
   on('hd-submit', 'click', onSubmit);
   on('hd-unknown-time', 'change', (e) => {
     const dis = e.target.checked;
     const h = $('hd-hour'); if (h) h.disabled = dis;
     const mi = $('hd-minute'); if (mi) mi.disabled = dis;
   });
-  on('hd-download-png', 'click', onDownloadPng);
+  on('hd-download-png', 'click', onDownloadPng); // v1 單鈕（v2 由 CSS 隱藏）
+  // v2 匯出四式（按鈕在 HTML，v1 模式由 CSS 隱藏；handler 皆先檢查 state.lastChart）
+  on('hd-dl-card', 'click', () => onDownloadV2('card'));
+  on('hd-dl-social', 'click', () => onDownloadV2('social'));
+  on('hd-dl-transparent', 'click', () => onDownloadV2('transparent'));
+  on('hd-dl-svg', 'click', () => onDownloadV2('svg'));
   on('hd-share-link', 'click', onShareLink);
   on('hd-reset', 'click', onReset);
   applyHash();
