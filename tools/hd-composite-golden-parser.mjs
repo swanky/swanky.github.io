@@ -36,8 +36,16 @@ const CAL_INPUTS = { a: { date: '2000-01-01', time: '12:00', tz: 'Asia/Taipei' }
 const singles = JSON.parse(readFileSync(GOLDEN_SINGLE, 'utf8')).cases;
 const inputOf = id => singles.find(c => c.id === id)?.input;
 
+// dump 兩種存法兼容：真換行原文（批次一）或 JSON 字串字面量（批次二，整檔 "..." 帶 \n 逸出）
+function normalizeDump(txt) {
+  const t = txt.trim();
+  if (t.startsWith('"') && t.endsWith('"')) { try { return JSON.parse(t); } catch { /* 照原文 */ } }
+  return txt;
+}
+
 // ---------- SelfMap parser ----------
-function parseSelfmap(txt) {
+function parseSelfmap(rawTxt) {
+  const txt = normalizeDump(rawTxt);
   const lines = txt.split(/\r?\n/).map(l => l.trim());
   // 行星欄：連續 gate.line（>=20 筆）的前兩串 = A/B
   const runs = [];
@@ -118,7 +126,8 @@ function filterSelfmap(entries) {
 }
 
 // ---------- Jovian parser ----------
-function parseJovian(txt) {
+function parseJovian(rawTxt) {
+  const txt = normalizeDump(rawTxt);
   const num = (re) => { const m = txt.match(re); return m ? Number(m[1]) : null; };
   const theme = txt.match(/Connection Theme\s*\n?\s*(\d+)\s*&\s*(\d+)/);
   const counts = {

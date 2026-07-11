@@ -1,0 +1,1636 @@
+{
+  "_meta": {
+    "description": "合盤 golden：SelfMap 逐條（過濾規則見 docs/hd-redesign/composite-golden-design.md §2）+ Jovian/Maia 官方數量雙站交叉，引擎 gate-set sanity 三方對拍全過才收錄",
+    "collectedAt": "2026-07-11",
+    "collectedBy": "Playwright 逐對實測（期望值非模型/引擎推算）",
+    "note": "definition components 無外部源（兩站皆不提供），不在期望值內；中心以「數量」為期望（兩站僅給數）。echoGates=雙方同持之 gate（SelfMap 同伴區共鳴閘門，非四類）。"
+  },
+  "cases": [
+    {
+      "id": "cal-default",
+      "people": {
+        "a": {
+          "input": {
+            "date": "2000-01-01",
+            "time": "12:00",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "input": {
+            "date": "1995-06-15",
+            "time": "08:00",
+            "tz": "Asia/Taipei"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "2-14",
+              "aGate": 2,
+              "bGate": 14
+            },
+            {
+              "ch": "7-31",
+              "aGate": 31,
+              "bGate": 7
+            },
+            {
+              "ch": "10-20",
+              "aGate": 10,
+              "bGate": 20
+            },
+            {
+              "ch": "16-48",
+              "aGate": 48,
+              "bGate": 16
+            },
+            {
+              "ch": "24-61",
+              "aGate": 24,
+              "bGate": 61
+            },
+            {
+              "ch": "28-38",
+              "aGate": 38,
+              "bGate": 28
+            },
+            {
+              "ch": "39-55",
+              "aGate": 39,
+              "bGate": 55
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "26-44",
+              "who": "a"
+            },
+            {
+              "ch": "30-41",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "10-34",
+              "who": "a",
+              "otherGate": 34
+            },
+            {
+              "ch": "13-33",
+              "who": "a",
+              "otherGate": 13
+            },
+            {
+              "ch": "20-34",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "27-50",
+              "who": "a",
+              "otherGate": 27
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 7,
+          "dominance": 2,
+          "compromise": 4,
+          "companionship": 0
+        },
+        "definedCenterCount": 9,
+        "openCenterCount": 0,
+        "echoGates": [
+          5,
+          9,
+          34,
+          60
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-cal-default.txt",
+        "jovian": "jovian-cal-default.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "four-max",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-dst",
+          "input": {
+            "date": "1975-06-15",
+            "time": "14:30",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "eu-bst",
+          "input": {
+            "date": "1980-06-21",
+            "time": "12:00",
+            "tz": "Europe/London"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "5-15",
+              "aGate": 5,
+              "bGate": 15
+            },
+            {
+              "ch": "10-20",
+              "aGate": 20,
+              "bGate": 10
+            },
+            {
+              "ch": "10-34",
+              "aGate": 34,
+              "bGate": 10
+            },
+            {
+              "ch": "19-49",
+              "aGate": 19,
+              "bGate": 49
+            },
+            {
+              "ch": "20-57",
+              "aGate": 20,
+              "bGate": 57
+            },
+            {
+              "ch": "34-57",
+              "aGate": 34,
+              "bGate": 57
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "6-59"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "2-14",
+              "who": "b"
+            },
+            {
+              "ch": "10-57",
+              "who": "b"
+            },
+            {
+              "ch": "20-34",
+              "who": "a"
+            },
+            {
+              "ch": "27-50",
+              "who": "a"
+            },
+            {
+              "ch": "29-46",
+              "who": "b"
+            },
+            {
+              "ch": "35-36",
+              "who": "a"
+            },
+            {
+              "ch": "39-55",
+              "who": "a"
+            },
+            {
+              "ch": "42-53",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "25-51",
+              "who": "a",
+              "otherGate": 25
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 6,
+          "dominance": 8,
+          "compromise": 1,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          11
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-four-max.txt",
+        "jovian": "jovian-four-max.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "four-cx",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-dst",
+          "input": {
+            "date": "1975-06-15",
+            "time": "14:30",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "leap-1996",
+          "input": {
+            "date": "1996-02-29",
+            "time": "23:30",
+            "tz": "America/Chicago"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "10-20",
+              "aGate": 20,
+              "bGate": 10
+            },
+            {
+              "ch": "12-22",
+              "aGate": 12,
+              "bGate": 22
+            },
+            {
+              "ch": "19-49",
+              "aGate": 19,
+              "bGate": 49
+            },
+            {
+              "ch": "20-57",
+              "aGate": 20,
+              "bGate": 57
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "35-36"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "6-59",
+              "who": "a"
+            },
+            {
+              "ch": "10-57",
+              "who": "b"
+            },
+            {
+              "ch": "27-50",
+              "who": "a"
+            },
+            {
+              "ch": "37-40",
+              "who": "b"
+            },
+            {
+              "ch": "39-55",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "10-34",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "20-34",
+              "who": "a",
+              "otherGate": 34
+            },
+            {
+              "ch": "25-51",
+              "who": "a",
+              "otherGate": 51
+            },
+            {
+              "ch": "34-57",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "42-53",
+              "who": "a",
+              "otherGate": 42
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 4,
+          "dominance": 5,
+          "compromise": 5,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          5,
+          11
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-four-cx.txt",
+        "jovian": "jovian-four-cx.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "four-balance",
+      "people": {
+        "a": {
+          "goldenId": "us-pst-mid",
+          "input": {
+            "date": "1972-01-15",
+            "time": "00:00",
+            "tz": "America/Los_Angeles"
+          }
+        },
+        "b": {
+          "goldenId": "au-syd-dst",
+          "input": {
+            "date": "1995-12-25",
+            "time": "16:45",
+            "tz": "Australia/Sydney"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "1-8",
+              "aGate": 8,
+              "bGate": 1
+            },
+            {
+              "ch": "10-20",
+              "aGate": 20,
+              "bGate": 10
+            },
+            {
+              "ch": "13-33",
+              "aGate": 33,
+              "bGate": 13
+            },
+            {
+              "ch": "17-62",
+              "aGate": 62,
+              "bGate": 17
+            },
+            {
+              "ch": "18-58",
+              "aGate": 58,
+              "bGate": 18
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "34-57"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "3-60",
+              "who": "b"
+            },
+            {
+              "ch": "19-49",
+              "who": "a"
+            },
+            {
+              "ch": "28-38",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "10-34",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "10-57",
+              "who": "b",
+              "otherGate": 57
+            },
+            {
+              "ch": "20-34",
+              "who": "a",
+              "otherGate": 34
+            },
+            {
+              "ch": "20-57",
+              "who": "a",
+              "otherGate": 57
+            },
+            {
+              "ch": "30-41",
+              "who": "a",
+              "otherGate": 41
+            },
+            {
+              "ch": "32-54",
+              "who": "b",
+              "otherGate": 32
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 5,
+          "dominance": 3,
+          "compromise": 6,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          9,
+          11,
+          42,
+          61
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-four-balance.txt",
+        "jovian": "jovian-four-balance.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "four-split",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-dst",
+          "input": {
+            "date": "1975-06-15",
+            "time": "14:30",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "us-pst-mid",
+          "input": {
+            "date": "1972-01-15",
+            "time": "00:00",
+            "tz": "America/Los_Angeles"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "18-58",
+              "aGate": 18,
+              "bGate": 58
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "20-34"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "6-59",
+              "who": "a"
+            },
+            {
+              "ch": "25-51",
+              "who": "a"
+            },
+            {
+              "ch": "27-50",
+              "who": "a"
+            },
+            {
+              "ch": "28-38",
+              "who": "b"
+            },
+            {
+              "ch": "30-41",
+              "who": "b"
+            },
+            {
+              "ch": "35-36",
+              "who": "a"
+            },
+            {
+              "ch": "39-55",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "19-49",
+              "who": "b",
+              "otherGate": 19
+            },
+            {
+              "ch": "20-57",
+              "who": "b",
+              "otherGate": 20
+            },
+            {
+              "ch": "34-57",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "42-53",
+              "who": "a",
+              "otherGate": 42
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 1,
+          "dominance": 7,
+          "compromise": 4,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          9,
+          11,
+          20,
+          33,
+          34
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-four-split.txt",
+        "jovian": "jovian-four-split.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "em-max",
+      "people": {
+        "a": {
+          "goldenId": "ego-tokyo",
+          "input": {
+            "date": "1962-07-02",
+            "time": "03:00",
+            "tz": "Asia/Tokyo"
+          }
+        },
+        "b": {
+          "goldenId": "nz-auckland",
+          "input": {
+            "date": "1993-11-11",
+            "time": "07:07",
+            "tz": "Pacific/Auckland"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "1-8",
+              "aGate": 8,
+              "bGate": 1
+            },
+            {
+              "ch": "4-63",
+              "aGate": 63,
+              "bGate": 4
+            },
+            {
+              "ch": "7-31",
+              "aGate": 7,
+              "bGate": 31
+            },
+            {
+              "ch": "9-52",
+              "aGate": 52,
+              "bGate": 9
+            },
+            {
+              "ch": "18-58",
+              "aGate": 58,
+              "bGate": 18
+            },
+            {
+              "ch": "19-49",
+              "aGate": 19,
+              "bGate": 49
+            },
+            {
+              "ch": "29-46",
+              "aGate": 29,
+              "bGate": 46
+            },
+            {
+              "ch": "39-55",
+              "aGate": 55,
+              "bGate": 39
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "2-14",
+              "who": "b"
+            },
+            {
+              "ch": "13-33",
+              "who": "a"
+            },
+            {
+              "ch": "20-34",
+              "who": "b"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "16-48",
+              "who": "b",
+              "otherGate": 48
+            },
+            {
+              "ch": "21-45",
+              "who": "a",
+              "otherGate": 45
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 8,
+          "dominance": 3,
+          "compromise": 2,
+          "companionship": 0
+        },
+        "definedCenterCount": 9,
+        "openCenterCount": 0,
+        "echoGates": [
+          30,
+          44
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-em-max.txt",
+        "jovian": "jovian-em-max.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "cp-max",
+      "people": {
+        "a": {
+          "goldenId": "gate-bound-before",
+          "input": {
+            "date": "1990-05-15",
+            "time": "22:20",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "gate-bound-after",
+          "input": {
+            "date": "1990-05-15",
+            "time": "22:50",
+            "tz": "Asia/Taipei"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [],
+          "companionship": [
+            {
+              "ch": "13-33"
+            },
+            {
+              "ch": "24-61"
+            },
+            {
+              "ch": "30-41"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "23-43",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "1-8",
+              "who": "b",
+              "otherGate": 1
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 0,
+          "dominance": 1,
+          "compromise": 1,
+          "companionship": 3
+        },
+        "definedCenterCount": 6,
+        "openCenterCount": 3,
+        "echoGates": [
+          7,
+          15,
+          19,
+          21,
+          22,
+          29,
+          38,
+          39,
+          50,
+          58,
+          60
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-cp-max.txt",
+        "jovian": "jovian-cp-max.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "dm-max",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-dst",
+          "input": {
+            "date": "1975-06-15",
+            "time": "14:30",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "ar-baires",
+          "input": {
+            "date": "1978-02-14",
+            "time": "06:30",
+            "tz": "America/Argentina/Buenos_Aires"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "9-52",
+              "aGate": 9,
+              "bGate": 52
+            },
+            {
+              "ch": "20-57",
+              "aGate": 20,
+              "bGate": 57
+            },
+            {
+              "ch": "34-57",
+              "aGate": 34,
+              "bGate": 57
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "1-8",
+              "who": "b"
+            },
+            {
+              "ch": "6-59",
+              "who": "a"
+            },
+            {
+              "ch": "17-62",
+              "who": "b"
+            },
+            {
+              "ch": "20-34",
+              "who": "a"
+            },
+            {
+              "ch": "25-51",
+              "who": "a"
+            },
+            {
+              "ch": "26-44",
+              "who": "b"
+            },
+            {
+              "ch": "27-50",
+              "who": "a"
+            },
+            {
+              "ch": "35-36",
+              "who": "a"
+            },
+            {
+              "ch": "42-53",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "12-22",
+              "who": "b",
+              "otherGate": 12
+            },
+            {
+              "ch": "13-33",
+              "who": "b",
+              "otherGate": 33
+            },
+            {
+              "ch": "39-55",
+              "who": "a",
+              "otherGate": 55
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 3,
+          "dominance": 9,
+          "compromise": 3,
+          "companionship": 0
+        },
+        "definedCenterCount": 8,
+        "openCenterCount": 1,
+        "echoGates": [
+          5,
+          18
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-dm-max.txt",
+        "jovian": "jovian-dm-max.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "cx-max",
+      "people": {
+        "a": {
+          "goldenId": "us-pst-mid",
+          "input": {
+            "date": "1972-01-15",
+            "time": "00:00",
+            "tz": "America/Los_Angeles"
+          }
+        },
+        "b": {
+          "goldenId": "ca-vancouver",
+          "input": {
+            "date": "2015-03-08",
+            "time": "02:30",
+            "tz": "America/Vancouver"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "7-31",
+              "aGate": 31,
+              "bGate": 7
+            },
+            {
+              "ch": "10-20",
+              "aGate": 20,
+              "bGate": 10
+            },
+            {
+              "ch": "26-44",
+              "aGate": 44,
+              "bGate": 26
+            },
+            {
+              "ch": "32-54",
+              "aGate": 32,
+              "bGate": 54
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "34-57"
+            }
+          ],
+          "dominance": [],
+          "compromise": [
+            {
+              "ch": "10-34",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "10-57",
+              "who": "b",
+              "otherGate": 57
+            },
+            {
+              "ch": "19-49",
+              "who": "a",
+              "otherGate": 49
+            },
+            {
+              "ch": "20-34",
+              "who": "a",
+              "otherGate": 34
+            },
+            {
+              "ch": "20-57",
+              "who": "a",
+              "otherGate": 57
+            },
+            {
+              "ch": "21-45",
+              "who": "b",
+              "otherGate": 21
+            },
+            {
+              "ch": "28-38",
+              "who": "a",
+              "otherGate": 38
+            },
+            {
+              "ch": "30-41",
+              "who": "a",
+              "otherGate": 41
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 4,
+          "dominance": 0,
+          "compromise": 8,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          48
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-cx-max.txt",
+        "jovian": "jovian-cx-max.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "cx-zero",
+      "people": {
+        "a": {
+          "goldenId": "nz-auckland",
+          "input": {
+            "date": "1993-11-11",
+            "time": "07:07",
+            "tz": "Pacific/Auckland"
+          }
+        },
+        "b": {
+          "goldenId": "jp-tokyo-mid",
+          "input": {
+            "date": "1977-10-31",
+            "time": "23:59",
+            "tz": "Asia/Tokyo"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "9-52",
+              "aGate": 9,
+              "bGate": 52
+            },
+            {
+              "ch": "19-49",
+              "aGate": 49,
+              "bGate": 19
+            },
+            {
+              "ch": "20-57",
+              "aGate": 20,
+              "bGate": 57
+            },
+            {
+              "ch": "21-45",
+              "aGate": 45,
+              "bGate": 21
+            },
+            {
+              "ch": "29-46",
+              "aGate": 46,
+              "bGate": 29
+            },
+            {
+              "ch": "34-57",
+              "aGate": 34,
+              "bGate": 57
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "16-48"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "2-14",
+              "who": "a"
+            },
+            {
+              "ch": "5-15",
+              "who": "b"
+            },
+            {
+              "ch": "12-22",
+              "who": "b"
+            },
+            {
+              "ch": "20-34",
+              "who": "a"
+            }
+          ],
+          "compromise": []
+        },
+        "counts": {
+          "electromagnetic": 6,
+          "dominance": 4,
+          "compromise": 0,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          1,
+          4,
+          31,
+          44
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-cx-zero.txt",
+        "jovian": "jovian-cx-zero.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "em-zero",
+      "people": {
+        "a": {
+          "goldenId": "jp-tokyo-mid",
+          "input": {
+            "date": "1977-10-31",
+            "time": "23:59",
+            "tz": "Asia/Tokyo"
+          }
+        },
+        "b": {
+          "goldenId": "in-kolkata",
+          "input": {
+            "date": "1987-05-30",
+            "time": "15:15",
+            "tz": "Asia/Kolkata"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [],
+          "companionship": [
+            {
+              "ch": "16-48"
+            }
+          ],
+          "dominance": [
+            {
+              "ch": "12-22",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "5-15",
+              "who": "a",
+              "otherGate": 15
+            },
+            {
+              "ch": "9-52",
+              "who": "b",
+              "otherGate": 52
+            },
+            {
+              "ch": "25-51",
+              "who": "b",
+              "otherGate": 51
+            },
+            {
+              "ch": "26-44",
+              "who": "b",
+              "otherGate": 44
+            },
+            {
+              "ch": "37-40",
+              "who": "b",
+              "otherGate": 40
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 0,
+          "dominance": 1,
+          "compromise": 5,
+          "companionship": 1
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          21
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-em-zero.txt",
+        "jovian": "jovian-em-zero.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "minimal",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-jst",
+          "input": {
+            "date": "1943-03-10",
+            "time": "08:20",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "br-saopaulo",
+          "input": {
+            "date": "1969-08-22",
+            "time": "18:20",
+            "tz": "America/Sao_Paulo"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "7-31",
+              "aGate": 31,
+              "bGate": 7
+            }
+          ],
+          "companionship": [
+            {
+              "ch": "29-46"
+            }
+          ],
+          "dominance": [],
+          "compromise": [
+            {
+              "ch": "20-34",
+              "who": "b",
+              "otherGate": 20
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 1,
+          "dominance": 0,
+          "compromise": 1,
+          "companionship": 1
+        },
+        "definedCenterCount": 3,
+        "openCenterCount": 6,
+        "echoGates": [
+          11,
+          14,
+          16,
+          20,
+          22,
+          27,
+          30,
+          47,
+          51,
+          62
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-minimal.txt",
+        "jovian": "jovian-minimal.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "refl-min",
+      "people": {
+        "a": {
+          "goldenId": "refl-bangkok",
+          "input": {
+            "date": "1962-01-08",
+            "time": "13:00",
+            "tz": "Asia/Bangkok"
+          }
+        },
+        "b": {
+          "goldenId": "ego-tokyo",
+          "input": {
+            "date": "1962-07-02",
+            "time": "03:00",
+            "tz": "Asia/Tokyo"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "3-60",
+              "aGate": 60,
+              "bGate": 3
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "21-45",
+              "who": "b"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "13-33",
+              "who": "b",
+              "otherGate": 13
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 1,
+          "dominance": 1,
+          "compromise": 1,
+          "companionship": 0
+        },
+        "definedCenterCount": 5,
+        "openCenterCount": 4,
+        "echoGates": [
+          7,
+          19,
+          29,
+          30,
+          40,
+          44
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-refl-min.txt",
+        "jovian": "jovian-refl-min.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "maximal",
+      "people": {
+        "a": {
+          "goldenId": "tw-hist-dst",
+          "input": {
+            "date": "1975-06-15",
+            "time": "14:30",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "au-syd-dst",
+          "input": {
+            "date": "1995-12-25",
+            "time": "16:45",
+            "tz": "Australia/Sydney"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "5-15",
+              "aGate": 5,
+              "bGate": 15
+            },
+            {
+              "ch": "10-20",
+              "aGate": 20,
+              "bGate": 10
+            },
+            {
+              "ch": "12-22",
+              "aGate": 12,
+              "bGate": 22
+            },
+            {
+              "ch": "13-33",
+              "aGate": 33,
+              "bGate": 13
+            },
+            {
+              "ch": "20-57",
+              "aGate": 20,
+              "bGate": 57
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "3-60",
+              "who": "b"
+            },
+            {
+              "ch": "6-59",
+              "who": "a"
+            },
+            {
+              "ch": "10-57",
+              "who": "b"
+            },
+            {
+              "ch": "25-51",
+              "who": "a"
+            },
+            {
+              "ch": "32-54",
+              "who": "b"
+            },
+            {
+              "ch": "35-36",
+              "who": "a"
+            },
+            {
+              "ch": "39-55",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "10-34",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "20-34",
+              "who": "a",
+              "otherGate": 34
+            },
+            {
+              "ch": "27-50",
+              "who": "a",
+              "otherGate": 50
+            },
+            {
+              "ch": "34-57",
+              "who": "b",
+              "otherGate": 34
+            },
+            {
+              "ch": "42-53",
+              "who": "a",
+              "otherGate": 42
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 5,
+          "dominance": 7,
+          "compromise": 5,
+          "companionship": 0
+        },
+        "definedCenterCount": 7,
+        "openCenterCount": 2,
+        "echoGates": [
+          9,
+          11,
+          18
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-maximal.txt",
+        "jovian": "jovian-maximal.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "comp3",
+      "people": {
+        "a": {
+          "goldenId": "tw-normal",
+          "input": {
+            "date": "1988-09-03",
+            "time": "21:10",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "ego-tokyo",
+          "input": {
+            "date": "1962-07-02",
+            "time": "03:00",
+            "tz": "Asia/Tokyo"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "35-36",
+              "aGate": 35,
+              "bGate": 36
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "10-20",
+              "who": "a"
+            },
+            {
+              "ch": "12-22",
+              "who": "a"
+            },
+            {
+              "ch": "13-33",
+              "who": "b"
+            },
+            {
+              "ch": "47-64",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "18-58",
+              "who": "a",
+              "otherGate": 58
+            },
+            {
+              "ch": "21-45",
+              "who": "b",
+              "otherGate": 21
+            },
+            {
+              "ch": "37-40",
+              "who": "a",
+              "otherGate": 40
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 1,
+          "dominance": 4,
+          "compromise": 3,
+          "companionship": 0
+        },
+        "definedCenterCount": 8,
+        "openCenterCount": 1,
+        "echoGates": [
+          44,
+          63
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-comp3.txt",
+        "jovian": "jovian-comp3.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    },
+    {
+      "id": "tw-pair",
+      "people": {
+        "a": {
+          "goldenId": "tw-normal",
+          "input": {
+            "date": "1988-09-03",
+            "time": "21:10",
+            "tz": "Asia/Taipei"
+          }
+        },
+        "b": {
+          "goldenId": "tw-hist-jst",
+          "input": {
+            "date": "1943-03-10",
+            "time": "08:20",
+            "tz": "Asia/Taipei"
+          }
+        }
+      },
+      "expected": {
+        "categories": {
+          "electromagnetic": [
+            {
+              "ch": "21-45",
+              "aGate": 21,
+              "bGate": 45
+            },
+            {
+              "ch": "26-44",
+              "aGate": 44,
+              "bGate": 26
+            }
+          ],
+          "companionship": [],
+          "dominance": [
+            {
+              "ch": "18-58",
+              "who": "a"
+            },
+            {
+              "ch": "29-46",
+              "who": "b"
+            },
+            {
+              "ch": "37-40",
+              "who": "a"
+            }
+          ],
+          "compromise": [
+            {
+              "ch": "10-20",
+              "who": "a",
+              "otherGate": 20
+            },
+            {
+              "ch": "12-22",
+              "who": "a",
+              "otherGate": 22
+            },
+            {
+              "ch": "47-64",
+              "who": "a",
+              "otherGate": 47
+            }
+          ]
+        },
+        "counts": {
+          "electromagnetic": 2,
+          "dominance": 3,
+          "compromise": 3,
+          "companionship": 0
+        },
+        "definedCenterCount": 9,
+        "openCenterCount": 0,
+        "echoGates": [
+          11,
+          20,
+          62
+        ]
+      },
+      "source": {
+        "selfmap": "selfmap-tw-pair.txt",
+        "jovian": "jovian-tw-pair.txt",
+        "site": "selfmap.tw（逐條）+ jovianarchive.com/Maia（官方數量）",
+        "collectedAt": "2026-07-11"
+      }
+    }
+  ]
+}
