@@ -39,7 +39,7 @@ extra_head: |
       { "@type": "Question", "name": "不知道其中一人的出生時間怎麼辦？", "acceptedAnswer": { "@type": "Answer", "text": "出生時間會影響部分閘門的啟動。可以勾選「不確定出生時間」先以中午試算，結果頁會標示「部分合盤結果可能隨出生時間改變」，把它當方向參考即可。想要精確版本，建議先向戶政事務所申請出生登記資料查證時間。" } },
       { "@type": "Question", "name": "我們的出生資料會被上傳嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不會。所有計算都在你的瀏覽器裡完成，本站不上傳、不儲存兩人的出生資料，重新整理頁面就清空。提醒一點：你下載的圖卡檔案內含你輸入的出生資料（方便日後接續使用或申請報告），分享檔案給別人前請先想一下。" } },
       { "@type": "Question", "name": "可以用在朋友、親子或工作搭檔嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。四種連結描述的是任意兩個人之間的能量結構，不限伴侶。輸入時可以選擇關係情境（伴侶、家人、朋友、工作夥伴），部分解讀提示會跟著調整措辭。" } },
-      { "@type": "Question", "name": "免費合盤與付費報告差在哪裡？", "acceptedAnswer": { "@type": "Answer", "text": "免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）由真人針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，並經人工校稿後交付。" } }
+      { "@type": "Question", "name": "免費合盤與付費報告差在哪裡？", "acceptedAnswer": { "@type": "Answer", "text": "免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，AI 輔助生成、人工校稿後交付。" } }
     ]
   }
   </script>
@@ -142,9 +142,6 @@ extra_css: |
   .hdc-report td:first-child { white-space: nowrap; }
   .hdc-report th { color: #7a5500; font-weight: 600; white-space: nowrap; }
   .hdc-report .price { font-size: 1.5rem; color: #7a5500; font-weight: 800; }
-  .hdc-samples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
-  @media (max-width: 640px) { .hdc-samples { grid-template-columns: 1fr; } }
-  .hdc-samples img { width: 100%; height: 150px; object-fit: cover; object-position: top; border: 1px solid #eee2c0; border-radius: 8px; background: #fff; }
   .hdc-report .hdc-note-s { font-size: 0.8rem; color: #999; margin-top: 10px; }
   .hdc-faq { max-width: 860px; margin: 0 auto; }
   .hdc-faq details { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
@@ -318,7 +315,7 @@ extra_css: |
     <div class="container">
       <div class="hdc-report">
         <h3>合盤深度報告：把「你們的圖」讀成「你們的相處說明書」</h3>
-        <p style="font-size:0.94rem;color:#555;line-height:1.8;">免費合盤給你完整的結構；深度報告由真人針對你們兩人逐條展開——每條連結的機制、天賦與相處提醒、九大中心的關係化學、整體相處建議，人工校稿後交付。</p>
+        <p style="font-size:0.94rem;color:#555;line-height:1.8;">免費合盤給你完整的結構；深度報告針對你們兩人逐條展開——每條連結的機制、天賦與相處提醒、九大中心的關係化學、整體相處建議，AI 輔助生成、人工校稿後交付。</p>
         <div class="hdc-table-scroll">
         <table>
           <tr><th></th><th>免費合盤（本頁）</th><th>深度報告</th></tr>
@@ -326,14 +323,8 @@ extra_css: |
           <tr><td>逐通道深度解讀</td><td>短述</td><td>每條 300–450 字：機制→天賦→提醒</td></tr>
           <tr><td>九大中心關係化學</td><td>提要</td><td>逐中心展開＋具名建議</td></tr>
           <tr><td>綜合相處建議</td><td>—</td><td>✔ 含你們的獨特之處</td></tr>
-          <tr><td>製作方式</td><td>即時生成</td><td>真人撰寫＋人工校稿</td></tr>
+          <tr><td>製作方式</td><td>即時生成</td><td>AI 輔助生成＋人工校稿</td></tr>
         </table>
-        </div>
-        <p style="font-size:0.88rem;color:#7a5500;font-weight:600;margin:16px 0 8px;">報告長這樣（真實案例脫敏樣張）：</p>
-        <div class="hdc-samples">
-          <a href="{{ '/assets/img/human-design/report-sample-1.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/human-design/report-sample-1.jpg' | relative_url }}" alt="合盤報告樣張：合盤圖與數據總覽（脫敏）" loading="lazy"></a>
-          <a href="{{ '/assets/img/human-design/report-sample-2.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/human-design/report-sample-2.jpg' | relative_url }}" alt="合盤報告樣張：四種連結分類解讀（脫敏）" loading="lazy"></a>
-          <a href="{{ '/assets/img/human-design/report-sample-3.jpg' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/human-design/report-sample-3.jpg' | relative_url }}" alt="合盤報告樣張：逐通道深度解讀（脫敏）" loading="lazy"></a>
         </div>
         <div><span class="price">NT$1,080</span>　<span style="font-size:0.85rem;color:#999;">早鳥驗證價・也支援穩定幣付款</span></div>
         <button type="button" class="hd-btn-generate" id="hdc-report-end" style="max-width:420px;margin-top:16px;">用 Email 申請合盤深度報告</button>
@@ -351,7 +342,7 @@ extra_css: |
       <details><summary>不知道其中一人的出生時間怎麼辦？</summary><p>出生時間會影響部分閘門的啟動。可以勾選「不確定出生時間」先以中午試算，結果頁會標示「部分合盤結果可能隨出生時間改變」，把它當方向參考即可。想要精確版本，建議先向戶政事務所申請出生登記資料查證時間。</p></details>
       <details><summary>我們的出生資料會被上傳嗎？</summary><p>不會。所有計算都在你的瀏覽器裡完成，本站不上傳、不儲存兩人的出生資料，重新整理頁面就清空。提醒一點：你下載的圖卡檔案內含你輸入的出生資料（方便日後接續使用或申請報告），分享檔案給別人前請先想一下。</p></details>
       <details><summary>可以用在朋友、親子或工作搭檔嗎？</summary><p>可以。四種連結描述的是任意兩個人之間的能量結構，不限伴侶。輸入時可以選擇關係情境（伴侶、家人、朋友、工作夥伴），部分解讀提示會跟著調整措辭。</p></details>
-      <details><summary>免費合盤與付費報告差在哪裡？</summary><p>免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）由真人針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，並經人工校稿後交付。</p></details>
+      <details><summary>免費合盤與付費報告差在哪裡？</summary><p>免費版給你完整的合盤圖、四類連結清單與中心變化，自己就能讀。付費合盤報告（NT$1,080）針對你們兩人逐通道完整展開——每條連結的機制、天賦與相處提醒、中心化學與整體建議，AI 輔助生成、人工校稿後交付。</p></details>
       <p style="margin-top:18px;"><a href="{{ '/human-design/' | relative_url }}" style="color:#7a5500;">← 還沒排過自己的人類圖？先從單人排盤開始</a></p>
     </div>
   </section>

@@ -288,7 +288,7 @@
   use_cases: [伴侶相處, 團隊搭檔, 深度解讀]
   cta_label: 查看合盤報告
   price: NT$1,080
-  note: 早鳥驗證價 NT$1,080，奠基於免費合盤工具結果的加購深度解讀，真人撰寫、人工校稿；不做關係好壞判定。
+  note: 早鳥驗證價 NT$1,080，奠基於免費合盤工具結果的加購深度解讀，AI 輔助生成、人工校稿；不做關係好壞判定。
   related: [human-design-composite, human-design-report]
 
 - id: qimen-pro
