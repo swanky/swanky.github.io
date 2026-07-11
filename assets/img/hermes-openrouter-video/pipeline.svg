@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Hermes Agent 串接 OpenRouter 生成短影片的架構</title>
+  <desc id="desc">GPT-5.6 Sol 在 Hermes Agent 中負責規劃與核准，openrouter-video plugin 呼叫 OpenRouter 非同步影片 API，由 Seedance 2.0 Fast 生成片段，manifest 保存狀態，完成後交由本機 FFmpeg、Pillow 與 Edge TTS 剪輯驗證。</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#94a3b8"/></marker>
+    <style>
+      .title{font:700 28px system-ui,sans-serif;fill:#f8fafc}.sub{font:15px system-ui,sans-serif;fill:#94a3b8}.name{font:700 18px system-ui,sans-serif;fill:#f8fafc}.detail{font:14px system-ui,sans-serif;fill:#cbd5e1}.tiny{font:12px system-ui,sans-serif;fill:#94a3b8}.flow{fill:none;stroke:#94a3b8;stroke-width:2.5;marker-end:url(#arrow)}.guard{fill:none;stroke:#fb7185;stroke-width:2;stroke-dasharray:7 6}.box{stroke-width:2;rx:14}.label{font:700 13px system-ui,sans-serif;letter-spacing:.08em}
+    </style>
+  </defs>
+  <rect width="1200" height="640" fill="#020617"/>
+  <rect width="1200" height="640" fill="url(#grid)" opacity=".75"/>
+  <text x="54" y="58" class="title">Hermes × OpenRouter 影片生成工作流</text>
+  <text x="54" y="86" class="sub">模型負責判斷，plugin 負責付費 API，本機工具負責可重現的後製與驗收</text>
+
+  <path class="flow" d="M258 230H330"/><path class="flow" d="M548 230H620"/><path class="flow" d="M838 230H910"/>
+  <path class="flow" d="M1025 315V385"/><path class="flow" d="M910 470H838"/><path class="flow" d="M620 470H548"/>
+
+  <rect x="42" y="146" width="216" height="168" fill="#0f172a" stroke="#22d3ee" class="box"/>
+  <text x="62" y="177" fill="#22d3ee" class="label">ORCHESTRATOR</text>
+  <text x="62" y="211" class="name">Hermes Agent</text>
+  <text x="62" y="239" class="detail">GPT-5.6 Sol</text>
+  <text x="62" y="265" class="tiny">OpenAI Codex OAuth</text>
+  <text x="62" y="289" class="tiny">規劃、工具呼叫、人工核准</text>
+
+  <rect x="330" y="146" width="218" height="168" fill="#0f172a" stroke="#34d399" class="box"/>
+  <text x="350" y="177" fill="#34d399" class="label">LOCAL PLUGIN</text>
+  <text x="350" y="211" class="name">openrouter-video</text>
+  <text x="350" y="239" class="detail">估價、冪等、重試</text>
+  <text x="350" y="265" class="tiny">Data URL 只留 SHA-256</text>
+  <text x="350" y="289" class="tiny">Agent 核准後才呼叫 submit</text>
+
+  <rect x="620" y="146" width="218" height="168" fill="#0f172a" stroke="#a78bfa" class="box"/>
+  <text x="640" y="177" fill="#a78bfa" class="label">ASYNC API</text>
+  <text x="640" y="211" class="name">OpenRouter</text>
+  <text x="640" y="239" class="detail">POST /api/v1/videos</text>
+  <text x="640" y="265" class="tiny">30 秒間隔輪詢 job</text>
+  <text x="640" y="289" class="tiny">完成後下載 content</text>
+
+  <rect x="910" y="146" width="248" height="168" fill="#0f172a" stroke="#fbbf24" class="box"/>
+  <text x="930" y="177" fill="#fbbf24" class="label">VIDEO MODEL</text>
+  <text x="930" y="211" class="name">Seedance 2.0 Fast</text>
+  <text x="930" y="239" class="detail">Text / First Frame → Video</text>
+  <text x="930" y="265" class="tiny">4 秒・480p・9:16</text>
+  <text x="930" y="289" class="tiny">generate_audio = false</text>
+
+  <rect x="910" y="385" width="248" height="168" fill="#0f172a" stroke="#fb923c" class="box"/>
+  <text x="930" y="416" fill="#fb923c" class="label">JOB STATE</text>
+  <text x="930" y="450" class="name">Sanitized Manifest</text>
+  <text x="930" y="478" class="detail">job id・status・usage</text>
+  <text x="930" y="504" class="tiny">不保存 base64 參考圖</text>
+  <text x="930" y="528" class="tiny">輸出檔拒絕覆寫</text>
+
+  <rect x="620" y="385" width="218" height="168" fill="#0f172a" stroke="#22d3ee" class="box"/>
+  <text x="640" y="416" fill="#22d3ee" class="label">LOCAL EDIT</text>
+  <text x="640" y="450" class="name">FFmpeg + Pillow</text>
+  <text x="640" y="478" class="detail">Edge TTS 女聲旁白</text>
+  <text x="640" y="504" class="tiny">contain・字幕・音量正規化</text>
+  <text x="640" y="528" class="tiny">不再消耗 OpenRouter 額度</text>
+
+  <rect x="330" y="385" width="218" height="168" fill="#0f172a" stroke="#34d399" class="box"/>
+  <text x="350" y="416" fill="#34d399" class="label">VERIFICATION</text>
+  <text x="350" y="450" class="name">QA &amp; Evidence</text>
+  <text x="350" y="478" class="detail">ffprobe・SHA-256</text>
+  <text x="350" y="504" class="tiny">contact sheet・黑畫面檢查</text>
+  <text x="350" y="528" class="tiny">人工觀看後才收尾</text>
+
+  <rect x="28" y="126" width="546" height="208" rx="20" class="guard"/>
+  <text x="42" y="350" fill="#fb7185" class="tiny">人工核准邊界：顯示預估費用 → 使用者明確核准 → 才提交付費生成</text>
+  <text x="54" y="610" class="tiny">實作原則：讓生成模型只做必須生成的鏡頭，其餘交給可重現、可驗證的本機流程。</text>
+</svg>
