@@ -89,16 +89,17 @@ Always use Jekyll's `relative_url` filter:
 
 Bootstrap, AOS (`data-aos`), Isotope, GLightbox, PureCounter, Animate.css, Boxicons, Bootstrap Icons. Isotope/GLightbox/PureCounter loaded conditionally via front matter flags.
 
-## Human Design Generator (`/human-design/`)
+## Human Design Generator (`/human-design/`) & Composite (`/human-design/relationship/`)
 
 A self-contained, client-side app — no backend; birth data never leaves the browser.
 
-- **Page**: `human-design/index.html` — sets `use_human_design: true` and injects `WebApplication` + `FAQPage` JSON-LD via `extra_head`.
-- **Engine** (`assets/js/human-design/`, 16 ES modules): `hd-engine` (orchestration), `hd-astro` (ephemeris via astronomy-engine), `hd-geometry` / `hd-mandala` / `hd-svg` / `hd-svg-string` (bodygraph rendering), `hd-judge`, `hd-timezone`, `hd-cities`, `hd-ui` (browser entry point), and `hd-data-*` (gates / channels / centers / texts / qr / fixing).
+- **Pages**: `human-design/index.html`（`use_human_design: true`）＋ `human-design/relationship/index.html`（`use_hd_composite: true`，合盤）；both inject `WebApplication` + `FAQPage` JSON-LD via `extra_head`; loaded through the corresponding flags in `_includes/scripts.html`（vendor UMD first, then ES module entry）。
+- **Engine core** (`assets/js/human-design/`): `hd-engine` (orchestration) → `hd-adapter`（`toHumanDesignChart` 正規化：gates/channels/centers）→ renderers。`hd-astro`（ephemeris via astronomy-engine）、`hd-judge`、`hd-timezone`、`hd-cities`、`hd-data-*`（gates / channels / centers / texts / qr / fixing）。
+- **BodyGraph v2 render pipeline**（2026-07 bodygraph v2 全案）: `hd-geometry-v2`（幾何單一事實源：VIEWBOX2/CENTER_SHAPES2/GATE_ANCHORS2/CHANNEL_PATHS2/channelHalfDs2）＋ `hd-theme`（THEMES_V2 三主題 tokens：classic/modern/dark，各含 v26 `skin` 與合盤 `compose` 區塊）＋ `hd-bodygraph`（`renderBodygraph`，assertReportSafe 四紅線：no polygon/style/class/gradient）＋ `hd-export-v2`（匯出四式）。v1（`hd-geometry`/`hd-svg`/`hd-svg-string`）保留供 `?bodygraph=v1` 回退。報告端（swanky-human-design）import 本站幾何與主題＝單一事實源方向：本站 → 報告端，不可反轉。
+- **Composite (合盤) modules**（2026-07-11）: `hd-composite`（`computeComposite`：電磁/同伴/主導/妥協四類 truth table、合盤中心＋dynamic 五態、definition 連通分量）＋ `hd-bodygraph-compose`（`renderCompositeBodygraph`：案 B 視覺＝四類色 casing＋A 實線/B 虛線雙編碼）＋ `hd-composite-texts`（文案、禁詞註記檔頭）＋ `hd-composite-ui`（頁面 entry）＋ `hd-export-compose`（合盤匯出四式）＋ `hd-form`（出生表單 factory，prefix 參數化，單人/合盤共用——`hd-ui` 亦改用）。單人→合盤帶入走 `sessionStorage['hd:composite:a']`（表單輸入、非 URL）。
 - **Fixing arrows**: planet-table ▲/▼ exaltation/detriment markers from `hd-data-fixing.js` (data ported from SharpAstrology, MIT). Nodes intentionally show no arrows — this matches the standard more closely than reference sites.
-- **PNG export metadata**: downloaded card embeds birth data as a visible caption + iTXt chunk (`hd-svg.js` `injectPngText`; payload = name/date/time/place, no lat/lon). Name comes from the optional 姓名 field on the page.
-- **Tests** (`tests/human-design/*.test.mjs`): run with `npm test` (`node --test`, also runs tarot tests). Covers astro, timezone, geometry, mandala, judge, and golden fixtures.
-- **Tooling** (`tools/`): render & geometry-validation POCs, including `hd-report-poc.*` (paid-report prototype).
+- **PNG export metadata**: all exported PNGs embed birth data as iTXt chunk（keyword `hd-birth`，`core-export.js` `injectPngText`）。單人 payload＝name/date/time/place（no lat/lon）；合盤 payload＝`{v, kind:'composite', a:{…}, b:{…}}`——報告端 ingest 以 `kind` 分流。SVG 匯出不帶 iTXt。
+- **Tests** (`tests/human-design/*.test.mjs`, `npm test` via `node --test`): astro / timezone / geometry(v1+v2) / mandala / judge / bodygraph-v2 / fixing / **golden**（單人 28 組：humandesignasia/Maia 實測）/ **composite golden**（16 組：SelfMap 逐條＋Jovian/Maia 官方數量雙站交叉，方法論見私有 `docs/hd-redesign/composite-golden-design.md`）/ **visual regression**（單人 24＋合盤 24 SVG 快照 byte-identical）。另有 `tools/hd-composite-differential.mjs`（JS↔報告端 Python compose 對拍，本機手動、npm test 不依賴姊妹 repo）。
 - **astronomy-engine loading** (non-obvious — see Known Gotchas in `CLAUDE.md`): browser uses the UMD global `Astronomy`; Node tests use `createRequire()` via the vendored `assets/vendor/astronomy-engine/package.json` `"type":"commonjs"` override.
 
 ## Tarot Reflection Tool (`/tarot/`)
