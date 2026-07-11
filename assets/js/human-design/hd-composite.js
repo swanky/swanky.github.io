@@ -64,13 +64,20 @@ export function computeComposite(chartA, chartB) {
   }
 
   const centers = {};
-  for (const c of CENTER_IDS) centers[c] = { defined: false, sourceChannels: [] };
+  for (const c of CENTER_IDS) centers[c] = { defined: false, sourceChannels: [], dynamic: 'open' };
   for (const ch of CHANNELS) {
     if (!channels[ch.id].definedInComposite) continue;
     for (const c of ch.centers) {
       centers[c].defined = true;
       centers[c].sourceChannels.push(ch.id);
     }
+  }
+  // dynamic：關係裡這個中心的來源（報告端 center_dynamic 同語意）
+  //   both＝雙方各自定義；a/b＝單方定義（帶給對方）；new＝雙方皆開放、合盤才接通（魔法中心）；open＝共同開放
+  for (const c of CENTER_IDS) {
+    const aDef = chartA.centers[c] === 'defined';
+    const bDef = chartB.centers[c] === 'defined';
+    centers[c].dynamic = aDef && bDef ? 'both' : aDef ? 'a' : bDef ? 'b' : centers[c].defined ? 'new' : 'open';
   }
 
   // definition：合盤完整通道為邊、其跨中心為節點的連通分量（CENTER_IDS 固定序→輸出確定）

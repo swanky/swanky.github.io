@@ -91,6 +91,14 @@ for (let k = 0; k < pairs.length; k++) {
   const pyShared = [...(py.shared || [])].sort((x, y) => x - y).join(',');
   const jsShared = js.sharedGates.join(',');
   if (pyShared !== jsShared) { diffs++; console.log(`DIFF ${label} shared: JS[${jsShared}] PY[${pyShared}]`); }
+  // 中心動態（both/A/B/new/open）
+  for (const [zh, dyn] of Object.entries(py.center_dynamic || {})) {
+    const c = CENTER_MAP[zh];
+    const pyDyn = dyn === 'A' ? 'a' : dyn === 'B' ? 'b' : dyn;
+    if (js.centers[c].dynamic !== pyDyn) {
+      diffs++; console.log(`DIFF ${label} dynamic ${c}: JS ${js.centers[c].dynamic} PY ${pyDyn}`);
+    }
+  }
 }
 console.log(`\nchecked ${checked} pairs, diffs: ${diffs}`);
 process.exit(diffs ? 1 : 0);

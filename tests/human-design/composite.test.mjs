@@ -136,6 +136,23 @@ test('definition：none／single／split 案例', () => {
   assert.equal(split.definition.components.length, 2);
 });
 
+test('中心動態：both／a／b／new（魔法中心）／open 五態', () => {
+  // A 定義 g+throat（1-8）、B 定義 sacral+root（3-60）；電磁 2-14 接通 g-sacral（皆已由單方定義）
+  const r = computeComposite(makeChart([1, 8, 2]), makeChart([3, 60, 14]));
+  assert.equal(r.centers.g.dynamic, 'a', 'g 由 A 帶入');
+  assert.equal(r.centers.throat.dynamic, 'a');
+  assert.equal(r.centers.sacral.dynamic, 'b', 'sacral 由 B 帶入');
+  assert.equal(r.centers.root.dynamic, 'b');
+  assert.equal(r.centers.head.dynamic, 'open');
+  // 魔法中心：雙方皆開放、合盤才接通
+  const magic = computeComposite(makeChart([1]), makeChart([8]));
+  assert.equal(magic.centers.g.dynamic, 'new');
+  assert.equal(magic.centers.throat.dynamic, 'new');
+  // both：雙方各自定義
+  const both = computeComposite(makeChart([1, 8]), makeChart([1, 8]));
+  assert.equal(both.centers.g.dynamic, 'both');
+});
+
 test('不輸出共同 type/authority/profile/cross；version 存在', () => {
   const r = computeComposite(makeChart([1]), makeChart([8]));
   assert.equal(r.version, COMPOSITE_VERSION);
