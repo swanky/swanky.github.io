@@ -10,10 +10,10 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 
 - `bundle install` — 安裝相依。
 - `bundle exec jekyll build` — 建置到 `_site/`。
-- `bundle exec jekyll serve` — 本機開發（http://127.0.0.1:4000）。**agent 執行時避免使用**：殘留的 `--watch` 程序會在操作間隙回復／清空工作目錄檔案；檔案神秘回復時先終止殘留的 ruby 程序。
+- `bundle exec jekyll serve` — 本機開發（http://127.0.0.1:4000）。**agent 執行時避免使用**：殘留的 `--watch` 程序會在操作間隙回復／清空工作目錄檔案（單次操作內穩定、操作間隙回復——這才是「寫入不穩」的真相，不是機器壞了）；檔案神秘回復時先終止殘留的 ruby 程序（PowerShell：`Get-Process ruby | Stop-Process -Force`）。
 - `npm test` — engine 測試（`node --test` 跑 `tests/**/*.test.mjs`，免 npm install）。便宜可靠，開發期的主要驗證手段。
 - Push 到 `master` 即自動部署。正式站 **https://swanky.github.io**（Flickr 帳號 `swanky-hsiao` 不是網域的一部分）。
-- 部署狀態用 GitHub Actions 查詢（`gh run list --limit 5`）。**build** job 失敗→回 repo 除錯；build 綠但 **deploy** 在 `syncing_files` 失敗且訊息為「Deployment failed, try again later」→ GitHub Pages 瞬態問題，重跑失敗 job 即可。
+- 部署狀態用 GitHub Actions 查詢（`gh run list --limit 5`）。**build** job 失敗→回 repo 除錯；build 綠但 **deploy** 在 `syncing_files` 失敗且訊息為「Deployment failed, try again later」→ GitHub Pages 瞬態問題，`gh run rerun <id> --failed` 重跑即可。
 
 ## 完成的定義（可驗證）
 
