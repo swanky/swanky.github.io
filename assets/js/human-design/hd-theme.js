@@ -74,8 +74,19 @@ function buildTheme(c) {
     },
     label: { ...c.label, fontSize: STRUCT.label.fontSize },
     skin: c.skin, // v26 render token 集（見檔頭）——buildTheme 直通、結構由各主題 spec 明列
+    compose: c.compose, // 合盤 A/B 與四類 tokens（additive，單人 renderer 不讀）——hd-bodygraph-compose.js 專用
   };
 }
+
+// ── 合盤（compose）共用結構：A 實線／B 虛線雙編碼（灰階可辨），色彩各主題覆寫 ────────
+// 起點＝報告端 pair 報告色語言（A 青 #1f7a8c/B 洋紅 #b5446e＋四類卡色），站主 2026-07-11 指定參考；
+// 最終配色屬 B2 站主看圖拍板區，此為案 A 預設值。
+const COMPOSE_STRUCT = {
+  bDash: '7 6',            // B 側虛線（非顏色雙編碼；沿報告端 both 疊線既有語彙）
+  jointR: 5,               // 電磁中點接合徵記半徑
+  stubLen: 26,             // 妥協：對方單 gate 端點短段長
+  pairWidth: 3.2, pairGap: 4.0, // 同伴平行雙線（沿單人 mixed 技法尺寸）
+};
 
 // ── A · classic（Classic Professional）─────────────────────────────────────────
 // 白紙、經典人類圖低飽和四色（黃=Head/G、綠=Ajna、棕=Throat/Spleen/Solar/Root、紅=Heart/Sacral）。
@@ -115,6 +126,12 @@ const CLASSIC = buildTheme({
       // pad = mixWhite(centerDefined, 0.72)（v2-skin-derive.mjs）
       pad: { head: '#F7F0D6', ajna: '#E0EAD6', throat: '#EBE3D8', g: '#F7F0D6', heart: '#EFD5D1', spleen: '#EBE3D8', solar: '#EBE3D8', sacral: '#EFD5D1', root: '#EBE3D8' },
     },
+  },
+  compose: {
+    ...COMPOSE_STRUCT,
+    a: { color: '#17677A', label: 'A' },  // 白紙上微深化青（對比）
+    b: { color: '#A63D63', label: 'B' },
+    categories: { electromagnetic: '#C09112', companionship: '#357E35', dominance: '#6F47A6', compromise: '#B25A26' },
   },
 });
 
@@ -157,6 +174,12 @@ const MODERN = buildTheme({
       pad: { head: '#FCF1D2', ajna: '#DCEFE8', throat: '#EDE8F5', g: '#FDF1CE', heart: '#F6E2D8', spleen: '#EAF2DB', solar: '#F6E8D7', sacral: '#F5DDD8', root: '#E6E0DA' },
     },
   },
+  compose: {
+    ...COMPOSE_STRUCT,
+    a: { color: '#1F7A8C', label: 'A' },  // 報告端原色（pair 報告既用）
+    b: { color: '#B5446E', label: 'B' },
+    categories: { electromagnetic: '#D4A017', companionship: '#3A8A3A', dominance: '#7A4FB5', compromise: '#C4632A' },
+  },
 });
 
 // ── C · dark（Dark Analytical）─────────────────────────────────────────────────
@@ -198,6 +221,12 @@ const DARK = buildTheme({
       // pad = mixToward(centerDefined, cardBg #1C1D21, 0.60)（深墊；v2-skin-derive.mjs）
       pad: { head: '#574925', ajna: '#2A443D', throat: '#3D3750', g: '#554723', heart: '#58362C', spleen: '#3C482C', solar: '#574026', sacral: '#582D29', root: '#423931' },
     },
+  },
+  compose: {
+    ...COMPOSE_STRUCT,
+    a: { color: '#4FB3C9', label: 'A' },  // 深底提亮版
+    b: { color: '#D9799F', label: 'B' },
+    categories: { electromagnetic: '#E0B23A', companionship: '#5CAD5C', dominance: '#9D77D0', compromise: '#D98450' },
   },
 });
 
