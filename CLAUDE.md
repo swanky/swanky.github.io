@@ -18,6 +18,7 @@ Execute autonomously; start without asking. Read relevant code first; make reaso
 | 要派 subagent、選 model、要驗收交付 | `docs/agents/dispatch.md`；派工直接套 `docs/agents/delegation-templates.md` |
 | 拿不準：真的完成了嗎／要不要問使用者／該換路還是重試／要不要升級模型 | `docs/agents/judgment.md` |
 | 想改 CLAUDE.md、docs/agents/*、或 memory 規則 | `docs/agents/maintenance.md`（**先讀再改**） |
+| 想新增／修改 AGENTS.md、Hermes／Codex 適配、或跨 agent 共用 skills | `docs/agents/cross-agent-sharing.md`；若會改制度檔再讀 `docs/agents/maintenance.md` |
 | 改 layouts、collections、front matter、或 Human Design engine | `docs/architecture.md` |
 | 視覺／設計工作 | `docs/design.md` |
 | 新接手本環境、或想了解制度為何這樣設計 | `docs/agents/letter-to-future-sessions.md`、`docs/agents/diagnosis-2026-07.md` |
