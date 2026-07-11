@@ -13,6 +13,7 @@ breadcrumbs:
   - name: 關係合盤
     url: /human-design/relationship/
 use_hd_composite: true
+og_image: /assets/img/human-design/og-relationship.jpg
 extra_head: |
   <script type="application/ld+json">
   {
@@ -274,9 +275,15 @@ extra_css: |
         <button type="button" class="hdc-btn is-active" id="hdc-view-merged">合併顯示</button>
         <button type="button" class="hdc-btn" id="hdc-view-side">並排顯示</button>
         <span style="flex:1"></span>
-        <button type="button" class="hdc-btn" id="hdc-download-svg"><i class="bi bi-download"></i> 下載合盤圖</button>
         <button type="button" class="hdc-btn" id="hdc-share"><i class="bi bi-share"></i> 分享工具</button>
         <button type="button" class="hdc-btn hdc-btn-gold" id="hdc-report-top">深入解讀 ↓</button>
+      </div>
+      <div class="hdc-toolbar" style="margin-top:-6px;">
+        <span style="font-size:0.84rem;color:#999;align-self:center;"><i class="bi bi-download"></i> 下載：</span>
+        <button type="button" class="hdc-btn" id="hdc-dl-card">品牌卡 PNG</button>
+        <button type="button" class="hdc-btn" id="hdc-dl-social">社群卡 PNG</button>
+        <button type="button" class="hdc-btn" id="hdc-dl-transparent">透明去背 PNG</button>
+        <button type="button" class="hdc-btn" id="hdc-dl-svg">向量 SVG</button>
       </div>
       <div class="hdc-graph" id="hdc-graph"></div>
       <div class="hdc-legend" id="hdc-legend"></div>

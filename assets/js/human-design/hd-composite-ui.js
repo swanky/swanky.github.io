@@ -12,6 +12,7 @@ import { CENTERS } from './hd-data-centers.js';
 import { THEMES_V2 } from './hd-theme.js';
 import { CATEGORY_TEXTS, CENTER_DYNAMIC_TEXTS, SUMMARY_CARDS, HOW_TO_READ, METHOD_NOTE } from './hd-composite-texts.js';
 import { createBirthForm } from './hd-form.js';
+import { exportCompositeSvg, exportCompositeTransparentPng, exportCompositeBrandCard, exportCompositeSocialCard } from './hd-export-compose.js';
 import { $, setHTML, on, gtag } from '../core/core-dom.js';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -80,6 +81,8 @@ function onSubmit() {
   state.relation = $('hdc-relation')?.value || '';
   state.chartA = charts.a.chart;
   state.chartB = charts.b.chart;
+  state.unknownA = charts.a.unknown;
+  state.unknownB = charts.b.unknown;
   state.composite = computeComposite(toHumanDesignChart(charts.a.chart), toHumanDesignChart(charts.b.chart));
   state.anyUnknown = charts.a.unknown || charts.b.unknown;
   renderResult();
@@ -210,17 +213,55 @@ function renderGraph() {
   $('hdc-view-side')?.classList.toggle('is-active', state.view === 'side');
 }
 
-// ---- 下載（MVP：SVG；PNG 圖卡於 B5 擴充）----
-function onDownloadSvg() {
+// ---- 下載四式（hd-export-compose）----
+// 雙人 iTXt payload：與單人 hd-birth 同 keyword，kind:'composite' 供報告端 ingest 分流（站主拍板嵌）。
+function personMeta(side) {
+  const c = side === 'a' ? state.chartA : state.chartB;
+  const f = side === 'a' ? formA : formB;
+  const pad = (n) => String(n).padStart(2, '0');
+  return {
+    name: (side === 'a' ? state.nameA : state.nameB) || null,
+    date: `${c.input.year}-${pad(c.input.month)}-${pad(c.input.day)}`,
+    time: `${pad(c.input.hour)}:${pad(c.input.minute)}`,
+    place: f.cityLabel || null,
+    tz: (typeof c.input.tz === 'string') ? c.input.tz : null,
+    offset: (c.tzInfo && typeof c.tzInfo.offsetMin === 'number') ? c.tzInfo.offsetMin : null,
+    unknown_time: side === 'a' ? !!state.unknownA : !!state.unknownB,
+  };
+}
+
+// 社群卡一句亮點（規則式；與摘要卡同優先序，取最有代表性的一類）
+function pickHighlight(c) {
+  const chName = (id) => CH_BY_ID[id].nameZh;
+  if (c.categories.electromagnetic.length) return `我們的火花：「${chName(c.categories.electromagnetic[0])}」一人一半`;
+  if (c.categories.companionship.length) return `我們的默契：都擁有「${chName(c.categories.companionship[0])}」`;
+  if (c.categories.compromise.length) return `我們最需要翻譯的地方：「${chName(c.categories.compromise[0])}」`;
+  if (c.categories.dominance.length) return `一方穩定帶出的能量：「${chName(c.categories.dominance[0])}」`;
+  return '互補型的兩個人';
+}
+
+function buildCompositeBundle() {
+  const c = state.composite;
+  const pad = (n) => String(n).padStart(2, '0');
+  const a = state.chartA.input, b = state.chartB.input;
+  const relPart = state.relation ? `${state.relation}・` : '';
+  return {
+    composite: c,
+    nameA: nameOf('a'),
+    nameB: nameOf('b'),
+    meta: { v: 1, kind: 'composite', a: personMeta('a'), b: personMeta('b'), source: 'swanky.github.io/human-design/relationship' },
+    subText: `${relPart}${a.year}/${pad(a.month)}/${pad(a.day)} × ${b.year}/${pad(b.month)}/${pad(b.day)}`,
+    highlight: pickHighlight(c),
+    filenameBase: `hd-composite-${a.year}${pad(a.month)}${pad(a.day)}x${b.year}${pad(b.month)}${pad(b.day)}`,
+    onError: () => showError('圖卡匯出失敗，請改用瀏覽器截圖。'),
+  };
+}
+
+function onDownload(kind) {
   if (!state.composite) return;
-  const svg = renderCompositeBodygraph(state.composite, { ariaLabel: `${nameOf('a')} 與 ${nameOf('b')} 的人類圖合盤` });
-  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `合盤-${nameOf('a')}x${nameOf('b')}.svg`;
-  a.click();
-  URL.revokeObjectURL(a.href);
-  gtag('event', 'hd_relationship_download', { format: 'svg' });
+  const b = buildCompositeBundle();
+  ({ svg: exportCompositeSvg, transparent: exportCompositeTransparentPng, card: exportCompositeBrandCard, social: exportCompositeSocialCard }[kind])?.(b);
+  gtag('event', 'hd_relationship_download', { format: kind });
 }
 
 function onShare() {
@@ -255,7 +296,10 @@ function boot() {
   formB.init();
   applyCarryOver();
   on('hdc-submit', 'click', onSubmit);
-  on('hdc-download-svg', 'click', onDownloadSvg);
+  on('hdc-dl-card', 'click', () => onDownload('card'));
+  on('hdc-dl-social', 'click', () => onDownload('social'));
+  on('hdc-dl-transparent', 'click', () => onDownload('transparent'));
+  on('hdc-dl-svg', 'click', () => onDownload('svg'));
   on('hdc-share', 'click', onShare);
   on('hdc-view-merged', 'click', () => { state.view = 'merged'; renderGraph(); gtag('event', 'hd_relationship_view_toggle', { view: 'merged' }); });
   on('hdc-view-side', 'click', () => { state.view = 'side'; renderGraph(); gtag('event', 'hd_relationship_view_toggle', { view: 'side' }); });
