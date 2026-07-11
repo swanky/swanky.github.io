@@ -1,6 +1,6 @@
-# Claude Code 內訓課程 — 課程介紹資料單一真相（介紹頁・不招生）
-# 由 /education/claude-code/index.html 以 Liquid 讀取生成頁面。
-# 課綱對齊教學 repo docs/00_課程總覽.md（2026-06 版）；課綱定稿前以「課程設計公開」定位呈現。
+# 歷史 Claude Code 課綱資料，保留作內容遷移與版本對照，不再驅動公開頁面。
+# /education/claude-code/ 現為 redirect；現行商品資料在 agentic_engineering.yml。
+# 本檔課綱對齊教學 repo docs/00_課程總覽.md（2026-06 版）。
 
 name: "Claude Code 一條龍 AI 交付力"
 tagline: "不分職稱、不分前後端，讓每個人都能用 AI 一條龍獨立交付需求"

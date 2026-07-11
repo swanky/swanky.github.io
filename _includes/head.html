@@ -74,6 +74,7 @@
 
 <!-- Template Main CSS File -->
 <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+{% if page.nav_active == 'education' %}<link href="{{ '/assets/css/education.css' | relative_url }}" rel="stylesheet">{% endif %}
 
 <!-- 無 JS 兜底：AOS 進場動畫用 opacity:0 鎖住 [data-aos] 內容，靠 JS scroll 才顯現。
      無 JS（含部分 SEO/OG 截圖爬蟲不執行或不捲動）時強制顯示，避免分享卡與爬蟲看到空白頁。

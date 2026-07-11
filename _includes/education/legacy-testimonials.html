@@ -1,0 +1,16 @@
+<details class="edu-details">
+  <summary>展開全部 {{ site.data.education_legacy_testimonials | size }} 則歷史學員回饋</summary>
+  <div class="edu-details__body">
+    <div class="edu-callout edu-callout--archive">
+      <strong>歷史內容聲明：</strong>以下保留當時學員的原始陳述，包含當年的市場語境與個人投資感受。這些文字不代表目前課程承諾、投資成果或收益保證，也不構成投資建議。
+    </div>
+    <div class="edu-testimonial-grid">
+      {% for item in site.data.education_legacy_testimonials %}
+      <blockquote class="edu-testimonial">
+        <p>{{ item.quote }}</p>
+        <cite>{{ item.name }}{% if item.source_url %}・<a href="{{ item.source_url }}" target="_blank" rel="noopener noreferrer">歷史來源 <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{% endif %}</cite>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</details>

@@ -1,309 +1,147 @@
 ---
 layout: home
-title: 教育訓練
-description: 東吳大學連續 8 年授課、企業內訓 7 場。提供攝影、模特兒、Web3 與 AI 相關課程，個人小班或企業內訓皆可。
-keywords: 教育訓練,攝影課程,模特兒課程,加密貨幣教學,企業內訓,史旺基
+title: 企業培訓與個人實戰課程
+seo_title: AI・Web3 企業培訓與模特兒一對一課程
+description: 史旺基提供 Agentic Engineering、Web3 企業培訓，以及女性模特兒鏡頭表現一對一課程。企業與個人分流，課程成果、狀態與洽詢方式清楚呈現。
+keywords: 企業培訓,Agentic Engineering,AI Agent內訓,Web3企業培訓,模特兒課程,史旺基
 nav_active: education
 breadcrumbs:
   - name: 主頁
     url: /
   - name: 教育訓練
     url: /education/
-extra_css: |
-  .page-cta .btn-cta {
-    display: inline-block;
-    padding: 14px 40px;
-    border-radius: 50px;
-    border: 2px solid #E5A300;
-    background: #E5A300;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .page-cta .btn-cta:hover {
-    background: transparent;
-    color: #E5A300;
-    text-decoration: none;
-  }
-  .section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #E5A300;
-    margin-bottom: 8px;
-  }
-  .section-divider {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 10px 0 40px;
-  }
-  .badge-audience {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 50px;
-    background: #fff8e6;
-    color: #b8860b;
-    border: 1px solid #f0d77a;
-    margin-right: 4px;
-    margin-bottom: 8px;
-  }
-  .btn-card {
-    display: inline-block;
-    margin-top: auto;
-    padding: 6px 18px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #E5A300;
-    border: 1.5px solid #E5A300;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .btn-card:hover {
-    background: #E5A300;
-    color: #fff;
-    text-decoration: none;
-  }
-  .instructor-bio {
-    padding: 50px 0 30px;
-  }
-  .instructor-bio img {
-    border-radius: 12px;
-    max-width: 220px;
-  }
-  .instructor-bio h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 6px;
-  }
-  .instructor-bio .title-line {
-    font-size: 0.9rem;
-    color: #E5A300;
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  .instructor-bio p {
-    font-size: 0.92rem;
-    color: #555;
-    line-height: 1.7;
-  }
-  .stats-row {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 30px 0 10px;
-  }
-  .stats-row .stat-item {
-    text-align: center;
-  }
-  .stats-row .stat-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #E5A300;
-    display: block;
-  }
-  .stats-row .stat-label {
-    font-size: 0.82rem;
-    color: #777;
-    margin-top: 2px;
-  }
-  .inline-cta {
-    font-size: 0.92rem;
-    color: #E5A300;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .inline-cta:hover {
-    color: #b8860b;
-    text-decoration: underline;
-  }
 ---
+{% capture enterprise_subject %}[企業培訓洽詢] AI／Web3 培訓需求{% endcapture %}
+{% capture enterprise_body %}您好，我想了解企業培訓。
 
-  <main id="main">
-    <div class="section-title works">
-      <h1>教育訓練</h1>
-      <p>師大博士 × 東吳大學連續 8 年授課 × 企業內訓 7 場。從加密貨幣到模特兒培訓，結合業界實戰與學術深度——個人小班制或企業客製化方案皆可安排。</p>
-      <p class="mt-2"><a href="mailto:swanky.hsiao@gmail.com" class="inline-cta">有需求？立即來信洽詢 →</a></p>
-    </div>
+公司／單位：
+感興趣的方向（Agentic Engineering／Web3／跨主軸）：
+團隊角色：
+預計人數：
+希望時數：
+想解決的問題：
+預計日期：{% endcapture %}
+{% capture enterprise_href %}mailto:swanky.hsiao@gmail.com?subject={{ enterprise_subject | url_encode }}&body={{ enterprise_body | url_encode }}{% endcapture %}
+{% capture model_subject %}[模特兒一對一課程洽詢] 鏡頭表現與作品拍攝{% endcapture %}
+{% capture model_body %}您好，我想了解模特兒鏡頭表現一對一課程。
 
-  <!-- ======= Courses Section ======= -->
-  <section class="service-details">
-    <div class="container">
+是否已滿 18 歲（未滿 18 歲須由法定代理人共同確認）：
+想改善的鏡頭表現：
+偏好的拍攝風格：
+希望一對一或小班：
+可配合時段：{% endcapture %}
+{% capture model_href %}mailto:swanky.hsiao@gmail.com?subject={{ model_subject | url_encode }}&body={{ model_body | url_encode }}{% endcapture %}
+<main id="main" class="education-page">
+  {% include education/hero.html eyebrow="Education" title="企業培訓與個人實戰課程" lead="企業需要的是能判斷、能實作的共同方法；個人學習則要真的帶走成果。先選你的情境，再看適合的課程。" image="/education/crypto/img/swanky_crypto_class.jpg" alt="史旺基過往課程的多人實作現場" caption="自 2018 年起持續於東吳大學授課，Web3 企業內訓 7 場以上。" primary_href="#enterprise" primary_label="找企業培訓" secondary_href="#individual" secondary_label="找個人課程" %}
 
-      <p class="section-label">課程介紹 / 洽詢</p>
-      <hr class="section-divider">
-
-      <div class="row">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/claude-code/' | relative_url }}"><img src="{{ '/assets/img/illustrations/claude-code-course.svg' | relative_url }}" alt="Claude Code 一條龍 AI 交付力內訓課程示意圖"></a>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <span class="badge-audience">企業</span>
-              <h5 class="card-title"><a href="{{ '/education/claude-code/' | relative_url }}">Claude Code 內訓課程</a></h5>
-              <p class="card-text">9 堂線上實機課程設計：需求分析、規格、開發、測試到上線的一條龍 AI 交付力。課綱與教學法完整公開。</p>
-              <a href="{{ '/education/claude-code/' | relative_url }}" class="btn-card mt-auto">了解課程內容 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/modeling/' | relative_url }}"><img src="{{ '/assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg' | relative_url }}" alt="模特兒課程實拍作品照"></a>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <span class="badge-audience">個人</span>
-              <h5 class="card-title"><a href="{{ '/education/modeling/' | relative_url }}">模特兒課程</a></h5>
-              <p class="card-text">從素人晉升網美，傳授擺姿技巧、保養化妝要點、接案模式、社群經營方向。適合個人小班制。</p>
-              <a href="{{ '/education/modeling/' | relative_url }}" class="btn-card mt-auto">了解課程內容 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/crypto/' | relative_url }}"><img src="{{ '/assets/img/MG_0080_ps.jpg' | relative_url }}" alt="加密貨幣課程教學現場照片"></a>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <span class="badge-audience">個人</span><span class="badge-audience">企業</span>
-              <h5 class="card-title"><a href="{{ '/education/crypto/' | relative_url }}">Web3 課程</a></h5>
-              <p class="card-text">涵蓋 DeFi、NFT、交易策略與 Web3 趨勢。具備業界實戰與學術背景，適合個人進修或企業團隊培訓。</p>
-              <a href="{{ '/education/crypto/' | relative_url }}" class="btn-card mt-auto">了解課程內容 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/crypto/enterprise/' | relative_url }}"><img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="企業內訓區塊鏈 Web3 培訓計畫示意圖"></a>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <span class="badge-audience">企業</span>
-              <h5 class="card-title"><a href="{{ '/education/crypto/enterprise/' | relative_url }}">企業內訓方案</a></h5>
-              <p class="card-text">13 個模組、800+ 頁教材，涵蓋 DeFi、NFT、RWA、GameFi 與 Web3 策略。提供全方位培訓、精選模組與專題工作坊三種方案。</p>
-              <a href="{{ '/education/crypto/enterprise/' | relative_url }}" class="btn-card mt-auto">查看培訓方案 →</a>
-            </div>
-          </div>
-        </div>
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head edu-section-head--center">
+        <span class="edu-eyebrow">Choose Your Path</span>
+        <h2>先分情境，不把所有課程塞成一排</h2>
+        <p>企業採購與個人學習在意的事情不同。這裡先讓兩種訪客各自找到下一步，再談課綱。</p>
+      </header>
+      <div class="edu-path-grid">
+        <a class="edu-path-card edu-path-card--illustration" href="#enterprise" data-aos="fade-up">
+          <img src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="企業培訓課程與實作路徑插圖">
+          <div class="edu-path-card__body"><span>FOR TEAMS</span><h2>企業培訓</h2><p>Agentic Engineering、Web3，或依組織目標跨主軸組合。</p><b class="edu-path-card__link">查看企業方案 →</b></div>
+        </a>
+        <a class="edu-path-card" href="#individual" data-aos="fade-up" data-aos-delay="100">
+          <img src="{{ '/assets/img/portfolio/33300626336_d82723bf49_k.jpeg' | relative_url }}" alt="女性模特兒自然鏡頭表現作品">
+          <div class="edu-path-card__body"><span>FOR INDIVIDUALS</span><h2>個人學習</h2><p>女性模特兒鏡頭表現一對一課程，以及 AI、Web3 免費自學資源。</p><b class="edu-path-card__link">查看個人課程 →</b></div>
+        </a>
       </div>
-
     </div>
   </section>
 
-  <!-- ======= Instructor Bio Section ======= -->
-  <section class="instructor-bio" data-aos="fade-up">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-3 col-md-4 text-center mb-4 mb-md-0">
-          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片" loading="lazy">
-        </div>
-        <div class="col-lg-9 col-md-8">
-          <h4>講師｜史旺基 Swanky Hsiao</h4>
-          <p class="title-line">師大資工博士・東吳大學兼任助理教授・大型電信業技術主管・CSM 認證</p>
-          <p>國立臺灣師範大學資訊工程博士，現職大型電信業技術主管，東吳大學巨量資料管理學院區塊鏈課程兼任助理教授（連續第 8 年）。曾任財團法人資訊工業策進會、國際信任機器(ITM)技術研發總監。擅長 Java 企業架構、敏捷開發、區塊鏈技術應用，並為 TBSI 區塊鏈聯盟推動者。同時是國際攝影得獎者（TIME Magazine、PX3、IPA），以跨域視角讓技術課程更具深度與說服力。</p>
-        </div>
+  <section id="enterprise" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Enterprise</span><h2>企業培訓：先定義問題，再組合模組</h2><p>不是從零重做一套教材，也不是把所有熱門名詞講一遍。課程從現有模組中依角色、目標與時數組合；價格於需求確認後提供。</p></header>
+      <div class="edu-card-grid edu-card-grid--two">
+        <article class="edu-card edu-card--featured" data-aos="fade-up">
+          <img class="edu-card__image edu-card__image--contain" src="{{ '/assets/img/illustrations/claude-code-course.svg' | relative_url }}" alt="Agentic Engineering 需求到交付流程示意圖">
+          <div class="edu-badges"><span class="edu-badge">企業試辦</span><span class="edu-badge edu-badge--blue">2–3 小時／半天／9 堂</span></div>
+          <h3>Agentic Engineering 企業培訓</h3>
+          <p>需求拆解、規格、驗證、協作到交付。方法跨工具，以 Claude Code 為主要示範並補充 Codex 等 coding agent 對照。</p>
+          <a class="edu-card__link" href="{{ '/education/agentic-engineering/' | relative_url }}">查看試辦方案 →</a>
+        </article>
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="100">
+          <img class="edu-card__image edu-card__image--contain" src="{{ '/assets/img/illustrations/enterprise-training.svg' | relative_url }}" alt="Web3 企業培訓示意圖">
+          <div class="edu-badges"><span class="edu-badge">成熟模組</span><span class="edu-badge edu-badge--blue">13 模組</span></div>
+          <h3>Web3 企業培訓</h3>
+          <p>從主管判斷、RWA／穩定幣風險，到產品與技術團隊鏈上實務。13 個模組保留為能力庫，前台用三條學習路徑選擇。</p>
+          <a class="edu-card__link" href="{{ '/education/crypto/enterprise/' | relative_url }}">查看三條企業路徑 →</a>
+        </article>
       </div>
-      <div class="stats-row">
-        <div class="stat-item">
-          <span class="stat-number">8</span>
-          <span class="stat-label">年大學連續授課</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">7</span>
-          <span class="stat-label">場企業內訓</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">800+</span>
-          <span class="stat-label">頁教材</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">13</span>
-          <span class="stat-label">個課程模組</span>
-        </div>
+      <div class="edu-callout edu-callout--blue mt-4" data-aos="fade-up"><strong>可以跨主軸組合。</strong>例如用 AI 建立 RWA／Web3 研究與風險盤點流程。它是客製培訓建議，不另包裝成第三套大課。</div>
+    </div>
+  </section>
+
+  <section id="individual" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Individual</span><h2>個人學習：商品與免費資源分開</h2><p>能直接洽詢的課程，會把交付內容寫清楚；免費內容則讓你先了解我的方法，不假裝成招生頁。</p></header>
+      <div class="edu-card-grid">
+        <article class="edu-card edu-card--featured" data-aos="fade-up">
+          <img class="edu-card__image" src="{{ '/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg' | relative_url }}" alt="女性模特兒擺姿與鏡頭表現作品">
+          <div class="edu-badges"><span class="edu-badge">女性限定</span><span class="edu-badge edu-badge--blue">主推一對一</span></div>
+          <h3>模特兒鏡頭表現一對一課程</h3>
+          <p>練擺姿、鏡頭感與個人形象，課程包含正式拍攝與每人自選 5 張精修數位照片。</p>
+          <a class="edu-card__link" href="{{ '/education/modeling/' | relative_url }}">查看課程與合作人才庫說明 →</a>
+        </article>
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="80">
+          <img class="edu-card__image edu-card__image--contain" src="{{ '/assets/img/illustrations/claude-code-terminal.svg' | relative_url }}" alt="AI 學習分享終端機示意圖">
+          <div class="edu-badges"><span class="edu-badge edu-badge--muted">免費自學</span></div>
+          <h3>AI 學習分享</h3><p>Agentic Engineering、coding agent 與實際工作流文章。先讀方法與限制，再決定是否需要培訓。</p>
+          <a class="edu-card__link" href="{{ '/education/ai/' | relative_url }}">閱讀 AI 學習內容 →</a>
+        </article>
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="160">
+          <img class="edu-card__image" src="{{ '/assets/img/MG_0080_ps.jpg' | relative_url }}" alt="Web3 課程教學現場">
+          <div class="edu-badges"><span class="edu-badge edu-badge--muted">免費自學</span></div>
+          <h3>Web3 入門精選</h3><p>用白話拆解 Web3、DeFi、NFT、預言機與 AI × Crypto，重點放結構與風險，不追價格。</p>
+          <a class="edu-card__link" href="{{ '/education/crypto/web3-essentials/' | relative_url }}">閱讀 Web3 入門內容 →</a>
+        </article>
       </div>
     </div>
-  </section><!-- End Instructor Bio Section -->
+  </section>
 
-  <!-- ======= Teaching Record Section ======= -->
-  <section class="service-details section-bg" data-aos="fade-up">
-    <div class="container">
-
-      <p class="section-label mt-2">教學紀錄</p>
-      <hr class="section-divider">
-
-      <div class="row">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/crypto/soochow/' | relative_url }}"><img src="{{ '/assets/img/illustrations/soochow-professor.svg' | relative_url }}" alt="東吳大學資料科學系區塊鏈課程示意圖" loading="lazy"></a>
-            </div>
-            <div class="card-body">
-              <span class="badge-audience">大學</span>
-              <h5 class="card-title"><a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學區塊鏈課程</a></h5>
-              <p class="card-text">連續第 8 年（107–114 學年）開授，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="card-img">
-              <img src="{{ '/assets/img/illustrations/z-institute-nft.svg' | relative_url }}" alt="Z Institute NFT GameFi 實戰課程示意圖" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Z Institute 課程總講師</h5>
-              <p class="card-text">2022 年擔任「NFT & GameFi 實戰人才加速器」課程總講師，教授 NFT 發行、GameFi 機制設計與 Web3 實務應用。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="card">
-            <div class="card-img">
-              <img src="{{ '/assets/img/illustrations/campus-lecture.svg' | relative_url }}" alt="校園巡迴區塊鏈講座示意圖" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">校園講座</h5>
-              <p class="card-text">2022 年受邀至光復商工、銘傳大學、實踐資工、臺北市立大學、元智大學、台東大學等校進行區塊鏈主題講座。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="card">
-            <div class="card-img">
-              <a href="{{ '/education/ai/' | relative_url }}"><img src="{{ '/assets/img/illustrations/claude-code-terminal.svg' | relative_url }}" alt="AI 學習分享 Claude Code 實戰心得" loading="lazy"></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="{{ '/education/ai/' | relative_url }}">AI學習分享</a></h5>
-              <p class="card-text">Claude Code 實戰心得、AI 開發工具應用與設計系統探索，從工程師視角分享 AI 輔助開發的真實體驗。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <section class="edu-section edu-section--dark">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Co-host</span><h2>AI Agent × Crypto Research 合作課程</h2><p>只接受社群、場地或教育平台合作，不直接收個人名單。可安排 60–90 分鐘講座，或依受眾組合 2–6 小時工作坊。</p></header>
+      <a class="edu-btn edu-btn--light" href="{{ '/education/ai-crypto-research/' | relative_url }}">查看合作方式與學習成果</a>
     </div>
-  </section><!-- End Teaching Record Section -->
+  </section>
 
-  <!-- ======= Contact CTA ======= -->
-  <section class="why-us page-cta" data-aos="fade-up">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center py-5">
-          <h4>讓我們為您量身規劃課程方案</h4>
-          <p class="mb-2">個人小班制或企業客製化培訓皆可安排，歡迎來信討論您的培訓目標。</p>
-          <p class="text-muted small mb-4">個人學員歡迎直接來信詢問；企業內訓請簡述公司規模與課程主題，將儘速回覆客製化方案。</p>
-          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">免費諮詢課程方案</a>
-        </div>
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head edu-section-head--center"><span class="edu-eyebrow">Evidence</span><h2>資歷分開歸屬，不互相借成績</h2><p>Web3 有持續授課與企業內訓紀錄；Agentic Engineering 目前以教材與公開內容作證；模特兒課程則用實際作品與三期額滿紀錄說話。</p></header>
+      <div class="edu-metrics">
+        <div class="edu-metric"><strong>2018</strong><span>起持續於東吳授課</span></div>
+        <div class="edu-metric"><strong>7 場以上</strong><span>企業內訓</span></div>
+        <div class="edu-metric"><strong>13 模組</strong><span>Web3 教材能力庫</span></div>
+        <div class="edu-metric"><strong>3 期額滿</strong><span>模特兒課程紀錄</span></div>
       </div>
     </div>
-  </section><!-- End Contact CTA -->
+  </section>
 
-  </main><!-- End #main -->
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Teaching Record</span><h2>教學紀錄不是現行商品</h2><p>大學課程與過往加密貨幣個人班保留原始脈絡，歷史頁會明確標示目前不招生。</p></header>
+      <div class="edu-card-grid edu-card-grid--two">
+        <article class="edu-card"><h3>東吳大學區塊鏈課程</h3><p>自 2018 年起持續授課，記錄課程演進、完整大綱與教學方法。</p><a class="edu-card__link" href="{{ '/education/crypto/soochow/' | relative_url }}">查看教學紀錄 →</a></article>
+        <article class="edu-card"><h3>加密貨幣歷史課程</h3><p>交易、DeFi、NFT 舊課程與原始學員回饋完整保留，但不再作為現行招生商品。</p><a class="edu-card__link" href="{{ '/education/crypto/' | relative_url }}">查看 Web3 教育入口 →</a></article>
+      </div>
+    </div>
+  </section>
+
+  {% include education/instructor.html %}
+
+  <section class="edu-section">
+    <div class="edu-container">
+      <div class="edu-cta" data-aos="fade-up">
+        <h2>選一個真正符合你情境的下一步</h2>
+        <p>企業請提供團隊角色、預計人數與想解決的問題；個人模特兒課程請說明想改善的鏡頭表現與可配合時段。</p>
+        <div class="edu-cta__actions"><a class="edu-btn edu-btn--light" href="{{ enterprise_href }}">索取企業培訓建議</a><a class="edu-btn edu-btn--ghost" href="{{ model_href }}" style="color:#fff!important;border-color:#fff">洽詢模特兒一對一課程</a></div>
+      </div>
+    </div>
+  </section>
+</main>

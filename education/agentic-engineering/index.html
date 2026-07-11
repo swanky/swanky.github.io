@@ -1,0 +1,141 @@
+---
+layout: home
+title: Agentic Engineering 企業培訓
+seo_title: Agentic Engineering 企業培訓：跨工具 AI Agent 交付方法
+permalink: /education/agentic-engineering/
+description: Agentic Engineering 企業培訓試辦方案。從需求拆解、規格、測試到交付，核心方法跨工具，以 Claude Code 為主要示範並補充 Codex 等 coding agent 對照。
+keywords: Agentic Engineering,AI Agent企業培訓,AI開發,coding agent,Claude Code,Codex,規格驅動,軟體工程,企業內訓
+course_name: Agentic Engineering 企業培訓
+nav_active: education
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: Agentic Engineering 企業培訓
+    url: /education/agentic-engineering/
+---
+{% assign c = site.data.courses.agentic_engineering %}
+{% capture inquiry_subject %}[企業培訓洽詢] Agentic Engineering 培訓需求{% endcapture %}
+{% capture inquiry_body %}您好，我想了解 Agentic Engineering 企業培訓。
+
+公司／單位：
+團隊角色：
+預計人數：
+希望時數（2–3 小時／半天／9 堂／尚未確定）：
+想解決的問題：
+預計日期：{% endcapture %}
+{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
+<main id="main" class="education-page">
+  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline image="/assets/img/illustrations/claude-code-course.svg" alt="Agentic Engineering 企業培訓：需求、規格、驗證與交付流程示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',from_page:window.location.pathname});}" %}
+
+  <section class="edu-section edu-section--compact">
+    <div class="edu-container">
+      <div class="edu-callout edu-callout--blue" data-aos="fade-up">
+        <strong>這不是多工具功能大全。</strong> {{ c.subtitle }} 課程不要求提供公司機密、密碼、金鑰或客戶資料，實作預設使用公開或練習專案。
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">What Changes</span>
+        <h2>真正的落差，不在有沒有裝工具</h2>
+        <p>工具發下去，不代表團隊會交付。缺少規格、驗證與 review，AI 只會更快產生一批難以判斷的結果。這門課把焦點放回工程方法。</p>
+      </header>
+      <div class="edu-outcome-grid">
+        {% for item in c.principles %}
+        <article class="edu-outcome" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}">
+          <i class="{{ item.icon }}" aria-hidden="true"></i>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="formats" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">Formats</span>
+        <h2>先從適合團隊的深度開始</h2>
+        <p>試辦不等於免費測試。三種方案共用同一套方法，差別在實作深度與可驗收成果；價格於確認需求後提供。</p>
+      </header>
+      <div class="edu-card-grid">
+        {% for format in c.formats %}
+        <article class="edu-card{% if forloop.index == 2 %} edu-card--featured{% endif %}" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}">
+          <div class="edu-badges"><span class="edu-badge">{{ format.duration }}</span></div>
+          <h3>{{ format.name }}</h3>
+          <p><strong>適合：</strong>{{ format.audience }}</p>
+          <p><strong>帶走：</strong>{{ format.outcome }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">Outcomes</span>
+        <h2>完整九堂，帶走的是交付證據</h2>
+        <p>課堂產出不是練完就丟的範例，而是能回到工作繼續使用的規格、測試與 Agent 專案規則。</p>
+      </header>
+      <div class="edu-card-grid edu-card-grid--two">
+        {% for item in c.outcomes %}
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 60 }}">
+          <i class="{{ item.icon }}" style="color:#9b6c00;font-size:1.35rem" aria-hidden="true"></i>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">Curriculum</span>
+        <h2>9 堂，走完一次需求到上線</h2>
+        <p>Claude Code 是主要示範環境；課程會說清楚哪些是工程方法，哪些只是工具實作。</p>
+      </header>
+      <div class="edu-table-wrap" data-aos="fade-up">
+        <table class="edu-table">
+          <thead><tr><th>#</th><th>主題</th><th>階段</th><th>實作</th><th>帶走</th></tr></thead>
+          <tbody>
+            {% for lesson in c.lessons %}
+            <tr><td>{{ lesson.id }}</td><td><strong>{{ lesson.name }}</strong></td><td>{{ lesson.stage }}</td><td>{{ lesson.practice }}</td><td>{{ lesson.takeaway }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head edu-section-head--center">
+        <span class="edu-eyebrow">Evidence</span>
+        <h2>目前能證明的，是教材與方法已經準備好</h2>
+        <p>這是企業試辦方案，因此不拿 Web3 的授課場次冒充 AI 成效。正式授課成果會在完成後再補。</p>
+      </header>
+      <div class="edu-metrics">
+        {% for stat in c.stats %}<div class="edu-metric"><strong>{{ stat.number }}</strong><span>{{ stat.label }}</span></div>{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% include education/instructor.html extra="我關心的不是哪個工具排行榜第一，而是團隊能不能建立一套換工具後仍然成立的交付紀律。" %}
+
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header>
+      {% for item in c.faq %}<details class="edu-details"><summary>{{ item.q }}</summary><div class="edu-details__body">{{ item.a }}</div></details>{% endfor %}
+    </div>
+  </section>
+
+  {% include education/cta.html title="先說清楚團隊要解決什麼" text="來信提供團隊角色、人數、希望時數與目前卡住的問題。我會依需求建議適合的試辦深度，不先塞一套九堂課給你。" href=inquiry_href label="索取 Agentic Engineering 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_bottom',from_page:window.location.pathname});}" secondary_href="/technical/agentic-engineering/" secondary_label="先讀 Agentic Engineering 系列" %}
+</main>

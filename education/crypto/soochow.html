@@ -1,474 +1,57 @@
 ---
 layout: home
-title: 東吳大學資料科學系區塊鏈課程 | Swanky Studio 史旺基工作室
-seo_title: 東吳大學區塊鏈課程：大學兼課第 8 年｜加密貨幣・DeFi・NFT・Web3
-description: 史旺基於東吳大學資料科學系開授區塊鏈課程，自 107 學年起連續第 8 年授課，涵蓋加密貨幣、DeFi、NFT、元宇宙、Web3 與 AIGC，理論與實務並重，協助學生掌握區塊鏈核心應用與科技趨勢。
-keywords: 東吳大學區塊鏈課程,區塊鏈教學,加密貨幣,DeFi,NFT,Web3,AIGC,史旺基
-course_name: 東吳大學資料科學系區塊鏈課程
+title: 東吳大學區塊鏈課程
+seo_title: 東吳大學區塊鏈課程教學紀錄｜自 2018 年起持續授課
+description: 史旺基自 2018 年起持續於東吳大學教授區塊鏈課程。一學期 18 堂，涵蓋錢包與交易、比特幣、密碼學、以太坊、DeFi、NFT、RWA、GameFi、Web3 與預測市場，並包含鏈上實作與期末 Pitch。
+keywords: 東吳大學,區塊鏈課程,Web3教學,比特幣,以太坊,DeFi,NFT,RWA,GameFi,Polymarket,教學紀錄,史旺基
 nav_active: education
-use_purecounter: true
 breadcrumbs:
   - name: 主頁
     url: /
   - name: 教育訓練
     url: /education/
+  - name: Web3 教育
+    url: /education/crypto/
   - name: 東吳大學區塊鏈課程
     url: /education/crypto/soochow/
-extra_css: |
-  .syllabus-accordion .accordion-button {
-    font-weight: 600;
-    color: #111;
-    background-color: #fff;
-    gap: 10px;
-  }
-  .syllabus-accordion .accordion-button:not(.collapsed) {
-    color: #E5A300;
-    background-color: #fffbf0;
-    box-shadow: inset 0 -1px 0 rgba(229, 163, 0, 0.25);
-  }
-  .syllabus-accordion .accordion-button:not(.collapsed)::after {
-    filter: invert(65%) sepia(90%) saturate(600%) hue-rotate(5deg) brightness(95%);
-  }
-  .syllabus-accordion .week-icon {
-    font-size: 1.15rem;
-    color: #E5A300;
-    flex-shrink: 0;
-  }
-  .syllabus-accordion .week-num {
-    color: #E5A300;
-    min-width: 2.2em;
-    flex-shrink: 0;
-  }
-  .syllabus-accordion .accordion-body {
-    color: #444;
-    line-height: 1.75;
-    font-size: 0.95rem;
-  }
-  .syllabus-tag {
-    display: inline-block;
-    background: #fff3cd;
-    color: #7a5500;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-right: 4px;
-    margin-bottom: 4px;
-  }
 ---
+<main id="main" class="education-page">
+  {% include education/hero.html eyebrow="Teaching Record" status="持續授課・教學紀錄" title="東吳大學區塊鏈課程" lead="自 2018 年起持續授課。目前以一學期 18 堂安排，從錢包與交易一路走到智能合約、DeFi、RWA、GameFi、Web3 與預測市場，最後用鏈上實作和 Pitch 收束。" image="/assets/img/illustrations/soochow-professor.svg" alt="東吳大學區塊鏈課程教學示意圖" contain=true primary_href="#syllabus" primary_label="查看課程大綱" secondary_href="/education/crypto/" secondary_label="返回 Web3 教育" %}
 
-  <main id="main">
-    <div class="section-title works">
-      <h2>東吳大學資料科學系 ─ 區塊鏈課程</h2>
-      <p>自 107 學年起連續第 8 年開授，帶領學生從零入門，深入探索區塊鏈的現在與未來。</p>
-    </div>
-    <!-- ======= fillpic-edub Section ======= -->
-    <section class="fillpic-edub" data-aos="fade-up">
-      <div class="container">
-        <h4>歡迎預約洽詢</h4>
-        <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp">歡迎洽詢聯繫</a>
-    </div>
-    </section><!-- fillpic-edub Section -->
+  <section class="edu-section edu-section--compact"><div class="edu-container"><div class="edu-callout edu-callout--blue"><strong>這是大學教學紀錄，不是公開招生頁。</strong>目前可合作的企業培訓與研究工作坊，請回到 Web3 教育入口選擇。</div></div></section>
 
-    <!-- ======= Facts Section ======= -->
-    <section class="facts section-bg" data-aos="fade-up">
-      <div class="container">
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Course Design</span><h2>從第一次交易，到做出一場區塊鏈 Pitch</h2><p>這不是把熱門名詞排成清單。學生要先理解信任與系統結構，再實際操作錢包、交易與智能合約，最後把技術、應用與風險組成自己的提案。</p></header><div class="edu-outcome-grid">
+      <article class="edu-outcome"><i class="bi bi-diagram-3" aria-hidden="true"></i><h3>建立技術地圖</h3><p>從比特幣、密碼學與以太坊，理解 Web3 系統如何建立可驗證的信任。</p></article>
+      <article class="edu-outcome"><i class="bi bi-mouse" aria-hidden="true"></i><h3>完成鏈上實作</h3><p>操作錢包與交易，並以 Remix、MetaMask 在 Sepolia 部署 ERC-20 合約。</p></article>
+      <article class="edu-outcome"><i class="bi bi-easel" aria-hidden="true"></i><h3>提出應用 Pitch</h3><p>選擇真實問題，整理使用者、區塊鏈價值、技術設計與主要風險。</p></article>
+    </div></div>
+  </section>
 
-        <div class="row counters mb-4">
+  <section id="syllabus" class="edu-section">
+    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Syllabus</span><h2>目前課程主題地圖</h2><p>以下依 2026 年教材倉儲中的 14 份主題簡報整理；實際順序、案例與平台會隨學期進度更新，不把快速變動的產品寫成永久課表。</p></header><p class="edu-table-hint">手機可左右滑動查看完整表格。</p><div class="edu-table-wrap"><table class="edu-table"><thead><tr><th>階段</th><th>主題</th><th>實際涵蓋內容</th></tr></thead><tbody>
+      <tr><td>01</td><td><strong>課程導覽與區塊鏈基礎</strong></td><td>Web3、加密貨幣、區塊鏈概念與課程問題意識</td></tr>
+      <tr><td>02</td><td><strong>錢包、交易所與第一筆交易</strong></td><td>私鑰、託管、自主管理、MetaMask、交易流程與鏈上查詢</td></tr>
+      <tr><td>03</td><td><strong>元宇宙、NFT 與迷因幣</strong></td><td>數位所有權、代幣標準、社群共識與 ERC-20 發行實作</td></tr>
+      <tr><td>04</td><td><strong>比特幣與密碼學</strong></td><td>區塊、共識、挖礦、雜湊、數位簽章與資訊安全</td></tr>
+      <tr><td>05</td><td><strong>以太坊與智能合約</strong></td><td>EVM、DApp、合約執行，以及 Bitcoin、Ethereum、Solana 的差異</td></tr>
+      <tr><td>06</td><td><strong>DeFi 基礎與進階</strong></td><td>穩定幣、DEX、借貸、流動性、模組化金融與協議風險</td></tr>
+      <tr><td>07</td><td><strong>RWA 與 GameFi</strong></td><td>現實世界資產上鏈、鏈上與實體權利連結、遊戲經濟設計</td></tr>
+      <tr><td>08</td><td><strong>Web3 與預測市場</strong></td><td>讀寫擁有、網路權力、Polymarket、群眾智慧與市場風險</td></tr>
+    </tbody></table></div></div>
+  </section>
 
-          <div class="col-lg-4 col-4 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-            <p>連續授課年數</p>
-          </div>
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Teaching Method</span><h2>原理、操作與提案三條線一起走</h2><p>現在的教材不是一次寫死：已教授內容留存，後續簡報持續更新；平台操作也會回到可驗證的公開測試環境。</p></header><div class="edu-card-grid">
+      <article class="edu-card"><h3>原理與案例</h3><p>把信任、共識、金鑰、交易、智能合約與經濟模型講清楚，再用當期案例檢查。</p></article>
+      <article class="edu-card"><h3>公開環境實作</h3><p>從錢包與區塊鏈瀏覽器，到 Remix、MetaMask、Sepolia 合約部署，留下可查證結果。</p></article>
+      <article class="edu-card"><h3>期末創業 Pitch</h3><p>不只介紹一個幣；要說清楚問題、使用者、區塊鏈為何必要，以及失敗風險。</p></article>
+    </div></div>
+  </section>
 
-          <div class="col-lg-4 col-4 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-            <p>課程週數</p>
-          </div>
+  <section class="edu-section"><div class="edu-container"><header class="edu-section-head edu-section-head--center"><span class="edu-eyebrow">Continuity</span><h2>自 2018 年起持續授課</h2><p>目前教材倉儲包含 14 份主題簡報、超過 1,000 頁內容；案例會更新，技術判斷與實作紀律持續保留。</p></header><div class="edu-metrics"><div class="edu-metric"><strong>2018</strong><span>開始授課</span></div><div class="edu-metric"><strong>18 堂</strong><span>一學期課程安排</span></div><div class="edu-metric"><strong>1,000+ 頁</strong><span>目前主題教材</span></div><div class="edu-metric"><strong>實作＋Pitch</strong><span>課程成果</span></div></div></div></section>
 
-          <div class="col-lg-4 col-4 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-            <p>核心主題領域</p>
-          </div>
+  {% include education/instructor.html extra="大學課程讓我每年都得重新檢查一次：哪些概念仍然成立，哪些案例已經變成歷史。這也是教材持續更新的原因。" %}
 
-        </div>
-
-        <div class="row facts-text">
-        <div class="col-lg-4 col-12">
-          <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" alt="史旺基蕭宇程的肖像照片">
-        </div>
-        <div class="col-lg-8 col-12 text-left">
-          <h4>講師 / 史旺基 (Swanky Hsiao)</h4>
-          <h5>講師介紹</h5>
-            <p>
-              本名蕭宇程（Hsiao Yu-Cheng），巨蟹座Ａ型，國立臺灣師範大學資訊工程博士。
-              擅長 Java 程式設計與企業級服務架構、物件導向程式設計與架構、敏捷方法與敏捷軟體開發、
-              資料科學應用規畫、成長駭客、區塊鏈技術應用規畫及研發。曾執行大型雲端物聯網系統、
-              工業物聯網資料科學系統、邊緣資料中心基礎設施提案相關計畫。
-              現職大型電信業技術主管，東吳大學巨量資料管理學院區塊鏈課程兼任助理教授（第 8 年）。曾任職財團法人資訊工業策進會、國際信任機器（ITM）技術研發總監。
-            </p>
-
-          <h5>課程簡介</h5>
-            <p>
-              本課程以區塊鏈與加密貨幣基礎知識入門，深入探討當前及未來潛在應用。結合實作經驗，讓同學全面理解區塊鏈相關應用，並掌握科技趨勢。涵蓋內容包括：加密貨幣與區塊鏈概念、去中心化金融（DeFi）、非同質化代幣（NFT）、元宇宙、Web3 及 AIGC 等。
-            </p>
-            <p>
-              <em>This course begins with fundamental knowledge of blockchain and cryptocurrency, delving deeply into current and potential future applications. By integrating practical experience, students will gain a comprehensive understanding of blockchain-related applications and grasp emerging technology trends. Topics covered include: concepts of cryptocurrency and blockchain, decentralized finance (DeFi), non-fungible tokens (NFTs), the metaverse, Web3, and AI-generated content (AIGC).</em>
-            </p>
-        </div>
-      </div>
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section class="edu-services" id="edu-services">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bi bi-layers"></i></div>
-              <h4 class="title">從基礎到前沿</h4>
-              <p class="description">課程由淺入深，從加密貨幣與區塊鏈基礎概念出發，逐步深入 DeFi、NFT、GameFi、RWA、Web3 與 AIGC，
-                幫助同學建立完整的 Web3 知識地圖，掌握區塊鏈產業全貌。</p>
-            </div>
-          </div>
-
-          <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bi bi-tools"></i></div>
-              <h4 class="title">理論與實務並重</h4>
-              <p class="description">每堂課結合概念講解與實際操作演練，包含錢包設定、交易所操作、智能合約互動等實戰體驗，
-                讓同學不只懂理論，更能親身理解區塊鏈技術如何運作於真實世界。</p>
-            </div>
-          </div>
-
-          <div class="col-md-12 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bi bi-trophy"></i></div>
-              <h4 class="title">Pitch Battle 期末挑戰</h4>
-              <p class="description">課程以「創新 Pitch Battle」作為壓軸，鼓勵同學將所學融合創意，
-                提出自己的區塊鏈應用提案並上台簡報，訓練思維整合與表達能力，為進入 Web3 產業做好準備。</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= fillpic-noani-edub Section ======= -->
-    <section class="fillpic-noani-edub" data-aos="fade-up">
-      <div class="container">
-    </div>
-    </section><!-- fillpic-noani-edub Section -->
-
-    <!-- ======= Syllabus Section ======= -->
-    <section class="facts section-bg" data-aos="fade-up">
-      <div class="container">
-        <div class="section-title">
-          <h2>課程大綱</h2>
-          <p>共 14 週，涵蓋區塊鏈核心技術與最新應用趨勢。</p>
-        </div>
-
-        <div class="accordion syllabus-accordion" id="syllabusAccordion">
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h01">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c01" aria-expanded="false" aria-controls="c01">
-                <i class="bi bi-lightning-charge week-icon"></i>
-                <span class="week-num">01.</span>
-                課程導覽 &amp; 區塊鏈大冒險啟航
-              </button>
-            </h2>
-            <div id="c01" class="accordion-collapse collapse" aria-labelledby="h01" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                從 Web1（唯讀）→ Web2（讀寫）→ Web3（讀寫擁有）的網路演進脈絡切入，認識課程架構與學習目標。介紹代幣（Token）分類——NFT 與同質化代幣、穩定幣的基本概念，並以區塊鏈六層技術架構（數據層、網路層、共識層、激勵層、合約層、應用層）建立完整技術地圖。搭配 Bitcoin Pizza Day 經典案例與 Slido 互動問答，開啟 14 週的知識冒險旅程。
-                <br><br>
-                <span class="syllabus-tag">Web1→Web2→Web3</span>
-                <span class="syllabus-tag">代幣分類</span>
-                <span class="syllabus-tag">區塊鏈架構</span>
-                <span class="syllabus-tag">比特幣</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h02">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c02" aria-expanded="false" aria-controls="c02">
-                <i class="bi bi-wallet2 week-icon"></i>
-                <span class="week-num">02.</span>
-                加密貨幣錢包與交易所大解密！實戰你的第一筆交易
-              </button>
-            </h2>
-            <div id="c02" class="accordion-collapse collapse" aria-labelledby="h02" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                從零開始設定加密貨幣錢包，理解私鑰、公鑰與 BIP39 助記詞的安全機制，比較託管 / 非託管、冷 / 熱錢包的差異與風險。手把手操作 MaiCoin 與 Binance 完成人生第一筆交易，學習跨平台入金流程。深入比較中心化交易所（CEX）與去中心化交易所（DEX），並以《區塊鏈黑暗森林自救手冊》建立安全意識——D.Y.O.R.。
-                <br><br>
-                <span class="syllabus-tag">冷錢包 / 熱錢包</span>
-                <span class="syllabus-tag">私鑰管理</span>
-                <span class="syllabus-tag">CEX vs DEX</span>
-                <span class="syllabus-tag">DYOR</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h03">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c03" aria-expanded="false" aria-controls="c03">
-                <i class="bi bi-globe2 week-icon"></i>
-                <span class="week-num">03.</span>
-                超越區塊鏈：我們正在前往元宇宙！
-              </button>
-            </h2>
-            <div id="c03" class="accordion-collapse collapse" aria-labelledby="h03" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                探索元宇宙（Metaverse）的起源與定義——Matthew Ball 七大核心要素、Jon Radoff 七層價值鏈架構。體驗 Decentraland、The Sandbox 等平台，認識虛擬土地、Avatar 經濟與 VoxEdit 創作工具。深入剖析 RTFKT、CloneX 等 NFT 時尚品牌的虛實整合案例，並以 Meta 策略轉向（VR → AI 眼鏡 / AR）反思元宇宙產業的下一步。
-                <br><br>
-                <span class="syllabus-tag">元宇宙</span>
-                <span class="syllabus-tag">Decentraland</span>
-                <span class="syllabus-tag">The Sandbox</span>
-                <span class="syllabus-tag">VR/AR</span>
-                <span class="syllabus-tag">RTFKT</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h04">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c04" aria-expanded="false" aria-controls="c04">
-                <i class="bi bi-palette week-icon"></i>
-                <span class="week-num">04.</span>
-                NFT 不只是 JPG？揭秘 NFT 技術與無限應用
-              </button>
-            </h2>
-            <div id="c04" class="accordion-collapse collapse" aria-labelledby="h04" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                深入解析 NFT 技術原理——ERC-721 / ERC-1155 標準、智能合約、tokenURI 與 IPFS 鏈上元數據架構。透過 CryptoPunks、BAYC、CloneX/RTFKT 經典專案剖析空投機制、品牌 IP 經營與 Phygital（虛實整合）商業模式。涵蓋 NFT 交易平台（OpenSea、Blur）與創作者生態，並以 pplpleasr、IOYOI 等台灣藝術家案例連結在地產業。
-                <br><br>
-                <span class="syllabus-tag">ERC-721</span>
-                <span class="syllabus-tag">BAYC</span>
-                <span class="syllabus-tag">Phygital</span>
-                <span class="syllabus-tag">NFT 交易平台</span>
-                <span class="syllabus-tag">數位藝術</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h05">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c05" aria-expanded="false" aria-controls="c05">
-                <i class="bi bi-emoji-laughing week-icon"></i>
-                <span class="week-num">05.</span>
-                迷因幣完全解析！鏈上創世神實戰體驗
-              </button>
-            </h2>
-            <div id="c05" class="accordion-collapse collapse" aria-labelledby="h05" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                從 Richard Dawkins 的迷因理論到 DOGE、PEPE、$PNUT 等經典案例，理解迷因幣的文化基因與社群驅動的炒作週期。分析投資熱度四大驅動因子與風險警示，並透過 Phantom 錢包在 Solana 鏈上實際操作 Pump.fun 平台，親手體驗代幣發行的完整流程，搭配小組迷因幣 Pitch 行銷實戰演練。
-                <br><br>
-                <span class="syllabus-tag">Meme Coin</span>
-                <span class="syllabus-tag">Pump.fun</span>
-                <span class="syllabus-tag">Solana</span>
-                <span class="syllabus-tag">DOGE</span>
-                <span class="syllabus-tag">PEPE</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h06">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c06" aria-expanded="false" aria-controls="c06">
-                <i class="bi bi-cpu week-icon"></i>
-                <span class="week-num">06.</span>
-                比特幣如何運作？揭開區塊鏈的信任真理之門
-              </button>
-            </h2>
-            <div id="c06" class="accordion-collapse collapse" aria-labelledby="h06" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                深入比特幣的完整運作流程——從創世區塊（Genesis Block）的誕生、UTXO 交易模型、工作量證明（PoW）挖礦機制到 P2P 廣播網路。導讀比特幣白皮書十大重點，涵蓋去除中間人、雙花防禦、挖礦激勵與隱私機制。搭配比特大陸產業案例、Blockchain Demo 互動演示與四川礦場實拍影片，體驗區塊鏈的信任真理。
-                <br><br>
-                <span class="syllabus-tag">比特幣白皮書</span>
-                <span class="syllabus-tag">UTXO</span>
-                <span class="syllabus-tag">PoW 共識</span>
-                <span class="syllabus-tag">創世區塊</span>
-                <span class="syllabus-tag">挖礦</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h07">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c07" aria-expanded="false" aria-controls="c07">
-                <i class="bi bi-shield-lock week-icon"></i>
-                <span class="week-num">07.</span>
-                暗號、解碼與數字安全：密碼學的神奇世界
-              </button>
-            </h2>
-            <div id="c07" class="accordion-collapse collapse" aria-labelledby="h07" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                從古典密碼學的斯巴達密碼棒、凱撒密碼到二戰 Enigma 密碼機，走過密碼學的歷史長河。深入學習 CIA 三要素、對稱 / 非對稱加密（AES、RSA）、SHA-256 雜湊函數與數位簽章，理解它們如何共同構築區塊鏈的安全基礎。延伸探討量子密碼與量子電腦對未來安全性的影響，搭配線上 Hash Demo 與凱撒密碼解密練習。
-                <br><br>
-                <span class="syllabus-tag">密碼學</span>
-                <span class="syllabus-tag">對稱 / 非對稱加密</span>
-                <span class="syllabus-tag">Hash Function</span>
-                <span class="syllabus-tag">量子密碼</span>
-                <span class="syllabus-tag">資訊安全</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h08">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c08" aria-expanded="false" aria-controls="c08">
-                <i class="bi bi-file-code week-icon"></i>
-                <span class="week-num">08.</span>
-                以太坊 101：智能合約與未來金融的開端
-              </button>
-            </h2>
-            <div id="c08" class="accordion-collapse collapse" aria-labelledby="h08" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                從 Vitalik Buterin 的成長歷程認識以太坊的誕生，理解其作為圖靈完備去中心化計算平台的設計哲學與 EVM 架構。以投票 DApp 為實例，完整拆解前端 Web3.js 與區塊鏈互動的八步交易流程。涵蓋以太坊技術組件（Merkle Patricia Tree、Ethash）、ETH 貨幣單位體系，以及 Ethereum 2.0 從 PoW 邁向 PoS 的升級路線圖。
-                <br><br>
-                <span class="syllabus-tag">Ethereum</span>
-                <span class="syllabus-tag">智能合約</span>
-                <span class="syllabus-tag">DApp</span>
-                <span class="syllabus-tag">EVM</span>
-                <span class="syllabus-tag">Ethereum 2.0</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h09">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c09" aria-expanded="false" aria-controls="c09">
-                <i class="bi bi-bank week-icon"></i>
-                <span class="week-num">09.</span>
-                DeFi 來了！顛覆傳統金融的去中心化革命
-              </button>
-            </h2>
-            <div id="c09" class="accordion-collapse collapse" aria-labelledby="h09" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                認識去中心化金融（DeFi）的定義、四大要件與三大特徵，透過 DefiLlama 掌握 TVL（總鎖倉量）市場脈動。深入學習穩定幣七大分類、MakerDAO CDP 抵押借貸機制，以及 AMM 自動做市商與訂單簿模型的對比。涵蓋 DeFi 七大應用類型與 CeFi 收益率比較，並實際操作 Compound 借貸與 Uniswap 交易。
-                <br><br>
-                <span class="syllabus-tag">DeFi</span>
-                <span class="syllabus-tag">穩定幣</span>
-                <span class="syllabus-tag">MakerDAO</span>
-                <span class="syllabus-tag">AMM</span>
-                <span class="syllabus-tag">DEX</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h10">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c10" aria-expanded="false" aria-controls="c10">
-                <i class="bi bi-bar-chart-line week-icon"></i>
-                <span class="week-num">10.</span>
-                DeFi 進階攻略：實戰入門與應用指南
-              </button>
-            </h2>
-            <div id="c10" class="accordion-collapse collapse" aria-labelledby="h10" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                深入剖析三大 DeFi 核心協議——MakerDAO（DAI 穩定幣抵押借貸）、Aave（動態利率借貸與閃電貸）、Uniswap（恆定乘積公式 x*y=k）。透過大量數值計算練習掌握抵押率、清算流程、利率換算與無常損失（Impermanent Loss）。總覽 DeFi 協議完整分類——質押、借貸、收益耕作、迷因幣，並以四大安全性評估指標建立風險判斷框架。
-                <br><br>
-                <span class="syllabus-tag">MakerDAO</span>
-                <span class="syllabus-tag">Aave</span>
-                <span class="syllabus-tag">Uniswap</span>
-                <span class="syllabus-tag">無常損失</span>
-                <span class="syllabus-tag">協議安全</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h11">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c11" aria-expanded="false" aria-controls="c11">
-                <i class="bi bi-building week-icon"></i>
-                <span class="week-num">11.</span>
-                RWA 實體資產代幣化：鏈上與現實世界的橋樑
-              </button>
-            </h2>
-            <div id="c11" class="accordion-collapse collapse" aria-labelledby="h11" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                探討股票、債券、房地產等實體資產（Real World Assets）如何透過代幣化上鏈流通。以 Backed Finance（xStocks）與 Ondo Finance 為例，深入比較鏈上美股與傳統券商的差異，引用麥肯錫 2030 年預測與 BlackRock CEO 對代幣化的戰略觀點。後半段延伸至 Solana 生態系與 Solana Mobile（Saga / Seeker），探索區塊鏈如何透過手機作為 Web3 的實體入口。
-                <br><br>
-                <span class="syllabus-tag">RWA</span>
-                <span class="syllabus-tag">資產代幣化</span>
-                <span class="syllabus-tag">鏈上美股</span>
-                <span class="syllabus-tag">Solana</span>
-                <span class="syllabus-tag">Solana Mobile</span>
-                <br><br>
-                📖 延伸閱讀：<a href="{{ '/technical/rwa/' | relative_url }}" style="color:#8B5E00; font-weight:600;">RWA 代幣化系列</a>——黃金、債券、合規標準與全球監管的深度解析；入門可先看 <a href="{{ '/education/crypto/web3-essentials/' | relative_url }}" style="color:#2b6cb0; font-weight:600;">Web3 入門精選</a>。
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h12">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c12" aria-expanded="false" aria-controls="c12">
-                <i class="bi bi-controller week-icon"></i>
-                <span class="week-num">12.</span>
-                GameFi 遊戲經濟架構革命：玩賺經濟來了！
-              </button>
-            </h2>
-            <div id="c12" class="accordion-collapse collapse" aria-labelledby="h12" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                解析 Play-to-Earn 與 Move-to-Earn 模式的代幣雙幣經濟設計、NFT 道具所有權與 DAO 治理架構。以 Axie Infinity、Aavegotchi、STEPN、MapleStory Universe 四大案例深度剖析玩賺模型的成敗——從菲律賓月入 4.7 萬的巔峰到 Ronin Network 6.2 億美元駭客事件的警示。透過 STEPN 入門實操與 Aavegotchi GHST 入金練習，體驗 GameFi 完整生態。
-                <br><br>
-                <span class="syllabus-tag">Play-to-Earn</span>
-                <span class="syllabus-tag">Move-to-Earn</span>
-                <span class="syllabus-tag">Axie Infinity</span>
-                <span class="syllabus-tag">STEPN</span>
-                <span class="syllabus-tag">DAO 治理</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h13">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c13" aria-expanded="false" aria-controls="c13">
-                <i class="bi bi-diagram-3 week-icon"></i>
-                <span class="week-num">13.</span>
-                Web3：從「讀寫擁有」開啟你的未來網路世界
-              </button>
-            </h2>
-            <div id="c13" class="accordion-collapse collapse" aria-labelledby="h13" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                以克里斯．狄克森《Read Write Own》為核心教材，系統性導讀 Web3 的理論根基。深入比較協定網路、企業網路與區塊鏈網路三種架構，剖析企業網路的「韭菜循環」與高抽成率問題。理解代幣如何同時擔任經濟獎勵與治理權杖，辨析「科技宅精神 vs 賭徒歪風」兩種文化，展望 AI 時代創作者的全新社會契約與區塊鏈的 iPhone 時刻。
-                <br><br>
-                <span class="syllabus-tag">Read-Write-Own</span>
-                <span class="syllabus-tag">代幣經濟學</span>
-                <span class="syllabus-tag">創作者經濟</span>
-                <span class="syllabus-tag">去中心化治理</span>
-                <span class="syllabus-tag">抽成率</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="h14">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c14" aria-expanded="false" aria-controls="c14">
-                <i class="bi bi-trophy week-icon"></i>
-                <span class="week-num">14.</span>
-                期末大挑戰！創新 Pitch Battle
-              </button>
-            </h2>
-            <div id="c14" class="accordion-collapse collapse" aria-labelledby="h14" data-bs-parent="#syllabusAccordion">
-              <div class="accordion-body">
-                以 Pitch Battle 競賽形式呈現個人或小組（1-3 人）的區塊鏈創新應用提案，每組限時 8 分鐘上台簡報。提案須涵蓋四大面向：問題說明、區塊鏈解決方案（對應六大技術特性）、優劣分析與商業模式。全班採「人人是評審」投票制度，將整學期所學融合創意，訓練思維整合、表達溝通與創業提案能力。
-                <br><br>
-                <span class="syllabus-tag">創業 Pitch</span>
-                <span class="syllabus-tag">區塊鏈應用</span>
-                <span class="syllabus-tag">商業模式</span>
-                <span class="syllabus-tag">成果展示</span>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- End Accordion -->
-
-      </div>
-    </section><!-- End Syllabus Section -->
-
-  </main><!-- End #main -->
+  <section class="edu-section edu-section--dark"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">For Organizations</span><h2>企業需要的不是把 18 堂大學課照搬</h2><p>企業培訓會依主管、風險合規或產品技術角色重新組合，只取符合組織目標的內容與練習。</p></header><a class="edu-btn edu-btn--light" href="{{ '/education/crypto/enterprise/' | relative_url }}">查看 Web3 企業培訓</a></div></section>
+</main>

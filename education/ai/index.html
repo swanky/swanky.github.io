@@ -1,42 +1,53 @@
 ---
 layout: home
-title: AI學習分享 - Swanky Studio 史旺基工作室
-description: >
-  史旺基工作室 AI 學習分享專區，收錄 Claude Code 實戰心得、AI 開發工具應用與設計系統探索文章，從工程師視角分享 AI 輔助開發的真實體驗。
-keywords: Claude Code,AI工具,設計系統,AI開發,Claude,史旺基
+title: AI 學習分享
+seo_title: Agentic Engineering 與 AI 開發實戰文章
+description: 史旺基的 AI 學習分享，整理 Agentic Engineering、coding agent、規格、測試、治理與 Claude Code 實戰。這裡是免費內容入口，企業培訓另有獨立商品頁。
+keywords: Agentic Engineering,AI開發,coding agent,Claude Code,Codex,規格驅動,AI學習,史旺基
 nav_active: education
 breadcrumbs:
   - name: 主頁
     url: /
   - name: 教育訓練
     url: /education/
-  - name: AI學習分享
+  - name: AI 學習分享
     url: /education/ai/
 ---
+<main id="main" class="education-page">
+  {% include education/hero.html eyebrow="Free Learning" status="免費自學資源" title="AI 學習分享" lead="我不太想再做一份工具快捷鍵大全。這裡整理的是規格、驗證、治理與交付：工具換了，仍然能留下來的那套方法。" image="/assets/img/illustrations/claude-code-terminal.svg" alt="AI coding agent 終端機工作流示意圖" contain=true primary_href="/technical/agentic-engineering/" primary_label="從 Agentic Engineering 系列開始" secondary_href="#latest" secondary_label="看最新文章" %}
 
-  <main id="main">
-    <div class="section-title works">
-      <h2>AI學習分享</h2>
-      <p>Claude Code 實戰心得、AI 開發工具應用與設計系統探索</p>
-    </div>
+  <section class="edu-section edu-section--compact">
+    <div class="edu-container"><div class="edu-callout edu-callout--blue"><strong>免費內容與企業培訓分開。</strong>這一頁讓你先讀我的方法與限制；要替團隊安排 2–3 小時、半天或 9 堂培訓，再前往 Agentic Engineering 商品頁。</div></div>
+  </section>
 
-  <section class="service-details">
-    <div class="container">
-
-      <div class="hub-banner" data-aos="fade-up">
-        <div class="hub-banner-text">
-          <h3>Claude Code 內訓課程</h3>
-          <p>這些實戰心得已經整理成一門 9 堂的課——課綱與教學法完整公開。</p>
-        </div>
-        <a href="{{ '/education/claude-code/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'claude_code_course',from_page:'{{ page.url }}'});}">看課程設計 &rarr;</a>
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Learning Map</span><h2>先看結構，再追工具</h2><p>文章分成三層：心智模型、工程方法、實戰工作流。Claude Code 是重要案例，但不是全部。</p></header>
+      <div class="edu-card-grid">
+        <article class="edu-card"><div class="edu-badges"><span class="edu-badge">01</span></div><h3>心智模型</h3><p>AI 放大的不只是速度，也放大需求拆解、品質判斷與管理方式的差異。</p></article>
+        <article class="edu-card"><div class="edu-badges"><span class="edu-badge">02</span></div><h3>工程方法</h3><p>規格、設計邊界、測試與文件，讓「生成得快」不至於變成「收拾得久」。</p></article>
+        <article class="edu-card"><div class="edu-badges"><span class="edu-badge">03</span></div><h3>實戰工作流</h3><p>Claude Code、Codex、Skills、MCP 與多 Agent 協作，放回完整交付流程裡理解。</p></article>
       </div>
-
-      <div class="row">
-        {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
-        {% include article-card-grid.html articles=sorted_articles %}
-      </div>
-
     </div>
   </section>
 
-  </main><!-- End #main -->
+  <section id="latest" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Latest</span><h2>近期 AI 實戰文章</h2><p>先讀一篇真的遇過的問題，再決定要不要接受工具商替你定義工作方式。</p></header>
+      <div class="edu-card-grid">
+        {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
+        {% for article in sorted_articles limit: 9 %}
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
+          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy">{% endif %}
+          <div class="edu-badges"><span class="edu-badge edu-badge--muted">{{ article.date | date: "%Y-%m-%d" }}</span></div>
+          <h3>{{ article.title }}</h3>
+          {% if article.description %}<p>{{ article.description }}</p>{% endif %}
+          <a class="edu-card__link" href="{{ article.url | relative_url }}">閱讀文章 →</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--dark"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">For Teams</span><h2>想把方法帶進團隊？</h2><p>Agentic Engineering 企業培訓目前以試辦方案開放洽詢。方法跨工具，Claude Code 作主要示範環境。</p></header><a class="edu-btn edu-btn--light" href="{{ '/education/agentic-engineering/' | relative_url }}">查看企業試辦方案</a></div></section>
+</main>

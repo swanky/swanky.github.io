@@ -1,0 +1,22 @@
+<section class="edu-hero" data-aos="fade-up">
+  <div class="edu-container edu-hero__grid">
+    <div>
+      {% if include.status %}<span class="edu-hero__status">{{ include.status }}</span>{% endif %}
+      {% if include.eyebrow %}<span class="edu-eyebrow">{{ include.eyebrow }}</span>{% endif %}
+      <h1>{{ include.title }}</h1>
+      <p class="edu-hero__lead">{{ include.lead }}</p>
+      {% if include.primary_href or include.secondary_href %}
+      <div class="edu-hero__actions">
+        {% if include.primary_href %}<a class="edu-btn" href="{{ include.primary_href }}"{% if include.analytics %} onclick="{{ include.analytics }}"{% endif %}>{{ include.primary_label }}</a>{% endif %}
+        {% if include.secondary_href %}<a class="edu-btn edu-btn--ghost" href="{{ include.secondary_href }}">{{ include.secondary_label }}</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% if include.image %}
+    <figure class="edu-hero__media{% if include.contain %} edu-hero__media--contain{% endif %}">
+      <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}">
+      {% if include.caption %}<figcaption class="edu-hero__caption">{{ include.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<section class="edu-section">
+  <div class="edu-container">
+    <div class="edu-cta" data-aos="fade-up">
+      <h2>{{ include.title }}</h2>
+      <p>{{ include.text }}</p>
+      <div class="edu-cta__actions">
+        <a class="edu-btn edu-btn--light" href="{{ include.href }}"{% if include.analytics %} onclick="{{ include.analytics }}"{% endif %}>{{ include.label }}</a>
+        {% if include.secondary_href %}<a class="edu-btn edu-btn--ghost" href="{{ include.secondary_href }}">{{ include.secondary_label }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
