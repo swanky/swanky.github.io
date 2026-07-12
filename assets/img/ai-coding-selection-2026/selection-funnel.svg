@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">企業 AI Coding 選型漏斗</title>
+  <desc id="desc">先用資料、身分、權限、稽核與平台條件淘汰不合格工具，再以真實任務 pilot 比較品質、修正時間與成本，最後形成核准組合。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eef6ff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity=".14"/></filter></defs>
+  <rect width="1200" height="660" rx="26" fill="url(#bg)"/>
+  <g font-family="Arial, 'Noto Sans TC', sans-serif">
+    <text x="70" y="72" fill="#0f172a" font-size="36" font-weight="700">企業選型不是排行榜，是一個淘汰與驗證漏斗</text>
+    <text x="70" y="108" fill="#475569" font-size="20">先問能不能安全使用，再問工程師喜不喜歡。</text>
+    <g filter="url(#s)">
+      <path d="M90 160H1110L1010 270H190Z" fill="#0f766e"/>
+      <path d="M210 290H990L900 400H300Z" fill="#2563eb"/>
+      <path d="M330 420H870L780 530H420Z" fill="#6d28d9"/>
+      <path d="M450 550H750L705 620H495Z" fill="#b45309"/>
+    </g>
+    <text x="600" y="202" text-anchor="middle" fill="#fff" font-size="27" font-weight="700">Knockout gates</text>
+    <text x="600" y="236" text-anchor="middle" fill="#ccfbf1" font-size="18">資料邊界｜SSO／撤權｜sandbox｜network｜audit｜目標 OS</text>
+    <text x="600" y="335" text-anchor="middle" fill="#fff" font-size="27" font-weight="700">同一批真實任務 Pilot</text>
+    <text x="600" y="369" text-anchor="middle" fill="#dbeafe" font-size="18">固定 repo、權限、測試與驗收；比較兩個 harness／模型家族</text>
+    <text x="600" y="465" text-anchor="middle" fill="#fff" font-size="27" font-weight="700">Accepted-task economics</text>
+    <text x="600" y="499" text-anchor="middle" fill="#ede9fe" font-size="18">品質、人工修正、重試、等待、回滾與治理一起算</text>
+    <text x="600" y="588" text-anchor="middle" fill="#fff" font-size="25" font-weight="700">核准組合＋退出方案</text>
+  </g>
+</svg>
