@@ -14,17 +14,11 @@
     </div>
     {% if include.image %}
     <figure class="edu-hero__media{% if include.contain %} edu-hero__media--contain{% endif %}">
-      <div class="edu-hero__visuals{% if include.secondary_image %} edu-hero__visuals--collage{% endif %}">
+      <div class="edu-hero__visuals">
         <div class="edu-hero__primary">
           <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}" loading="eager" fetchpriority="high" decoding="async">
           {% if include.media_label %}<span class="edu-media-label">{{ include.media_label }}</span>{% endif %}
         </div>
-        {% if include.secondary_image %}
-        <div class="edu-hero__secondary">
-          <img src="{{ include.secondary_image | relative_url }}" alt="{{ include.secondary_alt }}" loading="eager" decoding="async">
-          {% if include.secondary_media_label %}<span class="edu-media-label">{{ include.secondary_media_label }}</span>{% endif %}
-        </div>
-        {% endif %}
       </div>
       {% if include.caption %}<figcaption class="edu-hero__caption">{{ include.caption }}</figcaption>{% endif %}
     </figure>
