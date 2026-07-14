@@ -26,7 +26,7 @@
 .ct-section-head { max-width: 790px; margin-bottom: 38px; }
 .ct-section-head--center { margin-right: auto; margin-left: auto; text-align: center; }
 .ct-section-head--center .ct-eyebrow { justify-content: center; }
-.ct-section-head h2 { margin: 0 0 14px; color: inherit; font-size: clamp(2rem, 4.2vw, 3.35rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.08; }
+.ct-section-head h1, .ct-section-head h2 { margin: 0 0 14px; color: inherit; font-size: clamp(2rem, 4.2vw, 3.35rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.08; }
 .ct-section-head p { margin: 0; color: var(--ct-muted); font-size: 1.04rem; line-height: 1.78; }
 .ct-section--paper .ct-section-head p { color: #5c6677; }
 
@@ -80,7 +80,7 @@
 .ct-split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 54px; align-items: center; }
 .ct-feature-media { margin: 0; padding: 18px; border: 1px solid var(--ct-line); border-radius: 26px; background: #08101f; box-shadow: 0 26px 70px rgba(0,0,0,.28); }
 .ct-feature-media img { width: 100%; aspect-ratio: 2/3; object-fit: contain; border-radius: 16px; }
-.ct-feature-copy h2 { margin: 0 0 16px; font-size: clamp(2rem,4vw,3.15rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.08; }
+.ct-feature-copy h1, .ct-feature-copy h2 { margin: 0 0 16px; font-size: clamp(2rem,4vw,3.15rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.08; }
 .ct-feature-copy p { color: var(--ct-muted); line-height: 1.78; }
 .ct-note { padding: 20px 22px; border-left: 4px solid var(--ct-cyan); border-radius: 0 15px 15px 0; background: rgba(102,229,255,.08); color: #c5d7ea; line-height: 1.7; }
 .ct-section--paper .ct-note { background: #ece8ff; color: #3e3a55; border-left-color: #7652df; }
