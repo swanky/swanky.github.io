@@ -1,403 +1,246 @@
 ---
 layout: home
-title: 攝影寫真
-description: 史旺基人像攝影作品集。獲法國 PX3 攝影獎、美國 IPA 獎項，作品曾刊登美國 TIME Magazine。制服女孩系列、商業攝影、個人寫真。
-keywords: 攝影寫真,制服女孩,商業攝影,展覽作品,史旺基
+title: 攝影作品
+seo_title: 史旺基攝影｜人物、城市與近二十年影像
+description: 史旺基近二十年攝影代表作。從 Flickr 與部落格時代出發，持續拍攝人物、城市、制服文化與概念系列；作品獲 PX3、IPA 肯定，曾刊登 TIME，並有五本攝影相關出版。
+keywords: 史旺基攝影,人像攝影,制服女孩,台北攝影師,攝影作品,For Your Safety,Flickr
 nav_active: photography
 breadcrumbs:
   - name: 主頁
     url: /
-  - name: 攝影寫真
+  - name: 攝影作品
     url: /photography/
-use_isotope: true
 use_glightbox: true
-extra_css: |
-  .page-cta .btn-cta {
-    display: inline-block;
-    padding: 14px 40px;
-    border-radius: 50px;
-    border: 2px solid #E5A300;
-    background: #E5A300;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .page-cta .btn-cta:hover {
-    background: transparent;
-    color: #E5A300;
-    text-decoration: none;
-  }
+use_photography_author: true
+og_image: /assets/img/photography/selected/24350775633.jpg
 ---
-<!-- Modal-a -->
-<div class="modal fade" id="modal-a" tabindex="-1" aria-labelledby="modal-a-label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-a-label">《制服．女孩 × 史旺基》2014</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        史旺基第一本攝影作品書，<br>
-        青春、活力、制服女孩，<br>
-        以寫真方式留住十七歲女生的青春魅力。<br><br>
-        作者：史旺基<br>
-        出版社：夢想製造<br>
-        出版日期：2014-01-23<br><br>
+{% assign photography = site.data.photography_author %}
 
-        欣旅遊社群總監　工頭堅<br>
-        《愛上老相機》作者　老查<br>
-        人氣部落客　亨利市市長<br>
-        人氣部落客　波蘿日報洨記者<br>
-        社團法人臺灣電競協會理事長　施文彬<br>
-        知名主持人　黃子佼<br>
-        聯合推薦（依姓氏筆畫排列）<br>
-        <hr>
-        相關連結：<br>
-        <p><a href="http://news.aniarc.com/news/83801/" class="tooltip-test" >【2014動漫節】「制服．女孩 × 史旺基」簽書會 制服女孩讀者相見歡 </a><br><a href="http://blog.xuite.net/big.max/Polo/224439566" class="tooltip-test" >【羨慕】史旺基 X 制服女孩簽書會 </a></p>
-
+<main id="main" class="photo-author-page">
+  <section class="photo-author-hero" aria-labelledby="photography-title">
+    <a href="{{ photography.hero.image | relative_url }}"
+      class="photo-author-hero-media portfolio-lightbox"
+      data-gallery="photography-selected"
+      title="{{ photography.hero.alt }}">
+      <img src="{{ photography.hero.image | relative_url }}"
+        alt="{{ photography.hero.alt }}"
+        width="{{ photography.hero.width }}"
+        height="{{ photography.hero.height }}"
+        fetchpriority="high">
+    </a>
+    <div class="photo-author-hero-copy">
+      <p class="photo-author-eyebrow">{{ photography.hero.eyebrow }}</p>
+      <h1 id="photography-title">{{ photography.hero.title }}</h1>
+      <p class="photo-author-hero-intro">{{ photography.hero.intro }}</p>
+      <div class="photo-author-actions">
+        <a href="#selected-works" class="photo-author-button">看代表作品</a>
+        <a href="{{ '/photography/gallery/' | relative_url }}" class="photo-author-button photo-author-button--ghost">瀏覽完整作品牆</a>
       </div>
     </div>
-  </div>
-</div>
-<!-- End Modal-a -->
-<!-- Modal-b -->
-<div class="modal fade" id="modal-b" tabindex="-1" aria-labelledby="modal-b-label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-b-label">《制服．女孩 II × 史旺基》2015</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        第二集制服女孩我給自己所設定的創作概念是「生活感」。<br>
-        制服是一種青春的表徵也是絕大多數人出社會前的共同回憶，<br>
-        任何能夠用「青春是…」三個字所開頭的想像語句，<br>
-        都是攝影師所想要透過這本作品傳達的美好畫面。<br><br>
-        作者：史旺基<br>
-        出版社：夢想製造<br>
-        出版日期：2015-02-08<br>
-        <hr>
-        相關連結：<br>
-        <p><a href="http://xinforum.xinmedia.com/collection_infor_20.aspx?id=1285" class="tooltip-test" > 制服女孩II × 史旺基 簽書見面會 </a><br><a href="http://uniform.wingzero.tw/blog/archives/2982" class="tooltip-test" >制服女孩II × 史旺基 簽書見面會 Posted on 2015/02/13 by 制服地圖 </a><br><a href="http://uniform.wingzero.tw/blog/archives/3697" class="tooltip-test" >制服．女孩 II 簽書會活動成功 Posted on 2015/03/20 by 制服地圖 </a></p>
+  </section>
 
+  <nav class="photo-author-quick-nav" aria-label="攝影專區快速導覽">
+    <span>快速前往</span>
+    <div>
+      <a href="{{ '/photography/gallery/' | relative_url }}">完整作品牆</a>
+      {% for item in photography.archive_links %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+      <a href="#model-collaboration">模特兒合作</a>
+    </div>
+  </nav>
+
+  <section class="photo-author-section" id="selected-works" aria-labelledby="selected-works-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">01 · SELECTED WORKS</p>
+        <div>
+          <h2 id="selected-works-title">先記住作品。</h2>
+          <p>這組作品穿過早期自然光、城市空間、動物肖像、角色造型與近期人物創作。比起瀏覽數、人物名氣或獎項，更重要的是每張照片是否仍值得停下來看。</p>
+        </div>
+      </header>
+
+      <div class="photo-author-masonry">
+        {% for work in photography.selected_works %}
+        <article class="photo-author-work">
+          <a href="{{ work.image | relative_url }}"
+            class="portfolio-lightbox"
+            data-gallery="photography-selected"
+            title="{{ work.title }}｜{{ work.meta }}">
+            <img src="{{ work.image | relative_url }}"
+              alt="{{ work.alt }}"
+              width="{{ work.width }}"
+              height="{{ work.height }}"
+              loading="lazy">
+          </a>
+          <div class="photo-author-work-copy">
+            <strong>{{ work.title }}</strong>
+            <span>{{ work.meta }}</span>
+            <a href="{{ work.url }}" class="photo-author-source" target="_blank" rel="noopener noreferrer">在 Flickr 看原作</a>
+          </div>
+        </article>
+        {% endfor %}
       </div>
     </div>
-  </div>
-</div>
-<!-- End Modal-b -->
-<!-- Modal-c -->
-<div class="modal fade" id="modal-c" tabindex="-1" aria-labelledby="modal-c-label" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-c-label">《高校制服戀物論》2015</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        你知道自己為什麼那麼喜歡制服嗎？<br>
-        「迷戀制服」的正當性，就從這本書開始建立！<br>
-        路上觀察×社會理論×歷史脈絡，掀開高校女子制服的純真符碼與隱晦情慾！<br>
-        地表上第一部研究「高校女子制服」的中文專書，<br>
-        「制服地圖」超人氣攝影師史旺基跨刀拍攝！<br><br>
-        作者：劉揚銘, 攝影：史旺基<br>
-        出版社：沐風文化<br>
-        出版日期：2015-04-01<br>
-        <hr>
-        相關連結：<br>
-        <p>
-          <a href="http://www.appledaily.com.tw/realtimenews/article/new/20150331/584400/" class="tooltip-test" >2015-03-31 [蘋果日報] 「少女帶領我們前進」制服控自嘲「變態」</a><br>
-          <a href="http://www.nownews.com/n/2015/03/31/1655635" class="tooltip-test" >2015-03-31 [NOWnews生活中心] 制服只代表色情嗎？《高校制服戀物論》說給你聽～</a><br>
-          <a href="http://www.chinatimes.com/realtimenews/20150331004799-260405" class="tooltip-test" >2015-03-31 [中時電子報] 高校制服戀物論 為宅宅發聲 </a><br>
-          <a href="http://www.ettoday.net/news/20150331/486768.htm" class="tooltip-test" >2015-03-31 [ETtoday] 專業制服控大叔　迷戀少女制服還能出書</a><br>
-          <a href="http://n.yam.com/yam/life/20150331/20150331949914.html" class="tooltip-test" >2015-03-31 [yam蕃薯藤新聞] 大叔追少年夢 完成少女制服控演化史 </a><br>
-          <a href="http://magazine.n.yam.com/view/mkmnews.php/741145" class="tooltip-test" >2015-04-20 [yampeople蕃騰人物] 大叔組團戀制服 變態有理！</a><br>
-          <a href="http://www.storm.mg/lifestyle/46939" class="tooltip-test" >2015-04-22 [風生活] 少女制服的青春是我靈魂救贖，中年大叔的制服告白 </a>
-        </p>
+  </section>
 
+  <section class="photo-author-statement" aria-label="攝影創作觀點">
+    <blockquote>我拍的不只是漂亮的人，而是人物如何存在於一個時代。</blockquote>
+    <p>制服、城市、網路文化、公共藝術、日常物件與人物關係，長期構成史旺基觀看世界的方式。</p>
+  </section>
+
+  <section class="photo-author-section" id="series" aria-labelledby="series-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">02 · SERIES</p>
+        <div>
+          <h2 id="series-title">系列，而不只是相簿。</h2>
+          <p>當照片開始互相說話，人物、場景與創作方法才形成一個完整的世界。</p>
+        </div>
+      </header>
+
+      <div class="photo-author-series-list">
+        {% for series in photography.series %}
+        <article class="photo-author-series-card">
+          <a href="{{ series.url | relative_url }}" class="photo-author-series-media"{% if series.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+            <img src="{{ series.image | relative_url }}"
+              alt="{{ series.alt }}"
+              width="{{ series.width }}"
+              height="{{ series.height }}"
+              loading="lazy">
+          </a>
+          <div class="photo-author-series-copy">
+            <p class="photo-author-eyebrow">{{ series.eyebrow }}</p>
+            <h3>{{ series.title }}</h3>
+            <p>{{ series.description }}</p>
+            <a href="{{ series.url | relative_url }}" class="photo-author-text-link"{% if series.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ series.cta }} →</a>
+          </div>
+        </article>
+        {% endfor %}
       </div>
     </div>
-  </div>
-</div>
-<!-- End Modal-c -->
+  </section>
 
-
-  <main id="main">
-    <div class="section-title works">
-      <h1>攝影寫真</h1>
-      <p>三本出版攝影集、法國 PX3 二等獎、美國 IPA 榮譽獎、TIME Magazine 刊登。提供人像寫真、企業形象、活動紀錄等攝影服務。</p>
-    </div>
-
-<!-- ======= Portfolio Section ======= -->
-<section class="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>出版 Photo Album</h2>
-      <p>出版多本攝影作品書，包括《制服．女孩 × 史旺基》系列與 《高校制服戀物論》。</p>
-    </div>
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item">
-          <img src="{{ '/assets/img/portfolio/portfolio-1.jpeg' | relative_url }}" class="img-fluid" alt="《制服．女孩 × 史旺基》2014 書籍封面">
-          <div class="portfolio-info">
-            <h3>《制服．女孩 × 史旺基》2014</h3>
-            <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#modal-a">
-              書籍介紹
-              </button>
-          </div>
+  <section class="photo-author-section photo-author-light" id="history" aria-labelledby="history-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">03 · PHOTOGRAPHY JOURNEY</p>
+        <div>
+          <h2 id="history-title">不是履歷，是轉變。</h2>
+          <p>從網路相簿、人物合作到概念系列、展覽與出版，每個階段都改變了觀看與拍攝的方法。</p>
         </div>
-      </div>
+      </header>
 
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-        <div class="portfolio-item">
-          <img src="{{ '/assets/img/portfolio/portfolio-2.jpeg' | relative_url }}" class="img-fluid" alt="《制服．女孩 II × 史旺基》2015 書籍封面">
-          <div class="portfolio-info">
-            <h3>《制服．女孩 II × 史旺基》2015</h3>
-            <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#modal-b">
-             書籍介紹
-             </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item">
-          <img src="{{ '/assets/img/portfolio/portfolio-3.jpeg' | relative_url }}" class="img-fluid" alt="《高校制服戀物論》2015 書籍封面">
-          <div class="portfolio-info">
-            <h3>《高校制服戀物論》2015</h3>
-            <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#modal-c">
-              書籍介紹
-              </button>
-          </div>
-        </div>
+      <div class="photo-author-timeline">
+        {% for era in photography.timeline %}
+        <article class="photo-author-era">
+          <time>{{ era.year }}</time>
+          <h3>{{ era.title }}</h3>
+          <p>{{ era.description }}</p>
+        </article>
+        {% endfor %}
       </div>
     </div>
-    <div class="col-lg-12 text-center"><a href="{{ '/photography/photo-albums/' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a></div>
+  </section>
 
-  </div>
-</section><!-- End Portfolio Section -->
-
-<!-- ======= Portfolio Section ======= -->
-<section class="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>獎項 Awards</h2>
-      <p>法國 PX3 二等獎（2013）、美國 IPA 榮譽獎（2012）、TIME Magazine Vol. 179（2012）。</p>
-    </div>
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/px3_2011.jpeg' | relative_url }}" class="img-fluid" alt="2011 Px3 榮譽提名作品《Bikini-aholic》">
-          <div class="portfolio-info">
-            <h3>2011 Px3（巴黎攝影大賽攝影獎）榮譽提名</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/px3_2011.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2011 Px3（巴黎攝影獎）榮譽提名｜Bikini-aholic"><i class="bx bx-plus"></i></a>
-
-            </div>
-          </div>
+  <section class="photo-author-section" id="recognition" aria-labelledby="recognition-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">04 · RECOGNITION</p>
+        <div>
+          <h2 id="recognition-title">作品先說話，經歷再加深信任。</h2>
+          <p>出版、國際攝影獎、媒體刊登與長期線上傳播，共同留下這段攝影歷程的座標。</p>
         </div>
-      </div>
+      </header>
 
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/ipa_2012.jpeg' | relative_url }}" class="img-fluid" alt="2012 IPA 榮譽獎作品《For Your Safety》">
-          <div class="portfolio-info">
-            <h3>2012 IPA（國際攝影獎）榮譽獎</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/ipa_2012.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2012 IPA（國際攝影獎）榮譽獎｜For Your Safety"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/px3_2013_1.jpeg' | relative_url }}" class="img-fluid" alt="2013 Px3 二等獎作品《For Your Safety》">
-          <div class="portfolio-info">
-            <h3>2013 Px3（巴黎攝影大賽攝影獎）二等獎</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/px3_2013_1.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2013 Px3（巴黎攝影大賽攝影獎）二等獎｜For Your Safety"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-        </div>
+      <div class="photo-author-proof">
+        {% for proof in photography.proof %}
+        <a href="{{ proof.url | relative_url }}"{% if proof.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+          <b>{{ proof.value }}</b>
+          <span>{{ proof.label }}</span>
+          <small>{{ proof.note }}</small>
+        </a>
+        {% endfor %}
       </div>
     </div>
-    <div class="col-lg-12 text-center"><a href="{{ '/photography/awards/' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a></div>
+  </section>
 
-  </div>
-</section><!-- End Portfolio Section -->
-
-<!-- ======= Portfolio Section ======= -->
-<section class="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>個人作品 Personal Works</h2>
-      <p>拍攝超過 100 位模特兒，制服女孩系列代表作，風格清新自然，善用自然光捕捉人像情緒。</p>
-    </div>
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg' | relative_url }}" class="img-fluid" alt="2018 李婷婷×史旺基《制服女孩》作品照">
-          <div class="portfolio-info">
-            <h3>2018 李婷婷x史旺基「制服女孩」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2018 李婷婷x史旺基「制服女孩」"><i class="bx bx-plus"></i></a>
-
-            </div>
-          </div>
+  <section class="photo-author-section photo-author-media" id="media" aria-labelledby="media-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">05 · ON SCREEN</p>
+        <div>
+          <h2 id="media-title">在鏡頭之外，也留下公開影像紀錄。</h2>
+          <p>兩段影片分別記下主流電視節目的拍攝現場，以及 Flickr／部落格攝影時期的公開訪談。</p>
         </div>
-      </div>
+      </header>
 
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/33300626336_d82723bf49_k.jpeg' | relative_url }}" class="img-fluid" alt="2017 小潔Mina×史旺基《制服女孩》作品照">
-          <div class="portfolio-info">
-            <h3>2017 小潔(Mina)x史旺基「制服女孩」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/33300626336_d82723bf49_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2017 小潔(Mina)x史旺基「制服女孩」"><i class="bx bx-plus"></i></a>
-            </div>
+      <div class="photo-author-media-grid">
+        {% for item in photography.media %}
+        <article class="photo-author-media-card">
+          <div class="photo-author-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/{{ item.youtube_id }}"
+              title="{{ item.title }}"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/51133994574_dfc8e53f9e_k.jpeg' | relative_url }}" class="img-fluid" alt="2021 黃帛瑜×史旺基《比特幣女孩》作品照">
-          <div class="portfolio-info">
-            <h3>2021 黃帛瑜x史旺基「比特幣女孩」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/51133994574_dfc8e53f9e_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2021 黃帛瑜x史旺基「比特幣女孩」"><i class="bx bx-plus"></i></a>
-            </div>
+          <div class="photo-author-media-copy">
+            <p class="photo-author-eyebrow">{{ item.date }}</p>
+            <h3>{{ item.title }}</h3>
+            <strong>{{ item.role }}</strong>
+            <p>{{ item.description }}</p>
           </div>
-        </div>
+        </article>
+        {% endfor %}
       </div>
     </div>
-    <div class="col-lg-12 text-center"><a href="{{ '/photography/personal-works/' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a></div>
+  </section>
 
-  </div>
-</section><!-- End Portfolio Section -->
-
-<!-- ======= Commercial Works Section ======= -->
-<section class="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>商業作品 Commercial Works</h2>
-      <p>提供品牌形象、活動紀錄、企業/個人宣傳等商業攝影服務，作品遍及各類客戶委託合作。</p>
-    </div>
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/33645452611_56b9253b61_k.jpeg' | relative_url }}" class="img-fluid" alt="2017 李昱×史旺基《制服女孩》作品照">
-          <div class="portfolio-info">
-            <h3>2017 李昱x史旺基「制服女孩」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/33645452611_56b9253b61_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2017 李昱x史旺基「制服女孩」"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
+  <section class="photo-author-section photo-author-light" id="archive" aria-labelledby="archive-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">06 · EXPLORE THE ARCHIVE</p>
+        <div>
+          <h2 id="archive-title">繼續往裡面走。</h2>
+          <p>代表作是入口；出版、獎項、人物、商業合作、媒體與完整歷程，則保存了這段創作的不同切面。</p>
         </div>
-      </div>
+      </header>
 
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-web">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg' | relative_url }}" class="img-fluid" alt="2017 果子×史旺基《星空復古》作品照">
-          <div class="portfolio-info">
-            <h3>2017 果子x史旺基「星空復古」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2017 果子x史旺基「星空復古」"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-        <div class="portfolio-item2">
-          <img src="{{ '/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg' | relative_url }}" class="img-fluid" alt="2018 李婷婷×史旺基《制服女孩》作品照">
-          <div class="portfolio-info">
-            <h3>2018 李婷婷x史旺基「制服女孩」</h3>
-            <div>
-              <a href="{{ '/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg' | relative_url }}" data-galleryery="portfolioGallery" class="portfolio-lightbox"
-              title="2018 李婷婷x史旺基「制服女孩」"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-        </div>
+      <div class="photo-author-archive-grid">
+        {% for item in photography.archive_links %}
+        <a href="{{ item.url | relative_url }}" class="photo-author-archive-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <span>{{ item.cta }} →</span>
+        </a>
+        {% endfor %}
       </div>
     </div>
-    <div class="col-lg-12 text-center"><a href="{{ '/photography/commercial-works/' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a></div>
+  </section>
 
-  </div>
-</section><!-- End Commercial Works Section -->
+  <section class="photo-author-collaboration" id="model-collaboration" aria-labelledby="model-collaboration-title">
+    <div class="photo-author-shell">
+      <p class="photo-author-eyebrow">{{ photography.model_collaboration.eyebrow }}</p>
+      <h2 id="model-collaboration-title">{{ photography.model_collaboration.title }}</h2>
+      <p class="photo-author-collaboration-intro">{{ photography.model_collaboration.intro }}</p>
 
-    <!-- ======= Media Section ======= -->
-   <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-12 d-flex flex-column justify-content-center p-5 text-center">
-          <div class="icon-box_no">
-            <h4 class="title"><a>小明星大跟班｜2017.03.21
-              </a></h4>
-            <p class="description">【完整版】美照背後的秘密？！外拍model沒那麼好當！ <br>外拍攝影師 / 史旺基</p>
-          </div>
-        </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 video-box_a">
-            <div class="videoYT">
-              <iframe src="https://www.youtube.com/embed/DAdH1lLAIUk" title="外拍幕後花絮：美照背後的秘密｜史旺基攝影師" allowfullscreen loading="lazy"></iframe>
-            </div>
-        </div>
-        <div class="col-lg-2"></div>
+      <div class="photo-author-collaboration-grid">
+        {% for point in photography.model_collaboration.points %}
+        <article>
+          <h3>{{ point.title }}</h3>
+          <p>{{ point.description }}</p>
+        </article>
+        {% endfor %}
       </div>
 
-      <div class="row">
-        <div class="col-lg-12 d-flex flex-column justify-content-center p-5 text-center">
-          <div class="icon-box_no">
-            <h4 class="title"><a>朱學恒之阿宅反抗軍電台(史旺基篇)｜2012-04-08
-              </a></h4>
-            <p class="description">精華片段<br>專題來賓 / 史旺基</p>
-          </div>
-        </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 video-box_a">
-          <div class="videoYT">
-            <iframe src="https://www.youtube.com/embed/o06QF_GJILs" title="朱學恒之阿宅反抗軍電台：史旺基專題來賓｜2012-04-08" allowfullscreen loading="lazy"></iframe>
-          </div>
-          </div>
-        <div class="col-lg-2"></div>
-      </div>
-
+      <p class="photo-author-collaboration-note">{{ photography.model_collaboration.note }}</p>
     </div>
-  </section><!-- End Media Section -->
-
-  <!-- ======= Contact CTA ======= -->
-  <section class="why-us page-cta" data-aos="fade-up">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center py-5">
-          <h4>對攝影合作有興趣？</h4>
-          <p class="mb-4">提供人像寫真、企業形象、活動紀錄等委託服務，歡迎來信洽詢。</p>
-          <a href="mailto:swanky.hsiao@gmail.com" class="btn-cta">聯繫委託</a>
-        </div>
-      </div>
+    <div class="photo-author-actions">
+      <a href="mailto:swanky.hsiao@gmail.com?subject=%E6%A8%A1%E7%89%B9%E5%85%92%E5%90%88%E4%BD%9C%E6%8F%90%E6%A1%88&amp;body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%8F%90%E5%87%BA%E6%A8%A1%E7%89%B9%E5%85%92%E5%90%88%E4%BD%9C%EF%BC%9A%0A%0A%E7%A8%B1%E5%91%BC%EF%BC%9A%0A%E5%85%AC%E9%96%8B%E4%BD%9C%E5%93%81%E6%88%96%E7%A4%BE%E7%BE%A4%E9%80%A3%E7%B5%90%EF%BC%9A%0A%E6%83%B3%E5%98%97%E8%A9%A6%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%8F%E9%A2%A8%E6%A0%BC%EF%BC%9A%0A%E5%8F%AF%E9%85%8D%E5%90%88%E6%99%82%E6%AE%B5%EF%BC%9A%0A%E5%85%B6%E4%BB%96%E6%83%B3%E5%85%88%E7%A2%BA%E8%AA%8D%E7%9A%84%E4%BA%8B%E6%83%85%EF%BC%9A" class="photo-author-button">提出模特兒合作</a>
+      <a href="mailto:swanky.hsiao@gmail.com?subject=%E6%94%9D%E5%BD%B1%E5%90%88%E4%BD%9C%E6%B4%BD%E8%A9%A2" class="photo-author-button photo-author-button--ghost">其他攝影合作</a>
     </div>
-  </section><!-- End Contact CTA -->
-
-  </main><!-- End #main -->
+  </section>
+</main>

@@ -1,0 +1,224 @@
+hero:
+  image: /assets/img/photography/selected/24350775633.jpg
+  width: 1600
+  height: 1067
+  alt: 宇彤在校園跑道上的制服人像
+  eyebrow: PHOTOGRAPHER · AUTHOR · 2006—現在
+  title: 人物、城市，與網路時代留下的光。
+  intro: 從 Flickr 與部落格時代出發，史旺基持續拍攝人物、城市與青春文化。這裡不是完整相簿，而是近二十年創作中最值得被記住的作品。
+
+selected_works:
+  - photo_id: "24977731995"
+    image: /assets/img/photography/selected/24977731995.jpg
+    width: 1600
+    height: 1600
+    alt: 宇彤透過圓筒形成透視感的概念人像
+    title: 視線穿過日常物件
+    meta: 宇彤 · 史旺基親選 · 2016
+    url: https://www.flickr.com/photos/swanky-hsiao/24977731995/
+  - photo_id: "2089504883"
+    image: /assets/img/photography/selected/2089504883.jpg
+    width: 1600
+    height: 1600
+    alt: Pinky 戴著彩色圍巾凝視鏡頭的貓咪照片
+    title: Pinky
+    meta: 動物肖像 · 2007 · 社群共鳴代表作
+    url: https://www.flickr.com/photos/swanky-hsiao/2089504883/
+  - photo_id: "1664024637"
+    image: /assets/img/photography/selected/1664024637.jpg
+    width: 1600
+    height: 1143
+    alt: 果子的黑白花飾人像
+    title: 黑白與凝視
+    meta: 果子 · 2007
+    url: https://www.flickr.com/photos/swanky-hsiao/1664024637/
+  - photo_id: "4624112041"
+    image: /assets/img/photography/selected/4624112041.jpg
+    width: 1600
+    height: 1576
+    alt: 車廂窗光環境人像
+    title: 車廂裡的光
+    meta: 人物與交通空間 · 2010
+    url: https://www.flickr.com/photos/swanky-hsiao/4624112041/
+  - photo_id: "15262345956"
+    image: /assets/img/photography/selected/15262345956.jpg
+    width: 1600
+    height: 1600
+    alt: 窗邊椅子上的制服人像
+    title: 窗邊的懸浮感
+    meta: 制服、動作與空間 · 2014
+    url: https://www.flickr.com/photos/swanky-hsiao/15262345956/
+  - photo_id: "32811316801"
+    image: /assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg
+    width: 2048
+    height: 1365
+    alt: 果子在星空復古場景中的角色人像
+    title: 角色走進場景
+    meta: 果子 · 星空復古 · 2017
+    url: https://www.flickr.com/photos/swanky-hsiao/32811316801/
+  - photo_id: "33300626336"
+    image: /assets/img/portfolio/33300626336_d82723bf49_k.jpeg
+    width: 2048
+    height: 1365
+    alt: 小潔 Mina 在教室窗邊的制服人像
+    title: 教室裡的日常
+    meta: 小潔 Mina · 2017
+    url: https://www.flickr.com/photos/swanky-hsiao/33300626336/
+  - photo_id: "33645452611"
+    image: /assets/img/portfolio/33645452611_56b9253b61_k.jpeg
+    width: 2048
+    height: 1365
+    alt: 李昱在麵包店前的制服人像
+    title: 人物與生活場景
+    meta: 李昱 · 麵包店 · 2017
+    url: https://www.flickr.com/photos/swanky-hsiao/33645452611/
+  - photo_id: "29528630897"
+    image: /assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg
+    width: 2048
+    height: 1365
+    alt: 李婷婷在戶外座椅旁的制服人像
+    title: 青春的身體線條
+    meta: 李婷婷 · 2018
+    url: https://www.flickr.com/photos/swanky-hsiao/29528630897/
+  - photo_id: "20275049655"
+    image: /assets/img/photography/selected/20275049655.jpg
+    width: 1600
+    height: 1067
+    alt: 啾比特在戶外城市空間的橫幅人像
+    title: 人物與環境
+    meta: 啾比特 · 城市人像 · 2015
+    url: https://www.flickr.com/photos/swanky-hsiao/20275049655/
+  - photo_id: "51132640907"
+    image: /assets/img/photography/selected/51132640907.jpg
+    width: 1600
+    height: 1067
+    alt: 羽葶自然笑容的戶外人像
+    title: 自然表情
+    meta: 羽葶 · 戶外人像 · 2021
+    url: https://www.flickr.com/photos/swanky-hsiao/51132640907/
+  - photo_id: "51134421425"
+    image: /assets/img/photography/selected/51134421425.jpg
+    width: 1600
+    height: 1067
+    alt: 羽葶躺在草地上的橫幅近景人像
+    title: 靠近鏡頭
+    meta: 羽葶 · 草地近景 · 2021
+    url: https://www.flickr.com/photos/swanky-hsiao/51134421425/
+
+series:
+  - image: /assets/img/photography/selected/4597747289.jpg
+    width: 1600
+    height: 1067
+    alt: Momo 站在台北市場蔬菜貨車旁的人像
+    eyebrow: 2010 · 城市人像
+    title: Momo。走在
+    description: 不清空城市再拍人，而是讓市場、路人、貨車與人物一起留下來。
+    url: https://www.flickr.com/photos/swanky-hsiao/4597747289/
+    cta: 在 Flickr 看作品
+  - image: /assets/img/sec/001_Zoey_1.jpg
+    width: 1024
+    height: 1024
+    alt: For Your Safety 系列中 Zoey 戴安全帽手持乾燥花的人像
+    eyebrow: 2011 · 概念系列
+    title: For Your Safety
+    description: 從頭盔、人物與物件出發，讓保護、日常與脆弱在同一張影像裡碰撞。
+    url: /photography/for-your-safety/
+    cta: 看完整系列
+  - image: /assets/img/photography/selected/4517746235.jpg
+    width: 1600
+    height: 1600
+    alt: RedBall Project 巨大紅球夾在剝皮寮建築之間
+    eyebrow: 2010 · 街頭作品
+    title: RedBall@Taipei
+    description: 一次在剝皮寮遇見公共藝術的街頭作品；同一場 RedBall Project 後來亦獲 TIME 專題刊登。
+    url: https://www.flickr.com/photos/swanky-hsiao/4517746235/
+    cta: 在 Flickr 看作品
+
+timeline:
+  - year: "2006"
+    title: 從網路走進攝影
+    description: 第一次正式人像外拍，開始更有系統地整理作品，並透過 Flickr 與更多人分享。
+  - year: "2007"
+    title: 作品走出個人相簿
+    description: 開始參加攝影競賽，也透過 Flickr 與早期網路社群被更多人看見。
+  - year: 08—09
+    title: 人物與網路文化
+    description: 長期人物合作、每月桌布計畫、攝影分享，以及跨部落格與社群的影像傳播。
+  - year: "2010"
+    title: 開始形成自己的系列
+    description: Momo「走在」、更多城市人物實驗、自費作品書與第一次 GEISAI 攝影展。
+  - year: "2011"
+    title: 系列走進展覽與媒體
+    description: For Your Safety 從網路被看見，接著進入 GEISAI #3、搖咖啡展覽與媒體報導。
+  - year: 12—21
+    title: 媒體、出版與延伸
+    description: TIME、PX3、IPA、五本攝影相關出版、電視節目與更自主的合作。
+
+proof:
+  - value: "5"
+    label: 本攝影相關出版
+    note: 3 本個人作品書＋2 本參與攝影
+    url: /photography/photo-albums/
+  - value: PX3
+    label: 國際攝影獎二等獎
+    note: For Your Safety
+    url: /photography/awards/
+  - value: TIME
+    label: RedBall Project
+    note: 專題刊登
+    url: /press/
+  - value: 3.08億
+    label: Flickr 帳號累積瀏覽
+    note: 截至 2026
+    url: https://www.flickr.com/photos/swanky-hsiao/
+
+media:
+  - youtube_id: DAdH1lLAIUk
+    date: "2017.03.21"
+    title: 小明星大跟班｜美照背後的秘密？！外拍 model 沒那麼好當！
+    role: 外拍攝影師／史旺基
+    description: 以外拍攝影師身分參與節目，從實際拍攝現場呈現一張人像作品如何完成。
+  - youtube_id: o06QF_GJILs
+    date: "2012.04.08"
+    title: 朱學恒之阿宅反抗軍電台｜史旺基篇
+    role: 專題來賓／史旺基
+    description: Flickr 與部落格攝影時期留下的公開訪談，回看當時的創作與網路傳播。
+
+model_collaboration:
+  eyebrow: 07 · MODEL COLLABORATION
+  title: 想一起完成下一組作品嗎？
+  intro: 目前開放少量合作模特兒提案。無論你已有拍攝經驗，或第一次想認真留下作品，只要願意一起討論主題、服裝與場景，都歡迎先來信介紹自己。
+  points:
+    - title: 一起完成，不是單向配合
+      description: 拍攝前會先對齊想法、參考畫面與彼此期待，讓模特兒也能參與作品形成。
+    - title: 新手也可以提出合作
+      description: 不以拍攝經驗作唯一標準，更重視個人特質、溝通意願，以及你對主題是否真的有興趣。
+    - title: 界線與使用方式先說清楚
+      description: 時間、地點、費用或互惠、照片交付、公開使用與可接受範圍，都會在拍攝前確認。
+  note: 未滿 18 歲須取得法定代理人同意；初次來信不需提供身分證、住址等敏感資料。提案不代表一定合作，會依主題與雙方適合度回覆。
+
+archive_links:
+  - title: 攝影出版
+    description: 三本《制服．女孩》個人作品書，另為《高校制服戀物論》擔任攝影，並參與《2015臺灣高校制服年鑑》拍攝。
+    url: /photography/photo-albums/
+    cta: 查看出版
+  - title: 國際獎項
+    description: PX3、IPA 與不同時期的得獎作品。
+    url: /photography/awards/
+    cta: 查看獎項
+  - title: 人物作品
+    description: 不同模特兒、角色與場景的人像創作。
+    url: /photography/personal-works/
+    cta: 查看人物作品
+  - title: 商業合作
+    description: 品牌形象、活動紀錄與宣傳影像。
+    url: /photography/commercial-works/
+    cta: 查看合作作品
+  - title: 媒體報導
+    description: 電視、專訪與不同時期的公開報導紀錄。
+    url: /press/
+    cta: 查看媒體報導
+  - title: 攝影歷程
+    description: 展覽、講座、出版、媒體與長期作品檔案。
+    url: /photography/archive/
+    cta: 查看完整歷程
