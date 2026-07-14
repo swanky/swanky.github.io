@@ -206,6 +206,9 @@
 .tech-service-list li::before { color: var(--tech-blue); content: "✓"; font-weight: 900; }
 .tech-service-card--web3 .tech-service-list li::before { color: var(--tech-gold); }
 .tech-service-action { margin-top: auto; }
+.tech-service-card--visual { display: grid; grid-template-columns: minmax(300px,.8fr) 1.2fr; min-height: 0; margin-top: 24px; }
+.tech-service-card--visual .tech-service-media { height: 100%; min-height: 360px; }
+.tech-service-card--visual .tech-service-media img { object-fit: contain; }
 
 .tech-compare-grid, .tech-start-grid, .tech-proof-grid, .tech-deliverable-grid { display: grid; gap: 20px; }
 .tech-compare-grid { grid-template-columns: 1fr 1fr; }
@@ -362,7 +365,7 @@
   .tech-hero { min-height: auto; }
   .tech-hero-grid { grid-template-columns: 1fr; }
   .tech-hero-media { min-height: 470px; }
-  .tech-service-grid, .tech-series-grid, .tech-split, .tech-split--reverse { grid-template-columns: 1fr; }
+  .tech-service-grid, .tech-series-grid, .tech-split, .tech-split--reverse, .tech-service-card--visual { grid-template-columns: 1fr; }
   .tech-proof-grid, .tech-article-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-start-grid, .tech-process-grid { grid-template-columns: 1fr; }
   .tech-cta-grid { grid-template-columns: 1fr; }
@@ -384,6 +387,7 @@
   .tech-hero-shot--single { inset: 0; }
   .tech-service-card { min-height: 0; }
   .tech-service-media { height: 235px; }
+  .tech-service-card--visual .tech-service-media { min-height: 300px; }
   .tech-service-body { padding: 24px; }
   .tech-compare-grid, .tech-proof-grid, .tech-deliverable-grid, .tech-video-grid, .tech-article-grid { grid-template-columns: 1fr; }
   .tech-proof-media { height: 230px; }

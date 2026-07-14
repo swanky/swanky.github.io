@@ -135,8 +135,8 @@
 
 # ── B. 當下問事：針對當下問題與時間進行反思 ─────────────────────────
 - id: tarot
-  title: 職場塔羅
-  subtitle: 用圖像把卡住的處境想清楚
+  title: Cyber Tarot Lab
+  subtitle: 原創牌組、反思工具與 AI 視覺實驗
   category: inquiry
   status: live
   flagship: true
@@ -145,11 +145,11 @@
   phase: 已上線
   route: /tarot/
   nav_order: 4
-  nav_label: 塔羅
+  nav_label: Cyber Tarot
   icon: bi-collection
   input_type: question
-  use_cases: [職場反思, 感情, 生活決策]
-  cta_label: 立即抽牌
+  use_cases: [原創牌組, 結構化反思, AI 視覺實驗]
+  cta_label: 進入實驗室
   note: ''
   related: [tarot-daily, iching]
 

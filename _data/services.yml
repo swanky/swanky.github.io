@@ -26,3 +26,13 @@
   url: /education/
   cta_text: 預約講師／內訓
   aos_delay: 200
+
+- title: AI 視覺創作
+  eyebrow: AI Visual Production
+  icon: bi-stars
+  color: pink
+  description: >
+    為個人品牌、創作者與內容團隊製作可延伸的 AI 系列圖像與短影音。從角色一致性、視覺方向與分鏡，到人工 QA 與正式檔案交付。
+  url: /technical/ai-visual-production/
+  cta_text: 查看 AI 視覺製作
+  aos_delay: 300

@@ -1,0 +1,22 @@
+---
+layout: home
+title: AI Tarot Lab
+seo_title: AI 塔羅牌製作案例｜角色一致性、數量精準與人工 QA
+description: 一套 78 張 AI 塔羅牌如何從角色母版、視覺規格、生成、重生到逐張 QA。包含權杖八、倒吊人、聖杯七與錢幣十的實際問題。
+og_image: /assets/img/tarot-clonex/wands-08.jpg
+nav_active: tarot
+use_tarot_lab: true
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: Cyber Tarot Lab
+    url: /tarot/
+  - name: AI Tarot Lab
+    url: /tarot/lab/
+---
+<main id="main" class="cyber-tarot">
+  <section class="ct-section ct-section--soft"><div class="ct-shell ct-split"><div class="ct-feature-copy"><span class="ct-eyebrow">Public Build Case Study</span><h2>AI 生圖最難的不是漂亮，是一致與精準</h2><p>單張圖漂亮不難。難的是 78 張都像同一副牌，同一個角色沒有中途換臉，權杖八真的只有八根，而且生成成功後還能用檔名、尺寸與人工判斷驗收。</p><div class="ct-actions"><a class="ct-btn ct-btn--primary" href="{{ '/tarot/decks/clonex/' | relative_url }}">查看完整成品</a><a class="ct-btn ct-btn--ghost" href="{{ '/technical/ai-visual-production/' | relative_url }}">洽詢 AI 視覺製作</a></div></div><figure class="ct-feature-media"><img src="{{ '/assets/img/tarot-clonex/wands-08.jpg' | relative_url }}" alt="權杖八以兩排各四根確保精準數量" width="768" height="1152"></figure></div></section>
+  <section class="ct-section"><div class="ct-shell"><header class="ct-section-head"><span class="ct-eyebrow">Production System</span><h2>從角色母版到 78 張可交付資產</h2><p>流程不是「寫 prompt → 收圖」。每一階段都有停止條件與回頭重做的理由。</p></header><div class="ct-route-grid"><article class="ct-route-card"><span class="ct-route-icon"><i class="bi bi-person-bounding-box"></i></span><h3>01｜角色與風格母版</h3><p>先鎖定臉、眼睛、裂紋皮膚、金髮、機械兔耳、服裝與材質，再開始牌面量產。</p></article><article class="ct-route-card"><span class="ct-route-icon"><i class="bi bi-list-check"></i></span><h3>02｜逐牌規格</h3><p>每張列出場景、主符號、精準數量、禁止物件、構圖與安全邊界。</p></article><article class="ct-route-card"><span class="ct-route-icon"><i class="bi bi-shield-check"></i></span><h3>03｜生成與人工 QA</h3><p>全圖檢查數量、角色、姿勢、手指、文字污染、Logo、牌框與裁切；不合格就重生。</p></article></div></div></section>
+  <section class="ct-section ct-section--soft"><div class="ct-shell"><header class="ct-section-head"><span class="ct-eyebrow">Failure Modes</span><h2>幾張最能說明問題的牌</h2></header><div class="ct-proof-grid"><article class="ct-proof-card"><img src="{{ '/assets/img/tarot-clonex/wands-08.jpg' | relative_url }}" alt="權杖八最終版，上排四根下排四根" loading="lazy"><div class="ct-proof-body"><h3>權杖八：5、9，最後才是 8</h3><p>把八根拆成兩排各四根，禁止背景杆狀物，再逐根追蹤。漂亮但數量錯，仍然是不合格。</p></div></article><article class="ct-proof-card"><img src="{{ '/assets/img/tarot-clonex/major-12.jpg' | relative_url }}" alt="倒吊人的單腳懸掛與重力方向" loading="lazy"><div class="ct-proof-body"><h3>倒吊人：姿勢與重力一起驗</h3><p>必須單腳懸掛、另一腿交叉成 figure-four，頭髮和衣物也要真的往地面垂落。</p></div></article><article class="ct-proof-card"><img src="{{ '/assets/img/tarot-clonex/pentacles-10.jpg' | relative_url }}" alt="錢幣十採兩排各五枚確保精準" loading="lazy"><div class="ct-proof-body"><h3>錢幣十：9、11、11，第四次才通過</h3><p>最後放棄容易誤數的生命之樹排列，改成兩排各五枚。象徵稍抽象，驗收卻更可靠。</p></div></article></div></div></section>
+  <section class="ct-section ct-section--paper"><div class="ct-shell ct-split"><div><header class="ct-section-head"><span class="ct-eyebrow">Verification</span><h2>生成成功，不等於可交付</h2><p>全套最後通過 78／78、缺圖 0、多餘 PNG 0、錯格式或尺寸 0。機械檢查負責檔案，視覺模型與人工檢查負責畫面；兩者不能互相取代。</p></header><div class="ct-note">這是公開個人創作案例，不是客戶成效案例。它證明的是大型圖像系列的規格設計、批次生產、失敗重做與驗收能力。</div></div><figure class="ct-feature-media"><img src="{{ '/assets/img/tarot-clonex/pentacles-07.jpg' | relative_url }}" alt="錢幣七完整呈現七枚可數 coin-disc" loading="lazy"></figure></div></section>
+</main>
