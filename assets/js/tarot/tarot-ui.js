@@ -377,8 +377,8 @@ function doMemoSave() {
   const m = currentMemo(); if (!m) return;
   const entry = addEntry(m);
   setHTML('tarot-memo-saved', entry
-    ? '✓ 已存到本機 Journal（只存在這台裝置的瀏覽器，不上傳）。<a href="/tarot/journal/">開啟我的塔羅 Journal →</a>'
-    : '無法存到本機（瀏覽器可能停用了儲存）。你仍可用上面的 Markdown／PNG 匯出保存。');
+    ? '✓ 已存到你的反思紀錄（只存在這台裝置，不會上傳）。<a href="/tarot/journal/">開啟我的塔羅反思紀錄 →</a>'
+    : '存不進來（你的瀏覽器可能停用了儲存功能）。你仍可以用上面的「存成文字檔」或「存成圖片」保存下來。');
   gtag('event', 'tarot_memo_save', { spread: state.spread, topic: state.topic });
 }
 

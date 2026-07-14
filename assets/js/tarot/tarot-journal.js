@@ -67,7 +67,7 @@ function reviewBlock(e, status) {
       <button class="tj-btn tj-btn--primary" data-review="${id}">完成回顧</button>
     </div>`;
   }
-  return `<p class="tj-review-pending">預定 <b>${esc(e.reviewDate || '')}</b> 回顧——七天後回來，檢查當時的假設是否成立。也可以下載 .ics 提醒自己。</p>`;
+  return `<p class="tj-review-pending">預定 <b>${esc(e.reviewDate || '')}</b> 回顧——七天後回來，檢查當時的假設是否成立。也可以把提醒加進你的行事曆。</p>`;
 }
 
 function entryHtml(e) {
@@ -88,8 +88,8 @@ function entryHtml(e) {
     <details class="tj-details"><summary>看五段反思</summary><div class="tj-secs">${sectionsHtml(e.sections)}</div></details>
     ${reviewBlock(e, status)}
     <div class="tj-entry-actions">
-      <button class="tj-btn" data-md="${e.id}">匯出 Markdown</button>
-      <button class="tj-btn" data-ics="${e.id}">.ics 回顧提醒</button>
+      <button class="tj-btn" data-md="${e.id}">存成文字檔</button>
+      <button class="tj-btn" data-ics="${e.id}">加到行事曆提醒</button>
     </div>
   </article>`;
 }

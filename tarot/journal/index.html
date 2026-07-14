@@ -1,8 +1,8 @@
 ---
 layout: home
-title: 我的塔羅 Journal
-seo_title: 我的塔羅 Journal｜本機保存的反思與七日回顧
-description: 你在塔羅反思工具裡整理的決策備忘錄，只存在這台裝置的瀏覽器。七天後回來驗證當時的假設，或隨時匯出與刪除。不上傳、不同步、不建立帳號。
+title: 我的塔羅反思紀錄
+seo_title: 我的塔羅反思紀錄｜存在自己裝置、七天後回來驗證
+description: 你在塔羅反思工具裡整理的決策備忘錄，只存在你自己的裝置。七天後回來驗證當時的假設，或隨時下載備份與刪除。不上傳、不同步、不用註冊。
 keywords: 塔羅日記,塔羅反思紀錄,決策備忘錄,七日回顧,塔羅journal
 nav_active: tarot
 use_tarot_journal: true
@@ -11,7 +11,7 @@ breadcrumbs:
     url: /
   - name: Cyber Tarot Lab
     url: /tarot/
-  - name: 我的塔羅 Journal
+  - name: 我的塔羅反思紀錄
     url: /tarot/journal/
 extra_css: |
   .tj-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; }
@@ -85,7 +85,7 @@ extra_css: |
   <section class="tj-hero" data-aos="fade-up">
     <div class="container text-center">
       <span class="tarot-pill"><i class="bi bi-journal-bookmark"></i> 只存在這台裝置，七天後回來驗證</span>
-      <h1>我的塔羅 Journal</h1>
+      <h1>我的塔羅反思紀錄</h1>
       <p class="lead">你在反思工具裡整理的每一份《決策備忘錄》都留在這裡。七天後回來，看看當時的假設是否成立、實際做了什麼——把一次抽牌，變成一個會回顧的循環。</p>
       <div><a class="explore-backlink" href="{{ '/tarot/draw/' | relative_url }}">← 回到塔羅反思工具</a></div>
     </div>
@@ -96,19 +96,19 @@ extra_css: |
       <div class="tj-stats" id="tj-stats"></div>
 
       <div class="tj-empty" id="tj-empty" style="display:none;">
-        你還沒有保存任何反思。<br>去抽一次牌，把它整理成《決策備忘錄》，按「存到本機 Journal」，就會出現在這裡。
+        你還沒有保存任何反思。<br>去抽一次牌，把它整理成《決策備忘錄》，按「存到我的反思紀錄」，就會出現在這裡。
         <br><a href="{{ '/tarot/draw/' | relative_url }}">開始一次反思 →</a>
       </div>
 
       <div class="tj-list" id="tj-list" style="display:none;"></div>
 
       <div class="tj-global-actions" id="tj-global-actions" style="display:none;">
-        <button id="tj-export-all">匯出全部（JSON）</button>
+        <button id="tj-export-all">下載完整備份</button>
         <button id="tj-clear-all" class="is-danger">刪除全部紀錄</button>
       </div>
 
       <p class="tj-privacy-note">
-        <strong>關於你的資料：</strong>這些反思紀錄只儲存在你目前這台裝置的瀏覽器（localStorage），<strong>不會上傳、不會同步到其他裝置、也不需要帳號</strong>。這代表換一台電腦、換一個瀏覽器、清除瀏覽資料或使用無痕模式時，紀錄不會跟著走——若想長期保存，請用「匯出全部」下載一份。「刪除全部紀錄」會立即、永久移除本機所有資料，不留備份。
+        <strong>關於你的資料：</strong>這些反思紀錄只儲存在你目前這台裝置的瀏覽器裡，<strong>不會上傳、不會同步到其他裝置、也不用註冊帳號</strong>。這代表換一台電腦、換一個瀏覽器、清除瀏覽資料或使用無痕模式時，紀錄不會跟著走——若想長期保存，請用「下載完整備份」存一份到你的電腦。「刪除全部紀錄」會立即、永久移除這台裝置上的所有資料，不留備份。
       </p>
     </div>
   </section>

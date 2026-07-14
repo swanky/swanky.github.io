@@ -334,9 +334,9 @@ extra_css: |
         <div class="tarot-readings" id="tarot-readings"></div>
         <div class="tarot-result-actions" id="tarot-actions" style="display:none;">
           <button class="is-primary" id="tarot-memo-generate">整理成決策備忘錄 →</button>
-          <button id="tarot-download">下載塔羅圖卡 (PNG)</button>
+          <button id="tarot-download">下載塔羅圖卡</button>
           <button id="tarot-again">再抽一次</button>
-          <label class="tarot-privacy-check"><input type="checkbox" id="tarot-include-question"> 下載 PNG 時，把我的問題也印在圖卡上（預設不印，保護隱私）</label>
+          <label class="tarot-privacy-check"><input type="checkbox" id="tarot-include-question"> 下載圖卡時，把我的問題也印上去（預設不印，保護隱私）</label>
         </div>
 
         <!-- Tarot Decision Memo：五段結構化反思，可編輯、可匯出、可存本機 Journal（JS 填充） -->
@@ -344,10 +344,10 @@ extra_css: |
           <div class="tarot-memo-inner">
             <div class="tarot-memo-form" id="tarot-memo-form"></div>
             <div class="tarot-memo-actions">
-              <button class="is-primary" id="tarot-memo-save">存到本機 Journal</button>
-              <button id="tarot-memo-md">匯出 Markdown</button>
-              <button id="tarot-memo-png">匯出 PNG</button>
-              <button id="tarot-memo-ics">加入七日回顧提醒（.ics）</button>
+              <button class="is-primary" id="tarot-memo-save">存到我的反思紀錄</button>
+              <button id="tarot-memo-md">存成文字檔</button>
+              <button id="tarot-memo-png">存成圖片</button>
+              <button id="tarot-memo-ics">加進行事曆提醒（七天後）</button>
             </div>
             <p class="tarot-memo-saved" id="tarot-memo-saved"></p>
           </div>
@@ -463,7 +463,7 @@ extra_css: |
           <div id="tfaq4" class="accordion-collapse collapse" data-bs-parent="#tarotFaq"><div class="accordion-body">線上抽牌完全免費。若想更深入，可來信預約客製文字解讀（非同步、email 交付）或 1:1 線上引導（名額有限）。付款可用台幣，或穩定幣（USDC／USDT 轉到 swanbear.eth，價格更優惠）。所有內容僅用於你的解讀，不會公開或另作他用。</div></div>
         </div>
       </div>
-      <p style="text-align:center; margin-top:24px;"><a class="explore-backlink" href="{{ '/tarot/daily/' | relative_url }}">每天一分鐘：今日一牌 →</a>　·　<a class="explore-backlink" href="{{ '/tarot/journal/' | relative_url }}">我的塔羅 Journal（七日回顧）→</a></p>
+      <p style="text-align:center; margin-top:24px;"><a class="explore-backlink" href="{{ '/tarot/daily/' | relative_url }}">每天一分鐘：今日一牌 →</a>　·　<a class="explore-backlink" href="{{ '/tarot/journal/' | relative_url }}">我的塔羅反思紀錄（七日回顧）→</a></p>
     </div>
   </section>
 
