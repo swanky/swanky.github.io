@@ -1,5 +1,6 @@
 hero:
   image: /assets/img/photography/selected/24350775633.jpg
+  responsive_key: "24350775633"
   width: 1600
   height: 1067
   alt: 宇彤在校園跑道上的制服人像
@@ -10,6 +11,7 @@ hero:
 selected_works:
   - photo_id: "24977731995"
     image: /assets/img/photography/selected/24977731995.jpg
+    responsive_key: "24977731995"
     width: 1600
     height: 1600
     alt: 宇彤透過圓筒形成透視感的概念人像
@@ -18,6 +20,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/24977731995/
   - photo_id: "2089504883"
     image: /assets/img/photography/selected/2089504883.jpg
+    responsive_key: "2089504883"
     width: 1600
     height: 1600
     alt: Pinky 戴著彩色圍巾凝視鏡頭的貓咪照片
@@ -26,6 +29,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/2089504883/
   - photo_id: "1664024637"
     image: /assets/img/photography/selected/1664024637.jpg
+    responsive_key: "1664024637"
     width: 1600
     height: 1143
     alt: 果子的黑白花飾人像
@@ -34,6 +38,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/1664024637/
   - photo_id: "4624112041"
     image: /assets/img/photography/selected/4624112041.jpg
+    responsive_key: "4624112041"
     width: 1600
     height: 1576
     alt: 車廂窗光環境人像
@@ -42,6 +47,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/4624112041/
   - photo_id: "15262345956"
     image: /assets/img/photography/selected/15262345956.jpg
+    responsive_key: "15262345956"
     width: 1600
     height: 1600
     alt: 窗邊椅子上的制服人像
@@ -50,6 +56,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/15262345956/
   - photo_id: "32811316801"
     image: /assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg
+    responsive_key: "32811316801_33e0cc3e72_k"
     width: 2048
     height: 1365
     alt: 果子在星空復古場景中的角色人像
@@ -58,6 +65,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/32811316801/
   - photo_id: "33300626336"
     image: /assets/img/portfolio/33300626336_d82723bf49_k.jpeg
+    responsive_key: "33300626336_d82723bf49_k"
     width: 2048
     height: 1365
     alt: 小潔 Mina 在教室窗邊的制服人像
@@ -66,6 +74,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/33300626336/
   - photo_id: "33645452611"
     image: /assets/img/portfolio/33645452611_56b9253b61_k.jpeg
+    responsive_key: "33645452611_56b9253b61_k"
     width: 2048
     height: 1365
     alt: 李昱在麵包店前的制服人像
@@ -74,6 +83,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/33645452611/
   - photo_id: "29528630897"
     image: /assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg
+    responsive_key: "29528630897_7de2f3ac21_k"
     width: 2048
     height: 1365
     alt: 李婷婷在戶外座椅旁的制服人像
@@ -82,6 +92,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/29528630897/
   - photo_id: "20275049655"
     image: /assets/img/photography/selected/20275049655.jpg
+    responsive_key: "20275049655"
     width: 1600
     height: 1067
     alt: 啾比特在戶外城市空間的橫幅人像
@@ -90,6 +101,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/20275049655/
   - photo_id: "51132640907"
     image: /assets/img/photography/selected/51132640907.jpg
+    responsive_key: "51132640907"
     width: 1600
     height: 1067
     alt: 羽葶自然笑容的戶外人像
@@ -98,6 +110,7 @@ selected_works:
     url: https://www.flickr.com/photos/swanky-hsiao/51132640907/
   - photo_id: "51134421425"
     image: /assets/img/photography/selected/51134421425.jpg
+    responsive_key: "51134421425"
     width: 1600
     height: 1067
     alt: 羽葶躺在草地上的橫幅近景人像
@@ -107,6 +120,7 @@ selected_works:
 
 series:
   - image: /assets/img/photography/selected/4597747289.jpg
+    responsive_key: "4597747289"
     width: 1600
     height: 1067
     alt: Momo 站在台北市場蔬菜貨車旁的人像
@@ -116,6 +130,7 @@ series:
     url: https://www.flickr.com/photos/swanky-hsiao/4597747289/
     cta: 在 Flickr 看作品
   - image: /assets/img/sec/001_Zoey_1.jpg
+    responsive_key: "001_Zoey_1"
     width: 1024
     height: 1024
     alt: For Your Safety 系列中 Zoey 戴安全帽手持乾燥花的人像
@@ -125,6 +140,7 @@ series:
     url: /photography/for-your-safety/
     cta: 看完整系列
   - image: /assets/img/photography/selected/4517746235.jpg
+    responsive_key: "4517746235"
     width: 1600
     height: 1600
     alt: RedBall Project 巨大紅球夾在剝皮寮建築之間

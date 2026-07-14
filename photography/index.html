@@ -18,11 +18,15 @@ og_image: /assets/img/photography/selected/24350775633.jpg
 
 <main id="main" class="photo-author-page">
   <section class="photo-author-hero" aria-labelledby="photography-title">
+    {% assign hero_responsive_base = '/assets/img/photography/responsive/' | append: photography.hero.responsive_key %}
     <a href="{{ photography.hero.image | relative_url }}"
       class="photo-author-hero-media portfolio-lightbox"
       data-gallery="photography-selected"
       title="{{ photography.hero.alt }}">
-      <img src="{{ photography.hero.image | relative_url }}"
+      <img src="{{ hero_responsive_base | append: '-960.jpg' | relative_url }}"
+        srcset="{{ hero_responsive_base | append: '-480.jpg' | relative_url }} 480w,
+          {{ hero_responsive_base | append: '-960.jpg' | relative_url }} 960w"
+        sizes="(max-width: 1000px) 100vw, 69vw"
         alt="{{ photography.hero.alt }}"
         width="{{ photography.hero.width }}"
         height="{{ photography.hero.height }}"
@@ -62,12 +66,19 @@ og_image: /assets/img/photography/selected/24350775633.jpg
 
       <div class="photo-author-masonry">
         {% for work in photography.selected_works %}
+        {% assign work_responsive_base = '/assets/img/photography/responsive/' | append: work.responsive_key %}
         <article class="photo-author-work">
           <a href="{{ work.image | relative_url }}"
             class="portfolio-lightbox"
             data-gallery="photography-selected"
             title="{{ work.title }}｜{{ work.meta }}">
-            <img src="{{ work.image | relative_url }}"
+            <img src="{{ work_responsive_base | append: '-960.jpg' | relative_url }}"
+              srcset="{{ work_responsive_base | append: '-480.jpg' | relative_url }} 480w,
+                {{ work_responsive_base | append: '-960.jpg' | relative_url }} 960w"
+              sizes="(max-width: 720px) calc(100vw - 28px),
+                (max-width: 1000px) calc(50vw - 33px),
+                (max-width: 1368px) calc(33vw - 28px),
+                428px"
               alt="{{ work.alt }}"
               width="{{ work.width }}"
               height="{{ work.height }}"
@@ -101,9 +112,15 @@ og_image: /assets/img/photography/selected/24350775633.jpg
 
       <div class="photo-author-series-list">
         {% for series in photography.series %}
+        {% assign series_responsive_base = '/assets/img/photography/responsive/' | append: series.responsive_key %}
         <article class="photo-author-series-card">
           <a href="{{ series.url | relative_url }}" class="photo-author-series-media"{% if series.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
-            <img src="{{ series.image | relative_url }}"
+            <img src="{{ series_responsive_base | append: '-960.jpg' | relative_url }}"
+              srcset="{{ series_responsive_base | append: '-480.jpg' | relative_url }} 480w,
+                {{ series_responsive_base | append: '-960.jpg' | relative_url }} 960w"
+              sizes="(max-width: 720px) calc(100vw - 28px),
+                (max-width: 1368px) 54vw,
+                713px"
               alt="{{ series.alt }}"
               width="{{ series.width }}"
               height="{{ series.height }}"
