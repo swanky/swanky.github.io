@@ -145,7 +145,7 @@
   phase: 已上線
   route: /tarot/
   nav_order: 4
-  nav_label: Cyber Tarot
+  nav_label: 塔羅
   icon: bi-collection
   input_type: question
   use_cases: [原創牌組, 結構化反思, AI 視覺實驗]

@@ -32,7 +32,7 @@ function renderGallery(root) {
         const label = `${card.nameZh} ${card.nameEn}`;
         const index = cards.indexOf(card);
         return `<figure class="ct-gallery-card" data-index="${index}" tabindex="0" role="button" aria-label="放大檢視${escapeHtml(label)}">`
-          + `<img src="${card.src}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}" loading="lazy" width="768">`
+          + `<img src="${card.src}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}" loading="lazy" decoding="async" width="768">`
           + `<figcaption>${escapeHtml(card.nameZh)}<br><span>${escapeHtml(card.nameEn)}</span></figcaption></figure>`;
       }).join('')
       + '</div></section>';
