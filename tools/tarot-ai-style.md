@@ -13,7 +13,7 @@
 3. **每張多生 2–4 張挑最好**（賣品要求一致，寧可多挑）。
 4. **尺寸**：直式 **2:3（1024×1536）**，人物場景滿到邊，但**上下各留一點留白**給模板的牌名／編號；**art only，不要畫邊框或任何文字**。
 5. **存檔**：依牌 id 存 **JPG**（先壓到約 768px 寬、品質 ~85 給網站用；**印刷另存高解析原檔**）。檔名＝id：`major-00.jpg`…`major-21.jpg`、`wands-01.jpg`…`pentacles-14.jpg`（宮廷牌 11 侍者/12 騎士/13 皇后/14 國王）。id 清單見 `assets/js/tarot/tarot-deck.js`。
-6. 丟一張到 `assets/img/tarot/`、在 `tarot-art-manifest.js` 加該 id，網站那張就自動換成你的圖。
+6. 丟一張到 `assets/img/tarot/uniform/`、在 `tarot-art-manifest.js` 加該 id，網站那張就自動換成你的圖。
 
 ---
 

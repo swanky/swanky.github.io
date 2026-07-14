@@ -545,8 +545,8 @@ SCENE: The protagonist sits as a commanding king upon a grand throne entwined wi
 **數的方法**（沿用原牌組經驗）：從**全解析度原圖**左右高倍率裁切逐一點數（低倍率看全幅容易少算）。宮廷牌與王牌確認「只有 1 個主符號」。
 
 ### §4.5 生圖後：壓圖換檔 ＋ 更新 manifest（本站實際規格）
-1. **存列印原圖**：ChatGPT 生出的高解析原圖，存 `assets/img/tarot-print/{id}.png`（規格 1024×1536 PNG；此目錄刻意保留在 git 供未來重製，見 `_config.yml`）。
-2. **壓站上圖**：壓成 `assets/img/tarot/{id}.jpg`（768×1152＝原圖 75%、JPG 品質 ~85）。轉檔用 **PowerShell WIC**（專案慣例，非 python／GDI+；見 `reference_windows_image_convert` 記憶）。範例：
+1. **存列印原圖**：ChatGPT 生出的高解析原圖，存 `assets/img/tarot/print/uniform/{id}.png`（規格 1024×1536 PNG；此目錄刻意保留在 git 供未來重製，見 `_config.yml`）。
+2. **壓站上圖**：壓成 `assets/img/tarot/uniform/{id}.jpg`（768×1152＝原圖 75%、JPG 品質 ~85）。轉檔用 **PowerShell WIC**（專案慣例，非 python／GDI+；見 `reference_windows_image_convert` 記憶）。範例：
    ```powershell
    # 讀 tarot-print/{id}.png → 縮到寬 768、存 tarot/{id}.jpg q85（WIC）
    # 逐張處理；{id} 例：pentacles-07

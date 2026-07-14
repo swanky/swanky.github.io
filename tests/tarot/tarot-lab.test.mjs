@@ -26,7 +26,7 @@ function jpegDimensions(filePath) {
 }
 
 test('CloneX web 牌組＝78 張且全為 768×1152 JPEG', () => {
-  const dir = path.join(ROOT, 'assets/img/tarot-clonex');
+  const dir = path.join(ROOT, 'assets/img/tarot/clonex');
   const expected = buildDeck().map((id) => `${id}.jpg`).sort();
   const actual = fs.readdirSync(dir).filter((name) => name.endsWith('.jpg')).sort();
   assert.deepEqual(actual, expected);
@@ -69,7 +69,7 @@ test('CloneX gallery 避免舊快取，lightbox 有描述與前後切牌', () =>
 });
 
 test('印刷母版不部署，服務頁使用洽詢報價而非固定價目', () => {
-  assert.match(read('_config.yml'), /assets\/img\/tarot-clonex-print/);
+  assert.match(read('_config.yml'), /assets\/img\/tarot\/print/);
   const service = read('technical/ai-visual-production/index.html');
   assert.match(service, /依範圍報價/);
   assert.match(service, /用 Email 免費洽詢/);

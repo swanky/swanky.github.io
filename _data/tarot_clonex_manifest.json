@@ -6,7 +6,7 @@
   "web": "768×1152",
   "aspect": "2:3",
   "count": 78,
-  "dir": "/assets/img/tarot-clonex/",
+  "dir": "/assets/img/tarot/clonex/",
   "note": "逐牌基準資料：檔名、web 尺寸與數字牌預期可數物件數（pips）。人工 QA 判準見 /tarot/lab/。此檔為程式由實際圖檔生成的可驗證 baseline。",
   "cards": [
     {

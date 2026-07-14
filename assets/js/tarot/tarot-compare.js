@@ -1,7 +1,7 @@
 // tarot-compare.js — 三副牌對照藝廊：原版偉特 RWS × 制服女孩（墨線）× Cyber Tarot（CloneX）。
 // 左欄＝公共財偉特靜態圖（assets/img/tarot/rws/{id}.jpg，720px）；
 // 中欄＝制服女孩，重用 tarot-card-image 的 faceSvg 套框（＝與線上抽牌同款成品）；
-// 右欄＝Cyber Tarot（CloneX）成品圖（assets/img/tarot-clonex/{id}.jpg，768px）。
+// 右欄＝Cyber Tarot（CloneX）成品圖（assets/img/tarot/clonex/{id}.jpg，768px）。
 // 效能：左右兩欄用原生 loading="lazy"；中欄 SVG 無原生 lazy，改用 IntersectionObserver
 //       在進場前才注入 faceSvg，避免 78 張 SVG 內嵌圖一次並發把連線塞爆（部分圖載不出）。
 // 純前端、零第三方相依；含自製極簡 lightbox（點圖放大、Esc／點背景關閉）。
@@ -10,7 +10,7 @@ import { faceSvg } from './tarot-card-image.js';
 import { createOverlay } from './tarot-overlay.js';
 
 const RWS_DIR = '/assets/img/tarot/rws/';
-const CLONEX_DIR = '/assets/img/tarot-clonex/';
+const CLONEX_DIR = '/assets/img/tarot/clonex/';
 // 目前以 Gemini 暫代、待 ChatGPT 重生的牌（顯示小標記）。
 const PLACEHOLDER = new Set(['pentacles-13', 'pentacles-14']);
 

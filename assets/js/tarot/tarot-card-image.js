@@ -1,4 +1,4 @@
-// tarot-card-image.js — 以 AI 牌面圖（assets/img/tarot/{id}.png）為主視覺，套金色品牌框＋牌名緞帶。
+// tarot-card-image.js — 以 AI 牌面圖（assets/img/tarot/uniform/{id}.png）為主視覺，套金色品牌框＋牌名緞帶。
 // 沒有圖的牌（不在 tarot-art-manifest 的 ART_IDS）→ 回退到現有素牌面 tarot-card-svg，故未生圖前畫面不變。
 // 同一份 framedImageInner 供「頁面顯示」與「PNG 匯出」共用（匯出時 href 改傳 dataURL）。
 import { faceSvg as plainFaceSvg, backSvg } from './tarot-card-svg.js';
@@ -7,10 +7,10 @@ import { buildDeck } from './tarot-deck.js';
 
 // 牌組登錄表：每個牌組＝一個藝術圖來源目錄 + 具備圖的牌 id 集合。
 // uniform＝墨線復古制服女孩（部分牌用 AI 圖、其餘回退素牌面，見 tarot-art-manifest）。
-// clonex＝Cute Luxe Cyber Tarot，78 張全數具備圖（assets/img/tarot-clonex/，檔名與 uniform 一致）。
+// clonex＝Cute Luxe Cyber Tarot，78 張全數具備圖（assets/img/tarot/clonex/，檔名與 uniform 一致）。
 export const DECKS = {
   uniform: { key: 'uniform', dir: ART_DIR, ids: ART_IDS, label: 'Uniform Girl Tarot', labelZh: '制服女孩牌組' },
-  clonex:  { key: 'clonex', dir: '/assets/img/tarot-clonex/', ids: new Set(buildDeck()), label: 'CloneX Cute Luxe Cyber Tarot', labelZh: 'CloneX Cute Luxe Cyber Tarot' },
+  clonex:  { key: 'clonex', dir: '/assets/img/tarot/clonex/', ids: new Set(buildDeck()), label: 'CloneX Cute Luxe Cyber Tarot', labelZh: 'CloneX Cute Luxe Cyber Tarot' },
 };
 export const DECK_KEYS = ['uniform', 'clonex'];
 function deckOf(deck) { return DECKS[deck] || DECKS.uniform; }

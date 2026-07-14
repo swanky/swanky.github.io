@@ -43,10 +43,10 @@ exclude:
   - package.json
   - tests
   - tools
-  # Print-resolution tarot originals (1024×1536 PNG): kept in git for future
-  # print use, but excluded from the build so they don't bloat the deployed _site.
-  - assets/img/tarot-print
-  - assets/img/tarot-clonex-print
+  # Print-resolution tarot originals (uniform/clonex 1024×1536 PNG masters and
+  # the public-domain RWS 1080×1920 scans): kept in git for future print use,
+  # but excluded from the build so they don't bloat the deployed _site.
+  - assets/img/tarot/print
   # Pre-compression image originals (*.original.*): kept in git as off-site
   # backup (2026-07-04), excluded from the deployed site for the same reason.
   - assets/img/*.original.*

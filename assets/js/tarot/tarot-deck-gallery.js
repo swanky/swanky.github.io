@@ -16,7 +16,7 @@ const escapeHtml = (value) => String(value ?? '')
   .replace(/"/g, '&quot;');
 
 function renderGallery(root) {
-  const dir = root.dataset.galleryDir || '/assets/img/tarot-clonex/';
+  const dir = root.dataset.galleryDir || '/assets/img/tarot/clonex/';
   const deckLabel = root.dataset.galleryLabel || '原創塔羅牌';
   const cards = buildDeck().map((id) => ({ ...CARDS[id], src: `${dir}${id}.jpg` }));
   let html = '<nav class="ct-gallery-nav" aria-label="牌組分類">'

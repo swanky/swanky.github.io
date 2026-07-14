@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = path.resolve('assets/img/tarot-clonex-print');
+const root = path.resolve('assets/img/tarot/print/clonex');
 const expectedCards = [
   ...Array.from({ length: 22 }, (_, index) => `major-${String(index).padStart(2, '0')}.png`),
   ...['wands', 'cups', 'swords', 'pentacles'].flatMap((suit) =>
