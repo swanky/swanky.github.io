@@ -6,21 +6,32 @@ import { drawSpread } from './tarot-draw.js';
 import { SPREADS, SPREAD_KEYS, recommendSpread, TOPICS, TOPIC_KEYS, recommendTopic } from './tarot-spreads.js';
 import { CARDS } from './tarot-deck.js';
 import { READINGS } from './tarot-data-texts.js';
-import { faceSvg, backSvg } from './tarot-card-image.js';
+import { faceSvg, backSvg, DECKS, DECK_KEYS } from './tarot-card-image.js';
 import { exportReadingPng } from './tarot-export-svg.js';
 import { createOverlay } from './tarot-overlay.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 import { inquiryMailto } from '../core/core-funnel.js';
+import { buildMemo, memoFormHtml, readMemo, downloadMemoMarkdown, exportMemoPng, downloadReviewIcs } from './tarot-memo.js';
+import { addEntry } from './tarot-journal-store.js';
 
 const REDUCED = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const state = { spread: 'single', spreadManual: false, topic: 'life', topicManual: false, allowReversed: true, draw: null, question: '', revealTimers: [], revealed: false };
+const state = { spread: 'single', spreadManual: false, topic: 'life', topicManual: false, allowReversed: true, deck: 'uniform', draw: null, question: '', revealTimers: [], revealed: false, memo: null, modalIdx: null };
 
 function dateText() {
   const d = new Date();
   const p = (n) => String(n).padStart(2, '0');
   return `${d.getFullYear()}/${p(d.getMonth() + 1)}/${p(d.getDate())}`;
 }
+
+// 七日後的回顧日期（給 Decision Memo 與 .ics 提醒）。
+function reviewDateText() {
+  const d = new Date();
+  d.setDate(d.getDate() + 7);
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}/${p(d.getMonth() + 1)}/${p(d.getDate())}`;
+}
+function deckLabel() { return DECKS[state.deck] ? DECKS[state.deck].labelZh : ''; }
 
 // ---- 主題選擇 ----
 function renderTopicOptions() {
@@ -75,6 +86,50 @@ function selectSpread(key, manual) {
   });
 }
 
+// ---- 牌組選擇（Uniform 制服女孩 / CloneX Cyber Tarot）----
+function renderDeckOptions() {
+  const wrap = $('tarot-deck-options');
+  if (!wrap) return;
+  wrap.innerHTML = DECK_KEYS.map((k) => {
+    const d = DECKS[k];
+    const active = k === state.deck ? ' is-active' : '';
+    return `<button type="button" class="tarot-deck-btn${active}" data-deck="${k}">
+      <span class="tarot-deck-name">${esc(d.labelZh)}</span>
+      <span class="tarot-deck-sub">${esc(d.label)}</span>
+    </button>`;
+  }).join('');
+  wrap.querySelectorAll('.tarot-deck-btn').forEach((b) => {
+    b.addEventListener('click', () => selectDeck(b.getAttribute('data-deck')));
+  });
+}
+function selectDeck(key) {
+  if (!DECKS[key]) return;
+  state.deck = key;
+  const wrap = $('tarot-deck-options');
+  if (wrap) wrap.querySelectorAll('.tarot-deck-btn').forEach((b) => {
+    b.classList.toggle('is-active', b.getAttribute('data-deck') === key);
+  });
+  applyDeckToFaces();
+  gtag('event', 'tarot_deck_select', { deck: key });
+}
+// 換牌組時，就地替換已翻開的牌面（含放大 modal 的大圖），毋須重抽。
+function applyDeckToFaces() {
+  if (!state.draw) return;
+  const cardEls = $('tarot-cards') ? Array.from($('tarot-cards').querySelectorAll('.tarot-card')) : [];
+  cardEls.forEach((el, i) => {
+    const d = state.draw[i];
+    const card = d && CARDS[d.cardId];
+    const face = el.querySelector('.tarot-card-face');
+    if (face && card) face.innerHTML = faceSvg(card, d.reversed, null, state.deck);
+  });
+  const art = document.querySelector('#tarot-card-modal .tarot-modal-art');
+  if (art && state.modalIdx != null) {
+    const d = state.draw[state.modalIdx];
+    const card = d && CARDS[d.cardId];
+    if (card) art.innerHTML = faceSvg(card, d.reversed, null, state.deck);
+  }
+}
+
 function updateReco() {
   const q = ($('tarot-question') ? $('tarot-question').value : '') || '';
   state.question = q.trim();
@@ -114,7 +169,7 @@ function doDraw() {
       <div class="tarot-card" data-i="${i}" tabindex="0" role="button" aria-label="第 ${i + 1} 張・${esc(d.slotLabel)}，點擊看大圖與解讀">
         <div class="tarot-card-inner">
           <div class="tarot-card-back">${backSvg()}</div>
-          <div class="tarot-card-face">${faceSvg(card, d.reversed)}</div>
+          <div class="tarot-card-face">${faceSvg(card, d.reversed, null, state.deck)}</div>
         </div>
       </div>
     </div>`;
@@ -123,6 +178,11 @@ function doDraw() {
   setHTML('tarot-readings', '');
   show('tarot-actions', false);
   setHTML('tarot-funnel', '');
+  // 重抽：清掉上一輪的決策備忘錄
+  state.memo = null;
+  setHTML('tarot-memo-form', '');
+  setHTML('tarot-memo-saved', '');
+  show('tarot-memo', false);
   show('tarot-result', true);
 
   const cardEls = $('tarot-cards') ? Array.from($('tarot-cards').querySelectorAll('.tarot-card')) : [];
@@ -218,7 +278,7 @@ const cardModal = createOverlay({
       </div>
     </div>`,
 });
-function closeCardModal() { cardModal.close(); }
+function closeCardModal() { state.modalIdx = null; cardModal.close(); }
 // trigger＝被點的卡片元素，關閉後焦點還原回它（用 document.activeElement 在 Safari 滑鼠點 div 時會落在 <body>）。
 function openCardModal(i, trigger) {
   const d = state.draw && state.draw[i];
@@ -226,7 +286,8 @@ function openCardModal(i, trigger) {
   const card = CARDS[d.cardId];
   if (!card) return;
   const ov = cardModal.ensure();
-  ov.querySelector('.tarot-modal-art').innerHTML = faceSvg(card, d.reversed);
+  state.modalIdx = i;
+  ov.querySelector('.tarot-modal-art').innerHTML = faceSvg(card, d.reversed, null, state.deck);
   ov.querySelector('.tarot-modal-info').innerHTML = cardReadingInner(d);
   cardModal.open(trigger);
   // 捲動歸零必須在 is-open（display:flex）之後——元素要有 layout box，設 scrollTop 才生效；
@@ -261,30 +322,84 @@ function renderFunnel() {
 // ---- 動作 ----
 function doDownload() {
   if (!state.draw) return;
+  // 隱私：分享圖卡預設「不」印上使用者的問題，需主動勾選才包含（roadmap §5.5）。
+  const includeQ = $('tarot-include-question') ? $('tarot-include-question').checked : false;
   exportReadingPng(state.draw, {
-    question: state.question,
+    question: includeQ ? state.question : '',
     spreadName: TOPICS[state.topic].label + '・' + SPREADS[state.spread].nameZh,
     dateText: dateText(),
+    deck: state.deck,
   }, {
     filename: `tarot-${state.topic}-${state.spread}-${dateText().replace(/\//g, '')}.png`,
     onError: () => { setText('tarot-error', '圖卡產生失敗，請改用瀏覽器截圖。'); show('tarot-error', true); },
   }).catch(() => {});
-  gtag('event', 'tarot_download', { spread: state.spread, topic: state.topic });
+  gtag('event', 'tarot_download', { spread: state.spread, topic: state.topic, with_question: includeQ });
 }
 
 function doAgain() { doDraw(); }
+
+// ---- Decision Memo：把這次抽牌整理成五段結構化反思，可編輯、可匯出、可存本機 Journal ----
+function doGenerateMemo() {
+  if (!state.draw) return;
+  state.memo = buildMemo({
+    question: state.question, draw: state.draw, topic: state.topic, spread: state.spread,
+    dateText: dateText(), reviewDate: reviewDateText(), deckLabel: deckLabel(),
+  });
+  setHTML('tarot-memo-form', memoFormHtml(state.memo));
+  setHTML('tarot-memo-saved', '');
+  show('tarot-memo', true);
+  const el = $('tarot-memo');
+  if (el && el.scrollIntoView) el.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'start' });
+  gtag('event', 'tarot_memo_generate', { spread: state.spread, topic: state.topic });
+}
+// 讀回使用者當下編輯的內容（每次匯出／儲存都重讀，確保與畫面一致）。
+function currentMemo() { return state.memo ? readMemo(state.memo) : null; }
+function memoFilename(ext) { return `tarot-memo-${state.topic}-${dateText().replace(/\//g, '')}.${ext}`; }
+function doMemoMarkdown() {
+  const m = currentMemo(); if (!m) return;
+  downloadMemoMarkdown(m, memoFilename('md'));
+  gtag('event', 'tarot_memo_export', { format: 'markdown' });
+}
+function doMemoPng() {
+  const m = currentMemo(); if (!m) return;
+  exportMemoPng(m, {
+    filename: memoFilename('png'),
+    onError: () => { setText('tarot-error', '備忘錄圖片產生失敗，請改用 Markdown 匯出或截圖。'); show('tarot-error', true); },
+  });
+  gtag('event', 'tarot_memo_export', { format: 'png' });
+}
+function doMemoIcs() {
+  const m = currentMemo(); if (!m) return;
+  downloadReviewIcs(m, dateText().replace(/\//g, ''), 'tarot-review-reminder.ics');
+  gtag('event', 'tarot_memo_ics', {});
+}
+function doMemoSave() {
+  const m = currentMemo(); if (!m) return;
+  const entry = addEntry(m);
+  setHTML('tarot-memo-saved', entry
+    ? '✓ 已存到本機 Journal（只存在這台裝置的瀏覽器，不上傳）。<a href="/tarot/journal/">開啟我的塔羅 Journal →</a>'
+    : '無法存到本機（瀏覽器可能停用了儲存）。你仍可用上面的 Markdown／PNG 匯出保存。');
+  gtag('event', 'tarot_memo_save', { spread: state.spread, topic: state.topic });
+}
 
 // ---- 初始化 ----
 function init() {
   renderTopicOptions();
   renderSpreadOptions();
+  renderDeckOptions();
   updateReco();
   on('tarot-question', 'input', updateReco);
   on('tarot-draw', 'click', doDraw);
   on('tarot-download', 'click', doDownload);
   on('tarot-again', 'click', doAgain);
+  on('tarot-memo-generate', 'click', doGenerateMemo);
+  on('tarot-memo-md', 'click', doMemoMarkdown);
+  on('tarot-memo-png', 'click', doMemoPng);
+  on('tarot-memo-ics', 'click', doMemoIcs);
+  on('tarot-memo-save', 'click', doMemoSave);
   show('tarot-result', false);
   show('tarot-actions', false);
+  show('tarot-memo', false);
   show('tarot-error', false);
 }
 

@@ -48,6 +48,11 @@
 <script type="module" src="{{ '/assets/js/tarot/tarot-daily.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_tarot_journal %}
+<!-- 我的塔羅 Journal：本機保存的決策備忘錄＋七日回顧，純前端 ES module（localStorage、零後端） -->
+<script type="module" src="{{ '/assets/js/tarot/tarot-journal.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.use_astrology %}
 <!-- 星座命盤：vendor UMD（global Astronomy）先載，再 ES module（同 HD 模式） -->
 <script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>

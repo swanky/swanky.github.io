@@ -3,6 +3,17 @@
 // 同一份 framedImageInner 供「頁面顯示」與「PNG 匯出」共用（匯出時 href 改傳 dataURL）。
 import { faceSvg as plainFaceSvg, backSvg } from './tarot-card-svg.js';
 import { ART_IDS, ART_DIR } from './tarot-art-manifest.js';
+import { buildDeck } from './tarot-deck.js';
+
+// 牌組登錄表：每個牌組＝一個藝術圖來源目錄 + 具備圖的牌 id 集合。
+// uniform＝墨線復古制服女孩（部分牌用 AI 圖、其餘回退素牌面，見 tarot-art-manifest）。
+// clonex＝Cute Luxe Cyber Tarot，78 張全數具備圖（assets/img/tarot-clonex/，檔名與 uniform 一致）。
+export const DECKS = {
+  uniform: { key: 'uniform', dir: ART_DIR, ids: ART_IDS, label: 'Uniform Girl Tarot', labelZh: '制服女孩牌組' },
+  clonex:  { key: 'clonex', dir: '/assets/img/tarot-clonex/', ids: new Set(buildDeck()), label: 'CloneX Cute Luxe Cyber Tarot', labelZh: 'CloneX Cute Luxe Cyber Tarot' },
+};
+export const DECK_KEYS = ['uniform', 'clonex'];
+function deckOf(deck) { return DECKS[deck] || DECKS.uniform; }
 
 const FACE_W = 240;
 const FACE_H = 360;
@@ -17,8 +28,8 @@ const SERIF = "'Noto Serif TC','Songti TC','MingLiU','Times New Roman',serif";
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 export { backSvg, FACE_W, FACE_H };
-export function hasArt(card) { return ART_IDS.has(card.id); }
-export function artUrl(card) { return ART_DIR + card.id + '.jpg'; }
+export function hasArt(card, deck) { return deckOf(deck).ids.has(card.id); }
+export function artUrl(card, deck) { return deckOf(deck).dir + card.id + '.jpg'; }
 
 // 牌面內容（不含外層 <svg>）：滿版圖 + 金框 + 編號/逆位徽記 + 牌名緞帶。
 // href 可為同源網址（頁面顯示）或 dataURL（PNG 匯出）。逆位＝圖旋轉 180，框與文字維持正向。
@@ -49,16 +60,17 @@ export function framedImageInner(card, reversed, href) {
     <text x="${cx}" y="${nameY}" text-anchor="middle" dominant-baseline="middle" style="font:700 17px ${SERIF}; letter-spacing:3px" fill="${INK}">${esc(card.nameZh)}</text>`;
 }
 
-// 頁面用：有圖→框圖；無圖→回退素牌面。
-export function faceSvg(card, reversed, cls) {
-  if (!ART_IDS.has(card.id)) return plainFaceSvg(card, reversed, cls);
-  return `<svg class="${cls || 'tarot-face-svg'}" viewBox="0 0 ${FACE_W} ${FACE_H}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="${esc(card.nameZh)}${reversed ? '（逆位）' : ''}">${framedImageInner(card, reversed, artUrl(card))}</svg>`;
+// 頁面用：有圖→框圖；無圖→回退素牌面。deck 決定圖來源（預設 uniform，向後相容）。
+export function faceSvg(card, reversed, cls, deck) {
+  const dk = deckOf(deck);
+  if (!dk.ids.has(card.id)) return plainFaceSvg(card, reversed, cls);
+  return `<svg class="${cls || 'tarot-face-svg'}" viewBox="0 0 ${FACE_W} ${FACE_H}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="${esc(card.nameZh)}${reversed ? '（逆位）' : ''}">${framedImageInner(card, reversed, dk.dir + card.id + '.jpg')}</svg>`;
 }
 
 // 匯出用：抓同源 PNG → dataURL（SVG 當 image 載入時不會載外部資源，dataURL 也不汙染 canvas）。
-export async function fetchArtDataUrl(card) {
+export async function fetchArtDataUrl(card, deck) {
   try {
-    const res = await fetch(artUrl(card));
+    const res = await fetch(artUrl(card, deck));
     if (!res.ok) return null;
     const blob = await res.blob();
     return await new Promise((resolve) => {

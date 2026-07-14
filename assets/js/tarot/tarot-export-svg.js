@@ -113,7 +113,7 @@ export async function exportReadingPng(draw, meta = {}, opts = {}) {
   const artMap = {};
   for (const d of draw) {
     const card = CARDS[d.cardId];
-    if (card && hasArt(card)) { const url = await fetchArtDataUrl(card); if (url) artMap[d.cardId] = url; }
+    if (card && hasArt(card, meta.deck)) { const url = await fetchArtDataUrl(card, meta.deck); if (url) artMap[d.cardId] = url; }
   }
   const { svg, w, h } = buildExportSvg(draw, meta, artMap);
   downloadPngFromSvg({
