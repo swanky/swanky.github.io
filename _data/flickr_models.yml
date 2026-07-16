@@ -92,6 +92,8 @@ featured_collab:
     flickr_album_id: "72157624154925043"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/collections/72157624763412824/"
     cover_image: "album_72157624154925043.jpg"
+    cover_width: 683
+    cover_height: 1024
     albums:
       - title: "2011-10 阿宅遊艇趴"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157627777985941/"
@@ -175,6 +177,8 @@ featured_collab:
     flickr_album_id: "72157603757904337"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/collections/72157621178210950/"
     cover_image: "album_72157603757904337.jpg"
+    cover_width: 1024
+    cover_height: 1024
     albums:
       - title: "2017-02 星空復古＠萬鏡寫真館"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157676809872014/"
@@ -276,6 +280,8 @@ featured_collab:
     flickr_album_id: "72157603754431546"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/collections/72157603754431546/"
     cover_image: "305685307.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2009-08 內湖港墘"
         url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157621851484441/"
@@ -303,6 +309,8 @@ featured_collab:
     flickr_album_id: "72157631792409778"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157631792409778/"
     cover_image: "8090041680.jpg"
+    cover_width: 1024
+    cover_height: 1024
     albums:
       - title: "2014-11 信義區"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157649644556455/"
@@ -324,6 +332,8 @@ featured_collab:
     flickr_album_id: "72157630914069426"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157630914069426/"
     cover_image: "album_72157630914069426.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2013-06 忠義淡水"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157634375988332/"
@@ -345,6 +355,8 @@ featured_collab:
     flickr_album_id: "72157632530316323"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632530316323/"
     cover_image: "8473615776.jpg"
+    cover_width: 1024
+    cover_height: 1024
     albums:
       - title: "2013-11 三重高中制服＠琴二棚"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157638191249814/"
@@ -364,6 +376,8 @@ featured_collab:
     flickr_album_id: "72157629203838480"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157629203838480/"
     cover_image: "album_72157629203838480.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2012-04 淡水"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157629388357762/"
@@ -383,6 +397,8 @@ featured_collab:
     flickr_album_id: "72157635310022714"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635310022714/"
     cover_image: "album_72157635310022714.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2015-04 若慈"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157654533639399/"
@@ -402,6 +418,8 @@ featured_collab:
     flickr_album_id: "72157632874474980"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157632874474980/"
     cover_image: "8513524648.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2013-04 宅T宣傳照"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157633170938590/"
@@ -421,6 +439,8 @@ featured_collab:
     flickr_album_id: "72157635182065102"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157635182065102/"
     cover_image: "album_72157635182065102.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2014-12 嫺嫺甜甜過耶誕"
         url: "https://www.flickr.com/photos/swanky-hsiao/sets/72157647565276253/"
@@ -440,6 +460,8 @@ featured_collab:
     flickr_album_id: "72157673127456475"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157673127456475/"
     cover_image: "album_72157673127456475.jpg"
+    cover_width: 1024
+    cover_height: 683
     post_url: "/photography/at-studio/"
     albums:
       - title: "2016-07 淡水線制服之旅"
@@ -458,6 +480,8 @@ featured_collab:
     flickr_album_id: "72157673051651878"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157673051651878/"
     cover_image: "album_72157673051651878.jpg"
+    cover_width: 1024
+    cover_height: 683
     albums:
       - title: "2022-12 CloneX #18974"
         url: "https://www.flickr.com/photos/swanky-hsiao/albums/72177720304869243/"
@@ -473,6 +497,8 @@ featured_collab:
     flickr_album_id: "72157700670410182"
     flickr_album_url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157700670410182/"
     cover_image: "album_72157700670410182.jpg"
+    cover_width: 683
+    cover_height: 1024
     albums:
       - title: "2021-04 比特幣女孩"
         url: "https://www.flickr.com/photos/swanky-hsiao/albums/72157719012170802/"

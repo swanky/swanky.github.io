@@ -1,0 +1,10 @@
+{% assign image_meta = site.data.photography_image_manifest[include.image] %}
+{% assign display_src = image_meta.src_960 | default: image_meta.src_480 | default: include.image %}
+<img class="{{ include.class | default: 'photo-subpage-image' }}"
+  src="{{ display_src | relative_url }}"
+  {% if image_meta.src_480 and image_meta.src_960 %}srcset="{{ image_meta.src_480 | relative_url }} 480w, {{ image_meta.src_960 | relative_url }} 960w"{% elsif image_meta.src_480 %}srcset="{{ image_meta.src_480 | relative_url }} 480w"{% endif %}
+  {% if image_meta.src_480 %}sizes="{{ include.sizes | default: '(max-width: 720px) calc(100vw - 28px), 50vw' }}"{% endif %}
+  alt="{{ include.alt }}"
+  width="{{ image_meta.width }}"
+  height="{{ image_meta.height }}"
+  loading="{{ include.loading | default: 'lazy' }}">

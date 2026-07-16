@@ -1,0 +1,99 @@
+- title: 《制服．女孩 × 史旺基》
+  year: 2014
+  role: 個人攝影作品書
+  image: /assets/img/portfolio/portfolio-1.jpeg
+  width: 308
+  height: 427
+  publisher: 夢想製造
+  published_at: 2014-01-23
+  description: 以人物、制服與青春狀態為主軸的第一本個人攝影作品書。
+- title: 《制服．女孩 II × 史旺基》
+  year: 2015
+  role: 個人攝影作品書
+  image: /assets/img/portfolio/portfolio-2.jpeg
+  width: 308
+  height: 421
+  publisher: 夢想製造
+  published_at: 2015-02-08
+  description: 從單張人像走向生活場景，延伸人物與日常空間的關係。
+  coverage:
+    - relation: 活動紀錄
+      outlet: 欣講堂／XinMedia
+      date: 2015-03-07
+      title: 制服女孩II × 史旺基 簽書見面會
+      url: https://web.archive.org/web/20160412151111id_/http://xinforum.xinmedia.com/collection_infor_20.aspx?id=1285
+      archived: true
+      note: 列史旺基為講師，並介紹第二本攝影作品書。
+    - relation: 活動紀錄
+      outlet: Uniform Map 制服地圖
+      date: 2015-03-20
+      title: 制服．女孩 II 簽書會活動成功
+      url: https://web.archive.org/web/20150411063633id_/http://uniform.wingzero.tw/blog/archives/3697
+      archived: true
+      note: 記錄簽書會、推薦序與第二本攝影作品書。
+- title: 《高校制服戀物論》
+  year: 2015
+  role: 擔任攝影
+  image: /assets/img/portfolio/portfolio-3.jpeg
+  width: 308
+  height: 431
+  publisher: 沐風文化
+  published_at: 2015-04-01
+  description: 以攝影參與台灣制服文化的出版整理，文字作者為劉揚銘。
+  coverage:
+    - relation: 作者專訪
+      outlet: 蘋果日報
+      date: 2015-03-31
+      title: 「少女帶領我們前進」制服控自嘲「變態」
+      url: https://web.archive.org/web/20150403070306id_/http://www.appledaily.com.tw:80/realtimenews/article/new/20150331/584400
+      archived: true
+      note: 報導明確列出蕭宇程（史旺基）為本書攝影。
+    - relation: 作者專訪
+      outlet: ETtoday 新聞雲
+      date: 2015-03-31
+      title: 專業制服控大叔　迷戀少女制服還能出書
+      url: https://www.ettoday.net/news/20150331/486768.htm
+      note: 報導文字與攝影合作，並收錄史旺基談話。
+    - relation: 作者專訪
+      outlet: yam 蕃薯藤新聞／蕃新聞
+      date: 2015-03-31
+      title: 大叔追少年夢　完成少女制服控演化史
+      url: https://n.yam.com/Article/20150331949914
+      note: 報導合作背景、拍攝規模與史旺基談話。
+    - relation: 本書報導
+      outlet: 中時電子報
+      date: 2015-03-31
+      title: 高校制服戀物論　為宅宅發聲
+      url: https://www.chinatimes.com/realtimenews/20150331004799-260405
+      note: 報導劉揚銘與攝影師史旺基共同完成本書。
+- title: 《2015臺灣高校制服年鑑》
+  year: 2015
+  role: 參與拍攝
+  image: /assets/img/portfolio/portfolio-4.jpeg
+  width: 308
+  height: 459
+  publisher: 制服地圖
+  published_at: 2015
+  description: 參與年度制服影像紀錄，保存不同學校制服與人物樣貌。
+  coverage:
+    - relation: 出版企劃報導
+      outlet: TVBS 新聞網
+      date: 2014-09-09
+      title: 萌！高校 511 所制服年鑑　拍出女生俏麗
+      url: https://news.tvbs.com.tw/life/545860
+      note: 報導年鑑、10 位攝影師與拍攝規模；未逐一列出參與攝影師。
+    - relation: 出版企劃報導
+      outlet: 自由時報
+      date: 2014-09-09
+      title: 20 女模換穿 511 所高校服　萌拍制服年鑑
+      url: https://news.ltn.com.tw/news/life/breakingnews/1101392
+      note: 報導年鑑企劃與拍攝規模；未逐一列出參與攝影師。
+- title: 《制服．女孩 III × 史旺基》
+  year: 2016
+  role: 個人攝影作品書
+  image: /assets/img/portfolio/portfolio-5.jpeg
+  width: 767
+  height: 1050
+  publisher: 夢想製造
+  published_at: 2016
+  description: 以雙人與群像關係延伸系列，讓人物互動成為畫面的核心。

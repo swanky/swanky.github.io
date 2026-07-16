@@ -1,0 +1,11 @@
+<article class="photo-subpage-work">
+  <a href="{{ include.work.image | relative_url }}" class="photo-subpage-image-link{% if include.lightbox %} portfolio-lightbox{% endif %}"{% if include.lightbox %} data-gallery="{{ include.gallery }}" title="{{ include.work.title }}"{% endif %}>
+    {% include photography/responsive-image.html image=include.work.image alt=include.work.alt sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1000px) calc(50vw - 33px), (max-width: 1368px) calc(33vw - 28px), 428px" %}
+  </a>
+  <div class="photo-subpage-work-copy">
+    <p class="photo-author-eyebrow">{{ include.work.theme | default: include.work.meta }}</p>
+    <h2>{{ include.work.title }}</h2>
+    {% if include.work.subject %}<p>{{ include.work.subject }} · {{ include.work.year }}</p>{% elsif include.work.meta %}<p>{{ include.work.meta }}</p>{% endif %}
+    {% if include.work.flickr_url %}<a class="photo-author-text-link" href="{{ include.work.flickr_url }}" target="_blank" rel="noopener noreferrer">在 Flickr 看原作 →</a>{% elsif include.work.url %}<a class="photo-author-text-link" href="{{ include.work.url | relative_url }}">查看系列 →</a>{% endif %}
+  </div>
+</article>

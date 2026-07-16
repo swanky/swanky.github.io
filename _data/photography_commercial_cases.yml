@@ -1,0 +1,46 @@
+- id: michael-shih-mv
+  year: "2010"
+  category: 音樂錄影帶
+  title: 施文彬《文跡奇武②麻雀雖小》
+  role: MV 拍攝現場側拍
+  description: 記錄音樂錄影帶拍攝現場、表演者與工作過程，留下可公開查閱的幕後影像。
+  album_url: https://www.flickr.com/photos/swanky-hsiao/albums/72157624957794877/
+- id: machi-mv
+  year: "2012"
+  category: 音樂錄影帶
+  title: N2O × MACHI 官方 MV
+  role: 拍攝現場側拍
+  description: 記錄〈幹什麼〉與〈超級掰〉兩支官方 MV 的幕後工作與拍攝現場。
+  album_url: https://www.flickr.com/photos/swanky-hsiao/albums/72157632741060822/
+  secondary_url: https://www.flickr.com/photos/swanky-hsiao/albums/72157632736808865/
+- id: film-stills
+  year: "2012"
+  category: 舞台演出
+  title: 《舞琉璃》
+  role: 舞台劇照與工作紀錄
+  description: 記錄演出、排練、演員與幕後工作，留下舞台作品從準備到正式呈現的公開影像。
+  album_url: https://www.flickr.com/photos/swanky-hsiao/collections/72157629845335775/
+- id: emba-events
+  year: "2010"
+  category: 活動紀錄
+  title: 政大 EMBA 活動
+  role: 系列活動攝影
+  description: 以四組相簿完整記錄活動流程、人物互動與現場氛圍。
+  album_url: https://www.flickr.com/photos/swanky-hsiao/albums/72157623612020698/
+- id: wedding
+  year: "2008–2012"
+  category: 人生紀錄
+  title: 婚禮與自助婚紗
+  role: 婚禮紀錄、婚紗側拍
+  description: 在儀式與移動之間保留人物關係、家人互動與當天真正發生的瞬間。
+  album_url: https://www.flickr.com/photos/swanky-hsiao/collections/72157614525020580/
+- id: artfn
+  year: "2022"
+  category: 展覽紀錄
+  title: ArtfN 台北藝術新銳博覽會
+  role: 展場與作品紀錄
+  description: 記錄展場、藝術作品與觀眾之間的觀看關係。
+  image: /assets/img/flickr/album_72177720299529278.jpg
+  width: 1024
+  height: 683
+  album_url: https://www.flickr.com/photos/swanky-hsiao/albums/72177720299529278/

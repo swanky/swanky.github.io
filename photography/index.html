@@ -38,7 +38,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
       <p class="photo-author-hero-intro">{{ photography.hero.intro }}</p>
       <div class="photo-author-actions">
         <a href="#selected-works" class="photo-author-button">看代表作品</a>
-        <a href="{{ '/photography/gallery/' | relative_url }}" class="photo-author-button photo-author-button--ghost">瀏覽完整作品牆</a>
+        <a href="{{ '/photography/gallery/' | relative_url }}" class="photo-author-button photo-author-button--ghost">瀏覽作品與系列</a>
       </div>
     </div>
   </section>
@@ -46,7 +46,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
   <nav class="photo-author-quick-nav" aria-label="攝影專區快速導覽">
     <span>快速前往</span>
     <div>
-      <a href="{{ '/photography/gallery/' | relative_url }}">完整作品牆</a>
+      <a href="{{ '/photography/gallery/' | relative_url }}">作品與系列</a>
       {% for item in photography.archive_links %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endfor %}

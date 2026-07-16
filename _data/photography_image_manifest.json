@@ -1,0 +1,635 @@
+{
+  "/assets/img/flickr/305685307.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-305685307-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-305685307-960.jpg"
+  },
+  "/assets/img/flickr/309437621.jpg": {
+    "width": 1023,
+    "height": 655,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-309437621-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-309437621-960.jpg"
+  },
+  "/assets/img/flickr/8090041680.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-8090041680-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-8090041680-960.jpg"
+  },
+  "/assets/img/flickr/8473615776.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-8473615776-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-8473615776-960.jpg"
+  },
+  "/assets/img/flickr/8513524648.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-8513524648-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-8513524648-960.jpg"
+  },
+  "/assets/img/flickr/album_72157603757904337.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157603757904337-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157603757904337-960.jpg"
+  },
+  "/assets/img/flickr/album_72157624154925043.jpg": {
+    "width": 683,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157624154925043-480.jpg"
+  },
+  "/assets/img/flickr/album_72157629203838480.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157629203838480-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157629203838480-960.jpg"
+  },
+  "/assets/img/flickr/album_72157630914069426.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157630914069426-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157630914069426-960.jpg"
+  },
+  "/assets/img/flickr/album_72157635182065102.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157635182065102-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157635182065102-960.jpg"
+  },
+  "/assets/img/flickr/album_72157635310022714.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157635310022714-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157635310022714-960.jpg"
+  },
+  "/assets/img/flickr/album_72157673051651878.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157673051651878-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157673051651878-960.jpg"
+  },
+  "/assets/img/flickr/album_72157673127456475.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157673127456475-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72157673127456475-960.jpg"
+  },
+  "/assets/img/flickr/album_72157700670410182.jpg": {
+    "width": 683,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72157700670410182-480.jpg"
+  },
+  "/assets/img/flickr/album_72177720299529278.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-album_72177720299529278-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-album_72177720299529278-960.jpg"
+  },
+  "/assets/img/flickr/commercial/artfn-52121948224.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52121948224-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52121948224-960.jpg"
+  },
+  "/assets/img/flickr/commercial/artfn-52121948414.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52121948414-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52121948414-960.jpg"
+  },
+  "/assets/img/flickr/commercial/artfn-52122205300.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52122205300-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-artfn-52122205300-960.jpg"
+  },
+  "/assets/img/flickr/commercial/emba-events-4431011247.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431011247-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431011247-960.jpg"
+  },
+  "/assets/img/flickr/commercial/emba-events-4431738238.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431738238-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431738238-960.jpg"
+  },
+  "/assets/img/flickr/commercial/emba-events-4431767738.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431767738-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-emba-events-4431767738-960.jpg"
+  },
+  "/assets/img/flickr/commercial/film-stills-6943815766.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6943815766-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6943815766-960.jpg"
+  },
+  "/assets/img/flickr/commercial/film-stills-6944017442.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6944017442-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6944017442-960.jpg"
+  },
+  "/assets/img/flickr/commercial/film-stills-6944024900.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6944024900-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-6944024900-960.jpg"
+  },
+  "/assets/img/flickr/commercial/film-stills-7089849425.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-7089849425-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-film-stills-7089849425-960.jpg"
+  },
+  "/assets/img/flickr/commercial/machi-mv-8462822929.jpg": {
+    "width": 768,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8462822929-480.jpg"
+  },
+  "/assets/img/flickr/commercial/machi-mv-8463081895.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463081895-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463081895-960.jpg"
+  },
+  "/assets/img/flickr/commercial/machi-mv-8463086541.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463086541-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463086541-960.jpg"
+  },
+  "/assets/img/flickr/commercial/machi-mv-8463925940.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463925940-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-machi-mv-8463925940-960.jpg"
+  },
+  "/assets/img/flickr/commercial/michael-shih-mv-5046228460.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-michael-shih-mv-5046228460-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-michael-shih-mv-5046228460-960.jpg"
+  },
+  "/assets/img/flickr/commercial/michael-shih-mv-5046231342.jpg": {
+    "width": 683,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-michael-shih-mv-5046231342-480.jpg"
+  },
+  "/assets/img/flickr/commercial/michael-shih-mv-5046252028.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-michael-shih-mv-5046252028-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-michael-shih-mv-5046252028-960.jpg"
+  },
+  "/assets/img/flickr/commercial/wedding-4469658185.jpg": {
+    "width": 683,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-4469658185-480.jpg"
+  },
+  "/assets/img/flickr/commercial/wedding-4470432484.jpg": {
+    "width": 1024,
+    "height": 683,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-4470432484-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-4470432484-960.jpg"
+  },
+  "/assets/img/flickr/commercial/wedding-7004074608.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-7004074608-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-7004074608-960.jpg"
+  },
+  "/assets/img/flickr/commercial/wedding-7150166655.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-7150166655-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/flickr-commercial-wedding-7150166655-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_1.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_1-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_2.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_2-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_3.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_3-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_3-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_4.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_4-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_4-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_5.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_5-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_5-960.jpg"
+  },
+  "/assets/img/old/ug3/sjpg/girls_6.jpg": {
+    "width": 1575,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_6-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/old-ug3-sjpg-girls_6-960.jpg"
+  },
+  "/assets/img/photography/selected/15262345956.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-15262345956-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-15262345956-960.jpg"
+  },
+  "/assets/img/photography/selected/1664024637.jpg": {
+    "width": 1600,
+    "height": 1143,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-1664024637-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-1664024637-960.jpg"
+  },
+  "/assets/img/photography/selected/20275049655.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-20275049655-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-20275049655-960.jpg"
+  },
+  "/assets/img/photography/selected/2089504883.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-2089504883-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-2089504883-960.jpg"
+  },
+  "/assets/img/photography/selected/24350775633.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-24350775633-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-24350775633-960.jpg"
+  },
+  "/assets/img/photography/selected/24977731995.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-24977731995-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-24977731995-960.jpg"
+  },
+  "/assets/img/photography/selected/4624112041.jpg": {
+    "width": 1600,
+    "height": 1576,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-4624112041-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-4624112041-960.jpg"
+  },
+  "/assets/img/photography/selected/51132640907.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-51132640907-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-51132640907-960.jpg"
+  },
+  "/assets/img/photography/selected/51134421425.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "src_480": "/assets/img/photography/responsive-subpages/photography-selected-51134421425-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/photography-selected-51134421425-960.jpg"
+  },
+  "/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg": {
+    "width": 2048,
+    "height": 1365,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-29528630897_7de2f3ac21_k-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/portfolio-29528630897_7de2f3ac21_k-960.jpg"
+  },
+  "/assets/img/portfolio/32811316801_33e0cc3e72_k.jpeg": {
+    "width": 2048,
+    "height": 1365,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-32811316801_33e0cc3e72_k-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/portfolio-32811316801_33e0cc3e72_k-960.jpg"
+  },
+  "/assets/img/portfolio/33300626336_d82723bf49_k.jpeg": {
+    "width": 2048,
+    "height": 1365,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-33300626336_d82723bf49_k-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/portfolio-33300626336_d82723bf49_k-960.jpg"
+  },
+  "/assets/img/portfolio/33645452611_56b9253b61_k.jpeg": {
+    "width": 2048,
+    "height": 1365,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-33645452611_56b9253b61_k-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/portfolio-33645452611_56b9253b61_k-960.jpg"
+  },
+  "/assets/img/portfolio/8-55869-13_IPA_Doraemon.jpeg": {
+    "width": 466,
+    "height": 700
+  },
+  "/assets/img/portfolio/ipa_2012.jpeg": {
+    "width": 500,
+    "height": 500,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-ipa_2012-480.jpg"
+  },
+  "/assets/img/portfolio/portfolio-1.jpeg": {
+    "width": 308,
+    "height": 427
+  },
+  "/assets/img/portfolio/portfolio-2.jpeg": {
+    "width": 308,
+    "height": 421
+  },
+  "/assets/img/portfolio/portfolio-3.jpeg": {
+    "width": 308,
+    "height": 431
+  },
+  "/assets/img/portfolio/portfolio-4.jpeg": {
+    "width": 308,
+    "height": 459
+  },
+  "/assets/img/portfolio/portfolio-5.jpeg": {
+    "width": 767,
+    "height": 1050,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-portfolio-5-480.jpg"
+  },
+  "/assets/img/portfolio/px3_2011.jpeg": {
+    "width": 500,
+    "height": 625,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-px3_2011-480.jpg"
+  },
+  "/assets/img/portfolio/px3_2013_1.jpeg": {
+    "width": 500,
+    "height": 500,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-px3_2013_1-480.jpg"
+  },
+  "/assets/img/portfolio/px3_2013_2.jpeg": {
+    "width": 500,
+    "height": 500,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-px3_2013_2-480.jpg"
+  },
+  "/assets/img/portfolio/px3_2014.jpeg": {
+    "width": 500,
+    "height": 500,
+    "src_480": "/assets/img/photography/responsive-subpages/portfolio-px3_2014-480.jpg"
+  },
+  "/assets/img/sec/001_Zoey_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-001_Zoey_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-001_Zoey_1-960.jpg"
+  },
+  "/assets/img/sec/001_Zoey_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-001_Zoey_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-001_Zoey_2-960.jpg"
+  },
+  "/assets/img/sec/001_Zoey_3.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-001_Zoey_3-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-001_Zoey_3-960.jpg"
+  },
+  "/assets/img/sec/002_Hide_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-002_Hide_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-002_Hide_1-960.jpg"
+  },
+  "/assets/img/sec/003_ZoeyB_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-003_ZoeyB_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-003_ZoeyB_1-960.jpg"
+  },
+  "/assets/img/sec/004_Fansia_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-004_Fansia_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-004_Fansia_1-960.jpg"
+  },
+  "/assets/img/sec/005_Colorist_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-005_Colorist_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-005_Colorist_1-960.jpg"
+  },
+  "/assets/img/sec/006_Arching_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-006_Arching_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-006_Arching_1-960.jpg"
+  },
+  "/assets/img/sec/007_Sheyuti_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-007_Sheyuti_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-007_Sheyuti_1-960.jpg"
+  },
+  "/assets/img/sec/008_Margaret_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-008_Margaret_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-008_Margaret_1-960.jpg"
+  },
+  "/assets/img/sec/009_Hsuan_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-009_Hsuan_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-009_Hsuan_1-960.jpg"
+  },
+  "/assets/img/sec/009_Hsuan_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-009_Hsuan_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-009_Hsuan_2-960.jpg"
+  },
+  "/assets/img/sec/010_Alice_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-010_Alice_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-010_Alice_1-960.jpg"
+  },
+  "/assets/img/sec/011_Olivia_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-011_Olivia_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-011_Olivia_1-960.jpg"
+  },
+  "/assets/img/sec/012_Kevin_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-012_Kevin_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-012_Kevin_1-960.jpg"
+  },
+  "/assets/img/sec/013_Kate_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-013_Kate_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-013_Kate_1-960.jpg"
+  },
+  "/assets/img/sec/014_Dulce_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-014_Dulce_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-014_Dulce_1-960.jpg"
+  },
+  "/assets/img/sec/015_Keai_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-015_Keai_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-015_Keai_1-960.jpg"
+  },
+  "/assets/img/sec/015_Keai_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-015_Keai_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-015_Keai_2-960.jpg"
+  },
+  "/assets/img/sec/016_SingtoneLiu_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_1-960.jpg"
+  },
+  "/assets/img/sec/016_SingtoneLiu_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_2-960.jpg"
+  },
+  "/assets/img/sec/016_SingtoneLiu_3.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_3-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_3-960.jpg"
+  },
+  "/assets/img/sec/016_SingtoneLiu_4.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_4-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-016_SingtoneLiu_4-960.jpg"
+  },
+  "/assets/img/sec/017_Mickey_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-017_Mickey_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-017_Mickey_1-960.jpg"
+  },
+  "/assets/img/sec/018_Miars_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-018_Miars_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-018_Miars_1-960.jpg"
+  },
+  "/assets/img/sec/019_Bebe_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-019_Bebe_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-019_Bebe_1-960.jpg"
+  },
+  "/assets/img/sec/020_Si-Xian_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-020_Si-Xian_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-020_Si-Xian_1-960.jpg"
+  },
+  "/assets/img/sec/021_Kimberly_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-021_Kimberly_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-021_Kimberly_1-960.jpg"
+  },
+  "/assets/img/sec/021_Kimberly_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-021_Kimberly_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-021_Kimberly_2-960.jpg"
+  },
+  "/assets/img/sec/022_Julie_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-022_Julie_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-022_Julie_1-960.jpg"
+  },
+  "/assets/img/sec/023_Irem_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-023_Irem_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-023_Irem_1-960.jpg"
+  },
+  "/assets/img/sec/023_Irem_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-023_Irem_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-023_Irem_2-960.jpg"
+  },
+  "/assets/img/sec/023_Irem_3.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-023_Irem_3-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-023_Irem_3-960.jpg"
+  },
+  "/assets/img/sec/023_Irem_4.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-023_Irem_4-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-023_Irem_4-960.jpg"
+  },
+  "/assets/img/sec/023_Irem_5.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-023_Irem_5-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-023_Irem_5-960.jpg"
+  },
+  "/assets/img/sec/024_Viviana_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-024_Viviana_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-024_Viviana_1-960.jpg"
+  },
+  "/assets/img/sec/024_Viviana_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-024_Viviana_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-024_Viviana_2-960.jpg"
+  },
+  "/assets/img/sec/025_Victoria_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-025_Victoria_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-025_Victoria_1-960.jpg"
+  },
+  "/assets/img/sec/026_Rose_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-026_Rose_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-026_Rose_1-960.jpg"
+  },
+  "/assets/img/sec/026_Rose_2.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-026_Rose_2-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-026_Rose_2-960.jpg"
+  },
+  "/assets/img/sec/027_Karen_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-027_Karen_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-027_Karen_1-960.jpg"
+  },
+  "/assets/img/sec/028_Fay_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-028_Fay_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-028_Fay_1-960.jpg"
+  },
+  "/assets/img/sec/030_Zamy_1.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src_480": "/assets/img/photography/responsive-subpages/sec-030_Zamy_1-480.jpg",
+    "src_960": "/assets/img/photography/responsive-subpages/sec-030_Zamy_1-960.jpg"
+  }
+}

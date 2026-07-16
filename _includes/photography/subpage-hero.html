@@ -1,0 +1,14 @@
+<header class="photo-subpage-hero">
+  <div class="photo-author-shell">
+    <p class="photo-author-eyebrow">{{ include.eyebrow }}</p>
+    <h1>{{ include.title }}</h1>
+    <p>{{ include.intro }}</p>
+    {% if include.primary_url %}
+    <div class="photo-author-actions">
+      {% assign primary_prefix = include.primary_url | slice: 0 %}
+      <a href="{% if primary_prefix == '#' %}{{ include.primary_url }}{% else %}{{ include.primary_url | relative_url }}{% endif %}" class="photo-author-button">{{ include.primary_label }}</a>
+      {% if include.secondary_url %}{% assign secondary_prefix = include.secondary_url | slice: 0 %}<a href="{% if secondary_prefix == '#' %}{{ include.secondary_url }}{% else %}{{ include.secondary_url | relative_url }}{% endif %}" class="photo-author-button photo-author-button--ghost">{{ include.secondary_label }}</a>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</header>
