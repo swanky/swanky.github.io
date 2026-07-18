@@ -2,7 +2,7 @@
 title: "別再只看排行榜第一名：Artificial Analysis 與 2026 LLM 評估方法全解析"
 seo_title: "Artificial Analysis 深度解析：2026 LLM Benchmark、速度、成本與私有評估方法"
 date: 2026-07-17
-published: false
+published: true
 categories: [technical]
 tags: [artificial-analysis, llm-evaluation, ai-agent, modelops]
 layout: article

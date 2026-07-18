@@ -2,7 +2,7 @@
 title: "Kimi K3 讓「閉源一定更強」失效了：開放模型如何在特定領域超車"
 seo_title: "Kimi K3 深度解析：2.8T MoE、1M Context、Agent Benchmark 與開放權重真相"
 date: 2026-07-18
-published: false
+published: true
 categories: [technical]
 tags: [kimi-k3, open-weight-llm, ai-agent, agentic-engineering]
 layout: article

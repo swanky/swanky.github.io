@@ -1,8 +1,8 @@
 ---
 layout: null
 permalink: /story/
-title: 三個宇宙｜蕭宇程 Swanky Hsiao
-description: 得獎攝影師、大型電信業技術主管、Web3 教育者——蕭宇程 Swanky Hsiao 的三個宇宙。一頁捲完，看見鏡頭、程式與鏈上身分如何用同一種眼光對焦。
+title: 三個宇宙｜史旺基 Swanky Hsiao
+description: 得獎攝影師、大型電信業技術主管、Web3 教育者——史旺基 Swanky Hsiao 的三個宇宙。一頁捲完，看見鏡頭、程式與鏈上身分如何用同一種眼光對焦。
 ---
 <!doctype html>
 <html lang="zh-Hant" class="no-js">
@@ -65,7 +65,7 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
   "@graph": [
     {
       "@type": "Person",
-      "name": "蕭宇程",
+      "name": "史旺基",
       "alternateName": "Swanky Hsiao",
       "jobTitle": "大型電信業技術主管",
       "url": "{{ page.url | absolute_url }}",
@@ -90,8 +90,15 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+
 <!-- 閱讀進度條（scroll-driven；不支援時由 story.js 更新；無 JS 時隱藏） -->
 <div class="progress" aria-hidden="true"></div>
+<div class="story-atmosphere" aria-hidden="true">
+  <span class="atmosphere-orb atmosphere-orb--gold"></span>
+  <span class="atmosphere-orb atmosphere-orb--blue"></span>
+  <span class="atmosphere-grid"></span>
+</div>
 
 <!-- ======= 頂欄 ======= -->
 <header class="topbar">
@@ -107,7 +114,7 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
   <a class="back-home" href="{{ '/' | relative_url }}">回主站</a>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- ======= 01・對焦 ======= -->
 <section class="act act-hero" id="act-01" data-act="1">
@@ -121,17 +128,46 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
     <div class="hero-scrim" aria-hidden="true"></div>
   </div>
 
+  <div class="hero-orbit" aria-hidden="true">
+    <span class="orbit-ring orbit-ring--outer"></span>
+    <span class="orbit-ring orbit-ring--middle"></span>
+    <span class="orbit-core"></span>
+    <span class="orbit-node orbit-node--light">光</span>
+    <span class="orbit-node orbit-node--code">碼</span>
+    <span class="orbit-node orbit-node--chain">鏈</span>
+  </div>
+
   <div class="hero-inner">
     <p class="eyebrow">三個宇宙・一種眼光</p>
-    <h1 class="hero-name">蕭宇程<span>Swanky&nbsp;Hsiao</span></h1>
+    <h1 class="hero-name">史旺基<span>Swanky&nbsp;Hsiao</span></h1>
     <p class="hero-roles">得獎攝影師 <b>×</b> 大型電信業技術主管 <b>×</b> Web3 教育者</p>
     <p class="hero-quote">「我用同一種眼光，對焦三個看似無關的宇宙——鏡頭、程式，與鏈上的身分。」</p>
   </div>
 
-  <a class="scroll-hint" href="#act-02" aria-label="向下捲動，開始顯影">
-    <span>向下捲動，開始顯影</span>
+  <nav class="hero-universes" aria-label="三個宇宙快速導覽">
+    <a href="#act-02"><span>01</span><strong>光</strong><small>20 年人物攝影</small></a>
+    <a href="#act-03"><span>02</span><strong>碼</strong><small>AI 協作方法</small></a>
+    <a href="#act-04"><span>03</span><strong>鏈</strong><small>Web3 × 數位身分</small></a>
+  </nav>
+
+  <a class="scroll-hint" href="#story-thesis" aria-label="向下捲動，先看三個宇宙如何連在一起">
+    <span>向下捲動，先看三個宇宙如何連在一起</span>
     <span class="arrow" aria-hidden="true"></span>
   </a>
+</section>
+
+<!-- ======= 序章・同一種眼光 ======= -->
+<section class="story-thesis" id="story-thesis" aria-labelledby="story-thesis-title">
+  <span class="thesis-numerals" aria-hidden="true">01&nbsp;&nbsp;02&nbsp;&nbsp;03</span>
+  <div class="thesis-inner reveal">
+    <p class="thesis-kicker">ONE VISION · THREE WORLDS</p>
+    <h2 id="story-thesis-title">我不是在三個領域之間切換。<br>我只是不斷從雜訊裡，找出值得留下的訊號。</h2>
+    <div class="thesis-grid">
+      <article><span>LIGHT</span><h3>看見一個人</h3><p>在光線、表情與距離之間，留下對方真正像自己的那一刻。</p></article>
+      <article><span>CODE</span><h3>看懂一個系統</h3><p>把複雜需求拆開、驗證，再收斂成能被使用、能被交付的成果。</p></article>
+      <article><span>CHAIN</span><h3>重新定義身分</h3><p>讓創作、角色與數位工具，成為另一種認識自己與連結世界的方法。</p></article>
+    </div>
+  </div>
 </section>
 
 <!-- ======= 02・光（攝影宇宙） ======= -->
@@ -143,17 +179,25 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
     <p class="act-lead">攝影是我最早學會的語言。二十年來，我在快門按下的那一刻，把一個人最真實的樣子留成一格光。</p>
     <ul class="pills" aria-label="攝影數據">
       <li><b>100+</b><span>位模特兒</span></li>
-      <li><b>5</b><span>本攝影出版</span></li>
+      <li><b>5</b><span>本攝影相關出版</span></li>
       <li><b>2006</b><span>起，一路拍到今天</span></li>
     </ul>
   </header>
 
   <!-- 〈光〉開場序曲：GL 溶接序列（僅 WebGL 啟用時顯示；無 GL 時 display:none，下方長卷自然承接、無空洞） -->
   <div class="overture" data-gl-overture aria-hidden="true"
-       data-img0="{{ '/assets/img/story/story-309437621-1600.jpg' | relative_url }}"
-       data-img1="{{ '/assets/img/story/story-33300626336-1600.jpg' | relative_url }}"
-       data-img2="{{ '/assets/img/story/story-24977731995-1600.jpg' | relative_url }}">
-    <div class="overture-sticky"><canvas class="overture-gl" aria-hidden="true"></canvas></div>
+       data-img0="{{ '/assets/img/story/story-overture-01.jpg' | relative_url }}"
+       data-img1="{{ '/assets/img/story/story-overture-02.jpg' | relative_url }}"
+       data-img2="{{ '/assets/img/story/story-overture-03.jpg' | relative_url }}">
+    <div class="overture-sticky">
+      <canvas class="overture-gl" aria-hidden="true"></canvas>
+      <div class="overture-captions">
+        <p data-overture-caption="0"><span>2006 · BEGINNING</span><strong>一張側臉，開始練習凝視。</strong></p>
+        <p data-overture-caption="1"><span>2017 · NARRATIVE</span><strong>讓人物和場景，一起說故事。</strong></p>
+        <p data-overture-caption="2"><span>2021 · CLOSER</span><strong>靠近一點，讓畫面留下呼吸。</strong></p>
+      </div>
+      <div class="overture-index"><i></i><span>01</span><span>02</span><span>03</span></div>
+    </div>
   </div>
 
   <div class="gallery">
@@ -210,7 +254,7 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
 
     <div class="interlude reveal">
       <p class="interlude-kicker">PX3 × 3 · IPA × 2 · 2011–2014</p>
-      <p class="interlude-text">從 2011 到 2014，作品五度獲得法國 PX3、美國 IPA 兩大國際攝影獎肯定，題材從制服少女到城市裡的安全隱喻；也出版了五本個人攝影作品書，把制服系列做成能捧在手裡的一頁一頁。</p>
+      <p class="interlude-text">從 2011 到 2014，作品五度獲得法國 PX3、美國 IPA 兩大國際攝影獎肯定，題材從制服少女到城市裡的安全隱喻；也累積 5 本攝影相關出版——3 本個人作品書、2 本合作出版，讓創作成為能捧在手裡的一頁一頁。</p>
     </div>
 
     <figure class="plate plate--wide reveal">
@@ -271,12 +315,34 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
     </li>
   </ol>
 
+  <div class="code-proofs reveal" aria-label="公開實作證據">
+    <a class="code-proof" href="{{ '/human-design/relationship/' | relative_url }}">
+      <div class="media" style="aspect-ratio:1200/630">
+        <img class="media-img" src="{{ '/assets/img/human-design/og-relationship.jpg' | relative_url }}" width="1200" height="630" loading="lazy" decoding="async" alt="人類圖關係合盤工具的兩人圖表與連結畫面。">
+      </div>
+      <div class="code-proof-copy"><span>公開工具</span><h3>把複雜計算做成能直接操作的體驗</h3><p>從出生資料、天文位置到兩人的關係圖，在瀏覽器裡完成計算與視覺化。</p></div>
+    </a>
+    <a class="code-proof" href="{{ '/technical/hermes-agent-openrouter-video-generation/' | relative_url }}">
+      <div class="media" style="aspect-ratio:1600/900">
+        <img class="media-img" src="{{ '/assets/img/hermes-openrouter-video/hermes-openrouter-video-banner.jpg' | relative_url }}" width="1600" height="900" loading="lazy" decoding="async" alt="Hermes Agent 串接影片生成、狀態追蹤與成品驗證的流程封面。">
+        <span class="media-disclosure">AI 生成情境圖</span>
+      </div>
+      <div class="code-proof-copy"><span>實作紀錄</span><h3>讓 AI Agent 從請求一路走到可驗證成品</h3><p>串接非同步服務、追蹤工作狀態、下載產物，再用實際工具確認影片可以播放。</p></div>
+    </a>
+  </div>
+
   <div class="stat-row reveal" aria-label="技術實績">
     <div class="stat"><b>7</b><span>場企業內訓</span></div>
     <div class="stat"><b>8</b><span>年大學授課</span></div>
     <div class="stat"><b>3</b><span>屆 JCConf 講者</span></div>
     <div class="stat"><b>59</b><span>篇技術與 AI 專欄</span></div>
   </div>
+
+  <aside class="code-signal reveal">
+    <p class="signal-label">OPERATING PRINCIPLE</p>
+    <blockquote>AI 不該只替人產生答案。它應該在清楚的邊界裡完成工作、留下證據，並且隨時能被人接手。</blockquote>
+    <div class="signal-line" aria-hidden="true"><span>定義</span><i></i><span>執行</span><i></i><span>驗證</span><i></i><span>交付</span></div>
+  </aside>
 
   <div class="act-cta reveal">
     <a class="link-more" href="{{ '/technical/' | relative_url }}"
@@ -338,6 +404,11 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
 
   <div class="chain-copy reveal">
     <p>兩套親手做的原創塔羅牌組，78 張牌面由 AI 一張張生圖、再逐張人工把關；還有一整座「自我探索實驗室」，人類圖、易經問卦、生命靈數等七個免費工具，都能在瀏覽器裡直接玩。</p>
+    <dl class="chain-proof" aria-label="鏈上創作實績">
+      <div><dt>156</dt><dd>兩套完整牌面</dd></div>
+      <div><dt>7</dt><dd>個自我探索工具</dd></div>
+      <div><dt>1</dt><dd>個持續進化的數位分身</dd></div>
+    </dl>
     <div class="act-cta">
       <a class="link-more" href="{{ '/explore/' | relative_url }}"
          onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'self_discovery'});}">自我探索實驗室 <span aria-hidden="true">&rarr;</span></a>
@@ -357,21 +428,21 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
   </header>
 
   <div class="work-cards">
-    <article class="wcard reveal">
+    <article class="wcard reveal tilt-surface">
       <span class="wcard-no">01</span>
       <h3>攝影委託</h3>
       <p>人像寫真、形象照、活動紀錄與商業攝影皆可預約。先聊聊你想留下的樣子，再談怎麼拍。</p>
       <a class="btn-solid" href="mailto:swanky.hsiao@gmail.com?subject=攝影預約洽詢"
          onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'photography'});}">來信預約</a>
     </article>
-    <article class="wcard reveal">
+    <article class="wcard reveal tilt-surface">
       <span class="wcard-no">02</span>
       <h3>技術顧問</h3>
       <p>技術架構與 AI／Agentic Engineering 導入顧問。先對齊你的場景，再談怎麼做。</p>
       <a class="btn-solid" href="mailto:swanky.hsiao@gmail.com?subject=技術顧問洽詢"
          onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'technical'});}">來信聊聊</a>
     </article>
-    <article class="wcard reveal">
+    <article class="wcard reveal tilt-surface">
       <span class="wcard-no">03</span>
       <h3>企業內訓</h3>
       <p>從 2–3 小時導入到完整培訓，把和 AI 協作的方法帶進你的團隊。</p>
@@ -388,13 +459,14 @@ description: 得獎攝影師、大型電信業技術主管、Web3 教育者—�
       <div class="media" style="aspect-ratio:1/1;background-image:url('{{ '/assets/img/story/story-about-portrait-blur.jpg' | relative_url }}')">
         <img class="media-img" src="{{ '/assets/img/story/story-about-portrait-1600.jpg' | relative_url }}"
              width="1200" height="1200" loading="lazy" decoding="async"
-             alt="鏡頭前的蕭宇程 Swanky Hsiao，是攝影師身分背後真實的那個人。">
+             alt="鏡頭前的史旺基 Swanky Hsiao，是攝影師身分背後真實的那個人。">
       </div>
     </figure>
     <div class="develop-copy">
       <p class="act-deco">DEVELOPED</p>
       <h2 class="act-title">成像</h2>
       <p class="manifesto">鏡頭、程式、鏈——說到底，都是我看世界的方式。</p>
+      <p class="develop-note">如果你也有一個模糊但重要的想法，我們可以先從一封信開始，把它對焦。</p>
       <nav class="social-row" aria-label="社群連結">
         {% for link in site.data.social_links %}
         <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>

@@ -1,5 +1,5 @@
-/* /story/ P2 — WebGL 增強層（漸進、非破壞）。
-   硬底線：任何環境下 GL 失敗都無痕退回 P1 靜態版。
+/* /story/ 2026 P4 — WebGL 增強層（漸進、非破壞）。
+   硬底線：任何環境下 GL 失敗都無痕退回靜態長卷。
    three 只在所有護欄通過後才動態載入（saveData / reduced-motion / 無 WebGL2 / ?nogl=1 一律不下載）。
    三特效：1) hero 粒子聚焦（含 2) 片內底片顆粒）  3) 〈光〉開場 displacement 序曲。 */
 (function () {
@@ -18,13 +18,17 @@
     probe = null;
   } catch (e) { return; }
 
-  var MOBILE = innerWidth < 768;
-  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  /* 直向平板也不適合用寬幅 texture cover；以尺寸＋方向共同判斷。 */
+  var MOBILE = innerWidth < 900 || innerHeight > innerWidth * 1.12;
+  var DEVICE_DPR = Math.min(window.devicePixelRatio || 1, 2);
+  function renderDpr(width, height, pixelBudget) {
+    return Math.min(DEVICE_DPR, Math.sqrt(pixelBudget / Math.max(1, width * height)));
+  }
   var ric = window.requestIdleCallback || function (fn) { return setTimeout(fn, 300); };
 
   /* 主執行緒禮貌：延到 idle 後、three 動態載入成功才初始化 */
   ric(function () {
-    import('three').then(function (THREE) { init(THREE); })['catch'](function () {/* 靜默退回 P1 */});
+    import('three').then(function (THREE) { init(THREE); })['catch'](function () {/* 靜默退回靜態長卷 */});
   });
 
   /* ================================================================= */
@@ -69,6 +73,7 @@
     var host = canvas && canvas.parentNode;                                            // .hero-media
     if (!canvas || !host) return;
     var W = host.clientWidth, H = host.clientHeight;
+    var heroDpr = renderDpr(W, H, 3000000);
     var iw = img.naturalWidth, ih = img.naturalHeight;
     if (!W || !H || !iw || !ih) return;
 
@@ -97,7 +102,7 @@
     geo.setAttribute('aSeed', new THREE.BufferAttribute(seed, 3));
     var uni = {
       uProgress: { value: 0 }, uTime: { value: 0 },
-      uSize: { value: Math.max(dw / COLS, dh / ROWS) * 1.45 }, uPR: { value: DPR },
+      uSize: { value: Math.max(dw / COLS, dh / ROWS) * 1.45 }, uPR: { value: heroDpr },
       uSpread: { value: new THREE.Vector2(W * .75, H * .75) }
     };
     var mat = new THREE.ShaderMaterial({
@@ -111,12 +116,9 @@
     var renderer;
     try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true, powerPreference: 'high-performance' }); }
     catch (e) { geo.dispose(); mat.dispose(); return; }
-    renderer.setPixelRatio(DPR); renderer.setSize(W, H, false);
+    renderer.setPixelRatio(heroDpr); renderer.setSize(W, H, false);
 
-    try { sessionStorage.setItem('storyGlHero', '1'); } catch (e) {}
-    root.classList.add('gl-hero'); canvas.hidden = false;
-
-    var DUR = 2.8, t0 = 0, last = 0, ended = false, gone = false, raf = 0, vis = true, inView = true;
+    var DUR = 2.8, t0 = 0, last = 0, ended = false, gone = false, activated = false, raf = 0, vis = true, inView = true;
 
     function dispose() {
       if (gone) return; gone = true;
@@ -131,7 +133,14 @@
       if (vis && inView) {
         t0 += dt; var p = Math.min(t0 / DUR, 1), e = 1 - Math.pow(1 - p, 3);   // easeOutCubic
         uni.uProgress.value = e; uni.uTime.value += dt;
-        renderer.render(scene, cam);
+        if (!activated) canvas.hidden = false;
+        try { renderer.render(scene, cam); }
+        catch (e) { canvas.hidden = true; dispose(); return; }
+        if (!activated) {
+          activated = true;
+          try { sessionStorage.setItem('storyGlHero', '1'); } catch (e) {}
+          root.classList.add('gl-hero');
+        }
         if (p >= 1 && !ended) {
           ended = true;
           root.classList.add('gl-hero-done');                                   // CSS 淡出 canvas、淡入靜態 hero
@@ -156,58 +165,95 @@
   /* ===== 特效 3：〈光〉開場 displacement 序曲（sticky 300vh，3 張溶接） ===== */
   var OV_VS = 'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position,1.);}';
   var OV_FS = [
-    'uniform sampler2D uTexA,uTexB;uniform float uMix,uAspA,uAspB,uCanvas,uAmt;varying vec2 vUv;',
+    'uniform sampler2D uTexA,uTexB;uniform float uMix,uAspA,uAspB,uCanvas,uAmt,uTime,uVelocity;varying vec2 vUv;',
     'vec2 cover(vec2 p,float a){vec2 s=uCanvas<a?vec2(uCanvas/a,1.):vec2(1.,a/uCanvas);return(p-.5)*s+.5;}',
     'float hash(vec2 p){return fract(sin(dot(p,vec2(41.,289.)))*43758.5453);}',
     'float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);',
     'float a=hash(i),b=hash(i+vec2(1,0)),c=hash(i+vec2(0,1)),d=hash(i+vec2(1,1));',
     'return mix(mix(a,b,f.x),mix(c,d,f.x),f.y);}',
     'void main(){vec2 ua=cover(vUv,uAspA),ub=cover(vUv,uAspB);float m=smoothstep(0.,1.,uMix);',
-    'float lum=dot(texture2D(uTexA,ua).rgb,vec3(.299,.587,.114));',              // 由亮度＋程序噪聲生成位移
-    'float disp=mix(noise(vUv*4.),lum,.6);vec2 dd=vec2(disp-.5)*uAmt;',
-    'vec3 A=texture2D(uTexA,ua+dd*m).rgb,B=texture2D(uTexB,ub-dd*(1.-m)).rgb;',
-    'gl_FragColor=vec4(mix(A,B,m),1.);}'
+    'float pulse=sin(m*3.14159265);float lum=dot(texture2D(uTexA,ua).rgb,vec3(.299,.587,.114));',
+    'float n=noise(vUv*5.+vec2(uTime*.035,-uTime*.021));float disp=mix(n,lum,.58);',
+    'vec2 dir=normalize(vec2(.72,.34)+vec2(n-.5,.5-n)*.32);',
+    'vec2 dd=dir*(disp-.5)*uAmt*(.35+pulse*1.25+uVelocity*.7);',
+    'vec2 ca=dir*(.0015+.006*pulse)*(1.+uVelocity*.45);',
+    'vec2 auv=ua+dd*m,buv=ub-dd*(1.-m);',
+    'vec3 A=vec3(texture2D(uTexA,auv+ca*pulse).r,texture2D(uTexA,auv).g,texture2D(uTexA,auv-ca*pulse).b);',
+    'vec3 B=vec3(texture2D(uTexB,buv-ca*pulse).r,texture2D(uTexB,buv).g,texture2D(uTexB,buv+ca*pulse).b);',
+    'vec3 c=mix(A,B,m);float grain=hash(gl_FragCoord.xy+floor(uTime*18.));',
+    'float vig=smoothstep(.92,.28,length(vUv-.5));c*=mix(.82,1.,vig);c*=.965+grain*.07;',
+    'gl_FragColor=vec4(c,1.);}'
   ].join('');
 
   function setupOverture(THREE) {
+    /* 直向手機以完整長卷取代全螢幕 cover；避免寬幅攝影被裁掉約四分之三。 */
+    function safeOverture() {
+      return innerWidth >= 900 && innerHeight <= innerWidth * 1.12 && innerWidth / Math.max(1, innerHeight) <= 2.2;
+    }
+    if (!safeOverture()) return;
     var sec = doc.querySelector('[data-gl-overture]');
     var canvas = sec && sec.querySelector('.overture-gl');
+    var sticky = sec && sec.querySelector('.overture-sticky');
     if (!canvas) return;
     var urls = [sec.dataset.img0, sec.dataset.img1, sec.dataset.img2];
     if (!urls[0] || !urls[1] || !urls[2]) return;
 
+    sec.setAttribute('data-frame', '0');
+    if (sticky) sticky.style.backgroundImage = 'url("' + urls[0] + '")';
     root.classList.add('gl-overture');   // 先給 section 300vh 版面（GPU 資源仍延後建立）；失敗時再收回
 
     var built = false, dead = false, ren, scene, cam, mat, geo, tex = [], seg = -1, asp = [1, 1, 1],
-        raf = 0, act = false, vis = true, watchdog = 0;
+        raf = 0, act = false, vis = true, watchdog = 0, lastP = 0, lastT = 0, velocity = 0, shownFrame = -1;
 
-    function collapse() { teardown(); root.classList.remove('gl-overture'); }   // 徹底退回 P1（長卷承接）
-    function teardown() {
+    function suspend() {
+      act = false; lastT = 0; velocity = 0;
+      if (raf) cancelAnimationFrame(raf); raf = 0;
+    }
+    function collapse() {
+      teardown(false); sec.classList.remove('is-ready'); root.classList.remove('gl-overture');
+    }
+    function teardown(loseContext) {
       dead = true; built = false; act = false; if (raf) cancelAnimationFrame(raf); raf = 0;
       clearTimeout(watchdog);
       tex.forEach(function (t) { t && t.dispose(); }); tex = [];
       if (geo) geo.dispose(); if (mat) mat.dispose();
-      if (ren) { ren.dispose(); var gl = ren.getContext && ren.getContext(), lc = gl && gl.getExtension && gl.getExtension('WEBGL_lose_context'); if (lc) lc.loseContext(); }
+      if (ren) {
+        ren.dispose();
+        if (loseContext) {
+          var gl = ren.getContext && ren.getContext(), lc = gl && gl.getExtension && gl.getExtension('WEBGL_lose_context');
+          if (lc) lc.loseContext();
+        }
+      }
       ren = scene = cam = mat = geo = null; seg = -1;
     }
     function build() {
       if (built) return; built = true; dead = false;
       try { ren = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: 'high-performance' }); }
       catch (e) { built = false; return collapse(); }
-      ren.setPixelRatio(DPR);
+      ren.outputColorSpace = THREE.SRGBColorSpace;
+      ren.setClearColor(0x000000, 1);
       scene = new THREE.Scene();
       cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
       geo = new THREE.PlaneGeometry(2, 2);
       mat = new THREE.ShaderMaterial({
-        uniforms: { uTexA: { value: null }, uTexB: { value: null }, uMix: { value: 0 }, uAspA: { value: 1 }, uAspB: { value: 1 }, uCanvas: { value: 1 }, uAmt: { value: .16 } },
+        uniforms: {
+          uTexA: { value: null }, uTexB: { value: null }, uMix: { value: 0 },
+          uAspA: { value: 1 }, uAspB: { value: 1 }, uCanvas: { value: 1 },
+          uAmt: { value: .12 }, uTime: { value: 0 }, uVelocity: { value: 0 }
+        },
         vertexShader: OV_VS, fragmentShader: OV_FS
       });
       scene.add(new THREE.Mesh(geo, mat));
       var loader = new THREE.TextureLoader();
+      var maxAniso = ren.capabilities.getMaxAnisotropy();
       urls.forEach(function (u, i) {
         loader.load(u, function (tx) {
+          if (dead) { tx.dispose(); return; }
           tx.colorSpace = THREE.SRGBColorSpace; tx.minFilter = THREE.LinearFilter; tx.generateMipmaps = false;
+          tx.anisotropy = Math.min(4, maxAniso);
           tex[i] = tx; asp[i] = tx.image.width / tx.image.height; seg = -1;
+          if (tex[0] && tex[1] && tex[2]) clearTimeout(watchdog);
+          requestFrame();
         }, null, function () { collapse(); });                                   // 任一張載不到→收回，不留空洞
       });
       watchdog = setTimeout(function () { if (!(tex[0] && tex[1] && tex[2])) collapse(); }, 6000);
@@ -216,31 +262,52 @@
     }
     function resize() {
       if (!ren) return; var w = canvas.clientWidth, h = canvas.clientHeight; if (!w || !h) return;
+      ren.setPixelRatio(renderDpr(w, h, 3000000));
       ren.setSize(w, h, false); mat.uniforms.uCanvas.value = w / h;
     }
     function prog() {
       var r = sec.getBoundingClientRect(), travel = sec.offsetHeight - innerHeight;
       return travel <= 0 ? 0 : Math.min(1, Math.max(0, -r.top / travel));
     }
-    function frame() {
+    function requestFrame() {
+      if (!raf && act && vis && !dead) raf = requestAnimationFrame(frame);
+    }
+    function frame(now) {
       raf = 0; if (dead) return;
       if (act && vis && tex[0] && tex[1] && tex[2]) {
-        var p = prog() * 2, s = p < 1 ? 0 : 1, t = p < 1 ? p : p - 1;
+        var pp = prog(), dt = lastT ? Math.min((now - lastT) / 1000, .1) : .016;
+        var rawVelocity = dt > 0 ? Math.min(1, Math.abs(pp - lastP) / dt * .16) : 0;
+        velocity += (rawVelocity - velocity) * .18; lastP = pp; lastT = now;
+        var p = pp * 2, s = p < 1 ? 0 : 1, t = p < 1 ? p : p - 1;
         if (s !== seg) { seg = s; mat.uniforms.uTexA.value = tex[s]; mat.uniforms.uTexB.value = tex[s + 1]; mat.uniforms.uAspA.value = asp[s]; mat.uniforms.uAspB.value = asp[s + 1]; }
-        mat.uniforms.uMix.value = t; ren.render(scene, cam);
+        var nextFrame = Math.min(2, Math.round(pp * 2));
+        if (nextFrame !== shownFrame) { shownFrame = nextFrame; sec.setAttribute('data-frame', String(nextFrame)); }
+        mat.uniforms.uMix.value = t; mat.uniforms.uVelocity.value = velocity;
+        mat.uniforms.uTime.value += dt;
+        try { ren.render(scene, cam); }
+        catch (e) { collapse(); return; }
+        sec.classList.add('is-ready');
       }
-      raf = requestAnimationFrame(frame);
+      if (velocity > .01) requestFrame();
     }
 
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {
-        if (es[0].isIntersecting) { build(); if (dead) return; act = true; if (!raf) raf = requestAnimationFrame(frame); }
-        else { act = false; teardown(); }                                       // 捲離視口→釋放 GPU 資源（版面保留）
+        if (es[0].isIntersecting) { build(); if (dead) return; act = true; requestFrame(); }
+        else suspend();                                                         // 捲離視口只暫停；保留 context 與 section，回捲可續播
       }, { rootMargin: '200px 0px 200px 0px', threshold: 0 }).observe(sec);
-    } else { build(); act = true; raf = requestAnimationFrame(frame); }
+    } else { build(); act = true; requestFrame(); }
 
-    doc.addEventListener('visibilitychange', function () { vis = !doc.hidden; });
-    window.addEventListener('resize', resize);
-    window.addEventListener('pagehide', teardown, { once: true });
+    doc.addEventListener('visibilitychange', function () {
+      vis = !doc.hidden;
+      if (!vis) { if (raf) cancelAnimationFrame(raf); raf = 0; lastT = 0; }
+      else requestFrame();
+    });
+    window.addEventListener('scroll', requestFrame, { passive: true });
+    window.addEventListener('resize', function () {
+      if (!safeOverture()) { collapse(); return; }
+      resize(); requestFrame();
+    });
+    window.addEventListener('pagehide', function () { teardown(true); }, { once: true });
   }
 })();

@@ -19,6 +19,9 @@
       "role": "gallery",
       "src": "/assets/img/story/story-309437621-1600.jpg",
       "blur": "/assets/img/story/story-309437621-blur.jpg",
+      "overture": "/assets/img/story/story-overture-01.jpg",
+      "overtureWidth": 1023,
+      "overtureHeight": 575,
       "width": 1023,
       "height": 655,
       "title": "黑白近景",
@@ -31,6 +34,9 @@
       "role": "gallery",
       "src": "/assets/img/story/story-33300626336-1600.jpg",
       "blur": "/assets/img/story/story-33300626336-blur.jpg",
+      "overture": "/assets/img/story/story-overture-02.jpg",
+      "overtureWidth": 1600,
+      "overtureHeight": 900,
       "width": 1600,
       "height": 1066,
       "title": "教室裡的日常",
@@ -91,6 +97,9 @@
       "role": "gallery",
       "src": "/assets/img/story/story-51134421425-1600.jpg",
       "blur": "/assets/img/story/story-51134421425-blur.jpg",
+      "overture": "/assets/img/story/story-overture-03.jpg",
+      "overtureWidth": 1600,
+      "overtureHeight": 900,
       "width": 1600,
       "height": 1067,
       "title": "靠近鏡頭",
@@ -191,7 +200,7 @@
       "height": 1200,
       "title": "攝影師本人",
       "year": null,
-      "caption": "鏡頭前的蕭宇程，是攝影師身分背後真實的那個人。",
+      "caption": "鏡頭前的史旺基，是攝影師身分背後真實的那個人。",
       "sourcePath": "/assets/img/About_r.jpg"
     }
   ]
