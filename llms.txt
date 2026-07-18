@@ -6,6 +6,7 @@
 
 ## 關於 About
 
+- [三個宇宙——沉浸式個人故事](https://swanky.github.io/story/): 一頁走完蕭宇程的攝影、AI 技術與 Web3 三個領域：得獎作品、方法論與合作方式
 - [關於蕭宇程 Swanky Hsiao](https://swanky.github.io/#about): 個人簡介、學經歷、得獎紀錄、自我介紹
 - 本名：蕭宇程（Hsiao Yu-Cheng）
 - 英文名：Swanky Hsiao

@@ -1,0 +1,422 @@
+---
+layout: null
+permalink: /story/
+title: 三個宇宙｜蕭宇程 Swanky Hsiao
+description: 得獎攝影師、大型電信業技術主管、Web3 教育者——蕭宇程 Swanky Hsiao 的三個宇宙。一頁捲完，看見鏡頭、程式與鏈上身分如何用同一種眼光對焦。
+---
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SB1R6G61LY');
+</script>
+
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.description }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:image" content="{{ '/assets/img/story/story-24350775633-1600.jpg' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ '/assets/img/story/story-24350775633-1600.jpg' | absolute_url }}">
+<meta name="twitter:site" content="@swanky">
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Favicons -->
+<link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+<link href="{{ '/assets/img/Swanky_logo_icon180.png' | relative_url }}" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+  rel="stylesheet">
+
+<!-- Story page CSS -->
+<link href="{{ '/assets/css/story.css' | relative_url }}" rel="stylesheet">
+
+<!-- JSON-LD：Person + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "蕭宇程",
+      "alternateName": "Swanky Hsiao",
+      "jobTitle": "大型電信業技術主管",
+      "url": "{{ page.url | absolute_url }}",
+      "image": "{{ '/assets/img/story/story-about-portrait-1600.jpg' | absolute_url }}",
+      "sameAs": [{% for link in site.data.social_links %}"{{ link.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首頁", "item": "{{ '/' | absolute_url }}"},
+        {"@type": "ListItem", "position": 2, "name": "三個宇宙", "item": "{{ page.url | absolute_url }}"}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- 無 JS 兜底：確保進場動畫元素一律可見 -->
+<noscript>
+  <style>.reveal,.media-img{opacity:1!important;transform:none!important;}</style>
+</noscript>
+</head>
+<body>
+
+<!-- 閱讀進度條（scroll-driven；不支援時由 story.js 更新；無 JS 時隱藏） -->
+<div class="progress" aria-hidden="true"></div>
+
+<!-- ======= 頂欄 ======= -->
+<header class="topbar">
+  <a class="wordmark" href="{{ '/' | relative_url }}">SWANKY</a>
+  <nav class="acts-nav" aria-label="六幕導覽">
+    <a href="#act-01" data-dot="1"><span class="dot"></span><span class="dot-label">對焦</span></a>
+    <a href="#act-02" data-dot="2"><span class="dot"></span><span class="dot-label">光</span></a>
+    <a href="#act-03" data-dot="3"><span class="dot"></span><span class="dot-label">碼</span></a>
+    <a href="#act-04" data-dot="4"><span class="dot"></span><span class="dot-label">鏈</span></a>
+    <a href="#act-05" data-dot="5"><span class="dot"></span><span class="dot-label">合作</span></a>
+    <a href="#act-06" data-dot="6"><span class="dot"></span><span class="dot-label">成像</span></a>
+  </nav>
+  <a class="back-home" href="{{ '/' | relative_url }}">回主站</a>
+</header>
+
+<main>
+
+<!-- ======= 01・對焦 ======= -->
+<section class="act act-hero" id="act-01" data-act="1">
+  <div class="hero-media">
+    <div class="media" style="background-image:url('{{ '/assets/img/story/story-24350775633-blur.jpg' | relative_url }}')">
+      <img class="media-img" src="{{ '/assets/img/story/story-24350775633-1600.jpg' | relative_url }}"
+           width="1600" height="1067" fetchpriority="high" decoding="async"
+           alt="宇彤坐在藍色跑道上回望鏡頭，制服與跑道線條框出一格青春定格。">
+    </div>
+    <canvas id="story-hero-gl" hidden aria-hidden="true"></canvas>
+    <div class="hero-scrim" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-inner">
+    <p class="eyebrow">三個宇宙・一種眼光</p>
+    <h1 class="hero-name">蕭宇程<span>Swanky&nbsp;Hsiao</span></h1>
+    <p class="hero-roles">得獎攝影師 <b>×</b> 大型電信業技術主管 <b>×</b> Web3 教育者</p>
+    <p class="hero-quote">「我用同一種眼光，對焦三個看似無關的宇宙——鏡頭、程式，與鏈上的身分。」</p>
+  </div>
+
+  <a class="scroll-hint" href="#act-02" aria-label="向下捲動，開始顯影">
+    <span>向下捲動，開始顯影</span>
+    <span class="arrow" aria-hidden="true"></span>
+  </a>
+</section>
+
+<!-- ======= 02・光（攝影宇宙） ======= -->
+<section class="act act-light" id="act-02" data-act="2">
+  <header class="act-head reveal">
+    <p class="act-eyebrow">第一個宇宙</p>
+    <h2 class="act-title">光</h2>
+    <p class="act-deco">LIGHT · Photography</p>
+    <p class="act-lead">攝影是我最早學會的語言。二十年來，我在快門按下的那一刻，把一個人最真實的樣子留成一格光。</p>
+    <ul class="pills" aria-label="攝影數據">
+      <li><b>100+</b><span>位模特兒</span></li>
+      <li><b>5</b><span>本攝影出版</span></li>
+      <li><b>2006</b><span>起，一路拍到今天</span></li>
+    </ul>
+  </header>
+
+  <!-- 〈光〉開場序曲：GL 溶接序列（僅 WebGL 啟用時顯示；無 GL 時 display:none，下方長卷自然承接、無空洞） -->
+  <div class="overture" data-gl-overture aria-hidden="true"
+       data-img0="{{ '/assets/img/story/story-309437621-1600.jpg' | relative_url }}"
+       data-img1="{{ '/assets/img/story/story-33300626336-1600.jpg' | relative_url }}"
+       data-img2="{{ '/assets/img/story/story-24977731995-1600.jpg' | relative_url }}">
+    <div class="overture-sticky"><canvas class="overture-gl" aria-hidden="true"></canvas></div>
+  </div>
+
+  <div class="gallery">
+
+    <figure class="plate plate--wide reveal">
+      <div class="media" style="aspect-ratio:1600/1143;background-image:url('{{ '/assets/img/story/story-1664024637-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-1664024637-1600.jpg' | relative_url }}"
+             width="1600" height="1143" loading="lazy" decoding="async"
+             alt="果子別著花飾回眸一笑，黑白影像裡的溫柔凝視。">
+      </div>
+      <figcaption><span class="cap-title">黑白與凝視</span><span class="cap-year">2007</span><span class="cap-desc">果子別著花飾回眸一笑，黑白影像裡的溫柔凝視。</span></figcaption>
+    </figure>
+
+    <figure class="plate plate--inset plate--left reveal">
+      <div class="media" style="aspect-ratio:1023/655;background-image:url('{{ '/assets/img/story/story-309437621-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-309437621-1600.jpg' | relative_url }}"
+             width="1023" height="655" loading="lazy" decoding="async"
+             alt="安達熙的黑白側臉近景，是最早期的凝視練習。">
+      </div>
+      <figcaption><span class="cap-title">黑白近景</span><span class="cap-year">2006</span><span class="cap-desc">安達熙的黑白側臉近景，是最早期的凝視練習。</span></figcaption>
+    </figure>
+
+    <div class="interlude reveal">
+      <p class="interlude-kicker">TIME · 2012</p>
+      <p class="interlude-text">《紅球計畫》走進台北剝皮寮，也登上了美國《TIME》時代雜誌——那是我第一次感覺到，一張照片可以走多遠。</p>
+    </div>
+
+    <figure class="plate plate--wide reveal">
+      <div class="media" style="aspect-ratio:1600/1066;background-image:url('{{ '/assets/img/story/story-33300626336-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-33300626336-1600.jpg' | relative_url }}"
+             width="1600" height="1066" loading="lazy" decoding="async"
+             alt="小潔 Mina 在教室窗邊寫字，一抹側笑藏著少女心事。">
+      </div>
+      <figcaption><span class="cap-title">教室裡的日常</span><span class="cap-year">2017</span><span class="cap-desc">小潔 Mina 在教室窗邊寫字，一抹側笑藏著少女心事。</span></figcaption>
+    </figure>
+
+    <figure class="plate plate--inset plate--right reveal">
+      <div class="media" style="aspect-ratio:1/1;background-image:url('{{ '/assets/img/story/story-24977731995-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-24977731995-1600.jpg' | relative_url }}"
+             width="1600" height="1600" loading="lazy" decoding="async"
+             alt="宇彤的視線穿過圓筒鏡頭，把日常物件拍成一場概念實驗。">
+      </div>
+      <figcaption><span class="cap-title">視線穿過日常物件</span><span class="cap-year">2016</span><span class="cap-desc">宇彤的視線穿過圓筒鏡頭，把日常物件拍成一場概念實驗。</span></figcaption>
+    </figure>
+
+    <figure class="plate plate--inset plate--left reveal">
+      <div class="media" style="aspect-ratio:1600/1576;background-image:url('{{ '/assets/img/story/story-4624112041-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-4624112041-1600.jpg' | relative_url }}"
+             width="1600" height="1576" loading="lazy" decoding="async"
+             alt="城市人物赤腳窩在車廂座椅上，午後的光把等待拉得很長。">
+      </div>
+      <figcaption><span class="cap-title">車廂裡的光</span><span class="cap-year">2010</span><span class="cap-desc">城市人物赤腳窩在車廂座椅上，午後的光把等待拉得很長。</span></figcaption>
+    </figure>
+
+    <div class="interlude reveal">
+      <p class="interlude-kicker">PX3 × 3 · IPA × 2 · 2011–2014</p>
+      <p class="interlude-text">從 2011 到 2014，作品五度獲得法國 PX3、美國 IPA 兩大國際攝影獎肯定，題材從制服少女到城市裡的安全隱喻；也出版了五本個人攝影作品書，把制服系列做成能捧在手裡的一頁一頁。</p>
+    </div>
+
+    <figure class="plate plate--wide reveal">
+      <div class="media" style="aspect-ratio:1600/1066;background-image:url('{{ '/assets/img/story/story-32811316801-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-32811316801-1600.jpg' | relative_url }}"
+             width="1600" height="1066" loading="lazy" decoding="async"
+             alt="果子戴上皇冠與粉髮，走進一場自己導演的復古場景。">
+      </div>
+      <figcaption><span class="cap-title">角色走進場景</span><span class="cap-year">2017</span><span class="cap-desc">果子戴上皇冠與粉髮，走進一場自己導演的復古場景。</span></figcaption>
+    </figure>
+
+    <figure class="plate plate--inset plate--right reveal">
+      <div class="media" style="aspect-ratio:1600/1067;background-image:url('{{ '/assets/img/story/story-51134421425-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-51134421425-1600.jpg' | relative_url }}"
+             width="1600" height="1067" loading="lazy" decoding="async"
+             alt="羽葶躺在草地上靠近鏡頭，是近作裡最放鬆的一次對視。">
+      </div>
+      <figcaption><span class="cap-title">靠近鏡頭</span><span class="cap-year">2021</span><span class="cap-desc">羽葶躺在草地上靠近鏡頭，是近作裡最放鬆的一次對視。</span></figcaption>
+    </figure>
+
+  </div>
+
+  <div class="act-cta reveal">
+    <a class="link-more" href="{{ '/photography/' | relative_url }}"
+       onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'photography_gallery'});}">看完整攝影作品 <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ======= 03・碼（技術宇宙） ======= -->
+<section class="act act-code" id="act-03" data-act="3">
+  <header class="act-head reveal">
+    <p class="act-eyebrow">第二個宇宙</p>
+    <h2 class="act-title">碼</h2>
+    <p class="act-deco">CODE · AI × Engineering</p>
+    <p class="act-lead">白天，我在大型電信業帶技術團隊；這幾年，我把攝影師的「顯影」眼光，用在和 AI 一起工作上——把一張照片從藥水裡顯出來的四個步驟，正好也是我帶 AI 做事的節奏。</p>
+  </header>
+
+  <ol class="darkroom" aria-label="AI 協作四步">
+    <li class="dr-step reveal">
+      <span class="dr-no">01</span>
+      <h3>取景・定義問題</h3>
+      <p>先想清楚要拍什麼：把一個模糊的需求，對焦成一個講得清楚的問題。</p>
+    </li>
+    <li class="dr-step reveal">
+      <span class="dr-no">02</span>
+      <h3>顯影・AI 執行</h3>
+      <p>讓畫面浮現：把大量執行交給 AI，快速長出第一版草稿。</p>
+    </li>
+    <li class="dr-step reveal">
+      <span class="dr-no">03</span>
+      <h3>定影・驗證</h3>
+      <p>在藥水裡把畫面定住：逐一驗證結果，確認它真的成立，而不是看起來像。</p>
+    </li>
+    <li class="dr-step reveal">
+      <span class="dr-no">04</span>
+      <h3>放大・交付</h3>
+      <p>放大成一張能掛上牆的作品：收斂成真正能用、能交付的成果。</p>
+    </li>
+  </ol>
+
+  <div class="stat-row reveal" aria-label="技術實績">
+    <div class="stat"><b>7</b><span>場企業內訓</span></div>
+    <div class="stat"><b>8</b><span>年大學授課</span></div>
+    <div class="stat"><b>3</b><span>屆 JCConf 講者</span></div>
+    <div class="stat"><b>59</b><span>篇技術與 AI 專欄</span></div>
+  </div>
+
+  <div class="act-cta reveal">
+    <a class="link-more" href="{{ '/technical/' | relative_url }}"
+       onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'technical_consulting'});}">技術顧問 <span aria-hidden="true">&rarr;</span></a>
+    <a class="link-more" href="{{ '/education/agentic-engineering/' | relative_url }}"
+       onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'agentic_engineering'});}">企業培訓方案 <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ======= 04・鏈（Web3 × 自我探索宇宙） ======= -->
+<section class="act act-chain" id="act-04" data-act="4">
+  <header class="act-head reveal">
+    <p class="act-eyebrow">第三個宇宙</p>
+    <h2 class="act-title">鏈</h2>
+    <p class="act-deco">CHAIN · Web3 × Self-Discovery</p>
+    <p class="act-lead">到了鏈上，我把古老的符號和自己的數位身分，變成一個個可以動手玩的網頁小工具。</p>
+  </header>
+
+  <div class="tarot-stage reveal">
+    <div class="tarot-fan">
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-uniform-major-16-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/uniform/major-16.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="制服版高塔牌：閃電擊碎塔頂、王冠落下。">
+        </div>
+      </figure>
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-uniform-major-15-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/uniform/major-15.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="制服版惡魔牌：兩人被鎖鏈纏繞。">
+        </div>
+      </figure>
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-uniform-major-18-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/uniform/major-18.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="制服版月亮牌：雙狼對月而嚎。">
+        </div>
+      </figure>
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-clonex-major-16-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/clonex/major-16.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="CloneX 版高塔牌：數位水晶高塔應聲崩裂。">
+        </div>
+      </figure>
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-clonex-major-15-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/clonex/major-15.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="CloneX 版惡魔牌：鎖鏈纏身的虛擬分身站在暗黑神像前。">
+        </div>
+      </figure>
+      <figure class="tcard">
+        <div class="media" style="aspect-ratio:768/1152;background-image:url('{{ '/assets/img/story/story-clonex-major-08-blur.jpg' | relative_url }}')">
+          <img class="media-img" src="{{ '/assets/img/tarot/clonex/major-08.jpg' | relative_url }}" width="768" height="1152" loading="lazy" decoding="async" alt="CloneX 版力量牌：兔耳分身徒手安撫怒吼雄獅。">
+        </div>
+      </figure>
+    </div>
+    <figure class="pfp-badge">
+      <div class="media" style="aspect-ratio:1/1;background-image:url('{{ '/assets/img/story/story-clonex-pfp-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-clonex-pfp-1600.jpg' | relative_url }}" width="512" height="512" loading="lazy" decoding="async" alt="史旺基的 CloneX 鏈上頭像，帶有村上隆元素的 PFP。">
+      </div>
+      <figcaption>鏈上分身 CloneX #17152</figcaption>
+    </figure>
+  </div>
+
+  <div class="chain-copy reveal">
+    <p>兩套親手做的原創塔羅牌組，78 張牌面由 AI 一張張生圖、再逐張人工把關；還有一整座「自我探索實驗室」，人類圖、易經問卦、生命靈數等七個免費工具，都能在瀏覽器裡直接玩。</p>
+    <div class="act-cta">
+      <a class="link-more" href="{{ '/explore/' | relative_url }}"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'self_discovery'});}">自我探索實驗室 <span aria-hidden="true">&rarr;</span></a>
+      <a class="link-more" href="{{ '/tarot/' | relative_url }}"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'tarot_lab'});}">Cyber Tarot Lab <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 05・合作 ======= -->
+<section class="act act-work" id="act-05" data-act="5">
+  <header class="act-head reveal">
+    <p class="act-eyebrow">一起做點什麼</p>
+    <h2 class="act-title">合作</h2>
+    <p class="act-deco">WORK WITH ME</p>
+    <p class="act-lead">三個宇宙，三種合作方式。挑一個離你最近的開始。</p>
+  </header>
+
+  <div class="work-cards">
+    <article class="wcard reveal">
+      <span class="wcard-no">01</span>
+      <h3>攝影委託</h3>
+      <p>人像寫真、形象照、活動紀錄與商業攝影皆可預約。先聊聊你想留下的樣子，再談怎麼拍。</p>
+      <a class="btn-solid" href="mailto:swanky.hsiao@gmail.com?subject=攝影預約洽詢"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'photography'});}">來信預約</a>
+    </article>
+    <article class="wcard reveal">
+      <span class="wcard-no">02</span>
+      <h3>技術顧問</h3>
+      <p>技術架構與 AI／Agentic Engineering 導入顧問。先對齊你的場景，再談怎麼做。</p>
+      <a class="btn-solid" href="mailto:swanky.hsiao@gmail.com?subject=技術顧問洽詢"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'technical'});}">來信聊聊</a>
+    </article>
+    <article class="wcard reveal">
+      <span class="wcard-no">03</span>
+      <h3>企業內訓</h3>
+      <p>從 2–3 小時導入到完整培訓，把和 AI 協作的方法帶進你的團隊。</p>
+      <a class="btn-solid" href="mailto:swanky.hsiao@gmail.com?subject=企業內訓洽詢"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'training'});}">來信洽詢</a>
+    </article>
+  </div>
+</section>
+
+<!-- ======= 06・成像 ======= -->
+<section class="act act-develop" id="act-06" data-act="6">
+  <div class="develop-inner reveal">
+    <figure class="portrait">
+      <div class="media" style="aspect-ratio:1/1;background-image:url('{{ '/assets/img/story/story-about-portrait-blur.jpg' | relative_url }}')">
+        <img class="media-img" src="{{ '/assets/img/story/story-about-portrait-1600.jpg' | relative_url }}"
+             width="1200" height="1200" loading="lazy" decoding="async"
+             alt="鏡頭前的蕭宇程 Swanky Hsiao，是攝影師身分背後真實的那個人。">
+      </div>
+    </figure>
+    <div class="develop-copy">
+      <p class="act-deco">DEVELOPED</p>
+      <h2 class="act-title">成像</h2>
+      <p class="manifesto">鏡頭、程式、鏈——說到底，都是我看世界的方式。</p>
+      <nav class="social-row" aria-label="社群連結">
+        {% for link in site.data.social_links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+        {% endfor %}
+      </nav>
+      <a class="btn-solid btn-home" href="{{ '/' | relative_url }}"
+         onclick="if(window.gtag){gtag('event','story_cta_click',{flow:'back_home'});}">回主站</a>
+    </div>
+  </div>
+  <footer class="story-foot">
+    &copy; {{ 'now' | date: '%Y' }} <strong>Swanky Studio</strong>. All Rights Reserved
+  </footer>
+</section>
+
+</main>
+
+<script src="{{ '/assets/js/story/story.js' | relative_url }}" defer></script>
+
+<!-- P2 WebGL 增強層：three r185（vendored）＋ story-gl 動態載入。護欄任一不過或 GL 失敗 → 無痕退回上方 P1 靜態版 -->
+<script type="importmap">
+{ "imports": { "three": "{{ '/assets/vendor/three/three.module.min.js' | relative_url }}" } }
+</script>
+<script type="module" src="{{ '/assets/js/story/story-gl.js' | relative_url }}"></script>
+</body>
+</html>
