@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Kimi K3 官方 API 延遲拆解</title>
+  <desc id="desc">Artificial Analysis 在 10K 輸入工作負載上量到，送出請求後約 1.99 秒收到第一個 token，之後約 32.25 秒為正式答案前的推理，第一個答案 token 約在 34.24 秒出現，生成到 500 token 的端到端時間約 42.30 秒。輸出開始後速度約 62 token 每秒。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#121b36"/></linearGradient>
+    <linearGradient id="reason" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+    <linearGradient id="answer" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#24334f" stroke-width="1" opacity=".32"/></pattern>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="url(#bg)"/><rect width="1200" height="620" rx="28" fill="url(#grid)"/>
+  <text x="58" y="68" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">62 token／秒不等於 2 秒就看到答案</text>
+  <text x="58" y="106" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="22">Artificial Analysis｜Kimi 官方 API・10K input・近期 P50 工作負載</text>
+
+  <!-- summary cards -->
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+    <rect x="58" y="142" width="250" height="104" rx="18" fill="#0c3140" stroke="#22d3ee"/>
+    <text x="82" y="181" fill="#67e8f9" font-size="19">開始收到 token</text><text x="82" y="222" fill="#f8fafc" font-size="34" font-weight="900">1.99 秒</text>
+    <rect x="329" y="142" width="250" height="104" rx="18" fill="#2e1754" stroke="#a78bfa"/>
+    <text x="353" y="181" fill="#d8b4fe" font-size="19">答案前推理</text><text x="353" y="222" fill="#f8fafc" font-size="34" font-weight="900">32.25 秒</text>
+    <rect x="600" y="142" width="250" height="104" rx="18" fill="#12304f" stroke="#60a5fa"/>
+    <text x="624" y="181" fill="#bfdbfe" font-size="19">第一個答案 token</text><text x="624" y="222" fill="#f8fafc" font-size="34" font-weight="900">34.24 秒</text>
+    <rect x="871" y="142" width="271" height="104" rx="18" fill="#12382f" stroke="#34d399"/>
+    <text x="895" y="181" fill="#a7f3d0" font-size="19">500 token 完成</text><text x="895" y="222" fill="#f8fafc" font-size="34" font-weight="900">42.30 秒</text>
+  </g>
+
+  <!-- timeline -->
+  <text x="150" y="310" fill="#cbd5e1" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20">請求送出</text>
+  <rect x="150" y="338" width="42.4" height="70" rx="12" fill="#0891b2"/>
+  <rect x="192.4" y="338" width="686" height="70" rx="12" fill="url(#reason)"/>
+  <rect x="878.4" y="338" width="171.6" height="70" rx="12" fill="url(#answer)"/>
+  <g fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="19" font-weight="800" text-anchor="middle">
+    <text x="535" y="381">內部推理：32.25 秒</text>
+    <text x="964" y="381">正式答案輸出</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="2"><path d="M150 328v94"/><path d="M192.4 328v94"/><path d="M878.4 328v94"/><path d="M1050 328v94"/></g>
+  <g fill="#cbd5e1" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18" text-anchor="middle"><text x="150" y="448">0 秒</text><text x="192.4" y="448">1.99</text><text x="878.4" y="448">34.24</text><text x="1050" y="448">42.30</text></g>
+
+  <rect x="58" y="492" width="1084" height="82" rx="18" fill="#111d35" stroke="#334155"/>
+  <circle cx="95" cy="533" r="13" fill="#22d3ee"/>
+  <text x="126" y="526" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="22" font-weight="800">真正的 UX 判斷</text>
+  <text x="126" y="555" fill="#aebdd3" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20">K3 開始講話後約 62 token／秒，但使用者先等了約半分鐘；要同時看 TTFT、TTFA 與端到端時間。</text>
+</svg>

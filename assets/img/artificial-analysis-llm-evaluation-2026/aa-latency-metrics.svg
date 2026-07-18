@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">LLM 延遲與任務時間指標</title><desc id="desc">從請求送出到首 token 是 TTFT，到第一個正式答案 token 是 TTFA，正式答案的生成速度是 Output Speed，直到完整回答結束是 E2E Time；Agent 任務還需另外計算工具與重試時間。</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#151c38"/></linearGradient><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#c084fc"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
+<rect width="1200" height="650" rx="28" fill="url(#bg)"/>
+<text x="58" y="68" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">「每秒輸出很快」只描述最後一段</text>
+<text x="58" y="106" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="22">TTFT、TTFA、Output Speed 與 E2E Time 回答的是不同問題</text>
+<g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+<text x="90" y="180" fill="#cbd5e1" font-size="20">請求送出</text>
+<rect x="90" y="205" width="160" height="82" rx="16" fill="#0e7490"/><text x="170" y="238" text-anchor="middle" fill="#fff" font-size="21" font-weight="800">排隊與啟動</text><text x="170" y="267" text-anchor="middle" fill="#cffafe" font-size="18">TTFT</text>
+<rect x="250" y="205" width="430" height="82" rx="16" fill="url(#g1)"/><text x="465" y="238" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">答案前推理</text><text x="465" y="267" text-anchor="middle" fill="#f3e8ff" font-size="18">TTFT 已開始，但讀者還沒看到答案</text>
+<rect x="680" y="205" width="360" height="82" rx="16" fill="url(#g2)"/><text x="860" y="238" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">正式答案輸出</text><text x="860" y="267" text-anchor="middle" fill="#e0f2fe" font-size="18">Output Speed</text>
+<path d="M90 302v30M250 302v30M680 302v30M1040 302v30" stroke="#e2e8f0" stroke-width="2"/>
+<text x="90" y="358" fill="#67e8f9" font-size="20" font-weight="800">0</text><text x="250" y="358" text-anchor="middle" fill="#67e8f9" font-size="20" font-weight="800">第一個 token</text><text x="680" y="358" text-anchor="middle" fill="#bfdbfe" font-size="20" font-weight="800">第一個答案 token</text><text x="1040" y="358" text-anchor="end" fill="#bfdbfe" font-size="20" font-weight="800">完整回答</text>
+<path d="M90 390H250" stroke="#22d3ee" stroke-width="5"/><text x="170" y="424" text-anchor="middle" fill="#67e8f9" font-size="20" font-weight="800">TTFT</text>
+<path d="M90 448H680" stroke="#a78bfa" stroke-width="5"/><text x="385" y="482" text-anchor="middle" fill="#d8b4fe" font-size="20" font-weight="800">TTFA</text>
+<path d="M90 506H1040" stroke="#60a5fa" stroke-width="5"/><text x="565" y="540" text-anchor="middle" fill="#bfdbfe" font-size="20" font-weight="800">E2E Time</text>
+<rect x="58" y="574" width="1084" height="50" rx="15" fill="#111d35" stroke="#334155"/><text x="80" y="606" fill="#e2e8f0" font-size="20"><tspan fill="#fbbf24" font-weight="900">Agent 任務還要再加：</tspan><tspan>工具等待、重試、人工核准與驗收時間。</tspan></text>
+</g>
+</svg>

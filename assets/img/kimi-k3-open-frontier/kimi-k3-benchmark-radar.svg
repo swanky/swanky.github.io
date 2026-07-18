@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Kimi K3、Claude Fable 5 與 GPT-5.6 Sol 六項官方評測雷達圖</title>
+  <desc id="desc">比較 DeepSWE、Terminal-Bench 2.1、Program Bench、FrontierSWE、Automation Bench 與 BrowseComp。Kimi K3 在 Program、Automation 與 BrowseComp 領先，在 DeepSWE、Terminal 與 FrontierSWE 未領先。各評測尺度皆為零到一百分，但不可相加成綜合分數。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#141a35"/></linearGradient>
+    <pattern id="gridbg" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#24334f" stroke-width="1" opacity=".35"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="780" rx="28" fill="url(#bg)"/><rect width="1200" height="780" rx="28" fill="url(#gridbg)"/>
+  <text x="58" y="64" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">K3 是偏科的前沿模型，不是六科總冠軍</text>
+  <text x="58" y="101" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="21">Moonshot 官方 launch table｜所有分數皆為 0–100；不同 Harness，不能相加成單一總分</text>
+
+  <!-- radar grid -->
+  <g fill="none" stroke="#334155" stroke-width="2">
+    <polygon points="600,327.5 654.1,358.8 654.1,421.3 600,452.5 545.9,421.3 545.9,358.8"/>
+    <polygon points="600,265 708.3,327.5 708.3,452.5 600,515 491.7,452.5 491.7,327.5"/>
+    <polygon points="600,202.5 762.4,296.3 762.4,483.8 600,577.5 437.6,483.8 437.6,296.3"/>
+    <polygon points="600,140 816.5,265 816.5,515 600,640 383.5,515 383.5,265" stroke="#52627c"/>
+    <path d="M600 390V140M600 390L816.5 265M600 390L816.5 515M600 390V640M600 390L383.5 515M600 390L383.5 265"/>
+  </g>
+  <g fill="#718198" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="16"><text x="611" y="330">25</text><text x="611" y="268">50</text><text x="611" y="205">75</text><text x="611" y="143">100</text></g>
+
+  <!-- model polygons -->
+  <polygon points="600,215 783.2,284.3 766.3,486 600,606.5 537,426.4 409.5,280" fill="#fb7185" fill-opacity=".10" stroke="#fb7185" stroke-width="4"/>
+  <polygon points="600,207.5 792.3,279 768,487 600,568.3 535.7,427.1 404.3,277" fill="#fbbf24" fill-opacity=".09" stroke="#fbbf24" stroke-width="4"/>
+  <polygon points="600,221.3 791.2,279.6 768.4,487.3 600,593 533.3,428.5 402.5,276" fill="#22d3ee" fill-opacity=".20" stroke="#22d3ee" stroke-width="6" filter="url(#glow)"/>
+  <g fill="#22d3ee" stroke="#071224" stroke-width="3"><circle cx="600" cy="221.3" r="8"/><circle cx="791.2" cy="279.6" r="8"/><circle cx="768.4" cy="487.3" r="8"/><circle cx="600" cy="593" r="8"/><circle cx="533.3" cy="428.5" r="8"/><circle cx="402.5" cy="276" r="8"/></g>
+
+  <!-- axis labels and K3 values -->
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" text-anchor="middle">
+    <text x="600" y="130" fill="#f8fafc" font-size="23" font-weight="800">DeepSWE</text><text x="600" y="157" fill="#67e8f9" font-size="18">K3 67.5</text>
+    <text x="896" y="234" fill="#f8fafc" font-size="23" font-weight="800">Terminal-Bench</text><text x="896" y="261" fill="#67e8f9" font-size="18">K3 88.3</text>
+    <text x="900" y="548" fill="#f8fafc" font-size="23" font-weight="800">Program Bench</text><text x="900" y="575" fill="#67e8f9" font-size="18">K3 77.8</text>
+    <text x="600" y="684" fill="#f8fafc" font-size="23" font-weight="800">FrontierSWE</text><text x="600" y="711" fill="#67e8f9" font-size="18">K3 81.2</text>
+    <text x="296" y="548" fill="#f8fafc" font-size="23" font-weight="800">Automation</text><text x="296" y="575" fill="#67e8f9" font-size="18">K3 30.8</text>
+    <text x="296" y="234" fill="#f8fafc" font-size="23" font-weight="800">BrowseComp</text><text x="296" y="261" fill="#67e8f9" font-size="18">K3 91.2</text>
+  </g>
+
+  <!-- legend and takeaways -->
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20">
+    <rect x="58" y="716" width="1084" height="44" rx="14" fill="#111d35" stroke="#334155"/>
+    <circle cx="88" cy="738" r="8" fill="#22d3ee"/><text x="106" y="745" fill="#e2e8f0">Kimi K3</text>
+    <circle cx="248" cy="738" r="8" fill="#fb7185"/><text x="266" y="745" fill="#e2e8f0">Claude Fable 5</text>
+    <circle cx="474" cy="738" r="8" fill="#fbbf24"/><text x="492" y="745" fill="#e2e8f0">GPT-5.6 Sol</text>
+    <text x="704" y="745" fill="#67e8f9" font-weight="800">K3 領先：Program・Automation・BrowseComp</text>
+  </g>
+</svg>

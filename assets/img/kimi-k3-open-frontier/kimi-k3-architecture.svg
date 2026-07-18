@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Kimi K3 從輸入、注意力、稀疏專家到 Agent 輸出的架構圖</title>
+  <desc id="desc">Kimi K3 接收文字、圖片與長上下文，經 KDA 與 AttnRes 處理後，由 Stable LatentMoE 在 896 個專家中選擇 16 個，再交由 Kimi Code 或其他相容 Agent Harness 執行；底層使用 MXFP4 權重、MXFP8 activation，官方建議以 64 個以上加速器部署。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#101b38"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#24334f" stroke-width="1" opacity=".42"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#55d8ff"/></marker>
+    <marker id="arrowRose" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="760" rx="28" fill="url(#grid)"/>
+  <text x="60" y="68" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">Kimi K3：模型不是一顆大腦，而是一整座數位工廠</text>
+  <text x="60" y="104" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="22">2.8 兆總參數 × 稀疏專家路由 × 長上下文 × Agent Harness × 推論基礎設施</text>
+
+  <!-- arrows behind nodes -->
+  <path d="M278 286C340 286 344 212 402 212" fill="none" stroke="#55d8ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M568 212C610 212 616 300 648 326" fill="none" stroke="#8b5cf6" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M790 326C842 326 850 236 916 236" fill="none" stroke="#55d8ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M790 398C842 398 854 480 916 480" fill="none" stroke="#fb7185" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrowRose)"/>
+
+  <!-- input -->
+  <g>
+    <rect x="58" y="160" width="220" height="252" rx="20" fill="#0d2a3d" stroke="#22d3ee" stroke-width="2"/>
+    <text x="82" y="204" fill="#67e8f9" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="23" font-weight="800">多模態長上下文</text>
+    <text x="82" y="248" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="32" font-weight="900">1,048,576</text>
+    <text x="82" y="278" fill="#94a3b8" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="19">token context window</text>
+    <rect x="82" y="310" width="50" height="50" rx="12" fill="#123a50"/><path d="M96 324h22v22H96zM101 338l6-6 5 5 4-4 7 7" fill="none" stroke="#67e8f9" stroke-width="2"/>
+    <rect x="143" y="310" width="50" height="50" rx="12" fill="#123a50"/><path d="M156 325h24M156 333h24M156 341h17" stroke="#67e8f9" stroke-width="2"/>
+    <rect x="204" y="310" width="50" height="50" rx="12" fill="#123a50"/><path d="M217 324l22 11-22 11z" fill="none" stroke="#67e8f9" stroke-width="2"/>
+    <text x="82" y="392" fill="#cbd5e1" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18">文字・圖片・影片・工具歷史</text>
+  </g>
+
+  <!-- attention stack -->
+  <g>
+    <rect x="400" y="148" width="170" height="126" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+    <text x="425" y="190" fill="#bfdbfe" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="24" font-weight="800">KDA</text>
+    <text x="425" y="222" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="19">長序列注意力效率</text>
+    <path d="M425 244h118" stroke="url(#cyan)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="446" cy="244" r="7" fill="#67e8f9"/><circle cx="492" cy="244" r="7" fill="#60a5fa"/><circle cx="532" cy="244" r="7" fill="#a78bfa"/>
+
+    <rect x="400" y="302" width="170" height="126" rx="18" fill="#2e1065" stroke="#a78bfa" stroke-width="2"/>
+    <text x="425" y="344" fill="#d8b4fe" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="24" font-weight="800">AttnRes</text>
+    <text x="425" y="376" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="19">跨深度選擇性取回</text>
+    <path d="M428 403h24l15-24 18 24 18-42 18 42h24" fill="none" stroke="#c084fc" stroke-width="4"/>
+  </g>
+
+  <!-- MoE core -->
+  <g filter="url(#glow)">
+    <circle cx="705" cy="360" r="126" fill="#101d3c" stroke="#3b82f6" stroke-width="3"/>
+    <circle cx="705" cy="360" r="103" fill="none" stroke="#334d75" stroke-width="2" stroke-dasharray="5 8"/>
+    <g fill="#475569">
+      <circle cx="705" cy="273" r="9"/><circle cx="749" cy="285" r="9"/><circle cx="782" cy="317" r="9"/><circle cx="793" cy="360" r="9"/><circle cx="782" cy="403" r="9"/><circle cx="749" cy="435" r="9"/><circle cx="705" cy="447" r="9"/><circle cx="661" cy="435" r="9"/><circle cx="628" cy="403" r="9"/><circle cx="617" cy="360" r="9"/><circle cx="628" cy="317" r="9"/><circle cx="661" cy="285" r="9"/>
+    </g>
+    <g fill="#67e8f9"><circle cx="705" cy="273" r="10"/><circle cx="782" cy="317" r="10"/><circle cx="749" cy="435" r="10"/></g>
+  </g>
+  <text x="705" y="341" text-anchor="middle" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="25" font-weight="900">Stable LatentMoE</text>
+  <text x="705" y="377" text-anchor="middle" fill="#67e8f9" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="28" font-weight="900">896 選 16</text>
+  <text x="705" y="408" text-anchor="middle" fill="#a8b7d0" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18">不是 2.8T 全部同時運算</text>
+
+  <!-- output and guardrail -->
+  <g>
+    <rect x="916" y="158" width="226" height="184" rx="20" fill="#073b35" stroke="#34d399" stroke-width="2"/>
+    <text x="942" y="204" fill="#6ee7b7" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="23" font-weight="800">Agent 工作系統</text>
+    <text x="942" y="242" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20">Kimi Code／相容 Harness</text>
+    <text x="942" y="278" fill="#cbd5e1" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18">程式・研究・試算表・視覺</text>
+    <rect x="942" y="298" width="172" height="18" rx="9" fill="#164e46"/><rect x="942" y="298" width="132" height="18" rx="9" fill="#34d399"/>
+
+    <rect x="916" y="386" width="226" height="174" rx="20" fill="#4c1324" stroke="#fb7185" stroke-width="2"/>
+    <text x="942" y="430" fill="#fda4af" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="23" font-weight="800">人工核准邊界</text>
+    <path d="M964 468v-14a24 24 0 0148 0v14M950 468h76v58h-76z" fill="none" stroke="#fb7185" stroke-width="4"/>
+    <text x="1044" y="481" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18">刪除・發布</text>
+    <text x="1044" y="510" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18">付款・部署</text>
+    <text x="1044" y="539" fill="#fda4af" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="17">不能只靠 Prompt</text>
+  </g>
+
+  <!-- infrastructure -->
+  <rect x="58" y="610" width="1084" height="102" rx="20" fill="#111d35" stroke="#42526f" stroke-width="2"/>
+  <text x="86" y="650" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="24" font-weight="800">推論底座</text>
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="19">
+    <rect x="224" y="630" width="190" height="54" rx="13" fill="#3b1d52" stroke="#c084fc"/><text x="319" y="664" text-anchor="middle" fill="#f3e8ff">MXFP4 權重</text>
+    <rect x="438" y="630" width="200" height="54" rx="13" fill="#183b53" stroke="#67e8f9"/><text x="538" y="664" text-anchor="middle" fill="#cffafe">MXFP8 activation</text>
+    <rect x="662" y="630" width="210" height="54" rx="13" fill="#3f2f15" stroke="#fbbf24"/><text x="767" y="664" text-anchor="middle" fill="#fef3c7">64+ 加速器 supernode</text>
+    <rect x="896" y="630" width="218" height="54" rx="13" fill="#16324b" stroke="#60a5fa"/><text x="1005" y="654" text-anchor="middle" fill="#dbeafe">高頻寬 expert</text><text x="1005" y="676" text-anchor="middle" fill="#dbeafe">parallel 通訊</text>
+  </g>
+</svg>

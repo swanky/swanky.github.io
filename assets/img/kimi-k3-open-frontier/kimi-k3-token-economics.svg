@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Kimi K3 API 官方牌價與 Artificial Analysis 7 比 2 比 1 混合價格</title>
+  <desc id="desc">官方每百萬 token 價格為快取命中輸入 0.30 美元、未命中輸入 3 美元、輸出 15 美元。Artificial Analysis 以 70% 快取命中、20% 未命中輸入、10% 輸出的標準組合計算，成本貢獻分別為 0.21、0.60 與 1.50 美元，合計 2.31 美元；雖然輸出只占 10% token，卻占約 65% 混合成本。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#151b35"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#24334f" stroke-width="1" opacity=".34"/></pattern>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg)"/><rect width="1200" height="700" rx="28" fill="url(#grid)"/>
+  <text x="58" y="66" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">K3 不便宜：真正昂貴的是輸出，而不是長前綴</text>
+  <text x="58" y="104" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="21">官方牌價 × Artificial Analysis 7:2:1 標準化 token mix｜每百萬 token、未含稅</text>
+
+  <!-- official price cards -->
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+    <rect x="58" y="142" width="330" height="132" rx="20" fill="#0b3841" stroke="#22d3ee" stroke-width="2"/>
+    <text x="84" y="184" fill="#67e8f9" font-size="21" font-weight="800">快取命中輸入</text><text x="84" y="238" fill="#f8fafc" font-size="44" font-weight="900">US$0.30</text>
+    <rect x="435" y="142" width="330" height="132" rx="20" fill="#3c2a12" stroke="#fbbf24" stroke-width="2"/>
+    <text x="461" y="184" fill="#fde68a" font-size="21" font-weight="800">未命中輸入</text><text x="461" y="238" fill="#f8fafc" font-size="44" font-weight="900">US$3.00</text>
+    <rect x="812" y="142" width="330" height="132" rx="20" fill="#4a1629" stroke="#fb7185" stroke-width="2"/>
+    <text x="838" y="184" fill="#fda4af" font-size="21" font-weight="800">輸出</text><text x="838" y="238" fill="#f8fafc" font-size="44" font-weight="900">US$15.00</text>
+  </g>
+
+  <text x="58" y="326" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="28" font-weight="800">7:2:1 token mix 怎麼變成 US$2.31？</text>
+  <g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" text-anchor="middle">
+    <circle cx="230" cy="395" r="55" fill="#0e7490"/><text x="230" y="389" fill="#ecfeff" font-size="29" font-weight="900">70%</text><text x="230" y="418" fill="#cffafe" font-size="17">快取命中</text>
+    <circle cx="600" cy="395" r="55" fill="#a16207"/><text x="600" y="389" fill="#fffbeb" font-size="29" font-weight="900">20%</text><text x="600" y="418" fill="#fef3c7" font-size="17">未命中輸入</text>
+    <circle cx="970" cy="395" r="55" fill="#be123c"/><text x="970" y="389" fill="#fff1f2" font-size="29" font-weight="900">10%</text><text x="970" y="418" fill="#ffe4e6" font-size="17">輸出</text>
+    <text x="230" y="474" fill="#67e8f9" font-size="21">70% × 0.30 = 0.21</text>
+    <text x="600" y="474" fill="#fde68a" font-size="21">20% × 3.00 = 0.60</text>
+    <text x="970" y="474" fill="#fda4af" font-size="21">10% × 15.00 = 1.50</text>
+  </g>
+
+  <!-- cost contribution bar -->
+  <text x="180" y="528" fill="#cbd5e1" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20">混合成本貢獻</text>
+  <rect x="180" y="548" width="840" height="62" rx="16" fill="#1e293b"/>
+  <path d="M196 548H256.4V610H196Q180 610 180 594V564Q180 548 196 548Z" fill="#0891b2"/>
+  <rect x="256.4" y="548" width="218.2" height="62" fill="#ca8a04"/>
+  <path d="M474.6 548H1004Q1020 548 1020 564V594Q1020 610 1004 610H474.6Z" fill="#e11d48"/>
+  <g fill="#fff" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18" font-weight="800" text-anchor="middle"><text x="218" y="586">9%</text><text x="365" y="586">26%</text><text x="747" y="586">65% 來自輸出</text></g>
+
+  <rect x="58" y="636" width="1084" height="46" rx="14" fill="#111d35" stroke="#334155"/>
+  <text x="80" y="666" fill="#e2e8f0" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20"><tspan fill="#67e8f9" font-weight="900">US$2.31</tspan><tspan> 是跨模型比較基準，不是保證帳單；K3 輸出冗長時，實際成本會往右側紅色區域偏移。</tspan></text>
+</svg>

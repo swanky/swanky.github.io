@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">Artificial Analysis Intelligence Index v4.1 權重</title>
+<desc id="desc">Agents 34%、Coding 24%、Scientific 24%、General 18%。九項評測中，Agent 類別權重最高。</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#151c38"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#263651" opacity=".35"/></pattern></defs>
+<rect width="1200" height="640" rx="28" fill="url(#bg)"/><rect width="1200" height="640" rx="28" fill="url(#grid)"/>
+<text x="58" y="68" fill="#f8fafc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="38" font-weight="800">Intelligence Index v4.1：工作能力開始壓過單題考試</text>
+<text x="58" y="106" fill="#9fb0cc" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="22">四大類、九項評測｜複合分數代表一套能力觀點，不是絕對智商</text>
+<g transform="translate(58 148)">
+<rect width="1084" height="94" rx="18" fill="#18243d"/>
+<path d="M18 0H368.6V94H18Q0 94 0 76V18Q0 0 18 0Z" fill="#22c7d9"/>
+<rect x="368.6" width="260.2" height="94" fill="#5b8ff9"/>
+<rect x="628.8" width="260.2" height="94" fill="#9b72f2"/>
+<path d="M889 0H1066Q1084 0 1084 18V76Q1084 94 1066 94H889Z" fill="#f4c95d"/>
+<g fill="#071224" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" text-anchor="middle" font-weight="900"><text x="184" y="42" font-size="27">Agents 34%</text><text x="184" y="70" font-size="17">真實任務與工具</text><text x="499" y="42" font-size="27">Coding 24%</text><text x="499" y="70" font-size="17">工程與科學程式</text><text x="759" y="42" font-size="27" fill="#fff">Scientific 24%</text><text x="759" y="70" font-size="17" fill="#f3e8ff">高難度科學推理</text><text x="987" y="42" font-size="27">General 18%</text><text x="987" y="70" font-size="17">知識與長文件</text></g>
+</g>
+<g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+<rect x="58" y="280" width="258" height="266" rx="20" fill="#0b3440" stroke="#22d3ee"/><text x="82" y="322" fill="#67e8f9" font-size="23" font-weight="800">Agents</text><text x="82" y="361" fill="#fff" font-size="19">GDPval-AA v2　20%</text><text x="82" y="395" fill="#fff" font-size="19">τ³-Banking　14%</text><path d="M82 425h205" stroke="#1d5360"/><text x="82" y="463" fill="#b9c9dc" font-size="18">規劃・工具・狀態</text><text x="82" y="494" fill="#b9c9dc" font-size="18">專業成果交付</text>
+<rect x="335" y="280" width="258" height="266" rx="20" fill="#142d55" stroke="#60a5fa"/><text x="359" y="322" fill="#bfdbfe" font-size="23" font-weight="800">Coding</text><text x="359" y="361" fill="#fff" font-size="19">Terminal-Bench　16%</text><text x="359" y="395" fill="#fff" font-size="19">SciCode　8%</text><path d="M359 425h205" stroke="#294672"/><text x="359" y="463" fill="#b9c9dc" font-size="18">終端機・系統任務</text><text x="359" y="494" fill="#b9c9dc" font-size="18">科學程式設計</text>
+<rect x="612" y="280" width="258" height="266" rx="20" fill="#2e1854" stroke="#a78bfa"/><text x="636" y="322" fill="#d8b4fe" font-size="23" font-weight="800">Scientific</text><text x="636" y="361" fill="#fff" font-size="19">HLE　12%</text><text x="636" y="395" fill="#fff" font-size="19">GPQA Diamond　6%</text><text x="636" y="429" fill="#fff" font-size="19">CritPt　6%</text><path d="M636 450h205" stroke="#51357a"/><text x="636" y="489" fill="#b9c9dc" font-size="18">高難度科學、數學</text>
+<rect x="889" y="280" width="253" height="266" rx="20" fill="#473714" stroke="#fbbf24"/><text x="913" y="322" fill="#fde68a" font-size="23" font-weight="800">General</text><text x="913" y="361" fill="#fff" font-size="19">AA-Omniscience　12%</text><text x="913" y="395" fill="#fff" font-size="19">AA-LCR　6%</text><path d="M913 425h200" stroke="#665523"/><text x="913" y="463" fill="#d9d1b9" font-size="18">知識正確率</text><text x="913" y="494" fill="#d9d1b9" font-size="18">長文件整合</text>
+</g>
+<rect x="58" y="574" width="1084" height="44" rx="14" fill="#111d35" stroke="#334155"/><text x="80" y="603" fill="#e2e8f0" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="20"><tspan fill="#67e8f9" font-weight="900">關鍵變化：</tspan><tspan>模型不只要答對，還要能持續操作、修正並交付成果。</tspan></text>
+</svg>
