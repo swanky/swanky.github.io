@@ -16,7 +16,7 @@
   overflow: hidden;
   background: var(--tech-white);
   color: var(--tech-ink);
-  font-family: "Lato", "Noto Sans TC", system-ui, sans-serif;
+  font-family: var(--font-sans);
 }
 
 .technical-page *, .technical-page *::before, .technical-page *::after { box-sizing: border-box; }
@@ -298,7 +298,8 @@
 .tech-process-card h3 { margin: 0 0 10px; color: #fff; font-size: 1.2rem; font-weight: 800; }
 .tech-process-card p { margin: 0; color: rgba(255,255,255,.65); line-height: 1.65; }
 .tech-process-price { display: inline-block; margin-top: 16px; padding: 5px 9px; border-radius: 999px; background: rgba(80,184,255,.12); color: #8ed3ff; font-size: .72rem; font-weight: 800; }
-.tech-process-card:nth-child(2) .tech-process-price { background: rgba(255,201,79,.12); color: #ffd46f; }
+.tech-process-step--gold { color: #ffc94f; }
+.tech-process-price--gold { background: rgba(255,201,79,.12); color: #ffc94f; }
 
 .tech-video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .tech-video-card { overflow: hidden; border: 1px solid var(--tech-line); border-radius: 20px; background: #fff; }

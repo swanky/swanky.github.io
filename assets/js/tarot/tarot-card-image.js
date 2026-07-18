@@ -10,7 +10,7 @@ import { buildDeck } from './tarot-deck.js';
 // clonex＝Cute Luxe Cyber Tarot，78 張全數具備圖（assets/img/tarot/clonex/，檔名與 uniform 一致）。
 export const DECKS = {
   uniform: { key: 'uniform', dir: ART_DIR, ids: ART_IDS, label: 'Uniform Girl Tarot', labelZh: '制服女孩牌組' },
-  clonex:  { key: 'clonex', dir: '/assets/img/tarot/clonex/', ids: new Set(buildDeck()), label: 'CloneX Cute Luxe Cyber Tarot', labelZh: 'CloneX Cute Luxe Cyber Tarot' },
+  clonex:  { key: 'clonex', dir: '/assets/img/tarot/clonex/', ids: new Set(buildDeck()), label: 'CloneX Cute Luxe Cyber Tarot', labelZh: 'CloneX 電馭霓虹牌組' },
 };
 export const DECK_KEYS = ['uniform', 'clonex'];
 function deckOf(deck) { return DECKS[deck] || DECKS.uniform; }

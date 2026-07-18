@@ -40,7 +40,7 @@
 .edu-section-head h2 {
   margin: 0 0 12px;
   color: var(--edu-ink);
-  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif;
   font-size: clamp(1.9rem, 4vw, 2.65rem);
   font-weight: 700;
   line-height: 1.22;
@@ -58,7 +58,7 @@
 .edu-hero h1 {
   margin: 0 0 20px;
   color: var(--edu-ink);
-  font-family: "Playfair Display", "Noto Serif TC", serif;
+  font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif;
   font-size: clamp(2.45rem, 5vw, 4.65rem);
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -84,7 +84,7 @@
 .edu-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 12px 24px; border: 1px solid var(--edu-gold); border-radius: 999px;
-  background: var(--edu-gold); color: #fff !important; font-size: .92rem; font-weight: 700; letter-spacing: .03em; text-decoration: none !important;
+  background: var(--edu-gold); color: #111 !important; font-size: .92rem; font-weight: 700; letter-spacing: .03em; text-decoration: none !important;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 .edu-btn:hover { transform: translateY(-2px); background: #c88e00; box-shadow: 0 10px 24px rgba(155,108,0,.2); }
@@ -106,7 +106,7 @@
 .edu-path-card--illustration img { padding: 48px; background: #eaf4f8; object-fit: contain; }
 .edu-path-card__body { position: relative; z-index: 2; color: #fff; }
 .edu-path-card__body span { color: #f8d46e; font-size: .78rem; font-weight: 700; letter-spacing: .12em; }
-.edu-path-card h2, .edu-path-card h3 { margin: 8px 0 10px; color: #fff; font-family: "Playfair Display", serif; font-size: clamp(1.7rem, 3vw, 2.35rem); font-weight: 700; }
+.edu-path-card h2, .edu-path-card h3 { margin: 8px 0 10px; color: #fff; font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif; font-size: clamp(1.7rem, 3vw, 2.35rem); font-weight: 700; }
 .edu-path-card p { max-width: 520px; margin: 0; color: rgba(255,255,255,.82); line-height: 1.75; }
 .edu-path-card__link { display: inline-block; margin-top: 18px; color: #fff; font-weight: 700; }
 
@@ -171,7 +171,7 @@
 .edu-record-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .edu-record-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 24px; padding: 30px; border: 1px solid var(--edu-line); border-radius: 18px; background: #fff; color: var(--edu-ink) !important; text-decoration: none !important; box-shadow: 0 10px 32px rgba(52,40,19,.05); transition: transform .2s ease, box-shadow .2s ease; }
 .edu-record-card:hover { transform: translateY(-3px); box-shadow: var(--edu-shadow); }
-.edu-record-card__index { color: var(--edu-gold-dark); font-family: "Playfair Display", serif; font-size: 1.25rem; font-weight: 700; letter-spacing: .04em; }
+.edu-record-card__index { color: var(--edu-gold-dark); font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif; font-size: 1.25rem; font-weight: 700; letter-spacing: .04em; }
 .edu-record-card h3 { margin: 0 0 8px; color: var(--edu-ink); font-size: 1.2rem; }
 .edu-record-card p { margin: 0 0 18px; color: var(--edu-muted); line-height: 1.75; }
 .edu-record-card b { color: var(--edu-gold-dark); font-size: .9rem; }
@@ -184,7 +184,7 @@
 
 .edu-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; overflow: hidden; border: 1px solid var(--edu-line); border-radius: 18px; background: var(--edu-line); }
 .edu-metric { padding: 28px 18px; background: #fff; text-align: center; }
-.edu-metric strong { display: block; color: var(--edu-gold-dark); font-family: "Playfair Display", serif; font-size: clamp(1.75rem, 4vw, 2.5rem); }
+.edu-metric strong { display: block; color: var(--edu-gold-dark); font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif; font-size: clamp(1.75rem, 4vw, 2.5rem); }
 .edu-metric span { display: block; margin-top: 5px; color: var(--edu-muted); font-size: .82rem; }
 
 .edu-outcome-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -195,7 +195,7 @@
 
 .edu-profile { display: grid; grid-template-columns: 230px minmax(0,1fr); gap: 42px; align-items: center; }
 .edu-profile img { width: 100%; aspect-ratio: 1 / 1; border-radius: 16px; object-fit: cover; box-shadow: var(--edu-shadow); }
-.edu-profile h2 { margin: 0 0 7px; color: var(--edu-ink); font-family: "Playfair Display", serif; font-size: 2rem; }
+.edu-profile h2 { margin: 0 0 7px; color: var(--edu-ink); font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.65rem); font-weight: 700; }
 .edu-profile__title { color: var(--edu-gold-dark); font-weight: 700; }
 .edu-profile p { color: var(--edu-muted); line-height: 1.8; }
 
@@ -203,7 +203,7 @@
 .edu-timeline__item { display: grid; grid-template-columns: 100px minmax(0,1fr); gap: 26px; padding: 24px 0; border-bottom: 1px solid var(--edu-line); }
 .edu-timeline__item:last-child { border-bottom: 0; }
 .edu-timeline__step { color: var(--edu-gold-dark); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
-.edu-timeline__item h3 { margin: 0 0 7px; font-size: 1.12rem; }
+.edu-timeline__item h3 { margin: 0 0 7px; font-size: 1.12rem; font-weight: 700; }
 .edu-timeline__item p { margin: 0; color: var(--edu-muted); line-height: 1.75; }
 
 .edu-table-hint { display: none; margin: -12px 0 12px; color: var(--edu-muted); font-size: .82rem; }
@@ -236,7 +236,7 @@
 .edu-gallery img { width: 100%; height: 100%; min-height: 260px; border-radius: 16px; object-fit: cover; }
 
 .edu-cta { padding: 68px 34px; border-radius: 28px; background: linear-gradient(135deg, #2b2824, #40382d); color: #fff; text-align: center; }
-.edu-cta h2 { margin: 0 0 12px; color: #fff; font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.edu-cta h2 { margin: 0 0 12px; color: #fff; font-family: "Playfair Display", "Songti SC", "STSong", "Microsoft JhengHei", Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.65rem); font-weight: 700; }
 .edu-cta p { max-width: 720px; margin: 0 auto 24px; color: rgba(255,255,255,.74); line-height: 1.8; }
 .edu-cta__actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 

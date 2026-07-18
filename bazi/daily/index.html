@@ -49,18 +49,25 @@ extra_css: |
   .wd-card { max-width: 460px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 18px; box-shadow: 0 10px 34px rgba(0,0,0,0.06); padding: 30px 28px; text-align: center; }
   .wd-date { font-size: 0.9rem; color: #E5A300; font-weight: 700; margin: 0 0 8px; }
   .wd-gz { font-size: 4.2rem; font-weight: 800; letter-spacing: 6px; line-height: 1.1; margin: 6px 0; }
-  .wd-meta { font-size: 0.9rem; color: #8a7f6a; margin: 0 0 16px; }
+  .wd-meta { font-size: 0.9rem; color: #8B5E00; margin: 0 0 16px; }
   .wd-mood { font-size: 1.02rem; color: #3a3226; line-height: 1.7; margin: 0 0 16px; }
   .wd-hint { background: #fffaf0; border: 1px dashed #ecd9a6; border-radius: 12px; padding: 14px 16px; }
-  .wd-hint h5 { font-size: 0.8rem; font-weight: 700; color: #b6820a; margin: 0 0 6px; letter-spacing: 0.5px; }
+  .wd-hint h5 { font-size: 0.8rem; font-weight: 700; color: #8B5E00; margin: 0 0 6px; letter-spacing: 0.5px; }
   .wd-hint p { font-size: 0.95rem; color: #444; line-height: 1.75; margin: 0; }
   .wd-actions { text-align: center; margin: 22px 0 6px; }
-  .wd-dl-btn { padding: 11px 26px; border-radius: 9px; font-size: 0.92rem; font-weight: 700; cursor: pointer; border: none; background: #E5A300; color: #fff; transition: 0.25s; }
+  .wd-dl-btn { padding: 11px 26px; border-radius: 10px; font-size: 0.92rem; font-weight: 700; cursor: pointer; border: none; background: #E5A300; color: #111; transition: 0.25s; }
   .wd-dl-btn:hover { background: #cc9000; }
   .wd-link { text-align: center; margin-top: 20px; }
-  .wd-link a { color: #a5791f; border-bottom: 1px dashed #e6c879; font-size: 0.92rem; text-decoration: none; }
+  .wd-link a { color: #8B5E00; border-bottom: 1px dashed #e6c879; font-size: 0.92rem; text-decoration: none; }
   .wd-link a:hover { color: #E5A300; }
-  .wd-backlink { color: #a5791f; text-decoration: none; font-weight: 600; }
+  .wd-backlink { color: #8B5E00; text-decoration: none; font-weight: 600; }
+  .wd-breadcrumbs { font-size: 0.82rem; color: #8B5E00; margin-bottom: 14px; }
+  .wd-breadcrumbs a { color: #8B5E00; text-decoration: none; border-bottom: 1px dashed rgba(139,94,0,.35); }
+  .wd-breadcrumbs a:hover { color: #E5A300; }
+  .wd-breadcrumbs-sep { margin: 0 6px; color: #c9b48a; }
+  #wdFaq .accordion-button { font-weight: 700; color: #111; }
+  #wdFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
+  #wdFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
 ---
 
 <main id="main">
@@ -68,6 +75,11 @@ extra_css: |
   <!-- ======= Hero ======= -->
   <section class="wd-hero" data-aos="fade-up">
     <div class="container">
+      <nav class="wd-breadcrumbs" aria-label="breadcrumb">
+        {% for crumb in page.breadcrumbs %}
+        {% if forloop.last %}<span>{{ crumb.name }}</span>{% else %}<a href="{{ crumb.url | relative_url }}">{{ crumb.name }}</a><span class="wd-breadcrumbs-sep"> › </span>{% endif %}
+        {% endfor %}
+      </nav>
       {% include tool-privacy.html style='pill' %}
       <h1>今日五行</h1>
       <p class="lead">看今天的干支與當值五行，給自己一個今日提醒。不是預測運勢，是一個今天可以留意的節奏。</p>
@@ -97,7 +109,7 @@ extra_css: |
   </section>
 
   <!-- ======= FAQ ======= -->
-  <section class="wd-section" style="background:#f8f9fa;">
+  <section class="wd-section" style="background:#fffaf0;">
     <div class="container">
       <h2 style="font-size:1.4rem; font-weight:700; color:#3a3226; text-align:center; margin-bottom:24px;">常見問題</h2>
       <div class="accordion" id="wdFaq" style="max-width:720px; margin:0 auto;">

@@ -8,8 +8,8 @@ nav_active: tarot
 breadcrumbs:
   - name: 主頁
     url: /
-  - name: 塔羅
-    url: /tarot/
+  - name: 自我探索實驗室
+    url: /explore/
   - name: 牌組對照
     url: /tarot/compare/
 use_tarot_compare: true
@@ -18,8 +18,8 @@ extra_css: |
   .cmp-hero h1 { font-size: 2rem; font-weight: 700; color:#111; margin-bottom: 12px; }
   .cmp-hero .lead { font-size: 1.04rem; color:#5a5346; max-width: 700px; margin: 0 auto; line-height: 1.78; }
   .cmp-hero .cmp-legend { display:flex; gap: 22px; justify-content:center; flex-wrap:wrap; margin-top: 20px; font-size: 0.88rem; color:#6b5a2a; }
-  .cmp-hero .cmp-legend b { color:#b6820a; }
-  .cmp-hero .cmp-back { display:inline-block; margin-top: 18px; font-size: 0.9rem; color:#c98f00; text-decoration:none; border-bottom:1px dashed #e6c879; }
+  .cmp-hero .cmp-legend b { color:#8B5E00; }
+  .cmp-hero .cmp-back { display:inline-block; margin-top: 18px; font-size: 0.9rem; color:#8B5E00; text-decoration:none; border-bottom:1px dashed #e6c879; }
   .cmp-hero .cmp-back:hover { color:var(--c-gold); }
 
   .cmp-philo { padding: 38px 0 4px; }
@@ -36,8 +36,8 @@ extra_css: |
   .cmp-philo-suits h3 { font-size:1rem; font-weight:700; color:#111; text-align:center; margin:0 0 16px; }
   .cmp-suit-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   .cmp-suit { text-align:center; padding:8px 4px; }
-  .cmp-suit-name { font-size:0.98rem; font-weight:700; color:#b6820a; }
-  .cmp-suit-el { font-size:0.74rem; color:#a99; margin-bottom:7px; }
+  .cmp-suit-name { font-size:0.98rem; font-weight:700; color:#8B5E00; }
+  .cmp-suit-el { font-size:0.74rem; color:#8B5E00; margin-bottom:7px; }
   .cmp-suit-motif { font-size:0.85rem; color:#5a5346; line-height:1.55; }
   .cmp-philo-end { font-size:0.95rem; color:#444; text-align:center; max-width:680px; margin:0 auto; line-height:1.8; }
 
@@ -45,7 +45,7 @@ extra_css: |
   .cmp-jump { position: sticky; top: 64px; z-index: 6; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
     background: rgba(255,255,255,0.93); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
     padding: 10px; border-radius: 12px; margin-bottom: 30px; border:1px solid #f0e9d8; }
-  .cmp-jump a { font-size: 0.85rem; font-weight:600; color:#b6820a; text-decoration:none; padding: 5px 14px; border-radius: 50px; border:1px solid #f0dca8; transition:.2s; }
+  .cmp-jump a { font-size: 0.85rem; font-weight:600; color:#8B5E00; text-decoration:none; padding: 5px 14px; border-radius: 50px; border:1px solid #f0dca8; transition:.2s; }
   .cmp-jump a:hover { background:var(--c-gold); color:#fff; border-color:var(--c-gold); }
 
   .cmp-section { margin-bottom: 42px; scroll-margin-top: 130px; }
@@ -56,12 +56,12 @@ extra_css: |
   .cmp-name { font-size: 1.06rem; font-weight:700; color:#111; text-align:center; margin-bottom: 13px; }
   .cmp-en { font-size: 0.8rem; font-weight:400; color:#c3bca8; }
   .cmp-trio { display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .cmp-media--svg { background:#f3e8cc; }
+  .cmp-media--svg { background: linear-gradient(135deg, #f8f2e0 0%, #ecdfc0 100%); }
   .cmp-cell { margin:0; cursor: zoom-in; }
-  .cmp-media { aspect-ratio: 2 / 3; border-radius: 11px; overflow:hidden; box-shadow: 0 5px 18px rgba(0,0,0,0.10); background:#efe6cf; display:flex; transition: transform .2s, box-shadow .2s; }
+  .cmp-media { aspect-ratio: 2 / 3; border-radius: 11px; overflow:hidden; box-shadow: 0 5px 18px rgba(0,0,0,0.10); background: linear-gradient(135deg, #f5ecd5 0%, #e8dab8 100%); display:flex; transition: transform .2s, box-shadow .2s; }
   .cmp-cell:hover .cmp-media { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.16); }
   .cmp-media img, .cmp-media svg { width:100%; height:100%; object-fit: contain; display:block; }
-  .cmp-cell figcaption { text-align:center; font-size: 0.82rem; font-weight:600; color:#8a7f63; margin-top: 8px; }
+  .cmp-cell figcaption { text-align:center; font-size: 0.82rem; font-weight:600; color:#8B5E00; margin-top: 8px; }
   .cmp-ph { font-size: 0.68rem; font-weight:700; color:#b07a00; background:#fff3d6; border:1px solid #f0dca8; border-radius:5px; padding:1px 6px; vertical-align: middle; }
 
   .cmp-lightbox { position: fixed; inset:0; z-index: 1000; background: rgba(22,17,8,0.9); display:none; align-items:center; justify-content:center; flex-direction:column; padding: 24px; }
@@ -73,6 +73,14 @@ extra_css: |
   .cmp-lb-close { position: fixed; top: 16px; right: 20px; width: 46px; height:46px; border:none; border-radius:50%;
     background: rgba(255,255,255,0.16); color:#fff; font-size: 1.7rem; line-height:1; cursor:pointer; transition:.2s; }
   .cmp-lb-close:hover { background: rgba(255,255,255,0.32); }
+
+  .cmp-cta { text-align:center; max-width:640px; margin:10px auto 30px; }
+  .cmp-cta-title { font-size:1.15rem; font-weight:700; color:#111; margin-bottom:14px; }
+  .cmp-cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .cmp-cta-btn { display:inline-block; padding:12px 26px; border-radius:10px; font-weight:600; font-size:0.92rem; text-decoration:none; border:1.5px solid var(--c-gold); background:#fff; color:#8B5E00; transition:.25s; }
+  .cmp-cta-btn:hover { background:var(--c-gold); color:#fff; text-decoration:none; }
+  .cmp-cta-btn.is-primary { background:var(--c-gold); color:#fff; }
+  .cmp-cta-btn.is-primary:hover { background:#c98f00; color:#fff; }
 
   .cmp-foot { max-width: 760px; margin: 8px auto 0; font-size: 0.82rem; color:#a59c86; line-height: 1.75; background:#faf8f3; border:1px solid #f0e9d8; border-radius: 10px; padding: 18px 22px; }
   .cmp-noscript { max-width: 640px; margin: 30px auto; text-align:center; color:#777; background:#fff; border:1px solid #eee; border-radius:12px; padding: 26px; }
@@ -100,7 +108,7 @@ extra_css: |
         <span>右 · <b>Cyber Tarot</b>（CloneX 3D）</span>
         <span>🔍 點任一張可放大檢視</span>
       </div>
-      <a class="cmp-back" href="{{ '/tarot/' | relative_url }}">← 回到塔羅抽牌</a>
+      <a class="cmp-back" href="{{ '/explore/' | relative_url }}">← 回到自我探索實驗室</a>
     </div>
   </section>
 
@@ -149,6 +157,14 @@ extra_css: |
       <noscript>
         <div class="cmp-noscript">這個對照藝廊需要 JavaScript 才能載入 78 張牌的對照圖。請開啟 JavaScript，或先到<a href="{{ '/tarot/' | relative_url }}">塔羅抽牌頁</a>體驗。</div>
       </noscript>
+      <div class="cmp-cta">
+        <p class="cmp-cta-title">喜歡這兩副原創牌？</p>
+        <div class="cmp-cta-actions">
+          <a class="cmp-cta-btn is-primary" href="{{ '/tarot/draw/' | relative_url }}">開始一次塔羅反思 →</a>
+          <a class="cmp-cta-btn" href="{{ '/tarot/decks/' | relative_url }}">看完整牌組介紹 →</a>
+        </div>
+      </div>
+
       <p class="cmp-foot">
         左欄原版為公共財的 Rider–Waite–Smith 塔羅（繪者 Pamela Colman Smith，1909 年出版，著作權已消滅），僅作藝術對照與致敬之用；中欄與右欄牌面（制服女孩與 Cyber Tarot）為史旺基工作室原創製作。本對照頁與任何塔羅出版社、占卜機構無隸屬關係。塔羅在本站定位為自我反思的引子，非占卜、不預測具體結果。
       </p>

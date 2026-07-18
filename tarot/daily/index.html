@@ -10,8 +10,6 @@ breadcrumbs:
     url: /
   - name: 自我探索實驗室
     url: /explore/
-  - name: 職場塔羅
-    url: /tarot/
   - name: 今日一牌
     url: /tarot/daily/
 use_tarot_daily: true
@@ -47,7 +45,7 @@ extra_css: |
   .daily-hero .lead { font-size: 1.02rem; color: #5a5346; max-width: 560px; margin: 0 auto 18px; line-height: 1.75; }
   .daily-section { padding: 40px 0; }
   .daily-intro { text-align: center; }
-  .daily-draw-btn { padding: 15px 44px; border: none; border-radius: 12px; background: var(--c-gold); color: #fff; font-weight: 700; font-size: 1.08rem; cursor: pointer; transition: 0.25s; }
+  .daily-draw-btn { padding: 15px 44px; border: none; border-radius: 10px; background: var(--c-gold); color: #fff; font-weight: 700; font-size: 1.08rem; cursor: pointer; transition: 0.25s; }
   .daily-draw-btn:hover { background: #c98f00; }
   .daily-card-wrap { display: flex; justify-content: center; margin: 6px 0 26px; }
   .tarot-card { width: 200px; height: 300px; perspective: 1000px; }
@@ -66,13 +64,24 @@ extra_css: |
   .daily-remind h5 { font-size: 0.82rem; font-weight: 700; color: #b6820a; margin: 0 0 6px; letter-spacing: 0.5px; }
   .daily-remind p { font-size: 0.92rem; color: #444; line-height: 1.8; margin: 0; }
   .daily-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0 8px; }
-  .daily-actions button { padding: 11px 22px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
+  .daily-actions button { padding: 11px 22px; border-radius: 10px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
   .daily-actions button.is-primary { background: var(--c-gold); color: #fff; }
   .daily-actions button:hover { background: var(--c-gold); color: #fff; }
   .daily-reroll-used { text-align: center; font-size: 0.85rem; color: #a99; margin: 8px 0; }
   .daily-link { text-align: center; margin-top: 20px; }
   .daily-link a { color: #c98f00; border-bottom: 1px dashed #e6c879; font-size: 0.92rem; text-decoration: none; }
   .daily-link a:hover { color: var(--c-gold); }
+
+  /* FAQ：蓋掉原生 Bootstrap accordion 的預設灰底／藍框，換成本頁暖白＋金色語言 */
+  .faq-section { background: #fffaf0; }
+  .faq-section .accordion-item { background: #fff; border-color: #f0e9d8; border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+  .faq-section .accordion-item:first-of-type, .faq-section .accordion-item:last-of-type { border-radius: 10px; }
+  .faq-section .accordion-button { font-size: 1.02rem; font-weight: 700; color: #111; background: #fff; }
+  .faq-section .accordion-button:not(.collapsed) { color: #111; background: #fffaf0; box-shadow: inset 0 -1px 0 rgba(229,163,0,0.18); }
+  .faq-section .accordion-button:focus { border-color: var(--c-gold); outline: 3px solid rgba(229,163,0,0.45); outline-offset: -2px; }
+  .faq-section .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b6820a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+  .faq-section .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E5A300'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+  .faq-section .accordion-body { color: #555; }
 ---
 
 <main id="main">
@@ -119,7 +128,7 @@ extra_css: |
   </section>
 
   <!-- ======= FAQ ======= -->
-  <section class="daily-section" style="background:#f8f9fa;">
+  <section class="daily-section faq-section">
     <div class="container">
       <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
       <div class="accordion" id="dailyFaq" style="max-width:720px; margin:0 auto;">

@@ -4,7 +4,7 @@
   </a>
   <div class="photo-subpage-work-copy">
     <p class="photo-author-eyebrow">{{ include.work.theme | default: include.work.meta }}</p>
-    <h2>{{ include.work.title }}</h2>
+    <h3>{{ include.work.title }}</h3>
     {% if include.work.subject %}<p>{{ include.work.subject }} · {{ include.work.year }}</p>{% elsif include.work.meta %}<p>{{ include.work.meta }}</p>{% endif %}
     {% if include.work.flickr_url %}<a class="photo-author-text-link" href="{{ include.work.flickr_url }}" target="_blank" rel="noopener noreferrer">在 Flickr 看原作 →</a>{% elsif include.work.url %}<a class="photo-author-text-link" href="{{ include.work.url | relative_url }}">查看系列 →</a>{% endif %}
   </div>

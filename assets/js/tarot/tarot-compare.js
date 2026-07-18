@@ -94,6 +94,35 @@ function lazyMountSvgs(root) {
   boxes.forEach((b) => io.observe(b));
 }
 
+// 跳轉導覽：長距離一律瞬跳，避免平滑捲動飛越全頁時，把後段卡片的懶載入一次拖出視窗
+// 觸發（跟「進場前才注入」的節流設計互相牴觸）。近距離仍保留平滑捲動的手感。
+function bindJumpNav(root) {
+  const nav = root.querySelector('.cmp-jump');
+  if (!nav) return;
+  nav.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    const distance = Math.abs(target.getBoundingClientRect().top);
+    if (distance > 3000) {
+      // 長距離：JS 的 behavior:'auto' 只是「跟隨 CSS scroll-behavior」，而全站 html 是
+      // scroll-behavior:smooth（bootstrap.css），所以要瞬跳必須暫時關掉這個 CSS 屬性，
+      // 跳完下一輪再還原，避免動到其他捲動互動。
+      const html = document.documentElement;
+      const prevBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      requestAnimationFrame(() => { html.style.scrollBehavior = prevBehavior; });
+    } else {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (window.history && history.pushState) history.pushState(null, '', '#' + id);
+  });
+}
+
 function render() {
   const root = document.getElementById('tarot-compare');
   if (!root) return;
@@ -112,6 +141,7 @@ function render() {
   root.innerHTML = html;
 
   lazyMountSvgs(root);
+  bindJumpNav(root);
 
   root.addEventListener('click', (e) => {
     const cell = e.target.closest('.cmp-cell');

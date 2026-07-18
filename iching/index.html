@@ -42,7 +42,7 @@ extra_css: |
   .ich-selects { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   .ich-selects select, .ich-selects input { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
   .ich-selects input { width: 90px; }
-  .ich-cast-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; margin-top: 6px; }
+  .ich-cast-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #111; font-weight: 700; font-size: 1.02rem; cursor: pointer; margin-top: 6px; }
   .ich-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; }
   .ich-result { max-width: 720px; margin: 30px auto 0; }
   .ich-heximg { display: flex; justify-content: center; margin: 4px 0 14px; }
@@ -60,8 +60,11 @@ extra_css: |
   .iching-seg li { font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 6px; }
   .ich-cta { max-width: 720px; margin: 8px auto 0; text-align: center; background: #fffdf8; border: 1px dashed #ecd9a6; border-radius: 12px; padding: 20px; }
   .ich-cta p { color: #6b6252; margin: 0 0 12px; font-size: 0.94rem; }
-  .ich-cta a { display: inline-block; background: #E5A300; color: #fff; font-weight: 700; text-decoration: none; padding: 11px 26px; border-radius: 9px; }
+  .ich-cta a { display: inline-block; background: #E5A300; color: #111; font-weight: 700; text-decoration: none; padding: 11px 26px; border-radius: 10px; }
   .ich-backlink { color: #a5791f; text-decoration: none; font-weight: 600; }
+  #ichFaq .accordion-button { font-weight: 700; color: #111; }
+  #ichFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
+  #ichFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
 ---
 
 <main id="main">
@@ -119,7 +122,7 @@ extra_css: |
     </div>
   </section>
 
-  <section class="ich-section" style="background:#f8f9fa;">
+  <section class="ich-section" style="background:#fffaf0;">
     <div class="container">
       <h2 style="font-size:1.4rem; font-weight:700; color:#3a3226; text-align:center; margin-bottom:24px;">常見問題</h2>
       <div class="accordion" id="ichFaq" style="max-width:760px; margin:0 auto;">

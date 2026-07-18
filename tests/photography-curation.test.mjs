@@ -168,7 +168,7 @@ test('攝影作品圖片預設保留完整比例', () => {
 test('Archive 深色區的資料卡使用高對比配色', () => {
   const css = read('assets/css/photography.css');
   assert.match(css, /\.photo-author-section:not\(\.photo-author-light\) \.photo-subpage-archive-grid a/);
-  assert.match(css, /background: #171715/);
+  assert.match(css, /background: var\(--photo-surface\)/);
   assert.match(css, /color: #f5f1e8 !important/);
 });
 

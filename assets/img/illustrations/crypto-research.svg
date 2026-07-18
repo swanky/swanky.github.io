@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f4ee"/>
+      <stop offset="100%" stop-color="#ede6d8"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0ece4"/>
+      <stop offset="100%" stop-color="#e8e0d0"/>
+    </linearGradient>
+    <linearGradient id="stepGold" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#E5A300"/>
+      <stop offset="100%" stop-color="#F5C53B"/>
+    </linearGradient>
+    <linearGradient id="stepBlue" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4fa6d5"/>
+      <stop offset="100%" stop-color="#7fc4e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background room -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#e0d5c0"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#c8b898" stroke-width="2"/>
+
+  <!-- Wall panel accent -->
+  <rect x="0" y="0" width="16" height="450" fill="rgba(79,166,213,0.15)"/>
+  <rect x="784" y="0" width="16" height="450" fill="rgba(79,166,213,0.15)"/>
+
+  <!-- Research board -->
+  <rect x="130" y="40" width="540" height="270" rx="4" fill="#ddd8cc" stroke="#c8b898" stroke-width="3"/>
+  <rect x="138" y="48" width="524" height="254" rx="2" fill="url(#board)"/>
+
+  <!-- Tray -->
+  <rect x="130" y="310" width="540" height="12" rx="2" fill="#c8b898"/>
+  <rect x="150" y="312" width="30" height="8" rx="2" fill="#4fa6d5" opacity="0.6"/>
+
+  <!-- Title on board -->
+  <text x="400" y="80" text-anchor="middle" font-size="15" fill="#2d2926" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">公開資料研究工作流</text>
+  <line x1="210" y1="88" x2="590" y2="88" stroke="#4fa6d5" stroke-width="2"/>
+
+  <!-- Three-step pipeline -->
+  <!-- Step 1: 公開資料蒐集 -->
+  <g transform="translate(160, 102)">
+    <rect x="0" y="0" width="128" height="150" rx="8" fill="url(#stepGold)" opacity="0.15" stroke="#E5A300" stroke-width="1.5"/>
+    <rect x="34" y="18" width="60" height="46" rx="4" fill="#fff" stroke="#8B5E00" stroke-width="1.5"/>
+    <line x1="44" y1="32" x2="84" y2="32" stroke="#c8b898" stroke-width="2"/>
+    <line x1="44" y1="42" x2="84" y2="42" stroke="#c8b898" stroke-width="2"/>
+    <line x1="44" y1="52" x2="68" y2="52" stroke="#c8b898" stroke-width="2"/>
+    <circle cx="88" cy="66" r="13" fill="#fff" stroke="#E5A300" stroke-width="3"/>
+    <line x1="97" y1="75" x2="108" y2="86" stroke="#E5A300" stroke-width="3" stroke-linecap="round"/>
+    <text x="64" y="112" text-anchor="middle" font-size="10" fill="#8B5E00" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">STEP 1</text>
+    <text x="64" y="132" text-anchor="middle" font-size="12" fill="#2d2926" font-family="sans-serif" font-weight="700">公開資料蒐集</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(288, 172)">
+    <line x1="0" y1="5" x2="30" y2="5" stroke="#8B5E00" stroke-width="2"/>
+    <polygon points="27,0 37,5 27,10" fill="#8B5E00"/>
+  </g>
+
+  <!-- Step 2: 交叉查證 -->
+  <g transform="translate(336, 102)">
+    <rect x="0" y="0" width="128" height="150" rx="8" fill="url(#stepBlue)" opacity="0.15" stroke="#4fa6d5" stroke-width="1.5"/>
+    <rect x="26" y="16" width="42" height="54" rx="4" fill="#fff" stroke="#2f6690" stroke-width="1.5" transform="rotate(-8 64 100)"/>
+    <rect x="54" y="20" width="42" height="54" rx="4" fill="#fff" stroke="#2f6690" stroke-width="1.5" transform="rotate(8 64 100)"/>
+    <circle cx="64" cy="58" r="17" fill="#4fa6d5"/>
+    <path d="M 56 58 l 5 6 l 12 -14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="64" y="112" text-anchor="middle" font-size="10" fill="#2f6690" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">STEP 2</text>
+    <text x="64" y="132" text-anchor="middle" font-size="12" fill="#2d2926" font-family="sans-serif" font-weight="700">交叉查證</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(464, 172)">
+    <line x1="0" y1="5" x2="30" y2="5" stroke="#8B5E00" stroke-width="2"/>
+    <polygon points="27,0 37,5 27,10" fill="#8B5E00"/>
+  </g>
+
+  <!-- Step 3: 研究產出 -->
+  <g transform="translate(512, 102)">
+    <rect x="0" y="0" width="128" height="150" rx="8" fill="url(#stepGold)" opacity="0.18" stroke="#E5A300" stroke-width="1.5"/>
+    <rect x="31" y="14" width="64" height="72" rx="4" fill="#fff" stroke="#8B5E00" stroke-width="1.5"/>
+    <line x1="41" y1="27" x2="85" y2="27" stroke="#c8b898" stroke-width="2"/>
+    <rect x="41" y="52" width="9" height="24" fill="#E5A300" opacity="0.75"/>
+    <rect x="55" y="40" width="9" height="36" fill="#4fa6d5" opacity="0.75"/>
+    <rect x="69" y="58" width="9" height="18" fill="#3fb950" opacity="0.75"/>
+    <text x="64" y="112" text-anchor="middle" font-size="10" fill="#8B5E00" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">STEP 3</text>
+    <text x="64" y="132" text-anchor="middle" font-size="12" fill="#2d2926" font-family="sans-serif" font-weight="700">研究產出</text>
+  </g>
+
+  <!-- Researcher silhouette (left of board) -->
+  <ellipse cx="98" cy="222" rx="18" ry="26" fill="#2d2926" opacity="0.7"/>
+  <circle cx="98" cy="190" r="14" fill="#2d2926" opacity="0.7"/>
+  <line x1="112" y1="210" x2="145" y2="198" stroke="#2d2926" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Desks row with laptops echoing the three steps -->
+  <g transform="translate(0, 10)">
+    <!-- Desk 1 -->
+    <rect x="220" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="242" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="242" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="238" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="240" y="354" width="24" height="14" rx="1" fill="#8B5E00" opacity="0.5"/>
+
+    <!-- Desk 2 -->
+    <rect x="400" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="422" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="422" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="418" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="420" y="354" width="24" height="14" rx="1" fill="#2f6690" opacity="0.5"/>
+
+    <!-- Desk 3 -->
+    <rect x="580" y="360" width="90" height="22" rx="3" fill="#c4a26e" opacity="0.6"/>
+    <ellipse cx="602" cy="348" rx="10" ry="6" fill="#2d2926" opacity="0.4"/>
+    <circle cx="602" cy="336" r="8" fill="#2d2926" opacity="0.4"/>
+    <rect x="598" y="352" width="28" height="18" rx="2" fill="#444" opacity="0.5"/>
+    <rect x="600" y="354" width="24" height="14" rx="1" fill="#3fb950" opacity="0.5"/>
+  </g>
+
+  <!-- Badge label -->
+  <rect x="580" y="388" width="210" height="38" rx="4" fill="rgba(79,166,213,0.15)"/>
+  <text x="685" y="404" text-anchor="middle" font-size="10" fill="#2f6690" font-family="'Lato', sans-serif" font-weight="700" letter-spacing="1">研究工作坊</text>
+  <text x="685" y="419" text-anchor="middle" font-size="8" fill="#2f6690" font-family="'Lato', sans-serif">AI Agent × Crypto Research</text>
+</svg>

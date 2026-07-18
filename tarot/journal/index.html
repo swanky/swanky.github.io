@@ -9,8 +9,8 @@ use_tarot_journal: true
 breadcrumbs:
   - name: 主頁
     url: /
-  - name: Cyber Tarot Lab
-    url: /tarot/
+  - name: 自我探索實驗室
+    url: /explore/
   - name: 我的塔羅反思紀錄
     url: /tarot/journal/
 extra_css: |
@@ -25,33 +25,33 @@ extra_css: |
   .tj-stats { display: flex; gap: 14px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
   .tj-stat { background: #fff; border: 1px solid #f0e9d8; border-radius: 12px; padding: 16px 26px; text-align: center; min-width: 108px; }
   .tj-stat strong { display: block; font-size: 1.7rem; font-weight: 700; color: var(--c-gold); line-height: 1.1; }
-  .tj-stat span { font-size: 0.82rem; color: #888; }
+  .tj-stat span { font-size: 0.82rem; color: #5f5b53; }
 
-  .tj-empty { text-align: center; background: #fff; border: 1px dashed #ecd9a6; border-radius: 14px; padding: 40px 28px; color: #777; line-height: 1.8; }
-  .tj-empty a { display: inline-block; margin-top: 14px; padding: 11px 26px; border-radius: 8px; background: var(--c-gold); color: #fff; font-weight: 600; text-decoration: none; }
+  .tj-empty { text-align: center; background: #fff; border: 1px dashed #ecd9a6; border-radius: 14px; padding: 40px 28px; color: #5f5b53; line-height: 1.8; }
+  .tj-empty a { display: inline-block; margin-top: 14px; padding: 11px 26px; border-radius: 10px; background: var(--c-gold); color: #fff; font-weight: 600; text-decoration: none; }
   .tj-empty a:hover { background: #c98f00; color: #fff; }
 
   .tj-list { display: flex; flex-direction: column; gap: 18px; }
   .tj-entry { background: #fff; border: 1px solid #eee; border-left: 4px solid var(--c-gold); border-radius: 13px; padding: 22px 24px; }
   .tj-entry-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
   .tj-entry-headl { display: flex; align-items: center; gap: 10px; }
-  .tj-entry-date { font-size: 0.82rem; font-weight: 700; color: #b6820a; }
+  .tj-entry-date { font-size: 0.82rem; font-weight: 700; color: #8B5E00; }
   .tj-badge { font-size: 0.72rem; font-weight: 700; border-radius: 5px; padding: 2px 9px; }
   .tj-badge--done { background: #e8f3e2; color: #4a7a3a; }
-  .tj-badge--due { background: #fff0d6; color: #c07a00; }
-  .tj-badge--pending { background: #f2f2f2; color: #999; }
+  .tj-badge--due { background: #fff0d6; color: #8B5E00; }
+  .tj-badge--pending { background: #f2f2f2; color: #8a8378; }
   .tj-del { background: none; border: none; font-size: 0.8rem; color: #c99; cursor: pointer; padding: 2px 6px; border-radius: 6px; }
   .tj-del:hover { background: #fdecec; color: #c0392b; }
   .tj-entry-q { font-size: 1.05rem; font-weight: 700; color: #111; margin: 0 0 4px; line-height: 1.5; }
-  .tj-entry-meta { font-size: 0.8rem; color: #aaa; margin: 0 0 4px; }
-  .tj-entry-cards { font-size: 0.9rem; color: #555; margin: 0 0 10px; }
+  .tj-entry-meta { font-size: 0.8rem; color: #8a8378; margin: 0 0 4px; }
+  .tj-entry-cards { font-size: 0.9rem; color: #333; margin: 0 0 10px; }
   .tj-details { margin: 8px 0 12px; }
-  .tj-details summary { cursor: pointer; font-size: 0.86rem; font-weight: 600; color: #b6820a; list-style: none; }
+  .tj-details summary { cursor: pointer; font-size: 0.86rem; font-weight: 600; color: #8B5E00; list-style: none; }
   .tj-details summary::-webkit-details-marker { display: none; }
   .tj-details[open] summary { margin-bottom: 10px; }
   .tj-secs { display: flex; flex-direction: column; gap: 10px; background: #fafafa; border-radius: 10px; padding: 14px 16px; }
-  .tj-sec-label { display: block; font-size: 0.78rem; font-weight: 700; color: #b6820a; margin-bottom: 2px; }
-  .tj-sec p { font-size: 0.9rem; color: #444; line-height: 1.7; margin: 0; }
+  .tj-sec-label { display: block; font-size: 0.78rem; font-weight: 700; color: #8B5E00; margin-bottom: 2px; }
+  .tj-sec p { font-size: 0.9rem; color: #333; line-height: 1.7; margin: 0; }
 
   .tj-review { border-radius: 10px; padding: 14px 16px; margin: 6px 0 12px; }
   .tj-review h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 8px; }
@@ -59,25 +59,25 @@ extra_css: |
   .tj-review--done h4 { color: #4a7a3a; }
   .tj-review--done p { font-size: 0.88rem; color: #4a4a45; line-height: 1.7; margin: 0 0 8px; }
   .tj-review--due { background: #fffaf0; border: 1px solid #f3e6c4; }
-  .tj-review--due h4 { color: #c07a00; }
-  .tj-review--due label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 10px; }
+  .tj-review--due h4 { color: #8B5E00; }
+  .tj-review--due label { display: block; font-size: 0.85rem; color: #5f5b53; margin-bottom: 10px; }
   .tj-review--due textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 8px 10px; font-size: 0.9rem; font-family: inherit; line-height: 1.6; resize: vertical; margin-top: 4px; }
   .tj-review--due textarea:focus { outline: none; border-color: var(--c-gold); }
-  .tj-review-pending { font-size: 0.85rem; color: #999; background: #fafafa; border-radius: 8px; padding: 10px 14px; line-height: 1.7; margin: 6px 0 12px; }
+  .tj-review-pending { font-size: 0.85rem; color: #5f5b53; background: #fafafa; border-radius: 8px; padding: 10px 14px; line-height: 1.7; margin: 6px 0 12px; }
 
-  .tj-btn { padding: 9px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
+  .tj-btn { padding: 9px 16px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
   .tj-btn.tj-btn--primary { background: var(--c-gold); color: #fff; }
   .tj-btn:hover { background: var(--c-gold); color: #fff; }
   .tj-entry-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
   .tj-global-actions { display: flex; gap: 12px; justify-content: center; margin: 30px 0 0; flex-wrap: wrap; }
-  .tj-global-actions button { padding: 10px 20px; border-radius: 8px; font-size: 0.86rem; font-weight: 600; cursor: pointer; border: 1.5px solid #ddd; background: #fff; color: #666; transition: 0.25s; }
+  .tj-global-actions button { padding: 10px 20px; border-radius: 10px; font-size: 0.86rem; font-weight: 600; cursor: pointer; border: 1.5px solid #ddd; background: #fff; color: #5f5b53; transition: 0.25s; }
   .tj-global-actions button:hover { border-color: #999; color: #333; }
   .tj-global-actions button.is-danger { border-color: #e6b0b0; color: #c0392b; }
   .tj-global-actions button.is-danger:hover { background: #fdecec; }
 
-  .tj-privacy-note { max-width: 680px; margin: 30px auto 0; font-size: 0.82rem; color: #999; line-height: 1.75; background: #fafafa; border-radius: 10px; padding: 16px 20px; }
-  .tj-privacy-note strong { color: #777; }
+  .tj-privacy-note { max-width: 680px; margin: 30px auto 0; font-size: 0.82rem; color: #5f5b53; line-height: 1.75; background: #fafafa; border-radius: 10px; padding: 16px 20px; }
+  .tj-privacy-note strong { color: #333; }
 ---
 
 <main id="main">

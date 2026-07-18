@@ -34,10 +34,10 @@
   </g>
   <rect x="50" y="70" width="200" height="34" rx="17" fill="none" stroke="#4fa6d5" stroke-width="1.5" />
   <text x="150" y="92" font-family="sans-serif" font-size="13" font-weight="bold" fill="#4fa6d5" text-anchor="middle" letter-spacing="2">Web3 入門精選</text>
-  <text x="50" y="205" font-family="sans-serif" font-size="54" font-weight="bold" fill="#ffffff">AI × 加密</text>
-  <rect x="50" y="227" width="420" height="3" fill="url(#gold)" opacity="0.6" />
-  <text x="50" y="283" font-family="sans-serif" font-size="24" fill="#c9d1d9">去中心化算力網路</text>
-  <text x="50" y="320" font-family="sans-serif" font-size="20" fill="#8b949e">會是下一個風口嗎？</text>
+  <text x="150" y="205" font-family="sans-serif" font-size="54" font-weight="bold" fill="#ffffff">AI × 加密</text>
+  <rect x="150" y="227" width="320" height="3" fill="url(#gold)" opacity="0.6" />
+  <text x="150" y="283" font-family="sans-serif" font-size="24" fill="#c9d1d9">去中心化算力網路</text>
+  <text x="150" y="320" font-family="sans-serif" font-size="20" fill="#8b949e">會是下一個風口嗎？</text>
   <rect x="0" y="590" width="1200" height="40" fill="#000000" opacity="0.3" />
   <text x="50" y="615" font-family="sans-serif" font-size="13" fill="#8b949e">Swanky Studio｜史旺基工作室</text>
   <text x="1150" y="615" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="end">2026</text>

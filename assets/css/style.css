@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .btn-color {
   background: #E5A300;
-  color: #fff;
+  color: #111;
   border-color: #E5A300;
   border-radius: 50px;
 }
@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   width: 130%;
   height: 95%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-  url("../img/cover.jpeg") center top no-repeat;
+  url("../img/portfolio/33300626336_d82723bf49_k.jpeg") 60% 15% no-repeat;
   background-size: cover;
   z-index: 0;
   border-radius: 0 0 50% 50%;
@@ -440,6 +440,19 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   background: #E5A300;
   color: #fff;
   text-decoration: none;
+}
+
+#hero .btn-get-started.btn-primary-solid {
+  background: #E5A300;
+  color: #111;
+  border-color: #E5A300;
+  border-radius: 50px;
+}
+
+#hero .btn-get-started.btn-primary-solid:hover {
+  background: #C98E00;
+  border-color: #C98E00;
+  color: #111;
 }
 
 .fillpic .btn-get-started,
@@ -2164,6 +2177,20 @@ padding-bottom: 56.25%;
   font-size: 16px;
 }
 
+/* 鍵盤導覽：tab 進 social 連結時觸發顯示（原只認 :hover，鍵盤使用者看不到連結） */
+.team .member:focus-within .social {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* 觸控裝置沒有 hover，改常駐顯示避免連結永遠碰不到 */
+@media (hover: none) {
+  .team .member .social {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -3828,7 +3855,7 @@ section.testimonials {
   border: 1px solid #f0e6d3;
 }
 
-.article-cta h4 {
+.article-cta h3 {
   font-family: var(--font-display);
   font-size: 1.375rem;
   font-weight: 700;
@@ -3896,6 +3923,11 @@ section.testimonials {
   color: #1a1815;
   text-align: center;
   margin: 0 0 28px 0;
+}
+
+/* Bootstrap .text-muted 預設冷灰，與站上暖色調不搭；只在延伸閱讀卡片範圍內覆寫，不動全域 utility */
+.related-posts .text-muted {
+  color: #4d4742;
 }
 
 /* article-card-grid 卡片封面：統一橫式 16:9 cover 縮圖。
@@ -4414,8 +4446,8 @@ section.testimonials {
 .tool-form-card .tool-name { width: 100%; }
 .tool-check { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #666; cursor: pointer; margin: 6px 0 14px; }
 .tool-check input { width: 16px; height: 16px; accent-color: var(--tool-accent); }
-.tool-compute-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: var(--tool-accent); color: #fff; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; }
-.tool-compute-btn:hover { background: var(--tool-accent-hover); color: #fff; }
+.tool-compute-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: var(--tool-accent); color: #111; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; }
+.tool-compute-btn:hover { background: var(--tool-accent-hover); color: #111; }
 .tool-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; }
 
 /* --- Hub Hero --- */
@@ -4488,16 +4520,16 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .explore-badge.is-beta { background: rgba(229,163,0,.08); border: 1px solid var(--c-gold); color: var(--c-gold-deep); }
 .explore-card-price { font-size: 0.85rem; font-weight: 600; color: var(--c-gold-deep); margin-top: auto; padding-top: 10px; }
 .explore-card-price + .explore-card-cta { margin-top: 4px; }
-.explore-card-cta { font-size: 0.9rem; font-weight: 700; color: #c98f00; margin-top: auto; }
+.explore-card-cta { font-size: 0.9rem; font-weight: 700; color: var(--c-gold-deep); margin-top: auto; }
 .explore-card-cta.as-link { text-decoration: none; }
 .explore-card-cta.as-link:hover { color: var(--c-gold); }
 .explore-card-more { margin-top: auto; }
-.explore-card-more summary { font-size: 0.86rem; font-weight: 600; color: #8a8578; cursor: pointer; list-style: none; }
+.explore-card-more summary { font-size: 0.86rem; font-weight: 600; color: #8a8578; cursor: pointer; list-style: none; padding: 8px 0; }
 .explore-card-more summary::-webkit-details-marker { display: none; }
 .explore-card-more summary::before { content: "＋ "; color: var(--c-gold); font-weight: 700; }
 .explore-card-more[open] summary::before { content: "－ "; }
 .explore-card-note { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 10px 0 8px; }
-.explore-signal { display: inline-block; font-size: 0.85rem; font-weight: 600; color: #c98f00; border-bottom: 1px dashed #e6c879; }
+.explore-signal { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--c-gold-deep); border-bottom: 1px dashed #e6c879; }
 .explore-signal:hover { color: var(--c-gold); }
 
 /* --- 產品藍圖 roadmap（縱向時間軸：線＋節點圓點）--- */
@@ -4544,7 +4576,7 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
   font-size: 0.86rem; color: #b6820a; text-decoration: none;
   border: 1px solid #f0dca8; border-radius: 50px; padding: 5px 15px; transition: 0.2s;
 }
-.explore-backlink:hover { background: #fffaf0; border-color: var(--c-gold); color: #c98f00; }
+.explore-backlink:hover { background: #fffaf0; border-color: var(--c-gold); color: var(--c-gold-deep); }
 
 /* --- 首頁「自我探索實驗室」入口 banner --- */
 .explore-home-cta {
@@ -4642,10 +4674,13 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-cta-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; color: var(--c-gold); text-transform: uppercase; margin-bottom: 8px; }
 .qimen-cta-card h4 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
 .qimen-cta-card p { font-size: 0.87rem; color: #666; line-height: 1.7; margin-bottom: 16px; flex: 1; }
-.qimen-cta-btn { display: block; text-align: center; padding: 11px; border-radius: 8px; background: var(--c-gold); color: #fff; font-weight: 600; text-decoration: none; transition: 0.25s; margin-top: auto; }
-.qimen-cta-btn:hover { background: #c98f00; color: #fff; }
+.qimen-cta-btn { display: block; text-align: center; padding: 11px; border-radius: 10px; background: var(--c-gold); color: #111; font-weight: 600; text-decoration: none; transition: 0.25s; margin-top: auto; }
+.qimen-cta-btn:hover { background: #c98f00; color: #111; }
 .qimen-cta-btn.is-outline { background: #fff; border: 1.5px solid var(--c-gold); color: #c98f00; }
-.qimen-cta-btn.is-outline:hover { background: var(--c-gold); color: #fff; }
+.qimen-cta-btn.is-outline:hover { background: var(--c-gold); color: #111; }
+/* 主次分權：兩鈕若共用 is-outline 視覺同權重，其中一個改掛此 class 當主要行動（HTML 由後續批次接手掛用） */
+.qimen-cta-btn--primary { background: var(--c-gold); color: #111; }
+.qimen-cta-btn--primary:hover { background: #c98f00; color: #111; }
 
 /* 教育展示 banner（tool 頁頂部）＋示意表單 */
 .qimen-demo-banner { background: #fff8e6; border-bottom: 1px solid #f3e2b8; }
@@ -4656,9 +4691,27 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-form-card label:first-child { margin-top: 0; }
 .qimen-form-card input, .qimen-form-card select, .qimen-form-card textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 10px 12px; font-size: 0.95rem; color: #333; font-family: inherit; }
 .qimen-form-card input:focus, .qimen-form-card select:focus, .qimen-form-card textarea:focus { outline: none; border-color: var(--c-gold); box-shadow: 0 0 0 3px rgba(229,163,0,0.12); }
-.qimen-form-btn { margin-top: 18px; width: 100%; padding: 13px; border: none; border-radius: 9px; background: var(--c-gold); color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.25s; }
+.qimen-form-btn { margin-top: 18px; width: 100%; padding: 13px; border: none; border-radius: 10px; background: var(--c-gold); color: #111; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.25s; }
 .qimen-form-btn:hover { background: #c98f00; }
 .qimen-demo-notice { display: none; margin-top: 18px; background: #fff8e6; border: 1px solid #f3e2b8; border-radius: 10px; padding: 16px 18px; font-size: 0.9rem; color: #8a6a00; line-height: 1.75; }
+
+@media (max-width: 768px) {
+  /* E2：手機格子窄，泡泡固定 200px 置中會左右溢出視窗；改可縮寬＋邊欄格子貼齊格內側而非跨出裁切 */
+  .qimen-tip { width: auto; max-width: min(74vw, 220px); }
+  .qimen-cell:nth-child(3n+1) .qimen-tip { left: 0; right: auto; transform: none; }
+  .qimen-cell:nth-child(3n) .qimen-tip { left: auto; right: 0; transform: none; }
+  /* 驗證 E2 時發現的連帶問題：::after 浮水印用 inset:0 撐滿整個九宮格再旋轉，
+     旋轉後的外接框必然比格子本身寬，在窄視窗會把 scrollWidth 推出視窗；
+     改成內容自適應大小再置中旋轉，浮水印本身縮小、外接框不再超框。 */
+  .qimen-grid.is-demo::after {
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+}
 
 @media (max-width: 480px) {
   .qimen-grid { gap: 6px; }

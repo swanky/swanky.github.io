@@ -23,6 +23,7 @@ function renderGallery(root) {
     + SECTIONS.map((section) => `<a href="#deck-${section.key}">${section.short}</a>`).join('')
     + '</nav>';
 
+  let eagerBudget = 8; // 首屏前 8 張不設 lazy，避免捲動未到前大片留白、感知像沒載入
   for (const section of SECTIONS) {
     const sectionCards = cards.filter(section.test);
     html += `<section class="ct-gallery-section" id="deck-${section.key}">`
@@ -31,8 +32,9 @@ function renderGallery(root) {
       + sectionCards.map((card) => {
         const label = `${card.nameZh} ${card.nameEn}`;
         const index = cards.indexOf(card);
+        const lazyAttr = eagerBudget-- > 0 ? '' : ' loading="lazy"';
         return `<figure class="ct-gallery-card" data-index="${index}" tabindex="0" role="button" aria-label="放大檢視${escapeHtml(label)}">`
-          + `<img src="${card.src}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}" loading="lazy" decoding="async" width="768">`
+          + `<img src="${card.src}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}"${lazyAttr} decoding="async" width="768">`
           + `<figcaption>${escapeHtml(card.nameZh)}<br><span>${escapeHtml(card.nameEn)}</span></figcaption></figure>`;
       }).join('')
       + '</div></section>';
