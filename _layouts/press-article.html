@@ -3,13 +3,19 @@ layout: default
 ---
 {% include press-article-jsonld.html %}
 
+<style>
+  .section-title h1 { font-size: var(--text-2xl); font-weight: 700; letter-spacing: -0.015em; margin-bottom: 20px; padding-bottom: 20px; position: relative; }
+  .section-title h1::before { content: ''; position: absolute; display: block; width: 120px; height: 0px; background: #ddd; bottom: 0px; left: calc(50% - 60px); }
+  .section-title h1::after { content: ''; position: absolute; display: block; width: 28px; height: 2px; background: #F5C53B; bottom: 0; left: calc(50% - 20px); }
+</style>
+
 <main id="main">
 
   <section class="blog-post">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>{{ page.title }}</h2>
+        <h1>{{ page.title }}</h1>
         <p>{{ page.date | date: "%Y-%m-%d" }} · {{ page.source_name }}{% if page.author %} · {{ page.author }}{% endif %}</p>
       </div>
 
@@ -22,7 +28,7 @@ layout: default
           <i class="bi bi-info-circle me-1"></i>本頁為原始報導之備份存檔，內容版權歸原作者與媒體所有。
         </p>
         {% if page.source_url %}
-        <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" class="btn-get-started" style="display:inline-block; padding:10px 30px; background:#E5A300; color:#fff; border-radius:4px; text-decoration:none;">
+        <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-color">
           <i class="bi bi-box-arrow-up-right me-1"></i>前往原始報導
         </a>
         {% endif %}

@@ -1,7 +1,7 @@
 - title: 攝影寫真
   eyebrow: Photography
   icon: bi-camera
-  color: pink
+  color: gold-1
   description: 拍攝經驗豐富、風格清新自然，作品遍及人像寫真、活動紀錄、自助婚紗、企業/個人形象宣傳、商業攝影。
   url: /photography/
   cta_text: 欣賞作品集
@@ -10,7 +10,7 @@
 - title: 技術顧問
   eyebrow: Tech Consulting
   icon: bi-pen
-  color: cyan
+  color: gold-2
   description: >
     主力服務：AI Agent／Claude Code 團隊導入——把 AI 變成可重複、可驗證、可交付的工程流程。另提供 Java 企業級架構、敏捷轉型與區塊鏈／Web3 技術顧問。
   url: /technical/ai-agent-consulting/
@@ -20,7 +20,7 @@
 - title: 教育訓練
   eyebrow: Speaking & Training
   icon: bi-patch-check
-  color: green
+  color: gold-3
   description: >
     企業內訓與公開講座講師，課程涵蓋加密貨幣、NFT、Web3 與 AI 工程。連續多年於大學授課，可依需求客製個人小班制或企業內訓。
   url: /education/
@@ -30,7 +30,7 @@
 - title: AI 視覺內容製作
   eyebrow: AI Visual Production
   icon: bi-stars
-  color: pink
+  color: gold-4
   description: >
     為個人品牌、創作者與內容團隊製作可延伸的 AI 系列圖像與短影音。從角色一致性、視覺方向與分鏡，到人工 QA 與正式檔案交付。
   url: /technical/ai-visual-production/

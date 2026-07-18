@@ -159,8 +159,15 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin-left: 5px;
 }
 
-.navbar a:hover, .navbar .active, .navbar li:hover > a {
+.navbar a:hover, .navbar li:hover > a {
   color: #F5C53B;
+}
+
+.navbar .active {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
 .navbar .dropdown ul {
@@ -282,8 +289,15 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   color: #343a40;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover, .navbar-mobile li:hover > a {
   color: #E5A300;
+}
+
+.navbar-mobile .active {
+  color: #343a40;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
 .navbar-mobile .getstarted {
@@ -762,6 +776,62 @@ section {
 
 .services .icon-box-blue:hover {
   border-color: #2282ff;
+}
+
+/* Service card icon colors: 4-step gold scale, replaces the Bootstrap-template
+   pink/cyan/green identity for the homepage service cards only. New classes —
+   icon-box-pink/cyan/green above are left untouched because they're still used
+   by .edu-services below and by photography/uniform-girl-history.html. */
+.services .icon-box-gold-1 .icon {
+  background: #fdf3e0;
+}
+
+.services .icon-box-gold-1 .icon i {
+  color: #E5A300;
+}
+
+.services .icon-box-gold-1:hover {
+  border-top-color: #E5A300;
+  box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
+}
+
+.services .icon-box-gold-2 .icon {
+  background: #fdf3e0;
+}
+
+.services .icon-box-gold-2 .icon i {
+  color: #8B5E00;
+}
+
+.services .icon-box-gold-2:hover {
+  border-top-color: #8B5E00;
+  box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
+}
+
+.services .icon-box-gold-3 .icon {
+  background: #fdf3e0;
+}
+
+.services .icon-box-gold-3 .icon i {
+  color: #B98700;
+}
+
+.services .icon-box-gold-3:hover {
+  border-top-color: #B98700;
+  box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
+}
+
+.services .icon-box-gold-4 .icon {
+  background: #fdf3e0;
+}
+
+.services .icon-box-gold-4 .icon i {
+  color: #C9A227;
+}
+
+.services .icon-box-gold-4:hover {
+  border-top-color: #C9A227;
+  box-shadow: 0 8px 32px 0 rgba(229, 163, 0, 0.12);
 }
 /*--------------------------------------------------------------
 # Our edu-Services
@@ -2185,7 +2255,7 @@ padding-bottom: 56.25%;
   font-size: 14px;
 }
 
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
   background-color: #E5A300;
 }
 
@@ -3426,6 +3496,11 @@ section.testimonials {
   word-break: break-word;
 }
 
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .post-content > p {
   margin-top: 0;
   margin-bottom: 1.5em;
@@ -3783,7 +3858,7 @@ section.testimonials {
   padding: 11px 28px;
   background: #E5A300;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 50px;
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--text-sm);
@@ -3902,7 +3977,7 @@ section.testimonials {
 }
 .series-group-title:first-of-type { margin-top: 10px; }
 .series-group-title h2 {
-  font-family: var(--font-serif, serif);
+  font-family: var(--font-display);
   font-size: 23px;
   font-weight: 600;
   margin: 0 0 8px;
@@ -4016,7 +4091,7 @@ section.testimonials {
   padding: 11px 26px;
   background: #E5A300;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 50px;
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--text-sm);
