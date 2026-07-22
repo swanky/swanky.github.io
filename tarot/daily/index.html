@@ -40,7 +40,9 @@ extra_head: |
   }
   </script>
 extra_css: |
-  .daily-hero { background: linear-gradient(135deg, #fffaf0, #fdf3e0); padding: 56px 0 40px; text-align: center; }
+  .daily-hero { position: relative; background: radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%), linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%); padding: 56px 0 40px; text-align: center; }
+  .daily-hero::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.6; background-image: linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px); background-size: 46px 46px; }
+  .daily-hero > .container, .daily-hero > * { position: relative; z-index: 1; }
   .daily-hero h1 { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 12px; }
   .daily-hero .lead { font-size: 1.02rem; color: #5a5346; max-width: 560px; margin: 0 auto 18px; line-height: 1.75; }
   .daily-section { padding: 40px 0; }
@@ -82,6 +84,14 @@ extra_css: |
   .faq-section .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b6820a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
   .faq-section .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E5A300'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
   .faq-section .accordion-body { color: #555; }
+
+  /* 深色導流帶 */
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .daily-draw-btn { display:inline-block; text-decoration:none; color:#111; }
+  .tool-cta-dark .daily-draw-btn:hover { color:#111; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
 ---
 
 <main id="main">
@@ -115,6 +125,15 @@ extra_css: |
           <a href="{{ '/tarot/' | relative_url }}">想問一個更完整的問題？用職場塔羅完整抽牌 →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ======= 深色導流帶 ======= -->
+  <section class="tool-cta-dark" data-aos="fade-up">
+    <div class="container">
+      <h3>想探索更多？</h3>
+      <p>這裡每個工具都把象徵系統當成反思與決策的地圖，純前端計算、資料不上傳。</p>
+      <a class="daily-draw-btn" href="{{ '/explore/' | relative_url }}">回到自我探索實驗室 →</a>
     </div>
   </section>
 

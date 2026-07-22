@@ -398,6 +398,24 @@
   .tech-cta-card { padding: 26px; }
 }
 
+.tech-listing-band {
+  min-height: 360px; display: flex; align-items: center; padding: 64px 0;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(23,107,255,.24), transparent 40%),
+    linear-gradient(135deg, #07111f 0%, #0b1930 100%);
+  color: #fff; text-align: center;
+}
+.tech-listing-band--web3 {
+  background:
+    radial-gradient(circle at 86% 12%, rgba(229,163,0,.22), transparent 40%),
+    linear-gradient(135deg, #0b101b 0%, #171405 100%);
+}
+.tech-listing-band .tlb-eyebrow { display:block; color:#50b8ff; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+.tech-listing-band--web3 .tlb-eyebrow { color:#ffc94f; }
+.tech-listing-band h1 { margin:0 0 12px; color:#fff; font-family:"Playfair Display","Songti SC",Georgia,serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:700; }
+.tech-listing-band p { margin:0 auto; max-width:640px; color:rgba(255,255,255,.78); line-height:1.75; }
+@media (max-width:767px){ .tech-listing-band{ min-height:260px; padding:44px 0; } }
+
 @media (prefers-reduced-motion: reduce) {
   .technical-page *, .technical-page *::before, .technical-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }

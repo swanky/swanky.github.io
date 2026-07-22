@@ -14,7 +14,9 @@ breadcrumbs:
   - name: 我的塔羅反思紀錄
     url: /tarot/journal/
 extra_css: |
-  .tj-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; }
+  .tj-hero { position: relative; background: radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%), linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%); padding: 56px 0 40px; }
+  .tj-hero::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.6; background-image: linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px); background-size: 46px 46px; }
+  .tj-hero > .container, .tj-hero > * { position: relative; z-index: 1; }
   .tj-hero h1 { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 12px; }
   .tj-hero .lead { font-size: 1rem; color: #5a5346; max-width: 620px; margin: 0 auto 18px; line-height: 1.75; }
   .tarot-pill { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #f0dca8; border-radius: 50px; padding: 6px 16px; font-size: 0.85rem; color: #7a5500; margin-bottom: 18px; }
@@ -78,6 +80,14 @@ extra_css: |
 
   .tj-privacy-note { max-width: 680px; margin: 30px auto 0; font-size: 0.82rem; color: #5f5b53; line-height: 1.75; background: #fafafa; border-radius: 10px; padding: 16px 20px; }
   .tj-privacy-note strong { color: #333; }
+
+  /* 深色導流帶 */
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tj-btn.tj-btn--primary { display:inline-block; text-decoration:none; color:#111; }
+  .tool-cta-dark .tj-btn.tj-btn--primary:hover { color:#111; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
 ---
 
 <main id="main">
@@ -110,6 +120,15 @@ extra_css: |
       <p class="tj-privacy-note">
         <strong>關於你的資料：</strong>這些反思紀錄只儲存在你目前這台裝置的瀏覽器裡，<strong>不會上傳、不會同步到其他裝置、也不用註冊帳號</strong>。這代表換一台電腦、換一個瀏覽器、清除瀏覽資料或使用無痕模式時，紀錄不會跟著走——若想長期保存，請用「下載完整備份」存一份到你的電腦。「刪除全部紀錄」會立即、永久移除這台裝置上的所有資料，不留備份。
       </p>
+    </div>
+  </section>
+
+  <!-- ======= 深色導流帶 ======= -->
+  <section class="tool-cta-dark" data-aos="fade-up">
+    <div class="container">
+      <h3>想探索更多？</h3>
+      <p>這裡每個工具都把象徵系統當成反思與決策的地圖，純前端計算、資料不上傳。</p>
+      <a class="tj-btn tj-btn--primary" href="{{ '/explore/' | relative_url }}">回到自我探索實驗室 →</a>
     </div>
   </section>
 

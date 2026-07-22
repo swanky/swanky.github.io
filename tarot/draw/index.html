@@ -43,7 +43,9 @@ extra_head: |
   }
   </script>
 extra_css: |
-  .tarot-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 60px 0 46px; }
+  .tarot-hero { position: relative; background: radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%), linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%); padding: 60px 0 46px; }
+  .tarot-hero::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.6; background-image: linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px); background-size: 46px 46px; }
+  .tarot-hero > .container, .tarot-hero > * { position: relative; z-index: 1; }
   .tarot-hero h1 { font-size: 2.1rem; font-weight: 700; color: #111; margin-bottom: 14px; }
   .tarot-hero .lead { font-size: 1.06rem; color: #5a5346; max-width: 640px; margin: 0 auto 22px; line-height: 1.75; }
   .tarot-pill { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #f0dca8; border-radius: 50px; padding: 6px 16px; font-size: 0.85rem; color: #7a5500; margin-bottom: 22px; }
@@ -256,6 +258,14 @@ extra_css: |
   .faq-section .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E5A300'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
   .faq-section .accordion-body { color: #555; }
 
+  /* 深色導流帶（沿用既有付費引導段 #tarot-plans） */
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark > .container > p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tarot-prod-cta { color:#111; }
+  .tool-cta-dark .tarot-prod-cta:hover { color:#111; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
   @media (max-width: 768px) {
     .tarot-spread-options { grid-template-columns: 1fr; }
     .tarot-topic-options { grid-template-columns: repeat(2, 1fr); }
@@ -276,30 +286,6 @@ extra_css: |
       <p class="lead">先寫下你正卡住的事——職場、感情、生活，還是一個難的決定都可以——選主題、挑牌陣、抽牌，讓牌面把模糊的處境，翻成你能談、能做的下一步。</p>
       <a href="#tarot-tool" class="tarot-btn-primary" style="display:inline-block; width:auto; padding:13px 36px;">開始抽牌 ↓</a>
       <div style="margin-top:16px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 回到自我探索實驗室</a></div>
-    </div>
-  </section>
-
-  <!-- ======= 這不是占卜 ======= -->
-  <section class="tarot-explain" data-aos="fade-up">
-    <div class="container">
-      <div class="tarot-explain-card">
-        <h2>這不是占卜，是一種反思的方式</h2>
-        <p>塔羅在這裡不是用來預測未來，而是一面鏡子——牌面的象徵幫你把模糊的感受具象化，看見自己原本沒留意的角度。每次抽牌會給你四件事：<b>牌面象徵</b>、對照你處境的<b>連結</b>、可以問自己的<b>反思問題</b>，以及一個一週內可以做的<b>小行動</b>。這套作法源自一位帶過團隊的技術主管在 1:1 對話裡用的引導框架——現在不只用在工作，<b>感情、生活、重大決策</b>都可以用同一種方式好好想一想。抽完牌，還可以把它整理成一份可編輯、可下載、<b>七天後回來驗證</b>的《決策備忘錄》。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= 牌組對照入口 ======= -->
-  <section class="tarot-explain" style="padding:6px 0 0;" data-aos="fade-up">
-    <div class="container">
-      <a class="tarot-compare-banner" href="{{ '/tarot/compare/' | relative_url }}">
-        <span class="tarot-compare-ico"><i class="bi bi-images"></i></span>
-        <span class="tarot-compare-txt">
-          <b>看看這副牌長什麼樣？</b>
-          78 張全副牌面，同一位墨線復古制服女孩貫穿全副、重新詮釋經典偉特——寶劍劍身鏨著電路紋、錢幣藏著鏈上代幣，四個花色各自呼應一條技術線。一張一張並排對照、點圖放大。
-        </span>
-        <span class="tarot-compare-arrow">→</span>
-      </a>
     </div>
   </section>
 
@@ -369,6 +355,30 @@ extra_css: |
     </div>
   </section>
 
+  <!-- ======= 這不是占卜 ======= -->
+  <section class="tarot-explain" data-aos="fade-up">
+    <div class="container">
+      <div class="tarot-explain-card">
+        <h2>這不是占卜，是一種反思的方式</h2>
+        <p>塔羅在這裡不是用來預測未來，而是一面鏡子——牌面的象徵幫你把模糊的感受具象化，看見自己原本沒留意的角度。每次抽牌會給你四件事：<b>牌面象徵</b>、對照你處境的<b>連結</b>、可以問自己的<b>反思問題</b>，以及一個一週內可以做的<b>小行動</b>。這套作法源自一位帶過團隊的技術主管在 1:1 對話裡用的引導框架——現在不只用在工作，<b>感情、生活、重大決策</b>都可以用同一種方式好好想一想。抽完牌，還可以把它整理成一份可編輯、可下載、<b>七天後回來驗證</b>的《決策備忘錄》。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 牌組對照入口 ======= -->
+  <section class="tarot-explain" style="padding:6px 0 0;" data-aos="fade-up">
+    <div class="container">
+      <a class="tarot-compare-banner" href="{{ '/tarot/compare/' | relative_url }}">
+        <span class="tarot-compare-ico"><i class="bi bi-images"></i></span>
+        <span class="tarot-compare-txt">
+          <b>看看這副牌長什麼樣？</b>
+          78 張全副牌面，同一位墨線復古制服女孩貫穿全副、重新詮釋經典偉特——寶劍劍身鏨著電路紋、錢幣藏著鏈上代幣，四個花色各自呼應一條技術線。一張一張並排對照、點圖放大。
+        </span>
+        <span class="tarot-compare-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
   <!-- ======= 定位 ======= -->
   <section class="tarot-tool tarot-positioning" data-aos="fade-up">
     <div class="container">
@@ -387,10 +397,10 @@ extra_css: |
   </section>
 
   <!-- ======= 付費引導 ======= -->
-  <section class="tarot-tool" id="tarot-plans" data-aos="fade-up">
+  <section class="tarot-tool tool-cta-dark" id="tarot-plans" data-aos="fade-up">
     <div class="container text-center">
-      <h2 style="font-size:1.7rem; font-weight:700; color:#111; margin-bottom:8px;">想把一個議題，聊得更深？</h2>
-      <p style="color:#777; max-width:620px; margin:0 auto;">線上抽牌給你一面快速的鏡子。若你想針對某個真正的卡點（職場、感情、生活或一個難的決定），由我帶你跑一遍完整的塔羅反思，這裡有兩種方式。目前為首批驗證階段，以早鳥價回饋前幾位願意提供使用心得的人。</p>
+      <h2 style="font-size:1.7rem; font-weight:700; margin-bottom:8px;">想把一個議題，聊得更深？</h2>
+      <p style="max-width:620px; margin:0 auto;">線上抽牌給你一面快速的鏡子。若你想針對某個真正的卡點（職場、感情、生活或一個難的決定），由我帶你跑一遍完整的塔羅反思，這裡有兩種方式。目前為首批驗證階段，以早鳥價回饋前幾位願意提供使用心得的人。</p>
 
       <div class="tarot-products">
         <div class="tarot-product-card is-featured is-outline">

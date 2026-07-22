@@ -14,7 +14,9 @@ breadcrumbs:
     url: /tarot/compare/
 use_tarot_compare: true
 extra_css: |
-  .cmp-hero { background: linear-gradient(135deg,#fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; }
+  .cmp-hero { position: relative; background: radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%), linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%); padding: 56px 0 40px; }
+  .cmp-hero::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.6; background-image: linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px); background-size: 46px 46px; }
+  .cmp-hero > .container, .cmp-hero > * { position: relative; z-index: 1; }
   .cmp-hero h1 { font-size: 2rem; font-weight: 700; color:#111; margin-bottom: 12px; }
   .cmp-hero .lead { font-size: 1.04rem; color:#5a5346; max-width: 700px; margin: 0 auto; line-height: 1.78; }
   .cmp-hero .cmp-legend { display:flex; gap: 22px; justify-content:center; flex-wrap:wrap; margin-top: 20px; font-size: 0.88rem; color:#6b5a2a; }
@@ -84,6 +86,13 @@ extra_css: |
 
   .cmp-foot { max-width: 760px; margin: 8px auto 0; font-size: 0.82rem; color:#a59c86; line-height: 1.75; background:#faf8f3; border:1px solid #f0e9d8; border-radius: 10px; padding: 18px 22px; }
   .cmp-noscript { max-width: 640px; margin: 30px auto; text-align:center; color:#777; background:#fff; border:1px solid #eee; border-radius:12px; padding: 26px; }
+
+  /* 深色導流帶（沿用既有 .cmp-cta 段） */
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark .cmp-cta-title { color:#fff; }
+  .tool-cta-dark .cmp-cta-btn.is-primary,
+  .tool-cta-dark .cmp-cta-btn.is-primary:hover { color:#111; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
 
   @media (max-width: 600px) {
     .cmp-hero h1 { font-size: 1.6rem; }
@@ -157,7 +166,7 @@ extra_css: |
       <noscript>
         <div class="cmp-noscript">這個對照藝廊需要 JavaScript 才能載入 78 張牌的對照圖。請開啟 JavaScript，或先到<a href="{{ '/tarot/' | relative_url }}">塔羅抽牌頁</a>體驗。</div>
       </noscript>
-      <div class="cmp-cta">
+      <div class="cmp-cta tool-cta-dark">
         <p class="cmp-cta-title">喜歡這兩副原創牌？</p>
         <div class="cmp-cta-actions">
           <a class="cmp-cta-btn is-primary" href="{{ '/tarot/draw/' | relative_url }}">開始一次塔羅反思 →</a>

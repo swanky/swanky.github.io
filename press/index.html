@@ -26,12 +26,24 @@ extra_css: >
   .badge-unavailable { background: #A63A2B; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
   .badge-external { background: #5f5b53; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
   .press-intro { background: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.7; }
+  .press-hero {
+    min-height: 340px; display:flex; align-items:center; padding:60px 0;
+    background: linear-gradient(135deg, #2b2724 0%, #232020 100%);
+    color:#fff; text-align:center;
+  }
+  .press-hero .ph-eyebrow { display:block; color:#E5A300; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+  .press-hero h1 { margin:0 0 12px; color:#fff; }
+  .press-hero p { margin:0 auto; max-width:620px; color:rgba(255,255,255,.78); }
+  @media (max-width:767px){ .press-hero{ min-height:240px; padding:42px 0; } }
 ---
 
-  <div class="section-title works">
-    <h1>媒體報導 Press Coverage</h1>
-    <p>歷年新聞報導、雜誌專訪與相關媒體報導彙整。</p>
-  </div>
+  <section class="press-hero">
+    <div class="container">
+      <span class="ph-eyebrow">Press Coverage</span>
+      <h1>媒體報導 Press Coverage</h1>
+      <p>歷年新聞報導、雜誌專訪與相關媒體報導彙整。</p>
+    </div>
+  </section>
 
   <div class="container" style="padding-bottom: 60px;">
 

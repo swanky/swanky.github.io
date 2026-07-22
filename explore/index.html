@@ -10,6 +10,28 @@ breadcrumbs:
     url: /
   - name: 自我探索實驗室
     url: /explore/
+extra_css: |
+  .explore-hero {
+    position: relative;
+    min-height: max(620px, 82svh);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 72px 0 60px;
+    background:
+      radial-gradient(circle at 82% 16%, rgba(229,163,0,.14), transparent 34%),
+      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+    overflow: hidden;
+  }
+  .explore-hero::after {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:
+      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .explore-hero > .container { position: relative; z-index: 1; }
+  .explore-hero h1 { font-size: clamp(2.25rem, 5vw, 3.4rem); }
+  .explore-hero-nav a { padding: 9px 20px; }
+  @media (max-width: 767px) { .explore-hero { min-height: auto; padding: 52px 0 40px; } }
 extra_head: |
   <script type="application/ld+json">
   {

@@ -20,6 +20,15 @@
 - **自我探索工具頁**：亮色暖金；**按鈕語言＝圓角矩形（統一 10px）＋必有 hover**——與行銷頁的藥丸（50px/999px）並立為兩種正式按鈕語言（2026-07-18 D1 決策）：行銷/導流用藥丸、工具/功能操作用 10px 圓角矩形。
 - nft/ 為 legacy 獨立 mini-site，不納入品牌系統。
 
+## 版面結構規範（2026-07-22 立，源於站主抓到的審查盲點）
+
+跨頁「版面用滿感」由兩個結構指標決定，與色調無關，日後設計審查必須把它列為跨頁比對維度（2026-07 審查只比了元件層與色調層，漏掉此維度）：
+
+- **Hub／登陸頁 hero 撐屏**：`min-height: max(640px, 85svh)`＋`display:flex; align-items:center`（tarot decks 家族 680px 地板）；≤767px 一律退回 `min-height:auto`。先例：`.edu-hero`、`.explore-hero`、`.ct-section--hero`、`.tech-hero`、`.photo-author-hero`。
+- **深色滿版節奏帶**：每個 hub 頁至少 1 段深色滿版 section 製造明暗節奏。用色按家族 token：Base `#232020`（--c-ink）、Education `#26231f`、Technical `#07111f`、Tarot `#050914`、nft `#13111C`。深色帶上金字一律亮金 `#E5A300`（深金 `#8a5d00` 僅限亮底）；次要文字 `rgba(255,255,255,.72)` 起跳。
+- **工具頁例外（硬約束）**：輸入表單／工具主體必須在 1440×900 與 390×844 首屏內——工具頁 hero 不加 min-height，改用「亮色漸層＋細點陣質感層」＋頁尾 `.tool-cta-dark`（#232020）深色帶補節奏。
+- **Listing 頁輕量身分帶**：320–420px 深底帶（`.tech-listing-band`、`.press-hero`），不撐滿屏。
+
 ## Content & Tone Guidelines
 
 - **Language**: All website copy, blog posts, and text content MUST be written in Traditional Chinese (zh-TW).

@@ -79,6 +79,28 @@ extra_css: |
   #baziFaq .accordion-button { font-weight: 700; color: #111; }
   #baziFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
   #baziFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
+
+  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
+  .bazi-hero {
+    position: relative;
+    background:
+      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
+      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+  }
+  .bazi-hero::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
+    background-image:
+      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .bazi-hero > .container, .bazi-hero > * { position: relative; z-index: 1; }
+
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
 ---
 
 <main id="main">
@@ -161,10 +183,10 @@ extra_css: |
   </section>
 
   <!-- ======= 付費候補 ======= -->
-  <section class="bazi-section" style="background:#fff;">
+  <section class="bazi-section tool-cta-dark">
     <div class="container text-center">
-      <h2 style="font-size:1.4rem; font-weight:700; color:#3a3226; margin-bottom:8px;">想要一份五行・職涯節奏的深度報告？</h2>
-      <p style="color:#777; max-width:600px; margin:0 auto 18px;">「八字五行・職涯節奏報告」（人工撰寫，早鳥 NT$980）正在籌備中。留下需求，正式上線時以早鳥價通知你。</p>
+      <h2 style="font-size:1.4rem; font-weight:700; margin-bottom:8px;">想要一份五行・職涯節奏的深度報告？</h2>
+      <p style="max-width:600px; margin:0 auto 18px;">「八字五行・職涯節奏報告」（人工撰寫，早鳥 NT$980）正在籌備中。留下需求，正式上線時以早鳥價通知你。</p>
       <a class="tool-compute-btn" style="display:inline-block; width:auto; padding:12px 30px; text-decoration:none;" href="mailto:swanky.hsiao@gmail.com?subject={{ '早鳥候補：八字五行職涯節奏報告' | url_encode }}&body={{ '嗨 史旺基，八字五行職涯節奏報告上線時請通知我。我最想釐清的是（職涯步調／轉職時機／個人節奏）：' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_signal',{'tool':'bazi-report'});}">加入早鳥候補 →</a>
     </div>
   </section>

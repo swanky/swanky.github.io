@@ -50,6 +50,14 @@
 	@keyframes clonexpulse { 0%,100%{opacity:.5;} 50%{opacity:1;} }
 	/* 桌面讓精選收藏排成一行（5 欄），消除 4+1 孤兒行 */
 	@media (min-width:992px){ #clonex-grid > [class*="col-"]{ flex:0 0 20%; max-width:20%; } }
+
+	/* banner hero 撐屏（WP-NFT）：legacy .post-entry .banner / .banner-img 預設 height:auto，此處覆寫 */
+	.banner-section .post-entry .banner { min-height: 70vh; }
+	.banner-section .post-entry .banner .banner-img { width: 100%; height: 70vh; object-fit: cover; }
+	@media (max-width: 767px) {
+	  .banner-section .post-entry .banner,
+	  .banner-section .post-entry .banner .banner-img { min-height: 56vh; height: 56vh; }
+	}
 	</style>
 </head>
 <body>

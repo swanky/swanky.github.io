@@ -359,6 +359,35 @@ extra_css: |
     #hd-result.is-v2 [data-hit],
     .hd-select-detail, .hd-sheet-backdrop, .hd-download-v2 button { transition: none !important; }
   }
+
+  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
+  .hd-hero {
+    position: relative;
+    background:
+      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
+      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+  }
+  .hd-hero::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
+    background-image:
+      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .hd-hero > .container, .hd-hero > * { position: relative; z-index: 1; }
+
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* hd-report 深色帶內：淺色卡片（穩定幣付款區）文字保留原色，避免白字疊白底 */
+  .tool-cta-dark .hd-crypto-pay h3 { color: #111; }
+  .tool-cta-dark .hd-crypto-pay > p { color: #666; }
+  .tool-cta-dark .hd-crypto-card > p { color: #888; }
+  .tool-cta-dark .hd-crypto-amounts { color: #444; }
+  .tool-cta-dark .hd-crypto-note { color: #b07a00; }
 ---
 
 <main id="main">
@@ -372,31 +401,6 @@ extra_css: |
       <a href="#hd-form" class="hd-btn-generate" style="display:inline-block; width:auto; padding:13px 36px;">開始生成 ↓</a>
       <div style="margin-top:14px; font-size:0.92rem;"><a href="{{ '/human-design/relationship/' | relative_url }}" style="color:#8B5E00;"><i class="bi bi-people"></i> 兩個人的關係合盤 →</a></div>
       <div style="margin-top:10px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 探索更多工具：自我探索實驗室</a></div>
-    </div>
-  </section>
-
-  <!-- ======= 什麼是人類圖 ======= -->
-  <section class="hd-explain" data-aos="fade-up">
-    <div class="container">
-      <div class="hd-explain-card">
-        <h2 class="hd-section-title">什麼是人類圖？</h2>
-        <p class="hd-explain-lead">人類圖把占星、易經、脈輪與卡巴拉這幾套古老系統，重新組裝成一張可以讀的個人能量地圖。把它當成一份自我使用說明書——告訴你怎麼做決定、怎麼安排工作節奏、怎麼跟不同的人協作——而不是一份預測未來的命盤。</p>
-        <details class="hd-glossary">
-          <summary>▸ 人類圖名詞速查（類型、權威、角色、定義…）</summary>
-          <dl class="hd-glossary-grid">
-            <div class="hd-gloss-item"><dt>類型</dt><dd>四大能量類型——生產者、顯示者、投射者、反映者（生產者再細分出顯示生產者），決定你和世界互動最省力的方式。</dd></div>
-            <div class="hd-gloss-item"><dt>內在權威</dt><dd>你身上最可信的決策訊號來源——可能是薦骨回應、情緒週期或當下直覺，是你做對決定的內建依據。</dd></div>
-            <div class="hd-gloss-item"><dt>人生角色</dt><dd>由兩條爻線組成的數字（如 6/3），描述你天生扮演的角色與認識世界的方式。</dd></div>
-            <div class="hd-gloss-item"><dt>人生策略</dt><dd>配合你的類型、最不會撞牆的行動原則，例如「等待回應」或「行動前告知」。</dd></div>
-            <div class="hd-gloss-item"><dt>個人定義</dt><dd>你被定義的中心彼此連不連得起來，分成一分人到四分人，影響你能獨立運作還是需要他人補位。</dd></div>
-            <div class="hd-gloss-item"><dt>能量中心</dt><dd>圖上九個區塊，有定義代表能量穩定固定，開放代表會吸收與放大環境，各有各的功課。</dd></div>
-            <div class="hd-gloss-item"><dt>通道與閘門</dt><dd>閘門是 64 個能量點，兩端閘門都啟動就連成一條通道，代表你穩定持有的某種天賦。</dd></div>
-            <div class="hd-gloss-item"><dt>非自己主題</dt><dd>當你偏離設計時反覆出現的負面感受（挫敗、憤怒、苦澀、失望），是提醒你走錯路的儀表板警示。</dd></div>
-            <div class="hd-gloss-item"><dt>正面信號</dt><dd>當你走在對的路上時浮現的內在訊號（滿足、平和、成功、驚喜），是確認方向正確的綠燈。</dd></div>
-            <div class="hd-gloss-item"><dt>輪迴交叉</dt><dd>由太陽與地球四個閘門組成的組合，勾勒你這一生整體的人生主題與發揮方向。</dd></div>
-          </dl>
-        </details>
-      </div>
     </div>
   </section>
 
@@ -449,6 +453,31 @@ extra_css: |
 
         <button class="hd-btn-generate" id="hd-submit">生成我的人類圖</button>
         <div class="hd-error" id="hd-error"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 什麼是人類圖 ======= -->
+  <section class="hd-explain" data-aos="fade-up">
+    <div class="container">
+      <div class="hd-explain-card">
+        <h2 class="hd-section-title">什麼是人類圖？</h2>
+        <p class="hd-explain-lead">人類圖把占星、易經、脈輪與卡巴拉這幾套古老系統，重新組裝成一張可以讀的個人能量地圖。把它當成一份自我使用說明書——告訴你怎麼做決定、怎麼安排工作節奏、怎麼跟不同的人協作——而不是一份預測未來的命盤。</p>
+        <details class="hd-glossary">
+          <summary>▸ 人類圖名詞速查（類型、權威、角色、定義…）</summary>
+          <dl class="hd-glossary-grid">
+            <div class="hd-gloss-item"><dt>類型</dt><dd>四大能量類型——生產者、顯示者、投射者、反映者（生產者再細分出顯示生產者），決定你和世界互動最省力的方式。</dd></div>
+            <div class="hd-gloss-item"><dt>內在權威</dt><dd>你身上最可信的決策訊號來源——可能是薦骨回應、情緒週期或當下直覺，是你做對決定的內建依據。</dd></div>
+            <div class="hd-gloss-item"><dt>人生角色</dt><dd>由兩條爻線組成的數字（如 6/3），描述你天生扮演的角色與認識世界的方式。</dd></div>
+            <div class="hd-gloss-item"><dt>人生策略</dt><dd>配合你的類型、最不會撞牆的行動原則，例如「等待回應」或「行動前告知」。</dd></div>
+            <div class="hd-gloss-item"><dt>個人定義</dt><dd>你被定義的中心彼此連不連得起來，分成一分人到四分人，影響你能獨立運作還是需要他人補位。</dd></div>
+            <div class="hd-gloss-item"><dt>能量中心</dt><dd>圖上九個區塊，有定義代表能量穩定固定，開放代表會吸收與放大環境，各有各的功課。</dd></div>
+            <div class="hd-gloss-item"><dt>通道與閘門</dt><dd>閘門是 64 個能量點，兩端閘門都啟動就連成一條通道，代表你穩定持有的某種天賦。</dd></div>
+            <div class="hd-gloss-item"><dt>非自己主題</dt><dd>當你偏離設計時反覆出現的負面感受（挫敗、憤怒、苦澀、失望），是提醒你走錯路的儀表板警示。</dd></div>
+            <div class="hd-gloss-item"><dt>正面信號</dt><dd>當你走在對的路上時浮現的內在訊號（滿足、平和、成功、驚喜），是確認方向正確的綠燈。</dd></div>
+            <div class="hd-gloss-item"><dt>輪迴交叉</dt><dd>由太陽與地球四個閘門組成的組合，勾勒你這一生整體的人生主題與發揮方向。</dd></div>
+          </dl>
+        </details>
       </div>
     </div>
   </section>
@@ -583,10 +612,10 @@ extra_css: |
   </section>
 
   <!-- ======= 付費產品 ======= -->
-  <section class="hd-section" id="hd-report" data-aos="fade-up">
+  <section class="hd-section tool-cta-dark" id="hd-report" data-aos="fade-up">
     <div class="container text-center">
       <h2 class="hd-section-title" style="margin-bottom:8px;">想更深入理解你的設計？</h2>
-      <p style="color:#777; max-width:620px; margin:0 auto;">免費版讓你看見輪廓，付費解讀帶你走進細節——把人類圖結構，轉成你職涯與關係裡能用的具體建議。目前為首批驗證階段，以早鳥價回饋前 10 位願意提供使用回饋的人。</p>
+      <p style="max-width:620px; margin:0 auto;">免費版讓你看見輪廓，付費解讀帶你走進細節——把人類圖結構，轉成你職涯與關係裡能用的具體建議。目前為首批驗證階段，以早鳥價回饋前 10 位願意提供使用回饋的人。</p>
 
       <div class="hd-products">
         <div class="hd-product-card is-featured is-outline">

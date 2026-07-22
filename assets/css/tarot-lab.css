@@ -27,6 +27,14 @@
 .ct-section--soft { background: linear-gradient(180deg, #0a1020, #080d19); }
 .ct-section--paper { background: #f7f5ef; color: #111a2b; }
 .ct-section--compact { padding: 56px 0; }
+.ct-section--hero {
+  min-height: max(680px, 82svh);
+  display: flex; align-items: center;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(167,119,255,.25), transparent 35%),
+    radial-gradient(circle at 18% 80%, rgba(102,229,255,.14), transparent 32%),
+    #050914;
+}
 .ct-eyebrow { display: inline-flex; gap: 9px; align-items: center; margin-bottom: 13px; color: var(--ct-cyan); font-size: .74rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ct-eyebrow::before { width: 26px; height: 2px; content: ""; background: currentColor; }
 .ct-section-head { max-width: 790px; margin-bottom: 38px; }
@@ -141,6 +149,7 @@
   .ct-shell { width: min(100% - 28px, 1180px); }
   .ct-section { padding: 62px 0; }
   .ct-hero { min-height: auto; padding: 52px 0 62px; }
+  .ct-section--hero { min-height: auto; }
   .ct-hero-grid { gap: 32px; }
   .ct-hero-copy h1 { font-size: clamp(2.35rem,12vw,3.35rem); }
   .ct-actions { display: grid; grid-template-columns: 1fr; }

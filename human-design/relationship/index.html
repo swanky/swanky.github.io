@@ -150,6 +150,32 @@ extra_css: |
   .hdc-faq summary { font-weight: 600; color: #222; cursor: pointer; font-size: 0.95rem; }
   .hdc-faq p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 10px 0 0; }
   .hdc-method { max-width: 860px; margin: 0 auto; font-size: 0.82rem; color: #999; line-height: 1.7; }
+
+  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
+  .hd-hero {
+    position: relative;
+    background:
+      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
+      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+  }
+  .hd-hero::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
+    background-image:
+      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .hd-hero > .container, .hd-hero > * { position: relative; z-index: 1; }
+
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* hdc-report 深色帶內：既有淺色報告卡維持原色與左對齊 */
+  .tool-cta-dark .hdc-report { text-align: left; }
+  .tool-cta-dark .hdc-report h2 { color: #111; }
 ---
 
 <main id="main">
@@ -314,7 +340,7 @@ extra_css: |
   </section>
 
   <!-- ======= 付費報告 ======= -->
-  <section class="hd-section" id="hdc-report">
+  <section class="hd-section tool-cta-dark" id="hdc-report">
     <div class="container">
       <div class="hdc-report">
         <h2>合盤深度報告：把「你們的圖」讀成「你們的相處說明書」</h2>

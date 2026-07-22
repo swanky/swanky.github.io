@@ -65,6 +65,31 @@ extra_css: |
   #ichFaq .accordion-button { font-weight: 700; color: #111; }
   #ichFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
   #ichFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
+
+  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
+  .ich-hero {
+    position: relative;
+    background:
+      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
+      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+  }
+  .ich-hero::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
+    background-image:
+      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .ich-hero > .container, .ich-hero > * { position: relative; z-index: 1; }
+
+  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
+  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
+  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
+  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
+  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* ich-cta 深色帶內：既有淺色虛線卡維持原文字色 */
+  .tool-cta-dark .ich-cta p { color: #6b6252; }
 ---
 
 <main id="main">
@@ -113,7 +138,7 @@ extra_css: |
     </div>
   </section>
 
-  <section class="ich-section" style="background:#fff; padding-top:6px;">
+  <section class="ich-section tool-cta-dark">
     <div class="container">
       <div class="ich-cta">
         <p>想要更深入的解卦？「深度解卦・文字報告」會針對你的問題，逐爻解讀本卦與動爻、給出具體的進退建議。</p>
