@@ -1,4 +1,4 @@
-<!-- 媒體報導 NewsArticle 結構化資料：報導主體為蕭宇程（about），補強知識圖譜實體 -->
+<!-- 媒體報導 NewsArticle 結構化資料：報導主體為史旺基（about），補強知識圖譜實體 -->
 {% if page.source_name %}
 <script type="application/ld+json">
 {
@@ -15,8 +15,8 @@
   },
   "about": {
     "@type": "Person",
-    "name": "蕭宇程",
-    "alternateName": "Swanky Hsiao",
+    "name": "史旺基",
+    "alternateName": ["Swanky Hsiao", "蕭宇程"],
     "url": "{{ '/' | absolute_url }}"
   },
   "image": "{% if page.cover_image %}{{ page.cover_image | absolute_url }}{% else %}{{ '/assets/img/About_r.jpg' | absolute_url }}{% endif %}",
