@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent 動作風險、核准與交接矩陣</title>
+  <desc id="desc">把 Agent 動作分成讀取分析、本機可逆修改、對外共享寫入、不可逆或金錢動作四級，為每級設定自動化範圍、必要證據、核准與失敗處理。</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#17243b"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06101e"/><stop offset="1" stop-color="#10172b"/></linearGradient>
+    <style>.t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#f8fafc}.h{font-size:28px;font-weight:700}.sub{font-size:16px;fill:#a9b8cc}.th{font-size:17px;font-weight:700}.risk{font-size:19px;font-weight:700}.b{font-size:16px;fill:#c2ccda}.s{font-size:14px;fill:#9aa9bd}.mono{font-family:Consolas,"JetBrains Mono",monospace}</style>
+  </defs>
+  <rect width="1200" height="820" rx="24" fill="url(#bg)"/><rect width="1200" height="820" rx="24" fill="url(#grid)" opacity=".55"/>
+  <text class="t h" x="48" y="56">自主程度要跟動作風險走</text>
+  <text class="t sub" x="48" y="86">能力愈強，不代表權限應該愈大；每級風險都要有不同證據、核准與失敗語義</text>
+
+  <g>
+    <rect x="40" y="120" width="1120" height="54" rx="12" fill="#15243a" stroke="#334155"/>
+    <text class="t th" x="150" y="153" text-anchor="middle">風險與常見動作</text>
+    <text class="t th" x="390" y="153" text-anchor="middle">預設自主範圍</text>
+    <text class="t th" x="655" y="153" text-anchor="middle">必要證據</text>
+    <text class="t th" x="900" y="153" text-anchor="middle">核准規則</text>
+    <text class="t th" x="1080" y="153" text-anchor="middle">失敗處理</text>
+  </g>
+
+  <g>
+    <rect x="40" y="186" width="1120" height="118" rx="14" fill="#0b2d2b" stroke="#34d399" stroke-width="2"/>
+    <rect x="52" y="198" width="72" height="30" rx="15" fill="#14532d"/><text class="t s" x="88" y="218" text-anchor="middle">LOW</text>
+    <text class="t risk" x="52" y="256">讀取／分析</text><text class="t s" x="52" y="282">搜尋、摘要、分類、比較</text>
+    <text class="t b" x="290" y="226">在核准資料範圍內自動執行</text><text class="t s" x="290" y="253">不可自行擴大資料來源或身分</text><text class="t s" x="290" y="279">敏感資料依分類另行限制</text>
+    <text class="t b" x="550" y="226">Source URI／Snapshot</text><text class="t s" x="550" y="253">存取結果、時間、版本</text><text class="t s" x="550" y="279">關鍵主張回指原文</text>
+    <text class="t b" x="810" y="226">通常不逐次核准</text><text class="t s" x="810" y="253">資料範圍由 Policy 預先批准</text><text class="t s" x="810" y="279">超出 Scope 就停</text>
+    <text class="t b" x="1010" y="226">標記來源不可用</text><text class="t s" x="1010" y="253">不以記憶補洞</text><text class="t s" x="1010" y="279">降級或交接</text>
+  </g>
+
+  <g>
+    <rect x="40" y="316" width="1120" height="118" rx="14" fill="#102b42" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="52" y="328" width="92" height="30" rx="15" fill="#164e63"/><text class="t s" x="98" y="348" text-anchor="middle">MEDIUM</text>
+    <text class="t risk" x="52" y="386">本機可逆修改</text><text class="t s" x="52" y="412">草稿、patch、轉檔、測試</text>
+    <text class="t b" x="290" y="356">可產生變更，不可越出工作範圍</text><text class="t s" x="290" y="383">禁止覆蓋未授權檔案</text><text class="t s" x="290" y="409">保留 rollback</text>
+    <text class="t b" x="550" y="356">Diff／Test／Artifact Hash</text><text class="t s" x="550" y="383">寫後回讀、格式與建置檢查</text><text class="t s" x="550" y="409">失敗前後狀態</text>
+    <text class="t b" x="810" y="356">依路徑與操作預先授權</text><text class="t s" x="810" y="383">刪除、覆寫仍提升風險級別</text><text class="t s" x="810" y="409">Scope 改變要重問</text>
+    <text class="t b" x="1010" y="356">回滾至 checkpoint</text><text class="t s" x="1010" y="383">限制重試次數</text><text class="t s" x="1010" y="409">保留診斷證據</text>
+  </g>
+
+  <g>
+    <rect x="40" y="446" width="1120" height="118" rx="14" fill="#302109" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="52" y="458" width="82" height="30" rx="15" fill="#713f12"/><text class="t s" x="93" y="478" text-anchor="middle">HIGH</text>
+    <text class="t risk" x="52" y="516">對外／共享寫入</text><text class="t s" x="52" y="542">寄送、發布、遠端建立、共享修改</text>
+    <text class="t b" x="290" y="486">先產生 Preview，不直接送出</text><text class="t s" x="290" y="513">收件人、內容、目標環境固定</text><text class="t s" x="290" y="539">核准後才執行一次</text>
+    <text class="t b" x="550" y="486">Payload Hash／Recipient／Target</text><text class="t s" x="550" y="513">Preview、成本、影響範圍</text><text class="t s" x="550" y="539">成功 receipt</text>
+    <text class="t b" x="810" y="486">明確核准 Action Fingerprint</text><text class="t s" x="810" y="513">欄位改變立即失效</text><text class="t s" x="810" y="539">設定到期時間</text>
+    <text class="t b" x="1010" y="486">先查是否已成功</text><text class="t s" x="1010" y="513">不可盲目重送</text><text class="t s" x="1010" y="539">通知人類接手</text>
+  </g>
+
+  <g>
+    <rect x="40" y="576" width="1120" height="128" rx="14" fill="#3b1127" stroke="#fb7185" stroke-width="2"/>
+    <rect x="52" y="588" width="104" height="30" rx="15" fill="#881337"/><text class="t s" x="104" y="608" text-anchor="middle">CRITICAL</text>
+    <text class="t risk" x="52" y="646">不可逆／金錢／權限</text><text class="t s" x="52" y="674">刪除、付款、部署、憑證、角色變更</text>
+    <text class="t b" x="290" y="616">只可準備，不可自行執行</text><text class="t s" x="290" y="643">最小權限、成本上限、雙重檢查</text><text class="t s" x="290" y="670">高風險工具獨立隔離</text>
+    <text class="t b" x="550" y="616">完整 Fingerprint＋Precondition</text><text class="t s" x="550" y="643">Approval Identity／TTL</text><text class="t s" x="550" y="670">執行、對帳與補償 receipt</text>
+    <text class="t b" x="810" y="616">逐次、明確、不可轉授</text><text class="t s" x="810" y="643">核准後變更必須重批</text><text class="t s" x="810" y="670">必要時雙人核准</text>
+    <text class="t b" x="1010" y="616">停止自動重試</text><text class="t s" x="1010" y="643">查帳、補償、升級事件</text><text class="t s" x="1010" y="670">保留完整稽核鏈</text>
+  </g>
+
+  <rect x="40" y="736" width="1120" height="54" rx="12" fill="#161b2d" stroke="#a78bfa"/>
+  <text class="t th" x="62" y="769" fill="#c4b5fd">Handoff Package</text>
+  <text class="t b" x="225" y="769">run_id　goal　state　completed／pending　evidence　artifacts＋hash　blocked_reason　next_action</text>
+</svg>

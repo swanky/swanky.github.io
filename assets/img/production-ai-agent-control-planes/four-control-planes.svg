@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Production AI Agent 四層控制面</title>
+  <desc id="desc">Instruction 與 Context、Evidence、State、Permission 四層控制面共同約束確定性 Orchestrator、模型決策與工具執行，Scope 則包住整個系統。</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#16243a" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06101e"/>
+      <stop offset="1" stop-color="#0b1730"/>
+    </linearGradient>
+    <linearGradient id="runtime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d2c52"/>
+      <stop offset="0.5" stop-color="#172554"/>
+      <stop offset="1" stop-color="#30184e"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#7dd3fc"/></marker>
+    <style>
+      .t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#f8fafc}.muted{fill:#a9b8cc}.h{font-size:28px;font-weight:700}.sub{font-size:16px}.boxh{font-size:23px;font-weight:700}.body{font-size:16px}.small{font-size:14px}.mono{font-family:"JetBrains Mono",Consolas,monospace}.line{fill:none;stroke:#7dd3fc;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="760" rx="24" fill="url(#grid)" opacity=".62"/>
+  <text class="t h" x="54" y="58">Production AI Agent｜四層控制面</text>
+  <text class="t sub muted" x="54" y="88">模型負責判斷；控制面負責版本、證據、狀態與權限</text>
+
+  <rect x="34" y="110" width="1132" height="612" rx="22" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="10 8"/>
+  <rect x="54" y="96" width="168" height="30" rx="15" fill="#3b2c09" stroke="#fbbf24"/>
+  <text class="t small" x="138" y="117" text-anchor="middle" fill="#fde68a">SCOPE／責任邊界</text>
+
+  <path class="line" d="M170 300V360"/><path class="line" d="M455 300V360"/><path class="line" d="M745 300V360"/><path class="line" d="M1030 300V360"/>
+
+  <g>
+    <rect x="62" y="150" width="240" height="150" rx="16" fill="#092b3c" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="88" cy="179" r="7" fill="#22d3ee" filter="url(#glow)"/>
+    <text class="t boxh" x="106" y="188">Instruction／Context</text>
+    <text class="t body muted" x="86" y="222">• 模組化指令與工具契約</text>
+    <text class="t body muted" x="86" y="249">• Build、diff、eval、rollback</text>
+    <text class="t body muted" x="86" y="276">• 任務脈絡按需載入</text>
+  </g>
+  <g>
+    <rect x="347" y="150" width="240" height="150" rx="16" fill="#1d1748" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="373" cy="179" r="7" fill="#818cf8" filter="url(#glow)"/>
+    <text class="t boxh" x="391" y="188">Evidence</text>
+    <text class="t body muted" x="371" y="222">• Claim ↔ Source 回指</text>
+    <text class="t body muted" x="371" y="249">• Tool receipt 與 artifact hash</text>
+    <text class="t body muted" x="371" y="276">• Completion Contract</text>
+  </g>
+  <g>
+    <rect x="632" y="150" width="240" height="150" rx="16" fill="#241447" stroke="#c084fc" stroke-width="2"/>
+    <circle cx="658" cy="179" r="7" fill="#c084fc" filter="url(#glow)"/>
+    <text class="t boxh" x="676" y="188">State</text>
+    <text class="t body muted" x="656" y="222">• Run／Step／Checkpoint</text>
+    <text class="t body muted" x="656" y="249">• 錯誤、重試與冪等鍵</text>
+    <text class="t body muted" x="656" y="276">• 可恢復、可重放、可交接</text>
+  </g>
+  <g>
+    <rect x="917" y="150" width="240" height="150" rx="16" fill="#3a1028" stroke="#fb7185" stroke-width="2"/>
+    <circle cx="943" cy="179" r="7" fill="#fb7185" filter="url(#glow)"/>
+    <text class="t boxh" x="961" y="188">Permission</text>
+    <text class="t body muted" x="941" y="222">• Identity／Tool／Scope</text>
+    <text class="t body muted" x="941" y="249">• Fingerprint＋Approval</text>
+    <text class="t body muted" x="941" y="276">• Least Privilege＋Receipt</text>
+  </g>
+
+  <rect x="78" y="360" width="1044" height="144" rx="18" fill="url(#runtime)" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t boxh" x="600" y="397" text-anchor="middle">Deterministic Orchestrator／確定性編排層</text>
+  <g class="t small">
+    <rect x="108" y="424" width="168" height="48" rx="10" fill="#102946" stroke="#38bdf8"/><text x="192" y="454" text-anchor="middle">組裝脈絡</text>
+    <rect x="296" y="424" width="168" height="48" rx="10" fill="#18264c" stroke="#818cf8"/><text x="380" y="454" text-anchor="middle">模型提出動作</text>
+    <rect x="484" y="424" width="168" height="48" rx="10" fill="#27204b" stroke="#a78bfa"/><text x="568" y="454" text-anchor="middle">驗證證據</text>
+    <rect x="672" y="424" width="168" height="48" rx="10" fill="#35172e" stroke="#fb7185"/><text x="756" y="454" text-anchor="middle">檢查權限</text>
+    <rect x="860" y="424" width="220" height="48" rx="10" fill="#12362c" stroke="#34d399"/><text x="970" y="454" text-anchor="middle">執行工具＋提交狀態</text>
+  </g>
+  <path d="M276 448H294M464 448H482M652 448H670M840 448H858" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path class="line" d="M142 610H323"/><path class="line" d="M497 610H682"/><path class="line" d="M856 610H1034"/>
+  <g>
+    <rect x="58" y="566" width="164" height="88" rx="14" fill="#162033" stroke="#94a3b8"/>
+    <text class="t boxh" x="140" y="602" text-anchor="middle">目標</text><text class="t small muted" x="140" y="630" text-anchor="middle">需求＋驗收條件</text>
+    <rect x="325" y="566" width="172" height="88" rx="14" fill="#18264c" stroke="#818cf8"/>
+    <text class="t boxh" x="411" y="602" text-anchor="middle">模型判斷</text><text class="t small muted" x="411" y="630" text-anchor="middle">結構化 Proposal</text>
+    <rect x="684" y="566" width="172" height="88" rx="14" fill="#3a1028" stroke="#fb7185"/>
+    <text class="t boxh" x="770" y="602" text-anchor="middle">Tool Gateway</text><text class="t small muted" x="770" y="630" text-anchor="middle">政策強制點</text>
+    <rect x="1036" y="566" width="108" height="88" rx="14" fill="#12362c" stroke="#34d399"/>
+    <text class="t boxh" x="1090" y="602" text-anchor="middle">產物</text><text class="t small muted" x="1090" y="630" text-anchor="middle">Receipt</text>
+  </g>
+  <text class="t small muted" x="600" y="694" text-anchor="middle">Scope 決定接受、拒絕、停止與人工交接；任何一層都不能只靠模型「自己注意」</text>
+</svg>
