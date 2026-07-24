@@ -1,0 +1,17 @@
+<!-- 文章中段輕量 CTA：長文（≥5 個 h2）由 article layout 自動插入中段；front matter 設 mid_cta: false 可關閉 -->
+{% if page.categories contains 'photography' %}
+<aside class="article-cta-mid">
+  <p>喜歡這些影像？人像寫真、形象照與活動紀錄皆可預約。</p>
+  <a href="{{ '/photography/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',cta_position:'mid',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
+</aside>
+{% elsif page.categories contains 'claude-code' or page.tags contains 'claude-code' %}
+<aside class="article-cta-mid">
+  <p>這套方法也能帶進你的團隊——從 2–3 小時導入到 9 堂完整培訓。</p>
+  <a href="{{ '/education/agentic-engineering/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'mid',from_page:'{{ page.url }}'});}">看企業培訓方案 &rarr;</a>
+</aside>
+{% else %}
+<aside class="article-cta-mid">
+  <p>需要技術顧問或企業內訓？先聊聊你的場景，再談怎麼做。</p>
+  <a href="{{ '/technical/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'technical',cta_position:'mid',from_page:'{{ page.url }}'});}">認識技術顧問服務 &rarr;</a>
+</aside>
+{% endif %}
