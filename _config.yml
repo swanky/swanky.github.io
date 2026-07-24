@@ -72,6 +72,16 @@ defaults:
       path: "nft"
     values:
       layout: null
+  # Third-party vendor libraries and nft mini-site internal assets render 200
+  # but have no search value — keep their html/pdf out of sitemap.xml.
+  - scope:
+      path: "assets/vendor"
+    values:
+      sitemap: false
+  - scope:
+      path: "nft/assets"
+    values:
+      sitemap: false
 
 # Plugins
 plugins:

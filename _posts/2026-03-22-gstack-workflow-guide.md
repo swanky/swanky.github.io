@@ -11,6 +11,32 @@ description: "gstack 不是一包 prompt，而是一套把 AI 開發流程角色
 keywords: gstack,Claude Code,AI工作流,開發流程,AI工具,AI學習,史旺基,Swanky Studio
 ---
 
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li><strong>gstack 是什麼</strong>：一套把 Claude Code 變成「有工序、有守門員、有驗證習慣」的工作流技能包——從規劃、審查、QA 到出貨，每個階段有專屬指令。</li>
+    <li><strong>安裝</strong>：<code>git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack</code> 後進入目錄跑 <code>./setup</code>（Windows 需另裝 Node.js，<a href="#安裝前你要先知道的事">細節見下方</a>）。</li>
+    <li><strong>新手先練 5 顆</strong>：<code>/plan-eng-review</code>（規劃）、<code>/review</code>（merge 前審查）、<code>/qa</code>（真的去測網頁）、<code>/investigate</code>（先查再修）、<code>/guard</code>（限制改動範圍）。</li>
+    <li><strong>最大誤區</strong>：把它當一包超大 prompt——它的價值在節奏與分工，不在單顆指令多神。</li>
+  </ul>
+</div>
+
+<nav class="article-toc" aria-label="文章目錄">
+  <span class="article-toc-label">快速跳轉</span>
+  <ul>
+    <li><a href="#什麼是-gstack">什麼是 gstack</a></li>
+    <li><a href="#為什麼-gstack-值得學">為什麼值得學</a></li>
+    <li><a href="#gstack-適合誰">適合誰</a></li>
+    <li><a href="#安裝方式">安裝方式</a></li>
+    <li><a href="#先理解-gstack-的四大層次">四大層次</a></li>
+    <li><a href="#核心-skill-詳解新手最先該學的-8-顆">核心 skill 詳解</a></li>
+    <li><a href="#你最該照著走的三條工作流">三條工作流</a></li>
+    <li><a href="#新手實戰範例用-gstack-做一個會員分級功能">實戰範例</a></li>
+    <li><a href="#gstack-最容易踩的坑">最容易踩的坑</a></li>
+    <li><a href="#常見問題">常見問題</a></li>
+  </ul>
+</nav>
+
 很多人第一次接觸 Claude Code 時，會把它當成一個很會寫程式的聊天視窗。這樣用不是不行，但常常會遇到同樣幾個問題：
 
 - 前面需求沒想清楚就開始做

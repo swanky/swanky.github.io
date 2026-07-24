@@ -20,7 +20,21 @@ layout: default
       {% endif %}
 
       <div class="post-content">
+        {%- comment -%}
+        長文（≥5 個 h2）在中段自動插入輕量 CTA：scroll-90% 事件僅約 10% 頁面瀏覽觸及，
+        只放頁尾的 CTA 大多數讀者看不到。front matter 設 mid_cta: false 可關閉。
+        {%- endcomment -%}
+        {% assign h2_parts = content | split: '<h2' %}
+        {% if page.mid_cta != false and h2_parts.size >= 6 %}
+          {% assign mid_index = h2_parts.size | divided_by: 2 %}
+          {%- for part in h2_parts -%}
+            {%- unless forloop.first -%}
+              {%- if forloop.index0 == mid_index %}{% include article-cta-mid.html %}{% endif -%}
+              <h2{% endunless %}{{ part }}
+          {%- endfor -%}
+        {% else %}
         {{ content }}
+        {% endif %}
       </div>
 
       {% if page.source_url or page.source_url_x %}
