@@ -8,6 +8,8 @@ tags: [web3, nft, defi, market-design]
 layout: article
 cover_image: /assets/img/fake-world-assets-fwa-deep-dive/fwa-chain-gacha-banner-v3-fixed.jpg
 hero_image: true
+source_url: "https://www.linkedin.com/posts/swanky_web3-nft-defi-share-7486588753440841728-_a4v/"
+source_url_x: "https://x.com/swanky/status/2080823291577774364"
 description: "Fake World Assets 不只是 NFT 抽卡，而是一套結合 ETH 擔保金、隨機分配、常駐買價與代幣排放的鏈上市場。本文拆解它的定價公式、Loss-to-Earn 敘事，以及補貼退潮後真正要看的風險。"
 keywords: Fake World Assets, FWA, NFT, DeFi, Loss-to-Earn, CryptoPunks, BAYC, Azuki, Pudgy Penguins, NFT 流動性, 鏈上扭蛋, 代幣經濟, Web3, 史旺基, Swanky Studio
 ---
