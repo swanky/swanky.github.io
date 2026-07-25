@@ -2,7 +2,7 @@
 title: "假世界資產，不是假資產：FWA 如何把 NFT 流動性做成一台鏈上扭蛋機"
 seo_title: "Fake World Assets 深度解讀：NFT 扭蛋、Loss-to-Earn 與補貼退潮風險"
 date: 2026-07-25
-published: false
+published: true
 categories: [technical]
 tags: [web3, nft, defi, market-design]
 layout: article
