@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FWA 代幣兩階段經濟與補貼退潮壓力測試</title>
+  <desc id="desc">固定供應量中 50% 建立市場，30% 用於十五天排放，20% 用於 v1 快照申領。排放期存款人與成功抽卡者每天各分總供應量 1%。排放後可由協議費買回 FWA，但該比例預設為 0%；若啟用，買回代幣預設按 40%、40%、20% 分給存款人、抽卡者與銷毀。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#1b1531"/></linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#263655" stroke-width="1" opacity=".34"/></pattern>
+    <marker id="arrow" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0 0L11 4.5L0 9Z" fill="#7dd3fc"/></marker>
+    <style>.t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#f8fafc}.h{font-size:34px;font-weight:800}.sub{font-size:18px;fill:#a9b8cc}.bh{font-size:22px;font-weight:800}.body{font-size:17px;fill:#d7dfeb}.small{font-size:15px;fill:#9fb0c8}.num{font-size:30px;font-weight:900}.line{fill:none;stroke:#7dd3fc;stroke-width:3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/><rect width="1200" height="760" rx="28" fill="url(#grid)"/>
+  <text class="t h" x="54" y="62">代幣能把兩邊叫進房間，不能保證大家留下來</text>
+  <text class="t sub" x="54" y="98">FWA 的真正壓力測試，是 15 天排放結束後，抽卡需求與協議收入能否接手</text>
+
+  <rect x="54" y="136" width="520" height="520" rx="24" fill="#111e36" stroke="#818cf8" stroke-width="2"/>
+  <text class="t bh" x="88" y="178">階段一｜固定供應量與 15 天冷啟動</text>
+  <rect x="88" y="210" width="452" height="72" rx="16" fill="#1e293b"/>
+  <path d="M104 210H314V282H104Q88 282 88 266V226Q88 210 104 210Z" fill="#0e7490"/>
+  <rect x="314" y="210" width="136" height="72" fill="#7c3aed"/>
+  <path d="M450 210H524Q540 210 540 226V266Q540 282 524 282H450Z" fill="#b45309"/>
+  <g class="t bh" text-anchor="middle"><text x="201" y="254">50% 市場</text><text x="382" y="254">30% 排放</text><text x="495" y="254">20% 申領</text></g>
+
+  <path class="line" d="M382 286V326"/>
+  <rect x="88" y="328" width="208" height="126" rx="18" fill="#0b3942" stroke="#22d3ee"/>
+  <text class="t bh" x="192" y="366" text-anchor="middle">存款人 15%</text><text class="t num" x="192" y="410" text-anchor="middle" fill="#67e8f9">每日 1%</text><text class="t small" x="192" y="438" text-anchor="middle">依 √backing 累積</text>
+  <rect x="332" y="328" width="208" height="126" rx="18" fill="#312e60" stroke="#a78bfa"/>
+  <text class="t bh" x="436" y="366" text-anchor="middle">抽卡者 15%</text><text class="t num" x="436" y="410" text-anchor="middle" fill="#c4b5fd">每日 1%</text><text class="t small" x="436" y="438" text-anchor="middle">成功抽卡者分配</text>
+  <rect x="88" y="482" width="452" height="132" rx="18" fill="#2b1f32" stroke="#f472b6" stroke-dasharray="8 6"/>
+  <text class="t bh" x="314" y="522" text-anchor="middle" fill="#f9a8d4">外部買入預設關閉；賣出保持開放</text>
+  <text class="t body" x="314" y="558" text-anchor="middle">初期供給主要由協議使用產生</text>
+  <text class="t small" x="314" y="588" text-anchor="middle">這是冷啟動設計，不是自然需求證明</text>
+
+  <rect x="626" y="136" width="520" height="520" rx="24" fill="#111e36" stroke="#fbbf24" stroke-width="2"/>
+  <text class="t bh" x="660" y="178">階段二｜排放結束後的收入迴圈</text>
+  <rect x="660" y="214" width="190" height="90" rx="18" fill="#143a38" stroke="#34d399"/>
+  <text class="t bh" x="755" y="250" text-anchor="middle">協議活動</text><text class="t body" x="755" y="280" text-anchor="middle">抽卡＋結算＋交易</text>
+  <path class="line" d="M852 259H914"/>
+  <rect x="916" y="214" width="196" height="90" rx="18" fill="#3b2b13" stroke="#fbbf24"/>
+  <text class="t bh" x="1014" y="250" text-anchor="middle">協議費收入</text><text class="t body" x="1014" y="280" text-anchor="middle">可配置一部分買回</text>
+
+  <path d="M1014 304V346H886" fill="none" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="708" y="348" width="356" height="104" rx="20" fill="#4a1629" stroke="#fb7185" stroke-width="2"/>
+  <text class="t bh" x="886" y="384" text-anchor="middle">protocol fee → FWA</text>
+  <text class="t num" x="886" y="426" text-anchor="middle" fill="#fda4af">預設 0%（關閉）</text>
+
+  <path class="line" d="M886 454V492"/>
+  <g>
+    <rect x="660" y="494" width="138" height="112" rx="16" fill="#0b3942" stroke="#22d3ee"/>
+    <text class="t bh" x="729" y="534" text-anchor="middle">40%</text><text class="t body" x="729" y="572" text-anchor="middle">存款人</text>
+    <rect x="817" y="494" width="138" height="112" rx="16" fill="#312e60" stroke="#a78bfa"/>
+    <text class="t bh" x="886" y="534" text-anchor="middle">40%</text><text class="t body" x="886" y="572" text-anchor="middle">抽卡者</text>
+    <rect x="974" y="494" width="138" height="112" rx="16" fill="#47242b" stroke="#fb7185"/>
+    <text class="t bh" x="1043" y="534" text-anchor="middle">20%</text><text class="t body" x="1043" y="572" text-anchor="middle">銷毀</text>
+  </g>
+  <text class="t small" x="886" y="636" text-anchor="middle">40／40／20 是「啟用買回後」的預設路由，不代表買回目前正在發生</text>
+
+  <rect x="54" y="676" width="1092" height="56" rx="16" fill="#281b2d" stroke="#6b355f"/>
+  <text class="t body" x="600" y="711" text-anchor="middle">測謊題：沒有每日排放後，還有多少人願意付 ETH 抽卡？｜官方參數截點：2026-07-25</text>
+</svg>

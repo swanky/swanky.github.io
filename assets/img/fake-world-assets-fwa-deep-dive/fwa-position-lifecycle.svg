@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">FWA 部位生命週期</title>
+  <desc id="desc">存款人把 NFT 與 ETH 擔保金鎖成一個部位，擔保金同時決定倒數權重與常駐買價。抽卡者支付池子價格後，由 Chainlink VRF 隨機分配，最後只能留下 NFT、重新上架，或接受存款人的常駐買價。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#16142d"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#263655" stroke-width="1" opacity=".38"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0 0L11 4.5L0 9Z" fill="#67e8f9"/></marker>
+    <style>.t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#f8fafc}.h{font-size:34px;font-weight:800}.sub{font-size:18px;fill:#a9b8cc}.bh{font-size:22px;font-weight:800}.body{font-size:17px;fill:#cbd5e1}.small{font-size:15px;fill:#9fb0c8}.line{fill:none;stroke:#67e8f9;stroke-width:3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/><rect width="1200" height="720" rx="28" fill="url(#grid)"/>
+  <text class="t h" x="54" y="62">FWA 把 NFT、擔保金與退出選項綁成一個部位</text>
+  <text class="t sub" x="54" y="98">抽中者只能在 NFT 與存款人的常駐買價之間選擇，不能兩邊一起拿</text>
+
+  <g>
+    <rect x="54" y="156" width="246" height="236" rx="22" fill="#10233a" stroke="#38bdf8" stroke-width="2"/>
+    <text class="t bh" x="177" y="194" text-anchor="middle">① 存款人建立部位</text>
+    <rect x="82" y="218" width="88" height="112" rx="12" fill="#312e81" stroke="#a78bfa"/>
+    <path d="M104 252h44v44h-44z" fill="#c4b5fd"/><path d="M111 245h30M111 303h30" stroke="#f8fafc" stroke-width="6"/>
+    <text class="t small" x="126" y="354" text-anchor="middle">NFT</text>
+    <text class="t h" x="188" y="278">＋</text>
+    <circle cx="242" cy="272" r="38" fill="#4c1d95" stroke="#c084fc" stroke-width="2" filter="url(#glow)"/>
+    <path d="M242 245l-17 28 17 10 17-10zM225 277l17 24 17-24-17 10z" fill="#ede9fe"/>
+    <text class="t small" x="242" y="354" text-anchor="middle">ETH 擔保金</text>
+    <text class="t body" x="82" y="382">倒數權重＋常駐買價</text>
+  </g>
+
+  <path class="line" d="M302 274H368"/>
+
+  <g>
+    <rect x="370" y="156" width="302" height="236" rx="22" fill="#182049" stroke="#818cf8" stroke-width="2"/>
+    <text class="t bh" x="521" y="194" text-anchor="middle">② 支付池子報價</text>
+    <circle cx="444" cy="272" r="52" fill="#0e7490" stroke="#67e8f9" stroke-width="2"/>
+    <text class="t bh" x="444" y="268" text-anchor="middle">池子</text><text class="t small" x="444" y="294" text-anchor="middle">調和平均</text>
+    <path d="M506 272H570" stroke="#67e8f9" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="604" cy="272" r="42" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" filter="url(#glow)"/>
+    <path d="M580 272c12-24 36-24 48 0-12 24-36 24-48 0z" fill="none" stroke="#dbeafe" stroke-width="4"/><circle cx="604" cy="272" r="7" fill="#dbeafe"/>
+    <text class="t small" x="604" y="340" text-anchor="middle">Chainlink VRF</text>
+    <text class="t body" x="410" y="376">依請求順序，按倒數權重抽出部位</text>
+  </g>
+
+  <path class="line" d="M674 274H740"/>
+
+  <g>
+    <rect x="742" y="136" width="404" height="520" rx="24" fill="#171d36" stroke="#a78bfa" stroke-width="2"/>
+    <text class="t bh" x="944" y="176" text-anchor="middle">③ 抽中後三條互斥路徑</text>
+    <circle cx="944" cy="230" r="38" fill="#4c1d95" stroke="#c084fc" stroke-width="2"/><text class="t bh" x="944" y="237" text-anchor="middle">NFT</text>
+    <path d="M944 270V304M944 304H812V336M944 304V336M944 304H1076V336" fill="none" stroke="#c4b5fd" stroke-width="3"/>
+
+    <rect x="770" y="336" width="112" height="160" rx="16" fill="#0f3a36" stroke="#34d399"/>
+    <text class="t bh" x="826" y="374" text-anchor="middle">留下</text><text class="t body" x="826" y="410" text-anchor="middle">拿 NFT</text><text class="t small" x="826" y="442" text-anchor="middle">原存款人</text><text class="t small" x="826" y="466" text-anchor="middle">取回擔保金</text>
+
+    <rect x="888" y="336" width="112" height="160" rx="16" fill="#132f4a" stroke="#38bdf8"/>
+    <text class="t bh" x="944" y="374" text-anchor="middle">重掛</text><text class="t body" x="944" y="410" text-anchor="middle">NFT 留池</text><text class="t small" x="944" y="442" text-anchor="middle">抽中者補入</text><text class="t small" x="944" y="466" text-anchor="middle">新擔保金</text>
+
+    <rect x="1006" y="336" width="112" height="160" rx="16" fill="#40213b" stroke="#fb7185"/>
+    <text class="t bh" x="1062" y="374" text-anchor="middle">賣回</text><text class="t body" x="1062" y="410" text-anchor="middle">拿 ETH</text><text class="t small" x="1062" y="442" text-anchor="middle">或換成</text><text class="t small" x="1062" y="466" text-anchor="middle">FWA 代幣</text>
+
+    <rect x="782" y="532" width="324" height="86" rx="16" fill="#2a172a" stroke="#f472b6" stroke-dasharray="8 6"/>
+    <text class="t bh" x="944" y="568" text-anchor="middle" fill="#f9a8d4">不能同時拿 NFT 與擔保金</text>
+    <text class="t small" x="944" y="596" text-anchor="middle">預設買回結算為擔保金的 85%</text>
+  </g>
+
+  <rect x="54" y="448" width="618" height="170" rx="20" fill="#101b30" stroke="#334155"/>
+  <text class="t bh" x="82" y="486">同一筆 ETH 同時做三件事</text>
+  <text class="t body" x="82" y="526">1. 決定部位被抽中的權重：擔保越低，越容易被抽中</text>
+  <text class="t body" x="82" y="560">2. 預先資助存款人的買回承諾：不是抽中者的附贈獎金</text>
+  <text class="t body" x="82" y="594">3. 作為存款人的鎖定資本：部位結束或撤出時依規則返還</text>
+  <text class="t small" x="600" y="688" text-anchor="middle">依 FWA 官方文件整理｜參數截點：2026-07-25</text>
+</svg>
