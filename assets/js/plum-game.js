@@ -121,7 +121,7 @@
   }
 
   if (finePointer && !reducedMotion) {
-    const tiltTargets = document.querySelectorAll('.promise-card, .mechanic, .outcome, .faction-grid article, .character-portrait, .gallery-card');
+    const tiltTargets = document.querySelectorAll('.promise-card, .mechanic, .outcome, .faction-grid article, .character-portrait, .gallery-card, .cycle-card');
     tiltTargets.forEach((target) => {
       target.addEventListener('pointermove', (event) => {
         const rect = target.getBoundingClientRect();

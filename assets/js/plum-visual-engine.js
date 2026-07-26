@@ -219,12 +219,13 @@
     affinity: 0.5,
     cast: 0.56,
     cinematic: 0.62,
-    world: 0.69,
-    gallery: 0.73,
-    boss: 0.84,
-    development: 0.9,
-    accessibility: 0.93,
-    faq: 0.96,
+    cycle: 0.69,
+    world: 0.75,
+    gallery: 0.8,
+    boss: 0.87,
+    development: 0.92,
+    accessibility: 0.95,
+    faq: 0.97,
     final: 1
   };
 
