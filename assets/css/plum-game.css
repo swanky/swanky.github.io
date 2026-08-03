@@ -725,3 +725,16 @@ button { color: inherit; }
   :root { --muted: #ddd7cc; --line: rgba(226,199,119,.6); }
   .mechanic, .character, .faction-grid article { border-color: var(--gold); }
 }
+
+/* --- Vertical slice pixel-art turnaround sheets (added 2026-08-03) --- */
+.plum-pixel-art,
+.character-stills img.plum-pixel-art,
+.runtime-shot img.plum-pixel-art {
+  object-fit: contain;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* --- Dual-name hero title fit (added 2026-08-03) --- */
+.hero h1 > span { font-size: clamp(2.4rem, 6.4vw, 4.6rem); letter-spacing: .05em; }
