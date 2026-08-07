@@ -1,8 +1,13 @@
 _site
+# 審查／驗收時複製出來的建置快照（_site-review、_site-public-check 等），可用 jekyll build 重建
+_site-*/
 .sass-cache
 .jekyll-metadata
+# macOS Finder 產物
+.DS_Store
 # Claude Code：skills 與共享設定入庫（跨電腦沿用）；僅本機權限設定不入庫
 .claude/settings.local.json
+.claude/image-cache/
 .gstack/
 .playwright-mcp/
 .env
@@ -21,3 +26,7 @@ tools/_render/
 !.agents/skills/
 # Hermes 本機工作檔（plans 等會話產物，不入公開 repo）
 .hermes/
+# Hermes 寫檔時的暫存目錄（任意層級，如 _posts/.hermes-tmp.xxxxxx/）
+.hermes-tmp.*/
+# agent 驗證截圖：一律留在暫存區，別散落 repo 根目錄（網站圖片放 assets/ 底下）
+/*.png
