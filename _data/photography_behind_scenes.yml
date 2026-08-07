@@ -20,6 +20,38 @@ on_air:
   - image: /assets/img/swanky/photography/super_entourage_square.jpg
     alt: 節目錄影現場側拍
 
+# 與朱學恒的阿宅反抗軍電台合作，在節目與活動現場擔任攝影所留下的紀錄。
+# 刻意不逐一標示來賓姓名——照片能確認的是拍攝場合，不是每個人的身分。
+radio:
+  - image: /assets/img/swanky/otaku_army/tour.jpg
+    alt: 阿宅反抗軍電台活動現場紀錄
+  - image: /assets/img/swanky/otaku_army/giddens.jpg
+    alt: 節目來賓在錄音室受訪
+  - image: /assets/img/swanky/otaku_army/katncandix2.jpg
+    alt: 樂團來賓在節目現場
+  - image: /assets/img/swanky/otaku_army/joyshishi777.jpg
+    alt: 節目現場人物紀錄
+  - image: /assets/img/swanky/otaku_army/makoto_saber.jpg
+    alt: 角色扮演來賓在活動現場
+  - image: /assets/img/swanky/otaku_army/mikako.jpg
+    alt: 節目現場人物紀錄
+  - image: /assets/img/swanky/otaku_army/mary.jpg
+    alt: 活動現場佈置與人物紀錄
+  - image: /assets/img/swanky/otaku_army/ufo/190882_10151185305343094_1227604979_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/473790_10151047798778094_1848262589_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/176901_10151250427183094_552230258_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/210243_10151092875093094_1334436684_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/705331_10151623612743094_1681813890_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/1272928_10151833295243094_354905348_o.jpg
+    alt: 廣播節目錄音室現場
+  - image: /assets/img/swanky/otaku_army/ufo/54683_10151250425313094_1119655485_o.jpg
+    alt: 廣播節目錄音室現場
+
 exhibition:
   - image: /assets/img/swanky/exhibition/geisai_tw2_1.jpg
     alt: GEISAI TW2 藝術祭參展攤位

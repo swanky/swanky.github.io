@@ -302,6 +302,10 @@
 .tech-process-price--gold { background: rgba(255,201,79,.12); color: #ffc94f; }
 
 .tech-video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.tech-build-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.tech-build-grid figure { margin: 0; }
+.tech-build-grid img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.tech-build-grid figcaption { margin-top: 10px; font-size: .85rem; line-height: 1.5; opacity: .78; }
 .tech-video-card { overflow: hidden; border: 1px solid var(--tech-line); border-radius: 20px; background: #fff; }
 .tech-video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
 .tech-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -391,6 +395,7 @@
   .tech-service-card--visual .tech-service-media { min-height: 300px; }
   .tech-service-body { padding: 24px; }
   .tech-compare-grid, .tech-proof-grid, .tech-deliverable-grid, .tech-video-grid, .tech-article-grid { grid-template-columns: 1fr; }
+  .tech-build-grid { grid-template-columns: 1fr 1fr; }
   .tech-proof-media { height: 230px; }
   .tech-video-grid { gap: 18px; }
   .tech-series-card { min-height: 340px; }
