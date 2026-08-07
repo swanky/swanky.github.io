@@ -12,6 +12,9 @@ const textSources = [
   '_data/photography_masterpieces.yml',
   '_data/photography_publications.yml',
   '_data/photography_awards.yml',
+  '_data/photography_certificates.yml',
+  '_data/photography_behind_scenes.yml',
+  '_data/flickr_album_covers.yml',
   '_data/photography_commercial_cases.yml',
   '_data/photography_commercial_photos.json',
 ].map((path) => readFileSync(resolve(root, path), 'utf8')).join('\n');
@@ -30,6 +33,8 @@ function jpegDimensions(buffer) {
   let offset = 2;
   while (offset < buffer.length - 9) {
     if (buffer[offset] !== 0xff) { offset += 1; continue; }
+    // JPEG 允許 marker 前有多個 0xFF 填充位元組（少數相機／編碼器會寫出來），跳過它們
+    while (buffer[offset + 1] === 0xff) { offset += 1; }
     const marker = buffer[offset + 1];
     offset += 2;
     if (marker === 0xd8 || marker === 0xd9) continue;
@@ -59,7 +64,12 @@ const manifest = {};
 for (const publicPath of [...imagePaths].sort()) {
   const sourcePath = resolve(root, publicPath.slice(1));
   if (!existsSync(sourcePath)) throw new Error(`Missing source: ${publicPath}`);
-  const meta = dimensions(sourcePath);
+  let meta;
+  try {
+    meta = dimensions(sourcePath);
+  } catch (error) {
+    throw new Error(`Cannot read dimensions of ${publicPath}: ${error.message}`);
+  }
   const entry = { width: meta.width, height: meta.height };
   const key = responsiveKey(publicPath);
 

@@ -1,0 +1,21 @@
+---
+layout: home
+title: 相簿索引
+seo_title: 史旺基 Flickr 相簿索引｜2008—2022 拍攝紀錄
+description: 史旺基歷年 Flickr 公開相簿索引，涵蓋 2008 至 2022 年的人像拍攝、活動紀錄與展覽現場，每本相簿可直接連往 Flickr 觀看完整內容。
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: 相簿索引
+    url: /photography/albums/
+use_photography_author: true
+---
+<main id="main" class="photo-author-page photo-author-subpage">
+  {% include photography/subpage-hero.html eyebrow="ALBUM INDEX · 2008—2022" title="十四年的拍攝，收在這些相簿裡。" intro="這裡是歷年公開相簿的索引，依時間由新到舊排列。點進去會連到 Flickr 看完整內容——完整成品與人物隱私仍以當時約定為準。" primary_url="#album-index" primary_label="瀏覽相簿" secondary_url="/photography/gallery/" secondary_label="先看精選作品" %}
+  {% include photography/subpage-nav.html %}
+
+  <section class="photo-author-section" id="album-index"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">{{ site.data.flickr_album_covers | size }} 本相簿</p><div><h2>依時間排列。</h2><p>相簿名稱沿用當時的命名，保留拍攝日期與合作對象的原始紀錄。</p></div></header><div class="photo-subpage-case-grid">{% for album in site.data.flickr_album_covers %}<article class="photo-subpage-case"><div class="photo-subpage-case-media"><a href="{{ album.url }}" target="_blank" rel="noopener noreferrer" title="{{ album.title }}">{% capture album_alt %}{{ album.title }}相簿封面{% endcapture %}{% include photography/responsive-image.html image=album.cover alt=album_alt class="photo-subpage-image" sizes="(max-width: 720px) calc(100vw - 28px), 30vw" %}</a></div><div class="photo-subpage-case-copy"><p class="photo-author-eyebrow">{{ album.date }} · {{ album.photos }} 張</p><h2>{{ album.title }}</h2><a class="photo-author-text-link" href="{{ album.url }}" target="_blank" rel="noopener noreferrer">在 Flickr 看整本 →</a></div></article>{% endfor %}</div></div></section>
+</main>

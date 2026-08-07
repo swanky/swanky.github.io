@@ -918,6 +918,10 @@
 .photo-subpage-square-grid a { display: block; border: 1px solid var(--photo-line); background: var(--photo-ink); color: #f7f4ed !important; text-decoration: none !important; }
 .photo-subpage-square-grid img { display: block; width: 100%; height: auto; object-fit: contain; }
 .photo-subpage-square-grid span { display: block; padding: 10px 12px; font-size: .8rem; }
+/* 長寬比不一的紀錄照（工作現場等）：讓每格貼合自己圖片的高度，
+   避免整列被最高的圖撐開、在矮圖下方留出大片空白。
+   刻意不裁切——攝影作品一律保留完整比例（見 tests/photography-curation.test.mjs）。 */
+.photo-subpage-square-grid--natural { align-items: start; }
 
 @media (max-width: 1000px) {
   .photo-subpage-work-grid { columns: 2; }

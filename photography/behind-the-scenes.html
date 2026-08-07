@@ -1,0 +1,25 @@
+---
+layout: home
+title: 工作現場
+seo_title: 史旺基攝影工作現場｜拍攝側拍、節目錄影與展覽紀錄
+description: 史旺基的攝影工作現場紀錄，包含外景拍攝側拍、節目錄影，以及 GEISAI TW2 藝術祭參展的展出現場。
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: 工作現場
+    url: /photography/behind-the-scenes/
+use_photography_author: true
+---
+<main id="main" class="photo-author-page photo-author-subpage">
+  {% include photography/subpage-hero.html eyebrow="BEHIND THE SCENES" title="照片以外，還有拍照的那個當下。" intro="作品頁看到的是成果；這裡是成果之前的樣子——蹲在路邊取景、在攝影棚等光、把作品掛上展牆的那些時刻。" primary_url="#on-location" primary_label="看拍攝現場" secondary_url="/photography/gallery/" secondary_label="回到作品與系列" %}
+  {% include photography/subpage-nav.html %}
+
+  <section class="photo-author-section" id="on-location"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">01 · ON LOCATION</p><div><h2>拍攝現場。</h2><p>外景與棚拍的工作側拍。取景的姿勢通常不好看，但那才是作品真正發生的地方。</p></div></header><div class="photo-subpage-square-grid photo-subpage-square-grid--natural">{% for shot in site.data.photography_behind_scenes.on_location %}<a href="{{ shot.image | relative_url }}" class="portfolio-lightbox" data-gallery="bts-location" title="{{ shot.alt }}">{% include photography/responsive-image.html image=shot.image alt=shot.alt class="photo-subpage-image" sizes="(max-width: 720px) calc(50vw - 21px), 25vw" %}</a>{% endfor %}</div></div></section>
+
+  <section class="photo-author-section" id="on-air"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">02 · ON AIR</p><div><h2>節目錄影。</h2><p>受邀上節目談攝影歷程與創作故事時留下的現場紀錄。</p></div></header><div class="photo-subpage-square-grid photo-subpage-square-grid--natural">{% for shot in site.data.photography_behind_scenes.on_air %}<a href="{{ shot.image | relative_url }}" class="portfolio-lightbox" data-gallery="bts-onair" title="{{ shot.alt }}">{% include photography/responsive-image.html image=shot.image alt=shot.alt class="photo-subpage-image" sizes="(max-width: 720px) calc(50vw - 21px), 25vw" %}</a>{% endfor %}</div></div></section>
+
+  <section class="photo-author-section" id="exhibition"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">03 · EXHIBITION</p><div><h2>展出現場。</h2><p>作品離開螢幕、掛上牆面的樣子。包含 GEISAI TW2 藝術祭的參展紀錄。</p></div></header><div class="photo-subpage-square-grid photo-subpage-square-grid--natural">{% for shot in site.data.photography_behind_scenes.exhibition %}<a href="{{ shot.image | relative_url }}" class="portfolio-lightbox" data-gallery="bts-exhibition" title="{{ shot.alt }}">{% include photography/responsive-image.html image=shot.image alt=shot.alt class="photo-subpage-image" sizes="(max-width: 720px) calc(50vw - 21px), 25vw" %}</a>{% endfor %}</div></div></section>
+</main>

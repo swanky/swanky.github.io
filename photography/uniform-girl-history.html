@@ -328,6 +328,40 @@ extra_css: >
   </section>
 
   <!-- ====== Section 6: 作者自序 ====== -->
+  <!-- ====== 2016 制服年曆 ====== -->
+  <section class="service-details">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-12" data-aos="fade-up">
+          <h3 class="border-bottom pb-2 mb-4">2016 制服年曆</h3>
+          <p>與第三集同期推出的《制服．女孩 × 史旺基》2016 制服年曆，十二個月份各一張作品，場景從校園、速食店到街頭日常。</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-7" data-aos="fade-right">
+          <a href="{{ '/assets/img/old/calendar_s_2016.jpg' | relative_url }}" data-gallery="calendar-2016" class="portfolio-lightbox" title="制服．女孩 × 史旺基 2016 制服年曆">
+            <img class="img-fluid rounded" src="{{ '/assets/img/old/calendar_s_2016.jpg' | relative_url }}" alt="制服．女孩 × 史旺基 2016 制服年曆封面" width="800" height="572" loading="lazy">
+          </a>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <h5>十二個月，十二種制服日常</h5>
+          <p>年曆延續系列一貫的自然路線，不擺拍、不修飾情緒，讓女孩們在自己的節奏裡被拍下來。</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        {% for i in (1..12) %}{% assign month_key = i | prepend: '0' | slice: -2, 2 %}{% assign month_image = '/assets/img/old/cal_2016/cal_2016_' | append: month_key | append: '.jpg' %}
+        <div class="col-6 col-md-3" data-aos="fade-up">
+          <a href="{{ month_image | relative_url }}" data-gallery="calendar-2016" class="portfolio-lightbox" title="2016 制服年曆 {{ i }} 月">
+            <img class="img-fluid rounded" src="{{ month_image | relative_url }}" alt="2016 制服年曆 {{ i }} 月份作品" width="1240" height="886" loading="lazy">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="service-details section-bg">
     <div class="container">
       <div class="row mb-3">

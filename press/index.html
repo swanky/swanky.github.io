@@ -35,6 +35,13 @@ extra_css: >
   .press-hero h1 { margin:0 0 12px; color:#fff; }
   .press-hero p { margin:0 auto; max-width:620px; color:rgba(255,255,255,.78); }
   @media (max-width:767px){ .press-hero{ min-height:240px; padding:42px 0; } }
+  .press-figure { margin: 14px 0 12px; }
+  .press-figure img { display:block; width:100%; max-width:420px; height:auto; border-radius:6px; border:1px solid #e8e4dc; background:#faf9f7; }
+  .press-figure figcaption { font-size:.8rem; color:#8a8177; margin-top:6px; line-height:1.5; }
+  .press-figures { display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 12px; }
+  .press-figures figure { flex:1 1 220px; max-width:320px; margin:0; }
+  .press-figures img { display:block; width:100%; height:auto; border-radius:6px; border:1px solid #e8e4dc; background:#faf9f7; }
+  .press-figures figcaption { font-size:.78rem; color:#8a8177; margin-top:6px; line-height:1.5; }
 ---
 
   <section class="press-hero">
@@ -119,6 +126,16 @@ extra_css: >
         <h3>制服癖真的美好！</h3>
         <div class="meta"><span class="source">FHM 男人幫</span> · 2015-05</div>
         <p>FHM 男人幫雜誌專訪史旺基，探討制服攝影的魅力與創作理念。</p>
+        <div class="press-figures">
+          <figure>
+            <img src="{{ '/assets/img/press/fhm-uniform-fetishism-spread.jpg' | relative_url }}" alt="FHM 男人幫雜誌實體照，翻開至制服攝影專題的跨頁版面" width="1280" height="1368" loading="lazy">
+            <figcaption>刊出當期雜誌與專題跨頁</figcaption>
+          </figure>
+          <figure>
+            <img src="{{ '/assets/img/press/fhm-uniform-fetishism-page.jpg' | relative_url }}" alt="專題內頁版面，史旺基受訪談拍攝制服主題的緣由與工作方式" width="960" height="1280" loading="lazy">
+            <figcaption>受訪頁面：與作家劉揚銘對談</figcaption>
+          </figure>
+        </div>
         <a href="https://www.flickr.com/photos/swanky-hsiao/19076310045/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Flickr 掃描頁</a>
       </div>
 
@@ -126,6 +143,10 @@ extra_css: >
         <h3>用筆桿解構迷戀，用相機捕捉青春 — 作家劉揚銘 × 攝影師史旺基</h3>
         <div class="meta"><span class="source">誠品提案 eslite Proposal</span> · 2015-05</div>
         <p>誠品提案專題報導，訪問《高校制服戀物論》作家劉揚銘與攝影師史旺基的創作對談。</p>
+        <figure class="press-figure">
+          <img src="{{ '/assets/img/press/eslite-proposal-2015.jpg' | relative_url }}" alt="誠品《提案 on the desk》2015 年 5 月號封面與內頁，刊出作家劉揚銘與攝影師史旺基的對談專題" width="1280" height="1814" loading="lazy">
+          <figcaption>2015 年 5 月號封面與專題跨頁</figcaption>
+        </figure>
         <a href="https://www.flickr.com/photos/swanky-hsiao/18453780964/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Flickr 掃描頁</a>
       </div>
     </section>
@@ -171,6 +192,10 @@ extra_css: >
         <h3>TIME Magazine — RedBall Project</h3>
         <div class="meta"><span class="source">TIME Magazine</span> · 2012-03（Vol. 179 No. 9）</div>
         <p>作品《RedBall Project @ Bopiliao Historic Block》刊登於 TIME Magazine 美國版、iPad 版、TIME For Kids 美國版與日韓版 RedBall Project 專題。</p>
+        <figure class="press-figure">
+          <img src="{{ '/assets/img/press/time-magazine-redball.jpg' | relative_url }}" alt="TIME Magazine 實體雜誌攤開於桌面，刊出 RedBall Project 專題頁面" width="1280" height="1280" loading="lazy">
+          <figcaption>刊出當期實體雜誌</figcaption>
+        </figure>
         <a href="{{ '/photography/archive/#sec-press' | relative_url }}" class="btn btn-color btn-sm me-2">詳細資訊</a>
         <a href="https://www.flickr.com/photos/swanky-hsiao/6930857127/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Flickr 原圖</a>
       </div>
@@ -237,6 +262,21 @@ extra_css: >
         <div class="meta"><span class="source">海峽導報</span> · 2011-06-30</div>
         <p>中國大陸海峽導報後續報導。</p>
         <a href="http://epaper.taihainet.com/html/20110630/hxdb333233.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>原始連結 <span class="badge-unavailable">原文已失效</span></a>
+      </div>
+    </section>
+
+    <!-- 紙本版面存檔 -->
+    <section class="press-section">
+      <h2><i class="bi bi-images me-2"></i>紙本版面存檔</h2>
+
+      <div class="press-card">
+        <h3>攝影雜誌人物專訪</h3>
+        <div class="meta"><span class="source">紙本雜誌</span></div>
+        <p>以「從喜愛攝影到熱愛攝影，只想捕捉美麗的一刻」為題的人物專訪版面，談從興趣走向創作的轉折與相機選擇。</p>
+        <figure class="press-figure">
+          <img src="{{ '/assets/img/press/photo-magazine-interview.jpg' | relative_url }}" alt="紙本攝影雜誌翻開的專訪版面，右頁為史旺基手持雙眼相機的人物照" width="1280" height="1280" loading="lazy">
+          <figcaption>專訪版面</figcaption>
+        </figure>
       </div>
     </section>
 

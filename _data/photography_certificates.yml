@@ -1,0 +1,7 @@
+# 獎項的官方獎狀掃描存檔。
+# 對應 photography_awards.yml 的得獎紀錄，作為得獎事實的佐證。
+- year: 2013
+  organization: PX3 巴黎攝影大賽
+  image: /assets/img/photography/certificates/px3-2013.jpg
+  alt: PX3 巴黎攝影大賽 2013 年頒發的兩張獎狀，上方為 For Your Safety 系列的兩件得獎作品
+  caption: 同年以 For Your Safety 系列取得兩個獎項：左為廣告類二等獎，右為榮譽提名。

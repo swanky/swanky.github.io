@@ -51,6 +51,16 @@ exclude:
   # backup (2026-07-04), excluded from the deployed site for the same reason.
   - assets/img/*.original.*
   - assets/img/**/*.original.*
+  # OurSong NFT 作品原圖（單張 3–11 MB，共約 220 MB）：頁面用 nft/oursong/web/
+  # 的壓縮版，原圖留在 git 作為存檔，不進部署。
+  - nft/oursong/_freepass
+  - nft/oursong/gaga840928
+  - nft/oursong/nnszea
+  - nft/oursong/ruru419
+  - nft/oursong/selena0925
+  - nft/oursong/sixian0909
+  - nft/oursong/tinaaaaalee
+  - nft/oursong/vickychu
 
 # Keep these files even though they start with underscore or dot
 include:

@@ -1,0 +1,33 @@
+# 工作現場與活動側寫。
+# 這些不是作品，是拍攝當下與對外活動的紀錄；作品本身在 gallery／personal-works／series 各頁。
+on_location:
+  - image: /assets/img/swanky/photography/photo_shoot_1.jpg
+    alt: 外景拍攝現場，史旺基蹲下取景
+  - image: /assets/img/swanky/photography/photo_shoot_2.jpg
+    alt: 街邊拍攝現場，架設器材與模特兒溝通中
+  - image: /assets/img/swanky/photography/photo_shoot_3.jpg
+    alt: 馬路邊蹲低取景的拍攝現場
+  - image: /assets/img/swanky/photography/photo_shoot_4.jpg
+    alt: 拍攝空檔的工作現場紀錄
+  - image: /assets/img/swanky/photography/photo_shoot_5.jpg
+    alt: 戶外拍攝進行中的工作現場
+  - image: /assets/img/swanky/photography/swanky_hasselblad.jpg
+    alt: 史旺基手持底片相機
+
+on_air:
+  - image: /assets/img/swanky/photography/super_entourage.jpg
+    alt: 節目錄影現場，桌上放著寫有史旺基的名牌
+  - image: /assets/img/swanky/photography/super_entourage_square.jpg
+    alt: 節目錄影現場側拍
+
+exhibition:
+  - image: /assets/img/swanky/exhibition/geisai_tw2_1.jpg
+    alt: GEISAI TW2 藝術祭參展攤位
+  - image: /assets/img/swanky/exhibition/geisai_tw2_2.jpg
+    alt: GEISAI TW2 藝術祭展出作品牆
+  - image: /assets/img/swanky/exhibition/geisai_tw2_3.jpg
+    alt: GEISAI TW2 藝術祭攤位與觀展民眾
+  - image: /assets/img/swanky/exhibition/geisai_tw2_4.jpg
+    alt: GEISAI TW2 藝術祭展場一角
+  - image: /assets/img/swanky/exhibition/exhibition_1.jpg
+    alt: 作品展出現場
