@@ -861,6 +861,95 @@ body[data-scene="cycle"] .plum-webgl {
   line-height: 1.85;
 }
 
+.cycle-premiere {
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(1.8rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(1.4rem, 3.5vw, 3rem);
+  margin: 0 0 clamp(2.8rem, 6vw, 5.5rem);
+  scroll-margin-top: 96px;
+  border: 1px solid rgba(228, 196, 119, .32);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(151, 38, 75, .22), transparent 34rem),
+    linear-gradient(135deg, rgba(24, 12, 17, .94), rgba(6, 12, 10, .96));
+  box-shadow: 0 34px 100px rgba(0, 0, 0, .36);
+}
+
+.cycle-premiere-copy { min-width: 0; }
+.cycle-premiere-copy .eyebrow { margin-bottom: .65rem; }
+.cycle-premiere-status {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: .28rem .62rem;
+  border: 1px solid rgba(226, 199, 119, .45);
+  color: var(--gold-bright);
+  background: rgba(226, 199, 119, .07);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.cycle-premiere h3 {
+  margin: 0 0 1rem;
+  color: #f3ecdf;
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.6vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: .04em;
+}
+.cycle-premiere-copy > p:not(.eyebrow):not(.cycle-premiere-status) {
+  margin: .75rem 0 0;
+  color: rgba(238, 232, 218, .72);
+  line-height: 1.9;
+}
+.cycle-premiere-copy .cycle-premiere-lead { color: rgba(247, 239, 224, .9); font-size: 1.05rem; }
+.cycle-premiere-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cycle-premiere-facts li {
+  padding: .34rem .6rem;
+  border: 1px solid rgba(228, 196, 119, .2);
+  color: rgba(237, 216, 166, .82);
+  font-size: .69rem;
+  letter-spacing: .05em;
+}
+.cycle-youtube-link,
+.cycle-watch-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--gold-bright);
+  font-weight: 800;
+  text-decoration: none;
+}
+.cycle-youtube-link { margin-top: 1.6rem; padding-bottom: .25rem; border-bottom: 1px solid rgba(226, 199, 119, .5); }
+.cycle-youtube-link:hover,
+.cycle-youtube-link:focus-visible,
+.cycle-watch-link:hover,
+.cycle-watch-link:focus-visible { color: #fff7e6; }
+.cycle-premiere-player {
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(228, 196, 119, .3);
+  background: #030504;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .45);
+}
+.cycle-premiere-player iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
 .cycle-motif-ribbon {
   display: flex;
   align-items: center;
@@ -1194,6 +1283,10 @@ body[data-scene="cycle"] .plum-webgl {
 
 .cycle-card-featured::after { width: 100%; }
 
+.cycle-card-released { border-color: rgba(228, 196, 119, .46); }
+.cycle-card-released::after { width: 100%; }
+.cycle-watch-link { margin-top: 1rem; font-size: .78rem; letter-spacing: .05em; }
+
 .cycle-act-coda .cycle-episode-list { grid-template-columns: minmax(0, 1fr); }
 
 .cycle-card-coda {
@@ -1381,6 +1474,7 @@ body[data-scene="cycle"] .plum-webgl {
   .film-grain { opacity: .022; }
   .cycle-heading { grid-template-columns: 1fr; gap: 1.5rem; }
   .cycle-intro { max-width: 760px; }
+  .cycle-premiere { grid-template-columns: 1fr; }
   .cycle-soundscape { grid-template-columns: 1fr; align-items: start; }
   .cycle-wave-wide { justify-content: flex-start; }
   .cycle-act { grid-template-columns: 170px minmax(0, 1fr); gap: 1.5rem; }
@@ -1412,6 +1506,9 @@ body[data-scene="cycle"] .plum-webgl {
   .cycle-heading h2 { font-size: clamp(2.8rem, 14vw, 4.4rem); }
   .cycle-intro { padding: 1.1rem 0 0 1.15rem; }
   .cycle-disclosure { grid-template-columns: 1fr; gap: .5rem; }
+  .cycle-premiere { padding: 1rem; margin-inline: -4px; }
+  .cycle-premiere-copy { padding: .5rem .35rem .25rem; }
+  .cycle-premiere h3 { font-size: clamp(2.4rem, 13vw, 4rem); }
   .cycle-motif-ribbon { justify-content: flex-start; margin-inline: -16px; padding-inline: 16px; }
   .cycle-prologue { grid-template-columns: 58px minmax(0, 1fr); gap: 1rem; padding: 1.3rem; }
   .cycle-prologue-number { font-size: 4.5rem; }

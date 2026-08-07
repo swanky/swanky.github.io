@@ -41,3 +41,10 @@
   desc: 持續撰寫 AI 代理工程與現實世界資產（RWA）代幣化系列，將第一線實作經驗整理成公開觀點與教學。
   meta: TECH · WRITING
   url: /technical/
+
+- num: "07"
+  title: 《金瓶異夢：十二花界》文學影像首集
+  year: "2026"
+  desc: 以《金瓶梅》第二、三回為起點，透過 AI 影像與語音重建叉竿落下的相遇，也為開發中的單機戰棋《梅香境》整理角色與視覺母題。
+  meta: GAME · LITERARY FILM · AI
+  url: "/games/plum/#ep01-film"
