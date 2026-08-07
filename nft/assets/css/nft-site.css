@@ -1,0 +1,67 @@
+/* Swanky NFT mini-site 自訂樣式（兩頁共用，載於 style.css 之後） */
+
+/* --- Header：單列品牌 lockup ＋ 右側選單 --- */
+.site-nav .site-navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.nft-brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+}
+.nft-brand img {
+	height: 22px;
+	width: auto;
+	display: block;
+}
+.nft-brand .nft-brand-tag {
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 1;
+	color: #111;
+	border: 1.5px solid #111;
+	border-radius: 4px;
+	padding: 3px 7px 2px;
+}
+
+/* 桌面選單不再浮動溢出，改為同列 flex */
+.site-nav .site-navigation .site-menu {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+.site-nav .site-navigation .site-menu > li.cta-button {
+	margin-left: 8px;
+}
+
+/* 行動版才顯示漢堡選單（桌面已有 inline 選單，避免重複入口） */
+@media (min-width: 992px) {
+	.site-nav .burger { display: none; }
+}
+@media (max-width: 991.98px) {
+	.site-nav .site-navigation .site-menu { display: none; }
+}
+
+/* --- 作品系列卡片：白底插畫圖加細框，避免與背景融合 --- */
+.post-entry.small-post-entry-v .thumbnail img {
+	border: 1px solid #ececec;
+	border-radius: 8px;
+}
+
+/* --- oncyber 入口：置中一般尺寸按鈕 --- */
+.btn-section {
+	padding-top: 8px;
+	padding-bottom: 24px;
+}
+.btn-section .enter-hint {
+	color: #888;
+	font-size: 0.95rem;
+	margin-bottom: 10px;
+}
