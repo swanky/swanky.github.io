@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-5" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,6 +77,8 @@
       <p class="jpm-edition-switch"><a href="{{ other_url | relative_url }}">對照{{ other_label }}・{{ page.label }} ⇄</a></p>
     </header>
 
+    {% include jinpingmei/chapter-guide.html %}
+
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
       {{ content }}
     </article>
@@ -113,6 +115,6 @@
     </div>
   </footer>
 
-  <script src="{{ '/assets/js/jinpingmei-reader.js' | relative_url }}?v=20260808-1" defer></script>
+  <script src="{{ '/assets/js/jinpingmei-reader.js' | relative_url }}?v=20260808-2" defer></script>
 </body>
 </html>

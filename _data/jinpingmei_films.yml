@@ -1,0 +1,17 @@
+# 影文互導：原文回目 ⇄ 影像十部曲成片對應
+# editions 列出該對應適用的版本（劇情兩版相同就都列）
+- chapter: 2
+  editions: [wanli, chongzhen]
+  title: "EP01〈簾下遇金蓮〉"
+  anchor: "ep01"
+  blurb: "西門慶簾下初遇潘金蓮——本回的關鍵一幕，已拍成影片。"
+- chapter: 3
+  editions: [wanli, chongzhen]
+  title: "EP01〈簾下遇金蓮〉"
+  anchor: "ep01"
+  blurb: "王婆定計、茶房相會——本回的情節收錄在這部影片後段。"
+- chapter: 13
+  editions: [wanli, chongzhen]
+  title: "EP02〈隔牆瓶兒〉"
+  anchor: "ep02"
+  blurb: "李瓶兒隔牆密約——本回的關鍵一幕，已拍成影片。"

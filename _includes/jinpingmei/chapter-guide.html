@@ -1,0 +1,35 @@
+{% assign ch_key = page.chapter | prepend: 'c' %}
+{% assign g = nil %}
+{% if site.data.jinpingmei_guide[page.edition][ch_key] %}
+  {% assign g = site.data.jinpingmei_guide[page.edition][ch_key] %}
+{% elsif site.data.jinpingmei_guide.common[ch_key] %}
+  {% assign g = site.data.jinpingmei_guide.common[ch_key] %}
+{% endif %}
+{% assign film = nil %}
+{% for f in site.data.jinpingmei_films %}
+  {% if f.chapter == page.chapter and f.editions contains page.edition %}{% assign film = f %}{% endif %}
+{% endfor %}
+{% if film %}
+<p class="jpm-film-note"><b>影</b><span>{{ film.blurb }}</span><a href="{{ '/jinpingmei/studio/' | relative_url }}#{{ film.anchor }}">觀看 {{ film.title }} ▶</a></p>
+{% endif %}
+{% if g %}
+<details class="jpm-guide">
+  <summary><b>本回導讀</b><span>看不懂古文？先讀這段白話說明</span></summary>
+  <div class="jpm-guide-body">
+    <p class="jpm-guide-intro">{{ g.intro }}</p>
+    {% if g.highlights %}
+    <ul class="jpm-guide-hl">
+      {% for h in g.highlights %}<li>{{ h }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if g.cast %}
+    <p class="jpm-guide-subhead">本回主要人物</p>
+    <dl class="jpm-guide-cast">
+      {% for p in g.cast %}<dt>{{ p.name }}</dt><dd>{{ p.note }}</dd>{% endfor %}
+    </dl>
+    {% endif %}
+    <p class="jpm-guide-ai">白話導讀由 AI 整理，只是入門的梯子，並非原文；下方原文一字未刪改。</p>
+  </div>
+</details>
+{% endif %}
+{% include jinpingmei/who-is-who.html %}
