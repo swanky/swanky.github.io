@@ -22,20 +22,81 @@ keywords: Matt Pocock, AI Skills, Agent Skills, grill-me, grill-with-docs, imple
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章目錄">
-  <span class="article-toc-label">快速跳轉</span>
-  <ul>
-    <li><a href="#一封看起來像行銷信的信">一封看起來像行銷信的信</a></li>
-    <li><a href="#skills-不是-prompt-收藏">Skills 不是 Prompt 收藏</a></li>
-    <li><a href="#為什麼模型愈強skill-反而愈重要">為什麼模型愈強，Skill 反而愈重要</a></li>
-    <li><a href="#安裝方式">安裝方式</a></li>
-    <li><a href="#兩條核心工作流">兩條核心工作流</a></li>
-    <li><a href="#六個核心-skill-怎麼用">六個核心 Skill 怎麼用</a></li>
-    <li><a href="#實際操作範例">實際操作範例</a></li>
-    <li><a href="#這套流程還沒有解決什麼">這套流程還沒有解決什麼</a></li>
-    <li><a href="#團隊要怎麼導入">團隊要怎麼導入</a></li>
-  </ul>
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part">
+      <span class="article-toc-part-title">先搞懂它到底在解決什麼</span>
+      <ol class="article-toc-items">
+        <li><a href="#一封看起來像行銷信的信">一封看起來像行銷信的信</a></li>
+        <li><a href="#skills-不是-prompt-收藏">Skills 不是 Prompt 收藏</a></li>
+        <li><a href="#為什麼模型愈強skill-反而愈重要">為什麼模型愈強，Skill 反而愈重要</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part">
+      <span class="article-toc-part-title">怎麼裝、怎麼用</span>
+      <ol class="article-toc-items">
+        <li>
+          <a href="#安裝方式">安裝方式</a>
+          <span class="article-toc-sub">
+            <a href="#codex-與其他支援-agent-skills-的工具">Codex 等工具</a>
+            <a href="#claude-code-plugin">Claude Code Plugin</a>
+          </span>
+        </li>
+        <li>
+          <a href="#兩條核心工作流">兩條核心工作流</a>
+          <span class="article-toc-sub">
+            <a href="#小型工作一個-session-可以完成">小型工作</a>
+            <a href="#大型工作會跨越多個-session">大型工作</a>
+          </span>
+        </li>
+        <li>
+          <a href="#六個核心-skill-怎麼用">六個核心 Skill 怎麼用</a>
+          <span class="article-toc-sub">
+            <a href="#1-grill-me先把你問到不能再含糊">/grill-me</a>
+            <a href="#2-grill-with-docs把共同語言留在-repository">/grill-with-docs</a>
+            <a href="#3-to-spec把已經談妥的內容保存下來">/to-spec</a>
+            <a href="#4-to-tickets切成-agent-吃得下的垂直工作">/to-tickets</a>
+            <a href="#5-implement按照既定決策實作">/implement</a>
+            <a href="#6-improve-codebase-architecture找出值得重構的地方">/improve-codebase-architecture</a>
+          </span>
+        </li>
+      </ol>
+    </li>
+    <li class="article-toc-part">
+      <span class="article-toc-part-title">實際跑一次，以及還沒解決的事</span>
+      <ol class="article-toc-items">
+        <li>
+          <a href="#實際操作範例">實際操作範例</a>
+          <span class="article-toc-sub">
+            <a href="#第一步先釐清不准寫-code">先釐清</a>
+            <a href="#第二步工作變大就保存成-spec">存成 Spec</a>
+            <a href="#第三步每一張-ticket-都要重新驗證">逐張驗證</a>
+          </span>
+        </li>
+        <li>
+          <a href="#這套流程還沒有解決什麼">這套流程還沒有解決什麼</a>
+          <span class="article-toc-sub">
+            <a href="#追問可能太久">追問太久</a>
+            <a href="#文件可能漂移">文件漂移</a>
+            <a href="#implement-不會替你管理整個交付生命週期">交付生命週期</a>
+            <a href="#安全掃描不等於值得信任">安全風險</a>
+          </span>
+        </li>
+      </ol>
+    </li>
+    <li class="article-toc-part">
+      <span class="article-toc-part-title">帶進團隊與最後判斷</span>
+      <ol class="article-toc-items">
+        <li><a href="#團隊要怎麼導入">團隊要怎麼導入</a></li>
+        <li><a href="#最後判斷主流的會是-skill不一定是這一套-skill">最後判斷：主流的會是 Skill</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
+
+<div class="article-part"><span class="article-part-num">一</span><span class="article-part-title">先搞懂它到底在解決什麼</span></div>
 
 ## 一封看起來像行銷信的信
 
@@ -99,6 +160,8 @@ Matt 的 [`mattpocock/skills`](https://github.com/mattpocock/skills) 把幾個�
 模型負責理解與執行，Skill 負責提醒它現在扮演什麼角色、遵循什麼工序、什麼叫完成。人則負責決定方向、授權範圍與最後驗收。
 
 三者缺一不可。
+
+<div class="article-part"><span class="article-part-num">二</span><span class="article-part-title">怎麼裝、怎麼用</span></div>
 
 ## 安裝方式
 
@@ -203,6 +266,8 @@ Agent 會沿著目標客群、使用情境、成功條件、排除範圍與風�
 
 它只負責調查與提出候選，不直接改程式碼。這個界線我很喜歡：先看哪裡值得投資，再另外開 Session 做設計與實作，避免 Agent 一看到「改善架構」就把半個 Repository 翻修一遍。
 
+<div class="article-part"><span class="article-part-num">三</span><span class="article-part-title">實際跑一次，以及還沒解決的事</span></div>
+
 ## 實際操作範例
 
 假設我們要替一個個人網站增加「顧問適配診斷」，讓訪客先回答幾個問題，再決定是否進入付費需求診斷。
@@ -278,6 +343,8 @@ skills.sh 顯示 `/grill-me` 通過 Gen Agent Trust Hub、Socket 與 Snyk 檢查
 但第三方 Skill 可以影響檔案、Git、Issue Tracker，甚至帶著 Agent 呼叫更多工具。正式導入前仍然要逐檔審查、Pin 版本、限制權限，並先放到非敏感的個人或沙盒 Repository 測試。
 
 把一個 Skill 裝進高權限 Agent，跟把一句提示詞貼進聊天視窗，風險不是同一個等級。
+
+<div class="article-part"><span class="article-part-num">四</span><span class="article-part-title">帶進團隊與最後判斷</span></div>
 
 ## 團隊要怎麼導入
 

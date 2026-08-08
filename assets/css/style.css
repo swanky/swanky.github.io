@@ -3985,6 +3985,166 @@ section.testimonials {
   color: #E5A300;
 }
 
+/* --- Article TOC 大綱版（長文用：分部＋編號＋小節，兩欄自動平衡）---
+   markup：.article-toc.article-toc--outline > ol.article-toc-parts > li.article-toc-part
+             > .article-toc-part-title + ol.article-toc-items
+                 > li > a + span.article-toc-sub > a…
+   舊版 flat 樣式（上方 .article-toc ul）仍供短文沿用，兩者共用外框。 */
+.article-toc--outline {
+  padding: 22px 26px 6px;
+  background: #fdfcfa;
+  counter-reset: toc-item;
+}
+
+.article-toc-parts {
+  columns: 2;
+  column-gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: toc-part;
+}
+
+.article-toc-part {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+.article-toc-part-title {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--c-gold-deep);
+  counter-increment: toc-part;
+  padding-bottom: 7px;
+  margin-bottom: 9px;
+  border-bottom: 1px solid #f0e6d3;
+}
+
+.article-toc-part-title::before {
+  content: counter(toc-part, cjk-ideographic) "、";
+}
+
+.article-toc-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-toc-items > li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+
+.article-toc-items > li::before {
+  counter-increment: toc-item;
+  content: counter(toc-item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--c-gold-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+.article-toc-items > li > a {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #4a463f;
+  text-decoration: none;
+}
+
+.article-toc-items > li > a:hover {
+  color: var(--c-gold-deep);
+}
+
+/* 小節用 flex＋gap 排，分隔點掛在各項自己身上（::after 分隔會在換行處落單） */
+.article-toc-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px 12px;
+  margin-top: 3px;
+}
+
+.article-toc-sub a {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--c-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.article-toc-sub a::before {
+  content: "·";
+  color: #c9c1b3;
+  margin-right: 5px;
+}
+
+.article-toc-sub a:hover {
+  color: var(--c-gold-deep);
+}
+
+@media (max-width: 600px) {
+  .article-toc-parts {
+    columns: 1;
+  }
+}
+
+/* --- Article 分部分隔（長文把 h2 分群，與大綱的「一、二、三」對應）--- */
+.article-part {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 3.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 2px solid #f0e6d3;
+}
+
+.article-part:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* 緊接大綱框的第一個分部：大綱框已有 2.5rem 下緣，不必再疊滿版間距 */
+.article-toc + .article-part {
+  margin-top: 0.75rem;
+}
+
+.article-part-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #E5A300;
+  color: #111;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.article-part-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--c-gold-deep);
+}
+
+.post-content .article-part + h2 {
+  margin-top: 1.5rem;
+}
+
 /* --- Article mid CTA（長文中段輕量 CTA，article layout 自動插入）--- */
 .article-cta-mid {
   margin: 2.5rem 0;
