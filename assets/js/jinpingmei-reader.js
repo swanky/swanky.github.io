@@ -79,6 +79,20 @@
   });
   syncButtons();
 
+  // 米紙模式（淺色紙感主題）：class 由 layout head 內的防閃爍腳本先行套用
+  var paperBtn = document.querySelector('[data-paper-toggle]');
+  if (paperBtn) {
+    var syncPaper = function () {
+      paperBtn.setAttribute('aria-pressed', String(root.classList.contains('jpm-paper')));
+    };
+    paperBtn.addEventListener('click', function () {
+      root.classList.toggle('jpm-paper');
+      try { localStorage.setItem('jpm-paper', root.classList.contains('jpm-paper') ? '1' : '0'); } catch (e) { /* 忽略 */ }
+      syncPaper();
+    });
+    syncPaper();
+  }
+
   // 閱讀進度條
   var bar = document.querySelector('[data-progress]');
   if (bar) {

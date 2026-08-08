@@ -1,0 +1,22 @@
+{% comment %} 五幕閱讀地圖條帶（目錄頁用）。參數 include.edition＝wanli｜chongzhen，決定各幕起始回連結。
+資料 _data/jinpingmei_map.yml（幕別為閱讀框架，邊界錨點已對照導讀資料核驗）。 {% endcomment %}
+{% if include.edition == 'chongzhen' %}
+  {% assign acts_base = '/jinpingmei/text/chongzhen/' %}
+{% else %}
+  {% assign acts_base = '/jinpingmei/text/' %}
+{% endif %}
+<div class="jpm-acts-head reveal">
+  <h2>一百回怎麼讀<small>五幕看全書</small></h2>
+  <p>一百回不必硬著頭皮從頭啃。我們把全書整理成五幕，每一幕回答一個問題，點進去就從那一幕開始讀。<a href="{{ '/jinpingmei/guide/' | relative_url }}">第一次讀？先看新手導讀 →</a></p>
+</div>
+<ol class="jpm-acts reveal">
+  {% for act in site.data.jinpingmei_map.acts %}
+  {% capture act_href %}{{ acts_base }}{{ act.start | prepend: '00' | slice: -3, 3 }}/{% endcapture %}
+  <li><a href="{{ act_href | relative_url }}">
+    <span class="jpm-act-symbol" aria-hidden="true">{{ act.symbol }}</span>
+    <b>{{ act.title }}</b>
+    <span class="jpm-act-range">{{ act.range }}</span>
+    <span class="jpm-act-q">{{ act.question }}</span>
+  </a></li>
+  {% endfor %}
+</ol>

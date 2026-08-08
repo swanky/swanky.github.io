@@ -23,7 +23,7 @@ permalink: /jinpingmei/text/chongzhen/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-5" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-6" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,6 +74,10 @@ permalink: /jinpingmei/text/chongzhen/
           <p>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇<b>完整保存文本、不做任何刪改</b>，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。</p>
         </div>
       </aside>
+    </section>
+
+    <section class="jpm-section" style="padding-top: clamp(32px, 5vw, 52px); padding-bottom: 0" aria-label="五幕閱讀地圖">
+      {% include jinpingmei/acts-strip.html edition="chongzhen" %}
     </section>
 
     {% assign chapters = site.jinpingmei | where: 'edition', 'chongzhen' | sort: 'chapter' %}

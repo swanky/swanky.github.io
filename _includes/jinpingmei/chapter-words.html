@@ -1,0 +1,24 @@
+{% comment %} 回末「本回詞語」牌記：明代難詞白話小抄。資料 _data/jinpingmei_words.yml，
+查找順序＝版本專屬（chongzhen 第1、53—57回）→ common 兩版共用；無資料時整塊不渲染。 {% endcomment %}
+{% if site.data.jinpingmei_words %}
+{% assign wch_key = page.chapter | prepend: 'c' %}
+{% assign wlist = nil %}
+{% if site.data.jinpingmei_words[page.edition] and site.data.jinpingmei_words[page.edition][wch_key] %}
+  {% assign wlist = site.data.jinpingmei_words[page.edition][wch_key] %}
+{% elsif site.data.jinpingmei_words.common and site.data.jinpingmei_words.common[wch_key] %}
+  {% assign wlist = site.data.jinpingmei_words.common[wch_key] %}
+{% endif %}
+{% if wlist and wlist.size > 0 %}
+<aside class="paiji paiji--note jpm-words" aria-label="本回詞語">
+  <div class="paiji-frame">
+    <p class="paiji-head"><b>本回詞語</b><small>看不懂的老詞，這裡有白話小抄</small></p>
+    <dl class="jpm-words-list">
+      {% for w in wlist %}
+      <div class="jpm-words-item"><dt>{{ w.w }}</dt><dd>{{ w.d }}</dd></div>
+      {% endfor %}
+    </dl>
+    <p class="jpm-guide-ai">詞語解釋由 AI 整理並經抽驗，只是入門的小抄；上方原文一字未刪改。</p>
+  </div>
+</aside>
+{% endif %}
+{% endif %}

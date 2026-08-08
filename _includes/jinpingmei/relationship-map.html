@@ -1,0 +1,101 @@
+{% comment %} 西門府人物關係圖（inline SVG，樣式吃 jinpingmei.css 的 .jpm-relmap 變數）。
+關係事實依站內已驗證的稱謂速查基準（who-is-who）繪製；簡化版，僅畫婚姻／血親／依附／前緣。 {% endcomment %}
+<div class="jpm-relmap">
+  <svg viewBox="0 0 980 675" role="img" aria-labelledby="jpm-relmap-title">
+    <title id="jpm-relmap-title">西門府人物關係圖：西門慶與六房妻妾、親族、僕從與幫閒的關係（簡化版）</title>
+
+    <!-- 連線（先畫線再畫框，框蓋線頭） -->
+    <line class="ln ln--kin" x1="170" y1="124" x2="160" y2="280"/>
+    <line class="ln" x1="240" y1="295" x2="380" y2="75"/>
+    <line class="ln" x1="240" y1="305" x2="380" y2="165"/>
+    <line class="ln" x1="240" y1="315" x2="380" y2="255"/>
+    <line class="ln" x1="240" y1="330" x2="380" y2="345"/>
+    <line class="ln" x1="240" y1="342" x2="380" y2="435"/>
+    <line class="ln" x1="240" y1="354" x2="380" y2="525"/>
+    <line class="ln ln--kin" x1="590" y1="165" x2="700" y2="165"/>
+    <line class="ln ln--serv" x1="590" y1="420" x2="700" y2="375"/>
+    <line class="ln ln--past" x1="590" y1="440" x2="700" y2="455"/>
+    <line class="ln ln--serv" x1="590" y1="458" x2="700" y2="530"/>
+    <line class="ln ln--past" x1="590" y1="525" x2="700" y2="600"/>
+    <line class="ln ln--serv" x1="150" y1="366" x2="150" y2="470"/>
+
+    <!-- 欄位標題 -->
+    <text class="lb" x="485" y="42" text-anchor="middle" font-size="12" letter-spacing="2">─ 六房妻妾・依家中排行 ─</text>
+    <text class="lb" x="820" y="122" text-anchor="middle" font-size="12" letter-spacing="2">─ 各房牽出的人 ─</text>
+
+    <!-- 西門慶 -->
+    <rect class="bx bx--main" x="60" y="280" width="180" height="86"/>
+    <text class="nm-big" x="150" y="322" text-anchor="middle" font-size="26">西門慶</text>
+    <text class="nt" x="150" y="348" text-anchor="middle" font-size="12">清河縣富商・人稱「大官人」</text>
+
+    <!-- 女兒女婿 -->
+    <rect class="bx" x="60" y="60" width="220" height="64"/>
+    <text class="nm" x="170" y="88" text-anchor="middle" font-size="16">西門大姐 ＆ 陳經濟</text>
+    <text class="nt" x="170" y="108" text-anchor="middle" font-size="12">女兒與女婿，小倆口住在府中</text>
+    <text class="lb" x="184" y="205" font-size="12">女兒</text>
+
+    <!-- 六房妻妾 -->
+    <rect class="bx" x="380" y="46" width="210" height="58"/>
+    <text class="nm" x="485" y="70" text-anchor="middle" font-size="16">大娘・吳月娘</text>
+    <text class="nt" x="485" y="90" text-anchor="middle" font-size="12">正妻，人稱「大姐姐」</text>
+    <rect class="bx" x="380" y="136" width="210" height="58"/>
+    <text class="nm" x="485" y="160" text-anchor="middle" font-size="16">二娘・李嬌兒</text>
+    <text class="nt" x="485" y="180" text-anchor="middle" font-size="12">妓院出身</text>
+    <rect class="bx" x="380" y="226" width="210" height="58"/>
+    <text class="nm" x="485" y="250" text-anchor="middle" font-size="16">三娘・孟玉樓</text>
+    <text class="nt" x="485" y="270" text-anchor="middle" font-size="12">帶著財產再嫁的寡婦</text>
+    <rect class="bx" x="380" y="316" width="210" height="58"/>
+    <text class="nm" x="485" y="340" text-anchor="middle" font-size="16">四娘・孫雪娥</text>
+    <text class="nt" x="485" y="360" text-anchor="middle" font-size="12">掌管廚房</text>
+    <rect class="bx" x="380" y="406" width="210" height="58"/>
+    <text class="nm" x="485" y="430" text-anchor="middle" font-size="16">五娘・潘金蓮</text>
+    <text class="nt" x="485" y="450" text-anchor="middle" font-size="12">娘家排行六，又稱「六姐」</text>
+    <rect class="bx" x="380" y="496" width="210" height="58"/>
+    <text class="nm" x="485" y="520" text-anchor="middle" font-size="16">六娘・李瓶兒</text>
+    <text class="nt" x="485" y="540" text-anchor="middle" font-size="12">帶著家財改嫁進府</text>
+
+    <!-- 右欄：各房牽出的人 -->
+    <rect class="bx" x="700" y="139" width="240" height="52"/>
+    <text class="nm" x="820" y="161" text-anchor="middle" font-size="15">李桂姐</text>
+    <text class="nt" x="820" y="181" text-anchor="middle" font-size="12">李嬌兒的侄女，妓院名妓</text>
+    <text class="lb" x="645" y="156" text-anchor="middle" font-size="12">侄女</text>
+
+    <rect class="bx" x="700" y="349" width="240" height="52"/>
+    <text class="nm" x="820" y="371" text-anchor="middle" font-size="15">龐春梅</text>
+    <text class="nt" x="820" y="391" text-anchor="middle" font-size="12">金蓮房裡的大丫鬟，日後大翻身</text>
+    <text class="lb" x="638" y="390" text-anchor="middle" font-size="12">丫鬟</text>
+
+    <rect class="bx" x="700" y="423" width="240" height="64"/>
+    <text class="nm" x="820" y="449" text-anchor="middle" font-size="15">武大郎 ＆ 武松</text>
+    <text class="nt" x="820" y="471" text-anchor="middle" font-size="12">金蓮的前夫（歿）與小叔</text>
+    <text class="lb" x="642" y="436" text-anchor="middle" font-size="12">前夫家</text>
+
+    <rect class="bx" x="700" y="504" width="240" height="52"/>
+    <text class="nm" x="820" y="526" text-anchor="middle" font-size="15">王婆</text>
+    <text class="nt" x="820" y="546" text-anchor="middle" font-size="12">開茶坊的鄰居，牽線說媒</text>
+    <text class="lb" x="634" y="496" text-anchor="middle" font-size="12">說媒</text>
+
+    <rect class="bx" x="700" y="574" width="240" height="52"/>
+    <text class="nm" x="820" y="596" text-anchor="middle" font-size="15">花子虛</text>
+    <text class="nt" x="820" y="616" text-anchor="middle" font-size="12">瓶兒的前夫（歿），結拜兄弟</text>
+    <text class="lb" x="638" y="560" text-anchor="middle" font-size="12">前夫</text>
+
+    <!-- 左下：僕從與幫閒 -->
+    <rect class="bx" x="40" y="470" width="240" height="110"/>
+    <text class="rk" x="160" y="494" text-anchor="middle" font-size="13" letter-spacing="2">跟著西門府吃飯的</text>
+    <text class="nt" x="160" y="518" text-anchor="middle" font-size="12">應伯爵・謝希大｜結拜幫閒</text>
+    <text class="nt" x="160" y="540" text-anchor="middle" font-size="12">玳安｜貼身小廝</text>
+    <text class="nt" x="160" y="562" text-anchor="middle" font-size="12">宋惠蓮・來旺｜僕婦夫妻</text>
+
+    <!-- 圖例 -->
+    <line class="ln" x1="40" y1="654" x2="72" y2="654"/>
+    <text class="lb" x="80" y="658" font-size="12">婚姻</text>
+    <line class="ln ln--kin" x1="140" y1="654" x2="172" y2="654"/>
+    <text class="lb" x="180" y="658" font-size="12">血親・姻親</text>
+    <line class="ln ln--serv" x1="300" y1="654" x2="332" y2="654"/>
+    <text class="lb" x="340" y="658" font-size="12">依附：主僕・幫閒・說媒</text>
+    <line class="ln ln--past" x1="560" y1="654" x2="592" y2="654"/>
+    <text class="lb" x="600" y="658" font-size="12">前一段婚姻（歿）</text>
+  </svg>
+</div>
+<p class="jpm-relmap-cap">西門府鼎盛期的主要人物與關係（簡化版）；各人進場退場時間不一——例如宋惠蓮的故事只到第二十六回。手機上可左右滑動看全圖，看不懂誰是誰時，每一回開頭都有「稱謂速查」。</p>

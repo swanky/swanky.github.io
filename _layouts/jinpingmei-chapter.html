@@ -17,7 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-5" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-6" rel="stylesheet">
+  <script>try{if(localStorage.getItem('jpm-paper')==='1')document.documentElement.classList.add('jpm-paper')}catch(e){}</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,6 +59,7 @@
         <button type="button" class="sz-m" data-size="m" aria-pressed="true">文</button>
         <button type="button" class="sz-l" data-size="l" aria-pressed="false">文</button>
       </span>
+      <button type="button" class="jpm-paper-btn" data-paper-toggle aria-pressed="false" title="深色墨底／米紙色底切換">紙</button>
     </nav>
   </header>
 
@@ -82,6 +84,8 @@
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
       {{ content }}
     </article>
+
+    {% include jinpingmei/chapter-words.html %}
 
     <nav class="jpm-pager" aria-label="回目換頁">
       {% if prev_c %}
@@ -115,6 +119,6 @@
     </div>
   </footer>
 
-  <script src="{{ '/assets/js/jinpingmei-reader.js' | relative_url }}?v=20260808-2" defer></script>
+  <script src="{{ '/assets/js/jinpingmei-reader.js' | relative_url }}?v=20260808-3" defer></script>
 </body>
 </html>
