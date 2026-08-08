@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.turnaround | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-1" rel="stylesheet">
+</head>
+<body class="jpm">
+  <a class="jpm-skip" href="#char-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}" class="active">角色研究館</a>
+      <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a class="hide-m" href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+    </nav>
+  </header>
+
+  <main id="char-main" class="jpm-shell">
+    <section class="jpm-section">
+      <div class="jpm-char-head">
+        <div>
+          <p class="jpm-eyebrow">CHARACTER STUDY</p>
+          <h1>{{ page.name }}</h1>
+          <p class="alias">{{ page.aliases }}</p>
+          <p class="tagline">{{ page.tagline }}</p>
+        </div>
+        <figure>
+          <img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成動畫風）" width="1536" height="1024" fetchpriority="high">
+          <figcaption>三視圖角色設定・AI 生成動畫風・以原典描寫為依據</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    {{ content }}
+
+    {% assign cast = site.jinpingmei_characters | sort: 'order' %}
+    {% assign idx = -1 %}
+    {% for c in cast %}{% if c.order == page.order %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
+    {% assign prev_i = idx | minus: 1 %}
+    {% assign next_i = idx | plus: 1 %}
+    <nav class="jpm-pager" aria-label="角色換頁">
+      {% if idx > 0 %}{% assign pc = cast[prev_i] %}
+      <a href="{{ pc.url | relative_url }}" rel="prev"><span class="dir">◀ 上一位</span><span class="ttl">{{ pc.name }}</span></a>
+      {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
+      <a class="jpm-pager-toc" href="{{ '/jinpingmei/characters/' | relative_url }}">全部角色</a>
+      {% if next_i < cast.size %}{% assign nc = cast[next_i] %}
+      <a class="jpm-pager-next" href="{{ nc.url | relative_url }}" rel="next"><span class="dir">下一位 ▶</span><span class="ttl">{{ nc.name }}</span></a>
+      {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
+    </nav>
+
+    <aside class="jpm-reader-note">
+      本頁人物側寫由 AI 依《金瓶梅詞話》（萬曆本）原典整理，標註「（推斷）」者為合理推測而非原文明載；所有人物圖像皆為 AI 生成，並非真人照片。製作方法見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。
+    </aside>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

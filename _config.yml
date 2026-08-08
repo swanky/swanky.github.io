@@ -66,6 +66,15 @@ exclude:
 include:
   - _headers
 
+# Collections
+collections:
+  jinpingmei:
+    output: true
+    sort_by: chapter
+  jinpingmei_characters:
+    output: true
+    sort_by: order
+
 # Default front matter
 defaults:
   - scope:
