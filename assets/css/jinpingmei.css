@@ -221,3 +221,96 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
   .jpm-pager-next { text-align: left; }
   .jpm-rel-list li { grid-template-columns: 84px 1fr; }
 }
+
+/* ══ 宇宙旗艦視覺語言（2026-08-08「開卷」設計，hub 與全部子頁共用） ══
+   楷體引文、幕眉、直排標籤、朱印牌記、進場動畫、影片門面。
+   hub 專屬（序幕／三美／百回長卷等）在 jinpingmei-hub.css。 */
+
+:root { --jpm-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", "Noto Serif TC", serif; }
+.jpm ::selection { background: var(--jpm-gold); color: #141109; }
+
+/* 進場動畫（無 JS 一律直接可見；js-on 由 jinpingmei-universe.js 加） */
+.js-on .reveal { opacity: 0; transform: translateY(26px); }
+.js-on .reveal.in { opacity: 1; transform: none; transition: opacity .9s ease, transform .9s cubic-bezier(.22, .61, .36, 1); }
+.js-on .reveal.in[data-late="1"] { transition-delay: .12s; }
+.js-on .reveal.in[data-late="2"] { transition-delay: .24s; }
+
+/* 幕眉／章節眉：金字大標＋直排小標籤 */
+.act-no { display: flex; align-items: baseline; gap: .9rem; margin: 0 0 1.1rem; }
+.act-no b { font-family: var(--jpm-serif); font-weight: 900; color: var(--jpm-gold); font-size: .95rem; letter-spacing: .42em; }
+.act-no span { color: var(--jpm-muted); font-size: .74rem; letter-spacing: .3em; border: 1px solid var(--jpm-line); padding: .18em .7em .18em .95em; }
+.act-title { margin: 0 0 1.2rem; font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.3; letter-spacing: .06em; }
+.act-title small { display: block; margin-top: .5rem; font-size: .42em; font-weight: 700; color: var(--jpm-muted); letter-spacing: .18em; }
+.act-lead { margin: 0; color: var(--jpm-muted); font-size: 1.02rem; max-width: 44em; }
+.act-lead b { color: var(--jpm-paper); font-weight: 700; }
+
+.act-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin-top: clamp(30px, 4.5vw, 52px); }
+.act-cta { display: inline-flex; align-items: center; gap: .7em; padding: .85em 1.6em; border: 1px solid var(--jpm-gold); color: var(--jpm-gold-bright); font-family: var(--jpm-serif); font-size: .98rem; letter-spacing: .14em; transition: background .35s, color .35s; }
+.act-cta i { font-style: normal; transition: transform .35s; }
+.act-cta:hover { background: var(--jpm-gold); color: #141109; }
+.act-cta:hover i { transform: translateX(4px); }
+.act-cta-side { color: var(--jpm-muted); font-size: .82rem; }
+
+/* 頁首雙欄：主文案＋直排引言（每頁一句原文簽名） */
+.jpu-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(24px, 4.5vw, 64px); align-items: center; }
+.jpu-vquote { margin: 0; writing-mode: vertical-rl; font-family: var(--jpm-kai); font-size: clamp(1rem, 1.6vw, 1.3rem); letter-spacing: .16em; color: #d8cfb8; display: flex; flex-direction: column; gap: clamp(.7em, 1.2vw, 1.1em); justify-self: end; padding-left: clamp(.8em, 1.4vw, 1.3em); border-left: 1px solid var(--jpm-line); }
+.jpu-vquote span { display: block; line-height: 1.6; white-space: nowrap; }
+.jpu-vquote b { display: block; font-weight: 700; color: var(--jpm-gold-bright); margin-top: 1.4em; line-height: 1.6; white-space: nowrap; }
+.jpu-vquote footer { align-self: end; font-size: .58em; letter-spacing: .26em; color: var(--jpm-muted); padding-right: 1.2em; border-right: 1px solid var(--jpm-line); white-space: nowrap; }
+
+/* 影片門面：站內劇照＋播放鈕，點擊才載入 YouTube */
+.film-player { position: relative; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--jpm-line); overflow: hidden; }
+.film-player img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+.film-player:hover img { transform: scale(1.035); }
+.film-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.film-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; background: linear-gradient(180deg, rgba(10, 9, 7, .06) 46%, rgba(10, 9, 7, .66)); border: 0; cursor: pointer; color: var(--jpm-paper); font-family: var(--jpm-sans); font-size: .8rem; letter-spacing: .34em; text-indent: .34em; }
+.film-play i { position: relative; display: block; width: 74px; height: 74px; border-radius: 50%; border: 1px solid rgba(233, 224, 203, .85); background: rgba(14, 13, 11, .42); backdrop-filter: blur(3px); transition: background .35s, transform .35s; }
+.film-play i::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-left: 17px solid var(--jpm-paper); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+.film-play:hover i { background: rgba(157, 58, 77, .82); transform: scale(1.06); }
+
+/* 牌記（明代刻書版權頁式樣）：雙線框＋朱點條列＋豎印 */
+.paiji { margin: clamp(52px, 8vw, 92px) auto 0; max-width: 700px; }
+.paiji-frame { position: relative; padding: clamp(1.6rem, 3.5vw, 2.6rem) clamp(1.4rem, 3.5vw, 2.8rem) clamp(2rem, 4vw, 3rem); border: 1px solid rgba(201, 164, 97, .5); outline: 1px solid rgba(201, 164, 97, .22); outline-offset: 6px; background: radial-gradient(80% 60% at 50% 0%, rgba(201, 164, 97, .05), transparent 70%), var(--jpm-panel); }
+.paiji-head { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 1.2rem; }
+.paiji-head b { font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(1.5rem, 2.6vw, 1.9rem); letter-spacing: .5em; color: var(--jpm-paper); }
+.paiji-head small { color: var(--jpm-muted); font-size: .78rem; letter-spacing: .18em; }
+.paiji-frame ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
+.paiji-frame li { position: relative; padding-left: 1.3em; color: #cfc6b0; font-size: .92rem; }
+.paiji-frame li::before { content: ""; position: absolute; left: 0; top: .52em; width: .5em; height: .5em; background: var(--jpm-red); }
+.paiji-frame li b, .paiji-frame p b { color: var(--jpm-paper); }
+.paiji-frame p { margin: 0 0 .7rem; color: #cfc6b0; font-size: .92rem; line-height: 2; }
+.paiji-frame p:last-of-type { margin-bottom: 0; }
+.paiji-frame a { color: var(--jpm-gold); }
+.paiji-seal { position: absolute; right: clamp(14px, 3vw, 26px); bottom: clamp(-18px, -1vw, -12px); display: inline-flex; padding: .42em .28em; background: linear-gradient(150deg, #a63e52, #8d3244); color: #f2e6d5; font-family: var(--jpm-serif); font-weight: 900; font-size: .82rem; box-shadow: inset 0 0 10px rgba(60, 10, 18, .5), 0 4px 18px rgba(0, 0, 0, .4); transform: rotate(2deg); }
+.paiji-seal i { writing-mode: vertical-rl; font-style: normal; letter-spacing: .16em; }
+.paiji--note { max-width: none; margin-top: clamp(40px, 6vw, 64px); }
+.paiji--note .paiji-frame { padding: clamp(1.2rem, 2.5vw, 1.8rem) clamp(1.2rem, 2.8vw, 2rem) clamp(1.4rem, 3vw, 2rem); }
+.paiji--note .paiji-head { margin-bottom: .8rem; }
+.paiji--note .paiji-head b { font-size: 1.15rem; }
+
+/* 角色卡升級：墨化顯影＋擬真定裝直排角標＋楷體別名 */
+.jpm-cast-card { position: relative; }
+.jpm-cast-card img { filter: grayscale(.45) sepia(.12) brightness(.82); transition: filter .8s ease; }
+.jpm-cast-card:hover img, .jpm-cast-card:focus-visible img { filter: none; }
+.jpm-cast-card .alias { font-family: var(--jpm-kai); }
+.jpu-tag { position: absolute; top: 10px; right: 10px; z-index: 1; padding: .32em .36em; writing-mode: vertical-rl; background: rgba(14, 13, 11, .78); border: 1px solid var(--jpm-gold); color: var(--jpm-gold-bright); font-size: .64rem; letter-spacing: .22em; }
+.jpu-tag--muted { border-color: var(--jpm-line); color: var(--jpm-muted); }
+
+/* 閱讀頁與角色頁的楷體細節 */
+.jpm-reader-head .jpm-volume { font-family: var(--jpm-kai); }
+.jpm-reader-head h1 small { font-family: var(--jpm-kai); font-weight: 400; letter-spacing: .16em; }
+.jpm-quotes li { font-family: var(--jpm-kai); }
+.jpm-char-head .alias { font-family: var(--jpm-kai); }
+.jpm-chapter-list .no { font-family: var(--jpm-kai); }
+
+@media (max-width: 720px) {
+  .jpu-hero { grid-template-columns: 1fr; gap: 30px; }
+  .jpu-vquote { justify-self: start; font-size: .95rem; padding-left: 0; border-left: 0; }
+  .act-no b { font-size: .85rem; }
+  .paiji-seal { right: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-on .reveal { opacity: 1; transform: none; transition: none; }
+  .film-player img, .jpm-cast-card img { transition: none; }
+}

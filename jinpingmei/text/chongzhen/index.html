@@ -22,8 +22,8 @@ permalink: /jinpingmei/text/chongzhen/
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,18 +52,32 @@ permalink: /jinpingmei/text/chongzhen/
 
   <main id="toc-main" class="jpm-shell">
     <section class="jpm-section" style="padding-bottom: 0">
-      <p class="jpm-eyebrow">THE COMPLETE TEXT</p>
-      <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">新刻繡像批評金瓶梅<br>崇禎本・全一百回</h1>
-      <p class="jpm-lead">通稱「崇禎本」或「繡像本」的評改系統：回目更工整、文字經文人潤飾，與詞話本並列金瓶梅兩大版本源流。依 Wikisource 整理本收錄，一字未刪改；每一回都可切回詞話本逐回對照，親眼看兩個版本怎麼講同一個故事。</p>
-      <p class="jpm-edition-switch">目前閱讀：<strong>崇禎本（繡像本）</strong>　<a href="{{ '/jinpingmei/text/' | relative_url }}">切換至詞話本（萬曆本）⇄</a></p>
-      <div class="jpm-notice">
-        <strong>閱讀說明：</strong>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇完整保存文本、不做任何刪改，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。
+      <div class="jpu-hero">
+        <div class="jpu-hero-main">
+          <p class="act-no reveal"><b>原文書房</b><span>崇禎本</span></p>
+          <h1 class="act-title reveal">新刻繡像批評金瓶梅<small>崇禎本・全一百回</small></h1>
+          <p class="act-lead reveal">通稱「崇禎本」或「繡像本」的評改系統：回目更工整、文字經文人潤飾，與詞話本並列金瓶梅兩大版本源流。依 Wikisource 整理本收錄，<b>一字未刪改</b>；每一回都可切回詞話本逐回對照，親眼看兩個版本怎麼講同一個故事。</p>
+          <p class="jpm-edition-switch reveal" style="margin-top: 1.2rem">目前閱讀：<strong>崇禎本（繡像本）</strong>　<a href="{{ '/jinpingmei/text/' | relative_url }}">切換至詞話本（萬曆本）⇄</a></p>
+        </div>
+        <blockquote class="jpu-vquote reveal" lang="zh-Hant">
+          <span>二八佳人體似酥，</span>
+          <span>腰間仗劍斬愚夫。</span>
+          <span>雖然不見人頭落，</span>
+          <b>暗裡教君骨髓枯。</b>
+          <footer>崇禎本・第一回開卷詩</footer>
+        </blockquote>
       </div>
+      <aside class="paiji paiji--note reveal" aria-label="閱讀說明">
+        <div class="paiji-frame">
+          <p class="paiji-head"><b>閱讀說明</b><small>本書房的收錄原則</small></p>
+          <p>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇<b>完整保存文本、不做任何刪改</b>，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。</p>
+        </div>
+      </aside>
     </section>
 
     {% assign chapters = site.jinpingmei | where: 'edition', 'chongzhen' | sort: 'chapter' %}
     <section class="jpm-section" style="padding-top: clamp(24px, 4vw, 40px)">
-      <div class="jpm-volume-block">
+      <div class="jpm-volume-block reveal">
         <h2>卷首 <small>東吳弄珠客序</small></h2>
         <ol class="jpm-chapter-list" style="grid-template-columns: 1fr">
           {% for c in chapters %}{% if c.chapter == 0 %}
@@ -74,7 +88,7 @@ permalink: /jinpingmei/text/chongzhen/
       {% assign groups = "1,2,3,4,5,6,7,8,9,10" | split: "," %}
       {% for g in groups %}
       {% assign gnum = g | plus: 0 %}
-      <div class="jpm-volume-block">
+      <div class="jpm-volume-block reveal">
         <h2>第{{ g | times: 10 | minus: 9 }}回—第{{ g | times: 10 }}回</h2>
         <ol class="jpm-chapter-list">
           {% for c in chapters %}{% if c.volume == gnum and c.chapter > 0 %}
@@ -103,5 +117,6 @@ permalink: /jinpingmei/text/chongzhen/
       </nav>
     </div>
   </footer>
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-1" defer></script>
 </body>
 </html>

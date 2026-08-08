@@ -24,9 +24,9 @@ permalink: /jinpingmei/studio/
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#studio-main">跳到主要內容</a>
@@ -42,30 +42,44 @@ permalink: /jinpingmei/studio/
 
   <main id="studio-main" class="jpm-shell">
     <section class="jpm-section" style="padding-bottom: 0">
-      <p class="jpm-eyebrow">THE VIRTUAL STUDIO</p>
-      <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">影像工作室</h1>
-      <p class="jpm-lead">這裡是虛擬劇組的片場：沒有攝影棚、沒有真人演員，卻有完整的劇組工序——原典考證、選角、定裝、分鏡、剪輯、字幕。每一步都由 AI 協作完成，每一步也都留下可檢驗的工作底稿。</p>
+      <div class="jpu-hero">
+        <div class="jpu-hero-main">
+          <p class="act-no reveal"><b>影像工作室</b><span>虛擬劇組</span></p>
+          <h1 class="act-title reveal">片場實錄<small>THE VIRTUAL STUDIO</small></h1>
+          <p class="act-lead reveal">這裡是虛擬劇組的片場：沒有攝影棚、沒有真人演員，卻有完整的劇組工序——原典考證、選角、定裝、分鏡、剪輯、字幕。每一步都由 AI 協作完成，每一步也都留下<b>可檢驗的工作底稿</b>。</p>
+        </div>
+        <blockquote class="jpu-vquote reveal" lang="zh-Hant">
+          <span>不端不正，</span>
+          <b>卻打在那人頭巾上。</b>
+          <footer>詞話本・第二回——一切從一根叉竿開始</footer>
+        </blockquote>
+      </div>
     </section>
 
     <section class="jpm-section">
-      <div class="jpm-prose"><h2>已公開成片｜EP01〈簾下遇金蓮〉</h2>
+      <p class="act-no reveal"><b>成片</b><span>EP01・已公開</span></p>
+      <div class="jpm-prose reveal"><h2>簾下遇金蓮</h2>
       <p>取材自《金瓶梅詞話》<a href="{{ '/jinpingmei/text/002/' | relative_url }}">第二回</a>、<a href="{{ '/jinpingmei/text/003/' | relative_url }}">第三回</a>：一根叉竿落下，潘金蓮與西門慶抬眼相遇。3 分 39 秒、正體中文字幕，影像與語音皆為 AI 生成。</p></div>
-      <div class="jpm-video" style="margin-top: 1.2rem">
-        <iframe src="https://www.youtube-nocookie.com/embed/E8Lgyx0X_s4?rel=0" title="《金瓶梅》影像十部曲 EP01〈簾下遇金蓮〉" width="1280" height="720" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="film-player reveal" style="margin-top: 1.2rem" data-video-id="E8Lgyx0X_s4" data-video-title="《金瓶梅》影像十部曲 EP01〈簾下遇金蓮〉">
+        <img src="{{ '/assets/img/games/plum/cinematic/ep01-still-3.jpg' | relative_url }}" alt="EP01〈簾下遇金蓮〉劇照：潘金蓮對鏡簪髮（AI 生成）" width="1672" height="941" loading="lazy" decoding="async">
+        <button class="film-play" type="button" aria-label="播放 EP01〈簾下遇金蓮〉"><i aria-hidden="true"></i><span>播放</span></button>
       </div>
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>已公開成片｜EP02〈隔牆瓶兒〉</h2>
+      <p class="act-no reveal"><b>成片</b><span>EP02・已公開</span></p>
+      <div class="jpm-prose reveal"><h2>隔牆瓶兒</h2>
       <p>取材自《金瓶梅詞話》<a href="{{ '/jinpingmei/text/013/' | relative_url }}">第十三回</a>：一堵牆，隔得住人，隔不住秘密。3 分 57 秒、正體中文字幕，影像與語音皆為 AI 生成。</p></div>
-      <div class="jpm-video" style="margin-top: 1.2rem">
-        <iframe src="https://www.youtube-nocookie.com/embed/NMFgHt9YgE8?rel=0" title="《金瓶梅》影像十部曲 EP02〈隔牆瓶兒〉" width="1280" height="720" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="film-player reveal" style="margin-top: 1.2rem" data-video-id="NMFgHt9YgE8" data-video-title="《金瓶梅》影像十部曲 EP02〈隔牆瓶兒〉">
+        <img src="{{ '/assets/img/games/plum/cinematic/ep02-still-2.jpg' | relative_url }}" alt="EP02〈隔牆瓶兒〉劇照：李瓶兒持扇立於門廊（AI 生成）" width="1920" height="1080" loading="lazy" decoding="async">
+        <button class="film-play" type="button" aria-label="播放 EP02〈隔牆瓶兒〉"><i aria-hidden="true"></i><span>播放</span></button>
       </div>
       <p style="margin-top: .9rem; color: var(--jpm-muted); font-size: .88rem">這是「文學影像十部曲」的前兩集；十集的完整結構與各集母題，見<a href="{{ '/games/plum/#literary-cycle' | relative_url }}">十部曲企畫</a>。</p>
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>選角：讓原典當導演</h2>
+      <p class="act-no reveal"><b>選角</b><span>原典考證</span></p>
+      <div class="jpm-prose reveal"><h2>讓原典當導演</h2>
       <p>虛擬劇組的選角不是「生一張漂亮的圖」，而是一套可審查的流程：先讓 AI 產出候選定裝照，再回到原典逐字比對，最後留下裁決記錄。漂亮度可以保留，但身份、年齡、妝髮、服裝與神態，一律以原典證據為準。</p></div>
       <figure class="jpm-banner jpm-workdoc" style="margin: 1.2rem 0">
         <a href="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-casting" title="五位女性角色選角定裝照橫幅（AI 生成擬真攝影風，非真人）"><img src="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" alt="五位女性角色選角定裝照橫幅（AI 生成擬真攝影風，非真人）" width="2200" height="1100" loading="lazy"></a>
@@ -84,7 +98,8 @@ permalink: /jinpingmei/studio/
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>同一個角色，兩種詮釋</h2>
+      <p class="act-no reveal"><b>定裝</b><span>雙版本立繪</span></p>
+      <div class="jpm-prose reveal"><h2>同一個角色，兩種詮釋</h2>
       <p>為戰棋遊戲《金瓶異夢：十二花界》發展的五位女主角立繪，每人都做了兩個版本：標準版忠於端莊的敘事定位；成熟版保留原著本來就有的感官張力。兩者都是完整著衣的插畫設計——差別在於它願不願意承認，這部小說從來就不迴避欲望。</p></div>
       <div style="display: grid; gap: 1rem; margin-top: 1.2rem">
         <figure class="jpm-banner">
@@ -104,7 +119,8 @@ permalink: /jinpingmei/studio/
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>下一部：120 秒擬真電影版分鏡</h2>
+      <p class="act-no reveal"><b>分鏡</b><span>2.39:1 電影遮幅</span></p>
+      <div class="jpm-prose reveal"><h2>下一部：120 秒擬真電影版分鏡</h2>
       <p>五位女主角各有一段核心敘事——被買賣的名字、照護與喪失、門內正室、婢女登階、被改名——最後在「五面命鏡」會合。以下為 2.39:1 電影遮幅的分鏡設計稿，每一鏡皆有 A／B 兩個構圖方案。</p></div>
       <div class="jpm-board-grid" style="margin-top: 1.2rem">
         <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc05a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC05-A：潘金蓮——被買賣的名字"><img src="{{ '/assets/img/jinpingmei/studio/board-dc05a.jpg' | relative_url }}" alt="分鏡 DC05-A：潘金蓮——被買賣的名字" width="1672" height="700" loading="lazy"></a><figcaption>DC05-A・潘金蓮｜被買賣的名字</figcaption></figure>
@@ -123,7 +139,8 @@ permalink: /jinpingmei/studio/
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>前瞻：EP07〈雪夜琵琶〉場景研究</h2>
+      <p class="act-no reveal"><b>前瞻</b><span>EP07 場景研究</span></p>
+      <div class="jpm-prose reveal"><h2>EP07〈雪夜琵琶〉場景研究</h2>
       <p>十部曲的第七集〈雪夜琵琶〉已完成場景研究：冷房一弦、暖房一門，金蓮獨守雪夜，瓶兒循著琵琶聲親自來請。以下為早期影像批次的場景劇照，人物造型與現行選角版本可能不同；正式成片將以新版選角重新製作。</p></div>
       <div class="jpm-board-grid" style="margin-top: 1.2rem">
         <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-1.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：銀燈香盡，四弦琵琶特寫"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-1.jpg' | relative_url }}" alt="EP07 場景劇照：銀燈香盡，四弦琵琶特寫" width="1672" height="941" loading="lazy"></a><figcaption>銀燈香盡・四弦琵琶</figcaption></figure>
@@ -136,7 +153,8 @@ permalink: /jinpingmei/studio/
     </section>
 
     <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose"><h2>怎麼做到的？</h2>
+      <p class="act-no reveal"><b>方法</b><span>工作流公開</span></p>
+      <div class="jpm-prose reveal"><h2>怎麼做到的？</h2>
       <p>整套流程的方法與心得，寫成了兩篇文章：<a href="{{ '/claude-code/jinpingmei-character-lab/' | relative_url }}">用 AI 替一部百回小說建立全劇組角色設定</a>——講角色研究館背後的工作流；<a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}">當 AI 拒絕金瓶梅</a>——講為什麼選這部經典來測試各家 AI 工具的邊界。</p></div>
     </section>
 
@@ -158,5 +176,6 @@ permalink: /jinpingmei/studio/
     </div>
   </footer>
   {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-1" defer></script>
 </body>
 </html>

@@ -24,9 +24,9 @@ permalink: /jinpingmei/characters/
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#cast-main">跳到角色列表</a>
@@ -42,10 +42,19 @@ permalink: /jinpingmei/characters/
 
   <main id="cast-main" class="jpm-shell">
     <section class="jpm-section" style="padding-bottom: 0">
-      <p class="jpm-eyebrow">CHARACTER RESEARCH</p>
-      <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">角色研究館</h1>
-      <p class="jpm-lead">虛擬劇組替《金瓶梅詞話》做了一次完整的「選角前置作業」：從全書文本整理出人物證據，為十一位主要角色建立側寫、關係網、逐字原文依據，再用 AI 生成三視圖設定與聲音方向。五位核心女性已換上擬真攝影風的定裝三視圖，其餘角色暫以動畫風呈現。每一頁都附上工作底稿——你可以看到證據，也可以看到指令。</p>
-      <figure class="jpm-banner jpm-workdoc" style="margin-top: clamp(24px, 4vw, 40px)">
+      <div class="jpu-hero">
+        <div class="jpu-hero-main">
+          <p class="act-no reveal"><b>角色研究館</b><span>十一人</span></p>
+          <h1 class="act-title reveal">眾生名冊<small>CHARACTER RESEARCH</small></h1>
+          <p class="act-lead reveal">虛擬劇組替《金瓶梅詞話》做了一次完整的「選角前置作業」：從全書文本整理出人物證據，為<b>十一位主要角色</b>建立側寫、關係網、逐字原文依據，再用 AI 生成三視圖設定與聲音方向。五位核心女性已換上擬真攝影風的定裝三視圖，其餘角色暫以動畫風呈現。每一頁都附上工作底稿——你可以看到證據，也可以看到指令。</p>
+        </div>
+        <blockquote class="jpu-vquote reveal" lang="zh-Hant">
+          <span>跳不出七情六慾關頭，</span>
+          <b>打不破酒色財氣圈子。</b>
+          <footer>崇禎本・第一回</footer>
+        </blockquote>
+      </div>
+      <figure class="jpm-banner jpm-workdoc reveal" style="margin-top: clamp(24px, 4vw, 40px)">
         <a href="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-cast" title="五位女性角色的 AI 擬真選角定裝照橫幅（AI 生成，非真人）"><img src="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" alt="五位女性角色的 AI 擬真選角定裝照橫幅（AI 生成，非真人）" width="2200" height="1100" loading="lazy"></a>
         <figcaption>五位核心女性角色的選角定裝照・AI 生成擬真攝影風，並非真人照片</figcaption>
       </figure>
@@ -55,7 +64,8 @@ permalink: /jinpingmei/characters/
       {% assign cast = site.jinpingmei_characters | sort: 'order' %}
       <div class="jpm-cast-grid">
         {% for c in cast %}
-        <a class="jpm-cast-card" href="{{ c.url | relative_url }}">
+        <a class="jpm-cast-card reveal" href="{{ c.url | relative_url }}">
+          {% if c.turnaround contains 'turnaround-live' %}<span class="jpu-tag" aria-hidden="true">擬真定裝</span>{% else %}<span class="jpu-tag jpu-tag--muted" aria-hidden="true">重製中</span>{% endif %}
           <img src="{{ c.turnaround | relative_url }}" alt="{{ c.name }}三視圖角色設定" width="{{ c.turnaround_w | default: 1536 }}" height="{{ c.turnaround_h | default: 1024 }}" loading="lazy">
           <div class="body">
             <h3>{{ c.name }}</h3>
@@ -85,5 +95,6 @@ permalink: /jinpingmei/characters/
     </div>
   </footer>
   {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-1" defer></script>
 </body>
 </html>

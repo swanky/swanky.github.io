@@ -16,8 +16,8 @@
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,8 +91,11 @@
       {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
     </nav>
 
-    <aside class="jpm-reader-note">
-      本頁為明代章回小說《{{ page.book }}》原典全文，依 <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Wikisource 整理本</a>收錄，一字未刪改；原典含成人內容，建議成年讀者閱讀。本書房同時收錄<a href="{{ '/jinpingmei/text/' | relative_url }}">詞話本（萬曆本）</a>與<a href="{{ '/jinpingmei/text/chongzhen/' | relative_url }}">崇禎本（繡像本）</a>兩個版本，可逐回對照。此為公共領域文獻，屬「<a href="{{ '/jinpingmei/' | relative_url }}">金瓶梅宇宙</a>」文學研究的一部分。
+    <aside class="paiji paiji--note" aria-label="收錄說明">
+      <div class="paiji-frame">
+        <p class="paiji-head"><b>收錄說明</b><small>本回文獻來源</small></p>
+        <p>本頁為明代章回小說《{{ page.book }}》原典全文，依 <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Wikisource 整理本</a>收錄，<b>一字未刪改</b>；原典含成人內容，建議成年讀者閱讀。本書房同時收錄<a href="{{ '/jinpingmei/text/' | relative_url }}">詞話本（萬曆本）</a>與<a href="{{ '/jinpingmei/text/chongzhen/' | relative_url }}">崇禎本（繡像本）</a>兩個版本，可逐回對照。此為公共領域文獻，屬「<a href="{{ '/jinpingmei/' | relative_url }}">金瓶梅宇宙</a>」文學研究的一部分。</p>
+      </div>
     </aside>
   </main>
 

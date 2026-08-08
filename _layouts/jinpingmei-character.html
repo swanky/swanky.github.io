@@ -18,9 +18,9 @@
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-4" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#char-main">跳到主要內容</a>
@@ -38,10 +38,12 @@
     <section class="jpm-section">
       <div class="jpm-char-head">
         <div>
-          <p class="jpm-eyebrow">CHARACTER STUDY</p>
-          <h1>{{ page.name }}</h1>
-          <p class="alias">{{ page.aliases }}</p>
-          <p class="tagline">{{ page.tagline }}</p>
+          {% assign zhnum = "一,二,三,四,五,六,七,八,九,十,十一" | split: "," %}
+          {% assign zhidx = page.order | minus: 1 %}
+          <p class="act-no reveal"><b>角色檔案</b><span>名冊其{{ zhnum[zhidx] }}</span></p>
+          <h1 class="reveal">{{ page.name }}</h1>
+          <p class="alias reveal">{{ page.aliases }}</p>
+          <p class="tagline reveal">{{ page.tagline }}</p>
         </div>
         <figure>
           <a href="{{ page.turnaround | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）"><img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high"></a>
@@ -67,8 +69,11 @@
       {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
     </nav>
 
-    <aside class="jpm-reader-note">
-      本頁人物側寫由 AI 依《金瓶梅詞話》（萬曆本）原典整理，標註「（推斷）」者為合理推測而非原文明載；所有人物圖像皆為 AI 生成，並非真人照片。製作方法見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。
+    <aside class="paiji paiji--note" aria-label="側寫說明">
+      <div class="paiji-frame">
+        <p class="paiji-head"><b>側寫說明</b><small>本檔案的整理原則</small></p>
+        <p>本頁人物側寫由 AI 依《金瓶梅詞話》（萬曆本）原典整理，標註「（推斷）」者為合理推測而非原文明載；所有人物圖像皆為 <b>AI 生成</b>，並非真人照片。製作方法見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。</p>
+      </div>
     </aside>
   </main>
 
@@ -86,5 +91,6 @@
     </div>
   </footer>
   {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-1" defer></script>
 </body>
 </html>

@@ -4,11 +4,11 @@
    直排文字系統、灑金箋、朱印、線裝書封、牌記框。四色紀律不破。 */
 
 .jpm-hub {
-  --hub-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", var(--jpm-serif);
   --hub-ink-deep: #0b0a08;
   --hub-ink-warm: #12100b;
 }
-.jpm-hub ::selection { background: var(--jpm-gold); color: #141109; }
+/* 楷體 --jpm-kai、::selection、.reveal、.act-*、.act-cta、.film-player、.paiji
+   已移至 jinpingmei.css（宇宙共用段）；本檔只剩 hub 專屬。 */
 
 /* ── 全域：topbar 於序幕透明、捲動後上色 ── */
 .jpm-hub .jpm-topbar {
@@ -24,12 +24,6 @@
   border-bottom-color: var(--jpm-line);
   backdrop-filter: blur(8px);
 }
-
-/* ── 進場動畫基礎：無 JS 一律直接可見 ── */
-.js-on .reveal { opacity: 0; transform: translateY(26px); }
-.js-on .reveal.in { opacity: 1; transform: none; transition: opacity .9s ease, transform .9s cubic-bezier(.22, .61, .36, 1); }
-.js-on .reveal.in[data-late="1"] { transition-delay: .12s; }
-.js-on .reveal.in[data-late="2"] { transition-delay: .24s; }
 
 /* ── 右緣直排卷標導覽 ── */
 .hub-spine {
@@ -51,43 +45,9 @@
 .hub-spine a:hover { color: var(--jpm-paper); }
 .hub-spine a.active { color: var(--jpm-gold-bright); border-right-color: var(--jpm-gold); }
 
-/* ── 幕的共用骨架 ── */
+/* ── 幕的骨架（hub 專屬節奏；幕眉/CTA 樣式在共用檔） ── */
 .act { position: relative; padding: clamp(76px, 11vw, 150px) 0; }
 .act-head { position: relative; max-width: 56em; }
-.act-no {
-  display: flex; align-items: baseline; gap: .9rem;
-  margin: 0 0 1.1rem;
-}
-.act-no b {
-  font-family: var(--jpm-serif); font-weight: 900;
-  color: var(--jpm-gold); font-size: .95rem; letter-spacing: .42em;
-}
-.act-no span {
-  color: var(--jpm-muted); font-size: .74rem; letter-spacing: .3em;
-  border: 1px solid var(--jpm-line); padding: .18em .7em .18em .95em;
-}
-.act-title {
-  margin: 0 0 1.2rem;
-  font-family: var(--jpm-serif); font-weight: 900;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.3; letter-spacing: .06em;
-}
-.act-lead { margin: 0; color: var(--jpm-muted); font-size: 1.02rem; max-width: 44em; }
-.act-lead b { color: var(--jpm-paper); font-weight: 700; }
-
-.act-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin-top: clamp(30px, 4.5vw, 52px); }
-.act-cta {
-  display: inline-flex; align-items: center; gap: .7em;
-  padding: .85em 1.6em;
-  border: 1px solid var(--jpm-gold);
-  color: var(--jpm-gold-bright);
-  font-family: var(--jpm-serif); font-size: .98rem; letter-spacing: .14em;
-  transition: background .35s, color .35s;
-}
-.act-cta i { font-style: normal; transition: transform .35s; }
-.act-cta:hover { background: var(--jpm-gold); color: #141109; }
-.act-cta:hover i { transform: translateX(4px); }
-.act-cta-side { color: var(--jpm-muted); font-size: .82rem; }
 
 /* ── 灑金箋（金點粒子，多幕共用） ── */
 .act-overture::after, .act-game::after {
@@ -127,7 +87,7 @@
 .overture-quote {
   margin: 0;
   writing-mode: vertical-rl;
-  font-family: var(--hub-kai);
+  font-family: var(--jpm-kai);
   font-size: clamp(1.02rem, 1.9vw, 1.42rem);
   letter-spacing: .16em;
   color: #d8cfb8;
@@ -263,7 +223,7 @@
 }
 .tri-meta b { font-family: var(--jpm-serif); font-size: clamp(1.15rem, 2.2vw, 1.6rem); font-weight: 900; color: var(--jpm-paper); }
 .tri-meta small { color: var(--jpm-muted); font-size: .64rem; letter-spacing: .3em; }
-.tri-meta q { font-family: var(--hub-kai); color: var(--jpm-gold); font-size: clamp(.82rem, 1.4vw, .95rem); quotes: "「" "」"; }
+.tri-meta q { font-family: var(--jpm-kai); color: var(--jpm-gold); font-size: clamp(.82rem, 1.4vw, .95rem); quotes: "「" "」"; }
 
 /* 十一人選角牆 */
 .cast-wall { margin-top: clamp(44px, 6vw, 76px); }
@@ -350,7 +310,7 @@
   margin-left: .55em; padding-top: .15em;
 }
 .mu span {
-  font-family: var(--hub-kai);
+  font-family: var(--jpm-kai);
   font-size: .99rem; letter-spacing: .14em; line-height: 1.75;
 }
 .mu span + span { opacity: .82; }
@@ -401,7 +361,7 @@
   background: #f8f1de;
   border: 1px solid #a8956c;
   color: #35291a;
-  font-family: var(--hub-kai);
+  font-family: var(--jpm-kai);
   font-size: .78rem; letter-spacing: .18em; line-height: 1.15;
 }
 .ed-meta { display: flex; flex-direction: column; gap: .45rem; }
@@ -420,41 +380,6 @@
   gap: clamp(18px, 3.2vw, 40px);
   margin-top: clamp(36px, 5vw, 60px);
 }
-.film-player {
-  position: relative; aspect-ratio: 16 / 9;
-  background: #000; border: 1px solid var(--jpm-line);
-  overflow: hidden;
-}
-.film-player img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 1.2s ease;
-}
-.film-player:hover img { transform: scale(1.035); }
-.film-player iframe { display: block; width: 100%; height: 100%; border: 0; }
-.film-play {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem;
-  background: linear-gradient(180deg, rgba(10, 9, 7, .06) 46%, rgba(10, 9, 7, .66));
-  border: 0; cursor: pointer;
-  color: var(--jpm-paper);
-  font-family: var(--jpm-sans); font-size: .8rem; letter-spacing: .34em; text-indent: .34em;
-}
-.film-play i {
-  position: relative; display: block;
-  width: 74px; height: 74px; border-radius: 50%;
-  border: 1px solid rgba(233, 224, 203, .85);
-  background: rgba(14, 13, 11, .42);
-  backdrop-filter: blur(3px);
-  transition: background .35s, transform .35s;
-}
-.film-play i::after {
-  content: ""; position: absolute; left: 53%; top: 50%;
-  transform: translate(-50%, -50%);
-  border-left: 17px solid var(--jpm-paper);
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-}
-.film-play:hover i { background: rgba(157, 58, 77, .82); transform: scale(1.06); }
 .film-meta { padding: 1.15rem .25rem 0; }
 .film-ep { margin: 0 0 .4rem; color: var(--jpm-gold); font-size: .74rem; letter-spacing: .3em; }
 .film-meta h3 { margin: 0 0 .6rem; font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(1.5rem, 2.6vw, 2rem); }
@@ -530,48 +455,6 @@
 .reason b { display: block; margin-bottom: .55rem; font-family: var(--jpm-serif); font-weight: 900; color: var(--jpm-gold-bright); font-size: 1.02rem; letter-spacing: .06em; }
 .reason p { margin: 0; color: var(--jpm-muted); font-size: .88rem; }
 
-/* 凡例牌記 */
-.paiji { margin: clamp(52px, 8vw, 92px) auto 0; max-width: 700px; }
-.paiji-frame {
-  position: relative;
-  padding: clamp(1.6rem, 3.5vw, 2.6rem) clamp(1.4rem, 3.5vw, 2.8rem) clamp(2rem, 4vw, 3rem);
-  border: 1px solid rgba(201, 164, 97, .5);
-  outline: 1px solid rgba(201, 164, 97, .22);
-  outline-offset: 6px;
-  background:
-    radial-gradient(80% 60% at 50% 0%, rgba(201, 164, 97, .05), transparent 70%),
-    var(--jpm-panel);
-}
-.paiji-head { display: flex; align-items: baseline; gap: 1rem; margin: 0 0 1.2rem; }
-.paiji-head b {
-  font-family: var(--jpm-serif); font-weight: 900;
-  font-size: clamp(1.5rem, 2.6vw, 1.9rem); letter-spacing: .5em;
-  color: var(--jpm-paper);
-}
-.paiji-head small { color: var(--jpm-muted); font-size: .78rem; letter-spacing: .18em; }
-.paiji-frame ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
-.paiji-frame li {
-  position: relative; padding-left: 1.3em;
-  color: #cfc6b0; font-size: .92rem;
-}
-.paiji-frame li::before {
-  content: ""; position: absolute; left: 0; top: .52em;
-  width: .5em; height: .5em;
-  background: var(--jpm-red);
-}
-.paiji-frame li b { color: var(--jpm-paper); }
-.paiji-seal {
-  position: absolute; right: clamp(14px, 3vw, 26px); bottom: clamp(-18px, -1vw, -12px);
-  display: inline-flex;
-  padding: .42em .28em;
-  background: linear-gradient(150deg, #a63e52, #8d3244);
-  color: #f2e6d5;
-  font-family: var(--jpm-serif); font-weight: 900; font-size: .82rem;
-  box-shadow: inset 0 0 10px rgba(60, 10, 18, .5), 0 4px 18px rgba(0, 0, 0, .4);
-  transform: rotate(2deg);
-}
-.paiji-seal i { writing-mode: vertical-rl; font-style: normal; letter-spacing: .16em; }
-
 .coda-method { margin-top: clamp(52px, 7vw, 84px); max-width: 56em; }
 .coda-method h3 { margin: 0 0 .6rem; font-family: var(--jpm-serif); font-weight: 900; font-size: 1.3rem; color: var(--jpm-gold-bright); }
 .coda-method > p { margin: 0 0 1rem; color: var(--jpm-muted); font-size: .9rem; }
@@ -619,12 +502,10 @@
   .mu span { font-size: .92rem; }
   .game-shots { grid-template-columns: 1fr; }
   .cycle-list em { font-size: .62rem; }
-  .paiji-seal { right: 10px; }
 }
 
 /* ══ 動效尊重 ══ */
 @media (prefers-reduced-motion: reduce) {
-  .js-on .reveal { opacity: 1; transform: none; transition: none; }
   .js-on .oq-line, .js-on .oq-from,
   .js-on .overture-title .jpm-eyebrow, .js-on .overture-title h1,
   .js-on .overture-title .overture-sub, .js-on .overture-title .overture-seal { opacity: 1; animation: none; }
