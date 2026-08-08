@@ -43,8 +43,8 @@
           <p class="tagline">{{ page.tagline }}</p>
         </div>
         <figure>
-          <img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成動畫風）" width="1536" height="1024" fetchpriority="high">
-          <figcaption>三視圖角色設定・AI 生成動畫風・以原典描寫為依據</figcaption>
+          <img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high">
+          <figcaption>{{ page.turnaround_caption | default: '三視圖角色設定・AI 生成・以原典描寫為依據' }}</figcaption>
         </figure>
       </div>
     </section>

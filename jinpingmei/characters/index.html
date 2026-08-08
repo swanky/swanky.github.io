@@ -1,7 +1,7 @@
 ---
 layout: null
-title: 角色研究館｜金瓶梅十大角色 AI 選角與人物側寫
-description: 以《金瓶梅詞話》原典為本的十大角色研究：AI 虛擬劇組整理的人物側寫、逐字原文依據、三視圖角色設定與聲音方向。西門慶、潘金蓮、吳月娘、李瓶兒、春梅等一次看懂。
+title: 角色研究館｜金瓶梅主要角色 AI 選角與人物側寫
+description: 以《金瓶梅詞話》原典為本的十一位主要角色研究：AI 虛擬劇組整理的人物側寫、逐字原文依據與聲音方向；五位核心女性採擬真攝影風三視圖。西門慶、潘金蓮、吳月娘、李瓶兒、龐春梅、宋惠蓮一次看懂。
 permalink: /jinpingmei/characters/
 ---
 <!doctype html>
@@ -43,7 +43,7 @@ permalink: /jinpingmei/characters/
     <section class="jpm-section" style="padding-bottom: 0">
       <p class="jpm-eyebrow">CHARACTER RESEARCH</p>
       <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">角色研究館</h1>
-      <p class="jpm-lead">虛擬劇組替《金瓶梅詞話》做了一次完整的「選角前置作業」：從全書文本整理出人物證據，為十位主要角色建立側寫、關係網、逐字原文依據，再用 AI 生成三視圖設定與聲音方向。每一頁都附上工作底稿——你可以看到證據，也可以看到指令。</p>
+      <p class="jpm-lead">虛擬劇組替《金瓶梅詞話》做了一次完整的「選角前置作業」：從全書文本整理出人物證據，為十一位主要角色建立側寫、關係網、逐字原文依據，再用 AI 生成三視圖設定與聲音方向。五位核心女性已換上擬真攝影風的定裝三視圖，其餘角色暫以動畫風呈現。每一頁都附上工作底稿——你可以看到證據，也可以看到指令。</p>
       <figure class="jpm-banner jpm-workdoc" style="margin-top: clamp(24px, 4vw, 40px)">
         <img src="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet.jpg' | relative_url }}" alt="五位女性角色的 AI 擬真選角定裝照橫幅（AI 生成，非真人）" width="2200" height="732" loading="lazy">
         <figcaption>五位核心女性角色的選角定裝照・AI 生成擬真攝影風，並非真人照片</figcaption>
@@ -55,7 +55,7 @@ permalink: /jinpingmei/characters/
       <div class="jpm-cast-grid">
         {% for c in cast %}
         <a class="jpm-cast-card" href="{{ c.url | relative_url }}">
-          <img src="{{ c.turnaround | relative_url }}" alt="{{ c.name }}三視圖角色設定" width="1536" height="1024" loading="lazy">
+          <img src="{{ c.turnaround | relative_url }}" alt="{{ c.name }}三視圖角色設定" width="{{ c.turnaround_w | default: 1536 }}" height="{{ c.turnaround_h | default: 1024 }}" loading="lazy">
           <div class="body">
             <h3>{{ c.name }}</h3>
             <span class="alias">{{ c.aliases }}</span>
@@ -67,7 +67,7 @@ permalink: /jinpingmei/characters/
     </section>
 
     <aside class="jpm-reader-note">
-      十位角色以外，戰棋遊戲《金瓶異夢：十二花界》另立了五位女主角的奇幻改編版本（含宋惠蓮），見<a href="{{ '/games/plum/#cast' | relative_url }}">遊戲角色頁</a>；選角母版的製作與迭代過程，見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。所有人物圖像皆為 AI 生成，並非真人照片；側寫中標註「（推斷）」者為合理推測而非原文明載。
+      戰棋遊戲《金瓶異夢：十二花界》以五位核心女性為女主角，發展了奇幻改編版本，見<a href="{{ '/games/plum/#cast' | relative_url }}">遊戲角色頁</a>；擬真選角的製作與迭代過程，見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。所有人物圖像皆為 AI 生成，並非真人照片；側寫中標註「（推斷）」者為合理推測而非原文明載。
     </aside>
   </main>
 
