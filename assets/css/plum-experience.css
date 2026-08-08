@@ -104,11 +104,13 @@ main section,
 main section > .shell,
 .hero-content,
 .hero-scroll-cue,
-.capture-label,
 .game-footer > .shell {
   position: relative;
   z-index: 3;
 }
+
+/* capture-label 維持 plum-game.css 的 position:absolute（釘在 hero 右下角），只抬 z-index */
+.capture-label { z-index: 3; }
 
 main section::selection {
   background: color-mix(in oklch, var(--plum) 82%, black);

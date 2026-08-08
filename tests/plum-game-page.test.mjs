@@ -37,7 +37,8 @@ test('EP01 對外說明清楚區分文學影像與遊戲實機', () => {
   const section = page.match(/<section id="ep01-film"[\s\S]*?<\/section>/)?.[0] ?? '';
   assert.match(section, /AI 生成影像與語音/);
   assert.match(section, /不是遊戲實機畫面/);
-  assert.match(section, /取材自《金瓶梅》第二、三回/);
+  // 2026-08-08：第二、三回改為連向 /jinpingmei/text/ 原文書房的超連結
+  assert.match(section, /取材自《金瓶梅》<a href="\{\{ '\/jinpingmei\/text\/002\/' \| relative_url \}\}">第二回<\/a>/);
 });
 
 test('EP01 卡片標示首集已公開並連回播放器', () => {

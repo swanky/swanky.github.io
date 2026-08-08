@@ -215,6 +215,7 @@
     promise: 0.1,
     story: 0.2,
     gameplay: 0.34,
+    slice: 0.38,
     choice: 0.42,
     affinity: 0.5,
     cast: 0.56,

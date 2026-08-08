@@ -29,8 +29,8 @@ permalink: /games/plum/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/plum-game.css' | relative_url }}?v=20260726-3" rel="stylesheet">
-  <link href="{{ '/assets/css/plum-experience.css' | relative_url }}?v=20260807-1" rel="stylesheet">
+  <link href="{{ '/assets/css/plum-game.css' | relative_url }}?v=20260808-1" rel="stylesheet">
+  <link href="{{ '/assets/css/plum-experience.css' | relative_url }}?v=20260808-1" rel="stylesheet">
   <noscript><style>.reveal{opacity:1!important;transform:none!important}.plum-webgl,.effect-toggle,.experience-rail{display:none!important}</style></noscript>
   <script type="application/ld+json">
   {
@@ -77,12 +77,12 @@ permalink: /games/plum/
       <nav id="game-navigation" class="nav-links" aria-label="遊戲頁面導覽">
         <a href="#story">故事</a>
         <a href="#gameplay">玩法</a>
+        <a href="#slice">實機進度</a>
         <a href="#cast">角色</a>
         <a href="#cinematic">影像</a>
         <a href="#literary-cycle">十部曲</a>
         <a href="#gallery">畫面</a>
         <a href="#development">開發進度</a>
-        <a href="#slice">實機進度</a>
         <button class="effect-toggle" type="button" aria-pressed="true"><span aria-hidden="true"></span>沉浸效果</button>
         <span class="nav-status">Steam 頁面籌備中</span>
       </nav>
@@ -117,7 +117,7 @@ permalink: /games/plum/
         </dl>
       </div>
       <div class="hero-scroll-cue" aria-hidden="true"><span>SCROLL TO ENTER</span><i></i></div>
-      <p class="capture-label">開發中實機畫面，內容與介面仍會調整</p>
+      <p class="capture-label">五位女主角概念視覺海報，非實機畫面</p>
     </section>
 
     <section class="promise section-pad" aria-labelledby="promise-title" data-scene="promise" data-chapter="玩家承諾">
@@ -168,29 +168,26 @@ permalink: /games/plum/
         </header>
         <div class="gameplay-showcase">
           <figure class="gameplay-focus reveal">
-            <button class="image-button tactical-window" type="button" data-tactical-scan data-lightbox-src="{{ '/assets/img/games/plum/gameplay/grid-closeup.webp' | relative_url }}" data-lightbox-alt="《梅香境》開發中實機戰術格線特寫">
-              <picture>
-                <source media="(max-width: 620px)" srcset="{{ '/assets/img/games/plum/gameplay/grid-closeup-mobile.webp' | relative_url }}">
-                <img src="{{ '/assets/img/games/plum/gameplay/grid-closeup.webp' | relative_url }}" alt="開發中實機特寫：放大顯示角色、可移動格與戰場位置關係" width="1600" height="900" loading="lazy">
-              </picture>
+            <button class="image-button tactical-window" type="button" data-tactical-scan data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" data-lightbox-alt="《梅香境》Godot 開發版戰鬥介面：體力、技能列與行動預覽">
+              <img src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" alt="Godot 開發版實機戰鬥介面：體力、技能列與行動預覽" width="1920" height="1080" loading="lazy">
               <span class="tactical-hud" aria-hidden="true"><i>MOVE RANGE</i><b>WAIT 07</b><em>GRID LOCKED</em></span>
-              <span class="zoom-hint">放大戰術格線</span>
+              <span class="zoom-hint">放大戰鬥介面</span>
             </button>
-            <figcaption><span>TACTICAL CLOSE-UP</span> 從實機畫面裁出的等比例特寫，讓每個移動格、站位與角色比例都能直接看清。</figcaption>
+            <figcaption><span>BATTLE HUD</span> Godot 開發版實機戰鬥介面：體力、技能列、出手順序與行動預覽，一眼可讀。</figcaption>
           </figure>
-          <aside class="grid-readout reveal" aria-label="戰術格線閱讀重點">
+          <aside class="grid-readout reveal" aria-label="戰場閱讀重點">
             <p class="eyebrow">READ THE BOARD</p>
             <h3>不是縮小的裝飾格，<br>而是每一步的決策單位</h3>
             <ol>
-              <li><b>移動範圍</b><span>可到達的格子集中顯示，不讓華麗場景吃掉判讀。</span></li>
-              <li><b>角色接地</b><span>腳點落在格心，人物尺度與地磚維持一致。</span></li>
-              <li><b>風險位置</b><span>牆角、狹道與敵方控制區，會直接改變下一次出手。</span></li>
+              <li><b>出手順序</b><span>以行動計時排序，預先看見誰先動、誰在等待。</span></li>
+              <li><b>體力技能</b><span>角色狀態與技能列常駐可讀，不用猜也不用背。</span></li>
+              <li><b>行動預覽</b><span>命中、預估傷害與地形修正在出手前就看得見。</span></li>
             </ol>
           </aside>
         </div>
         <figure class="gameplay-overview reveal">
-          <button class="image-button" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/battle-idle.webp' | relative_url }}" data-lightbox-alt="《梅香境》開發中完整實機戰鬥畫面">
-            <img src="{{ '/assets/img/games/plum/gameplay/battle-idle.webp' | relative_url }}" alt="開發中完整實機畫面：等距梅園戰場、角色狀態與行動介面" width="1440" height="810" loading="lazy">
+          <button class="image-button" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" data-lightbox-alt="《梅香境》Godot 開發版完整實機戰鬥畫面">
+            <img src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" alt="Godot 開發版完整實機畫面：等距戰場、火勢蔓延與多重目標" width="1920" height="1080" loading="lazy">
             <span class="zoom-hint">查看完整戰場</span>
           </button>
           <figcaption><span>ENGINE CAPTURE</span> 可操作開發版本實機畫面；美術、字型與 HUD 正持續收斂。</figcaption>
@@ -202,6 +199,32 @@ permalink: /games/plum/
           <article class="mechanic reveal"><span class="mechanic-icon">算</span><h3>出手前看清結果</h3><p>命中率、預估傷害、方向與地形修正都會呈現。困難來自選擇，而不是藏起規則。</p></article>
           <article class="mechanic reveal"><span class="mechanic-icon">敵</span><h3>可讀的敵方意圖</h3><p>守門者卡住通路、追獵者找落單目標、焚契者直奔證據。敵人施壓，但不靠偷看資訊作弊。</p></article>
           <article class="mechanic reveal"><span class="mechanic-icon">重</span><h3>失敗也留下故事</h3><p>即使擊敗首領，仍可能得到「戰術勝利、政治失敗」。結算說明後果，也給你重玩的理由。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="slice" class="slice section-pad" aria-labelledby="slice-title" data-scene="slice" data-chapter="垂直切片">
+      <div class="shell wide-shell">
+        <header class="section-heading reveal">
+          <p class="eyebrow">VERTICAL SLICE IN GODOT</p>
+          <h2 id="slice-title">開發現況｜Godot 垂直切片實機</h2>
+          <p>遊戲已在 Godot 重建出可完整遊玩的垂直切片「帳房失火」：標題畫面→開場對話→以行動計時（WT）排序的戰棋（火勢蔓延、機關，與救人／留證／追真相的多重目標）→四種結局→結算重打，一氣呵成。下一步朝「戰棋 RPG × 視覺小說 × 戀愛模擬 × Roguelike」的單局輪迴（roguelike run）制融合玩法推進。</p>
+        </header>
+
+        <div class="runtime-gallery" aria-label="垂直切片實機截圖">
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" data-lightbox-alt="標題畫面——雨夜梅香境"><img src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" alt="標題畫面——雨夜梅香境" width="1920" height="1080" loading="lazy" decoding="async"><span>標題畫面——雨夜梅香境</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" data-lightbox-alt="開場對話"><img src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" alt="開場對話" width="1920" height="1080" loading="lazy" decoding="async"><span>開場對話</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" data-lightbox-alt="火勢蔓延的後期戰局"><img src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" alt="火勢蔓延的後期戰局" width="1920" height="1080" loading="lazy" decoding="async"><span>火勢蔓延的後期戰局</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" data-lightbox-alt="結局結算"><img src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" alt="結局結算" width="1920" height="1080" loading="lazy" decoding="async"><span>結局結算</span></button>
+        </div>
+
+        <p class="disclosure reveal">五位女主的像素轉身表——四方向 idle／walk／attack／hit 全套動作，確立單位動態基準。</p>
+        <div class="character-stills" aria-label="五位女主像素轉身表">
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-pan.png' | relative_url }}" data-lightbox-alt="潘金蓮像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-pan.png' | relative_url }}" alt="潘金蓮像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>潘金蓮</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-li.png' | relative_url }}" data-lightbox-alt="李瓶兒像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-li.png' | relative_url }}" alt="李瓶兒像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>李瓶兒</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-pang.png' | relative_url }}" data-lightbox-alt="龐春梅像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-pang.png' | relative_url }}" alt="龐春梅像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>龐春梅</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-song.png' | relative_url }}" data-lightbox-alt="宋惠蓮像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-song.png' | relative_url }}" alt="宋惠蓮像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>宋惠蓮</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-wu.png' | relative_url }}" data-lightbox-alt="吳月娘像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-wu.png' | relative_url }}" alt="吳月娘像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>吳月娘</span></button>
         </div>
       </div>
     </section>
@@ -234,8 +257,14 @@ permalink: /games/plum/
           </ul>
         </div>
         <div class="affinity-scenes reveal">
-          <article><small>潘金蓮 × 李瓶兒</small><h3>一人作證，一人留命</h3><p>李瓶兒替潘金蓮承受部分反擊；潘金蓮則讓目標無法隱藏或撤退。</p></article>
-          <article><small>吳月娘 × 龐春梅</small><h3>門內有階</h3><p>吳月娘建立守備線；龐春梅可沿著這條承諾，免費推進一次。</p></article>
+          <article>
+            <div class="affinity-text"><small>潘金蓮 × 李瓶兒</small><h3>一人作證，一人留命</h3><p>李瓶兒替潘金蓮承受部分反擊；潘金蓮則讓目標無法隱藏或撤退。</p></div>
+            <div class="affinity-pair" aria-hidden="true"><img src="{{ '/assets/img/games/plum/characters/pan.webp' | relative_url }}" alt="" width="366" height="1200" loading="lazy"><img src="{{ '/assets/img/games/plum/characters/li.webp' | relative_url }}" alt="" width="366" height="1200" loading="lazy"></div>
+          </article>
+          <article>
+            <div class="affinity-text"><small>吳月娘 × 龐春梅</small><h3>門內有階</h3><p>吳月娘建立守備線；龐春梅可沿著這條承諾，免費推進一次。</p></div>
+            <div class="affinity-pair" aria-hidden="true"><img src="{{ '/assets/img/games/plum/characters/wu.webp' | relative_url }}" alt="" width="352" height="1200" loading="lazy"><img src="{{ '/assets/img/games/plum/characters/chunmei.webp' | relative_url }}" alt="" width="366" height="1200" loading="lazy"></div>
+          </article>
         </div>
       </div>
     </section>
@@ -379,6 +408,10 @@ permalink: /games/plum/
           <p>影片採 AI 生成真人電影概念影像與本機剪輯，五人皆為原創成年華人女性，不是真實演員或實拍 casting，也不是 Godot 實機畫面。</p>
           <div class="cinematic-facts"><span>40 秒</span><span>1280 × 720</span><span>24 FPS</span><span>正體中文字幕</span></div>
           <p class="youtube-note"><strong>YouTube：</strong>以下為已公開的 40 秒概念預告，可直接播放並開啟字幕。</p>
+          <button class="image-button cinematic-poster" type="button" data-lightbox-src="{{ '/assets/img/games/plum/cinematic/live-action-concept-poster.jpg' | relative_url }}" data-lightbox-alt="《金瓶異夢：十二花界》真人電影概念海報：五面鏡框各嵌一位女主角，紅線串連">
+            <img src="{{ '/assets/img/games/plum/cinematic/live-action-concept-poster.jpg' | relative_url }}" alt="真人電影概念海報：五面鏡框各嵌一位女主角，紅線串連——命運不是答案，是戰場" width="1280" height="720" loading="lazy">
+            <span class="zoom-hint">放大海報</span>
+          </button>
         </div>
         <div class="cinematic-player reveal">
           <div class="cinematic-label"><span>AI-GENERATED LIVE-ACTION CONCEPT</span><small>非實拍／非實機</small></div>
@@ -422,7 +455,7 @@ permalink: /games/plum/
             <p class="cycle-premiere-status">首集已公開</p>
             <h3 id="ep01-film-title">簾下遇金蓮</h3>
             <p class="cycle-premiere-lead">一根叉竿從樓上落下，潘金蓮與西門慶抬眼相遇。這個看似偶然的瞬間，往後改變了三個人的命運。</p>
-            <p>取材自《金瓶梅》第二、三回，以 AI 生成影像與語音完成的文學影像敘事。它是《梅香境》的角色與視覺研究，不是遊戲實機畫面。</p>
+            <p>取材自《金瓶梅》<a href="{{ '/jinpingmei/text/002/' | relative_url }}">第二回</a>、<a href="{{ '/jinpingmei/text/003/' | relative_url }}">第三回</a>，以 AI 生成影像與語音完成的文學影像敘事。它是《梅香境》的角色與視覺研究，不是遊戲實機畫面。</p>
             <ul class="cycle-premiere-facts" aria-label="EP01 影片資訊">
               <li>3 分 39 秒</li>
               <li>正體中文字幕</li>
@@ -694,14 +727,14 @@ permalink: /games/plum/
         </header>
         <div class="status-layout">
           <div class="status-timeline">
-            <article class="status-done reveal"><span>已具備</span><h3>戰棋核心沙盒</h3><p>可移動、普通攻擊、待機與轉向；具備個別出手順序、命中與傷害預測、正側背方向修正，以及可解釋的敵方行動。</p></article>
+            <article class="status-done reveal"><span>已具備</span><h3>〈帳房失火〉垂直切片</h3><p>從標題畫面、開場對話、戰棋（火勢蔓延、機關與救人／留證／追真相多重目標）到四種結局與結算重打，已可一氣呵成完整遊玩。</p></article>
             <article class="status-now reveal"><span>製作中</span><h3>角色與戰場視覺收斂</h3><p>五名角色的身分、武裝、像素剪影與標準立繪已建立；目前持續調整角色比例、地面格線、接地感與象牙紙風格介面。</p></article>
-            <article class="status-next reveal"><span>下一階段</span><h3>〈帳房失火〉完整章節</h3><p>加入火勢蔓延、多目標壓力、技能、Affinity 援護與多種戰後結果，讓玩法真正承載人物與政治後果。</p></article>
+            <article class="status-next reveal"><span>下一階段</span><h3>單局輪迴融合玩法</h3><p>朝「戰棋 RPG × 視覺小說 × 戀愛模擬 × Roguelike」的單局輪迴玩法推進，讓每一輪選擇都承載人物與政治後果。</p></article>
             <article class="status-later reveal"><span>公開 Demo 前</span><h3>完整體驗與發行打磨</h3><p>控制器、音效、難度與無障礙設定、多解析度測試、Windows 發行包，以及可由實際遊戲重現的商店素材。</p></article>
           </div>
           <div class="build-card reveal">
             <span class="build-badge">目前開發版本</span>
-            <h3>小型戰棋沙盒</h3>
+            <h3>垂直切片「帳房失火」</h3>
             <ul>
               <li><b>模式</b><span>單機劇情向策略角色扮演</span></li>
               <li><b>平台</b><span>Windows PC 優先</span></li>
@@ -713,38 +746,11 @@ permalink: /games/plum/
             <p>公開下載日期尚未公布。頁面不會用概念圖冒充完成內容；開發進度以可操作版本與實機畫面為準。</p>
           </div>
         </div>
-        <div class="runtime-gallery" aria-label="開發中實機畫面">
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/move-range.webp' | relative_url }}" data-lightbox-alt="開發版本移動範圍實機畫面"><img src="{{ '/assets/img/games/plum/gameplay/move-range.webp' | relative_url }}" alt="開發版本實機畫面：顯示可移動範圍" width="1440" height="810" loading="lazy"><span>移動範圍</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/attack-windup.webp' | relative_url }}" data-lightbox-alt="開發版本攻擊前搖實機畫面"><img src="{{ '/assets/img/games/plum/gameplay/attack-windup.webp' | relative_url }}" alt="開發版本實機畫面：角色準備發動攻擊" width="1440" height="810" loading="lazy"><span>攻擊前搖</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/impact-hit.webp' | relative_url }}" data-lightbox-alt="開發版本命中效果實機畫面"><img src="{{ '/assets/img/games/plum/gameplay/impact-hit.webp' | relative_url }}" alt="開發版本實機畫面：攻擊命中效果" width="1440" height="810" loading="lazy"><span>命中回饋</span></button>
-        </div>
-      </div>
-    </section>
-
-    <section id="slice" class="slice section-pad" aria-labelledby="slice-title" data-scene="slice" data-chapter="垂直切片">
-      <div class="shell wide-shell">
-        <header class="section-heading reveal">
-          <p class="eyebrow">VERTICAL SLICE IN GODOT</p>
-          <h2 id="slice-title">開發現況｜Godot 垂直切片實機</h2>
-          <p>遊戲已在 Godot 重建出可完整遊玩的垂直切片「帳房失火」：標題畫面→開場對話→以行動計時（WT）排序的戰棋（火勢蔓延、機關，與救人／留證／追真相的多重目標）→四種結局→結算重打，一氣呵成。下一步朝「戰棋 RPG × 視覺小說 × 戀愛模擬 × Roguelike」的單局輪迴（roguelike run）制融合玩法推進。</p>
-        </header>
-
-        <div class="runtime-gallery" aria-label="垂直切片實機截圖">
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" data-lightbox-alt="標題畫面——雨夜梅香境"><img src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" alt="標題畫面——雨夜梅香境" width="1920" height="1080" loading="lazy" decoding="async"><span>標題畫面——雨夜梅香境</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" data-lightbox-alt="開場對話"><img src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" alt="開場對話" width="1920" height="1080" loading="lazy" decoding="async"><span>開場對話</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" data-lightbox-alt="以行動計時（WT）排序的戰棋：火勢與多重目標"><img src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" alt="以行動計時（WT）排序的戰棋：火勢與多重目標" width="1920" height="1080" loading="lazy" decoding="async"><span>以行動計時（WT）排序的戰棋：火勢與多重目標</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" data-lightbox-alt="火勢蔓延的後期戰局"><img src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" alt="火勢蔓延的後期戰局" width="1920" height="1080" loading="lazy" decoding="async"><span>火勢蔓延的後期戰局</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" data-lightbox-alt="戰鬥 HUD：體力、技能列與行動預覽"><img src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" alt="戰鬥 HUD：體力、技能列與行動預覽" width="1920" height="1080" loading="lazy" decoding="async"><span>戰鬥 HUD：體力、技能列與行動預覽</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" data-lightbox-alt="結局結算"><img src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" alt="結局結算" width="1920" height="1080" loading="lazy" decoding="async"><span>結局結算</span></button>
-        </div>
-
-        <p class="disclosure reveal">五位女主的像素轉身表——四方向 idle／walk／attack／hit 全套動作，確立單位動態基準。</p>
-        <div class="character-stills" aria-label="五位女主像素轉身表">
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-pan.png' | relative_url }}" data-lightbox-alt="潘金蓮像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-pan.png' | relative_url }}" alt="潘金蓮像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>潘金蓮</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-li.png' | relative_url }}" data-lightbox-alt="李瓶兒像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-li.png' | relative_url }}" alt="李瓶兒像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>李瓶兒</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-pang.png' | relative_url }}" data-lightbox-alt="龐春梅像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-pang.png' | relative_url }}" alt="龐春梅像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>龐春梅</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-song.png' | relative_url }}" data-lightbox-alt="宋惠蓮像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-song.png' | relative_url }}" alt="宋惠蓮像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>宋惠蓮</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/sprites-wu.png' | relative_url }}" data-lightbox-alt="吳月娘像素轉身表"><img class="plum-pixel-art" src="{{ '/assets/img/games/plum/rebuild/sprites-wu.png' | relative_url }}" alt="吳月娘像素轉身表" width="1920" height="992" loading="lazy" decoding="async"><span>吳月娘</span></button>
+        <div class="runtime-gallery quad" aria-label="早期原型實機畫面（2026 年 7 月）">
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/move-range.webp' | relative_url }}" data-lightbox-alt="早期原型實機畫面：顯示可移動範圍"><img src="{{ '/assets/img/games/plum/gameplay/move-range.webp' | relative_url }}" alt="早期原型實機畫面：顯示可移動範圍" width="1440" height="810" loading="lazy"><span>早期原型 · 移動範圍</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/attack-windup.webp' | relative_url }}" data-lightbox-alt="早期原型實機畫面：角色準備發動攻擊"><img src="{{ '/assets/img/games/plum/gameplay/attack-windup.webp' | relative_url }}" alt="早期原型實機畫面：角色準備發動攻擊" width="1440" height="810" loading="lazy"><span>早期原型 · 攻擊前搖</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/impact-hit.webp' | relative_url }}" data-lightbox-alt="早期原型實機畫面：攻擊命中效果"><img src="{{ '/assets/img/games/plum/gameplay/impact-hit.webp' | relative_url }}" alt="早期原型實機畫面：攻擊命中效果" width="1440" height="810" loading="lazy"><span>早期原型 · 命中回饋</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/gameplay/onboarding.webp' | relative_url }}" data-lightbox-alt="早期原型實機畫面：開場的勝利目標說明面板"><img src="{{ '/assets/img/games/plum/gameplay/onboarding.webp' | relative_url }}" alt="早期原型實機畫面：開場的勝利目標說明面板" width="1440" height="810" loading="lazy"><span>早期原型 · 目標說明</span></button>
         </div>
       </div>
     </section>
@@ -796,6 +802,7 @@ permalink: /games/plum/
         <p>《梅香境》Steam 商店頁籌備中。公開試玩日期確定後，本頁會更新正式下載與願望清單入口。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#gallery">再看一次遊戲畫面</a>
+          <a class="button button-ghost" href="{{ '/jinpingmei/' | relative_url }}">探索金瓶梅宇宙</a>
           <a class="button button-ghost" href="{{ '/' | relative_url }}">回到史旺基工作室</a>
         </div>
       </div>
@@ -816,7 +823,7 @@ permalink: /games/plum/
     <p></p>
   </dialog>
 
-  <script src="{{ '/assets/js/plum-visual-engine.js' | relative_url }}?v=20260726-2" defer></script>
+  <script src="{{ '/assets/js/plum-visual-engine.js' | relative_url }}?v=20260808-1" defer></script>
   <script src="{{ '/assets/js/plum-game.js' | relative_url }}?v=20260726-4" defer></script>
 </body>
 </html>
