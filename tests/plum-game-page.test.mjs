@@ -10,9 +10,10 @@ const css = readFileSync(join(root, 'assets/css/plum-experience.css'), 'utf8');
 const selectedWorks = readFileSync(join(root, '_data/selected_works.yml'), 'utf8');
 
 const publicVideoId = 'E8Lgyx0X_s4';
+const ep02VideoId = 'NMFgHt9YgE8';
 
-test('《梅香境》頁首提供 EP01 公開影片入口', () => {
-  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 影像<\/a>/);
+test('《梅香境》頁首提供公開影片入口', () => {
+  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01・EP02 影像<\/a>/);
 });
 
 test('首頁精選作品提供 EP01 導流但不重複嵌入播放器', () => {
@@ -46,6 +47,17 @@ test('EP01 卡片標示首集已公開並連回播放器', () => {
   assert.match(card, /<span>EP01<\/span>/);
   assert.match(card, /首集已公開/);
   assert.match(card, /href="#ep01-film"/);
+});
+
+test('EP02 以隱私強化的 YouTube iframe 公開並連回播放器', () => {
+  assert.match(page, /<section id="ep02-film" class="cycle-premiere reveal"/);
+  assert.match(page, new RegExp(`https://www\\.youtube-nocookie\\.com/embed/${ep02VideoId}`));
+  assert.match(page, /title="《金瓶梅》影像十部曲 EP02〈隔牆瓶兒〉"/);
+  assert.match(page, new RegExp(`https://youtu\\.be/${ep02VideoId}`));
+  const cards = page.match(/<article class="cycle-card cycle-card-released reveal">[\s\S]*?<\/article>/g) ?? [];
+  const ep02Card = cards.find((c) => c.includes('<span>EP02</span>')) ?? '';
+  assert.match(ep02Card, /第二集已公開/);
+  assert.match(ep02Card, /href="#ep02-film"/);
 });
 
 test('EP01 播放器維持 16:9 並在窄螢幕改為單欄', () => {
