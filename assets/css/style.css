@@ -3647,6 +3647,15 @@ section.testimonials {
   color: #5c3d00;
 }
 
+/* 窄螢幕：讓表格自己橫向捲動。儲存格內的 code 是 nowrap，min-content 寬度會超過
+   閱讀欄寬，table 的 overflow:hidden 對 display:table 無效，整頁就會被推寬。 */
+@media (max-width: 767px) {
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 /* Horizontal rule: editorial section break */
 .post-content hr {
   border: none;
@@ -3951,6 +3960,14 @@ section.testimonials {
   margin-bottom: 0;
 }
 
+/* TL;DR／大綱框裡的 inline code 允許斷行——.post-content code 是 nowrap，
+   長指令或路徑會把窄螢幕的整頁推寬（這兩個框不是捲動容器，擋不住）。 */
+.article-tldr code,
+.article-toc code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 /* 頁內錨點跳轉時預留 fixed header（60px）＋呼吸空間，避免標題被壓在 header 下 */
 .post-content h2,
 .post-content h3 {
@@ -4095,6 +4112,19 @@ section.testimonials {
   .article-toc-parts {
     columns: 1;
   }
+}
+
+/* --- Article 更新說明（舊文重新核對後的版本提示）--- */
+.post-content .article-update-note {
+  margin: 0 0 1.75rem;
+  padding: 12px 18px;
+  background: #fdf8f2;
+  border-left: 3px solid #E5A300;
+  border-radius: 0 6px 6px 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--c-muted);
 }
 
 /* --- Article 分部分隔（長文把 h2 分群，與大綱的「一、二、三」對應）--- */
