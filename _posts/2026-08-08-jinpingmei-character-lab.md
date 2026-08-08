@@ -3,7 +3,8 @@ title: "用 AI 替一部百回小說建立全劇組角色設定：金瓶梅角�
 seo_title: "AI 角色設定工作流：從金瓶梅百回原文到十大角色卡、三視圖與選角母版"
 date: 2026-08-08
 published: true
-categories: [claude-code]
+categories: [claude-code, technical]
+permalink: /claude-code/jinpingmei-character-lab/
 tags: [ai-agent, ai-visual, character-design, jinpingmei, workflow, agent-skills]
 layout: article
 cover_image: /assets/img/jinpingmei/covers/character-lab-banner.jpg
