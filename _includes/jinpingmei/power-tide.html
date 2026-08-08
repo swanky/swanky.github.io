@@ -1,0 +1,66 @@
+{% comment %}
+  勢力潮汐圖：四條人物線（西門家勢／潘金蓮／李瓶兒／龐春梅）跨百回的起落示意。
+  事件錨點全數對照 _data/jinpingmei_guide.yml 已驗證導讀核定（scratchpad wave3/tide-anchors.md，2026-08-09）；
+  曲線高低為閱讀感覺的相對示意，非量化數據。掛新手導讀頁。
+{% endcomment %}
+<figure class="jpm-tide" role="img" aria-labelledby="jpm-tide-title">
+  <svg viewBox="0 0 980 540" xmlns="http://www.w3.org/2000/svg">
+    <title id="jpm-tide-title">勢力潮汐圖：西門家勢、潘金蓮、李瓶兒、龐春梅四條線在一百回間的起落示意</title>
+    <!-- 五幕底色帶 -->
+    <rect class="band" x="54" y="48" width="88" height="392"/>
+    <rect class="band--alt" x="142" y="48" width="176" height="392"/>
+    <rect class="band" x="318" y="48" width="264" height="392"/>
+    <rect class="band--alt" x="582" y="48" width="168" height="392"/>
+    <rect class="band" x="750" y="48" width="184" height="392"/>
+    <text class="bandlb" x="98" y="66" text-anchor="middle" font-size="12">欲望點火<tspan x="98" dy="16" font-size="10">一—一〇</tspan></text>
+    <text class="bandlb" x="230" y="66" text-anchor="middle" font-size="12">後院成局<tspan x="230" dy="16" font-size="10">一一—三〇</tspan></text>
+    <text class="bandlb" x="450" y="66" text-anchor="middle" font-size="12">帝國鼎盛<tspan x="450" dy="16" font-size="10">三一—六〇</tspan></text>
+    <text class="bandlb" x="666" y="66" text-anchor="middle" font-size="12">華宴轉冷<tspan x="666" dy="16" font-size="10">六一—七九</tspan></text>
+    <text class="bandlb" x="842" y="66" text-anchor="middle" font-size="12">瓦解與餘波<tspan x="842" dy="16" font-size="10">八〇—一〇〇</tspan></text>
+    <!-- 座標 -->
+    <line class="ax" x1="54" y1="440" x2="934" y2="440"/>
+    <g font-size="10.5">
+      <text class="axlb" x="59" y="459" text-anchor="middle">第1回</text>
+      <text class="axlb" x="226" y="459" text-anchor="middle">20</text>
+      <text class="axlb" x="402" y="459" text-anchor="middle">40</text>
+      <text class="axlb" x="578" y="459" text-anchor="middle">60</text>
+      <text class="axlb" x="754" y="459" text-anchor="middle">80</text>
+      <text class="axlb" x="930" y="459" text-anchor="middle">100</text>
+      <text class="axlb" x="46" y="92" text-anchor="end">勢盛</text>
+      <text class="axlb" x="46" y="432" text-anchor="end">勢微</text>
+    </g>
+    <!-- 西門家勢（西門慶歿後改走一家的家勢） -->
+    <path class="tl tl--x" d="M68,330 C90,325 110,318 129,310 C150,306 180,330 200,345 C240,330 280,240 314,200 C370,175 430,178 481,170 C540,160 610,125 666,110 C695,103 720,100 745,100 C760,220 775,330 790,375 C850,400 900,408 930,410"/>
+    <!-- 潘金蓮 -->
+    <path class="tl tl--j" d="M59,390 C70,385 82,378 94,370 C105,352 118,318 129,300 C138,308 148,332 156,340 C300,280 480,220 569,180 C630,168 700,180 745,200 C765,250 785,300 798,330 C801,352 804,372 807,390 C810,402 813,415 816,430"/>
+    <!-- 李瓶兒 -->
+    <path class="tl tl--p" d="M164,360 C176,372 188,385 200,390 C206,362 211,330 217,300 C250,240 285,175 314,150 C400,135 480,140 530,170 C545,200 560,280 569,330 C578,365 588,400 596,430"/>
+    <!-- 龐春梅 -->
+    <path class="tl tl--c" d="M138,410 C340,404 620,400 807,418 C830,370 855,250 877,180 C887,168 896,158 904,150 C913,144 922,140 930,140"/>
+    <!-- 事件點與標註 -->
+    <g font-size="10.5">
+      <circle class="dt dt--j" cx="129" cy="300" r="4"/><text class="ev" x="129" y="286" text-anchor="middle">9・金蓮進門</text>
+      <circle class="dt dt--p" cx="217" cy="300" r="4"/><text class="ev" x="217" y="286" text-anchor="middle">19・瓶兒進門</text>
+      <circle class="dt dt--p" cx="314" cy="150" r="4"/><text class="ev" x="314" y="136" text-anchor="middle">30・生下官哥</text>
+      <circle class="dt dt--x" cx="314" cy="200" r="4"/><text class="ev" x="322" y="222" text-anchor="start">30・加官</text>
+      <circle class="dt dt--j" cx="569" cy="180" r="4"/><text class="ev" x="569" y="166" text-anchor="middle">59・貓驚官哥</text>
+      <circle class="dt dt--p" cx="596" cy="430" r="4"/><text class="ev" x="596" y="420" text-anchor="middle">62・瓶兒病逝</text>
+      <circle class="dt dt--x" cx="666" cy="110" r="4"/><text class="ev" x="666" y="96" text-anchor="middle">70・升正千戶</text>
+      <circle class="dt dt--x" cx="745" cy="100" r="4"/><text class="ev" x="753" y="88" text-anchor="middle">79・西門慶病亡</text>
+      <circle class="dt dt--j" cx="816" cy="430" r="4"/><text class="ev" x="816" y="456" text-anchor="middle">87・武松復仇</text>
+      <circle class="dt dt--c" cx="807" cy="418" r="4"/><text class="ev" x="800" y="436" text-anchor="end">86・轉賣守備府</text>
+      <circle class="dt dt--c" cx="877" cy="180" r="4"/><text class="ev" x="877" y="166" text-anchor="middle">94・守備夫人</text>
+      <circle class="dt dt--c" cx="930" cy="140" r="4"/><text class="ev" x="948" y="126" text-anchor="end">100・春梅猝死</text>
+      <text class="ev" x="948" y="428" text-anchor="end">100・孝哥出家</text>
+    </g>
+    <!-- 圖例 -->
+    <g font-size="11">
+      <line class="tl tl--x" x1="60" y1="505" x2="88" y2="505"/><text class="lg" x="94" y="509">西門家勢</text>
+      <line class="tl tl--j" x1="190" y1="505" x2="218" y2="505"/><text class="lg" x="224" y="509">潘金蓮</text>
+      <line class="tl tl--p" x1="310" y1="505" x2="338" y2="505"/><text class="lg" x="344" y="509">李瓶兒</text>
+      <line class="tl tl--c" x1="430" y1="505" x2="458" y2="505"/><text class="lg" x="464" y="509">龐春梅</text>
+      <circle class="dt dt--x" cx="576" cy="505" r="4"/><text class="lg" x="586" y="509">＝關鍵事件（數字是回號）</text>
+    </g>
+  </svg>
+  <figcaption class="jpm-tide-cap">曲線高低是「讀起來的勢力與處境」的相對示意（AI 整理、事件錨點逐一對照導讀核定），不是量化數據。西門慶死於第七十九回，其後金色線改走西門一家的家勢；龐春梅的線到最後二十回才翻上來——全書最戲劇性的一道逆流。手機上圖可左右滑動。</figcaption>
+</figure>

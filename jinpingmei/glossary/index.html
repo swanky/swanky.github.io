@@ -1,0 +1,142 @@
+---
+layout: null
+title: 金瓶梅詞語小典｜明代老詞白話解，可搜尋
+description: 把《金瓶梅》每一回回末「本回詞語」的白話小抄彙整成一頁：明代市井俗語、名物、官制稱謂的白話解釋，可即時搜尋、按回瀏覽，每一組都連得回原文。
+permalink: /jinpingmei/glossary/
+---
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-7" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "金瓶梅詞語小典",
+    "inLanguage": "zh-TW",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "description": {{ page.description | jsonify }}
+  }
+  </script>
+</head>
+<body class="jpm">
+  <a class="jpm-skip" href="#gloss-main">跳到詞語列表</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/text/' | relative_url }}" class="active">原文書房</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+    </nav>
+  </header>
+
+  {% assign words = site.data.jinpingmei_words %}
+  {% assign wchapters = site.jinpingmei | where: 'edition', 'wanli' | sort: 'chapter' %}
+  {% assign zchapters = site.jinpingmei | where: 'edition', 'chongzhen' | sort: 'chapter' %}
+  {% assign wtotal = 0 %}
+  {% for c in wchapters %}{% if c.chapter > 0 %}{% assign ch_key = c.chapter | prepend: 'c' %}{% assign lst = words.wanli[ch_key] | default: words.common[ch_key] %}{% if lst %}{% assign wtotal = wtotal | plus: lst.size %}{% endif %}{% endif %}{% endfor %}
+  {% assign ztotal = 0 %}
+  {% for c in zchapters %}{% if c.chapter > 0 %}{% assign ch_key = c.chapter | prepend: 'c' %}{% assign lst = words.chongzhen[ch_key] %}{% if lst %}{% assign ztotal = ztotal | plus: lst.size %}{% endif %}{% endif %}{% endfor %}
+  {% assign gtotal = wtotal | plus: ztotal %}
+
+  <main id="gloss-main" class="jpm-shell">
+    <section class="jpm-section" style="padding-bottom: 0">
+      <div class="jpu-hero">
+        <div class="jpu-hero-main">
+          <p class="act-no reveal"><b>原文書房</b><span>詞語小典</span></p>
+          <h1 class="act-title reveal">金瓶梅詞語小典<small>明代老詞的白話解・共 {{ gtotal }} 條</small></h1>
+          <p class="act-lead reveal">讀《金瓶梅》最常卡住的不是文言文——它本來就是白話小說——而是四百年前的市井老詞：俗語、衣飾名物、官職稱謂。這一頁把每一回回末「本回詞語」的小抄整本攤開，<b>可以直接搜尋</b>，也可以按回瀏覽；點回目就跳回該回原文。</p>
+        </div>
+      </div>
+      <div class="jpm-gloss-search reveal" hidden>
+        <label for="gloss-q">找一個詞</label>
+        <input id="gloss-q" type="search" data-gloss-search placeholder="輸入詞或解釋裡的字，例如：太歲" autocomplete="off">
+        <span class="ct" data-gloss-count>共 {{ gtotal }} 條</span>
+      </div>
+    </section>
+
+    <section class="jpm-section" style="padding-top: clamp(28px, 4vw, 44px); padding-bottom: 0" aria-label="按回瀏覽（詞話本回次）">
+      <h2 class="jpm-h2">按回瀏覽<small>詞話本回次・{{ wtotal }} 條；崇禎本改寫回的 {{ ztotal }} 條在頁末另列</small></h2>
+      {% for c in wchapters %}{% if c.chapter > 0 %}
+      {% assign ch_key = c.chapter | prepend: 'c' %}
+      {% assign lst = words.wanli[ch_key] | default: words.common[ch_key] %}
+      {% if lst %}
+      <section class="jpm-gloss-group" id="g-{{ ch_key }}" data-gloss-group>
+        <h3><a href="{{ c.url | relative_url }}">{{ c.label }}<small>{{ c.couplet }}</small></a></h3>
+        <dl class="jpm-words-list">
+          {% for w in lst %}
+          <div class="jpm-words-item"><dt>{{ w.w }}</dt><dd>{{ w.d }}</dd></div>
+          {% endfor %}
+        </dl>
+      </section>
+      {% endif %}
+      {% endif %}{% endfor %}
+    </section>
+
+    <section class="jpm-section" style="padding-top: clamp(28px, 4vw, 44px); padding-bottom: 0" aria-label="崇禎本改寫回專屬">
+      <h2 class="jpm-h2">崇禎本改寫回專屬<small>第一回・第五十三～五十七回・{{ ztotal }} 條</small></h2>
+      <p class="jpm-route-note">崇禎本的第一回與第五十三～五十七回是整段改寫過的文字，這幾回的詞語小抄另外整理如下；點回目直接進崇禎本原文。</p>
+      {% for c in zchapters %}{% if c.chapter > 0 %}
+      {% assign ch_key = c.chapter | prepend: 'c' %}
+      {% assign lst = words.chongzhen[ch_key] %}
+      {% if lst %}
+      <section class="jpm-gloss-group" id="g-z-{{ ch_key }}" data-gloss-group>
+        <h3><a href="{{ c.url | relative_url }}">{{ c.label }}<small>{{ c.couplet }}</small></a></h3>
+        <dl class="jpm-words-list">
+          {% for w in lst %}
+          <div class="jpm-words-item"><dt>{{ w.w }}</dt><dd>{{ w.d }}</dd></div>
+          {% endfor %}
+        </dl>
+      </section>
+      {% endif %}
+      {% endif %}{% endfor %}
+    </section>
+
+    <section class="jpm-section" style="padding-bottom: 0">
+      <div class="act-cta-row reveal">
+        <a class="act-cta" href="{{ '/jinpingmei/text/' | relative_url }}">回全書目錄<i>→</i></a>
+        <span class="act-cta-side">第一次讀？先看<a href="{{ '/jinpingmei/guide/' | relative_url }}">新手導讀</a>。</span>
+      </div>
+    </section>
+
+    <aside class="paiji paiji--note reveal" aria-label="本頁誠實標示">
+      <div class="paiji-frame">
+        <p class="paiji-head"><b>小典凡例</b><small>本頁的誠實標示</small></p>
+        <p>詞語解釋由 <b>AI 整理並經人工抽驗</b>，與每回回末的「本回詞語」是同一份資料——它是入門的小抄，不是學術辭典。彙整以詞話本回次為準（含只在詞話本出現的異體字詞），崇禎本改寫回的專屬詞條另列一節。原文本體<b>一字未刪改</b>。發現解釋有誤，歡迎回報。</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>

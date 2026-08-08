@@ -1,0 +1,12 @@
+{% comment %}
+  目錄回目 li：回號＋回目對聯＋（有資料時）一句摘要與場景分類。
+  參數：c＝章節物件；edition＝"wanli" | "chongzhen"。
+  摘要資料 _data/jinpingmei_brief.yml：chongzhen 覆蓋（結構差異回）→ common。
+{% endcomment %}
+{%- assign ch_key = c.chapter | prepend: 'c' -%}
+{%- if include.edition == 'chongzhen' -%}
+  {%- assign bf = site.data.jinpingmei_brief.chongzhen[ch_key] | default: site.data.jinpingmei_brief.common[ch_key] -%}
+{%- else -%}
+  {%- assign bf = site.data.jinpingmei_brief.common[ch_key] -%}
+{%- endif -%}
+<li{% if bf %} data-ch="{{ c.chapter }}" data-sc="{{ bf.s }}"{% endif %}><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="cpv"><span class="cp">{{ c.couplet }}</span>{% if bf %}<span class="bf"><i>{{ bf.s }}</i>{{ bf.b }}</span>{% endif %}</span></a></li>

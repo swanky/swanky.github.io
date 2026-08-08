@@ -50,6 +50,81 @@
     }
   }
 
+  // 原文書房目錄：場景過濾＋防雷模式（遮未讀回的摘要；讀過或進度之前的回照常顯示）
+  var tocTools = document.querySelector('[data-toc-tools]');
+  if (tocTools) {
+    var chLis = Array.prototype.slice.call(document.querySelectorAll('.jpm-chapter-list li[data-ch]'));
+    var extraLis = Array.prototype.slice.call(document.querySelectorAll('.jpm-chapter-list li:not([data-ch])'));
+    var blocks = Array.prototype.slice.call(document.querySelectorAll('.jpm-volume-block'));
+    var chFrom = function (path) { var m = String(path).match(/\/(\d{3})\/?$/); return m ? parseInt(m[1], 10) : null; };
+
+    var spoilerBtn = tocTools.querySelector('[data-spoiler-toggle]');
+    var spoilerHint = tocTools.querySelector('[data-spoiler-hint]');
+    var applySpoiler = function () {
+      var on = false;
+      try { on = localStorage.getItem('jpm-spoiler') === '1'; } catch (e) { /* 忽略 */ }
+      var pos = load('jpm-reading-pos');
+      var posCh = pos && pos.url ? chFrom(pos.url) : null;
+      var readChs = {};
+      (load('jpm-read-set') || []).forEach(function (u) { var n = chFrom(u); if (n !== null) readChs[n] = 1; });
+      chLis.forEach(function (li) {
+        var n = parseInt(li.getAttribute('data-ch'), 10);
+        var safe = readChs[n] === 1 || (posCh !== null && n <= posCh);
+        li.classList.toggle('is-veiled', on && !safe);
+      });
+      if (spoilerBtn) spoilerBtn.setAttribute('aria-pressed', String(on));
+      if (spoilerHint) spoilerHint.hidden = !on;
+    };
+    if (spoilerBtn) {
+      spoilerBtn.addEventListener('click', function () {
+        try {
+          var on = localStorage.getItem('jpm-spoiler') === '1';
+          localStorage.setItem('jpm-spoiler', on ? '0' : '1');
+        } catch (e) { /* 忽略 */ }
+        applySpoiler();
+      });
+    }
+    applySpoiler();
+
+    Array.prototype.forEach.call(tocTools.querySelectorAll('[data-sc-filter]'), function (btn) {
+      btn.addEventListener('click', function () {
+        var v = btn.getAttribute('data-sc-filter');
+        Array.prototype.forEach.call(tocTools.querySelectorAll('[data-sc-filter]'), function (b) { b.classList.toggle('on', b === btn); });
+        chLis.forEach(function (li) { li.hidden = !!v && li.getAttribute('data-sc') !== v; });
+        extraLis.forEach(function (li) { li.hidden = !!v; });
+        blocks.forEach(function (bl) { bl.hidden = !bl.querySelector('.jpm-chapter-list li:not([hidden])'); });
+      });
+    });
+    tocTools.hidden = false;
+  }
+
+  // 詞語小典：即時搜尋（比對詞與解釋全文）
+  var glossInput = document.querySelector('[data-gloss-search]');
+  if (glossInput) {
+    var glossCount = document.querySelector('[data-gloss-count]');
+    var glossGroups = Array.prototype.slice.call(document.querySelectorAll('[data-gloss-group]'));
+    var glossItems = [];
+    glossGroups.forEach(function (g) {
+      Array.prototype.forEach.call(g.querySelectorAll('.jpm-words-item'), function (it) {
+        glossItems.push({ el: it, t: it.textContent });
+      });
+    });
+    var glossRender = function () {
+      var q = glossInput.value.trim();
+      var shown = 0;
+      glossItems.forEach(function (it) {
+        var hit = !q || it.t.indexOf(q) !== -1;
+        it.el.hidden = !hit;
+        if (hit) shown++;
+      });
+      glossGroups.forEach(function (g) { g.hidden = !g.querySelector('.jpm-words-item:not([hidden])'); });
+      if (glossCount) glossCount.textContent = q ? '找到 ' + shown + ' 條' : '共 ' + glossItems.length + ' 條';
+    };
+    glossInput.addEventListener('input', glossRender);
+    var glossBox = glossInput.closest('.jpm-gloss-search');
+    if (glossBox) glossBox.hidden = false;
+  }
+
   // 影片門面：點擊才載入 YouTube 播放器
   Array.prototype.forEach.call(document.querySelectorAll('.film-player'), function (player) {
     var btn = player.querySelector('.film-play');

@@ -451,7 +451,78 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
   .jpm-segs li { grid-template-columns: 1fr; gap: .1rem; }
 }
 
+/* 閱讀輔助層第三波：每回一句摘要＋場景分類、防雷模式、勢力潮汐圖、詞語小典（2026-08） */
+
+.jpm [hidden] { display: none !important; }
+
+/* 目錄回目：一句摘要＋場景分類 chip */
+.jpm-chapter-list .cpv { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .3rem; }
+.jpm-chapter-list .bf { font-size: .8rem; line-height: 1.75; color: var(--jpm-muted); transition: filter .25s ease, opacity .25s ease; }
+.jpm-chapter-list .bf i { font-style: normal; display: inline-block; margin-right: .55em; padding: .06em .5em .1em; border: 1px solid var(--jpm-gold); color: var(--jpm-gold); font-size: .68rem; letter-spacing: .12em; white-space: nowrap; transform: translateY(-.08em); }
+.jpm-chapter-list li[data-sc="權力交易"] .bf i { color: #9db4b0; border-color: rgba(157, 180, 176, .45); }
+.jpm-chapter-list li[data-sc="內宅群像"] .bf i { color: #c48a97; border-color: rgba(196, 138, 151, .45); }
+.jpm-chapter-list li[data-sc="儀式場景"] .bf i { color: #a3b58e; border-color: rgba(163, 181, 142, .45); }
+.jpm-chapter-list li[data-sc="崩解餘波"] .bf i { color: var(--jpm-muted); border-color: var(--jpm-line); }
+.jpm-chapter-list li.is-veiled .bf { filter: blur(6px); opacity: .7; user-select: none; }
+
+/* 目錄工具列：場景過濾＋防雷 */
+.jpm-toc-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem 1.4rem; margin: 0 0 clamp(22px, 3vw, 30px); padding: .85rem 1rem; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
+.jpm-scene-filter { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.jpm-scene-filter .lb { margin-right: .25rem; font-size: .78rem; letter-spacing: .16em; color: var(--jpm-muted); }
+.jpm-scene-filter button { padding: .3em .7em; border: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-muted); font-family: var(--jpm-sans); font-size: .8rem; letter-spacing: .06em; cursor: pointer; }
+.jpm-scene-filter button:hover { border-color: var(--jpm-gold); color: var(--jpm-paper); }
+.jpm-scene-filter button.on { background: var(--jpm-gold); border-color: var(--jpm-gold); color: #141109; }
+.jpm-spoiler-btn { display: inline-flex; align-items: baseline; gap: .55rem; padding: .42rem .8rem; border: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-muted); font-family: var(--jpm-sans); font-size: .82rem; cursor: pointer; }
+.jpm-spoiler-btn b { font-family: var(--jpm-kai); font-weight: 700; color: var(--jpm-gold); letter-spacing: .14em; }
+.jpm-spoiler-btn:hover { border-color: var(--jpm-gold); color: var(--jpm-paper); }
+.jpm-spoiler-btn[aria-pressed="true"] { border-color: var(--jpm-gold); background: rgba(185, 141, 63, .14); color: var(--jpm-paper); }
+.jpm-toc-hint { flex-basis: 100%; margin: 0; font-size: .8rem; line-height: 1.8; color: var(--jpm-muted); }
+
+/* 勢力潮汐圖（導讀頁） */
+.jpm-tide { border: 1px solid var(--jpm-line); background: var(--jpm-panel); padding: clamp(10px, 2vw, 22px); overflow-x: auto; }
+.jpm-tide svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.jpm-tide-cap { margin: .6rem 0 0; font-size: .8rem; color: var(--jpm-muted); }
+.jpm-tide text { font-family: var(--jpm-serif); }
+.jpm-tide .band { fill: rgba(255, 255, 255, .016); }
+.jpm-tide .band--alt { fill: rgba(185, 141, 63, .05); }
+.jpm-tide .bandlb { fill: var(--jpm-muted); font-family: var(--jpm-kai); letter-spacing: .12em; }
+.jpm-tide .ax { stroke: var(--jpm-line); }
+.jpm-tide .axlb { fill: var(--jpm-muted); }
+.jpm-tide .tl { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.jpm-tide .tl--x { stroke: var(--jpm-gold); }
+.jpm-tide .tl--j { stroke: #c96a7e; }
+.jpm-tide .tl--p { stroke: #8ea7c2; }
+.jpm-tide .tl--c { stroke: #8fb08a; }
+.jpm-tide .dt { fill: var(--jpm-bg); stroke-width: 1.6; }
+.jpm-tide .dt--x { stroke: var(--jpm-gold); }
+.jpm-tide .dt--j { stroke: #c96a7e; }
+.jpm-tide .dt--p { stroke: #8ea7c2; }
+.jpm-tide .dt--c { stroke: #8fb08a; }
+.jpm-tide .ev { fill: var(--jpm-paper); }
+.jpm-tide .evn { fill: var(--jpm-muted); }
+.jpm-tide .lg { fill: var(--jpm-muted); }
+
+/* 詞語小典 */
+.jpm-gloss-search { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: 1.5rem; padding: .85rem 1rem; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
+.jpm-gloss-search label { flex: 0 0 auto; font-family: var(--jpm-kai); font-weight: 700; color: var(--jpm-gold-bright); letter-spacing: .12em; }
+.jpm-gloss-search input { flex: 1 1 14em; min-width: 0; padding: .35em .1em; border: 0; border-bottom: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-paper); font-family: var(--jpm-sans); font-size: 1rem; }
+.jpm-gloss-search input:focus { outline: none; border-bottom-color: var(--jpm-gold); }
+.jpm-gloss-search input::placeholder { color: var(--jpm-muted); opacity: .75; }
+.jpm-gloss-search .ct { flex: 0 0 auto; font-size: .82rem; color: var(--jpm-muted); letter-spacing: .06em; }
+.jpm-gloss-group { margin: 0 0 clamp(24px, 4vw, 36px); }
+.jpm-gloss-group h3 { margin: 0 0 .7rem; font-size: 1.02rem; }
+.jpm-gloss-group h3 a { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .8rem; font-family: var(--jpm-serif); color: var(--jpm-gold-bright); }
+.jpm-gloss-group h3 small { font-family: var(--jpm-kai); font-weight: 400; font-size: .8rem; color: var(--jpm-muted); letter-spacing: .05em; }
+.jpm-gloss-group h3 a:hover small { color: var(--jpm-gold); }
+.jpm-words-more { margin-left: .6em; color: var(--jpm-gold-bright); border-bottom: 1px solid var(--jpm-gold); padding-bottom: .1em; white-space: nowrap; }
+
+@media (max-width: 720px) {
+  .jpm-chapter-list .bf { font-size: .78rem; }
+  .jpm-toc-tools { padding: .8rem .85rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .js-on .reveal { opacity: 1; transform: none; transition: none; }
   .film-player img, .jpm-cast-card img { transition: none; }
+  .jpm-chapter-list .bf { transition: none; }
 }

@@ -24,7 +24,7 @@ permalink: /jinpingmei/text/
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-6" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-7" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,6 +83,19 @@ permalink: /jinpingmei/text/
 
     {% assign chapters = site.jinpingmei | where: 'edition', 'wanli' | sort: 'chapter' %}
     <section class="jpm-section" style="padding-top: clamp(24px, 4vw, 40px)">
+      <div class="jpm-toc-tools reveal" data-toc-tools hidden>
+        <div class="jpm-scene-filter" role="group" aria-label="依場景挑回">
+          <span class="lb">挑著讀</span>
+          <button type="button" class="on" data-sc-filter="">全部</button>
+          <button type="button" data-sc-filter="主線轉折">主線轉折</button>
+          <button type="button" data-sc-filter="權力交易">權力交易</button>
+          <button type="button" data-sc-filter="內宅群像">內宅群像</button>
+          <button type="button" data-sc-filter="儀式場景">儀式場景</button>
+          <button type="button" data-sc-filter="崩解餘波">崩解餘波</button>
+        </div>
+        <button type="button" class="jpm-spoiler-btn" data-spoiler-toggle aria-pressed="false"><b>防雷</b>遮住還沒讀到的回的摘要</button>
+        <p class="jpm-toc-hint" data-spoiler-hint hidden>防雷已開：只顯示你讀過的回、和目前進度之前的回的摘要，其餘先遮住。回目本身照常可點。</p>
+      </div>
       <div class="jpm-volume-block reveal">
         <h2>卷首 <small>序跋與四貪詞</small></h2>
         <ol class="jpm-chapter-list" style="grid-template-columns: 1fr">
@@ -98,7 +111,7 @@ permalink: /jinpingmei/text/
         <h2>卷之{{ v }} <small>第{{ v | times: 10 | minus: 9 }}回—第{{ v | times: 10 }}回</small></h2>
         <ol class="jpm-chapter-list">
           {% for c in chapters %}{% if c.volume == vnum and c.chapter > 0 %}
-          <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="cp">{{ c.couplet }}</span></a></li>
+          {% include jinpingmei/chapter-li.html c=c edition="wanli" %}
           {% endif %}{% endfor %}
         </ol>
       </div>
@@ -122,6 +135,6 @@ permalink: /jinpingmei/text/
       </nav>
     </div>
   </footer>
-  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-2" defer></script>
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
 </body>
 </html>
