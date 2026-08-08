@@ -1,0 +1,107 @@
+---
+layout: null
+title: 新刻繡像批評金瓶梅（崇禎本）全文目錄｜原文書房
+description: 《新刻繡像批評金瓶梅》（崇禎本）全一百回原文線上閱讀，依 Wikisource 整理本收錄、一字未刪改；與《金瓶梅詞話》（萬曆本）可逐回對照。可調字級的深色閱讀介面。
+permalink: /jinpingmei/text/chongzhen/
+---
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "新刻繡像批評金瓶梅（崇禎本）",
+    "alternateName": "金瓶梅",
+    "inLanguage": "zh-TW",
+    "isAccessibleForFree": true,
+    "url": {{ page.url | absolute_url | jsonify }},
+    "numberOfPages": 100,
+    "description": {{ page.description | jsonify }}
+  }
+  </script>
+</head>
+<body class="jpm">
+  <a class="jpm-skip" href="#toc-main">跳到全書目錄</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/text/' | relative_url }}" class="active">原文書房</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+    </nav>
+  </header>
+
+  <main id="toc-main" class="jpm-shell">
+    <section class="jpm-section" style="padding-bottom: 0">
+      <p class="jpm-eyebrow">THE COMPLETE TEXT</p>
+      <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">新刻繡像批評金瓶梅<br>崇禎本・全一百回</h1>
+      <p class="jpm-lead">通稱「崇禎本」或「繡像本」的評改系統：回目更工整、文字經文人潤飾，與詞話本並列金瓶梅兩大版本源流。依 Wikisource 整理本收錄，一字未刪改；每一回都可切回詞話本逐回對照，親眼看兩個版本怎麼講同一個故事。</p>
+      <p class="jpm-edition-switch">目前閱讀：<strong>崇禎本（繡像本）</strong>　<a href="{{ '/jinpingmei/text/' | relative_url }}">切換至詞話本（萬曆本）⇄</a></p>
+      <div class="jpm-notice">
+        <strong>閱讀說明：</strong>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇完整保存文本、不做任何刪改，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。
+      </div>
+    </section>
+
+    {% assign chapters = site.jinpingmei | where: 'edition', 'chongzhen' | sort: 'chapter' %}
+    <section class="jpm-section" style="padding-top: clamp(24px, 4vw, 40px)">
+      <div class="jpm-volume-block">
+        <h2>卷首 <small>東吳弄珠客序</small></h2>
+        <ol class="jpm-chapter-list" style="grid-template-columns: 1fr">
+          {% for c in chapters %}{% if c.chapter == 0 %}
+          <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="cp">東吳弄珠客題——「讀金瓶梅而生憐憫心者，菩薩也」</span></a></li>
+          {% endif %}{% endfor %}
+        </ol>
+      </div>
+      {% assign groups = "1,2,3,4,5,6,7,8,9,10" | split: "," %}
+      {% for g in groups %}
+      {% assign gnum = g | plus: 0 %}
+      <div class="jpm-volume-block">
+        <h2>第{{ g | times: 10 | minus: 9 }}回—第{{ g | times: 10 }}回</h2>
+        <ol class="jpm-chapter-list">
+          {% for c in chapters %}{% if c.volume == gnum and c.chapter > 0 %}
+          <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="cp">{{ c.couplet }}</span></a></li>
+          {% endif %}{% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </section>
+
+    <aside class="jpm-reader-note">
+      崇禎本無分卷，本目錄以十回一組排列方便瀏覽。想了解兩個版本的差異，最快的方式是各開一回對照——例如兩版<a href="{{ '/jinpingmei/text/chongzhen/001/' | relative_url }}">第一回</a>的開場就走了完全不同的路。人物側寫見<a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>。
+    </aside>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

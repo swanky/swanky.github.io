@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 金瓶梅詞話（萬曆本）全文目錄｜原文書房
-description: 《金瓶梅詞話》（萬曆本）全一百回原文線上閱讀，依 Wikisource 整理本收錄、一字未刪改。十卷分卷目錄、可調字級的閱讀介面，屬「金瓶梅宇宙」文學研究的一部分。
+description: 《金瓶梅詞話》（萬曆本）全一百回原文線上閱讀，依 Wikisource 整理本收錄、一字未刪改；另收《新刻繡像批評金瓶梅》（崇禎本）可逐回對照。十卷分卷目錄、可調字級的閱讀介面。
 permalink: /jinpingmei/text/
 ---
 <!doctype html>
@@ -23,7 +23,7 @@ permalink: /jinpingmei/text/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,12 +55,13 @@ permalink: /jinpingmei/text/
       <p class="jpm-eyebrow">THE COMPLETE TEXT</p>
       <h1 style="font-size: clamp(2rem, 4.5vw, 3.4rem)">金瓶梅詞話<br>萬曆本・全一百回</h1>
       <p class="jpm-lead">明代四大奇書之一的足本原文，依 Wikisource 整理本收錄，一字未刪改。深色紙墨介面、可調字級、鍵盤左右鍵換回——把四百年前的文字，放進今天最舒服的閱讀體驗裡。</p>
+      <p class="jpm-edition-switch">目前閱讀：<strong>詞話本（萬曆本）</strong>　<a href="{{ '/jinpingmei/text/chongzhen/' | relative_url }}">切換至崇禎本（繡像本）⇄</a></p>
       <div class="jpm-notice">
-        <strong>閱讀說明：</strong>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇完整保存文本、不做任何刪改，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。
+        <strong>閱讀說明：</strong>本書為明代章回小說原典，含直白的情色與暴力描寫；我們選擇完整保存文本、不做任何刪改，建議成年讀者閱讀。文本屬公共領域，來源為 Wikisource 整理稿。書房同時收錄兩大版本系統——詞話本（萬曆本）與崇禎本（繡像本），每一回都可互相對照。
       </div>
     </section>
 
-    {% assign chapters = site.jinpingmei | sort: 'chapter' %}
+    {% assign chapters = site.jinpingmei | where: 'edition', 'wanli' | sort: 'chapter' %}
     <section class="jpm-section" style="padding-top: clamp(24px, 4vw, 40px)">
       <div class="jpm-volume-block">
         <h2>卷首 <small>序跋與四貪詞</small></h2>

@@ -72,6 +72,9 @@ body.jpm {
 .jpm-reader-head .jpm-volume { display: inline-block; margin-bottom: 1rem; padding: .28rem .9rem; border: 1px solid var(--jpm-line); color: var(--jpm-gold); font-size: .74rem; letter-spacing: .3em; }
 .jpm-reader-head h1 { font-size: clamp(1.5rem, 3.6vw, 2.3rem); }
 .jpm-reader-head h1 small { display: block; margin-top: .55rem; font-size: .58em; font-weight: 600; color: var(--jpm-muted); letter-spacing: .12em; }
+.jpm-edition-switch { margin: 1.1rem 0 0; font-size: .82rem; }
+.jpm-edition-switch a { display: inline-block; padding: .3rem .85rem; border: 1px solid var(--jpm-line); color: var(--jpm-gold); letter-spacing: .08em; }
+.jpm-edition-switch a:hover { border-color: var(--jpm-gold); background: var(--jpm-panel); }
 .jpm-reader {
   font-family: var(--jpm-serif);
   font-size: var(--reader-size);

@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e0d0b">
-  <title>{{ page.title }}｜金瓶梅詞話（萬曆本）全文 | {{ site.title }}</title>
+  <title>{{ page.title }}｜{{ page.book }}全文 | {{ site.title }}</title>
   <meta name="description" content="{{ page.description }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
-  <meta property="og:title" content="{{ page.title }}｜金瓶梅詞話（萬曆本）全文">
+  <meta property="og:title" content="{{ page.title }}｜{{ page.book }}全文">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,9 +27,9 @@
     "url": {{ page.url | absolute_url | jsonify }},
     "isPartOf": {
       "@type": "Book",
-      "name": "金瓶梅詞話（萬曆本）",
+      "name": {{ page.book | jsonify }},
       "inLanguage": "zh-TW",
-      "url": {{ '/jinpingmei/text/' | absolute_url | jsonify }}
+      "url": {% if page.edition == 'chongzhen' %}{{ '/jinpingmei/text/chongzhen/' | absolute_url | jsonify }}{% else %}{{ '/jinpingmei/text/' | absolute_url | jsonify }}{% endif %}
     }
   }
   </script>
@@ -38,10 +38,20 @@
   <a class="jpm-skip" href="#chapter-body">跳到本回內文</a>
   <div class="jpm-progress" aria-hidden="true"><span data-progress></span></div>
 
+  {% if page.edition == 'chongzhen' %}
+    {% assign toc_url = '/jinpingmei/text/chongzhen/' %}
+    {% assign other_label = '詞話本' %}
+    {% capture other_url %}/jinpingmei/text/{{ page.chapter | prepend: '00' | slice: -3, 3 }}/{% endcapture %}
+  {% else %}
+    {% assign toc_url = '/jinpingmei/text/' %}
+    {% assign other_label = '崇禎本' %}
+    {% capture other_url %}/jinpingmei/text/chongzhen/{{ page.chapter | prepend: '00' | slice: -3, 3 }}/{% endcapture %}
+  {% endif %}
+
   <header class="jpm-topbar">
     <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
     <nav class="jpm-topnav" aria-label="閱讀導覽">
-      <a href="{{ '/jinpingmei/text/' | relative_url }}">全書目錄</a>
+      <a href="{{ toc_url | relative_url }}">全書目錄</a>
       <a class="hide-m" href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
       <span class="jpm-sizer" role="group" aria-label="調整文字大小">
         <button type="button" class="sz-s" data-size="s" aria-pressed="false">文</button>
@@ -51,7 +61,7 @@
     </nav>
   </header>
 
-  {% assign chapters = site.jinpingmei | sort: 'chapter' %}
+  {% assign chapters = site.jinpingmei | where: 'edition', page.edition | sort: 'chapter' %}
   {% assign idx = -1 %}
   {% for c in chapters %}{% if c.chapter == page.chapter %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
   {% assign prev_i = idx | minus: 1 %}
@@ -62,8 +72,9 @@
 
   <main class="jpm-shell-narrow">
     <header class="jpm-reader-head">
-      <span class="jpm-volume">{% if page.chapter == 0 %}卷首{% else %}卷之{{ page.volume }}{% endif %}</span>
+      <span class="jpm-volume">{{ page.edition_label }}{% if page.edition == 'wanli' %}{% if page.chapter == 0 %}・卷首{% else %}・卷之{{ page.volume }}{% endif %}{% endif %}</span>
       <h1>{{ page.label }}{% if page.couplet != '' %}<small>{{ page.couplet }}</small>{% endif %}</h1>
+      <p class="jpm-edition-switch"><a href="{{ other_url | relative_url }}">對照{{ other_label }}・{{ page.label }} ⇄</a></p>
     </header>
 
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
@@ -74,14 +85,14 @@
       {% if prev_c %}
       <a href="{{ prev_c.url | relative_url }}" rel="prev"><span class="dir">◀ 上一回</span><span class="ttl">{{ prev_c.label }}{% if prev_c.couplet != '' %}　{{ prev_c.couplet | truncate: 18 }}{% endif %}</span></a>
       {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
-      <a class="jpm-pager-toc" href="{{ '/jinpingmei/text/' | relative_url }}">全書目錄</a>
+      <a class="jpm-pager-toc" href="{{ toc_url | relative_url }}">全書目錄</a>
       {% if next_c %}
       <a class="jpm-pager-next" href="{{ next_c.url | relative_url }}" rel="next"><span class="dir">下一回 ▶</span><span class="ttl">{{ next_c.label }}{% if next_c.couplet != '' %}　{{ next_c.couplet | truncate: 18 }}{% endif %}</span></a>
       {% else %}<span class="jpm-pager-empty" aria-hidden="true"></span>{% endif %}
     </nav>
 
     <aside class="jpm-reader-note">
-      本頁為明代章回小說《金瓶梅詞話》（萬曆本）原典全文，依 <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Wikisource 整理本</a>收錄，一字未刪改；原典含成人內容，建議成年讀者閱讀。此為公共領域文獻，屬「<a href="{{ '/jinpingmei/' | relative_url }}">金瓶梅宇宙</a>」文學研究的一部分。
+      本頁為明代章回小說《{{ page.book }}》原典全文，依 <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Wikisource 整理本</a>收錄，一字未刪改；原典含成人內容，建議成年讀者閱讀。本書房同時收錄<a href="{{ '/jinpingmei/text/' | relative_url }}">詞話本（萬曆本）</a>與<a href="{{ '/jinpingmei/text/chongzhen/' | relative_url }}">崇禎本（繡像本）</a>兩個版本，可逐回對照。此為公共領域文獻，屬「<a href="{{ '/jinpingmei/' | relative_url }}">金瓶梅宇宙</a>」文學研究的一部分。
     </aside>
   </main>
 
