@@ -19,7 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#char-main">跳到主要內容</a>
@@ -43,7 +44,7 @@
           <p class="tagline">{{ page.tagline }}</p>
         </div>
         <figure>
-          <img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high">
+          <a href="{{ page.turnaround | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）"><img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high"></a>
           <figcaption>{{ page.turnaround_caption | default: '三視圖角色設定・AI 生成・以原典描寫為依據' }}</figcaption>
         </figure>
       </div>
@@ -84,5 +85,6 @@
       </nav>
     </div>
   </footer>
+  {% include jinpingmei/lightbox.html %}
 </body>
 </html>

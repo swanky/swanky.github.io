@@ -31,6 +31,14 @@ body.jpm {
 .jpm a { color: var(--jpm-gold-bright); text-decoration: none; }
 .jpm a:hover { color: #f0dda0; }
 .jpm img { max-width: 100%; height: auto; }
+/* 點圖看大圖：連結需為區塊，否則內層 img 的 margin auto 置中會失效 */
+.jpm-zoom { display: block; cursor: zoom-in; }
+/* 燈箱說明列預設白底黑字，改成本頁深色調 */
+.glightbox-clean .gslide-description { background: var(--jpm-panel); border-top: 1px solid var(--jpm-line); }
+.glightbox-clean .gslide-title { color: var(--jpm-paper); font-family: var(--jpm-serif); }
+.glightbox-clean .gslide-desc { color: var(--jpm-muted); }
+.glightbox-clean .gprev, .glightbox-clean .gnext, .glightbox-clean .gclose { background: rgba(14, 13, 11, .55); }
+.glightbox-clean .gprev svg, .glightbox-clean .gnext svg, .glightbox-clean .gclose svg { fill: var(--jpm-gold-bright); }
 
 .jpm-skip { position: absolute; left: -9999px; }
 .jpm-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--jpm-gold); color: #141109; padding: .4rem .8rem; }

@@ -25,7 +25,8 @@ permalink: /jinpingmei/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#jpm-main">跳到主要內容</a>
@@ -46,7 +47,7 @@ permalink: /jinpingmei/
       <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem)">金瓶梅宇宙</h1>
       <p class="jpm-lead" style="font-size: 1.05rem">如果今天有一個劇組要重製《金瓶梅》，它需要文學顧問、選角導演、服裝考證、分鏡師、剪輯師——這裡的每一個位置，都由 AI 協作擔任。「金瓶梅宇宙」是一場公開進行的實驗：用 AI 把一部四百年前的經典，重新製作成文字、影像與遊戲，並公開全部工作底稿。</p>
       <figure class="jpm-banner" style="margin-top: clamp(24px, 4vw, 40px)">
-        <img src="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" alt="五位女主角立繪總覽（AI 生成）" width="1500" height="480" fetchpriority="high">
+        <a href="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-hub" title="五位女主角立繪總覽（AI 生成）"><img src="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" alt="五位女主角立繪總覽（AI 生成）" width="1500" height="480" fetchpriority="high"></a>
         <figcaption>《金瓶異夢》五位女主角・AI 生成立繪</figcaption>
       </figure>
     </section>
@@ -104,5 +105,6 @@ permalink: /jinpingmei/
       </nav>
     </div>
   </footer>
+  {% include jinpingmei/lightbox.html %}
 </body>
 </html>

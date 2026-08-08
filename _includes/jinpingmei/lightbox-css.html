@@ -1,0 +1,6 @@
+{%- comment -%}
+glightbox 樣式必須排在 jinpingmei.css **之前**載入，
+否則 jinpingmei.css 裡的燈箱深色覆寫會被 glightbox 預設樣式蓋掉（同特異性、後載入者勝）。
+配對的 JS 在 _includes/jinpingmei/lightbox.html（放 body 結尾）。
+{%- endcomment -%}
+<link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">

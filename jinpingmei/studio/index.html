@@ -25,7 +25,8 @@ permalink: /jinpingmei/studio/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-2" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#studio-main">跳到主要內容</a>
@@ -67,7 +68,7 @@ permalink: /jinpingmei/studio/
       <div class="jpm-prose"><h2>選角：讓原典當導演</h2>
       <p>虛擬劇組的選角不是「生一張漂亮的圖」，而是一套可審查的流程：先讓 AI 產出候選定裝照，再回到原典逐字比對，最後留下裁決記錄。漂亮度可以保留，但身份、年齡、妝髮、服裝與神態，一律以原典證據為準。</p></div>
       <figure class="jpm-banner jpm-workdoc" style="margin: 1.2rem 0">
-        <img src="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet.jpg' | relative_url }}" alt="五位女性角色選角定裝照橫幅（AI 生成擬真攝影風，非真人）" width="2200" height="732" loading="lazy">
+        <a href="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-casting" title="五位女性角色選角定裝照橫幅（AI 生成擬真攝影風，非真人）"><img src="{{ '/assets/img/jinpingmei/studio/casting-contact-sheet-v2.jpg' | relative_url }}" alt="五位女性角色選角定裝照橫幅（AI 生成擬真攝影風，非真人）" width="2200" height="1100" loading="lazy"></a>
         <figcaption>五位核心女性角色的選角定裝照（contact sheet）・AI 生成，非真人</figcaption>
       </figure>
       <div class="jpm-prose"><p>以潘金蓮為例，一次完整的審查長這樣——</p></div>
@@ -77,7 +78,7 @@ permalink: /jinpingmei/studio/
         <div><dt>裁決</dt><dd>保留臉部、髮量、自然膚質與漂亮度；神態改為機敏斜睨與若有似無的半笑；移除披風、肩鍊與王室金飾，依原典重做大袖短衫、湘裙、汗巾、香袋與白綾高底鞋。</dd></div>
       </dl>
       <figure class="jpm-banner jpm-workdoc" style="margin: 1.2rem 0 0">
-        <img src="{{ '/assets/img/jinpingmei/studio/identity-compare-sample.jpg' | relative_url }}" alt="潘金蓮選角定裝的版本迭代對照：候選版與依原典校正版並列" width="1400" height="760" loading="lazy">
+        <a href="{{ '/assets/img/jinpingmei/studio/identity-compare-sample.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-identity" title="潘金蓮選角定裝的版本迭代對照：候選版與依原典校正版並列"><img src="{{ '/assets/img/jinpingmei/studio/identity-compare-sample.jpg' | relative_url }}" alt="潘金蓮選角定裝的版本迭代對照：候選版與依原典校正版並列" width="1400" height="760" loading="lazy"></a>
         <figcaption>定裝迭代對照工作稿：左為候選版，右為依原典證據校正後的版本</figcaption>
       </figure>
     </section>
@@ -87,18 +88,18 @@ permalink: /jinpingmei/studio/
       <p>為戰棋遊戲《金瓶異夢：十二花界》發展的五位女主角立繪，每人都做了兩個版本：標準版忠於端莊的敘事定位；成熟版保留原著本來就有的感官張力。兩者都是完整著衣的插畫設計——差別在於它願不願意承認，這部小說從來就不迴避欲望。</p></div>
       <div style="display: grid; gap: 1rem; margin-top: 1.2rem">
         <figure class="jpm-banner">
-          <img src="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" alt="五位女主角標準版立繪總覽" width="1500" height="480" loading="lazy">
+          <a href="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-figures" title="五位女主角標準版立繪總覽"><img src="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" alt="五位女主角標準版立繪總覽" width="1500" height="480" loading="lazy"></a>
           <figcaption>標準版・潘金蓮、李瓶兒、吳月娘、龐春梅、宋惠蓮</figcaption>
         </figure>
         <figure class="jpm-banner">
-          <img src="{{ '/assets/img/jinpingmei/figures/overview-sensual.jpg' | relative_url }}" alt="五位女主角成熟版立繪總覽" width="1500" height="480" loading="lazy">
+          <a href="{{ '/assets/img/jinpingmei/figures/overview-sensual.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-figures" title="五位女主角成熟版立繪總覽"><img src="{{ '/assets/img/jinpingmei/figures/overview-sensual.jpg' | relative_url }}" alt="五位女主角成熟版立繪總覽" width="1500" height="480" loading="lazy"></a>
           <figcaption>成熟版・同五位角色的感官張力詮釋（完整著衣的插畫設計）</figcaption>
         </figure>
       </div>
       <div class="jpm-versions" style="margin-top: 1rem">
-        <figure><img src="{{ '/assets/img/jinpingmei/figures/songhuilian-standard.jpg' | relative_url }}" alt="宋惠蓮《金瓶異夢》標準版立繪" loading="lazy"><figcaption>宋惠蓮・標準版</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/figures/songhuilian-sensual.jpg' | relative_url }}" alt="宋惠蓮《金瓶異夢》成熟版立繪" loading="lazy"><figcaption>宋惠蓮・成熟版</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/live-action/songhuilian-master.jpg' | relative_url }}" alt="宋惠蓮真人選角母版（AI 擬真攝影風，非真人照片）" loading="lazy"><figcaption>宋惠蓮・選角母版（AI 擬真）</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/figures/songhuilian-standard.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-songhuilian" title="宋惠蓮《金瓶異夢》標準版立繪"><img src="{{ '/assets/img/jinpingmei/figures/songhuilian-standard.jpg' | relative_url }}" alt="宋惠蓮《金瓶異夢》標準版立繪" loading="lazy"></a><figcaption>宋惠蓮・標準版</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/figures/songhuilian-sensual.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-songhuilian" title="宋惠蓮《金瓶異夢》成熟版立繪"><img src="{{ '/assets/img/jinpingmei/figures/songhuilian-sensual.jpg' | relative_url }}" alt="宋惠蓮《金瓶異夢》成熟版立繪" loading="lazy"></a><figcaption>宋惠蓮・成熟版</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/live-action/songhuilian-master.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-songhuilian" title="宋惠蓮真人選角母版（AI 擬真攝影風，非真人照片）"><img src="{{ '/assets/img/jinpingmei/live-action/songhuilian-master.jpg' | relative_url }}" alt="宋惠蓮真人選角母版（AI 擬真攝影風，非真人照片）" loading="lazy"></a><figcaption>宋惠蓮・選角母版（AI 擬真）</figcaption></figure>
       </div>
     </section>
 
@@ -106,18 +107,18 @@ permalink: /jinpingmei/studio/
       <div class="jpm-prose"><h2>下一部：120 秒擬真電影版分鏡</h2>
       <p>五位女主角各有一段核心敘事——被買賣的名字、照護與喪失、門內正室、婢女登階、被改名——最後在「五面命鏡」會合。以下為 2.39:1 電影遮幅的分鏡設計稿，每一鏡皆有 A／B 兩個構圖方案。</p></div>
       <div class="jpm-board-grid" style="margin-top: 1.2rem">
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc05a.jpg' | relative_url }}" alt="分鏡 DC05-A：潘金蓮——被買賣的名字" width="1672" height="700" loading="lazy"><figcaption>DC05-A・潘金蓮｜被買賣的名字</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc05b.jpg' | relative_url }}" alt="分鏡 DC05-B：潘金蓮——構圖變體" width="1672" height="700" loading="lazy"><figcaption>DC05-B・構圖變體</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc06a.jpg' | relative_url }}" alt="分鏡 DC06-A：李瓶兒——照護與喪失" width="1672" height="700" loading="lazy"><figcaption>DC06-A・李瓶兒｜照護與喪失</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc06b.jpg' | relative_url }}" alt="分鏡 DC06-B：李瓶兒——構圖變體" width="1672" height="700" loading="lazy"><figcaption>DC06-B・構圖變體</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc07a.jpg' | relative_url }}" alt="分鏡 DC07-A：吳月娘——門內正室" width="1672" height="700" loading="lazy"><figcaption>DC07-A・吳月娘｜門內正室</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc07b.jpg' | relative_url }}" alt="分鏡 DC07-B：吳月娘——構圖變體" width="1672" height="700" loading="lazy"><figcaption>DC07-B・構圖變體</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc08a.jpg' | relative_url }}" alt="分鏡 DC08-A：龐春梅——婢女登階" width="1672" height="700" loading="lazy"><figcaption>DC08-A・龐春梅｜婢女登階</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc08b.jpg' | relative_url }}" alt="分鏡 DC08-B：龐春梅——構圖變體" width="1672" height="700" loading="lazy"><figcaption>DC08-B・構圖變體</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc09a.jpg' | relative_url }}" alt="分鏡 DC09-A：宋惠蓮——被改名" width="1672" height="700" loading="lazy"><figcaption>DC09-A・宋惠蓮｜被改名</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc09b.jpg' | relative_url }}" alt="分鏡 DC09-B：宋惠蓮——構圖變體" width="1672" height="700" loading="lazy"><figcaption>DC09-B・構圖變體</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc10a.jpg' | relative_url }}" alt="分鏡 DC10-A：五面命鏡會合" width="1672" height="700" loading="lazy"><figcaption>DC10-A・五面命鏡會合</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/board-dc10b.jpg' | relative_url }}" alt="分鏡 DC10-B：五面命鏡——鏡面裂痕版" width="1672" height="700" loading="lazy"><figcaption>DC10-B・鏡面裂痕版</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc05a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC05-A：潘金蓮——被買賣的名字"><img src="{{ '/assets/img/jinpingmei/studio/board-dc05a.jpg' | relative_url }}" alt="分鏡 DC05-A：潘金蓮——被買賣的名字" width="1672" height="700" loading="lazy"></a><figcaption>DC05-A・潘金蓮｜被買賣的名字</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc05b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC05-B：潘金蓮——構圖變體"><img src="{{ '/assets/img/jinpingmei/studio/board-dc05b.jpg' | relative_url }}" alt="分鏡 DC05-B：潘金蓮——構圖變體" width="1672" height="700" loading="lazy"></a><figcaption>DC05-B・構圖變體</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc06a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC06-A：李瓶兒——照護與喪失"><img src="{{ '/assets/img/jinpingmei/studio/board-dc06a.jpg' | relative_url }}" alt="分鏡 DC06-A：李瓶兒——照護與喪失" width="1672" height="700" loading="lazy"></a><figcaption>DC06-A・李瓶兒｜照護與喪失</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc06b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC06-B：李瓶兒——構圖變體"><img src="{{ '/assets/img/jinpingmei/studio/board-dc06b.jpg' | relative_url }}" alt="分鏡 DC06-B：李瓶兒——構圖變體" width="1672" height="700" loading="lazy"></a><figcaption>DC06-B・構圖變體</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc07a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC07-A：吳月娘——門內正室"><img src="{{ '/assets/img/jinpingmei/studio/board-dc07a.jpg' | relative_url }}" alt="分鏡 DC07-A：吳月娘——門內正室" width="1672" height="700" loading="lazy"></a><figcaption>DC07-A・吳月娘｜門內正室</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc07b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC07-B：吳月娘——構圖變體"><img src="{{ '/assets/img/jinpingmei/studio/board-dc07b.jpg' | relative_url }}" alt="分鏡 DC07-B：吳月娘——構圖變體" width="1672" height="700" loading="lazy"></a><figcaption>DC07-B・構圖變體</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc08a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC08-A：龐春梅——婢女登階"><img src="{{ '/assets/img/jinpingmei/studio/board-dc08a.jpg' | relative_url }}" alt="分鏡 DC08-A：龐春梅——婢女登階" width="1672" height="700" loading="lazy"></a><figcaption>DC08-A・龐春梅｜婢女登階</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc08b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC08-B：龐春梅——構圖變體"><img src="{{ '/assets/img/jinpingmei/studio/board-dc08b.jpg' | relative_url }}" alt="分鏡 DC08-B：龐春梅——構圖變體" width="1672" height="700" loading="lazy"></a><figcaption>DC08-B・構圖變體</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc09a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC09-A：宋惠蓮——被改名"><img src="{{ '/assets/img/jinpingmei/studio/board-dc09a.jpg' | relative_url }}" alt="分鏡 DC09-A：宋惠蓮——被改名" width="1672" height="700" loading="lazy"></a><figcaption>DC09-A・宋惠蓮｜被改名</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc09b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC09-B：宋惠蓮——構圖變體"><img src="{{ '/assets/img/jinpingmei/studio/board-dc09b.jpg' | relative_url }}" alt="分鏡 DC09-B：宋惠蓮——構圖變體" width="1672" height="700" loading="lazy"></a><figcaption>DC09-B・構圖變體</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc10a.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC10-A：五面命鏡會合"><img src="{{ '/assets/img/jinpingmei/studio/board-dc10a.jpg' | relative_url }}" alt="分鏡 DC10-A：五面命鏡會合" width="1672" height="700" loading="lazy"></a><figcaption>DC10-A・五面命鏡會合</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/board-dc10b.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-boards" title="分鏡 DC10-B：五面命鏡——鏡面裂痕版"><img src="{{ '/assets/img/jinpingmei/studio/board-dc10b.jpg' | relative_url }}" alt="分鏡 DC10-B：五面命鏡——鏡面裂痕版" width="1672" height="700" loading="lazy"></a><figcaption>DC10-B・鏡面裂痕版</figcaption></figure>
       </div>
     </section>
 
@@ -125,12 +126,12 @@ permalink: /jinpingmei/studio/
       <div class="jpm-prose"><h2>前瞻：EP07〈雪夜琵琶〉場景研究</h2>
       <p>十部曲的第七集〈雪夜琵琶〉已完成場景研究：冷房一弦、暖房一門，金蓮獨守雪夜，瓶兒循著琵琶聲親自來請。以下為早期影像批次的場景劇照，人物造型與現行選角版本可能不同；正式成片將以新版選角重新製作。</p></div>
       <div class="jpm-board-grid" style="margin-top: 1.2rem">
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-1.jpg' | relative_url }}" alt="EP07 場景劇照：銀燈香盡，四弦琵琶特寫" width="1672" height="941" loading="lazy"><figcaption>銀燈香盡・四弦琵琶</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-2.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮倚幃屏守角門，逆光" width="1672" height="941" loading="lazy"><figcaption>金蓮倚幃屏守角門</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-3.jpg' | relative_url }}" alt="EP07 場景劇照：瓶兒替西門慶拂雪" width="1672" height="941" loading="lazy"><figcaption>瓶兒替西門慶拂雪</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-4.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮淚落仍撥弦" width="1672" height="941" loading="lazy"><figcaption>金蓮淚落仍撥弦</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-5.jpg' | relative_url }}" alt="EP07 場景劇照：西門慶與瓶兒雪夜立於角門外" width="1672" height="941" loading="lazy"><figcaption>雪夜立於角門外</figcaption></figure>
-        <figure><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-6.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮鏡中自視" width="1672" height="941" loading="lazy"><figcaption>金蓮鏡中自視</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-1.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：銀燈香盡，四弦琵琶特寫"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-1.jpg' | relative_url }}" alt="EP07 場景劇照：銀燈香盡，四弦琵琶特寫" width="1672" height="941" loading="lazy"></a><figcaption>銀燈香盡・四弦琵琶</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-2.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：金蓮倚幃屏守角門，逆光"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-2.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮倚幃屏守角門，逆光" width="1672" height="941" loading="lazy"></a><figcaption>金蓮倚幃屏守角門</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-3.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：瓶兒替西門慶拂雪"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-3.jpg' | relative_url }}" alt="EP07 場景劇照：瓶兒替西門慶拂雪" width="1672" height="941" loading="lazy"></a><figcaption>瓶兒替西門慶拂雪</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-4.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：金蓮淚落仍撥弦"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-4.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮淚落仍撥弦" width="1672" height="941" loading="lazy"></a><figcaption>金蓮淚落仍撥弦</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-5.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：西門慶與瓶兒雪夜立於角門外"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-5.jpg' | relative_url }}" alt="EP07 場景劇照：西門慶與瓶兒雪夜立於角門外" width="1672" height="941" loading="lazy"></a><figcaption>雪夜立於角門外</figcaption></figure>
+        <figure><a href="{{ '/assets/img/jinpingmei/studio/ep07-plate-6.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-plates" title="EP07 場景劇照：金蓮鏡中自視"><img src="{{ '/assets/img/jinpingmei/studio/ep07-plate-6.jpg' | relative_url }}" alt="EP07 場景劇照：金蓮鏡中自視" width="1672" height="941" loading="lazy"></a><figcaption>金蓮鏡中自視</figcaption></figure>
       </div>
     </section>
 
@@ -156,5 +157,6 @@ permalink: /jinpingmei/studio/
       </nav>
     </div>
   </footer>
+  {% include jinpingmei/lightbox.html %}
 </body>
 </html>
