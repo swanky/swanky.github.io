@@ -181,6 +181,14 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 bundle exec jekyll build 2>&1 | tail -3   # 確認無錯
 ```
 
+Windows／Git Bash 陷阱：若 `bundle` wrapper 報 `No such file or directory -- /c/Ruby33-x64/bin/bundle`，不要重裝 Ruby；直接呼叫 Windows batch wrapper：
+
+```bash
+'C:/Ruby33-x64/bin/bundle.bat' exec jekyll build
+```
+
+發布驗證應輸出到本次新建的獨立 destination；不要覆寫使用者既有的 `_site-*` 或 preview 目錄。
+
 再提交（Windows 環境下，git 操作一律走 POSIX shell，避免 PowerShell 引號跳脫造成 commit message 亂碼）：
 
 ```bash
