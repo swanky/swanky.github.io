@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 金瓶梅宇宙｜一個虛擬 AI 劇組重製四百年前的經典
-description: 「金瓶梅宇宙」是一個由 AI 協作的虛擬劇組：完整收錄《金瓶梅詞話》百回原文、建立十大角色研究、產出文學影像與戰棋遊戲。文字、選角、影像、遊戲——看一部明代經典如何被重新製作。
+description: 「金瓶梅宇宙」是一個由 AI 協作的虛擬劇組：完整收錄《金瓶梅詞話》百回原文、建立十一位角色研究、產出文學影像與戰棋遊戲。文字、選角、影像、遊戲——看一部明代經典如何被重新製作。
 permalink: /jinpingmei/
 ---
 <!doctype html>
@@ -24,14 +24,15 @@ permalink: /jinpingmei/
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-3" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-hub.css' | relative_url }}?v=20260808-1" rel="stylesheet">
 </head>
-<body class="jpm">
+<body class="jpm jpm-hub">
   <a class="jpm-skip" href="#jpm-main">跳到主要內容</a>
 
-  <header class="jpm-topbar">
+  <header class="jpm-topbar" data-hub-bar>
     <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
     <nav class="jpm-topnav" aria-label="宇宙導覽">
       <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
@@ -41,54 +42,254 @@ permalink: /jinpingmei/
     </nav>
   </header>
 
-  <main id="jpm-main" class="jpm-shell">
-    <section class="jpm-section" style="padding-bottom: 0">
-      <p class="jpm-eyebrow">A VIRTUAL STUDIO REMAKES A CLASSIC</p>
-      <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem)">金瓶梅宇宙</h1>
-      <p class="jpm-lead" style="font-size: 1.05rem">如果今天有一個劇組要重製《金瓶梅》，它需要文學顧問、選角導演、服裝考證、分鏡師、剪輯師——這裡的每一個位置，都由 AI 協作擔任。「金瓶梅宇宙」是一場公開進行的實驗：用 AI 把一部四百年前的經典，重新製作成文字、影像與遊戲，並公開全部工作底稿。</p>
-      <figure class="jpm-banner" style="margin-top: clamp(24px, 4vw, 40px)">
-        <a href="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" class="jpm-zoom" data-gallery="jpm-hub" title="五位女主角立繪總覽（AI 生成）"><img src="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | relative_url }}" alt="五位女主角立繪總覽（AI 生成）" width="1500" height="480" fetchpriority="high"></a>
-        <figcaption>《金瓶異夢》五位女主角・AI 生成立繪</figcaption>
-      </figure>
+  <nav class="hub-spine" aria-label="本頁章節">
+    <a href="#xu"><span>序</span></a>
+    <a href="#ren"><span>人</span></a>
+    <a href="#wen"><span>文</span></a>
+    <a href="#ying"><span>影</span></a>
+    <a href="#xi"><span>戲</span></a>
+    <a href="#ba"><span>跋</span></a>
+  </nav>
+
+  <main id="jpm-main">
+
+    <!-- ══ 序幕・開卷 ══ -->
+    <section id="xu" class="act act-overture" aria-label="序幕">
+      <div class="overture-grain" aria-hidden="true"></div>
+      <div class="overture-inner jpm-shell">
+        <blockquote class="overture-quote" lang="zh-Hant">
+          <p class="oq-line"><span>讀《金瓶梅》而生憐憫心者，</span><b>菩薩也；</b></p>
+          <p class="oq-line"><span>生畏懼心者，</span><b>君子也；</b></p>
+          <p class="oq-line"><span>生歡喜心者，</span><b>小人也；</b></p>
+          <p class="oq-line"><span>生效法心者，</span><b>乃禽獸耳。</b></p>
+          <footer class="oq-from"><span>萬曆丁巳冬</span><span>東吳弄珠客〈金瓶梅序〉</span></footer>
+        </blockquote>
+        <div class="overture-title">
+          <p class="jpm-eyebrow">A VIRTUAL AI STUDIO REMAKES A 400-YEAR-OLD CLASSIC</p>
+          <h1>金瓶梅<span class="ot-uni">宇宙</span></h1>
+          <p class="overture-sub">四百年前，一部奇書寫盡人間慾望；四百年後，一個虛擬 AI 劇組把它重新製作成文字、影像與遊戲。文學顧問、選角導演、服裝考證、分鏡師——每個位置都由 AI 協作擔任，全部工作底稿公開。</p>
+          <span class="overture-seal" aria-hidden="true"><i>史旺</i><i>基製</i></span>
+        </div>
+      </div>
+      <a class="overture-cue" href="#ren"><span>開卷</span><i aria-hidden="true"></i></a>
     </section>
 
-    <section class="jpm-section">
-      <div class="jpm-cards">
-        <a class="jpm-card" href="{{ '/jinpingmei/text/' | relative_url }}">
-          <span class="no">壹</span>
-          <h3>原文書房</h3>
-          <p>詞話本（萬曆本）與崇禎本（繡像本）雙版本各一百回，一字未刪改、逐回可對照。深色紙墨介面、可調字級——為長篇閱讀設計。</p>
-          <span class="go">進入書房 →</span>
+    <!-- ══ 第壹幕・人 ══ -->
+    <section id="ren" class="act act-cast" aria-labelledby="ren-title">
+      <header class="act-head jpm-shell">
+        <p class="act-no reveal"><b>第壹幕</b><span>人物</span></p>
+        <h2 class="act-title reveal" id="ren-title">三字藏三美</h2>
+        <p class="act-lead reveal">「金瓶梅」從來不只是書名——金、瓶、梅三個字，藏着三個女人的名字：潘<b>金</b>蓮、李<b>瓶</b>兒、龐春<b>梅</b>。她們與其他八位主要角色，都經過逐回原文考證，再由 AI 選角定裝。</p>
+      </header>
+
+      <div class="triptych jpm-shell">
+        <a class="tri reveal" href="{{ '/jinpingmei/characters/panjinlian/' | relative_url }}">
+          <img src="{{ '/assets/img/jinpingmei/figures/panjinlian-standard.jpg' | relative_url }}" alt="潘金蓮立繪（AI 生成）" width="864" height="1821" loading="lazy" decoding="async">
+          <span class="tri-veil" aria-hidden="true"></span>
+          <span class="tri-char" aria-hidden="true">金</span>
+          <span class="tri-meta">
+            <b>潘金蓮</b>
+            <small>PAN JINLIAN</small>
+            <q>本性機變伶俐</q>
+          </span>
         </a>
-        <a class="jpm-card" href="{{ '/jinpingmei/characters/' | relative_url }}">
-          <span class="no">貳</span>
-          <h3>角色研究館</h3>
-          <p>十位主要角色的人物側寫、關係網與逐字原文依據，配上 AI 生成的三視圖設定與選角母版。</p>
-          <span class="go">認識角色 →</span>
+        <a class="tri reveal" data-late="1" href="{{ '/jinpingmei/characters/lipinger/' | relative_url }}">
+          <img src="{{ '/assets/img/jinpingmei/figures/lipinger-standard.jpg' | relative_url }}" alt="李瓶兒立繪（AI 生成）" width="864" height="1821" loading="lazy" decoding="async">
+          <span class="tri-veil" aria-hidden="true"></span>
+          <span class="tri-char" aria-hidden="true">瓶</span>
+          <span class="tri-meta">
+            <b>李瓶兒</b>
+            <small>LI PING'ER</small>
+            <q>好個溫克性兒</q>
+          </span>
         </a>
-        <a class="jpm-card" href="{{ '/jinpingmei/studio/' | relative_url }}">
-          <span class="no">參</span>
-          <h3>影像工作室</h3>
-          <p>EP01〈簾下遇金蓮〉、EP02〈隔牆瓶兒〉成片，加上選角考證流程、定裝迭代與 120 秒電影版分鏡——虛擬劇組的片場實錄。</p>
-          <span class="go">走進片場 →</span>
+        <a class="tri reveal" data-late="2" href="{{ '/jinpingmei/characters/chunmei/' | relative_url }}">
+          <img src="{{ '/assets/img/jinpingmei/figures/chunmei-standard.jpg' | relative_url }}" alt="龐春梅立繪（AI 生成）" width="864" height="1821" loading="lazy" decoding="async">
+          <span class="tri-veil" aria-hidden="true"></span>
+          <span class="tri-char" aria-hidden="true">梅</span>
+          <span class="tri-meta">
+            <b>龐春梅</b>
+            <small>PANG CHUNMEI</small>
+            <q>性聰慧，喜謔浪</q>
+          </span>
         </a>
-        <a class="jpm-card" href="{{ '/games/plum/' | relative_url }}">
-          <span class="no">肆</span>
-          <h3>戰棋遊戲</h3>
-          <p>《金瓶異夢：十二花界》：從原典人物矛盾出發的單機劇情向戰棋 SRPG，Godot 垂直切片已可完整遊玩。</p>
-          <span class="go">看遊戲 →</span>
-        </a>
+      </div>
+
+      <div class="cast-wall jpm-shell">
+        <p class="cast-wall-note reveal">十一位主要角色・五位已完成擬真定裝，其餘沿用動畫風設定、重製中</p>
+        <div class="cast-grid">
+          {% assign cast = site.jinpingmei_characters | sort: "order" %}
+          {% for c in cast %}
+          <a class="cast-tile reveal{% if c.turnaround contains 'turnaround-live' %} is-live{% endif %}" href="{{ c.url | relative_url }}">
+            <img src="{{ c.turnaround | relative_url }}" alt="{{ c.name }}三視圖設定（AI 生成）" width="{{ c.turnaround_w }}" height="{{ c.turnaround_h }}" loading="lazy" decoding="async">
+            <span class="ct-meta"><b>{{ c.name }}</b>{% unless c.turnaround contains 'turnaround-live' %}<small>動畫設定・重製中</small>{% endunless %}</span>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="act-cta-row reveal">
+          <a class="act-cta" href="{{ '/jinpingmei/characters/' | relative_url }}">進入角色研究館<i aria-hidden="true">→</i></a>
+          <span class="act-cta-side">人物側寫、關係網、逐字原文依據與 AI 選角檔案</span>
+        </div>
       </div>
     </section>
 
-    <section class="jpm-section" style="padding-top: 0">
-      <div class="jpm-prose jpm-shell-narrow" style="margin-inline: 0; width: auto; max-width: 46em">
-        <h2>為什麼是《金瓶梅》？</h2>
-        <p>三個理由。第一，它是公共領域的經典——明代四大奇書之一，人物深度至今罕有敵手，任何人都能自由改作。第二，它從市井日常寫出慾望與權力的全景，天生就是跨媒介改編的富礦。第三，也是最實際的：它直白的情慾描寫，正好可以測出各家 AI 工具真正的能力邊界——哪些模型願意處理文學裡的成人內容、哪些會直接拒絕，這本身就是一個值得公開的技術觀察，詳見<a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}">〈當 AI 拒絕金瓶梅〉</a>。</p>
-        <h2>誠實標示</h2>
-        <p>宇宙裡的分工很清楚：原文一字未刪改，來源為 Wikisource 整理稿；所有人物圖像、影片與語音皆為 AI 生成，並非真人；人物側寫以原典為本，推測處逐條標註「（推斷）」。原典含成人內容，建議成年讀者閱讀。</p>
-        <h2>怎麼做到的？</h2>
-        <p>兩篇方法文章：<a href="{{ '/claude-code/jinpingmei-character-lab/' | relative_url }}">〈用 AI 替一部百回小說建立全劇組角色設定〉</a>講角色研究的工作流；<a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}">〈當 AI 拒絕金瓶梅〉</a>講工具選型的邊界測試。相關服務見<a href="{{ '/technical/ai-visual-production/' | relative_url }}">AI 視覺內容製作</a>。</p>
+    <!-- ══ 第貳幕・文 ══ -->
+    <section id="wen" class="act act-text" aria-labelledby="wen-title">
+      <header class="act-head jpm-shell">
+        <p class="act-no reveal"><b>第貳幕</b><span>原文</span></p>
+        <h2 class="act-title reveal" id="wen-title">百回無刪節</h2>
+        <p class="act-lead reveal">《金瓶梅詞話》一百回原文，一字未刪。下面這幅長卷收着全部一百個回目——往左拉動展卷，看中哪一回，點下去就能開始讀。</p>
+      </header>
+
+      <div class="mu-scroll reveal" data-mu-scroll tabindex="0" role="region" aria-label="百回回目長卷，可左右捲動">
+        <div class="mu-track">
+          <span class="mu-cap" aria-hidden="true"><span>詞話本・百回</span></span>
+          {%- assign chs = site.jinpingmei | where: "edition", "wanli" | sort: "chapter" -%}
+          {%- for c in chs -%}
+          {%- if c.chapter > 0 -%}
+          <a class="mu" href="{{ c.url | relative_url }}">
+            <small>{{ c.label }}</small>
+            {%- assign parts = c.couplet | split: " " -%}
+            {%- for p in parts -%}<span>{{ p }}</span>{%- endfor -%}
+          </a>
+          {%- endif -%}
+          {%- endfor -%}
+          <span class="mu-cap mu-cap-end" aria-hidden="true"><span>卷終</span></span>
+        </div>
+      </div>
+      <p class="mu-hint reveal jpm-shell" aria-hidden="true">◂ 按住拖曳，展開長卷</p>
+
+      <div class="editions jpm-shell">
+        <a class="edition reveal" href="{{ '/jinpingmei/text/' | relative_url }}">
+          <span class="ed-book" aria-hidden="true"><i class="ed-stitch"></i><span class="ed-label">金瓶梅詞話</span></span>
+          <span class="ed-meta"><b>詞話本（萬曆本）</b><span>現存最接近初刻的版本，說書人口吻、詞曲穿插——一百回全文。</span><em>進入書房 →</em></span>
+        </a>
+        <a class="edition reveal" href="{{ '/jinpingmei/text/chongzhen/' | relative_url }}">
+          <span class="ed-book" aria-hidden="true"><i class="ed-stitch"></i><span class="ed-label">繡像金瓶梅</span></span>
+          <span class="ed-meta"><b>崇禎本（繡像本）</b><span>明末改訂本，文字更精練——同樣一百回，每回可與詞話本互相對照。</span><em>進入書房 →</em></span>
+        </a>
+        <div class="edition-note reveal">
+          <p>兩個版本都依 Wikisource 整理本收錄，<b>露骨段落一併保留、未做任何刪改</b>——這是文學史的原貌。閱讀介面可調字級、鍵盤左右鍵換回，每一回都有「對照另一版本」的開關。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 第參幕・影 ══ -->
+    <section id="ying" class="act act-film" aria-labelledby="ying-title">
+      <header class="act-head jpm-shell">
+        <p class="act-no reveal"><b>第參幕</b><span>影像</span></p>
+        <h2 class="act-title reveal" id="ying-title">片場實錄</h2>
+        <p class="act-lead reveal">虛擬劇組把原典拍成影像：十部曲企畫，前兩集已公開。從選角、定裝、分鏡到成片，每一步的工作底稿都在影像工作室展示。</p>
+      </header>
+
+      <div class="films jpm-shell">
+        <article class="film reveal">
+          <div class="film-player" data-video-id="E8Lgyx0X_s4" data-video-title="EP01〈簾下遇金蓮〉">
+            <img src="{{ '/assets/img/games/plum/cinematic/ep01-still-3.jpg' | relative_url }}" alt="EP01〈簾下遇金蓮〉劇照：潘金蓮對鏡簪髮（AI 生成）" width="1672" height="941" loading="lazy" decoding="async">
+            <button class="film-play" type="button" aria-label="播放 EP01〈簾下遇金蓮〉"><i aria-hidden="true"></i><span>播放</span></button>
+          </div>
+          <div class="film-meta">
+            <p class="film-ep">EP01・已公開</p>
+            <h3>簾下遇金蓮</h3>
+            <p class="film-desc">一根叉竿從樓上落下，潘金蓮與西門慶抬眼相遇——這個看似偶然的瞬間，改變了三個人的命運。取材自第二、三回，3 分 39 秒。</p>
+            <p class="film-links"><a href="{{ '/jinpingmei/text/002/' | relative_url }}">讀第二回原文</a><a href="https://youtu.be/E8Lgyx0X_s4" target="_blank" rel="noopener noreferrer">在 YouTube 觀看 ↗</a></p>
+          </div>
+        </article>
+        <article class="film reveal">
+          <div class="film-player" data-video-id="NMFgHt9YgE8" data-video-title="EP02〈隔牆瓶兒〉">
+            <img src="{{ '/assets/img/games/plum/cinematic/ep02-still-2.jpg' | relative_url }}" alt="EP02〈隔牆瓶兒〉劇照：李瓶兒持扇立於門廊（AI 生成）" width="1920" height="1080" loading="lazy" decoding="async">
+            <button class="film-play" type="button" aria-label="播放 EP02〈隔牆瓶兒〉"><i aria-hidden="true"></i><span>播放</span></button>
+          </div>
+          <div class="film-meta">
+            <p class="film-ep">EP02・已公開</p>
+            <h3>隔牆瓶兒</h3>
+            <p class="film-desc">一道高牆隔開兩戶人家，也隔不住門縫裡的祕密。李瓶兒的故事從牆頭開始。取材自第十三回，3 分 57 秒。</p>
+            <p class="film-links"><a href="{{ '/jinpingmei/text/013/' | relative_url }}">讀第十三回原文</a><a href="https://youtu.be/NMFgHt9YgE8" target="_blank" rel="noopener noreferrer">在 YouTube 觀看 ↗</a></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="cycle jpm-shell reveal">
+        <h3 class="cycle-title">文學影像十部曲</h3>
+        <ol class="cycle-list">
+          <li class="done"><b>EP01</b><span>簾下遇金蓮</span><small>第二、三回</small><em>已公開</em></li>
+          <li class="done"><b>EP02</b><span>隔牆瓶兒</span><small>第十三回</small><em>已公開</em></li>
+          <li><b>EP03</b><span>燈樓群芳</span><small>第十五回</small><em>籌備中</em></li>
+          <li><b>EP04</b><span>掃雪烹茶</span><small>第二十一回</small><em>籌備中</em></li>
+          <li><b>EP05</b><span>惠蓮：從鞦韆到空房</span><small>第二十二至二十六回</small><em>籌備中</em></li>
+          <li><b>EP06</b><span>泰山還願</span><small>第八十四回</small><em>籌備中</em></li>
+          <li><b>EP07</b><span>雪夜琵琶</span><small>第三十八回</small><em>前期視覺已公開</em></li>
+          <li><b>EP08</b><span>紅妝鬥氣</span><small>第四十、四十一回</small><em>籌備中</em></li>
+          <li><b>EP09</b><span>瓶兒：失子與離世</span><small>第五十九至六十二回</small><em>籌備中</em></li>
+          <li><b>EP10</b><span>舊園回聲</span><small>第八十五至九十六回</small><em>籌備中</em></li>
+        </ol>
+        <div class="act-cta-row">
+          <a class="act-cta" href="{{ '/jinpingmei/studio/' | relative_url }}">走進影像工作室<i aria-hidden="true">→</i></a>
+          <span class="act-cta-side">選角考證、定裝迭代、分鏡與場景劇照——片場的全部底稿</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 第肆幕・戲 ══ -->
+    <section id="xi" class="act act-game" aria-labelledby="xi-title">
+      <header class="act-head jpm-shell">
+        <p class="act-no reveal"><b>第肆幕</b><span>遊戲</span></p>
+        <h2 class="act-title reveal" id="xi-title">一局棋演愛憎</h2>
+        <p class="act-lead reveal">《金瓶異夢：十二花界》——從原典人物矛盾出發的單機劇情向戰棋遊戲。如果結局早已寫好，你會從哪一格開始改寫？</p>
+      </header>
+
+      <div class="game jpm-shell">
+        <a class="game-poster reveal" href="{{ '/games/plum/' | relative_url }}">
+          <img src="{{ '/assets/img/games/plum/cinematic/hero-poster-v2.jpg' | relative_url }}" alt="《金瓶異夢：十二花界》主視覺（AI 生成）" width="1920" height="1080" loading="lazy" decoding="async">
+          <span class="gp-frame" aria-hidden="true"></span>
+        </a>
+        <div class="game-shots">
+          <figure class="reveal"><img src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" alt="戰棋對戰畫面" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>戰棋對戰・垂直切片實機畫面</figcaption></figure>
+          <figure class="reveal"><img src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" alt="劇情對話畫面" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>劇情對話・原典人物矛盾入戲</figcaption></figure>
+          <figure class="reveal"><img src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" alt="遊戲標題畫面" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>標題畫面・Godot 引擎製作</figcaption></figure>
+        </div>
+        <div class="act-cta-row reveal">
+          <a class="act-cta" href="{{ '/games/plum/' | relative_url }}">看遊戲企畫<i aria-hidden="true">→</i></a>
+          <span class="act-cta-side">世界觀、戰鬥系統、十二花界設定與垂直切片實錄</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 跋 ══ -->
+    <section id="ba" class="act act-coda" aria-labelledby="ba-title">
+      <header class="act-head jpm-shell">
+        <p class="act-no reveal"><b>跋</b><span>後記</span></p>
+        <h2 class="act-title reveal" id="ba-title">為什麼是金瓶梅</h2>
+      </header>
+      <div class="coda jpm-shell">
+        <div class="coda-reasons">
+          <div class="reason reveal"><b>壹・公共領域的高峰</b><p>明代四大奇書之一，人物深度至今罕有敵手；著作權早已消滅，任何人都能自由改作。</p></div>
+          <div class="reason reveal"><b>貳・跨媒介的富礦</b><p>從市井日常寫出慾望與權力的全景——天生適合被改編成影像、遊戲與更多形式。</p></div>
+          <div class="reason reveal"><b>參・AI 的試金石</b><p>它直白的情慾描寫，正好測出各家 AI 工具的能力邊界：哪些願意處理文學裡的成人內容、哪些直接拒絕。詳見<a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}">〈當 AI 拒絕金瓶梅〉</a>。</p></div>
+        </div>
+
+        <aside class="paiji reveal" aria-labelledby="paiji-title">
+          <div class="paiji-frame">
+            <p class="paiji-head" id="paiji-title"><b>凡例</b><small>本宇宙的誠實標示</small></p>
+            <ul>
+              <li>原文<b>一字未刪改</b>，來源為 Wikisource 整理稿。</li>
+              <li>所有人物圖像、影片與語音皆為 <b>AI 生成</b>，並非真人。</li>
+              <li>人物側寫以原典為本，推測處逐條標註「（推斷）」。</li>
+              <li>原典含成人內容，<b>建議成年讀者</b>閱讀。</li>
+            </ul>
+            <span class="paiji-seal" aria-hidden="true"><i>金瓶梅宇宙</i></span>
+          </div>
+        </aside>
+
+        <div class="coda-method reveal">
+          <h3>怎麼做到的？</h3>
+          <p>兩篇方法文章，公開全部工作流：</p>
+          <div class="method-links">
+            <a href="{{ '/claude-code/jinpingmei-character-lab/' | relative_url }}"><b>用 AI 替一部百回小說建立全劇組角色設定</b><span>角色研究館的工作流</span></a>
+            <a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}"><b>當 AI 拒絕金瓶梅</b><span>各家模型的邊界測試</span></a>
+          </div>
+          <p class="method-service">相關服務：<a href="{{ '/technical/ai-visual-production/' | relative_url }}">AI 視覺內容製作</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -106,5 +307,6 @@ permalink: /jinpingmei/
     </div>
   </footer>
   {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-hub.js' | relative_url }}?v=20260808-1" defer></script>
 </body>
 </html>
