@@ -36,6 +36,16 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 - `cover_image` 一律 `.jpg`（PNG 來源先轉 JPEG）；列表卡片會把封面裁成 16:9，選圖／裁圖要預留。
 - 同步自 LinkedIn／X 的文章：設 `hero_image: true`；`source_url` 填 LinkedIn（一律 `www.` 子網域）、`source_url_x` 填 X。layout 會自動渲染單／雙來源連結。
 - Bootstrap Icons：使用前先確認 glyph class 存在於 vendored CSS（缺字渲染成空方塊——曾是正式站 bug）。
+- `hero_image: true` 只在封面是「設計過的 banner」時加；隨手圖或無封面就省略（單篇頁 banner 預設不顯示）。
+
+## 品牌角色形象（banner／封面插畫）
+
+站上技術與 AI 學習文章的 banner，固定由**同一位水手服少女**出鏡（她同時是 78 張塔羅牌組的主角）——這是品牌識別，不是裝飾。
+
+- **參考圖正本（生圖時一律附上）**：`assets/img/brand/swanky-mascot-live-ref.jpg`（擬真版，2026-08-08 站主指定為之後一律使用的形象）、`assets/img/brand/swanky-mascot-anime-ref.jpg`（插畫版，塔羅牌組沿用）。
+- **文字描述正本**：`tools/tarot-ai-style-universal.md` §1.2 的 `{{CHARACTER}}` 段（栗棕直髮、齊瀏海、兩條細紅髮帶、藏青水手領白上衣、紅領巾、藏青百褶裙、白過膝襪、棕樂福鞋）。
+- **不得自行創作或改動角色外觀**（髮色、紅髮帶、水手服配色都是識別特徵）；模型不跨對話記憶臉孔，每次開新對話生圖都要重新附參考圖。
+- 構圖慣例：少女位於畫面一側（多為右側）與主題場景互動，其餘畫面留給該篇的主題視覺；16:9、無文字浮水印。
 
 ## 環境事實（Windows）
 

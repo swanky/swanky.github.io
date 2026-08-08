@@ -29,6 +29,7 @@ Execute autonomously; start without asking. Read relevant code first; make reaso
 | 想新增／修改 AGENTS.md、Hermes／Codex 適配、或跨 agent 共用 skills | `docs/agents/cross-agent-sharing.md`；若會改制度檔再讀 `docs/agents/maintenance.md` |
 | 改 layouts、collections、front matter、或 Human Design engine | `docs/architecture.md` |
 | 視覺／設計工作 | `docs/design.md` |
+| 要產生文章 banner／封面插畫（有人物出鏡） | `AGENTS.md`「品牌角色形象」段——**一律附參考圖** `assets/img/brand/swanky-mascot-live-ref.jpg`，不得自創角色外觀 |
 | 新接手本環境、或想了解制度為何這樣設計 | `docs/agents/letter-to-future-sessions.md`、`docs/agents/diagnosis-2026-07.md` |
 
 Precedence when rules conflict: **user's live instruction > CLAUDE.md（適配層）> AGENTS.md（共用規範）> docs/agents/* > memory**（依 `AGENTS.md` 跨 agent 原則，適配層不得另訂與共用規範衝突的專案規則——真衝突時視為 bug，修正之）。依高優先者執行，並修正低優先檔＋在回報中說明（修正動作本身仍受 `docs/agents/maintenance.md` §1 分層約束——黃／紅區先問）。
@@ -46,4 +47,5 @@ Precedence when rules conflict: **user's live instruction > CLAUDE.md（適配�
 
 - `/sync-social-article` — sync a LinkedIn Pulse / X post (or fuse both) into `_posts/`. **Always use it when given LinkedIn/X links** — it encodes the working extraction paths; WebFetch only returns paraphrases (unusable) and naive scraping hits login walls.
 - `/s2m` — slides (PPTX/PDF) → per-page Markdown.
+- `/codex-image` — 委派本機 codex CLI 生圖（文章 banner、插畫）。**本環境唯一的生圖管道**；有人物出鏡一律照 `AGENTS.md`「品牌角色形象」附參考圖。
 - gstack skills: after a visual / Human-Design-engine / perf change, *offer* the matching skill (don't run unprompted) — see `docs/gstack-skills.md`.

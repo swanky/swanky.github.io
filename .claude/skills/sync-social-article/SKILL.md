@@ -154,6 +154,7 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 格式要求：
 - title 加雙引號；date 用 YYYY-MM-DD；categories 固定 `[technical]`；layout 固定 `article`
 - `hero_image: true` 僅在有設計過的封面圖時加（沒有封面或封面是隨手圖就省略——單篇頁 banner 預設不顯示）
+- 若要**自製** banner（來源沒有可用封面時），人物一律用站上的品牌角色形象——參考圖 `assets/img/brand/swanky-mascot-live-ref.jpg`，規範見 `AGENTS.md`「品牌角色形象」段。不得自行創作角色外觀
 - `source_url` / `source_url_x` 只填實際存在的來源，各自加雙引號；X URL 去除 query string（`?s=20` 等），用 `x.com` 域名
 - description、keywords 為繁體中文（zh-TW）
 - 正文保留 Markdown 結構（##/### 標題、列表、引用、程式碼區塊）

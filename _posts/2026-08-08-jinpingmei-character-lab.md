@@ -6,7 +6,8 @@ published: true
 categories: [claude-code]
 tags: [ai-agent, ai-visual, character-design, jinpingmei, workflow, agent-skills]
 layout: article
-cover_image: /assets/img/jinpingmei/covers/character-lab-cover.jpg
+cover_image: /assets/img/jinpingmei/covers/character-lab-banner.jpg
+hero_image: true
 description: "一套 AI 工作流讀完《金瓶梅詞話》一百回，海選出角色、建立十張附逐字原文依據的角色卡，再生成三視圖設定與擬真選角母版——完整方法與品質關卡公開。"
 keywords: AI 角色設定, 角色卡, 金瓶梅, 三視圖, character design, AI workflow, 原典考證, 虛擬劇組, 史旺基, Swanky Studio
 ---
