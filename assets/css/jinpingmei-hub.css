@@ -127,6 +127,7 @@
   font-size: clamp(3.4rem, 9.5vw, 7rem);
   line-height: 1.12; letter-spacing: .1em;
 }
+.ot-name { display: inline-block; white-space: nowrap; }
 .ot-uni {
   display: inline-block;
   margin-left: .18em;
@@ -521,11 +522,21 @@
 
 /* ── 序幕・歷史木刻層（公版） ── */
 .overture-woodcut { display: none; margin: 0; }
-@media (min-width: 1101px) {
-  .overture-inner { grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr) minmax(0, .5fr); }
-  .overture-title .overture-sub { max-width: 24em; }
-  .overture-woodcut { display: block; align-self: center; }
+@media (min-width: 1440px) {
+  /* 插圖加入後，序幕需要比全站標準版心更寬；三區各自保留最低可讀寬度，
+     避免直排引文、大標與圖說跨欄互疊。 */
+  .overture-inner {
+    width: min(1480px, calc(100% - 80px));
+    grid-template-columns: minmax(460px, .8fr) minmax(520px, 1.35fr) minmax(220px, .58fr);
+    gap: clamp(36px, 4vw, 72px);
+  }
+  .overture-title { min-width: 0; }
+  .overture-title h1 { font-size: clamp(4.6rem, 5.8vw, 7rem); white-space: nowrap; }
+  .overture-title .overture-sub { max-width: 32em; }
+  .overture-woodcut { display: block; align-self: center; min-width: 0; }
   .overture-woodcut img { opacity: .9; filter: sepia(.12) contrast(.97); }
+  .overture-woodcut figcaption { display: block; }
+  .overture-woodcut figcaption a { display: inline-block; margin-top: .35rem; }
   .js-on .overture-woodcut { opacity: 0; }
   .js-on .ov-ready .overture-woodcut { animation: oq-in 1.2s ease forwards 2.2s; }
 }
