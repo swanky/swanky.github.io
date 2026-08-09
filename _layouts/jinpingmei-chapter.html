@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-7" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-1" rel="stylesheet">
   <script>try{if(localStorage.getItem('jpm-paper')==='1')document.documentElement.classList.add('jpm-paper')}catch(e){}</script>
   <script type="application/ld+json">
   {
@@ -81,6 +81,16 @@
 
     {% include jinpingmei/chapter-guide.html %}
 
+    {% if page.chapter > 0 %}
+    {% assign woodcut = site.data.jinpingmei_illustrations.items | where: "chapter", page.chapter | where: "status", "approved" | first %}
+    {% if woodcut %}
+    <aside class="jpm-woodcut-aside" aria-label="歷史版本插圖">
+      {% include jinpingmei/woodcut-figure.html id=woodcut.id %}
+      <p class="jpm-woodcut-note">上圖為明代十七世紀刊本的本回插圖，屬公共領域，作為閱讀的圖像參照；它與本頁文字所依據的整理底本並非同一實體書頁。全站歷史圖像的來源與授權見<a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>。</p>
+    </aside>
+    {% endif %}
+    {% endif %}
+
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
       {{ content }}
     </article>
@@ -114,6 +124,7 @@
         <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
         <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
         <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
         <a href="{{ '/' | relative_url }}">回主站</a>
       </nav>
     </div>

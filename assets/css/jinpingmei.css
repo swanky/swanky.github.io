@@ -521,6 +521,44 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
   .jpm-toc-tools { padding: .8rem .85rem; }
 }
 
+/* ── 歷史公版木刻插圖層 ── */
+.jpm-woodcut { margin: 0; min-width: 0; }
+.jpm-woodcut picture { display: block; }
+.jpm-woodcut a.jpm-zoom { display: block; }
+.jpm-woodcut img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--jpm-line); border-radius: 4px;
+  background: var(--jpm-paper);
+}
+.jpm-woodcut figcaption {
+  margin-top: .55rem; font-size: .78rem; line-height: 1.6; color: var(--jpm-muted);
+  display: flex; flex-wrap: wrap; gap: .2rem .8rem; justify-content: space-between;
+}
+.jpm-woodcut figcaption a { color: var(--jpm-gold); text-decoration: none; white-space: nowrap; }
+.jpm-woodcut figcaption a:hover, .jpm-woodcut figcaption a:focus-visible { color: var(--jpm-gold-bright); text-decoration: underline; }
+.jpm-woodcut-row {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.2vw, 26px); align-items: start;
+}
+.jpm-woodcut-aside { margin: 0 0 clamp(20px, 3vw, 30px); }
+.jpm-woodcut-aside .jpm-woodcut { max-width: 430px; margin: 0 auto; }
+.jpm-woodcut-note {
+  max-width: 640px; margin: .7rem auto 0; text-align: center;
+  font-size: .78rem; line-height: 1.7; color: var(--jpm-muted);
+}
+.jpm-woodcut-note a { color: var(--jpm-gold); }
+.jpm-asset-error { color: #c65a6e; font-size: .85rem; border: 1px dashed #c65a6e; padding: .5rem .8rem; }
+.jpm-credit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: clamp(16px, 2.4vw, 28px); }
+.jpm-credit-card { background: var(--jpm-panel); border: 1px solid var(--jpm-line); border-radius: 6px; padding: 14px 14px 16px; }
+.jpm-credit-card img { display: block; width: 100%; height: auto; border: 1px solid var(--jpm-line); border-radius: 4px; background: var(--jpm-paper); }
+.jpm-credit-card h3 { margin: .8rem 0 .3rem; font-size: 1rem; font-family: var(--jpm-serif); }
+.jpm-credit-card .meta { margin: 0 0 .55rem; font-size: .78rem; color: var(--jpm-muted); line-height: 1.7; }
+.jpm-credit-card .lic { display: inline-block; font-size: .72rem; color: var(--jpm-gold); border: 1px solid var(--jpm-line); border-radius: 3px; padding: .12rem .5rem; margin-bottom: .55rem; }
+.jpm-credit-card > a { color: var(--jpm-gold); font-size: .8rem; }
+@media (max-width: 720px) {
+  .jpm-woodcut-row { grid-template-columns: 1fr; max-width: 430px; margin-inline: auto; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .js-on .reveal { opacity: 1; transform: none; transition: none; }
   .film-player img, .jpm-cast-card img { transition: none; }

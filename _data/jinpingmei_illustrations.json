@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-09",
+  "project": "swanky/swanky.github.io",
+  "policy": {
+    "default": "deny",
+    "approved_license_ids": [
+      "PDM-1.0",
+      "CC0-1.0",
+      "CC-BY-4.0",
+      "CC-BY-SA-4.0"
+    ],
+    "source_priority": [
+      "Wikimedia Commons individual file page with explicit rights statement",
+      "Institutional Open Access or CC0 record",
+      "Explicit CC BY or CC BY-SA source"
+    ],
+    "never_scrape_from": [
+      "新聞或評論文章中的轉載圖",
+      "Pinterest、微博、百度圖片、內容農場與無來源圖庫",
+      "標示僅供個人研究、需另行申請或禁止再散布的資料庫"
+    ],
+    "notes": [
+      "Public Domain 不等於可以省略來源紀錄；本站仍保留作品年代、來源頁與檢核日期。",
+      "不可只看作品年代，還要分別檢查掃描檔、攝影、修復、上色、版面編排與網站使用條款。",
+      "Wikimedia Commons 不提供權利保證；每張圖仍需逐檔檢核。"
+    ]
+  },
+  "items": [
+    {
+      "id": "jpm-c17-scene-06",
+      "status": "approved",
+      "title_zh": "十七世紀《金瓶梅》宅院人物插圖",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei-6.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei-6.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名平面作品；Commons 將忠實重製檔標示為公版。"
+      },
+      "caption_zh": "十七世紀《金瓶梅》插圖，佚名。公版重製檔取自 Wikimedia Commons。",
+      "alt_zh": "十七世紀《金瓶梅》木刻插圖，宅院門前數名人物相見",
+      "subjects": [
+        "宅院",
+        "人物",
+        "明代生活"
+      ],
+      "recommended_use": [
+        "首頁序幕的歷史層",
+        "新手導讀頁分隔圖",
+        "公版插圖藝廊"
+      ],
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-scene-06.original.jpg",
+        "sha256": "6c4819dc89c3326a86314b03ca26fe80aa89ef575a9dc411ec0d7be6d7273867",
+        "web": {
+          "480": "assets/approved-web/jpm-c17-scene-06-480.webp",
+          "960": "assets/approved-web/jpm-c17-scene-06-960.webp",
+          "default": "assets/approved-web/jpm-c17-scene-06.webp",
+          "width": "1600",
+          "height": "2071"
+        }
+      },
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "approved",
+        "notes": "目前閱讀地圖中的 hero 圖可保留；正式站改用獨立檔案，不要 base64 內嵌。 1600 寬衍生檔對站上顯示尺寸過大，未收進 repo；lightbox 用 default 檔。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-06-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-06-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-06.webp",
+          "width": "1600",
+          "height": "2071"
+        },
+        "keep_original_in_public_repo": false
+      }
+    },
+    {
+      "id": "jpm-c1617-ch004-ximen-pan",
+      "status": "approved",
+      "title_zh": "第四回：西門慶與潘金蓮",
+      "edition": "1617年中國版插圖",
+      "chapter": 4,
+      "creator": "佚名",
+      "date": "1617",
+      "commons_title": "File:Jin Ping Mei chapt4.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei_chapt4.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "1617年佚名作品；Commons 標示忠實重製與公版。"
+      },
+      "caption_zh": "《金瓶梅》第四回插圖，西門慶與潘金蓮，1617年版，佚名。",
+      "alt_zh": "《金瓶梅》第四回木刻插圖，西門慶在宅院中與潘金蓮相會",
+      "subjects": [
+        "潘金蓮",
+        "西門慶",
+        "第四回"
+      ],
+      "recommended_use": [
+        "新手導讀第一幕",
+        "第四回原文頁",
+        "潘金蓮角色頁的歷史圖像區"
+      ],
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c1617-ch004-ximen-pan.original.jpg",
+        "sha256": "96180d91cd67e376fc4407b2f4dd5579b68b237010519d608d6226ca8d879da1",
+        "web": {
+          "480": "assets/approved-web/jpm-c1617-ch004-ximen-pan-480.webp",
+          "960": "assets/approved-web/jpm-c1617-ch004-ximen-pan-960.webp",
+          "default": "assets/approved-web/jpm-c1617-ch004-ximen-pan.webp",
+          "width": "1070",
+          "height": "1708"
+        }
+      },
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "approved",
+        "notes": "章回對應明確，優先使用。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch004-ximen-pan-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch004-ximen-pan-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch004-ximen-pan.webp",
+          "width": "1070",
+          "height": "1708"
+        },
+        "keep_original_in_public_repo": false
+      }
+    },
+    {
+      "id": "jpm-c1617-ch017-domino",
+      "status": "approved",
+      "title_zh": "第十七回：宅中骨牌遊戲",
+      "edition": "1617年中國版插圖",
+      "chapter": 17,
+      "creator": "佚名",
+      "date": "1617",
+      "commons_title": "File:Jin ping mei chapt17.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_ping_mei_chapt17.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "1617年佚名作品；Commons 標示忠實重製與公版。"
+      },
+      "caption_zh": "《金瓶梅》第十七回插圖，宅中骨牌遊戲，1617年版，佚名。",
+      "alt_zh": "《金瓶梅》第十七回木刻插圖，數人在宅院內玩骨牌",
+      "subjects": [
+        "第十七回",
+        "骨牌",
+        "宅院生活"
+      ],
+      "recommended_use": [
+        "新手導讀第二幕",
+        "第十七回原文頁",
+        "明代日常生活專題"
+      ],
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c1617-ch017-domino.original.jpg",
+        "sha256": "ebb7bf70735e8f543ddf2f90324c1505eeaad82976a65ffee32609d81d3770a9",
+        "web": {
+          "480": "assets/approved-web/jpm-c1617-ch017-domino-480.webp",
+          "960": "assets/approved-web/jpm-c1617-ch017-domino-960.webp",
+          "default": "assets/approved-web/jpm-c1617-ch017-domino.webp",
+          "width": "1073",
+          "height": "1614"
+        }
+      },
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "approved",
+        "notes": "章回對應明確，優先使用。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch017-domino-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch017-domino-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c1617-ch017-domino.webp",
+          "width": "1073",
+          "height": "1614"
+        },
+        "keep_original_in_public_repo": false
+      }
+    },
+    {
+      "id": "jpm-c17-fireworks",
+      "status": "approved",
+      "title_zh": "第四十二回：門前放煙火",
+      "edition": "崇禎年間版本插圖",
+      "chapter": 42,
+      "creator": "佚名",
+      "date": "明代",
+      "commons_title": "File:Ming Dynasty Jin Ping Mei fireworks.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ming_Dynasty_Jin_Ping_Mei_fireworks.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "1628至1643年間版本之佚名插圖；Commons 標示忠實重製與公版。"
+      },
+      "caption_zh": "《金瓶梅》第四十二回插圖，門前放煙火，明崇禎年間刊本，佚名。",
+      "alt_zh": "明代《金瓶梅》第四十二回木刻插圖，眾人在門前圍觀施放煙火",
+      "subjects": [
+        "第四十二回",
+        "煙火",
+        "元宵",
+        "宴飲"
+      ],
+      "recommended_use": [
+        "新手導讀第三幕",
+        "元宵與宴飲專題",
+        "首頁歷史細節卡片"
+      ],
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/img/jinpingmei/woodcuts/jpm-c17-fireworks.original.jpg",
+        "sha256": "04b0358b2453481d510745c42c08ca07dd1e37a99f416cb44e6d3c716b055b06",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-fireworks-480.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-fireworks.webp",
+          "width": "700",
+          "height": "896"
+        }
+      },
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "approved",
+        "notes": "2026-08-09 已依 Commons API 下載 700×896 原檔（sha1 與 API 回報一致：d7bc745776d7b1c5b1d73293bd2f68ff4d4d52a6），重建 480 與全尺寸 WebP；原 500×640 預覽檔棄用。 章回定位依據：圖版上緣刻「第四十二回」，側刻「逞豪華門前放煙火」，與崇禎本第四十二回回目「逞豪華門前放煙火 賞元宵樓上醉花燈」相符（2026-08-09 對照站內原文核定，非畫面推測）。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-fireworks-480.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-fireworks.webp",
+          "width": "700",
+          "height": "896"
+        },
+        "keep_original_in_public_repo": false
+      }
+    },
+    {
+      "id": "jpm-c17-song-huilian-huiyuan",
+      "status": "approved_source_needs_download",
+      "title_zh": "宋惠蓮與惠元",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名作品；Commons 標示忠實重製與公版。"
+      },
+      "caption_zh": "宋惠蓮與惠元，十七世紀《金瓶梅》插圖，佚名。",
+      "alt_zh": "十七世紀《金瓶梅》插圖，宋惠蓮與惠元在宅院中交談",
+      "subjects": [
+        "宋惠蓮",
+        "惠元"
+      ],
+      "recommended_use": [
+        "宋惠蓮角色內容",
+        "僕役與內宅專題"
+      ],
+      "content_sensitivity": "general",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved"
+      }
+    },
+    {
+      "id": "jpm-c17-scene-02",
+      "status": "approved_source_needs_manual_caption",
+      "title_zh": "十七世紀《金瓶梅》插圖 2",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei-2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei-2.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
+      },
+      "caption_zh": null,
+      "alt_zh": null,
+      "subjects": [],
+      "recommended_use": [
+        "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
+      ],
+      "content_sensitivity": "review_required",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved_metadata_incomplete",
+        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+      }
+    },
+    {
+      "id": "jpm-c17-scene-03",
+      "status": "approved_source_needs_manual_caption",
+      "title_zh": "十七世紀《金瓶梅》插圖 3",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei-3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei-3.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
+      },
+      "caption_zh": null,
+      "alt_zh": null,
+      "subjects": [],
+      "recommended_use": [
+        "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
+      ],
+      "content_sensitivity": "review_required",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved_metadata_incomplete",
+        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+      }
+    },
+    {
+      "id": "jpm-c17-scene-04",
+      "status": "approved_source_needs_manual_caption",
+      "title_zh": "十七世紀《金瓶梅》插圖 4",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei-4.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei-4.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
+      },
+      "caption_zh": null,
+      "alt_zh": null,
+      "subjects": [],
+      "recommended_use": [
+        "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
+      ],
+      "content_sensitivity": "review_required",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved_metadata_incomplete",
+        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+      }
+    },
+    {
+      "id": "jpm-c17-scene-05",
+      "status": "approved_source_needs_manual_caption",
+      "title_zh": "十七世紀《金瓶梅》插圖 5",
+      "edition": "十七世紀《金瓶梅》插圖",
+      "chapter": null,
+      "creator": "佚名",
+      "date": "17世紀",
+      "commons_title": "File:Jin Ping Mei-5.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jin_Ping_Mei-5.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
+      },
+      "caption_zh": null,
+      "alt_zh": null,
+      "subjects": [],
+      "recommended_use": [
+        "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
+      ],
+      "content_sensitivity": "review_required",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved_metadata_incomplete",
+        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+      }
+    },
+    {
+      "id": "jpm-c60-abacus",
+      "status": "approved_source_needs_download",
+      "title_zh": "第六十回插圖中的算盤",
+      "edition": "明代《金瓶梅》插圖",
+      "chapter": 60,
+      "creator": "佚名",
+      "date": "明代",
+      "commons_title": "File:Suanpan jinpm.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Suanpan_jinpm.jpg",
+      "rights": {
+        "status": "public_domain",
+        "license_id": "PDM-1.0",
+        "label": "Public Domain Mark 1.0／PD-Art",
+        "basis": "明代佚名作品；Commons 標示忠實重製與公版。"
+      },
+      "caption_zh": "《金瓶梅》第六十回插圖中的算盤。",
+      "alt_zh": "明代《金瓶梅》插圖中的算盤與人物",
+      "subjects": [
+        "第六十回",
+        "算盤",
+        "商業"
+      ],
+      "recommended_use": [
+        "商業與財富專題",
+        "閱讀地圖權力交易段落"
+      ],
+      "content_sensitivity": "general",
+      "local": null,
+      "review": {
+        "checked_at": "2026-08-09",
+        "result": "source_approved"
+      }
+    }
+  ],
+  "blocked": [
+    {
+      "id": "jpm-color-unknown",
+      "status": "blocked",
+      "original_filename": "jpm_color.jpg",
+      "sha256": "a7e9cb56e25704c0bf18d49ec51b0151da84c9847d431f12af604c6457488a60",
+      "reason": [
+        "圖面帶有近代整理者浮水印，來源鏈不完整。",
+        "無法僅憑圖面證明該數位檔的攝影、修復、上色或重製授權。",
+        "不是本套已驗證的1617／十七世紀黑白木刻系列。",
+        "不得裁掉浮水印後使用；應換成來源清楚的公版檔。"
+      ]
+    }
+  ],
+  "research_only_sources": [
+    {
+      "name": "文匯網〈琳琅滿目的《金瓶梅》插圖〉",
+      "url": "https://wenhui.whb.cn/third/baidu/201902/28/244904.html",
+      "allowed_use": "作為版本與畫家線索索引",
+      "forbidden_use": "直接截圖、批次下載或把文章中的所有圖片視為公版"
+    },
+    {
+      "name": "東京大學東洋文化研究所漢籍善本全文影像資料庫",
+      "allowed_use": "研究版本與定位頁碼",
+      "risk": "原站使用條款限制下載圖像的再散布與公開使用；不可由 agent 自動抓取進正式站。"
+    },
+    {
+      "name": "早稻田大學古典籍綜合資料庫",
+      "allowed_use": "研究版本與館藏",
+      "risk": "公開刊載／網站使用可能需申請；不可只因古籍公版就忽略資料庫條款。"
+    }
+  ]
+}

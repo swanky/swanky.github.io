@@ -1,0 +1,99 @@
+---
+layout: null
+title: 圖像來源與授權｜金瓶梅宇宙的歷史公版插圖
+description: 金瓶梅宇宙使用的十七世紀刊本木刻插圖清單：每一張的年代、作者、來源頁與公版授權依據，全部可逐張查證。
+permalink: /jinpingmei/credits/
+---
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-1" rel="stylesheet">
+</head>
+<body class="jpm">
+  <a class="jpm-skip" href="#credits-main">跳到圖像清單</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+    </nav>
+  </header>
+
+  <main id="credits-main" class="jpm-shell">
+    <section class="jpm-section" style="padding-bottom: 0">
+      <div class="jpu-hero">
+        <div class="jpu-hero-main">
+          <p class="act-no reveal"><b>金瓶梅宇宙</b><span>圖像來源</span></p>
+          <h1 class="act-title reveal">歷史插圖的來源與授權<small>每一張都可以查證</small></h1>
+          <p class="act-lead reveal">站上除了 AI 生成的角色與場景，也用了少量<b>四百年前刊本的木刻插圖</b>。原作早已屬於公共領域（著作權已消滅），任何人都能自由使用；即便如此，我們仍替每一張留下年代、作者、來源頁與檢核日期——你可以逐張點回原始檔案頁查證。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jpm-section" style="padding-top: clamp(28px, 4vw, 44px); padding-bottom: 0" aria-label="正式使用的歷史圖像">
+      <h2 class="jpm-h2">站上使用中的歷史圖像</h2>
+      <div class="jpm-credit-grid" style="margin-top: 1.1rem">
+        {% for it in site.data.jinpingmei_illustrations.items %}
+        {% if it.status == "approved" and it.target %}
+        <article class="jpm-credit-card reveal">
+          <img src="{{ it.target.web['480'] | default: it.target.web.default | relative_url }}" alt="{{ it.alt_zh | escape }}" width="{{ it.target.web.width }}" height="{{ it.target.web.height }}" loading="lazy" decoding="async">
+          <h3>{{ it.title_zh }}</h3>
+          <p class="meta">{{ it.date }}・{{ it.creator }}<br>{{ it.edition }}</p>
+          <span class="lic">{{ it.rights.label }}</span>
+          <p class="meta">檢核日期：{{ it.review.checked_at }}</p>
+          <a href="{{ it.source_page }}" target="_blank" rel="noopener noreferrer">Wikimedia Commons 檔案頁 ↗</a>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="jpm-section" style="padding-bottom: 0">
+      <div class="act-cta-row reveal">
+        <a class="act-cta" href="{{ '/jinpingmei/' | relative_url }}">回宇宙總覽<i>→</i></a>
+        <span class="act-cta-side">想看這些插圖用在哪？<a href="{{ '/jinpingmei/guide/' | relative_url }}">新手導讀</a>的五幕地圖旁就有。</span>
+      </div>
+    </section>
+
+    <aside class="paiji paiji--note reveal" aria-label="收錄原則">
+      <div class="paiji-frame">
+        <p class="paiji-head"><b>收錄原則</b><small>我們怎麼確認「可以用」</small></p>
+        <p>只收錄<b>來源可逐張查證的公共領域</b>圖像：以 Wikimedia Commons 單張檔案頁的授權標示為準，下載自存、不熱連結；每張保留來源頁、年代、作者與檢核日期。近代畫家重繪版、帶浮水印的整理檔、以及授權不明的網路轉載圖一律不用；還沒核對出章回的古圖，寧可先不上站，也不憑畫面亂猜。</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{%- comment -%}
+  歷史公版木刻插圖（manifest 驅動）。
+  用法：{% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch004-ximen-pan" %}
+  參數：id（必填）｜class（附加 CSS class）｜eager（首屏圖）｜zoom（頁面有 lightbox 時包 jpm-zoom）
+  資料源：_data/jinpingmei_illustrations.json——只輸出 status == "approved" 的項目；
+  權利規則與稽核見 tools/audit-jinpingmei-illustrations.py。
+{%- endcomment -%}
+{%- assign illustration = site.data.jinpingmei_illustrations.items | where: "id", include.id | first -%}
+{%- if illustration and illustration.status == "approved" and illustration.target -%}
+{%- assign web = illustration.target.web -%}
+<figure class="jpm-woodcut{% if include.class %} {{ include.class }}{% endif %}" data-illustration-id="{{ illustration.id }}">
+  {%- if include.zoom %}<a href="{{ web.default | relative_url }}" class="jpm-zoom" data-gallery="jpm-woodcuts" title="{{ illustration.title_zh | escape }}（十七世紀公版木刻）">{% endif -%}
+  <picture>
+    {%- if web["960"] %}
+    <source media="(min-width: 600px)" srcset="{{ web['960'] | relative_url }}" type="image/webp">
+    {%- endif %}
+    <img src="{{ web['480'] | default: web.default | relative_url }}"
+      alt="{{ illustration.alt_zh | escape }}"
+      width="{{ web.width }}" height="{{ web.height }}"
+      {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+  </picture>
+  {%- if include.zoom %}</a>{% endif -%}
+  <figcaption>
+    <span>{{ illustration.caption_zh }}</span>
+    <a href="{{ illustration.source_page }}" target="_blank" rel="noopener noreferrer">來源與公版資訊 ↗</a>
+  </figcaption>
+</figure>
+{%- elsif jekyll.environment == "development" -%}
+<p class="jpm-asset-error">插圖 {{ include.id | escape }} 尚未核准或找不到，正式環境不輸出。</p>
+{%- endif -%}

@@ -512,3 +512,20 @@
   .overture-cue i { animation: none; }
   .tri img, .cast-tile img, .film-player img, .game-poster img { transition: none; }
 }
+
+/* ── 序幕・歷史木刻層（公版） ── */
+.overture-woodcut { display: none; margin: 0; }
+@media (min-width: 1101px) {
+  .overture-inner { grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr) minmax(0, .5fr); }
+  .overture-title .overture-sub { max-width: 24em; }
+  .overture-woodcut { display: block; align-self: center; }
+  .overture-woodcut img { opacity: .9; filter: sepia(.12) contrast(.97); }
+  .js-on .overture-woodcut { opacity: 0; }
+  .js-on .ov-ready .overture-woodcut { animation: oq-in 1.2s ease forwards 2.2s; }
+}
+@media (max-width: 767px) {
+  .overture-woodcut { display: block; max-width: 340px; margin: .4rem auto 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-on .overture-woodcut { opacity: 1; animation: none; }
+}

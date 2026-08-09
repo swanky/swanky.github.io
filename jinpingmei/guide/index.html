@@ -23,7 +23,7 @@ permalink: /jinpingmei/guide/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260808-7" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-1" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -129,6 +129,15 @@ permalink: /jinpingmei/guide/
           </a></li>
           {% endfor %}
         </ol>
+      </div>
+      <div class="reveal" style="margin-top: clamp(28px, 4vw, 44px)">
+        <h3 class="jpm-h2" style="font-size: 1.1rem">版刻旁證：四百年前讀者看到的畫面<small>十七世紀刊本插圖・公版</small></h3>
+        <p class="jpm-route-note">前三幕各配一幅十七世紀刊本的木刻：第四回西門慶初會潘金蓮（欲望點火）、第十七回宅中骨牌（後院成局）、第四十二回門前放煙火（帝國鼎盛的排場）。第四、五幕的版刻仍在逐圖核對章回，寧缺毋濫。</p>
+        <div class="jpm-woodcut-row">
+          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch004-ximen-pan" %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch017-domino" %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c17-fireworks" %}
+        </div>
       </div>
       <div class="reveal" style="margin-top: clamp(28px, 4vw, 44px)">
         <h3 class="jpm-h2" style="font-size: 1.1rem">再細一點：十回一段的讀法<small>每段一個任務</small></h3>
@@ -238,6 +247,7 @@ permalink: /jinpingmei/guide/
         <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
         <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
         <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
         <a href="{{ '/' | relative_url }}">回主站</a>
       </nav>
     </div>
