@@ -380,6 +380,12 @@
   gap: clamp(18px, 3.2vw, 40px);
   margin-top: clamp(36px, 5vw, 60px);
 }
+/* 集數為奇數時，落單的最後一張置中，不靠左懸空 */
+.films > .film:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: min(100%, calc(50% - clamp(9px, 1.6vw, 20px)));
+  margin-inline: auto;
+}
 .film-meta { padding: 1.15rem .25rem 0; }
 .film-ep { margin: 0 0 .4rem; color: var(--jpm-gold); font-size: .74rem; letter-spacing: .3em; }
 .film-meta h3 { margin: 0 0 .6rem; font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(1.5rem, 2.6vw, 2rem); }

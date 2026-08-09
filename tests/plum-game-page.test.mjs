@@ -11,9 +11,10 @@ const selectedWorks = readFileSync(join(root, '_data/selected_works.yml'), 'utf8
 
 const publicVideoId = 'E8Lgyx0X_s4';
 const ep02VideoId = 'NMFgHt9YgE8';
+const ep03VideoId = 'pOcVepABSt8';
 
 test('《梅香境》頁首提供公開影片入口', () => {
-  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01・EP02 影像<\/a>/);
+  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 至 EP03 影像<\/a>/);
 });
 
 test('首頁精選作品提供 EP01 導流但不重複嵌入播放器', () => {
@@ -58,6 +59,21 @@ test('EP02 以隱私強化的 YouTube iframe 公開並連回播放器', () => {
   const ep02Card = cards.find((c) => c.includes('<span>EP02</span>')) ?? '';
   assert.match(ep02Card, /第二集已公開/);
   assert.match(ep02Card, /href="#ep02-film"/);
+});
+
+test('EP03 以隱私強化的 YouTube iframe 公開並連回播放器', () => {
+  assert.match(page, /<section id="ep03-film" class="cycle-premiere reveal"/);
+  assert.match(page, new RegExp(`https://www\\.youtube-nocookie\\.com/embed/${ep03VideoId}`));
+  assert.match(page, /title="《金瓶梅》影像十部曲 EP03〈燈樓群芳〉"/);
+  assert.match(page, new RegExp(`https://youtu\\.be/${ep03VideoId}`));
+  const section = page.match(/<section id="ep03-film"[\s\S]*?<\/section>/)?.[0] ?? '';
+  assert.match(section, /AI 生成影像與語音/);
+  assert.match(section, /不是遊戲實機畫面/);
+  assert.match(section, /取材自《金瓶梅》<a href="\{\{ '\/jinpingmei\/text\/015\/' \| relative_url \}\}">第十五回<\/a>/);
+  const cards = page.match(/<article class="cycle-card cycle-card-released reveal">[\s\S]*?<\/article>/g) ?? [];
+  const ep03Card = cards.find((c) => c.includes('<span>EP03</span>')) ?? '';
+  assert.match(ep03Card, /第三集已公開/);
+  assert.match(ep03Card, /href="#ep03-film"/);
 });
 
 test('EP01 播放器維持 16:9 並在窄螢幕改為單欄', () => {
