@@ -48,6 +48,73 @@ export function computeChart(input, options = {}) {
   };
 }
 
+function stableValues(samples, getter) {
+  const found = new Map();
+  for (const chart of samples) {
+    const value = getter(chart);
+    const key = JSON.stringify(value);
+    if (!found.has(key)) found.set(key, value);
+  }
+  return { stable: found.size === 1, values: [...found.values()] };
+}
+
+function activationStability(samples) {
+  const changed = [];
+  for (const side of ['personality', 'design']) {
+    for (const planet of PLANET_IDS) {
+      const result = stableValues(samples, (chart) => {
+        const pos = chart[side][planet];
+        return `${pos.gate}.${pos.line}`;
+      });
+      if (!result.stable) changed.push({ side, planet, values: result.values });
+    }
+  }
+  return { stable: changed.length === 0, changed };
+}
+
+function summarizeStability(samples, meta) {
+  const stability = {
+    ...meta,
+    type: stableValues(samples, (c) => c.type),
+    authority: stableValues(samples, (c) => c.authority),
+    profile: stableValues(samples, (c) => c.profile),
+    definition: stableValues(samples, (c) => c.definition),
+    definedCenters: stableValues(samples, (c) => [...c.definedCenters].sort()),
+    undefinedCenters: stableValues(samples, (c) => [...c.undefinedCenters].sort()),
+    fullyOpenCenters: stableValues(samples, (c) => [...c.fullyOpenCenters].sort()),
+    channels: stableValues(samples, (c) => c.definedChannels.map((x) => x.id).sort()),
+    cross: stableValues(samples, (c) => ({ ...c.crossGates, angle: c.crossAngle, name: c.incarnationCross?.nameZh || null })),
+    activations: activationStability(samples),
+  };
+  stability.coreStable = ['type', 'authority', 'profile', 'definition'].every((key) => stability[key].stable);
+  stability.allStable = ['type', 'authority', 'profile', 'definition', 'definedCenters', 'undefinedCenters',
+    'fullyOpenCenters', 'channels', 'cross', 'activations'].every((key) => stability[key].stable);
+  return stability;
+}
+
+function shiftLocalMinutes(input, deltaMinutes) {
+  const local = new Date(Date.UTC(input.year, input.month - 1, input.day, input.hour, input.minute + deltaMinutes));
+  return {
+    ...input,
+    year: local.getUTCFullYear(), month: local.getUTCMonth() + 1, day: local.getUTCDate(),
+    hour: local.getUTCHours(), minute: local.getUTCMinutes(),
+  };
+}
+
+// 已知大致時間：以輸入時間與前後邊界取樣，適合檢查 ±15／30／60 分鐘的結果是否穩定。
+export function computeChartUncertainty(input, uncertaintyMinutes, options = {}) {
+  if (![15, 30, 60].includes(uncertaintyMinutes)) {
+    throw new RangeError('時間誤差只接受 15、30 或 60 分鐘。');
+  }
+  const samples = [-uncertaintyMinutes, 0, uncertaintyMinutes]
+    .map((delta) => computeChart(shiftLocalMinutes(input, delta), options));
+  return {
+    primary: samples[1],
+    samples,
+    stability: summarizeStability(samples, { mode: 'range', uncertaintyMinutes }),
+  };
+}
+
 // 未知出生時間模式：一天取五個採樣點，主結果用正午，並回報哪些屬性整日穩定。
 const SAMPLE_TIMES = [
   { hour: 0, minute: 0 }, { hour: 6, minute: 0 }, { hour: 12, minute: 0 },
@@ -58,19 +125,9 @@ export function computeChartSamples(input, options = {}) {
   const samples = SAMPLE_TIMES.map((t) => computeChart({ ...input, ...t }, options));
   const primary = samples[2]; // 正午
 
-  const stabilityOf = (getter) => {
-    const values = [...new Set(samples.map(getter))];
-    return { stable: values.length === 1, values };
-  };
-
   return {
     primary,
     samples,
-    stability: {
-      type: stabilityOf((c) => c.type),
-      authority: stabilityOf((c) => c.authority),
-      profile: stabilityOf((c) => c.profile),
-      definition: stabilityOf((c) => c.definition),
-    },
+    stability: summarizeStability(samples, { mode: 'day', uncertaintyMinutes: null }),
   };
 }

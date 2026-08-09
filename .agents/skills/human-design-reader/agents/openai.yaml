@@ -1,0 +1,4 @@
+interface:
+  display_name: "人類圖排盤與解讀"
+  short_description: "使用本站引擎排盤、檢查時間誤差並撰寫可驗證的繁中解讀"
+  default_prompt: "Use $human-design-reader to calculate this Human Design chart and explain it in Traditional Chinese."

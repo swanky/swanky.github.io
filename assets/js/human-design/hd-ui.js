@@ -1,5 +1,5 @@
 // hd-ui.js — 表單與結果渲染（頁面入口 ES module）
-import { computeChart, computeChartSamples } from './hd-engine.js';
+import { computeChart, computeChartSamples, computeChartUncertainty } from './hd-engine.js';
 import { HdError } from './hd-astro.js';
 import { createBirthForm } from './hd-form.js';
 import { mountChartCard, renderChartCard, exportChartPng } from './hd-svg.js';
@@ -45,16 +45,20 @@ function onSubmit() {
   const tz = form.resolveTz();
   if (!tz) { showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。'); return; }
   const unknownTime = form.isUnknownTime();
+  const uncertaintyMinutes = form.uncertaintyMinutes();
 
   try {
     if (unknownTime) {
       const { primary, stability } = computeChartSamples({ ...input, tz });
       renderResult(primary, stability);
+    } else if (uncertaintyMinutes) {
+      const { primary, stability } = computeChartUncertainty({ ...input, tz }, uncertaintyMinutes);
+      renderResult(primary, stability);
     } else {
       const chart = computeChart({ ...input, tz });
       renderResult(chart, null);
     }
-    gtag('event', 'hd_chart_generated', { unknown_time: unknownTime, from_page: '/human-design/' });
+    gtag('event', 'hd_chart_generated', { unknown_time: unknownTime, uncertainty_minutes: uncertaintyMinutes, from_page: '/human-design/' });
   } catch (err) {
     if (err instanceof HdError) showError(err.message);
     else { showError('計算時發生未預期的錯誤，請確認輸入並重試。'); console.error(err); }
@@ -97,10 +101,18 @@ function renderResult(chart, stability) {
       const vals = ok ? '' : `（可能為 ${s.values.map(zhMap[key]).join(' 或 ')}）`;
       return `<div class="hd-stab-item"><span>${ok ? '✓' : '⚠'}</span><span><strong>${label}</strong>：${ok ? '整天一致' : '會隨出生時間改變' + vals}</span></div>`;
     };
-    stab.innerHTML = `<h5>⏱ 你未提供確切出生時間——以下是整天的穩定性分析（主結果以正午計算）</h5>`
+    const heading = stability.mode === 'day'
+      ? '你未提供確切出生時間——以下比較同一天五個時段（主結果以正午計算）'
+      : `以下比較輸入時間前後 ${stability.uncertaintyMinutes} 分鐘（主結果仍用你輸入的時間）`;
+    const structural = (label, value) => `<div class="hd-stab-item"><span>${value.stable ? '✓' : '⚠'}</span><span><strong>${label}</strong>：${value.stable ? '取樣結果一致' : '可能改變'}</span></div>`;
+    const changedCount = stability.activations.changed.length;
+    stab.innerHTML = `<h5>⏱ ${heading}</h5>`
       + item('類型', 'type', stability.type) + item('內在權威', 'authority', stability.authority)
       + item('人生角色', 'profile', stability.profile) + item('定義', 'definition', stability.definition)
-      + `<div style="margin-top:8px;color:#789;font-size:0.82rem;">月亮相關的閘門變動最快，若標示為會改變，建議查證出生時間以取得精確結果。</div>`;
+      + structural('中心狀態', stability.definedCenters) + structural('通道', stability.channels)
+      + structural('輪迴交叉', stability.cross)
+      + `<div class="hd-stab-item"><span>${changedCount ? '⚠' : '✓'}</span><span><strong>行星啟動位置</strong>：${changedCount ? `${changedCount} 個位置可能改變` : '取樣結果一致'}</span></div>`
+      + `<div style="margin-top:8px;color:#789;font-size:0.82rem;">這是誤差範圍內的取樣檢查；若核心結果會改變，建議先查證出生時間，再做深入解讀。</div>`;
     stab.style.display = 'block';
   } else if (stab) {
     stab.style.display = 'none';
@@ -131,13 +143,17 @@ function renderResult(chart, stability) {
   // 設計重點解讀（類型／權威／角色／定義 的白話展開）
   setHTML('hd-readout', renderReadout(chart));
 
-  // 九中心（逐一解讀：有定義＝穩定發送，開放＝吸收放大）
+  // 九中心：未定義（仍有啟動閘門）與完全開放（沒有任何啟動閘門）分開標示。
   setHTML('hd-centers-list', CENTER_IDS.map((id) => {
     const defined = chart.definedCenters.includes(id);
+    const fullyOpen = chart.fullyOpenCenters.includes(id);
     const c = CENTERS[id];
+    const status = defined ? '● 已定義' : (fullyOpen ? '◎ 完全開放' : '○ 未定義');
+    const desc = defined ? c.definedDesc : c.openDesc
+      + (fullyOpen ? ' 此中心沒有任何啟動閘門，可把它視為感受外界差異的一個觀察區域。' : ' 此中心雖未形成完整通道，仍有部分閘門被啟動。');
     return `<div class="hd-center-item">
-      <span class="hd-cc-name">${c.nameZh}</span> <span class="${defined ? 'hd-cc-defined' : 'hd-cc-open'}">${defined ? '● 已定義' : '○ 開放'}</span>
-      <div class="hd-cc-desc">${defined ? c.definedDesc : c.openDesc}</div>
+      <span class="hd-cc-name">${c.nameZh}</span> <span class="${defined ? 'hd-cc-defined' : 'hd-cc-open'}">${status}</span>
+      <div class="hd-cc-desc">${desc}</div>
     </div>`;
   }).join(''));
 
@@ -150,7 +166,8 @@ function renderResult(chart, stability) {
   }[chart.crossAngle] || '';
   setHTML('hd-cross', `
     <p class="hd-cross-intro">輪迴交叉是人類圖格局最大的一層，由你出生時與出生前的太陽、地球四個閘門組成，勾勒你這一生整體的主題與舞台。</p>
-    <div class="hd-cross-data">你的交叉：<strong>閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}</strong>　<span class="hd-cross-angle">${ang}</span></div>
+    <div class="hd-cross-data">你的交叉：<strong>${chart.incarnationCross?.nameZh || `閘門 ${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}`}</strong>　<span class="hd-cross-angle">${ang}</span></div>
+    <div class="hd-cross-data" style="margin-top:4px;">組成閘門：${chart.crossGates.pSun}/${chart.crossGates.pEarth} | ${chart.crossGates.dSun}/${chart.crossGates.dEarth}</div>
     ${angMeaning ? `<p class="hd-cross-meaning">${angMeaning}。</p>` : ''}
     <p class="hd-cross-note">這個交叉的具體主題、以及它在你職涯與關係裡怎麼展開，留在<a href="#hd-report">付費解讀</a>裡細談。</p>`);
 
@@ -246,7 +263,7 @@ function renderAttrPanel(chart) {
     ${row('定義', d.nameZh)}
     ${row('人生策略', t.strategy)}
     ${row('非自己主題', t.notSelf)}
-    ${row('輪迴交叉', `閘門 ${cg.pSun}/${cg.pEarth} | ${cg.dSun}/${cg.dEarth}`, ang)}
+    ${row('輪迴交叉', chart.incarnationCross?.nameZh || `閘門 ${cg.pSun}/${cg.pEarth} | ${cg.dSun}/${cg.dEarth}`, ang)}
   </div>`;
 }
 

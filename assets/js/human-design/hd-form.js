@@ -99,6 +99,7 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
       const dis = e.target.checked;
       const h = el('hour'); if (h) h.disabled = dis;
       const mi = el('minute'); if (mi) mi.disabled = dis;
+      const uncertainty = el('uncertainty'); if (uncertainty) uncertainty.disabled = dis;
     });
 
     initCitySearch();
@@ -119,6 +120,7 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
   }
 
   function isUnknownTime() { return !!el('unknown-time')?.checked; }
+  function uncertaintyMinutes() { return +(el('uncertainty')?.value || 0); }
 
   // 程式化帶入（hash 預填／sessionStorage 帶入）：日期時間直設選單、tz 設 IANA 字串或手動偏移
   function setDate(y, mo, d) { setVal(eid('year'), y); setVal(eid('month'), mo); refreshDays(); setVal(eid('day'), d); }
@@ -138,7 +140,7 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
   }
 
   return {
-    init, readInput, resolveTz, isUnknownTime,
+    init, readInput, resolveTz, isUnknownTime, uncertaintyMinutes,
     setDate, setTime, setCity, setManualOffset, setUnknownTime,
     get tz() { return state.tz; },
     set tz(v) { state.tz = v; },

@@ -25,6 +25,9 @@ test('無任何通道 → 反映者／月亮權威／無定義', () => {
   assert.equal(r.definition, 'none');
   assert.equal(r.definedCenters.length, 0);
   assert.equal(r.openCenters.length, 9);
+  assert.deepEqual(r.undefinedCenters, ['g']);
+  assert.equal(r.fullyOpenCenters.length, 8);
+  assert.ok(!r.fullyOpenCenters.includes('g'));
 });
 
 test('僅 20-34（喉-薦）→ 顯示生產者／薦骨權威', () => {
@@ -105,4 +108,5 @@ test('人生角色與輪迴交叉取自兩組太陽／地球', () => {
   assert.equal(r.profile, '3/5');
   assert.deepEqual(r.crossGates, { pSun: 13, pEarth: 7, dSun: 43, dEarth: 23 });
   assert.equal(r.crossAngle, 'right');
+  assert.equal(r.incarnationCross.nameZh, '右角度交叉之人面獅身');
 });

@@ -429,6 +429,13 @@ extra_css: |
           <label class="hd-check" style="margin-top:12px;">
             <input type="checkbox" id="hd-unknown-time"> 我不知道確切出生時間（以正午試算，並標示哪些結果會變動）
           </label>
+          <label for="hd-uncertainty" style="display:block;margin-top:12px;font-size:0.9rem;color:#666;">如果時間是回想或約略記錄，可檢查前後誤差：</label>
+          <select id="hd-uncertainty" style="margin-top:6px;max-width:230px;" aria-label="出生時間誤差範圍">
+            <option value="0">時間精確，不需檢查</option>
+            <option value="15">前後 15 分鐘</option>
+            <option value="30">前後 30 分鐘</option>
+            <option value="60">前後 60 分鐘</option>
+          </select>
         </div>
 
         <div class="hd-field">

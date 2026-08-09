@@ -5,6 +5,7 @@ import { CHANNELS } from './hd-data-channels.js';
 import { CENTERS, CENTER_IDS } from './hd-data-centers.js';
 import { PLANET_IDS } from './hd-astro.js';
 import { PROFILES } from './hd-data-texts.js';
+import { getIncarnationCross } from './hd-data-crosses.js';
 
 const MOTOR_CENTERS = CENTER_IDS.filter((id) => CENTERS[id].motor); // heart, sacral, solar, root
 
@@ -29,6 +30,8 @@ export function judge(personality, design) {
   );
   const definedCenters = [...new Set(definedChannels.flatMap((c) => c.centers))];
   const openCenters = CENTER_IDS.filter((id) => !definedCenters.includes(id));
+  const undefinedCenters = openCenters.filter((id) => CENTERS[id].gates.some((gate) => gateActivations[gate]));
+  const fullyOpenCenters = openCenters.filter((id) => !undefinedCenters.includes(id));
   const has = (id) => definedCenters.includes(id);
 
   // 鄰接表（節點 = 定義的中心，邊 = 定義的通道）
@@ -86,9 +89,10 @@ export function judge(personality, design) {
     dSun: design.sun.gate, dEarth: design.earth.gate,
   };
   const crossAngle = PROFILES[profile] ? PROFILES[profile].angle : null;
+  const incarnationCross = getIncarnationCross(crossGates.pSun, crossAngle);
 
   return {
-    gateActivations, definedChannels, definedCenters, openCenters,
-    definition, type, authority, profile, crossGates, crossAngle, motorToThroat,
+    gateActivations, definedChannels, definedCenters, openCenters, undefinedCenters, fullyOpenCenters,
+    definition, type, authority, profile, crossGates, crossAngle, incarnationCross, motorToThroat,
   };
 }
