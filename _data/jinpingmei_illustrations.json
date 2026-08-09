@@ -256,7 +256,7 @@
     },
     {
       "id": "jpm-c17-song-huilian-huiyuan",
-      "status": "approved_source_needs_download",
+      "status": "approved",
       "title_zh": "宋惠蓮與惠元",
       "edition": "十七世紀《金瓶梅》插圖",
       "chapter": null,
@@ -270,8 +270,8 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "十七世紀佚名作品；Commons 標示忠實重製與公版。"
       },
-      "caption_zh": "宋惠蓮與惠元，十七世紀《金瓶梅》插圖，佚名。",
-      "alt_zh": "十七世紀《金瓶梅》插圖，宋惠蓮與惠元在宅院中交談",
+      "caption_zh": "宋惠蓮與惠元，十七世紀《金瓶梅》插圖，佚名，人物依圖上題名。",
+      "alt_zh": "十七世紀《金瓶梅》木刻插圖，宋惠蓮與惠元立於荷池畔交談，圖上題有兩人名字",
       "subjects": [
         "宋惠蓮",
         "惠元"
@@ -281,18 +281,43 @@
         "僕役與內宅專題"
       ],
       "content_sensitivity": "general",
-      "local": null,
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-song-huilian-huiyuan.original.jpg",
+        "sha256": "92b3a87381c3acaa1d2879f557bf8351bb4a07e0f37d10769662a98349ea4612",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan.webp",
+          "width": "1600",
+          "height": "2185"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved"
+        "result": "approved",
+        "notes": "圖上題名「宋惠蓮」「惠元」，人物身分依題字，非畫面推測；2026-08-09 下載 1761×2405 原檔（sha1 與 Commons API 一致），原檔存本機套件 cache。"
+      },
+      "characters": [
+        "宋惠蓮"
+      ],
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-song-huilian-huiyuan.webp",
+          "width": "1600",
+          "height": "2185"
+        },
+        "keep_original_in_public_repo": false
       }
     },
     {
       "id": "jpm-c17-scene-02",
-      "status": "approved_source_needs_manual_caption",
-      "title_zh": "十七世紀《金瓶梅》插圖 2",
-      "edition": "十七世紀《金瓶梅》插圖",
-      "chapter": null,
+      "status": "approved",
+      "title_zh": "第八十六回：雪娥唆打陳敬濟",
+      "edition": "崇禎年間版本插圖",
+      "chapter": 86,
       "creator": "佚名",
       "date": "17世紀",
       "commons_title": "File:Jin Ping Mei-2.jpg",
@@ -303,24 +328,47 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
       },
-      "caption_zh": null,
-      "alt_zh": null,
-      "subjects": [],
+      "caption_zh": "《金瓶梅》第八十六回插圖，雪娥唆打陳敬濟，明崇禎年間刊本，佚名。",
+      "alt_zh": "明代《金瓶梅》第八十六回木刻插圖，庭院中眾人拉扯打鬧，圖上刻有本回回目",
+      "subjects": [
+        "第八十六回",
+        "孫雪娥",
+        "陳經濟"
+      ],
       "recommended_use": [
         "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
       ],
-      "content_sensitivity": "review_required",
-      "local": null,
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-scene-02.original.jpg",
+        "sha256": "f9381e9571cf05aa057ce6f3658fd8a558a0f16c39803d20429d13003632050a",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-02-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-02-960.webp",
+          "width": "960",
+          "height": "1265"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved_metadata_incomplete",
-        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+        "result": "approved",
+        "notes": "章回定位依據：圖上刻「雪娥唆打陳敬濟」「蓮解渴」「王潮兒」，與崇禎本第八十六回回目「雪娥唆打陳敬濟 金蓮解渴王潮兒」相符（2026-08-09 對照站內原文核定，非畫面推測）。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-02-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-02-960.webp",
+          "width": "960",
+          "height": "1265"
+        },
+        "keep_original_in_public_repo": false
       }
     },
     {
       "id": "jpm-c17-scene-03",
-      "status": "approved_source_needs_manual_caption",
-      "title_zh": "十七世紀《金瓶梅》插圖 3",
+      "status": "approved",
+      "title_zh": "李瓶兒與如意兒",
       "edition": "十七世紀《金瓶梅》插圖",
       "chapter": null,
       "creator": "佚名",
@@ -333,24 +381,52 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
       },
-      "caption_zh": null,
-      "alt_zh": null,
-      "subjects": [],
+      "caption_zh": "李瓶兒與奶子如意兒（懷抱官哥），十七世紀《金瓶梅》插圖，佚名，人物依圖上題名。",
+      "alt_zh": "十七世紀《金瓶梅》木刻插圖，李瓶兒坐於椅上，奶子如意兒抱著官哥站在一旁",
+      "subjects": [
+        "李瓶兒",
+        "如意兒",
+        "官哥"
+      ],
       "recommended_use": [
         "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
       ],
-      "content_sensitivity": "review_required",
-      "local": null,
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-scene-03.original.jpg",
+        "sha256": "76e7c74f86647c801429cd13e0dcc45f30e905ded807ee9c4e50ea1bebd23be3",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03.webp",
+          "width": "1600",
+          "height": "2117"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved_metadata_incomplete",
-        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+        "result": "approved",
+        "notes": "圖上題名「李瓶兒」「奶子」「如意兒」，人物身分依題字，非畫面推測；2026-08-09 下載原檔（sha1 與 Commons API 一致），原檔存本機套件 cache。"
+      },
+      "characters": [
+        "李瓶兒"
+      ],
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03-960.webp",
+          "default": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-03.webp",
+          "width": "1600",
+          "height": "2117"
+        },
+        "keep_original_in_public_repo": false
       }
     },
     {
       "id": "jpm-c17-scene-04",
-      "status": "approved_source_needs_manual_caption",
-      "title_zh": "十七世紀《金瓶梅》插圖 4",
+      "status": "approved",
+      "title_zh": "瓶酒賞梅（章回待考）",
       "edition": "十七世紀《金瓶梅》插圖",
       "chapter": null,
       "creator": "佚名",
@@ -363,26 +439,48 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
       },
-      "caption_zh": null,
-      "alt_zh": null,
-      "subjects": [],
+      "caption_zh": "十七世紀《金瓶梅》插圖，圖上題字「瓶酒賞梅」，佚名；對應章回待考。",
+      "alt_zh": "十七世紀《金瓶梅》木刻插圖，數名女子圍桌置瓶酒賞梅小酌",
+      "subjects": [
+        "賞梅",
+        "宴飲"
+      ],
       "recommended_use": [
         "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
       ],
-      "content_sensitivity": "review_required",
-      "local": null,
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-scene-04.original.jpg",
+        "sha256": "2f7af1603c481e1cbaf47e6788fb9a5fa8c35f3d6972c735736eaaa96d43489f",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-04-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-04-960.webp",
+          "width": "960",
+          "height": "1274"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved_metadata_incomplete",
-        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+        "result": "approved",
+        "notes": "圖上題字「瓶酒賞梅」為場景題，非回目；全書回目查無此語，章回待考——僅以中性描述收錄，不上章回頁。2026-08-09 下載原檔（sha1 一致），原檔存本機套件 cache。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-04-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-04-960.webp",
+          "width": "960",
+          "height": "1274"
+        },
+        "keep_original_in_public_repo": false
       }
     },
     {
       "id": "jpm-c17-scene-05",
-      "status": "approved_source_needs_manual_caption",
-      "title_zh": "十七世紀《金瓶梅》插圖 5",
-      "edition": "十七世紀《金瓶梅》插圖",
-      "chapter": null,
+      "status": "approved",
+      "title_zh": "第八十五回：月娘識破姦情",
+      "edition": "崇禎年間版本插圖",
+      "chapter": 85,
       "creator": "佚名",
       "date": "17世紀",
       "commons_title": "File:Jin Ping Mei-5.jpg",
@@ -393,25 +491,48 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "十七世紀佚名作品；Commons 檔案頁標示忠實重製與公版。"
       },
-      "caption_zh": null,
-      "alt_zh": null,
-      "subjects": [],
+      "caption_zh": "《金瓶梅》第八十五回插圖，吳月娘識破姦情、春梅姐不垂別淚，明崇禎年間刊本，佚名。",
+      "alt_zh": "明代《金瓶梅》第八十五回木刻插圖，門前三人相語，圖上刻有本回回目",
+      "subjects": [
+        "第八十五回",
+        "吳月娘",
+        "龐春梅"
+      ],
       "recommended_use": [
         "完成逐圖辨識後再配置，不得僅憑畫面猜章回"
       ],
-      "content_sensitivity": "review_required",
-      "local": null,
+      "content_sensitivity": "general",
+      "local": {
+        "source": "assets/approved-originals/jpm-c17-scene-05.original.jpg",
+        "sha256": "448726af5fa84b36e5d0a4cc99419fb9c457419fe061b035ac77ee6dc2f77f9f",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-05-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-05-960.webp",
+          "width": "960",
+          "height": "1300"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved_metadata_incomplete",
-        "notes": "授權來源可用，但人物、情節與章回尚未核對；下載後需人工看圖與對照原文。"
+        "result": "approved",
+        "notes": "章回定位依據：圖上刻「吳月娘識破奸情 春梅姐不垂別淚」，與崇禎本第八十五回回目相符（2026-08-09 對照站內原文核定，非畫面推測）。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-05-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c17-scene-05-960.webp",
+          "width": "960",
+          "height": "1300"
+        },
+        "keep_original_in_public_repo": false
       }
     },
     {
       "id": "jpm-c60-abacus",
-      "status": "approved_source_needs_download",
-      "title_zh": "第六十回插圖中的算盤",
-      "edition": "明代《金瓶梅》插圖",
+      "status": "approved",
+      "title_zh": "第六十回：西門慶官作生涯",
+      "edition": "崇禎年間版本插圖",
       "chapter": 60,
       "creator": "佚名",
       "date": "明代",
@@ -423,8 +544,8 @@
         "label": "Public Domain Mark 1.0／PD-Art",
         "basis": "明代佚名作品；Commons 標示忠實重製與公版。"
       },
-      "caption_zh": "《金瓶梅》第六十回插圖中的算盤。",
-      "alt_zh": "明代《金瓶梅》插圖中的算盤與人物",
+      "caption_zh": "《金瓶梅》第六十回插圖，西門慶緞鋪開張（櫃上見算盤），明崇禎年間刊本，佚名。",
+      "alt_zh": "明代《金瓶梅》第六十回木刻插圖，緞鋪開張，掌櫃與夥計在櫃檯前打算盤接待客人",
       "subjects": [
         "第六十回",
         "算盤",
@@ -435,10 +556,30 @@
         "閱讀地圖權力交易段落"
       ],
       "content_sensitivity": "general",
-      "local": null,
+      "local": {
+        "source": "assets/approved-originals/jpm-c60-abacus.original.jpg",
+        "sha256": "d530d9580148efab9c0fe2a0ecc52dd416bf8e0fefc0348e484c156666f29a9c",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c60-abacus-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c60-abacus-960.webp",
+          "width": "960",
+          "height": "1345"
+        }
+      },
       "review": {
         "checked_at": "2026-08-09",
-        "result": "source_approved"
+        "result": "approved",
+        "notes": "章回定位依據：圖側刻「西門慶官作生涯」，與崇禎本第六十回回目「李瓶兒病纏死孽 西門慶官作生涯」相符；招牌「本衙紬緞」亦合本回緞鋪開張情節（2026-08-09 對照站內原文核定）。"
+      },
+      "target": {
+        "directory": "assets/img/jinpingmei/woodcuts",
+        "web": {
+          "480": "/assets/img/jinpingmei/woodcuts/jpm-c60-abacus-480.webp",
+          "960": "/assets/img/jinpingmei/woodcuts/jpm-c60-abacus-960.webp",
+          "width": "960",
+          "height": "1345"
+        },
+        "keep_original_in_public_repo": false
       }
     }
   ],

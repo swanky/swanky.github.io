@@ -537,9 +537,11 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
 .jpm-woodcut figcaption a { color: var(--jpm-gold); text-decoration: none; white-space: nowrap; }
 .jpm-woodcut figcaption a:hover, .jpm-woodcut figcaption a:focus-visible { color: var(--jpm-gold-bright); text-decoration: underline; }
 .jpm-woodcut-row {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: clamp(14px, 2.2vw, 26px); align-items: start;
 }
+.jpm-versions .jpm-woodcut { max-width: 420px; padding: 0; border: 0; background: none; }
+.jpm-versions .jpm-woodcut figcaption { margin: .55rem 0 .8rem; padding: 0 2px; }
 .jpm-woodcut-aside { margin: 0 0 clamp(20px, 3vw, 30px); }
 .jpm-woodcut-aside .jpm-woodcut { max-width: 430px; margin: 0 auto; }
 .jpm-woodcut-note {

@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-2" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#char-main">跳到主要內容</a>
@@ -53,6 +53,17 @@
     </section>
 
     {{ content }}
+
+    {% assign oldplates = "" | split: "" %}
+    {% for it in site.data.jinpingmei_illustrations.items %}{% if it.status == "approved" and it.characters and it.characters contains page.name %}{% assign oldplates = oldplates | push: it %}{% endif %}{% endfor %}
+    {% if oldplates.size > 0 %}
+    <section class="jpm-section" style="padding-top:0" aria-label="古本形象">
+      <div class="jpm-prose"><h2>古本形象</h2><p>四百年前刊本裡的這個角色——十七世紀木刻插圖、公共領域，與上方的 AI 重製並置對照。人物身分依圖上題名，並非後人推測。來源與授權見<a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>。</p></div>
+      <div class="jpm-versions">
+        {% for it in oldplates %}{% include jinpingmei/woodcut-figure.html id=it.id zoom=true %}{% endfor %}
+      </div>
+    </section>
+    {% endif %}
 
     {% assign cast = site.jinpingmei_characters | sort: 'order' %}
     {% assign idx = -1 %}
