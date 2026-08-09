@@ -23,6 +23,7 @@ permalink: /jinpingmei/credits/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-2" rel="stylesheet">
 </head>
 <body class="jpm">
@@ -54,7 +55,8 @@ permalink: /jinpingmei/credits/
         {% for it in site.data.jinpingmei_illustrations.items %}
         {% if it.status == "approved" and it.target %}
         <article class="jpm-credit-card reveal">
-          <img src="{{ it.target.web['480'] | default: it.target.web.default | relative_url }}" alt="{{ it.alt_zh | escape }}" width="{{ it.target.web.width }}" height="{{ it.target.web.height }}" loading="lazy" decoding="async">
+          {% assign zoom_src = it.target.web.default | default: it.target.web['960'] | default: it.target.web['480'] %}
+          <a class="jpm-zoom" data-gallery="jpm-credits" href="{{ zoom_src | relative_url }}" title="{{ it.title_zh | escape }}"><img src="{{ it.target.web['480'] | default: it.target.web.default | relative_url }}" alt="{{ it.alt_zh | escape }}" width="{{ it.target.web.width }}" height="{{ it.target.web.height }}" loading="lazy" decoding="async"></a>
           <h3>{{ it.title_zh }}</h3>
           <p class="meta">{{ it.date }}・{{ it.creator }}<br>{{ it.edition }}</p>
           <span class="lic">{{ it.rights.label }}</span>
@@ -94,6 +96,7 @@ permalink: /jinpingmei/credits/
       </nav>
     </div>
   </footer>
+  {% include jinpingmei/lightbox.html %}
   <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
 </body>
 </html>

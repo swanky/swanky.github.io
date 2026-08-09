@@ -9,7 +9,7 @@
 {%- if illustration and illustration.status == "approved" and illustration.target -%}
 {%- assign web = illustration.target.web -%}
 <figure class="jpm-woodcut{% if include.class %} {{ include.class }}{% endif %}" data-illustration-id="{{ illustration.id }}">
-  {%- if include.zoom %}<a href="{{ web.default | relative_url }}" class="jpm-zoom" data-gallery="jpm-woodcuts" title="{{ illustration.title_zh | escape }}（十七世紀公版木刻）">{% endif -%}
+  {%- if include.zoom %}{%- assign zoom_src = web.default | default: web["960"] | default: web["480"] -%}<a href="{{ zoom_src | relative_url }}" class="jpm-zoom" data-gallery="{{ include.gallery | default: 'jpm-woodcuts' }}" title="{{ illustration.title_zh | escape }}（十七世紀公版木刻）">{% endif -%}
   <picture>
     {%- if web["960"] %}
     <source media="(min-width: 600px)" srcset="{{ web['960'] | relative_url }}" type="image/webp">

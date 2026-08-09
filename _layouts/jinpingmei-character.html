@@ -60,7 +60,7 @@
     <section class="jpm-section" style="padding-top:0" aria-label="古本形象">
       <div class="jpm-prose"><h2>古本形象</h2><p>四百年前刊本裡的這個角色——十七世紀木刻插圖、公共領域，與上方的 AI 重製並置對照。人物身分依圖上題名，並非後人推測。來源與授權見<a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>。</p></div>
       <div class="jpm-versions">
-        {% for it in oldplates %}{% include jinpingmei/woodcut-figure.html id=it.id zoom=true %}{% endfor %}
+        {% for it in oldplates %}{% include jinpingmei/woodcut-figure.html id=it.id zoom=true gallery="jpm-character" %}{% endfor %}
       </div>
     </section>
     {% endif %}

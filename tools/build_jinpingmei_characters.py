@@ -191,27 +191,35 @@ def render_body(card: dict, slug: str) -> str:
         f"<p>{intro}</p></div>"
         '<div class="jpm-versions">'
     )
-    parts.append(
-        f'<figure><img src="{{{{ \'/assets/img/jinpingmei/live-action/{slug}-master.jpg\' | relative_url }}}}" '
-        f'alt="{name}選角母版（AI 擬真攝影風，非真人照片）" loading="lazy">'
-        f"<figcaption>選角母版{KDOT}AI 擬真攝影風</figcaption></figure>"
-    )
+    vfigs = [(
+        f"/assets/img/jinpingmei/live-action/{slug}-master.jpg",
+        f"{name}選角母版（AI 擬真攝影風，非真人照片）",
+        f"選角母版{KDOT}AI 擬真攝影風",
+    )]
     if slug in LIVE_WOMEN:
-        parts.append(
-            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-standard.jpg\' | relative_url }}}}" '
-            f'alt="{name}《金瓶異夢》標準版立繪" loading="lazy">'
-            "<figcaption>《金瓶異夢》標準版立繪</figcaption></figure>"
-        )
-        parts.append(
-            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-sensual.jpg\' | relative_url }}}}" '
-            f'alt="{name}《金瓶異夢》成熟版立繪" loading="lazy">'
-            "<figcaption>《金瓶異夢》成熟版立繪</figcaption></figure>"
-        )
+        vfigs.append((
+            f"/assets/img/jinpingmei/figures/{slug}-standard.jpg",
+            f"{name}《金瓶異夢》標準版立繪",
+            "《金瓶異夢》標準版立繪",
+        ))
+        vfigs.append((
+            f"/assets/img/jinpingmei/figures/{slug}-sensual.jpg",
+            f"{name}《金瓶異夢》成熟版立繪",
+            "《金瓶異夢》成熟版立繪",
+        ))
     if slug in CARTOON_TURNAROUND:
+        vfigs.append((
+            f"/assets/img/jinpingmei/turnaround/{slug}.jpg",
+            f"{name}動畫風三視圖",
+            f"原典研究{KDOT}動畫風三視圖",
+        ))
+    # 與頁首三視圖同一個 data-gallery，lightbox 內可上下張串看整套視覺
+    for vsrc, valt, vcap in vfigs:
+        vhref = f"{{{{ '{vsrc}' | relative_url }}}}"
         parts.append(
-            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/turnaround/{slug}.jpg\' | relative_url }}}}" '
-            f'alt="{name}動畫風三視圖" loading="lazy">'
-            f"<figcaption>原典研究{KDOT}動畫風三視圖</figcaption></figure>"
+            f'<figure><a href="{vhref}" class="jpm-zoom" data-gallery="jpm-character" title="{valt}">'
+            f'<img src="{vhref}" alt="{valt}" loading="lazy"></a>'
+            f"<figcaption>{vcap}</figcaption></figure>"
         )
     parts.append("</div></section>")
 

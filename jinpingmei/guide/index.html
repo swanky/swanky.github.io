@@ -23,6 +23,7 @@ permalink: /jinpingmei/guide/
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-2" rel="stylesheet">
   <script type="application/ld+json">
   {
@@ -134,10 +135,10 @@ permalink: /jinpingmei/guide/
         <h3 class="jpm-h2" style="font-size: 1.1rem">版刻旁證：四百年前讀者看到的畫面<small>十七世紀刊本插圖・公版</small></h3>
         <p class="jpm-route-note">五幕已有四幕配上十七世紀刊本的木刻：第四回西門慶初會潘金蓮（欲望點火）、第十七回宅中骨牌（後院成局）、第四十二回門前放煙火（帝國鼎盛的排場）、第八十五回月娘識破姦情（瓦解與餘波）。第四幕「華宴轉冷」的版刻仍在核對章回，寧缺毋濫。</p>
         <div class="jpm-woodcut-row">
-          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch004-ximen-pan" %}
-          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch017-domino" %}
-          {% include jinpingmei/woodcut-figure.html id="jpm-c17-fireworks" %}
-          {% include jinpingmei/woodcut-figure.html id="jpm-c17-scene-05" %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch004-ximen-pan" zoom=true %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c1617-ch017-domino" zoom=true %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c17-fireworks" zoom=true %}
+          {% include jinpingmei/woodcut-figure.html id="jpm-c17-scene-05" zoom=true %}
         </div>
       </div>
       <div class="reveal" style="margin-top: clamp(28px, 4vw, 44px)">
@@ -253,6 +254,7 @@ permalink: /jinpingmei/guide/
       </nav>
     </div>
   </footer>
+  {% include jinpingmei/lightbox.html %}
   <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
 </body>
 </html>
