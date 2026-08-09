@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 金瓶梅宇宙｜一個虛擬 AI 劇組重製四百年前的經典
-description: 「金瓶梅宇宙」是一個由 AI 協作的虛擬劇組：完整收錄《金瓶梅詞話》百回原文、建立十一位角色研究、產出文學影像與戰棋遊戲。文字、選角、影像、遊戲——看一部明代經典如何被重新製作。
+description: 「金瓶梅宇宙」是一個由 AI 協作的虛擬劇組：完整收錄《金瓶梅詞話》百回原文、建立十九位角色研究、產出文學影像與戰棋遊戲。文字、選角、影像、遊戲——看一部明代經典如何被重新製作。
 permalink: /jinpingmei/
 ---
 <!doctype html>
@@ -79,7 +79,7 @@ permalink: /jinpingmei/
       <header class="act-head jpm-shell">
         <p class="act-no reveal"><b>第壹幕</b><span>人物</span></p>
         <h2 class="act-title reveal" id="ren-title">三字藏三美</h2>
-        <p class="act-lead reveal">「金瓶梅」從來不只是書名——金、瓶、梅三個字，藏着三個女人的名字：潘<b>金</b>蓮、李<b>瓶</b>兒、龐春<b>梅</b>。她們與其他八位主要角色，都經過逐回原文考證，再由 AI 選角定裝。</p>
+        <p class="act-lead reveal">「金瓶梅」從來不只是書名——金、瓶、梅三個字，藏着三個女人的名字：潘<b>金</b>蓮、李<b>瓶</b>兒、龐春<b>梅</b>。她們與其他十六位主要角色，都經過逐回原文考證，再由 AI 選角定裝。</p>
       </header>
 
       <div class="triptych jpm-shell">
@@ -116,13 +116,13 @@ permalink: /jinpingmei/
       </div>
 
       <div class="cast-wall jpm-shell">
-        <p class="cast-wall-note reveal">十一位主要角色・五位已完成擬真定裝，其餘沿用動畫風設定、重製中</p>
+        <p class="cast-wall-note reveal">十九位主要角色・全數完成擬真攝影風定裝</p>
         <div class="cast-grid">
           {% assign cast = site.jinpingmei_characters | sort: "order" %}
           {% for c in cast %}
-          <a class="cast-tile reveal{% if c.turnaround contains 'turnaround-live' %} is-live{% endif %}" href="{{ c.url | relative_url }}">
+          <a class="cast-tile reveal" href="{{ c.url | relative_url }}">
             <img src="{{ c.turnaround | relative_url }}" alt="{{ c.name }}三視圖設定（AI 生成）" width="{{ c.turnaround_w }}" height="{{ c.turnaround_h }}" loading="lazy" decoding="async">
-            <span class="ct-meta"><b>{{ c.name }}</b>{% unless c.turnaround contains 'turnaround-live' %}<small>動畫設定・重製中</small>{% endunless %}</span>
+            <span class="ct-meta"><b>{{ c.name }}</b></span>
           </a>
           {% endfor %}
         </div>

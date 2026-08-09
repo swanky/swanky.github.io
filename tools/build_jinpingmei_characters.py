@@ -1,241 +1,306 @@
-# 金瓶梅角色卡 → _jinpingmei_characters collection 轉換器（雙來源）
-# 來源 A：cast.md（Top10；其中四位女性改用來源 B，餘六位用此檔＋動畫風三視圖）
-# 來源 B：live-action-five/金瓶梅詞話-五名核心女性-真人-cast.md（五女擬真版，Owner APPROVED_ALL v001）
-# 用法：python -X utf8 tools/build_jinpingmei_characters.py
-import re
-import sys
+"""金瓶梅角色卡 -> _jinpingmei_characters collection 轉換器（v2）
+
+來源（唯讀）：
+  C:\\cc_home\\novel-characters-lab\\jinpingmei-full\\data\\catalog\\visual-authority-cast\\v001\\cards\\*.json
+  （19 個角色卡；card 檔名 -> 站上 slug 對照見 CARD_SLUG）
+  同目錄 v001\\images\\{中文名}-turnaround.png 的 PNG IHDR，取得三視圖實際尺寸
+  （bytes 16-20 寬、20-24 高，big-endian；轉檔不改尺寸所以可信）
+
+2026-08-09 v2：改吃 visual-authority-cast v001 JSON、十九人整編
+（原 v1 讀 金瓶梅詞話-主要角色-cast.md ＋ live-action-five 真人 cast.md 兩份 Markdown、僅十一人，已棄用）。
+
+用法：python -X utf8 tools/build_jinpingmei_characters.py
+"""
+import json
+import struct
 from pathlib import Path
 
 LAB = Path(r"C:\cc_home\novel-characters-lab\jinpingmei-full")
-SRC_MAIN = LAB / "金瓶梅詞話-主要角色-cast.md"
-SRC_LIVE = LAB / "live-action-five" / "金瓶梅詞話-五名核心女性-真人-cast.md"
+CARDS_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v001" / "cards"
+IMAGES_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v001" / "images"
 DST = Path(__file__).resolve().parent.parent / "_jinpingmei_characters"
 
-SLUGS = {
-    "西門慶": "ximenqing", "吳月娘": "wuyueniang", "李瓶兒": "lipinger",
-    "潘金蓮": "panjinlian", "應伯爵": "yingbojue", "陳經濟": "chenjingji",
-    "孟玉樓": "mengyulou", "春梅": "chunmei", "龐春梅": "chunmei",
-    "孫雪娥": "sunxuee", "李嬌兒": "lijiaoer", "宋惠蓮": "songhuilian",
-}
-ORDER = {  # 依原 Top10 出場序；宋惠蓮 排最後
-    "ximenqing": 1, "wuyueniang": 2, "lipinger": 3, "panjinlian": 4, "yingbojue": 5,
-    "chenjingji": 6, "mengyulou": 7, "chunmei": 8, "lijiaoer": 9, "sunxuee": 10, "songhuilian": 11,
-}
-LIVE_WOMEN = {"panjinlian", "lipinger", "wuyueniang", "chunmei", "songhuilian"}
-GAME_VERSION = LIVE_WOMEN  # 五女皆有 標準版/成熟版/選角母版
-CARTOON_TURNAROUND = {"panjinlian", "lipinger", "wuyueniang", "chunmei"}  # 換擬真後仍保留動畫風於版本區
-LIVE_DIMS = {"panjinlian": (1672, 941), "lipinger": (1536, 1024), "wuyueniang": (1536, 1024), "chunmei": (1536, 1024), "songhuilian": (1536, 1024)}
+# 兩個站上會混用、外觀相似但不同碼位的分隔點：逐字保留既有規範，避免手打誤植。
+MDOT = "\u00b7"   # MIDDLE DOT，tagline 用「 · 」（前後帶空格）
+KDOT = "\u30fb"   # KATAKANA MIDDLE DOT，視覺版本圖說用「・」（無空格）
 
-# 欄位標籤：兼容簡／繁兩版 cast 檔
-S_PORTRAIT = "人物画像|人物畫像"
-S_PROMPT = "卡通形象提示词|卡通形象提示詞"
-S_VOICE = "音色提示词|音色提示詞"
-FIELD_LABELS = {"性别|性別": "性別", "年龄|年齡": "年齡", "身份": "身份", "性格": "性格"}
-PROSE_LABELS = {"外貌": "外貌", "性情": "性情", "动机|動機": "動機", "人物弧光": "人物弧光"}
-VOICE_LABELS = {"音色": "音色", "音高": "音高", "语速|語速": "語速", "口音": "口音", "情绪|情緒": "情緒", "类比|類比": "類比"}
+# card 檔名（不含副檔名）→ 站上 slug（逐字對照派工單）
+CARD_SLUG = {
+    "01-pan-jinlian": "panjinlian",
+    "02-li-pinger": "lipinger",
+    "03-wu-yueniang": "wuyueniang",
+    "04-pang-chunmei": "chunmei",
+    "05-song-huilian": "songhuilian",
+    "06-ximenqing": "ximenqing",
+    "07-meng-yulou": "mengyulou",
+    "08-li-jiaoer": "lijiaoer",
+    "09-chen-jingji": "chenjingji",
+    "10-ying-bojue": "yingbojue",
+    "11-sun-xuee": "sunxuee",
+    "12-wang-po": "wangpo",
+    "13-wu-zhi": "wuzhi",
+    "14-hua-zixu": "huazixu",
+    "15-han-aijie": "hanaijie",
+    "16-zhou-xiu": "zhouxiu",
+    "17-wu-song": "wusong",
+    "18-wang-liuer": "wangliuer",
+    "19-pu-jing": "pujing",
+}
+
+# slug → 名冊順位（逐字對照派工單）
+ORDER = {
+    "ximenqing": 1, "wuyueniang": 2, "lipinger": 3, "panjinlian": 4, "yingbojue": 5,
+    "chenjingji": 6, "mengyulou": 7, "chunmei": 8, "lijiaoer": 9, "sunxuee": 10,
+    "songhuilian": 11, "wangpo": 12, "wuzhi": 13, "huazixu": 14, "hanaijie": 15,
+    "zhouxiu": 16, "wusong": 17, "wangliuer": 18, "pujing": 19,
+}
+
+# 戰棋遊戲《金瓶異夢：十二花界》標準版／成熟版立繪的五名核心女性
+LIVE_WOMEN = {"panjinlian", "lipinger", "wuyueniang", "chunmei", "songhuilian"}
+# 舊主要角色批次（原 Top10）留下的「動畫風三視圖」——換擬真母版後仍留於視覺版本區作對照
+CARTOON_TURNAROUND = {
+    "ximenqing", "wuyueniang", "lipinger", "panjinlian", "yingbojue",
+    "chenjingji", "mengyulou", "chunmei", "lijiaoer", "sunxuee",
+}
+
+IMPORTANCE_ZH = {"protagonist": "主角", "major": "要角"}
+
+_ZH_DIGITS = "零一二三四五六七八九"
 
 
 def esc(t: str) -> str:
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def parse_character(block: str):
-    lines = block.splitlines()
-    m = re.match(r"^([^（\s]+)（([^）]+)）", lines[0])
-    if not m:
-        sys.exit(f"角色標題解析失敗：{lines[0]!r}")
-    name, aliases = m.group(1), m.group(2)
-    tagline = ""
-    for ln in lines[1:8]:
-        if ln.startswith("> "):
-            tagline = re.sub(r"^>\s*", "", ln).strip()
-            break
-    if not tagline:
-        sys.exit(f"{name}: 找不到定位句")
-
-    def section(title, nxt):
-        pat = re.compile(rf"^### (?:{title})\s*$(.*?)(?=^### (?:{nxt})|\Z)", re.M | re.S)
-        sm = pat.search(block)
-        return sm.group(1) if sm else ""
-
-    portrait = section(S_PORTRAIT, S_PROMPT)
-    prompts = section(S_PROMPT, S_VOICE)
-    voice = re.split(rf"### (?:{S_VOICE})", block, maxsplit=1)
-    voice = voice[1] if len(voice) > 1 else ""
-    if not (portrait and prompts and voice):
-        sys.exit(f"{name}: 三大段落不齊")
-
-    fields = {}
-    for pat, zh_t in FIELD_LABELS.items():
-        fm = re.search(rf"-\s+\*\*(?:{pat})\*\*：(.+)", portrait)
-        if fm:
-            fields[zh_t] = fm.group(1).strip()
-    prose = {}
-    for pat, zh_t in PROSE_LABELS.items():
-        pm = re.search(rf"^\*\*(?:{pat})\*\*　(.+)$", portrait, re.M)
-        if pm:
-            prose[zh_t] = pm.group(1).strip()
-    rel_m = re.search(r"\*\*(?:关系|關係)\*\*\s*(.*?)(?=\*\*(?:原文依据|原文依據)\*\*)", portrait, re.S)
-    relations = []
-    if rel_m:
-        for ln in rel_m.group(1).splitlines():
-            rm = re.match(r"^-\s+(.+?)\s+—\s+(.+)$", ln.strip())
-            if rm:
-                relations.append((rm.group(1), rm.group(2)))
-    quotes = []
-    q_m = re.search(r"\*\*(?:原文依据|原文依據)\*\*\s*(.*)$", portrait, re.S)
-    if q_m:
-        quotes = [re.sub(r"^>\s*", "", q).strip() for q in q_m.group(1).splitlines() if q.strip().startswith(">")]
-
-    codes = re.findall(r"```text\s*\n(.*?)```", prompts, re.S)
-    zh_prompt = ""
-    zm = re.search(r"^中文：(.+?)(?=^\*\*|\Z)", prompts, re.M | re.S)
-    if zm:
-        zh_prompt = " ".join(zm.group(1).split())
-    style_m = re.search(r"\*\*(?:风格|風格)\*\*　(.+)", prompts)
-
-    voice_fields = {}
-    for pat, zh_t in VOICE_LABELS.items():
-        vm = re.search(rf"-\s+\*\*(?:{pat})\*\*：(.+)", voice)
-        if vm:
-            voice_fields[zh_t] = vm.group(1).strip()
-    voice_codes = re.findall(r"```text\s*\n(.*?)```", voice, re.S)
-    voice_zh = ""
-    vzm = re.search(r"^中文：(.+?)(?=^---|\Z)", voice, re.M | re.S)
-    if vzm:
-        voice_zh = " ".join(vzm.group(1).split())
-
-    return {
-        "name": name, "aliases": aliases, "tagline": tagline,
-        "fields": fields, "prose": prose, "relations": relations, "quotes": quotes,
-        "style": style_m.group(1).strip() if style_m else "",
-        "prompt_en": codes[0].strip() if codes else "",
-        "prompt_zh": zh_prompt,
-        "prompt_negative": codes[1].strip() if len(codes) > 1 else "",
-        "prompt_turnaround": codes[2].strip() if len(codes) > 2 else "",
-        "voice_fields": voice_fields,
-        "voice_en": voice_codes[0].strip() if voice_codes else "",
-        "voice_zh": voice_zh,
-    }
+def zh_num(n: int) -> str:
+    """1-100 中文數字，與 _jinpingmei/*.html 回目「第X回」用字一致（十一、二十、一百…）。"""
+    if not 1 <= n <= 100:
+        raise ValueError(f"zh_num 只支援 1-100：{n}")
+    if n == 100:
+        return "一百"
+    tens, ones = divmod(n, 10)
+    if tens == 0:
+        return _ZH_DIGITS[ones]
+    s = "十" if tens == 1 else _ZH_DIGITS[tens] + "十"
+    if ones:
+        s += _ZH_DIGITS[ones]
+    return s
 
 
-def render(c, slug, live):
+def read_png_dims(path: Path):
+    with open(path, "rb") as f:
+        head = f.read(24)
+    if head[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError(f"不是合法 PNG：{path}")
+    w, h = struct.unpack(">II", head[16:24])
+    return w, h
+
+
+def get_aliases(card: dict) -> str:
+    raw = card.get("displayAliases") or card.get("aliases") or []
+    raw = [a for a in raw if a != card["name"]]
+    return "\u3001".join(raw)
+
+
+def get_tagline(card: dict) -> str:
+    prefix = IMPORTANCE_ZH[card["importance"]]
+    return f"{prefix} {MDOT} {card['oneLiner']}"
+
+
+def chapter_links(chapters) -> str:
+    return "\u3001".join(
+        f'<a href="{{{{ \'/jinpingmei/text/{c:03d}/\' | relative_url }}}}">第{zh_num(c)}回</a>'
+        for c in chapters
+    )
+
+
+def visual_versions_intro(slug: str) -> str:
+    has_game = slug in LIVE_WOMEN
+    has_cartoon = slug in CARTOON_TURNAROUND
+    if has_game and has_cartoon:
+        return (
+            "同一個角色的其他視覺路線：擬真攝影風選角母版、戰棋遊戲《金瓶異夢：十二花界》的兩版立繪，"
+            "以及早期的動畫風三視圖。以下全部為 AI 生成影像，並非真人照片。"
+        )
+    if has_game:
+        return (
+            "同一個角色的其他視覺路線：擬真攝影風選角母版、戰棋遊戲《金瓶異夢：十二花界》的兩版立繪。"
+            "以下全部為 AI 生成影像，並非真人照片。"
+        )
+    if has_cartoon:
+        return (
+            "同一個角色的其他視覺路線：擬真攝影風選角母版，以及早期的動畫風三視圖。"
+            "以下全部為 AI 生成影像，並非真人照片。"
+        )
+    return "同一個角色的另一份視覺材料：擬真攝影風的選角母版。以下全部為 AI 生成影像，並非真人照片。"
+
+
+def render_body(card: dict, slug: str) -> str:
+    name = card["name"]
+    persona = card["persona"]
+    image = card["image"]
+    voice = card["voice"]
     parts = []
+
     parts.append('<section class="jpm-section" style="padding-top:0">')
     parts.append('<dl class="jpm-fields">')
-    for k in ("性別", "年齡", "身份", "性格"):
-        if k in c["fields"]:
-            parts.append(f"<div><dt>{k}</dt><dd>{esc(c['fields'][k])}</dd></div>")
+    if persona.get("gender"):
+        parts.append(f"<div><dt>性別</dt><dd>{esc(persona['gender'])}</dd></div>")
+    if persona.get("ageRange"):
+        parts.append(f"<div><dt>年齡</dt><dd>{esc(persona['ageRange'])}</dd></div>")
+    if persona.get("identity"):
+        parts.append(f"<div><dt>身份</dt><dd>{esc(persona['identity'])}</dd></div>")
+    if persona.get("personality"):
+        parts.append(f"<div><dt>性格</dt><dd>{esc(' / '.join(persona['personality']))}</dd></div>")
     parts.append("</dl>")
     parts.append('<div class="jpm-prose">')
-    for k in ("外貌", "性情", "動機", "人物弧光"):
-        if k in c["prose"]:
-            parts.append(f"<h2>{k}</h2><p>{esc(c['prose'][k])}</p>")
+    for zh, key in (("外貌", "appearance"), ("性情", "temperament"), ("動機", "motivation"), ("人物弧光", "arc")):
+        if persona.get(key):
+            parts.append(f"<h2>{zh}</h2><p>{esc(persona[key])}</p>")
     parts.append("</div></section>")
 
-    if c["relations"]:
-        parts.append('<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>人物關係</h2></div><ul class="jpm-rel-list">')
-        for who, desc in c["relations"]:
-            parts.append(f"<li><b>{esc(who)}</b><span>{esc(desc)}</span></li>")
+    rels = persona.get("relationships") or []
+    if rels:
+        parts.append(
+            '<section class="jpm-section" style="padding-top:0"><div class="jpm-prose">'
+            '<h2>人物關係</h2></div><ul class="jpm-rel-list">'
+        )
+        for r in rels:
+            parts.append(f"<li><b>{esc(r['name'])}</b><span>{esc(r['relation'])}</span></li>")
         parts.append("</ul></section>")
 
-    if c["quotes"]:
-        parts.append('<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>原文依據</h2><p>以下逐字引自《金瓶梅詞話》（萬曆本）原典，是這份角色側寫的文本根據。</p></div><ul class="jpm-quotes">')
-        for q in c["quotes"]:
-            parts.append(f"<li>{esc(q)}</li>")
+    evidence = persona.get("evidence") or []
+    if evidence:
+        loc_map = {loc["quote"].strip(): loc["chapters"] for loc in (card.get("evidenceLocations") or [])}
+        parts.append(
+            '<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>原文依據</h2>'
+            "<p>以下逐字引自《金瓶梅詞話》（萬曆本）原典，是這份角色側寫的文本根據。</p></div>"
+            '<ul class="jpm-quotes">'
+        )
+        for q in evidence:
+            chapters = loc_map.get(q.strip())
+            if chapters:
+                parts.append(f'<li>{esc(q)}<span class="src">（{chapter_links(chapters)}）</span></li>')
+            else:
+                parts.append(f"<li>{esc(q)}</li>")
         parts.append("</ul></section>")
 
-    if slug in GAME_VERSION:
-        parts.append('<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>視覺版本</h2><p>同一個角色的其他視覺路線：擬真攝影風選角母版、戰棋遊戲《金瓶異夢：十二花界》的兩版立繪'
-                     + ('，以及早期的動畫風三視圖' if slug in CARTOON_TURNAROUND else '')
-                     + '。以下全部為 AI 生成影像，並非真人照片。</p></div><div class="jpm-versions">')
-        parts.append(f'<figure><img src="{{{{ \'/assets/img/jinpingmei/live-action/{slug}-master.jpg\' | relative_url }}}}" alt="{c["name"]}選角母版（AI 擬真攝影風，非真人照片）" loading="lazy"><figcaption>選角母版・AI 擬真攝影風</figcaption></figure>')
-        parts.append(f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-standard.jpg\' | relative_url }}}}" alt="{c["name"]}《金瓶異夢》標準版立繪" loading="lazy"><figcaption>《金瓶異夢》標準版立繪</figcaption></figure>')
-        parts.append(f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-sensual.jpg\' | relative_url }}}}" alt="{c["name"]}《金瓶異夢》成熟版立繪" loading="lazy"><figcaption>《金瓶異夢》成熟版立繪</figcaption></figure>')
-        if slug in CARTOON_TURNAROUND:
-            parts.append(f'<figure><img src="{{{{ \'/assets/img/jinpingmei/turnaround/{slug}.jpg\' | relative_url }}}}" alt="{c["name"]}動畫風三視圖" loading="lazy"><figcaption>原典研究・動畫風三視圖</figcaption></figure>')
-        parts.append("</div></section>")
+    intro = visual_versions_intro(slug)
+    parts.append(
+        '<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>視覺版本</h2>'
+        f"<p>{intro}</p></div>"
+        '<div class="jpm-versions">'
+    )
+    parts.append(
+        f'<figure><img src="{{{{ \'/assets/img/jinpingmei/live-action/{slug}-master.jpg\' | relative_url }}}}" '
+        f'alt="{name}選角母版（AI 擬真攝影風，非真人照片）" loading="lazy">'
+        f"<figcaption>選角母版{KDOT}AI 擬真攝影風</figcaption></figure>"
+    )
+    if slug in LIVE_WOMEN:
+        parts.append(
+            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-standard.jpg\' | relative_url }}}}" '
+            f'alt="{name}《金瓶異夢》標準版立繪" loading="lazy">'
+            "<figcaption>《金瓶異夢》標準版立繪</figcaption></figure>"
+        )
+        parts.append(
+            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/figures/{slug}-sensual.jpg\' | relative_url }}}}" '
+            f'alt="{name}《金瓶異夢》成熟版立繪" loading="lazy">'
+            "<figcaption>《金瓶異夢》成熟版立繪</figcaption></figure>"
+        )
+    if slug in CARTOON_TURNAROUND:
+        parts.append(
+            f'<figure><img src="{{{{ \'/assets/img/jinpingmei/turnaround/{slug}.jpg\' | relative_url }}}}" '
+            f'alt="{name}動畫風三視圖" loading="lazy">'
+            f"<figcaption>原典研究{KDOT}動畫風三視圖</figcaption></figure>"
+        )
+    parts.append("</div></section>")
 
-    parts.append('<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>AI 選角檔案</h2><p>虛擬劇組的工作底稿：把原典證據翻譯成給 AI 的設定指令，再由指令生成上方的角色視覺與聲音方向。完整方法見<a href="{{ \'/jinpingmei/studio/\' | relative_url }}">影像工作室</a>。</p></div>')
+    parts.append(
+        '<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>AI 選角檔案</h2>'
+        "<p>虛擬劇組的工作底稿：把原典證據翻譯成給 AI 的設定指令，再由指令生成上方的角色視覺與聲音方向。"
+        "完整方法見<a href=\"{{ '/jinpingmei/studio/' | relative_url }}\">影像工作室</a>。</p></div>"
+    )
     parts.append('<details class="jpm-details"><summary>形象設定指令（給圖像模型）</summary><div class="inner">')
-    if c["style"]:
-        parts.append(f'<span class="lbl">風格</span><p>{esc(c["style"])}</p>')
-    if c["prompt_zh"]:
-        parts.append(f'<span class="lbl">設定描述（中文）</span><p>{esc(c["prompt_zh"])}</p>')
-    if c["prompt_en"]:
-        parts.append(f'<span class="lbl">設定描述（英文原稿）</span><pre>{esc(c["prompt_en"])}</pre>')
-    if c["prompt_negative"]:
-        parts.append(f'<span class="lbl">排除條件（negative prompt）</span><pre>{esc(c["prompt_negative"])}</pre>')
-    if c["prompt_turnaround"]:
-        parts.append(f'<span class="lbl">三視圖指令</span><pre>{esc(c["prompt_turnaround"])}</pre>')
+    if image.get("style"):
+        parts.append(f'<span class="lbl">風格</span><p>{esc(image["style"])}</p>')
+    if image.get("promptZh"):
+        parts.append(f'<span class="lbl">設定描述（中文）</span><p>{esc(image["promptZh"])}</p>')
+    if image.get("prompt"):
+        parts.append(f'<span class="lbl">設定描述（英文原稿）</span><pre>{esc(image["prompt"])}</pre>')
+    if image.get("negativePrompt"):
+        parts.append(f'<span class="lbl">排除條件（negative prompt）</span><pre>{esc(image["negativePrompt"])}</pre>')
+    if image.get("turnaround"):
+        parts.append(f'<span class="lbl">三視圖指令</span><pre>{esc(image["turnaround"])}</pre>')
     parts.append("</div></details>")
+
     parts.append('<details class="jpm-details"><summary>聲音設定（給語音模型）</summary><div class="inner">')
-    if c["voice_fields"]:
-        parts.append("<p>" + "；".join(f"<strong>{k}</strong>：{esc(v)}" for k, v in c["voice_fields"].items()) + "</p>")
-    if c["voice_zh"]:
-        parts.append(f'<span class="lbl">聲音描述（中文）</span><p>{esc(c["voice_zh"])}</p>')
-    if c["voice_en"]:
-        parts.append(f'<span class="lbl">聲音描述（英文原稿）</span><pre>{esc(c["voice_en"])}</pre>')
+    voice_bits = [
+        f"<strong>{zh}</strong>：{esc(voice[key])}"
+        for zh, key in (
+            ("音色", "timbre"), ("音高", "pitch"), ("語速", "pace"),
+            ("口音", "accent"), ("情緒", "emotion"), ("類比", "referenceHint"),
+        )
+        if voice.get(key)
+    ]
+    if voice_bits:
+        parts.append("<p>" + "；".join(voice_bits) + "</p>")
+    if voice.get("promptZh"):
+        parts.append(f'<span class="lbl">聲音描述（中文）</span><p>{esc(voice["promptZh"])}</p>')
+    if voice.get("prompt"):
+        parts.append(f'<span class="lbl">聲音描述（英文原稿）</span><pre>{esc(voice["prompt"])}</pre>')
     parts.append("</div></details></section>")
 
-    if live:
-        turnaround = f"/assets/img/jinpingmei/turnaround-live/{slug}.jpg"
-        tw, th = LIVE_DIMS[slug]
-        caption = "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
-    else:
-        turnaround = f"/assets/img/jinpingmei/turnaround/{slug}.jpg"
-        tw, th = 1536, 1024
-        caption = "三視圖角色設定・AI 生成動畫風・以原典描寫為依據"
+    return "\n".join(parts)
 
+
+def render_front_matter(card: dict, slug: str) -> str:
+    name = card["name"]
+    tw, th = read_png_dims(IMAGES_DIR / f"{name}-turnaround.png")
     fm = [
         "---",
         "layout: jinpingmei-character",
-        f'name: "{c["name"]}"',
-        f'aliases: "{c["aliases"]}"',
-        f'tagline: "{c["tagline"]}"',
+        f'name: "{name}"',
+        f'aliases: "{get_aliases(card)}"',
+        f'tagline: "{get_tagline(card)}"',
         f"order: {ORDER[slug]}",
-        f'turnaround: "{turnaround}"',
+        f'turnaround: "/assets/img/jinpingmei/turnaround-live/{slug}.jpg"',
         f"turnaround_w: {tw}",
         f"turnaround_h: {th}",
-        f'turnaround_caption: "{caption}"',
+        'turnaround_caption: "三視圖角色設定\u30fbAI 擬真攝影風（非真人照片）\u30fb以原典描寫為依據"',
         f"permalink: /jinpingmei/characters/{slug}/",
-        f'title: "{c["name"]}｜金瓶梅角色研究"',
-        f'description: "金瓶梅角色研究：{c["name"]}——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"',
+        f'title: "{name}｜金瓶梅角色研究"',
+        (
+            f'description: "金瓶梅角色研究：{name}\u2014\u2014AI 虛擬劇組整理的人物側寫、原文依據、'
+            '三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"'
+        ),
         "---",
     ]
-    return "\n".join(fm) + "\n" + "\n".join(parts) + "\n"
+    return "\n".join(fm)
 
 
-def split_blocks(path):
-    text = path.read_text(encoding="utf-8-sig")
-    blocks = re.split(r"^## ", text, flags=re.M)[1:]
-    return [b for b in blocks if not b.startswith("故事摘要")]
+def render(card: dict, slug: str) -> str:
+    return render_front_matter(card, slug) + "\n" + render_body(card, slug) + "\n"
 
 
 def main():
-    live_blocks = split_blocks(SRC_LIVE)
-    if len(live_blocks) != 5:
-        sys.exit(f"真人 cast 預期 5 位，實得 {len(live_blocks)}")
-    main_blocks = split_blocks(SRC_MAIN)
-    if len(main_blocks) != 10:
-        sys.exit(f"主 cast 預期 10 位，實得 {len(main_blocks)}")
+    paths = sorted(CARDS_DIR.glob("*.json"))
+    assert len(paths) == 19, f"預期 19 個 cards，實得 {len(paths)}"
+    unknown = [p.stem for p in paths if p.stem not in CARD_SLUG]
+    assert not unknown, f"CARD_SLUG 未涵蓋的檔名：{unknown}"
 
     DST.mkdir(exist_ok=True)
-    written = set()
-    for b in live_blocks:
-        c = parse_character(b)
-        slug = SLUGS[c["name"]]
-        (DST / f"{slug}.html").write_text(render(c, slug, live=True), encoding="utf-8")
-        written.add(slug)
-        print(f"[live] {slug} ({c['name']}, 關係{len(c['relations'])} 引文{len(c['quotes'])})")
-    for b in main_blocks:
-        c = parse_character(b)
-        slug = SLUGS[c["name"]]
-        if slug in written:
-            continue  # 五女以真人版為準
-        (DST / f"{slug}.html").write_text(render(c, slug, live=False), encoding="utf-8")
-        written.add(slug)
-        print(f"[main] {slug} ({c['name']}, 關係{len(c['relations'])} 引文{len(c['quotes'])})")
+    written = []
+    for path in paths:
+        slug = CARD_SLUG[path.stem]
+        card = json.loads(path.read_text(encoding="utf-8-sig"))
+        (DST / f"{slug}.html").write_text(render(card, slug), encoding="utf-8")
+        written.append(slug)
+        ev = card["persona"].get("evidence") or []
+        loc = {l["quote"].strip() for l in (card.get("evidenceLocations") or [])}
+        linked = sum(1 for q in ev if q.strip() in loc)
+        print(f"{slug}\torder={ORDER[slug]}\t({card['name']}) 關係{len(card['persona'].get('relationships') or [])} 引文{len(ev)} 連結{linked}")
+
+    assert len(written) == 19
     print(f"done: {len(written)} 位")
 
 
