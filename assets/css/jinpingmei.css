@@ -205,6 +205,8 @@ a.jpm-card:hover { border-color: var(--jpm-gold); background: var(--jpm-panel-2)
 }
 @media (max-width: 480px) {
   .jpm-refgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* 兩欄下奇數張時最後一張會落單，跨整行置中，維持與其他格相同寬度 */
+  .jpm-refgrid > figure:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - .35rem); }
 }
 
 details.jpm-details { margin: 0 0 .8rem; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
