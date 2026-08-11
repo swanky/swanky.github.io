@@ -85,9 +85,9 @@ title: 古典小說書房
       <h2>還在整理的作品</h2>
       <p>下面這幾部已經找好公開的原文來源，但還沒上線。原因寫在後面——文字品質沒過關的底本不會拿來充當原文。</p>
       <dl>
-        {%- for b in planned %}
-        <dt>{{ b.title }}</dt><dd>{{ b.editions.first.label }}・全書 {{ b.editions.first.chapter_count }} 回{% if b.editions.first.note %}——{{ b.editions.first.note }}{% endif %}</dd>
-        {%- endfor %}
+        {%- for b in planned %}{% for ed in b.editions %}
+        <dt>{{ b.title }}{% if b.editions.size > 1 %}・{{ ed.label }}{% endif %}</dt><dd>{% if b.editions.size == 1 %}{{ ed.label }}・{% endif %}全書 {{ ed.chapter_count }} 回{% if ed.note %}——{{ ed.note }}{% endif %}</dd>
+        {%- endfor %}{% endfor %}
       </dl>
     </aside>
     {%- endif %}
