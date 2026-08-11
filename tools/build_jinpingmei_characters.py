@@ -1,10 +1,15 @@
-"""金瓶梅角色卡 -> _jinpingmei_characters collection 轉換器（v2）
+"""金瓶梅角色卡 -> _jinpingmei_characters collection 轉換器（v3）
 
 來源（唯讀）：
-  C:\\cc_home\\novel-characters-lab\\jinpingmei-full\\data\\catalog\\visual-authority-cast\\v001\\cards\\*.json
+  C:\\cc_home\\novel-characters-lab\\jinpingmei-full\\data\\catalog\\visual-authority-cast\\v002\\cards\\*.json
   （19 個角色卡；card 檔名 -> 站上 slug 對照見 CARD_SLUG）
-  同目錄 v001\\images\\{中文名}-turnaround.png 的 PNG IHDR，取得三視圖實際尺寸
+  同目錄 v002\\images\\{中文名}-turnaround.png 的 PNG IHDR，取得三視圖實際尺寸
   （bytes 16-20 寬、20-24 高，big-endian；轉檔不改尺寸所以可信）
+
+2026-08-11 v3：來源升到 visual-authority-cast v002（cards 檔名改為連字號分寫，見 CARD_SLUG），
+並新增 lifeStages -> 「書裡的年紀」區塊（只有原典報過年紀的角色會輸出）。
+v002 另有 referencePack 欄位，站上不由此腳本渲染——多角度參考圖走
+_data/jinpingmei_reference_packs.yml ＋ _includes/jinpingmei/reference-pack.html。
 
 2026-08-09 v2：改吃 visual-authority-cast v001 JSON、十九人整編
 （原 v1 讀 金瓶梅詞話-主要角色-cast.md ＋ live-action-five 真人 cast.md 兩份 Markdown、僅十一人，已棄用）。
@@ -16,8 +21,8 @@ import struct
 from pathlib import Path
 
 LAB = Path(r"C:\cc_home\novel-characters-lab\jinpingmei-full")
-CARDS_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v001" / "cards"
-IMAGES_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v001" / "images"
+CARDS_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v002" / "cards"
+IMAGES_DIR = LAB / "data" / "catalog" / "visual-authority-cast" / "v002" / "images"
 DST = Path(__file__).resolve().parent.parent / "_jinpingmei_characters"
 
 # 兩個站上會混用、外觀相似但不同碼位的分隔點：逐字保留既有規範，避免手打誤植。
@@ -27,10 +32,10 @@ KDOT = "\u30fb"   # KATAKANA MIDDLE DOT，視覺版本圖說用「・」（無�
 # card 檔名（不含副檔名）→ 站上 slug（逐字對照派工單）
 CARD_SLUG = {
     "01-pan-jinlian": "panjinlian",
-    "02-li-pinger": "lipinger",
-    "03-wu-yueniang": "wuyueniang",
-    "04-pang-chunmei": "chunmei",
-    "05-song-huilian": "songhuilian",
+    "02-li-ping-er": "lipinger",
+    "03-wu-yue-niang": "wuyueniang",
+    "04-pang-chun-mei": "chunmei",
+    "05-song-hui-lian": "songhuilian",
     "06-ximenqing": "ximenqing",
     "07-meng-yulou": "mengyulou",
     "08-li-jiaoer": "lijiaoer",
@@ -158,6 +163,26 @@ def render_body(card: dict, slug: str) -> str:
         if persona.get(key):
             parts.append(f"<h2>{zh}</h2><p>{esc(persona[key])}</p>")
     parts.append("</div></section>")
+
+    # 原典在不同回數報過歲數的角色，才有這一段（v002 起提供）
+    stages = card.get("lifeStages") or []
+    if stages:
+        parts.append(
+            '<section class="jpm-section" style="padding-top:0"><div class="jpm-prose"><h2>書裡的年紀</h2>'
+            "<p>原典在不同回數報過這個角色的歲數，接起來就是一條時間線——這也是判斷全書時序的依據之一。"
+            "每一段後面附上原文，括號裡的回數可以直接點回去讀。</p></div>"
+            '<dl class="jpm-fields jpm-stages">'
+        )
+        for s in stages:
+            bits = [f"<b>{esc(s['label'])}</b>"]
+            if s.get("chapters"):
+                bits.append(f'<span class="src">（{chapter_links(s["chapters"])}）</span>')
+            for q in s.get("evidence") or []:
+                bits.append(f'<span class="ev">{esc(q)}</span>')
+            if s.get("note"):
+                bits.append(f'<span class="note">{esc(s["note"])}</span>')
+            parts.append(f"<div><dt>{esc(s['ageRange'])}</dt><dd>{''.join(bits)}</dd></div>")
+        parts.append("</dl></section>")
 
     rels = persona.get("relationships") or []
     if rels:

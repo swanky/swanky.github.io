@@ -1,0 +1,26 @@
+{%- comment -%}
+  角色多角度參考圖組（資料驅動）。
+  用法：{% include jinpingmei/reference-pack.html slug="panjinlian" %}
+  資料源：_data/jinpingmei_reference_packs.yml；圖檔 assets/img/jinpingmei/reference/{slug}-{kind}-{angle}.jpg
+  沒有對應 pack 的角色不輸出任何內容。
+{%- endcomment -%}
+{%- assign rp = site.data.jinpingmei_reference_packs -%}
+{%- assign pack = rp.packs | where: "slug", include.slug | first -%}
+{%- if pack -%}
+<section class="jpm-section" style="padding-top:0" aria-label="多角度參考">
+  <div class="jpm-prose"><h2>多角度參考</h2>
+  <p>同一位角色在不同集數、不同鏡位裡要長得一樣，才撐得起一部戲。所以除了上方的定裝三視圖，劇組還替{{ pack.name }}留了一組「對照用」的基準照：先把臉從正面拍到側面，再換上素色貼身衣看清身形比例——刻意不加妝髮造型與戲服，就是為了讓後續每一次生成都有同一個比對基準。這組圖不是劇照，也不取代上方的定裝版本。</p></div>
+  {%- for set in pack.sets %}
+  <p class="jpm-refset-label">{{ set.label }}</p>
+  <div class="jpm-refgrid" style="--cols: {{ set.angles | size }}">
+    {%- for angle in set.angles -%}
+    {%- assign anglelabel = rp.angle_labels[angle] -%}
+    {%- if set.kind == 'face' -%}{%- assign kindlabel = '五官參考' -%}{%- else -%}{%- assign kindlabel = '體型參考' -%}{%- endif -%}
+    {%- capture alttext %}{{ pack.name }}{{ kindlabel }}・{{ anglelabel }}（AI 生成，非真人照片）{% endcapture -%}
+    {%- capture src %}/assets/img/jinpingmei/reference/{{ pack.slug }}-{{ set.kind }}-{{ angle }}.jpg{% endcapture -%}
+    <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-reference" title="{{ alttext }}"><img src="{{ src | relative_url }}" alt="{{ alttext }}" width="{{ rp.width }}" height="{{ rp.height }}" loading="lazy" decoding="async"></a><figcaption>{{ anglelabel }}</figcaption></figure>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</section>
+{%- endif -%}

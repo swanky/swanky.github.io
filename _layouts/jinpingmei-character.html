@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260809-2" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
 </head>
 <body class="jpm">
   <a class="jpm-skip" href="#char-main">跳到主要內容</a>
@@ -53,6 +53,14 @@
     </section>
 
     {{ content }}
+
+    {%- comment -%}
+      多角度參考圖組——只有 _data/jinpingmei_reference_packs.yml 收錄的角色會輸出。
+      page.url 形如 /jinpingmei/characters/panjinlian/；split 會捨去尾部空段，所以 last 就是 slug。
+    {%- endcomment -%}
+    {% assign slugparts = page.url | split: '/' %}
+    {% assign charslug = slugparts | last %}
+    {% include jinpingmei/reference-pack.html slug=charslug %}
 
     {% assign oldplates = "" | split: "" %}
     {% for it in site.data.jinpingmei_illustrations.items %}{% if it.status == "approved" and it.characters and it.characters contains page.name %}{% assign oldplates = oldplates | push: it %}{% endif %}{% endfor %}

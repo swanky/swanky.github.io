@@ -174,6 +174,10 @@ a.jpm-card:hover { border-color: var(--jpm-gold); background: var(--jpm-panel-2)
 .jpm-fields div { padding: .8rem 1rem; background: var(--jpm-panel); }
 .jpm-fields dt { color: var(--jpm-gold); font-size: .72rem; letter-spacing: .22em; }
 .jpm-fields dd { margin: .25rem 0 0; font-size: .92rem; }
+.jpm-stages dd b { display: block; color: #e8ddc4; }
+.jpm-stages dd .src { display: block; margin-top: .3rem; font-size: .78rem; color: var(--jpm-muted); }
+.jpm-stages dd .ev { display: block; margin-top: .45rem; padding-left: .6rem; border-left: 2px solid var(--jpm-red); font-family: var(--jpm-serif); font-size: .86rem; color: #cfc6b0; }
+.jpm-stages dd .note { display: block; margin-top: .45rem; font-size: .76rem; color: var(--jpm-muted); }
 
 .jpm-prose h2 { margin: 2.4rem 0 .9rem; font-family: var(--jpm-serif); font-size: 1.35rem; color: var(--jpm-gold-bright); }
 .jpm-prose p { margin: 0 0 1rem; color: #cfc6b0; }
@@ -189,6 +193,19 @@ a.jpm-card:hover { border-color: var(--jpm-gold); background: var(--jpm-panel-2)
 .jpm-versions img { display: block; width: 100%; }
 .jpm-versions figcaption { margin: 0 -10px; }
 .jpm-versions figcaption { padding: .55rem .8rem; color: var(--jpm-muted); font-size: .76rem; line-height: 1.7; }
+
+/* 多角度參考圖組（直幅 2:3，一列排完一組角度；--cols 由圖組張數決定） */
+.jpm-refgrid { display: grid; grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr)); gap: .7rem; margin: 0 0 1.1rem; }
+.jpm-refgrid figure { margin: 0; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
+.jpm-refgrid img { display: block; width: 100%; height: auto; }
+.jpm-refgrid figcaption { padding: .4rem .55rem; color: var(--jpm-muted); font-size: .72rem; letter-spacing: .04em; text-align: center; }
+.jpm-refset-label { margin: 0 0 .5rem; color: var(--jpm-gold); font-size: .74rem; letter-spacing: .2em; }
+@media (max-width: 720px) {
+  .jpm-refgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .jpm-refgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 details.jpm-details { margin: 0 0 .8rem; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
 details.jpm-details summary { padding: .85rem 1.1rem; cursor: pointer; font-family: var(--jpm-serif); color: var(--jpm-gold-bright); letter-spacing: .06em; }

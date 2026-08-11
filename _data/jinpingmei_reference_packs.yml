@@ -1,0 +1,47 @@
+# 角色多角度參考圖組
+# 來源：novel-characters-lab / jinpingmei-full 的 visual-authority-cast v002
+#（_current/characters/reference-packs，站主逐張核准後匯入）
+# 用途：讓後續影像在不同鏡位、不同集數裡，維持同一位角色的五官與體型一致。
+# 全部圖像皆為 AI 生成，並非真人照片。轉檔工具：tools/convert_jinpingmei_reference.ps1
+#
+# angle_labels：角度代碼 → 站上顯示文字（圖組共用）
+angle_labels:
+  front: 正面
+  left-three-quarter: 左 45°
+  right-three-quarter: 右 45°
+  left-profile: 左側面
+  right-profile: 右側面
+  back: 背面
+
+# 圖片寬高（全組一致，直幅 2:3）
+width: 1024
+height: 1536
+
+packs:
+  - slug: panjinlian
+    name: 潘金蓮
+    sets:
+      - kind: face
+        label: 五官參考・五個角度
+        angles: [front, left-three-quarter, right-three-quarter, left-profile, right-profile]
+      - kind: body
+        label: 體型參考・四個角度
+        angles: [front, left-profile, right-profile, back]
+  - slug: lipinger
+    name: 李瓶兒
+    sets:
+      - kind: face
+        label: 五官參考・五個角度
+        angles: [front, left-three-quarter, right-three-quarter, left-profile, right-profile]
+      - kind: body
+        label: 體型參考・四個角度
+        angles: [front, left-profile, right-profile, back]
+  - slug: chunmei
+    name: 龐春梅
+    sets:
+      - kind: face
+        label: 五官參考・五個角度
+        angles: [front, left-three-quarter, right-three-quarter, left-profile, right-profile]
+      - kind: body
+        label: 體型參考・四個角度
+        angles: [front, left-profile, right-profile, back]
