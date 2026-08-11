@@ -1,0 +1,842 @@
+[
+  {
+    "chapter": 1,
+    "heading": "第一回　甄士隱夢幻識通靈　賈雨村風塵懷閨秀",
+    "paragraph_count": 37,
+    "text_sha256": "4e6db1350a1f5ecc7ec601b30f0ce585e429d21840bca5c82958a86f952e6eb6",
+    "path": "chapters/001.txt"
+  },
+  {
+    "chapter": 2,
+    "heading": "第二回　賈夫人仙逝揚州城　冷子興演說榮國府",
+    "paragraph_count": 22,
+    "text_sha256": "b7fe9a6ef380b4db16e43af3d2511ac9a450e8ea86cf6ae0d6e274badff7ae7d",
+    "path": "chapters/002.txt"
+  },
+  {
+    "chapter": 3,
+    "heading": "第三回　金陵城起復賈雨村　榮國府收養林黛玉",
+    "paragraph_count": 29,
+    "text_sha256": "ebcb52a88c011fe3e37788831559077fe5751a6df03449924d1dd72f08135c99",
+    "path": "chapters/003.txt"
+  },
+  {
+    "chapter": 4,
+    "heading": "第四回　薄命女偏逢薄命郎　葫蘆僧亂判葫蘆案",
+    "paragraph_count": 21,
+    "text_sha256": "7d6dbae1c0b4c23521f378208414f096e542bd0c56f8bf19a14f8106c6b8d5a4",
+    "path": "chapters/004.txt"
+  },
+  {
+    "chapter": 5,
+    "heading": "第五回　開生面夢演紅樓夢　立新場情傳幻境情",
+    "paragraph_count": 91,
+    "text_sha256": "e6216dd5c1030721d02cfe9e1e240c2373fdce4a1401909771bf0f0d9b06386f",
+    "path": "chapters/005.txt"
+  },
+  {
+    "chapter": 6,
+    "heading": "第六回　賈寶玉初試雲雨情　劉姥姥一進榮國府",
+    "paragraph_count": 25,
+    "text_sha256": "99d18538369b8e378b747433a032b0d927c6bc0142276c46326615ec16164272",
+    "path": "chapters/006.txt"
+  },
+  {
+    "chapter": 7,
+    "heading": "第七回　送宮花周瑞嘆英蓮　談肄業秦鐘結寶玉",
+    "paragraph_count": 26,
+    "text_sha256": "11f8862fd301c6433adf8260933829a121c5d275f7875288dea75ea81183877c",
+    "path": "chapters/007.txt"
+  },
+  {
+    "chapter": 8,
+    "heading": "第八回　薛寶釵小恙梨香院　賈寶玉大醉絳芸軒",
+    "paragraph_count": 34,
+    "text_sha256": "92deaf09e79c8641ac947bc1f9e6eab8ba2b97b402308e97add183ec2450dd65",
+    "path": "chapters/008.txt"
+  },
+  {
+    "chapter": 9,
+    "heading": "第九回　戀風流情友入家塾　起嫌疑頑童鬧學堂",
+    "paragraph_count": 11,
+    "text_sha256": "6ac1194e8134ab9ba001098c16f45766f47abaf5f55befef363f964ba39fe46b",
+    "path": "chapters/009.txt"
+  },
+  {
+    "chapter": 10,
+    "heading": "第十回　金寡婦貪利權受辱　張太醫論病細窮源",
+    "paragraph_count": 15,
+    "text_sha256": "d6591db5d5d4b3f1dff747f9f8f4360cd9be35067131721c4cc50c9e01a7e0d0",
+    "path": "chapters/010.txt"
+  },
+  {
+    "chapter": 11,
+    "heading": "第十一回　慶壽辰宁府排家宴　見熙鳳賈瑞起淫心",
+    "paragraph_count": 21,
+    "text_sha256": "53beadd62893e5a0b4a71c9ac8a7016df46721a674ef12255fe1c189d89d21f6",
+    "path": "chapters/011.txt"
+  },
+  {
+    "chapter": 12,
+    "heading": "第十二回　王熙鳳毒設相思局　賈天祥正照風月鑒",
+    "paragraph_count": 15,
+    "text_sha256": "b6bdcc1500eda50493b1130db92555d43961dc69818b7cc23d76099cdaab93bf",
+    "path": "chapters/012.txt"
+  },
+  {
+    "chapter": 13,
+    "heading": "第十三回　秦可卿死封龍禁尉　王熙鳳協理宁國府",
+    "paragraph_count": 22,
+    "text_sha256": "afd10467578a3e9a12df93b1759ebd8348af7df501a1b0e42b81ba0f53daa531",
+    "path": "chapters/013.txt"
+  },
+  {
+    "chapter": 14,
+    "heading": "第十四回　林如海捐館揚州城　賈寶玉路謁北靜王",
+    "paragraph_count": 24,
+    "text_sha256": "8532354d4fdab6e7af931624bdf3239db85609e6736c6b22a43008e702d6a32e",
+    "path": "chapters/014.txt"
+  },
+  {
+    "chapter": 15,
+    "heading": "第十五回　王鳳姐弄權鐵檻寺　秦鯨卿得趣饅頭庵",
+    "paragraph_count": 15,
+    "text_sha256": "4580fb1e4abce5bfc98d55c48554a66b46fb81ce4a8316e7bea5199b30915c87",
+    "path": "chapters/015.txt"
+  },
+  {
+    "chapter": 16,
+    "heading": "第十六回　賈元春才選鳳藻宮　秦鯨卿夭逝黃泉路",
+    "paragraph_count": 23,
+    "text_sha256": "b97024de03329422abd113c7cc7127f23aa153b8867f324ddbaed6701a26d4d4",
+    "path": "chapters/016.txt"
+  },
+  {
+    "chapter": 17,
+    "heading": "第十七回　會芳園試才題對額　賈寶玉機敏動諸賓",
+    "paragraph_count": 28,
+    "text_sha256": "3a6838c33bad6fe7bc464c728f87e015f9fd7d894d0342d2e3b8786a10584572",
+    "path": "chapters/017.txt"
+  },
+  {
+    "chapter": 18,
+    "heading": "第十八回　林黛玉誤剪香囊袋　賈元春歸省慶元宵",
+    "paragraph_count": 60,
+    "text_sha256": "800d2097f5309b8ed3e7d326c4c7975d679feead4960c6813caa4db2682061d8",
+    "path": "chapters/018.txt"
+  },
+  {
+    "chapter": 19,
+    "heading": "第十九回　情切切良宵花解語　意綿綿靜日玉生香",
+    "paragraph_count": 29,
+    "text_sha256": "e6b41504e8dfb1158e26cb602e41760a126a45458bd38be944cb9c4918cef805",
+    "path": "chapters/019.txt"
+  },
+  {
+    "chapter": 20,
+    "heading": "第二十回 王熙鳳正言彈妒意　林黛玉俏語謔嬌音\n　　話說寶玉在林黛玉房中說「耗子精」，寶釵撞來，諷刺寶玉元宵不知「綠蠟」之典，三人正在房中互相譏刺取笑。那寶玉正恐黛玉飯後貪眠，一時存了食，或夜間走了困，皆非保養身體之法，幸而寶釵走來，大家談笑，那林黛玉方不欲睡，自己纔放了心。忽聽他房中嚷起來，大家側耳聽了一聽，林黛玉先笑道：「這是你媽媽和襲人叫嚷呢。那襲人也罷了，你媽媽再要認真排場他，可見老背晦了。」",
+    "paragraph_count": 11,
+    "text_sha256": "b9ad32791a32e1897c44669c4f5a3424fb7819a3b9c557c0f69c78d5589082f9",
+    "path": "chapters/020.txt"
+  },
+  {
+    "chapter": 21,
+    "heading": "第二十一回　賢襲人嬌嗔箴寶玉　俏平兒軟語救賈璉",
+    "paragraph_count": 23,
+    "text_sha256": "465bd8ee1b3602e534d69e115a737a08ac3d808fad1f7db3c615b2238a17e35f",
+    "path": "chapters/021.txt"
+  },
+  {
+    "chapter": 22,
+    "heading": "第二十二回　聽曲文寶玉悟禪机　製燈迷賈政悲讖語",
+    "paragraph_count": 40,
+    "text_sha256": "dcf4423ccc05975198cfdbc67b38d46d285e3d3b262b1c9b6b3f8c006c7cf46a",
+    "path": "chapters/022.txt"
+  },
+  {
+    "chapter": 23,
+    "heading": "第二十三回　西廂記妙詞通戲語　牡丹亭艷曲警芳心",
+    "paragraph_count": 29,
+    "text_sha256": "a07605798d703f2b7f9c1875a606a42a6e8f51c2ba5c26e8b906a479fd513753",
+    "path": "chapters/023.txt"
+  },
+  {
+    "chapter": 24,
+    "heading": "第二十四回　醉金剛輕財尚義俠　痴女兒遺帕惹相思",
+    "paragraph_count": 25,
+    "text_sha256": "ed81f386786b1273d2ed999f7937dc914be4d905d24dcb8b355417c01d3bcefc",
+    "path": "chapters/024.txt"
+  },
+  {
+    "chapter": 25,
+    "heading": "第二十五回　魘魔法姊弟逢五鬼　紅樓夢通靈遇雙真",
+    "paragraph_count": 27,
+    "text_sha256": "b380ed1bc69b198c3afeae24873fa79e7098066c158898f83a74a4cac2a46cfc",
+    "path": "chapters/025.txt"
+  },
+  {
+    "chapter": 26,
+    "heading": "第二十六回　蜂腰橋設言傳心事　瀟湘館春困發幽情",
+    "paragraph_count": 26,
+    "text_sha256": "1fbac7ce9a12cbbc6884cba59cf065e15a350a9b3ffaced87405d286a2721bf1",
+    "path": "chapters/026.txt"
+  },
+  {
+    "chapter": 27,
+    "heading": "第二十七回　滴翠亭楊妃戲彩蝶　埋香冢飛燕泣殘紅",
+    "paragraph_count": 20,
+    "text_sha256": "c01af6a64e91aa7c458eb3544a8608af8df950784404eaaa818989277fe60384",
+    "path": "chapters/027.txt"
+  },
+  {
+    "chapter": 28,
+    "heading": "第二十八回　蔣玉菡情贈茜香羅　薛寶釵羞籠紅麝串",
+    "paragraph_count": 34,
+    "text_sha256": "6dbe8d171840164d8bdc7dca95776e388263cad047af5299ee22eee3031a48e9",
+    "path": "chapters/028.txt"
+  },
+  {
+    "chapter": 29,
+    "heading": "第二十九回　享福人福深還禱福　痴情女情重愈斟情",
+    "paragraph_count": 24,
+    "text_sha256": "424b7cb18db088a69caee232213ad70c0358ce66081eddf4fd076f2c30981cb6",
+    "path": "chapters/029.txt"
+  },
+  {
+    "chapter": 30,
+    "heading": "第三十回　寶釵借扇机帶雙敲　齡官划薔痴及局外",
+    "paragraph_count": 18,
+    "text_sha256": "36dcc671a002eae07195b47cd459a3d1289e26fea3aeddd33e8ed9c77ec3fa0b",
+    "path": "chapters/030.txt"
+  },
+  {
+    "chapter": 31,
+    "heading": "第三十一回　撕扇子作千金一笑　因麒麟伏白首雙星",
+    "paragraph_count": 8,
+    "text_sha256": "cdbca957d64dd75fa30063377010502bed27f620266a4e8f0d6c7364f4d661a9",
+    "path": "chapters/031.txt"
+  },
+  {
+    "chapter": 32,
+    "heading": "第三十二回　訴肺腑心迷活寶玉　含恥辱情烈死金釧",
+    "paragraph_count": 10,
+    "text_sha256": "e4b09d83c73c379c1d22ce47d4af6fcaf53624454489ab92de9d6420ea96af18",
+    "path": "chapters/032.txt"
+  },
+  {
+    "chapter": 33,
+    "heading": "第三十三回　手足耽耽小動唇舌　不肖种种大承笞撻",
+    "paragraph_count": 11,
+    "text_sha256": "25f36e4f8a1e1307407ddef5dfffa50317aa8407250b5354da4922181d3c03e0",
+    "path": "chapters/033.txt"
+  },
+  {
+    "chapter": 34,
+    "heading": "第三十四回　情中情因情感妹妹　錯里錯以錯勸哥哥",
+    "paragraph_count": 18,
+    "text_sha256": "cb1614938c67d6fc36352c619f3fbe8f3f8261c8d51239a02cb44933068e06cb",
+    "path": "chapters/034.txt"
+  },
+  {
+    "chapter": 35,
+    "heading": "第三十五回　白玉釧親嘗蓮葉羹　黃金鶯巧結梅花絡",
+    "paragraph_count": 17,
+    "text_sha256": "f1d53e4c0d97d248a9eee1a932bd92ac59f9af8585b1ba779cdd861334fab894",
+    "path": "chapters/035.txt"
+  },
+  {
+    "chapter": 36,
+    "heading": "第三十六回　繡鴛鴦夢兆絳芸軒　識分定情悟梨香院",
+    "paragraph_count": 13,
+    "text_sha256": "0cb51259a89dae4f8319012d803b062ce18fd4482b7e55ae079b73918b651821",
+    "path": "chapters/036.txt"
+  },
+  {
+    "chapter": 37,
+    "heading": "第三十七回　秋爽齋偶結海棠社　蘅蕪苑夜擬菊花題",
+    "paragraph_count": 36,
+    "text_sha256": "4ad1e4c620fb3b6bd4b76ca98ee616cca6c7aed7aee49623d57aaf6f8e32e2df",
+    "path": "chapters/037.txt"
+  },
+  {
+    "chapter": 38,
+    "heading": "第三十八回　林瀟湘魁奪菊花詩　薛蘅蕪諷和螃蟹詠",
+    "paragraph_count": 54,
+    "text_sha256": "5d49dd67b6b24a2411caaa4187aea7513eb232fd545d4f9d4a89251d45eef80d",
+    "path": "chapters/038.txt"
+  },
+  {
+    "chapter": 39,
+    "heading": "第三十九回　村老嫗謊談承色笑　癡情子實意覓蹤跡",
+    "paragraph_count": 11,
+    "text_sha256": "56d3ec75dde58a879958eb77ab9ba30c03985eded7f1c742fb9f5ef9ac01f9a5",
+    "path": "chapters/039.txt"
+  },
+  {
+    "chapter": 40,
+    "heading": "第四十回　史太君兩宴大觀園　金鴛鴦三宣牙牌令",
+    "paragraph_count": 17,
+    "text_sha256": "6fd9cfbfdeae6f611811cc0e75ac020c65007b7927ad6dc5e8dfd48d45b2acdd",
+    "path": "chapters/040.txt"
+  },
+  {
+    "chapter": 41,
+    "heading": "第四十一回　賈寶玉品茶攏翠庵　劉姥姥醉臥怡紅院",
+    "paragraph_count": 14,
+    "text_sha256": "f42d85da5b538d0ec0e7be92c1a2c63c1e74d907cb21437febf4551aa75b9a6b",
+    "path": "chapters/041.txt"
+  },
+  {
+    "chapter": 42,
+    "heading": "第四十二回　蘅蕪君蘭言解疑語　瀟湘子雅謔補餘香",
+    "paragraph_count": 17,
+    "text_sha256": "fa50cacbd1ea95a75f59a0d5419a4bff6d89705a96ad48341c0c6ae5a068c6db",
+    "path": "chapters/042.txt"
+  },
+  {
+    "chapter": 43,
+    "heading": "第四十三回　閒取樂偶攢金慶壽　不了情暫撮土為香",
+    "paragraph_count": 17,
+    "text_sha256": "836599e7d03feeb8a92f8f7fd4af66da88430e2e9d9c3936839ce1fecfbd563d",
+    "path": "chapters/043.txt"
+  },
+  {
+    "chapter": 44,
+    "heading": "第四十四回　變生不測鳳姐潑醋　喜出望外平兒理妝",
+    "paragraph_count": 16,
+    "text_sha256": "38d39202c2ea8db6b31fc928b3067ed81ec984459999ef85128f9ce9681249a6",
+    "path": "chapters/044.txt"
+  },
+  {
+    "chapter": 45,
+    "heading": "第四十五回　金蘭契互剖金蘭語　風雨夕悶製風雨詞",
+    "paragraph_count": 17,
+    "text_sha256": "d1736f9e5b12b63e22b4a7b5ddeb3afaa1f3c216c745c9874a3c54ffa6154476",
+    "path": "chapters/045.txt"
+  },
+  {
+    "chapter": 46,
+    "heading": "第四十六回　尷尬人難免尷尬事　鴛鴦女誓絕鴛鴦偶",
+    "paragraph_count": 17,
+    "text_sha256": "293a0dbd1a8d2b1b1f56a1bc985b37ce7eda2d72bc129615790645514937e201",
+    "path": "chapters/046.txt"
+  },
+  {
+    "chapter": 47,
+    "heading": "第四十七回　呆霸王調情遭苦打　冷郎君懼禍走他鄉",
+    "paragraph_count": 17,
+    "text_sha256": "12921968f680bfd70d0ea33f4199b53592a3e2c9709269844c4637f42b5188ed",
+    "path": "chapters/047.txt"
+  },
+  {
+    "chapter": 48,
+    "heading": "第四十八回　濫情人情誤思游藝　慕雅女雅集苦吟詩",
+    "paragraph_count": 21,
+    "text_sha256": "cb89a89227550063a7e6a5c3913ff9f9f4fac3e61ef522265f1f04ce99a276e0",
+    "path": "chapters/048.txt"
+  },
+  {
+    "chapter": 49,
+    "heading": "第四十九回　琉璃世界白雪紅梅　脂粉香娃割腥啖膻",
+    "paragraph_count": 22,
+    "text_sha256": "dbe9d56425e71ee94582825bc0e7c363912a3b13ddf9a05a60730dd113c13dc3",
+    "path": "chapters/049.txt"
+  },
+  {
+    "chapter": 50,
+    "heading": "第五十回　蘆雪广爭聯即景詩　暖香塢創製春燈謎",
+    "paragraph_count": 126,
+    "text_sha256": "972664df7a9f52a5e3cde87fb8f60564243a90f9ec203aacb3d5f555848c924c",
+    "path": "chapters/050.txt"
+  },
+  {
+    "chapter": 51,
+    "heading": "第五十一回　薛小妹新編怀古詩　胡庸醫亂用虎狼藥",
+    "paragraph_count": 38,
+    "text_sha256": "929b5a17681126d35e90e75072580e200390aa3d60e742f77cef8ecb5a9f19df",
+    "path": "chapters/051.txt"
+  },
+  {
+    "chapter": 52,
+    "heading": "第五十二回　俏平兒情掩蝦鬚鐲　勇晴雯病補雀金裘",
+    "paragraph_count": 19,
+    "text_sha256": "c54e34bbe4b758e4c4286d414ec42fc811002a395d8dff36d06f774a7b63b5e7",
+    "path": "chapters/052.txt"
+  },
+  {
+    "chapter": 53,
+    "heading": "第五十三回　寧國府除夕祭宗祠　榮國府元宵開夜宴",
+    "paragraph_count": 23,
+    "text_sha256": "02880eb00ac853baa7b48dfea592c28f54e3bb07a678c3897ca733717261b945",
+    "path": "chapters/053.txt"
+  },
+  {
+    "chapter": 54,
+    "heading": "第五十四回　史太君破陳腐舊套　王熙鳳效戲彩斑衣",
+    "paragraph_count": 16,
+    "text_sha256": "98cb1f5e509d8ff12e9f34baabd072c2311f876bce5fe10f215e115f42d89933",
+    "path": "chapters/054.txt"
+  },
+  {
+    "chapter": 55,
+    "heading": "第五十五回　辱親女愚妾爭閒氣　欺幼主刁奴蓄險心",
+    "paragraph_count": 22,
+    "text_sha256": "8d26aaddc991f4d1f8e1b4481a5c4e55b7a50d48d673ac2de3214f06821b0983",
+    "path": "chapters/055.txt"
+  },
+  {
+    "chapter": 56,
+    "heading": "第五十六回　敏探春興利除宿弊　識寶釵小惠全大體",
+    "paragraph_count": 16,
+    "text_sha256": "7aa10560a2115378e54fe4629d78c982a706ef358b1c28d0f33e984cd6df26fb",
+    "path": "chapters/056.txt"
+  },
+  {
+    "chapter": 57,
+    "heading": "第五十七回　慧紫鵑情辭試莽玉　慈姨媽愛語慰痴顰",
+    "paragraph_count": 24,
+    "text_sha256": "13338e794f26ef427a13598ece025c95126867f309372307f8280ce1fd6c3c6d",
+    "path": "chapters/057.txt"
+  },
+  {
+    "chapter": 58,
+    "heading": "第五十八回　杏子陰假鳳泣虛凰　茜紗窗真情揆痴理",
+    "paragraph_count": 17,
+    "text_sha256": "3592b5ffda32efa358e26d0248ce8a917a7c6d8a1a7a1c38a89761b5e773f3c2",
+    "path": "chapters/058.txt"
+  },
+  {
+    "chapter": 59,
+    "heading": "第五十九回　柳葉渚邊嗔鶯吒燕　絳芸軒里召將飛符",
+    "paragraph_count": 16,
+    "text_sha256": "562b5f8dbf62d05da6c3f33549504ebbbd0775d2d329d20e8c37fb8cb55dc1ea",
+    "path": "chapters/059.txt"
+  },
+  {
+    "chapter": 60,
+    "heading": "第六十回　茉莉粉替去薔薇硝　玫瑰露引來茯苓霜",
+    "paragraph_count": 27,
+    "text_sha256": "676e311a0e38d2ecfb97c29aa51a2d29d3fe7f6c0983f722e353f2594612326d",
+    "path": "chapters/060.txt"
+  },
+  {
+    "chapter": 61,
+    "heading": "第六十一回　投鼠忌器寶玉瞞贓　判冤決獄平兒行權",
+    "paragraph_count": 8,
+    "text_sha256": "b1355c69a67f70708c71cab8a662ccae2c014a4bee1d5efae6487348b1fa17d4",
+    "path": "chapters/061.txt"
+  },
+  {
+    "chapter": 62,
+    "heading": "第六十二回　憨湘雲醉眠芍藥裀　呆香菱情解石榴裙",
+    "paragraph_count": 29,
+    "text_sha256": "36c95c454ff4664c800020b84df0e77a9489b4dc179ab0a49d94384fac7fece4",
+    "path": "chapters/062.txt"
+  },
+  {
+    "chapter": 63,
+    "heading": "第六十三回　壽怡紅群芳開夜宴　死金丹獨艷理親喪",
+    "paragraph_count": 36,
+    "text_sha256": "0a0240a33d8453ed46e8e94984bb06438516bd490e4260bc33185566a4de237c",
+    "path": "chapters/063.txt"
+  },
+  {
+    "chapter": 64,
+    "heading": "第六十四回　幽淑女悲題五美吟　浪蕩子情遺九龍珮",
+    "paragraph_count": 34,
+    "text_sha256": "05f34ce07f8236ce00910f443f48780b9788e33e31c5dc16b186880dca661d6e",
+    "path": "chapters/064.txt"
+  },
+  {
+    "chapter": 65,
+    "heading": "第六十五回　賈二舍偷娶尤二姨　尤三姐思嫁柳二郎",
+    "paragraph_count": 8,
+    "text_sha256": "9b51efc26cd9042e5a5a6cbfa193ec60ce8f014e3ddfa1fd2b29b6e2b28ccfe7",
+    "path": "chapters/065.txt"
+  },
+  {
+    "chapter": 66,
+    "heading": "第六十六回　情小妹恥情歸地府　冷二郎一冷入空門",
+    "paragraph_count": 9,
+    "text_sha256": "10f3c663f7b540a565bebcace7c50fcc9aba1ca449238fdbbb583734d339d85c",
+    "path": "chapters/066.txt"
+  },
+  {
+    "chapter": 67,
+    "heading": "第六十七回　見土儀顰卿思故里　聞秘事鳳姐訊家童",
+    "paragraph_count": 19,
+    "text_sha256": "0bbca4903014fd1d19217321e8a5f5000216ae1df3a5b502f915d53478dbbe53",
+    "path": "chapters/067.txt"
+  },
+  {
+    "chapter": 68,
+    "heading": "第六十八回　苦尤娘賺入大觀園　酸鳳姐大鬧宁國府",
+    "paragraph_count": 16,
+    "text_sha256": "2a96164e083face0df0e9849efd5f2a5efb8f422fcc6a6032b17957212559365",
+    "path": "chapters/068.txt"
+  },
+  {
+    "chapter": 69,
+    "heading": "第六十九回　弄小巧用借劍殺人　覺大限吞生金自逝",
+    "paragraph_count": 13,
+    "text_sha256": "b0b57f5b0a415980bb444236b45d8e894c481f620897660285f1314baa862c3d",
+    "path": "chapters/069.txt"
+  },
+  {
+    "chapter": 70,
+    "heading": "第七十回　林黛玉重建桃花社　史湘雲偶填柳絮詞",
+    "paragraph_count": 31,
+    "text_sha256": "5a28140d729f02361941ca81f691bb6532dcb1f854dd885503015c131a8e0b3a",
+    "path": "chapters/070.txt"
+  },
+  {
+    "chapter": 71,
+    "heading": "第七十一回　嫌隙人有心生嫌隙　鴛鴦女無意遇鴛鴦",
+    "paragraph_count": 14,
+    "text_sha256": "969b39864576534b1b460dde4994b20aa5e40e880ea9adc471f6e8593cdd825c",
+    "path": "chapters/071.txt"
+  },
+  {
+    "chapter": 72,
+    "heading": "第七十二回　王熙鳳恃強羞說病　來旺婦倚勢霸成親",
+    "paragraph_count": 9,
+    "text_sha256": "8cbd6c26c2129a6af365cc00fc46071fb80fa4bbf9b44743698c7de0c3fa7d35",
+    "path": "chapters/072.txt"
+  },
+  {
+    "chapter": 73,
+    "heading": "第七十三回　痴丫頭誤拾繡春囊　懦小姐不問累金鳳",
+    "paragraph_count": 10,
+    "text_sha256": "5fad391ac0add06402eb70198f123264e3dbd7d3178a275febd26b40faed32a8",
+    "path": "chapters/073.txt"
+  },
+  {
+    "chapter": 74,
+    "heading": "第七十四回　惑奸讒抄揀大觀園　矢孤介杜絕宁國府",
+    "paragraph_count": 12,
+    "text_sha256": "4ac7f4fe8a55a00105c5705b4379eeb7f775f6c148d6ee2a0d46f9a43948527b",
+    "path": "chapters/074.txt"
+  },
+  {
+    "chapter": 75,
+    "heading": "第七十五回　開夜宴异兆發悲音　賞中秋新詞得佳讖",
+    "paragraph_count": 12,
+    "text_sha256": "2e8b5d12bf2da17582ded3d6fc53f78a47385cdebe9f7f1ab7b979efa26b1218",
+    "path": "chapters/075.txt"
+  },
+  {
+    "chapter": 76,
+    "heading": "第七十六回　凸碧堂品笛感凄清　凹晶館聯詩悲寂寞",
+    "paragraph_count": 58,
+    "text_sha256": "13b1823a043cd5b637fa44bb64d1c40bbf30ee2fec9ac46f4de73e832d80ef98",
+    "path": "chapters/076.txt"
+  },
+  {
+    "chapter": 77,
+    "heading": "第七十七回　俏丫鬟抱屈夭風流　美优伶斬情歸水月",
+    "paragraph_count": 10,
+    "text_sha256": "2535ef4b43f2ab789778f1b8290b436140360d52d16b9def8cf43cfcba81e498",
+    "path": "chapters/077.txt"
+  },
+  {
+    "chapter": 78,
+    "heading": "第七十八回　老學士閒徵姽嫿詞　痴公子杜撰芙蓉誄",
+    "paragraph_count": 43,
+    "text_sha256": "684ec6927c0e1e60f07a4d722081c4c190b9b4b3a2eebcb4ff592390563c959d",
+    "path": "chapters/078.txt"
+  },
+  {
+    "chapter": 79,
+    "heading": "第七十九回　薛文龍悔娶河東獅　賈迎春誤嫁中山狼",
+    "paragraph_count": 7,
+    "text_sha256": "8ea52bda8b17cafbe902986f8af395133cb0bcd1fa741caeb84c48d6c789edae",
+    "path": "chapters/079.txt"
+  },
+  {
+    "chapter": 80,
+    "heading": "上一回　回目录　高續下一回",
+    "paragraph_count": 10,
+    "text_sha256": "132420bdee34c8906ac0e16eae6779357662b3cb995b867e0121ce902057ea60",
+    "path": "chapters/080.txt"
+  },
+  {
+    "chapter": 81,
+    "heading": "第八十一回　占旺相四美釣游魚　奉嚴詞兩番入家塾",
+    "paragraph_count": 14,
+    "text_sha256": "48debb399ed84d579e7289bb484b5642265b8eac287e3eac3540d909539ee765",
+    "path": "chapters/081.txt"
+  },
+  {
+    "chapter": 82,
+    "heading": "第八十二回　老學究講義警頑心　病瀟湘痴魂驚惡夢",
+    "paragraph_count": 13,
+    "text_sha256": "acbbea6b2f650b912a305f24ce586fc422a344de205bfc98d810506906759672",
+    "path": "chapters/082.txt"
+  },
+  {
+    "chapter": 83,
+    "heading": "第八十三回　省宮闈賈元妃染恙　鬧閨閫薛寶釵吞聲",
+    "paragraph_count": 17,
+    "text_sha256": "82a9ab5358b6376a9c9ab0e2cf8c46fbe678bf6db819f4d9cbeacff129c3bceb",
+    "path": "chapters/083.txt"
+  },
+  {
+    "chapter": 84,
+    "heading": "第八十四回　試文字寶玉始提親　探驚風賈環重結怨",
+    "paragraph_count": 17,
+    "text_sha256": "8930958edb5a046d38eb2aa187485d73d152e92ef01933f144e749bf278a3ad6",
+    "path": "chapters/084.txt"
+  },
+  {
+    "chapter": 85,
+    "heading": "第八十五回　賈存周報升郎中任　薛文起复惹放流刑",
+    "paragraph_count": 22,
+    "text_sha256": "d75652463159115fa2d9557fecca994508c1b703037301fb93b5bd22e2bca6f8",
+    "path": "chapters/085.txt"
+  },
+  {
+    "chapter": 86,
+    "heading": "第八十六回　受私賄老官翻案牘　寄閒情淑女解琴書",
+    "paragraph_count": 15,
+    "text_sha256": "62d52a665af2da5e5bdf5331bfa06c8829ed0dbcd687821dc9256dba647a2a12",
+    "path": "chapters/086.txt"
+  },
+  {
+    "chapter": 87,
+    "heading": "第八十七回　感深秋撫琴悲往事　坐禪寂走火入邪魔",
+    "paragraph_count": 24,
+    "text_sha256": "cbf47a38fcf1dbc104aa8fc21273e28420f72fe0c79a0ea9fe9feac9a3b56f16",
+    "path": "chapters/087.txt"
+  },
+  {
+    "chapter": 88,
+    "heading": "第八十八回　博庭歡寶玉贊孤兒　正家法賈珍鞭悍仆",
+    "paragraph_count": 12,
+    "text_sha256": "247e69c28dc01b1da85c4b5e40957b6c71f8e9d9b7d18a85c66a5c7fc4b449c3",
+    "path": "chapters/088.txt"
+  },
+  {
+    "chapter": 89,
+    "heading": "第八十九回　人亡物在公子填詞　蛇影杯弓顰卿絕粒",
+    "paragraph_count": 18,
+    "text_sha256": "f9eb33e07bb5ee3e4707e02612ba50dd12d2dbb30cb5c5cb61fb84130ba00d10",
+    "path": "chapters/089.txt"
+  },
+  {
+    "chapter": 90,
+    "heading": "第九十回　失綿衣貧女耐嗷嘈　送果品小郎驚叵測",
+    "paragraph_count": 15,
+    "text_sha256": "f689a5ccbb58e4d7dabf0b4d04359ad718943c64ae0782e796a98f3020a0adfc",
+    "path": "chapters/090.txt"
+  },
+  {
+    "chapter": 91,
+    "heading": "第九十一回　縱淫心寶蟾工設計　布疑陣寶玉妄談禪",
+    "paragraph_count": 12,
+    "text_sha256": "2f130fe2da3b7b0fc36a8c1b691d67599d1501eb56679b180e8866e837b706e7",
+    "path": "chapters/091.txt"
+  },
+  {
+    "chapter": 92,
+    "heading": "第九十二回　評女傳巧姐慕賢良　玩母珠賈政參聚散",
+    "paragraph_count": 11,
+    "text_sha256": "d605d5517832889eb88ec0d885d84dedc6d41aaf77ed41b8b2a9842691ee6683",
+    "path": "chapters/092.txt"
+  },
+  {
+    "chapter": 93,
+    "heading": "第九十三回　甄家僕投靠賈家門　水月庵掀翻風月案",
+    "paragraph_count": 18,
+    "text_sha256": "0d8849d1eec0c8bca734f84e6d659ac12015b7abc4989ebe494d51de92785600",
+    "path": "chapters/093.txt"
+  },
+  {
+    "chapter": 94,
+    "heading": "第九十四回　宴海棠賈母賞花妖　失寶玉通靈知奇禍",
+    "paragraph_count": 23,
+    "text_sha256": "41814f5ac33dc96a65b973c564e80c2be4e4983a80a3b0d0ff68950febf7a661",
+    "path": "chapters/094.txt"
+  },
+  {
+    "chapter": 95,
+    "heading": "第九十五回　因訛成實元妃薨逝　以假混真寶玉瘋顛",
+    "paragraph_count": 16,
+    "text_sha256": "f5781e85d0fad07a5d1dc18463da84d7b7f5782ab7f0541376ea39cb1f8cc7a7",
+    "path": "chapters/095.txt"
+  },
+  {
+    "chapter": 96,
+    "heading": "第九十六回　瞞消息鳳姐設奇謀　泄机關顰兒迷本性",
+    "paragraph_count": 11,
+    "text_sha256": "ad0b990ac4c9b9efb4193141f1e40b8bc271bbcc60e4521d55cbafb95f71ecef",
+    "path": "chapters/096.txt"
+  },
+  {
+    "chapter": 97,
+    "heading": "第九十七回　林黛玉焚稿斷痴情　薛寶釵出閨成大禮",
+    "paragraph_count": 22,
+    "text_sha256": "b7f887b4f3067631b78a7396c6f0c0e0c444bfdec01c2c61fc8e68a21b1925b2",
+    "path": "chapters/097.txt"
+  },
+  {
+    "chapter": 98,
+    "heading": "第九十八回　苦絳珠魂歸離恨天　病神瑛淚灑相思地",
+    "paragraph_count": 17,
+    "text_sha256": "ca751956183dbe755354161149335a04ad8aea5f0fb6d16bae99b0b825f66e27",
+    "path": "chapters/098.txt"
+  },
+  {
+    "chapter": 99,
+    "heading": "第九十九回　守官箴惡奴同破例　閱邸報老舅自擔驚",
+    "paragraph_count": 14,
+    "text_sha256": "708c10976194f906cbad546cb72c9540200f750dac3f7ebe79a6d7b3cd041f88",
+    "path": "chapters/099.txt"
+  },
+  {
+    "chapter": 100,
+    "heading": "第一零零回　破好事香菱結深恨　悲遠嫁寶玉感離情",
+    "paragraph_count": 8,
+    "text_sha256": "e85f2ce2b6ee8921880eb85a0ee4bb7ab9d5fc866cdc77603237190fe2d263f9",
+    "path": "chapters/100.txt"
+  },
+  {
+    "chapter": 101,
+    "heading": "第一零一回　大觀園月夜感幽魂　散花寺神簽驚异兆",
+    "paragraph_count": 16,
+    "text_sha256": "a019800ac989447906d44f14cb3861f6c371d00b0fa0f1fa29525686dcacbe24",
+    "path": "chapters/101.txt"
+  },
+  {
+    "chapter": 102,
+    "heading": "第一零二回　宁國府骨肉病災襟　大觀園符水驅妖孽",
+    "paragraph_count": 12,
+    "text_sha256": "4f31106fe0c70a36a981cd493267914ee4cd63539213754e4447a6144ec6b389",
+    "path": "chapters/102.txt"
+  },
+  {
+    "chapter": 103,
+    "heading": "第一零三回　施毒計金桂自焚身　昧真禪雨村空遇舊",
+    "paragraph_count": 14,
+    "text_sha256": "73d9ad040e1ed2ac2c14e7cc156b19021e2b1d5950c1dc73ad05a71bc717302e",
+    "path": "chapters/103.txt"
+  },
+  {
+    "chapter": 104,
+    "heading": "第一零四回　醉金剛小鰍生大浪　痴公子餘痛触前情",
+    "paragraph_count": 17,
+    "text_sha256": "ecb530aac619dbee590a8ec8e32b58fe3088b4fdc47db7a110e8b7ebc65ae1f5",
+    "path": "chapters/104.txt"
+  },
+  {
+    "chapter": 105,
+    "heading": "第一零五回　錦衣軍查抄宁國府　驄馬使彈劾平安州",
+    "paragraph_count": 10,
+    "text_sha256": "8c001e4a230eb0e9c9efaea3548c6b5ca67472fd411e793015723ab4830cb7e2",
+    "path": "chapters/105.txt"
+  },
+  {
+    "chapter": 106,
+    "heading": "第一零六回　王熙鳳致禍抱羞慚　賈太君禱天消禍患",
+    "paragraph_count": 9,
+    "text_sha256": "989870d47afd40c3c38cbbeed1f6c7909aca7c1e8229eee61954c4809c729329",
+    "path": "chapters/106.txt"
+  },
+  {
+    "chapter": 107,
+    "heading": "第一零七回　散餘資賈母明大義　复世職政老沐天恩",
+    "paragraph_count": 9,
+    "text_sha256": "7a7331236a4b25ea943373eefc683ebb08cea07269864faeed8fe1e90c5d824e",
+    "path": "chapters/107.txt"
+  },
+  {
+    "chapter": 108,
+    "heading": "第一零八回　強歡笑蘅蕪慶生辰　死纏綿瀟湘聞鬼哭",
+    "paragraph_count": 10,
+    "text_sha256": "f8059d8cb20c76cdffe84247c4460e51072b18438e727ed4c21c9f4222f3155b",
+    "path": "chapters/108.txt"
+  },
+  {
+    "chapter": 109,
+    "heading": "第一零九回　候芳魂五兒承錯愛　還孽債迎女返真元",
+    "paragraph_count": 17,
+    "text_sha256": "964b6e8c1f5b33c716c0522ffd41a477cd2f93a3c21bdcea578e4919f7365626",
+    "path": "chapters/109.txt"
+  },
+  {
+    "chapter": 110,
+    "heading": "第一一零回　史太君壽終歸地府　王鳳姐力詘失人心",
+    "paragraph_count": 11,
+    "text_sha256": "6c64ee2531a982d54aa0d7b5d61cedce547627b5ddb5f9094b687cdd73b6ca6e",
+    "path": "chapters/110.txt"
+  },
+  {
+    "chapter": 111,
+    "heading": "第一一一回　鴛鴦女殉主登太虛　狗彘奴欺天招伙盜",
+    "paragraph_count": 12,
+    "text_sha256": "b4f6c1635d0c2d009707e1b3c13db9968d4441f82f39335b9ebf9c2df3436a62",
+    "path": "chapters/111.txt"
+  },
+  {
+    "chapter": 112,
+    "heading": "第一一二回　活冤孽妙尼遭大劫　死讎仇趙妾赴冥曹",
+    "paragraph_count": 24,
+    "text_sha256": "9325a8c45ee6899518c0531c24f87deb7a5c25d6a3fcd35914313ac4e6ee2315",
+    "path": "chapters/112.txt"
+  },
+  {
+    "chapter": 113,
+    "heading": "第一一三回　忏宿冤鳳姐託村嫗　釋舊憾情婢感痴郎",
+    "paragraph_count": 13,
+    "text_sha256": "f886671b673c540397e731243f02c5f0b107ae31684a2ed391814a3f1e07babe",
+    "path": "chapters/113.txt"
+  },
+  {
+    "chapter": 114,
+    "heading": "第一一四回　王熙鳳歷幻返金陵　甄應嘉蒙恩還玉闕",
+    "paragraph_count": 9,
+    "text_sha256": "99ca0b9b59024d5e779f1500cda3621d4bda7419ac8680629032d4f0da931c15",
+    "path": "chapters/114.txt"
+  },
+  {
+    "chapter": 115,
+    "heading": "第一一五回　惑偏私惜春矢素志　證同類寶玉失相知",
+    "paragraph_count": 17,
+    "text_sha256": "95e79031eff0d22463ba8e6c6adcc46bf7e5a4ab8e0a218311ca7ebf189c0397",
+    "path": "chapters/115.txt"
+  },
+  {
+    "chapter": 116,
+    "heading": "第一一六回　得通靈幻境悟仙緣　送慈柩故鄉全孝道",
+    "paragraph_count": 17,
+    "text_sha256": "d8ade540cc53911b49be0d18fb316d6e4b82658359201835f1b099b720f814f1",
+    "path": "chapters/116.txt"
+  },
+  {
+    "chapter": 117,
+    "heading": "第一一七回　阻超凡佳人雙護玉　欣聚党惡子獨承家",
+    "paragraph_count": 10,
+    "text_sha256": "1117cc88600e1cca20fc07d04fe4ee30ed07dac180cfb3cd08606201edafb787",
+    "path": "chapters/117.txt"
+  },
+  {
+    "chapter": 118,
+    "heading": "第一一八回　記微嫌舅兄欺弱女　驚謎語妻妾諫痴人",
+    "paragraph_count": 18,
+    "text_sha256": "5ad055b841b276173d91e79a0b21479f364357ba248586df725e84e2cadf798d",
+    "path": "chapters/118.txt"
+  },
+  {
+    "chapter": 119,
+    "heading": "第一一九回　中鄉魁寶玉卻塵緣　沐皇恩賈家延世澤",
+    "paragraph_count": 23,
+    "text_sha256": "d08ea0495df9b66b9ee275dab4584910df77bf14a0bc988674f8ec96ddd31122",
+    "path": "chapters/119.txt"
+  },
+  {
+    "chapter": 120,
+    "heading": "第一二零回　甄士隱詳說太虛情　賈雨村歸結紅樓夢",
+    "paragraph_count": 22,
+    "text_sha256": "54afaa4d580242027dabb2b1a80684fc06af712c0bd4184a8a9cd5830110ef07",
+    "path": "chapters/120.txt"
+  }
+]

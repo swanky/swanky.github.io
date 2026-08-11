@@ -1,0 +1,18 @@
+{
+  "book_id": "honglou",
+  "edition_id": "wikisource-120",
+  "source_type": "中文維基文庫（Wikisource）",
+  "source_page": "https://zh.wikisource.org/wiki/紅樓夢",
+  "page_template": "https://zh.wikisource.org/wiki/紅樓夢/第{NNN}回",
+  "retrieved_at": "2026-08-11",
+  "chapter_count": 120,
+  "normalization": [
+    "wikitext → 純文字",
+    "移除 <ref> 編者註腳與註釋段（現代附加物，非小說內容）",
+    "移除導覽連結、樣式與授權模板、分隔線",
+    "保留 -{...}- 繁簡轉換抑制標記的內文",
+    "<poem> 區塊每行縮排保留為語意行"
+  ],
+  "text_changes": "未做繁簡轉換、未改字、未改標點、未經 AI 改寫。",
+  "license": "原文屬公共領域；維基文庫的校對與排版層為 CC BY-SA 4.0／GFDL"
+}
