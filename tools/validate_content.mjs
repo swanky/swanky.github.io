@@ -147,10 +147,18 @@ export function validateContent() {
     const [bookId, editionId] = key.split('/');
     const sorted = [...chapters].sort((a, b) => a - b);
     if (new Set(sorted).size !== sorted.length) bad(`${key}: 章回號有重複 ${sorted.join(',')}`);
-    for (let i = 1; i < sorted.length; i += 1) {
-      if (sorted[i] !== sorted[i - 1] + 1) bad(`${key}: 章回號跳號——${sorted[i - 1]} 之後直接跳到 ${sorted[i]}`);
-    }
     const edition = byId.get(bookId)?.editions.find((e) => e.id === editionId);
+    // 底本自己缺的回（庚辰本缺第 67 回）要先在 books.yml 宣告，才放行這個缺口；
+    // 沒宣告的跳號一律視為匯入漏掉。
+    const declaredMissing = new Set(edition?.missing_chapters || []);
+    for (let i = 1; i < sorted.length; i += 1) {
+      for (let n = sorted[i - 1] + 1; n < sorted[i]; n += 1) {
+        if (!declaredMissing.has(n)) bad(`${key}: 第 ${n} 回不見了——底本真的缺這回就在 books.yml 的 missing_chapters 宣告，否則是匯入漏掉`);
+      }
+    }
+    for (const n of declaredMissing) {
+      if (sorted.includes(n)) bad(`books.yml[${key}]: missing_chapters 宣告缺第 ${n} 回，但 _books/ 裡有這一回`);
+    }
     if (edition && edition.imported_chapters !== sorted.length) {
       bad(`books.yml[${key}]: imported_chapters ${edition.imported_chapters} ≠ _books 實際 ${sorted.length} 篇`);
     }

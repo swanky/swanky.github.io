@@ -23,6 +23,7 @@
     - id: wanli
       label: 詞話本（萬曆本）
       chapter_count: 100
+      text_fidelity: verbatim
       imported_chapters: 101
       source_page: https://zh.wikisource.org/wiki/金瓶梅詞話（萬曆本）
       license: 公共領域文獻，依 Wikisource 整理本收錄，一字未刪改
@@ -31,6 +32,7 @@
     - id: chongzhen
       label: 崇禎本（繡像本）
       chapter_count: 100
+      text_fidelity: verbatim
       imported_chapters: 101
       source_page: https://zh.wikisource.org/wiki/金瓶梅
       license: 公共領域文獻，依 Wikisource 整理本收錄，一字未刪改
@@ -49,6 +51,7 @@
     - id: gutenberg-23863
       label: 七十回本
       chapter_count: 70
+      text_fidelity: verbatim
       imported_chapters: 6
       source_page: https://www.gutenberg.org/ebooks/23863
       download_url: https://www.gutenberg.org/cache/epub/23863/pg23863.txt
@@ -70,6 +73,7 @@
     - id: gutenberg-23950
       label: 一百二十回本
       chapter_count: 120
+      text_fidelity: verbatim
       imported_chapters: 0
       source_page: https://www.gutenberg.org/ebooks/23950
       license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
@@ -89,6 +93,7 @@
     - id: gutenberg-23962
       label: 一百回本
       chapter_count: 100
+      text_fidelity: verbatim
       imported_chapters: 0
       source_page: https://www.gutenberg.org/ebooks/23962
       license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
@@ -101,24 +106,27 @@
   alternate_titles: [石頭記]
   author: 曹雪芹、高鶚（傳統題署）
   era: 清
-  status: planned
+  status: published
   language: classical-chinese
-  blurb: 一個大家族由盛轉衰。人物最多、別名最繁、版本問題也最複雜，要等底本挑定才收得住。
+  blurb: 一個大家族由盛轉衰。人物最多、別名最繁、版本問題也最複雜——所以這裡同時收了兩種底本，可以對照著讀。
   primary_edition: wikisource-120
   editions:
     - id: wikisource-120
       label: 一百二十回本
       chapter_count: 120
-      imported_chapters: 0
+      text_fidelity: converted
+      imported_chapters: 120
       source_page: https://zh.wikisource.org/wiki/紅樓夢
       license: 原文屬公共領域；維基文庫的校對與排版層為 CC BY-SA 4.0／GFDL
       retrieved_at: '2026-08-11'
-      note: 前八十回用脂本系統、後四十回用程甲本系統的通行匯校本，一百二十回都已取得。但這份謄本有四千多處把「裡」寫成「里」、四百多處把「於」寫成「于」，還不到可以說「一字未改」的程度，所以先不上站
+      note: 前八十回用脂本系統、後四十回用程甲本系統的通行匯校本，一百二十回齊全。這份謄本有四千多處把「裡」寫成「里」、四百多處把「於」寫成「于」，所以頁面不會宣稱一字未改——想讀用字更講究的，可以對照庚辰本
     - id: gengchen-78
       label: 庚辰本（脂硯齋重評石頭記）
       chapter_count: 78
-      imported_chapters: 0
+      text_fidelity: transcribed
+      missing_chapters: [67]
+      imported_chapters: 77
       source_page: https://zh.wikisource.org/wiki/脂硯齋重評石頭記
       license: 原文屬公共領域；維基文庫的校對與排版層為 CC BY-SA 4.0／GFDL
       retrieved_at: '2026-08-11'
-      note: 現存七十八回的早期抄本，用字乾淨。但它不完整，而且抄本上夾著脂硯齋的批語，要先決定批語怎麼呈現才能收
+      note: 現存的早期抄本，用字乾淨。缺點是不完整：全書只到第七十八回，其中第六十七回這個抄本也沒有。抄本上夾著四千多條脂硯齋批語，已與正文分開保存，站上目前只顯示正文

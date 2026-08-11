@@ -96,7 +96,19 @@
 
     <aside class="bk-note" aria-label="收錄說明">
       <h2>收錄說明</h2>
+      {%- comment -%}
+        不同底本的忠實度不同，說法必須跟著不同——把「一字未刪改」寫死在 layout 裡，
+        對於用字經過簡繁轉換的謄本就是不實陳述。忠實度由 books.yml 的 text_fidelity
+        指定，值來自 tools/assess_text_quality.mjs 的量測，不憑印象填。
+      {%- endcomment -%}
+      {%- case edition.text_fidelity -%}
+      {%- when 'verbatim' -%}
       <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，<b>一字未刪改</b>。原文與後續整理的輔助資料分開存放，本頁只呈現原文。</p>
+      {%- when 'transcribed' -%}
+      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。這是根據抄本謄錄的版本，用字與原抄本可能有少量出入。原文與後續整理的輔助資料分開存放，本頁只呈現原文。</p>
+      {%- when 'converted' -%}
+      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。但有一點要老實說：這份謄本有一部分用字被轉換過（例如「裡」寫成「里」、「於」寫成「于」），所以我們不會說它一字未改。想讀用字更講究的版本，可以對照本書的其他底本。</p>
+      {%- endcase -%}
       <dl>
         <dt>底本</dt><dd>{{ edition.label }}{% if edition.note %}（{{ edition.note }}）{% endif %}</dd>
         <dt>文字來源</dt><dd><a href="{{ edition.source_page }}" target="_blank" rel="noopener noreferrer">{{ edition.source_page }}</a></dd>

@@ -4,37 +4,135 @@
   "title": "Book",
   "description": "一部作品。對應 _data/books.yml 的每一筆。",
   "type": "object",
-  "required": ["id", "title", "author", "era", "status", "language", "blurb", "editions"],
+  "required": [
+    "id",
+    "title",
+    "author",
+    "era",
+    "status",
+    "language",
+    "blurb",
+    "editions"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
-    "title": { "type": "string" },
-    "alternate_titles": { "type": "array", "items": { "type": "string" } },
-    "author": { "type": "string" },
-    "era": { "type": "string" },
-    "status": { "enum": ["published", "pilot", "planned"] },
-    "language": { "enum": ["classical-chinese"] },
-    "blurb": { "type": "string" },
-    "flagship_url": { "type": "string", "description": "已有專屬子站的作品（金瓶梅）填此欄，書目頁直接連過去，不產生通用章回頁" },
-    "primary_edition": { "type": "string" },
-    "editions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/edition" } }
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "alternate_titles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author": {
+      "type": "string"
+    },
+    "era": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "published",
+        "pilot",
+        "planned"
+      ]
+    },
+    "language": {
+      "enum": [
+        "classical-chinese"
+      ]
+    },
+    "blurb": {
+      "type": "string"
+    },
+    "flagship_url": {
+      "type": "string",
+      "description": "已有專屬子站的作品（金瓶梅）填此欄，書目頁直接連過去，不產生通用章回頁"
+    },
+    "primary_edition": {
+      "type": "string"
+    },
+    "editions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/edition"
+      }
+    }
   },
   "$defs": {
     "edition": {
       "type": "object",
-      "required": ["id", "label", "chapter_count", "source_page", "license"],
+      "required": [
+        "chapter_count",
+        "id",
+        "label",
+        "license",
+        "source_page",
+        "text_fidelity"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-        "label": { "type": "string" },
-        "chapter_count": { "type": "integer", "minimum": 1, "description": "該版本全書回數（不含卷首／楔子）" },
-        "imported_chapters": { "type": "integer", "minimum": 0, "description": "站上實際已匯入的篇數（含卷首／楔子）；未全匯時誠實記錄" },
-        "source_page": { "type": "string", "pattern": "^https://" },
-        "download_url": { "type": "string", "pattern": "^https://" },
-        "license": { "type": "string" },
-        "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-        "retrieved_at": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
-        "note": { "type": "string" }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "chapter_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "該版本全書回數（不含卷首／楔子）"
+        },
+        "imported_chapters": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "站上實際已匯入的篇數（含卷首／楔子）；未全匯時誠實記錄"
+        },
+        "source_page": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "download_url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "license": {
+          "type": "string"
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "note": {
+          "type": "string"
+        },
+        "text_fidelity": {
+          "enum": [
+            "verbatim",
+            "transcribed",
+            "converted"
+          ],
+          "description": "這份底本的文字忠實度，決定頁面怎麼對讀者說明。verbatim＝逐字忠於底本；transcribed＝謄本，用字有少量出入；converted＝部分用字經過簡繁轉換。由 tools/assess_text_quality.mjs 的量測結果決定，不憑印象填"
+        },
+        "missing_chapters": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "description": "該底本本身缺失的回數（例：庚辰本缺第 67 回）。章回連號檢查會放行這些缺口"
+        }
       }
     }
   }

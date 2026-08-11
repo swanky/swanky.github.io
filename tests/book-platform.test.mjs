@@ -27,8 +27,35 @@ test('註冊表收錄五部作品，id 與狀態符合預期', () => {
   assert.deepEqual(books.map((b) => b.id), ['jinpingmei', 'shuihu', 'sanguo', 'xiyou', 'honglou']);
   assert.equal(books.find((b) => b.id === 'jinpingmei').status, 'published');
   assert.equal(books.find((b) => b.id === 'shuihu').status, 'pilot');
-  // 底本文字品質未過關的作品不得標成已上線
-  assert.equal(books.find((b) => b.id === 'honglou').status, 'planned');
+});
+
+test('底本忠實度必須誠實標示，且頁面說法要跟著不同', () => {
+  // 這道防線取代了原本「紅樓夢不得標成已上線」的硬規則。作品可以上線，
+  // 但用字經過轉換的底本不能冒充逐字原文——說法必須跟著忠實度變。
+  for (const b of books) {
+    for (const ed of b.editions) {
+      assert.ok(ed.text_fidelity, `${b.id}/${ed.id} 缺 text_fidelity`);
+      if (ed.text_fidelity !== 'verbatim') {
+        assert.ok(ed.note && ed.note.length > 20,
+          `${b.id}/${ed.id} 不是逐字忠實的底本（${ed.text_fidelity}），必須在 note 對讀者說明`);
+      }
+    }
+  }
+  const layout = readFileSync('_layouts/book-chapter.html', 'utf8');
+  for (const f of ['verbatim', 'transcribed', 'converted']) {
+    assert.ok(layout.includes(`when '${f}'`), `book-chapter.html 沒有處理 text_fidelity=${f}`);
+  }
+  // 「一字未刪改」只能出現在 verbatim 那一支。只看會渲染出去的部分——
+  // 註解裡說明規則本身也會用到這五個字。
+  const rendered = layout.replace(/\{%-?\s*comment\s*-?%\}[\s\S]*?\{%-?\s*endcomment\s*-?%\}/g, '');
+  assert.equal((rendered.match(/一字未刪改/g) || []).length, 1,
+    '「一字未刪改」在 book-chapter.html 的渲染內容出現超過一次——非逐字底本會被誤稱');
+});
+
+test('底本自己缺的回必須先宣告，才允許章回號跳號', () => {
+  const gc = books.find((b) => b.id === 'honglou').editions.find((e) => e.id === 'gengchen-78');
+  assert.deepEqual(gc.missing_chapters, [67], '庚辰本缺第 67 回（維基文庫該頁並列列藏本與程高本，不屬本底本）');
+  assert.equal(gc.imported_chapters, gc.chapter_count - gc.missing_chapters.length);
 });
 
 test('每本書的 blurb 是給讀者看的白話，不含工程術語', () => {
