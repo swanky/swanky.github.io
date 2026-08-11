@@ -1,0 +1,26 @@
+{
+  "book_id": "shuihu",
+  "title": "水滸傳",
+  "source_title": "水滸傳",
+  "author": "施耐庵（傳）",
+  "edition_id": "gutenberg-23863",
+  "source_type": "Project Gutenberg UTF-8 text",
+  "source_page": "https://www.gutenberg.org/ebooks/23863",
+  "download_url": "https://www.gutenberg.org/cache/epub/23863/pg23863.txt",
+  "retrieved_at": "2026-08-09",
+  "chapter_count": 70,
+  "has_preamble": true,
+  "source_sha256": "9d5b723b57f462545d412593870e7f48157829777b9329350a29bc44fd654789",
+  "normalized_sha256": "de19d122eeac06d6b2381c048dfc6c503516e4a79a8aec2f88211a469ddfb7d9",
+  "normalization": [
+    "UTF-8 decode",
+    "line endings normalized to LF",
+    "Project Gutenberg wrapper separated"
+  ],
+  "text_changes": "No character conversion, punctuation rewrite, modernization, or AI rewriting performed.",
+  "license": "Project Gutenberg License as embedded in each source file; original literary work is ancient/public-domain, but users must verify local law and source terms.",
+  "notes": "Project Gutenberg 文字版為楔子加 70 回；另收 1932 年 120 回影印本，兩者不可視為同版。",
+  "staged_from": "classic_chinese_novels_text_only_2026-08-09",
+  "staged_scope": "楔子＋第 1–5 回（pilot）",
+  "staged_note": "楔子由 normalized/preamble.txt 切出，素材包 chapters/ 未收；其餘章回逐位元組複製，hash 已核對。"
+}

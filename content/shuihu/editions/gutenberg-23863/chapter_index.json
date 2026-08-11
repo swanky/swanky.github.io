@@ -1,0 +1,45 @@
+[
+  {
+    "chapter": 0,
+    "heading": "楔子　張天師祈禳瘟疫　洪太尉誤走妖魔",
+    "paragraph_count": 34,
+    "text_sha256": "45115f2ac88cdd0a5c2728dac3e1fba454c443057be87a105ff780137f11aec8",
+    "path": "chapters/000.txt",
+    "provenance": "切自 normalized/preamble.txt 第 6 行起至檔尾（素材包 chapters/ 遺漏此篇）"
+  },
+  {
+    "chapter": 1,
+    "heading": "第一回　王教頭私走延安府　九紋龍大鬧史家村",
+    "paragraph_count": 43,
+    "text_sha256": "2d19746ec88e63021f89c95c5954b6a83fd6440089f44369a91d46fea4aca5de",
+    "path": "chapters/001.txt"
+  },
+  {
+    "chapter": 2,
+    "heading": "第二回　史大郎夜走華陰縣　魯提轄拳打鎮關西",
+    "paragraph_count": 34,
+    "text_sha256": "135680ed11bd01b43dfcc0ac7da744b4f635b9697807bb6f801a53243e5cccbe",
+    "path": "chapters/002.txt"
+  },
+  {
+    "chapter": 3,
+    "heading": "第三回　趙員外重修文殊院　魯智深大鬧五臺山",
+    "paragraph_count": 36,
+    "text_sha256": "65d20afde319161c05100a0c560d8c70fbfb2b2c69e608c06b5036ce55b0c045",
+    "path": "chapters/003.txt"
+  },
+  {
+    "chapter": 4,
+    "heading": "第四回　小霸王醉入銷金帳　花和尚大鬧桃花村",
+    "paragraph_count": 24,
+    "text_sha256": "c96b941b1261b72deeac0db075598f27cf8aa5248798bdb7e9df9e6a3141b474",
+    "path": "chapters/004.txt"
+  },
+  {
+    "chapter": 5,
+    "heading": "第五回　九紋龍翦徑赤松林　魯智深火燒瓦官寺",
+    "paragraph_count": 21,
+    "text_sha256": "c7d47e12bd7dff1e8dec9b455cc76a5e92dd4de9b5865f16e57a586addf1a944",
+    "path": "chapters/005.txt"
+  }
+]
