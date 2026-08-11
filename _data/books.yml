@@ -1,0 +1,116 @@
+# 古典小說書目註冊表——平台的單一真相來源。
+#
+# 通用閱讀器（_layouts/book-chapter.html、book-index.html）只讀這個檔，
+# layout 內不得出現任何書名字串或書專屬路徑。加一本書＝加一筆資料。
+#
+# status: published 已完整上站｜pilot 只上了一部分（imported_chapters 誠實記錄）｜planned 尚未匯入
+# flagship_url: 已有專屬子站的作品填此欄——書目頁直接連過去，不產生通用章回頁
+#
+# schema: schema/book.schema.json（`npm test` 會驗）
+# 決策脈絡: docs/novel-platform/architecture.md
+
+- id: jinpingmei
+  title: 金瓶梅
+  alternate_titles: [金瓶梅詞話, 新刻繡像批評金瓶梅]
+  author: 蘭陵笑笑生
+  era: 明
+  status: published
+  language: classical-chinese
+  blurb: 一個生藥鋪老闆如何靠鑽營爬上去、又如何垮下來。明代市井生活寫得最細的一部書，兩個版本可以逐回對照著讀。
+  flagship_url: /jinpingmei/
+  primary_edition: wanli
+  editions:
+    - id: wanli
+      label: 詞話本（萬曆本）
+      chapter_count: 100
+      imported_chapters: 101
+      source_page: https://zh.wikisource.org/wiki/金瓶梅詞話（萬曆本）
+      license: 公共領域文獻，依 Wikisource 整理本收錄，一字未刪改
+      retrieved_at: '2026-07-25'
+      note: 含卷首序文一篇（第 000 篇）
+    - id: chongzhen
+      label: 崇禎本（繡像本）
+      chapter_count: 100
+      imported_chapters: 101
+      source_page: https://zh.wikisource.org/wiki/金瓶梅
+      license: 公共領域文獻，依 Wikisource 整理本收錄，一字未刪改
+      retrieved_at: '2026-07-25'
+      note: 與詞話本正文差異大，不可視為同版；崇禎本原文人名作「陳敬濟」
+
+- id: shuihu
+  title: 水滸傳
+  author: 施耐庵（傳）
+  era: 明
+  status: pilot
+  language: classical-chinese
+  blurb: 一百零八個人被逼上梁山的過程。前幾回先看高俅怎麼發跡、史進與魯智深怎麼被官府擠到沒路走——武松與潘金蓮的故事也是從這裡開始的。
+  primary_edition: gutenberg-23863
+  editions:
+    - id: gutenberg-23863
+      label: 七十回本
+      chapter_count: 70
+      imported_chapters: 6
+      source_page: https://www.gutenberg.org/ebooks/23863
+      download_url: https://www.gutenberg.org/cache/epub/23863/pg23863.txt
+      license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
+      source_sha256: 9d5b723b57f462545d412593870e7f48157829777b9329350a29bc44fd654789
+      retrieved_at: '2026-08-09'
+      note: 楔子加七十回。另有一百二十回本，兩者不是同一版本，不可混併。目前上站的是楔子與前五回
+
+- id: sanguo
+  title: 三國演義
+  alternate_titles: [三國志演義]
+  author: 羅貫中（傳）
+  era: 明
+  status: planned
+  language: classical-chinese
+  blurb: 漢末群雄從結義到一統的一百二十回。人物數量與勢力關係最複雜的一部，適合用來檢驗人物關係圖。
+  primary_edition: gutenberg-23950
+  editions:
+    - id: gutenberg-23950
+      label: 一百二十回本
+      chapter_count: 120
+      imported_chapters: 0
+      source_page: https://www.gutenberg.org/ebooks/23950
+      license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
+      source_sha256: ed422e10c16c19af7ca7b09ca0320012e60776b3d7cb054769b8f7d9a19aea7d
+      retrieved_at: '2026-08-09'
+      note: 底本有 419 處簡體殘留字（后 229／于 182），上站前需逐一檢視
+
+- id: xiyou
+  title: 西遊記
+  author: 吳承恩（傳）
+  era: 明
+  status: planned
+  language: classical-chinese
+  blurb: 取經路上的一百回。妖怪、法寶、天庭神職自成一套體系，是資料模型要面對的下一種挑戰。
+  primary_edition: gutenberg-23962
+  editions:
+    - id: gutenberg-23962
+      label: 一百回本
+      chapter_count: 100
+      imported_chapters: 0
+      source_page: https://www.gutenberg.org/ebooks/23962
+      license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
+      source_sha256: af3c9e408c0c58595b666ed9981b6fa1e9343f4bbc78309b1cb0818c32fc1f58
+      retrieved_at: '2026-08-09'
+      note: 底本有 118 處簡體殘留字，上站前需逐一檢視
+
+- id: honglou
+  title: 紅樓夢
+  author: 曹雪芹、高鶚（傳統題署）
+  era: 清
+  status: planned
+  language: classical-chinese
+  blurb: 一個大家族由盛轉衰。人物最多、別名最繁、版本問題最複雜，要等資料模型成熟才收得住。
+  primary_edition: gutenberg-24264
+  editions:
+    - id: gutenberg-24264
+      label: 一百二十回本
+      chapter_count: 120
+      imported_chapters: 0
+      source_page: https://www.gutenberg.org/ebooks/24264
+      license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
+      source_sha256: ff1526996bf4b81807651921a85e5c1c0f1d1d123c9fa4553057ba6a3ec72011
+      retrieved_at: '2026-08-09'
+      note: 這份底本不合格、暫不採用——一萬五千餘處簡體殘留字、兩萬餘處句號寫成「．」，且全書多數回沒有分段。上站前必須另尋底本

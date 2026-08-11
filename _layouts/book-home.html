@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  單一作品頁（PLAN.md §4）。頁面只需 front matter：layout / book_id / permalink。
+  只列真的存在的入口——人物、地點、時間線等尚未建立，不放假連結。
+{%- endcomment -%}
+{%- assign book = site.data.books | where: 'id', page.book_id | first -%}
+{%- assign seal = book.title | slice: 0, 1 -%}
+{%- assign all_chapters = site.books | where: 'book_id', page.book_id -%}
+{%- capture page_title %}{{ book.title }}　原文閱讀{% endcapture -%}
+{%- capture page_desc %}{{ book.title }}（{{ book.author }}・{{ book.era }}代）原文全文閱讀。{{ book.blurb }}{% endcapture -%}
+<head>
+  {%- include book/head.html page_title=page_title description=page_desc og_type='website' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": {{ book.title | jsonify }},
+    {% if book.alternate_titles %}"alternateName": {{ book.alternate_titles | jsonify }},{% endif %}
+    "author": { "@type": "Person", "name": {{ book.author | jsonify }} },
+    "inLanguage": "zh-TW",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "description": {{ book.blurb | jsonify }}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ '/books/' | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ book.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk" data-book="{{ book.id }}">
+  <a class="bk-skip" href="#editions">跳到版本列表</a>
+  {%- include book/topbar.html brand_url='/books/' brand_name='古典小說書房' brand_sub='CLASSIC NOVELS' seal=seal -%}
+
+  <main class="bk-shell-narrow">
+    <nav class="bk-crumb" aria-label="麵包屑">
+      <ol>
+        <li><a href="{{ '/books/' | relative_url }}">古典小說書房</a></li>
+        <li aria-current="page">{{ book.title }}</li>
+      </ol>
+    </nav>
+
+    <header class="bk-hero">
+      <span class="bk-kicker">{{ book.author }}・{{ book.era }}代</span>
+      <h1>{{ book.title }}</h1>
+      <p>{{ book.blurb }}</p>
+      <ul class="bk-facts">
+        {%- if book.alternate_titles %}<li>又稱 {{ book.alternate_titles | join: '、' }}</li>{% endif %}
+        <li>章回小說</li>
+        <li>{{ book.editions | size }} 個版本</li>
+        <li>目前收錄 {{ all_chapters | size }} 篇原文</li>
+      </ul>
+    </header>
+
+    <p class="bk-resume" data-resume hidden>接著上次讀：<a href="#"><b data-resume-label></b> ▶</a></p>
+
+    <h2 id="editions" class="bk-kicker" style="margin:0 0 .8rem;color:var(--bk-gold);letter-spacing:.28em;font-size:.74rem">收錄版本</h2>
+    <ul class="bk-booklist">
+      {%- for ed in book.editions -%}
+      {%- assign ed_chapters = all_chapters | where: 'edition_id', ed.id | sort: 'chapter' -%}
+      {%- if ed.id == book.primary_edition %}{% capture ed_url %}/books/{{ book.id }}/text/{% endcapture %}{% else %}{% capture ed_url %}/books/{{ book.id }}/text/{{ ed.id }}/{% endcapture %}{% endif -%}
+      <li class="bk-book">
+        <h2><a href="{{ ed_url | relative_url }}">{{ ed.label }}</a></h2>
+        <span class="bk-byline">全書 {{ ed.chapter_count }} 回・目前收錄 {{ ed_chapters | size }} 篇</span>
+        {%- if ed.note %}<p>{{ ed.note }}</p>{% endif %}
+        <p class="bk-cta">
+          {%- if ed_chapters.size > 0 %}<a href="{{ ed_chapters.first.url | relative_url }}">從{{ ed_chapters.first.label }}開始讀 ▶</a>　<a href="{{ ed_url | relative_url }}">回目列表</a>{% else %}<span class="bk-tag">整理中</span>{% endif %}
+        </p>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <aside class="bk-note" aria-label="關於這份原文">
+      <h2>關於這份原文</h2>
+      <p>原文一字未刪改，站上另外整理的導讀、註解等輔助內容一律分開存放，不混進原文。每一篇都存有校驗碼，只要有一個字被改動，重新產生頁面時就會對不上、建置直接失敗。</p>
+      {%- for ed in book.editions %}
+      <dl>
+        <dt>{{ ed.label }}</dt><dd><a href="{{ ed.source_page }}" target="_blank" rel="noopener noreferrer">{{ ed.source_page }}</a>／{{ ed.license }}</dd>
+      </dl>
+      {%- endfor %}
+    </aside>
+  </main>
+
+  {%- include book/footer.html -%}
+  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+</body>
+</html>

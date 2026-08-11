@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "paragraph.schema.json",
+  "title": "Paragraph",
+  "description": "段落。頁面上以 <p id=\"p-{章回三位}-{序號四位}\"> 呈現；全域 ID 需前綴 {book_id}-。",
+  "type": "object",
+  "required": ["id", "book_id", "edition_id", "chapter", "order", "text"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*-[0-9]{3}-p[0-9]{4}$" },
+    "book_id": { "type": "string" },
+    "edition_id": { "type": "string" },
+    "chapter": { "type": "integer", "minimum": 0 },
+    "order": { "type": "integer", "minimum": 1 },
+    "text": { "type": "string" },
+    "characters": { "type": "array", "items": { "type": "string" } },
+    "locations": { "type": "array", "items": { "type": "string" } },
+    "terms": { "type": "array", "items": { "type": "string" } }
+  }
+}

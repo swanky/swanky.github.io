@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chapter.schema.json",
+  "title": "Chapter",
+  "description": "一篇章回。對應 _books/*.html 的 front matter。",
+  "type": "object",
+  "required": ["layout", "book_id", "edition_id", "chapter", "label", "title", "permalink", "paragraph_count", "text_sha256"],
+  "properties": {
+    "layout": { "enum": ["book-chapter"] },
+    "book_id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "edition_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "chapter": { "type": "integer", "minimum": 0, "description": "0 = 卷首／楔子" },
+    "label": { "type": "string" },
+    "couplet": { "type": "string" },
+    "title": { "type": "string" },
+    "permalink": { "type": "string", "pattern": "^/books/" },
+    "description": { "type": "string" },
+    "paragraph_count": { "type": "integer", "minimum": 1 },
+    "text_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "source_url": { "type": "string", "pattern": "^https://" }
+  }
+}

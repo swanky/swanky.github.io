@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  通用回目列表。頁面只需 front matter：layout / book_id / edition_id / permalink。
+  硬規則同 book-chapter.html：本檔不得出現書名字串或單一作品專屬路徑。
+{%- endcomment -%}
+{%- assign book = site.data.books | where: 'id', page.book_id | first -%}
+{%- assign edition = book.editions | where: 'id', page.edition_id | first -%}
+{%- capture book_url %}/books/{{ book.id }}/{% endcapture -%}
+{%- assign seal = book.title | slice: 0, 1 -%}
+{%- assign chapters = site.books | where: 'book_id', page.book_id | where: 'edition_id', page.edition_id | sort: 'chapter' -%}
+{%- capture page_title %}{{ book.title }}{{ edition.label }}回目｜原文全文{% endcapture -%}
+{%- capture page_desc %}《{{ book.title }}》{{ edition.label }}原文回目列表，共收錄 {{ chapters.size }} 篇，一字未刪改。{% endcapture -%}
+<head>
+  {%- include book/head.html page_title=page_title description=page_desc og_type='website' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": {{ book.title | jsonify }},
+    "author": { "@type": "Person", "name": {{ book.author | jsonify }} },
+    "bookEdition": {{ edition.label | jsonify }},
+    "inLanguage": "zh-TW",
+    "numberOfPages": {{ edition.chapter_count }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "description": {{ book.blurb | jsonify }}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ '/books/' | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ book.title | jsonify }}, "item": {{ book_url | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 3, "name": {{ edition.label | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk" data-book="{{ book.id }}">
+  <a class="bk-skip" href="#chapter-list">跳到回目列表</a>
+  {%- include book/topbar.html brand_url=book_url brand_name=book.title brand_sub=edition.label seal=seal -%}
+
+  <main class="bk-shell-narrow">
+    <nav class="bk-crumb" aria-label="麵包屑">
+      <ol>
+        <li><a href="{{ '/books/' | relative_url }}">古典小說書房</a></li>
+        <li><a href="{{ book_url | relative_url }}">{{ book.title }}</a></li>
+        <li aria-current="page">{{ edition.label }}</li>
+      </ol>
+    </nav>
+
+    <header class="bk-hero">
+      <span class="bk-kicker">{{ edition.label }}</span>
+      <h1>{{ book.title }}　原文回目</h1>
+      <p>{{ book.blurb }}</p>
+      <ul class="bk-facts">
+        <li>{{ book.author }}</li>
+        <li>{{ book.era }}代</li>
+        <li>全書 {{ edition.chapter_count }} 回</li>
+        <li>目前收錄 {{ chapters.size }} 篇</li>
+      </ul>
+    </header>
+
+    <p class="bk-resume" data-resume hidden>接著上次讀：<a href="#"><b data-resume-label></b> ▶</a></p>
+
+    <ol id="chapter-list" class="bk-chapter-list">
+      {%- for c in chapters %}
+      <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="ttl">{{ c.couplet | default: c.label }}</span></a></li>
+      {%- endfor %}
+    </ol>
+
+    {%- if edition.imported_chapters < edition.chapter_count %}
+    <aside class="bk-note" aria-label="收錄進度">
+      <h2>收錄進度</h2>
+      <p>《{{ book.title }}》{{ edition.label }}全書 {{ edition.chapter_count }} 回，目前先收 {{ chapters.size }} 篇上線。這是刻意的：先用少量章回確認閱讀體驗與資料結構站得住，再往下補齊，不一次倒進來。</p>
+      <dl>
+        <dt>底本</dt><dd>{{ edition.label }}{% if edition.note %}（{{ edition.note }}）{% endif %}</dd>
+        <dt>文字來源</dt><dd><a href="{{ edition.source_page }}" target="_blank" rel="noopener noreferrer">{{ edition.source_page }}</a></dd>
+        <dt>授權</dt><dd>{{ edition.license }}</dd>
+      </dl>
+    </aside>
+    {%- endif %}
+  </main>
+
+  {%- include book/footer.html -%}
+  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+</body>
+</html>

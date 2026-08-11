@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  通用章回閱讀器。服務 _books/ collection 的所有作品。
+
+  硬規則（tests/book-platform.test.mjs 會驗）：本檔不得出現任何書名字串或
+  單一作品專屬路徑。所有書籍資訊一律經 page.book_id 從 _data/books.yml 查表。
+{%- endcomment -%}
+{%- assign book = site.data.books | where: 'id', page.book_id | first -%}
+{%- assign edition = book.editions | where: 'id', page.edition_id | first -%}
+{%- if page.edition_id == book.primary_edition -%}
+  {%- capture toc_url %}/books/{{ book.id }}/text/{% endcapture -%}
+{%- else -%}
+  {%- capture toc_url %}/books/{{ book.id }}/text/{{ edition.id }}/{% endcapture -%}
+{%- endif -%}
+{%- capture book_url %}/books/{{ book.id }}/{% endcapture -%}
+{%- capture page_title %}{{ page.title }}｜{{ book.title }}原文{% endcapture -%}
+{%- assign seal = book.title | slice: 0, 1 -%}
+<head>
+  {%- include book/head.html page_title=page_title description=page.description -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": {{ page.title | jsonify }},
+    "position": {{ page.chapter }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "inLanguage": "zh-TW",
+    "isPartOf": {
+      "@type": "Book",
+      "name": {{ book.title | jsonify }},
+      "author": { "@type": "Person", "name": {{ book.author | jsonify }} },
+      "bookEdition": {{ edition.label | jsonify }},
+      "inLanguage": "zh-TW",
+      "url": {{ toc_url | absolute_url | jsonify }}
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ '/books/' | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ book.title | jsonify }}, "item": {{ book_url | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 3, "name": {{ edition.label | jsonify }}, "item": {{ toc_url | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 4, "name": {{ page.label | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk" data-book="{{ book.id }}">
+  <a class="bk-skip" href="#chapter-body">跳到本回內文</a>
+  <div class="bk-progress" aria-hidden="true"><span data-progress></span></div>
+
+  {%- include book/topbar.html brand_url=book_url brand_name=book.title brand_sub=edition.label seal=seal toc_url=toc_url reader_tools=true -%}
+
+  {%- assign siblings = site.books | where: 'book_id', page.book_id | where: 'edition_id', page.edition_id | sort: 'chapter' -%}
+  {%- assign idx = -1 -%}
+  {%- for c in siblings %}{% if c.chapter == page.chapter %}{% assign idx = forloop.index0 %}{% endif %}{% endfor -%}
+  {%- assign prev_i = idx | minus: 1 -%}
+  {%- assign next_i = idx | plus: 1 -%}
+  {%- assign prev_c = nil -%}{%- assign next_c = nil -%}
+  {%- if idx > 0 %}{% assign prev_c = siblings[prev_i] %}{% endif -%}
+  {%- if next_i < siblings.size %}{% assign next_c = siblings[next_i] %}{% endif -%}
+
+  <main class="bk-shell-narrow">
+    <nav class="bk-crumb" aria-label="麵包屑">
+      <ol>
+        <li><a href="{{ '/books/' | relative_url }}">古典小說書房</a></li>
+        <li><a href="{{ book_url | relative_url }}">{{ book.title }}</a></li>
+        <li><a href="{{ toc_url | relative_url }}">{{ edition.label }}</a></li>
+        <li aria-current="page">{{ page.label }}</li>
+      </ol>
+    </nav>
+
+    <header class="bk-reader-head">
+      <span class="bk-meta">{{ book.title }}・{{ edition.label }}</span>
+      <h1>{{ page.label }}{% if page.couplet != '' %}<small>{{ page.couplet }}</small>{% endif %}</h1>
+    </header>
+
+    <article id="chapter-body" class="bk-reader" data-book="{{ book.id }}" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
+      {{ content }}
+    </article>
+
+    <nav class="bk-pager" aria-label="回目換頁">
+      {%- if prev_c %}
+      <a href="{{ prev_c.url | relative_url }}" rel="prev"><span class="dir">◀ 上一篇</span><span class="ttl">{{ prev_c.label }}{% if prev_c.couplet != '' %}　{{ prev_c.couplet | truncate: 18 }}{% endif %}</span></a>
+      {%- else %}<span class="bk-pager-empty" aria-hidden="true"></span>{% endif %}
+      <a class="bk-pager-toc" href="{{ toc_url | relative_url }}">回目列表</a>
+      {%- if next_c %}
+      <a class="bk-pager-next" href="{{ next_c.url | relative_url }}" rel="next"><span class="dir">下一篇 ▶</span><span class="ttl">{{ next_c.label }}{% if next_c.couplet != '' %}　{{ next_c.couplet | truncate: 18 }}{% endif %}</span></a>
+      {%- else %}<span class="bk-pager-empty" aria-hidden="true"></span>{% endif %}
+    </nav>
+
+    <aside class="bk-note" aria-label="收錄說明">
+      <h2>收錄說明</h2>
+      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，<b>一字未刪改</b>。原文與後續整理的輔助資料分開存放，本頁只呈現原文。</p>
+      <dl>
+        <dt>底本</dt><dd>{{ edition.label }}{% if edition.note %}（{{ edition.note }}）{% endif %}</dd>
+        <dt>文字來源</dt><dd><a href="{{ edition.source_page }}" target="_blank" rel="noopener noreferrer">{{ edition.source_page }}</a></dd>
+        <dt>授權</dt><dd>{{ edition.license }}</dd>
+        <dt>本篇校驗碼</dt><dd><code>{{ page.text_sha256 | slice: 0, 16 }}…</code>（{{ page.paragraph_count }} 段，含回目）</dd>
+      </dl>
+      <p>校驗碼是這篇原文的指紋：站上每次重新產生頁面都會核對它，只要有一個字被改動就會對不上、建置直接失敗。</p>
+    </aside>
+  </main>
+
+  {%- include book/footer.html -%}
+  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+</body>
+</html>

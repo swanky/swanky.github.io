@@ -1,0 +1,5 @@
+# 古典小說平台的 staged 原文是「原文有沒有被改過」的比對基準（校驗碼算在它身上），
+# 必須跨平台逐位元組穩定——不受 core.autocrlf 影響。
+# 驗證器本身另有 LF 正規化，所以就算誤簽成 CRLF 也不會誤報；這條是多一層保險。
+content/** text eol=lf
+schema/*.json text eol=lf

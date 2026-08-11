@@ -1,0 +1,23 @@
+{%- comment -%}
+  古典小說通用層的共用 <head>。
+  參數：page_title（必填，完整 <title> 用）、description（必填）
+  刻意不接受書名參數——書名一律由呼叫端從 _data/books.yml 查表後組好字串傳進來。
+{%- endcomment -%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ include.page_title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ include.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{{ include.og_type | default: 'article' }}">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ include.page_title }}">
+  <meta property="og:description" content="{{ include.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/book-reader.css' | relative_url }}?v=20260811-1" rel="stylesheet">
+  <script>try{if(localStorage.getItem('bk-paper')==='1')document.documentElement.classList.add('bk-paper')}catch(e){}</script>

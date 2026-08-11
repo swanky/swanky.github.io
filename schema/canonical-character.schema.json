@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canonical-character.schema.json",
+  "title": "CanonicalCharacter",
+  "description": "跨作品的同一個文學形象。relation=homonym 用於同名不同人，明確阻止自動合併。",
+  "type": "object",
+  "required": ["id", "name", "appears_in", "relation", "review_status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "appears_in": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "character.id 陣列" },
+    "relation": { "enum": ["same-work", "adapted", "homonym"] },
+    "note": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "ai-reviewed", "human-reviewed", "verified"] }
+  }
+}

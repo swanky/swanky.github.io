@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "term.schema.json",
+  "title": "Term",
+  "description": "古文詞彙、物品、制度。金瓶梅現有 _data/jinpingmei_words.yml 是本 schema 的前身，日後併入時對映 term/definition/books/evidence。",
+  "type": "object",
+  "required": ["id", "term", "category", "definition", "books", "review_status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^term-[a-z0-9-]+$" },
+    "term": { "type": "string" },
+    "category": { "enum": ["飲食", "服飾", "官職", "商業", "貨幣", "婚姻", "宗教", "性文化", "器物", "建築", "稱謂", "方言", "其他"] },
+    "definition": { "type": "string" },
+    "books": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "evidence": { "type": "array", "items": { "type": "string" } },
+    "sources": { "type": "array", "items": { "type": "string" } },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "review_status": { "enum": ["unreviewed", "ai-reviewed", "human-reviewed", "verified"] }
+  }
+}

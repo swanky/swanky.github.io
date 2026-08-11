@@ -1,0 +1,169 @@
+/* 古典小說通用閱讀器樣式
+ *
+ * 服務 _layouts/book-chapter.html、book-index.html、books/index.html——即所有
+ * 走通用層的作品。金瓶梅有自己的 assets/css/jinpingmei.css，兩者刻意不互相依賴
+ * （旗艦零回歸風險）。
+ *
+ * 技術債（已記錄於 docs/novel-platform/architecture.md §5）：下面的色票值與
+ * jinpingmei.css 相同但各存一份。第三本書上線時必須抽出共用 tokens 檔。
+ */
+
+:root {
+  --bk-bg: #0e0d0b;
+  --bk-panel: #16140f;
+  --bk-line: rgba(201, 164, 97, .22);
+  --bk-paper: #e9e0cb;
+  --bk-muted: #a99f89;
+  --bk-gold: #c9a461;
+  --bk-gold-bright: #e2c777;
+  --bk-red: #9d3a4d;
+  --bk-serif: "Noto Serif TC", "Songti TC", serif;
+  --bk-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --bk-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", "Noto Serif TC", serif;
+  --bk-reader-size: 1.125rem;
+}
+
+/* 米紙模式：淺色紙感底。class 由 layout head 的防閃爍腳本先行套用 */
+html.bk-paper {
+  --bk-bg: #ece3d0;
+  --bk-panel: #e3d9c2;
+  --bk-line: rgba(120, 92, 40, .28);
+  --bk-paper: #2a2318;
+  --bk-muted: #6d6350;
+  --bk-gold: #8a6a28;
+  --bk-gold-bright: #6f5320;
+}
+
+[data-reader-size="s"] { --bk-reader-size: 1rem; }
+[data-reader-size="l"] { --bk-reader-size: 1.3rem; }
+
+.bk { margin: 0; background: var(--bk-bg); color: var(--bk-paper); font-family: var(--bk-sans); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.bk *, .bk *::before, .bk *::after { box-sizing: border-box; }
+.bk a { color: var(--bk-gold); text-decoration: none; }
+.bk a:hover { color: var(--bk-gold-bright); text-decoration: underline; }
+.bk ::selection { background: var(--bk-gold); color: #141109; }
+
+.bk-skip { position: absolute; left: -9999px; }
+.bk-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--bk-gold); color: #141109; padding: .4rem .8rem; }
+
+.bk-shell { max-width: 1180px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 28px); }
+.bk-shell-narrow { max-width: 44rem; margin: 0 auto; padding: 0 clamp(14px, 4vw, 28px) clamp(48px, 8vw, 88px); }
+
+/* ── 進度條 ───────────────────────────── */
+.bk-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 50; background: transparent; }
+.bk-progress span { display: block; height: 100%; width: 0; background: var(--bk-gold); transition: width .1s linear; }
+
+/* ── 頂欄 ─────────────────────────────── */
+.bk-topbar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .65rem clamp(14px, 3vw, 28px);
+  background: color-mix(in srgb, var(--bk-bg) 92%, transparent);
+  border-bottom: 1px solid var(--bk-line);
+  backdrop-filter: blur(8px);
+}
+.bk-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--bk-paper) !important; text-decoration: none !important; font-family: var(--bk-serif); }
+.bk-brand:hover { color: var(--bk-gold-bright) !important; }
+.bk-seal { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: linear-gradient(150deg, #a63e52, #8d3244); color: #f2e6d5; font-weight: 900; font-size: .92rem; }
+.bk-brand span { display: flex; flex-direction: column; font-weight: 700; font-size: .96rem; letter-spacing: .1em; line-height: 1.35; }
+.bk-brand small { color: var(--bk-muted); font-size: .58rem; letter-spacing: .22em; font-weight: 400; }
+.bk-topnav { display: flex; align-items: center; gap: clamp(.5rem, 2vw, 1.2rem); font-size: .82rem; }
+.bk-topnav a { letter-spacing: .06em; }
+
+.bk-sizer { display: inline-flex; border: 1px solid var(--bk-line); }
+.bk-sizer button { background: none; border: 0; padding: .2rem .5rem; color: var(--bk-muted); font-family: var(--bk-serif); cursor: pointer; line-height: 1.6; }
+.bk-sizer button.sz-s { font-size: .7rem; }
+.bk-sizer button.sz-m { font-size: .86rem; }
+.bk-sizer button.sz-l { font-size: 1.02rem; }
+.bk-sizer button[aria-pressed="true"] { background: var(--bk-gold); color: #141109; }
+.bk-paper-btn { background: none; border: 1px solid var(--bk-line); padding: .2rem .55rem; color: var(--bk-muted); font-family: var(--bk-serif); font-size: .82rem; cursor: pointer; }
+.bk-paper-btn[aria-pressed="true"] { background: var(--bk-gold); color: #141109; }
+
+/* ── 麵包屑 ───────────────────────────── */
+.bk-crumb { margin: clamp(18px, 3vw, 28px) 0 0; color: var(--bk-muted); font-size: .76rem; letter-spacing: .06em; }
+.bk-crumb ol { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.bk-crumb li + li::before { content: "/"; margin-right: .45rem; color: var(--bk-line); }
+
+/* ── 章回頁 ───────────────────────────── */
+.bk-reader-head { padding: clamp(22px, 4vw, 38px) 0 clamp(18px, 3vw, 26px); border-bottom: 1px solid var(--bk-line); }
+.bk-reader-head .bk-meta { display: block; margin-bottom: .7rem; color: var(--bk-muted); font-family: var(--bk-kai); font-size: .78rem; letter-spacing: .18em; }
+.bk-reader-head h1 { margin: 0; font-family: var(--bk-serif); font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.4; letter-spacing: .04em; }
+.bk-reader-head h1 small { display: block; margin-top: .55rem; font-family: var(--bk-kai); font-weight: 400; font-size: .58em; letter-spacing: .14em; color: var(--bk-muted); line-height: 1.7; }
+
+.bk-reader { padding: clamp(24px, 4vw, 40px) 0 0; font-family: var(--bk-kai); font-size: var(--bk-reader-size); line-height: 2.15; }
+.bk-reader p { margin: 0 0 1.5em; text-align: justify; text-indent: 2em; }
+.bk-reader p:target { background: color-mix(in srgb, var(--bk-gold) 18%, transparent); outline: 1px solid var(--bk-line); outline-offset: .3em; }
+
+/* ── 換頁 ─────────────────────────────── */
+.bk-pager { display: grid; grid-template-columns: 1fr auto 1fr; gap: .8rem; align-items: stretch; margin: clamp(34px, 5vw, 52px) 0 0; }
+.bk-pager a { display: flex; flex-direction: column; gap: .3rem; padding: .8rem 1rem; border: 1px solid var(--bk-line); background: var(--bk-panel); text-decoration: none !important; }
+.bk-pager a:hover { border-color: var(--bk-gold); }
+.bk-pager .dir { color: var(--bk-muted); font-size: .72rem; letter-spacing: .16em; }
+.bk-pager .ttl { color: var(--bk-paper); font-family: var(--bk-serif); font-size: .88rem; line-height: 1.6; }
+.bk-pager-next { text-align: right; }
+.bk-pager-toc { justify-content: center; align-items: center; font-family: var(--bk-serif); font-size: .84rem; letter-spacing: .12em; }
+.bk-pager-empty { display: block; }
+
+/* ── 牌記（收錄說明） ─────────────────── */
+.bk-note { margin: clamp(40px, 6vw, 64px) 0 0; border: 1px solid var(--bk-line); background: var(--bk-panel); padding: clamp(1.2rem, 2.8vw, 1.8rem); }
+.bk-note h2 { margin: 0 0 .7rem; font-family: var(--bk-serif); font-size: 1.08rem; letter-spacing: .18em; }
+.bk-note p { margin: 0 0 .6rem; color: color-mix(in srgb, var(--bk-paper) 82%, var(--bk-muted)); font-size: .86rem; line-height: 1.95; }
+.bk-note p:last-child { margin-bottom: 0; }
+.bk-note dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .35rem .9rem; font-size: .82rem; }
+.bk-note dt { color: var(--bk-muted); letter-spacing: .1em; }
+.bk-note dd { margin: 0; color: color-mix(in srgb, var(--bk-paper) 82%, var(--bk-muted)); word-break: break-word; }
+
+/* ── 回目列表 ─────────────────────────── */
+.bk-hero { padding: clamp(30px, 6vw, 60px) 0 clamp(24px, 4vw, 40px); }
+.bk-hero .bk-kicker { display: block; margin-bottom: .8rem; color: var(--bk-gold); font-size: .74rem; letter-spacing: .28em; }
+.bk-hero h1 { margin: 0 0 .9rem; font-family: var(--bk-serif); font-weight: 900; font-size: clamp(1.9rem, 5.5vw, 3rem); letter-spacing: .06em; line-height: 1.3; }
+.bk-hero p { margin: 0; max-width: 44em; color: color-mix(in srgb, var(--bk-paper) 84%, var(--bk-muted)); font-size: 1rem; }
+.bk-hero .bk-facts { margin: 1.2rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem .8rem; padding: 0; list-style: none; }
+.bk-hero .bk-facts li { padding: .22em .8em; border: 1px solid var(--bk-line); color: var(--bk-muted); font-size: .76rem; letter-spacing: .08em; }
+
+.bk-chapter-list { margin: 0 0 clamp(30px, 5vw, 48px); padding: 0; list-style: none; display: grid; gap: .5rem; }
+.bk-chapter-list li { border: 1px solid var(--bk-line); background: var(--bk-panel); }
+.bk-chapter-list a { display: flex; align-items: baseline; gap: .9rem; padding: .8rem 1rem; text-decoration: none !important; }
+.bk-chapter-list a:hover { background: color-mix(in srgb, var(--bk-gold) 8%, transparent); }
+.bk-chapter-list .no { flex: 0 0 auto; min-width: 4.2em; color: var(--bk-gold); font-family: var(--bk-kai); font-size: .84rem; letter-spacing: .1em; }
+.bk-chapter-list .ttl { color: var(--bk-paper); font-family: var(--bk-serif); font-size: .95rem; line-height: 1.7; }
+
+/* ── 書目頁 ───────────────────────────── */
+.bk-booklist { margin: 0 0 clamp(36px, 6vw, 60px); padding: 0; list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.bk-book { display: flex; flex-direction: column; gap: .7rem; padding: clamp(1.1rem, 2.5vw, 1.6rem); border: 1px solid var(--bk-line); background: var(--bk-panel); }
+.bk-book h2 { margin: 0; font-family: var(--bk-serif); font-weight: 900; font-size: 1.35rem; letter-spacing: .1em; }
+.bk-book h2 a { color: var(--bk-paper) !important; text-decoration: none !important; }
+.bk-book h2 a:hover { color: var(--bk-gold-bright) !important; }
+.bk-book .bk-byline { color: var(--bk-muted); font-size: .78rem; letter-spacing: .1em; }
+.bk-book p { margin: 0; color: color-mix(in srgb, var(--bk-paper) 84%, var(--bk-muted)); font-size: .9rem; }
+.bk-book .bk-eds { margin: 0; padding: 0; list-style: none; display: grid; gap: .3rem; font-size: .8rem; color: var(--bk-muted); }
+.bk-book .bk-cta { margin-top: auto; padding-top: .4rem; font-family: var(--bk-serif); font-size: .9rem; letter-spacing: .1em; }
+.bk-tag { display: inline-block; padding: .18em .7em; border: 1px solid var(--bk-line); color: var(--bk-muted); font-size: .7rem; letter-spacing: .14em; }
+.bk-tag--live { border-color: var(--bk-gold); color: var(--bk-gold-bright); }
+.bk-tag--pilot { border-color: var(--bk-red); color: color-mix(in srgb, var(--bk-red) 60%, var(--bk-paper)); }
+
+/* ── 頁尾 ─────────────────────────────── */
+.bk-footer { margin-top: clamp(48px, 8vw, 90px); padding: clamp(24px, 4vw, 36px) 0; border-top: 1px solid var(--bk-line); }
+.bk-footer .bk-shell { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.bk-footer span { color: var(--bk-muted); font-size: .78rem; letter-spacing: .08em; }
+.bk-footer nav { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; font-size: .8rem; }
+
+@media (max-width: 720px) {
+  .bk-topnav .hide-m { display: none; }
+  .bk-pager { grid-template-columns: 1fr; }
+  .bk-pager-next { text-align: left; }
+  .bk-pager-empty { display: none; }
+  .bk-reader { line-height: 2; }
+}
+@media (max-width: 480px) {
+  .bk-brand small { display: none; }
+  .bk-topnav { gap: .45rem; font-size: .76rem; }
+  .bk-note dl { grid-template-columns: 1fr; gap: .1rem .9rem; }
+  .bk-note dt { margin-top: .5rem; }
+}
+
+/* 續讀入口與已讀標記 */
+.bk-resume { margin: 0 0 1.4rem; padding: .7rem 1rem; border: 1px solid var(--bk-gold); background: color-mix(in srgb, var(--bk-gold) 8%, transparent); font-size: .88rem; }
+.bk-resume b { font-family: var(--bk-serif); }
+.bk-chapter-list li.is-read { opacity: .62; }
+.bk-chapter-list li.is-read .no::after { content: "・讀過"; color: var(--bk-muted); font-size: .82em; }

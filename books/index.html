@@ -1,0 +1,99 @@
+---
+layout: null
+permalink: /books/
+title: 古典小說書房
+---
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  平台書目首頁。內容全部來自 _data/books.yml——加一本書不必改這個檔。
+  已有專屬子站的作品（flagship_url）直接連過去，不重複做一套閱讀器。
+{%- endcomment -%}
+{%- assign live = site.data.books | where_exp: 'b', "b.status != 'planned'" -%}
+{%- assign planned = site.data.books | where: 'status', 'planned' -%}
+{%- assign published = site.data.books | where: 'status', 'published' -%}
+{%- comment -%}描述也從註冊表算出來——加一本書不必回頭改這頁的 meta。{%- endcomment -%}
+{%- assign all_titles = site.data.books | map: 'title' | join: '、' -%}
+{%- capture page_desc %}中國古典小說原文閱讀：{{ all_titles }}。原文一字未刪改，另附讀得懂的說明，手機也好讀。{% endcapture -%}
+<head>
+  {%- include book/head.html page_title=page.title description=page_desc og_type='website' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "inLanguage": "zh-TW",
+    "hasPart": [
+      {%- for b in live %}
+      {
+        "@type": "Book",
+        "name": {{ b.title | jsonify }},
+        "author": { "@type": "Person", "name": {{ b.author | jsonify }} },
+        "inLanguage": "zh-TW",
+        "url": {% if b.flagship_url %}{{ b.flagship_url | absolute_url | jsonify }}{% else %}{{ b.id | prepend: '/books/' | append: '/' | absolute_url | jsonify }}{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk">
+  <a class="bk-skip" href="#booklist">跳到作品列表</a>
+  {%- include book/topbar.html brand_url='/books/' brand_name='古典小說書房' brand_sub='CLASSIC NOVELS' seal='書' -%}
+
+  <main class="bk-shell">
+    <header class="bk-hero">
+      <span class="bk-kicker">原文閱讀</span>
+      <h1>古典小說書房</h1>
+      <p>把幾部長篇古典小說的原文放在一個地方，一字不刪不改，配上看得懂的說明——讓沒有讀過文言文的人也能讀完一整回。{% if published.size > 0 %}目前《{{ published.first.title }}》最完整，{% endif %}其餘作品陸續整理上線。</p>
+    </header>
+
+    <ul id="booklist" class="bk-booklist">
+      {%- for b in live -%}
+      {%- if b.flagship_url %}{% assign go = b.flagship_url %}{% else %}{% capture go %}/books/{{ b.id }}/{% endcapture %}{% endif -%}
+      {%- assign imported = 0 -%}
+      {%- for ed in b.editions %}{% assign imported = imported | plus: ed.imported_chapters %}{% endfor -%}
+      <li class="bk-book">
+        <h2><a href="{{ go | relative_url }}">{{ b.title }}</a></h2>
+        <span class="bk-byline">{{ b.author }}・{{ b.era }}代
+          {%- if b.status == 'published' %}<span class="bk-tag bk-tag--live">全書上線</span>{% elsif b.status == 'pilot' %}<span class="bk-tag bk-tag--pilot">部分上線</span>{% endif %}
+        </span>
+        <p>{{ b.blurb }}</p>
+        <ul class="bk-eds">
+          {%- for ed in b.editions %}
+          <li>{{ ed.label }}——全書 {{ ed.chapter_count }} 回，已收 {{ ed.imported_chapters }} 篇</li>
+          {%- endfor %}
+        </ul>
+        <p class="bk-cta"><a href="{{ go | relative_url }}">開始讀 ▶</a></p>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {%- if planned.size > 0 %}
+    <aside class="bk-note" aria-label="整理中的作品">
+      <h2>還在整理的作品</h2>
+      <p>下面這幾部已經找好公開的原文來源，但還沒上線。原因寫在後面——文字品質沒過關的底本不會拿來充當原文。</p>
+      <dl>
+        {%- for b in planned %}
+        <dt>{{ b.title }}</dt><dd>{{ b.editions.first.label }}・全書 {{ b.editions.first.chapter_count }} 回{% if b.editions.first.note %}——{{ b.editions.first.note }}{% endif %}</dd>
+        {%- endfor %}
+      </dl>
+    </aside>
+    {%- endif %}
+  </main>
+
+  {%- include book/footer.html -%}
+  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+</body>
+</html>

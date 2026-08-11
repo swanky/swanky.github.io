@@ -1,0 +1,24 @@
+{%- comment -%}
+  通用頂欄。參數：
+    brand_url / brand_name（必填）、brand_sub（選；小標）、seal（選；朱印一字）
+    toc_url / toc_label（選；有值才顯示「回目」入口）
+    reader_tools（選；true 時顯示字級與米紙鈕——只有章回頁需要）
+{%- endcomment -%}
+  <header class="bk-topbar">
+    <a class="bk-brand" href="{{ include.brand_url | relative_url }}">
+      {%- if include.seal %}<span class="bk-seal" aria-hidden="true">{{ include.seal }}</span>{% endif -%}
+      <span>{{ include.brand_name }}{% if include.brand_sub %}<small>{{ include.brand_sub }}</small>{% endif %}</span>
+    </a>
+    <nav class="bk-topnav" aria-label="閱讀導覽">
+      {%- if include.toc_url %}<a href="{{ include.toc_url | relative_url }}">{{ include.toc_label | default: '回目列表' }}</a>{% endif %}
+      <a class="hide-m" href="{{ '/books/' | relative_url }}">全部作品</a>
+      {%- if include.reader_tools %}
+      <span class="bk-sizer" role="group" aria-label="調整文字大小">
+        <button type="button" class="sz-s" data-size="s" aria-pressed="false">文</button>
+        <button type="button" class="sz-m" data-size="m" aria-pressed="true">文</button>
+        <button type="button" class="sz-l" data-size="l" aria-pressed="false">文</button>
+      </span>
+      <button type="button" class="bk-paper-btn" data-paper-toggle aria-pressed="false" title="深色底／米紙色底切換">紙</button>
+      {%- endif %}
+    </nav>
+  </header>

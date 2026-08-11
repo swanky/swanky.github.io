@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relationship.schema.json",
+  "title": "Relationship",
+  "description": "人物關係。關係隨劇情改變，必帶起訖章回（PLAN.md §12）；evidence 必為 paragraph ID（§17 Rule 2）。end_chapter=null 表延續至全書結束。",
+  "type": "object",
+  "required": ["source", "target", "type", "book_id", "start_chapter", "evidence", "review_status"],
+  "properties": {
+    "source": { "type": "string" },
+    "target": { "type": "string" },
+    "type": { "type": "string", "description": "spouse / concubine / servant / sworn-brother / adversary / kin / lover / business 等" },
+    "book_id": { "type": "string" },
+    "start_chapter": { "type": "integer", "minimum": 0 },
+    "end_chapter": { "type": ["integer", "null"], "minimum": 0 },
+    "evidence": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*-[0-9]{3}-p[0-9]{4}$" } },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "generated_by": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "ai-reviewed", "human-reviewed", "verified"] }
+  }
+}

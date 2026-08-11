@@ -43,6 +43,11 @@ exclude:
   - package.json
   - tests
   - tools
+  # Classic-novel platform: staged source text (the provenance baseline that
+  # tools/import_book_chapters.mjs reads and npm test hashes against) and the
+  # JSON Schemas. Both are build inputs, not pages.
+  - content
+  - schema
   # Print-resolution tarot originals (uniform/clonex 1024×1536 PNG masters and
   # the public-domain RWS 1080×1920 scans): kept in git for future print use,
   # but excluded from the build so they don't bloat the deployed _site.
@@ -74,6 +79,12 @@ collections:
   jinpingmei_characters:
     output: true
     sort_by: order
+  # Multi-book platform: every non-flagship work's chapters live here, keyed by
+  # book_id/edition_id front matter (see _data/books.yml). One collection rather
+  # than one per book, so adding a work needs no _config.yml change.
+  books:
+    output: true
+    sort_by: chapter
 
 # Default front matter
 defaults:

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "location.schema.json",
+  "title": "Location",
+  "description": "地點。小說地點／歷史地點／現代地理位置三者必須分開，不得混為一談（PLAN.md §14）。無法對應現代地理時 modern_location 填 null，不猜。",
+  "type": "object",
+  "required": ["id", "name", "type", "books", "review_status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string", "description": "小說裡的地名" },
+    "type": { "enum": ["city", "county", "prefecture", "village", "mountain", "temple", "residence", "shop", "region", "other"] },
+    "books": { "type": "array", "items": { "type": "string" } },
+    "description": { "type": "string" },
+    "historical_location": { "type": "string", "description": "史地考證結果；未考證留空字串" },
+    "modern_location": { "type": ["string", "null"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "evidence": { "type": "array", "items": { "type": "string" } },
+    "review_status": { "enum": ["unreviewed", "ai-reviewed", "human-reviewed", "verified"] }
+  }
+}

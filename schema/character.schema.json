@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "character.schema.json",
+  "title": "Character",
+  "description": "書內角色（book-scoped）。跨作品同名角色不得合併——同一文學形象靠 canonical_id 串，見 canonical-character.schema.json（PLAN.md §17 Rule 4/5）。",
+  "type": "object",
+  "required": ["id", "book_id", "name", "review_status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "慣例 {book_id}-{slug}" },
+    "book_id": { "type": "string" },
+    "canonical_id": { "type": "string", "description": "跨作品層 ID；沒有跨作品身分時省略" },
+    "name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "必經人工或高可信流程確認，不接受純字串比對產生（PLAN.md §60）" },
+    "gender": { "enum": ["female", "male", "unknown"] },
+    "description": { "type": "string" },
+    "first_appearance": { "type": "string", "pattern": "^[a-z][a-z0-9-]*-[0-9]{3}-p[0-9]{4}$" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "generated_by": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "ai-reviewed", "human-reviewed", "verified"] },
+    "evidence": { "type": "array", "items": { "type": "string" } }
+  }
+}
