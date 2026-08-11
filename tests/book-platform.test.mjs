@@ -102,6 +102,24 @@ test('作品頁與回目頁只放 front matter，不重複實作版面', () => {
   }
 });
 
+test('有專屬子站的作品，註冊表宣告的收錄數必須與實際 collection 檔數相符', () => {
+  // 這類作品不走 _books/，validate_content.mjs 查不到它們——沒有這個測試，
+  // books.yml 就可能默默說謊（宣告 101 篇，實際 collection 只有 99 篇）。
+  const flagshipCollections = { jinpingmei: { dir: '_jinpingmei', prefix: { wanli: '', chongzhen: 'chongzhen-' } } };
+  for (const b of books) {
+    if (!b.flagship_url) continue;
+    const map = flagshipCollections[b.id];
+    assert.ok(map, `${b.id} 有 flagship_url 但這個測試不知道它的 collection 在哪——請補進 flagshipCollections`);
+    const files = readdirSync(map.dir).filter((f) => f.endsWith('.html'));
+    for (const ed of b.editions) {
+      const prefix = map.prefix[ed.id];
+      assert.notEqual(prefix, undefined, `${b.id} 的 edition "${ed.id}" 沒有對應的檔名前綴`);
+      const actual = files.filter((f) => (prefix === '' ? /^\d{3}\.html$/.test(f) : f.startsWith(prefix))).length;
+      assert.equal(actual, ed.imported_chapters, `books.yml[${b.id}/${ed.id}] 宣告 ${ed.imported_chapters} 篇，${map.dir} 實際 ${actual} 篇`);
+    }
+  }
+});
+
 test('段落 ID 格式正確且連號從 0002 起（回目不進正文）', () => {
   const files = readdirSync('_books').filter((f) => f.endsWith('.html'));
   assert.ok(files.length > 0, '_books/ 是空的');
