@@ -32,7 +32,7 @@ title: 古典小說書房
         "name": {{ b.title | jsonify }},
         "author": { "@type": "Person", "name": {{ b.author | jsonify }} },
         "inLanguage": "zh-TW",
-        "url": {% if b.flagship_url %}{{ b.flagship_url | absolute_url | jsonify }}{% else %}{{ b.id | prepend: '/books/' | append: '/' | absolute_url | jsonify }}{% endif %}
+        "url": {% if b.flagship_url %}{{ b.flagship_url | absolute_url | jsonify }}{% else %}{{ b.id | prepend: '/' | append: '/' | absolute_url | jsonify }}{% endif %}
       }{% unless forloop.last %},{% endunless %}
       {%- endfor %}
     ]
@@ -61,7 +61,7 @@ title: 古典小說書房
 
     <ul id="booklist" class="bk-booklist">
       {%- for b in live -%}
-      {%- if b.flagship_url %}{% assign go = b.flagship_url %}{% else %}{% capture go %}/books/{{ b.id }}/{% endcapture %}{% endif -%}
+      {%- if b.flagship_url %}{% assign go = b.flagship_url %}{% else %}{% capture go %}/{{ b.id }}/{% endcapture %}{% endif -%}
       {%- assign imported = 0 -%}
       {%- for ed in b.editions %}{% assign imported = imported | plus: ed.imported_chapters %}{% endfor -%}
       <li class="bk-book">

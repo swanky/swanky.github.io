@@ -13,7 +13,7 @@
     "label": { "type": "string" },
     "couplet": { "type": "string" },
     "title": { "type": "string" },
-    "permalink": { "type": "string", "pattern": "^/books/" },
+    "permalink": { "type": "string", "pattern": "^/[a-z][a-z0-9-]*/text/" },
     "description": { "type": "string" },
     "paragraph_count": { "type": "integer", "minimum": 1 },
     "text_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },

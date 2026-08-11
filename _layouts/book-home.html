@@ -64,7 +64,7 @@
     <ul class="bk-booklist">
       {%- for ed in book.editions -%}
       {%- assign ed_chapters = all_chapters | where: 'edition_id', ed.id | sort: 'chapter' -%}
-      {%- if ed.id == book.primary_edition %}{% capture ed_url %}/books/{{ book.id }}/text/{% endcapture %}{% else %}{% capture ed_url %}/books/{{ book.id }}/text/{{ ed.id }}/{% endcapture %}{% endif -%}
+      {%- if ed.id == book.primary_edition %}{% capture ed_url %}/{{ book.id }}/text/{% endcapture %}{% else %}{% capture ed_url %}/{{ book.id }}/text/{{ ed.id }}/{% endcapture %}{% endif -%}
       <li class="bk-book">
         <h2><a href="{{ ed_url | relative_url }}">{{ ed.label }}</a></h2>
         <span class="bk-byline">全書 {{ ed.chapter_count }} 回・目前收錄 {{ ed_chapters | size }} 篇</span>

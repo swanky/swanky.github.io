@@ -9,11 +9,11 @@
 {%- assign book = site.data.books | where: 'id', page.book_id | first -%}
 {%- assign edition = book.editions | where: 'id', page.edition_id | first -%}
 {%- if page.edition_id == book.primary_edition -%}
-  {%- capture toc_url %}/books/{{ book.id }}/text/{% endcapture -%}
+  {%- capture toc_url %}/{{ book.id }}/text/{% endcapture -%}
 {%- else -%}
-  {%- capture toc_url %}/books/{{ book.id }}/text/{{ edition.id }}/{% endcapture -%}
+  {%- capture toc_url %}/{{ book.id }}/text/{{ edition.id }}/{% endcapture -%}
 {%- endif -%}
-{%- capture book_url %}/books/{{ book.id }}/{% endcapture -%}
+{%- capture book_url %}/{{ book.id }}/{% endcapture -%}
 {%- capture page_title %}{{ page.title }}｜{{ book.title }}原文{% endcapture -%}
 {%- assign seal = book.title | slice: 0, 1 -%}
 <head>

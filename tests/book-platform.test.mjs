@@ -85,19 +85,35 @@ test('通用層不指向旗艦子站的專屬路徑', () => {
 test('每個非 planned 且無專屬子站的作品，都有作品頁與回目頁', () => {
   for (const b of books) {
     if (b.status === 'planned' || b.flagship_url) continue;
-    assert.ok(existsSync(`books/${b.id}/index.html`), `缺 books/${b.id}/index.html`);
+    assert.ok(existsSync(`${b.id}/index.html`), `缺 books/${b.id}/index.html`);
     for (const ed of b.editions) {
       if (ed.imported_chapters === 0) continue;
-      const dir = ed.id === b.primary_edition ? `books/${b.id}/text` : `books/${b.id}/text/${ed.id}`;
+      const dir = ed.id === b.primary_edition ? `${b.id}/text` : `${b.id}/text/${ed.id}`;
       assert.ok(existsSync(`${dir}/index.html`), `缺 ${dir}/index.html`);
     }
+  }
+});
+
+test('book id 不得與站上既有頂層路徑相撞', () => {
+  // 每部作品各佔一個頂層路徑（/shuihu/、/jinpingmei/…），所以 id 一旦撞到既有
+  // 區塊就會蓋掉那一區。新增作品時這個測試會先擋下來。
+  const reserved = new Set(['books', 'games', 'press', 'nft', 'education', 'tarot', 'story',
+    'about', 'services', 'contact', 'blog', 'posts', 'assets', 'feed', 'sitemap', 'search',
+    'photography', 'portfolio', 'explore', 'tools', 'schema', 'content']);
+  for (const b of books) {
+    if (b.flagship_url) {
+      // 旗艦作品本來就佔著自己的頂層路徑，只要確認宣告的網址與 id 一致
+      assert.equal(b.flagship_url, `/${b.id}/`, `${b.id} 的 flagship_url 應為 /${b.id}/ 才與通用層同形`);
+      continue;
+    }
+    assert.ok(!reserved.has(b.id), `book id "${b.id}" 與站上既有頂層路徑相撞`);
   }
 });
 
 test('作品頁與回目頁只放 front matter，不重複實作版面', () => {
   for (const b of books) {
     if (b.status === 'planned' || b.flagship_url) continue;
-    const { body } = parseFrontMatter(readFileSync(`books/${b.id}/index.html`, 'utf8'));
+    const { body } = parseFrontMatter(readFileSync(`${b.id}/index.html`, 'utf8'));
     assert.equal(body.trim(), '', `books/${b.id}/index.html 應只有 front matter`);
   }
 });

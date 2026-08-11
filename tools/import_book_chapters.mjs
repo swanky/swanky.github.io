@@ -89,7 +89,7 @@ for (const entry of index) {
     .join('\n');
 
   const urlEd = isPrimary ? '' : `${editionId}/`;
-  const permalink = `/books/${bookId}/text/${urlEd}${pad}/`;
+  const permalink = `/${bookId}/text/${urlEd}${pad}/`;
   const desc = `《${book.title}》${label}原文全文（${edition.label}）${couplet ? `：${couplet}` : ''}。`;
 
   const fm = [

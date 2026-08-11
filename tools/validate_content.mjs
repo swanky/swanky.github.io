@@ -105,7 +105,7 @@ export function validateContent() {
     const expectFile = `${data.book_id}-${data.edition_id}-${pad}.html`;
     if (f !== expectFile) bad(`${path}: 檔名應為 ${expectFile}`);
     const isPrimary = data.edition_id === book.primary_edition;
-    const expectLink = `/books/${data.book_id}/text/${isPrimary ? '' : `${data.edition_id}/`}${pad}/`;
+    const expectLink = `/${data.book_id}/text/${isPrimary ? '' : `${data.edition_id}/`}${pad}/`;
     if (data.permalink !== expectLink) bad(`${path}: permalink 應為 ${expectLink}，實際 ${data.permalink}`);
 
     // ── 原文完整性 ──

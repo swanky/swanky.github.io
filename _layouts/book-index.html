@@ -6,7 +6,7 @@
 {%- endcomment -%}
 {%- assign book = site.data.books | where: 'id', page.book_id | first -%}
 {%- assign edition = book.editions | where: 'id', page.edition_id | first -%}
-{%- capture book_url %}/books/{{ book.id }}/{% endcapture -%}
+{%- capture book_url %}/{{ book.id }}/{% endcapture -%}
 {%- assign seal = book.title | slice: 0, 1 -%}
 {%- assign chapters = site.books | where: 'book_id', page.book_id | where: 'edition_id', page.edition_id | sort: 'chapter' -%}
 {%- capture page_title %}{{ book.title }}{{ edition.label }}回目｜原文全文{% endcapture -%}
