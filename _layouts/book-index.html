@@ -67,7 +67,8 @@
 
     <ol id="chapter-list" class="bk-chapter-list">
       {%- for c in chapters %}
-      <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span><span class="ttl">{{ c.couplet | default: c.label }}</span></a></li>
+      {%- comment -%}對句為空時不可退回 label——否則同一行印兩次回數（正式站曾出現）{%- endcomment -%}
+      <li><a href="{{ c.url | relative_url }}"><span class="no">{{ c.label }}</span>{% if c.couplet != '' %}<span class="ttl">{{ c.couplet }}</span>{% endif %}</a></li>
       {%- endfor %}
     </ol>
 

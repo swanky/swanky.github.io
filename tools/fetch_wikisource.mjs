@@ -139,13 +139,20 @@ export function wikitextToPlain(wt) {
         if (/^\s*【/.test(body)) annotations.push(body.replace(/\s+/g, ' ').trim());
         return '';
       });
-      const m = /\|\s*section\s*=\s*([^\n|]*)/i.exec(`|${flat.slice(flat.indexOf('|') + 1)}`);
+      // section 的值可能跨行：庚辰本第 39 回把回目下聯寫在下一行的 '''…''' 裡，
+      // 用 [^\n|]* 會斷在換行，只留「第三十九回」半截標題。參數以「行首的 |」為界，
+      // 所以吃到下一個行首 | 或字串結尾為止，再把換行收斂成全形空白。
+      const m = /\|\s*section\s*=\s*([\s\S]*?)(?=\n[ \t]*\||$)/i.exec(`|${flat.slice(flat.indexOf('|') + 1)}`);
       if (m) {
         headerHeading = m[1]
           .replace(/'''/g, '')
           .replace(/\[\[[^\]]*\]\]/g, '')
           .replace(/-\{([^{}]*)\}-/g, '$1')     // 回目裡也有 -{广}-（第 50 回）
           .replace(/【[^】]*】/g, '')
+          // 只把跨行接回來（換行前後的空白一起吃掉，換成單一全形空白）。
+          // 刻意不收斂行內的連續空白——那是底本的排版，儲存層盡量不動；
+          // 顯示層的寬度統一由 tools/import_book_chapters.mjs 處理。
+          .replace(/[ \t　]*\n[ \t　]*/g, '　')
           .trim();
       }
       return null;

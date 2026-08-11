@@ -13,6 +13,7 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, readdirSync, writeFileSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseYamlSequence } from './lib/mini-yaml.mjs';
+import { splitHeading, normalizeHeading } from './lib/heading.mjs';
 
 const [bookId, editionArg] = process.argv.slice(2);
 if (!bookId) { console.error('用法：node tools/import_book_chapters.mjs <book_id> [edition_id]'); process.exit(1); }
@@ -54,14 +55,6 @@ export function logicalLines(block) {
   return out.filter(Boolean);
 }
 
-/** 回目 heading 拆成 label（第一回／楔子）與 couplet（對句）。 */
-function splitHeading(heading) {
-  const h = heading.trim();
-  const i = h.search(/[\s　]/);
-  if (i === -1) return { label: h, couplet: '' };
-  return { label: h.slice(0, i), couplet: h.slice(i).replace(/^[\s　]+/, '') };
-}
-
 mkdirSync('_books', { recursive: true });
 // 先清掉本 (book, edition) 的舊輸出，避免縮小匯入範圍時留下孤兒檔
 const prefix = `${bookId}-${editionId}-`;
@@ -100,7 +93,7 @@ for (const entry of index) {
     `chapter: ${entry.chapter}`,
     `label: ${yq(label)}`,
     `couplet: ${yq(couplet)}`,
-    `title: ${yq(entry.heading.trim())}`,
+    `title: ${yq(normalizeHeading(entry.heading))}`,
     `permalink: ${yq(permalink)}`,
     `description: ${yq(desc)}`,
     `paragraph_count: ${entry.paragraph_count}`,

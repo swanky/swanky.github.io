@@ -12,6 +12,7 @@ import { test } from 'node:test';
 import { parseYamlSequence } from '../tools/lib/mini-yaml.mjs';
 import { validate } from '../tools/lib/mini-schema.mjs';
 import { validateContent, parseFrontMatter } from '../tools/validate_content.mjs';
+import { splitHeading } from '../tools/lib/heading.mjs';
 
 const books = parseYamlSequence(readFileSync('_data/books.yml', 'utf8'));
 const BOOK_TITLES = books.flatMap((b) => [b.title, ...(b.alternate_titles || [])]);
@@ -204,6 +205,28 @@ test('水滸傳收錄楔子與全七十回', () => {
   assert.deepEqual(chapters, Array.from({ length: 71 }, (_, i) => i));
   const wedge = parseFrontMatter(readFileSync('_books/shuihu-gutenberg-23863-000.html', 'utf8'));
   assert.equal(wedge.data.label, '楔子');
+});
+
+test('回目一律拆成回數＋對句，不得整條塞進 label（回目列表會印兩次）', () => {
+  // 正式站 bug：三國演義那份底本的回目寫成「第一回：上聯，下聯」，切割器只認空白，
+  // 於是 120 篇的 couplet 全空、label 是整條回目，回目列表把同一句印了兩次。
+  assert.deepEqual(splitHeading('第一回：宴桃園豪傑三結義，斬黃巾英雄首立功'),
+    { label: '第一回', couplet: '宴桃園豪傑三結義，斬黃巾英雄首立功' });
+  assert.deepEqual(splitHeading('楔子　張天師祈禳瘟疫　洪太尉誤走妖魔'),
+    { label: '楔子', couplet: '張天師祈禳瘟疫　洪太尉誤走妖魔' });
+  assert.deepEqual(splitHeading('第一○回     老龍王拙計犯天條　魏丞相遺書託冥吏'),
+    { label: '第一○回', couplet: '老龍王拙計犯天條　魏丞相遺書託冥吏' });
+  assert.deepEqual(splitHeading('第三十九回'), { label: '第三十九回', couplet: '' });
+
+  // 實際產物：只有回數、沒有對句的篇章不該存在（有的話代表底本或轉換又漏了下聯）
+  const noCouplet = readdirSync('_books').filter((f) => f.endsWith('.html'))
+    .filter((f) => parseFrontMatter(readFileSync(`_books/${f}`, 'utf8')).data.couplet === '');
+  assert.deepEqual(noCouplet, [], `這些篇章沒有對句：${noCouplet.join('、')}`);
+});
+
+test('回目列表的對句欄位不得退回 label（否則同一行印兩次回數）', () => {
+  const layout = readFileSync('_layouts/book-index.html', 'utf8');
+  assert.ok(!/couplet\s*\|\s*default/.test(layout), 'book-index.html 又用了 couplet | default 退回 label');
 });
 
 // ── 3. 自製工具的測試 ──────────────────────────────────────────

@@ -123,7 +123,15 @@ export function validateContent() {
     if (plain(data.title) !== plain(srcHeading)) {
       bad(`${path}: title 與原文回目不符\n    原文：${srcHeading}\n    front matter：${data.title}`);
     }
-    if (plain(`${data.label}${data.couplet}`) !== plain(srcHeading)) {
+    // label＋couplet 必須拼回原文回目：頭尾都要對得上，中間允許少掉一個分隔符
+    //（三國那份底本的回目是「第一回：上聯，下聯」，「：」不進 label 也不進 couplet）。
+    // 這條守的是「不丟字、不造字」，不是守標點。
+    const flatHeading = plain(srcHeading);
+    const flatLabel = plain(data.label);
+    const flatCouplet = plain(data.couplet);
+    const gap = flatHeading.slice(flatLabel.length, flatHeading.length - flatCouplet.length);
+    if (!flatHeading.startsWith(flatLabel) || !flatHeading.endsWith(flatCouplet)
+        || flatLabel.length + flatCouplet.length > flatHeading.length || !/^[：:，,、]?$/.test(gap)) {
       bad(`${path}: label＋couplet 拼回來不等於原文回目\n    原文：${srcHeading}\n    拼回：${data.label}／${data.couplet}`);
     }
 
