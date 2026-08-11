@@ -1,0 +1,26 @@
+{
+  "book_id": "xiyou",
+  "title": "西遊記",
+  "source_title": "西遊記",
+  "author": "吳承恩（傳）",
+  "edition_id": "gutenberg-23962",
+  "source_type": "Project Gutenberg UTF-8 text",
+  "source_page": "https://www.gutenberg.org/ebooks/23962",
+  "download_url": "https://www.gutenberg.org/cache/epub/23962/pg23962.txt",
+  "retrieved_at": "2026-08-09",
+  "chapter_count": 100,
+  "has_preamble": true,
+  "source_sha256": "af3c9e408c0c58595b666ed9981b6fa1e9343f4bbc78309b1cb0818c32fc1f58",
+  "normalized_sha256": "f6c1b88adcda0f76fcc21c8612214a87f40c45f922e5d50fdb19fd9c96890310",
+  "normalization": [
+    "UTF-8 decode",
+    "line endings normalized to LF",
+    "Project Gutenberg wrapper separated"
+  ],
+  "text_changes": "No character conversion, punctuation rewrite, modernization, or AI rewriting performed.",
+  "license": "Project Gutenberg License as embedded in each source file; original literary work is ancient/public-domain, but users must verify local law and source terms.",
+  "notes": "Project Gutenberg UTF-8 文字版，切為 100 回；另收 1934 年全本與 100 回繪圖本。",
+  "staged_from": "classic_chinese_novels_text_only_2026-08-09",
+  "staged_scope": "第 1–100 回",
+  "staged_note": "章回逐位元組複製，hash 已核對。"
+}

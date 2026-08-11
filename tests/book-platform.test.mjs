@@ -26,7 +26,24 @@ test('註冊表收錄五部作品，id 與狀態符合預期', () => {
   assert.equal(books.length, 5);
   assert.deepEqual(books.map((b) => b.id), ['jinpingmei', 'shuihu', 'sanguo', 'xiyou', 'honglou']);
   assert.equal(books.find((b) => b.id === 'jinpingmei').status, 'published');
-  assert.equal(books.find((b) => b.id === 'shuihu').status, 'pilot');
+});
+
+test('status 必須與實際收錄量一致，不能自稱全書上線卻只收一半', () => {
+  for (const b of books) {
+    const primary = b.editions.find((e) => e.id === b.primary_edition);
+    const missing = (primary.missing_chapters || []).length;
+    // 卷首／楔子讓 imported 可以比 chapter_count 多一篇
+    const complete = primary.imported_chapters + missing >= primary.chapter_count;
+    if (b.status === 'published') {
+      assert.ok(complete, `${b.id} 標 published，但主要版本只收 ${primary.imported_chapters}/${primary.chapter_count}`);
+    }
+    if (b.status === 'planned') {
+      assert.equal(primary.imported_chapters, 0, `${b.id} 標 planned，卻已收 ${primary.imported_chapters} 篇`);
+    }
+    if (b.status === 'pilot') {
+      assert.ok(primary.imported_chapters > 0 && !complete, `${b.id} 標 pilot，收錄量卻不是「部分」`);
+    }
+  }
 });
 
 test('底本忠實度必須誠實標示，且頁面說法要跟著不同', () => {
@@ -178,12 +195,13 @@ test('段落 ID 格式正確且連號從 0002 起（回目不進正文）', () =
   }
 });
 
-test('水滸傳 pilot 收錄楔子與前五回', () => {
+test('水滸傳收錄楔子與全七十回', () => {
   const chapters = readdirSync('_books')
     .filter((f) => f.startsWith('shuihu-gutenberg-23863-'))
     .map((f) => Number(f.match(/-(\d{3})\.html$/)[1]))
     .sort((a, b) => a - b);
-  assert.deepEqual(chapters, [0, 1, 2, 3, 4, 5], '楔子（000）是正文開篇，不可漏');
+  // 楔子（000）是正文開篇，素材包把它誤歸進 preamble 沒收，不可再漏
+  assert.deepEqual(chapters, Array.from({ length: 71 }, (_, i) => i));
   const wedge = parseFrontMatter(readFileSync('_books/shuihu-gutenberg-23863-000.html', 'utf8'));
   assert.equal(wedge.data.label, '楔子');
 });

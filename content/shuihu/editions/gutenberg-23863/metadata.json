@@ -21,6 +21,6 @@
   "license": "Project Gutenberg License as embedded in each source file; original literary work is ancient/public-domain, but users must verify local law and source terms.",
   "notes": "Project Gutenberg 文字版為楔子加 70 回；另收 1932 年 120 回影印本，兩者不可視為同版。",
   "staged_from": "classic_chinese_novels_text_only_2026-08-09",
-  "staged_scope": "楔子＋第 1–5 回（pilot）",
-  "staged_note": "楔子由 normalized/preamble.txt 切出，素材包 chapters/ 未收；其餘章回逐位元組複製，hash 已核對。"
+  "staged_scope": "卷首＋第 1–70 回",
+  "staged_note": "卷首（楔子）由 normalized/preamble.txt 切出，素材包 chapters/ 未收；其餘章回逐位元組複製，hash 已核對。"
 }

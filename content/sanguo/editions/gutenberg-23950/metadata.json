@@ -1,0 +1,26 @@
+{
+  "book_id": "sanguo",
+  "title": "三國演義",
+  "source_title": "三國志演義",
+  "author": "羅貫中（傳）",
+  "edition_id": "gutenberg-23950",
+  "source_type": "Project Gutenberg UTF-8 text",
+  "source_page": "https://www.gutenberg.org/ebooks/23950",
+  "download_url": "https://www.gutenberg.org/cache/epub/23950/pg23950.txt",
+  "retrieved_at": "2026-08-09",
+  "chapter_count": 120,
+  "has_preamble": true,
+  "source_sha256": "ed422e10c16c19af7ca7b09ca0320012e60776b3d7cb054769b8f7d9a19aea7d",
+  "normalized_sha256": "2489944eb39bc9491d7e63f52240701df260927ccc8412c90099ff5243fd1fe7",
+  "normalization": [
+    "UTF-8 decode",
+    "line endings normalized to LF",
+    "Project Gutenberg wrapper separated"
+  ],
+  "text_changes": "No character conversion, punctuation rewrite, modernization, or AI rewriting performed.",
+  "license": "Project Gutenberg License as embedded in each source file; original literary work is ancient/public-domain, but users must verify local law and source terms.",
+  "notes": "Project Gutenberg 書名作《三國志演義》，切為 120 回；另收 1924、1936 年兩套影印本。",
+  "staged_from": "classic_chinese_novels_text_only_2026-08-09",
+  "staged_scope": "第 1–120 回",
+  "staged_note": "章回逐位元組複製，hash 已核對。"
+}

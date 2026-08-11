@@ -93,6 +93,21 @@ export function assess(text) {
   };
 }
 
+/**
+ * 由量測結果推導 books.yml 該填的 text_fidelity。
+ *
+ * 有這條規則，忠實度就不是逐本目測的印象，而是可重現的推導結果——
+ * 換了底本重跑就知道標籤要不要跟著改。
+ *   converted   ≥3 組對偶字系統性簡化，或句末大量用「．」→ 不是原文，是轉換本
+ *   transcribed 雜訊等級的簡體字每萬字 ≥1 → 謄本，用字有少量出入
+ *   verbatim    以上皆非 → 逐字忠於底本
+ */
+export function suggestFidelity(a) {
+  if (a.systemicPairs >= 3 || a.midDotRatio > 5) return 'converted';
+  if (a.noisePer10k >= 1) return 'transcribed';
+  return 'verbatim';
+}
+
 /** 依量測結果下判斷。門檻集中寫在這裡，不散落在報告文字裡。 */
 export function verdict(a) {
   const fails = [];
@@ -129,7 +144,7 @@ for (const target of targets) {
   if (!files.length) { console.error(`${target}：找不到可讀的文字檔`); continue; }
   const text = files.map((f) => (extname(f) === '.txt' ? readFileSync(f, 'utf8').replace(/\r\n/g, '\n') : stripHtml(readFileSync(f, 'utf8')))).join('\n\n');
   const a = assess(text);
-  results.push({ target, files: files.length, ...a, verdict: verdict(a) });
+  results.push({ target, files: files.length, ...a, verdict: verdict(a), fidelity: suggestFidelity(a) });
 }
 
 if (asJson) { console.log(JSON.stringify(results, null, 2)); process.exit(0); }
@@ -139,6 +154,7 @@ for (const r of results) {
   console.log(`\n${tag}  ${r.target}`);
   console.log(`  漢字 ${r.cjk.toLocaleString()}｜${r.files} 檔｜分段 ${r.blankLines}（每萬字 ${r.paragraphsPer10k}）`);
   console.log(`  系統性簡化對偶組 ${r.systemicPairs}／${r.pairs.length}｜雜訊簡體字 ${r.noiseChars}（每萬字 ${r.noisePer10k}）`);
+  console.log(`  → books.yml 該填 text_fidelity: ${suggestFidelity(r)}`);
   const p = r.punctuation;
   console.log(`  句號 ${p.fullStop}｜中間點 ${p.midDot}（占句末 ${r.midDotRatio}%）｜引號 「」${p.cornerQuote} “”${p.curlyQuote} "${p.halfQuote}`);
   if (showPairs) {

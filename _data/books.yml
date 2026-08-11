@@ -43,63 +43,63 @@
   title: 水滸傳
   author: 施耐庵（傳）
   era: 明
-  status: pilot
+  status: published
   language: classical-chinese
-  blurb: 一百零八個人被逼上梁山的過程。前幾回先看高俅怎麼發跡、史進與魯智深怎麼被官府擠到沒路走——武松與潘金蓮的故事也是從這裡開始的。
+  blurb: 一百零八個人被逼上梁山的過程。從高俅發跡寫起，史進、魯智深、林沖、武松一個個被官府擠到沒路走——武松與潘金蓮的故事也在裡面，和《金瓶梅》接得上。
   primary_edition: gutenberg-23863
   editions:
     - id: gutenberg-23863
       label: 七十回本
       chapter_count: 70
       text_fidelity: verbatim
-      imported_chapters: 6
+      imported_chapters: 71
       source_page: https://www.gutenberg.org/ebooks/23863
       download_url: https://www.gutenberg.org/cache/epub/23863/pg23863.txt
       license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
       source_sha256: 9d5b723b57f462545d412593870e7f48157829777b9329350a29bc44fd654789
       retrieved_at: '2026-08-09'
-      note: 金聖嘆評本，楔子加七十回。另有一百二十回本（多出征田虎、征王慶兩段），內容差很多，不是同一個版本。全書用字已逐一檢查，是正體原文。目前上站的是楔子與前五回
+      note: 金聖嘆評本，楔子加七十回。另有一百二十回本（多出征田虎、征王慶兩段），內容差很多，不是同一個版本。全書用字已逐一檢查，是正體原文。楔子與七十回全數收錄
 
 - id: sanguo
   title: 三國演義
   alternate_titles: [三國志演義]
   author: 羅貫中（傳）
   era: 明
-  status: planned
+  status: published
   language: classical-chinese
-  blurb: 漢末群雄從結義到一統的一百二十回。人物數量與勢力關係最複雜的一部，適合用來檢驗人物關係圖。
+  blurb: 漢末群雄從桃園結義寫到三分歸一統，一百二十回。人物與勢力關係最複雜的一部，也是最好認人的一部。
   primary_edition: gutenberg-23950
   editions:
     - id: gutenberg-23950
       label: 一百二十回本
       chapter_count: 120
-      text_fidelity: verbatim
-      imported_chapters: 0
+      text_fidelity: transcribed
+      imported_chapters: 120
       source_page: https://www.gutenberg.org/ebooks/23950
       license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
       source_sha256: ed422e10c16c19af7ca7b09ca0320012e60776b3d7cb054769b8f7d9a19aea7d
       retrieved_at: '2026-08-09'
-      note: 毛宗崗評改本，也就是今天市面上最通行的那個版本。全書用字已逐一檢查，是正體原文
+      note: 毛宗崗評改本，也就是今天市面上最通行的那個版本。這份謄本全書約有一百五十個字被寫成了簡體，佔全書不到萬分之四，其餘用字都是正體
 
 - id: xiyou
   title: 西遊記
   author: 吳承恩（傳）
   era: 明
-  status: planned
+  status: published
   language: classical-chinese
-  blurb: 取經路上的一百回。妖怪、法寶、天庭神職自成一套體系，是資料模型要面對的下一種挑戰。
+  blurb: 取經路上的一百回。從石猴出世鬧天宮寫到五聖成真，妖怪、法寶、神職自成一套熱鬧的體系。
   primary_edition: gutenberg-23962
   editions:
     - id: gutenberg-23962
       label: 一百回本
       chapter_count: 100
-      text_fidelity: verbatim
-      imported_chapters: 0
+      text_fidelity: transcribed
+      imported_chapters: 100
       source_page: https://www.gutenberg.org/ebooks/23962
       license: Project Gutenberg 提供的電子文字；作品本身屬公共領域
       source_sha256: af3c9e408c0c58595b666ed9981b6fa1e9343f4bbc78309b1cb0818c32fc1f58
       retrieved_at: '2026-08-09'
-      note: 全書用字已逐一檢查，是正體原文；只有約二十個字在轉檔過程被寫成了簡體，上站前會改回來
+      note: 這份謄本全書約有九十個字被寫成了簡體，佔全書不到萬分之二，其餘用字都是正體
 
 - id: honglou
   title: 紅樓夢

@@ -41,5 +41,460 @@
     "paragraph_count": 21,
     "text_sha256": "c7d47e12bd7dff1e8dec9b455cc76a5e92dd4de9b5865f16e57a586addf1a944",
     "path": "chapters/005.txt"
+  },
+  {
+    "chapter": 6,
+    "heading": "第六回　花和尚倒拔垂楊柳　豹子頭誤入白虎堂",
+    "paragraph_count": 25,
+    "text_sha256": "5d67b86593b1720f524e8d437f4c270c80e8ca4538e8f7af3c5ca9e37e715e1c",
+    "path": "chapters/006.txt"
+  },
+  {
+    "chapter": 7,
+    "heading": "第七回 林教頭刺配滄州道 魯智深大鬧野豬林",
+    "paragraph_count": 12,
+    "text_sha256": "569c1692a15849eefa7fa36632f5551c165c51539ee6b70d8e98c91915289e49",
+    "path": "chapters/007.txt"
+  },
+  {
+    "chapter": 8,
+    "heading": "第八回　柴進門招天下客　林沖棒打洪教頭",
+    "paragraph_count": 22,
+    "text_sha256": "f38865775a5fbdd9583fa09e79edc8ff4128e4db3f01fdc1eceb7f9db405bbff",
+    "path": "chapters/008.txt"
+  },
+  {
+    "chapter": 9,
+    "heading": "第九回　林教頭風雪山神廟　陸虞候火燒草料場",
+    "paragraph_count": 21,
+    "text_sha256": "ae86640eca92633e7c2431cf61506f8dd92a57999a647d4dd023a1babb032ff2",
+    "path": "chapters/009.txt"
+  },
+  {
+    "chapter": 10,
+    "heading": "第十回　朱貴水亭施號箭　林沖雪夜上梁山",
+    "paragraph_count": 18,
+    "text_sha256": "7a7277b5bb55ceeae1d857925eed2348a426b7f252c0afe69d2467c81b48c287",
+    "path": "chapters/010.txt"
+  },
+  {
+    "chapter": 11,
+    "heading": "第十一回 梁山泊林沖落草　汴京城楊志賣刀",
+    "paragraph_count": 18,
+    "text_sha256": "24ccfabbde13117245e5a4098d73aad6d579afdd52e37783fbb3d37d962bc27f",
+    "path": "chapters/011.txt"
+  },
+  {
+    "chapter": 12,
+    "heading": "第十二回　青面獸北京鬥武　急先鋒東郭爭功",
+    "paragraph_count": 23,
+    "text_sha256": "310b68fe2f608fd6b64c94739a8d734115c773df92466d5d7b5f1677347bb403",
+    "path": "chapters/012.txt"
+  },
+  {
+    "chapter": 13,
+    "heading": "第十三回　赤髮鬼醉臥靈官殿　晁天王認義東溪村",
+    "paragraph_count": 24,
+    "text_sha256": "c527b14f328c6902a2448c4d2de6e40104f5fa4ea3bd50eba480a06c3cdf472f",
+    "path": "chapters/013.txt"
+  },
+  {
+    "chapter": 14,
+    "heading": "第十四回　吳學究說三阮撞籌　公孫勝應七星聚義",
+    "paragraph_count": 21,
+    "text_sha256": "b5b9388a09cb3c0612f1a7281a72e6a60b9de44eb696b4703168bcb01459abfa",
+    "path": "chapters/014.txt"
+  },
+  {
+    "chapter": 15,
+    "heading": "第十五回　楊志押送金銀擔　吳用智取生辰綱",
+    "paragraph_count": 23,
+    "text_sha256": "9aafdf81a008409555d413fbeaae6e392f1dfde1b90fd0f91eff1cc6d015ac81",
+    "path": "chapters/015.txt"
+  },
+  {
+    "chapter": 16,
+    "heading": "第十六回　花和尚單打二龍山　青面獸雙奪寶珠寺",
+    "paragraph_count": 23,
+    "text_sha256": "1038ea1a9cfaa75c510d7734584e96b61b47e0154d27e2903a8e502be7cc5f39",
+    "path": "chapters/016.txt"
+  },
+  {
+    "chapter": 17,
+    "heading": "第十七回　美髯公智穩插翅虎　宋公明私放晁天王",
+    "paragraph_count": 21,
+    "text_sha256": "4b35f24b60debebd8dcae879373693803ac0bbfcad8a68fc88133d514769b55f",
+    "path": "chapters/017.txt"
+  },
+  {
+    "chapter": 18,
+    "heading": "第十八回　林沖水寨大併火　晁蓋梁山小奪泊",
+    "paragraph_count": 25,
+    "text_sha256": "3a5afec09c60a1648dce36ed74e5d9a835e502cbf808b8a67eea4ec9e0af1a53",
+    "path": "chapters/018.txt"
+  },
+  {
+    "chapter": 19,
+    "heading": "第十九回　梁山泊義士尊晁蓋　鄆城縣月夜走劉唐",
+    "paragraph_count": 29,
+    "text_sha256": "dfc49e6dde417587008d975655d4d24fad7855d64e525485ea2f907b38c83483",
+    "path": "chapters/019.txt"
+  },
+  {
+    "chapter": 20,
+    "heading": "第二十回　虔婆醉打唐牛兒　宋江怒殺閻婆惜",
+    "paragraph_count": 20,
+    "text_sha256": "f23ca5101ab346b30d72feb7f089644ee33d58f08eccf3206cac52cbfb83b9ed",
+    "path": "chapters/020.txt"
+  },
+  {
+    "chapter": 21,
+    "heading": "第二十一回　閻婆大鬧鄆城縣　朱仝義釋宋公明",
+    "paragraph_count": 21,
+    "text_sha256": "6d770fdc464c1aeb67d62b27b5f099949be142fa484f53d90472ce64f55ce842",
+    "path": "chapters/021.txt"
+  },
+  {
+    "chapter": 22,
+    "heading": "第二十二回　橫海郡柴進留賓　景陽岡武松打虎",
+    "paragraph_count": 21,
+    "text_sha256": "a3e883a5d2cf4e87c45eada8bc206bf1f02fdc1759cb5c82ab65762d7c8fa162",
+    "path": "chapters/022.txt"
+  },
+  {
+    "chapter": 23,
+    "heading": "第二十三回 王婆貪賄說風情 鄆哥不忿鬧茶肆",
+    "paragraph_count": 41,
+    "text_sha256": "d0a613c9dad723e4fced8539adceb41b96c5ca52bdc6d72137a79f4aacc006f9",
+    "path": "chapters/023.txt"
+  },
+  {
+    "chapter": 24,
+    "heading": "第二十四回　王婆計啜西門慶　淫婦藥鴆武大郎",
+    "paragraph_count": 22,
+    "text_sha256": "7186793948b19e6b0d4926c25f24565a950c3ed5f4d0b985c2167c70063f4720",
+    "path": "chapters/024.txt"
+  },
+  {
+    "chapter": 25,
+    "heading": "第二十五回　偷骨殖何九送喪　供人頭武二設祭",
+    "paragraph_count": 27,
+    "text_sha256": "09bdbc0422d1264f91145394cb33e10b61f7990d170e94768d6893985f1c1076",
+    "path": "chapters/025.txt"
+  },
+  {
+    "chapter": 26,
+    "heading": "第二十六回　母夜叉孟州道賣人肉　武都頭十字坡遇張青",
+    "paragraph_count": 14,
+    "text_sha256": "0b371c3be7d44feddc742ed2cccab3d6244942023a6002e2f705766758eeadf0",
+    "path": "chapters/026.txt"
+  },
+  {
+    "chapter": 27,
+    "heading": "第二十七回　武松威震平安寨　施恩義奪快活林",
+    "paragraph_count": 15,
+    "text_sha256": "154cff54d318fef8a2f8c83dfc3eeda504a0fa48d8ec3281d6555ac4b341d702",
+    "path": "chapters/027.txt"
+  },
+  {
+    "chapter": 28,
+    "heading": "第二十八回　施恩重霸孟州道　武松醉打蔣門神",
+    "paragraph_count": 13,
+    "text_sha256": "f8dfe0af99a2c8e55abdda9cf0c15b3f791f8c84845041edddc0225bcb86ec63",
+    "path": "chapters/028.txt"
+  },
+  {
+    "chapter": 29,
+    "heading": "第二十九回　施恩三入死囚牢　武松大鬧飛雲浦",
+    "paragraph_count": 26,
+    "text_sha256": "6b3c59e8fe56742f7c0ff17fd2885bf07b0d187b552992050aa96a9901cbe5e3",
+    "path": "chapters/029.txt"
+  },
+  {
+    "chapter": 30,
+    "heading": "第三十回　張都監血濺鴛鴦樓　武行者夜走蜈蚣嶺",
+    "paragraph_count": 19,
+    "text_sha256": "d1ea19ff8692e13e1b58a3383b156fb7afcbbfa7b1bb69a27c890da8f9942664",
+    "path": "chapters/030.txt"
+  },
+  {
+    "chapter": 31,
+    "heading": "第三十一回　武行者醉打孔亮　錦毛虎義釋宋江",
+    "paragraph_count": 29,
+    "text_sha256": "f59f4475519cd45b5c19341cdc17bd390f948eec1c9bfe8988463d3900916942",
+    "path": "chapters/031.txt"
+  },
+  {
+    "chapter": 32,
+    "heading": "第三十二回　宋江夜看小鼇山　花榮大鬧清風寨",
+    "paragraph_count": 19,
+    "text_sha256": "f33e58a3a98f24b193881672074dfe90361840e24d864834b9e4668d629cc72c",
+    "path": "chapters/032.txt"
+  },
+  {
+    "chapter": 33,
+    "heading": "第三十三回　鎮三山大鬧青州道　霹靂火夜走瓦礫場",
+    "paragraph_count": 22,
+    "text_sha256": "2d91278d379fbf22d876e263b6316bf592f65bf428f14c4a66d593d422aa2f31",
+    "path": "chapters/033.txt"
+  },
+  {
+    "chapter": 34,
+    "heading": "第三十四回　石將軍村店寄書　小李廣梁山射鴈",
+    "paragraph_count": 20,
+    "text_sha256": "876962211fa1efc7294a5e7c534c5183bfc1a2e79e820212e87f33dfed00378d",
+    "path": "chapters/034.txt"
+  },
+  {
+    "chapter": 35,
+    "heading": "第三十五回　梁山泊吳用舉戴宗　揭陽嶺宋江逢李俊",
+    "paragraph_count": 17,
+    "text_sha256": "7da5148b15090e01b175714f97d40a93e381339074ad28e08f97ba5bce748f3d",
+    "path": "chapters/035.txt"
+  },
+  {
+    "chapter": 36,
+    "heading": "第三十六回　沒遮攔追趕及時雨　船火兒夜鬧潯陽江",
+    "paragraph_count": 19,
+    "text_sha256": "3339de60eadc8e69a678eed4a8be1ca2599075bc046e32ee25f680321c2f788a",
+    "path": "chapters/036.txt"
+  },
+  {
+    "chapter": 37,
+    "heading": "第三十七回　及時雨會神行太保　黑旋風鬥浪裏白條",
+    "paragraph_count": 21,
+    "text_sha256": "cb542d2f7b9a43fae54c15a92fc0d6a9b344bdd6e952dd2bd246988d6e4fefe3",
+    "path": "chapters/037.txt"
+  },
+  {
+    "chapter": 38,
+    "heading": "第三十八回　潯陽樓宋江吟反詩　梁山泊戴宗傳假信",
+    "paragraph_count": 33,
+    "text_sha256": "825288caa990617d7cc83e1fdf19d57a22cf36a6edaededec0a5591c2fc03875",
+    "path": "chapters/038.txt"
+  },
+  {
+    "chapter": 39,
+    "heading": "第三十九回　梁山泊好漢劫法場　白龍廟英雄小聚義",
+    "paragraph_count": 19,
+    "text_sha256": "f7b7f2c3ed94959bee01a58dc39f3731e0f15a0b332582dcc0f5e333aeb4e8e8",
+    "path": "chapters/039.txt"
+  },
+  {
+    "chapter": 40,
+    "heading": "第四十回　宋江智取無為軍　張順活捉黃文炳",
+    "paragraph_count": 24,
+    "text_sha256": "61899c9db64ba335c6f63062dd82bce607d251ece5785365ea53d90221667b44",
+    "path": "chapters/040.txt"
+  },
+  {
+    "chapter": 41,
+    "heading": "第四十一回　還道村受三卷天書　宋公明遇九天玄女",
+    "paragraph_count": 16,
+    "text_sha256": "95066f4f0c17912f6c6723c30750fc2c09aaa06a90386f9fce92242208643af4",
+    "path": "chapters/041.txt"
+  },
+  {
+    "chapter": 42,
+    "heading": "第四十二回　假李逵翦徑劫單身　黑旋風沂嶺殺四虎",
+    "paragraph_count": 32,
+    "text_sha256": "8c4bc4c4bb6c219a9b8fad152703861a5474421eb6955c3c0ea601a73d56afcb",
+    "path": "chapters/042.txt"
+  },
+  {
+    "chapter": 43,
+    "heading": "第四十三回　錦豹子小徑逢戴宗　病關索長街遇石秀",
+    "paragraph_count": 31,
+    "text_sha256": "1ed7e1d26472b35feac821c129b594ca88e9d88664d41e172054f91251a30c55",
+    "path": "chapters/043.txt"
+  },
+  {
+    "chapter": 44,
+    "heading": "第四十四回　楊雄醉罵潘巧雲　石秀智殺裴如海",
+    "paragraph_count": 24,
+    "text_sha256": "feb2d46b8f9bac699f005f9ccc25592b08c699ef935340b04e0e7f34ccbc45cc",
+    "path": "chapters/044.txt"
+  },
+  {
+    "chapter": 45,
+    "heading": "第四十五回　病關索大鬧翠屏山　拚命三火燒祝家店",
+    "paragraph_count": 28,
+    "text_sha256": "e54b6aeff1d6bb44a706221f10733111ba1e008c7199db430afa03e180e60c60",
+    "path": "chapters/045.txt"
+  },
+  {
+    "chapter": 46,
+    "heading": "第四十六回　撲天雕兩修生死書　宋公明一打祝家莊",
+    "paragraph_count": 30,
+    "text_sha256": "b0b208131e58dd521c77ff02a49f7d2d6cb48e74c479d2f80157870f9f8a991f",
+    "path": "chapters/046.txt"
+  },
+  {
+    "chapter": 47,
+    "heading": "第四十七回　一丈青單捉王矮虎　宋公明二打祝家莊",
+    "paragraph_count": 18,
+    "text_sha256": "29ad78f0c4cf959a005128a50e866936a40f0edc4530ffc13fb5cae7cb74ca13",
+    "path": "chapters/047.txt"
+  },
+  {
+    "chapter": 48,
+    "heading": "第四十八回　解珍解寶雙越獄　孫立孫新大劫牢",
+    "paragraph_count": 30,
+    "text_sha256": "5ab8ba0592217872431c0d5826d1385e3f4f91d56e36e671c6e0facb0c970782",
+    "path": "chapters/048.txt"
+  },
+  {
+    "chapter": 49,
+    "heading": "第四十九回　吳學究雙掌連環計　宋公明三打祝家莊",
+    "paragraph_count": 24,
+    "text_sha256": "a9a2cfb83a5085ffe2c61aa7c8e2b9675bbdf9b7f4d8bbbcda1a9a294106c75c",
+    "path": "chapters/049.txt"
+  },
+  {
+    "chapter": 50,
+    "heading": "第五十回　插翅虎枷打白秀英　美髯公誤失小衙內",
+    "paragraph_count": 26,
+    "text_sha256": "7dd2aa508bd061616ba5e48b8a74df81105978c797ac976b56f319398d48fd93",
+    "path": "chapters/050.txt"
+  },
+  {
+    "chapter": 51,
+    "heading": "第五十一回　李逵打死殷天賜　柴進失陷高唐州",
+    "paragraph_count": 24,
+    "text_sha256": "f15d28a221bd4d6aa5b813ce12d544b34a66537871c26ef592f9e1885b62e620",
+    "path": "chapters/051.txt"
+  },
+  {
+    "chapter": 52,
+    "heading": "第五十二回　戴宗二取公孫勝　李逵獨劈羅真人",
+    "paragraph_count": 24,
+    "text_sha256": "3b476a68c09e5c62a796c22d40f83331151a44799d4dc6b3ea7da1374bf34af3",
+    "path": "chapters/052.txt"
+  },
+  {
+    "chapter": 53,
+    "heading": "第五十三回　入雲龍鬬法破高廉　黑旋風下井救柴進",
+    "paragraph_count": 26,
+    "text_sha256": "6eb958bfa6c98c359f12c7a9443db9be893400b4eb40d62721329e8982b1047d",
+    "path": "chapters/053.txt"
+  },
+  {
+    "chapter": 54,
+    "heading": "第五十四回　高太尉大興三路兵　呼延灼擺佈連環馬",
+    "paragraph_count": 28,
+    "text_sha256": "4b88e46e577341b8c6f18240571e177911cdfff7948144ba97f4614c10221812",
+    "path": "chapters/054.txt"
+  },
+  {
+    "chapter": 55,
+    "heading": "第五十五回　吳用使時遷偷甲　湯隆賺徐寧上山",
+    "paragraph_count": 28,
+    "text_sha256": "64674d1f89d1ae1070b890ad89ef6111292354c36258cfeaf7f6ce70732bee03",
+    "path": "chapters/055.txt"
+  },
+  {
+    "chapter": 56,
+    "heading": "第五十六回　徐寧教使鈎鐮鎗　宋江大破連環馬",
+    "paragraph_count": 26,
+    "text_sha256": "4aaf96c8b0d86f3ab2ba916850475d89a9f589520ee374f31d6e25f9f3586093",
+    "path": "chapters/056.txt"
+  },
+  {
+    "chapter": 57,
+    "heading": "第五十七回　三山聚義打青州　衆虎同心歸水泊",
+    "paragraph_count": 26,
+    "text_sha256": "bf2d05a08800f80ee5e8c2662d96660a210d111f0ba0621a89354da75998553a",
+    "path": "chapters/057.txt"
+  },
+  {
+    "chapter": 58,
+    "heading": "第五十八回　吳用賺金鈴弔掛　宋江鬧西嶽華山",
+    "paragraph_count": 25,
+    "text_sha256": "4d25080735a1f55d2cca2e4697caf6df43b4eec381b8a82e7fe4273a32d17dbc",
+    "path": "chapters/058.txt"
+  },
+  {
+    "chapter": 59,
+    "heading": "第五十九回　公孫勝芒碭山降魔　晁天王曾頭市中箭",
+    "paragraph_count": 23,
+    "text_sha256": "0772430920ece0cad2913a129062ff6f764f97556792183d703b8b093765c122",
+    "path": "chapters/059.txt"
+  },
+  {
+    "chapter": 60,
+    "heading": "第六十回　吳用智賺玉麒麟　張順夜鬧金沙渡",
+    "paragraph_count": 27,
+    "text_sha256": "cf1a50a6994faed4da3093d909e57ed8e5c16bb6ba84ff1565bb5e9d515476ef",
+    "path": "chapters/060.txt"
+  },
+  {
+    "chapter": 61,
+    "heading": "第六十一回　放冷箭燕青救主　劫法場石秀跳樓",
+    "paragraph_count": 33,
+    "text_sha256": "ba76bc7755df2dae283aadc30d33233fc7110a1c3696d65bebdd562de8f4818e",
+    "path": "chapters/061.txt"
+  },
+  {
+    "chapter": 62,
+    "heading": "第六十二回　宋江兵打大名城　關勝議取梁山泊",
+    "paragraph_count": 23,
+    "text_sha256": "1fb0f0eb20fa573f3818ca75ce75dbd50e3f46795254e18936599158e48e2f3a",
+    "path": "chapters/062.txt"
+  },
+  {
+    "chapter": 63,
+    "heading": "第六十三回　呼延灼月夜賺關勝　宋公明雪天擒索超",
+    "paragraph_count": 26,
+    "text_sha256": "2b3b235f7a4fb8ca843428d5655c5ca60a57f8f7b89729dd14a2b73fe11d9c3a",
+    "path": "chapters/063.txt"
+  },
+  {
+    "chapter": 64,
+    "heading": "第六十四回　托塔天王夢中顯聖　浪裏白條水上報冤",
+    "paragraph_count": 28,
+    "text_sha256": "7e23109c023fe906a922ec34caa777b166e4fa2f4f7be48c8a1b8aaa01ceeeea",
+    "path": "chapters/064.txt"
+  },
+  {
+    "chapter": 65,
+    "heading": "第六十五回　時遷火燒翠雲樓　吳用智取大名府",
+    "paragraph_count": 28,
+    "text_sha256": "13dc3d53d397af0e7992e6a9276b12f49ef7dd8c05560cbd868876f4a2c2f029",
+    "path": "chapters/065.txt"
+  },
+  {
+    "chapter": 66,
+    "heading": "第六十六回　宋江賞馬步三軍　關勝降水火二將",
+    "paragraph_count": 33,
+    "text_sha256": "730acea7cb3d92d979c5905ba061b17ebddf2309213b7cc64b468a458375db1d",
+    "path": "chapters/066.txt"
+  },
+  {
+    "chapter": 67,
+    "heading": "第六十七回　宋公明夜打曾頭市　盧俊義活捉史文恭",
+    "paragraph_count": 31,
+    "text_sha256": "461e52e856c98805b477fb492ba913ee742b896560d3ff92046f8b2a88143ab0",
+    "path": "chapters/067.txt"
+  },
+  {
+    "chapter": 68,
+    "heading": "第六十八回　東平府誤陷九紋龍　宋公明義釋雙鎗將",
+    "paragraph_count": 22,
+    "text_sha256": "dd60c4b8b3910073a62f6958102c5c47b645399bde74f27a9823af6dfe9c2398",
+    "path": "chapters/068.txt"
+  },
+  {
+    "chapter": 69,
+    "heading": "第六十九回　沒羽箭飛石打英雄　宋公明棄糧擒壯士",
+    "paragraph_count": 24,
+    "text_sha256": "35dbf6729df7dd7461e04000e51fcc61bf830024a431b8d9f11665b03900f3c3",
+    "path": "chapters/069.txt"
+  },
+  {
+    "chapter": 70,
+    "heading": "第七十回　忠義堂石碣受天文　梁山泊英雄驚惡夢",
+    "paragraph_count": 94,
+    "text_sha256": "2cad6fbb3ea541ed7ee00eb68e6528f2708f358d44cf0a7fee1b5b32df81a521",
+    "path": "chapters/070.txt"
   }
 ]
