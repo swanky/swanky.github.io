@@ -83,14 +83,15 @@
       {{ content }}
     </article>
 
-    <nav class="bk-pager" aria-label="回目換頁">
+    {%- comment -%}沒有上一篇／下一篇時加修飾 class，讓格線收攏（卷首、楔子、末回）{%- endcomment -%}
+    <nav class="bk-pager{% unless prev_c %} bk-pager--noprev{% endunless %}{% unless next_c %} bk-pager--nonext{% endunless %}" aria-label="回目換頁">
       {%- if prev_c %}
       <a href="{{ prev_c.url | relative_url }}" rel="prev"><span class="dir">◀ 上一篇</span><span class="ttl">{{ prev_c.label }}{% if prev_c.couplet != '' %}　{{ prev_c.couplet | truncate: 18 }}{% endif %}</span></a>
-      {%- else %}<span class="bk-pager-empty" aria-hidden="true"></span>{% endif %}
+      {%- endif %}
       <a class="bk-pager-toc" href="{{ toc_url | relative_url }}">回目列表</a>
       {%- if next_c %}
       <a class="bk-pager-next" href="{{ next_c.url | relative_url }}" rel="next"><span class="dir">下一篇 ▶</span><span class="ttl">{{ next_c.label }}{% if next_c.couplet != '' %}　{{ next_c.couplet | truncate: 18 }}{% endif %}</span></a>
-      {%- else %}<span class="bk-pager-empty" aria-hidden="true"></span>{% endif %}
+      {%- endif %}
     </nav>
 
     <aside class="bk-note" aria-label="收錄說明">

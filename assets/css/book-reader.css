@@ -21,17 +21,23 @@
   --bk-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   --bk-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", "Noto Serif TC", serif;
   --bk-reader-size: 1.125rem;
+  /* 金色當底時的字色（按下的字級鈕、跳過連結、選取反白）；兩種主題各一組 */
+  --bk-on-gold: #141109;
 }
 
-/* 米紙模式：淺色紙感底。class 由 layout head 的防閃爍腳本先行套用 */
+/* 米紙模式：淺色紙感底。class 由 layout head 的防閃爍腳本先行套用。
+ * 色值經瀏覽器實測選定，全部文字角色 ≥ WCAG AA 4.5:1（含面板底 --bk-panel）：
+ * gold #75591f＝5.14／4.67，muted #645a48＝5.31／4.83。淺底上「更亮」等於更沒對比，
+ * 所以 gold-bright（hover）在這個主題要更深，不是更亮。 */
 html.bk-paper {
   --bk-bg: #ece3d0;
   --bk-panel: #e3d9c2;
   --bk-line: rgba(120, 92, 40, .28);
   --bk-paper: #2a2318;
-  --bk-muted: #6d6350;
-  --bk-gold: #8a6a28;
-  --bk-gold-bright: #6f5320;
+  --bk-muted: #645a48;
+  --bk-gold: #75591f;
+  --bk-gold-bright: #5f4a16;
+  --bk-on-gold: #f7f2e7;
 }
 
 [data-reader-size="s"] { --bk-reader-size: 1rem; }
@@ -41,10 +47,10 @@ html.bk-paper {
 .bk *, .bk *::before, .bk *::after { box-sizing: border-box; }
 .bk a { color: var(--bk-gold); text-decoration: none; }
 .bk a:hover { color: var(--bk-gold-bright); text-decoration: underline; }
-.bk ::selection { background: var(--bk-gold); color: #141109; }
+.bk ::selection { background: var(--bk-gold); color: var(--bk-on-gold); }
 
 .bk-skip { position: absolute; left: -9999px; }
-.bk-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--bk-gold); color: #141109; padding: .4rem .8rem; }
+.bk-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--bk-gold); color: var(--bk-on-gold); padding: .4rem .8rem; }
 
 .bk-shell { max-width: 1180px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 28px); }
 .bk-shell-narrow { max-width: 44rem; margin: 0 auto; padding: 0 clamp(14px, 4vw, 28px) clamp(48px, 8vw, 88px); }
@@ -68,16 +74,18 @@ html.bk-paper {
 .bk-brand span { display: flex; flex-direction: column; font-weight: 700; font-size: .96rem; letter-spacing: .1em; line-height: 1.35; }
 .bk-brand small { color: var(--bk-muted); font-size: .58rem; letter-spacing: .22em; font-weight: 400; }
 .bk-topnav { display: flex; align-items: center; gap: clamp(.5rem, 2vw, 1.2rem); font-size: .82rem; }
-.bk-topnav a { letter-spacing: .06em; }
+/* 觸控目標：連結與按鈕都撐到 40px 高（WCAG 2.5.8 的 24px 只是下限，閱讀工具列
+ * 手指點的頻率高，給到 40px）。視覺尺寸不變，靠 padding 把可點範圍撐開。 */
+.bk-topnav a { display: inline-flex; align-items: center; min-height: 40px; letter-spacing: .06em; }
 
 .bk-sizer { display: inline-flex; border: 1px solid var(--bk-line); }
-.bk-sizer button { background: none; border: 0; padding: .2rem .5rem; color: var(--bk-muted); font-family: var(--bk-serif); cursor: pointer; line-height: 1.6; }
+.bk-sizer button { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 38px; background: none; border: 0; padding: .2rem .45rem; color: var(--bk-muted); font-family: var(--bk-serif); cursor: pointer; line-height: 1.6; }
 .bk-sizer button.sz-s { font-size: .7rem; }
 .bk-sizer button.sz-m { font-size: .86rem; }
 .bk-sizer button.sz-l { font-size: 1.02rem; }
-.bk-sizer button[aria-pressed="true"] { background: var(--bk-gold); color: #141109; }
-.bk-paper-btn { background: none; border: 1px solid var(--bk-line); padding: .2rem .55rem; color: var(--bk-muted); font-family: var(--bk-serif); font-size: .82rem; cursor: pointer; }
-.bk-paper-btn[aria-pressed="true"] { background: var(--bk-gold); color: #141109; }
+.bk-sizer button[aria-pressed="true"] { background: var(--bk-gold); color: var(--bk-on-gold); }
+.bk-paper-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 38px; background: none; border: 1px solid var(--bk-line); padding: .2rem .5rem; color: var(--bk-muted); font-family: var(--bk-serif); font-size: .82rem; cursor: pointer; }
+.bk-paper-btn[aria-pressed="true"] { background: var(--bk-gold); color: var(--bk-on-gold); }
 
 /* ── 麵包屑 ───────────────────────────── */
 .bk-crumb { margin: clamp(18px, 3vw, 28px) 0 0; color: var(--bk-muted); font-size: .76rem; letter-spacing: .06em; }
@@ -102,7 +110,10 @@ html.bk-paper {
 .bk-pager .ttl { color: var(--bk-paper); font-family: var(--bk-serif); font-size: .88rem; line-height: 1.6; }
 .bk-pager-next { text-align: right; }
 .bk-pager-toc { justify-content: center; align-items: center; font-family: var(--bk-serif); font-size: .84rem; letter-spacing: .12em; }
-.bk-pager-empty { display: block; }
+/* 卷首／楔子沒有上一篇、末回沒有下一篇——格線要跟著收攏，
+ * 否則「回目列表」會卡在中間欄、旁邊空出一大塊，看起來像元素漏放。 */
+.bk-pager--noprev { grid-template-columns: auto 1fr; }
+.bk-pager--nonext { grid-template-columns: 1fr auto; }
 
 /* ── 牌記（收錄說明） ─────────────────── */
 .bk-note { margin: clamp(40px, 6vw, 64px) 0 0; border: 1px solid var(--bk-line); background: var(--bk-panel); padding: clamp(1.2rem, 2.8vw, 1.8rem); }
@@ -150,9 +161,8 @@ html.bk-paper {
 
 @media (max-width: 720px) {
   .bk-topnav .hide-m { display: none; }
-  .bk-pager { grid-template-columns: 1fr; }
+  .bk-pager, .bk-pager--noprev, .bk-pager--nonext { grid-template-columns: 1fr; }
   .bk-pager-next { text-align: left; }
-  .bk-pager-empty { display: none; }
   .bk-reader { line-height: 2; }
 }
 @media (max-width: 480px) {
@@ -165,5 +175,9 @@ html.bk-paper {
 /* 續讀入口與已讀標記 */
 .bk-resume { margin: 0 0 1.4rem; padding: .7rem 1rem; border: 1px solid var(--bk-gold); background: color-mix(in srgb, var(--bk-gold) 8%, transparent); font-size: .88rem; }
 .bk-resume b { font-family: var(--bk-serif); }
-.bk-chapter-list li.is-read { opacity: .62; }
-.bk-chapter-list li.is-read .no::after { content: "・讀過"; color: var(--bk-muted); font-size: .82em; }
+/* 已讀的回目要「看得出讀過」但不能變得看不清楚。
+ * 原本用 opacity: .62 整列調暗，實測金色回號的有效對比掉到 3.83（未達 AA 4.5），
+ * 所以改成不動透明度、只換成 muted 色（7.02）＋一個勾記。 */
+.bk-chapter-list li.is-read .no { color: var(--bk-muted); }
+.bk-chapter-list li.is-read .no::after { content: " ✓"; color: var(--bk-gold); }
+.bk-chapter-list li.is-read .ttl { color: color-mix(in srgb, var(--bk-paper) 78%, var(--bk-muted)); }
