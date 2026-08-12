@@ -76,9 +76,16 @@
       {%- endfor -%}
     </ul>
 
+    {%- if book.lineage %}
+    <aside class="bk-note" aria-label="版本沿革">
+      <h2>這本書為什麼有好幾種版本</h2>
+      <p>{{ book.lineage }}</p>
+    </aside>
+    {%- endif %}
+
     <aside class="bk-note" aria-label="關於這份原文">
       <h2>關於這份原文</h2>
-      <p>原文一字未刪改，站上另外整理的導讀、註解等輔助內容一律分開存放，不混進原文。每一篇都存有校驗碼，只要有一個字被改動，重新產生頁面時就會對不上、建置直接失敗。</p>
+      <p>原文照來源完整收錄，站上不做任何改動；各底本的用字狀況在上方逐一老實說明。導讀、註解等站上另外整理的輔助內容一律分開存放，不混進原文。每一篇都存有校驗碼，只要有一個字被改動，重新產生頁面時就會對不上、建置直接失敗。</p>
       {%- for ed in book.editions %}
       <dl>
         <dt>{{ ed.label }}</dt><dd><a href="{{ ed.source_page }}" target="_blank" rel="noopener noreferrer">{{ ed.source_page }}</a>／{{ ed.license }}</dd>

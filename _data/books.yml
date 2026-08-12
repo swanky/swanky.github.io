@@ -46,6 +46,7 @@
   status: published
   language: classical-chinese
   blurb: 一百零八個人被逼上梁山的過程。從高俅發跡寫起，史進、魯智深、林沖、武松一個個被官府擠到沒路走——武松與潘金蓮的故事也在裡面，和《金瓶梅》接得上。
+  lineage: 這本書流傳下來不只一種樣子：常見的有一百回本、一百二十回本（多出征田虎、征王慶兩段），還有清初金聖嘆刪定的七十回本——故事截到一百零八人排定座次為止，前面加一段楔子。三種本子內容差很多，不是同一份文字的不同印刷。站上收的是金聖嘆七十回本。
   primary_edition: gutenberg-23863
   editions:
     - id: gutenberg-23863
@@ -68,6 +69,7 @@
   status: published
   language: classical-chinese
   blurb: 漢末群雄從桃園結義寫到三分歸一統，一百二十回。人物與勢力關係最複雜的一部，也是最好認人的一部。
+  lineage: 現存最早的刊本出於明代嘉靖年間，題《三國志通俗演義》，分二百四十則；清代康熙年間毛綸、毛宗崗父子把它整理成一百二十回並加上評語，改動了不少文字——今天市面上讀到的幾乎都是毛本。站上收的就是毛本一百二十回。
   primary_edition: gutenberg-23950
   editions:
     - id: gutenberg-23950
@@ -88,6 +90,7 @@
   status: published
   language: classical-chinese
   blurb: 取經路上的一百回。從石猴出世鬧天宮寫到五聖成真，妖怪、法寶、神職自成一套熱鬧的體系。
+  lineage: 現存最早的完整刊本出於明代萬曆年間的金陵世德堂，一百回；後來清代又出過多種刪節、加評語的本子。站上收的是通行的一百回本；這份謄本依據哪一種刊本，來源頁沒有標明——這裡不猜，先老實記為待考。
   primary_edition: gutenberg-23962
   editions:
     - id: gutenberg-23962
@@ -109,6 +112,7 @@
   status: published
   language: classical-chinese
   blurb: 一個大家族由盛轉衰。人物最多、別名最繁、版本問題也最複雜——所以這裡同時收了兩種底本，可以對照著讀。
+  lineage: 這幾部書裡版本問題最複雜的一部。早期只有手抄本流傳，各本都不到百回；因為附有署名脂硯齋的批語，通稱脂本，庚辰本是其中保存較完整的一種。清代乾隆年間，程偉元與高鶚排印出一百二十回本，補齊了後四十回（這四十回出自誰手，至今沒有定論），從此成為通行本。站上兩種底本都收了，可以對照著讀。
   primary_edition: wikisource-120
   editions:
     - id: wikisource-120

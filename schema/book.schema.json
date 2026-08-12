@@ -50,6 +50,10 @@
     "blurb": {
       "type": "string"
     },
+    "lineage": {
+      "type": "string",
+      "description": "版本沿革（TA 白話）：這本書為什麼有好幾種版本、站上收的是哪一種。書目事實只寫查得到的，不確定就明說待考（見 AGENTS.md「版本學事實是資料，不是文案」）。有填才會在作品頁渲染"
+    },
     "flagship_url": {
       "type": "string",
       "description": "已有專屬子站的作品（金瓶梅）填此欄，書目頁直接連過去，不產生通用章回頁"

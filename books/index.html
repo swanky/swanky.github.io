@@ -14,7 +14,7 @@ title: 古典小說書房
 {%- assign published = site.data.books | where: 'status', 'published' -%}
 {%- comment -%}描述也從註冊表算出來——加一本書不必回頭改這頁的 meta。{%- endcomment -%}
 {%- assign all_titles = site.data.books | map: 'title' | join: '、' -%}
-{%- capture page_desc %}中國古典小說原文閱讀：{{ all_titles }}。原文一字未刪改，另附讀得懂的說明，手機也好讀。{% endcapture -%}
+{%- capture page_desc %}中國古典小說原文閱讀：{{ all_titles }}。原文完整收錄、站上不做任何改動，各底本來源與用字狀況逐本說明，手機也好讀。{% endcapture -%}
 <head>
   {%- include book/head.html page_title=page.title description=page_desc og_type='website' -%}
   <script type="application/ld+json">
@@ -56,7 +56,7 @@ title: 古典小說書房
     <header class="bk-hero">
       <span class="bk-kicker">原文閱讀</span>
       <h1>古典小說書房</h1>
-      <p>把幾部長篇古典小說的原文放在一個地方，一字不刪不改，配上看得懂的說明——讓沒有讀過文言文的人也能讀完一整回。{% if published.size > 0 %}目前《{{ published.first.title }}》最完整，{% endif %}其餘作品陸續整理上線。</p>
+      <p>把幾部長篇古典小說的原文放在一個地方，站上不刪不改一字，來源與用字狀況逐本老實交代，再配上看得懂的說明——讓沒有讀過文言文的人也能讀完一整回。{% if published.size > 0 %}目前《{{ published.first.title }}》最完整，{% endif %}其餘作品陸續整理上線。</p>
     </header>
 
     <ul id="booklist" class="bk-booklist">

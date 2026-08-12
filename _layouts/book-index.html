@@ -10,7 +10,13 @@
 {%- assign seal = book.title | slice: 0, 1 -%}
 {%- assign chapters = site.books | where: 'book_id', page.book_id | where: 'edition_id', page.edition_id | sort: 'chapter' -%}
 {%- capture page_title %}{{ book.title }}{{ edition.label }}回目｜原文全文{% endcapture -%}
-{%- capture page_desc %}《{{ book.title }}》{{ edition.label }}原文回目列表，共收錄 {{ chapters.size }} 篇，一字未刪改。{% endcapture -%}
+{%- comment -%}忠實度說法跟著 text_fidelity 走，不把「一字未刪改」寫死（同 book-chapter.html 的分岔）{%- endcomment -%}
+{%- if edition.text_fidelity == 'verbatim' -%}
+{%- assign fidelity_claim = '一字未刪改' -%}
+{%- else -%}
+{%- assign fidelity_claim = '站上不做任何改動，用字狀況見頁面說明' -%}
+{%- endif -%}
+{%- capture page_desc %}《{{ book.title }}》{{ edition.label }}原文回目列表，共收錄 {{ chapters.size }} 篇，{{ fidelity_claim }}。{% endcapture -%}
 <head>
   {%- include book/head.html page_title=page_title description=page_desc og_type='website' -%}
   <script type="application/ld+json">
