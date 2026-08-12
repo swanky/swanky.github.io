@@ -75,6 +75,51 @@
   }
 
   /**
+   * 網站總覽面板。
+   * 支援 Popover API 的瀏覽器交給原生（含焦點、Escape 與點外關閉）；
+   * 舊瀏覽器用下方退路，避免出現第二套導覽實作。
+   */
+  const overviewPanel = select('#site-overview')
+  const overviewTriggers = select('[popovertarget="site-overview"]', true)
+  if (overviewPanel && overviewTriggers.length) {
+    const supportsPopover = 'showPopover' in HTMLElement.prototype
+
+    const setOverviewState = (isOpen) => {
+      document.body.classList.toggle('site-overview-open', isOpen)
+      overviewTriggers.forEach((trigger) => {
+        if (trigger.getAttribute('popovertargetaction') !== 'hide') {
+          trigger.setAttribute('aria-expanded', String(isOpen))
+        }
+      })
+    }
+
+    if (supportsPopover) {
+      overviewPanel.addEventListener('toggle', () => {
+        setOverviewState(overviewPanel.matches(':popover-open'))
+      })
+    } else {
+      overviewPanel.hidden = true
+      overviewTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const shouldOpen = overviewPanel.hidden
+          overviewPanel.hidden = !shouldOpen
+          overviewPanel.classList.toggle('is-open', shouldOpen)
+          setOverviewState(shouldOpen)
+          if (shouldOpen) select('.site-overview__close')?.focus()
+        })
+      })
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !overviewPanel.hidden) {
+          overviewPanel.hidden = true
+          overviewPanel.classList.remove('is-open')
+          setOverviewState(false)
+          select('.site-overview-trigger')?.focus()
+        }
+      })
+    }
+  }
+
+  /**
    * Back to top button
    */
   let backtotop = select('.back-to-top')
