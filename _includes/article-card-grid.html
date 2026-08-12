@@ -4,7 +4,7 @@
     {% if include.number %}<span class="card-step">{{ include.number }}</span>{% endif %}
     {% if article.cover_image %}
     <div class="card-img article-card-img">
-      <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy"></a>
+      <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy"></a>
     </div>
     {% endif %}
     <div class="card-body">

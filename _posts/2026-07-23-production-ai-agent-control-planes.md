@@ -7,6 +7,12 @@ categories: [technical]
 tags: [ai-agent, agentic-engineering, agent-governance, production-ai]
 layout: article
 cover_image: /assets/img/production-ai-agent-control-planes/production-ai-agent-control-planes-banner-v2.jpg
+cover_alt: "水手服少女在機房操作四組流程面板，檢查 AI 系統的規則、證據、進度與權限"
+cta_context: ai-agent
+related_posts:
+  - ai-agent-wallet-permission-boundaries
+  - matt-pocock-skills-ai-coding-workflow
+  - hermes-agent-openrouter-video-generation
 hero_image: true
 description: "AI Agent 從 Demo 走到正式環境，難題不是模型能不能呼叫工具，而是指令能否版控、結論能否回指證據、任務能否中斷續跑，以及高風險動作是否真的受權限控制。本文以四層控制面建立可驗收的 Production Agent 架構。"
 keywords: AI Agent, Production AI Agent, Agentic Engineering, Context Engineering, Evidence Layer, Agent State, Human Approval, AI Agent 治理, Completion Contract, AI Agent 導入, 史旺基, Swanky Studio

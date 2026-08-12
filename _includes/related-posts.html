@@ -1,9 +1,18 @@
-<!-- 延伸閱讀：同分類取最新 3 篇（排除當前文章），複用 article-card-grid -->
+<!-- 延伸閱讀：front matter 可指定 related_posts；未指定時同分類取最新 3 篇 -->
 {% if page.categories.size > 0 %}
   {% assign cur_url = page.url %}
-  {% assign primary_cat = page.categories | first %}
-  {% assign pool = site.categories[primary_cat] %}
-  {% assign related = pool | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
+  {% assign related = '' | split: '' %}
+  {% if page.related_posts %}
+    {% for slug in page.related_posts %}
+      {% assign matches = site.posts | where_exp: "item", "item.url contains slug" %}
+      {% assign related = related | concat: matches %}
+    {% endfor %}
+    {% assign related = related | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
+  {% else %}
+    {% assign primary_cat = page.categories | first %}
+    {% assign pool = site.categories[primary_cat] %}
+    {% assign related = pool | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
+  {% endif %}
   {% if related.size > 0 %}
   <div class="related-posts">
     <h3 class="related-posts-title">延伸閱讀</h3>

@@ -1,5 +1,5 @@
 <!-- 文章結尾 CTA：暖性邀請，依分類切換；點擊埋 gtag 事件供 GA4 標記為關鍵事件 -->
-{% assign cta_context = include.context | default: '' %}
+{% assign cta_context = include.context | default: page.cta_context | default: '' %}
 {% if cta_context == 'photography' or page.categories contains 'photography' %}
 <div class="article-cta">
   <h3>喜歡這些影像？</h3>
@@ -9,7 +9,34 @@
     <a href="{{ '/photography/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
   </div>
 </div>
-{% elsif cta_context == 'claude-code' or page.categories contains 'claude-code' or page.tags contains 'claude-code' %}
+{% elsif cta_context == 'ai-visual' %}
+<div class="article-cta">
+  <h3>想把角色或內容做成一致的系列？</h3>
+  <p>從視覺方向、角色設定、分鏡到逐項人工檢查，可依範圍規劃系列圖像或短影音。</p>
+  <div class="article-cta-actions">
+    <a href="{{ '/technical/ai-visual-production/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'ai_visual_production',from_page:'{{ page.url }}'});}">看 AI 視覺內容製作 &rarr;</a>
+    <a href="{{ '/tarot/lab/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','tool_page_click',{tool:'tarot_lab',from_page:'{{ page.url }}'});}">看公開製作案例 &rarr;</a>
+  </div>
+</div>
+{% elsif cta_context == 'ai-agent' %}
+<div class="article-cta">
+  <h3>準備讓 AI Agent 進入真實流程？</h3>
+  <p>先界定要改善的工作、權限、人工核准與驗收方式，再決定工具與試行範圍。</p>
+  <div class="article-cta-actions">
+    <a href="{{ '/technical/ai-agent-consulting/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'ai_agent_consulting',from_page:'{{ page.url }}'});}">看 AI Agent 導入顧問 &rarr;</a>
+    <a href="{{ '/education/agentic-engineering/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',from_page:'{{ page.url }}'});}">看企業培訓 &rarr;</a>
+  </div>
+</div>
+{% elsif cta_context == 'web3' %}
+<div class="article-cta">
+  <h3>正在評估 Web3 應用？</h3>
+  <p>先判斷問題是否真的需要上鏈，再比較架構、風險與試行範圍；若目標是建立團隊知識，也有企業培訓。</p>
+  <div class="article-cta-actions">
+    <a href="{{ '/technical/web3-consulting/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'web3_consulting',from_page:'{{ page.url }}'});}">看 Web3 技術顧問 &rarr;</a>
+    <a href="{{ '/education/crypto/enterprise/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'web3_training',from_page:'{{ page.url }}'});}">看 Web3 企業培訓 &rarr;</a>
+  </div>
+</div>
+{% elsif cta_context == 'agentic' or cta_context == 'claude-code' or page.categories contains 'claude-code' or page.tags contains 'claude-code' %}
 <div class="article-cta">
   <h3>想把 Agentic Engineering 帶進團隊？</h3>
   <p>這些方法已整理成企業試辦方案：從 2–3 小時導入、半天 E2E 實作，到 9 堂完整培訓。核心方法跨工具，Claude Code 作主要示範。</p>

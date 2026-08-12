@@ -15,7 +15,7 @@ layout: default
 
       {% if page.hero_image and page.cover_image %}
       <div class="article-cover">
-        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
       </div>
       {% endif %}
 

@@ -7,6 +7,12 @@ categories: [technical]
 tags: [web3, nft, defi, market-design]
 layout: article
 cover_image: /assets/img/fake-world-assets-fwa-deep-dive/fwa-chain-gacha-banner-v3-fixed.jpg
+cover_alt: "水手服少女操作數位扭蛋機，機台中放著收藏卡片與紫色錢幣符號"
+cta_context: web3
+related_posts:
+  - nft-token-standards
+  - defi-real-yield
+  - uniform-girls-nft-debut
 hero_image: true
 source_url: "https://www.linkedin.com/posts/swanky_web3-nft-defi-share-7486588753440841728-_a4v/"
 source_url_x: "https://x.com/swanky/status/2080823291577774364"

@@ -286,7 +286,7 @@ breadcrumbs:
         {% for article in sorted_articles limit:6 %}
         <article class="tech-article-card">
           <a href="{{ article.url | relative_url }}">
-            {% if article.cover_image %}<div class="tech-article-media"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy"></div>{% endif %}
+            {% if article.cover_image %}<div class="tech-article-media"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy"></div>{% endif %}
             <div class="tech-article-body"><span class="tech-article-date">{{ article.date | date: "%Y-%m-%d" }}</span><h3>{{ article.title }}</h3></div>
           </a>
         </article>

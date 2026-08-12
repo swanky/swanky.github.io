@@ -7,6 +7,12 @@ categories: [technical]
 tags: [ai-moderation, open-source-ai, llm, content-policy, jinpingmei, ai-visual]
 layout: article
 cover_image: /assets/img/jinpingmei/covers/ai-moderation-banner.jpg
+cover_alt: "水手服少女在古典人物畫與紅色禁止符號之間選擇可使用的 AI 內容"
+cta_context: ai-visual
+related_posts:
+  - jinpingmei-character-lab
+  - stable-diffusion-photography-experiment
+  - ai-visual-fatigue-photography-authenticity
 hero_image: true
 description: "拿《金瓶梅》這部公共領域的文學經典去測各家 AI：閉源模型對情色文學的攔截、Grok 的寬鬆邊界、開源模型的自由度——一個技術顧問對「AI 道德審查」與開源閉源之爭的第一手觀察。"
 keywords: AI 內容審查, content moderation, 金瓶梅, 開源 AI, 閉源 AI, LLM, Stable Diffusion, Grok, 道德邊界, 技術選型, 史旺基, Swanky Studio

@@ -38,7 +38,7 @@ breadcrumbs:
         {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
         {% for article in sorted_articles limit: 9 %}
         <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
-          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy">{% endif %}
+          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <div class="edu-badges"><span class="edu-badge edu-badge--muted">{{ article.date | date: "%Y-%m-%d" }}</span></div>
           <h3>{{ article.title }}</h3>
           {% if article.description %}<p>{{ article.description }}</p>{% endif %}

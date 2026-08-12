@@ -7,6 +7,12 @@ categories: [technical]
 tags: [ai-agent, web3, coinbase, metamask, x402, agentic-finance, agent-governance]
 layout: article
 cover_image: /assets/img/linkedin/ai-agent-wallet-permission-boundaries.jpg
+cover_alt: "三位水手服少女在金庫裡設定付款規則、人工核准與拒絕閘門"
+cta_context: web3
+related_posts:
+  - production-ai-agent-control-planes
+  - ai-agent-payments-web3
+  - claude-code-hot-wallet
 hero_image: true
 description: "Coinbase for Agents 與 MetaMask Agent Wallet 讓 AI 代理從建議者變成金融執行者。真正值得看的不是自動交易，而是資金隔離、額度、白名單、人工核准與交易收據如何成為硬邊界。"
 keywords: AI Agent, Coinbase for Agents, MetaMask Agent Wallet, x402, Agentic Finance, AI 代理支付, AI 自動交易, 權限控管, 人工核准, Web3, 史旺基, Swanky Studio

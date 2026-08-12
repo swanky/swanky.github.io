@@ -21,6 +21,9 @@ essentials_posts:
   - nft-token-standards
   - oracle-architecture-risks
   - ai-decentralized-compute
+advanced_posts:
+  - fake-world-assets-fwa-deep-dive
+  - ai-agent-wallet-permission-boundaries
 ---
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Free Learning" status="免費自學資源" title="Web3 入門精選" lead="Web3 的名詞很多，先不要急著追每一個新敘事。這六篇文章從結構、使用情境與風險開始，把會一直用到的基礎一篇一篇講清楚。" image="/assets/img/52350041329_99f53bd3df_h.jpeg" alt="女性手持比特幣代幣遮住單眼的人像作品" caption="Uni - Crypto Girl｜攝影：史旺基" primary_href="#articles" primary_label="開始閱讀" secondary_href="/education/crypto/" secondary_label="返回 Web3 教育" %}
@@ -41,7 +44,21 @@ essentials_posts:
         {% assign matches = site.posts | where_exp: "p", "p.url contains slug" %}
         {% for article in matches %}
         <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
-          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.title }}" loading="lazy">{% endif %}
+          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
+          <h3>{{ article.title }}</h3>{% if article.description %}<p>{{ article.description }}</p>{% endif %}<a class="edu-card__link" href="{{ article.url | relative_url }}">閱讀文章 →</a>
+        </article>
+        {% endfor %}
+      {% endfor %}
+    </div></div>
+  </section>
+
+  <section class="edu-section edu-section--tint">
+    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Current Cases</span><h2>讀完基礎，再看兩個正在發生的案例</h2><p>一篇拆解數位收藏品的流動性機制，一篇檢查 AI 付款與交易的權限邊界；用真實產品練習判斷，不只記名詞。</p></header><div class="edu-card-grid">
+      {% for slug in page.advanced_posts %}
+        {% assign matches = site.posts | where_exp: "p", "p.url contains slug" %}
+        {% for article in matches %}
+        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
+          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <h3>{{ article.title }}</h3>{% if article.description %}<p>{{ article.description }}</p>{% endif %}<a class="edu-card__link" href="{{ article.url | relative_url }}">閱讀文章 →</a>
         </article>
         {% endfor %}
