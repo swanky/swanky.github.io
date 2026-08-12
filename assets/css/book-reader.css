@@ -172,6 +172,84 @@ html.bk-paper {
 .bk-footer span { color: var(--bk-muted); font-size: .78rem; letter-spacing: .08em; }
 .bk-footer nav { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; font-size: .8rem; }
 
+/* ── 書房世界索引（第一階段旗艦入口） ─────────────
+ * 只套在 books/index.html 的 .bk-library；章回閱讀器保持安靜、穩定。
+ * 書名與版況仍完全來自資料檔，這裡只定義可擴充的版面節奏。 */
+.bk-library {
+  background:
+    radial-gradient(circle at 92% 5%, rgba(157, 58, 77, .15), transparent 26rem),
+    linear-gradient(180deg, #0d0c0a, var(--bk-bg) 58rem);
+}
+.bk-library .bk-topbar { padding-top: .8rem; padding-bottom: .8rem; }
+.bk-library .bk-shell { max-width: 1380px; }
+.bk-atlas { padding-bottom: clamp(30px, 5vw, 70px); }
+.bk-atlas-hero {
+  display: grid;
+  min-height: min(720px, calc(100svh - 58px));
+  padding: clamp(60px, 9vw, 130px) 0 clamp(52px, 8vw, 105px);
+  grid-template-columns: 1.15fr .85fr;
+  grid-template-areas: "title intro" "title facts";
+  gap: 40px clamp(40px, 8vw, 125px);
+  align-items: end;
+}
+.bk-atlas-hero__title { grid-area: title; align-self: center; }
+.bk-atlas-hero .bk-kicker { display: block; margin-bottom: 2rem; color: var(--bk-gold); font: 700 .66rem/1.5 var(--bk-sans); letter-spacing: .24em; }
+.bk-atlas-hero h1 { margin: 0; color: var(--bk-paper); font: 900 clamp(4.2rem, 10vw, 9rem)/1.04 var(--bk-serif); letter-spacing: -.05em; }
+.bk-atlas-hero__intro { grid-area: intro; max-width: 37rem; padding-top: 1.8rem; border-top: 1px solid var(--bk-line); }
+.bk-atlas-hero__intro p { margin: 0; color: color-mix(in srgb, var(--bk-paper) 78%, var(--bk-muted)); font-size: .94rem; line-height: 2; }
+.bk-atlas-hero__intro .bk-atlas-hero__statement { margin-bottom: 1.4rem; color: var(--bk-paper); font-family: var(--bk-serif); font-size: clamp(1.35rem, 2.4vw, 2.15rem); font-weight: 700; line-height: 1.65; letter-spacing: .03em; }
+.bk-atlas-facts { grid-area: facts; display: grid; margin: 0; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--bk-line); border-left: 1px solid var(--bk-line); }
+.bk-atlas-facts div { padding: 1.1rem 1rem; border-right: 1px solid var(--bk-line); border-bottom: 1px solid var(--bk-line); }
+.bk-atlas-facts dt { color: var(--bk-gold-bright); font: 400 clamp(1.7rem, 3vw, 2.8rem)/1.1 var(--bk-serif); }
+.bk-atlas-facts dd { margin: .45rem 0 0; color: var(--bk-muted); font-size: .68rem; letter-spacing: .14em; }
+.bk-atlas-divider { display: flex; margin-bottom: 1.4rem; padding: .8rem 0; align-items: center; justify-content: space-between; color: var(--bk-muted); border-top: 1px solid var(--bk-gold); border-bottom: 1px solid var(--bk-line); font-size: .68rem; letter-spacing: .18em; }
+.bk-atlas-list { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; }
+.bk-atlas-list .bk-atlas-book { grid-column: span 4; }
+.bk-atlas-list .bk-atlas-book:nth-child(1) { grid-column: span 7; }
+.bk-atlas-list .bk-atlas-book:nth-child(2) { grid-column: span 5; }
+.bk-atlas-book {
+  position: relative;
+  min-height: 430px;
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  overflow: hidden;
+  isolation: isolate;
+  background: color-mix(in srgb, var(--bk-panel) 91%, var(--bk-gold));
+  transition: border-color .25s ease, transform .25s ease, background-color .25s ease;
+}
+.bk-atlas-book:hover { border-color: var(--bk-gold); background: color-mix(in srgb, var(--bk-panel) 86%, var(--bk-gold)); transform: translateY(-4px); }
+.bk-atlas-book::before { position: absolute; z-index: -1; inset: 0 auto auto 0; width: 3px; height: 4.5rem; content: ""; background: var(--bk-red); }
+.bk-atlas-book__glyph { position: absolute; z-index: -1; right: -.05em; bottom: -.17em; color: color-mix(in srgb, var(--bk-gold) 11%, transparent) !important; font: 900 clamp(9rem, 17vw, 15rem)/1 var(--bk-serif); text-decoration: none !important; pointer-events: none; }
+.bk-atlas-book__top { display: flex; margin-bottom: auto; justify-content: space-between; color: var(--bk-muted); font: 700 .62rem/1.5 var(--bk-sans); letter-spacing: .18em; }
+.bk-atlas-book h2 { margin-top: clamp(3.2rem, 6vw, 6rem); font-size: clamp(2rem, 3.6vw, 3.5rem); line-height: 1.2; letter-spacing: .08em; }
+.bk-atlas-book .bk-byline { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; }
+.bk-atlas-book .bk-atlas-book__blurb { max-width: 38rem; color: color-mix(in srgb, var(--bk-paper) 79%, var(--bk-muted)); font-size: .86rem; line-height: 1.85; }
+.bk-atlas-book .bk-eds { margin-top: .3rem; line-height: 1.7; }
+.bk-atlas-book .bk-cta { position: relative; z-index: 2; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--bk-line); }
+.bk-atlas-book .bk-cta a { display: flex; min-height: 40px; align-items: center; justify-content: space-between; }
+.bk-library :focus-visible { outline: 3px solid var(--bk-gold-bright); outline-offset: 4px; }
+
+@media (max-width: 900px) {
+  .bk-atlas-hero { min-height: 0; grid-template-columns: 1fr; grid-template-areas: "title" "intro" "facts"; }
+  .bk-atlas-hero__title { padding-top: 2rem; }
+  .bk-atlas-list .bk-atlas-book,
+  .bk-atlas-list .bk-atlas-book:nth-child(1),
+  .bk-atlas-list .bk-atlas-book:nth-child(2) { grid-column: span 6; }
+}
+
+@media (max-width: 600px) {
+  .bk-library .bk-topbar { align-items: flex-start; }
+  .bk-library .bk-topnav { flex-wrap: wrap; justify-content: flex-end; }
+  .bk-atlas-hero { padding-top: 3.5rem; gap: 2.5rem; }
+  .bk-atlas-hero h1 { font-size: clamp(3.7rem, 21vw, 5.7rem); }
+  .bk-atlas-hero__intro .bk-atlas-hero__statement { font-size: 1.35rem; }
+  .bk-atlas-facts div { padding: .9rem .6rem; }
+  .bk-atlas-divider span:last-child { display: none; }
+  .bk-atlas-list .bk-atlas-book,
+  .bk-atlas-list .bk-atlas-book:nth-child(1),
+  .bk-atlas-list .bk-atlas-book:nth-child(2) { grid-column: 1 / -1; }
+  .bk-atlas-book { min-height: 390px; }
+}
+
 @media (max-width: 720px) {
   .bk-topnav .hide-m { display: none; }
   .bk-pager, .bk-pager--noprev, .bk-pager--nonext { grid-template-columns: 1fr; }
