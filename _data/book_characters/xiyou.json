@@ -1,0 +1,274 @@
+[
+ {
+  "slug": "guanyin-pusa",
+  "name": "觀音菩薩",
+  "aliases": [
+   "觀世音菩薩",
+   "觀世音",
+   "南海菩薩"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以慈悲、制度與精準判斷安排取經全局，在師徒無法突破時才介入並把失序力量重新安置。",
+  "identity": "引導取經工程、在關鍵劫難中提供指引與收伏妖魔的菩薩",
+  "image": "guanyin-pusa.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "觀音菩薩白衣素妝、手持淨瓶與柳枝，立於蓮座站姿定妝照。"
+ },
+ {
+  "slug": "tieshan-gongzhu",
+  "name": "鐵扇公主",
+  "aliases": [
+   "羅剎女",
+   "鐵扇仙"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以芭蕉扇與領地權威守住自身家門，對兒子被收伏的怨恨使她拒絕取經團隊的請求。",
+  "identity": "芭蕉洞主人、牛魔王之妻、紅孩兒之母，掌芭蕉扇控制火焰山風勢",
+  "image": "tieshan-gongzhu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "鐵扇公主頭戴金冠、手持芭蕉扇，紅衣站姿定妝照。"
+ },
+ {
+  "slug": "nuerguo-guowang",
+  "name": "女兒國國王",
+  "aliases": [
+   "西梁女王",
+   "女王"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以一國之主的真誠與政治資源邀請唐三藏留下，使取經使命第一次受到並非暴力的情感考驗。",
+  "identity": "西梁女國的統治者，向唐三藏提出婚姻與讓位邀請",
+  "image": "nuerguo-guowang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "女兒國國王頭戴金冠，身穿紅金長袍，端莊站姿定妝照。"
+ },
+ {
+  "slug": "baigu-furen",
+  "name": "白骨夫人",
+  "aliases": [
+   "白骨精",
+   "白骨妖"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "擅長利用人類親屬形象與師徒信任裂縫接近獵物，本相的死亡感始終從偽裝下滲出。",
+  "identity": "白虎嶺以白骨成精、三次變化試圖捕食唐三藏的妖魔",
+  "image": "baigu-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "白骨夫人面色蒼白、衣衫破舊，持木杖站姿定妝照。"
+ },
+ {
+  "slug": "xiezi-jing",
+  "name": "蠍子精",
+  "aliases": [
+   "蝎子精",
+   "琵琶洞女怪",
+   "毒敵山女妖"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以強大毒鉤、近戰能力與直接求偶欲望綁住唐三藏，是少數能正面壓制悟空與八戒的女妖。",
+  "identity": "毒敵山琵琶洞的母蠍妖，以倒馬毒樁傷過如來與孫悟空",
+  "image": "xiezi-jing.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "蠍子精身後拖著蠍尾，一身皮甲持三叉戟站姿定妝照。"
+ },
+ {
+  "slug": "yutu-jing",
+  "name": "玉兔精",
+  "aliases": [
+   "玉兔兒",
+   "假公主",
+   "天竺假公主"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "把月宮舊怨帶到人間，以公主身分與搗藥杵把報復、婚配與身份竊取揉成同一場騙局。",
+  "identity": "廣寒宮搗藥玉兔，下界冒充天竺公主並企圖招唐三藏為駙馬",
+  "image": "yutu-jing.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "玉兔精頭頂兔耳，白衣配搗藥杵，清秀站姿定妝照。"
+ },
+ {
+  "slug": "diyong-furen",
+  "name": "地湧夫人",
+  "aliases": [
+   "金鼻白毛老鼠精",
+   "半截觀音",
+   "地湧夫人"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以地下洞府、替身遺骸與反覆變化拖延追兵，把求婚與吞食企圖藏在精密逃脫路線中。",
+  "identity": "陷空山無底洞白毛老鼠精，冒認李天王父子為親並擄走唐三藏",
+  "image": "diyong-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "地湧夫人頭頂鼠耳、鼻戴金環，白衣佩雙劍站姿定妝照。"
+ },
+ {
+  "slug": "yumian-gongzhu",
+  "name": "玉面公主",
+  "aliases": [
+   "玉面狐狸",
+   "萬歲狐王之女"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以繼承財產與洞府生活換取牛魔王保護，卻也因此成為夫妻衝突與借扇戰局中的脆弱節點。",
+  "identity": "積雷山摩雲洞狐王之女，以家財招牛魔王入贅的狐妖",
+  "image": "yumian-gongzhu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "玉面公主頭戴狐耳、身後垂著狐尾，錦袍站姿定妝照。"
+ },
+ {
+  "slug": "sun-wukong",
+  "name": "孫悟空",
+  "aliases": [
+   "孫行者",
+   "悟空",
+   "行者",
+   "齊天大聖",
+   "美猴王"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以洞察變化、極強戰力與反權威本能守護取經隊伍，在緊箍與責任中把自由轉化為承擔。",
+  "identity": "花果山石猴、齊天大聖，受緊箍約束保護唐三藏西行",
+  "image": "sun-wukong.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "孫悟空滿臉猿毛、額戴金圈，身披戰甲站姿定妝照。"
+ },
+ {
+  "slug": "tang-sanzang",
+  "name": "唐三藏",
+  "aliases": [
+   "唐僧",
+   "三藏",
+   "玄奘",
+   "御弟"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以戒律、慈悲與堅定使命維持西行方向，卻也因凡人視野與過度信任外表反覆陷入危機。",
+  "identity": "大唐御弟玄奘法師，奉命西行求取真經的取經人",
+  "image": "tang-sanzang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "唐三藏身披紅色袈裟、手持錫杖與缽，僧侶站姿定妝照。"
+ },
+ {
+  "slug": "zhu-bajie",
+  "name": "豬八戒",
+  "aliases": [
+   "八戒",
+   "悟能",
+   "豬悟能",
+   "天蓬元帥"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "把飢餓、慾望、抱怨與實用戰力全帶進隊伍，在退縮與出手之間形成最有人間煙火的拉扯。",
+  "identity": "原天蓬元帥、投錯豬胎後受戒護送唐三藏的二徒弟",
+  "image": "zhu-bajie.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "豬八戒豬鼻豬耳，肩背行囊、手持九齒釘耙站姿定妝照。"
+ },
+ {
+  "slug": "sha-wujing",
+  "name": "沙悟淨",
+  "aliases": [
+   "沙僧",
+   "悟淨",
+   "捲簾大將"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以沉默耐力、秩序感與穩定戰力維持隊伍，是爭吵與危機之間最可靠的承重結構。",
+  "identity": "原捲簾大將、流沙河妖怪，受戒後護送唐三藏並主要承擔行李",
+  "image": "sha-wujing.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "沙悟淨頸掛骷髏項鍊，持月牙鏟，粗獷站姿定妝照。"
+ },
+ {
+  "slug": "rulai-fozu",
+  "name": "如來佛祖",
+  "aliases": [
+   "如來",
+   "佛祖",
+   "釋迦如來"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以幾乎不動聲色的絕對尺度處理天界失序，將取經從懲罰、修行與文化傳遞整合成制度。",
+  "identity": "靈山最高權威，鎮壓悟空並主持真經授予與最終封授",
+  "image": "rulai-fozu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "如來佛祖身披袈裟立於蓮座，慈眉舉手站姿定妝照。"
+ },
+ {
+  "slug": "niu-mowang",
+  "name": "牛魔王",
+  "aliases": [
+   "大力牛魔王",
+   "牛王",
+   "平天大聖"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以巨大力量、妖界人脈與家族關係維持多處領地，卻在婚姻裂痕與借扇衝突中被各方圍攻。",
+  "identity": "積雷山與翠雲山勢力核心、鐵扇公主丈夫、紅孩兒父親",
+  "image": "niu-mowang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "牛魔王頭上雙角粗壯，身披盔甲持大棍，威嚴站姿定妝照。"
+ },
+ {
+  "slug": "bailong-ma",
+  "name": "白龍馬",
+  "aliases": [
+   "龍馬",
+   "小白龍",
+   "玉龍三太子"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "把被懲罰的龍族身分收束為長途負重與沉默護送，只有關鍵危局才重新顯露變化與戰力。",
+  "identity": "西海龍王三太子，受戒後化白馬馱唐三藏西行",
+  "image": "bailong-ma.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "白龍馬化身白馬、配著馬鞍轡具，四足站姿定妝照。"
+ },
+ {
+  "slug": "erlang-shen",
+  "name": "二郎神",
+  "aliases": [
+   "二郎顯聖真君",
+   "顯聖二郎真君",
+   "楊二郎"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "兼具天界正式武職與獨立行動風格，以第三眼、變化術和團隊獵捕能力處理最難收束的對手。",
+  "identity": "灌江口顯聖真君，以第三眼、變化與武藝參與擒悟空等天界任務",
+  "image": "erlang-shen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "二郎神額間有第三隻眼，銀甲配月牙戟，正面站姿定妝照。"
+ }
+]

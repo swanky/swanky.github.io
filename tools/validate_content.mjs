@@ -77,6 +77,29 @@ export function validateContent() {
   }
   const byId = new Map(books.map((b) => [b.id, b]));
 
+  // ── 1b. 角色館資料對 book-character.schema.json ────────────────
+  if (existsSync('_data/book_characters')) {
+    const charSchema = JSON.parse(readFileSync('schema/book-character.schema.json', 'utf8'));
+    for (const f of readdirSync('_data/book_characters').filter((x) => x.endsWith('.json')).sort()) {
+      const p = join('_data/book_characters', f);
+      const bookId = f.slice(0, -5);
+      if (!byId.has(bookId)) bad(`${p}: 檔名 book_id "${bookId}" 不在 _data/books.yml`);
+      let chars;
+      try { chars = JSON.parse(readFileSync(p, 'utf8')); } catch (e) { bad(`${p}: JSON 解析失敗——${e.message}`); continue; }
+      for (const e of validate(charSchema, chars)) bad(`${p} ${e}`);
+      if (!Array.isArray(chars)) continue;
+      const seenSlug = new Set();
+      for (const c of chars) {
+        if (seenSlug.has(c.slug)) bad(`${p}: slug 重複 "${c.slug}"`);
+        seenSlug.add(c.slug);
+        for (const img of [c.image, ...(c.variants || []).map((v) => v.image)]) {
+          const ip = join('assets/img/books', bookId, 'characters', img || '');
+          if (!existsSync(ip)) bad(`${p}[${c.slug}]: 圖檔不存在 ${ip}`);
+        }
+      }
+    }
+  }
+
   // ── 2+3. _books/*.html ────────────────────────────────────────
   const files = existsSync('_books') ? readdirSync('_books').filter((f) => f.endsWith('.html')).sort() : [];
   /** @type {Map<string, number[]>} `${book}/${edition}` → 章回號 */

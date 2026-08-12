@@ -1,0 +1,292 @@
+[
+ {
+  "slug": "lin-daiyu",
+  "name": "林黛玉",
+  "aliases": [
+   "黛玉",
+   "林妹妹",
+   "顰兒",
+   "瀟湘妃子"
+  ],
+  "gender": "女",
+  "importance": "protagonist",
+  "one_liner": "寄居賈府的敏銳才女，以詩、眼淚與近乎苛刻的真誠守住自己的感情和尊嚴。",
+  "identity": "林如海之女、賈母外孫女，寄居賈府的閨閣小姐",
+  "image": "lin-daiyu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "林黛玉粉色繡花襦裙、眼帶淚光，纖弱站姿定妝照。",
+  "variants": [
+   {
+    "image": "lin-daiyu-ghibli.jpg",
+    "label": "動畫風",
+    "width": 1672,
+    "height": 941,
+    "alt": "林黛玉粉色繡花襦裙造型，動畫風繪製的站姿定妝照。"
+   },
+   {
+    "image": "lin-daiyu-realistic.jpg",
+    "label": "寫實繪畫風",
+    "width": 1672,
+    "height": 941,
+    "alt": "林黛玉粉色繡花襦裙造型，細膚質感繪畫風站姿定妝照。"
+   }
+  ]
+ },
+ {
+  "slug": "xue-baochai",
+  "name": "薛寶釵",
+  "aliases": [
+   "寶釵",
+   "寶姐姐",
+   "蘅蕪君",
+   "寶姑娘"
+  ],
+  "gender": "女",
+  "importance": "protagonist",
+  "one_liner": "端方穩重、博學而善體人情的名門少女，總把熱烈心意收束在合宜分寸之內。",
+  "identity": "金陵薛家之女，寄居賈府的皇商小姐",
+  "image": "xue-baochai.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "薛寶釵身穿淡雅素花襖裙、面帶微笑，端方站姿定妝照。"
+ },
+ {
+  "slug": "wang-xifeng",
+  "name": "王熙鳳",
+  "aliases": [
+   "鳳姐",
+   "鳳姐兒",
+   "鳳辣子",
+   "璉二奶奶",
+   "璉嫂子"
+  ],
+  "gender": "女",
+  "importance": "protagonist",
+  "one_liner": "以笑聲、手腕與驚人執行力統御榮國府日常的年輕管家，鋒芒與危機同樣逼人。",
+  "identity": "賈璉之妻、王夫人內姪女，榮國府實際家務管理者",
+  "image": "wang-xifeng.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "王熙鳳頭戴鳳釵、身穿錦緞皮領襖裙，貴氣站姿定妝照。"
+ },
+ {
+  "slug": "jia-tanchun",
+  "name": "賈探春",
+  "aliases": [
+   "探春",
+   "三姑娘",
+   "三妹妹",
+   "蕉下客"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "志向高、眼界遠的賈府三小姐，以改革家務證明才幹，也清醒看見庶出身分的邊界。",
+  "identity": "賈政庶女、賈府三小姐，大觀園詩社發起者與家務代理者",
+  "image": "jia-tanchun.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "賈探春身穿繡有芭蕉葉紋樣的長襖，幹練站姿定妝照。"
+ },
+ {
+  "slug": "shi-xiangyun",
+  "name": "史湘雲",
+  "aliases": [
+   "史湘云",
+   "湘云",
+   "史大姑娘",
+   "雲兒",
+   "枕霞舊友"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "爽朗豪邁、才思敏捷的史家姑娘，用大笑、詩酒與男裝般的俐落姿態遮住早年的失怙與寄居感。",
+  "identity": "史家小姐、賈母娘家姪孫女，常來賈府作客的詩社成員",
+  "image": "shi-xiangyun.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "史湘雲一身俐落男裝式短襖長褲，笑容爽朗站姿定妝照。"
+ },
+ {
+  "slug": "miao-yu",
+  "name": "妙玉",
+  "aliases": [
+   "妙姑",
+   "檻外人",
+   "櫳翠庵女尼"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "出身仕宦而帶髮修行的孤高才女，以潔癖、茶道與距離感維護一個不受侯門支配的自我。",
+  "identity": "蘇州仕宦之女、帶髮修行者，櫳翠庵住持",
+  "image": "miao-yu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "妙玉身穿素色僧袍、手持茶盞，清冷站姿定妝照。"
+ },
+ {
+  "slug": "qing-wen",
+  "name": "晴雯",
+  "aliases": [
+   "晴雯兒",
+   "晴姑娘"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "容貌出眾、口齒鋒利又手藝高超的丫鬟，以不肯低頭的脾氣反抗身分加諸的屈辱。",
+  "identity": "賈寶玉房中的大丫鬟，擅長針線與精細織補",
+  "image": "qing-wen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "晴雯頭紮紅髮繩、身穿棗紅短襖深裙，俏麗站姿定妝照。"
+ },
+ {
+  "slug": "xi-ren",
+  "name": "襲人",
+  "aliases": [
+   "花襲人",
+   "珍珠",
+   "襲人姐姐",
+   "花大姑娘"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "溫柔周全、極盡職責的首席侍女，把情感、前途與秩序全都寄託在照料賈寶玉之上。",
+  "identity": "原為賈母婢女，後成為賈寶玉身邊最主要的貼身侍女",
+  "image": "xi-ren.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "襲人身穿粉色棉襖長裙，笑容溫柔站姿定妝照。"
+ },
+ {
+  "slug": "jia-baoyu",
+  "name": "賈寶玉",
+  "aliases": [
+   "寶玉",
+   "寶二爺",
+   "怡紅公子"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "銜玉而生的貴族少年，以對仕途規訓的抗拒與對女兒世界的珍重站在家族秩序中央。",
+  "identity": "榮國府公子、賈政與王夫人之子，大觀園怡紅院主人",
+  "image": "jia-baoyu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "賈寶玉頸掛玉墜、身穿紅底織花長袍，俊秀站姿定妝照。"
+ },
+ {
+  "slug": "jia-mu",
+  "name": "賈母",
+  "aliases": [
+   "史太君",
+   "老太太",
+   "老祖宗"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以資歷、財富與情感權威維繫賈府日常秩序的老祖母，也是繁華生活最敏銳的策展者。",
+  "identity": "榮國府最高輩分的史氏太夫人，賈寶玉與林黛玉的外祖母",
+  "image": "jia-mu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "賈母滿頭銀髮盤起、身穿深色錦袍，慈祥站姿定妝照。"
+ },
+ {
+  "slug": "jia-zheng",
+  "name": "賈政",
+  "aliases": [
+   "政老爺",
+   "老爺"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以儒家仕途與家法衡量兒子的官僚父親，嚴峻外表下也偶爾顯出審美與責任感。",
+  "identity": "工部官員、榮國府二老爺，賈寶玉之父",
+  "image": "jia-zheng.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "賈政頭戴紗帽、身穿深藍長袍，嚴肅站姿定妝照。"
+ },
+ {
+  "slug": "jia-lian",
+  "name": "賈璉",
+  "aliases": [
+   "璉二爺",
+   "二爺"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "在鳳姐權勢、家族差使與個人慾望間周旋的年輕管事者，精明卻缺乏穩定原則。",
+  "identity": "榮國府長房公子，王熙鳳之夫，承辦家族內外事務",
+  "image": "jia-lian.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "賈璉頭戴小帽、身穿灰褐長袍配荷包，精明站姿定妝照。"
+ },
+ {
+  "slug": "xue-pan",
+  "name": "薛蟠",
+  "aliases": [
+   "薛大爺",
+   "呆霸王",
+   "文起"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "倚仗財勢、衝動任性的皇商少主，以粗疏欲望不斷把家人與自己拖入麻煩。",
+  "identity": "薛家少主、皇商家族繼承人，薛寶釵之兄",
+  "image": "xue-pan.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "薛蟠體型壯碩、身穿織金錦袍戴多枚戒指，站姿定妝照。"
+ },
+ {
+  "slug": "liu-laolao",
+  "name": "劉姥姥",
+  "aliases": [
+   "姥姥",
+   "劉老老"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "靠兩畝薄田度日的鄉村老婦，以膽識、幽默與務實眼光穿過賈府的禮法迷宮。",
+  "identity": "京郊貧農老寡婦，透過女婿王狗兒與王家舊親進入賈府",
+  "image": "liu-laolao.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "劉姥姥頭包布巾、身穿補丁粗布衣，樸實站姿定妝照。"
+ },
+ {
+  "slug": "zi-juan",
+  "name": "紫鵑",
+  "aliases": [
+   "紫鵑姐姐",
+   "鸚哥"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以照料、試探和直言替黛玉守住現實邊界的貼身侍女，安靜卻極有判斷力。",
+  "identity": "林黛玉最親近的貼身侍女，原為賈母房中丫鬟",
+  "image": "zi-juan.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "紫鵑身穿紫色襖裙、腰間掛著鑰匙荷包，端正站姿定妝照。"
+ },
+ {
+  "slug": "ping-er",
+  "name": "平兒",
+  "aliases": [
+   "平儿",
+   "平姑娘"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "身處夫妻與主僕權力夾縫的能幹助手，以分寸、同理和執行力替許多人留下一線餘地。",
+  "identity": "王熙鳳的心腹大丫鬟、賈璉通房，協助處理榮府家務",
+  "image": "ping-er.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "平兒身穿素雅背心長裙，配荷包玉簪，溫婉站姿定妝照。"
+ }
+]

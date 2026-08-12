@@ -1,0 +1,246 @@
+[
+ {
+  "slug": "hu-sanniang",
+  "name": "扈三娘",
+  "aliases": [
+   "一丈青"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "善使雙刀、能在馬上擒將的年輕女將，在家族覆滅與被安排婚姻後仍以戰技取得梁山席位。",
+  "identity": "獨龍岡扈家莊女將，後成為梁山馬軍頭領",
+  "image": "hu-sanniang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披暗紅戰甲、腰配雙刀的年輕女將定妝照"
+ },
+ {
+  "slug": "sun-erniang",
+  "name": "孫二娘",
+  "aliases": [
+   "母夜叉"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在十字坡經營黑店、能獨立判斷來客與出手時機的江湖店主，粗獷外表下有自己的行業規矩。",
+  "identity": "十字坡酒店女店主、張青之妻，後為梁山頭領",
+  "image": "sun-erniang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭包藍巾、腰繫圍裙的黑店女掌櫃定妝照"
+ },
+ {
+  "slug": "gu-dasao",
+  "name": "顧大嫂",
+  "aliases": [
+   "母大蟲"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "能把親族、酒店與武力迅速組織成營救網路的強悍女頭領，行事比孫二娘更直接、更具號召力。",
+  "identity": "登州酒店女店主、孫新之妻，策動劫牢並加入梁山",
+  "image": "gu-dasao.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿藏青短衣、手持大刀的強悍女頭領定妝照"
+ },
+ {
+  "slug": "pan-jinlian",
+  "name": "潘金蓮",
+  "aliases": [
+   "金蓮"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在不對等婚姻、被拒的慾望與王婆操弄中選擇越過道德與法律界線，最終引爆武家悲劇。",
+  "identity": "武大之妻，武松陽穀縣故事中的核心人物",
+  "image": "pan-jinlian.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿粉褐上衣配深藍長裙的年輕婦人定妝照"
+ },
+ {
+  "slug": "yan-poxi",
+  "name": "閻婆惜",
+  "aliases": [
+   "婆惜"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以書信祕密與宋江談判、要求掌握自身利益的年輕女性，強硬選擇把兩人推向致命衝突。",
+  "identity": "受宋江資助安葬父親後成為其外室的年輕女性",
+  "image": "yan-poxi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿暗紅上衣配粉裙的年輕女子定妝照"
+ },
+ {
+  "slug": "pan-qiaoyun",
+  "name": "潘巧雲",
+  "aliases": [
+   "巧雲"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在疏離婚姻中尋求情感與欲望、又以謊言維持雙重生活的女性，最終被捲入極端私刑。",
+  "identity": "楊雄之妻，薊州故事中與裴如海私通的核心人物",
+  "image": "pan-qiaoyun.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿灰紫長衫、神情憂鬱的年輕婦人定妝照"
+ },
+ {
+  "slug": "wang-po",
+  "name": "王婆",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "熟悉街坊欲望與弱點的茶坊老婦，把媒合、試探和勒索拆成一套可執行步驟。",
+  "identity": "陽穀縣賣茶老婦與媒合者，策動西門慶、潘金蓮私情",
+  "image": "wang-po.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿藍布圍裙、面容精明的茶坊老婦定妝照"
+ },
+ {
+  "slug": "lin-niangzi",
+  "name": "林娘子",
+  "aliases": [
+   "林沖娘子"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在權勢騷擾與丈夫遭陷害的壓力下維持拒絕與尊嚴，其處境揭露東京權貴對平民家庭的侵害。",
+  "identity": "林沖之妻，高衙內逼迫事件中的核心受害者",
+  "image": "lin-niangzi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿素雅長袍、氣質端莊的年輕婦人定妝照"
+ },
+ {
+  "slug": "song-jiang",
+  "name": "宋江",
+  "aliases": [
+   "公明",
+   "及時雨",
+   "呼保義"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以仗義名聲、人情網路與政治判斷凝聚梁山，同時始終把群體命運拉向被朝廷承認的方向。",
+  "identity": "鄆城縣押司、梁山核心領袖",
+  "image": "song-jiang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿藏青袍、外披暗紅披肩的中年男子定妝照"
+ },
+ {
+  "slug": "wu-yong",
+  "name": "吳用",
+  "aliases": [
+   "學究",
+   "智多星"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "把人情、情報與弱點編成可執行計策的梁山軍師，既能解局也常以操控他人推動局勢。",
+  "identity": "鄉村學究、梁山軍師",
+  "image": "wu-yong.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴黑巾、手持摺扇的儒生軍師定妝照"
+ },
+ {
+  "slug": "lu-junyi",
+  "name": "盧俊義",
+  "aliases": [
+   "玉麒麟"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "兼具富戶教養與頂尖武藝的高大人物，被計策與冤案推離原有生活後成為梁山重要領袖。",
+  "identity": "北京大名府富戶、武藝高強的梁山副領袖",
+  "image": "lu-junyi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披深綠鎧甲、手持長槍的高大將領定妝照"
+ },
+ {
+  "slug": "lin-chong",
+  "name": "林沖",
+  "aliases": [
+   "豹子頭",
+   "林教頭"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "長期忍讓制度與權勢侵害的禁軍教頭，當退路被徹底切斷才把克制轉成決絕反抗。",
+  "identity": "東京八十萬禁軍教頭、後為梁山馬軍頭領",
+  "image": "lin-chong.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披鐵甲、手持長槍的禁軍教頭定妝照"
+ },
+ {
+  "slug": "lu-zhishen",
+  "name": "魯智深",
+  "aliases": [
+   "魯達",
+   "花和尚"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以巨大體格、直覺正義與不守形式的慈悲行動，總在制度失靈時直接替弱者出手。",
+  "identity": "原名魯達的提轄，出家後成為梁山步軍頭領",
+  "image": "lu-zhishen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "光頭、披暗紅巾帶、手持禪杖的壯僧定妝照"
+ },
+ {
+  "slug": "wu-song",
+  "name": "武松",
+  "aliases": [
+   "武二郎",
+   "行者"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "以沉著判斷、驚人武力與強烈報償觀念行動的江湖英雄，個人正義也常走向嚴酷暴力。",
+  "identity": "清河縣武家次子、陽穀縣都頭，後以行者身分加入梁山",
+  "image": "wu-song.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭綁布帶、腰佩雙刀的精壯漢子定妝照"
+ },
+ {
+  "slug": "li-kui",
+  "name": "李逵",
+  "aliases": [
+   "黑旋風",
+   "鐵牛"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "把忠誠、怒氣與破壞力毫無遮掩地放在行動上的猛將，既能護主也常造成難以收拾的傷害。",
+  "identity": "沂州百丈村出身的梁山步軍猛將",
+  "image": "li-kui.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "蓄濃密鬍鬚、手持雙斧的黑衣猛漢定妝照"
+ },
+ {
+  "slug": "yang-zhi",
+  "name": "楊志",
+  "aliases": [
+   "青面獸"
+  ],
+  "gender": "男",
+  "importance": "protagonist",
+  "one_liner": "帶醒目青色胎記、執著恢復軍職的將門後裔，屢次因制度、運氣與人際失敗被推向草莽。",
+  "identity": "將門後裔、殿司制使，後為梁山馬軍頭領",
+  "image": "yang-zhi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "臉帶青色胎記、身披鐵甲的將門後裔定妝照"
+ }
+]

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  通用角色館（AI 選角定妝照）。頁面只需 front matter：layout / book_id / permalink。
+  硬規則同其他 book layout：本檔不得出現書名字串或單一作品專屬路徑。
+  資料：_data/book_characters/{book_id}.json（tools/import_book_characters.mjs 生成，schema 驗證納入 npm test）。
+{%- endcomment -%}
+{%- assign book = site.data.books | where: 'id', page.book_id | first -%}
+{%- assign chars = site.data.book_characters[page.book_id] -%}
+{%- assign seal = book.title | slice: 0, 1 -%}
+{%- capture book_url %}/{{ book.id }}/{% endcapture -%}
+{%- capture img_base %}/assets/img/books/{{ book.id }}/characters/{% endcapture -%}
+{%- capture page_title %}{{ book.title }}　角色定妝照{% endcapture -%}
+{%- capture page_desc %}《{{ book.title }}》{{ chars | size }} 位主要角色的選角定妝照：把書裡的人物想像成開拍前的試裝照，每張都有大頭特寫、三面全身與隨身道具細節。{% endcapture -%}
+<head>
+  {%- include book/head.html page_title=page_title description=page_desc og_type='website' -%}
+  <link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ page_title | jsonify }},
+    "description": {{ page_desc | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "inLanguage": "zh-TW"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ '/books/' | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ book.title | jsonify }}, "item": {{ book_url | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 3, "name": "角色定妝照", "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk" data-book="{{ book.id }}">
+  <a class="bk-skip" href="#charlist">跳到角色列表</a>
+  {%- include book/topbar.html brand_url=book_url brand_name=book.title brand_sub='角色定妝照' seal=seal -%}
+
+  <main class="bk-shell">
+    <nav class="bk-crumb" aria-label="麵包屑">
+      <ol>
+        <li><a href="{{ '/books/' | relative_url }}">古典小說書房</a></li>
+        <li><a href="{{ book_url | relative_url }}">{{ book.title }}</a></li>
+        <li aria-current="page">角色定妝照</li>
+      </ol>
+    </nav>
+
+    <header class="bk-hero">
+      <span class="bk-kicker">如果這本書開拍</span>
+      <h1>{{ book.title }}　角色定妝照</h1>
+      <p>書裡的人走出來會長什麼樣子？這裡是 {{ chars | size }} 位主要角色的「選角定妝照」——依原文對外貌、年齡與身分的描寫設計，每張都有大頭特寫、三面全身與隨身道具細節。點圖可以放大，左右鍵換人。</p>
+    </header>
+
+    <ul id="charlist" class="bk-chargrid">
+      {%- for c in chars %}
+      <li class="bk-char" id="{{ c.slug }}">
+        <figure>
+          <a class="bk-zoom" href="{{ img_base | append: c.image | relative_url }}" data-gallery="bk-chars" data-title="{{ c.name }}" data-description="{{ c.one_liner | escape }}">
+            <img src="{{ img_base | append: c.image | relative_url }}" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}" loading="lazy" decoding="async">
+          </a>
+        </figure>
+        <h2>{{ c.name }}{% if c.aliases %}<small>{{ c.aliases | join: '、' }}</small>{% endif %}</h2>
+        <span class="bk-byline">{{ c.identity }}</span>
+        <p>{{ c.one_liner }}</p>
+        {%- if c.variants %}
+        <div class="bk-vars">
+          {%- for v in c.variants %}
+          <a class="bk-zoom" href="{{ img_base | append: v.image | relative_url }}" data-gallery="bk-chars" data-title="{{ c.name }}・{{ v.label }}" data-description="{{ v.alt | escape }}">
+            <img src="{{ img_base | append: v.image | relative_url }}" alt="{{ v.alt }}" width="{{ v.width }}" height="{{ v.height }}" loading="lazy" decoding="async">
+            <span>{{ v.label }}</span>
+          </a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <aside class="bk-note" aria-label="這一館怎麼來的">
+      <h2>這一館怎麼來的</h2>
+      <p>圖像由 AI 依原文的外貌、年齡與身分描寫生成，經逐張人工檢查後收錄——它們是創作詮釋，不是史實畫像，更不是古人真容。人物介紹同樣由 AI 依原文整理，原文沒有明說、由情節推斷的細節會標「（推斷）」。這些輔助內容與原文分開存放，不混進原文。</p>
+      <p class="bk-cta"><a href="{{ book_url | append: 'text/' | relative_url }}">讀《{{ book.title }}》原文 ▶</a></p>
+    </aside>
+  </main>
+
+  {%- include book/footer.html -%}
+  {%- include book/lightbox.html -%}
+</body>
+</html>

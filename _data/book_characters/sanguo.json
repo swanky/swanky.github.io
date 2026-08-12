@@ -1,0 +1,241 @@
+[
+ {
+  "slug": "diao-chan",
+  "name": "貂蟬",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在權臣壓迫下承擔連環計風險，以表演、判斷與勇氣周旋於董卓與呂布之間。",
+  "identity": "司徒王允府中歌伎，連環計的執行者",
+  "image": "diao-chan.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿深緋長衫、髮插金簪的年輕女子定妝照"
+ },
+ {
+  "slug": "sun-furen",
+  "name": "孫夫人",
+  "aliases": [
+   "孫權之妹"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "帶著持兵侍女出嫁的江東貴女，在婚姻聯盟與家族命令之間展現剛烈主見。",
+  "identity": "孫權之妹、劉備之妻，江東政治婚姻的核心人物",
+  "image": "sun-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披紅黑戰甲、腰佩長劍的貴族女將定妝照"
+ },
+ {
+  "slug": "mi-furen",
+  "name": "糜夫人",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在長坂坡潰散中以受傷之身保全幼主，把危局裡的判斷置於自身安危之前。",
+  "identity": "劉備夫人，長坂坡亂軍中保護阿斗的重要人物",
+  "image": "mi-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿褐色長袍、神情疲憊的年輕婦人定妝照"
+ },
+ {
+  "slug": "gan-furen",
+  "name": "甘夫人",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在長年遷徙與戰亂中維繫劉備家室，也是阿斗身世與蜀漢繼承線的重要母親。",
+  "identity": "劉備夫人、阿斗生母",
+  "image": "gan-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披素色披肩、氣質溫婉的年輕婦人定妝照"
+ },
+ {
+  "slug": "cai-furen",
+  "name": "蔡夫人",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "以母族與內宅影響力介入荊州繼承，為兒子劉琮爭取位置的政治行動者。",
+  "identity": "劉表後妻、劉琮之母，荊州繼承鬥爭的推動者",
+  "image": "cai-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿深紫長袍、神情威嚴的中年婦人定妝照"
+ },
+ {
+  "slug": "fu-huanghou",
+  "name": "伏皇后",
+  "aliases": [
+   "伏后"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "身在受控宮廷仍試圖聯絡外援反抗曹操，以皇后身分承擔高風險政治行動。",
+  "identity": "漢獻帝皇后，反對曹操專權的宮廷政治人物",
+  "image": "fu-huanghou.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴鳳冠、身穿黑紅宮裝的皇后定妝照"
+ },
+ {
+  "slug": "zhen-shi",
+  "name": "甄氏",
+  "aliases": [
+   "甄夫人"
+  ],
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "在袁曹政權更替中被迫轉換家族位置的貴族女性，其處境映出勝負如何進入婚姻。",
+  "identity": "袁熙之妻，鄴城陷落後進入曹氏家族",
+  "image": "zhen-shi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身穿淡紫長袍、氣質端莊的年輕女子定妝照"
+ },
+ {
+  "slug": "zhurong-furen",
+  "name": "祝融夫人",
+  "gender": "女",
+  "importance": "major",
+  "one_liner": "能以飛刀和騎戰正面迎敵的南中女將，在部族與婚姻聯盟中擁有實際軍事能力。",
+  "identity": "南中孟獲之妻、親自率軍出戰的女性武將",
+  "image": "zhurong-furen.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "梳雙辮、腰佩飛刀的南中女將定妝照"
+ },
+ {
+  "slug": "liu-bei",
+  "name": "劉備",
+  "aliases": [
+   "玄德",
+   "劉玄德",
+   "先主"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以仁厚名望、韌性與結盟能力在亂世反覆失地又重建勢力的核心領袖。",
+  "identity": "蜀漢開國君主，漢室宗親與流動軍政集團領袖",
+  "image": "liu-bei.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴髮冠、身披藏青長袍配鎧甲的中年男子定妝照"
+ },
+ {
+  "slug": "guan-yu",
+  "name": "關羽",
+  "aliases": [
+   "關公",
+   "雲長",
+   "關雲長"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以忠義、自尊與壓倒性武勇著稱的統帥，威嚴也可能轉成孤高判斷。",
+  "identity": "劉備結義兄弟、蜀漢核心將領",
+  "image": "guan-yu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "蓄長鬚、手持長刀、身披綠袍的統帥定妝照"
+ },
+ {
+  "slug": "zhang-fei",
+  "name": "張飛",
+  "aliases": [
+   "翼德",
+   "張翼德"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以爆發力、直率與震懾性嗓門衝在最前，也因失控暴烈傷害自己的軍隊。",
+  "identity": "劉備結義兄弟、蜀漢猛將",
+  "image": "zhang-fei.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披黑色鎧甲、手持長槍的魁梧將領定妝照"
+ },
+ {
+  "slug": "zhuge-liang",
+  "name": "諸葛亮",
+  "aliases": [
+   "孔明",
+   "諸葛孔明",
+   "臥龍"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以長期規畫、知識與自律把流亡集團變成國家的軍政設計者。",
+  "identity": "蜀漢丞相、軍師與政略核心",
+  "image": "zhuge-liang.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴綸巾、手持羽扇的儒雅軍師定妝照"
+ },
+ {
+  "slug": "cao-cao",
+  "name": "曹操",
+  "aliases": [
+   "孟德",
+   "曹孟德",
+   "魏王"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "兼具政治手腕、軍事冒險與詩人氣質的權力中心，善用人才也深受猜疑驅動。",
+  "identity": "魏國奠基者、漢末權臣與統帥",
+  "image": "cao-cao.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴官帽、身披黑紅鎧甲的中年權臣定妝照"
+ },
+ {
+  "slug": "sun-quan",
+  "name": "孫權",
+  "aliases": [
+   "仲謀",
+   "孫仲謀",
+   "吳侯"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "在父兄基業、江東士族與強敵夾擊間維持平衡的年輕君主。",
+  "identity": "江東之主、孫吳政權核心",
+  "image": "sun-quan.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "頭戴冠飾、身穿黃袍配佩劍的年輕君主定妝照"
+ },
+ {
+  "slug": "zhou-yu",
+  "name": "周瑜",
+  "aliases": [
+   "公瑾",
+   "周公瑾",
+   "大都督"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "兼具音律修養、俊雅風度與軍事決斷的江東統帥，在聯盟中維持吳方主導權。",
+  "identity": "孫吳大都督、赤壁之戰核心統帥",
+  "image": "zhou-yu.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "身披紅黑戰甲、佩戴玉飾的儒將定妝照"
+ },
+ {
+  "slug": "sima-yi",
+  "name": "司馬懿",
+  "aliases": [
+   "仲達",
+   "司馬仲達"
+  ],
+  "gender": "男",
+  "importance": "major",
+  "one_liner": "以耐心、偽裝與風險控制熬過多次政局變化，成為後期真正掌握節奏的人。",
+  "identity": "曹魏後期統帥與權力核心",
+  "image": "sima-yi.jpg",
+  "width": 1672,
+  "height": 941,
+  "alt": "髮鬚灰白、身披黑色長袍的老臣定妝照"
+ }
+]

@@ -7,6 +7,7 @@
 {%- assign book = site.data.books | where: 'id', page.book_id | first -%}
 {%- assign seal = book.title | slice: 0, 1 -%}
 {%- assign all_chapters = site.books | where: 'book_id', page.book_id -%}
+{%- assign chars = site.data.book_characters[page.book_id] -%}
 {%- capture page_title %}{{ book.title }}　原文閱讀{% endcapture -%}
 {%- capture page_desc %}{{ book.title }}（{{ book.author }}・{{ book.era }}代）原文全文閱讀。{{ book.blurb }}{% endcapture -%}
 <head>
@@ -55,6 +56,7 @@
         <li>章回小說</li>
         <li>{{ book.editions | size }} 個版本</li>
         <li>目前收錄 {{ all_chapters | size }} 篇原文</li>
+        {%- if chars %}<li>{{ chars | size }} 位角色定妝照</li>{% endif %}
       </ul>
     </header>
 
@@ -75,6 +77,15 @@
       </li>
       {%- endfor -%}
     </ul>
+
+    {%- if chars %}
+    {%- capture chars_url %}/{{ book.id }}/characters/{% endcapture %}
+    <aside class="bk-note" aria-label="角色定妝照">
+      <h2>如果這本書開拍</h2>
+      <p>書裡的人走出來會長什麼樣子？這裡有 {{ chars | size }} 位主要角色的選角定妝照——依原文描寫設計，每張都有大頭特寫、三面全身與隨身道具細節。</p>
+      <p class="bk-cta"><a href="{{ chars_url | relative_url }}">看角色定妝照 ▶</a></p>
+    </aside>
+    {%- endif %}
 
     {%- if book.lineage %}
     <aside class="bk-note" aria-label="版本沿革">
