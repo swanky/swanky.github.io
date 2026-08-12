@@ -169,6 +169,65 @@ extra_css: |
   .hd-product-card .hd-prod-badge { display: inline-block; font-size: 0.74rem; font-weight: 700; color: #c0392b; background: #fdecec; border-radius: 5px; padding: 3px 9px; margin-bottom: 10px; }
   .hd-product-card .hd-prod-crypto-hint { display: inline-block; font-size: 0.8rem; color: #c98f00; text-decoration: none; margin: 0 0 14px; border-bottom: 1px dashed #e6c879; }
   .hd-product-card .hd-prod-crypto-hint:hover { color: var(--c-gold); }
+  /* 結果頁付費報告轉換模組：先交付完整免費結果，再把「圖」接到可採取的下一步 */
+  .hd-result-offer { max-width: 1000px; margin: 30px auto 6px; background: #fff; border: 1px solid #dfc985; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 38px rgba(70,54,18,.10); }
+  .hd-result-offer-grid { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(310px,.8fr); }
+  .hd-offer-copy { padding: 30px 32px; }
+  .hd-offer-kicker { display: inline-block; margin-bottom: 9px; color: #8B5E00; font-size: .76rem; font-weight: 800; letter-spacing: .08em; }
+  .hd-offer-copy h3 { margin: 0 0 10px; color: #111; font-size: 1.35rem; line-height: 1.45; font-weight: 750; }
+  .hd-offer-copy h3 span { color: #8B5E00; }
+  .hd-offer-lead { margin: 0; color: #5f5a50; font-size: .94rem; line-height: 1.75; }
+  .hd-offer-points { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin-top: 20px; }
+  .hd-offer-point { min-width: 0; padding: 13px 13px 12px; border: 1px solid #eee5d2; border-radius: 10px; background: #fffaf0; }
+  .hd-offer-point strong { display: block; margin-bottom: 4px; color: #2c2924; font-size: .87rem; }
+  .hd-offer-point span { display: block; color: #756e61; font-size: .79rem; line-height: 1.55; }
+  .hd-offer-action { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: #232020; color: #fff; }
+  .hd-offer-action-label { margin: 0 0 5px; color: #F5C53B; font-size: .76rem; font-weight: 800; letter-spacing: .08em; }
+  .hd-offer-price { margin: 0 0 3px; color: #fff; font-size: 1.75rem; line-height: 1.2; font-weight: 800; }
+  .hd-offer-price small { color: rgba(255,255,255,.68); font-size: .78rem; font-weight: 500; }
+  .hd-offer-meta { margin: 0 0 16px; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.55; }
+  .hd-report-topic { margin: 0 0 14px; padding: 0; border: 0; }
+  .hd-report-topic legend { margin-bottom: 7px; color: rgba(255,255,255,.78); font-size: .78rem; }
+  .hd-report-topic-options { display: grid; gap: 7px; }
+  .hd-report-topic label { position: relative; margin: 0; cursor: pointer; }
+  .hd-report-topic input { position: absolute; opacity: 0; pointer-events: none; }
+  .hd-report-topic span { display: block; padding: 9px 11px; border: 1px solid rgba(255,255,255,.24); border-radius: 10px; color: rgba(255,255,255,.8); background: rgba(255,255,255,.05); font-size: .82rem; line-height: 1.35; transition: .2s; }
+  .hd-report-topic input:checked + span { border-color: #E5A300; color: #fff; background: rgba(229,163,0,.18); box-shadow: inset 3px 0 0 #E5A300; }
+  .hd-report-topic input:focus-visible + span { outline: 3px solid rgba(245,197,59,.45); outline-offset: 2px; }
+  .hd-result-report-cta { display: block; width: 100%; padding: 13px 16px; border: 0; border-radius: 10px; background: #E5A300; color: #111; font-size: .93rem; font-weight: 750; text-align: center; text-decoration: none; transition: .22s; }
+  .hd-result-report-cta:hover { background: #F5C53B; color: #111; text-decoration: none; transform: translateY(-1px); }
+  .hd-offer-safe-note { margin: 9px 0 0; color: rgba(255,255,255,.62); font-size: .75rem; line-height: 1.5; text-align: center; }
+  .hd-offer-free-link { display: block; margin-top: 13px; color: #F5C53B; font-size: .8rem; text-align: center; text-decoration: none; }
+  .hd-offer-free-link:hover { color: #fff; text-decoration: underline; }
+  .hd-report-preview { border-top: 1px solid #eee5d2; background: #fffdf8; }
+  .hd-report-preview > summary { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 22px; color: #5c5549; cursor: pointer; list-style: none; font-size: .88rem; font-weight: 700; }
+  .hd-report-preview > summary::-webkit-details-marker { display: none; }
+  .hd-report-preview > summary::after { content: '＋'; flex: 0 0 auto; color: #8B5E00; font-size: 1.15rem; }
+  .hd-report-preview[open] > summary::after { content: '－'; }
+  .hd-report-preview > summary small { color: #928a7c; font-size: .76rem; font-weight: 500; }
+  .hd-report-preview-body { padding: 3px 22px 22px; }
+  .hd-report-preview-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+  .hd-report-sample { display: block; min-width: 0; padding: 9px; border: 1px solid #e8dfcd; border-radius: 10px; background: #fff; color: #3b3730; }
+  .hd-report-sample-visual { position: relative; aspect-ratio: 4 / 5; overflow: hidden; padding: 18px 16px; border: 7px solid #eeeae2; border-radius: 7px; background: #fffdf9; box-shadow: inset 0 0 0 1px #e7dfd0; }
+  .hd-report-mock-kicker { display: block; color: #8B5E00; font-size: .55rem; font-weight: 800; letter-spacing: .12em; }
+  .hd-report-mock-title { display: block; margin-top: 4px; color: #211f1c; font-size: .82rem; font-weight: 800; line-height: 1.35; }
+  .hd-report-mock-rule { display: block; width: 42px; height: 2px; margin: 8px 0 10px; background: #E5A300; }
+  .hd-report-mock-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .hd-report-mock-stat { min-width: 0; padding: 7px; border-radius: 5px; background: #f7f3eb; }
+  .hd-report-mock-stat small { display: block; color: #968b7a; font-size: .43rem; }
+  .hd-report-mock-stat b { display: block; margin-top: 2px; color: #37322c; font-size: .57rem; line-height: 1.25; }
+  .hd-report-mock-callout { margin-top: 8px; padding: 8px; border-left: 3px solid #E5A300; background: #fff7e5; color: #6d6457; font-size: .47rem; line-height: 1.55; }
+  .hd-report-mock-graph { display: grid; grid-template-columns: 1fr 1.5fr 1fr; align-items: center; gap: 5px; height: 72%; }
+  .hd-report-mock-lines { color: #9a9080; font-size: .43rem; line-height: 1.7; }
+  .hd-report-mock-lines.is-right { text-align: right; }
+  .hd-report-mock-svg { width: 100%; height: auto; }
+  .hd-report-mock-checks { display: grid; gap: 7px; margin-top: 2px; }
+  .hd-report-mock-check { position: relative; padding: 8px 8px 8px 25px; border-radius: 5px; background: #f7f3eb; color: #5d554a; font-size: .5rem; line-height: 1.45; }
+  .hd-report-mock-check::before { content: '✓'; position: absolute; left: 9px; top: 8px; color: #8B5E00; font-weight: 800; }
+  .hd-report-mock-quote { margin-top: 9px; padding: 9px; border: 1px solid #ead49a; border-radius: 5px; color: #6b5a35; font-size: .53rem; line-height: 1.5; text-align: center; }
+  .hd-report-sample strong { display: block; margin: 9px 3px 2px; font-size: .83rem; }
+  .hd-report-sample > span { display: block; margin: 0 3px 2px; color: #80786b; font-size: .74rem; line-height: 1.45; }
+  .hd-report-sample-note { margin: 12px 0 0; color: #8a8275; font-size: .76rem; line-height: 1.6; text-align: center; }
   /* 穩定幣付款區 */
   .hd-crypto-pay { max-width: 880px; margin: 30px auto 0; background: linear-gradient(135deg,#fffaf0,#fff6e3); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px 28px; text-align: center; }
   .hd-crypto-pay h3 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 8px; }
@@ -309,6 +368,21 @@ extra_css: |
     .hd-products { grid-template-columns: 1fr; }
     .hd-readout-grid { grid-template-columns: 1fr; }
     .hd-glossary-grid { grid-template-columns: 1fr; }
+    .hd-result-offer-grid { grid-template-columns: 1fr; }
+    .hd-offer-points { grid-template-columns: 1fr; gap: 7px; margin-top: 15px; }
+    .hd-offer-point { display: grid; grid-template-columns: 84px 1fr; align-items: start; gap: 8px; padding: 9px 10px; }
+    .hd-offer-point strong { margin: 0; }
+    .hd-offer-point span { line-height: 1.45; }
+    .hd-report-preview-grid { grid-template-columns: 1fr; }
+    .hd-offer-copy { padding: 21px 20px; }
+    .hd-offer-copy h3 { font-size: 1.22rem; line-height: 1.38; }
+    .hd-offer-lead { font-size: .88rem; line-height: 1.65; }
+    .hd-offer-action { padding: 21px 20px; }
+    .hd-offer-meta { margin-bottom: 12px; }
+    .hd-report-topic { margin-bottom: 11px; }
+    .hd-report-preview > summary { align-items: flex-start; padding: 15px 18px; }
+    .hd-report-preview > summary span { display: flex; flex-direction: column; gap: 3px; }
+    .hd-report-preview-body { padding: 3px 18px 18px; }
   }
 
   /* ============================================================
@@ -528,7 +602,7 @@ extra_css: |
         <button id="hd-share-link">複製分享連結</button>
         <button id="hd-goto-composite">加入另一個人，看你們的合盤 →</button>
         <button id="hd-reset">重新輸入</button>
-        <a href="#hd-report" id="hd-report-link">深入解讀：付費報告 ↓</a>
+        <a href="#hd-result-offer" id="hd-report-link">把這張圖用進工作：看深度報告 ↓</a>
       </div>
       <div class="hd-share-note" id="hd-share-note"></div>
 
@@ -538,6 +612,68 @@ extra_css: |
 
       <!-- Layer 1 續：設計重點白話展開 -->
       <div id="hd-readout"></div>
+
+      <!-- 生成後付費下一步：先交付完整免費摘要，再說明付費報告多解決什麼 -->
+      <aside class="hd-result-offer" id="hd-result-offer" aria-labelledby="hd-result-offer-title">
+        <div class="hd-result-offer-grid">
+          <div class="hd-offer-copy">
+            <span class="hd-offer-kicker">根據你剛生成的結果</span>
+            <h3 id="hd-result-offer-title">從「<span id="hd-report-personal-key">你的類型 × 內在權威</span>」開始，回答這張圖怎麼用在工作裡</h3>
+            <p class="hd-offer-lead">免費結果已完整保留。深度報告不再重複名詞，而是把你的圖翻成職涯、帶人與做決定時可以實際觀察的做法。</p>
+            <div class="hd-offer-points">
+              <div class="hd-offer-point"><strong>做決定時</strong><span>分清楚什麼值得回應、什麼該先等一下。</span></div>
+              <div class="hd-offer-point"><strong>安排工作時</strong><span>看見你的發揮方式、耗損來源與合適節奏。</span></div>
+              <div class="hd-offer-point"><strong>和人協作時</strong><span>理解別人怎麼讀你，也避免把自己的節奏套在對方身上。</span></div>
+            </div>
+          </div>
+          <div class="hd-offer-action">
+            <p class="hd-offer-action-label">主題式深度報告</p>
+            <p class="hd-offer-price">NT$680 <small>早鳥驗證價</small></p>
+            <p class="hd-offer-meta">10+ 頁・AI 輔助生成、人工校稿・3 個工作天交付</p>
+            <fieldset class="hd-report-topic">
+              <legend>這次最想釐清：</legend>
+              <div class="hd-report-topic-options">
+                <label><input type="radio" name="hd-report-topic" value="career" checked><span>職涯定位與工作節奏</span></label>
+                <label><input type="radio" name="hd-report-topic" value="leadership"><span>帶人方式與團隊協作</span></label>
+              </div>
+            </fieldset>
+            <a class="hd-result-report-cta" id="hd-result-report-cta" href="mailto:swanky.hsiao@gmail.com?subject={{ '人類圖深度報告申請' | url_encode }}">申請我的深度報告 →</a>
+            <p class="hd-offer-safe-note">只會開啟你的電子郵件草稿，送出前可修改；不會自動付款。</p>
+            <a class="hd-offer-free-link" href="#hd-layer2">繼續看完整免費解讀 ↓</a>
+          </div>
+        </div>
+        <details class="hd-report-preview" id="hd-report-preview">
+          <summary><span>先看 3 張報告內容示意 <small>不含客戶資料</small></span></summary>
+          <div class="hd-report-preview-body">
+            <div class="hd-report-preview-grid">
+              <div class="hd-report-sample">
+                <div class="hd-report-sample-visual" role="img" aria-label="人類圖深度報告內容示意：一眼看懂個人設計的摘要頁">
+                  <span class="hd-report-mock-kicker">核心藍圖</span><span class="hd-report-mock-title">01　一眼看懂你的設計</span><span class="hd-report-mock-rule"></span>
+                  <div class="hd-report-mock-stats"><div class="hd-report-mock-stat"><small>類型</small><b>顯示生產者</b></div><div class="hd-report-mock-stat"><small>內在權威</small><b>薦骨型權威</b></div><div class="hd-report-mock-stat"><small>人生角色</small><b>3／6</b></div><div class="hd-report-mock-stat"><small>人生策略</small><b>等待回應</b></div></div>
+                  <div class="hd-report-mock-callout">先抓住最重要的決策方式與工作節奏，再往下讀中心、通道與天賦細節。</div>
+                </div>
+                <strong>01・一眼看懂你的設計</strong><span>先把類型、權威、策略與關鍵信號放回同一張地圖。</span>
+              </div>
+              <div class="hd-report-sample">
+                <div class="hd-report-sample-visual" role="img" aria-label="人類圖深度報告內容示意：個人能量圖與行星資訊頁">
+                  <span class="hd-report-mock-kicker">能量圖</span><span class="hd-report-mock-title">02　你的個人能量圖</span><span class="hd-report-mock-rule"></span>
+                  <div class="hd-report-mock-graph"><div class="hd-report-mock-lines">太陽　29.3<br>地球　30.3<br>月亮　24.4<br>水星　33.2</div><svg class="hd-report-mock-svg" viewBox="0 0 120 190" aria-hidden="true"><g fill="none" stroke="#cfc7ba" stroke-width="4"><path d="M60 25v28M60 70v24M60 110v24M60 150v20M38 110l-18 25M82 110l18 25"/></g><g stroke="#8d8374" stroke-width="1.5"><path d="M60 10 76 34H44Z" fill="#F5C53B"/><path d="M44 48h32l-16 23Z" fill="#73BFA3"/><rect x="45" y="75" width="30" height="28" rx="5" fill="#B6A2D8"/><path d="m60 108 20 20-20 20-20-20Z" fill="#F5C53B"/><rect x="45" y="151" width="30" height="26" rx="5" fill="#D87862"/><path d="m34 132-22 18v-36Z" fill="#fff"/><path d="m86 132 22 18v-36Z" fill="#fff"/></g></svg><div class="hd-report-mock-lines is-right">8.6　太陽<br>14.6　地球<br>58.6　月亮<br>2.3　水星</div></div>
+                </div>
+                <strong>02・你的個人能量圖</strong><span>圖、中心、通道與行星位置放在一起，不用來回對照。</span>
+              </div>
+              <div class="hd-report-sample">
+                <div class="hd-report-sample-visual" role="img" aria-label="人類圖深度報告內容示意：日常提醒與行動建議頁">
+                  <span class="hd-report-mock-kicker">生活練習</span><span class="hd-report-mock-title">11　把理解帶回日常</span><span class="hd-report-mock-rule"></span>
+                  <div class="hd-report-mock-checks"><div class="hd-report-mock-check">今天做決定前，身體先出現什麼反應？</div><div class="hd-report-mock-check">哪一種工作讓你越做越有能量？</div><div class="hd-report-mock-check">哪一次協作讓你感到被理解？</div></div>
+                  <div class="hd-report-mock-quote">先觀察，再驗證。這張圖提供的是線索，不替你決定答案。</div>
+                </div>
+                <strong>11・把理解帶回日常</strong><span>用提醒與觀察問題，把解讀變成接下來能驗證的行動。</span>
+              </div>
+            </div>
+            <p class="hd-report-sample-note">以上是內容結構示意；你收到的文字會依自己的圖與所選主題重新整理。</p>
+          </div>
+        </details>
+      </aside>
 
       <!-- Layer 2：通道 / 中心 / 輪迴交叉 / 行星細節（v2 摺疊預設收合；v1 攤平） -->
       <details class="hd-layer2" id="hd-layer2">
@@ -625,7 +761,7 @@ extra_css: |
       <p style="max-width:620px; margin:0 auto;">免費版讓你看見輪廓，付費解讀帶你走進細節——把人類圖結構，轉成你職涯與關係裡能用的具體建議。目前為首批驗證階段，以早鳥價回饋前 10 位願意提供使用回饋的人。</p>
 
       <div class="hd-products">
-        <div class="hd-product-card is-featured is-outline">
+        <div class="hd-product-card is-featured">
           <div class="hd-prod-tag">主題式深度報告</div>
           <h4>職涯／帶人 深度解讀報告</h4>
           <div class="hd-prod-price"><span class="hd-prod-was">NT$1,280</span>NT$680<small> / 份</small></div>
@@ -638,10 +774,10 @@ extra_css: |
             <li>點出你容易被誤解的地方，以及最該留意的能量盲點</li>
             <li>附上 7 天自我觀察清單，用日常情境驗證圖上描述準不準</li>
           </ul>
-          <a class="hd-prod-cta" id="hd-cta-report" href="mailto:swanky.hsiao@gmail.com?subject=%E4%BA%BA%E9%A1%9E%E5%9C%96%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%E8%A9%A2%E5%95%8F&body=%E5%97%A8%EF%BC%8C%E5%8F%B2%E6%97%BA%E5%9F%BA%EF%BC%8C%E6%88%91%E6%83%B3%E8%B3%BC%E8%B2%B7%E4%B8%BB%E9%A1%8C%E5%BC%8F%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%EF%BC%88NT%24680%20%E6%97%A9%E9%B3%A5%E5%83%B9%EF%BC%89%E3%80%82%0A%0A%E6%83%B3%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E9%A1%8C%EF%BC%88%E8%81%B7%E6%B6%AF%EF%BC%8F%E5%B8%B6%E4%BA%BA%EF%BC%89%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E6%99%82%E9%96%93%EF%BC%9A%0A%E5%87%BA%E7%94%9F%E5%9C%B0%E9%BB%9E%EF%BC%9A%0A%0A%EF%BC%88%E6%82%A8%E7%9A%84%E5%87%BA%E7%94%9F%E8%B3%87%E6%96%99%E5%83%85%E7%94%A8%E6%96%BC%E8%A3%BD%E4%BD%9C%E5%A0%B1%E5%91%8A%EF%BC%8C%E4%B8%8D%E6%9C%83%E5%85%AC%E9%96%8B%EF%BC%89">來信洽詢報告 →</a>
+          <a class="hd-prod-cta" id="hd-cta-report" href="mailto:swanky.hsiao@gmail.com?subject=%E4%BA%BA%E9%A1%9E%E5%9C%96%E6%B7%B1%E5%BA%A6%E5%A0%B1%E5%91%8A%E7%94%B3%E8%AB%8B">用電子郵件申請深度報告 →</a>
         </div>
 
-        <div class="hd-product-card is-featured">
+        <div class="hd-product-card is-featured is-outline">
           <div class="hd-prod-tag">雙人合盤報告</div>
           <h4>兩人關係 合盤解讀報告</h4>
           <div class="hd-prod-price"><span class="hd-prod-was">NT$2,280</span>NT$1,080<small> / 兩人一份</small></div>

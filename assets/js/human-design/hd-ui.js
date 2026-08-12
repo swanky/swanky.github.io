@@ -13,7 +13,15 @@ import { GATES } from './hd-data-gates.js';
 import { exportBodygraphSvg, exportTransparentPng, exportBrandCard, exportSocialCard } from './hd-export-v2.js';
 import { $, setHTML, setText, on, gtag } from '../core/core-dom.js';
 
-const state = { lastChart: null, hdChart: null, svg: null, v2: false, sel: null };
+const state = {
+  lastChart: null,
+  hdChart: null,
+  svg: null,
+  v2: false,
+  sel: null,
+  reportOfferViewed: false,
+  reportPreviewTracked: false,
+};
 // 表單（年月日時分/城市/手動時區/未知時間）＝hd-form.js factory；tz 與城市標籤狀態在 form 內
 const form = createBirthForm({ prefix: 'hd' });
 
@@ -68,6 +76,8 @@ function onSubmit() {
 // ---- 結果渲染 ----
 function renderResult(chart, stability) {
   state.lastChart = chart;
+  state.reportOfferViewed = false;
+  state.reportPreviewTracked = false;
   const { input, tzInfo } = chart;
   const dateStr = `${input.year}/${String(input.month).padStart(2, '0')}/${String(input.day).padStart(2, '0')} ${String(input.hour).padStart(2, '0')}:${String(input.minute).padStart(2, '0')}`;
   setHTML('hd-meta', `出生：${dateStr}　|　時區：${tzInfo.labelZh}${form.cityLabel ? '（' + form.cityLabel + '）' : ''}`);
@@ -142,6 +152,7 @@ function renderResult(chart, stability) {
 
   // 設計重點解讀（類型／權威／角色／定義 的白話展開）
   setHTML('hd-readout', renderReadout(chart));
+  updateReportOffer();
 
   // 九中心：未定義（仍有啟動閘門）與完全開放（沒有任何啟動閘門）分開標示。
   setHTML('hd-centers-list', CENTER_IDS.map((id) => {
@@ -180,6 +191,92 @@ function renderResult(chart, stability) {
     res.classList.add('is-show');
     res.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+}
+
+// ---- 生成後付費報告下一步 ----
+// 只把主題、類型與 CTA 位置送進 GA4；姓名、出生資料與地點只留在使用者本機的 Email 草稿。
+const REPORT_TOPICS = {
+  career: '職涯定位與工作節奏',
+  leadership: '帶人方式與團隊協作',
+};
+
+function selectedReportTopic() {
+  return document.querySelector('input[name="hd-report-topic"]:checked')?.value || 'career';
+}
+
+function buildReportMailto() {
+  const c = state.lastChart;
+  if (!c) return 'mailto:swanky.hsiao@gmail.com?subject=' + encodeURIComponent('人類圖深度報告申請');
+  const pad = (n) => String(n).padStart(2, '0');
+  const topicKey = selectedReportTopic();
+  const topicLabel = REPORT_TOPICS[topicKey] || REPORT_TOPICS.career;
+  const name = ($('hd-name')?.value || '').trim();
+  const timeLabel = form.isUnknownTime()
+    ? '不確定（本次以正午試算）'
+    : `${pad(c.input.hour)}:${pad(c.input.minute)}`;
+  const placeLabel = form.cityLabel || c.tzInfo?.labelZh || '手動指定時區';
+  const lines = [
+    '嗨，史旺基，我想申請人類圖主題式深度報告（早鳥 NT$680）。',
+    '',
+    `想分析的主題：${topicLabel}`,
+    name ? `稱呼：${name}` : '',
+    `出生資料：${c.input.year}/${pad(c.input.month)}/${pad(c.input.day)} ${timeLabel}，${placeLabel}`,
+    `我的排盤摘要：${TYPES[c.type].nameZh}／${AUTHORITIES[c.authority].nameZh}／人生角色 ${c.profile}／${DEFINITIONS[c.definition].nameZh}`,
+    '',
+    '我目前最想釐清的是：',
+    '（請在這裡補上一句即可）',
+    '',
+    '我了解報告為 AI 輔助生成、人工校稿，預計 3 個工作天交付。',
+  ].filter((line, index, arr) => line !== '' || arr[index - 1] !== '');
+  return `mailto:swanky.hsiao@gmail.com?subject=${encodeURIComponent(`[人類圖深度報告] ${topicLabel}`)}&body=${encodeURIComponent(lines.join('\n'))}`;
+}
+
+function updateReportOffer() {
+  const c = state.lastChart;
+  if (!c) return;
+  setText('hd-report-personal-key', `${TYPES[c.type].nameZh} × ${AUTHORITIES[c.authority].nameZh} × ${c.profile}`);
+  const href = buildReportMailto();
+  const resultCta = $('hd-result-report-cta');
+  const detailCta = $('hd-cta-report');
+  if (resultCta) resultCta.href = href;
+  if (detailCta) detailCta.href = href;
+}
+
+function trackReportCta(position) {
+  if (!state.lastChart) return;
+  const topic = selectedReportTopic();
+  updateReportOffer();
+  gtag('event', 'hd_report_cta', {
+    type: state.lastChart.type,
+    topic,
+    position,
+  });
+}
+
+function initReportOfferTracking() {
+  const offer = $('hd-result-offer');
+  if (offer && typeof IntersectionObserver !== 'undefined') {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.35);
+      if (!visible || !state.lastChart || state.reportOfferViewed) return;
+      state.reportOfferViewed = true;
+      gtag('event', 'hd_report_offer_viewed', { type: state.lastChart.type });
+    }, { threshold: [0.35] });
+    observer.observe(offer);
+  }
+
+  const preview = $('hd-report-preview');
+  preview?.addEventListener('toggle', () => {
+    if (!preview.open || !state.lastChart || state.reportPreviewTracked) return;
+    state.reportPreviewTracked = true;
+    gtag('event', 'hd_report_preview_opened', { type: state.lastChart.type, position: 'result' });
+  });
+
+  document.querySelectorAll('input[name="hd-report-topic"]').forEach((input) => {
+    input.addEventListener('change', updateReportOffer);
+  });
+  on('hd-result-report-cta', 'click', () => trackReportCta('result'));
+  on('hd-cta-report', 'click', () => trackReportCta('details'));
 }
 
 // 設計重點：把已算出的類型／權威／角色／定義原創解讀文案展開
@@ -564,6 +661,7 @@ function init() {
   on('hd-dl-svg', 'click', () => onDownloadV2('svg'));
   on('hd-share-link', 'click', onShareLink);
   on('hd-reset', 'click', onReset);
+  initReportOfferTracking();
   // 單人→合盤帶入：存「表單輸入」（非計算結果）進 sessionStorage 再導頁（同分頁有效、關閉即清）
   on('hd-goto-composite', 'click', () => {
     const c = state.lastChart;
