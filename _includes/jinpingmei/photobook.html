@@ -9,7 +9,7 @@
 {%- if pack -%}
 <section class="jpm-section" style="padding-top:0" aria-label="角色寫真">
   <div class="jpm-prose"><h2>角色寫真</h2>
-  <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。這是寫真集的先行試閱，之後會擴成獨立的寫真區。圖為 AI 生成，並非真人照片。</p></div>
+  <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。全部角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。圖為 AI 生成，並非真人照片。</p></div>
   {%- comment -%}單張的 pack 也維持兩欄格線，避免直式寫真在桌機撐到全版寬。{%- endcomment -%}
   {%- assign pbcols = pack.shots | size -%}
   {%- if pbcols < 2 -%}{%- assign pbcols = 2 -%}{%- endif -%}

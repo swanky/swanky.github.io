@@ -3,10 +3,16 @@
 # 渲染：_includes/jinpingmei/photobook.html（角色頁 layout 依 slug 比對，未收錄的角色不輸出）。
 # 圖檔：assets/img/jinpingmei/photobook/{image}；來源為站主的金瓶梅角色寫真專案，
 # 逐張經內容安全判圖（判準＝2026-08-08 站主決策前例：無裸露，上限露肩／高衩／抹胸）後上站。
-# 之後擴成獨立寫真區時，直接在 packs 加角色、加 shots 即可。
+# 獨立寫真館：/jinpingmei/photobook/（jinpingmei/photobook/index.html）。
+# 加新角色寫真＝在 packs 加一輯（slug 對應 _jinpingmei_characters 的 permalink 尾段）；
+# 角色頁與寫真館都會自動長出來。pack 級欄位：
+#   note  — 相冊導語（文案，寫真館用）
+#   quote — 逐字引文（一律複製角色頁「原文依據」既有引文，不得憑記憶寫）
 packs:
   - slug: panjinlian
     name: 潘金蓮
+    note: 三幀連拍：窗邊的光、鏡頭前的眼、妝台上的手——同一個人，三種心思。
+    quote: 本性機變伶俐
     shots:
       - image: panjinlian-01.jpg
         caption: 倚窗
@@ -25,6 +31,8 @@ packs:
         height: 1672
   - slug: lipinger
     name: 李瓶兒
+    note: 雨夜只拍了一幀。她站在窗邊，像在等一個不會來的人。
+    quote: 好個溫克性兒
     shots:
       - image: lipinger-01.jpg
         caption: 夜雨
@@ -33,6 +41,8 @@ packs:
         height: 1536
   - slug: chunmei
     name: 龐春梅
+    note: 滿月當空，她站得比誰都直——丫鬟的出身，主母的眼神。
+    quote: 性聰慧，喜謔浪，善應對
     shots:
       - image: chunmei-01.jpg
         caption: 望月
@@ -41,6 +51,8 @@ packs:
         height: 1536
   - slug: songhuilian
     name: 宋惠蓮
+    note: 竹影裡的一個笑。書裡她笑得最亮，收得也最急。
+    quote: 性明敏，善機變，會妝飾
     shots:
       - image: songhuilian-01.jpg
         caption: 含笑

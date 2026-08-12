@@ -1,0 +1,165 @@
+---
+layout: null
+title: 寫真館｜金瓶梅角色寫真集
+description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、龐春梅、宋惠蓮的角色寫真陸續進棚——離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
+permalink: /jinpingmei/photobook/
+---
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/jinpingmei/photobook/panjinlian-01.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260812-1" rel="stylesheet">
+</head>
+<body class="jpm jpm-pb">
+  <a class="jpm-skip" href="#pb-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a class="hide-m" href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+      <a class="hide-m" href="{{ '/' | relative_url }}">回主站</a>
+    </nav>
+  </header>
+
+  {%- assign pb = site.data.jinpingmei_photobook -%}
+  {%- assign zhv = "壹,貳,參,肆,伍,陸,柒,捌,玖,拾" | split: "," -%}
+  {%- assign zhs = "一,二,三,四,五,六,七,八,九,十" | split: "," -%}
+  {%- assign total = 0 -%}
+  {%- for p in pb.packs -%}{%- assign total = total | plus: p.shots.size -%}{%- endfor -%}
+  {%- assign npacks = pb.packs.size -%}
+
+  <main id="pb-main">
+
+    <!-- ── 開卷 ── -->
+    <section class="jpm-section pb-hero">
+      <div class="jpu-hero jpm-shell">
+        <div>
+          <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真</span></p>
+          <h1 class="act-title reveal">寫真館<small>走進光線裡的角色寫真集</small></h1>
+          <p class="act-lead reveal">定裝照管的是「像不像」，寫真管的是「有沒有戲」——經過原典考證定裝的角色，離開設定表，一位一位走進光線裡。每一幀都連得回她的角色檔案。全部影像皆為 <b>AI 生成</b>，並非真人照片。</p>
+          <ul class="pb-count reveal" aria-label="收錄進度">
+            <li>現收 <b>{% if npacks <= 10 %}{% assign ni = npacks | minus: 1 %}{{ zhs[ni] }}{% else %}{{ npacks }}{% endif %}</b> 輯</li>
+            <li><b>{% if total <= 10 %}{% assign ti = total | minus: 1 %}{{ zhs[ti] }}{% else %}{{ total }}{% endif %}</b> 幀寫真</li>
+            <li>陸續進棚</li>
+          </ul>
+        </div>
+        <aside class="jpu-vquote reveal" aria-label="寫真目次">
+          {%- for p in pb.packs -%}
+          {%- assign shortname = p.name | slice: 1, 2 -%}
+          {%- for s in p.shots -%}<span><small>{{ shortname }}</small>{{ s.caption }}</span>{%- endfor -%}
+          {%- endfor -%}
+          <footer>寫真目次</footer>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ── 相冊 ── -->
+    <section class="jpm-section" style="padding-top:0" aria-label="寫真相冊">
+      <div class="pb-albums jpm-shell">
+        {%- assign fno = 0 -%}
+        {%- assign soloi = 0 -%}
+        {%- for p in pb.packs -%}
+        {%- capture curl %}/jinpingmei/characters/{{ p.slug }}/{% endcapture -%}
+        {%- assign ch = site.jinpingmei_characters | where: "url", curl | first -%}
+        {%- assign vi = forloop.index | minus: 1 -%}
+        {%- if p.shots.size > 1 -%}
+          {%- assign albumcls = "pb-album--multi" -%}
+        {%- else -%}
+          {%- assign flip = soloi | modulo: 2 -%}
+          {%- assign albumcls = "pb-album--solo" -%}
+          {%- if flip == 1 -%}{%- assign albumcls = "pb-album--solo pb-album--flip" -%}{%- endif -%}
+          {%- assign soloi = soloi | plus: 1 -%}
+        {%- endif -%}
+        <article class="pb-album {{ albumcls }} pb-album--{{ p.slug }}" aria-labelledby="pb-{{ p.slug }}">
+          <header class="pb-meta reveal">
+            <div class="pb-head">
+              <span class="pb-vol" aria-hidden="true">輯{{ zhv[vi] }}</span>
+              <div>
+                <h2 id="pb-{{ p.slug }}">{{ p.name }}</h2>
+                {%- if ch and ch.aliases and ch.aliases != "" %}<p class="pb-alias">{{ ch.aliases }}</p>{% endif %}
+              </div>
+            </div>
+            {%- if p.quote %}
+            <blockquote class="pb-quote"><p>「{{ p.quote }}」</p><footer>《金瓶梅詞話》原文</footer></blockquote>
+            {%- endif %}
+            {%- if p.note %}<p class="pb-note">{{ p.note }}</p>{% endif %}
+            <a class="pb-cta" href="{{ curl | relative_url }}">看{{ p.name }}的角色檔案 →</a>
+          </header>
+          <div class="pb-prints">
+            {%- for s in p.shots -%}
+            {%- assign fno = fno | plus: 1 -%}
+            {%- capture src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
+            <figure class="pb-print reveal"{% if forloop.index > 1 %} data-late="{{ forloop.index | minus: 1 }}"{% endif %}>
+              <a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-photobook" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fno">No.{% if fno < 10 %}0{% endif %}{{ fno }}</span><span class="fcap">{{ s.caption }}</span></figcaption>
+            </figure>
+            {%- endfor %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+
+      <div class="jpm-shell">
+        <aside class="pb-teaser reveal" aria-label="下一輯預告">
+          <b>下一輯・拍攝中</b>
+          <p>其他角色陸續進棚，拍好一輯上一輯。等不及的話，先到<a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>認識全部十九位角色。</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ── 凡例 ── -->
+    <div class="jpm-shell">
+      <aside class="paiji reveal" aria-labelledby="pb-paiji">
+        <div class="paiji-frame">
+          <p class="paiji-head" id="pb-paiji"><b>凡例</b><small>本館的誠實標示</small></p>
+          <ul>
+            <li>寫真人物皆為《金瓶梅》書中角色，圖像全部 <b>AI 生成</b>，並非真人照片。</li>
+            <li>寫真對象出自<a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>考證過的十九位角色，每一輯都連回她的角色檔案。</li>
+            <li>全館<b>無裸露</b>；原典含成人內容，建議成年讀者。</li>
+            <li>角色如何選角定裝，見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。</li>
+          </ul>
+          <span class="paiji-seal" aria-hidden="true"><i>寫真館</i></span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/games/plum/' | relative_url }}">戰棋遊戲</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>
