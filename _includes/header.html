@@ -23,7 +23,7 @@
               <ul>
                 <li><a href="{{ '/photography/personal-works/' | relative_url }}">個人</a></li>
                 <li><a href="{{ '/photography/commercial-works/' | relative_url }}">商業</a></li>
-                <li><a href="{{ '/photography/gallery/' | relative_url }}">攝影作品精選</a></li>
+                <li><a href="{{ '/photography/gallery/' | relative_url }}">精選</a></li>
                 <li><a href="{{ '/photography/uniform-girl/' | relative_url }}">制服．女孩 × 史旺基</a></li>
                 <li><a href="{{ '/photography/archive/' | relative_url }}">歷年記錄</a></li>
               </ul>
@@ -32,18 +32,18 @@
         </li>
         <li class="dropdown"><a href="{{ '/technical/' | relative_url }}"{% if page.nav_active == 'technical' %} class="active"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ '/technical/' | relative_url }}">技術顧問總覽</a></li>
+            <li><a href="{{ '/technical/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a></li>
             <li><a href="{{ '/technical/ai-visual-production/' | relative_url }}">AI 視覺內容製作</a></li>
             <li><a href="{{ '/technical/web3-consulting/' | relative_url }}">Web3 技術顧問</a></li>
             <li><a href="{{ '/technical/agentic-engineering/' | relative_url }}">Agentic Engineering 系列</a></li>
             <li><a href="{{ '/technical/rwa/' | relative_url }}">現實世界資產（RWA）代幣化系列</a></li>
-            <li><a href="{{ '/technical/articles/' | relative_url }}">技術專欄文章</a></li>
+            <li><a href="{{ '/technical/articles/' | relative_url }}">專欄文章</a></li>
           </ul>
         </li>
         <li class="dropdown"><a href="{{ '/education/' | relative_url }}"{% if page.nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ '/education/' | relative_url }}">教育訓練總覽</a></li>
+            <li><a href="{{ '/education/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/education/agentic-engineering/' | relative_url }}">Agentic Engineering 企業培訓</a></li>
             <li><a href="{{ '/education/crypto/enterprise/' | relative_url }}">Web3 企業培訓</a></li>
             <li><a href="{{ '/education/modeling/' | relative_url }}">模特兒鏡頭表現一對一</a></li>
@@ -62,16 +62,16 @@
         {% comment %} 古典文學專區：金瓶梅宇宙（旗艦子站）＋古典小說書房（/books/ 通用層）；書單由 _data/books.yml 生成，加一本書免改本檔 {% endcomment %}
         <li class="dropdown"><a href="{{ '/books/' | relative_url }}"{% if page.nav_active == 'jinpingmei' or page.nav_active == 'books' %} class="active"{% endif %}><span>古典文學</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ '/books/' | relative_url }}">古典小說書房（總覽）</a></li>
+            <li><a href="{{ '/books/' | relative_url }}">書房總覽</a></li>
             <li class="dropdown"><a href="{{ '/jinpingmei/' | relative_url }}"><span>金瓶梅宇宙</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
                 <li><a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a></li>
-                <li><a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房（雙版本全文）</a></li>
-                <li><a href="{{ '/jinpingmei/guide/' | relative_url }}">第一次讀？新手導讀</a></li>
-                <li><a href="{{ '/jinpingmei/glossary/' | relative_url }}">詞語小典（老詞白話解）</a></li>
+                <li><a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a></li>
+                <li><a href="{{ '/jinpingmei/guide/' | relative_url }}">新手導讀</a></li>
+                <li><a href="{{ '/jinpingmei/glossary/' | relative_url }}">詞語小典</a></li>
                 <li><a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a></li>
                 <li><a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a></li>
-                <li><a href="{{ '/games/plum/' | relative_url }}">《金瓶異夢：十二花界》遊戲</a></li>
+                <li><a href="{{ '/games/plum/' | relative_url }}">遊戲：金瓶異夢</a></li>
               </ul>
             </li>
             {% for b in site.data.books %}{% unless b.flagship_url or b.status == 'planned' %}<li><a href="{{ b.id | prepend: '/' | append: '/' | relative_url }}">{{ b.title }}</a></li>
