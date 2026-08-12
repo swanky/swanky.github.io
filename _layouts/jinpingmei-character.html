@@ -55,11 +55,12 @@
     {{ content }}
 
     {%- comment -%}
-      多角度參考圖組——只有 _data/jinpingmei_reference_packs.yml 收錄的角色會輸出。
+      以下皆為資料驅動的附加區塊——只有對應 _data 檔收錄的角色會輸出。
       page.url 形如 /jinpingmei/characters/panjinlian/；split 會捨去尾部空段，所以 last 就是 slug。
     {%- endcomment -%}
     {% assign slugparts = page.url | split: '/' %}
     {% assign charslug = slugparts | last %}
+    {% include jinpingmei/dressup-sheet.html slug=charslug %}
     {% include jinpingmei/reference-pack.html slug=charslug %}
 
     {%- comment -%}角色寫真試閱——只有 _data/jinpingmei_photobook.yml 收錄的角色會輸出。{%- endcomment -%}

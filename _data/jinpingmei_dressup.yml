@@ -1,0 +1,101 @@
+# 定妝設計圖（資料驅動）——與 /books/ 角色定妝照館同一製作流程的金瓶梅版，並陳於角色頁。
+#
+# 渲染：_includes/jinpingmei/dressup-sheet.html（角色頁 layout 依 slug 比對）。
+# 圖檔：assets/img/jinpingmei/dressup/{slug}.jpg（來源＝novel-characters-lab 品質基準包頂層 19 張，
+# 以站主核准的身份照 reference lock 生成；2026-08-12 站主裁決「並陳」，上站前逐張判圖 19/19 PASS）。
+sheets:
+  - slug: chenjingji
+    name: 陳經濟
+    alt: 頭戴黑色巾帽、身穿灰綠色長袍配腰帶鑰匙的年輕男子定妝照
+    width: 1672
+    height: 941
+  - slug: chunmei
+    name: 龐春梅
+    alt: 頭綁暗紅色髮帶、身穿暗紅繡花上衣配深藍長裙的年輕女子定妝照
+    width: 1672
+    height: 941
+  - slug: hanaijie
+    name: 韓愛姐
+    alt: 頭包深灰頭巾、身穿藍灰色上衣配褐色長裙、全身完整包覆的女子定妝照
+    width: 1672
+    height: 941
+  - slug: huazixu
+    name: 花子虛
+    alt: 頭戴黑色巾帽、身穿米色繡邊長袍的年輕男子定妝照
+    width: 1672
+    height: 941
+  - slug: lijiaoer
+    name: 李嬌兒
+    alt: 頭戴金花飾、身穿棕金色對襟外衣的中年女子定妝照
+    width: 1672
+    height: 941
+  - slug: lipinger
+    name: 李瓶兒
+    alt: 身穿粉色繡花長衣配米白長裙的年輕女子定妝照
+    width: 1672
+    height: 941
+  - slug: mengyulou
+    name: 孟玉樓
+    alt: 身穿墨綠色對襟外衣配深藍長裙的女子定妝照
+    width: 1672
+    height: 941
+  - slug: panjinlian
+    name: 潘金蓮
+    alt: 身穿深藍灰色上衣配暗紅長裙的年輕女子定妝照
+    width: 1672
+    height: 941
+  - slug: pujing
+    name: 普靜
+    alt: 頭剃光、身穿深紫色僧袍、手持錫杖的老僧定妝照
+    width: 1672
+    height: 941
+  - slug: songhuilian
+    name: 宋惠蓮
+    alt: 頭戴花飾、身穿紅色上衣配藍綠花紋長裙的年輕女子定妝照
+    width: 1672
+    height: 941
+  - slug: sunxuee
+    name: 孫雪娥
+    alt: 身穿棕色上衣配深藍長裙、繫黑色圍裙的婦人定妝照
+    width: 1672
+    height: 941
+  - slug: wangliuer
+    name: 王六兒
+    alt: 頭梳高髻、身穿紫色交領長衣配褐色長裙的女子定妝照
+    width: 1672
+    height: 941
+  - slug: wangpo
+    name: 王婆
+    alt: 頭髮灰白、身穿深褐色交領長袍、腰繫錢袋的年長婦人定妝照
+    width: 1672
+    height: 941
+  - slug: wusong
+    name: 武松
+    alt: 頭包黑巾、身穿深藍黑色長袍的健壯男子定妝照
+    width: 1672
+    height: 941
+  - slug: wuyueniang
+    name: 吳月娘
+    alt: 頭插珍珠金釵、身穿毛領紅色外衣配灰綠長裙的貴婦定妝照
+    width: 1672
+    height: 941
+  - slug: wuzhi
+    name: 武植
+    alt: 頭包黑巾、身穿褐色補丁長袍的中年男子定妝照
+    width: 1672
+    height: 941
+  - slug: ximenqing
+    name: 西門慶
+    alt: 頭戴黑色巾帽、身穿墨綠色長袍的中年男子定妝照
+    width: 1672
+    height: 941
+  - slug: yingbojue
+    name: 應伯爵
+    alt: 頭包黑巾、身穿暗紫色對襟外衣配深藍長裙的男子定妝照
+    width: 1672
+    height: 941
+  - slug: zhouxiu
+    name: 周秀
+    alt: 頭戴黑色官帽、身穿暗紅色長袍繫腰帶的中年男子定妝照
+    width: 1672
+    height: 941

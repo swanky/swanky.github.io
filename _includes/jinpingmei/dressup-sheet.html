@@ -1,0 +1,19 @@
+{%- comment -%}
+  定妝設計圖（資料驅動）——與 /books/ 角色定妝照館同一套製作流程的一頁式定裝設計，
+  並陳於既有三視圖與視覺版本之後，不取代它們。
+  用法：{% include jinpingmei/dressup-sheet.html slug="panjinlian" %}
+  資料源：_data/jinpingmei_dressup.yml；圖檔 assets/img/jinpingmei/dressup/{slug}.jpg
+  沒有對應資料的角色不輸出任何內容。
+{%- endcomment -%}
+{%- assign du = site.data.jinpingmei_dressup -%}
+{%- assign sheet = du.sheets | where: "slug", include.slug | first -%}
+{%- if sheet -%}
+<section class="jpm-section" style="padding-top:0" aria-label="定妝設計圖">
+  <div class="jpm-prose"><h2>定妝設計圖</h2>
+  <p>開拍前的完整定裝一頁看完：大頭特寫、三面全身，加上隨身道具的細節。以本頁核准的身份形象為基準生成——同一位{{ sheet.name }}、同一張臉，換一種說明書式的呈現。圖為 AI 生成，並非真人照片。</p></div>
+  {%- capture src %}/assets/img/jinpingmei/dressup/{{ sheet.slug }}.jpg{% endcapture -%}
+  <div class="jpm-refgrid" style="--cols: 1">
+    <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ sheet.alt }}（AI 生成，非真人照片）"><img src="{{ src | relative_url }}" alt="{{ sheet.alt }}（AI 生成，非真人照片）" width="{{ sheet.width }}" height="{{ sheet.height }}" loading="lazy" decoding="async"></a><figcaption>定妝設計圖・AI 生成</figcaption></figure>
+  </div>
+</section>
+{%- endif -%}
