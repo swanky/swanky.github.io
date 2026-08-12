@@ -3,7 +3,7 @@
 // 未知時間 checkbox 的時分停用鉤。DOM id 以 prefix 參數化：單人頁 'hd'（hd-year…），
 // 合盤頁 'hd-a'／'hd-b'（hd-a-year…）。每實例自有 tz/cityLabel 狀態（原 hd-ui 模組級 state 局部化）。
 import { searchCities } from './hd-cities.js';
-import { $, setVal, on } from '../core/core-dom.js';
+import { $, setVal, on, gtag } from '../core/core-dom.js';
 
 function fillSelect(sel, items) {
   if (!sel) return;
@@ -42,8 +42,13 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
     if (!input || !list) return;
     let activeIdx = -1;
     let results = [];
+    const quickButtons = [...document.querySelectorAll(`[data-hd-city-for="${prefix}"]`)];
 
     const close = () => { list.classList.remove('is-open'); activeIdx = -1; };
+    const clearQuick = () => quickButtons.forEach((button) => {
+      button.classList.remove('is-active');
+      button.setAttribute('aria-pressed', 'false');
+    });
     const render = () => {
       if (!results.length) { close(); return; }
       list.innerHTML = results.map((c, i) =>
@@ -52,14 +57,21 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
           <span class="hd-city-group">${c.group}</span></div>`).join('');
       list.classList.add('is-open');
     };
-    const pick = (c) => {
+    const pick = (c, quickButton = null) => {
       state.tz = c.tz; state.cityLabel = c.zh;
       input.value = c.zh;
+      clearQuick();
+      if (quickButton) {
+        quickButton.classList.add('is-active');
+        quickButton.setAttribute('aria-pressed', 'true');
+      }
       close();
     };
 
     input.addEventListener('input', () => {
       state.tz = null; // 重新輸入即清除已選
+      state.cityLabel = null;
+      clearQuick();
       results = searchCities(input.value);
       activeIdx = -1;
       render();
@@ -75,6 +87,12 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
       const item = e.target.closest('.hd-city-item');
       if (item) pick(results[+item.dataset.idx]);
     });
+    quickButtons.forEach((button) => button.addEventListener('click', () => {
+      const city = searchCities(button.dataset.cityQuery || '', 1)[0];
+      if (!city) return;
+      pick(city, button);
+      gtag('event', 'hd_city_quick_pick', { form: prefix === 'hd' ? 'single' : 'relationship' });
+    }));
     document.addEventListener('click', (e) => { if (!e.target.closest('.hd-city-wrap')) close(); });
   }
 

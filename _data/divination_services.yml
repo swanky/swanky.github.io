@@ -30,7 +30,7 @@
 # ── A. 出生地圖：根據出生資料建立個人結構地圖 ─────────────────────────
 - id: human-design
   title: 人類圖
-  subtitle: 你的能量與決策設計圖
+  subtitle: 先看你的決策方式、工作節奏與協作提示
   category: birth-map
   status: live
   flagship: true
@@ -42,9 +42,9 @@
   nav_label: 人類圖
   icon: bi-diagram-3
   input_type: birth
-  use_cases: [決策策略, 能量類型, 自我認識]
-  cta_label: 立即產生
-  note: ''
+  use_cases: [做決定, 工作節奏, 團隊協作]
+  cta_label: 免費生成完整結果
+  note: 不用登入；不知道確切出生時間也能先試算。
   related: [astrology, bazi]
 
 - id: human-design-composite
@@ -259,17 +259,17 @@
 # ── D. 商業與策略服務：高價值人工顧問服務（不追求全自動化）───────────
 - id: human-design-report
   title: 人類圖深度報告
-  subtitle: 把你的類型、內在權威、人生角色，寫成職涯與關係裡能用的具體報告
+  subtitle: 把你的圖寫成職涯或帶人情境裡可以試的下一步
   category: service
   status: live
   visibility: public
   priority: P0
   phase: 已上線
-  route: /human-design/#hd-report
+  route: /human-design/#hd-form
   icon: bi-file-earmark-text
   input_type: birth
   use_cases: [職涯定位, 團隊協作, 深度解讀]
-  cta_label: 查看報告方案
+  cta_label: 先免費生成，再看方案
   price: NT$680 起
   note: 個人主題報告 NT$680 起，奠基於免費人類圖生成器結果的加購深度解讀，AI 輔助生成、人工校稿。
   related: [human-design, human-design-composite-report]

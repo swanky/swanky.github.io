@@ -77,6 +77,11 @@ MBTI 的價值在於幫助主管設計「雙通道」流程，讓不同偏好的
 - **SJ：** 守住版本門檻與合規品質。
 - **SP：** 處理緊急狀況與臨場危機。
 
+<aside class="article-cta-mid">
+  <p><strong>想換一個角度看自己的工作節奏？</strong>免費人類圖會整理你的決策方式、精力起伏與協作提示；把它當成另一組觀察問題，不是替你貼標籤。</p>
+  <a href="{{ '/human-design/#hd-form' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_funnel_entry_click',{source:'article_mbti',intent:'free_chart',from_page:'{{ page.url }}'});}">免費生成我的人類圖 →</a>
+</aside>
+
 ### INTJ 主管的自白：怎麼跟其他人共事
 
 我自己是 INTJ，這意味著我偏好規劃、系統與長期戰略。但在管理團隊時，如果只依照我的偏好行事，結果一定是「計畫很完美、團隊卻散掉」。所以我必須主動調整：

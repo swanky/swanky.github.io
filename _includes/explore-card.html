@@ -6,12 +6,12 @@
     manual-service 無 route      → 卡內「預約服務」mailto（人工收單）
     coming-soon 無 route         → <details> 展開說明＋「想先看到這個？」需求訊號 mailto＋gtag
   visibility != public 的卡由 explore-category 先過濾掉，不會傳進來。
-{% endcomment %}{% assign it = include.item %}{% assign mail = 'swanky.hsiao@gmail.com' %}{% capture inner %}<span class="explore-card-ico"><i class="bi {{ it.icon }}"></i></span>
+{% endcomment %}{% assign it = include.item %}{% assign mail = 'swanky.hsiao@gmail.com' %}{% assign is_hd_entry = false %}{% if it.id == 'human-design' or it.id == 'human-design-report' %}{% assign is_hd_entry = true %}{% endif %}{% capture inner %}<span class="explore-card-ico"><i class="bi {{ it.icon }}"></i></span>
   <span class="explore-card-main">
     <span class="explore-card-title">{{ it.title }}{% case it.status %}{% when 'live' %} <span class="explore-badge is-live">立即使用</span>{% when 'beta' %} <span class="explore-badge is-beta">beta · {{ it.phase }}</span>{% when 'manual-service' %} <span class="explore-badge is-manual">人工服務</span>{% when 'coming-soon' %} <span class="explore-badge is-soon">規劃中 · {{ it.phase }}</span>{% when 'content' %} <span class="explore-badge is-soon">示意內容</span>{% endcase %}</span>
     <span class="explore-card-sub">{{ it.subtitle }}</span>
   </span>{% endcapture %}{% if it.route != '' and it.route %}
-<a class="explore-card is-{{ it.status }}{% if it.flagship %} is-flagship{% endif %}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});}"{% endif %}>
+<a class="explore-card is-{{ it.status }}{% if it.flagship %} is-flagship{% endif %}" href="{{ it.route | relative_url }}"{% if it.status == 'live' or it.status == 'beta' %} onclick="if(window.gtag){gtag('event','explore_tool_click',{'tool':'{{ it.id }}'});{% if is_hd_entry %}gtag('event','hd_funnel_entry_click',{source:'explore_card',intent:'{{ it.id }}'});{% endif %}}"{% endif %}>
   {{ inner }}
   {% if it.price %}<span class="explore-card-price">{{ it.price }}</span>{% endif %}
   <span class="explore-card-cta">{{ it.cta_label }} →</span>

@@ -47,11 +47,29 @@ function showError(msg) {
 }
 function clearError() { $('hd-error')?.classList.remove('is-show'); }
 
+function initFormTracking() {
+  const card = document.querySelector('#hd-form .hd-form-card');
+  if (!card) return;
+  let tracked = false;
+  const events = ['input', 'change', 'click'];
+  const track = () => {
+    if (tracked) return;
+    tracked = true;
+    gtag('event', 'hd_form_started', { from_page: '/human-design/' });
+    events.forEach((eventName) => card.removeEventListener(eventName, track, true));
+  };
+  events.forEach((eventName) => card.addEventListener(eventName, track, true));
+}
+
 function onSubmit() {
   clearError();
   const input = form.readInput();
   const tz = form.resolveTz();
-  if (!tz) { showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。'); return; }
+  if (!tz) {
+    gtag('event', 'hd_form_validation_error', { field: 'birthplace', from_page: '/human-design/' });
+    showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。');
+    return;
+  }
   const unknownTime = form.isUnknownTime();
   const uncertaintyMinutes = form.uncertaintyMinutes();
 
@@ -644,6 +662,7 @@ function applyHash() {
 
 function init() {
   form.init();
+  initFormTracking();
   // Feature flag 分流：設模式 class（CSS 版面據此切換）＋v2 頁籤／v1 攤平 Layer 2。
   // 必須在 applyHash()（可能觸發 renderResult）之前設定 state.v2。
   state.v2 = useV2();

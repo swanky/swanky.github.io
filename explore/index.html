@@ -31,7 +31,41 @@ extra_css: |
   .explore-hero > .container { position: relative; z-index: 1; }
   .explore-hero h1 { font-size: clamp(2.25rem, 5vw, 3.4rem); }
   .explore-hero-nav a { padding: 9px 20px; }
-  @media (max-width: 767px) { .explore-hero { min-height: auto; padding: 52px 0 40px; } }
+  .explore-hd-feature {
+    display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+    max-width: 1060px; margin: 0 auto 20px; overflow: hidden;
+    border: 1px solid #e9d59e; border-radius: 18px;
+    box-shadow: 0 14px 38px rgba(108,78,10,.10);
+  }
+  .explore-hd-main { padding: 30px 32px; background: linear-gradient(135deg, #fffdf8, #fff5dc); }
+  .explore-hd-kicker { display: block; margin-bottom: 8px; color: #8B5E00; font-size: .75rem; font-weight: 800; letter-spacing: .09em; }
+  .explore-hd-main h3 { margin: 0 0 10px; color: #171512; font-size: clamp(1.45rem, 2.6vw, 2rem); line-height: 1.3; }
+  .explore-hd-main > p { max-width: 640px; margin: 0; color: #625b50; font-size: .93rem; line-height: 1.7; }
+  .explore-hd-benefits { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; padding: 0; list-style: none; }
+  .explore-hd-benefits li { padding: 7px 10px; border: 1px solid #eadfca; border-radius: 10px; background: rgba(255,255,255,.82); color: #5f574c; font-size: .8rem; }
+  .explore-hd-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .explore-hd-primary { display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 10px; background: #E5A300; color: #111; font-size: .9rem; font-weight: 800; text-decoration: none; transition: .2s; }
+  .explore-hd-primary:hover { background: #F5C53B; color: #111; transform: translateY(-1px); }
+  .explore-hd-safe { color: #8b8273; font-size: .76rem; }
+  .explore-hd-report { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: #232020; color: #fff; }
+  .explore-hd-report-label { margin: 0 0 7px; color: #F5C53B; font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
+  .explore-hd-report h4 { margin: 0 0 9px; color: #fff; font-size: 1.16rem; line-height: 1.45; }
+  .explore-hd-report p { margin: 0 0 16px; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.65; }
+  .explore-hd-report a { align-self: flex-start; color: #F5C53B; font-size: .84rem; font-weight: 750; text-decoration: none; }
+  .explore-hd-report a:hover { color: #fff; text-decoration: underline; }
+  .explore-hd-interest { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px 14px; max-width: 940px; margin: 0 auto 34px; color: #766e61; font-size: .8rem; text-align: center; }
+  .explore-hd-interest p { margin: 0; }
+  .explore-hd-interest a { padding: 7px 12px; border: 1px solid #E5A300; border-radius: 10px; color: #8B5E00; font-weight: 700; text-decoration: none; transition: .2s; }
+  .explore-hd-interest a:hover { background: #E5A300; color: #111; }
+  .explore-hd-interest small { flex-basis: 100%; color: #999185; }
+  @media (max-width: 767px) {
+    .explore-hero { min-height: auto; padding: 52px 0 40px; }
+    .explore-hd-feature { grid-template-columns: 1fr; border-radius: 14px; }
+    .explore-hd-main, .explore-hd-report { padding: 23px 20px; }
+    .explore-hd-primary { width: 100%; }
+    .explore-hd-safe { width: 100%; text-align: center; }
+    .explore-hd-interest { margin-bottom: 28px; }
+  }
 extra_head: |
   <script type="application/ld+json">
   {
@@ -69,6 +103,34 @@ extra_head: |
     <div class="container">
       <h2 class="explore-section-title">工具與服務</h2>
       <p class="explore-section-lead">依你想探索的方向分成四類：從出生資料看結構、針對當下問題反思、每日輕量提醒，以及高價值的人工顧問服務。</p>
+
+      <article class="explore-hd-feature" aria-labelledby="explore-hd-title">
+        <div class="explore-hd-main">
+          <span class="explore-hd-kicker">先從一張免費地圖開始</span>
+          <h3 id="explore-hd-title">看見你的決策方式、工作節奏與協作習慣</h3>
+          <p>輸入出生資料，就能免費看到類型、內在權威、人生角色、中心與通道；先用自己的日常驗證，不需要先相信。</p>
+          <ul class="explore-hd-benefits" aria-label="可以先觀察的三個方向">
+            <li>做決定時，什麼值得回應</li>
+            <li>工作時，怎麼安排比較不耗損</li>
+            <li>合作時，彼此的節奏差在哪裡</li>
+          </ul>
+          <div class="explore-hd-actions">
+            <a class="explore-hd-primary" href="{{ '/human-design/#hd-form' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_funnel_entry_click',{source:'explore_feature',intent:'free_chart'});}">免費生成我的人類圖 →</a>
+            <span class="explore-hd-safe">不用登入；出生資料只留在你的裝置。</span>
+          </div>
+        </div>
+        <div class="explore-hd-report">
+          <p class="explore-hd-report-label">生成後再決定</p>
+          <h4>有共鳴，再把這張圖用進職涯或帶人情境</h4>
+          <p>主題式深度報告 NT$680 起，10+ 頁、人工校稿，3 個工作天交付；免費結果不會少一塊。</p>
+          <a href="{{ '/human-design/#hd-form' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_funnel_entry_click',{source:'explore_feature',intent:'report_interest'});}">先免費生成，再看報告方案 →</a>
+        </div>
+      </article>
+      <div class="explore-hd-interest">
+        <p><strong>現在不方便排盤？</strong>可先登記人類圖工具與報告主題的重要更新。</p>
+        <a href="mailto:{{ site.email }}?subject={{ '[人類圖] 更新通知登記' | url_encode }}&body={{ '嗨，史旺基，我想收到人類圖工具與報告主題的重要更新通知。我最想看到的主題是：' | url_encode }}" onclick="if(window.gtag){gtag('event','hd_interest_contact',{source:'explore_feature'});}">用電子郵件登記通知 →</a>
+        <small>點擊後只會開啟郵件草稿，由你確認是否寄出。</small>
+      </div>
 
       {% include explore-category.html category='birth-map' letter='A' title='出生地圖' subtitle='根據出生資料，建立你的個人結構地圖' %}
       {% include explore-category.html category='inquiry' letter='B' title='當下問事' subtitle='針對當下的問題與時間，進行反思與觀察' %}

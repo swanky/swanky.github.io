@@ -63,11 +63,24 @@ extra_css: |
   .hd-city-item { padding: 9px 14px; cursor: pointer; font-size: 0.92rem; display: flex; justify-content: space-between; }
   .hd-city-item:hover, .hd-city-item.is-active { background: #fffbf0; }
   .hd-city-item .hd-city-group { font-size: 0.78rem; color: #aaa; }
+  .hd-city-quick { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 9px; }
+  .hd-city-quick-label { color: #999; font-size: .78rem; }
+  .hd-city-chip { padding: 6px 11px; border: 1px solid #ead7a5; border-radius: 10px; background: #fffdf8; color: #8B5E00; font-size: .8rem; font-weight: 650; line-height: 1.2; cursor: pointer; transition: .2s; }
+  .hd-city-chip:hover, .hd-city-chip.is-active { border-color: #E5A300; background: #fff4d3; color: #5c3e00; }
+  .hd-city-chip:focus-visible { outline: 3px solid rgba(229,163,0,.22); outline-offset: 2px; }
   .hd-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #555; cursor: pointer; }
   .hd-check input { width: 16px; height: 16px; accent-color: var(--c-gold); }
   .hd-advanced { margin-top: 12px; }
   .hd-advanced summary { font-size: 0.85rem; color: #888; cursor: pointer; }
   .hd-advanced .hd-adv-body { padding-top: 12px; }
+  .hd-form-extra { margin: -2px 0 16px; padding: 0 12px; border: 1px solid #eee5d2; border-radius: 10px; background: #fffdf8; }
+  .hd-form-extra summary { padding: 11px 0; color: #6e6658; font-weight: 600; list-style: none; }
+  .hd-form-extra summary::-webkit-details-marker { display: none; }
+  .hd-form-extra summary::before { content: '＋ '; color: #8B5E00; }
+  .hd-form-extra[open] summary::before { content: '－ '; }
+  .hd-form-extra .hd-adv-body { padding: 0 0 12px; }
+  .hd-form-extra label { display: block; margin-bottom: 6px; color: #666; font-size: .85rem; }
+  .hd-submit-note { margin: 9px 0 0; color: #8a8578; font-size: .78rem; line-height: 1.5; text-align: center; }
   .hd-btn-generate { width: 100%; padding: 14px; border: none; border-radius: 10px; background: var(--c-gold); color: #111; font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: 0.25s; margin-top: 6px; }
   .hd-btn-generate:hover { background: #c98f00; }
   .hd-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; display: none; }
@@ -170,7 +183,7 @@ extra_css: |
   .hd-product-card .hd-prod-crypto-hint { display: inline-block; font-size: 0.8rem; color: #c98f00; text-decoration: none; margin: 0 0 14px; border-bottom: 1px dashed #e6c879; }
   .hd-product-card .hd-prod-crypto-hint:hover { color: var(--c-gold); }
   /* 結果頁付費報告轉換模組：先交付完整免費結果，再把「圖」接到可採取的下一步 */
-  .hd-result-offer { max-width: 1000px; margin: 30px auto 6px; background: #fff; border: 1px solid #dfc985; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 38px rgba(70,54,18,.10); }
+  .hd-result-offer { max-width: 1000px; margin: 30px auto 6px; background: #fff; border: 1px solid #dfc985; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 38px rgba(70,54,18,.10); scroll-margin-top: 76px; }
   .hd-result-offer-grid { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(310px,.8fr); }
   .hd-offer-copy { padding: 30px 32px; }
   .hd-offer-kicker { display: inline-block; margin-bottom: 9px; color: #8B5E00; font-size: .76rem; font-weight: 800; letter-spacing: .08em; }
@@ -228,6 +241,11 @@ extra_css: |
   .hd-report-sample strong { display: block; margin: 9px 3px 2px; font-size: .83rem; }
   .hd-report-sample > span { display: block; margin: 0 3px 2px; color: #80786b; font-size: .74rem; line-height: 1.45; }
   .hd-report-sample-note { margin: 12px 0 0; color: #8a8275; font-size: .76rem; line-height: 1.6; text-align: center; }
+  .hd-interest-strip { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 22px; border-top: 1px solid #eee5d2; background: #fffaf0; }
+  .hd-interest-strip p { margin: 0; color: #675f52; font-size: .82rem; line-height: 1.55; }
+  .hd-interest-strip strong { color: #2c2924; }
+  .hd-interest-strip a { flex: 0 0 auto; padding: 9px 14px; border: 1px solid #E5A300; border-radius: 10px; color: #8B5E00; font-size: .8rem; font-weight: 700; text-decoration: none; transition: .2s; }
+  .hd-interest-strip a:hover { background: #E5A300; color: #111; }
   /* 穩定幣付款區 */
   .hd-crypto-pay { max-width: 880px; margin: 30px auto 0; background: linear-gradient(135deg,#fffaf0,#fff6e3); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px 28px; text-align: center; }
   .hd-crypto-pay h3 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 8px; }
@@ -383,6 +401,8 @@ extra_css: |
     .hd-report-preview > summary { align-items: flex-start; padding: 15px 18px; }
     .hd-report-preview > summary span { display: flex; flex-direction: column; gap: 3px; }
     .hd-report-preview-body { padding: 3px 18px 18px; }
+    .hd-interest-strip { align-items: stretch; flex-direction: column; gap: 10px; padding: 15px 18px 17px; }
+    .hd-interest-strip a { text-align: center; }
   }
 
   /* ============================================================
@@ -503,13 +523,18 @@ extra_css: |
           <label class="hd-check" style="margin-top:12px;">
             <input type="checkbox" id="hd-unknown-time"> 我不知道確切出生時間（以正午試算，並標示哪些結果會變動）
           </label>
-          <label for="hd-uncertainty" style="display:block;margin-top:12px;font-size:0.9rem;color:#666;">如果時間是回想或約略記錄，可檢查前後誤差：</label>
-          <select id="hd-uncertainty" style="margin-top:6px;max-width:230px;" aria-label="出生時間誤差範圍">
-            <option value="0">時間精確，不需檢查</option>
-            <option value="15">前後 15 分鐘</option>
-            <option value="30">前後 30 分鐘</option>
-            <option value="60">前後 60 分鐘</option>
-          </select>
+          <details class="hd-advanced">
+            <summary>時間是約略記錄？檢查前後誤差</summary>
+            <div class="hd-adv-body">
+              <label for="hd-uncertainty" style="display:block;font-size:0.85rem;color:#666;">想一起檢查的時間範圍：</label>
+              <select id="hd-uncertainty" style="margin-top:6px;max-width:230px;" aria-label="出生時間誤差範圍">
+                <option value="0">時間精確，不需檢查</option>
+                <option value="15">前後 15 分鐘</option>
+                <option value="30">前後 30 分鐘</option>
+                <option value="60">前後 60 分鐘</option>
+              </select>
+            </div>
+          </details>
         </div>
 
         <div class="hd-field">
@@ -517,6 +542,13 @@ extra_css: |
           <div class="hd-city-wrap">
             <input type="text" class="hd-city-input" id="hd-city-search" placeholder="輸入城市名稱，例如：台北、Tokyo、紐約" autocomplete="off">
             <div class="hd-city-list" id="hd-city-list" role="listbox"></div>
+          </div>
+          <div class="hd-city-quick" role="group" aria-label="常用出生城市">
+            <span class="hd-city-quick-label">常用：</span>
+            <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="台北市" aria-pressed="false">台北</button>
+            <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="新北市" aria-pressed="false">新北</button>
+            <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="台中市" aria-pressed="false">台中</button>
+            <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="高雄市" aria-pressed="false">高雄</button>
           </div>
           <details class="hd-advanced">
             <summary>找不到出生地？手動指定時區</summary>
@@ -527,12 +559,16 @@ extra_css: |
           </details>
         </div>
 
-        <div class="hd-field">
-          <label for="hd-name">稱呼／姓名 <span style="font-weight:400; color:#aaa;">（選填）</span></label>
-          <input type="text" class="hd-city-input" id="hd-name" placeholder="會寫進下載圖卡與後續報告，可留空" autocomplete="off" maxlength="40">
-        </div>
+        <details class="hd-form-extra" id="hd-name-extra">
+          <summary>想讓下載圖卡顯示稱呼？（選填）</summary>
+          <div class="hd-adv-body">
+            <label for="hd-name">稱呼／姓名</label>
+            <input type="text" class="hd-city-input" id="hd-name" placeholder="可留空，不影響排盤" autocomplete="off" maxlength="40">
+          </div>
+        </details>
 
         <button class="hd-btn-generate" id="hd-submit">生成我的人類圖</button>
+        <p class="hd-submit-note">不用登入，也不必留下電子郵件；免費結果會完整顯示。</p>
         <div class="hd-error" id="hd-error"></div>
       </div>
     </div>
@@ -673,6 +709,10 @@ extra_css: |
             <p class="hd-report-sample-note">以上是內容結構示意；你收到的文字會依自己的圖與所選主題重新整理。</p>
           </div>
         </details>
+        <div class="hd-interest-strip">
+          <p><strong>現在還不需要報告？</strong>可先登記更新通知；只有新報告主題或重要工具更新時才會寄信。</p>
+          <a id="hd-interest-contact" href="mailto:{{ site.email }}?subject={{ '[人類圖] 更新通知登記' | url_encode }}&body={{ '嗨，史旺基，我想收到人類圖工具與報告主題的重要更新通知。我最想看到的主題（選填）：' | url_encode }}" onclick="if(window.gtag){gtag('event','hd_interest_contact',{source:'result'});}">用電子郵件登記通知 →</a>
+        </div>
       </aside>
 
       <!-- Layer 2：通道 / 中心 / 輪迴交叉 / 行星細節（v2 摺疊預設收合；v1 攤平） -->
