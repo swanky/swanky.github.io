@@ -1,0 +1,23 @@
+{%- comment -%}
+  角色寫真試閱（資料驅動）。
+  用法：{% include jinpingmei/photobook.html slug="panjinlian" %}
+  資料源：_data/jinpingmei_photobook.yml；圖檔 assets/img/jinpingmei/photobook/{image}
+  沒有對應 pack 的角色不輸出任何內容。
+{%- endcomment -%}
+{%- assign pb = site.data.jinpingmei_photobook -%}
+{%- assign pack = pb.packs | where: "slug", include.slug | first -%}
+{%- if pack -%}
+<section class="jpm-section" style="padding-top:0" aria-label="角色寫真">
+  <div class="jpm-prose"><h2>角色寫真</h2>
+  <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。這是寫真集的先行試閱，之後會擴成獨立的寫真區。圖為 AI 生成，並非真人照片。</p></div>
+  {%- comment -%}單張的 pack 也維持兩欄格線，避免直式寫真在桌機撐到全版寬。{%- endcomment -%}
+  {%- assign pbcols = pack.shots | size -%}
+  {%- if pbcols < 2 -%}{%- assign pbcols = 2 -%}{%- endif -%}
+  <div class="jpm-refgrid" style="--cols: {{ pbcols }}">
+    {%- for s in pack.shots -%}
+    {%- capture src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
+    <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a><figcaption>{{ s.caption }}</figcaption></figure>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif -%}

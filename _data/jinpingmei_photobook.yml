@@ -1,0 +1,49 @@
+# 角色寫真試閱（資料驅動）——寫真區的第一批素材。
+#
+# 渲染：_includes/jinpingmei/photobook.html（角色頁 layout 依 slug 比對，未收錄的角色不輸出）。
+# 圖檔：assets/img/jinpingmei/photobook/{image}；來源為站主的金瓶梅角色寫真專案，
+# 逐張經內容安全判圖（判準＝2026-08-08 站主決策前例：無裸露，上限露肩／高衩／抹胸）後上站。
+# 之後擴成獨立寫真區時，直接在 packs 加角色、加 shots 即可。
+packs:
+  - slug: panjinlian
+    name: 潘金蓮
+    shots:
+      - image: panjinlian-01.jpg
+        caption: 倚窗
+        alt: 潘金蓮身穿黑紅交領長袍，倚窗回眸，微露香肩
+        width: 1023
+        height: 1537
+      - image: panjinlian-02.jpg
+        caption: 凝望
+        alt: 潘金蓮黑紅罩肩胸像特寫，斜倚回眸，眼神凝望
+        width: 1024
+        height: 1536
+      - image: panjinlian-03.jpg
+        caption: 理妝
+        alt: 潘金蓮著紅色抹胸內衫，梳妝台前簪花回眸顧盼
+        width: 941
+        height: 1672
+  - slug: lipinger
+    name: 李瓶兒
+    shots:
+      - image: lipinger-01.jpg
+        caption: 夜雨
+        alt: 李瓶兒站在雨夜窗邊，身穿深色繡花外衣，神情略帶哀愁
+        width: 1024
+        height: 1536
+  - slug: chunmei
+    name: 龐春梅
+    shots:
+      - image: chunmei-01.jpg
+        caption: 望月
+        alt: 龐春梅在滿月夜色下佇立，身穿深藍勁裝，眼神堅毅帶傲氣
+        width: 1024
+        height: 1536
+  - slug: songhuilian
+    name: 宋惠蓮
+    shots:
+      - image: songhuilian-01.jpg
+        caption: 含笑
+        alt: 宋惠蓮在竹林旁淺淺微笑，身穿繡竹葉紋樣的墨色外衣
+        width: 1024
+        height: 1536
