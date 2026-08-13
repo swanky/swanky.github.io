@@ -166,7 +166,7 @@ function renderResult(chart, stability) {
   setHTML('hd-channels-list', chart.definedChannels.length
     ? chart.definedChannels.map((c) =>
       `<div class="hd-chan-item"><span class="hd-chan-name">${c.nameZh}</span><span class="hd-chan-id">${c.id}</span><div class="hd-chan-desc">${c.desc}</div></div>`).join('')
-    : '<p style="color:#aaa;font-size:0.88rem;">沒有完整定義的通道（反映者特質）。</p>');
+    : '<p style="color:var(--c-muted);font-size:0.88rem;">沒有完整定義的通道（反映者特質）。</p>');
 
   // 設計重點解讀（類型／權威／角色／定義 的白話展開）
   setHTML('hd-readout', renderReadout(chart));

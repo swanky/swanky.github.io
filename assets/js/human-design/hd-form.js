@@ -53,7 +53,7 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
       if (!results.length) { close(); return; }
       list.innerHTML = results.map((c, i) =>
         `<div class="hd-city-item${i === activeIdx ? ' is-active' : ''}" data-idx="${i}" role="option">
-          <span>${c.zh}<span style="color:#bbb;font-size:0.8rem;"> ${c.en}</span></span>
+          <span>${c.zh}<span style="color:var(--c-muted);font-size:0.8rem;"> ${c.en}</span></span>
           <span class="hd-city-group">${c.group}</span></div>`).join('');
       list.classList.add('is-open');
     };

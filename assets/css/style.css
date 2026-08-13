@@ -1575,7 +1575,7 @@ padding-bottom: 56.25%;
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: var(--c-muted);
   margin: 0 0 15px 0;
 }
 
@@ -3755,7 +3755,7 @@ section.testimonials {
 .article-source-link p {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
-  color: #888;
+  color: var(--c-muted);
   margin: 0 0 8px 0;
 }
 
@@ -4363,7 +4363,7 @@ section.testimonials {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
   line-height: 1.75;
-  color: #777;
+  color: var(--c-muted);
   margin: 0;
   padding: 0;
 }
@@ -4678,7 +4678,7 @@ section.testimonials {
   margin: 0;
   font-size: 14px;
   line-height: 1.65;
-  color: #777;
+  color: var(--c-muted);
 }
 
 .work-row .w-meta {
@@ -4687,7 +4687,7 @@ section.testimonials {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #aaa;
+  color: var(--c-muted);
   line-height: 1.8;
 }
 
@@ -4755,11 +4755,11 @@ section.testimonials {
 .tool-privacy p { font-size: 0.88rem; color: #4a5a48; line-height: 1.75; margin: 0; }
 
 .tool-disclaimer {
-  font-size: 0.82rem; color: #999; line-height: 1.75;
+  font-size: 0.82rem; color: var(--c-muted); line-height: 1.75;
   max-width: 820px; margin: 0 auto; background: #fafafa;
   border-radius: 10px; padding: 20px 24px;
 }
-.tool-disclaimer strong { color: #777; }
+.tool-disclaimer strong { color: var(--c-muted); }
 
 .tool-method { max-width: 820px; margin: 0 auto; }
 .tool-method .accordion-button { font-weight: 600; color: #444; }
@@ -4768,7 +4768,7 @@ section.testimonials {
 .tool-method .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,0.12); border-color: #f0dca8; }
 .tool-method-rules { margin: 0; padding-left: 20px; }
 .tool-method-rules li { font-size: 0.88rem; color: #555; line-height: 1.8; }
-.tool-method-extra { font-size: 0.84rem; color: #888; margin: 10px 0 0; }
+.tool-method-extra { font-size: 0.84rem; color: var(--c-muted); margin: 10px 0 0; }
 
 /* --- 共用：出生表單（_includes/birth-form.html）---
    主色由頁面 extra_css 在 #main 覆寫 --tool-accent 三變數（預設＝實驗室金）。 */
@@ -4830,7 +4830,7 @@ section.testimonials {
 .explore-section.alt { background: #fff; }
 .explore-section-title { text-align: center; font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 6px; }
 .explore-section-lead {
-  text-align: center; font-size: 0.96rem; color: #777;
+  text-align: center; font-size: 0.96rem; color: var(--c-muted);
   max-width: 660px; margin: 0 auto 30px; line-height: 1.7;
 }
 
@@ -4846,7 +4846,7 @@ section.testimonials {
   display: inline-flex; align-items: center; justify-content: center;
 }
 .explore-cat-title { font-size: 1.2rem; font-weight: 700; color: #111; margin: 0; }
-.explore-cat-sub { font-size: 0.86rem; color: #888; margin: 2px 0 0; }
+.explore-cat-sub { font-size: 0.86rem; color: var(--c-muted); margin: 2px 0 0; }
 
 /* --- 工具卡 grid --- */
 .explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -4925,7 +4925,7 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .explore-tech-item:nth-last-child(-n+2) { border-bottom: none; }
 .explore-tech-item i { font-size: 1.15rem; color: var(--c-gold-deep); flex-shrink: 0; margin-top: 3px; }
 .explore-tech-item h4 { font-size: 0.98rem; font-weight: 700; color: #111; margin: 0 0 4px; }
-.explore-tech-item p { font-size: 0.86rem; color: #777; line-height: 1.6; margin: 0; }
+.explore-tech-item p { font-size: 0.86rem; color: var(--c-muted); line-height: 1.6; margin: 0; }
 
 /* --- 母工具頁返回 hub 的輕量交叉連結 --- */
 .explore-backlink {
@@ -4977,13 +4977,13 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-section { padding: 46px 0; }
 .qimen-section.alt { background: #fff; }
 .qimen-section-title { text-align: center; font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 8px; }
-.qimen-section-lead { text-align: center; font-size: 0.95rem; color: #777; max-width: 700px; margin: 0 auto 28px; line-height: 1.7; }
+.qimen-section-lead { text-align: center; font-size: 0.95rem; color: var(--c-muted); max-width: 700px; margin: 0 auto 28px; line-height: 1.7; }
 
 /* 概念轉譯 */
 .qimen-concept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; max-width: 940px; margin: 0 auto; }
 .qimen-concept { background: #fff; border: 1px solid #eee; border-radius: 11px; padding: 15px 17px; border-left: 3px solid var(--c-gold); }
 .qimen-concept b { display: block; font-size: 0.96rem; color: #111; margin-bottom: 3px; }
-.qimen-concept span { font-size: 0.86rem; color: #777; line-height: 1.6; }
+.qimen-concept span { font-size: 0.86rem; color: var(--c-muted); line-height: 1.6; }
 
 /* 適合情境 */
 .qimen-scenarios { display: grid; grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 10px; max-width: 960px; margin: 0 auto; }
@@ -5007,12 +5007,12 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-cell.tone-auspicious { border-top-color: var(--c-gold); }
 .qimen-cell.tone-caution { border-top-color: #7fa8c4; }
 .qimen-cell.tone-neutral { border-top-color: #cfc8ba; }
-.qimen-cell-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.72rem; color: #999; }
+.qimen-cell-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.72rem; color: var(--c-muted); }
 .qimen-cell-head .qc-palace { font-weight: 700; color: #b6820a; }
 .qimen-cell-main { display: flex; align-items: baseline; gap: 6px; }
 .qimen-cell-main .qc-men { font-size: 1.15rem; font-weight: 700; color: #111; }
 .qimen-cell-main .qc-star { font-size: 0.82rem; color: #666; }
-.qimen-cell-sub { display: flex; gap: 8px; font-size: 0.74rem; color: #888; }
+.qimen-cell-sub { display: flex; gap: 8px; font-size: 0.74rem; color: var(--c-muted); }
 .qimen-tone { align-self: flex-start; margin-top: auto; font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 1px 7px; }
 .tone-auspicious .qimen-tone { background: #fff3d6; color: #b6820a; }
 .tone-caution .qimen-tone { background: #eaf1f7; color: #4a7a9c; }
@@ -5023,7 +5023,7 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-center { background: linear-gradient(135deg, #fffaf0, #fdf3e0); border: 1px dashed var(--c-gold); border-top: 1px dashed var(--c-gold); cursor: default; align-items: center; justify-content: center; text-align: center; }
 .qimen-center-label { font-size: 0.72rem; font-weight: 700; color: #b6820a; letter-spacing: 1px; }
 .qimen-center-summary { font-size: 0.8rem; color: #6b5a2a; line-height: 1.55; margin: 6px 0 0; }
-.qimen-grid-caption { text-align: center; font-size: 0.82rem; color: #999; margin: 16px auto 0; max-width: 560px; }
+.qimen-grid-caption { text-align: center; font-size: 0.82rem; color: var(--c-muted); margin: 16px auto 0; max-width: 560px; }
 
 /* CTA 精選兩階（收窄呈現，行動單欄不變） */
 .qimen-cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 16px; max-width: 680px; margin: 0 auto; }
