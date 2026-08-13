@@ -139,7 +139,11 @@
   .pb-album--multi .pb-meta { display: flex; flex-direction: column; align-items: flex-start; }
   .pb-head h2 { font-size: 1.7rem; }
   /* 目次直排在窄幅要縮回單排橫滑，否則多欄目次撐爆版心 */
-  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; }
+  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; scrollbar-width: thin; scrollbar-color: rgba(201, 164, 97, .4) transparent; }
+  /* 原生亮灰滾動條在墨底上刺眼——收成 4px 金褐細軌，兼作橫滑提示 */
+  .pb-hero .jpu-vquote::-webkit-scrollbar { height: 4px; }
+  .pb-hero .jpu-vquote::-webkit-scrollbar-track { background: transparent; }
+  .pb-hero .jpu-vquote::-webkit-scrollbar-thumb { background: rgba(201, 164, 97, .4); }
 }
 
 @media (prefers-reduced-motion: reduce) {
