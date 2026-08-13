@@ -1220,7 +1220,7 @@ body[data-universe="work"] { --universe-color: var(--gold); }
     }
   }
 }
-@keyframes thesis-focus { from { opacity: .72; translate: 0 .8rem; letter-spacing: .01em; } to { opacity: 1; translate: 0 0; letter-spacing: -.035em; } }
+@keyframes thesis-focus { from { opacity: .72; translate: 0 .8rem; } to { opacity: 1; translate: 0 0; } }
 @keyframes thesis-column { from { opacity: .48; translate: 0 1.25rem; } to { opacity: 1; translate: 0 0; } }
 @keyframes aperture-reveal { from { clip-path: inset(12% 8% 12% 8% round 24px); filter: brightness(.55) saturate(.55); } to { clip-path: inset(0 round 3px); filter: none; } }
 @keyframes scanner-pass { from { translate: 0 -110%; } to { translate: 0 110%; } }
