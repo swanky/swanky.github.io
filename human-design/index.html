@@ -47,7 +47,7 @@ extra_css: |
   .hd-section { padding: 50px 0; }
   .hd-section-title { font-size: 1.6rem; font-weight: 700; color: #111; }
   .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); max-width: 720px; margin: 0 auto; }
-  .hd-form-card h3 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .hd-form-card h2 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .hd-form-card .form-hint { font-size: 0.85rem; color: var(--c-muted); margin-bottom: 22px; }
   .hd-field { margin-bottom: 18px; }
   .hd-field > label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin-bottom: 7px; }
@@ -153,20 +153,20 @@ extra_css: |
   .hd-gloss-item dt { font-weight: 700; color: var(--c-gold); margin-bottom: 2px; }
   .hd-gloss-item dd { color: #666; margin: 0; }
   .hd-step3-item { margin-bottom: 18px; }
-  .hd-step3-item h4 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .hd-step3-item h3 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
   .hd-step3-item p { font-size: 0.9rem; color: #666; line-height: 1.7; margin: 0; }
   /* 付費區誠實提醒 */
   .hd-funnel-note { max-width: 680px; margin: 26px auto 0; font-size: 0.84rem; color: var(--c-muted); line-height: 1.7; }
   .hd-positioning { background: #fafafa; }
   .hd-positioning .hd-pos-item { display: flex; gap: 14px; margin-bottom: 22px; }
   .hd-positioning .hd-pos-item i { font-size: 1.5rem; color: var(--c-gold); flex-shrink: 0; }
-  .hd-positioning .hd-pos-item h4 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+  .hd-positioning .hd-pos-item h3 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
   .hd-positioning .hd-pos-item p { font-size: 0.92rem; color: #666; line-height: 1.65; margin: 0; }
   .hd-products { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 880px; margin: 30px auto 0; }
   .hd-product-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
   .hd-product-card.is-featured { border-color: var(--c-gold); box-shadow: 0 10px 34px rgba(229,163,0,0.12); }
   .hd-product-card .hd-prod-tag { font-size: 0.76rem; font-weight: 700; color: var(--c-gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-  .hd-product-card h4 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+  .hd-product-card h3 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
   .hd-product-card .hd-prod-price { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .hd-product-card .hd-prod-price small { font-size: 0.85rem; color: var(--c-muted); font-weight: 400; }
   .hd-product-card .hd-prod-desc { font-size: 0.9rem; color: #666; line-height: 1.7; margin-bottom: 16px; }
@@ -498,7 +498,7 @@ extra_css: |
   .hd-form-option select, .hd-form-option input { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 8px 9px; color: #333; background: #fff; }
   @media (min-width: 768px) {
     .hd-form-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; align-items: start; }
-    .hd-form-card > h3,
+    .hd-form-card > h2,
     .hd-form-card > .form-hint,
     .hd-form-card > .hd-btn-generate,
     .hd-form-card > .hd-submit-note,
@@ -512,7 +512,7 @@ extra_css: |
     .hd-hero-action, .hd-hero-secondary, .hd-hero-backlink { display: none !important; }
     .hd-section { padding: 15px 0 22px; }
     .hd-form-card { padding: 17px; }
-    .hd-form-card h3 { font-size: 1.08rem; }
+    .hd-form-card h2 { font-size: 1.08rem; }
     .hd-form-card .form-hint { margin-bottom: 9px; line-height: 1.45; }
     .hd-field { margin-bottom: 9px; }
     .hd-field > label { margin-bottom: 5px; }
@@ -550,7 +550,7 @@ extra_css: |
   <section class="hd-section" id="hd-form">
     <div class="container">
       <div class="hd-form-card">
-        <h3>輸入你的出生資料</h3>
+        <h2>輸入你的出生資料</h2>
         <p class="form-hint">越精確的出生時間，排盤越準確。不確定也沒關係，可勾選下方選項。</p>
 
         <div class="hd-field hd-field--date">
@@ -805,15 +805,15 @@ extra_css: |
         <h2 class="hd-section-title">拿到圖之後：三步讀圖</h2>
         <p class="hd-explain-lead">圖表資訊量大，不用一次讀完。建議照這個順序，從最基本的互動規則，一層一層看到細部的能量特質。</p>
         <div class="hd-step3-item">
-          <h4><span class="hd-ro-label">STEP 1</span> 看類型與策略</h4>
+          <h3><span class="hd-ro-label">STEP 1</span> 看類型與策略</h3>
           <p>先確認你的類型與對應的人生策略——這是你和世界互動最基本的規則：等待回應、行動前告知、等待邀請，或等一輪月亮週期，決定了你該主動出擊還是按兵不動。多數的內耗，其實是規則用反了。</p>
         </div>
         <div class="hd-step3-item">
-          <h4><span class="hd-ro-label">STEP 2</span> 看內在權威</h4>
+          <h3><span class="hd-ro-label">STEP 2</span> 看內在權威</h3>
           <p>內在權威是你做決定時最該信任的訊號來源——可能是薦骨的直覺反應、情緒的週期起伏，或某個當下一閃而過的念頭。找到它，你就有一套不假外求的決策工具。</p>
         </div>
         <div class="hd-step3-item">
-          <h4><span class="hd-ro-label">STEP 3</span> 看已定義中心與通道</h4>
+          <h3><span class="hd-ro-label">STEP 3</span> 看已定義中心與通道</h3>
           <p>已定義的中心與通道，是你身上穩定不變的能量特質，不太會隨心情或環境改變；開放的中心則是你吸收與放大外界的地方，值得留意，但不必當成缺陷。</p>
         </div>
         <p class="hd-strategy-line">日常校準看這一組訊號：反覆出現的挫敗、憤怒、苦澀、失望，是偏航警示；滿足、平和、成功、驚喜，才是在軌確認——這就是「非自己主題」與「正面信號」的整合觀。</p>
@@ -830,9 +830,9 @@ extra_css: |
           <p style="color:#666; line-height:1.75;">人類圖最有價值的地方，不在「我是什麼類型」這個標籤，而在它怎麼幫你做決定、怎麼安排工作節奏、怎麼跟不同的人協作。這個工具由一位技術主管打造，帶著工程師與帶人者的視角。</p>
         </div>
         <div class="col-lg-7">
-          <div class="hd-pos-item"><i class="bi bi-cpu"></i><div><h4>給工程師與知識工作者</h4><p>你適合深度專精還是跨域整合？是該主動開局，還是等待對的機會回應？什麼樣的工作節奏會讓你發光、什麼會讓你耗損？</p></div></div>
-          <div class="hd-pos-item"><i class="bi bi-people"></i><div><h4>給帶團隊的主管</h4><p>團隊裡誰適合發起、誰適合回應、誰能看見系統盲點？怎麼從「我以為我在帶人，其實我在燒人」的循環裡走出來。</p></div></div>
-          <div class="hd-pos-item"><i class="bi bi-shield-check"></i><div><h4>隱私優先的設計</h4><p>所有天文計算都在你的瀏覽器內完成，出生資料不上傳、不記錄。這是一個把「可驗證、可提問」放在玄學之前的工具。</p></div></div>
+          <div class="hd-pos-item"><i class="bi bi-cpu"></i><div><h3>給工程師與知識工作者</h3><p>你適合深度專精還是跨域整合？是該主動開局，還是等待對的機會回應？什麼樣的工作節奏會讓你發光、什麼會讓你耗損？</p></div></div>
+          <div class="hd-pos-item"><i class="bi bi-people"></i><div><h3>給帶團隊的主管</h3><p>團隊裡誰適合發起、誰適合回應、誰能看見系統盲點？怎麼從「我以為我在帶人，其實我在燒人」的循環裡走出來。</p></div></div>
+          <div class="hd-pos-item"><i class="bi bi-shield-check"></i><div><h3>隱私優先的設計</h3><p>所有天文計算都在你的瀏覽器內完成，出生資料不上傳、不記錄。這是一個把「可驗證、可提問」放在玄學之前的工具。</p></div></div>
         </div>
       </div>
     </div>
@@ -847,7 +847,7 @@ extra_css: |
       <div class="hd-products">
         <div class="hd-product-card is-featured">
           <div class="hd-prod-tag">主題式深度報告</div>
-          <h4>職涯／帶人 深度解讀報告</h4>
+          <h3>職涯／帶人 深度解讀報告</h3>
           <div class="hd-prod-price"><span class="hd-prod-was">NT$1,280</span>NT$680<small> / 份</small></div>
           <div class="hd-prod-badge">首批限量驗證價 · 前 10 位</div>
           <a class="hd-prod-crypto-hint" href="#hd-crypto">💎 用穩定幣付款更省 → 9.99 USDC</a>
@@ -863,7 +863,7 @@ extra_css: |
 
         <div class="hd-product-card is-featured is-outline">
           <div class="hd-prod-tag">雙人合盤報告</div>
-          <h4>兩人關係 合盤解讀報告</h4>
+          <h3>兩人關係 合盤解讀報告</h3>
           <div class="hd-prod-price"><span class="hd-prod-was">NT$2,280</span>NT$1,080<small> / 兩人一份</small></div>
           <div class="hd-prod-badge">首批限量驗證價 · 前 10 位</div>
           <a class="hd-prod-crypto-hint" href="#hd-crypto">💎 用穩定幣付款更省 → 19.99 USDC</a>

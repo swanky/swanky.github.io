@@ -87,7 +87,7 @@
 .ct-deck-media img { width: 100%; aspect-ratio: 2/3; object-fit: contain; border-radius: 10px; }
 .ct-deck-body { padding: 28px; }
 .ct-deck-kicker { color: var(--ct-cyan); font-size: .71rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.ct-deck-card h3 { margin: 8px 0 10px; font-size: 1.65rem; font-weight: 800; }
+.ct-deck-card h2, .ct-deck-card h3 { margin: 8px 0 10px; font-size: 1.65rem; font-weight: 800; }
 .ct-deck-card p { margin: 0 0 18px; color: var(--ct-muted); line-height: 1.7; }
 .ct-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
 .ct-meta li { padding: 5px 9px; border: 1px solid var(--ct-line); border-radius: 999px; color: #c8d4e6; font-size: .72rem; }

@@ -53,7 +53,7 @@ extra_css: |
   .hdc-wizard { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
   @media (max-width: 820px) { .hdc-wizard { grid-template-columns: 1fr; } }
   .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-  .hd-form-card h3 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .hd-form-card h2 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
   .hdc-step { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--c-gold, #E5A300); color: #fff; font-size: 0.85rem; flex: none; }
   .hd-form-card .form-hint { font-size: 0.84rem; color: var(--c-muted); margin-bottom: 18px; }
   .hdc-consent { font-size: 0.82rem; color: #8B5E00; background: #fffaef; border: 1px solid #f0dca8; border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; line-height: 1.6; }
@@ -228,7 +228,7 @@ extra_css: |
     .hdc-wizard { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; padding-bottom: 4px; }
     .hdc-wizard > .hd-form-card { flex: 0 0 100%; scroll-snap-align: start; }
     .hd-form-card { padding: 12px; }
-    .hd-form-card h3 { font-size: 1.03rem; }
+    .hd-form-card h2 { font-size: 1.03rem; }
     .hd-form-card .form-hint { font-size: .77rem; line-height: 1.4; margin-bottom: 4px; }
     .hdc-consent { margin-bottom: 7px; padding: 6px 8px; font-size: .75rem; line-height: 1.42; }
     .hd-field { margin-bottom: 5px; }
@@ -270,7 +270,7 @@ extra_css: |
       <div class="hdc-wizard" aria-label="兩人的出生資料">
         <!-- A -->
         <div class="hd-form-card">
-          <h3><span class="hdc-step">1</span> 你的出生資料</h3>
+          <h2><span class="hdc-step">1</span> 你的出生資料</h2>
           <p class="form-hint">若你剛在單人排盤輸入過，這裡會自動帶入。</p>
           <div class="hdc-carryover" id="hdc-carryover"></div>
           <div class="hd-field hd-field--date">
@@ -306,7 +306,7 @@ extra_css: |
         </div>
         <!-- B -->
         <div class="hd-form-card">
-          <h3><span class="hdc-step">2</span> 對方的出生資料</h3>
+          <h2><span class="hdc-step">2</span> 對方的出生資料</h2>
           <p class="form-hint">任何關係都可以合：伴侶、家人、朋友、工作夥伴。</p>
           <div class="hdc-consent"><i class="bi bi-info-circle"></i> 請先取得對方同意再輸入其出生資料。所有計算只在你的瀏覽器內進行，不會上傳。</div>
           <div class="hd-field hd-field--date">

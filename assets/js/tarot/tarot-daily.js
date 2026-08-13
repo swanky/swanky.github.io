@@ -40,8 +40,8 @@ function renderReading(value) {
   let html = `<div class="daily-reading-head"><span class="daily-reading-name">${esc(name)}</span> <span class="tarot-r-en">${esc(card.nameEn)}</span></div>`;
   if (r && r.symbol) html += `<p class="daily-symbol">${esc(r.symbol)}</p>`;
   if (value.reversed && r && r.reversed) html += `<p class="daily-reversed"><b>這次是逆位——換個角度看：</b>${esc(r.reversed)}</p>`;
-  if (dom && dom.action) html += `<div class="daily-remind"><h5>今天，試著這樣做</h5><p>${esc(dom.action)}</p></div>`;
-  else html += `<div class="daily-remind"><h5>今天的提醒</h5><p>記下你抽到這張牌的當下，心裡浮現的第一個念頭。</p></div>`;
+  if (dom && dom.action) html += `<div class="daily-remind"><h2>今天，試著這樣做</h2><p>${esc(dom.action)}</p></div>`;
+  else html += `<div class="daily-remind"><h2>今天的提醒</h2><p>記下你抽到這張牌的當下，心裡浮現的第一個念頭。</p></div>`;
   setHTML('daily-reading', html);
 }
 

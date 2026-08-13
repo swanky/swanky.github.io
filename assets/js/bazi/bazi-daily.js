@@ -56,7 +56,7 @@ function render() {
     <div class="wd-gz" style="color:${color}">${esc(t.ganName)}${esc(t.zhiName)}</div>
     <p class="wd-meta">天干 <b style="color:${color}">${esc(t.ganName)}</b>（${esc(t.wuxing)}）· ${esc(t.nayin)}</p>
     <p class="wd-mood">${esc(t.mood)}</p>
-    <div class="wd-hint"><h5>今天的提醒</h5><p>${esc(t.hint)}</p></div>`);
+    <div class="wd-hint"><h2>今天的提醒</h2><p>${esc(t.hint)}</p></div>`);
   lastSvg = buildDailySvg(t);
 }
 

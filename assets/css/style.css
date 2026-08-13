@@ -1658,6 +1658,8 @@ padding-bottom: 56.25%;
 }
 
 .service-details .card-title {
+  font-size: 1.25rem;
+  line-height: 1.25;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
@@ -2955,7 +2957,7 @@ padding-bottom: 56.25%;
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-info h3 {
+#footer .footer-top .footer-info h2 {
   font-size: 18px;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
@@ -2993,7 +2995,7 @@ padding-bottom: 56.25%;
   text-decoration: none;
 }
 
-#footer .footer-top h4 {
+#footer .footer-top .footer-contact h2 {
   font-size: 18px;
   font-weight: 600;
   color: #E5A300;
@@ -4446,7 +4448,7 @@ section.testimonials {
   border: 1px solid #f0e6d3;
 }
 
-.hub-banner-text h3 {
+.hub-banner-text h2 {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
@@ -4779,7 +4781,7 @@ section.testimonials {
   --tool-heading: #111;
 }
 .tool-form-card { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-.tool-form-card h3 { font-size: 1.12rem; font-weight: 700; color: var(--tool-heading); margin: 0 0 12px; }
+.tool-form-card h2 { font-size: 1.12rem; font-weight: 700; color: var(--tool-heading); margin: 0 0 12px; }
 .tool-field { margin-bottom: 12px; }
 .tool-field > label { display: block; font-size: 0.86rem; font-weight: 600; color: #444; margin-bottom: 7px; }
 .tool-selects { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -4802,7 +4804,7 @@ section.testimonials {
 
 @media (min-width: 768px) {
   .tool-form-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; align-items: start; }
-  .tool-form-card > h3,
+  .tool-form-card > h2,
   .tool-form-card > .tool-compute-btn,
   .tool-form-card > .tool-error { grid-column: 1 / -1; }
 }
@@ -4924,7 +4926,7 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .explore-tech-item { display: flex; align-items: flex-start; gap: 14px; text-align: left; padding: 20px 4px; border-bottom: 1px solid #ececec; }
 .explore-tech-item:nth-last-child(-n+2) { border-bottom: none; }
 .explore-tech-item i { font-size: 1.15rem; color: var(--c-gold-deep); flex-shrink: 0; margin-top: 3px; }
-.explore-tech-item h4 { font-size: 0.98rem; font-weight: 700; color: #111; margin: 0 0 4px; }
+.explore-tech-item h3 { font-size: 0.98rem; font-weight: 700; color: #111; margin: 0 0 4px; }
 .explore-tech-item p { font-size: 0.86rem; color: var(--c-muted); line-height: 1.6; margin: 0; }
 
 /* --- 母工具頁返回 hub 的輕量交叉連結 --- */
@@ -5029,7 +5031,7 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 16px; max-width: 680px; margin: 0 auto; }
 .qimen-cta-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 24px 22px; display: flex; flex-direction: column; }
 .qimen-cta-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; color: var(--c-gold); text-transform: uppercase; margin-bottom: 8px; }
-.qimen-cta-card h4 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+.qimen-cta-card h3 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
 .qimen-cta-card p { font-size: 0.87rem; color: #666; line-height: 1.7; margin-bottom: 16px; flex: 1; }
 .qimen-cta-btn { display: block; text-align: center; padding: 11px; border-radius: 10px; background: var(--c-gold); color: #111; font-weight: 600; text-decoration: none; transition: 0.25s; margin-top: auto; }
 .qimen-cta-btn:hover { background: #c98f00; color: #111; }

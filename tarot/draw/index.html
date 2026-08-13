@@ -68,7 +68,7 @@ extra_css: |
 
   .tarot-tool { padding: 40px 0; }
   .tarot-q-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; max-width: 760px; margin: 0 auto; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-  .tarot-q-card h3 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .tarot-q-card h2 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .tarot-hint { font-size: 0.85rem; color: var(--c-muted); margin-bottom: 14px; }
   .tarot-tip { margin: -2px 0 14px; font-size: 0.86rem; }
   .tarot-tip summary { cursor: pointer; color: #b6820a; font-weight: 600; list-style: none; }
@@ -205,14 +205,14 @@ extra_css: |
   .tarot-positioning { background: #fafafa; }
   .tarot-pos-item { display: flex; gap: 14px; margin-bottom: 22px; }
   .tarot-pos-item i { font-size: 1.5rem; color: var(--c-gold); flex-shrink: 0; }
-  .tarot-pos-item h4 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+  .tarot-pos-item h3 { font-size: 1.02rem; font-weight: 700; color: #111; margin-bottom: 5px; }
   .tarot-pos-item p { font-size: 0.92rem; color: #666; line-height: 1.65; margin: 0; }
 
   .tarot-products { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 880px; margin: 30px auto 0; }
   .tarot-product-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; }
   .tarot-product-card.is-featured { border-color: var(--c-gold); box-shadow: 0 10px 34px rgba(229,163,0,0.12); }
   .tarot-prod-tag { font-size: 0.76rem; font-weight: 700; color: var(--c-gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-  .tarot-product-card h4 { font-size: 1.18rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+  .tarot-product-card h3 { font-size: 1.18rem; font-weight: 700; color: #111; margin-bottom: 8px; }
   .tarot-prod-price { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .tarot-prod-price small { font-size: 0.85rem; color: var(--c-muted); font-weight: 400; }
   .tarot-prod-was { text-decoration: line-through; color: var(--c-muted); font-size: 1rem; font-weight: 600; margin-right: 7px; }
@@ -284,8 +284,8 @@ extra_css: |
   .tarot-tool { padding: 4px 0 26px; }
   .tarot-q-card { max-width: 1040px; padding: 21px; }
   .tarot-tool-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 22px; align-items: start; }
-  .tarot-step-choices h3 { margin-top: 12px; }
-  .tarot-step-choices h3:first-child { margin-top: 0; }
+  .tarot-step-choices h2 { margin-top: 12px; }
+  .tarot-step-choices h2:first-child { margin-top: 0; }
   .tarot-step-choices .tarot-hint { margin-bottom: 7px; }
   .tarot-topic-options, .tarot-spread-options, .tarot-deck-options { margin-top: 5px; }
   .tarot-topic-btn, .tarot-spread-btn, .tarot-deck-btn { padding: 9px 10px; }
@@ -299,12 +299,12 @@ extra_css: |
     .tarot-tool { padding: 12px 0 20px; }
     .tarot-q-card { padding: 14px; }
     .tarot-tool-grid { grid-template-columns: 1fr; gap: 10px; }
-    .tarot-q-card h3 { font-size: .98rem; }
+    .tarot-q-card h2 { font-size: .98rem; }
     .tarot-hint { margin-bottom: 6px; font-size: .76rem; line-height: 1.4; }
     .tarot-tip { margin-bottom: 7px; font-size: .78rem; }
     #tarot-question { min-height: 68px; padding: 9px 10px; font-size: .88rem; line-height: 1.45; }
     .tarot-reco { margin-top: 6px; padding: 7px 9px; font-size: .78rem; line-height: 1.42; }
-    .tarot-step-choices h3 { margin: 8px 0 3px; }
+    .tarot-step-choices h2 { margin: 8px 0 3px; }
     .tarot-step-choices > .tarot-hint { display: none; }
     .tarot-topic-options { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
     .tarot-spread-options { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
@@ -337,7 +337,7 @@ extra_css: |
       <div class="tarot-q-card">
         <div class="tarot-tool-grid">
           <div class="tarot-step-question">
-            <h3>① 你最近卡在什麼事情上？</h3>
+            <h2>① 你最近卡在什麼事情上？</h2>
             <p class="tarot-hint">寫得越具體，建議的牌陣與解讀越貼近你。也可以留白，直接抽一張今日提醒。</p>
             <details class="tarot-tip">
               <summary><i class="bi bi-lightbulb"></i> 如何問一個好問題？</summary>
@@ -352,16 +352,16 @@ extra_css: |
           </div>
 
           <div class="tarot-step-choices">
-            <h3>② 這件事跟哪方面有關？</h3>
+            <h2>② 這件事跟哪方面有關？</h2>
             <p class="tarot-hint">選一個主題，同一張牌會給你對應的反思視角。系統也會依你的問題自動猜一個。</p>
             <div class="tarot-topic-options" id="tarot-topic-options"></div>
 
-            <h3>③ 選一個牌陣</h3>
+            <h2>③ 選一個牌陣</h2>
             <p class="tarot-hint">系統會依你的問題建議一個，你也可以自己改。</p>
             <div class="tarot-spread-options" id="tarot-spread-options"></div>
             <label class="tarot-check"><input type="checkbox" id="tarot-allow-reversed" checked> 包含逆位牌（只是換個角度看，不代表壞事）</label>
 
-            <h3>④ 選一副牌</h3>
+            <h2>④ 選一副牌</h2>
             <p class="tarot-hint">兩副原創牌組，牌義相同、牌面不同。抽牌後也可以隨時切換。</p>
             <div class="tarot-deck-options" id="tarot-deck-options"></div>
 
@@ -436,9 +436,9 @@ extra_css: |
           <p style="color:#666; line-height:1.75;">這個工具由一位帶過團隊的技術主管打造，帶著一種冷靜、不神棍的視角。它不替你決定，而是幫你把一個說不清楚的卡點，變成一個想得清楚、做得出來的下一步——無論那是工作、感情，還是一個放在心上很久的選擇。</p>
         </div>
         <div class="col-lg-7">
-          <div class="tarot-pos-item"><i class="bi bi-signpost-split"></i><div><h4>給正在做選擇的你</h4><p>該不該換工作、要不要投入一段關係、一筆錢花不花得下去——把難以言喻的猶豫，攤成可以衡量、可以談的選項。</p></div></div>
-          <div class="tarot-pos-item"><i class="bi bi-heart"></i><div><h4>給關係裡卡住的你</h4><p>伴侶、曖昧、家人、朋友——它不算「對方愛不愛你」，而是幫你看清自己在這段關係裡真正的需求與界線。</p></div></div>
-          <div class="tarot-pos-item"><i class="bi bi-compass"></i><div><h4>反思，不是預測</h4><p>這裡沒有運勢、吉凶、命定，也不預測升遷、感情或財運。牌是鏡子，照見的是你的選擇與盲點——決定永遠在你手上。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-signpost-split"></i><div><h3>給正在做選擇的你</h3><p>該不該換工作、要不要投入一段關係、一筆錢花不花得下去——把難以言喻的猶豫，攤成可以衡量、可以談的選項。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-heart"></i><div><h3>給關係裡卡住的你</h3><p>伴侶、曖昧、家人、朋友——它不算「對方愛不愛你」，而是幫你看清自己在這段關係裡真正的需求與界線。</p></div></div>
+          <div class="tarot-pos-item"><i class="bi bi-compass"></i><div><h3>反思，不是預測</h3><p>這裡沒有運勢、吉凶、命定，也不預測升遷、感情或財運。牌是鏡子，照見的是你的選擇與盲點——決定永遠在你手上。</p></div></div>
         </div>
       </div>
     </div>
@@ -453,7 +453,7 @@ extra_css: |
       <div class="tarot-products">
         <div class="tarot-product-card is-featured is-outline">
           <div class="tarot-prod-tag">非同步・email 交付</div>
-          <h4>塔羅・客製文字解讀</h4>
+          <h3>塔羅・客製文字解讀</h3>
           <div class="tarot-prod-price"><span class="tarot-prod-was">NT$980</span>NT$680<small> / 一個議題</small></div>
           <div class="tarot-prod-badge">首批限量驗證價</div>
           <a class="tarot-prod-crypto-hint" href="#tarot-crypto">💎 用穩定幣付款更省 → 6.99 USDC</a>
@@ -468,7 +468,7 @@ extra_css: |
 
         <div class="tarot-product-card is-featured">
           <div class="tarot-prod-tag">即時・線上一對一</div>
-          <h4>塔羅・1:1 線上引導</h4>
+          <h3>塔羅・1:1 線上引導</h3>
           <div class="tarot-prod-price">NT$2,400<small> / 60 分鐘</small></div>
           <div class="tarot-prod-badge">名額有限・本人親自進行</div>
           <p class="tarot-prod-desc">視訊一對一，帶著你當下的議題，用塔羅當引子跑完整套四段反思對話，會後附上重點摘要，幫你收斂成可執行的下一步。</p>
