@@ -165,6 +165,14 @@ test('攝影作品圖片預設保留完整比例', () => {
   assert.match(css, /\.photo-author-subpage[\s\S]*?\.photo-subpage-image[\s\S]*?height:\s*auto/);
 });
 
+test('低解析出版封面只縮小、不被版面放大', () => {
+  const css = read('assets/css/photography.css');
+  assert.match(
+    css,
+    /\.photo-author-subpage \.photo-subpage-publication > \.photo-subpage-image\s*{[\s\S]*?width:\s*auto;[\s\S]*?max-width:\s*100%;/,
+  );
+});
+
 test('Archive 深色區的資料卡使用高對比配色', () => {
   const css = read('assets/css/photography.css');
   assert.match(css, /\.photo-author-section:not\(\.photo-author-light\) \.photo-subpage-archive-grid a/);
