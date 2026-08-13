@@ -17,9 +17,9 @@
   gap: 7px;
   margin-left: 30px;
   padding: 7px 16px;
-  color: #fff;
+  color: #111;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, .6);
+  border: 1px solid rgba(17, 17, 17, .55);
   border-radius: 50px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -42,8 +42,19 @@
 }
 
 .site-overview-trigger:focus-visible {
-  outline: 3px solid #F5C53B;
+  outline: 3px solid #111;
   outline-offset: 3px;
+}
+
+#header.header-transparent .site-overview-trigger,
+#header.header-scrolled .site-overview-trigger {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .6);
+}
+
+#header.header-transparent .site-overview-trigger:focus-visible,
+#header.header-scrolled .site-overview-trigger:focus-visible {
+  outline-color: #F5C53B;
 }
 
 @media (max-width: 991px) {
