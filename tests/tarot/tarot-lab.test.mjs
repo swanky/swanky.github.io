@@ -84,6 +84,13 @@ test('Cyber Tarot Lab 路由、抽牌工具與 gallery 接線完整', () => {
   assert.match(read('assets/css/tarot-lab.css'), /\.ct-gallery-card img \{[^}]*height: auto;/);
 });
 
+test('塔羅抽牌的功能選項沿用工具頁 10px 圓角', () => {
+  const draw = read('tarot/draw/index.html');
+  for (const control of ['tarot-deck-btn', 'tarot-spread-btn', 'tarot-topic-btn']) {
+    assert.match(draw, new RegExp(`\\.${control} \\{[^}]*border-radius: 10px;`), control);
+  }
+});
+
 test('CloneX gallery 避免舊快取，lightbox 有描述與前後切牌', () => {
   const head = read('_includes/head.html');
   const scripts = read('_includes/scripts.html');
