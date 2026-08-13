@@ -101,6 +101,26 @@ extra_css: |
   .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
   .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
   @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* 工具首屏：保留同一套暖金 hero 與 10px 操作按鈕，只壓縮非必要留白。 */
+  .bazi-hero { padding: 22px 0 18px; }
+  .bazi-hero h1 { margin: 5px 0 7px; }
+  .bazi-hero .lead { margin-bottom: 10px; line-height: 1.58; }
+  .bazi-section { padding: 14px 0 22px; }
+  .bazi-adv { margin-bottom: 8px; padding: 0 10px; }
+  .bazi-adv summary { padding: 5px 0; font-size: .84rem; }
+  @media (max-width: 767px) {
+    .bazi-hero { padding: 11px 0 9px; }
+    .bazi-hero .lead { font-size: .94rem; line-height: 1.55; }
+    .bazi-beta { padding: 4px 12px; }
+    .bazi-section { padding-top: 6px; }
+    .tool-form-card { padding: 16px; }
+    .tool-form-card h3 { margin-bottom: 8px; }
+    .tool-field { margin-bottom: 10px; }
+    .tool-form-extra { margin-bottom: 8px; }
+    .tool-form-extra summary { padding: 6px 0; }
+    .tool-compute-btn { padding: 12px; }
+  }
 ---
 
 <main id="main">

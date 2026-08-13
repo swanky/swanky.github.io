@@ -16,8 +16,10 @@ const services = read('_data/divination_services.yml');
 const mbtiArticle = read('_posts/2025-08-31-mbti-software-management.md');
 
 test('出生資料表單把非必要欄位收起，並提供四個不傳送地點的快捷選項', () => {
-  assert.match(page, /<details class="hd-advanced">\s*<summary>時間是約略記錄？檢查前後誤差<\/summary>/);
-  assert.match(page, /<details class="hd-form-extra" id="hd-name-extra">/);
+  assert.match(page, /<details class="hd-form-extra hd-form-options" id="hd-name-extra">\s*<summary>更多選項：時間誤差、時區與稱呼<\/summary>/);
+  for (const id of ['hd-uncertainty', 'hd-manual-tz', 'hd-name']) {
+    assert.match(page, new RegExp(`id="${id}"`));
+  }
   assert.equal([...page.matchAll(/data-hd-city-for="hd"/g)].length, 4);
   assert.match(page, /\.hd-city-chip \{[^}]*border-radius: 10px;/s);
   assert.match(form, /gtag\('event', 'hd_city_quick_pick'/);

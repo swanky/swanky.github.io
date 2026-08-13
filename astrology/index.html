@@ -98,6 +98,19 @@ extra_css: |
   .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
   .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
   @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* 工具首屏：保留同一套暖金 hero 與 10px 操作按鈕，只壓縮非必要留白。 */
+  .astro-hero { padding: 22px 0 18px; }
+  .astro-hero h1 { margin: 5px 0 7px; }
+  .astro-hero .lead { margin-bottom: 10px; line-height: 1.58; }
+  .astro-section { padding: 14px 0 22px; }
+  @media (max-width: 767px) {
+    .astro-hero { padding: 10px 0 8px; }
+    .astro-hero .lead { font-size: .94rem; line-height: 1.55; }
+    .astro-beta { padding: 4px 12px; }
+    .tool-form-extra { margin-bottom: 8px; }
+    .tool-form-extra summary { padding: 6px 0; }
+  }
 ---
 
 <main id="main">

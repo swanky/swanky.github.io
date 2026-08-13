@@ -90,6 +90,17 @@ extra_css: |
   .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
   .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
   @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* 工具首屏：內容不刪減，僅把每日卡與下載操作拉回指定視窗內。 */
+  .wd-hero { padding: 34px 0 24px; }
+  .wd-section { padding: 28px 0 34px; }
+  @media (max-width: 767px) {
+    .wd-hero { padding: 26px 0 20px; }
+    .wd-hero .lead { line-height: 1.6; margin-bottom: 10px; }
+    .wd-breadcrumbs { margin-bottom: 9px; }
+    .wd-card { padding: 24px 22px; }
+    .wd-actions { margin-top: 16px; }
+  }
 ---
 
 <main id="main">

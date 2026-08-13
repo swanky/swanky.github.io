@@ -25,17 +25,20 @@ birth-form.html — 自我探索實驗室共用出生表單（astrology / bazi /
       <select id="{{ include.prefix }}-h"></select> 時
       <select id="{{ include.prefix }}-mi"></select> 分
     </div>
+    <label class="tool-check"><input type="checkbox" id="{{ include.prefix }}-time-unknown"> {{ include.time_unknown_label }}</label>
   </div>
-  <label class="tool-check"><input type="checkbox" id="{{ include.prefix }}-time-unknown"> {{ include.time_unknown_label }}</label>
   <div class="tool-field">
     <label>出生城市</label>
     <div class="tool-selects"><select id="{{ include.prefix }}-city" class="tool-city"></select></div>
   </div>
   {{ include.extra }}
-  <div class="tool-field">
-    <label>姓名（選填）</label>
-    <input type="text" id="{{ include.prefix }}-name" class="tool-name" placeholder="{{ include.name_placeholder }}">
-  </div>
+  <details class="tool-form-extra">
+    <summary>想讓結果顯示稱呼？（選填）</summary>
+    <div class="tool-form-extra-body">
+      <label for="{{ include.prefix }}-name">稱呼／姓名</label>
+      <input type="text" id="{{ include.prefix }}-name" class="tool-name" placeholder="{{ include.name_placeholder }}">
+    </div>
+  </details>
   <button class="tool-compute-btn" id="{{ include.prefix }}-compute">{{ include.submit_label }}</button>
   <div class="tool-error" id="{{ include.prefix }}-error" style="display:none;"></div>
 </div>

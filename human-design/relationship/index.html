@@ -61,7 +61,7 @@ extra_css: |
   .hd-field > label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin-bottom: 7px; }
   .hd-selects { display: flex; gap: 8px; flex-wrap: wrap; }
   .hd-selects .hd-sel-wrap { display: flex; align-items: center; gap: 4px; }
-  .hd-selects select, .hd-city-input, .hdc-relation-sel { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
+  .hd-selects select, .hd-city-input, .hdc-relation-sel { border: 1px solid #ddd; border-radius: 8px; padding: 7px 9px; font-size: 0.95rem; color: #333; background: #fff; }
   .hd-unit { font-size: 0.85rem; color: #888; }
   .hd-check { display: flex; align-items: flex-start; gap: 7px; font-size: 0.85rem; color: #666; cursor: pointer; }
   .hd-check input { margin-top: 3px; }
@@ -176,6 +176,78 @@ extra_css: |
   /* hdc-report 深色帶內：既有淺色報告卡維持原色與左對齊 */
   .tool-cta-dark .hdc-report { text-align: left; }
   .tool-cta-dark .hdc-report h2 { color: #111; }
+
+  /* 工具首屏單頁原型：桌機維持雙欄；手機沿用同一張表單卡，改為水平逐張填寫。 */
+  .hd-hero { padding: 20px 0 16px; }
+  .hd-hero h1 { margin-bottom: 8px; }
+  .hd-hero .lead { margin-bottom: 11px; line-height: 1.58; }
+  .hd-section { padding: 14px 0 22px; }
+  .hd-form-card { padding: 15px; }
+  .hd-form-card .form-hint { margin-bottom: 10px; }
+  .hdc-consent { margin-bottom: 10px; padding: 7px 10px; }
+  .hd-field { margin-bottom: 10px; }
+  .hd-person-options { margin-top: 2px; padding: 0 11px; border: 1px solid #eee5d2; border-radius: 10px; background: #fffdf8; }
+  .hd-person-options summary { padding: 8px 0; color: #6e6658; font-size: .82rem; font-weight: 600; cursor: pointer; list-style: none; }
+  .hd-person-options summary::-webkit-details-marker { display: none; }
+  .hd-person-options summary::before { content: "＋ "; color: #8B5E00; }
+  .hd-person-options[open] summary::before { content: "－ "; }
+  .hd-person-options-body { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 0 11px; }
+  .hd-person-options-body label { display: block; margin-bottom: 5px; color: #666; font-size: .8rem; }
+  .hd-person-options-body select, .hd-person-options-body input { width: 100%; }
+  .hdc-shared-row { margin-top: 12px; padding: 15px 19px; }
+  .hdc-relation-extra { padding: 0 11px; border: 1px solid #eee5d2; border-radius: 10px; background: #fffdf8; }
+  .hdc-relation-extra summary { padding: 8px 0; color: #6e6658; font-size: .82rem; font-weight: 600; cursor: pointer; list-style: none; }
+  .hdc-relation-extra summary::-webkit-details-marker { display: none; }
+  .hdc-relation-extra summary::before { content: "＋ "; color: #8B5E00; }
+  .hdc-relation-extra[open] summary::before { content: "－ "; }
+  .hdc-relation-extra-body { padding: 0 0 10px; }
+  .hd-btn-generate { margin-top: 10px; padding: 12px; }
+  .hdc-mobile-guide { display: none; }
+
+  @media (min-width: 821px) {
+    .hd-form-card { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); column-gap: 12px; align-items: start; }
+    .hd-form-card > h3,
+    .hd-form-card > .form-hint,
+    .hd-form-card > .hdc-carryover,
+    .hd-form-card > .hdc-consent,
+    .hd-form-card > .hd-field:not(.hd-field--date):not(.hd-field--time),
+    .hd-form-card > .hd-person-options { grid-column: 1 / -1; }
+    .hd-form-card .hd-selects { flex-wrap: nowrap; gap: 5px; }
+    .hd-form-card .hd-selects select { min-width: 0; padding: 6px 5px; font-size: .86rem; }
+    .hd-form-card .hd-unit { font-size: .76rem; }
+  }
+
+  @media (max-width: 820px) {
+    .hd-hero { padding: 13px 0 10px; }
+    .hd-hero nav { margin-bottom: 5px !important; }
+    .hd-hero h1 { font-size: 1.72rem; line-height: 1.25; margin-bottom: 7px; }
+    .hd-hero .lead { margin-bottom: 6px; font-size: .87rem; line-height: 1.45; }
+    .hd-privacy-pill { padding: 5px 11px; font-size: .75rem; line-height: 1.4; margin: 0; }
+    .hd-section { padding: 8px 0 18px; }
+    .hdc-mobile-guide { display: block; margin: 0 0 4px; color: #6e6658; font-size: .78rem; text-align: center; }
+    .hdc-wizard { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; padding-bottom: 4px; }
+    .hdc-wizard > .hd-form-card { flex: 0 0 100%; scroll-snap-align: start; }
+    .hd-form-card { padding: 12px; }
+    .hd-form-card h3 { font-size: 1.03rem; }
+    .hd-form-card .form-hint { font-size: .77rem; line-height: 1.4; margin-bottom: 4px; }
+    .hdc-consent { margin-bottom: 7px; padding: 6px 8px; font-size: .75rem; line-height: 1.42; }
+    .hd-field { margin-bottom: 5px; }
+    .hd-field > label { margin-bottom: 4px; font-size: .82rem; }
+    .hd-field--date .hd-selects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+    .hd-field--time .hd-selects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+    .hd-selects .hd-sel-wrap { min-width: 0; gap: 2px; }
+    .hd-selects select { min-width: 0; width: 100%; padding: 7px 5px; }
+    .hd-check { margin-top: 6px !important; font-size: .75rem; line-height: 1.35; }
+    .hd-advanced { margin-top: 6px; }
+    .hd-person-options summary { padding: 7px 0; }
+    .hd-person-options-body { grid-template-columns: 1fr; }
+    .hdc-shared-row { margin-top: 5px; padding: 9px 13px; }
+    .hdc-shared-row .hd-field { margin-bottom: 0; }
+    .hdc-shared-row label { font-size: .78rem; }
+    .hdc-relation-extra summary { padding: 6px 0; }
+    .hdc-relation-sel { padding: 7px 9px; }
+    .hd-btn-generate { margin-top: 5px; padding: 10px; }
+  }
 ---
 
 <main id="main">
@@ -186,21 +258,22 @@ extra_css: |
         <span style="font-size:0.85rem;color:#999;"><a href="{{ '/human-design/' | relative_url }}" style="color:#8B5E00;">人類圖生成器</a>　›　關係合盤</span>
       </nav>
       <h1>免費人類圖合盤（關係合圖）</h1>
-      <p class="lead">輸入兩個人的出生資料，看你們的 36 條通道之間形成哪四種連結——<b>電磁</b>的吸引、<b>同伴</b>的相似、<b>主導</b>的單向流動、<b>妥協</b>的重疊地帶，以及哪些能量中心因為在一起而改變。適合伴侶、家人、朋友與工作搭檔。</p>
+      <p class="lead">輸入兩人的出生資料，看 36 條通道形成的<b>電磁、同伴、主導與妥協</b>四種連結，以及你們在一起時改變的能量中心。適合伴侶、家人、朋友與工作搭檔。</p>
       <div class="hd-privacy-pill"><i class="bi bi-shield-lock"></i> 兩人的出生資料都只在你的瀏覽器內計算，不上傳、不儲存</div>
     </div>
   </section>
 
   <!-- ======= 雙人表單 ======= -->
   <section class="hd-section" id="hdc-form">
-    <div class="container">
-      <div class="hdc-wizard">
+      <div class="container">
+      <p class="hdc-mobile-guide">左右滑動可切換「你」與「對方」的出生資料。</p>
+      <div class="hdc-wizard" aria-label="兩人的出生資料">
         <!-- A -->
         <div class="hd-form-card">
           <h3><span class="hdc-step">1</span> 你的出生資料</h3>
           <p class="form-hint">若你剛在單人排盤輸入過，這裡會自動帶入。</p>
           <div class="hdc-carryover" id="hdc-carryover"></div>
-          <div class="hd-field">
+          <div class="hd-field hd-field--date">
             <label>出生日期（西元）</label>
             <div class="hd-selects">
               <div class="hd-sel-wrap"><select id="hd-a-year" aria-label="A 出生年"></select><span class="hd-unit">年</span></div>
@@ -208,7 +281,7 @@ extra_css: |
               <div class="hd-sel-wrap"><select id="hd-a-day" aria-label="A 出生日"></select><span class="hd-unit">日</span></div>
             </div>
           </div>
-          <div class="hd-field">
+          <div class="hd-field hd-field--time">
             <label>出生時間（24 小時制）</label>
             <div class="hd-selects">
               <div class="hd-sel-wrap"><select id="hd-a-hour" aria-label="A 出生時"></select><span class="hd-unit">時</span></div>
@@ -222,25 +295,21 @@ extra_css: |
               <input type="text" class="hd-city-input" id="hd-a-city-search" placeholder="輸入城市名稱，例如：台北、Tokyo" autocomplete="off">
               <div class="hd-city-list" id="hd-a-city-list" role="listbox"></div>
             </div>
-            <details class="hd-advanced">
-              <summary>找不到出生地？手動指定時區</summary>
-              <div class="hd-adv-body">
-                <label for="hd-a-manual-tz" style="font-size:0.85rem;color:#666;">出生地當時的 UTC 偏移：</label>
-                <select id="hd-a-manual-tz"></select>
-              </div>
-            </details>
           </div>
-          <div class="hd-field">
-            <label for="hd-a-name">你的稱呼 <span style="font-weight:400;color:#aaa;">（選填）</span></label>
-            <input type="text" class="hd-city-input" id="hd-a-name" placeholder="會顯示在結果與圖卡上" autocomplete="off" maxlength="20">
-          </div>
+          <details class="hd-person-options">
+            <summary>手動時區與稱呼（選填）</summary>
+            <div class="hd-person-options-body">
+              <div><label for="hd-a-manual-tz">出生地當時的 UTC 偏移</label><select id="hd-a-manual-tz"></select></div>
+              <div><label for="hd-a-name">你的稱呼</label><input type="text" class="hd-city-input" id="hd-a-name" placeholder="顯示在結果與圖卡上" autocomplete="off" maxlength="20"></div>
+            </div>
+          </details>
         </div>
         <!-- B -->
         <div class="hd-form-card">
           <h3><span class="hdc-step">2</span> 對方的出生資料</h3>
           <p class="form-hint">任何關係都可以合：伴侶、家人、朋友、工作夥伴。</p>
           <div class="hdc-consent"><i class="bi bi-info-circle"></i> 請先取得對方同意再輸入其出生資料。所有計算只在你的瀏覽器內進行，不會上傳。</div>
-          <div class="hd-field">
+          <div class="hd-field hd-field--date">
             <label>出生日期（西元）</label>
             <div class="hd-selects">
               <div class="hd-sel-wrap"><select id="hd-b-year" aria-label="B 出生年"></select><span class="hd-unit">年</span></div>
@@ -248,7 +317,7 @@ extra_css: |
               <div class="hd-sel-wrap"><select id="hd-b-day" aria-label="B 出生日"></select><span class="hd-unit">日</span></div>
             </div>
           </div>
-          <div class="hd-field">
+          <div class="hd-field hd-field--time">
             <label>出生時間（24 小時制）</label>
             <div class="hd-selects">
               <div class="hd-sel-wrap"><select id="hd-b-hour" aria-label="B 出生時"></select><span class="hd-unit">時</span></div>
@@ -262,32 +331,31 @@ extra_css: |
               <input type="text" class="hd-city-input" id="hd-b-city-search" placeholder="輸入城市名稱，例如：高雄、New York" autocomplete="off">
               <div class="hd-city-list" id="hd-b-city-list" role="listbox"></div>
             </div>
-            <details class="hd-advanced">
-              <summary>找不到出生地？手動指定時區</summary>
-              <div class="hd-adv-body">
-                <label for="hd-b-manual-tz" style="font-size:0.85rem;color:#666;">出生地當時的 UTC 偏移：</label>
-                <select id="hd-b-manual-tz"></select>
-              </div>
-            </details>
           </div>
-          <div class="hd-field">
-            <label for="hd-b-name">對方的稱呼 <span style="font-weight:400;color:#aaa;">（選填）</span></label>
-            <input type="text" class="hd-city-input" id="hd-b-name" placeholder="會顯示在結果與圖卡上" autocomplete="off" maxlength="20">
-          </div>
+          <details class="hd-person-options">
+            <summary>手動時區與稱呼（選填）</summary>
+            <div class="hd-person-options-body">
+              <div><label for="hd-b-manual-tz">出生地當時的 UTC 偏移</label><select id="hd-b-manual-tz"></select></div>
+              <div><label for="hd-b-name">對方的稱呼</label><input type="text" class="hd-city-input" id="hd-b-name" placeholder="顯示在結果與圖卡上" autocomplete="off" maxlength="20"></div>
+            </div>
+          </details>
         </div>
       </div>
       <!-- 共用列：關係情境＋送出 -->
       <div class="hdc-shared-row">
-        <div class="hd-field" style="margin-bottom:0;">
-          <label for="hdc-relation">你們的關係 <span style="font-weight:400;color:#aaa;">（選填，用於調整解讀措辭）</span></label>
-          <select id="hdc-relation" class="hdc-relation-sel">
-            <option value="">不指定</option>
-            <option value="伴侶">伴侶</option>
-            <option value="家人">家人</option>
-            <option value="朋友">朋友</option>
-            <option value="工作夥伴">工作夥伴</option>
-          </select>
-        </div>
+        <details class="hdc-relation-extra">
+          <summary>你們的關係（選填，用於調整解讀措辭）</summary>
+          <div class="hdc-relation-extra-body">
+            <label for="hdc-relation" class="visually-hidden">你們的關係</label>
+            <select id="hdc-relation" class="hdc-relation-sel">
+              <option value="">不指定</option>
+              <option value="伴侶">伴侶</option>
+              <option value="家人">家人</option>
+              <option value="朋友">朋友</option>
+              <option value="工作夥伴">工作夥伴</option>
+            </select>
+          </div>
+        </details>
         <button class="hd-btn-generate" id="hdc-submit">生成我們的合盤</button>
         <div class="hd-error" id="hdc-error"></div>
       </div>

@@ -482,6 +482,54 @@ extra_css: |
   .tool-cta-dark .hd-crypto-card > p { color: #888; }
   .tool-cta-dark .hd-crypto-amounts { color: #444; }
   .tool-cta-dark .hd-crypto-note { color: #b07a00; }
+
+  /* 工具首屏：沿用既有暖金工具語言，將重複導流與選填設定收斂。 */
+  .hd-hero { padding: 28px 0 24px; }
+  .hd-privacy-pill { margin-bottom: 12px; }
+  .hd-hero h1 { margin-bottom: 8px; }
+  .hd-hero .lead { margin-bottom: 12px; line-height: 1.6; }
+  .hd-section { padding: 20px 0 28px; }
+  .hd-form-card { padding: 21px; }
+  .hd-form-card .form-hint { margin-bottom: 12px; }
+  .hd-field { margin-bottom: 12px; }
+  .hd-advanced { margin-top: 8px; }
+  .hd-form-options-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0 0 12px; }
+  .hd-form-option label { display: block; margin-bottom: 5px; color: #666; font-size: .82rem; }
+  .hd-form-option select, .hd-form-option input { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 8px 9px; color: #333; background: #fff; }
+  @media (min-width: 768px) {
+    .hd-form-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; align-items: start; }
+    .hd-form-card > h3,
+    .hd-form-card > .form-hint,
+    .hd-form-card > .hd-btn-generate,
+    .hd-form-card > .hd-submit-note,
+    .hd-form-card > .hd-error { grid-column: 1 / -1; }
+  }
+  @media (max-width: 767px) {
+    .hd-hero { padding: 20px 0 18px; }
+    .hd-privacy-pill { margin-bottom: 10px; padding: 5px 12px; font-size: .78rem; }
+    .hd-hero h1 { font-size: 1.8rem; margin-bottom: 7px; }
+    .hd-hero .lead { margin: 0; font-size: .92rem; line-height: 1.52; }
+    .hd-hero-action, .hd-hero-secondary, .hd-hero-backlink { display: none !important; }
+    .hd-section { padding: 15px 0 22px; }
+    .hd-form-card { padding: 17px; }
+    .hd-form-card h3 { font-size: 1.08rem; }
+    .hd-form-card .form-hint { margin-bottom: 9px; line-height: 1.45; }
+    .hd-field { margin-bottom: 9px; }
+    .hd-field > label { margin-bottom: 5px; }
+    .hd-field--date .hd-selects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+    .hd-field--time .hd-selects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+    .hd-selects .hd-sel-wrap { min-width: 0; gap: 2px; }
+    .hd-selects select { min-width: 0; width: 100%; padding: 7px 5px; }
+    .hd-check { margin-top: 7px !important; font-size: .78rem; line-height: 1.42; }
+    .hd-city-quick { gap: 5px; margin-top: 6px; }
+    .hd-city-quick-label { display: none; }
+    .hd-city-chip { padding: 5px 9px; }
+    .hd-form-extra { margin-bottom: 10px; }
+    .hd-form-extra summary { padding: 8px 0; font-size: .82rem; }
+    .hd-form-options-grid { grid-template-columns: 1fr; gap: 10px; }
+    .hd-btn-generate { padding: 12px; margin-top: 2px; }
+    .hd-submit-note { margin-top: 6px; }
+  }
 ---
 
 <main id="main">
@@ -492,9 +540,9 @@ extra_css: |
       <span class="hd-privacy-pill"><i class="bi bi-shield-lock-fill"></i> 純前端計算・出生資料不離開你的瀏覽器</span>
       <h1>免費人類圖生成器</h1>
       <p class="lead">輸入出生年月日、時間與地點，立即生成你的人類圖——<br class="d-none d-md-block">類型、內在權威、人生角色、九大中心與 36 條通道，一次看懂你的能量設計。</p>
-      <a href="#hd-form" class="hd-btn-generate" style="display:inline-block; width:auto; padding:13px 36px;">開始生成 ↓</a>
-      <div style="margin-top:14px; font-size:0.92rem;"><a href="{{ '/human-design/relationship/' | relative_url }}" style="color:#8B5E00;"><i class="bi bi-people"></i> 兩個人的關係合盤 →</a></div>
-      <div style="margin-top:10px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 探索更多工具：自我探索實驗室</a></div>
+      <a href="#hd-form" class="hd-btn-generate hd-hero-action" style="display:inline-block; width:auto; padding:13px 36px;">開始生成 ↓</a>
+      <div class="hd-hero-secondary" style="margin-top:14px; font-size:0.92rem;"><a href="{{ '/human-design/relationship/' | relative_url }}" style="color:#8B5E00;"><i class="bi bi-people"></i> 兩個人的關係合盤 →</a></div>
+      <div class="hd-hero-backlink" style="margin-top:10px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 探索更多工具：自我探索實驗室</a></div>
     </div>
   </section>
 
@@ -505,7 +553,7 @@ extra_css: |
         <h3>輸入你的出生資料</h3>
         <p class="form-hint">越精確的出生時間，排盤越準確。不確定也沒關係，可勾選下方選項。</p>
 
-        <div class="hd-field">
+        <div class="hd-field hd-field--date">
           <label>出生日期（西元）</label>
           <div class="hd-selects">
             <div class="hd-sel-wrap"><select id="hd-year" aria-label="出生年"></select><span class="hd-unit">年</span></div>
@@ -514,7 +562,7 @@ extra_css: |
           </div>
         </div>
 
-        <div class="hd-field">
+        <div class="hd-field hd-field--time">
           <label>出生時間（24 小時制）</label>
           <div class="hd-selects">
             <div class="hd-sel-wrap"><select id="hd-hour" aria-label="出生時"></select><span class="hd-unit">時</span></div>
@@ -523,18 +571,6 @@ extra_css: |
           <label class="hd-check" style="margin-top:12px;">
             <input type="checkbox" id="hd-unknown-time"> 我不知道確切出生時間（以正午試算，並標示哪些結果會變動）
           </label>
-          <details class="hd-advanced">
-            <summary>時間是約略記錄？檢查前後誤差</summary>
-            <div class="hd-adv-body">
-              <label for="hd-uncertainty" style="display:block;font-size:0.85rem;color:#666;">想一起檢查的時間範圍：</label>
-              <select id="hd-uncertainty" style="margin-top:6px;max-width:230px;" aria-label="出生時間誤差範圍">
-                <option value="0">時間精確，不需檢查</option>
-                <option value="15">前後 15 分鐘</option>
-                <option value="30">前後 30 分鐘</option>
-                <option value="60">前後 60 分鐘</option>
-              </select>
-            </div>
-          </details>
         </div>
 
         <div class="hd-field">
@@ -550,20 +586,28 @@ extra_css: |
             <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="台中市" aria-pressed="false">台中</button>
             <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="高雄市" aria-pressed="false">高雄</button>
           </div>
-          <details class="hd-advanced">
-            <summary>找不到出生地？手動指定時區</summary>
-            <div class="hd-adv-body">
-              <label for="hd-manual-tz" style="font-size:0.85rem; color:#666;">出生地當時的 UTC 偏移：</label>
-              <select id="hd-manual-tz"></select>
-            </div>
-          </details>
         </div>
 
-        <details class="hd-form-extra" id="hd-name-extra">
-          <summary>想讓下載圖卡顯示稱呼？（選填）</summary>
-          <div class="hd-adv-body">
-            <label for="hd-name">稱呼／姓名</label>
-            <input type="text" class="hd-city-input" id="hd-name" placeholder="可留空，不影響排盤" autocomplete="off" maxlength="40">
+        <details class="hd-form-extra hd-form-options" id="hd-name-extra">
+          <summary>更多選項：時間誤差、時區與稱呼</summary>
+          <div class="hd-form-options-grid">
+            <div class="hd-form-option">
+              <label for="hd-uncertainty">時間誤差範圍</label>
+              <select id="hd-uncertainty" aria-label="出生時間誤差範圍">
+                <option value="0">時間精確，不需檢查</option>
+                <option value="15">前後 15 分鐘</option>
+                <option value="30">前後 30 分鐘</option>
+                <option value="60">前後 60 分鐘</option>
+              </select>
+            </div>
+            <div class="hd-form-option">
+              <label for="hd-manual-tz">找不到出生地？手動指定時區</label>
+              <select id="hd-manual-tz"></select>
+            </div>
+            <div class="hd-form-option">
+              <label for="hd-name">下載圖卡顯示稱呼（選填）</label>
+              <input type="text" class="hd-city-input" id="hd-name" placeholder="可留空，不影響排盤" autocomplete="off" maxlength="40">
+            </div>
           </div>
         </details>
 

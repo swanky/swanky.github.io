@@ -37,6 +37,23 @@ extra_css: |
   .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
   .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
   @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
+
+  /* 工具首屏：教育告知仍完整保留，只收斂 banner、hero 與表單的垂直密度。 */
+  .qimen-demo-banner .container { padding-top: 8px; padding-bottom: 8px; font-size: .82rem; line-height: 1.5; }
+  .qimen-hero { padding: 24px 0 20px; }
+  .qimen-hero h1 { font-size: 1.85rem; }
+  .qimen-hero .lead { font-size: .96rem; line-height: 1.62; }
+  .qimen-section { padding: 20px 0 28px; }
+  .qimen-form-card { padding: 20px; }
+  .qimen-form-card label { margin-top: 10px; }
+  .qimen-form-card textarea { min-height: 74px; }
+  @media (max-width: 767px) {
+    .qimen-demo-banner .container { font-size: .78rem; }
+    .qimen-hero { padding: 20px 0 16px; }
+    .qimen-hero .lead { font-size: .9rem; line-height: 1.55; }
+    .qimen-section { padding-top: 16px; }
+    .qimen-form-card { padding: 17px; }
+  }
 ---
 <main id="main">
 
@@ -49,10 +66,10 @@ extra_css: |
   </div>
 
   <!-- ======= Hero ======= -->
-  <section class="qimen-hero" data-aos="fade-up" style="padding:44px 0 34px;">
+  <section class="qimen-hero" data-aos="fade-up">
     <div class="container">
-      <h1 style="font-size:1.85rem;">奇門示意工具</h1>
-      <p class="lead" style="font-size:1rem;">先看看奇門盤面的輸入與輸出長什麼樣子、每個元素怎麼讀。等正式排盤通過驗證，這裡就會依你的問題起出真實盤面。</p>
+      <h1>奇門示意工具</h1>
+      <p class="lead">先看看奇門盤面的輸入與輸出長什麼樣子、每個元素怎麼讀。等正式排盤通過驗證，這裡就會依你的問題起出真實盤面。</p>
     </div>
   </section>
 
@@ -61,7 +78,7 @@ extra_css: |
     <div class="container">
       <form class="qimen-form-card" id="qimen-demo-form">
         <label for="qd-question">① 你想問的具體問題</label>
-        <textarea id="qd-question" rows="3" placeholder="例如：這個新產品，適合在什麼時機、用什麼方式對外發表？"></textarea>
+        <textarea id="qd-question" rows="2" placeholder="例如：這個新產品，適合在什麼時機、用什麼方式對外發表？"></textarea>
 
         <label for="qd-type">② 問題類型</label>
         <select id="qd-type">
