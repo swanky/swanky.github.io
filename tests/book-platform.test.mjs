@@ -103,6 +103,12 @@ test('通用層檔案全部存在', () => {
   for (const f of GENERIC_FILES) assert.ok(existsSync(f), `缺檔：${f}`);
 });
 
+test('書房總覽 Hero 符合 hub 撐屏基線，窄螢幕仍退回內容高度', () => {
+  const css = readFileSync('assets/css/book-reader.css', 'utf8');
+  assert.match(css, /\.bk-atlas-hero\s*{[\s\S]*?min-height:\s*max\(640px, 85svh\)/);
+  assert.match(css, /@media \(max-width: 900px\)[\s\S]*?\.bk-atlas-hero\s*{\s*min-height:\s*0/);
+});
+
 test('通用 layout 不硬編碼任何書名——加一本書只需改資料', () => {
   for (const f of GENERIC_FILES) {
     const src = readFileSync(f, 'utf8');

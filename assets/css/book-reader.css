@@ -185,7 +185,7 @@ html.bk-paper {
 .bk-atlas { padding-bottom: clamp(30px, 5vw, 70px); }
 .bk-atlas-hero {
   display: grid;
-  min-height: min(720px, calc(100svh - 58px));
+  min-height: max(640px, 85svh);
   padding: clamp(60px, 9vw, 130px) 0 clamp(52px, 8vw, 105px);
   grid-template-columns: 1.15fr .85fr;
   grid-template-areas: "title intro" "title facts";
