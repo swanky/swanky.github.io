@@ -138,11 +138,29 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  const mobileNavbar = select('#navbar')
+  const mobileNavToggle = select('.mobile-nav-toggle')
+  const setMobileNavState = (isOpen, returnFocus = false) => {
+    if (!mobileNavbar || !mobileNavToggle) return
+    mobileNavbar.classList.toggle('navbar-mobile', isOpen)
+    const icon = mobileNavToggle.querySelector('i')
+    icon?.classList.toggle('bi-list', !isOpen)
+    icon?.classList.toggle('bi-x', isOpen)
+    mobileNavToggle.setAttribute('aria-expanded', String(isOpen))
+    mobileNavToggle.setAttribute('aria-label', isOpen ? '關閉主選單' : '開啟主選單')
+    if (returnFocus) mobileNavToggle.focus()
+  }
+
+  if (mobileNavbar && mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', () => {
+      setMobileNavState(!mobileNavbar.classList.contains('navbar-mobile'))
+    })
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileNavbar.classList.contains('navbar-mobile')) {
+        setMobileNavState(false, true)
+      }
+    })
+  }
 
   /**
    * Mobile nav dropdowns activate
@@ -163,10 +181,7 @@
 
       let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+        setMobileNavState(false)
       }
       scrollto(this.hash)
     }

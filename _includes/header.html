@@ -11,7 +11,7 @@
     </div>
 
     <nav id="navbar" class="navbar">
-      <ul>
+      <ul id="primary-navigation">
         <li><a {% if page.nav_active == 'home' %}class="active" {% endif %}href="{{ '/' | relative_url }}">主頁</a></li>
         <li><a {% if page.nav_active == 'story' %}class="active" {% endif %}href="{{ '/story/' | relative_url }}">三個宇宙</a></li>
         <li class="dropdown"><a href="{{ '/photography/' | relative_url }}"{% if page.nav_active == 'photography' %} class="active"{% endif %}><span>攝影寫真</span> <i class="bi bi-chevron-down"></i></a>
@@ -85,7 +85,9 @@
       <button class="site-overview-trigger" type="button" popovertarget="site-overview" aria-expanded="false">
         <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i><span>總覽</span>
       </button>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <button class="mobile-nav-toggle" type="button" aria-label="開啟主選單" aria-controls="primary-navigation" aria-expanded="false">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
     </nav><!-- .navbar -->
 
   </div>

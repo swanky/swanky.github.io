@@ -243,11 +243,27 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 */
 .mobile-nav-toggle {
   color: #111;
-  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
   display: none;
-  line-height: 0;
+  align-items: center;
+  justify-content: center;
   transition: 0.5s;
+}
+
+.mobile-nav-toggle i {
+  font-size: 28px;
+  line-height: 0;
+}
+
+.mobile-nav-toggle:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 2px;
 }
 
 #header.header-transparent .navbar > ul > li > a,
@@ -255,6 +271,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #header.header-transparent .mobile-nav-toggle,
 #header.header-scrolled .mobile-nav-toggle {
   color: #fff;
+}
+
+#header.header-transparent .mobile-nav-toggle:focus-visible,
+#header.header-scrolled .mobile-nav-toggle:focus-visible {
+  outline-color: #F5C53B;
 }
 
 #header.header-transparent .navbar > ul > li > a:hover,
@@ -266,7 +287,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: inline-flex;
   }
   .navbar ul {
     display: none;
@@ -288,6 +309,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   position: absolute;
   top: 15px;
   right: 15px;
+  color: #fff;
 }
 
 .navbar-mobile ul {
