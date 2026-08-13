@@ -12,6 +12,7 @@
     <nav class="bk-topnav" aria-label="閱讀導覽">
       {%- if include.toc_url %}<a href="{{ include.toc_url | relative_url }}">{{ include.toc_label | default: '回目列表' }}</a>{% endif %}
       <a class="hide-m" href="{{ '/books/' | relative_url }}">全部作品</a>
+      <a href="{{ '/' | relative_url }}">回主站</a>
       {%- if include.reader_tools %}
       <span class="bk-sizer" role="group" aria-label="調整文字大小">
         <button type="button" class="sz-s" data-size="s" aria-pressed="false">文</button>

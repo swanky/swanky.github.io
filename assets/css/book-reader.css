@@ -76,7 +76,7 @@ html.bk-paper {
 .bk-topnav { display: flex; align-items: center; gap: clamp(.5rem, 2vw, 1.2rem); font-size: .82rem; }
 /* 觸控目標：連結與按鈕都撐到 40px 高（WCAG 2.5.8 的 24px 只是下限，閱讀工具列
  * 手指點的頻率高，給到 40px）。視覺尺寸不變，靠 padding 把可點範圍撐開。 */
-.bk-topnav a { display: inline-flex; align-items: center; min-height: 40px; letter-spacing: .06em; }
+.bk-topnav a { display: inline-flex; align-items: center; min-height: 40px; letter-spacing: .06em; white-space: nowrap; }
 
 .bk-sizer { display: inline-flex; border: 1px solid var(--bk-line); }
 .bk-sizer button { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 38px; background: none; border: 0; padding: .2rem .45rem; color: var(--bk-muted); font-family: var(--bk-serif); cursor: pointer; line-height: 1.6; }
@@ -257,6 +257,8 @@ html.bk-paper {
   .bk-reader { line-height: 2; }
 }
 @media (max-width: 480px) {
+  /* 連結不折字（nowrap），超窄屏改讓導覽整塊換到品牌下一行 */
+  .bk-topbar { flex-wrap: wrap; }
   .bk-brand small { display: none; }
   .bk-topnav { gap: .45rem; font-size: .76rem; }
   .bk-note dl { grid-template-columns: 1fr; gap: .1rem .9rem; }
