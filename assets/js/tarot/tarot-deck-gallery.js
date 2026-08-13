@@ -17,8 +17,9 @@ const escapeHtml = (value) => String(value ?? '')
 
 function renderGallery(root) {
   const dir = root.dataset.galleryDir || '/assets/img/tarot/clonex/';
+  const thumbDir = root.dataset.galleryThumbDir || dir;
   const deckLabel = root.dataset.galleryLabel || '原創塔羅牌';
-  const cards = buildDeck().map((id) => ({ ...CARDS[id], src: `${dir}${id}.jpg` }));
+  const cards = buildDeck().map((id) => ({ ...CARDS[id], src: `${dir}${id}.jpg`, thumbSrc: `${thumbDir}${id}.webp` }));
   let html = '<nav class="ct-gallery-nav" aria-label="牌組分類">'
     + SECTIONS.map((section) => `<a href="#deck-${section.key}">${section.short}</a>`).join('')
     + '</nav>';
@@ -34,7 +35,7 @@ function renderGallery(root) {
         const index = cards.indexOf(card);
         const lazyAttr = eagerBudget-- > 0 ? '' : ' loading="lazy"';
         return `<figure class="ct-gallery-card" data-index="${index}" tabindex="0" role="button" aria-label="放大檢視${escapeHtml(label)}">`
-          + `<img src="${card.src}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}"${lazyAttr} decoding="async" width="768">`
+          + `<img src="${card.thumbSrc}" alt="${escapeHtml(deckLabel)}：${escapeHtml(label)}"${lazyAttr} decoding="async" width="480" height="720">`
           + `<figcaption>${escapeHtml(card.nameZh)}<br><span>${escapeHtml(card.nameEn)}</span></figcaption></figure>`;
       }).join('')
       + '</div></section>';

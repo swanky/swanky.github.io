@@ -61,10 +61,10 @@ export function framedImageInner(card, reversed, href) {
 }
 
 // 頁面用：有圖→框圖；無圖→回退素牌面。deck 決定圖來源（預設 uniform，向後相容）。
-export function faceSvg(card, reversed, cls, deck) {
+export function faceSvg(card, reversed, cls, deck, artHref) {
   const dk = deckOf(deck);
   if (!dk.ids.has(card.id)) return plainFaceSvg(card, reversed, cls);
-  return `<svg class="${cls || 'tarot-face-svg'}" viewBox="0 0 ${FACE_W} ${FACE_H}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="${esc(card.nameZh)}${reversed ? '（逆位）' : ''}">${framedImageInner(card, reversed, dk.dir + card.id + '.jpg')}</svg>`;
+  return `<svg class="${cls || 'tarot-face-svg'}" viewBox="0 0 ${FACE_W} ${FACE_H}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="${esc(card.nameZh)}${reversed ? '（逆位）' : ''}">${framedImageInner(card, reversed, artHref || dk.dir + card.id + '.jpg')}</svg>`;
 }
 
 // 匯出用：抓同源 PNG → dataURL（SVG 當 image 載入時不會載外部資源，dataURL 也不汙染 canvas）。

@@ -1,16 +1,17 @@
 // tarot-compare.js — 三副牌對照藝廊：原版偉特 RWS × 制服女孩（墨線）× Cyber Tarot（CloneX）。
-// 左欄＝公共財偉特靜態圖（assets/img/tarot/rws/{id}.jpg，720px）；
-// 中欄＝制服女孩，重用 tarot-card-image 的 faceSvg 套框（＝與線上抽牌同款成品）；
-// 右欄＝Cyber Tarot（CloneX）成品圖（assets/img/tarot/clonex/{id}.jpg，768px）。
-// 效能：左右兩欄用原生 loading="lazy"；中欄 SVG 無原生 lazy，改用 IntersectionObserver
-//       在進場前才注入 faceSvg，避免 78 張 SVG 內嵌圖一次並發把連線塞爆（部分圖載不出）。
+// 列表只載 480px WebP 預覽；點開 lightbox 才取原尺寸 JPEG。
+// 中欄制服女孩重用 tarot-card-image 的 faceSvg 套框（＝與線上抽牌同款成品）。
+// SVG 無原生 lazy，仍以 IntersectionObserver 在進場前才注入，避免一次並發載入 78 張。
 // 純前端、零第三方相依；含自製極簡 lightbox（點圖放大、Esc／點背景關閉）。
 import { CARDS, buildDeck } from './tarot-deck.js';
-import { faceSvg } from './tarot-card-image.js';
+import { faceSvg } from './tarot-card-image.js?v=20260813-thumbs';
 import { createOverlay } from './tarot-overlay.js';
 
 const RWS_DIR = '/assets/img/tarot/rws/';
+const RWS_THUMB_DIR = '/assets/img/tarot/thumbs/rws/';
+const UNIFORM_THUMB_DIR = '/assets/img/tarot/thumbs/uniform/';
 const CLONEX_DIR = '/assets/img/tarot/clonex/';
+const CLONEX_THUMB_DIR = '/assets/img/tarot/thumbs/clonex/';
 // 目前以 Gemini 暫代、待 ChatGPT 重生的牌（顯示小標記）。
 const PLACEHOLDER = new Set(['pentacles-13', 'pentacles-14']);
 
@@ -27,7 +28,9 @@ const esc = (s) => String(s == null ? '' : s)
 
 function cardBlock(card) {
   const rws = RWS_DIR + card.id + '.jpg';
+  const rwsThumb = RWS_THUMB_DIR + card.id + '.webp';
   const clonex = CLONEX_DIR + card.id + '.jpg';
+  const clonexThumb = CLONEX_THUMB_DIR + card.id + '.webp';
   const zh = esc(card.nameZh);
   const ph = PLACEHOLDER.has(card.id) ? ' <span class="cmp-ph" title="暫以 Gemini 圖頂著，待重生">暫代</span>' : '';
   return `
@@ -35,7 +38,7 @@ function cardBlock(card) {
     <h3 class="cmp-name">${zh} <span class="cmp-en">${esc(card.nameEn)}</span></h3>
     <div class="cmp-trio">
       <figure class="cmp-cell" data-zoom-img="${rws}" data-zoom-label="原版偉特 · ${zh}">
-        <div class="cmp-media"><img src="${rws}" alt="原版偉特塔羅 ${zh}" loading="lazy" decoding="async" width="720" height="1208"></div>
+        <div class="cmp-media"><img src="${rwsThumb}" alt="原版偉特塔羅 ${zh}" loading="lazy" decoding="async" width="480" height="806"></div>
         <figcaption>原版偉特 RWS</figcaption>
       </figure>
       <figure class="cmp-cell" data-zoom-svg="${card.id}" data-zoom-label="制服女孩 · ${zh}">
@@ -43,7 +46,7 @@ function cardBlock(card) {
         <figcaption>制服女孩${ph}</figcaption>
       </figure>
       <figure class="cmp-cell" data-zoom-img="${clonex}" data-zoom-label="Cyber Tarot · ${zh}">
-        <div class="cmp-media"><img src="${clonex}" alt="Cyber Tarot（CloneX）${zh}" loading="lazy" decoding="async" width="768" height="1152"></div>
+        <div class="cmp-media"><img src="${clonexThumb}" alt="Cyber Tarot（CloneX）${zh}" loading="lazy" decoding="async" width="480" height="720"></div>
         <figcaption>Cyber Tarot</figcaption>
       </figure>
     </div>
@@ -77,7 +80,7 @@ function lazyMountSvgs(root) {
     if (box.dataset.filled) return;
     const card = CARDS[box.dataset.svg];
     if (!card) return;
-    box.innerHTML = faceSvg(card, false, 'cmp-svg');
+    box.innerHTML = faceSvg(card, false, 'cmp-svg', 'uniform', UNIFORM_THUMB_DIR + card.id + '.webp');
     box.dataset.filled = '1';
   };
   if (typeof IntersectionObserver === 'undefined') {

@@ -35,6 +35,37 @@ test('CloneX web 牌組＝78 張且全為 768×1152 JPEG', () => {
   }
 });
 
+test('三副牌的列表使用輕量預覽，放大檢視仍保留原尺寸圖', () => {
+  const expected = buildDeck().map((id) => `${id}.webp`).sort();
+  let sourceBytes = 0;
+  let thumbnailBytes = 0;
+  for (const deck of ['rws', 'uniform', 'clonex']) {
+    const sourceDir = path.join(ROOT, 'assets/img/tarot', deck);
+    const thumbnailDir = path.join(ROOT, 'assets/img/tarot/thumbs', deck);
+    const actual = fs.readdirSync(thumbnailDir).filter((name) => name.endsWith('.webp')).sort();
+    assert.deepEqual(actual, expected, deck);
+    for (const name of actual) {
+      const thumbnailPath = path.join(thumbnailDir, name);
+      const sourcePath = path.join(sourceDir, name.replace(/\.webp$/, '.jpg'));
+      const header = fs.readFileSync(thumbnailPath).subarray(0, 12);
+      assert.equal(header.subarray(0, 4).toString('ascii'), 'RIFF', name);
+      assert.equal(header.subarray(8, 12).toString('ascii'), 'WEBP', name);
+      sourceBytes += fs.statSync(sourcePath).size;
+      thumbnailBytes += fs.statSync(thumbnailPath).size;
+    }
+  }
+  assert.ok(thumbnailBytes < sourceBytes * 0.35, `預覽圖 ${thumbnailBytes} bytes，未低於原圖的 35%`);
+
+  const compare = read('assets/js/tarot/tarot-compare.js');
+  const gallery = read('assets/js/tarot/tarot-deck-gallery.js');
+  assert.match(compare, /THUMB_DIR/);
+  assert.match(compare, /data-zoom-img="\$\{rws\}"/);
+  assert.match(gallery, /thumbSrc/);
+  assert.match(gallery, /image\.src = card\.src/);
+  assert.match(read('tarot/decks/uniform/index.html'), /data-gallery-thumb-dir=/);
+  assert.match(read('tarot/decks/clonex/index.html'), /data-gallery-thumb-dir=/);
+});
+
 test('Cyber Tarot Lab 路由、抽牌工具與 gallery 接線完整', () => {
   const routes = [
     'tarot/index.html',

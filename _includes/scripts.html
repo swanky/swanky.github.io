@@ -30,12 +30,12 @@
 
 {% if page.use_tarot_compare %}
 <!-- 塔羅牌組對照藝廊：重用 tarot-deck／faceSvg，純前端 ES module -->
-<script type="module" src="{{ '/assets/js/tarot/tarot-compare.js' | relative_url }}?v=20260714-3way"></script>
+<script type="module" src="{{ '/assets/js/tarot/tarot-compare.js' | relative_url }}?v=20260813-thumbs"></script>
 {% endif %}
 
 {% if page.use_tarot_gallery %}
 <!-- 原創牌組藝廊：共用 78 張牌序與牌名，純前端 ES module -->
-<script type="module" src="{{ '/assets/js/tarot/tarot-deck-gallery.js' | relative_url }}?v=20260714-3"></script>
+<script type="module" src="{{ '/assets/js/tarot/tarot-deck-gallery.js' | relative_url }}?v=20260813-thumbs"></script>
 {% endif %}
 
 {% if page.use_qimen_demo %}
@@ -79,4 +79,3 @@
 <!-- 生命靈數：純算術（無天文 vendor、無亂數），純前端 ES module -->
 <script type="module" src="{{ '/assets/js/numerology/numerology-ui.js' | relative_url }}"></script>
 {% endif %}
-
