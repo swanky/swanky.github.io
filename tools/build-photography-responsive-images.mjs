@@ -8,6 +8,7 @@ const manifestPath = resolve(root, '_data/photography_image_manifest.json');
 mkdirSync(responsiveDir, { recursive: true });
 
 const textSources = [
+  '_data/photography_author.yml',
   '_data/photography_for_your_safety.yml',
   '_data/photography_masterpieces.yml',
   '_data/photography_publications.yml',

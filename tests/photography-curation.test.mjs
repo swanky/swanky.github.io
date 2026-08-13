@@ -84,6 +84,21 @@ test('攝影子頁圖片有尺寸資料與響應式衍生檔', () => {
   assert.match(read('_includes/photography/work-card.html'), /responsive-image\.html/);
 });
 
+test('攝影系列列表使用響應式圖片，不傳送超出顯示需求的原圖', () => {
+  const gallery = read('photography/gallery.html');
+  const author = read('_data/photography_author.yml');
+  const seriesImages = values(extractYamlList(author, 'series'), 'image');
+  const manifest = JSON.parse(read('_data/photography_image_manifest.json'));
+
+  assert.match(gallery, /responsive-image\.html image=series\.image/);
+  assert.doesNotMatch(gallery, /<img[^>]+src="{{ series\.image/);
+  assert.ok(seriesImages.length > 0, '攝影系列缺少圖片');
+  for (const image of seriesImages) {
+    assert.ok(manifest[image]?.src_480, `${image} 缺少 480px 衍生圖`);
+    assert.ok(manifest[image]?.src_960, `${image} 缺少 960px 衍生圖`);
+  }
+});
+
 test('獎項保留官方查證來源', () => {
   const awards = read('_data/photography_awards.yml');
   assert.equal((awards.match(/^\s+source_url:/gm) || []).length, 6);
