@@ -1,4 +1,4 @@
-# 角色寫真試閱（資料驅動）——寫真區的第一批素材。
+# 角色寫真（資料驅動）——寫真館與角色個人頁共用的單一資料源。
 #
 # 渲染：_includes/jinpingmei/photobook.html（角色頁 layout 依 slug 比對，未收錄的角色不輸出）。
 # 圖檔：assets/img/jinpingmei/photobook/{image}；來源為站主的金瓶梅角色寫真專案，
@@ -11,7 +11,7 @@
 packs:
   - slug: panjinlian
     name: 潘金蓮
-    note: 三幀連拍：窗邊的光、鏡頭前的眼、妝台上的手——同一個人，三種心思。
+    note: 從窗邊、妝台一路走到晨跑、網球與拳擊場；冷眼、壞笑與開懷，都是她善變而鮮明的一面。
     quote: 本性機變伶俐
     shots:
       - image: panjinlian-01.jpg
@@ -29,14 +29,79 @@ packs:
         alt: 潘金蓮著紅色抹胸內衫，梳妝台前簪花回眸顧盼
         width: 941
         height: 1672
+      - image: panjinlian-04.jpg
+        caption: 晨跑
+        alt: 潘金蓮在首爾河畔跑道旁靠牆休息，身穿酒紅外套與黑色運動服
+        width: 1024
+        height: 1536
+      - image: panjinlian-05.jpg
+        caption: 網球
+        alt: 潘金蓮坐在都市網球場裁判椅上，身穿象牙色上衣與酒紅網球裙，手持球拍
+        width: 1023
+        height: 1537
+      - image: panjinlian-06.jpg
+        caption: 拳後
+        alt: 潘金蓮在昏暗拳擊館擂台邊休息，身穿酒紅運動背心與黑色短褲，手握拳擊繃帶
+        width: 1024
+        height: 1536
+      - image: panjinlian-07.jpg
+        caption: 壞笑
+        alt: 潘金蓮在黃昏天台羽球場調皮微笑，身穿酒紅外套與黑色運動裙，手拿羽球
+        width: 1024
+        height: 1536
+      - image: panjinlian-08.jpg
+        caption: 滿足
+        alt: 潘金蓮在拳擊館訓練後閉眼微笑，身穿酒紅運動背心，手拿水瓶
+        width: 1024
+        height: 1536
+      - image: panjinlian-09.jpg
+        caption: 開懷
+        alt: 潘金蓮在夜色網球場開懷大笑，身穿象牙色上衣與酒紅網球裙，手拿網球
+        width: 1024
+        height: 1536
   - slug: lipinger
     name: 李瓶兒
-    note: 雨夜只拍了一幀。她站在窗邊，像在等一個不會來的人。
+    note: 從雨夜窗邊走到夕照網球場、皮拉提斯教室與單車雨夜；她的安靜、甜笑與驚喜，讓同一張臉有了不同節奏。
     quote: 好個溫克性兒
     shots:
       - image: lipinger-01.jpg
         caption: 夜雨
         alt: 李瓶兒站在雨夜窗邊，身穿深色繡花外衣，神情略帶哀愁
+        width: 1024
+        height: 1536
+      - image: lipinger-02.jpg
+        caption: 夕照網球
+        alt: 李瓶兒在金色夕陽的山景網球場蹲下繫鞋帶，身穿白色網球服
+        width: 1024
+        height: 1536
+      - image: lipinger-03.jpg
+        caption: 晨光伸展
+        alt: 李瓶兒坐在明亮皮拉提斯教室的器械上，身穿淺藍上衣與米白運動褲
+        width: 1024
+        height: 1536
+      - image: lipinger-04.jpg
+        caption: 天台羽球
+        alt: 李瓶兒站在夜色天台羽球場，身穿米白上衣與淺藍運動裙，手持球拍與羽球
+        width: 1024
+        height: 1536
+      - image: lipinger-05.jpg
+        caption: 雨夜單車
+        alt: 李瓶兒在雨夜便利商店外靠著單車休息，身穿灰藍運動服與透明雨衣
+        width: 1024
+        height: 1536
+      - image: lipinger-06.jpg
+        caption: 明亮
+        alt: 李瓶兒在夜色羽球場明亮大笑，身穿米白上衣與淺藍運動裙，手持球拍
+        width: 1023
+        height: 1537
+      - image: lipinger-07.jpg
+        caption: 甜笑
+        alt: 李瓶兒坐在明亮皮拉提斯教室的器械上害羞微笑，身穿淺藍上衣與米白運動褲
+        width: 1024
+        height: 1536
+      - image: lipinger-08.jpg
+        caption: 驚喜
+        alt: 李瓶兒在雨夜單車旁露出驚喜神情，身穿灰藍運動服與透明雨衣，手捧透明球
         width: 1024
         height: 1536
   - slug: chunmei
@@ -57,5 +122,70 @@ packs:
       - image: songhuilian-01.jpg
         caption: 含笑
         alt: 宋惠蓮在竹林旁淺淺微笑，身穿繡竹葉紋樣的墨色外衣
+        width: 1024
+        height: 1536
+  - slug: wuyueniang
+    name: 吳月娘
+    note: 竹影與簾光，深色與素色。她不必提高聲音，站姿與目光已把內宅主母的分寸立住。
+    quote: 舉止溫柔，持重寡言
+    shots:
+      - image: wuyueniang-01.jpg
+        caption: 竹影
+        alt: 吳月娘在竹影庭院中端坐，身穿墨黑與深綠交領衣裙，神情持重
+        width: 1024
+        height: 1536
+      - image: wuyueniang-02.jpg
+        caption: 簾光
+        alt: 吳月娘在明亮簾幕前端坐，身穿象牙白與淡金交領衣裙，神情沉靜
+        width: 1024
+        height: 1536
+  - slug: mengyulou
+    name: 孟玉樓
+    note: 月色落在紫衣上。她神情溫厚，卻不是沒有主見——安靜裡仍看得清局勢。
+    quote: 溫厚堪同掌上珠
+    shots:
+      - image: mengyulou-01.jpg
+        caption: 月下
+        alt: 孟玉樓在月色庭台前站立，身穿深紫繡花交領衣裙，神情溫厚從容
+        width: 1024
+        height: 1536
+  - slug: lijiaoer
+    name: 李嬌兒
+    note: 燭光照出棕金衣紋，也照出一個經手家中銀錢、早懂得替自己留後路的人。
+    quote: 出入銀錢，都在唱的李嬌兒手裏
+    shots:
+      - image: lijiaoer-01.jpg
+        caption: 燭影
+        alt: 李嬌兒站在紅牆燭光前，身穿棕金與酒紅交領衣裙，神情圓熟自持
+        width: 1024
+        height: 1536
+  - slug: sunxuee
+    name: 孫雪娥
+    note: 竹影壓在牆上，她眉頭緊鎖。掌廚務的人，身上也留著長年衝突的硬氣。
+    quote: 能造五鮮湯水，善舞翠盤之妙
+    shots:
+      - image: sunxuee-01.jpg
+        caption: 竹影
+        alt: 孫雪娥站在竹影牆前，身穿墨黑與深綠交領衣裙，眉頭微蹙
+        width: 1024
+        height: 1536
+  - slug: hanaijie
+    name: 韓愛姐
+    note: 雨窗前一身藍灰。這一幀取她後期遠行尋父的成年階段，安靜裡帶著決心。
+    quote: 韓愛姐湖州尋父
+    shots:
+      - image: hanaijie-01.jpg
+        caption: 雨窗
+        alt: 成年韓愛姐站在雨窗前，身穿樸素藍灰交領衣裙與布頭巾，神情堅定
+        width: 1024
+        height: 1536
+  - slug: wangliuer
+    name: 王六兒
+    note: 月下的深梅色衣襟，把她高挑、直接而有戒心的一面留在畫面裡。
+    quote: 長挑身材，瓜子麪皮，紫膛色
+    shots:
+      - image: wangliuer-01.jpg
+        caption: 月下
+        alt: 王六兒站在月色樓台前，身穿深梅紫交領衣裙，神情直接而沉著
         width: 1024
         height: 1536

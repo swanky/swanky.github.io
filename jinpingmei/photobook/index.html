@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 寫真館｜金瓶梅角色寫真集
-description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、龐春梅、宋惠蓮的角色寫真陸續進棚——離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
+description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、吳月娘等十位角色離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
 permalink: /jinpingmei/photobook/
 ---
 <!doctype html>
@@ -67,7 +67,7 @@ permalink: /jinpingmei/photobook/
         <aside class="jpu-vquote reveal" aria-label="寫真目次">
           {%- for p in pb.packs -%}
           {%- assign shortname = p.name | slice: 1, 2 -%}
-          {%- for s in p.shots -%}<span><small>{{ shortname }}</small>{{ s.caption }}</span>{%- endfor -%}
+          <span><small>{{ p.shots.size }} 幀</small>{{ shortname }}</span>
           {%- endfor -%}
           <footer>寫真目次</footer>
         </aside>
@@ -85,6 +85,8 @@ permalink: /jinpingmei/photobook/
         {%- assign vi = forloop.index | minus: 1 -%}
         {%- if p.shots.size > 1 -%}
           {%- assign albumcls = "pb-album--multi" -%}
+          {%- assign albumcols = p.shots.size -%}
+          {%- if albumcols > 3 -%}{%- assign albumcols = 3 -%}{%- endif -%}
         {%- else -%}
           {%- assign flip = soloi | modulo: 2 -%}
           {%- assign albumcls = "pb-album--solo" -%}
@@ -106,12 +108,14 @@ permalink: /jinpingmei/photobook/
             {%- if p.note %}<p class="pb-note">{{ p.note }}</p>{% endif %}
             <a class="pb-cta" href="{{ curl | relative_url }}">看{{ p.name }}的角色檔案 →</a>
           </header>
-          <div class="pb-prints">
+          <div class="pb-prints"{% if p.shots.size > 1 %} style="--pb-cols: {{ albumcols }}"{% endif %}>
             {%- for s in p.shots -%}
             {%- assign fno = fno | plus: 1 -%}
             {%- capture src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
+            {%- assign preview_name = s.image | replace: '.jpg', '-480.jpg' -%}
+            {%- capture preview_src %}/assets/img/jinpingmei/photobook/{{ preview_name }}{% endcapture -%}
             <figure class="pb-print reveal"{% if forloop.index > 1 %} data-late="{{ forloop.index | minus: 1 }}"{% endif %}>
-              <a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-photobook" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a>
+              <a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-photobook" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ preview_src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a>
               <figcaption><span class="fno">No.{% if fno < 10 %}0{% endif %}{{ fno }}</span><span class="fcap">{{ s.caption }}</span></figcaption>
             </figure>
             {%- endfor %}

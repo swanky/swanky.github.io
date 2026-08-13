@@ -13,10 +13,13 @@
   {%- comment -%}單張的 pack 也維持兩欄格線，避免直式寫真在桌機撐到全版寬。{%- endcomment -%}
   {%- assign pbcols = pack.shots | size -%}
   {%- if pbcols < 2 -%}{%- assign pbcols = 2 -%}{%- endif -%}
+  {%- if pbcols > 4 -%}{%- assign pbcols = 4 -%}{%- endif -%}
   <div class="jpm-refgrid" style="--cols: {{ pbcols }}">
     {%- for s in pack.shots -%}
     {%- capture src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
-    <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a><figcaption>{{ s.caption }}</figcaption></figure>
+    {%- assign preview_name = s.image | replace: '.jpg', '-480.jpg' -%}
+    {%- capture preview_src %}/assets/img/jinpingmei/photobook/{{ preview_name }}{% endcapture -%}
+    <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ preview_src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a><figcaption>{{ s.caption }}</figcaption></figure>
     {%- endfor %}
   </div>
 </section>

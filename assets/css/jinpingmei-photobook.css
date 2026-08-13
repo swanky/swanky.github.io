@@ -4,7 +4,7 @@
 
 /* ── 開卷：館名＋寫真目次 ── */
 .pb-hero { padding-bottom: clamp(24px, 4vw, 40px); }
-/* 目次要撐得起門面：與主標同一視覺量級，縱向拉滿右欄（每條＝人名＋題名） */
+/* 目次要撐得起門面：與主標同一視覺量級，縱向拉滿右欄（每條＝人名＋幀數） */
 .pb-hero .jpu-hero { align-items: stretch; }
 .pb-hero .jpu-vquote { justify-content: flex-start; padding-top: .4em; font-size: clamp(1.25rem, 2.1vw, 1.7rem); gap: clamp(.8em, 1.4vw, 1.3em); color: #e2d8bf; }
 .pb-hero .jpu-vquote span small { display: block; margin-bottom: .55em; font-size: .58em; letter-spacing: .3em; color: var(--jpm-gold); }
@@ -65,7 +65,7 @@
 .pb-print .fno { font-family: var(--jpm-serif); font-size: .66rem; font-weight: 700; letter-spacing: .2em; color: #8a6b32; }
 .pb-print .fcap { font-family: var(--jpm-kai); font-weight: 700; font-size: .98rem; letter-spacing: .34em; text-indent: .34em; color: #2f2617; }
 
-/* 多幀輯（潘金蓮）：全寬。文案雙欄＝名字｜（引文＋導語＋連結）同一疊，
+/* 多幀輯：全寬。文案雙欄＝名字｜（引文＋導語＋連結）同一疊，
    與單幀輯同一套容器語彙，避免導語懸浮在墨底上。 */
 .pb-album--multi .pb-meta {
   display: grid; grid-template-columns: auto minmax(0, 1fr);
@@ -75,26 +75,25 @@
 .pb-album--multi .pb-meta .pb-head { grid-row: span 3; }
 .pb-album--multi .pb-meta > :not(.pb-head) { grid-column: 2; }
 .pb-album--multi .pb-cta { justify-self: start; }
-/* 三幀攤在檯面上：各有角度、位移不等距，不是排版階梯 */
+/* 多幀攤在檯面上：各有角度、位移不等距，不是排版階梯 */
 .pb-prints { position: relative; }
 .pb-album--multi .pb-prints {
-  display: grid; grid-template-columns: 1.12fr 1fr 1fr;
-  gap: clamp(16px, 2.6vw, 30px); align-items: start;
+  display: grid; grid-template-columns: repeat(var(--pb-cols, 3), minmax(0, 1fr));
+  column-gap: clamp(16px, 2.6vw, 30px); row-gap: clamp(96px, 9vw, 128px); align-items: start;
   padding-bottom: 96px; /* 容納下錯位移 */
 }
-.pb-album--multi .pb-print:nth-child(1) { transform: rotate(-1.1deg); }
-.pb-album--multi .pb-print:nth-child(2) { transform: translateY(46px) rotate(1.5deg); }
-.pb-album--multi .pb-print:nth-child(3) { transform: translateY(88px) rotate(-1.9deg); }
+.pb-album--multi .pb-print:nth-child(3n + 1) { transform: rotate(-1.1deg); }
+.pb-album--multi .pb-print:nth-child(3n + 2) { transform: translateY(46px) rotate(1.5deg); }
+.pb-album--multi .pb-print:nth-child(3n) { transform: translateY(88px) rotate(-1.9deg); }
 
 /* 單幀輯：文案與照片兩欄，逐輯換邊；第二軸＝尺幅、擱放角度、紙色都不同 */
 .pb-album--solo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 76px); align-items: center; }
 .pb-album--solo .pb-prints { justify-self: center; width: min(100%, 430px); }
 .pb-album--flip .pb-meta { order: 2; }
 .pb-album--flip .pb-prints { order: 1; }
-.pb-album--lipinger .pb-prints { width: min(100%, 448px); transform: rotate(-1.2deg); }
-.pb-album--chunmei .pb-prints { width: min(100%, 468px); transform: rotate(.9deg); }
+.pb-album--solo.pb-album--chunmei .pb-prints { width: min(100%, 468px); transform: rotate(.9deg); }
 /* 輯肆刻意收小、斜得多、紙色偏舊——跟輯貳同構圖同色系，得靠裱框本身拉開差異 */
-.pb-album--songhuilian .pb-prints { width: min(100%, 336px); transform: rotate(2.1deg) translateY(18px); }
+.pb-album--solo.pb-album--songhuilian .pb-prints { width: min(100%, 336px); transform: rotate(2.1deg) translateY(18px); }
 .pb-album--songhuilian .pb-print {
   background:
     repeating-linear-gradient(93deg, rgba(104, 74, 26, .06) 0 1px, transparent 1px 3px),
@@ -120,24 +119,24 @@
   .pb-album--multi .pb-meta .pb-note { grid-column: 1 / -1; }
 }
 @media (max-width: 720px) {
+  .pb-hero .jpu-hero { min-width: 0; }
   /* 全部輯統一：先認人（題記），再看照片 */
   .pb-album--solo { grid-template-columns: 1fr; gap: 26px; }
   .pb-album--solo .pb-meta { order: 1; }
   .pb-album--solo .pb-prints { order: 2; width: min(100%, 420px); }
   /* 手機保留擱放角度，收掉縱向位移 */
-  .pb-album--lipinger .pb-prints { transform: rotate(-1deg); }
-  .pb-album--chunmei .pb-prints { transform: rotate(.9deg); }
-  .pb-album--songhuilian .pb-prints { width: min(100%, 360px); transform: rotate(1.8deg); }
+  .pb-album--solo.pb-album--chunmei .pb-prints { transform: rotate(.9deg); }
+  .pb-album--solo.pb-album--songhuilian .pb-prints { width: min(100%, 360px); transform: rotate(1.8deg); }
   /* 多幀輯直排也要有「攤開」感：輪流小角度＋左右錯位，不變成呆直列表 */
-  .pb-album--multi .pb-prints { grid-template-columns: 1fr; justify-items: center; padding-bottom: 0; gap: 30px; }
-  .pb-album--multi .pb-print { width: min(100%, 420px); }
-  .pb-album--multi .pb-print:nth-child(1) { transform: rotate(-1.1deg) translateX(-2.5%); }
-  .pb-album--multi .pb-print:nth-child(2) { transform: rotate(1.5deg) translateX(3.5%); }
-  .pb-album--multi .pb-print:nth-child(3) { transform: rotate(-1.4deg) translateX(-2%); }
+  .pb-album--multi .pb-prints { grid-template-columns: 1fr; justify-items: center; width: calc(100% - 40px); margin-inline: auto; padding-bottom: 0; gap: 30px; }
+  .pb-album--multi .pb-print { width: 94%; }
+  .pb-album--multi .pb-print:nth-child(3n + 1) { transform: rotate(-1.1deg) translateX(-2.5%); }
+  .pb-album--multi .pb-print:nth-child(3n + 2) { transform: rotate(1.5deg) translateX(3.5%); }
+  .pb-album--multi .pb-print:nth-child(3n) { transform: rotate(-1.4deg) translateX(-2%); }
   .pb-album--multi .pb-meta { display: flex; flex-direction: column; align-items: flex-start; }
   .pb-head h2 { font-size: 1.7rem; }
-  /* 目次直排在窄幅要縮回，否則七欄撐爆版心 */
-  .pb-hero .jpu-vquote { font-size: 1rem; gap: .7em; padding-top: 0; }
+  /* 目次直排在窄幅要縮回，否則多欄目次撐爆版心 */
+  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
