@@ -1,7 +1,7 @@
 # gstack Skills 建議（swanky.github.io）
 
 > 針對本專案整理的 gstack skill 使用建議。`docs/` 已被 `_config.yml` 排除，本檔不會發佈到網站。
-> 目前 gstack 版本：`1.58.0.0`（更新用 `/gstack-upgrade`）。CLAUDE.md 的「Tooling — gstack Skills」區段引用本檔。
+> 目前 gstack 版本：`1.62.0.0`（2026-08-14 升級；更新用 `/gstack-upgrade`）。CLAUDE.md 的「Tooling — gstack Skills」區段引用本檔。
 
 ## 為什麼要分組
 
