@@ -180,6 +180,13 @@ test('攝影作品圖片預設保留完整比例', () => {
   assert.match(css, /\.photo-author-subpage[\s\S]*?\.photo-subpage-image[\s\S]*?height:\s*auto/);
 });
 
+test('攝影首頁 Hero 在桌機保留足夠標題寬度', () => {
+  const css = read('assets/css/photography.css');
+  assert.match(css, /\.photo-author-hero\s*{[\s\S]*?grid-template-columns:\s*minmax\(0, 1\.35fr\) minmax\(360px, 0\.82fr\)/);
+  assert.match(css, /\.photo-author-hero-copy\s*{[\s\S]*?padding:\s*clamp\(48px, 8vw, 120px\) clamp\(32px, 3vw, 56px\)/);
+  assert.match(css, /\.photo-author-hero h1\s*{[\s\S]*?font-size:\s*clamp\(2\.8rem, 4\.8vw, 5\.6rem\)/);
+});
+
 test('低解析出版封面只縮小、不被版面放大', () => {
   const css = read('assets/css/photography.css');
   assert.match(
