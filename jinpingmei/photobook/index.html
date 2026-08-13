@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 寫真館｜金瓶梅角色寫真集
-description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、吳月娘等十位角色離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
+description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、吳月娘等角色離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
 permalink: /jinpingmei/photobook/
 ---
 <!doctype html>
@@ -27,7 +27,7 @@ permalink: /jinpingmei/photobook/
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260812-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260814-1" rel="stylesheet">
 </head>
 <body class="jpm jpm-pb">
   <a class="jpm-skip" href="#pb-main">跳到主要內容</a>
@@ -43,8 +43,8 @@ permalink: /jinpingmei/photobook/
   </header>
 
   {%- assign pb = site.data.jinpingmei_photobook -%}
-  {%- assign zhv = "壹,貳,參,肆,伍,陸,柒,捌,玖,拾" | split: "," -%}
-  {%- assign zhs = "一,二,三,四,五,六,七,八,九,十" | split: "," -%}
+  {%- assign zhv = "壹,貳,參,肆,伍,陸,柒,捌,玖,拾,拾壹,拾貳,拾參,拾肆,拾伍,拾陸,拾柒,拾捌,拾玖" | split: "," -%}
+  {%- assign zhs = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八,十九" | split: "," -%}
   {%- assign total = 0 -%}
   {%- for p in pb.packs -%}{%- assign total = total | plus: p.shots.size -%}{%- endfor -%}
   {%- assign npacks = pb.packs.size -%}
@@ -59,8 +59,8 @@ permalink: /jinpingmei/photobook/
           <h1 class="act-title reveal">寫真館<small>走進光線裡的角色寫真集</small></h1>
           <p class="act-lead reveal">定裝照管的是「像不像」，寫真管的是「有沒有戲」——經過原典考證定裝的角色，離開設定表，一位一位走進光線裡。每一幀都連得回她的角色檔案。全部影像皆為 <b>AI 生成</b>，並非真人照片。</p>
           <ul class="pb-count reveal" aria-label="收錄進度">
-            <li>現收 <b>{% if npacks <= 10 %}{% assign ni = npacks | minus: 1 %}{{ zhs[ni] }}{% else %}{{ npacks }}{% endif %}</b> 輯</li>
-            <li><b>{% if total <= 10 %}{% assign ti = total | minus: 1 %}{{ zhs[ti] }}{% else %}{{ total }}{% endif %}</b> 幀寫真</li>
+            <li>現收 <b>{% if npacks <= zhs.size %}{% assign ni = npacks | minus: 1 %}{{ zhs[ni] }}{% else %}{{ npacks }}{% endif %}</b> 輯</li>
+            <li><b>{% if total <= zhs.size %}{% assign ti = total | minus: 1 %}{{ zhs[ti] }}{% else %}{{ total }}{% endif %}</b> 幀寫真</li>
             <li>陸續進棚</li>
           </ul>
         </div>

@@ -4,11 +4,12 @@
 
 /* ── 開卷：館名＋寫真目次 ── */
 .pb-hero { padding-bottom: clamp(24px, 4vw, 40px); }
-/* 目次要撐得起門面：與主標同一視覺量級，縱向拉滿右欄（每條＝人名＋幀數） */
+/* 目次要撐得起門面：與主標同一視覺量級，縱向拉滿右欄（每條＝人名＋幀數）。
+   直排 flex column 的主軸＝水平右→左：max-width 到頂就往下折排，輯數再多也壓不扁左欄。 */
 .pb-hero .jpu-hero { align-items: stretch; }
-.pb-hero .jpu-vquote { justify-content: flex-start; padding-top: .4em; font-size: clamp(1.25rem, 2.1vw, 1.7rem); gap: clamp(.8em, 1.4vw, 1.3em); color: #e2d8bf; }
+.pb-hero .jpu-vquote { justify-content: flex-start; flex-wrap: wrap; max-width: 16em; padding-top: .4em; font-size: clamp(1.25rem, 2.1vw, 1.7rem); gap: clamp(.8em, 1.4vw, 1.3em); color: #e2d8bf; }
 .pb-hero .jpu-vquote span small { display: block; margin-bottom: .55em; font-size: .58em; letter-spacing: .3em; color: var(--jpm-gold); }
-.pb-hero .jpu-vquote footer { margin-top: auto; }
+.pb-hero .jpu-vquote footer { margin-top: auto; margin-right: auto; } /* 折排後落款收到左下角，不懸在排中 */
 .pb-count { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .pb-count li { border: 1px solid var(--jpm-line); padding: .24em .85em; font-family: var(--jpm-kai); font-size: .8rem; letter-spacing: .18em; color: var(--jpm-muted); }
 .pb-count b { color: var(--jpm-gold-bright); font-weight: 700; }
@@ -135,8 +136,8 @@
   .pb-album--multi .pb-print:nth-child(3n) { transform: rotate(-1.4deg) translateX(-2%); }
   .pb-album--multi .pb-meta { display: flex; flex-direction: column; align-items: flex-start; }
   .pb-head h2 { font-size: 1.7rem; }
-  /* 目次直排在窄幅要縮回，否則多欄目次撐爆版心 */
-  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; }
+  /* 目次直排在窄幅要縮回單排橫滑，否則多欄目次撐爆版心 */
+  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
