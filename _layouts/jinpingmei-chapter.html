@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% assign jpm_woodcut = site.data.jinpingmei_illustrations.items | where: "chapter", page.chapter | where: "status", "approved" | first %}
   {% if jpm_woodcut %}{% include jinpingmei/lightbox-css.html %}{% endif %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260815-1" rel="stylesheet">
   <script>try{if(localStorage.getItem('jpm-paper')==='1')document.documentElement.classList.add('jpm-paper')}catch(e){}</script>
   <script type="application/ld+json">
   {
@@ -75,6 +75,10 @@
   {% if idx > 0 %}{% assign prev_c = chapters[prev_i] %}{% endif %}
   {% if next_i < chapters.size %}{% assign next_c = chapters[next_i] %}{% endif %}
 
+  {%- capture jpm_anchors_key %}jinpingmei-{{ page.edition }}{% endcapture -%}
+  {%- assign jpm_anchors_ch = page.chapter | prepend: 'c' -%}
+  {%- assign jpm_anchors = site.data.book_anchors[jpm_anchors_key][jpm_anchors_ch] -%}
+
   <main class="jpm-shell-narrow">
     <header class="jpm-reader-head">
       <span class="jpm-volume">{{ page.edition_label }}{% if page.edition == 'wanli' %}{% if page.chapter == 0 %}・卷首{% else %}・卷之{{ page.volume }}{% endif %}{% endif %}</span>
@@ -90,6 +94,10 @@
       <p class="jpm-woodcut-note">上圖為明代十七世紀刊本的本回插圖，屬公共領域，作為閱讀的圖像參照（點圖可放大）；它與本頁文字所依據的整理底本並非同一實體書頁。全站歷史圖像的來源與授權見<a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>。</p>
     </aside>
     {% endif %}
+
+    {%- if jpm_anchors and jpm_anchors.size > 0 -%}
+    {% include chapter-anchors.html anchors=jpm_anchors prefix='jpm' id_mode='nth' chapter=page.chapter %}
+    {%- endif -%}
 
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
       {{ content }}
@@ -132,5 +140,8 @@
 
   {% if jpm_woodcut %}{% include jinpingmei/lightbox.html %}{% endif %}
   <script src="{{ '/assets/js/jinpingmei-reader.js' | relative_url }}?v=20260808-3" defer></script>
+  {%- if jpm_anchors and jpm_anchors.size > 0 -%}
+  <script src="{{ '/assets/js/chapter-anchors.js' | relative_url }}?v=20260815-1" defer></script>
+  {%- endif -%}
 </body>
 </html>

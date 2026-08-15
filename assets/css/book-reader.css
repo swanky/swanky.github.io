@@ -274,3 +274,44 @@ html.bk-paper {
 .bk-chapter-list li.is-read .no { color: var(--bk-muted); }
 .bk-chapter-list li.is-read .no::after { content: " ✓"; color: var(--bk-gold); }
 .bk-chapter-list li.is-read .ttl { color: color-mix(in srgb, var(--bk-paper) 78%, var(--bk-muted)); }
+
+/* ── 本回節點：正文頂部段落級導覽（2026-08） ──
+   資料驅動（_data/book_anchors/），機制與金瓶梅共用一份 include／JS，這裡只放皮。
+   book-reader.css 沒有全域 [hidden] 規則（金瓶梅那邊靠 .jpm [hidden] 涵蓋），這裡要自己補。 */
+.bk-anchors {
+  margin: 0 0 clamp(20px, 3vw, 32px);
+  padding: .9rem 1.05rem 1rem;
+  border: 1px solid var(--bk-line);
+  background: var(--bk-panel);
+}
+.bk-anchors[hidden], .bk-anchors a[hidden] { display: none !important; }
+.bk-anchors-head { margin: 0 0 .6rem; font-size: .76rem; letter-spacing: .12em; color: var(--bk-muted); }
+.bk-anchors-head b { font-family: var(--bk-serif); font-weight: 700; color: var(--bk-gold); letter-spacing: .1em; }
+.bk-anchors-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.bk-anchors-list a {
+  display: inline-block; padding: .32em .8em; border: 1px solid var(--bk-line);
+  background: var(--bk-bg); color: var(--bk-paper); font-family: var(--bk-kai);
+  font-size: .84rem; letter-spacing: .04em; text-align: center; text-decoration: none !important; cursor: pointer;
+}
+.bk-anchors-list a:hover, .bk-anchors-list a:focus-visible { border-color: var(--bk-gold); color: var(--bk-gold-bright); }
+.bk-anchors-note { margin: .7rem 0 0; font-size: .76rem; color: var(--bk-muted); }
+
+/* 跳轉目標的短暫高亮：淡金色閃過就褪去，不留永久標記（class 與金瓶梅共用同一份 JS） */
+@keyframes bk-anchor-flash {
+  0% { background: color-mix(in srgb, var(--bk-gold) 34%, transparent); }
+  100% { background: transparent; }
+}
+.anchor-flash { animation: bk-anchor-flash 1.6s ease-out; }
+
+/* 站上 sticky 頂欄（.bk-topbar）量測後的實際高度＋1rem，避免捲到段落被頂欄蓋住開頭。
+   實測正式站（Playwright，1280px 與 390px 兩種寬度取大者）：桌面 61.3px／手機 107.3px
+   （480px 以下 .bk-topbar 換行變兩列，見該檔 @media (max-width: 480px) 註解）。 */
+#chapter-body p { scroll-margin-top: calc(108px + 1rem); }
+
+@media (max-width: 480px) {
+  .bk-anchors { padding: .8rem .85rem .9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anchor-flash { animation: none; background: color-mix(in srgb, var(--bk-gold) 34%, transparent); }
+}

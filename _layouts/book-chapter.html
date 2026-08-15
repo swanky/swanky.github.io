@@ -64,6 +64,10 @@
   {%- if idx > 0 %}{% assign prev_c = siblings[prev_i] %}{% endif -%}
   {%- if next_i < siblings.size %}{% assign next_c = siblings[next_i] %}{% endif -%}
 
+  {%- capture bk_anchors_key %}{{ book.id }}-{{ edition.id }}{% endcapture -%}
+  {%- assign bk_anchors_ch = page.chapter | prepend: 'c' -%}
+  {%- assign bk_anchors = site.data.book_anchors[bk_anchors_key][bk_anchors_ch] -%}
+
   <main class="bk-shell-narrow">
     <nav class="bk-crumb" aria-label="麵包屑">
       <ol>
@@ -78,6 +82,10 @@
       <span class="bk-meta">{{ book.title }}・{{ edition.label }}</span>
       <h1>{{ page.label }}{% if page.couplet != '' %}<small>{{ page.couplet }}</small>{% endif %}</h1>
     </header>
+
+    {%- if bk_anchors and bk_anchors.size > 0 -%}
+    {% include chapter-anchors.html anchors=bk_anchors prefix='bk' id_mode='id' chapter=page.chapter fidelity=edition.text_fidelity %}
+    {%- endif -%}
 
     <article id="chapter-body" class="bk-reader" data-book="{{ book.id }}" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">
       {{ content }}
@@ -121,5 +129,8 @@
 
   {%- include book/footer.html -%}
   <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+  {%- if bk_anchors and bk_anchors.size > 0 -%}
+  <script src="{{ '/assets/js/chapter-anchors.js' | relative_url }}?v=20260815-1" defer></script>
+  {%- endif -%}
 </body>
 </html>

@@ -11,6 +11,7 @@
   --jpm-gold: #c9a461;
   --jpm-gold-bright: #e2c777;
   --jpm-red: #9d3a4d;
+  --jpm-flash: rgba(201, 164, 97, .38);
   --jpm-serif: "Noto Serif TC", "Songti TC", serif;
   --jpm-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   --reader-size: 1.125rem;
@@ -387,6 +388,7 @@ html.jpm-paper {
   --jpm-muted: #6c5d45;
   --jpm-gold: #7c5e1d;
   --jpm-gold-bright: #6b4f15;
+  --jpm-flash: rgba(120, 88, 34, .35);
 }
 html.jpm-paper body.jpm { background: repeating-linear-gradient(0deg, rgba(88, 64, 30, .028) 0 1px, transparent 1px 4px), var(--jpm-bg); }
 html.jpm-paper .jpm-topbar { background: rgba(238, 229, 208, .93); }
@@ -584,4 +586,44 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
   .js-on .reveal { opacity: 1; transform: none; transition: none; }
   .film-player img, .jpm-cast-card img { transition: none; }
   .jpm-chapter-list .bf { transition: none; }
+}
+
+/* ── 本回節點：正文頂部段落級導覽（2026-08） ──
+   資料驅動（_data/book_anchors/），機制與五書平台共用一份 include／JS，這裡只放皮。
+   [hidden] 隱藏已由上面 .jpm [hidden] 的全域規則涵蓋，這裡不必重複。 */
+.jpm-anchors {
+  margin: 0 0 clamp(20px, 3vw, 32px);
+  padding: .9rem 1.05rem 1rem;
+  border: 1px solid var(--jpm-line);
+  background: var(--jpm-panel);
+}
+.jpm-anchors-head { margin: 0 0 .6rem; font-size: .78rem; letter-spacing: .14em; color: var(--jpm-muted); }
+.jpm-anchors-head b { font-family: var(--jpm-serif); font-weight: 700; color: var(--jpm-gold); letter-spacing: .1em; }
+.jpm-anchors-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.jpm-anchors-list a {
+  display: inline-block; padding: .32em .8em; border: 1px solid var(--jpm-line);
+  background: var(--jpm-panel-2); color: var(--jpm-paper); font-family: var(--jpm-kai);
+  font-size: .84rem; letter-spacing: .04em; text-align: center; cursor: pointer;
+}
+.jpm-anchors-list a:hover, .jpm-anchors-list a:focus-visible { border-color: var(--jpm-gold); background: var(--jpm-panel); color: var(--jpm-gold-bright); }
+.jpm-anchors-note { margin: .7rem 0 0; font-size: .78rem; color: var(--jpm-muted); }
+
+/* 跳轉目標的短暫高亮：淡金色閃過就褪去，不留永久標記。
+   --jpm-flash 在 html.jpm-paper 另有一份定義，深墨／米紙兩種模式各自可讀。 */
+@keyframes jpm-anchor-flash {
+  0% { background: var(--jpm-flash); }
+  100% { background: transparent; }
+}
+.anchor-flash { animation: jpm-anchor-flash 1.6s ease-out; }
+
+/* 站上 sticky 頂欄（.jpm-topbar）量測後的實際高度＋1rem，避免捲到段落被頂欄蓋住開頭。
+   實測正式站（Playwright，1280px 與 390px 兩種寬度取大者）：桌面 69.3px／手機 51.8px。 */
+#chapter-body p { scroll-margin-top: calc(70px + 1rem); }
+
+@media (max-width: 480px) {
+  .jpm-anchors { padding: .8rem .85rem .9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anchor-flash { animation: none; background: var(--jpm-flash); }
 }

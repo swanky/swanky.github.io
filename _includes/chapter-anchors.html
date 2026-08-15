@@ -1,0 +1,38 @@
+{%- comment -%}
+  本回節點：正文頂部的段落級導覽（小目錄＋時間軸二合一）。表驅動、金瓶梅與五書通用平台共用，
+  硬規則：不得出現任何書名字串或單一作品專屬路徑（比照 tests/book-platform.test.mjs 對共用 layout
+  的規則辦理，即使這條測試目前沒有把本檔列進去）。
+
+  參數（一律用 include.xxx 讀，這是 Jekyll/Liquid include 參數的既有慣例，
+  見 _includes/jinpingmei/acts-strip.html 的 include.edition）：
+    include.anchors  — 該回錨點陣列 [{p, k, t}, ...]；nil 或空陣列時整個 include 不輸出任何東西
+    include.prefix   — 'jpm' 或 'bk'，決定 class 皮
+    include.id_mode  — 'id'（五書：段落本來就有 id="p-xxx-yyyy"，這裡可直接算出可用的 href）
+                       ｜'nth'（金瓶梅：無 id，要等 assets/js/chapter-anchors.js 執行期找到段落才補 id／href）
+    include.chapter  — 回號整數，補零算段落 id 用
+    include.fidelity — 選填，對應 edition.text_fidelity；預設 verbatim。非 verbatim（transcribed／
+                       converted）時，下方誠實標示不得說「一字未刪改」——那句話的出現次數在
+                       book-chapter.html 被測試鎖定為 1，本檔獨立管理自己的措辭，兩邊不會互相影響。
+{%- endcomment -%}
+{%- if include.anchors and include.anchors.size > 0 -%}
+{%- assign ch3 = include.chapter | prepend: '00' | slice: -3, 3 -%}
+{%- assign fid = include.fidelity | default: 'verbatim' -%}
+<nav class="{{ include.prefix }}-anchors" data-anchors data-mode="{{ include.id_mode }}" data-chapter="{{ include.chapter }}" aria-label="本回節點"{% if include.id_mode == 'nth' %} hidden{% endif %}>
+  <p class="{{ include.prefix }}-anchors-head"><b>本回節點</b></p>
+  <ul class="{{ include.prefix }}-anchors-list">
+    {%- for a in include.anchors -%}
+    {%- if include.id_mode == 'id' -%}
+    {%- assign p4 = a.p | prepend: '000' | slice: -4, 4 -%}
+    <li><a href="#p-{{ ch3 }}-{{ p4 }}" data-p="{{ a.p }}" data-k="{{ a.k | escape }}">{{ a.t | escape }}</a></li>
+    {%- else -%}
+    <li><a href="#" data-p="{{ a.p }}" data-k="{{ a.k | escape }}">{{ a.t | escape }}</a></li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+  {%- if fid == 'verbatim' -%}
+  <p class="{{ include.prefix }}-anchors-note">本回節點由 AI 整理，只是找位置的路標；原文一字未刪改。</p>
+  {%- else -%}
+  <p class="{{ include.prefix }}-anchors-note">本回節點由 AI 整理，只是找位置的路標；原文本身站上不做任何改動。</p>
+  {%- endif -%}
+</nav>
+{%- endif -%}
