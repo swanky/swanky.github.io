@@ -1,0 +1,93 @@
+/* 金瓶梅宇宙 Shorts 承接頁＋入口頁專屬樣式（2026-08-15）
+   涵蓋：/jinpingmei/go/ 入口頁、/jinpingmei/shorts/* 三個承接頁（共用 _layouts/jinpingmei-short.html）。
+   依附 jinpingmei.css 既有變數與共用 class（jpm-shell／jpm-section／jpm-prose／jpm-quotes／act-cta／
+   jpm-topbar／jpm-brand）——本檔一律在 jinpingmei.css 之後載入，不重複定義其變數，也不改動該檔。 */
+
+/* ── 承接頁：第一屏標題＋副題 ─────────── */
+.short-hero { padding: clamp(44px, 8vw, 84px) 0 clamp(20px, 3vw, 32px); }
+.short-hero h1 { max-width: 18em; font-size: clamp(1.55rem, 4.4vw, 2.5rem); }
+.short-subtitle { margin: 0; max-width: 34em; color: var(--jpm-gold-bright); font-family: var(--jpm-kai); font-size: clamp(.95rem, 1.6vw, 1.1rem); letter-spacing: .04em; }
+
+/* 核心答案：第一屏交付，比一般 prose 更醒目 */
+.short-answer p {
+  margin: 0;
+  max-width: 42em;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--jpm-gold);
+  color: var(--jpm-paper);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  line-height: 2.05;
+}
+
+/* 三個洞察：CSS counter 產生編號，不在 DOM 塞入額外文案 */
+.short-insights { display: grid; gap: 1.4rem; counter-reset: short-insight; }
+.short-insight { padding-top: 1.3rem; border-top: 1px solid var(--jpm-line); counter-increment: short-insight; }
+.short-insight::before { content: counter(short-insight, decimal-leading-zero); display: block; margin-bottom: .35rem; color: var(--jpm-gold); font-family: var(--jpm-kai); font-size: .78rem; letter-spacing: .3em; }
+.short-insight h3 { margin: 0 0 .5rem; font-family: var(--jpm-serif); font-size: 1.12rem; color: var(--jpm-gold-bright); }
+.short-insight p { margin: 0; max-width: 42em; color: #cfc6b0; font-size: .95rem; line-height: 1.95; }
+
+/* 原典證據卡：沿用 jpm-prose／jpm-quotes，補一行出處連結 */
+.short-evidence-source { margin: .9rem 0 0; color: var(--jpm-muted); font-size: .85rem; }
+.short-evidence-source a { color: var(--jpm-gold); }
+.short-evidence-source a:hover { color: var(--jpm-gold-bright); }
+
+/* CTA：主（實心大按鈕）／次（文字連結） */
+.short-cta { padding-bottom: clamp(28px, 5vw, 48px); }
+.short-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; }
+.short-cta-primary {
+  display: inline-flex; align-items: center; gap: .6em;
+  padding: .95em 1.9em;
+  border: 1px solid var(--jpm-gold);
+  background: var(--jpm-gold); color: #141109;
+  font-family: var(--jpm-serif); font-weight: 700; font-size: 1.02rem; letter-spacing: .06em;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.short-cta-primary i { font-style: normal; display: inline-block; transition: transform .3s; }
+.short-cta-primary:hover { background: var(--jpm-gold-bright); border-color: var(--jpm-gold-bright); color: #141109; }
+.short-cta-primary:hover i { transform: translateX(4px); }
+.short-cta-secondary { display: inline-flex; align-items: center; gap: .5em; color: var(--jpm-muted); font-size: .92rem; letter-spacing: .02em; }
+.short-cta-secondary i { font-style: normal; display: inline-block; transition: transform .3s; }
+.short-cta-secondary:hover { color: var(--jpm-gold-bright); }
+.short-cta-secondary:hover i { transform: translateX(4px); }
+
+/* 頁尾：訂閱（沿用 act-cta）／服務連結／回宇宙連結，置中堆疊 */
+.short-footer { padding: 2.2rem 0 clamp(64px, 10vw, 88px); border-top: 1px solid var(--jpm-line); text-align: center; }
+.short-footer .act-cta { margin-bottom: 1.3rem; }
+.short-footer-links { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .6rem; color: var(--jpm-muted); font-size: .85rem; }
+.short-footer-links a { color: var(--jpm-muted); }
+.short-footer-links a:hover { color: var(--jpm-gold-bright); }
+
+/* 手機底部黏著主 CTA bar；桌機不顯示 */
+.short-stickybar { display: none; }
+@media (max-width: 720px) {
+  .short-stickybar {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(14, 13, 11, .95);
+    border-top: 1px solid var(--jpm-line);
+    backdrop-filter: blur(8px);
+  }
+  .short-stickybar a {
+    display: flex; align-items: center; justify-content: center;
+    padding: .85em 1em;
+    background: var(--jpm-gold); color: #141109;
+    font-family: var(--jpm-serif); font-weight: 700; font-size: .98rem; letter-spacing: .04em;
+  }
+  body.jpm-short-page { padding-bottom: 76px; }
+}
+
+@media (max-width: 480px) {
+  .short-cta-row { flex-direction: column; align-items: flex-start; gap: .9rem; }
+}
+
+/* ── /jinpingmei/go/ 入口頁：極簡三鈕 ─── */
+.go-main { padding: clamp(16px, 5vh, 40px) 0 clamp(40px, 8vw, 72px); }
+.go-hero { max-width: 30em; text-align: center; margin: 0 auto; }
+.go-hero h1 { font-size: clamp(1.9rem, 6vw, 2.8rem); }
+.go-sub { margin: 0 0 clamp(28px, 5vw, 44px); color: var(--jpm-muted); font-size: 1rem; line-height: 1.9; }
+.go-buttons { display: flex; flex-direction: column; align-items: stretch; gap: .9rem; }
+.go-buttons a { width: 100%; justify-content: center; }
+.go-foot { margin-top: clamp(28px, 5vw, 44px); font-size: .82rem; color: var(--jpm-muted); }
+.go-foot a { color: var(--jpm-muted); }
+.go-foot a:hover { color: var(--jpm-gold-bright); }

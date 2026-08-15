@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+
+  <!-- Google tag (gtag.js)：沿用站上既有 GA4 property，非新建 ID。
+       金瓶梅宇宙其餘頁面（layout: null／jinpingmei-character／jinpingmei-chapter）目前皆未掛 gtag，
+       但本批 Shorts 承接頁的核心目的就是量測導流成效，缺了這段所有 gtag 事件都會靜默失效。 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SB1R6G61LY');
+  </script>
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/assets/img/jinpingmei/figures/overview-standard.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-shorts.css' | relative_url }}?v=20260815-1" rel="stylesheet">
+</head>
+<body class="jpm jpm-short-page">
+  <a class="jpm-skip" href="#short-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+  </header>
+
+  <main id="short-main" class="short-main">
+
+    <section class="short-hero jpm-shell">
+      <h1>{{ page.h1 }}</h1>
+      <p class="short-subtitle">{{ page.subtitle }}</p>
+    </section>
+
+    <section class="short-answer jpm-shell jpm-section" style="padding-top:0">
+      <p>{{ page.core_answer }}</p>
+    </section>
+
+    <section class="short-insights jpm-shell jpm-section" style="padding-top:0">
+      {% for ins in page.insights %}
+      <div class="short-insight">
+        <h3>{{ ins.title }}</h3>
+        <p>{{ ins.body }}</p>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section class="short-evidence jpm-shell jpm-section" style="padding-top:0">
+      <div class="jpm-prose"><h2>原文依據</h2></div>
+      <ul class="jpm-quotes">
+        {% for q in page.quote_lines %}<li>{{ q }}</li>{% endfor %}
+      </ul>
+      <p class="short-evidence-source">出處：<a href="{{ page.quote_source_url | relative_url }}">{{ page.quote_source }}</a></p>
+    </section>
+
+    <section class="short-cta jpm-shell">
+      <div class="short-cta-row">
+        <a class="short-cta-primary" href="{{ page.primary_cta_url | relative_url }}" onclick="if(window.gtag){gtag('event','short_primary_cta_click',{short_id:'{{ page.short_id }}',cta_target:'{{ page.primary_cta_url }}'});}">{{ page.primary_cta_text }}<i aria-hidden="true">→</i></a>
+        <a class="short-cta-secondary" href="{{ page.secondary_cta_url | relative_url }}" onclick="if(window.gtag){gtag('event','short_secondary_cta_click',{short_id:'{{ page.short_id }}'});}">{{ page.secondary_cta_text }}<i aria-hidden="true">→</i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="short-footer jpm-shell">
+    <a class="act-cta" href="https://www.youtube.com/@SwankyHsiao?sub_confirmation=1" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','short_subscribe_click',{from_page:'{{ page.url }}'});}">訂閱頻道，第一時間看下一集<i aria-hidden="true">→</i></a>
+    <ul class="short-footer-links">
+      <li><a href="{{ '/technical/ai-visual-production/' | relative_url }}">這些影像由 AI 虛擬劇組製作——了解 AI 視覺內容製作服務</a></li>
+      <li><a href="{{ '/jinpingmei/' | relative_url }}">進入《金瓶梅宇宙》：百回原文＋角色研究＋影像十部曲</a></li>
+    </ul>
+  </footer>
+
+  <div class="short-stickybar">
+    <a href="{{ page.primary_cta_url | relative_url }}" onclick="if(window.gtag){gtag('event','short_primary_cta_click',{short_id:'{{ page.short_id }}',cta_target:'{{ page.primary_cta_url }}'});}">{{ page.primary_cta_text }}</a>
+  </div>
+</body>
+</html>

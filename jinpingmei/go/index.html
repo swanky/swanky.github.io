@@ -1,0 +1,61 @@
+---
+layout: null
+title: 金瓶梅宇宙｜入口
+description: AI 虛擬劇組重製《金瓶梅》——百回原文、十九位角色研究、影像十部曲。從這裡開始。
+permalink: /jinpingmei/go/
+---
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+
+  <!-- Google tag (gtag.js)：沿用站上既有 GA4 property，非新建 ID。 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SB1R6G61LY');
+  </script>
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-shorts.css' | relative_url }}?v=20260815-1" rel="stylesheet">
+</head>
+<body class="jpm jpm-go">
+  <a class="jpm-skip" href="#go-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+  </header>
+
+  <main id="go-main" class="go-main jpm-shell">
+    <section class="go-hero">
+      <h1>金瓶梅宇宙</h1>
+      <p class="go-sub">AI 虛擬劇組重製《金瓶梅》——原文一字未改，角色一人一檔，影像一集一回。</p>
+      <div class="go-buttons">
+        <a class="short-cta-primary" href="{{ '/jinpingmei/characters/' | relative_url }}" onclick="if(window.gtag){gtag('event','go_button_click',{target:'characters'});}">認識十九位角色<i aria-hidden="true">→</i></a>
+        <a class="act-cta" href="{{ '/jinpingmei/studio/' | relative_url }}" onclick="if(window.gtag){gtag('event','go_button_click',{target:'studio'});}">看影像十部曲<i aria-hidden="true">→</i></a>
+        <a class="act-cta" href="https://www.youtube.com/@SwankyHsiao?sub_confirmation=1" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','go_button_click',{target:'subscribe'});}">訂閱下一集通知<i aria-hidden="true">→</i></a>
+      </div>
+      <p class="go-foot"><a href="{{ '/jinpingmei/' | relative_url }}">進入《金瓶梅宇宙》完整站</a></p>
+    </section>
+  </main>
+</body>
+</html>
