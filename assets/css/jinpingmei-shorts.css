@@ -91,3 +91,8 @@
 .go-foot { margin-top: clamp(28px, 5vw, 44px); font-size: .82rem; color: var(--jpm-muted); }
 .go-foot a { color: var(--jpm-muted); }
 .go-foot a:hover { color: var(--jpm-gold-bright); }
+
+/* 來源影片連結（發布後掛上，front matter short_youtube / short_x） */
+.short-watch { padding: 0 0 40px; }
+.short-watch p { color: var(--jpm-muted); font-size: .95rem; margin: 0; }
+.short-watch a { color: var(--jpm-gold-bright); text-decoration: underline; text-underline-offset: 4px; }

@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260811-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-shorts.css' | relative_url }}?v=20260815-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-shorts.css' | relative_url }}?v=20260815-2" rel="stylesheet">
 </head>
 <body class="jpm jpm-short-page">
   <a class="jpm-skip" href="#short-main">跳到主要內容</a>
@@ -75,6 +75,16 @@
         <a class="short-cta-secondary" href="{{ page.secondary_cta_url | relative_url }}" onclick="if(window.gtag){gtag('event','short_secondary_cta_click',{short_id:'{{ page.short_id }}'});}">{{ page.secondary_cta_text }}<i aria-hidden="true">→</i></a>
       </div>
     </section>
+
+    {% if page.short_youtube or page.short_x %}
+    <section class="short-watch jpm-shell">
+      <p>這一篇也有一分鐘的短片版：
+        {% if page.short_youtube %}<a href="{{ page.short_youtube }}" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','short_watch_click',{short_id:'{{ page.short_id }}',platform:'youtube'});}">在 YouTube 看</a>{% endif %}
+        {% if page.short_youtube and page.short_x %}・{% endif %}
+        {% if page.short_x %}<a href="{{ page.short_x }}" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','short_watch_click',{short_id:'{{ page.short_id }}',platform:'x'});}">在 X 看</a>{% endif %}
+      </p>
+    </section>
+    {% endif %}
 
   </main>
 
