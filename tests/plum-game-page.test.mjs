@@ -14,7 +14,7 @@ const ep02VideoId = 'NMFgHt9YgE8';
 const ep03VideoId = 'pOcVepABSt8';
 
 test('《梅香境》頁首提供公開影片入口', () => {
-  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 至 EP03 影像<\/a>/);
+  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 至 EP06 影像<\/a>/);
 });
 
 test('首頁精選作品提供 EP01 導流但不重複嵌入播放器', () => {
