@@ -4158,6 +4158,139 @@ section.testimonials {
   }
 }
 
+/* --- Article transcript（長訪談完整翻譯，逐段收合）--- */
+.post-content .article-transcript {
+  margin: 0 0 10px;
+  border: 1px solid #e8e2d9;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.post-content .article-transcript > summary {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-sans);
+  color: #403b36;
+}
+
+.post-content .article-transcript > summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-content .article-transcript > summary::after {
+  content: "+";
+  grid-column: 4;
+  color: var(--c-gold-deep);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.post-content .article-transcript[open] > summary::after {
+  content: "−";
+}
+
+.post-content .article-transcript > summary a {
+  color: var(--c-gold-deep);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+.post-content .article-transcript > summary span {
+  min-width: 0;
+  font-weight: 700;
+}
+
+.post-content .article-transcript > summary small {
+  color: var(--c-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.article-transcript__body {
+  padding: 0 18px 18px;
+  border-top: 1px solid #f0ece6;
+}
+
+.post-content .article-transcript__body > p {
+  margin: 16px 0 0;
+}
+
+.post-content .article-transcript__line {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.post-content .article-transcript__speaker {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.65rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.post-content .article-transcript__speaker--host {
+  border: 1px solid #c9dbed;
+  background: #e8f1fb;
+  color: #174a73;
+}
+
+.post-content .article-transcript__speaker--guest {
+  border: 1px solid #e4ca8d;
+  background: #f7ebcd;
+  color: #684600;
+}
+
+.post-content .article-transcript__dialogue {
+  min-width: 0;
+}
+
+.post-content .article-transcript__original {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-left: 3px solid #d8c9ad;
+  background: #faf8f4;
+}
+
+.post-content .article-transcript__original > summary {
+  cursor: pointer;
+  color: var(--c-gold-deep);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.post-content .article-transcript__original p {
+  margin: 10px 0 0;
+  color: var(--c-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .post-content .article-transcript > summary {
+    grid-template-columns: 4.2rem minmax(0, 1fr) auto auto;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .article-transcript__body {
+    padding: 0 14px 14px;
+  }
+}
+
 /* --- Article 更新說明（舊文重新核對後的版本提示）--- */
 .post-content .article-update-note {
   margin: 0 0 1.75rem;
