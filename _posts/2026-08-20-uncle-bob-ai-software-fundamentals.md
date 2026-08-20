@@ -2,7 +2,7 @@
 title: "Matt Pocock × Uncle Bob：AI 寫程式愈快，軟體基本功愈不能省"
 seo_title: "Matt Pocock × Uncle Bob 談 AI Coding：測試、架構與軟體基本功"
 date: 2026-08-20
-published: false
+published: true
 categories: [technical]
 tags: [ai-agent, ai-coding, matt-pocock, uncle-bob, clean-code, software-architecture, tdd, mutation-testing, software-engineering]
 layout: article
