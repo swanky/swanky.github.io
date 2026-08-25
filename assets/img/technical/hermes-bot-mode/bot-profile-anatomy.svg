@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Hermes Bot Mode 的 Profile 架構</title>
+  <desc id="desc">Desktop 與 CLI 共用同一個 Bot Profile；Profile 內含身份、模型、SOUL、記憶、Skills、工具、對話、排程與狀態。Profile 狀態分開，但憑證可能共享，而且不是檔案系統沙箱。</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#17314b" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071522"/><stop offset="1" stop-color="#102a3d"/></linearGradient>
+    <linearGradient id="profile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b3145"/><stop offset="1" stop-color="#10243b"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#38d9ff"/></marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#f7b955"/></marker>
+    <style>
+      .t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#eaf7ff}.mono{font-family:"Cascadia Mono","Noto Sans Mono",monospace}.h1{font-size:34px;font-weight:800}.sub{font-size:20px;fill:#a9c5d8}.label{font-size:23px;font-weight:750}.small{font-size:20px;fill:#b9d0df}.tiny{font-size:20px;fill:#89a9bd}.cyan{fill:#8be9ff}.amber{fill:#ffd179}.rose{fill:#ff9ab0}.card{fill:#0e2536;stroke:#2d7895;stroke-width:2}.module{fill:#0c2738;stroke:#38bde8;stroke-width:1.5}.persist{fill:#16243e;stroke:#a98bff;stroke-width:1.5}.security{fill:#351b29;stroke:#ff6f91;stroke-width:2}.arrow{fill:none;stroke:#38d9ff;stroke-width:3;marker-end:url(#arrow)}.dash{fill:none;stroke:#f7b955;stroke-width:3;stroke-dasharray:8 7;marker-end:url(#arrowAmber)}
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity=".55"/>
+
+  <text x="60" y="65" class="t h1">Bot Mode 的底層：Bot 就是一個 Profile</text>
+  <text x="60" y="98" class="t sub">不是新 Agent 引擎，而是把既有狀態與能力整理成可管理的長期角色。</text>
+
+  <path class="arrow" d="M265 265C315 265 320 265 360 265"/>
+  <path class="arrow" d="M265 380C315 380 320 380 360 380"/>
+  <path class="arrow" d="M265 495C315 495 320 495 360 495"/>
+  <path class="arrow" d="M895 335C940 335 960 295 1010 295"/>
+  <path class="dash" d="M895 445C950 445 955 485 1010 485"/>
+
+  <rect x="55" y="180" width="210" height="390" rx="18" class="card"/>
+  <text x="160" y="220" text-anchor="middle" class="t label cyan">操作入口</text>
+  <g>
+    <rect x="82" y="244" width="156" height="68" rx="12" class="module"/><text x="160" y="274" text-anchor="middle" class="t label">Desktop</text><text x="160" y="296" text-anchor="middle" class="t tiny">Roster／Group Chat</text>
+    <rect x="82" y="347" width="156" height="68" rx="12" class="module"/><text x="160" y="377" text-anchor="middle" class="t label">Bot Chat</text><text x="160" y="399" text-anchor="middle" class="t tiny">固定主對話</text>
+    <rect x="82" y="450" width="156" height="68" rx="12" class="module"/><text x="160" y="480" text-anchor="middle" class="t label">CLI</text><text x="160" y="502" text-anchor="middle" class="t tiny mono">Profile CLI</text>
+  </g>
+
+  <rect x="355" y="145" width="545" height="515" rx="24" fill="url(#profile)" stroke="#52d7ff" stroke-width="3" filter="url(#glow)"/>
+  <text x="390" y="190" class="t label cyan">Bot Profile：獨立 Hermes Home</text>
+  <text x="390" y="220" class="t tiny">State 分開；OAuth／token pool 可能共享</text>
+
+  <g>
+    <rect x="390" y="245" width="145" height="92" rx="12" class="module"/>
+    <text x="462" y="277" text-anchor="middle" class="t label">身份</text><text x="462" y="302" text-anchor="middle" class="t small">名稱／角色／頭像</text><text x="462" y="322" text-anchor="middle" class="t tiny">Description</text>
+
+    <rect x="555" y="245" width="145" height="92" rx="12" class="module"/>
+    <text x="627" y="277" text-anchor="middle" class="t label">模型</text><text x="627" y="302" text-anchor="middle" class="t small">Provider／Model</text><text x="627" y="322" text-anchor="middle" class="t tiny">可依 Bot 固定</text>
+
+    <rect x="720" y="245" width="145" height="92" rx="12" class="module"/>
+    <text x="792" y="277" text-anchor="middle" class="t label">SOUL</text><text x="792" y="302" text-anchor="middle" class="t small">角色／行為準則</text><text x="792" y="322" text-anchor="middle" class="t tiny">不是安全邊界</text>
+
+    <rect x="390" y="360" width="145" height="92" rx="12" class="persist"/>
+    <text x="462" y="392" text-anchor="middle" class="t label">記憶</text><text x="462" y="417" text-anchor="middle" class="t small">長期觀察／偏好</text><text x="462" y="437" text-anchor="middle" class="t tiny">每個 Profile 獨立</text>
+
+    <rect x="555" y="360" width="145" height="92" rx="12" class="persist"/>
+    <text x="627" y="392" text-anchor="middle" class="t label">Skills／Tools</text><text x="627" y="417" text-anchor="middle" class="t small">工具集／MCP</text><text x="627" y="437" text-anchor="middle" class="t tiny">能力與流程</text>
+
+    <rect x="720" y="360" width="145" height="92" rx="12" class="persist"/>
+    <text x="792" y="392" text-anchor="middle" class="t label">Bot Chat</text><text x="792" y="417" text-anchor="middle" class="t small">固定主對話</text><text x="792" y="437" text-anchor="middle" class="t tiny">長期工作脈絡</text>
+
+    <rect x="390" y="475" width="225" height="105" rx="12" class="module"/>
+    <text x="502" y="510" text-anchor="middle" class="t label">Routines／Cron</text><text x="502" y="535" text-anchor="middle" class="t small">定時與重複工作</text><text x="502" y="558" text-anchor="middle" class="t tiny">Gateway 必須運作</text>
+
+    <rect x="640" y="475" width="225" height="105" rx="12" class="module"/>
+    <text x="752" y="510" text-anchor="middle" class="t label">Sessions／Inbox</text><text x="752" y="535" text-anchor="middle" class="t small">對話、handoff、回覆</text><text x="752" y="558" text-anchor="middle" class="t tiny">message_agent 驗證 roster</text>
+  </g>
+
+  <rect x="980" y="205" width="190" height="180" rx="18" class="card"/>
+  <text x="1077" y="240" text-anchor="middle" class="t label cyan">模型與服務</text>
+  <text x="1077" y="275" text-anchor="middle" class="t small">雲端 Provider</text>
+  <text x="1077" y="302" text-anchor="middle" class="t small">或本地模型</text>
+  <text x="1077" y="329" text-anchor="middle" class="t small">Search／MCP</text>
+  <text x="1077" y="357" text-anchor="middle" class="t tiny">狀態 ≠ 推論位置</text>
+
+  <rect x="980" y="410" width="190" height="150" rx="18" class="card"/>
+  <text x="1077" y="447" text-anchor="middle" class="t label amber">其他機器</text>
+  <text x="1077" y="480" text-anchor="middle" class="t small">Desktop Relay</text>
+  <text x="1077" y="507" text-anchor="middle" class="t small">或 Peer Gateway</text>
+  <text x="1077" y="535" text-anchor="middle" class="t tiny">Bot 留在所屬後端</text>
+
+  <rect x="95" y="700" width="1010" height="64" rx="14" class="security"/>
+  <text x="600" y="728" text-anchor="middle" class="t label rose">安全提醒：Profile 隔離狀態，不隔離檔案系統</text>
+  <text x="600" y="751" text-anchor="middle" class="t small">預設 local terminal 仍沿用作業系統使用者權限；真正分權要靠 sandbox、container、獨立憑證與最小工具集。</text>
+</svg>

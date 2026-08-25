@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">作者建議的 Bot Mode 控制架構</title>
+  <desc id="desc">這不是 Hermes 內建強制流程。作者建議人類先定義目標與風險，讓具名 Bot 依工作選擇直接交接、有限回合群組討論或排程；產出再經確定性檢查、證據與獨立審查，以及人類核准。</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#19334b" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071521"/><stop offset="1" stop-color="#122a3f"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#45d9ff"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#71e2a5"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#ff7899"/></marker>
+    <style>
+      .t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#eff9ff}.h1{font-size:34px;font-weight:800}.sub{font-size:20px;fill:#a8c5d8}.head{font-size:23px;font-weight:800}.body{font-size:20px;fill:#c9dbe7}.small{font-size:20px;fill:#93acbd}.box{fill:#0e283a;stroke:#3ebfe8;stroke-width:2}.choice{fill:#14253a;stroke:#9c8cff;stroke-width:2}.verify{fill:#12342d;stroke:#62d99d;stroke-width:2}.human{fill:#3c2b16;stroke:#f4bd5c;stroke-width:2}.danger{fill:#351c2b;stroke:#ff7899;stroke-width:2}.cyan{fill:#8ce9ff}.green{fill:#95efbd}.amber{fill:#ffd17b}.rose{fill:#ffa0b7}.arrow{fill:none;stroke:#45d9ff;stroke-width:3;marker-end:url(#a)}.bus{fill:none;stroke:#45d9ff;stroke-width:3}.ok{fill:none;stroke:#71e2a5;stroke-width:3;marker-end:url(#g)}.retry{fill:none;stroke:#ff7899;stroke-width:3;stroke-dasharray:8 7;marker-end:url(#r)}
+    </style>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/><rect width="1200" height="820" fill="url(#grid)" opacity=".55"/>
+  <text x="60" y="64" class="t h1">不要先開十個 Bot：先設計一條能收斂的控制迴圈</text>
+  <text x="60" y="96" class="t sub">作者建議，非 Hermes 內建強制流程：高風險動作要另外設計 Gate。</text>
+
+  <path class="arrow" d="M210 195H300"/>
+  <path class="arrow" d="M480 195H535"/>
+  <path class="arrow" d="M715 195H815"/>
+
+  <rect x="55" y="135" width="155" height="120" rx="16" class="human"/>
+  <text x="132" y="175" text-anchor="middle" class="t head amber">人類</text>
+  <text x="132" y="205" text-anchor="middle" class="t body">目標／限制</text>
+  <text x="132" y="232" text-anchor="middle" class="t small">不可外包的判斷</text>
+
+  <rect x="300" y="135" width="180" height="120" rx="16" class="box"/>
+  <text x="390" y="175" text-anchor="middle" class="t head cyan">風險分類</text>
+  <text x="390" y="205" text-anchor="middle" class="t body">資料／權限／代價</text>
+  <text x="390" y="232" text-anchor="middle" class="t small">先定義 Done 與 Stop</text>
+
+  <rect x="535" y="135" width="180" height="120" rx="16" class="box"/>
+  <text x="625" y="175" text-anchor="middle" class="t head cyan">選擇工作形態</text>
+  <text x="625" y="205" text-anchor="middle" class="t body">單一／討論／定時</text>
+  <text x="625" y="232" text-anchor="middle" class="t small">不是每件事都要 Group</text>
+
+  <rect x="815" y="135" width="180" height="120" rx="16" class="choice" filter="url(#glow)"/>
+  <text x="905" y="175" text-anchor="middle" class="t head">Named Bot</text>
+  <text x="905" y="205" text-anchor="middle" class="t body">責任／記憶／工具</text>
+  <text x="905" y="232" text-anchor="middle" class="t small">持久角色開始執行</text>
+
+  <!-- Named Bot fan-out bus -->
+  <path class="bus" d="M905 255V290H205M905 290H995"/>
+  <path class="arrow" d="M205 290V320"/>
+  <path class="arrow" d="M600 290V320"/>
+  <path class="arrow" d="M995 290V320"/>
+
+  <rect x="70" y="320" width="270" height="150" rx="18" class="choice"/>
+  <text x="205" y="360" text-anchor="middle" class="t head">直接 @mention</text>
+  <text x="205" y="394" text-anchor="middle" class="t body">一位專家、清楚交付物</text>
+  <text x="205" y="425" text-anchor="middle" class="t small">active Bot 重寫後交接</text>
+  <text x="205" y="452" text-anchor="middle" class="t small">適合線性、低協調成本工作</text>
+
+  <rect x="465" y="320" width="270" height="150" rx="18" class="choice"/>
+  <text x="600" y="360" text-anchor="middle" class="t head">Group Chat</text>
+  <text x="600" y="394" text-anchor="middle" class="t body">2–6 Bots 有限回合討論</text>
+  <text x="600" y="425" text-anchor="middle" class="t small">最多三輪、十則 Bot 訊息</text>
+  <text x="600" y="452" text-anchor="middle" class="t small">適合反方審查與跨域取捨</text>
+
+  <rect x="860" y="320" width="270" height="150" rx="18" class="choice"/>
+  <text x="995" y="360" text-anchor="middle" class="t head">Routine／Cron</text>
+  <text x="995" y="394" text-anchor="middle" class="t body">重複、可預期、可觀測</text>
+  <text x="995" y="425" text-anchor="middle" class="t small">需要 Gateway／Scheduler 運作</text>
+  <text x="995" y="452" text-anchor="middle" class="t small">Hidden Bot 仍可繼續排程</text>
+
+  <!-- All work forms converge into author-defined verification -->
+  <path class="arrow" d="M205 470V515H300V545"/>
+  <path class="arrow" d="M600 470V505C600 525 430 520 425 560"/>
+  <path class="arrow" d="M995 470V500C995 525 460 500 425 575"/>
+
+  <rect x="175" y="545" width="250" height="125" rx="18" class="verify"/>
+  <text x="300" y="582" text-anchor="middle" class="t head green">確定性檢查</text>
+  <text x="300" y="614" text-anchor="middle" class="t body">測試／型別／靜態掃描</text>
+  <text x="300" y="644" text-anchor="middle" class="t small">證據不足就退回，不看自信</text>
+
+  <path class="ok" d="M425 607H475"/>
+  <rect x="475" y="545" width="250" height="125" rx="18" class="box"/>
+  <text x="600" y="582" text-anchor="middle" class="t head cyan">證據與獨立審查</text>
+  <text x="600" y="614" text-anchor="middle" class="t body">不同角色／模型／假設</text>
+  <text x="600" y="644" text-anchor="middle" class="t small">來源／Browser／視覺／反證</text>
+
+  <path class="ok" d="M725 607H775"/>
+  <rect x="775" y="545" width="300" height="125" rx="18" class="human"/>
+  <text x="925" y="582" text-anchor="middle" class="t head amber">人類核准外部動作</text>
+  <text x="925" y="614" text-anchor="middle" class="t body">發布／Merge／刪除／付款</text>
+  <text x="925" y="644" text-anchor="middle" class="t small">正式環境與不可逆操作</text>
+
+  <!-- Failure/rework loop back to the accountable named Bot -->
+  <path class="retry" d="M600 545C600 500 790 520 790 470C790 410 790 290 855 270"/>
+  <text x="690" y="510" class="t small rose">不符合規格／需要重做</text>
+
+  <rect x="95" y="715" width="1010" height="70" rx="16" class="danger"/>
+  <text x="600" y="744" text-anchor="middle" class="t head rose">Profile 不是權限邊界；SOUL 也不是防火牆</text>
+  <text x="600" y="771" text-anchor="middle" class="t small">敏感工作使用空白 Profile、最小工具集、獨立憑證與真正的 sandbox／container。</text>
+</svg>

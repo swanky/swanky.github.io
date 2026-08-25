@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Grok Bot、Hermes Bot Mode、Claude Code 與 Codex 的持久化心智模型</title>
+  <desc id="desc">截至 2026 年 8 月 25 日，Grok Bot 與 Hermes Bot Mode 的主要入口是具名長期角色；Claude Code 與 Codex 的主要入口是 Session、Team、Chat 與 Goal。這是作者定性分組，不代表能力分數或距離。</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1b3049" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07131f"/><stop offset="1" stop-color="#142740"/></linearGradient>
+    <linearGradient id="axis" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#48e0ff"/><stop offset=".52" stop-color="#9b8cff"/><stop offset="1" stop-color="#78e2a8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#78e2a8"/></marker>
+    <style>
+      .t{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#eff9ff}.mono{font-family:"Cascadia Mono","Noto Sans Mono",monospace}.h1{font-size:34px;font-weight:800}.sub{font-size:20px;fill:#aac2d4}.head{font-size:27px;font-weight:800}.label{font-size:22px;font-weight:750}.body{font-size:20px;fill:#c6d7e4}.small{font-size:20px;fill:#90aabd}.card{fill:#0f2436;stroke-width:2}.pill{fill:#132c40;stroke-width:1.5}.note{fill:#2e203b;stroke:#b28cff;stroke-width:1.5}.dash{fill:none;stroke:#6f8498;stroke-width:2;stroke-dasharray:6 7}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/><rect width="1200" height="760" fill="url(#grid)" opacity=".55"/>
+  <text x="60" y="64" class="t h1">任務做完後，系統留下的是「誰」還是「什麼」？</text>
+  <text x="60" y="96" class="t sub">截至 2026-08-25 的作者定性分組；不代表能力分數或等距尺度。</text>
+
+  <rect x="55" y="120" width="490" height="70" rx="16" fill="#10354a" stroke="#53d8ff" stroke-width="2"/>
+  <text x="300" y="150" text-anchor="middle" class="t label" fill="#8be9ff">Identity-first：先建立具名長期角色</text>
+  <text x="300" y="177" text-anchor="middle" class="t small">Grok Bot／Hermes Bot Mode</text>
+  <rect x="590" y="120" width="555" height="70" rx="16" fill="#19372e" stroke="#78e2a8" stroke-width="2"/>
+  <text x="867" y="150" text-anchor="middle" class="t label" fill="#9bf0bf">Work-first：先建立 Session／Chat／Goal</text>
+  <text x="867" y="177" text-anchor="middle" class="t small">Claude Code／Codex</text>
+
+  <g>
+    <line x1="165" y1="190" x2="165" y2="210" class="dash"/>
+    <rect x="55" y="210" width="225" height="395" rx="20" class="card" stroke="#53d8ff"/>
+    <circle cx="167" cy="255" r="27" fill="#123e54" stroke="#53d8ff" stroke-width="2"/><text x="167" y="264" text-anchor="middle" class="t head">G</text>
+    <text x="167" y="309" text-anchor="middle" class="t head" fill="#8be9ff">Grok Bot</text>
+    <rect x="80" y="335" width="175" height="48" rx="12" class="pill" stroke="#53d8ff"/><text x="167" y="365" text-anchor="middle" class="t label">持久化具名 Bot</text>
+    <text x="80" y="420" class="t body">• 長期角色與偏好</text><text x="80" y="452" class="t body">• Skills／Routines</text><text x="80" y="484" class="t body">• App／Browser 操作</text><text x="80" y="516" class="t body">• Bot 間交接</text>
+    <rect x="78" y="545" width="178" height="42" rx="10" fill="#362618" stroke="#f2b95b"/><text x="167" y="571" text-anchor="middle" class="t small">共享帳號電腦邊界</text>
+  </g>
+
+  <g>
+    <line x1="430" y1="190" x2="430" y2="210" class="dash"/>
+    <rect x="315" y="210" width="230" height="395" rx="20" class="card" stroke="#9b8cff"/>
+    <circle cx="430" cy="255" r="27" fill="#28204b" stroke="#9b8cff" stroke-width="2"/><text x="430" y="264" text-anchor="middle" class="t head">H</text>
+    <text x="430" y="309" text-anchor="middle" class="t head" fill="#c6b9ff">Hermes Bot</text>
+    <rect x="338" y="335" width="184" height="48" rx="12" class="pill" stroke="#9b8cff"/><text x="430" y="365" text-anchor="middle" class="t label">持久化 Profile</text>
+    <text x="340" y="420" class="t body">• SOUL／Memory</text><text x="340" y="452" class="t body">• Skills／Tools／MCP</text><text x="340" y="484" class="t body">• Bot Chat／Cron</text><text x="340" y="516" class="t body">• 多模型／多後端</text>
+    <rect x="338" y="545" width="184" height="42" rx="10" fill="#351c2b" stroke="#ff7798"/><text x="430" y="571" text-anchor="middle" class="t small">Profile ≠ 安全沙箱</text>
+  </g>
+
+  <g>
+    <line x1="725" y1="190" x2="725" y2="210" class="dash"/>
+    <rect x="590" y="210" width="270" height="395" rx="20" class="card" stroke="#f1a978"/>
+    <circle cx="725" cy="255" r="27" fill="#4a291f" stroke="#f1a978" stroke-width="2"/><text x="725" y="264" text-anchor="middle" class="t head">C</text>
+    <text x="725" y="309" text-anchor="middle" class="t head" fill="#ffc49d">Claude Code</text>
+    <rect x="615" y="335" width="220" height="48" rx="12" class="pill" stroke="#f1a978"/><text x="725" y="365" text-anchor="middle" class="t label">Session／Team</text>
+    <text x="618" y="420" class="t body">• Custom Agent 定義可保存</text><text x="618" y="452" class="t body">• Subagent 回報主 Session</text><text x="618" y="484" class="t body">• Agent Teams 直接互傳</text><text x="618" y="516" class="t body">• Shared Task List</text>
+    <rect x="615" y="545" width="220" height="42" rx="10" fill="#342a19" stroke="#f2c45b"/><text x="725" y="571" text-anchor="middle" class="t small">Teams：CLI、實驗功能</text>
+  </g>
+
+  <g>
+    <line x1="1005" y1="190" x2="1005" y2="210" class="dash"/>
+    <rect x="900" y="210" width="245" height="395" rx="20" class="card" stroke="#67dfa2"/>
+    <circle cx="1022" cy="255" r="27" fill="#173f31" stroke="#67dfa2" stroke-width="2"/><text x="1022" y="264" text-anchor="middle" class="t head">O</text>
+    <text x="1022" y="309" text-anchor="middle" class="t head" fill="#9bf0bf">Codex</text>
+    <rect x="923" y="335" width="198" height="48" rx="12" class="pill" stroke="#67dfa2"/><text x="1022" y="365" text-anchor="middle" class="t label">Chat／Goal</text>
+    <text x="925" y="420" class="t body">• Goal／完成條件</text><text x="925" y="452" class="t body">• Memory 可跨 Chat</text><text x="925" y="484" class="t body">• Subagent 回主 Agent</text><text x="925" y="516" class="t body">• CLI／IDE／Cloud</text>
+    <rect x="923" y="545" width="198" height="42" rx="10" fill="#18392d" stroke="#67dfa2"/><text x="1022" y="571" text-anchor="middle" class="t small">以成果與驗證收斂</text>
+  </g>
+
+  <rect x="115" y="650" width="970" height="72" rx="16" class="note"/>
+  <text x="600" y="679" text-anchor="middle" class="t label">真正的趨勢不是「Bot 取代 Task」，而是兩層開始合併</text>
+  <text x="600" y="705" text-anchor="middle" class="t body">長期角色負責記憶、責任與排程；臨時 Subagents／Goals 負責一次性、可驗證、可丟棄的執行。</text>
+</svg>
