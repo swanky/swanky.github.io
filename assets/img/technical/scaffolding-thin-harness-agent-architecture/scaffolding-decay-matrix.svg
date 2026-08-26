@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent 架構的折舊判斷矩陣</title>
+  <desc id="desc">左側是容易隨模型進步折舊的 Prompt hack、固定 Router、人工 Context 壓縮與固定 Agent 數量；右側是規格、測試、權限、版本與決策紀錄等耐久工程。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#12243b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#02070d" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="34" font-weight="700">先問：這個設計會不會隨模型變強而折舊？</text>
+  <text x="600" y="96" text-anchor="middle" fill="#afc4da" font-family="Inter, Noto Sans TC, sans-serif" font-size="20">不是「有工程／沒工程」，而是「短期補丁／耐久原語」</text>
+
+  <g filter="url(#shadow)">
+    <rect x="58" y="132" width="522" height="548" rx="24" fill="#151c29" stroke="#d76054" stroke-width="2"/>
+    <rect x="620" y="132" width="522" height="548" rx="24" fill="#0c2530" stroke="#39c6d8" stroke-width="2"/>
+  </g>
+
+  <rect x="86" y="157" width="170" height="38" rx="19" fill="#602c31"/>
+  <text x="171" y="183" text-anchor="middle" fill="#ffc4bd" font-family="Inter, Noto Sans TC, sans-serif" font-size="19" font-weight="700">高折舊 Scaffolding</text>
+  <text x="86" y="229" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="27" font-weight="700">替今天模型補弱點</text>
+  <text x="86" y="261" fill="#b9c3cf" font-family="Inter, Noto Sans TC, sans-serif" font-size="18">下一代模型可能直接把整層吃掉</text>
+
+  <g font-family="Inter, Noto Sans TC, sans-serif">
+    <g transform="translate(86 292)">
+      <circle cx="18" cy="18" r="18" fill="#5a2b30"/><path d="M10 18h16M18 10v16" stroke="#ff9a8e" stroke-width="3"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">針對單一模型的 Prompt hack</text>
+      <text x="50" y="43" fill="#aeb9c5" font-size="16">靠特殊措辭修正特定版本的習性</text>
+    </g>
+    <g transform="translate(86 378)">
+      <circle cx="18" cy="18" r="18" fill="#5a2b30"/><path d="M9 11h18v14H9zM13 7v4M23 7v4" fill="none" stroke="#ff9a8e" stroke-width="2.5"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">固定 Router、Graph 與角色數量</text>
+      <text x="50" y="43" fill="#aeb9c5" font-size="16">流程先假設模型不會自己選路</text>
+    </g>
+    <g transform="translate(86 464)">
+      <circle cx="18" cy="18" r="18" fill="#5a2b30"/><path d="M10 12h16M10 18h12M10 24h8" stroke="#ff9a8e" stroke-width="2.5"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">人工 Context 壓縮與搬運</text>
+      <text x="50" y="43" fill="#aeb9c5" font-size="16">為短 Context 或失憶設計的拐杖</text>
+    </g>
+    <g transform="translate(86 550)">
+      <circle cx="18" cy="18" r="18" fill="#5a2b30"/><path d="M9 18h18M22 12l6 6-6 6" fill="none" stroke="#ff9a8e" stroke-width="2.5"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">Retry spaghetti 與多層 Reviewer</text>
+      <text x="50" y="43" fill="#aeb9c5" font-size="16">把模型不穩定寫死成固定組織圖</text>
+    </g>
+  </g>
+  <rect x="86" y="628" width="466" height="34" rx="17" fill="#2b2027"/>
+  <text x="319" y="651" text-anchor="middle" fill="#ffb6ad" font-family="Inter, Noto Sans TC, sans-serif" font-size="17" font-weight="650">策略：限期、可替換、每次模型升級都重測</text>
+
+  <rect x="648" y="157" width="164" height="38" rx="19" fill="#124855"/>
+  <text x="730" y="183" text-anchor="middle" fill="#91f0f6" font-family="Inter, Noto Sans TC, sans-serif" font-size="19" font-weight="700">耐久 Engineering</text>
+  <text x="648" y="229" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="27" font-weight="700">讓任何更強模型知道什麼是對的</text>
+  <text x="648" y="261" fill="#b9d3d8" font-family="Inter, Noto Sans TC, sans-serif" font-size="18">能力越強，清楚邊界與可驗證真相越重要</text>
+
+  <g font-family="Inter, Noto Sans TC, sans-serif">
+    <g transform="translate(648 292)">
+      <circle cx="18" cy="18" r="18" fill="#154b55"/><path d="M10 12h16v12H10zM13 9h10" fill="none" stroke="#70e2ed" stroke-width="2.5"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">Goal、Spec、Acceptance Criteria</text>
+      <text x="50" y="43" fill="#b9d3d8" font-size="16">定義目的、限制與完成，不規定每一步</text>
+    </g>
+    <g transform="translate(648 378)">
+      <circle cx="18" cy="18" r="18" fill="#154b55"/><path d="M10 19l5 5 11-13" fill="none" stroke="#70e2ed" stroke-width="3"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">Tests、Evals 與 Evidence</text>
+      <text x="50" y="43" fill="#b9d3d8" font-size="16">把「做對了」變成模型外可檢查的事實</text>
+    </g>
+    <g transform="translate(648 464)">
+      <circle cx="18" cy="18" r="18" fill="#154b55"/><path d="M18 8l10 4v7c0 7-4 11-10 14-6-3-10-7-10-14v-7z" fill="none" stroke="#70e2ed" stroke-width="2.4"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">Sandbox、Permission、Approval</text>
+      <text x="50" y="43" fill="#b9d3d8" font-size="16">安全邊界不會因模型變聰明而消失</text>
+    </g>
+    <g transform="translate(648 550)">
+      <circle cx="18" cy="18" r="18" fill="#154b55"/><path d="M9 11h18v14H9zM13 15h10M13 20h7" fill="none" stroke="#70e2ed" stroke-width="2.3"/>
+      <text x="50" y="17" fill="#fff" font-size="21" font-weight="650">Git、CI 與 Decision Record</text>
+      <text x="50" y="43" fill="#b9d3d8" font-size="16">保留版本、收據與下次可重用的理由</text>
+    </g>
+  </g>
+  <rect x="648" y="628" width="466" height="34" rx="17" fill="#11363e"/>
+  <text x="881" y="651" text-anchor="middle" fill="#9be9ef" font-family="Inter, Noto Sans TC, sans-serif" font-size="17" font-weight="650">策略：強化、版本化、放進 Repository 與系統邊界</text>
+
+  <text x="600" y="724" text-anchor="middle" fill="#e5a300" font-family="Inter, Noto Sans TC, sans-serif" font-size="21" font-weight="700">判斷標準：模型升級後，它是放大能力，還是繼續假設模型只有 70 分？</text>
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Artifact-driven Agent 工作循環</title>
+  <desc id="desc">從持久目標與規格開始，Agent 產生計畫，人在高影響決策核准，接著執行並留下測試證據、決策紀錄與可搜尋工作產物，供下一次執行重用。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10263c"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#176bff"/>
+      <stop offset="1" stop-color="#49d6e8"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#63dbe8"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#e5a300"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#02070d" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="35" font-weight="700">把 Memory 從聊天感覺，變成可搜尋的工作產物</text>
+  <text x="600" y="96" text-anchor="middle" fill="#afc4da" font-family="Inter, Noto Sans TC, sans-serif" font-size="20">Persistent Goal → Plan → Decision Gate → Execution → Evidence → 下一次重用</text>
+
+  <g filter="url(#shadow)" font-family="Inter, Noto Sans TC, sans-serif">
+    <g transform="translate(38 155)">
+      <rect width="190" height="130" rx="20" fill="#102b52" stroke="#408bff" stroke-width="2"/>
+      <circle cx="95" cy="38" r="22" fill="#176bff"/>
+      <path d="M85 38h20M95 28v20" stroke="#fff" stroke-width="3"/>
+      <text x="95" y="82" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Goal／Spec</text>
+      <text x="95" y="108" text-anchor="middle" fill="#bcd1ef" font-size="15">目的、限制、完成定義</text>
+    </g>
+    <g transform="translate(272 155)">
+      <rect width="190" height="130" rx="20" fill="#112a3d" stroke="#3cbaca" stroke-width="2"/>
+      <circle cx="95" cy="38" r="22" fill="#168a9a"/>
+      <path d="M84 31h22M84 38h17M84 45h13" stroke="#fff" stroke-width="2.6"/>
+      <text x="95" y="82" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Agent Plan</text>
+      <text x="95" y="108" text-anchor="middle" fill="#b8d8dc" font-size="15">路徑由 Agent 提議</text>
+    </g>
+    <g transform="translate(506 155)">
+      <rect width="190" height="130" rx="20" fill="#3a2b12" stroke="#e5a300" stroke-width="2"/>
+      <circle cx="95" cy="38" r="22" fill="#9c6e00"/>
+      <path d="M84 38l7 7 15-16" fill="none" stroke="#fff" stroke-width="3"/>
+      <text x="95" y="82" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Decision Gate</text>
+      <text x="95" y="108" text-anchor="middle" fill="#eadcae" font-size="15">人只卡高影響選擇</text>
+    </g>
+    <g transform="translate(740 155)">
+      <rect width="190" height="130" rx="20" fill="#112a3d" stroke="#3cbaca" stroke-width="2"/>
+      <circle cx="95" cy="38" r="22" fill="#168a9a"/>
+      <path d="M85 29l20 9-20 9z" fill="#fff"/>
+      <text x="95" y="82" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Execution</text>
+      <text x="95" y="108" text-anchor="middle" fill="#b8d8dc" font-size="15">工具、指令、修正與重試</text>
+    </g>
+    <g transform="translate(974 155)">
+      <rect width="190" height="130" rx="20" fill="#102b52" stroke="#408bff" stroke-width="2"/>
+      <circle cx="95" cy="38" r="22" fill="#176bff"/>
+      <path d="M84 39l7 7 15-16" fill="none" stroke="#fff" stroke-width="3"/>
+      <text x="95" y="82" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Test／Evidence</text>
+      <text x="95" y="108" text-anchor="middle" fill="#bcd1ef" font-size="15">結果、收據與失敗路徑</text>
+    </g>
+
+    <g transform="translate(824 432)">
+      <rect width="250" height="120" rx="20" fill="#162538" stroke="#7f9bb8" stroke-width="2"/>
+      <path d="M24 24h42v58H24zM32 36h26M32 48h21M32 60h24" fill="none" stroke="#c8d6e4" stroke-width="2.5"/>
+      <text x="151" y="47" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Decision Record</text>
+      <text x="151" y="75" text-anchor="middle" fill="#bdcad7" font-size="15">為什麼選 A、不選 B</text>
+      <text x="151" y="98" text-anchor="middle" fill="#bdcad7" font-size="15">下次應改什麼</text>
+    </g>
+    <g transform="translate(475 432)">
+      <rect width="250" height="120" rx="20" fill="#11363e" stroke="#49d6e8" stroke-width="2"/>
+      <path d="M24 30h46v45H24zM31 23h32v8" fill="none" stroke="#81edf4" stroke-width="2.5"/>
+      <text x="154" y="47" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Searchable Artifact</text>
+      <text x="154" y="75" text-anchor="middle" fill="#b9d8dc" font-size="15">Notebook／Markdown／Runbook</text>
+      <text x="154" y="98" text-anchor="middle" fill="#b9d8dc" font-size="15">意圖、動作、結果放在一起</text>
+    </g>
+    <g transform="translate(126 432)">
+      <rect width="250" height="120" rx="20" fill="#3a2b12" stroke="#e5a300" stroke-width="2"/>
+      <path d="M28 49a22 22 0 1 1 7 16M27 65v-17h17" fill="none" stroke="#f5c53b" stroke-width="3"/>
+      <text x="155" y="47" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Next Run</text>
+      <text x="155" y="75" text-anchor="middle" fill="#eadcae" font-size="15">先搜尋過去，再產生新計畫</text>
+      <text x="155" y="98" text-anchor="middle" fill="#eadcae" font-size="15">不被單一 Session 綁住</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="url(#flow)" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M228 220h38"/>
+    <path d="M462 220h38"/>
+    <path d="M696 220h38"/>
+    <path d="M930 220h38"/>
+    <path d="M1069 291v120q0 20-20 20h-4"/>
+    <path d="M824 492h-93"/>
+    <path d="M475 492h-93"/>
+  </g>
+  <path d="M601 291v24q0 16-16 16H363q-16 0-16-16v-24" fill="none" stroke="#e5a300" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <text x="474" y="325" text-anchor="middle" fill="#f5c53b" font-family="Inter, Noto Sans TC, sans-serif" font-size="16" font-weight="650">不核准：退回修正計畫，不先執行</text>
+  <path d="M126 492H76q-20 0-20 20v98q0 20 20 20h19q20 0 20-20V294" fill="none" stroke="#e5a300" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <text x="600" y="627" text-anchor="middle" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="24" font-weight="700">真正耐久的 Memory，是任何 Agent 都能讀懂的外部產物</text>
+  <text x="600" y="667" text-anchor="middle" fill="#b8c9da" font-family="Inter, Noto Sans TC, sans-serif" font-size="18">聊天保留感受；Artifact 保留可以查核、比較、修正與重跑的工作脈絡</text>
+  <rect x="324" y="696" width="552" height="36" rx="18" fill="#132d47"/>
+  <text x="600" y="720" text-anchor="middle" fill="#8feaf2" font-family="Inter, Noto Sans TC, sans-serif" font-size="17" font-weight="650">不是每一步都等人；只在決策、風險與不可逆動作保留人工</text>
+</svg>

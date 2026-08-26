@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">薄 Harness 的三層架構</title>
+  <desc id="desc">應用層擁有介面、業務脈絡、工具與權限；Harness 層管理狀態、Context、工具迴圈、Sandbox、核准與可觀測性；模型層理解任務並決定路徑。薄 Harness 是減少脆弱假設，不是移除安全控制。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#102b40"/>
+    </linearGradient>
+    <linearGradient id="app" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35290f"/>
+      <stop offset="1" stop-color="#4a3710"/>
+    </linearGradient>
+    <linearGradient id="harness" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e3542"/>
+      <stop offset="1" stop-color="#0d4b55"/>
+    </linearGradient>
+    <linearGradient id="model" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#102850"/>
+      <stop offset="1" stop-color="#15396e"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#86eaf2"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#02070d" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="780" rx="28" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="36" font-weight="700">Thin Harness 不是 No Harness</text>
+  <text x="600" y="96" text-anchor="middle" fill="#afc4da" font-family="Inter, Noto Sans TC, sans-serif" font-size="20">把容易折舊的思考腳本刪掉，把狀態、安全、證據與工具邊界做紮實</text>
+
+  <g filter="url(#shadow)" font-family="Inter, Noto Sans TC, sans-serif">
+    <rect x="92" y="135" width="1016" height="164" rx="24" fill="url(#app)" stroke="#e5a300" stroke-width="2"/>
+    <rect x="92" y="330" width="1016" height="214" rx="24" fill="url(#harness)" stroke="#49d6e8" stroke-width="3"/>
+    <rect x="92" y="575" width="1016" height="130" rx="24" fill="url(#model)" stroke="#408bff" stroke-width="2"/>
+
+    <text x="126" y="180" fill="#f5c53b" font-size="19" font-weight="700">APPLICATION OWNS</text>
+    <text x="126" y="218" fill="#fff" font-size="29" font-weight="700">工作的真實脈絡與責任</text>
+    <g font-size="18" font-weight="650">
+      <rect x="476" y="164" width="132" height="42" rx="21" fill="#6b4e0b"/><text x="542" y="191" text-anchor="middle" fill="#fff">介面／UI</text>
+      <rect x="625" y="164" width="154" height="42" rx="21" fill="#6b4e0b"/><text x="702" y="191" text-anchor="middle" fill="#fff">Business Context</text>
+      <rect x="796" y="164" width="118" height="42" rx="21" fill="#6b4e0b"/><text x="855" y="191" text-anchor="middle" fill="#fff">Tools</text>
+      <rect x="931" y="164" width="140" height="42" rx="21" fill="#6b4e0b"/><text x="1001" y="191" text-anchor="middle" fill="#fff">Permission</text>
+    </g>
+    <text x="476" y="245" fill="#eadcae" font-size="17">知道使用者正在看什麼、哪些資料可讀、哪些動作要核准，並把結果寫回 system of record。</text>
+
+    <text x="126" y="379" fill="#8feaf2" font-size="19" font-weight="700">HARNESS OWNS</text>
+    <text x="126" y="417" fill="#fff" font-size="29" font-weight="700">可重用的 Agent loop</text>
+    <g font-size="15" font-weight="650">
+      <rect x="427" y="356" width="150" height="36" rx="18" fill="#14616d"/><text x="502" y="380" text-anchor="middle" fill="#fff">Conversation State</text>
+      <rect x="590" y="356" width="162" height="36" rx="18" fill="#14616d"/><text x="671" y="380" text-anchor="middle" fill="#fff">Context Compaction</text>
+      <rect x="765" y="356" width="116" height="36" rx="18" fill="#14616d"/><text x="823" y="380" text-anchor="middle" fill="#fff">Tool Loop</text>
+      <rect x="427" y="405" width="112" height="36" rx="18" fill="#124e59"/><text x="483" y="429" text-anchor="middle" fill="#fff">Sandbox</text>
+      <rect x="552" y="405" width="110" height="36" rx="18" fill="#124e59"/><text x="607" y="429" text-anchor="middle" fill="#fff">Approval</text>
+      <rect x="675" y="405" width="142" height="36" rx="18" fill="#124e59"/><text x="746" y="429" text-anchor="middle" fill="#fff">Progress Events</text>
+      <rect x="830" y="405" width="150" height="36" rx="18" fill="#124e59"/><text x="905" y="429" text-anchor="middle" fill="#fff">Failure Handling</text>
+      <rect x="427" y="454" width="160" height="36" rx="18" fill="#103f49"/><text x="507" y="478" text-anchor="middle" fill="#fff">Evidence／Receipts</text>
+      <rect x="600" y="454" width="200" height="36" rx="18" fill="#103f49"/><text x="700" y="478" text-anchor="middle" fill="#fff">Carry Work Across Turns</text>
+    </g>
+    <text x="427" y="522" fill="#b9d8dc" font-size="17">Harness 可以很薄，但這些能力不能只靠模型「記得要做」。</text>
+
+    <text x="126" y="619" fill="#8bb7ff" font-size="19" font-weight="700">MODEL OWNS</text>
+    <text x="126" y="657" fill="#fff" font-size="29" font-weight="700">理解任務、推理、自己選路</text>
+    <text x="606" y="634" fill="#c1d4ef" font-size="18">不需要人先規定每一步讀哪個檔案、叫幾個 Agent、重試幾次。</text>
+    <text x="606" y="667" fill="#c1d4ef" font-size="18">模型越強，越應該有空間表達新能力。</text>
+  </g>
+
+  <path d="M600 307v16" stroke="#86eaf2" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M600 552v16" stroke="#86eaf2" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1143 640h18V220h-18" fill="none" stroke="#e5a300" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="1151" y="435" text-anchor="middle" fill="#f5c53b" font-family="Inter, Noto Sans TC, sans-serif" font-size="15" font-weight="700" transform="rotate(-90 1151 435)">結果回到真實工作系統</text>
+
+  <rect x="232" y="730" width="736" height="34" rx="17" fill="#17283a"/>
+  <text x="600" y="753" text-anchor="middle" fill="#fff" font-family="Inter, Noto Sans TC, sans-serif" font-size="18" font-weight="700">Thin = 少一點脆弱假設；不是少一點測試、安全、核准與稽核</text>
+</svg>
