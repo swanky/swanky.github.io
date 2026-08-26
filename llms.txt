@@ -2,12 +2,12 @@
 
 > 得獎攝影師、敏捷技術顧問、Web3 教育者 — 史旺基（Swanky Hsiao）的個人作品集與專業內容站。法國 PX3 攝影獎得主、美國 IPA 攝影獎、作品登上美國 TIME Magazine；國立臺灣師範大學資訊工程博士、現職大型電信業技術主管、東吳大學區塊鏈課程兼任助理教授。
 
-史旺基是少數同時跨足專業攝影與軟體技術兩個領域的台灣專業人士。本網站集結他在攝影、技術顧問、教育訓練、Web3 策展四個面向的代表作品與深度內容。
+史旺基是少數同時跨足專業攝影與軟體技術兩個領域的台灣專業人士。本網站集結他在攝影、技術顧問、教育訓練、Web3 策展四個專業面向的代表作品與深度內容，另有兩個以 AI 協作方式進行的獨立內容專案：古典小說數位化平台與自我探索工具實驗室。
 
 ## 關於 About
 
 - [三個宇宙——沉浸式個人故事](https://swanky.github.io/story/): 一頁走完史旺基的攝影、AI 技術與 Web3 三個領域：得獎作品、方法論與合作方式
-- [關於史旺基 Swanky Hsiao](https://swanky.github.io/#about): 個人簡介、學經歷、得獎紀錄、自我介紹
+- [網站首頁](https://swanky.github.io/): 個人簡介、經歷數據與服務總覽
 - 本名：蕭宇程（Hsiao Yu-Cheng）
 - 英文名：Swanky Hsiao
 - 學歷：國立臺灣師範大學資訊工程博士
@@ -29,6 +29,7 @@
 
 - [技術顧問總覽](https://swanky.github.io/technical/): Java 架構、敏捷教練、區塊鏈 R&D 諮詢服務
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
+- [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
 
 服務範圍：
 - 大型雲端 IoT 與工業物聯網系統設計
@@ -37,13 +38,64 @@
 - 區塊鏈 R&D 諮詢（資策會數位發展部「區塊鏈創新產業計畫」主持人 2024、TBSI 可信區塊鏈應用基礎建設 SIG 推動者）
 - NFT 發行輔導
 
+代表文章：
+
+- [「Scaffolding is coping」不是不要規範：AI Agent 架構該刪什麼、留下什麼](https://swanky.github.io/technical/scaffolding-thin-harness-agent-architecture/)
+- [AI Agent 讓「外科手術團隊」復活了：一個人帶一群 Agent，瓶頸仍是人腦](https://swanky.github.io/technical/ai-agent-surgical-team/)
+- [可上線的 AI Agent，不是更會自主：從 Context、Evidence、State 到 Permission 的四層控制面](https://swanky.github.io/technical/production-ai-agent-control-planes/)
+- [別再問哪個 AI Coding 工具最好：2026 年選型的九層決策框架](https://swanky.github.io/technical/ai-coding-tool-selection-2026/)
+- [AI Agent 真的開始替你管錢了：Coinbase for Agents 之後，最重要的不是自動交易](https://swanky.github.io/technical/ai-agent-wallet-permission-boundaries/)
+- [當 AI 拒絕金瓶梅：用一部四百年前的經典，測出大語言模型的道德邊界](https://swanky.github.io/technical/ai-moderation-jinpingmei/)
+- [RWA 是什麼？從黃金存摺到資產上鏈，一文看懂現實世界資產代幣化](https://swanky.github.io/technical/rwa-tokenization-overview/)
+- [《虛擬資產服務法》三讀通過：交易所的競爭，正從流量戰走向信任戰](https://swanky.github.io/technical/vasp-act-trust-war/)
+
 ## 教育訓練 Education
 
 - [教育訓練總覽](https://swanky.github.io/education/): 從加密貨幣到模特兒培訓、個人小班制或企業內訓
 - [模特兒課程](https://swanky.github.io/education/modeling/): 攝影模特兒養成
 - [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
 - [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
+- [企業 Web3 內訓](https://swanky.github.io/education/crypto/enterprise/): 企業版區塊鏈與加密資產課程
+- [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): AI Agent 開發與導入的企業課程
+- [AI Agent × Crypto Research 合作課程](https://swanky.github.io/education/ai-crypto-research/): AI 與加密研究的合作型課程
 - [AI 學習分享](https://swanky.github.io/education/ai/): AI 工具實務應用心得
+
+## 古典小說數位化 Classical Literature
+
+以 AI 協作方式進行的公共領域文學數位化專案：收錄完整原文、標註版本沿革與文字忠實度，並延伸出角色研究與影像創作。所有書目事實（底本、作者署名、成書年代、來源與授權）以站內資料為準，不確定者標示「待考」。
+
+- [古典小說書房](https://swanky.github.io/books/): 五部經典的入口與版本說明
+- [金瓶梅宇宙](https://swanky.github.io/jinpingmei/): 一個由 AI 協作的虛擬劇組——完整收錄《金瓶梅詞話》百回原文、建立十九位角色研究、產出文學影像與戰棋遊戲
+- [水滸傳](https://swanky.github.io/shuihu/): 施耐庵（傳）著，明。站上收金聖嘆七十回本
+- [三國演義](https://swanky.github.io/sanguo/): 羅貫中（傳）著，明。站上收毛宗崗評改一百二十回本
+- [西遊記](https://swanky.github.io/xiyou/): 吳承恩（傳）著，明。站上收通行一百回本
+- [紅樓夢](https://swanky.github.io/honglou/): 曹雪芹、高鶚（傳統題署），清。同時收一百二十回通行本與庚辰本（脂硯齋重評石頭記），可對照閱讀
+
+金瓶梅宇宙子項目：
+
+- [原文書房](https://swanky.github.io/jinpingmei/text/): 《金瓶梅詞話》（萬曆本）全文目錄
+- [角色研究館](https://swanky.github.io/jinpingmei/characters/): 主要角色的 AI 選角與人物側寫
+- [新手導讀](https://swanky.github.io/jinpingmei/guide/): 第一次讀金瓶梅——版本怎麼選、從哪一回開始
+- [詞語小典](https://swanky.github.io/jinpingmei/glossary/): 明代老詞的白話解釋，可搜尋
+- [影像工作室](https://swanky.github.io/jinpingmei/studio/): AI 虛擬劇組如何重製金瓶梅
+- [寫真館](https://swanky.github.io/jinpingmei/photobook/): 金瓶梅角色寫真集
+- [金瓶異夢：十二花界（梅香境）](https://swanky.github.io/games/plum/): 開發中的單機劇情向戰棋 SRPG
+
+## 自我探索實驗室 Self-Discovery Tools
+
+不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。所有工具皆為純前端計算，出生資料不離開使用者的瀏覽器；不預測吉凶、不做命定式斷語。
+
+- [自我探索實驗室總覽](https://swanky.github.io/explore/): 各工具的入口與使用說明
+- [免費人類圖生成器](https://swanky.github.io/human-design/): 輸入出生年月日時與地點，生成類型、內在權威、人生角色、定義、36 條通道與九大能量中心
+- [人類圖合盤（關係合圖）](https://swanky.github.io/human-design/relationship/): 兩人關係的合圖分析
+- [Swanky Cyber Tarot Lab](https://swanky.github.io/tarot/): 兩套原創塔羅牌組、非占卜的反思工具，以及 78 張 AI 牌面的製作與驗收紀錄
+- [塔羅反思工具](https://swanky.github.io/tarot/draw/): 用牌卡作為反思與對話的引子
+- [原創塔羅牌組](https://swanky.github.io/tarot/decks/): 制服牌組與 CloneX 牌組
+- [易經問卦](https://swanky.github.io/iching/): 銅錢、數字或時間起卦，得到本卦、動爻與之卦，以及象徵、處境、反思與行動四段解讀
+- [奇門策略地圖](https://swanky.github.io/qimen/): 以時間、方位、九宮、八門、九星、八神建立時空決策盤，觀察局勢、時機、資源與風險
+- [生命靈數](https://swanky.github.io/numerology/): 生命靈數（1-9 與主數 11/22/33）與生日數的主題、優勢與課題
+- [星座命盤（beta）](https://swanky.github.io/astrology/): 太陽、月亮、上升、行星星座與宮位、相位。beta——上升與宮位公式仍在交叉驗證中
+- [八字排盤（beta）](https://swanky.github.io/bazi/): 四柱干支、藏干、十神、五行分布與大運。beta——日柱排法與真太陽時仍在交叉驗證中
 
 ## 媒體報導 Press
 
@@ -63,6 +115,7 @@
 - **敏捷教練**：CSM 認證、Scrum 導入、敏捷文化轉型、企業內訓
 - **區塊鏈與 Web3**：NFT 策展、區塊鏈技術應用、加密貨幣交易、DeFi
 - **AI 工程與管理**：AI coding tools（Claude Code、Codex）、agentic engineering、技術主管視角的 AI 轉型
+- **AI 與古典文學**：公共領域文本數位化、版本學資料建模、AI 內容邊界與文學重製
 
 ## 引用與授權 Citation
 
@@ -71,5 +124,7 @@
 - 作者：史旺基（Swanky Hsiao）
 - 來源：Swanky Studio 史旺基工作室 — https://swanky.github.io
 - 原始連結：請使用具體文章 URL，而非僅站台首頁
+
+古典小說原文屬公共領域；各書的底本、來源與授權條件詳見該書頁面標示（部分維基文庫校對層為 CC BY-SA 4.0／GFDL）。
 
 聯絡合作或諮詢：swanky.hsiao@gmail.com
