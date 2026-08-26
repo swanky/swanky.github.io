@@ -118,3 +118,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-redirect-from
+
+# Atom feed（jekyll-feed）
+# 預設 posts_limit 為 10，會讓 /feed.xml 只露出最新 10 篇。
+# 設一個遠大於文章總數的值，訂閱者與 AI 檢索都能拿到完整文章脈絡；
+# Liquid 的 limit 超出陣列長度就全取，新增文章不必調整此數字。
+feed:
+  posts_limit: 1000
