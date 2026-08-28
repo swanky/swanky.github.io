@@ -221,10 +221,18 @@
   /**
    * Initiate portfolio lightbox
    */
-  if (typeof GLightbox !== 'undefined') {
-    GLightbox({
-      selector: '.portfolio-lightbox'
-    });
+  const initPortfolioLightbox = () => {
+    if (typeof GLightbox === 'undefined' || window.__portfolioLightbox) return
+    window.__portfolioLightbox = GLightbox({
+      selector: '.portfolio-lightbox',
+      loop: true,
+      zoomable: true,
+      touchNavigation: true
+    })
+  }
+  initPortfolioLightbox()
+  if (!window.__portfolioLightbox) {
+    window.addEventListener('load', initPortfolioLightbox, { once: true })
   }
 
   /**

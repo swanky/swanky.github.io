@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 影片彩排的製作檢查關卡</title>
+  <desc id="desc">題目與角色圖先經低成本短測試、分鏡、成本核准，再送付費生成。逐鏡品質檢查不通過時只回到最近的安全關卡，通過後才進後製與交件驗證。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#102b43"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".22"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0l12 6-12 6z" fill="#7dd3fc"/></marker>
+    <marker id="retry" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0l12 6-12 6z" fill="#f5c53b"/></marker>
+    <style>
+      text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}.eyebrow{font-size:18px;fill:#7dd3fc;font-weight:700;letter-spacing:3px}.title{font-size:42px;fill:#fff;font-weight:800}.sub{font-size:21px;fill:#cbd5e1}.box-title{font-size:23px;fill:#f8fafc;font-weight:800}.box-copy{font-size:17px;fill:#cbd5e1}.num{font-size:18px;fill:#07111f;font-weight:900}.gate{font-size:15px;fill:#f5c53b;font-weight:800;letter-spacing:1px}.note{font-size:18px;fill:#f8fafc;font-weight:700}.retry{font-size:17px;fill:#f5c53b;font-weight:700}
+    </style>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="70" y="72" class="eyebrow">PRODUCTION REHEARSAL</text>
+  <text x="70" y="126" class="title">生成不是終點，檢查關卡才是產線</text>
+  <text x="70" y="164" class="sub">每個昂貴步驟前先證明可行；失敗只退回最近的安全狀態。</text>
+
+  <path d="M196 325H242M414 325H460M632 325H678M850 325H896M1068 325H1100" stroke="#7dd3fc" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(60 225)"><rect width="150" height="200" rx="20" fill="#12283d" stroke="#2f5d7b"/><circle cx="30" cy="30" r="17" fill="url(#cyan)"/><text x="30" y="36" text-anchor="middle" class="num">1</text><text x="22" y="82" class="box-title">輸入盤點</text><text x="22" y="116" class="box-copy">題目／角色圖</text><text x="22" y="145" class="box-copy">權利與限制</text><text x="22" y="174" class="box-copy">交件規格</text></g>
+    <g transform="translate(260 225)"><rect width="168" height="200" rx="20" fill="#12283d" stroke="#2f5d7b"/><circle cx="30" cy="30" r="17" fill="url(#cyan)"/><text x="30" y="36" text-anchor="middle" class="num">2</text><text x="22" y="82" class="box-title">低成本短測試</text><text x="22" y="116" class="box-copy">480p × 4 秒</text><text x="22" y="145" class="box-copy">測參考圖與轉場</text><text x="22" y="181" class="gate">可行性檢查</text></g>
+    <g transform="translate(478 225)"><rect width="168" height="200" rx="20" fill="#12283d" stroke="#2f5d7b"/><circle cx="30" cy="30" r="17" fill="url(#cyan)"/><text x="30" y="36" text-anchor="middle" class="num">3</text><text x="22" y="82" class="box-title">分鏡與估價</text><text x="22" y="116" class="box-copy">核准並凍結畫面</text><text x="22" y="145" class="box-copy">逐鏡預算上限</text><text x="22" y="181" class="gate">付費核准</text></g>
+    <g transform="translate(696 225)"><rect width="168" height="200" rx="20" fill="#12283d" stroke="#2f5d7b"/><circle cx="30" cy="30" r="17" fill="url(#cyan)"/><text x="30" y="36" text-anchor="middle" class="num">4</text><text x="22" y="82" class="box-title">付費生成</text><text x="22" y="116" class="box-copy">非同步生成任務</text><text x="22" y="145" class="box-copy">製作紀錄／實付</text><text x="22" y="181" class="gate">每鏡最多重抽 2 次</text></g>
+    <g transform="translate(914 225)"><rect width="168" height="200" rx="20" fill="#12283d" stroke="#2f5d7b"/><circle cx="30" cy="30" r="17" fill="url(#cyan)"/><text x="30" y="36" text-anchor="middle" class="num">5</text><text x="22" y="82" class="box-title">品質檢查</text><text x="22" y="116" class="box-copy">身分／動作／文字</text><text x="22" y="145" class="box-copy">通過／有限接受</text><text x="22" y="181" class="gate">人工品質核准</text></g>
+  </g>
+
+  <path d="M998 438V520H780V443" stroke="#f5c53b" stroke-width="4" fill="none" stroke-dasharray="10 8" marker-end="url(#retry)"/>
+  <text x="838" y="505" class="retry">不通過：回到生成或分鏡，不重跑整條線</text>
+
+  <rect x="260" y="566" width="670" height="96" rx="20" fill="#f8fafc"/>
+  <text x="302" y="607" class="note" style="fill:#0f172a">品質檢查通過後才進入：</text>
+  <text x="302" y="641" class="box-copy" style="fill:#64748b">剪接／混音 → 成片驗證 → 權利揭露 → 上傳包 → 站主手動發布</text>
+  <path d="M998 425V614H946" stroke="#7dd3fc" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+</svg>

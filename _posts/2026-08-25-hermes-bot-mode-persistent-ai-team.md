@@ -411,8 +411,6 @@ Hermes Bot Mode 不是 Claude Code Subagent 的另一個名字，也不只是 Gr
 
 如果這張地圖沒有先畫清楚，開再多 Bots，也只是讓混亂開始有了頭像。
 
-<small>封面為 AI 生成概念圖，以水手服 AI 系統工程師與四個具名機器人角色呈現 Persistent Bot roster、工作交接、Routine 與驗證 Gate；不代表 Nous Research、xAI、Anthropic 或 OpenAI 的官方介面、合作或背書。內文圖解由作者依官方文件重新繪製。</small>
-
 ---
 
 ## 參考資料

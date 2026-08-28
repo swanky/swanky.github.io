@@ -58,6 +58,8 @@ Figure 2...
 
 每張 Figure 必須回答不同問題。若無法說出它降低了哪一個理解成本，就不要做。
 
+內文圖若提供放大查看，不要用普通 `<a href>` 直接離開文章。沿用網站既有 GLightbox：front matter 設 `use_glightbox: true`，圖片連結加 `class="portfolio-lightbox"` 與該篇獨立的 `data-gallery`；桌機與手機都要驗證點圖開啟 viewer、Esc／關閉按鈕可關閉、關閉後回到原捲動位置。SVG 根節點要同時寫入與 `viewBox` 相符的 `width`／`height`（例如 `width="1200" height="720"`），避免 viewer 把它當成約 300×150 的小圖；放大後必須依目前 viewport 縮放並保持原比例。
+
 ## 4. 文章 front matter 最低欄位
 
 ```yaml
@@ -93,6 +95,34 @@ source_url_x: "https://x.com/.../status/..."
 
 ## 5. 建議文章元件順序
 
+### 網站既有元件（不可自行改成 Markdown 引言／清單）
+
+`30 秒結論` 必須沿用 `.article-tldr`：
+
+```html
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li><strong>一句判斷</strong>：白話說明。</li>
+  </ul>
+</div>
+```
+
+`本文大綱` 必須沿用 `.article-toc.article-toc--outline`、`.article-toc-parts` 與 `.article-toc-items`，並讓每個連結對應正文 H2 的 `{#anchor}`。不要寫成 `## 文章大綱` 加一般 Markdown 清單。
+
+文末 `參考資料` 沿用網站研究型文章格式，而且每筆必須是可點擊連結：
+
+```markdown
+## 參考資料
+
+- **[1]** [來源：標題](URL)
+- **[2]** [來源：標題](URL)
+```
+
+可用 `grounded-citations` ledger 驗證，但不要在最後一步用 `sources.py render --replace-in` 覆蓋這個網站格式；generic renderer 可能改回裸 URL。若曾 render，必須重新套回上面的可點擊清單格式，再跑 `verify`。
+
+不得加入通用的「AI 圖片揭露／AI Banner 揭露」段落；Swanky 已明確要求文章正文不放這種樣板文字。若有真實誤導風險，改在該圖的 `figcaption` 直接說明它是概念圖或情境示意，不要另立文末揭露區塊。
+
 ```text
 Front matter
 30 秒結論
@@ -107,7 +137,6 @@ Figure：差在哪／量測結果
 Figure：風險／成本／判斷框架（有需要才做）
 如果是我，我會怎麼做
 安靜收尾
-AI Banner 揭露（若需要）
 參考資料
 ```
 

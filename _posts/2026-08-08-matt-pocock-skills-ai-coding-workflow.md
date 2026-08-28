@@ -389,8 +389,6 @@ Matt 這套不會是唯一答案。它有太多追問、文件漂移、Git 自�
 
 這就已經很有價值了。
 
-<small>封面為 AI 生成概念圖，用於表達人類工程師透過 Skills 引導 AI Coding 工作流，不代表 Matt Pocock、AI Hero 或相關工具的官方視覺與合作背書。</small>
-
 ---
 
 ## 參考資料

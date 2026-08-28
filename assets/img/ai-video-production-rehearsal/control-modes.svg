@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 影片三種圖片控制模式</title>
+  <desc id="desc">首幀模式固定影片起點，首尾幀模式固定起點與終點，參考圖驅動模式固定角色和風格。最不確定的控制先用低解析度短秒數測試。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eef6ff"/></linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#163b5b"/></linearGradient>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0l12 6-12 6z" fill="#176bff"/></marker>
+    <style>text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}.eyebrow{font-size:18px;fill:#176bff;font-weight:800;letter-spacing:3px}.title{font-size:40px;fill:#07111f;font-weight:900}.sub{font-size:20px;fill:#475569}.card-title{font-size:27px;fill:#fff;font-weight:900}.card-sub{font-size:17px;fill:#bae6fd;font-weight:700}.label{font-size:17px;fill:#bae6fd;font-weight:700}.body{font-size:18px;fill:#cbd5e1}.best{font-size:18px;fill:#f5c53b;font-weight:800}.probe-title{font-size:23px;fill:#07111f;font-weight:900}.probe{font-size:18px;fill:#334155}</style>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="70" y="72" class="eyebrow">CONTROL MODES</text>
+  <text x="70" y="124" class="title">不是「有放圖片」就算同一種控制</text>
+  <text x="70" y="162" class="sub">先說清楚要鎖起點、鎖終點，還是鎖角色與風格。</text>
+
+  <g transform="translate(70 215)">
+    <rect width="320" height="330" rx="24" fill="url(#navy)"/>
+    <text x="28" y="48" class="card-sub">MODE 01</text><text x="28" y="92" class="card-title">首幀模式</text>
+    <rect x="28" y="128" width="74" height="104" rx="10" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/><path d="M120 180H252" stroke="#38bdf8" stroke-width="5" marker-end="url(#a)"/><rect x="260" y="145" width="34" height="70" rx="7" fill="#1d4ed8"/>
+    <text x="28" y="270" class="label" fill="#bae6fd">控制</text><text x="94" y="270" class="body" fill="#f8fafc">影片第一格</text>
+    <text x="28" y="307" class="best" fill="#f5c53b">適合：從核准畫面開始動</text>
+  </g>
+  <g transform="translate(440 215)">
+    <rect width="320" height="330" rx="24" fill="url(#navy)"/>
+    <text x="28" y="48" class="card-sub">MODE 02</text><text x="28" y="92" class="card-title">首尾幀模式</text>
+    <rect x="28" y="128" width="62" height="104" rx="10" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/><path d="M108 180H207" stroke="#38bdf8" stroke-width="5" marker-end="url(#a)"/><rect x="225" y="128" width="62" height="104" rx="10" fill="#fde68a" stroke="#f5c53b" stroke-width="3"/>
+    <text x="28" y="270" class="label" fill="#bae6fd">控制</text><text x="94" y="270" class="body" fill="#f8fafc">起點＋必須抵達的終點</text>
+    <text x="28" y="307" class="best" fill="#f5c53b">適合：變身、轉場、指定收尾</text>
+  </g>
+  <g transform="translate(810 215)">
+    <rect width="320" height="330" rx="24" fill="url(#navy)"/>
+    <text x="28" y="48" class="card-sub">MODE 03</text><text x="28" y="92" class="card-title">參考圖驅動</text>
+    <rect x="28" y="132" width="54" height="82" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/><rect x="70" y="145" width="54" height="82" rx="8" fill="#dbeafe" stroke="#38bdf8" stroke-width="3"/><rect x="112" y="123" width="54" height="82" rx="8" fill="#fef3c7" stroke="#f5c53b" stroke-width="3"/><path d="M184 180H260" stroke="#38bdf8" stroke-width="5" marker-end="url(#a)"/><circle cx="278" cy="180" r="23" fill="#1d4ed8"/>
+    <text x="28" y="270" class="label" fill="#bae6fd">控制</text><text x="94" y="270" class="body" fill="#f8fafc">身分、服裝、道具、風格</text>
+    <text x="28" y="307" class="best" fill="#f5c53b">適合：陌生角色與長鏡頭</text>
+  </g>
+
+  <rect x="160" y="590" width="880" height="84" rx="22" fill="#fff" stroke="#b7d7ff" stroke-width="2"/>
+  <circle cx="208" cy="632" r="23" fill="#f5c53b"/><text x="208" y="639" text-anchor="middle" class="best">P</text>
+  <text x="250" y="624" class="probe-title">最不確定的控制，先做低成本短測試</text>
+  <text x="250" y="653" class="probe">本次用 480p × 4 秒驗證參考圖與換景，通過後才送 30 秒正式鏡頭。</text>
+</svg>

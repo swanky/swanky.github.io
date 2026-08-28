@@ -10,6 +10,12 @@ const postFiles = readdirSync(join(REPO_ROOT, '_posts'));
 
 const articles = [
   {
+    file: '_posts/2026-08-28-ai-video-production-rehearsal-seedance-workflow.md',
+    slug: 'ai-video-production-rehearsal-seedance-workflow',
+    context: 'agentic',
+    hubs: ['technical/agentic-engineering/index.html'],
+  },
+  {
     file: '_posts/2026-07-23-production-ai-agent-control-planes.md',
     slug: 'production-ai-agent-control-planes',
     context: 'ai-agent',
@@ -74,6 +80,48 @@ test('新文章具備 SEO、封面替代文字、對應 CTA 與長文中段入�
     assert.ok(cover?.endsWith('.jpg'), `${article.slug} 封面不是 .jpg`);
     assert.ok(existsSync(join(REPO_ROOT, cover.slice(1))), `${article.slug} 封面檔不存在`);
     assert.ok((source.match(/^## /gm) ?? []).length >= 5, `${article.slug} 未達中段 CTA 門檻`);
+  }
+});
+
+test('AI 影片彩排文章沿用站內摘要、大綱、參考資料與嵌入播放器格式', () => {
+  const source = read('_posts/2026-08-28-ai-video-production-rehearsal-seedance-workflow.md');
+  const mainJs = read('assets/js/main.js');
+  const style = read('assets/css/style.css');
+
+  assert.match(source, /<div class="article-tldr">/);
+  assert.match(source, /<span class="article-tldr-label">30 秒結論<\/span>/);
+  assert.match(source, /<nav class="article-toc article-toc--outline" aria-label="文章大綱">/);
+  assert.match(source, /<ol class="article-toc-parts">/);
+  assert.match(source, /^---\r?\n\r?\n## 參考資料\r?$/m);
+  assert.match(source, /^\- \*\*\[1\]\*\* \[[^\]]+\]\(https:\/\//m);
+  assert.equal((source.match(/youtube-nocookie\.com\/embed\//g) ?? []).length, 3);
+  assert.match(source, /^use_glightbox:\s*true$/m);
+  assert.equal((source.match(/class="portfolio-lightbox"/g) ?? []).length, 10);
+  assert.equal((source.match(/data-gallery="ai-video-rehearsal"/g) ?? []).length, 10);
+  assert.match(mainJs, /const initPortfolioLightbox = \(\) =>/);
+  assert.match(mainJs, /window\.__portfolioLightbox = GLightbox/);
+  assert.match(mainJs, /window\.addEventListener\('load', initPortfolioLightbox/);
+  assert.match(style, /\.post-content a\.portfolio-lightbox\s*\{[\s\S]*?cursor:\s*zoom-in/);
+
+  for (const [file, height] of [
+    ['production-gates.svg', 720],
+    ['control-modes.svg', 720],
+    ['reference-failure-map.svg', 760],
+    ['cost-and-rolls.svg', 720],
+  ]) {
+    const svg = read(`assets/img/ai-video-production-rehearsal/${file}`);
+    assert.match(svg, new RegExp(`<svg[^>]+width="1200"[^>]+height="${height}"`));
+  }
+});
+
+test('文章正文不再放通用 AI 圖片揭露樣板', () => {
+  for (const file of postFiles.filter((name) => name.endsWith('.md'))) {
+    const source = read(`_posts/${file}`);
+    assert.doesNotMatch(
+      source,
+      /AI 圖片揭露|封面為 AI 生成概念圖|Banner 為 AI 生成概念圖/,
+      `${file} 仍含通用 AI 圖片揭露`,
+    );
   }
 });
 
