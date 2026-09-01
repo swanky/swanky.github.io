@@ -1,0 +1,982 @@
+{
+  "schema_version": 2,
+  "generated": "2026-09-01",
+  "group": {
+    "name": "Uniform CloneX",
+    "short": "UCX",
+    "tagline": "CloneX 水手服女子團體",
+    "lead": "當一切都能重抽，統一反而是最強的宣言。",
+    "channels": [
+      {
+        "label": "X（Twitter）",
+        "url": "https://x.com/ucx_tw"
+      },
+      {
+        "label": "UCX 出道紀錄（2022）",
+        "url": "../technical/ucx-uniform-clonex-origin/"
+      },
+      {
+        "label": "制服女孩 NFT 系列（2021）",
+        "url": "oursong.html"
+      },
+      {
+        "label": "Bunny Cyber Tarot",
+        "url": "https://swanky.github.io/tarot/decks/"
+      }
+    ],
+    "stats": [
+      {
+        "k": "MEMBERS",
+        "v": "3 正團 ＋ 2 幕後"
+      },
+      {
+        "k": "COLLECTION",
+        "v": "CloneX × RTFKT"
+      },
+      {
+        "k": "LINEAGE",
+        "v": "2021 NFT → 2022 UCX 出道 → 2026 角色檔案"
+      }
+    ],
+    "onchain_note": "CloneX 有兩組數字：名稱編號（如 #15755）與鏈上 token id（如 9245），兩者不相等。本頁的 OpenSea 連結一律用 token id。"
+  },
+  "brand": {
+    "colors": {
+      "primary": "#d4394c",
+      "secondary": "#144d9c",
+      "ink": "#0d1b2a",
+      "paper": "#ffffff"
+    },
+    "color_note": "紅來自水手服領巾、藍來自百褶裙——logo 的配色就是制服本身。",
+    "logo": [
+      "brand/logo_Extra_Color_std(w).webp",
+      "brand/logo_Extra_Color_std(b).webp",
+      "brand/logo_Extra_Color_h(w).webp",
+      "brand/logo_One_Color_std(w).webp"
+    ],
+    "fonts": {
+      "display": "Space Grotesk",
+      "body": "Space Grotesk",
+      "cjk": "Noto Sans TC",
+      "mono": "Space Mono"
+    },
+    "poster": "brand/poster_2022_red.webp",
+    "poster_note": "紅底直式為正式團體海報；另有青綠色宣傳酷卡，其標語「拍照打卡送海報」指的就是這張正式海報。"
+  },
+  "hero": {
+    "image": "group-shot/hero.webp",
+    "og": "group-shot/og.webp"
+  },
+  "members": [
+    {
+      "id": "15755",
+      "name": "Bunny",
+      "role": "主視覺／團體門面",
+      "dna": "Demon",
+      "dna_official": "Summoned from the darkness, demons pursue insidious activities.",
+      "specs": {
+        "身高": "178 cm",
+        "頭身比": "約 8 頭身",
+        "髮色": "金",
+        "眼睛": "深色眼白＋冰藍虹膜",
+        "標誌配件": "紫色硬殼兔耳耳機（含護目鏡帶）",
+        "膚質": "瓷白，帶細微裂紋"
+      },
+      "bio": [
+        "團體的門面，也是第一個決定不再重抽的人。",
+        "官方對 Demon 這一型的說法是「從黑暗召喚而來」——放在她身上像個玩笑，因為她是整團最常站在鏡頭前的人。她瓷白的皮膚上有細微裂紋，那不是損壞：在一個外型可以隨時重抽的世界裡，裂紋是待在同一個身體裡足夠久才會留下的痕跡。",
+        "她把那些裂紋留著。"
+      ],
+      "note": null,
+      "gallery": {
+        "cartoon": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/15755/cartoon_face_front.webp",
+            "thumb": "members/15755/cartoon_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/15755/cartoon_face_34.webp",
+            "thumb": "members/15755/cartoon_face_34_400.webp",
+            "wxh": "1200x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/15755/cartoon_face_profile.webp",
+            "thumb": "members/15755/cartoon_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/15755/cartoon_body_front.webp",
+            "thumb": "members/15755/cartoon_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/15755/cartoon_body_front_tall.webp",
+            "thumb": "members/15755/cartoon_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/15755/cartoon_body_profile.webp",
+            "thumb": "members/15755/cartoon_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/15755/cartoon_body_34back.webp",
+            "thumb": "members/15755/cartoon_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          }
+        ],
+        "photoreal": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/15755/photoreal_face_front.webp",
+            "thumb": "members/15755/photoreal_face_front_400.webp",
+            "wxh": "1200x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/15755/photoreal_face_34.webp",
+            "thumb": "members/15755/photoreal_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/15755/photoreal_face_profile.webp",
+            "thumb": "members/15755/photoreal_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/15755/photoreal_body_front.webp",
+            "thumb": "members/15755/photoreal_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/15755/photoreal_body_front_tall.webp",
+            "thumb": "members/15755/photoreal_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/15755/photoreal_body_profile.webp",
+            "thumb": "members/15755/photoreal_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/15755/photoreal_body_34back.webp",
+            "thumb": "members/15755/photoreal_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          }
+        ]
+      },
+      "display": "#15755 Bunny",
+      "pfp": "pfp/clonex_15755.webp",
+      "pfp_note": "RTFKT 官方 PFP",
+      "token": "9245",
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9245"
+    },
+    {
+      "id": "17474",
+      "name": null,
+      "role": "引導者",
+      "dna": "Angel",
+      "dna_official": "Born from the light, guides of the Metaverse.",
+      "specs": {
+        "身高": "182 cm",
+        "頭身比": "約 8 頭身",
+        "髮色": "深紅（兩側剃邊呈粉紫）",
+        "眼睛": "亮黃色放射狀虹膜",
+        "標誌配件": "1 個金色幾何光環，懸浮不觸髮",
+        "特徵": "臉與頸有白色發光細紋"
+      },
+      "bio": [
+        "官方說 Angel 是「Metaverse 的引導者」。她的工作字面上就是引導——在 REROLL 那間換裝店裡，她負責帶客人到鏡子前面。",
+        "但她引導的其實不是外型，是那個決定：要不要換。",
+        "她的光環不接觸頭髮，永遠懸在頭頂上方一點。團裡最高的女性成員，也是話最少的那個。"
+      ],
+      "note": null,
+      "gallery": {
+        "cartoon": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/17474/cartoon_face_front.webp",
+            "thumb": "members/17474/cartoon_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/17474/cartoon_face_34.webp",
+            "thumb": "members/17474/cartoon_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/17474/cartoon_face_profile.webp",
+            "thumb": "members/17474/cartoon_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/17474/cartoon_body_front.webp",
+            "thumb": "members/17474/cartoon_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/17474/cartoon_body_front_tall.webp",
+            "thumb": "members/17474/cartoon_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/17474/cartoon_body_profile.webp",
+            "thumb": "members/17474/cartoon_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile_tall",
+            "label": "全身側面（高挑版）",
+            "src": "members/17474/cartoon_body_profile_tall.webp",
+            "thumb": "members/17474/cartoon_body_profile_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/17474/cartoon_body_34back.webp",
+            "thumb": "members/17474/cartoon_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ],
+        "photoreal": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/17474/photoreal_face_front.webp",
+            "thumb": "members/17474/photoreal_face_front_400.webp",
+            "wxh": "1200x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/17474/photoreal_face_34.webp",
+            "thumb": "members/17474/photoreal_face_34_400.webp",
+            "wxh": "1200x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/17474/photoreal_face_profile.webp",
+            "thumb": "members/17474/photoreal_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/17474/photoreal_body_front.webp",
+            "thumb": "members/17474/photoreal_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/17474/photoreal_body_front_tall.webp",
+            "thumb": "members/17474/photoreal_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/17474/photoreal_body_profile.webp",
+            "thumb": "members/17474/photoreal_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile_tall",
+            "label": "全身側面（高挑版）",
+            "src": "members/17474/photoreal_body_profile_tall.webp",
+            "thumb": "members/17474/photoreal_body_profile_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/17474/photoreal_body_34back.webp",
+            "thumb": "members/17474/photoreal_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ]
+      },
+      "display": "#17474",
+      "pfp": "pfp/clonex_17474.webp",
+      "pfp_note": "RTFKT 官方 PFP",
+      "token": "15939",
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/15939"
+    },
+    {
+      "id": "9268",
+      "name": null,
+      "role": "街頭風",
+      "dna": "Human",
+      "dna_official": "One of the most developed species in CLONE X. Special variants include the Cursed Stoned Humans, and the very rare Vitiligo skins.",
+      "specs": {
+        "身高": "176 cm",
+        "頭身比": "約 8 頭身",
+        "髮色": "墨黑，帶銀灰挑染",
+        "眼睛": "淺青藍虹膜",
+        "標誌配件": "鑽石銀牙套（grillz）、兩條青色鎖鍊"
+      },
+      "bio": [
+        "最早出現在 Corp 宣傳影像裡的人。",
+        "她笑得最大聲，牙套上的鑽石在打光下會炸開一片碎光——那是設計過的效果，她自己也清楚。團裡沒有人比她更明白「站上舞台」和「被展示」的差別在哪，但她照樣笑得最大聲。",
+        "官方把 Human 稱為「CLONE X 最發達的物種之一」。她對這個說法沒有意見。"
+      ],
+      "note": null,
+      "gallery": {
+        "cartoon": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/9268/cartoon_face_front.webp",
+            "thumb": "members/9268/cartoon_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/9268/cartoon_face_34.webp",
+            "thumb": "members/9268/cartoon_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/9268/cartoon_face_profile.webp",
+            "thumb": "members/9268/cartoon_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/9268/cartoon_body_front.webp",
+            "thumb": "members/9268/cartoon_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/9268/cartoon_body_front_tall.webp",
+            "thumb": "members/9268/cartoon_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/9268/cartoon_body_profile.webp",
+            "thumb": "members/9268/cartoon_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/9268/cartoon_body_34back.webp",
+            "thumb": "members/9268/cartoon_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ],
+        "photoreal": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/9268/photoreal_face_front.webp",
+            "thumb": "members/9268/photoreal_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/9268/photoreal_face_34.webp",
+            "thumb": "members/9268/photoreal_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/9268/photoreal_face_profile.webp",
+            "thumb": "members/9268/photoreal_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/9268/photoreal_body_front.webp",
+            "thumb": "members/9268/photoreal_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/9268/photoreal_body_front_tall.webp",
+            "thumb": "members/9268/photoreal_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/9268/photoreal_body_profile.webp",
+            "thumb": "members/9268/photoreal_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/9268/photoreal_body_34back.webp",
+            "thumb": "members/9268/photoreal_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ]
+      },
+      "display": "#9268",
+      "pfp": "pfp/clonex_9268.webp",
+      "pfp_note": "RTFKT 官方 PFP",
+      "token": "2692",
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/2692"
+    }
+  ],
+  "crew": [
+    {
+      "id": "15162",
+      "name": null,
+      "role": "造型師／技術總監",
+      "dna": "Human",
+      "dna_official": "One of the most developed species in CLONE X. Special variants include the Cursed Stoned Humans, and the very rare Vitiligo skins.",
+      "specs": {
+        "身高": "174 cm",
+        "頭身比": "約 7.8 頭身",
+        "髮色": "洋紅（雙高馬尾，尾端偏紅）",
+        "眼睛": "粉色虹膜，瞳孔外圈青藍",
+        "標誌配件": "青綠緞帶結 ×2、銀刺鉚釘項圈",
+        "特徵": "娃娃式關節前臂，手腕與手肘有可見接縫"
+      },
+      "bio": [
+        "決定其他人長什麼樣子的人。",
+        "工裝背心上的口袋與束帶不是造型，那是工作服。她的前臂有娃娃式的關節接縫，而她從不用袖子遮住：既然她的工作是替別人挑選外型，她沒打算隱藏自己也是被組裝出來的。",
+        "團裡的制服是她定的版。"
+      ],
+      "note": "官方 PFP 是 2026-09-01 才從鏈上（token 9023）補回本專案的——在那之前這頁的多視角圖是 AI 依官方側身渲染延伸出來的正面臉。兩者事後逐項比對特徵一致，圖就沿用；但身分基準已改回官方 PFP。",
+      "gallery": {
+        "cartoon": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/15162/cartoon_face_front.webp",
+            "thumb": "members/15162/cartoon_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/15162/cartoon_face_34.webp",
+            "thumb": "members/15162/cartoon_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/15162/cartoon_face_profile.webp",
+            "thumb": "members/15162/cartoon_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/15162/cartoon_body_front.webp",
+            "thumb": "members/15162/cartoon_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/15162/cartoon_body_front_tall.webp",
+            "thumb": "members/15162/cartoon_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/15162/cartoon_body_profile.webp",
+            "thumb": "members/15162/cartoon_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/15162/cartoon_body_34back.webp",
+            "thumb": "members/15162/cartoon_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          }
+        ],
+        "photoreal": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/15162/photoreal_face_front.webp",
+            "thumb": "members/15162/photoreal_face_front_400.webp",
+            "wxh": "1200x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/15162/photoreal_face_34.webp",
+            "thumb": "members/15162/photoreal_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/15162/photoreal_face_profile.webp",
+            "thumb": "members/15162/photoreal_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/15162/photoreal_body_front.webp",
+            "thumb": "members/15162/photoreal_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/15162/photoreal_body_front_tall.webp",
+            "thumb": "members/15162/photoreal_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/15162/photoreal_body_profile.webp",
+            "thumb": "members/15162/photoreal_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/15162/photoreal_body_34back.webp",
+            "thumb": "members/15162/photoreal_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          }
+        ]
+      },
+      "display": "#15162",
+      "pfp": "pfp/clonex_15162.webp",
+      "pfp_note": "RTFKT 官方 PFP",
+      "token": "9023",
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9023"
+    },
+    {
+      "id": "17152",
+      "name": null,
+      "role": "製作人",
+      "dna": "Human",
+      "dna_official": "One of the most developed species in CLONE X. Special variants include the Cursed Stoned Humans, and the very rare Vitiligo skins.",
+      "specs": {
+        "身高": "192 cm",
+        "頭身比": "約 8.2 頭身",
+        "髮色": "未見（角色帽完全罩住）",
+        "眼睛": "琥珀黃，眼型窄而上揚",
+        "標誌配件": "白色圓帽（正面為巨大笑口、兩側球狀耳）、多眼圖案羽絨外套"
+      },
+      "bio": [
+        "把 UCX 送上舞台的人。",
+        "全隊最高，造型也最誇張——他從不試圖看起來像幕後。是他去跟 Corp 談的：如果要一個櫥窗，那就讓這個櫥窗自己決定要展示什麼。",
+        "他也是隊裡唯一還在排隊等下一次重抽的人。"
+      ],
+      "note": null,
+      "gallery": {
+        "cartoon": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/17152/cartoon_face_front.webp",
+            "thumb": "members/17152/cartoon_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/17152/cartoon_face_34.webp",
+            "thumb": "members/17152/cartoon_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/17152/cartoon_face_profile.webp",
+            "thumb": "members/17152/cartoon_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/17152/cartoon_body_front.webp",
+            "thumb": "members/17152/cartoon_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/17152/cartoon_body_front_tall.webp",
+            "thumb": "members/17152/cartoon_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/17152/cartoon_body_profile.webp",
+            "thumb": "members/17152/cartoon_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile_tall",
+            "label": "全身側面（高挑版）",
+            "src": "members/17152/cartoon_body_profile_tall.webp",
+            "thumb": "members/17152/cartoon_body_profile_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/17152/cartoon_body_34back.webp",
+            "thumb": "members/17152/cartoon_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ],
+        "photoreal": [
+          {
+            "view": "face_front",
+            "label": "正面",
+            "src": "members/17152/photoreal_face_front.webp",
+            "thumb": "members/17152/photoreal_face_front_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_34",
+            "label": "3/4 側",
+            "src": "members/17152/photoreal_face_34.webp",
+            "thumb": "members/17152/photoreal_face_34_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "face_profile",
+            "label": "側面",
+            "src": "members/17152/photoreal_face_profile.webp",
+            "thumb": "members/17152/photoreal_face_profile_400.webp",
+            "wxh": "1024x1024",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front",
+            "label": "全身正面",
+            "src": "members/17152/photoreal_body_front.webp",
+            "thumb": "members/17152/photoreal_body_front_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_front_tall",
+            "label": "全身正面（高挑版）",
+            "src": "members/17152/photoreal_body_front_tall.webp",
+            "thumb": "members/17152/photoreal_body_front_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile",
+            "label": "全身側面",
+            "src": "members/17152/photoreal_body_profile.webp",
+            "thumb": "members/17152/photoreal_body_profile_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": false
+          },
+          {
+            "view": "body_profile_tall",
+            "label": "全身側面（高挑版）",
+            "src": "members/17152/photoreal_body_profile_tall.webp",
+            "thumb": "members/17152/photoreal_body_profile_tall_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          },
+          {
+            "view": "body_34back",
+            "label": "全身 3/4 背面",
+            "src": "members/17152/photoreal_body_34back.webp",
+            "thumb": "members/17152/photoreal_body_34back_400.webp",
+            "wxh": "800x1200",
+            "rtfkt_footwear": true
+          }
+        ]
+      },
+      "display": "#17152",
+      "pfp": "pfp/clonex_17152.webp",
+      "pfp_note": "RTFKT 官方 PFP",
+      "token": "9927",
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9927"
+    }
+  ],
+  "story": [
+    {
+      "ch": 0,
+      "title": "官方底層：意識被轉移進「可自訂的化身」",
+      "body": [
+        "CloneX 的官方世界觀只有一段話。",
+        "三名來自 Orbitar 星（天龍座）的外星人成立了 CLONE X Corp，目的是把人類意識轉移進進階的 Clone 軀體，以建成終極的 Metaverse。官方原文說，這項技術徹底改變了人類透過「可自訂的化身身分」自我表達的能力。",
+        "官方沒有再寫下去——沒有漫畫、沒有劇集、沒有替任何一隻 Clone 取過名字。所以以下的故事是我們寫的。它不牴觸官方設定，因為官方在這裡留的是一片空白。"
+      ],
+      "source": "官方起源敘事，最初發布於 CloneX 官網。",
+      "image": null
+    },
+    {
+      "ch": 1,
+      "title": "傳承：十年制服攝影 → Web3 → 化身",
+      "body": [
+        "這件事其實做了很久。",
+        "第一代是十年的制服女孩攝影——真人，模特兒站在教室走廊與天台上。",
+        "第二代是 2021 年，那批照片以「制服女孩 NFT」與「加密女孩 NFT」在 OurSong 上鏈。當時定下的規則是：銷售收益模特兒分一半。因為攝影不只是攝影師的作品，也是模特兒的貢獻。",
+        "第三代是 UCX。角色不再有真人模特兒，但每一隻 Clone 都有持有者——所以規則沒有變：作品裡出現誰，誰就該被尊重與記錄。",
+        "制服一直是同一個題目。變的只是穿制服的身體從肉身換成了化身。"
+      ],
+      "source": "第二代作品存檔見本站「制服女孩 NFT 系列（2021）」分頁；UCX 2022-12-15 在 CloneX Taiwan 第二次線下聚會正式出道，當時的第一手紀錄見本站技術專欄〈UCX 的誕生〉。模特兒張小筑、插畫 Pixel RuRu 均已取得授權使用。此為紅底正式海報完整原圖，未裁切。",
+      "image": "brand/poster_2022_red.webp",
+      "caption": "2022 年的 UCX 團體海報。底部圓標為當時入鏡的成員編號。"
+    },
+    {
+      "ch": 2,
+      "title": "櫥窗：Corp 需要證明「可自訂」是美好的",
+      "body": [
+        "如果你的生意是把人類意識搬進可以隨時更換的身體，你需要有人證明那是一件好事。",
+        "於是 Corp 找來一群 DNA 各異的 Clone——生於光的、從黑暗召喚的、被稱為最發達物種的——讓她們穿上同一套制服，站上舞台。",
+        "每一次登台都是產品演示。台下的人看著她們，然後想：我也可以變成那樣。",
+        "這件事她們全都知道。"
+      ],
+      "source": null,
+      "image": null
+    },
+    {
+      "ch": 3,
+      "title": "選擇：把制服從戲服變成自己的決定",
+      "body": [
+        "制服原本是被指定的。",
+        "但在一個外型可以無限重抽的世界裡，重複出現同一個樣子，是一件需要刻意去做的事。她們每天穿上同一套水手服、留著同一張臉、把裂紋和接縫都留在原位。",
+        "當一切都能自訂，統一反而成為最強的宣言：我們選擇成為彼此的同類。",
+        "Corp 想要一個櫥窗。她們給了 Corp 一個團體。"
+      ],
+      "source": null,
+      "image": "group-shot/hero.webp"
+    },
+    {
+      "ch": 4,
+      "title": "光與暗：團體內部並不同質",
+      "body": [
+        "官方對 DNA 的描述很短，但很鋒利。",
+        "Angel：「生於光，Metaverse 的引導者。」　Demon：「從黑暗召喚，追求陰險的活動。」",
+        "團體的門面是 Demon。負責引導客人的是 Angel。",
+        "她們穿同一套制服站在同一個舞台上，這件事本身就是這個世界最好的說明——在化身的世代，你從哪裡被召喚出來，決定不了你要站在哪裡。"
+      ],
+      "source": "DNA 引文為 RTFKT 官方 2021-12 pre-reveal 推文原句（Demon 與 Human 已透過網頁存檔覆核，Angel 為搜尋快照轉引）。",
+      "image": null
+    }
+  ],
+  "works": [
+    {
+      "date": "2026-08",
+      "type": "video",
+      "title": "REROLL（擬真版）",
+      "meta": "93 秒",
+      "desc": "同一個故事的兩種視覺語言之一。一間可以重抽外型的店。",
+      "url": null,
+      "todo": "YouTube 連結待補"
+    },
+    {
+      "date": "2026-08",
+      "type": "video",
+      "title": "REROLL（卡通版）",
+      "meta": "93 秒",
+      "desc": "同上，手繪質感的版本。",
+      "url": null,
+      "todo": "YouTube 連結待補"
+    },
+    {
+      "date": "2026-08",
+      "type": "video",
+      "title": "BUNNY AWAKENS",
+      "meta": "30 秒",
+      "desc": "把 CloneX #15755 從一張 PFP 變成一個開始呼吸的角色。",
+      "url": "https://youtu.be/lXnwBJBcbXY"
+    },
+    {
+      "date": "2026-07",
+      "type": "project",
+      "title": "Cyber Tarot：78 張塔羅牌",
+      "meta": null,
+      "desc": "以 Bunny 為主體重新設計的完整塔羅牌組。",
+      "url": "https://swanky.github.io/tarot/decks/"
+    },
+    {
+      "date": "2022-12",
+      "type": "image",
+      "title": "UCX Poster",
+      "meta": "11 位成員",
+      "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一隻 CloneX 均已取得其持有者授權。",
+      "url": null,
+      "image": "brand/poster_2022_red.webp"
+    },
+    {
+      "date": "2021",
+      "type": "project",
+      "title": "制服女孩 NFT ／ 加密女孩 NFT",
+      "meta": null,
+      "desc": "十年制服女孩攝影系列的鏈上第一代。收益與模特兒對半分潤。",
+      "url": "oursong.html"
+    }
+  ],
+  "collection": [
+    {
+      "slug": "dunk-genesis-angel",
+      "src": "wearables/dunk-genesis-angel.webp",
+      "thumb": "wearables/dunk-genesis-angel_400.webp",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS — Angel",
+      "desc": "金色重裝甲，鞋跟金色翼狀鰭片，中段藍天白雲印花",
+      "opensea": null
+    },
+    {
+      "slug": "dunk-genesis-1560",
+      "src": "wearables/dunk-genesis-1560.webp",
+      "thumb": "wearables/dunk-genesis-1560_400.webp",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS #1560",
+      "desc": "銀灰裝甲板，發光青綠側標",
+      "opensea": "https://opensea.io/item/ethereum/0xf661d58cfe893993b11d53d11148c4650590c692/1560"
+    },
+    {
+      "slug": "af1-angel-34721",
+      "src": "wearables/af1-angel-34721.webp",
+      "thumb": "wearables/af1-angel-34721_400.webp",
+      "title": "RTFKT × Nike Air Force 1 — Angel #34721",
+      "desc": "白＋米色麂皮，金色閃電狀側標，可拆金色羽翼",
+      "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34721"
+    },
+    {
+      "slug": "af1-human-34720",
+      "src": "wearables/af1-human-34720.webp",
+      "thumb": "wearables/af1-human-34720_400.webp",
+      "title": "RTFKT × Nike Air Force 1 — Human #34720",
+      "desc": "淡粉鞋身，亮藍閃電狀側標",
+      "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34720"
+    }
+  ],
+  "rights": [
+    "本頁為創作者個人收藏與角色創作紀錄之非商業展示，無販售、無廣告、無導購。",
+    "UCX 為粉絲原創的水手服角色設定，靈感取自持有的 CloneX NFT 之官方 DNA 分類。本頁非官方、亦未經 RTFKT／Nike 授權，與其無隸屬或合作關係。",
+    "CloneX、RTFKT 為 RTFKT Studios 之商標；Nike 為 Nike, Inc. 之商標。角色所穿鞋款為本人持有之 RTFKT NFT。",
+    "本頁 74 張角色圖與所有影像作品均為 AI 生成，並經人工逐張審核。",
+    "第二代作品之模特兒肖像與插畫均取得授權使用：模特兒張小筑（簽署授權書）、插畫 Pixel RuRu（付費取得使用權）。",
+    "RTFKT 已於 2024 年底宣布停止營運。"
+  ]
+}

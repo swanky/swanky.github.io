@@ -105,6 +105,7 @@
 ## NFT 策展 NFT
 
 - [NFT 策展](https://swanky.github.io/nft/): Good Morning Frens (GMF)、ArtfN fair、GEISAI TAIWAN 等策展紀錄
+- [Uniform CloneX（UCX）](https://swanky.github.io/nft/uniform-clonex.html): CloneX 水手服女子團體的角色檔案頁——三位正團成員與兩位幕後角色的身分檔案、多視角視覺、世界觀故事與影像作品。制服女孩攝影系列的 Web3 世代延伸
 
 ## 內容主題與專長 Topics & Expertise
 
