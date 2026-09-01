@@ -1,17 +1,24 @@
 /* 金瓶梅宇宙共用樣式：宇宙 hub／原文書房／角色研究館／影像工作室
-   美學：明式紙墨——深墨底、象牙字、金線、朱印；與 /games/plum/ 同語彙但更沉靜（閱讀優先）。 */
+   美學：明式紙墨——深墨底、象牙字、金線、朱印；與 /games/plum/ 同語彙但更沉靜（閱讀優先）。
+
+   閱讀色票正本在 assets/css/_reading-tokens.css（與通用閱讀器 book-reader.css 共用）：
+   下面的 --jpm-* 只是那些 token 的別名，實際色值一律改那邊；本檔的選擇器與 --jpm-*
+   用法不受影響，兩套閱讀器結構上仍互不依賴。共用檔一律排在本檔之前載入。
+   金瓶梅專屬色（--jpm-panel-2、--jpm-flash、時間軸／場景分類／關係圖等）留在本檔。 */
 
 :root {
-  --jpm-bg: #0e0d0b;
-  --jpm-panel: #16140f;
+  --jpm-bg: var(--rt-bg);
+  --jpm-panel: var(--rt-panel);
   --jpm-panel-2: #1c1913;
-  --jpm-line: rgba(201, 164, 97, .22);
-  --jpm-paper: #e9e0cb;
-  --jpm-muted: #a99f89;
-  --jpm-gold: #c9a461;
-  --jpm-gold-bright: #e2c777;
-  --jpm-red: #9d3a4d;
+  --jpm-line: var(--rt-line);
+  --jpm-paper: var(--rt-paper);
+  --jpm-muted: var(--rt-muted);
+  --jpm-gold: var(--rt-gold);
+  --jpm-gold-bright: var(--rt-gold-bright);
+  --jpm-red: var(--rt-red);
   --jpm-flash: rgba(201, 164, 97, .38);
+  /* 金色當底時的字色（按下的字級鈕、跳過連結、選取反白）；兩種主題各一組 */
+  --jpm-on-gold: var(--rt-on-gold);
   --jpm-serif: "Noto Serif TC", "Songti TC", serif;
   --jpm-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   --reader-size: 1.125rem;
@@ -42,7 +49,7 @@ body.jpm {
 .glightbox-clean .gprev svg, .glightbox-clean .gnext svg, .glightbox-clean .gclose svg { fill: var(--jpm-gold-bright); }
 
 .jpm-skip { position: absolute; left: -9999px; }
-.jpm-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--jpm-gold); color: #141109; padding: .4rem .8rem; }
+.jpm-skip:focus { left: 12px; top: 12px; z-index: 99; background: var(--jpm-gold); color: var(--jpm-on-gold); padding: .4rem .8rem; }
 
 /* ── 頂欄 ─────────────────────────────── */
 .jpm-topbar {
@@ -57,7 +64,7 @@ body.jpm {
 .jpm-brand:hover { color: var(--jpm-paper); }
 .jpm-seal {
   display: grid; place-items: center; width: 30px; height: 30px;
-  background: var(--jpm-red); color: #f2e6d5;
+  background: var(--jpm-red); color: var(--rt-seal-text);
   font-family: var(--jpm-serif); font-size: .95rem; font-weight: 900;
 }
 .jpm-brand small { display: block; font-family: var(--jpm-sans); font-size: .58rem; font-weight: 400; letter-spacing: .3em; color: var(--jpm-muted); }
@@ -114,7 +121,7 @@ body.jpm {
 
 .jpm-sizer { display: inline-flex; gap: .15rem; border: 1px solid var(--jpm-line); }
 .jpm-sizer button { padding: .2rem .55rem; border: 0; background: transparent; color: var(--jpm-muted); font-family: var(--jpm-serif); cursor: pointer; }
-.jpm-sizer button[aria-pressed="true"] { background: var(--jpm-gold); color: #141109; }
+.jpm-sizer button[aria-pressed="true"] { background: var(--jpm-gold); color: var(--jpm-on-gold); }
 .jpm-sizer .sz-s { font-size: .72rem; }
 .jpm-sizer .sz-m { font-size: .85rem; }
 .jpm-sizer .sz-l { font-size: 1rem; }
@@ -247,7 +254,7 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
    hub 專屬（序幕／三美／百回長卷等）在 jinpingmei-hub.css。 */
 
 :root { --jpm-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", "Noto Serif TC", serif; }
-.jpm ::selection { background: var(--jpm-gold); color: #141109; }
+.jpm ::selection { background: var(--jpm-gold); color: var(--jpm-on-gold); }
 
 /* 進場動畫（無 JS 一律直接可見；js-on 由 jinpingmei-universe.js 加） */
 .js-on .reveal { opacity: 0; transform: translateY(26px); }
@@ -267,7 +274,7 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
 .act-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin-top: clamp(30px, 4.5vw, 52px); }
 .act-cta { display: inline-flex; align-items: center; gap: .7em; padding: .85em 1.6em; border: 1px solid var(--jpm-gold); color: var(--jpm-gold-bright); font-family: var(--jpm-serif); font-size: .98rem; letter-spacing: .14em; transition: background .35s, color .35s; }
 .act-cta i { font-style: normal; transition: transform .35s; }
-.act-cta:hover { background: var(--jpm-gold); color: #141109; }
+.act-cta:hover { background: var(--jpm-gold); color: var(--jpm-on-gold); }
 .act-cta:hover i { transform: translateX(4px); }
 .act-cta-side { color: var(--jpm-muted); font-size: .82rem; }
 
@@ -301,7 +308,7 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
 .paiji-frame p { margin: 0 0 .7rem; color: #cfc6b0; font-size: .92rem; line-height: 2; }
 .paiji-frame p:last-of-type { margin-bottom: 0; }
 .paiji-frame a { color: var(--jpm-gold); }
-.paiji-seal { position: absolute; right: clamp(14px, 3vw, 26px); bottom: clamp(-18px, -1vw, -12px); display: inline-flex; padding: .42em .28em; background: linear-gradient(150deg, #a63e52, #8d3244); color: #f2e6d5; font-family: var(--jpm-serif); font-weight: 900; font-size: .82rem; box-shadow: inset 0 0 10px rgba(60, 10, 18, .5), 0 4px 18px rgba(0, 0, 0, .4); transform: rotate(2deg); }
+.paiji-seal { position: absolute; right: clamp(14px, 3vw, 26px); bottom: clamp(-18px, -1vw, -12px); display: inline-flex; padding: .42em .28em; background: linear-gradient(150deg, var(--rt-seal-1), var(--rt-seal-2)); color: var(--rt-seal-text); font-family: var(--jpm-serif); font-weight: 900; font-size: .82rem; box-shadow: inset 0 0 10px rgba(60, 10, 18, .5), 0 4px 18px rgba(0, 0, 0, .4); transform: rotate(2deg); }
 .paiji-seal i { writing-mode: vertical-rl; font-style: normal; letter-spacing: .16em; }
 .paiji--note { max-width: none; margin-top: clamp(40px, 6vw, 64px); }
 .paiji--note .paiji-frame { padding: clamp(1.2rem, 2.5vw, 1.8rem) clamp(1.2rem, 2.8vw, 2rem) clamp(1.4rem, 3vw, 2rem); }
@@ -378,23 +385,22 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
 /* 米紙模式：淺色紙感主題（章節閱讀頁限定）。class 掛在 <html>，由 layout head 內腳本先行套用防閃爍 */
 .jpm-paper-btn { padding: .2rem .55rem; border: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-muted); font-family: var(--jpm-serif); font-size: .85rem; cursor: pointer; letter-spacing: .05em; }
 .jpm-paper-btn:hover { color: var(--jpm-gold-bright); border-color: var(--jpm-gold); }
-.jpm-paper-btn[aria-pressed="true"] { background: var(--jpm-gold); border-color: var(--jpm-gold); color: #141109; }
+.jpm-paper-btn[aria-pressed="true"] { background: var(--jpm-gold); border-color: var(--jpm-gold); color: var(--jpm-on-gold); }
 html.jpm-paper {
-  --jpm-bg: #ece2cc;
-  --jpm-panel: #f3ebd8;
+  --jpm-bg: var(--rt-lt-bg);
+  --jpm-panel: var(--rt-lt-panel);
   --jpm-panel-2: #e6dabf;
-  --jpm-line: rgba(120, 88, 34, .32);
-  --jpm-paper: #2c2418;
-  --jpm-muted: #6c5d45;
-  --jpm-gold: #7c5e1d;
-  --jpm-gold-bright: #6b4f15;
+  --jpm-line: var(--rt-lt-line);
+  --jpm-paper: var(--rt-lt-paper);
+  --jpm-muted: var(--rt-lt-muted);
+  --jpm-gold: var(--rt-lt-gold);
+  --jpm-gold-bright: var(--rt-lt-gold-bright);
   --jpm-flash: rgba(120, 88, 34, .35);
+  --jpm-on-gold: var(--rt-lt-on-gold);
 }
 html.jpm-paper body.jpm { background: repeating-linear-gradient(0deg, rgba(88, 64, 30, .028) 0 1px, transparent 1px 4px), var(--jpm-bg); }
 html.jpm-paper .jpm-topbar { background: rgba(238, 229, 208, .93); }
 html.jpm-paper .jpm a:hover { color: #4d380a; }
-html.jpm-paper .jpm-sizer button[aria-pressed="true"],
-html.jpm-paper .jpm-paper-btn[aria-pressed="true"] { color: #f6efdd; }
 html.jpm-paper .paiji-frame li, html.jpm-paper .paiji-frame p { color: #4e4232; }
 html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
 
@@ -445,7 +451,7 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
 .jpm-chips a:hover { border-color: var(--jpm-gold); background: var(--jpm-panel-2); color: var(--jpm-gold-bright); }
 .jpm-myths { margin: 0; display: grid; gap: 1.15rem; }
 .jpm-myths dt { font-family: var(--jpm-serif); font-weight: 700; font-size: 1.02rem; color: var(--jpm-paper); }
-.jpm-myths dt b { display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; margin-right: .6em; background: var(--jpm-red); color: #f2e6d5; font-size: .8rem; font-weight: 700; }
+.jpm-myths dt b { display: inline-grid; place-items: center; width: 1.6em; height: 1.6em; margin-right: .6em; background: var(--jpm-red); color: var(--rt-seal-text); font-size: .8rem; font-weight: 700; }
 .jpm-myths dd { margin: .35rem 0 0; color: var(--jpm-muted); font-size: .92rem; line-height: 2; }
 .jpm-myths dd b { color: var(--jpm-paper); }
 
@@ -492,7 +498,7 @@ html.jpm-paper .jpm-film-note b { color: #f2e6d5; }
 .jpm-scene-filter .lb { margin-right: .25rem; font-size: .78rem; letter-spacing: .16em; color: var(--jpm-muted); }
 .jpm-scene-filter button { padding: .3em .7em; border: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-muted); font-family: var(--jpm-sans); font-size: .8rem; letter-spacing: .06em; cursor: pointer; }
 .jpm-scene-filter button:hover { border-color: var(--jpm-gold); color: var(--jpm-paper); }
-.jpm-scene-filter button.on { background: var(--jpm-gold); border-color: var(--jpm-gold); color: #141109; }
+.jpm-scene-filter button.on { background: var(--jpm-gold); border-color: var(--jpm-gold); color: var(--jpm-on-gold); }
 .jpm-spoiler-btn { display: inline-flex; align-items: baseline; gap: .55rem; padding: .42rem .8rem; border: 1px solid var(--jpm-line); background: transparent; color: var(--jpm-muted); font-family: var(--jpm-sans); font-size: .82rem; cursor: pointer; }
 .jpm-spoiler-btn b { font-family: var(--jpm-kai); font-weight: 700; color: var(--jpm-gold); letter-spacing: .14em; }
 .jpm-spoiler-btn:hover { border-color: var(--jpm-gold); color: var(--jpm-paper); }

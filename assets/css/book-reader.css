@@ -4,40 +4,40 @@
  * 走通用層的作品。金瓶梅有自己的 assets/css/jinpingmei.css，兩者刻意不互相依賴
  * （旗艦零回歸風險）。
  *
- * 技術債（已記錄於 docs/novel-platform/architecture.md §5）：下面的色票值與
- * jinpingmei.css 相同但各存一份。第三本書上線時必須抽出共用 tokens 檔。
+ * 色票正本在 assets/css/_reading-tokens.css（docs/novel-platform/architecture.md §5
+ * 約定的收斂已完成）：本檔的 --bk-* 只是該檔 token 的別名，實際色值一律改那邊；
+ * 選擇器與 --bk-* 的用法不受影響。共用檔一律排在本檔之前載入
+ * （_includes/book/head.html）。
  */
 
 :root {
-  --bk-bg: #0e0d0b;
-  --bk-panel: #16140f;
-  --bk-line: rgba(201, 164, 97, .22);
-  --bk-paper: #e9e0cb;
-  --bk-muted: #a99f89;
-  --bk-gold: #c9a461;
-  --bk-gold-bright: #e2c777;
-  --bk-red: #9d3a4d;
+  --bk-bg: var(--rt-bg);
+  --bk-panel: var(--rt-panel);
+  --bk-line: var(--rt-line);
+  --bk-paper: var(--rt-paper);
+  --bk-muted: var(--rt-muted);
+  --bk-gold: var(--rt-gold);
+  --bk-gold-bright: var(--rt-gold-bright);
+  --bk-red: var(--rt-red);
   --bk-serif: "Noto Serif TC", "Songti TC", serif;
   --bk-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   --bk-kai: "LXGW WenKai TC", "Kaiti TC", "DFKai-SB", "BiauKai", "Noto Serif TC", serif;
   --bk-reader-size: 1.125rem;
   /* 金色當底時的字色（按下的字級鈕、跳過連結、選取反白）；兩種主題各一組 */
-  --bk-on-gold: #141109;
+  --bk-on-gold: var(--rt-on-gold);
 }
 
 /* 米紙模式：淺色紙感底。class 由 layout head 的防閃爍腳本先行套用。
- * 色值經瀏覽器實測選定，全部文字角色 ≥ WCAG AA 4.5:1（含面板底 --bk-panel）：
- * gold #75591f＝5.14／4.67，muted #645a48＝5.31／4.83。淺底上「更亮」等於更沒對比，
- * 所以 gold-bright（hover）在這個主題要更深，不是更亮。 */
+ * 色值（含 WCAG AA 實測紀錄）在 _reading-tokens.css 的 --rt-lt-* 段，此處只轉接。 */
 html.bk-paper {
-  --bk-bg: #ece3d0;
-  --bk-panel: #e3d9c2;
-  --bk-line: rgba(120, 92, 40, .28);
-  --bk-paper: #2a2318;
-  --bk-muted: #645a48;
-  --bk-gold: #75591f;
-  --bk-gold-bright: #5f4a16;
-  --bk-on-gold: #f7f2e7;
+  --bk-bg: var(--rt-lt-bg);
+  --bk-panel: var(--rt-lt-panel);
+  --bk-line: var(--rt-lt-line);
+  --bk-paper: var(--rt-lt-paper);
+  --bk-muted: var(--rt-lt-muted);
+  --bk-gold: var(--rt-lt-gold);
+  --bk-gold-bright: var(--rt-lt-gold-bright);
+  --bk-on-gold: var(--rt-lt-on-gold);
 }
 
 [data-reader-size="s"] { --bk-reader-size: 1rem; }
@@ -70,7 +70,7 @@ html.bk-paper {
 }
 .bk-brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--bk-paper) !important; text-decoration: none !important; font-family: var(--bk-serif); }
 .bk-brand:hover { color: var(--bk-gold-bright) !important; }
-.bk-seal { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: linear-gradient(150deg, #a63e52, #8d3244); color: #f2e6d5; font-weight: 900; font-size: .92rem; }
+.bk-seal { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: linear-gradient(150deg, var(--rt-seal-1), var(--rt-seal-2)); color: var(--rt-seal-text); font-weight: 900; font-size: .92rem; }
 .bk-brand span { display: flex; flex-direction: column; font-weight: 700; font-size: .96rem; letter-spacing: .1em; line-height: 1.35; }
 .bk-brand small { color: var(--bk-muted); font-size: .58rem; letter-spacing: .22em; font-weight: 400; }
 .bk-topnav { display: flex; align-items: center; gap: clamp(.5rem, 2vw, 1.2rem); font-size: .82rem; }

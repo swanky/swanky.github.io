@@ -1,0 +1,54 @@
+/* 古典小說閱讀色票（共用正本）
+ *
+ * 通用閱讀器 book-reader.css 與旗艦 jinpingmei.css 過去各存一份相同色值；
+ * docs/novel-platform/architecture.md §5 約定「第三本書上線時」抽出共用色票檔，
+ * 此檔即該約定的落地（_data/books.yml 現有 5 本書）。
+ *
+ * 消費端只做「別名映射」——book-reader.css 的 --bk-*、jinpingmei.css 的 --jpm-*
+ * 各自指向這裡的 token，兩檔的選擇器與既有變數用法一律不動，所以「兩套閱讀器
+ * 結構上互不依賴」的原則仍然成立（唯一的共同上游就是本檔）。
+ *
+ * 載入順序：本檔一律排在 book-reader.css／jinpingmei.css **之前**，否則消費檔的
+ * 覆寫會被後載入的本檔蓋掉。因為檔名以底線開頭（共用局部檔的命名慣例），
+ * Jekyll 預設不會複製到 _site，已在 _config.yml 的 include 白名單放行。
+ *
+ * 命名：--rt-*＝深色（預設）主題；--rt-lt-*＝淺色「米紙」主題。本檔刻意不認識
+ * .bk-paper／.jpm-paper 這兩個 class——由各消費檔在自己的淺色選擇器內轉接，
+ * 日後再加第三套閱讀器不必改本檔。
+ *
+ * 不收進共用層（各書特色色，留在各自檔案）：--jpm-panel-2、--jpm-flash，以及
+ * 金瓶梅的時間軸／場景分類／關係圖／圖片載入失敗等專屬色。全站品牌橙金 --c-*
+ * （style.css）是刻意不同的美學，絕不可與此處的暗啞金混併。
+ */
+
+:root {
+  /* 深色（預設）：明式紙墨——深墨底、象牙字、金線、朱印 */
+  --rt-bg: #0e0d0b;
+  --rt-panel: #16140f;
+  --rt-line: rgba(201, 164, 97, .22);
+  --rt-paper: #e9e0cb;
+  --rt-muted: #a99f89;
+  --rt-gold: #c9a461;
+  --rt-gold-bright: #e2c777;
+  --rt-red: #9d3a4d;
+  /* 金色當底時的字色（按下的字級鈕、跳過連結、選取反白） */
+  --rt-on-gold: #141109;
+
+  /* 朱印：品牌角落的方形印記（通用層 .bk-seal／金瓶梅 .paiji-seal 共用同一組值） */
+  --rt-seal-1: #a63e52;
+  --rt-seal-2: #8d3244;
+  --rt-seal-text: #f2e6d5;
+
+  /* 淺色「米紙」主題。色值經瀏覽器實測選定，全部文字角色 ≥ WCAG AA 4.5:1
+   * （含面板底 --rt-lt-panel）：gold #75591f＝5.14／4.67，muted #645a48＝5.31／4.83。
+   * 淺底上「更亮」等於更沒對比，所以 gold-bright（hover）在這個主題要更深，不是更亮。
+   * 朱紅 --rt-red 兩個主題共用同一值，故無 --rt-lt-red。 */
+  --rt-lt-bg: #ece3d0;
+  --rt-lt-panel: #e3d9c2;
+  --rt-lt-line: rgba(120, 92, 40, .28);
+  --rt-lt-paper: #2a2318;
+  --rt-lt-muted: #645a48;
+  --rt-lt-gold: #75591f;
+  --rt-lt-gold-bright: #5f4a16;
+  --rt-lt-on-gold: #f7f2e7;
+}

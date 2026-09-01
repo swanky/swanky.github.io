@@ -19,7 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% assign jpm_woodcut = site.data.jinpingmei_illustrations.items | where: "chapter", page.chapter | where: "status", "approved" | first %}
   {% if jpm_woodcut %}{% include jinpingmei/lightbox-css.html %}{% endif %}
-  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260815-1" rel="stylesheet">
+  <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <script>try{if(localStorage.getItem('jpm-paper')==='1')document.documentElement.classList.add('jpm-paper')}catch(e){}</script>
   <script type="application/ld+json">
   {
@@ -96,7 +97,7 @@
     {% endif %}
 
     {%- if jpm_anchors and jpm_anchors.size > 0 -%}
-    {% include chapter-anchors.html anchors=jpm_anchors prefix='jpm' id_mode='nth' chapter=page.chapter %}
+    {% include chapter-anchors.html anchors=jpm_anchors prefix='jpm' id_mode='id' chapter=page.chapter %}
     {%- endif -%}
 
     <article id="chapter-body" class="jpm-reader" data-prev="{% if prev_c %}{{ prev_c.url | relative_url }}{% endif %}" data-next="{% if next_c %}{{ next_c.url | relative_url }}{% endif %}">

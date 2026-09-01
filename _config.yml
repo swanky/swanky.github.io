@@ -70,6 +70,13 @@ exclude:
 # Keep these files even though they start with underscore or dot
 include:
   - _headers
+  # assets/css/_reading-tokens.css——古典小說閱讀器的共用色票檔。Jekyll 預設會把
+  # 底線開頭的檔案當內部檔略過，不放行的話 _site 不會有它，兩套閱讀器的色票變數
+  # 會全部解析失敗（頁面變成無色）。
+  # 這裡只能寫檔名不能寫路徑：Jekyll 3.10 的 include 比對的是「檔名」
+  # （lib/jekyll/entry_filter.rb 的 included? 只拿 basename 去比），寫成
+  # assets/css/_reading-tokens.css 永遠不會命中。
+  - _reading-tokens.css
 
 # Collections
 collections:
