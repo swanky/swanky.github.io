@@ -112,6 +112,16 @@ defaults:
       path: "nft/assets"
     values:
       sitemap: false
+  # 舊網址轉址檔（2026-09-01 兩頁改成目錄式乾淨網址）：只做 meta refresh，
+  # 不該和真正的頁面一起出現在 sitemap 裡。
+  - scope:
+      path: "nft/uniform-clonex.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "nft/oursong.html"
+    values:
+      sitemap: false
 
 # Plugins
 plugins:

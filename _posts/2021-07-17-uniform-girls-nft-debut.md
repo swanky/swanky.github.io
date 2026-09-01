@@ -11,7 +11,7 @@ keywords: NFT,制服女孩,OurSong,加密貨幣,區塊鏈,Web3,史旺基,Swanky 
 
 ## 為什麼要把攝影作品做成 NFT？
 
-> **2026 更新：**OurSong 後來停止服務，當年的創作者頁面與購買入口已不再適合作為作品入口。這篇文章保留 2021 年的實驗脈絡，同時補上平台退場後真正留下的教訓。當時發行的圖片，目前整理在 [Swanky NFT 作品頁]({{ '/nft/oursong.html' | relative_url }}) 與 [Pinterest 作品存檔](https://www.pinterest.com/swanbear/swanky-nft-oursong/)；我的 CloneX 收藏與後續創作則集中在 [Swanky NFT mini-site]({{ '/nft/' | relative_url }})。
+> **2026 更新：**OurSong 後來停止服務，當年的創作者頁面與購買入口已不再適合作為作品入口。這篇文章保留 2021 年的實驗脈絡，同時補上平台退場後真正留下的教訓。當時發行的圖片，目前整理在 [Swanky NFT 作品頁]({{ '/nft/oursong/' | relative_url }}) 與 [Pinterest 作品存檔](https://www.pinterest.com/swanbear/swanky-nft-oursong/)；我的 CloneX 收藏與後續創作則集中在 [Swanky NFT mini-site]({{ '/nft/' | relative_url }})。
 
 2021 年中，NFT 的話題已經鋪天蓋地。
 
@@ -32,7 +32,7 @@ keywords: NFT,制服女孩,OurSong,加密貨幣,區塊鏈,Web3,史旺基,Swanky 
 現在回頭看，這也是第一個很具體的風險提醒：**創作者可以發行 NFT，卻不能把作品的長期保存全部交給單一平台。**平台停止服務之後，原本方便的展示頁、社群關係與交易入口也可能一起消失。
 
 <figure>
-  <a href="{{ '/nft/oursong.html' | relative_url }}">
+  <a href="{{ '/nft/oursong/' | relative_url }}">
     <img src="{{ '/nft/assets/images/NFT_pics_800.jpg' | relative_url }}" alt="2021 年制服女孩與加密女孩 NFT 作品選集" loading="lazy">
   </a>
   <figcaption>2021 年發行的制服女孩與加密女孩 NFT 選集；點圖可前往站內作品存檔。</figcaption>
@@ -109,7 +109,7 @@ OurSong 的退場又補上更現實的一課：**代幣在鏈上，不等於展�
 
 **相關連結**：
 - [2021-07-17 Facebook 原文](https://www.facebook.com/SwankyParty/posts/pfbid06hsxmhnnmpmrBWtPwcwcbbfny7e4WoSKciStRr2AKPk1w6ZzrLUoyteoFHSyuvF6l)（355 讚）
-- [站內作品存檔：制服女孩 NFT 系列]({{ '/nft/oursong.html' | relative_url }})
+- [站內作品存檔：制服女孩 NFT 系列]({{ '/nft/oursong/' | relative_url }})
 - [Pinterest：Swanky NFT @ OurSong（39 件作品）](https://www.pinterest.com/swanbear/swanky-nft-oursong/)
 - [Swanky NFT mini-site：作品與鏈上 CloneX 收藏]({{ '/nft/' | relative_url }})
 - [延伸閱讀：UCX 制服 CloneX 社群的誕生]({% post_url 2022-12-15-ucx-uniform-clonex-origin %})
