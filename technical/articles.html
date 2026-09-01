@@ -42,6 +42,14 @@ breadcrumbs:
         <a href="{{ '/technical/rwa/' | relative_url }}" class="btn-cta">閱讀系列 &rarr;</a>
       </div>
 
+      <div class="hub-banner" data-aos="fade-up">
+        <div class="hub-banner-text">
+          <h2>AI 學習分享</h2>
+          <p>Claude Code、coding agent 與 AI 開發實戰的免費學習文章，另闢一個清單。</p>
+        </div>
+        <a href="{{ '/education/ai/' | relative_url }}" class="btn-cta">閱讀系列 &rarr;</a>
+      </div>
+
       <div class="row">
         {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
         {% include article-card-grid.html articles=sorted_articles %}

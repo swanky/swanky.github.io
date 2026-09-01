@@ -5,6 +5,9 @@ seo_title: Agentic Engineering 與 AI 開發實戰文章
 description: 史旺基的 AI 學習分享，整理 Agentic Engineering、coding agent、規格、測試、治理與 Claude Code 實戰。這裡是免費內容入口，企業培訓另有獨立商品頁。
 keywords: Agentic Engineering,AI開發,coding agent,Claude Code,Codex,規格驅動,AI學習,史旺基
 nav_active: education
+# 11 篇文章的網址前綴是 /claude-code/，但那層沒有索引頁；把它導來這裡當落地頁
+redirect_from:
+  - /claude-code/
 breadcrumbs:
   - name: 主頁
     url: /
@@ -33,10 +36,10 @@ breadcrumbs:
 
   <section id="latest" class="edu-section">
     <div class="edu-container">
-      <header class="edu-section-head"><span class="edu-eyebrow">Latest</span><h2>近期 AI 實戰文章</h2><p>先讀一篇真的遇過的問題，再決定要不要接受工具商替你定義工作方式。</p></header>
+      <header class="edu-section-head"><span class="edu-eyebrow">Latest</span><h2>近期 AI 實戰文章</h2><p>先讀一篇真的遇過的問題，再決定要不要接受工具商替你定義工作方式。想看 AI Agent、Web3 與 RWA 的深度文章，另有 <a href="{{ '/technical/articles/' | relative_url }}">技術專欄</a>。</p></header>
       <div class="edu-card-grid">
         {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
-        {% for article in sorted_articles limit: 9 %}
+        {% for article in sorted_articles %}
         <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
           {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <div class="edu-badges"><span class="edu-badge edu-badge--muted">{{ article.date | date: "%Y-%m-%d" }}</span></div>

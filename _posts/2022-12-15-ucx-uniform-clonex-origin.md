@@ -84,5 +84,6 @@ UCX 後來的發展，受到了整個 Web3 市場的週期影響。2022 年底�
 ---
 
 **相關連結**：
+- [Uniform CloneX（UCX）角色檔案頁：成員身分、世界觀與影像作品]({{ '/nft/uniform-clonex/' | relative_url }})
 - [UCX 出道貼文（2022-12-15）](https://www.facebook.com/SwankyParty/posts/pfbid0rZPAHqZrW3hqdwsCqgtKzjmqw79rRhy3vxmWYX7gvUkrsYHEpCJrAhdUqV4YDZaGl)
 - [延伸閱讀：制服女孩踏入 NFT 的第一步]({% post_url 2021-07-17-uniform-girls-nft-debut %})

@@ -80,7 +80,13 @@
           </ul>
         </li>
         <li><a {% if page.nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
-        <li><a {% if page.nav_active == 'nft' %}class="active" {% endif %}href="{{ '/nft/' | relative_url }}">NFT策展</a></li>
+        <li class="dropdown"><a href="{{ '/nft/' | relative_url }}"{% if page.nav_active == 'nft' %} class="active"{% endif %}><span>NFT策展</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{{ '/nft/' | relative_url }}">總覽</a></li>
+            <li><a href="{{ '/nft/uniform-clonex/' | relative_url }}">Uniform CloneX</a></li>
+            <li><a href="{{ '/nft/oursong/' | relative_url }}">制服女孩 NFT 系列</a></li>
+          </ul>
+        </li>
       </ul>
       <button class="site-overview-trigger" type="button" popovertarget="site-overview" aria-expanded="false">
         <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i><span>總覽</span>
@@ -179,6 +185,8 @@
         <a href="{{ '/story/' | relative_url }}">三個宇宙</a>
         <a href="{{ '/press/' | relative_url }}">媒體報導</a>
         <a href="{{ '/nft/' | relative_url }}">NFT 策展</a>
+        <a href="{{ '/nft/uniform-clonex/' | relative_url }}">Uniform CloneX</a>
+        <a href="{{ '/nft/oursong/' | relative_url }}">制服女孩 NFT 系列</a>
         <a href="mailto:{{ site.email }}">寫信聯絡</a>
       </div>
     </section>

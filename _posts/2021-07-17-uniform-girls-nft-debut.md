@@ -112,4 +112,5 @@ OurSong 的退場又補上更現實的一課：**代幣在鏈上，不等於展�
 - [站內作品存檔：制服女孩 NFT 系列]({{ '/nft/oursong/' | relative_url }})
 - [Pinterest：Swanky NFT @ OurSong（39 件作品）](https://www.pinterest.com/swanbear/swanky-nft-oursong/)
 - [Swanky NFT mini-site：作品與鏈上 CloneX 收藏]({{ '/nft/' | relative_url }})
+- [Uniform CloneX（UCX）角色檔案頁]({{ '/nft/uniform-clonex/' | relative_url }})
 - [延伸閱讀：UCX 制服 CloneX 社群的誕生]({% post_url 2022-12-15-ucx-uniform-clonex-origin %})
