@@ -62,7 +62,7 @@
 			<p class="hero__lead" id="ucx-lead">當一切都能重抽，統一反而是最強的宣言。</p>
 			<div class="hero__act">
 				<a class="btn" href="#members">認識五位成員<span class="btn__ar" aria-hidden="true">↓</span></a>
-				<div class="chips" id="ucx-channels"></div>
+				<a class="btn btn--ghost" href="#works">看影像作品</a>
 			</div>
 			<dl class="hero__data" id="ucx-stats"></dl>
 		</div>
@@ -156,6 +156,8 @@
 		<div class="wrap">
 			<h2 class="h2"><span class="knot" aria-hidden="true"></span>聲明 <span class="h2__note">Rights</span></h2>
 			<ul class="rights" id="ucx-rights"></ul>
+			<p class="mono" style="color:var(--on-ink-2);margin:var(--s4) 0 .7rem">官方渠道</p>
+			<div class="chips" id="ucx-channels"></div>
 			<p class="mono" style="color:var(--on-ink-2);margin-top:var(--s3)">
 				製作過程與技術細節另見
 				<a href="../../technical/ai-video-production-rehearsal-seedance-workflow/">技術專欄</a>。
@@ -424,30 +426,35 @@
 		/* 段落導覽：標出讀者目前所在的段，長頁面才不會迷路 */
 		function spy() {
 			var links = [].slice.call(document.querySelectorAll(".rail__list a"));
-			var map = {};
-			var secs = links.map(function (a) {
-				var s = document.getElementById(a.hash.slice(1));
-				if (s) { map[s.id] = a.parentNode; }
-				return s;
-			}).filter(Boolean);
-			if (!secs.length || !("IntersectionObserver" in window)) { return; }
+			var secs = links.map(function (a) { return document.getElementById(a.hash.slice(1)); });
+			var list = links.length ? links[0].parentNode.parentNode : null;
+			var tick = false;
 
-			var seen = {};
-			var io = new IntersectionObserver(function (entries) {
-				entries.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
-				var cur = null;
-				secs.forEach(function (s) { if (seen[s.id] && !cur) { cur = s.id; } });
-				links.forEach(function (a) { a.parentNode.classList.remove("is-at"); });
-				if (cur && map[cur]) {
-					map[cur].classList.add("is-at");
-					/* 手機上導覽列是橫向捲動的，把目前段落捲進視野 */
-					var li = map[cur], list = li.parentNode;
-					if (list.scrollWidth > list.clientWidth) {
-						list.scrollTo({ left: li.offsetLeft - list.clientWidth / 2 + li.offsetWidth / 2, behavior: "smooth" });
-					}
+			function update() {
+				tick = false;
+				var line = window.scrollY + window.innerHeight * 0.35;
+				var cur = -1;
+				secs.forEach(function (s, i) { if (s && s.offsetTop <= line) { cur = i; } });
+				/* 捲到底時最後一段一定是目前段：它可能整段都在門檻線下面 */
+				if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+					cur = secs.length - 1;
 				}
-			}, { rootMargin: "-30% 0px -60% 0px" });
-			secs.forEach(function (s) { io.observe(s); });
+				links.forEach(function (a, i) { a.parentNode.classList.toggle("is-at", i === cur); });
+				/* 手機上這條是橫向捲動的，把目前段落帶進視野 */
+				if (cur > -1 && list && list.scrollWidth > list.clientWidth) {
+					var li = links[cur].parentNode;
+					list.scrollTo({ left: li.offsetLeft - list.clientWidth / 2 + li.offsetWidth / 2, behavior: "smooth" });
+				}
+			}
+
+			function onScroll() {
+				if (tick) { return; }
+				tick = true;
+				window.requestAnimationFrame(update);
+			}
+			window.addEventListener("scroll", onScroll, { passive: true });
+			window.addEventListener("resize", onScroll);
+			update();
 		}
 
 		fetch(DATA_URL)

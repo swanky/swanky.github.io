@@ -150,6 +150,8 @@ ul { margin: 0; padding: 0; }
 	transition: background .2s var(--ease-out), transform .2s var(--ease-out);
 }
 .btn:hover { background: var(--red-ink); color: #fff; transform: translateY(-1px); }
+.btn--ghost { background: transparent; color: var(--on-ink); border: 1px solid rgba(255, 255, 255, .38); }
+.btn--ghost:hover { background: rgba(255, 255, 255, .12); border-color: #fff; color: #fff; }
 .btn__ar { transition: transform .2s var(--ease-out); }
 .btn:hover .btn__ar { transform: translateY(2px); }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
@@ -453,13 +455,13 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + var(--rail-h) + 14px);
 	/* 窄螢幕上斜向漸層遮不住角色，文字會壓在臉和身體上——改用縱向為主 */
 	.hero__bg::after {
 		background:
-			linear-gradient(0deg, rgba(10, 16, 36, .96) 0%, rgba(10, 16, 36, .82) 34%, rgba(10, 16, 36, .3) 62%, rgba(10, 16, 36, .1) 100%),
-			linear-gradient(90deg, rgba(10, 16, 36, .72) 0%, rgba(10, 16, 36, .2) 70%);
+			linear-gradient(0deg, rgba(10, 16, 36, .96) 0%, rgba(10, 16, 36, .86) 40%, rgba(10, 16, 36, .58) 74%, rgba(10, 16, 36, .42) 100%),
+			linear-gradient(90deg, rgba(10, 16, 36, .6) 0%, rgba(10, 16, 36, .18) 78%);
 	}
 	.hero__bg img { object-position: 50% 8%; }
 	.hero__data { grid-template-columns: 1fr; gap: .9rem; }
-	.hero__act { gap: .8rem; }
-	.btn { width: 100%; justify-content: center; }
+	.hero__act { gap: .7rem; }
+	.btn { flex: 1 1 100%; justify-content: center; }
 
 	.idx { grid-template-columns: 1fr; }
 	.mb__in, .mb--sm .mb__in { grid-template-columns: 1fr; }
