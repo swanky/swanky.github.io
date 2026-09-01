@@ -1,0 +1,1575 @@
+# _data/jinpingmei_characters.yml
+#
+# 本檔由 tools/build_jinpingmei_character_index.mjs 從 _jinpingmei_characters/*.html
+# 自動產生的索引，供日後搜尋與跨書對照用。正本仍是 _jinpingmei_characters/ 底下那 19 個
+# collection 檔案（front matter + 手寫 HTML body）——請勿手動編輯本檔，內容有異動時改正本
+# 再重跑：node tools/build_jinpingmei_character_index.mjs
+#
+# 刻意排除「AI 選角檔案」（圖像／語音模型生成指令）——那是提示詞不是角色事實。
+# life_stages 只有 3 人（ximenqing／lijiaoer／mengyulou）有資料，其餘 16 人是空陣列，
+# 這是原始資料本身的缺口，不是抽取遺漏，不得用模型知識杜撰補上。
+characters:
+  - slug: "ximenqing"
+    order: 1
+    name: "西門慶"
+    aliases:
+      - "大官人"
+      - "西門大官人"
+      - "四泉"
+    tier: "主角"
+    tagline: "清河豪富兼提刑千戶，以金錢與權勢縱慾營私，終因貪慾無度而早逝。"
+    fields:
+      gender: "男"
+      age: "二十七至三十三歲（依故事回次推進）"
+      identity: "清河縣富商、西門宅家主，後任金吾衛副千戶及山東提刑所理刑、提刑千戶"
+      personality: "好色任性 / 精於算計 / 慷慨好客 / 徇私狠辣 / 重情善變"
+    appearance: "體態厚實、面容保養良好，眉眼銳利而帶著富家主人的自信；在家穿質料華貴的深青長袍，辦公時加黑色官帽、玉帶與暗紅內襟，腰間佩精緻荷包與扇墜，以顯示財勢和官身。（推斷）"
+    temperament: "平日以豪爽從容的主人姿態周旋商賈、官紳與幫閒，遇到慾望或利益便轉為強勢急切；失控時暴烈，面對所愛者的死亡又會痛哭失態。（推斷）"
+    motivation: "不斷以財富、官勢與人情擴張家業和地位，同時即刻滿足色慾、享樂與報復心；對李瓶兒及官哥兒又顯出維護家庭與挽留親情的迫切。"
+    character_arc: "由清河富商藉賄賂與權門交結升為掌刑名的千戶，財勢、家業與私慾同步膨脹；在官哥兒與李瓶兒相繼死亡後仍未能節制，最終三十三歲血崩而死，末後經普靜薦拔轉生。"
+    relationships:
+      - name: "吳月娘"
+        description: "正妻與內宅主母；他向她交代家務，也曾行房求子並在妻妾爭執後加以安撫。"
+      - name: "李瓶兒"
+        description: "寵妾；他設計取得其財物後迎娶，為她與官哥兒延醫祈福，並在她死後大辦喪儀、長久追念。"
+      - name: "潘金蓮"
+        description: "由通姦與合謀毒殺武植而納入家中的妾；兩人長期縱慾，也因偏寵、財物與妒意反覆爭吵。"
+      - name: "應伯爵"
+        description: "經常陪宴、說項與牽線的幫閒好友；他接受其勸解和薦舉，也以錢財周濟對方。"
+      - name: "孟玉樓"
+        description: "妾；他為她慶壽、探病並與她同寢，但對她的寵愛不及李瓶兒與潘金蓮。"
+      - name: "春梅"
+        description: "潘金蓮房中的婢女；他曾在金蓮房中與她親暱。"
+    quotes:
+      - text: "人都稱他做西門大官人"
+        chapters:
+          - permalink: "/jinpingmei/text/002/"
+            label: "第二回"
+            number: 2
+      - text: "專一嫖風戲月，調佔良人婦女"
+        chapters:
+          - permalink: "/jinpingmei/text/002/"
+            label: "第二回"
+            number: 2
+      - text: "這西門慶就安心設計圖謀這婦人"
+        chapters:
+          - permalink: "/jinpingmei/text/013/"
+            label: "第十三回"
+            number: 13
+      - text: "太師老爺擡舉我，陞我做金吾衛副千戶"
+        chapters:
+          - permalink: "/jinpingmei/text/030/"
+            label: "第三十回"
+            number: 30
+      - text: "現掌刑名"
+        chapters:
+          - permalink: "/jinpingmei/text/043/"
+            label: "第四十三回"
+            number: 43
+      - text: "受苗青夜賂之金，曲為掩飾"
+        chapters:
+          - permalink: "/jinpingmei/text/048/"
+            label: "第四十八回"
+            number: 48
+      - text: "清河縣富戶西門慶"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+      - text: "我和你明日生死難開"
+        chapters:
+          - permalink: "/jinpingmei/text/038/"
+            label: "第三十八回"
+            number: 38
+      - text: "屬虎的，二十七歲，七月二十八日子時生。"
+        chapters:
+          - permalink: "/jinpingmei/text/004/"
+            label: "第四回"
+            number: 4
+      - text: "小人虛度二十八歲，七月二十八日子時建生。"
+        chapters:
+          - permalink: "/jinpingmei/text/007/"
+            label: "第七回"
+            number: 7
+      - text: "屬虎的，二十九歲了，七月二十八日子時生。"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "三十三歲而去"
+        chapters:
+          - permalink: "/jinpingmei/text/079/"
+            label: "第七十九回"
+            number: 79
+    life_stages:
+      - age_label: "二十七至二十八歲"
+        stage_title: "早期富商"
+        chapters:
+          - permalink: "/jinpingmei/text/004/"
+            label: "第四回"
+            number: 4
+          - permalink: "/jinpingmei/text/007/"
+            label: "第七回"
+            number: 7
+        evidence:
+          - "屬虎的，二十七歲，七月二十八日子時生。"
+          - "小人虛度二十八歲，七月二十八日子時建生。"
+        note: ""
+      - age_label: "二十九至三十一歲"
+        stage_title: "財官擴張期"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+          - permalink: "/jinpingmei/text/030/"
+            label: "第三十回"
+            number: 30
+          - permalink: "/jinpingmei/text/043/"
+            label: "第四十三回"
+            number: 43
+        evidence:
+          - "屬虎的，二十九歲了，七月二十八日子時生。"
+          - "現掌刑名"
+        note: ""
+      - age_label: "三十二至三十三歲"
+        stage_title: "晚期提刑與衰亡"
+        chapters:
+          - permalink: "/jinpingmei/text/067/"
+            label: "第六十七回"
+            number: 67
+          - permalink: "/jinpingmei/text/075/"
+            label: "第七十五回"
+            number: 75
+          - permalink: "/jinpingmei/text/079/"
+            label: "第七十九回"
+            number: 79
+        evidence:
+          - "三十三歲而去"
+        note: "第三十三歲為晚期／死亡年齡，不代表全書所有階段。"
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/ximenqing.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/ximenqing-master.jpg"
+          title: "西門慶選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "西門慶選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/ximenqing.jpg"
+          title: "西門慶動畫風三視圖"
+          alt: "西門慶動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/ximenqing/"
+    title: "西門慶｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：西門慶——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "wuyueniang"
+    order: 2
+    name: "吳月娘"
+    aliases:
+      - "月娘"
+      - "大娘"
+      - "吳氏"
+      - "西門吳氏"
+    tier: "要角"
+    tagline: "西門慶的正妻，溫柔持重而治家嚴整，在紛亂內宅中掌理人情、銀錢與家務。"
+    fields:
+      gender: "女"
+      age: "本真人系列採二十七至三十歲的成年生命階段（製作裁決）"
+      identity: "吳千戶之女、西門慶正妻、內宅主母"
+      personality: "溫柔持重 / 寡言 / 善於持家 / 心慈 / 嚴正"
+    appearance: "面若銀盆，眼如杏子；舉止溫柔而莊重。服飾端整素雅、儀容成熟穩健（推斷）。"
+    temperament: "平日沉靜克制，擅長在妻妾、僕役與親眷之間調停；遇到越權、失禮或內宅失序時，則會嚴詞斥責。"
+    motivation: "維持內宅秩序、護持家產與家人，並盼夫妻回心和睦、得子延嗣。"
+    character_arc: "她長期以正室身分主持宴客、婚喪、生育與銀錢事務，也在丈夫偏寵、妾室爭端與喪子失胎中承受壓力；丈夫死後持家護產、撫養孝哥，晚年因善信得普靜指點，終能避禍善終。"
+    relationships:
+      - name: "西門慶"
+        description: "丈夫；她勸其守密、行善並少貪財好色，也曾因反對急娶李瓶兒而受冷落。"
+      - name: "李瓶兒"
+        description: "妾室；她曾助藏其財物，後照料其生產、病重與治喪。"
+      - name: "潘金蓮"
+        description: "妾室；她屢次調停其與丈夫的衝突，也因專寵、失禮與挑釁而多次爭執。"
+      - name: "孟玉樓"
+        description: "妾室；她接納並照應對方，亦曾與其共同隱瞞小產。"
+      - name: "孫雪娥"
+        description: "妾室；曾共同辦理酒席，她也曾替其隱瞞與宋惠蓮的爭吵。"
+      - name: "陳經濟"
+        description: "家中晚輩；丈夫不在時，她嚴鎖內門，防範其與潘金蓮往來。"
+    quotes:
+      - text: "生的面若銀盆，眼如杏子"
+        chapters: []
+      - text: "舉止溫柔，持重寡言"
+        chapters: []
+      - text: "早早囬心，棄卻繁華，齊心家事"
+        chapters: []
+      - text: "乾薑之手，女人必善持家"
+        chapters: []
+      - text: "你便有口無心許下，神明都記著"
+        chapters: []
+      - text: "恁賊兩頭戳舌獻勤欺主的奴才"
+        chapters: []
+      - text: "孩子且不消教他往墳上去罷"
+        chapters: []
+      - text: "老鴉笑話豬兒黑"
+        chapters: []
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/wuyueniang.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/wuyueniang-master.jpg"
+          title: "吳月娘選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "吳月娘選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/figures/wuyueniang-standard.jpg"
+          title: "吳月娘《金瓶異夢》標準版立繪"
+          alt: "吳月娘《金瓶異夢》標準版立繪"
+          caption: "《金瓶異夢》標準版立繪"
+        - image: "/assets/img/jinpingmei/figures/wuyueniang-sensual.jpg"
+          title: "吳月娘《金瓶異夢》成熟版立繪"
+          alt: "吳月娘《金瓶異夢》成熟版立繪"
+          caption: "《金瓶異夢》成熟版立繪"
+        - image: "/assets/img/jinpingmei/turnaround/wuyueniang.jpg"
+          title: "吳月娘動畫風三視圖"
+          alt: "吳月娘動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/wuyueniang/"
+    title: "吳月娘｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：吳月娘——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "lipinger"
+    order: 3
+    name: "李瓶兒"
+    aliases:
+      - "瓶兒"
+      - "六娘"
+      - "花二孃"
+    tier: "要角"
+    tagline: "原為梁中書妾、花子虛妻，攜財嫁入西門家成為第六房，因得寵與育有官哥兒而捲入後宅妒爭，最終失子後崩漏而亡。"
+    fields:
+      gender: "女"
+      age: "二十七歲"
+      identity: "西門慶第六妾、花子虛前妻、官哥兒之母"
+      personality: "溫克 / 柔順 / 和氣 / 慷慨 / 護子情深"
+    appearance: "白淨，五短身材，肌膚香細；富室婦人的端整妝束與低調精緻的首飾（推斷）。"
+    temperament: "待人柔和，常以贈物、說情替旁人周全；受委屈時多忍讓落淚，遇官哥兒病危則焦灼悲慟、晝夜抱守。"
+    motivation: "照料官哥兒、求福治病，並以財物與人情維繫自己在多舌而善妒的內宅中的安穩（推斷）。"
+    character_arc: "從攜財改嫁、成為受寵的第六房，到生下官哥兒而招致妒意；孩子夭折後，她悲傷自傷、舊病轉劇，最終崩漏而亡，死後仍以影像、遺物與夢中亡魂牽動西門家的關係。"
+    relationships:
+      - name: "西門慶"
+        description: "丈夫；她是其深受寵愛的第六妾，臨終仍勸他持家，死後也屢被他追念。"
+      - name: "官哥兒"
+        description: "親生兒子；她將求福、照料與希望盡數寄託於他，孩子夭折使她的身心迅速崩潰。"
+      - name: "潘金蓮"
+        description: "同處內宅的妻妾；她因受寵與得子成為對方主要的嫉妒、挑撥與譏刺對象。"
+      - name: "吳月娘"
+        description: "內宅主母（推斷）；她曾向其求教兒病對策，也曾遭誣指在背後辱罵對方。"
+      - name: "花子虛"
+        description: "前夫；她在其死後改嫁，失子病重時又夢見他前來索財。"
+    quotes:
+      - text: "好個溫克性兒"
+        chapters: []
+      - text: "奴情願與官人鋪牀疊被"
+        chapters: []
+      - text: "奴身中已懷臨月孕"
+        chapters: []
+      - text: "分娩了一位哥兒"
+        chapters: []
+      - text: "俺這家人多舌頭多"
+        chapters: []
+      - text: "一頭撞在地下，哭的昏過去"
+        chapters: []
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/lipinger.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/lipinger-master.jpg"
+          title: "李瓶兒選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "李瓶兒選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/figures/lipinger-standard.jpg"
+          title: "李瓶兒《金瓶異夢》標準版立繪"
+          alt: "李瓶兒《金瓶異夢》標準版立繪"
+          caption: "《金瓶異夢》標準版立繪"
+        - image: "/assets/img/jinpingmei/figures/lipinger-sensual.jpg"
+          title: "李瓶兒《金瓶異夢》成熟版立繪"
+          alt: "李瓶兒《金瓶異夢》成熟版立繪"
+          caption: "《金瓶異夢》成熟版立繪"
+        - image: "/assets/img/jinpingmei/turnaround/lipinger.jpg"
+          title: "李瓶兒動畫風三視圖"
+          alt: "李瓶兒動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/lipinger/"
+    title: "李瓶兒｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：李瓶兒——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "panjinlian"
+    order: 4
+    name: "潘金蓮"
+    aliases:
+      - "金蓮"
+      - "五娘"
+      - "潘五姐"
+      - "潘氏"
+    tier: "主角"
+    tagline: "姿容豔媚、機變伶俐且妒悍尖利的第五房妾室，以爭寵、窺探與操控步步捲入慾望和報復。"
+    fields:
+      gender: "女"
+      age: "本真人系列採二十多歲的成年生命階段（製作裁決）"
+      identity: "潘裁之女；幼年被賣學彈唱，後為西門慶第五房妾室"
+      personality: "機變伶俐 / 善妒爭寵 / 尖利潑悍 / 狠決善控 / 情慾熾烈"
+    appearance: "姿容豔媚，濃髮斜視；善於妝飾，舉止明豔而富挑釁意味（推斷）。衣著講究、輪廓利落（推斷）。"
+    temperament: "反應極快，對冷落、偏寵與私情高度敏感；常以偷聽、盤問、冷嘲和指桑罵槐奪回主動，受激時敢當面頂撞、打滾自傷，也能以掌握的祕密勒索或操控他人。"
+    motivation: "維持自己在西門慶身邊的寵愛與影響力，排斥任何分走情愛、財物或地位的人；同時追逐情慾與被注視的滿足。"
+    character_arc: "從不滿婚姻、通姦並合謀毒殺武植，到改嫁西門慶後在妻妾間反覆爭寵、挑撥與報復；西門慶死後與陳經濟、春梅私通，被逐後寄居王婆家，終被武松殺死祭兄。"
+    relationships:
+      - name: "西門慶"
+        description: "所嫁之夫與主要爭寵對象；既極力邀寵，也以盤問、譏刺和縱慾牽制他"
+      - name: "吳月娘"
+        description: "正室與權力上的對手；她向其挑唆，也曾闖入爭辯、互揭私事"
+      - name: "李瓶兒"
+        description: "最強烈的爭寵對手；因其得寵生子而嫉恨，屢加譏刺並以雪獅子驚嚇官哥"
+      - name: "陳經濟"
+        description: "女婿與私情對象；兩人多次調戲、傳情及偷會"
+      - name: "孟玉樓"
+        description: "同為妻妾，時而共同譏諷他人，也是她傾訴內宅私情的對象"
+      - name: "春梅"
+        description: "貼身使喚的丫鬟與私情同伴；常替她傳遞物件、消息與情意"
+      - name: "孫雪娥"
+        description: "妻妾間的對手；她挑撥其與宋惠蓮相鬥，亦攻訐其自稱四娘"
+    quotes:
+      - text: "本性機變伶俐"
+        chapters: []
+      - text: "我眼子裏放不下砂子的人"
+        chapters: []
+      - text: "不如一狠二狠，把奴才結果了"
+        chapters: []
+      - text: "常懷嫉妒之心"
+        chapters: []
+      - text: "懊恨薄情輕棄"
+        chapters: []
+      - text: "兩個乘著沒有人來，執手相偎"
+        chapters: []
+      - text: "百般的稱快"
+        chapters: []
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/panjinlian.jpg"
+        width: 1672
+        height: 941
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/panjinlian-master.jpg"
+          title: "潘金蓮選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "潘金蓮選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/figures/panjinlian-standard.jpg"
+          title: "潘金蓮《金瓶異夢》標準版立繪"
+          alt: "潘金蓮《金瓶異夢》標準版立繪"
+          caption: "《金瓶異夢》標準版立繪"
+        - image: "/assets/img/jinpingmei/figures/panjinlian-sensual.jpg"
+          title: "潘金蓮《金瓶異夢》成熟版立繪"
+          alt: "潘金蓮《金瓶異夢》成熟版立繪"
+          caption: "《金瓶異夢》成熟版立繪"
+        - image: "/assets/img/jinpingmei/turnaround/panjinlian.jpg"
+          title: "潘金蓮動畫風三視圖"
+          alt: "潘金蓮動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/panjinlian/"
+    title: "潘金蓮｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：潘金蓮——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "yingbojue"
+    order: 5
+    name: "應伯爵"
+    aliases:
+      - "伯爵"
+      - "應二"
+      - "應二哥"
+      - "應花子"
+    tier: "要角"
+    tagline: "敗盡家產後依附富家子弟的首要幫閒，憑一張巧嘴穿梭於宴席、借貸與人情請託之間。"
+    fields:
+      gender: "男"
+      age: "約三十五至四十五歲（推斷）"
+      identity: "應員外之子；敗光紬絹鋪家產後，專陪富家子弟嫖飲的幫閒、中介與宴席陪客"
+      personality: "油滑機敏 / 善於逢迎 / 詼諧聒噪 / 逐利取巧 / 熟諳人情"
+    appearance: "中等身量而略顯清瘦，眉眼靈活，嘴角常掛著伺機接話的笑；衣著力求體面卻帶些浮華與磨舊痕跡，紫絨襖子是其醒目裝束之一（推斷）。"
+    temperament: "在人前幾乎從不冷場，擅長插科打諢、催酒勸歌、察言觀色；遇到有利可圖的請託便熱絡周旋，面對落難者則可能推託閃避。"
+    motivation: "依靠富家朋友圈維持體面生活，藉宴飲陪伴、說情牽線、作保與居中交易獲取酬謝及好處。"
+    character_arc: "長期依附西門慶，由宴席上的核心幫閒逐漸顯出兩頭收錢、暗取利益的中介本色；西門慶死後仍以友朋身分參與祭奠，依附性的生存方式並未根本改變。"
+    relationships:
+      - name: "西門慶"
+        description: "最熟稔的富商密友與主要依附對象；替他陪宴、說情、薦人並經手各種人情與生意"
+      - name: "常時節"
+        description: "友人；陪同求助並極力促成周濟，又奉命替其買房"
+      - name: "李智"
+        description: "多次替二人向西門慶周旋借貸、追催銀款並索取酬謝"
+      - name: "黃四"
+        description: "多次替二人向西門慶周旋借貸、追催銀款並索取酬謝"
+      - name: "李桂姐"
+        description: "在席間撮合、嘲罵與調笑的妓女，亦曾受託在衝突後巧言勸和"
+    quotes:
+      - text: "諢名叫做應花子"
+        chapters:
+          - permalink: "/jinpingmei/text/011/"
+            label: "第十一回"
+            number: 11
+      - text: "專一跟著富家子弟幫嫖貼食"
+        chapters:
+          - permalink: "/jinpingmei/text/011/"
+            label: "第十一回"
+            number: 11
+      - text: "應伯爵謝希大如同釘子釘在椅子上"
+        chapters:
+          - permalink: "/jinpingmei/text/013/"
+            label: "第十三回"
+            number: 13
+      - text: "若不是我那等取巧說著"
+        chapters:
+          - permalink: "/jinpingmei/text/031/"
+            label: "第三十一回"
+            number: 31
+      - text: "只四百二十兩銀子，打了三十兩背公"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "我若不起身，別人也只顧坐著"
+        chapters:
+          - permalink: "/jinpingmei/text/042/"
+            label: "第四十二回"
+            number: 42
+      - text: "管情就替你說成了"
+        chapters:
+          - permalink: "/jinpingmei/text/045/"
+            label: "第四十五回"
+            number: 45
+      - text: "趕眼錯把菓碟兒帶減碟倒在袖子裡"
+        chapters:
+          - permalink: "/jinpingmei/text/046/"
+            label: "第四十六回"
+            number: 46
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/yingbojue.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/yingbojue-master.jpg"
+          title: "應伯爵選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "應伯爵選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/yingbojue.jpg"
+          title: "應伯爵動畫風三視圖"
+          alt: "應伯爵動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/yingbojue/"
+    title: "應伯爵｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：應伯爵——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "chenjingji"
+    order: 6
+    name: "陳經濟"
+    aliases:
+      - "經濟"
+      - "陳姐夫"
+      - "陳姑夫"
+    tier: "要角"
+    tagline: "西門慶倚重的年輕女婿，能辦文書與帳務，卻因乖滑好色而在內宅私情與家敗流離中走向被殺。"
+    fields:
+      gender: "男"
+      age: "二十餘歲（推斷）"
+      identity: "陳洪之子、西門大姐之夫、西門慶的女婿，兼管鋪面、文書、銀錢與差事"
+      personality: "乖滑 / 機靈 / 好色 / 善於應酬 / 貪玩"
+    appearance: "身形修長靈活，面容年輕清俊，眉眼機警，常帶討巧的半笑；衣著較普通夥計體面，腰間便於掛鑰匙，手邊常有帳冊或筆札（推斷）。"
+    temperament: "在人前能磕頭應諾、迎送賓客，也能俐落承辦文書與銀錢；私下口舌活泛，愛調笑、行令與趁隙偷情，酒後尤其放浪。"
+    motivation: "一面靠辦事與管帳維持岳家的信任和自己的位置，一面不斷追逐酒色、私情與眼前快意（推斷）。"
+    character_arc: "從攜妻與家財投奔岳家、受倚重掌管工程與鋪面，逐步陷入與潘金蓮、春梅的私情；家敗後流落、出家，又獲春梅提拔，娶葛翠屏並戀韓愛姐，最終被張勝斬殺。"
+    relationships:
+      - name: "西門慶"
+        description: "岳父與倚重他的家主，交付鋪面、帳務、文書及銀錢差事"
+      - name: "西門大姐"
+        description: "妻子，曾因失而復得的三錢銀與他爭吵"
+      - name: "潘金蓮"
+        description: "在內宅多次調情、私會的對象"
+      - name: "春梅"
+        description: "先與他私通，家敗後又曾提拔他"
+      - name: "李瓶兒"
+        description: "曾被他輕薄；她死後他以孝子身分參與治喪"
+    quotes:
+      - text: "女婿陳經濟磕了頭"
+        chapters:
+          - permalink: "/jinpingmei/text/017/"
+            label: "第十七回"
+            number: 17
+      - text: "見了佳人是命"
+        chapters:
+          - permalink: "/jinpingmei/text/018/"
+            label: "第十八回"
+            number: 18
+      - text: "我幾次戲他，他口兒且是活"
+        chapters:
+          - permalink: "/jinpingmei/text/028/"
+            label: "第二十八回"
+            number: 28
+      - text: "我肚子裏撐心柱肝，要一百個也有"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "已帶半酣兒"
+        chapters:
+          - permalink: "/jinpingmei/text/039/"
+            label: "第三十九回"
+            number: 39
+      - text: "早是我沒錯親了哩"
+        chapters:
+          - permalink: "/jinpingmei/text/048/"
+            label: "第四十八回"
+            number: 48
+      - text: "還有幾個眼生字不認的"
+        chapters:
+          - permalink: "/jinpingmei/text/048/"
+            label: "第四十八回"
+            number: 48
+      - text: "陳經濟，因被張勝所殺"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/chenjingji.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/chenjingji-master.jpg"
+          title: "陳經濟選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "陳經濟選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/chenjingji.jpg"
+          title: "陳經濟動畫風三視圖"
+          alt: "陳經濟動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/chenjingji/"
+    title: "陳經濟｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：陳經濟——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "mengyulou"
+    order: 7
+    name: "孟玉樓"
+    aliases:
+      - "玉樓"
+      - "孟三姐"
+      - "孟三兒"
+    tier: "要角"
+    tagline: "精於持家且溫厚機敏的富孀，攜財嫁入西門家為第三房，總在後宅風波中勸解周旋。"
+    fields:
+      gender: "女"
+      age: "三十至三十七歲（依故事回次推進）"
+      identity: "布商遺孀，後為西門慶第三房妾室，再守寡後改嫁李拱璧"
+      personality: "溫厚 / 穩健 / 機敏 / 善解人意 / 有主見"
+    appearance: "身材修長，妝容精緻，面上略有麻點；曾穿鴉青緞子襖兒。"
+    temperament: "待人和緩而不失分寸，遇爭執多先勸解或以笑語化開；關鍵處心細眼快，既能扶住滑倒的小產者，也能冷眼看破隱情。"
+    motivation: "珍惜自身財產與選擇，並盡力維持後宅體面、照應身邊人的安穩（推斷）。"
+    character_arc: "由能自主擇婚的富孀攜財進入西門家，在妻妾糾葛與接連喪事中始終充當穩健的調停者；再度守寡後改嫁李拱璧，並設局挫敗陳經濟。"
+    relationships:
+      - name: "西門慶"
+        description: "丈夫；她攜財嫁入其家為第三房，日常替他備行裝、迎送與設宴。"
+      - name: "潘金蓮"
+        description: "親近的妻妾同伴；常同行談笑，也屢次勸她收斂嫉妒與怒氣。"
+      - name: "吳月娘"
+        description: "同住後宅的家眷；曾及時扶住她滑倒，勸其調理小產並協助保密。"
+      - name: "李瓶兒"
+        description: "同住後宅的家眷；生前照應其母子，死後協助穿衣裝殮。"
+      - name: "陳經濟"
+        description: "曾冷眼撞破他與潘金蓮相抱；再守寡後設局挫敗他。"
+      - name: "孟銳"
+        description: "弟弟；久別後在西門家相見，並由她帶來辭行。"
+      - name: "李拱璧"
+        description: "西門慶死後改嫁的夫主。"
+    quotes:
+      - text: "長挑身材，粉妝玉琢"
+        chapters:
+          - permalink: "/jinpingmei/text/007/"
+            label: "第七回"
+            number: 7
+      - text: "待後慢慢的俺們再勸他"
+        chapters:
+          - permalink: "/jinpingmei/text/026/"
+            label: "第二十六回"
+            number: 26
+      - text: "溫厚堪同掌上珠"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "連忙搊住他一隻胳膊"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "小產比大產還難調理"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "還虧了孟三姐，一手扶住我"
+        chapters:
+          - permalink: "/jinpingmei/text/040/"
+            label: "第四十回"
+            number: 40
+      - text: "那玉樓冷眼瞧破"
+        chapters:
+          - permalink: "/jinpingmei/text/055/"
+            label: "第五十五回"
+            number: 55
+      - text: "孟玉樓愛嫁李衙內"
+        chapters:
+          - permalink: "/jinpingmei/text/091/"
+            label: "第九十一回"
+            number: 91
+      - text: "奴家青春是三十歲。"
+        chapters:
+          - permalink: "/jinpingmei/text/007/"
+            label: "第七回"
+            number: 7
+      - text: "女命三十七歲，十一月二十七日子時生"
+        chapters:
+          - permalink: "/jinpingmei/text/091/"
+            label: "第九十一回"
+            number: 91
+    life_stages:
+      - age_label: "三十歲"
+        stage_title: "嫁入西門家前後"
+        chapters:
+          - permalink: "/jinpingmei/text/007/"
+            label: "第七回"
+            number: 7
+        evidence:
+          - "奴家青春是三十歲。"
+        note: ""
+      - age_label: "三十七歲"
+        stage_title: "西門家敗後再婚"
+        chapters:
+          - permalink: "/jinpingmei/text/091/"
+            label: "第九十一回"
+            number: 91
+        evidence:
+          - "女命三十七歲，十一月二十七日子時生"
+        note: ""
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/mengyulou.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/mengyulou-master.jpg"
+          title: "孟玉樓選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "孟玉樓選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/mengyulou.jpg"
+          title: "孟玉樓動畫風三視圖"
+          alt: "孟玉樓動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/mengyulou/"
+    title: "孟玉樓｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：孟玉樓——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "chunmei"
+    order: 8
+    name: "龐春梅"
+    aliases:
+      - "春梅"
+      - "春梅姐"
+      - "龐氏"
+    tier: "要角"
+    tagline: "聰慧剛烈、深受潘金蓮倚重的貼身丫鬟，遭賣後升為周守備正夫人，卻因私情走向早逝。"
+    fields:
+      gender: "女"
+      age: "本真人系列採二十至二十三歲的成年早期丫鬟生命階段；原著初登場未滿十八歲，二十九歲病逝"
+      identity: "早期為潘金蓮貼身丫鬟，後成為周守備正夫人；本真人母版採早期成年丫鬟階段"
+      personality: "聰慧伶俐 / 善於應對 / 剛烈自尊 / 忠於金蓮 / 強急潑辣"
+    appearance: "本真人系列採成年早期丫鬟造型：漂亮銳利的年輕臉孔、簡單紅帶髮髻、暖紅襖與深藍裙（製作裁決）。原著記載她未滿十八歲時五官端正，得寵後曾穿白綾襖與大紅遍地金比甲。"
+    temperament: "反應敏捷，敢當面斥責越界之人，也會因衣著與體面受損而拒絕侍酒；受抬舉時自信親暱，發怒時言辭凌厲。"
+    motivation: "早期重在維護潘金蓮、守住自身體面與受寵位置；身分改變後轉而追求情愛與自主（推斷）。"
+    character_arc: "由後宅中受寵且敢言的貼身丫鬟，經被賣入周守備府而升為正夫人；其後暗養陳經濟與周義，二十九歲因色癆而死。"
+    relationships:
+      - name: "潘金蓮"
+        description: "忠心服侍、代為傳話探聽並受其抬舉的主人"
+      - name: "西門慶"
+        description: "收用她並與她言語親暱的男主人"
+      - name: "吳月娘"
+        description: "最初的主人，後將她撥給潘金蓮"
+      - name: "陳經濟"
+        description: "先替潘金蓮與之傳信，後與之私通並暗中收養"
+      - name: "秋菊"
+        description: "常奉潘金蓮之命監打、捆綁的丫鬟"
+    quotes:
+      - text: "性聰慧，喜謔浪，善應對"
+        chapters: []
+      - text: "不是春梅當日勸"
+        chapters: []
+      - text: "你怎的捻我的手，調戲我"
+        chapters: []
+      - text: "自此送斷了路兒，不敢上門"
+        chapters: []
+      - text: "三九定然封贈"
+        chapters: []
+      - text: "我是不出去"
+        chapters: []
+      - text: "春梅方纔喜歡了"
+        chapters: []
+      - text: "周統制妻龐氏春梅"
+        chapters: []
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/chunmei.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/chunmei-master.jpg"
+          title: "龐春梅選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "龐春梅選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/figures/chunmei-standard.jpg"
+          title: "龐春梅《金瓶異夢》標準版立繪"
+          alt: "龐春梅《金瓶異夢》標準版立繪"
+          caption: "《金瓶異夢》標準版立繪"
+        - image: "/assets/img/jinpingmei/figures/chunmei-sensual.jpg"
+          title: "龐春梅《金瓶異夢》成熟版立繪"
+          alt: "龐春梅《金瓶異夢》成熟版立繪"
+          caption: "《金瓶異夢》成熟版立繪"
+        - image: "/assets/img/jinpingmei/turnaround/chunmei.jpg"
+          title: "龐春梅動畫風三視圖"
+          alt: "龐春梅動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/chunmei/"
+    title: "龐春梅｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：龐春梅——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "lijiaoer"
+    order: 9
+    name: "李嬌兒"
+    aliases:
+      - "嬌兒"
+      - "二娘"
+      - "二孃"
+    tier: "要角"
+    tagline: "由院中名妓成為西門慶第二房、掌管家中出入銀錢，臨喪卻盜財歸院並另嫁的豐肥女子。"
+    fields:
+      gender: "女"
+      age: "三十四歲（第八十回明載）"
+      identity: "西門慶第二房，原為院中名妓，亦是李桂姐的親姑"
+      personality: "精於理財（推斷） / 務實自保（推斷） / 重視親緣（推斷） / 謹慎守序（推斷）"
+    appearance: "肌膚豐肥，肉重身肥，平日多咳嗽；額尖、鼻小。"
+    temperament: "在內宅往來中多半隨眾而行，遇事先顧自身立場；說話直接，帶有市井生活磨出的圓熟與戒心（推斷）。"
+    motivation: "維持自己在西門家的生活與財務位置，照應李家親眷；局勢轉壞時優先另尋退路（推斷）。"
+    character_arc: "由院中名妓成為西門慶第二房並掌管銀錢，長期參與內宅宴飲、往來與治喪；西門慶死後盜取元寶返回李家，後嫁新任提刑張二官。"
+    relationships:
+      - name: "西門慶"
+        description: "其第二房；受命掌管家中出入銀錢，後在其喪期盜財離去"
+      - name: "李桂姐"
+        description: "親姑；支持西門慶梳籠她，並多次與她同席或留她房中"
+      - name: "潘金蓮"
+        description: "因李家受辱及琴童私通之事與她結怨，亦曾同席猜枚"
+      - name: "孫雪娥"
+        description: "曾共同告發潘金蓮，亦在席間替忙於廚下的她頂缺"
+      - name: "吳月娘"
+        description: "同為西門家內眷，常一同宴飲、探病、治喪及接待女客"
+      - name: "李瓶兒"
+        description: "同為西門家內眷；曾探視其病情、參與其臨產與身後裝殮"
+    quotes:
+      - text: "勾欄裏的李嬌兒打熱"
+        chapters:
+          - permalink: "/jinpingmei/text/002/"
+            label: "第二回"
+            number: 2
+      - text: "出入銀錢，都在唱的李嬌兒手裏"
+        chapters:
+          - permalink: "/jinpingmei/text/011/"
+            label: "第十一回"
+            number: 11
+      - text: "肉重身肥，廣有衣食"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "早知不上樓也罷了"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "我燈草拐扙不定，你還請問你爹去"
+        chapters:
+          - permalink: "/jinpingmei/text/046/"
+            label: "第四十六回"
+            number: 46
+      - text: "李嬌兒盜財歸院"
+        chapters:
+          - permalink: "/jinpingmei/text/080/"
+            label: "第八十回"
+            number: 80
+      - text: "李嬌兒三十四歲"
+        chapters:
+          - permalink: "/jinpingmei/text/080/"
+            label: "第八十回"
+            number: 80
+    life_stages:
+      - age_label: "三十四歲"
+        stage_title: "西門家敗後再嫁"
+        chapters:
+          - permalink: "/jinpingmei/text/080/"
+            label: "第八十回"
+            number: 80
+        evidence:
+          - "李嬌兒三十四歲"
+        note: ""
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/lijiaoer.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/lijiaoer-master.jpg"
+          title: "李嬌兒選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "李嬌兒選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/lijiaoer.jpg"
+          title: "李嬌兒動畫風三視圖"
+          alt: "李嬌兒動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/lijiaoer/"
+    title: "李嬌兒｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：李嬌兒——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "sunxuee"
+    order: 10
+    name: "孫雪娥"
+    aliases:
+      - "雪娥"
+      - "四娘"
+      - "孫娥"
+    tier: "要角"
+    tagline: "西門慶的第四房妾室，善理湯水並主管廚房，長期捲在妻妾、僕婦與來旺的衝突之中。"
+    fields:
+      gender: "女"
+      age: "中年（推斷）"
+      identity: "西門慶第四房妾室，原為房裡人，主管廚房與僕婦"
+      personality: "強硬（推斷） / 直率（推斷） / 記仇（推斷） / 畏禍（推斷）"
+    appearance: "身量偏矮，體態結實，帶有常年料理廚務的俐落感；衣著較家中其他妻妾樸實，袖口收束便於做事（推斷）。"
+    temperament: "平日務實幹練，受刺激時嗓門高、反應急，敢當面掌摑扭打；事到追責關頭又會迅速轉為驚惶求情（推斷）。"
+    motivation: "守住自己在內宅與廚房中的位置，並在長期受挑撥、羞辱與責打後尋求報復與自保（推斷）。"
+    character_arc: "由掌理廚務、參與內宅日常的妾室，逐步陷入與潘金蓮、宋惠蓮及來旺的衝突；後與來旺私逃，輾轉被賣，終因懼怕案發而自縊。"
+    relationships:
+      - name: "西門慶"
+        description: "其第四房妾室，多次因內宅衝突遭他踢打與降罰"
+      - name: "潘金蓮"
+        description: "長期互相衝突並受其挑撥、譏罵的同宅妻妾"
+      - name: "吳月娘"
+        description: "內宅主母；宋惠蓮自縊後曾向她跪求隱瞞衝突"
+      - name: "李嬌兒"
+        description: "曾與她一同告發潘金蓮私通琴童的同宅妻妾"
+      - name: "宋惠蓮"
+        description: "積怨甚深並曾掌摑扭打的僕婦"
+      - name: "來旺"
+        description: "被她告知西門慶與宋惠蓮私通始末，後與她私逃的僕人"
+    quotes:
+      - text: "能造五鮮湯水，善舞翠盤之妙"
+        chapters:
+          - permalink: "/jinpingmei/text/009/"
+            label: "第九回"
+            number: 9
+      - text: "把孫雪娥打了一頓"
+        chapters:
+          - permalink: "/jinpingmei/text/025/"
+            label: "第二十五回"
+            number: 25
+      - text: "好賊奴才，養漢淫婦！"
+        chapters:
+          - permalink: "/jinpingmei/text/026/"
+            label: "第二十六回"
+            number: 26
+      - text: "後來必主兇亡"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "慌的雪娥往廚下打發"
+        chapters:
+          - permalink: "/jinpingmei/text/058/"
+            label: "第五十八回"
+            number: 58
+      - text: "孫雪娥，不幸自縊身死"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/sunxuee.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/sunxuee-master.jpg"
+          title: "孫雪娥選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "孫雪娥選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/turnaround/sunxuee.jpg"
+          title: "孫雪娥動畫風三視圖"
+          alt: "孫雪娥動畫風三視圖"
+          caption: "原典研究・動畫風三視圖"
+    permalink: "/jinpingmei/characters/sunxuee/"
+    title: "孫雪娥｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：孫雪娥——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "songhuilian"
+    order: 11
+    name: "宋惠蓮"
+    aliases:
+      - "惠蓮"
+      - "蕙蓮"
+      - "宋氏"
+      - "來旺兒媳婦"
+      - "旺官娘子"
+      - "宋大姐"
+    tier: "要角"
+    tagline: "來旺之妻，二十四歲，聰敏善變、善於妝飾與應對，因捲入西門宅私情與權力角力而走向悲劇。"
+    fields:
+      gender: "女"
+      age: "二十四歲；身亡時二十五歲"
+      identity: "西門家僕人來旺之妻、宋仁之女，曾在蔡通判家使喚"
+      personality: "聰敏 / 善機變 / 善於逢迎 / 敢於抗辯"
+    appearance: "善於妝飾、針線與烹調，腳比潘金蓮更小；本真人系列採黃白淨面、高而虛籠髮髻與長水鬢的家人媳婦造型（製作裁決）。"
+    temperament: "處境有利時善於奉承與應變；丈夫遭支走、遞解後，則敢於質問西門慶並拒絕改事主人。"
+    motivation: "早期希望藉由私情與財物改善處境，也勸西門慶長期支走丈夫；後期轉為替丈夫抗辯並守住自身選擇。"
+    character_arc: "從接受西門慶財物、捲入私情與內宅爭鬥，到丈夫遭陷害遞解後拒絕屈從；最終與孫雪娥衝突，羞憤自縊而亡。"
+    relationships:
+      - name: "來旺"
+        description: "丈夫；她曾勸其戒酒，後為其受陷與遭遞解向西門慶抗辯。"
+      - name: "西門慶"
+        description: "與她私通並給予財物的主人；後又試圖要她改事自己。"
+      - name: "潘金蓮"
+        description: "撞破她與西門慶私情後形成牽制；她轉而奉承依附。"
+      - name: "孫雪娥"
+        description: "兩人互揭私情並扭打，衝突成為她走向自縊的直接壓力。"
+      - name: "陳經濟"
+        description: "曾有曖昧往來。"
+    quotes:
+      - text: "孃家姓宋"
+        chapters: []
+      - text: "遂改名蕙蓮"
+        chapters: []
+      - text: "性明敏，善機變，會妝飾"
+        chapters: []
+      - text: "休放他在家裏，使的他馬不停蹄纔好"
+        chapters: []
+      - text: "你原來就是個弄人的劊子手！"
+        chapters: []
+      - text: "自縊身死，亡年二十五歲"
+        chapters: []
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/songhuilian.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/songhuilian-master.jpg"
+          title: "宋惠蓮選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "宋惠蓮選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+        - image: "/assets/img/jinpingmei/figures/songhuilian-standard.jpg"
+          title: "宋惠蓮《金瓶異夢》標準版立繪"
+          alt: "宋惠蓮《金瓶異夢》標準版立繪"
+          caption: "《金瓶異夢》標準版立繪"
+        - image: "/assets/img/jinpingmei/figures/songhuilian-sensual.jpg"
+          title: "宋惠蓮《金瓶異夢》成熟版立繪"
+          alt: "宋惠蓮《金瓶異夢》成熟版立繪"
+          caption: "《金瓶異夢》成熟版立繪"
+    permalink: "/jinpingmei/characters/songhuilian/"
+    title: "宋惠蓮｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：宋惠蓮——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "wangpo"
+    order: 12
+    name: "王婆"
+    aliases: []
+    tier: "要角"
+    tagline: "她是武大家隔壁開茶坊的老寡婦，也以媒合、接生與牽頭營利。"
+    fields:
+      gender: "女"
+      age: "成年（原典未明載）"
+      identity: "武大家隔壁茶坊的老寡婦、王潮之母，兼做媒、接生與牽頭等營生。"
+      personality: "貪財 / 老練 / 善於察言觀色 / 擅長設局 / 狠決"
+    appearance: "年長婦人，常在街坊茶坊中活動；衣著應便於招呼客人與往來說合，面容帶著久經世故的審視感。（推斷）"
+    temperament: "語氣熟稔直接，善用街坊口吻、婚姻俗語與連環說辭卸下他人戒心；談到利益或滅口時則迅速轉為冷硬果決。"
+    motivation: "把街坊消息、人情關係與男女私情轉成可收取的財物，並在事發後盡力保住自身利益。"
+    character_arc: "由鄰里茶坊主人轉為私情媒合者，再成為毒殺與滅跡的共謀；其後仍試圖藉潘金蓮獲利，終因舊案遭到清算。"
+    relationships:
+      - name: "潘金蓮"
+        description: "鄰婦、受她撮合與操控的女子；她後來收留並待價出售對方。"
+      - name: "西門慶"
+        description: "付給她銀物、由她設計撮合私情並共同遮掩命案的人。"
+      - name: "武植"
+        description: "鄰居與陰謀受害者；她主張結果其性命並協助後續處理。"
+      - name: "武松"
+        description: "受害者之弟；她攔截其家書，最終因舊案遭其報復。"
+    quotes:
+      - text: "間壁住的賣茶王婆子"
+        chapters:
+          - permalink: "/jinpingmei/text/002/"
+            label: "第二回"
+            number: 2
+      - text: "王婆定十件挨光計"
+        chapters:
+          - permalink: "/jinpingmei/text/003/"
+            label: "第三回"
+            number: 3
+      - text: "把這矮子結果了他命"
+        chapters:
+          - permalink: "/jinpingmei/text/005/"
+            label: "第五回"
+            number: 5
+      - text: "初嫁由爹孃，後嫁由自己"
+        chapters:
+          - permalink: "/jinpingmei/text/008/"
+            label: "第八回"
+            number: 8
+      - text: "王婆售利嫁金蓮"
+        chapters:
+          - permalink: "/jinpingmei/text/086/"
+            label: "第八十六回"
+            number: 86
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/wangpo.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/wangpo-master.jpg"
+          title: "王婆選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "王婆選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/wangpo/"
+    title: "王婆｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：王婆——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "wuzhi"
+    order: 13
+    name: "武植"
+    aliases:
+      - "三寸丁谷樹皮"
+      - "武大"
+      - "武大郎"
+      - "賣炊餅武大郎"
+    tier: "要角"
+    tagline: "他是武松的同胞兄長，排行大郎，身材矮小、面貌粗陋，以沿街賣炊餅維生。"
+    fields:
+      gender: "男"
+      age: "成年（原典未明載）"
+      identity: "排行大郎的炊餅小販、武松同胞兄長、迎兒之父與潘金蓮前夫。"
+      personality: "本分 / 勤勞 / 懦弱 / 忍耐 / 受辱後敢於對質"
+    appearance: "身材矮小、面貌粗陋，長年挑擔沿街賣炊餅，衣著樸素耐磨；體態不具威勢，與高大的弟弟形成明顯對照。（部分推斷）"
+    temperament: "平日語氣樸實退讓，缺少強勢辭令；遭背叛後說話轉為急迫而直接，反覆抓住自己親眼捉姦的事實。"
+    motivation: "靠賣炊餅維持家計並守住婚姻與家庭；發現私情後，希望親手捉住證據、討回作為丈夫的尊嚴。"
+    character_arc: "由安分度日的小販，在婚姻背叛與鄰里羞辱中被迫面對衝突；捉姦受傷後遭妻與共謀者毒殺，其被壓下的冤情跨越全書，成為弟弟復仇與末回薦拔的因果中心。"
+    relationships:
+      - name: "武松"
+        description: "同胞弟弟；他的死亡促使弟弟返鄉查案並誓言報冤。"
+      - name: "潘金蓮"
+        description: "後娶妻子；她與人私通，並在他臥病時將其毒死。"
+      - name: "迎兒"
+        description: "前妻所生女兒，與他共同生活。"
+      - name: "西門慶"
+        description: "妻子私通的對象；他捉姦時遭其踢傷。"
+    quotes:
+      - text: "有一人姓武，名植，排行大郎"
+        chapters:
+          - permalink: "/jinpingmei/text/001/"
+            label: "第一回"
+            number: 1
+      - text: "三寸丁谷樹皮"
+        chapters:
+          - permalink: "/jinpingmei/text/001/"
+            label: "第一回"
+            number: 1
+          - permalink: "/jinpingmei/text/002/"
+            label: "第二回"
+            number: 2
+      - text: "我親手又捉著你奸"
+        chapters:
+          - permalink: "/jinpingmei/text/005/"
+            label: "第五回"
+            number: 5
+      - text: "腸胃迸斷，嗚呼哀哉"
+        chapters:
+          - permalink: "/jinpingmei/text/005/"
+            label: "第五回"
+            number: 5
+      - text: "武植，因被王婆唆潘氏下毒藥"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/wuzhi.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/wuzhi-master.jpg"
+          title: "武植選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "武植選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/wuzhi/"
+    title: "武植｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：武植——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "huazixu"
+    order: 14
+    name: "花子虛"
+    aliases:
+      - "花二"
+      - "花二哥"
+    tier: "要角"
+    tagline: "他是花太監的侄兒、李瓶兒的丈夫，承接叔父財產後貪酒戀妓，往往數夜不歸。"
+    fields:
+      gender: "男"
+      age: "二十四歲"
+      identity: "花太監侄兒、承產的富家子弟與李瓶兒丈夫，死後成為反覆入夢的舊冤人物。"
+      personality: "貪酒 / 戀妓 / 疏於持家 / 易受幫閒牽制 / 死後執念深重"
+    appearance: "二十四歲的富家成年男子；生前衣著講究卻帶縱酒失序之態，病中迅速衰頹；夢中則常以白衣亡者形象出現。（部分推斷）"
+    temperament: "生前說話帶富家子弟的隨性與被動，缺少精密應對；死後夢境中的表達轉為責問、索討與威逼，語勢陰冷而執著。（推斷）"
+    motivation: "生前追逐酒色享樂並試圖保住承繼財產；死後則以亡夫立場追問被轉走的財物與婚姻背叛。"
+    character_arc: "從承接巨產的年輕富家子弟，逐步因享樂、族產官司、妻子轉移財物與病勢失治而敗亡；死亡並未結束其作用，他以夢魘與舊冤形態回返，持續壓迫李瓶兒及西門家的因果線。"
+    relationships:
+      - name: "李瓶兒"
+        description: "妻子；她在他生前轉移財物並與西門慶私通，他死後多次入夢追索。"
+      - name: "西門慶"
+        description: "表面結交的朋友、實際上的情敵；對方利用幫閒牽制他並與其妻私通。"
+      - name: "官哥兒"
+        description: "李瓶兒之子；他在夢中曾抱著孩子出現。"
+    quotes:
+      - text: "第六是花太監侄兒花子虛"
+        chapters:
+          - permalink: "/jinpingmei/text/011/"
+            label: "第十一回"
+            number: 11
+      - text: "整三五夜不歸家"
+        chapters:
+          - permalink: "/jinpingmei/text/010/"
+            label: "第十回"
+            number: 10
+      - text: "花子虛因氣喪身"
+        chapters:
+          - permalink: "/jinpingmei/text/014/"
+            label: "第十四回"
+            number: 14
+      - text: "亡年二十四歲"
+        chapters:
+          - permalink: "/jinpingmei/text/014/"
+            label: "第十四回"
+            number: 14
+          - permalink: "/jinpingmei/text/092/"
+            label: "第九十二回"
+            number: 92
+      - text: "夢見花子虛從前門外來"
+        chapters:
+          - permalink: "/jinpingmei/text/059/"
+            label: "第五十九回"
+            number: 59
+      - text: "彷彿見花子虛抱著官哥兒叫他"
+        chapters:
+          - permalink: "/jinpingmei/text/060/"
+            label: "第六十回"
+            number: 60
+      - text: "花子虛，不幸被妻氣死"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/huazixu.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/huazixu-master.jpg"
+          title: "花子虛選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "花子虛選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/huazixu/"
+    title: "花子虛｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：花子虛——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "hanaijie"
+    order: 15
+    name: "韓愛姐"
+    aliases:
+      - "愛姐"
+      - "韓五姐"
+    tier: "要角"
+    tagline: "少年被送入權門，歷經愛情、喪亂與離散後仍尋親守志的堅忍女子。"
+    fields:
+      gender: "女"
+      age: "十五歲起（第37回明載；後期年齡未明載）"
+      identity: "韓道國與王六兒之女，曾為翟謙二房，後與陳經濟相戀並在離亂中尋父"
+      personality: "伶俐敏慧 / 重情守信 / 慷慨念親 / 堅忍決絕 / 孝親執著"
+    appearance: "十五歲時身材直細、腳小、面施濃妝而伶俐；成年後的衣著與神態未有完整明載，可延續纖細體態，轉為樸素端整、歷經離亂而堅定的外觀。（成年形象推斷）"
+    temperament: "早期在權門生活中懂禮而機敏，能周到款待舅父；後期面對戀人身亡、戰亂與尋親困境，情緒轉為沉靜克制，決心一旦形成便不回頭。（推斷）"
+    motivation: "早期在被安排的婚配中安身，仍維繫與母家親人的聯絡；後來為愛情守節，並在戰亂流離中尋找父母、守住自己的選擇。"
+    character_arc: "十五歲被父母與西門家安排送給翟謙做二房，在蔡府學得詩曲；後與陳經濟相戀，經濟死後入周府守節。戰亂中她離開安穩處境尋找父母，最終以削髮毀目的方式拒絕再嫁，將被動婚配的人生轉為自主守志。"
+    relationships:
+      - name: "韓道國"
+        description: "父親；十五歲時由他護送入京，後來她在戰亂中遠赴湖州尋父。"
+      - name: "王六兒"
+        description: "母親；她與母家保持聯絡，母親曾託來保捎送簪鞋。"
+      - name: "翟謙"
+        description: "早期被安排侍奉的權門管家；入其府後獲三間房與兩名丫鬟。"
+      - name: "陳經濟"
+        description: "後期戀人；她在蔡府習得詩曲後與他相戀，並在他死後守節。"
+      - name: "王經"
+        description: "舅父；他奉母親之意探望她，她以酒飯、貂鼠氅衣和銀子相待。"
+    quotes:
+      - text: "小名叫做愛姐"
+        chapters:
+          - permalink: "/jinpingmei/text/037/"
+            label: "第三十七回"
+            number: 37
+      - text: "女命，年十五歲"
+        chapters:
+          - permalink: "/jinpingmei/text/037/"
+            label: "第三十七回"
+            number: 37
+      - text: "就與了三間房，兩個丫鬟伏侍"
+        chapters:
+          - permalink: "/jinpingmei/text/038/"
+            label: "第三十八回"
+            number: 38
+      - text: "與了一件天青紵絲貂鼠氅衣兒"
+        chapters:
+          - permalink: "/jinpingmei/text/071/"
+            label: "第七十一回"
+            number: 71
+      - text: "韓愛姐湖州尋父"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/hanaijie.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/hanaijie-master.jpg"
+          title: "韓愛姐選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "韓愛姐選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/hanaijie/"
+    title: "韓愛姐｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：韓愛姐——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "zhouxiu"
+    order: 16
+    name: "周秀"
+    aliases:
+      - "周南軒"
+      - "周守備"
+    tier: "要角"
+    tagline: "由清河守備升至都統制的武官，以權勢承接春梅與陳經濟的後半生，最終戰死。"
+    fields:
+      gender: "男"
+      age: "成年男性，確切年齡未載"
+      identity: "清河帥府守備、地方總兵官，後升都統制"
+      personality: "重視官場禮序 / 好客豪飲 / 行事有威勢 / 能提拔部屬 / 具武職責任感"
+    appearance: "原典未明載其五官、身材與年齡。其守備、總兵與統制身分，足以作為成熟武官儀態與服裝設定的依據；鬍鬚、體格、傷疤等細節皆須標作推斷。"
+    temperament: "公開場合沉著有禮，能主持官宴並判斷席間分寸；需要留客、整肅或出兵時轉為不容推辭的軍令式語氣。（推斷）"
+    motivation: "維持地方武職權威與官場人脈，經營帥府、莊田和香火院；後期也透過婚姻、收留與提拔重組自己的家內與部屬秩序。"
+    character_arc: "早期以守備身分置產、設宴並與西門慶往來，中後期娶春梅、收留陳經濟並逐步升任都統制；靖康戰事中與番將對敵，中箭陣亡，末回經薦拔轉生。"
+    relationships:
+      - name: "春梅"
+        description: "後期妻子；婚姻使她進入守備府並取得權力，也把西門家餘波帶入其家。"
+      - name: "陳經濟"
+        description: "收留並提拔的部屬與家內親近者，其後在守備府用事。"
+      - name: "西門慶"
+        description: "地方官紳網絡中的宴飲與公務往來對象，彼此送禮、借兵馬並互相赴宴。"
+      - name: "吳奭"
+        description: "受邀替老夫人看目疾的道士，後由其關係轉往西門宅觀相。"
+      - name: "周老夫人"
+        description: "其母；他曾為母親目疾請吳奭診看。"
+      - name: "普靜"
+        description: "末回薦拔其戰死之魂，使其解除舊業、另行託生。"
+    quotes:
+      - text: "賣與守備周秀為業"
+        chapters:
+          - permalink: "/jinpingmei/text/014/"
+            label: "第十四回"
+            number: 14
+      - text: "帥府周守備生日"
+        chapters:
+          - permalink: "/jinpingmei/text/017/"
+            label: "第十七回"
+            number: 17
+      - text: "守備府周爺差人"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "周老總兵相約"
+        chapters:
+          - permalink: "/jinpingmei/text/029/"
+            label: "第二十九回"
+            number: 29
+      - text: "府裏周南軒那裏請喫酒"
+        chapters:
+          - permalink: "/jinpingmei/text/042/"
+            label: "第四十二回"
+            number: 42
+      - text: "原是周秀老爹蓋造"
+        chapters:
+          - permalink: "/jinpingmei/text/049/"
+            label: "第四十九回"
+            number: 49
+      - text: "帥府周爺來拜"
+        chapters:
+          - permalink: "/jinpingmei/text/072/"
+            label: "第七十二回"
+            number: 72
+      - text: "統制周秀，因與番將對敵"
+        chapters:
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/zhouxiu.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/zhouxiu-master.jpg"
+          title: "周秀選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "周秀選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/zhouxiu/"
+    title: "周秀｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：周秀——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "wusong"
+    order: 17
+    name: "武松"
+    aliases:
+      - "武二"
+      - "武二哥"
+      - "武都頭"
+    tier: "主角"
+    tagline: "他是武植之弟，憑過人膂力與槍棒本領在景陽岡徒手打虎，後任清河縣巡捕都頭。"
+    fields:
+      gender: "男"
+      age: "二十八歲"
+      identity: "武植同胞弟弟、景陽岡打虎者與清河縣巡捕都頭。"
+      personality: "剛正 / 勇猛 / 克制 / 重視手足 / 執著復仇"
+    appearance: "膂力過人、精於槍棒的二十八歲壯年男子；體格結實、動作沉穩有力，任都頭時宜作俐落公差裝束。（推斷）"
+    temperament: "說話簡短、直截而有公門人物的分寸；立誓與陳情時反覆抓住報冤、證據與責任，情緒升高仍帶強烈的是非判斷。"
+    motivation: "守住兄弟倫理與自身名節，在制度無法伸冤時查明兄長死因並報冤雪恨。"
+    character_arc: "從打虎成名、任職都頭的公門人物，轉為追查兄案的復仇者；第一次行動受阻並遭刺配後，遇赦歸來完成祭兄復仇，最終離開清河秩序投向梁山。"
+    relationships:
+      - name: "武植"
+        description: "同胞兄長；其冤死成為他追查與復仇的核心動力。"
+      - name: "潘金蓮"
+        description: "嫂嫂；他拒絕其勾引，後查明她參與毒殺兄長並向她報仇。"
+      - name: "西門慶"
+        description: "兄案主謀之一與尋仇目標；第一次尋人廝打時意外造成旁人死亡。"
+      - name: "王婆"
+        description: "兄案的策劃與共謀者；他歸來後將她與潘金蓮一併清算。"
+    quotes:
+      - text: "名喚武松"
+        chapters:
+          - permalink: "/jinpingmei/text/001/"
+            label: "第一回"
+            number: 1
+      - text: "三拳兩腳，和大蟲敵鬭"
+        chapters:
+          - permalink: "/jinpingmei/text/001/"
+            label: "第一回"
+            number: 1
+      - text: "兄弟替你報冤雪恨"
+        chapters:
+          - permalink: "/jinpingmei/text/009/"
+            label: "第九回"
+            number: 9
+      - text: "小的本為哥哥報仇，因尋西門慶廝打"
+        chapters:
+          - permalink: "/jinpingmei/text/010/"
+            label: "第十回"
+            number: 10
+      - text: "武都頭殺嫂祭兄"
+        chapters:
+          - permalink: "/jinpingmei/text/087/"
+            label: "第八十七回"
+            number: 87
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/wusong.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/wusong-master.jpg"
+          title: "武松選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "武松選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/wusong/"
+    title: "武松｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：武松——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "wangliuer"
+    order: 18
+    name: "王六兒"
+    aliases:
+      - "六姐"
+    tier: "要角"
+    tagline: "懂得把情慾、婚姻與權勢做成交易的外室，在利害之間直率而強韌地求取生路。"
+    fields:
+      gender: "女"
+      age: "二十八至二十九歲（第33回明載）"
+      identity: "王屠之妹、韓道國之妻、韓愛姐之母，後為西門慶外室"
+      personality: "刁潑直率 / 務實逐利 / 善於逢迎 / 情慾坦白 / 處境強韌"
+    appearance: "身材高挑，瓜子臉，膚色紫膛；善於打扮，能在中等人家婦人的端整裝束與私宴盛裝之間切換。髮式、衣料與首飾細節依其獲贈衣飾及新宅後的生活推斷。（推斷）"
+    temperament: "語氣爽利，敢把私情和得失直接說給丈夫聽；面對能帶來資源的人則懂得放軟身段、安排酒席與掌握獨處時機。（推斷）"
+    motivation: "在丈夫收入與自身處境之外取得更穩定的房屋、銀錢、衣飾與使女，也為家人和說情者把自己與西門慶的關係轉成實際資源。"
+    character_arc: "先因與小叔私通捲入街坊爭案，藉西門慶官勢脫困；女兒入京後，她成為西門慶外室，與丈夫共同利用這段關係置宅聚財。西門家敗後，她與丈夫、女兒流落臨清，以私窠維生，之後隨何官人去湖州並終嫁韓二。"
+    relationships:
+      - name: "韓道國"
+        description: "丈夫；她把與西門慶的私情明白告知他，夫妻共同以此謀取房產與商業利益。"
+      - name: "韓愛姐"
+        description: "女兒；她參與女兒入京前的準備，後託來保把簪鞋帶給女兒。"
+      - name: "西門慶"
+        description: "情人與資助者；她以外室身分接待他，也替苗青說情並獲得銀錢衣物。"
+      - name: "韓二"
+        description: "丈夫之弟；早年與她私通，西門家敗後最終與她成婚。"
+      - name: "王經"
+        description: "弟弟；他替她探望住在翟府的女兒。"
+      - name: "申二姐"
+        description: "常受她延請的唱曲女子；她曾安排其在家宴中獻唱。"
+    quotes:
+      - text: "排行六姐"
+        chapters:
+          - permalink: "/jinpingmei/text/001/"
+            label: "第一回"
+            number: 1
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+          - permalink: "/jinpingmei/text/080/"
+            label: "第八十回"
+            number: 80
+      - text: "長挑身材，瓜子麪皮，紫膛色"
+        chapters:
+          - permalink: "/jinpingmei/text/033/"
+            label: "第三十三回"
+            number: 33
+      - text: "既是下顧，明日請他過來"
+        chapters:
+          - permalink: "/jinpingmei/text/037/"
+            label: "第三十七回"
+            number: 37
+      - text: "也是我輸了身一場"
+        chapters:
+          - permalink: "/jinpingmei/text/038/"
+            label: "第三十八回"
+            number: 38
+      - text: "與王六兒打的一似火炭般熱"
+        chapters:
+          - permalink: "/jinpingmei/text/039/"
+            label: "第三十九回"
+            number: 39
+      - text: "夫妻二人各訴離情一遍"
+        chapters:
+          - permalink: "/jinpingmei/text/059/"
+            label: "第五十九回"
+            number: 59
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/wangliuer.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/wangliuer-master.jpg"
+          title: "王六兒選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "王六兒選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/wangliuer/"
+    title: "王六兒｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：王六兒——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
+  - slug: "pujing"
+    order: 19
+    name: "普靜"
+    aliases: []
+    tier: "要角"
+    tagline: "岱嶽雪洞修行的神異高僧，先救月娘，後度孝哥並薦拔群魂，收束全書因果。"
+    fields:
+      gender: "男"
+      age: "年長成年男性，確切年齡未載"
+      identity: "岱嶽東峯雪澗洞修行高僧，後在永福寺度化孝哥並為群魂薦拔"
+      personality: "慈悲 / 洞察因果 / 堅定守諾 / 不受財物 / 言語直截"
+    appearance: "原典稱其為老僧、雪洞老和尚，末回明載身披紫褐袈裟、手執九環錫杖、腳穿芒鞋、肩背布袋與經典。五官、身材與實際歲數未載；年長感可據稱謂推斷。"
+    temperament: "平靜而不柔弱，面對危難先安定眾人，談及宿願與出家時則堅定、不與世俗討價還價；誦咒薦拔時莊嚴清明。（推斷）"
+    motivation: "救人脫險、履行十年前收徒因緣，並以佛法化解眾人累積的冤業，使孝哥與群魂各得解脫。"
+    character_arc: "第八十四回在雪澗洞收留逃難的吳月娘一行，拒收布匹並約定日後度其子；第百回亂世重逢，帶眾人入永福寺，度孝哥出家，誦咒薦拔西門家及相關亡魂，完成全書宗教收束。"
+    relationships:
+      - name: "吳月娘"
+        description: "先在岱嶽危途中救她投宿，並與她約定日後收其親生子為徒。"
+      - name: "明悟禪師"
+        description: "十年前預定的弟子；亂世重逢後被他度化出家。"
+      - name: "吳大舅"
+        description: "第八十四回同行求助者；他向其說明雪洞去路並保護整隊過夜。"
+      - name: "吳二舅"
+        description: "末回對收徒提出世俗反對者；他仍堅持宿願並引眾人到永福寺。"
+      - name: "西門慶"
+        description: "末回受其經咒薦拔的亡魂之一，得以另行託生。"
+      - name: "周秀"
+        description: "戰死後受其薦拔的亡魂之一。"
+    quotes:
+      - text: "法名普靜"
+        chapters:
+          - permalink: "/jinpingmei/text/084/"
+            label: "第八十四回"
+            number: 84
+          - permalink: "/jinpingmei/text/100/"
+            label: "第一百回"
+            number: 100
+    life_stages: []
+    visuals:
+      turnaround:
+        image: "/assets/img/jinpingmei/turnaround-live/pujing.jpg"
+        width: 1536
+        height: 1024
+        caption: "三視圖角色設定・AI 擬真攝影風（非真人照片）・以原典描寫為依據"
+      versions:
+        - image: "/assets/img/jinpingmei/live-action/pujing-master.jpg"
+          title: "普靜選角母版（AI 擬真攝影風，非真人照片）"
+          alt: "普靜選角母版（AI 擬真攝影風，非真人照片）"
+          caption: "選角母版・AI 擬真攝影風"
+    permalink: "/jinpingmei/characters/pujing/"
+    title: "普靜｜金瓶梅角色研究"
+    description: "金瓶梅角色研究：普靜——AI 虛擬劇組整理的人物側寫、原文依據、三視圖設定與聲音方向，皆以《金瓶梅詞話》原典為本。"
