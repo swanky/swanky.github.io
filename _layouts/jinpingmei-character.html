@@ -22,6 +22,16 @@
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <style>
+    /* 跨書對照小區塊（T6b）。jinpingmei.css 由其他工作同時在改，樣式先留在本 layout 內。 */
+    .jpm-crossbook { margin: .4rem 0 0; padding: 1rem 1.1rem; border: 1px solid var(--jpm-line); background: var(--jpm-panel); }
+    .jpm-crossbook p { margin: 0 0 .7rem; color: #cfc6b0; font-size: .92rem; line-height: 1.95; }
+    .jpm-crossbook p:last-child { margin-bottom: 0; }
+    .jpm-crossbook .go { color: var(--jpm-gold-bright); }
+    .jpm-crossbook-chapters { display: flex; flex-wrap: wrap; gap: .5rem; margin: .2rem 0 0; padding: 0; list-style: none; }
+    .jpm-crossbook-chapters a { display: block; padding: .3rem .7rem; border: 1px solid var(--jpm-line); font-size: .84rem; color: var(--jpm-paper); text-decoration: none; }
+    .jpm-crossbook-chapters a:hover { color: var(--jpm-gold-bright); }
+  </style>
   {% include jinpingmei/gtag.html %}
 </head>
 <body class="jpm">
@@ -75,6 +85,28 @@
       <div class="jpm-prose"><h2>古本形象</h2><p>四百年前刊本裡的這個角色——十七世紀木刻插圖、公共領域，與上方的 AI 重製並置對照。人物身分依圖上題名，並非後人推測。來源與授權見<a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>。</p></div>
       <div class="jpm-versions">
         {% for it in oldplates %}{% include jinpingmei/woodcut-figure.html id=it.id zoom=true gallery="jpm-character" %}{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {%- comment -%}
+      跨書對照（T6b）——只有 front matter 有 also_in 的角色會輸出（目前是同時出現在《水滸傳》的三人）。
+      文案全部來自 front matter：跨書關係與版本的說法一律逐字引用 _data/books.yml 既有措辭，
+      回次一律是「名字出現的回次」這種機械統計，不在此下情節或戲份判斷。
+    {%- endcomment -%}
+    {% if page.also_in %}
+    <section class="jpm-section" style="padding-top:0" aria-label="另一部小說裡的同名人物">
+      <div class="jpm-prose"><h2>{{ page.also_in.heading }}</h2></div>
+      <div class="jpm-crossbook">
+        <p>{{ page.also_in.intro }}</p>
+        {% if page.also_in.link_url %}<p><a class="go" href="{{ page.also_in.link_url | relative_url }}">{{ page.also_in.link_text }} ▶</a></p>
+        {% elsif page.also_in.no_link_note %}<p>{{ page.also_in.no_link_note }}</p>{% endif %}
+        <p>{{ page.also_in.count_note }}</p>
+        {% if page.also_in.chapters %}
+        <ul class="jpm-crossbook-chapters">
+          {% for ch in page.also_in.chapters %}<li><a href="{{ ch.url | relative_url }}">{{ ch.label }}</a></li>{% endfor %}
+        </ul>
+        {% endif %}
       </div>
     </section>
     {% endif %}

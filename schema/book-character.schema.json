@@ -48,6 +48,26 @@
           "type": "string",
           "description": "TA 白話一句，判圖流程產出"
         },
+        "also_in": {
+          "type": "object",
+          "description": "跨作品同名人物的互連。**手動維護，不是 tools/import_book_characters.mjs 產生的**——重跑匯入時必須保留這個欄位（tests/cross-book-characters.test.mjs 是掉失的警報）。同名不等於同一人（architecture.md §6：跨作品同名角色不得視為同一人），本欄只提供對照連結，不做版本承襲判斷；一切版本學說法一律逐字引用 _data/books.yml 既有措辭。",
+          "required": ["heading", "intro", "url", "link_text", "count_note"],
+          "additionalProperties": false,
+          "properties": {
+            "heading": { "type": "string" },
+            "intro": { "type": "string" },
+            "url": {
+              "type": "string",
+              "pattern": "^/[a-z0-9/-]+/$",
+              "description": "另一部作品裡同名人物的頁面網址（站內絕對路徑）"
+            },
+            "link_text": { "type": "string" },
+            "count_note": {
+              "type": "string",
+              "description": "名字在另一部作品出現的回次統計（機械事實），不得寫成情節或戲份判斷"
+            }
+          }
+        },
         "variants": {
           "type": "array",
           "minItems": 1,

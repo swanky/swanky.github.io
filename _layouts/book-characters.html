@@ -15,6 +15,14 @@
 <head>
   {%- include book/head.html page_title=page_title description=page_desc og_type='website' -%}
   <link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">
+  <style>
+    /* 跨書對照小區塊（T6b）。book-reader.css 由其他工作同時在改，樣式先留在本 layout 內。 */
+    .bk-crossbook { margin: .35rem 0 0; padding: .85rem 1rem; border: 1px solid var(--bk-line); }
+    .bk-crossbook h3 { margin: 0 0 .5rem; font-family: var(--bk-serif); font-size: .95rem; letter-spacing: .14em; color: var(--bk-paper); }
+    .bk-crossbook p { margin: 0 0 .5rem; font-size: .82rem; line-height: 1.9; color: var(--bk-muted); }
+    .bk-crossbook p:last-child { margin-bottom: 0; }
+    .bk-crossbook a { color: var(--bk-paper); }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,6 +83,18 @@
             <span>{{ v.label }}</span>
           </a>
           {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- comment -%}
+          跨書對照——只有資料檔有 also_in 的角色會輸出。文案與網址全部來自資料，
+          本檔仍不出現任何書名字串或單一作品專屬路徑（同 layout 開頭的硬規則）。
+        {%- endcomment -%}
+        {%- if c.also_in %}
+        <div class="bk-crossbook">
+          <h3>{{ c.also_in.heading }}</h3>
+          <p>{{ c.also_in.intro }}</p>
+          <p><a href="{{ c.also_in.url | relative_url }}">{{ c.also_in.link_text }} ▶</a></p>
+          <p>{{ c.also_in.count_note }}</p>
         </div>
         {%- endif %}
       </li>
