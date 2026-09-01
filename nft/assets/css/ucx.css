@@ -43,6 +43,7 @@
 	--mono: "Space Mono", ui-monospace, monospace;
 
 	--nav-h: 58px;
+	--rail-h: 46px;            /* 段落導覽；錨點 scroll-margin 依它計算 */
 	--ease-out: cubic-bezier(.16, .84, .44, 1);
 }
 
@@ -89,18 +90,29 @@ ul { margin: 0; padding: 0; }
 	min-width: 0;   /* flex 子項預設 min-width:auto，會被內容撐開、拖著整頁橫向溢出 */
 }
 .nav__links::-webkit-scrollbar { display: none; }
-.nav__links, .rail__list { mask-image: linear-gradient(90deg, #000 0 92%, transparent 100%); }
+/* 溢出淡出遮罩只在真的會橫向捲動的手機版才套（見 §16）。曾經無條件套用，
+   把最右邊那顆膠囊按鈕的右緣吃掉約 3 成，看起來像沒描完的半透明框。 */
 .nav__links a {
 	color: var(--on-ink-2); font-size: .84rem; white-space: nowrap;
 	padding: .55rem 0; transition: color .2s var(--ease-out);
 }
 .nav__links a:hover { color: #fff; }
 .nav__links .is-here a { color: #fff; box-shadow: inset 0 -2px 0 var(--red); }
+/* 實心＝這是本頁唯一的主要行動。回主站那類離站連結一律放頁尾，不佔這個位置 */
 .nav__links .cta a {
-	color: #fff; border: 1px solid rgba(255, 255, 255, .34); border-radius: 999px;
-	padding: .34rem .9rem;
+	color: var(--ink); background: #fff; border-radius: 999px;
+	padding: .38rem .95rem; font-weight: 500;
+	transition: background .2s var(--ease-out), color .2s var(--ease-out);
 }
-.nav__links .cta a:hover { background: #fff; color: var(--ink); }
+.nav__links .cta a:hover { background: var(--red); color: #fff; }
+
+/* 跳過導覽（鍵盤使用者） */
+.skip {
+	position: fixed; top: .5rem; left: .5rem; z-index: 100; transform: translateY(-200%);
+	background: #fff; color: var(--ink); border-radius: var(--r-s); padding: .5rem .9rem;
+	font-size: .84rem;
+}
+.skip:focus { transform: none; }
 
 /* ---------- 4. Hero：整幅合照，字壓在上面 --------------------------------- */
 .hero {
@@ -120,16 +132,26 @@ ul { margin: 0; padding: 0; }
 	position: relative; width: 100%;
 	padding-block: clamp(3rem, 12vh, 7rem) 0;   /* 左右內距留給 .wrap，不可用 shorthand 蓋掉 */
 }
-.hero__logo { width: clamp(148px, 20vw, 226px); margin-bottom: var(--s3); }
+/* logo 本身就寫著 UNIFORM CLONEX，所以 h1 用 logo 當標題、文字給輔助技術讀，
+   不再在同一屏把團名印兩次 */
+.hero__name { margin: 0 0 var(--s2); }
+.hero__logo { width: clamp(190px, 26vw, 320px); height: auto; }
 .hero__tag { color: var(--red-lift); margin: 0 0 .7rem; }
-.hero__name {
-	color: #fff; font-size: clamp(2.6rem, 7.4vw, 5.4rem); letter-spacing: -.03em;
-	margin: 0 0 var(--s2);
-}
 .hero__lead {
 	color: var(--on-ink); font-size: clamp(1.05rem, 1.9vw, 1.4rem); line-height: 1.5;
 	max-width: 24em; margin: 0 0 var(--s3);
 }
+/* 第一屏要先給「繼續看下去」，離站連結退成次要 */
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem var(--s2); }
+.btn {
+	display: inline-flex; align-items: center; gap: .5rem;
+	background: var(--red); color: #fff; border-radius: 999px;
+	padding: .7rem 1.4rem; font-size: .95rem; font-weight: 500;
+	transition: background .2s var(--ease-out), transform .2s var(--ease-out);
+}
+.btn:hover { background: var(--red-ink); color: #fff; transform: translateY(-1px); }
+.btn__ar { transition: transform .2s var(--ease-out); }
+.btn:hover .btn__ar { transform: translateY(2px); }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
 .chip {
 	font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; color: var(--on-ink);
@@ -152,35 +174,32 @@ ul { margin: 0; padding: 0; }
 		var(--blue) 0 10px, var(--blue-ink) 10px 20px);
 }
 
-/* ---------- 5. 成員快捷列（貼齊在 nav 下） -------------------------------- */
+/* ---------- 5. 段落導覽（貼齊在 nav 下） ---------------------------------- */
+/* 整頁很長（桌機約 15 屏、手機約 40 屏），這條列出全部段落並標示目前位置，
+   讀者才知道自己在哪、還剩什麼。原本這裡放五顆成員頭像，出現在讀者
+   認識任何一位成員之前，等於五個陌生號碼——那份索引移到成員段落內。 */
 .rail {
 	position: sticky; top: var(--nav-h); z-index: 50;
 	background: rgba(251, 250, 247, .95); backdrop-filter: blur(8px);
 	border-bottom: 1px solid var(--line);
 }
-.rail__in { display: flex; align-items: center; gap: var(--s2); padding-block: .55rem; }
+.rail__in { display: flex; align-items: center; gap: var(--s2); height: var(--rail-h); }
 .rail__lab { color: var(--mute); flex: 0 0 auto; }
-.rail__list { display: flex; gap: .45rem; list-style: none; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+.rail__list { display: flex; gap: .3rem; list-style: none; overflow-x: auto; scrollbar-width: none; min-width: 0; }
 .rail__list::-webkit-scrollbar { display: none; }
 .rail__list a {
-	display: flex; align-items: center; gap: .45rem; flex: 0 0 auto;
-	width: max-content; white-space: nowrap;
-	padding: .22rem .6rem .22rem .22rem; border: 1px solid var(--line);
-	border-radius: 999px; background: #fff;
-	transition: border-color .2s var(--ease-out), transform .2s var(--ease-out);
+	display: block; flex: 0 0 auto; white-space: nowrap;
+	padding: .3rem .8rem; border-radius: 999px;
+	font-size: .84rem; color: var(--text-2);
+	transition: background .2s var(--ease-out), color .2s var(--ease-out);
 }
-.rail__list a:hover { border-color: var(--red); transform: translateY(-1px); }
-.rail__list img { width: 26px; height: 26px; border-radius: 999px; object-fit: cover; }
-.rail__list span {
-	flex: 0 0 auto;
-	font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; color: var(--text-2);
-	font-variant-numeric: tabular-nums;
-}
+.rail__list a:hover { background: #fff; color: var(--red-ink); }
+.rail__list .is-at a { background: var(--ink); color: #fff; }
 
 /* ---------- 6. 區塊外殼 ---------------------------------------------------- */
 .sec { padding: var(--s6) 0; }
 /* 錨點要停在固定 nav＋成員快捷列下面，不然標題會被蓋掉 */
-section[id], .mb { scroll-margin-top: calc(var(--nav-h) + 62px); }
+section[id], .mb { scroll-margin-top: calc(var(--nav-h) + var(--rail-h) + 14px); }
 .sec--tint { background: var(--paper-2); }
 .sec--ink { background: var(--ink); color: var(--on-ink); }
 .sec--ink a { color: var(--blue-lift); }
@@ -211,26 +230,49 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + 62px); }
 .lineage span { font-size: .92rem; color: var(--text-2); }
 .lineage strong { color: var(--text); }
 
-/* ---------- 8. 團員名冊卡 -------------------------------------------------- */
-.roster { display: grid; gap: var(--s2); grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); }
-.roster--sm { max-width: 800px; }   /* 卡片數少時不要被 1fr 撐大 */
-.rcard {
-	display: block; border-radius: var(--r-l); overflow: hidden; background: #fff;
-	border: 1px solid var(--line);
-	transition: transform .26s var(--ease-out), box-shadow .26s var(--ease-out), border-color .26s var(--ease-out);
+/* ---------- 8. 人物索引 ---------------------------------------------------- */
+/* 取代原本的大名冊卡：那套卡片高 380px、五張就是 1900px 的純捲動，而正下方
+   接著的完整檔案又是同樣五個人。索引只負責「本段有誰」，一眼看完就往下走。 */
+.idx { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); list-style: none; }
+.idx--sm { max-width: 560px; }
+.idx a {
+	display: flex; align-items: center; gap: .7rem; height: 100%;
+	background: #fff; border: 1px solid var(--line); border-radius: 999px;
+	padding: .4rem 1rem .4rem .4rem;
+	transition: border-color .2s var(--ease-out), transform .2s var(--ease-out);
 }
-.rcard:hover { transform: translateY(-4px); border-color: var(--red); box-shadow: 0 12px 28px -14px rgba(10, 16, 36, .38); }
-.rcard__img { aspect-ratio: 1; background: var(--paper-2); }
-.rcard__img img { width: 100%; height: 100%; object-fit: cover; }
-.rcard__body { background: var(--ink); border-top: 3px solid var(--red); padding: .7rem .85rem .8rem; }
-.rcard__id { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; color: var(--blue-lift); font-variant-numeric: tabular-nums; }
-.rcard__name { color: #fff; font-size: 1.02rem; margin: .1rem 0 .12rem; }
-.rcard__role { font-size: .76rem; color: var(--on-ink-2); }
+.idx a:hover { border-color: var(--red); transform: translateY(-2px); }
+.idx img { width: 46px; height: 46px; border-radius: 999px; object-fit: cover; flex: 0 0 auto; background: var(--paper-2); }
+.idx__txt { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .5rem; min-width: 0; flex: 1; }
+.idx__id { color: var(--blue-ink); }
+.idx__name { font-weight: 700; font-size: .98rem; color: var(--text); }
+.idx__role { font-size: .78rem; color: var(--mute); flex-basis: 100%; }
+.idx__ar { color: var(--mute); flex: 0 0 auto; transition: transform .2s var(--ease-out); }
+.idx a:hover .idx__ar { transform: translateY(2px); color: var(--red); }
 
 /* ---------- 9. 成員檔案 ---------------------------------------------------- */
-.mb { scroll-margin-top: calc(var(--nav-h) + 62px); padding: var(--s5) 0; border-top: 1px solid var(--line); }
+.mb { padding: var(--s5) 0; border-top: 1px solid var(--line); }
 .mb:first-of-type { border-top: 0; padding-top: var(--s4); }
 .mb__in { display: grid; gap: var(--s5); grid-template-columns: minmax(0, 320px) minmax(0, 1fr); align-items: start; }
+/* 幕後不在台前，版面份量就不該追平正團（改版前 2 位幕後佔 3424px、3 位正團 4746px） */
+.mb--sm { padding: var(--s4) 0; }
+.mb--sm .mb__in { grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: var(--s4); }
+.mb--sm .mb__name { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
+.mb--sm .dna { padding: .8rem var(--s2); }
+
+/* 摺疊：規格表與多視角圖收起來，想看的人才展開 */
+.fold { margin-top: var(--s3); border-top: 1px solid var(--line); }
+.fold > summary {
+	cursor: pointer; list-style: none; padding: .7rem 0;
+	font-family: var(--mono); font-size: .76rem; letter-spacing: .08em; color: var(--blue-ink);
+}
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::before { content: "＋ "; }
+.fold[open] > summary::before { content: "－ "; }
+.fold > summary:hover { color: var(--red-ink); }
+.fold .specs { margin-top: 0; border-top: 0; }
+.gal--sm .gal__grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+.gal--sm .gal__item img { aspect-ratio: 1; object-fit: cover; }
 
 .pfp { margin: 0; }
 .pfp__frame {
@@ -276,6 +318,7 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + 62px); }
 
 /* 圖廊 */
 .gal { margin-top: var(--s4); }
+.fold .gal { margin-top: 0; }
 .gal__lab { display: flex; align-items: center; gap: .6rem; margin: var(--s3) 0 .7rem; }
 .gal__lab::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .gal__grid { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); }
@@ -314,10 +357,28 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + 62px); }
 .works { display: grid; gap: var(--s2); grid-template-columns: repeat(auto-fit, minmax(288px, 1fr)); }
 .work {
 	background: #fff; border: 1px solid var(--line); border-radius: var(--r-l);
-	padding: var(--s3); display: flex; flex-direction: column; gap: .35rem;
+	overflow: hidden; display: flex; flex-direction: column;
 	transition: border-color .2s var(--ease-out);
 }
 .work:hover { border-color: var(--blue); }
+.work__body { padding: var(--s3); display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+/* 這是「影像作品」區，卡片本來全是文字——沒有實際素材的（影片還沒上線）維持
+   無圖並用虛線框標示，不拿角色定裝照冒充影片畫面。 */
+.work__img { position: relative; aspect-ratio: 16 / 9; background: var(--ink); overflow: hidden; }
+.work__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
+.work__img--contain { background: var(--paper-2); }
+.work__img--contain img { object-fit: contain; padding: .6rem; }
+.work:hover .work__img img { transform: scale(1.03); }
+.work__play {
+	position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%);
+	width: 52px; height: 52px; border-radius: 999px; background: rgba(212, 57, 76, .92);
+	box-shadow: 0 6px 20px -6px rgba(10, 16, 36, .6);
+}
+.work__play::after {
+	content: ""; position: absolute; inset: 50% auto auto 54%; transform: translate(-50%, -50%);
+	border: 9px solid transparent; border-left: 14px solid #fff; border-right: 0;
+}
+.work--soon { border-style: dashed; background: transparent; }
 .work__top { display: flex; align-items: baseline; gap: .6rem; }
 .work__date { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; color: var(--red-ink); font-variant-numeric: tabular-nums; }
 .work__meta { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; color: var(--mute); }
@@ -368,20 +429,46 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + 62px); }
 	.rights { columns: 1; }
 }
 @media (max-width: 760px) {
-	:root { --s6: 3.2rem; --nav-h: 54px; }
-	.hero { min-height: 0; }
-	.hero__in { padding-block-start: var(--s5); }
-	.hero__data { grid-template-columns: 1fr; gap: .9rem; }
-	.mb__in { grid-template-columns: 1fr; }
-	.pfp { max-width: 260px; }
-	.specs div { grid-template-columns: 5.4rem 1fr; }
-	.gal__grid { grid-template-columns: repeat(auto-fill, minmax(102px, 1fr)); }
+	:root { --s6: 3.2rem; --nav-h: 54px; --rail-h: 44px; }
+
+	/* 手機導覽只留「NFT 作品」＋主要行動：五個項目在 375px 會橫向溢出 264px，
+	   最後兩項整個在畫面外。回 /nft/ 由左上角品牌標負責，其餘連結在頁尾。 */
+	.nav__wide { display: none; }
+	.nav__links { gap: var(--s2); }
 	.nav__brand img { height: 17px; }
 	.rail__lab { display: none; }
+
+	/* 這裡才真的會橫向捲動，淡出提示有意義；padding 讓最後一項閃開淡出區 */
+	.rail__list {
+		mask-image: linear-gradient(90deg, #000 0 calc(100% - 26px), transparent 100%);
+		padding-right: 30px;
+	}
+
+	.hero { min-height: 0; }
+	.hero__in { padding-block-start: var(--s5); }
+	/* 窄螢幕上斜向漸層遮不住角色，文字會壓在臉和身體上——改用縱向為主 */
+	.hero__bg::after {
+		background:
+			linear-gradient(0deg, rgba(10, 16, 36, .96) 0%, rgba(10, 16, 36, .82) 34%, rgba(10, 16, 36, .3) 62%, rgba(10, 16, 36, .1) 100%),
+			linear-gradient(90deg, rgba(10, 16, 36, .72) 0%, rgba(10, 16, 36, .2) 70%);
+	}
+	.hero__bg img { object-position: 50% 8%; }
+	.hero__data { grid-template-columns: 1fr; gap: .9rem; }
+	.hero__act { gap: .8rem; }
+	.btn { width: 100%; justify-content: center; }
+
+	.idx { grid-template-columns: 1fr; }
+	.mb__in, .mb--sm .mb__in { grid-template-columns: 1fr; }
+	.pfp { max-width: 260px; }
+	.mb--sm .pfp { max-width: 180px; }
+	.specs div { grid-template-columns: 5.4rem 1fr; }
+	.gal__grid { grid-template-columns: repeat(auto-fill, minmax(102px, 1fr)); }
+	.gal--sm .gal__grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+
 	/* 觸控目標 ≥44px */
 	.chip { padding: .74rem 1rem; }
 	.oslink { padding: .7rem 0; }
-	.rail__list a { padding: .4rem .85rem .4rem .32rem; }
-	.rail__list img { width: 30px; height: 30px; }
+	.rail__list a { padding: .55rem .85rem; }
 	.nav__links a { padding: .8rem 0; }
+	.fold > summary { padding: .9rem 0; }
 }

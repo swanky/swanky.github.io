@@ -8,20 +8,8 @@
     "lead": "當一切都能重抽，統一反而是最強的宣言。",
     "channels": [
       {
-        "label": "X（Twitter）",
+        "label": "追蹤 @ucx_tw",
         "url": "https://x.com/ucx_tw"
-      },
-      {
-        "label": "UCX 出道紀錄（2022）",
-        "url": "../technical/ucx-uniform-clonex-origin/"
-      },
-      {
-        "label": "制服女孩 NFT 系列（2021）",
-        "url": "oursong.html"
-      },
-      {
-        "label": "Bunny Cyber Tarot",
-        "url": "https://swanky.github.io/tarot/decks/"
       }
     ],
     "stats": [
@@ -65,7 +53,7 @@
   },
   "hero": {
     "image": "group-shot/hero.webp",
-    "og": "group-shot/og.webp"
+    "og": "group-shot/og.jpg"
   },
   "members": [
     {
@@ -909,7 +897,9 @@
       "title": "BUNNY AWAKENS",
       "meta": "30 秒",
       "desc": "把 CloneX #15755 從一張 PFP 變成一個開始呼吸的角色。",
-      "url": "https://youtu.be/lXnwBJBcbXY"
+      "url": "https://youtu.be/lXnwBJBcbXY",
+      "image": "works/bunny-awakens.jpg",
+      "fit": "cover"
     },
     {
       "date": "2026-07",
@@ -917,7 +907,9 @@
       "title": "Cyber Tarot：78 張塔羅牌",
       "meta": null,
       "desc": "以 Bunny 為主體重新設計的完整塔羅牌組。",
-      "url": "https://swanky.github.io/tarot/decks/"
+      "url": "https://swanky.github.io/tarot/decks/",
+      "image": "../../assets/img/tarot/thumbs/clonex/major-00.webp",
+      "fit": "contain"
     },
     {
       "date": "2022-12",
@@ -926,7 +918,8 @@
       "meta": "11 位成員",
       "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一隻 CloneX 均已取得其持有者授權。",
       "url": null,
-      "image": "brand/poster_2022_red.webp"
+      "image": "brand/poster_2022_4x3_600.webp",
+      "fit": "cover"
     },
     {
       "date": "2021",
@@ -934,7 +927,9 @@
       "title": "制服女孩 NFT ／ 加密女孩 NFT",
       "meta": null,
       "desc": "十年制服女孩攝影系列的鏈上第一代。收益與模特兒對半分潤。",
-      "url": "oursong.html"
+      "url": "../oursong/",
+      "image": "../oursong/web/ruru1-cover.jpg",
+      "fit": "cover"
     }
   ],
   "collection": [
