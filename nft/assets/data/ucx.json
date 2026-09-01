@@ -879,7 +879,9 @@
       "title": "REROLL（擬真版）",
       "meta": "93 秒",
       "desc": "同一個故事的兩種視覺語言之一。一間可以重抽外型的店。",
-      "url": null
+      "url": "https://youtu.be/9CxNWxmb5qY",
+      "image": "works/reroll-photoreal.jpg",
+      "fit": "cover"
     },
     {
       "date": "2026-08",
@@ -887,7 +889,9 @@
       "title": "REROLL（卡通版）",
       "meta": "93 秒",
       "desc": "同上，手繪質感的版本。",
-      "url": null
+      "url": "https://youtu.be/WO2lMCWzVNQ",
+      "image": "works/reroll-cartoon.jpg",
+      "fit": "cover"
     },
     {
       "date": "2026-08",
