@@ -3,6 +3,9 @@
 # 版本 A：《金瓶梅詞話》（萬曆本）→ /jinpingmei/text/NNN/（十卷結構）
 # 版本 B：《新刻繡像批評金瓶梅》（崇禎本）→ /jinpingmei/text/chongzhen/NNN/（無卷，十回一組顯示）
 # 原則：原文一字不改——只做結構轉換（段落→<p>、wikitext ==X== → <h2>），不動任何內文字元。
+# 段落 id：p-{回數三位}-{段落四位}，只對正文 <p> 編號、<h2> 不佔序號——命名與編號規則跟
+# tools/import_book_chapters.mjs（_books/ 五書）一致，並與 assets/js/chapter-anchors.js 的
+# nth 計數（chapterBody.querySelectorAll('p') 的 1-based 序）完全對齊。
 # 用法：python -X utf8 tools/build_jinpingmei_chapters.py
 import re
 import sys
@@ -65,7 +68,7 @@ def convert(ed) -> int:
             if t.startswith(">"):
                 um = URL_RE.search(t)
                 if um and not src_url:
-                    src_url = um.group(1).rstrip("｜")
+                    src_url = um.group(1).split("｜")[0].rstrip("｜")
                 vm = VOL_RE.search(t)
                 if vm:
                     volume = int(vm.group(1))
@@ -84,6 +87,7 @@ def convert(ed) -> int:
             volume = (num + 9) // 10 if num > 0 else 0  # 顯示分組用，非原書卷次
 
         paras = []
+        p_seq = 0
         for raw in lines[body_start:]:
             t = raw.rstrip()
             if not t.strip():
@@ -92,7 +96,9 @@ def convert(ed) -> int:
             if wh:
                 paras.append(f"<h2>{esc(wh.group(1).strip())}</h2>")
             else:
-                paras.append(f"<p>{esc(t)}</p>")
+                p_seq += 1
+                pid = f"p-{num:03d}-{p_seq:04d}"
+                paras.append(f'<p id="{pid}">{esc(t)}</p>')
         if not paras:
             sys.exit(f"{ed['slug']}/{f.name}: 空內文")
 
