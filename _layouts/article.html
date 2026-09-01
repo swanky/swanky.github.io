@@ -72,4 +72,10 @@ layout: default
     </div>
   </section>
 
+  {%- comment -%}
+  自動「本文目錄」：長文在第一個段落標題前插一份可點清單。
+  文章已經手寫大綱（.article-toc）或標題太少時會自己讓路，詳見 assets/js/article-toc.js。
+  {%- endcomment -%}
+  <script type="module" src="{{ '/assets/js/article-toc.js' | relative_url }}"></script>
+
 </main><!-- End #main -->
