@@ -1,0 +1,103 @@
+---
+layout: null
+permalink: /books/search/
+title: 古典小說原文搜尋
+description: 在五部古典小說的原文裡找句子：輸入人名或記得的一句話，列出每一段對得上的原文，點一下就跳到那本書那一回的那一段；也可以一次打兩個詞，只列同時出現的段落。
+---
+<!doctype html>
+<html lang="zh-TW">
+{%- comment -%}
+  平台層的原文搜尋。可選範圍全部來自 _data/books.yml——加一本書不必改這個檔。
+  原文資料由 tools/build_search_index.mjs 產生在 assets/search/ 下，頁面只負責
+  把站台根目錄（relative_url）交給 JS，網址規則一律照資料裡的 base 欄位。
+{%- endcomment -%}
+{%- assign live = site.data.books | where_exp: 'b', "b.status != 'planned'" -%}
+{%- assign total_chapters = 0 -%}
+{%- for b in live -%}{%- for ed in b.editions -%}{%- assign total_chapters = total_chapters | plus: ed.imported_chapters -%}{%- endfor -%}{%- endfor -%}
+<head>
+  {%- include book/head.html page_title=page.title description=page.description og_type='website' -%}
+  <link href="{{ '/assets/css/book-search.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SearchResultsPage",
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "inLanguage": "zh-TW",
+    "isPartOf": { "@type": "CollectionPage", "name": "古典小說書房", "url": {{ '/books/' | absolute_url | jsonify }} }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "古典小說書房", "item": {{ '/books/' | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
+</head>
+<body class="bk bk-search">
+  <a class="bk-skip" href="#search-main">跳到搜尋</a>
+  {%- include book/topbar.html brand_url='/books/' brand_name='古典小說書房' brand_sub='CLASSIC NOVELS' seal='書' toc_url='/books/' toc_label='全部作品' -%}
+
+  <main id="search-main" class="bk-shell bks">
+    <header class="bks-hero">
+      <span class="bk-kicker">原文搜尋 ／ FULL TEXT</span>
+      <h1>在原文裡<br>找那一句</h1>
+      <p class="bks-hero__lead">五部書、{{ total_chapters }} 篇原文，一個字一個字比對。找到的每一段都直接連回該書該回的那一段——不是摘要，是原文本身。</p>
+    </header>
+
+    <form class="bks-form" data-search-form data-root="{{ '/' | relative_url }}" data-index="/assets/search/index.json">
+      <div class="bks-query">
+        <label class="bks-query__label" for="bks-q">想找的字或句子</label>
+        <div class="bks-query__row">
+          <input id="bks-q" class="bks-query__input" type="search" name="q" data-search-input
+                 placeholder="例如：潘金蓮，或 西門慶 潘金蓮" autocomplete="off" enterkeyhint="search"
+                 aria-describedby="bks-q-help" spellcheck="false">
+          <button class="bks-query__go" type="submit">開始找</button>
+        </div>
+        <p class="bks-query__help" id="bks-q-help">打一個詞就找那個詞。中間空一格再打第二個詞，就只列<b>兩個詞都出現</b>的段落——例如「西門慶 潘金蓮」找的是兩人同時在場的那些段。找的是原文本來的字，所以不同底本的用字若不一樣（例如《金瓶梅》崇禎本把「陳經濟」寫成「陳敬濟」），要照那個底本的寫法才找得到。</p>
+      </div>
+
+      <fieldset class="bks-picker">
+        <legend>要在哪一部裡找</legend>
+        <p class="bks-picker__note">選好之後第一次按「開始找」，會先把那一部的原文取回來，可能要等幾秒；同一部再找就是立刻出結果。</p>
+        <div class="bks-picker__grid">
+          {%- assign first = true -%}
+          {%- for b in live -%}{%- for ed in b.editions -%}{%- if ed.imported_chapters > 0 -%}
+          <label class="bks-choice">
+            <input type="radio" name="bks-edition" value="{{ b.id }}-{{ ed.id }}"{% if first %} checked{% assign first = false %}{% endif %}>
+            <span class="bks-choice__book">{{ b.title }}</span>
+            <span class="bks-choice__ed">{{ ed.label }}<small>{{ ed.imported_chapters }} 篇原文</small></span>
+          </label>
+          {%- endif -%}{%- endfor -%}{%- endfor -%}
+          <label class="bks-choice bks-choice--all">
+            <input type="radio" name="bks-edition" value="__all__">
+            <span class="bks-choice__book">五部一起找</span>
+            <span class="bks-choice__ed">全部底本<small>要取回全部原文，網路慢的話會等久一點</small></span>
+          </label>
+        </div>
+      </fieldset>
+    </form>
+
+    <p class="bks-status" data-search-status role="status" aria-live="polite">打幾個字就可以開始找；要換一部書的話，在下面挑。</p>
+
+    <section class="bks-results" aria-labelledby="bks-results-h">
+      <h2 class="bks-results__h" id="bks-results-h">找到的原文</h2>
+      <div class="bks-results__body" data-search-results aria-busy="false"></div>
+    </section>
+
+    <aside class="bks-foot" aria-label="關於這個搜尋">
+      <h2>關於這裡找到的東西</h2>
+      <p>找到的段落是站上收錄的原文本身，一個字都沒有改寫。每一部書收的是哪一個底本、用字有沒有經過轉換，各書頁面上都寫清楚了——<a href="{{ '/books/' | relative_url }}">全部作品</a>可以逐本看。</p>
+      <p>結果按原文的先後順序排（第幾回、第幾段），不做「哪一段最相關」的排序：找出處的時候，照情節順序讀下來通常才對。</p>
+    </aside>
+  </main>
+
+  {%- include book/footer.html -%}
+  <script type="module" src="{{ '/assets/js/book-search.js' | relative_url }}?v=20260901-1"></script>
+</body>
+</html>

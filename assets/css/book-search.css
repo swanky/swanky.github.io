@@ -1,0 +1,125 @@
+/* 古典小說原文搜尋（/books/search/）專屬樣式。
+ *
+ * 只服務這一頁，刻意獨立成檔：通用閱讀器 book-reader.css 與旗艦 jinpingmei.css
+ * 都不因為多了一個搜尋頁而動到。載入順序在 book-reader.css 之後
+ * （books/search/index.html 自己 link），所以這裡可以安心用 --bk-* 別名——
+ * 米紙模式（html.bk-paper）會自動換色，本檔不必再寫一套淺色選擇器。
+ * 色值正本：assets/css/_reading-tokens.css。
+ *
+ * 版面遵 docs/design.md 第 29 行的工具頁硬約束：hero 不撐屏，輸入框必須落在
+ * 1440×900 與 390×844 的首屏內。
+ */
+
+.bks { padding-bottom: clamp(56px, 9vw, 104px); }
+
+/* ── 頁首（工具頁：刻意壓低，把輸入框推進首屏） ── */
+.bks-hero { padding: clamp(30px, 5vw, 54px) 0 clamp(20px, 3vw, 30px); max-width: 46rem; }
+.bks-hero .bk-kicker { display: block; margin-bottom: 1rem; color: var(--bk-gold); font: 700 .66rem/1.5 var(--bk-sans); letter-spacing: .24em; }
+.bks-hero h1 { margin: 0 0 1rem; color: var(--bk-paper); font: 900 clamp(2.1rem, 5.2vw, 3.5rem)/1.15 var(--bk-serif); letter-spacing: -.02em; }
+.bks-hero__lead { margin: 0; color: color-mix(in srgb, var(--bk-paper) 78%, var(--bk-muted)); font-size: .94rem; line-height: 1.95; }
+
+/* ── 選書 ── */
+.bks-form { margin: 0; }
+.bks-picker { margin: 0; padding: clamp(1rem, 2.4vw, 1.4rem); border: 1px solid var(--bk-line); background: var(--bk-panel); }
+.bks-picker legend { padding: 0 .5rem; color: var(--bk-gold); font-family: var(--bk-serif); font-size: .92rem; font-weight: 700; letter-spacing: .16em; }
+.bks-picker__note { margin: 0 0 1rem; color: var(--bk-muted); font-size: .81rem; line-height: 1.85; }
+.bks-picker__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .5rem; }
+
+.bks-choice {
+  position: relative; display: flex; flex-direction: column; gap: .12rem;
+  padding: .6rem .75rem .6rem 2.1rem;
+  border: 1px solid var(--bk-line); background: transparent; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.bks-choice:hover { border-color: var(--bk-gold); }
+.bks-choice input { position: absolute; left: .7rem; top: .92rem; margin: 0; accent-color: var(--bk-gold); }
+.bks-choice__book { color: var(--bk-paper); font-family: var(--bk-serif); font-size: 1rem; font-weight: 700; letter-spacing: .04em; }
+.bks-choice__ed { color: var(--bk-muted); font-size: .76rem; line-height: 1.6; }
+.bks-choice__ed small { display: block; font-size: .72rem; opacity: .85; }
+.bks-choice:has(input:checked) { border-color: var(--bk-gold); background: color-mix(in srgb, var(--bk-gold) 12%, transparent); }
+.bks-choice:has(input:checked) .bks-choice__ed { color: color-mix(in srgb, var(--bk-paper) 70%, var(--bk-muted)); }
+.bks-choice:focus-within { outline: 2px solid var(--bk-gold); outline-offset: 2px; }
+.bks-choice--all .bks-choice__book { color: var(--bk-gold); }
+
+/* ── 輸入 ── */
+.bks-query { margin: 0 0 clamp(18px, 3vw, 26px); }
+.bks-query__label { display: block; margin-bottom: .5rem; color: var(--bk-gold); font-family: var(--bk-serif); font-size: .92rem; font-weight: 700; letter-spacing: .16em; }
+.bks-query__row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.bks-query__input {
+  flex: 1 1 16rem; min-width: 0; padding: .8rem .9rem;
+  border: 1px solid var(--bk-line); background: var(--bk-bg);
+  color: var(--bk-paper); font-family: var(--bk-sans); font-size: 1.05rem; line-height: 1.5;
+}
+.bks-query__input::placeholder { color: color-mix(in srgb, var(--bk-muted) 78%, transparent); }
+.bks-query__input:focus { outline: 2px solid var(--bk-gold); outline-offset: 1px; border-color: var(--bk-gold); }
+.bks-query__go {
+  flex: 0 0 auto; padding: .8rem 1.6rem;
+  border: 1px solid var(--bk-gold); background: var(--bk-gold); color: var(--bk-on-gold);
+  font-family: var(--bk-serif); font-size: 1rem; font-weight: 700; letter-spacing: .12em; cursor: pointer;
+}
+.bks-query__go:hover { background: var(--bk-gold-bright); border-color: var(--bk-gold-bright); }
+.bks-query__go:focus-visible { outline: 2px solid var(--bk-paper); outline-offset: 2px; }
+.bks-query__help { margin: .7rem 0 0; color: var(--bk-muted); font-size: .81rem; line-height: 1.9; }
+.bks-query__help b { color: color-mix(in srgb, var(--bk-paper) 84%, var(--bk-muted)); font-weight: 700; }
+
+/* ── 狀態 ── */
+.bks-status {
+  margin: clamp(18px, 3vw, 26px) 0 0; padding: .7rem .9rem;
+  border-left: 2px solid var(--bk-gold); background: var(--bk-panel);
+  color: color-mix(in srgb, var(--bk-paper) 84%, var(--bk-muted)); font-size: .88rem; line-height: 1.85;
+}
+
+/* ── 結果 ── */
+.bks-results { margin: clamp(26px, 4vw, 40px) 0 0; }
+.bks-results__h {
+  margin: 0 0 1.1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--bk-line);
+  color: var(--bk-gold); font-family: var(--bk-serif); font-size: 1.02rem; letter-spacing: .2em;
+}
+.bks-results__body:empty { display: none; }
+
+.bks-group + .bks-group { margin-top: clamp(28px, 4vw, 44px); padding-top: clamp(20px, 3vw, 28px); border-top: 1px solid var(--bk-line); }
+.bks-group__title { margin: 0 0 .6rem; color: var(--bk-paper); font-family: var(--bk-serif); font-size: 1.15rem; font-weight: 700; letter-spacing: .05em; }
+.bks-count { margin: 0 0 .9rem; color: var(--bk-muted); font-size: .84rem; }
+.bks-capped { margin: 1rem 0 0; padding: .7rem .9rem; border: 1px dashed var(--bk-line); color: var(--bk-muted); font-size: .82rem; line-height: 1.85; }
+.bks-none { margin: 0; color: var(--bk-muted); font-size: .88rem; }
+.bks-none--all { padding: 1.2rem; border: 1px solid var(--bk-line); background: var(--bk-panel); }
+
+.bks-toc-hits { margin: 0 0 1.2rem; padding: .8rem 1rem; border: 1px solid var(--bk-line); background: var(--bk-panel); }
+.bks-toc-hits h4 { margin: 0 0 .5rem; color: var(--bk-gold); font-family: var(--bk-serif); font-size: .9rem; letter-spacing: .14em; }
+.bks-toc-hits ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .3rem; }
+.bks-toc-hits a { display: block; font-size: .88rem; line-height: 1.7; }
+.bks-toc-hits em { display: inline; margin-left: .5rem; color: color-mix(in srgb, var(--bk-paper) 74%, var(--bk-muted)); font-style: normal; font-family: var(--bk-serif); }
+
+.bks-hits { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+.bks-hit > a {
+  display: block; padding: .85rem 1rem;
+  border: 1px solid var(--bk-line); background: var(--bk-panel);
+  color: var(--bk-paper); text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+.bks-hit > a:hover, .bks-hit > a:focus-visible { border-color: var(--bk-gold); background: color-mix(in srgb, var(--bk-gold) 9%, var(--bk-panel)); color: var(--bk-paper); text-decoration: none; }
+.bks-hit > a:focus-visible { outline: 2px solid var(--bk-gold); outline-offset: 2px; }
+.bks-hit__where { display: block; margin-bottom: .35rem; color: var(--bk-gold); font-family: var(--bk-serif); font-size: .82rem; letter-spacing: .08em; }
+.bks-hit__where em { margin-left: .5rem; color: var(--bk-muted); font-style: normal; }
+.bks-hit__text { display: block; color: color-mix(in srgb, var(--bk-paper) 90%, var(--bk-muted)); font-family: var(--bk-kai); font-size: 1rem; line-height: 1.95; word-break: break-word; }
+
+/* 命中的字：字色一律 inherit，兩種主題都不會反白到看不見 */
+.bks mark { background: color-mix(in srgb, var(--bk-gold) 30%, transparent); color: inherit; font-weight: 700; padding: 0 .06em; border-radius: 1px; }
+
+/* ── 頁末說明 ── */
+.bks-foot { margin: clamp(40px, 6vw, 64px) 0 0; padding-top: clamp(20px, 3vw, 28px); border-top: 1px solid var(--bk-line); max-width: 46rem; }
+.bks-foot h2 { margin: 0 0 .7rem; color: var(--bk-gold); font-family: var(--bk-serif); font-size: 1rem; letter-spacing: .16em; }
+.bks-foot p { margin: 0 0 .6rem; color: color-mix(in srgb, var(--bk-paper) 78%, var(--bk-muted)); font-size: .85rem; line-height: 1.95; }
+.bks-foot p:last-child { margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  .bks-hero { padding-top: 1.6rem; }
+  .bks-hero h1 { font-size: 2rem; }
+  .bks-hero h1 br { display: none; }
+  .bks-picker__grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .bks-query__go { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bks-choice, .bks-hit > a { transition: none; }
+}
