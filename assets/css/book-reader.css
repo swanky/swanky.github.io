@@ -315,3 +315,62 @@ html.bk-paper {
 @media (prefers-reduced-motion: reduce) {
   .anchor-flash { animation: none; background: color-mix(in srgb, var(--bk-gold) 34%, transparent); }
 }
+
+/* ── 本回批語：抄本夾註一覽（2026-09） ──
+   靜態寫在章回頁尾端（tools/append_chapter_annotations.mjs 產生），預設收合。
+   抄本沒有標明每條批語對應正文哪一句，所以只按抄本原順序條列，不做段落對位。 */
+.bk-ann {
+  margin: clamp(36px, 5vw, 56px) 0 0;
+  border: 1px solid var(--bk-line);
+  background: var(--bk-panel);
+}
+.bk-ann-summary {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem .8rem;
+  padding: .95rem clamp(1rem, 2.4vw, 1.5rem);
+  font-family: var(--bk-serif); font-size: 1.02rem; letter-spacing: .12em;
+  color: var(--bk-paper); cursor: pointer;
+}
+.bk-ann-summary::-webkit-details-marker { display: none; }
+.bk-ann-summary::marker { content: ''; }
+.bk-ann-summary b { font-weight: 700; }
+.bk-ann-summary::after {
+  content: '展開'; margin-left: auto; padding: .1em .7em;
+  border: 1px solid var(--bk-line); color: var(--bk-gold);
+  font-family: var(--bk-sans); font-size: .74rem; letter-spacing: .1em;
+}
+.bk-ann[open] .bk-ann-summary::after { content: '收合'; }
+.bk-ann-summary:hover, .bk-ann-summary:focus-visible { color: var(--bk-gold-bright); }
+.bk-ann-count { color: var(--bk-muted); font-family: var(--bk-sans); font-size: .78rem; letter-spacing: .08em; }
+.bk-ann-inner { padding: 0 clamp(1rem, 2.4vw, 1.5rem) clamp(1.1rem, 2.4vw, 1.5rem); border-top: 1px solid var(--bk-line); }
+.bk-ann-intro {
+  margin: 1rem 0 1.2rem; text-indent: 0; text-align: justify;
+  color: color-mix(in srgb, var(--bk-paper) 82%, var(--bk-muted));
+  font-family: var(--bk-sans); font-size: .84rem; line-height: 1.9;
+}
+.bk-ann-list { margin: 0; padding: 0; list-style: none; counter-reset: bk-ann; }
+.bk-ann-item {
+  counter-increment: bk-ann;
+  padding: .7rem 0 .7rem 2.4em; border-top: 1px dashed var(--bk-line);
+  position: relative; font-family: var(--bk-kai); font-size: calc(var(--bk-reader-size) * .92);
+  line-height: 1.95; text-align: justify; scroll-margin-top: calc(108px + 1rem);
+}
+.bk-ann-item::before {
+  content: counter(bk-ann); position: absolute; left: 0; top: .95em;
+  width: 2em; text-align: right; color: var(--bk-muted);
+  font-family: var(--bk-sans); font-size: .72rem; letter-spacing: .04em;
+}
+.bk-ann-item:first-child { border-top: 0; }
+.bk-ann-item:target { background: color-mix(in srgb, var(--bk-gold) 16%, transparent); }
+.bk-ann-src {
+  display: inline-block; margin-right: .6em; padding: .05em .6em;
+  border: 1px solid var(--bk-line); background: var(--bk-bg);
+  color: var(--bk-gold); font-family: var(--bk-sans); font-size: .72rem;
+  letter-spacing: .06em; white-space: nowrap; vertical-align: .12em;
+}
+.bk-ann-text { color: var(--bk-paper); }
+
+@media (max-width: 480px) {
+  .bk-ann-summary { padding: .8rem .85rem; font-size: .96rem; }
+  .bk-ann-inner { padding: 0 .85rem 1rem; }
+  .bk-ann-item { padding-left: 2.1em; }
+}

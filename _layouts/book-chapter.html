@@ -102,6 +102,12 @@
       {%- endif %}
     </nav>
 
+    {%- comment -%}
+      本頁尾端有沒有批語區塊，由章回檔自己帶（tools/append_chapter_annotations.mjs 產生
+      的標記）。有批語的底本不能再說「本頁只呈現原文」——那句話會變成不實陳述。
+    {%- endcomment -%}
+    {%- assign has_ann = false -%}
+    {%- if content contains 'annotations:begin' -%}{%- assign has_ann = true -%}{%- endif -%}
     <aside class="bk-note" aria-label="收錄說明">
       <h2>收錄說明</h2>
       {%- comment -%}
@@ -111,12 +117,15 @@
       {%- endcomment -%}
       {%- case edition.text_fidelity -%}
       {%- when 'verbatim' -%}
-      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，<b>一字未刪改</b>。原文與後續整理的輔助資料分開存放，本頁只呈現原文。</p>
+      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，<b>一字未刪改</b>。{% unless has_ann %}原文與後續整理的輔助資料分開存放，本頁只呈現原文。{% endunless %}</p>
       {%- when 'transcribed' -%}
-      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。這是根據抄本謄錄的版本，用字與原抄本可能有少量出入。原文與後續整理的輔助資料分開存放，本頁只呈現原文。</p>
+      <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。這是根據抄本謄錄的版本，用字與原抄本可能有少量出入。{% unless has_ann %}原文與後續整理的輔助資料分開存放，本頁只呈現原文。{% endunless %}</p>
       {%- when 'converted' -%}
       <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。但有一點要老實說：這份謄本有一部分用字被轉換過（例如「裡」寫成「里」、「於」寫成「于」），所以我們不會說它一字未改。想讀用字更講究的版本，可以對照本書的其他底本。</p>
       {%- endcase -%}
+      {%- if has_ann -%}
+      <p>正文裡沒有夾進任何一條批語：抄本上的批語與原文分開保存，這一回的批語另外列在正文後面的<a href="#annotations">本回批語</a>。抄本本身沒有標明每一條批語寫在正文的哪一句旁邊，所以那裡是照抄本原本的先後順序條列。</p>
+      {%- endif -%}
       <dl>
         <dt>底本</dt><dd>{{ edition.label }}{% if edition.note %}（{{ edition.note }}）{% endif %}</dd>
         <dt>文字來源</dt><dd><a href="{{ edition.source_page }}" target="_blank" rel="noopener noreferrer">{{ edition.source_page }}</a></dd>
