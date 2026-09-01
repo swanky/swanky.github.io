@@ -30,7 +30,10 @@ const jpegDimensions = (path) => {
 
 test('/story/ 對外身分與攝影出版說法正確', () => {
   assert.match(page, /三個宇宙｜史旺基 Swanky Hsiao/);
-  assert.doesNotMatch(page, /蕭宇程/);
+  // 對外可見文案一律「史旺基」領銜、不出現本名；本名只保留在給搜尋引擎看的結構化資料 alternateName（比照首頁慣例）
+  const visibleCopy = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  assert.doesNotMatch(visibleCopy, /蕭宇程/);
+  assert.match(page, /"alternateName": \["Swanky Hsiao", "蕭宇程"\]/);
   assert.match(page, /3 本個人作品書、2 本合作出版/);
   assert.doesNotMatch(page, /五本個人攝影作品書/);
 });
