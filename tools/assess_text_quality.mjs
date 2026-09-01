@@ -69,7 +69,7 @@ export function assess(text) {
     const simpShare = Math.round((simp / (trad + simp)) * 1000) / 10;
     const isSystemic = simp >= 20 && simpShare > 50;
     if (isSystemic) systemicPairs += 1; else noiseChars += simp;
-    pairs.push({ name: p.name, trad, simp, simpRaw, legit, simpShare, isSystemic });
+    pairs.push({ name: p.name, simpChar: p.simp, trad, simp, simpRaw, legit, simpShare, isSystemic });
   }
 
   const fullStop = count(/。/g);
@@ -166,6 +166,6 @@ for (const r of results) {
   for (const w of r.verdict.warns) console.log(`    △ ${w}`);
 }
 function x_(q) {
-  return `${q.name}/${q.simp}  繁 ${q.trad}　簡 ${q.simp === undefined ? '' : q.simpRaw}${q.legit ? `（扣正當用法 ${q.legit}）` : ''} → 有效 ${q.simp}　簡體占比 ${q.simpShare}%${q.isSystemic ? '  ← 系統性' : ''}`;
+  return `${q.name}/${q.simpChar}  繁 ${q.trad}　簡 ${q.simpRaw}${q.legit ? `（扣正當用法 ${q.legit}）` : ''} → 有效 ${q.simp}　簡體占比 ${q.simpShare}%${q.isSystemic ? '  ← 系統性' : ''}`;
 }
 console.log('');
