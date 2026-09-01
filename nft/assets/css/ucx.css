@@ -379,6 +379,10 @@ section[id], .mb { scroll-margin-top: calc(var(--nav-h) + var(--rail-h) + 14px);
 	border: 9px solid transparent; border-left: 14px solid #fff; border-right: 0;
 }
 .work--soon { border-style: dashed; background: transparent; }
+.work__img--soon {
+	background: transparent; border-bottom: 1px dashed var(--line);
+	display: grid; place-items: center; color: var(--mute); font-size: .84rem;
+}
 .work__top { display: flex; align-items: baseline; gap: .6rem; }
 .work__date { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; color: var(--red-ink); font-variant-numeric: tabular-nums; }
 .work__meta { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; color: var(--mute); }

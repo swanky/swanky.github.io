@@ -230,7 +230,8 @@
 		function idxHTML(m) {
 			return '<li><a href="#clonex-' + esc(m.id) + '">' +
 				'<img loading="lazy" src="' + esc(asset(m.pfp)) + '" alt="">' +
-				'<span class="idx__txt"><span class="idx__id mono">#' + esc(m.id) + "</span>" +
+				'<span class="idx__txt">' +
+				(m.name ? '<span class="idx__id mono">#' + esc(m.id) + "</span>" : "") +
 				'<span class="idx__name">' + esc(m.name || ("CloneX #" + m.id)) + "</span>" +
 				'<span class="idx__role">' + esc(m.role) + "</span></span>" +
 				'<span class="idx__ar" aria-hidden="true">↓</span></a></li>';
@@ -289,7 +290,8 @@
 			h += "</figcaption></figure></div>";
 
 			/* 右欄：文案、規格、官方 DNA 原句 */
-			h += '<div><div class="mb__id mono">#' + esc(m.id) + "</div>" +
+			h += "<div>" +
+				(m.name ? '<div class="mb__id mono">#' + esc(m.id) + "</div>" : "") +
 				'<h3 class="mb__name">' + esc(m.name || ("CloneX #" + m.id)) + "</h3>" +
 				'<span class="pill">' + esc(m.role) + "</span>" +
 				'<div class="prose">' + paras(m.bio) + "</div>";
@@ -370,6 +372,9 @@
 						'<img loading="lazy" src="' + esc(asset(w.image)) + '" alt="' + esc(w.title) + '">' +
 						(w.type === "video" ? '<span class="work__play" aria-hidden="true"></span>' : "") +
 						"</div>";
+				} else {
+					/* 還沒上線的作品給佔位框而不是空白，同一列的卡片高度才對得齊 */
+					h += '<div class="work__img work__img--soon"><span>影片準備中</span></div>';
 				}
 				h += '<div class="work__body"><div class="work__top">' +
 					'<span class="work__date mono">' + esc(w.date) + "</span>";
@@ -450,7 +455,15 @@
 				if (!r.ok) { throw new Error("HTTP " + r.status); }
 				return r.json();
 			})
-			.then(function (d) { render(d); spy(); })
+			.then(function (d) {
+				render(d);
+				spy();
+				/* 帶錨點進來時，目標元素是 render 後才存在的，要自己補捲一次 */
+				if (location.hash.length > 1) {
+					var t = document.getElementById(location.hash.slice(1));
+					if (t) { t.scrollIntoView(); }
+				}
+			})
 			.catch(function (e) {
 				/* 只剩一行錯誤訊息對讀者沒用：把靜態摘要頂上來，並收掉空的動態區塊 */
 				var fb = el("ucx-fallback");

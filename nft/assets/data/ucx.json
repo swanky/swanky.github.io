@@ -879,8 +879,7 @@
       "title": "REROLL（擬真版）",
       "meta": "93 秒",
       "desc": "同一個故事的兩種視覺語言之一。一間可以重抽外型的店。",
-      "url": null,
-      "todo": "YouTube 連結待補"
+      "url": null
     },
     {
       "date": "2026-08",
@@ -888,8 +887,7 @@
       "title": "REROLL（卡通版）",
       "meta": "93 秒",
       "desc": "同上，手繪質感的版本。",
-      "url": null,
-      "todo": "YouTube 連結待補"
+      "url": null
     },
     {
       "date": "2026-08",
@@ -929,7 +927,7 @@
       "desc": "十年制服女孩攝影系列的鏈上第一代。收益與模特兒對半分潤。",
       "url": "../oursong/",
       "image": "../oursong/web/ruru1-cover.jpg",
-      "fit": "cover"
+      "fit": "contain"
     }
   ],
   "collection": [
