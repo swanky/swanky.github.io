@@ -148,13 +148,17 @@ button { font: inherit; }
 	color: #fff; margin: 0; text-wrap: nowrap;
 }
 .hero__sub { padding: var(--s5) var(--gutter) var(--s6); align-items: start; }
-.hero__copyblock { grid-column: 1 / 7; }
+.hero__copyblock { grid-column: 1 / 8; }
 .hero__lead { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.7; max-width: 28em; color: var(--on-ink); margin: 0 0 var(--s3); }
 .hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
 /* 右欄不留死區：這一頁的目錄，年份就是章節號 */
-.hero__index { grid-column: 8 / 13; list-style: none; border-top: 1px solid rgba(255, 255, 255, .2); }
+.hero__index { grid-column: 8 / 13; }
+.hero__index ol { list-style: none; border-top: 1px solid rgba(255, 255, 255, .2); }
+.hero__index-lab { font-size: .8rem; letter-spacing: .1em; color: var(--red-lift); font-weight: 500; margin: 0 0 .6rem; }
 .hero__index li { border-bottom: 1px solid rgba(255, 255, 255, .12); }
-.hero__index a { display: grid; grid-template-columns: 5.5rem 1fr; align-items: baseline; gap: var(--s2); padding: .9rem 0; color: var(--on-ink); }
+.hero__index a { display: grid; grid-template-columns: 5.5rem 1fr auto; align-items: baseline; gap: var(--s2); padding: .9rem 0; color: var(--on-ink); }
+.hero__index .ar { color: var(--on-ink-2); transition: transform .2s var(--ease-out); }
+.hero__index a:hover .ar { transform: translateY(3px); color: #fff; }
 .hero__index a:hover { color: #fff; }
 .hero__index a:hover .hero__index-y { color: var(--red-lift); }
 .hero__index-y { font-family: var(--serif); font-size: 1.6rem; line-height: 1; letter-spacing: -.02em; color: var(--on-ink-2); transition: color .2s var(--ease-out); }
@@ -199,21 +203,21 @@ button { font: inherit; }
 .row__no { grid-column: 1 / 3; font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 3rem); color: var(--text); line-height: .95; letter-spacing: -.03em; padding-top: .1rem; }
 .row__fig { grid-column: 3 / 9; }
 .row__fig a { display: block; overflow: hidden; background: var(--ink); }
-.row__fig img {
-	width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
-	filter: saturate(.82) contrast(1.04);        /* 來源不同，統一收一點飽和度 */
+/* 三張來源不同（街拍、3D 截圖、AI 合成）與四張化身小圖，全頁同一套調色：
+   同樣的飽和度、對比與一層極淡的墨色，讓它們讀成同一次策展挑出來的物件。 */
+.row__fig img, #clonex-grid > :not(.is-feat) .clonex-card img {
+	filter: saturate(.78) contrast(1.05) sepia(.08);
 	transition: transform .4s var(--ease-out), filter .4s var(--ease-out);
 }
-.row__fig a:hover img { transform: scale(1.02); filter: none; }
+.row__fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.row__fig a:hover img, #clonex-grid > :not(.is-feat) .clonex-card:hover img { filter: none; }
+.row__fig a:hover img { transform: scale(1.02); }
 /* 三行有主從：2021 前史（小）→ 2022 過場（中）→ 2026 旗艦破格（圖從版心左緣起、佔 8 欄）。
    同一個 4:3 框，只靠尺度說誰是重點，不加邊框。 */
-.row--y1 .row__fig { grid-column: 3 / 7; }
-.row--y2 .row__fig { grid-column: 3 / 8; }
-.row--y2 .row__fig img { filter: grayscale(.35) saturate(.7) contrast(1.05); }
+.row--y1 .row__fig, .row--y2 .row__fig { grid-column: 3 / 8; }
 .row--y3 { padding-top: var(--s6); }
-.row--y3 .row__no { grid-column: 1 / 3; grid-row: 1; }
-.row--y3 .row__fig { grid-column: 1 / 9; grid-row: 2; margin-top: var(--s2); }
-.row--y3 .row__body { grid-row: 2; align-self: start; padding-top: var(--s2); }
+.row--y3 .row__fig { grid-column: 3 / 13; grid-row: 1; }
+.row--y3 .row__body { grid-column: 3 / 9; grid-row: 2; }
 .row--y3 .row__title { font-size: clamp(1.8rem, 3vw, 2.6rem); }
 
 .row__body { grid-column: 9 / 13; display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; }
@@ -243,15 +247,15 @@ button { font: inherit; }
 #clonex-grid:empty { display: none; }
 #clonex-grid > * { min-width: 0; }
 #clonex-grid > .is-feat { grid-column: 1 / 3; grid-row: 1 / 3; order: -1; }
-.clonex-card { display: block; height: 100%; color: var(--on-ink); }
+.clonex-card { display: flex; flex-direction: column; height: 100%; color: var(--on-ink); }
 .clonex-card:hover .clonex-id { color: var(--red-lift); }
 .clonex-card img, .clonex-noimg { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
 /* 名冊：五張都留原圖（放大裁頭會蓋住下方的身分標籤——iter8 評審抓到的真實瑕疵） */
 .clonex-noimg { display: grid; place-items: center; background: var(--ink-2); color: var(--on-ink-2); font-family: var(--mono); font-size: .8rem; }
-.clonex-meta { display: flex; flex-direction: column; gap: .1rem; padding: .8rem 0 0; }
+.clonex-meta { display: flex; flex-direction: column; gap: .1rem; padding: .7rem 0 0; min-height: 3.6rem; }
 .clonex-id { font-size: .84rem; letter-spacing: .04em; color: #fff; font-variant-numeric: tabular-nums; font-weight: 500; transition: color .2s var(--ease-out); }
 .clonex-role { font-size: .84rem; color: var(--on-ink); }
-.is-feat .clonex-meta { flex-direction: row; align-items: baseline; gap: .9rem; padding-top: .9rem; }
+.is-feat .clonex-meta { padding: .9rem 0 0; min-height: 0; }
 .is-feat .clonex-id { font-size: 1.1rem; }
 .is-feat .clonex-role { font-size: .95rem; }
 .clonex-skeleton { aspect-ratio: 1; background: var(--ink-2); animation: pulse 1.4s ease-in-out infinite; }
@@ -259,10 +263,19 @@ button { font: inherit; }
 
 /* ---------- 8. 頁尾：紙底尾註，把時間軸收在這裡 ----------------------------- */
 .foot { background: var(--paper-2); color: var(--text-2); padding: var(--s5) 0 var(--s4); font-size: .92rem; }
-.foot .grid12 { border-top: 1px solid var(--text); padding-top: var(--s3); }
+.foot .grid12::before { content: ""; grid-column: 1 / -1; border-top: 1px solid var(--text); }
 .foot__col--brand { grid-column: 1 / 6; }
 .foot__col--index { grid-column: 6 / 9; }
 .foot__col--social { grid-column: 9 / 13; }
+/* 索引頁的收尾：把時間軸再說一次，最後一站是主站 */
+.foot__close { grid-column: 1 / 13; display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1.2rem; font-family: var(--serif); font-size: clamp(1.3rem, 2.2vw, 1.9rem); color: var(--text); margin: 0; }
+.foot__close .ar { color: var(--red-ink); font-family: var(--sans); font-size: 1.1rem; }
+.foot__close a { color: var(--text); border-bottom: 2px solid var(--red); }
+.foot__close a:hover { color: var(--red-ink); }
+.foot__meta { grid-column: 1 / 13; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem var(--s3); margin: var(--s3) 0 0; font-size: .84rem; color: var(--mute); }
+.foot__meta a { color: var(--text-2); }
+.foot__meta a:hover { color: var(--red-ink); }
+.foot__meta ul { list-style: none; display: flex; flex-wrap: wrap; gap: .3rem var(--s2); }
 .foot__brand { display: flex; align-items: center; gap: .5rem; margin: 0 0 .7rem; }
 .foot__brand img { height: 20px; width: auto; }
 .foot__brand .nav__tag { color: var(--text); border-color: var(--text); }
@@ -277,17 +290,19 @@ button { font: inherit; }
 /* 檔案扉頁：年份是版面上第二大的元素，照片出血到右側視窗邊，左欄是規格表。 */
 .hero--arch { padding: 0; }
 .hero--arch__grid {
-	display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	max-width: calc((100% + var(--maxw)) / 2); margin-left: auto;   /* 左緣對齊版心、右緣出血 */
-	padding-left: var(--gutter);
+	display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--s5);
+	max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter);   /* 扉頁只是封面：圖比內頁的跨頁小 */
 }
-.hero--arch__main { padding: clamp(3rem, 9vh, 5.5rem) var(--s5) var(--s5) 0; align-self: end; }
-.hero--arch__year { font-size: clamp(3.5rem, 8vw, 7rem); line-height: .9; letter-spacing: -.04em; color: var(--red-lift); margin: .2rem 0 var(--s2); }
+.hero--arch__main { padding: clamp(3rem, 8vh, 4.5rem) 0 var(--s5); align-self: end; }
+.hero--arch__fig { align-self: end; padding-top: clamp(3rem, 8vh, 4.5rem); }
+.stamp { display: grid; grid-template-columns: auto 1fr; gap: var(--s2); margin: var(--s3) 0 0; padding: .8rem 0 0; border-top: 1px solid rgba(255, 255, 255, .22); font-size: .86rem; color: var(--on-ink-2); }
+.stamp .mono { color: #fff; font-size: .86rem; }
+.hero--arch__year { font-family: var(--serif); font-size: clamp(3.5rem, 7vw, 6rem); line-height: .9; letter-spacing: -.03em; color: #fff; margin: .2rem 0 var(--s2); }
 .hero--arch .hero__title { font-size: clamp(2.2rem, 3.6vw, 3.2rem); margin: 0 0 var(--s3); text-wrap: balance; }
 .hero--arch .hero__lead { grid-column: auto; max-width: 26em; margin: 0 0 var(--s4); }
 .hero--arch__fig { position: relative; margin: 0; }
 .hero--arch__fig a { display: block; height: 100%; overflow: hidden; }
-.hero--arch__fig img { width: 100%; height: 100%; min-height: 560px; aspect-ratio: 4 / 5; object-fit: cover; }
+.hero--arch__fig img { width: 100%; height: 100%; min-height: 0; aspect-ratio: 4 / 5; object-fit: cover; }
 .fig-cap {
 	position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--on-ink);
 	padding: .5rem .9rem; font-size: .84rem; display: inline-flex; gap: .7rem; align-items: baseline;
@@ -310,7 +325,7 @@ button { font: inherit; }
 .tri__item img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .4s var(--ease-out); }
 .tri__item a:hover img { transform: scale(1.02); }
 .tri__item figcaption { display: grid; grid-template-columns: auto 1fr; gap: .2rem .8rem; padding-top: .8rem; font-size: .9rem; color: var(--text-2); }
-.tri__item figcaption .mono { grid-row: 1 / 3; font-size: 1.1rem; color: var(--red-ink); align-self: start; }
+.tri__item figcaption .mono { grid-row: 1 / 3; font-size: 1.1rem; color: var(--text); align-self: start; }
 .tri__item figcaption b { color: var(--text); }
 .tri__notes { margin-top: var(--s5); }
 .tri__note { grid-column: span 5; color: var(--text-2); }
@@ -322,21 +337,37 @@ button { font: inherit; }
 .bullets { list-style: none; display: grid; gap: .35rem; color: var(--text-2); font-size: .94rem; }
 .bullets li { padding-left: 1rem; position: relative; }
 .bullets li::before { content: ""; position: absolute; left: 0; top: .75em; width: .4rem; height: 1px; background: var(--text-2); }
-/* 成對存檔：一件＝一個細框，大編號當標頭，卡面在上、解鎖內容在下 */
-.pairs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
-.pair { display: grid; gap: 6px; padding: 6px; border: 1px solid rgba(255, 255, 255, .22); }
-.pair a { display: block; overflow: hidden; background: var(--ink-2); }
-.pair img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
+/* 成對存檔：12 件＝6×2 排滿。兩個狀態要一眼分得出來——
+   卡面是「物件」：有紙白邊框、有內縫；解鎖內容是「攝影」：滿格、無框。 */
+/* 06 的跨頁：左窄卡面、右滿版解鎖內容，是全頁最大的影像 */
+.spread { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: var(--s2); align-items: end; margin-bottom: var(--s6); }
+.spread a { display: block; overflow: hidden; }
+.spread__cover { padding: 6px; background: var(--paper); align-self: end; }
+.spread__cover img { width: 100%; aspect-ratio: 760 / 1278; object-fit: cover; }
+.spread__content { background: var(--ink-2); }
+.spread__content img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 30%; }
+.spread__cap { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline; margin: .4rem 0 0; font-size: .9rem; color: var(--on-ink-2); }
+.spread__cap .mono { color: #fff; font-size: 1rem; }
+.spread__model { margin-left: auto; }
+.pairs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s5) var(--s3); }
+.pair { display: grid; gap: .8rem; align-content: start; }
+.pair__cover { width: 56%; }
+.pair__no { display: flex; gap: .6rem; align-items: baseline; margin: 0; font-size: .8rem; color: var(--on-ink-2); }
+.pair__no .mono { color: #fff; font-size: .9rem; }
+.pair a { position: relative; display: block; overflow: hidden; }
+.pair img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s var(--ease-out); }
 .pair a:hover img { transform: scale(1.03); }
+.pair__cover { padding: 6px; background: var(--paper); }
 .pair__cover img { aspect-ratio: 760 / 1278; }
+.pair__content { background: var(--ink-2); }
 .pair__content img { aspect-ratio: 1; }
-.pair__no { font-size: 1.5rem; line-height: 1; color: #fff; padding: .4rem .3rem .5rem; letter-spacing: -.02em; }
-/* 單件周邊：獨立一排，同一個 3:4 框，不與成組作品混排 */
-.singles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s2); margin-top: var(--s4); padding-top: var(--s4); border-top: 1px dashed rgba(255, 255, 255, .2); }
-.single { margin: 0; }
-.single a { display: block; overflow: hidden; background: var(--ink-2); }
-.single img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
-.single figcaption { padding-top: .5rem; font-size: .84rem; color: var(--on-ink-2); }
+/* 周邊物件：材質各異，原樣陳列（contain），各有說明 */
+.objects { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.object { margin: 0; }
+.object a { display: grid; place-items: center; aspect-ratio: 3 / 4; background: var(--ink-2); padding: var(--s2); overflow: hidden; }
+.object img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.object figcaption { display: grid; gap: .1rem; padding-top: .6rem; font-size: .84rem; color: var(--on-ink-2); }
+.object figcaption b { color: #fff; font-weight: 500; }
 
 .arch { padding: var(--s4) 0 var(--s5); border-top: 1px solid rgba(255, 255, 255, .14); }
 .arch__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem var(--s3); margin-bottom: var(--s3); }
@@ -370,19 +401,23 @@ button { font: inherit; }
 	.row { grid-template-columns: 4.2rem repeat(11, minmax(0, 1fr)); }
 	.row__no { grid-column: 1; font-size: 1.3rem; }
 	.row__fig, .row--y1 .row__fig, .row--y2 .row__fig { grid-column: 2 / 8; }
-	.row--y3 .row__fig { grid-column: 1 / 8; }
+	.row--y3 .row__fig { grid-column: 2 / 13; }
+	.row--y3 .row__body { grid-column: 2 / 8; }
 	.row__body { grid-column: 8 / 13; }
-	.hero__copyblock, .hero__index { grid-column: 1 / 13; }
+	.hero__copyblock { grid-column: 1 / 13; }
 	.sec__head--stack .sec__lead, .sec__head--stack .chain__acts { grid-column: 1 / 13; }
 	.foot__col--brand { grid-column: 1 / 13; }
 	.foot__col--index { grid-column: 1 / 7; }
 	.foot__col--social { grid-column: 7 / 13; }
-	.hero--arch__grid { grid-template-columns: 1fr; max-width: none; padding: 0; }
-	.hero--arch__main { padding: var(--s5) var(--gutter) var(--s4); }
-	.hero--arch__fig img { min-height: 0; aspect-ratio: 16 / 10; }
+	.hero--arch__grid { grid-template-columns: 1fr; gap: 0; }
+	.hero--arch__main { padding: var(--s5) 0 var(--s4); }
+	.hero--arch__fig { padding-top: 0; }
+	.hero--arch__fig img { aspect-ratio: 16 / 10; }
+	.spread { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
 	.h2--side, .prose { grid-column: 1 / 13; }
 	.tri__note:first-child, .tri__note:last-child { grid-column: 1 / 13; }
-	.pairs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.pairs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.objects { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
 	:root { --s6: 3.6rem; --nav-h: 54px; --inset-drop: 96px; }
@@ -397,18 +432,19 @@ button { font: inherit; }
 	/* 手機：雙聯畫上下堆疊、各佔約半屏，標題橫在兩張之間的接縫上 */
 	.dip2 { height: auto; grid-template-columns: 1fr; gap: 4px; }
 	.dip2__half { aspect-ratio: 4 / 3; }
+	.dip2__half--chain { order: 3; }
 	.dip2__half img { height: 100%; }
 	.dip2__half--camera img { height: 125%; object-position: 62% 0; }
 	.dip2__half--chain img { height: 100%; object-position: 45% 40%; }
 	.dip2__half::after { background: linear-gradient(0deg, rgba(10, 16, 36, .6) 0%, rgba(10, 16, 36, 0) 45%); }
-	.hero__copy { inset: auto 0 0 0; padding-bottom: var(--s3); }
+	/* 標題夾在兩張圖之間的縫上：第一屏＝真人照＋標題，往下是化身 */
+	.hero__copy { position: static; order: 2; padding: var(--s3) var(--gutter); pointer-events: auto; background: var(--ink); }
 	.hero__title { font-size: clamp(2rem, 9.4vw, 2.6rem); text-wrap: balance; }
+	.dip2__half::after { background: none; }
 	.hero__sub { padding: var(--s4) var(--gutter) var(--s5); gap: var(--s4); }
-	.hero__copyblock, .hero__index { grid-column: 1; }
+	.hero__copyblock { grid-column: 1; }
 	.hero__act { flex-direction: column; align-items: flex-start; }
 	.hero__act .btn { width: 100%; justify-content: center; }
-	.hero__index a { grid-template-columns: 4.2rem 1fr; }
-	.hero__index-y { font-size: 1.3rem; }
 
 	.sec--first { padding-top: var(--s6); }
 	.h2 { font-size: 2rem; }
@@ -419,9 +455,10 @@ button { font: inherit; }
 	.row { grid-template-columns: 1fr; gap: var(--s2); padding: var(--s4) 0; }
 	.row__no { display: none; }
 	.row__fig, .row__body, .row--y1 .row__fig, .row--y2 .row__fig, .row--y3 .row__fig, .row--y3 .row__body { grid-column: 1; grid-row: auto; }
+	.row__meta { flex-direction: column; align-items: flex-start; gap: .1rem; }
 	.row--y3 { padding-top: var(--s4); }
 	.row--y3 .row__fig { margin-top: 0; }
-	.row__meta .no-inline { display: inline; font-family: var(--serif); font-size: 1.15rem; color: var(--text); margin-right: .4rem; }
+	.row__meta .no-inline { display: block; width: 100%; font-family: var(--serif); font-size: 1.9rem; line-height: 1; color: var(--text); margin: 0 0 .4rem; }
 
 	.chain__acts { flex-direction: column; align-items: flex-start; gap: .9rem; }
 	/* 特寫整寬，四隻小圖 2×2，不留孤兒格 */
@@ -431,15 +468,18 @@ button { font: inherit; }
 
 	/* 12 欄格在手機收成 1 欄；所有跨欄設定一律歸 1 */
 	.grid12 { grid-template-columns: 1fr; }
-	.h2, .sec__lead, .chain__acts, .foot__col--brand, .foot__col--index, .foot__col--social, .foot__copy,
+	.h2, .sec__lead, .chain__acts, .foot__col--brand, .foot__col--index, .foot__col--social, .foot__copy, .foot__close, .foot__meta,
 	.h2--side, .prose, .tri__note:first-child, .tri__note:last-child { grid-column: 1; }
 	.hero--arch__year { font-size: 3.4rem; }
 	.hero--arch__fig img { aspect-ratio: 4 / 5; }
 	.facts div { grid-template-columns: 4rem 1fr; }
 	.tri { grid-template-columns: 1fr; gap: var(--s4); }
-	.pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
-	.singles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	.pair__no { font-size: 1.2rem; }
+	.pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4) var(--s2); }
+	.spread { grid-template-columns: 1fr; }
+	.spread__cover { width: 48%; }
+	.pair__cover { width: 64%; }
+	.objects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.stamp { grid-template-columns: 1fr; gap: .3rem; }
 	.arch__head { flex-direction: column; gap: .2rem; }
 	.foot ul { grid-template-columns: 1fr 1fr; }
 }

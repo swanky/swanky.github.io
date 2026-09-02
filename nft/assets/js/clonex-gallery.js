@@ -198,8 +198,8 @@ async function loadCollection(address, label) {
 
     const count = Math.min(balance, MAX_SHOW);
     status.innerHTML =
-      `${label} 共持有 <strong>${balance}</strong> 個 CloneX` +
-      (balance > count ? `，以下精選 ${count} 個` : "");
+      `${label} · <strong>${balance}</strong> 隻 CloneX` +
+      (balance > count ? `，以下精選 ${count} 隻` : "");
 
     // 先放骨架卡片，資料到位後逐一替換
     for (let i = 0; i < count; i++) {
