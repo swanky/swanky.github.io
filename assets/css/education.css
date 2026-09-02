@@ -48,6 +48,9 @@
 .edu-section--dark .edu-section-head h2 { color: #fff; }
 .edu-section-head p { margin: 0; color: var(--edu-muted); font-size: 1.02rem; line-height: 1.85; }
 .edu-section--dark .edu-section-head p { color: rgba(255,255,255,.72); }
+/* 段落內的文字連結：觸控裝置沒有 hover，光靠顏色不夠，加持續底線讓人一眼看出可點 */
+.edu-section-head p a { color: var(--edu-gold-dark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.edu-section-head p a:hover { color: var(--edu-ink); }
 
 .edu-hero { position: relative; padding: 72px 0 82px; background: linear-gradient(135deg, #fffdf8 0%, #f7eedb 100%); min-height: max(640px, 85svh); display: flex; align-items: center; }
 .edu-hero::before {
