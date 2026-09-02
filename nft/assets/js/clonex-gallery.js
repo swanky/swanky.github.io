@@ -198,7 +198,7 @@ async function loadCollection(address, label) {
 
     const count = Math.min(balance, MAX_SHOW);
     status.innerHTML =
-      `${label} · <strong>${balance}</strong> 隻 CloneX` +
+      `${label} · <strong>${balance}</strong> ${address === GALLERY_ADDRESS ? "位成員" : "隻 CloneX"}` +
       (balance > count ? `，以下精選 ${count} 隻` : "");
 
     // 先放骨架卡片，資料到位後逐一替換
