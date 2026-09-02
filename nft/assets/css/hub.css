@@ -1,0 +1,343 @@
+/* =============================================================================
+   Swanky NFT 首頁（/nft/）樣式 — 自足版（2026-09-02 重新設計）
+   -----------------------------------------------------------------------------
+   這一頁是主站 → Uniform CloneX 之間的中繼站，所以視覺語彙直接沿用 ucx.css 的
+   代幣（紅＝領巾、藍＝百褶裙、暖白紙底、深藍墨底）。不再載入模板的 Bootstrap／
+   style.css／輪播／AOS，頁面只靠這一支 CSS 與 clonex-gallery.js（鏈上收藏）。
+   與 UCX 頁刻意不同：這裡是索引，圖片一律硬邊、不圓角；字體只有兩家——
+   Noto Sans TC 負責所有文字層級，Space Mono 只給「數字型資料」（年份、編號、
+   token id），中文絕不進等寬。裝飾只留有語意的紅（接縫＝「相機→鏈上」）。
+   代幣值若要改，兩支檔案要一起改（刻意不用 @import，避免多一趟請求）。
+   ========================================================================== */
+
+/* ---------- 1. 設計代幣（顏色與 ucx.css 同值） ----------------------------- */
+:root {
+	--red: #d4394c;
+	--red-ink: #b02b3c;
+	--red-lift: #e8697a;
+	--blue: #144d9c;
+	--blue-ink: #0f3d7d;
+	--blue-lift: #6d9ede;
+
+	--ink: #0a1024;
+	--ink-2: #131b36;
+	--paper: #fbfaf7;
+	--paper-2: #f2efe8;
+	--line: #e3ded3;
+	--text: #1b2230;
+	--text-2: #4a5568;
+	--mute: #5c6572;
+	--on-ink: #e7ecf6;
+	--on-ink-2: #a6b3ca;
+
+	--s1: .5rem;  --s2: 1rem;  --s3: 1.5rem;  --s4: 2rem;
+	--s5: 3rem;   --s6: 5.5rem;
+
+	--maxw: 1220px;
+	--gutter: var(--s3);
+	/* 版心左緣：出血 hero 裡的標籤與內嵌框也掛在這條基準上。用容器的 100%
+	   而不是 100vw 算，捲軸寬度才不會讓它偏掉幾個像素 */
+	--edge: max(var(--gutter), calc((100% - var(--maxw)) / 2 + var(--gutter)));
+	--measure: 34em;
+
+	--sans: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;   /* 標題：檔案／專刊的味道 */
+	--mono: "Space Mono", ui-monospace, monospace;
+
+	--nav-h: 58px;
+	--inset-drop: 210px;         /* hero 內嵌化身壓出下緣的量（約框高一半）：只咬住照片右下角，不蓋到肩線 */
+	--ease-out: cubic-bezier(.16, .84, .44, 1);
+}
+
+/* ---------- 2. 重置 -------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+	margin: 0; background: var(--paper); color: var(--text);
+	font: 400 1.02rem/1.7 var(--sans);
+	overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--blue-ink); text-decoration: none; }
+a:hover { color: var(--red-ink); }
+h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.15; text-wrap: balance; font-family: var(--serif); }
+p { margin: 0 0 .85em; }
+ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+::selection { background: var(--red); color: #fff; }
+
+/* 等寬字：只放數字型資料 */
+.mono { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+/* 小標（可含中文）：一般字體、小一號、稍加字距 */
+.kicker { font-size: .8rem; letter-spacing: .04em; color: var(--mute); }
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+/* 文字連結＋箭頭：全頁除了 hero 那一顆主 CTA，所有行動都長這樣（含 button） */
+.more {
+	display: inline-flex; align-items: center; gap: .45rem;
+	color: var(--text); font-weight: 500; font-size: 1rem; line-height: 1.3;
+	background: none; border: 0; border-bottom: 1px solid var(--text); border-radius: 0;
+	padding: 0 0 .15rem; cursor: pointer;
+	transition: color .2s var(--ease-out), border-color .2s var(--ease-out);
+}
+.more:hover { color: var(--red-ink); border-color: var(--red-ink); }
+.more .ar { transition: transform .2s var(--ease-out); }
+.more:hover .ar { transform: translateX(3px); }
+.more--light { color: var(--on-ink); border-color: rgba(255, 255, 255, .5); }
+.more--light:hover { color: #fff; border-color: #fff; }
+
+/* ---------- 3. 導覽（與 UCX 頁同款） ---------------------------------------- */
+.nav {
+	position: fixed; inset: 0 0 auto; z-index: 60; height: var(--nav-h);
+	background: rgba(10, 16, 36, .9); backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+.nav__in { display: flex; align-items: center; gap: var(--s3); height: 100%; }
+.nav__brand { display: flex; align-items: center; gap: .5rem; flex: 0 0 auto; }
+.nav__brand img { height: 20px; width: auto; filter: brightness(0) invert(1); }
+.nav__tag {
+	font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; color: var(--on-ink);
+	border: 1px solid rgba(255, 255, 255, .3); border-radius: 3px; padding: .1rem .34rem;
+}
+.nav__links { display: flex; align-items: center; gap: var(--s3); list-style: none; margin-left: auto; min-width: 0; }
+.nav__links a { color: var(--on-ink-2); font-size: .84rem; white-space: nowrap; padding: .55rem 0; transition: color .2s var(--ease-out); }
+.nav__links a:hover { color: #fff; }
+.nav__links .is-here a { color: #fff; box-shadow: inset 0 -2px 0 var(--red); }
+.nav__links .cta a { color: #fff; font-weight: 500; }
+
+.skip {
+	position: fixed; top: .5rem; left: .5rem; z-index: 100; transform: translateY(-200%);
+	background: #fff; color: var(--ink); border-radius: 3px; padding: .5rem .9rem; font-size: .84rem;
+}
+.skip:focus { transform: none; }
+
+/* ---------- 4. Hero：真人攝影出血，化身以對頁形式侵入 ---------------------- */
+/* 「從相機到鏈上」要在畫面上發生：整幅是相機那一端（真人制服女孩攝影，頭肩），
+   右下角一塊紅框是鏈上那一端（同一構圖的 CloneX 頭肩），壓過照片下緣跨進下一段。
+   兩張都是頭肩、都用同款標籤；紅框就是接縫。 */
+.hero { margin-top: var(--nav-h); position: relative; background: var(--ink); color: var(--on-ink); }
+.hero__photo { position: relative; height: clamp(560px, 80vh, 780px); }
+.hero__pic { position: absolute; inset: 0; overflow: hidden; }
+.hero__pic > img { width: 100%; height: 100%; object-fit: cover; }
+.hero__pic::after {
+	content: ""; position: absolute; inset: 0; z-index: 1;
+	background:
+		linear-gradient(90deg, rgba(10, 16, 36, .82) 0%, rgba(10, 16, 36, .5) 34%, rgba(10, 16, 36, 0) 62%),
+		linear-gradient(0deg, rgba(10, 16, 36, .62) 0%, rgba(10, 16, 36, 0) 40%);
+}
+.hero__copy {
+	position: absolute; inset: 0; z-index: 2; pointer-events: none;
+	display: flex; flex-direction: column; justify-content: flex-end;
+	padding-bottom: clamp(2.4rem, 6vh, 3.8rem);
+}
+.hero__copy > * { pointer-events: auto; }
+.hero__tag { color: var(--red-lift); margin: 0 0 var(--s2); font-size: .9rem; letter-spacing: .04em; }
+.hero__title {
+	font-size: clamp(2.8rem, 6.6vw, 5.6rem); line-height: 1.02; letter-spacing: -.02em;
+	color: #fff; margin: 0 0 var(--s3); max-width: 10em;
+}
+.hero__title em { font-style: normal; color: var(--red-lift); }
+.hero__lead { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.7; max-width: 27em; color: var(--on-ink); margin: 0 0 var(--s3); }
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
+
+/* 兩張圖同一款標籤：黑底白字，掛在各自框的左下角 */
+.tag {
+	position: absolute; z-index: 3; left: 0; bottom: 0;
+	display: inline-flex; align-items: baseline; gap: .6rem;
+	background: var(--ink); color: #fff; padding: .5rem .9rem .45rem;
+	font-weight: 700; font-size: .92rem; line-height: 1;
+}
+.tag .kicker { color: var(--on-ink-2); font-weight: 400; font-size: .74rem; }
+.tag--camera { left: var(--edge); bottom: auto; top: var(--s3); }
+.tag--chain { left: -6px; bottom: -6px; background: var(--red); }
+.tag--chain .kicker { color: #fff; opacity: .88; }
+
+.hero__inset {
+	position: absolute; z-index: 4; right: var(--edge);
+	bottom: calc(-1 * var(--inset-drop)); width: clamp(220px, 24vw, 340px);
+	border: 6px solid var(--red); background: var(--ink-2); margin: 0;
+}
+.hero__inset img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+
+/* 全頁唯一的實色按鈕 */
+.btn {
+	display: inline-flex; align-items: center; gap: .5rem; cursor: pointer;
+	background: var(--red); color: #fff; border: 1px solid var(--red); border-radius: 999px;
+	padding: .8rem 1.6rem; font-size: 1rem; font-weight: 500;
+	transition: background .2s var(--ease-out), border-color .2s var(--ease-out), transform .2s var(--ease-out);
+}
+.btn:hover { background: var(--red-ink); border-color: var(--red-ink); color: #fff; transform: translateY(-1px); }
+.btn .ar { transition: transform .2s var(--ease-out); }
+.btn:hover .ar { transform: translateX(3px); }
+
+/* ---------- 5. 區塊外殼與標題（同一張 12 欄格） ---------------------------- */
+/* 全頁只有一套水平基準：12 欄，左 1–8 欄給標題／編號／圖，右 9–12 欄給文字。
+   區塊標題的引言、每一列的文字欄、都從第 9 欄開始。 */
+.sec { padding: var(--s6) 0; }
+.sec--first { padding-top: calc(var(--inset-drop) + var(--s5)); }
+.sec--ink { background: var(--ink); color: var(--on-ink); }
+.grid12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s3); }
+.sec__head { align-items: end; margin-bottom: var(--s5); }
+.h2 { grid-column: 1 / 8; font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -.015em; }
+.h2 .no { display: block; font-family: var(--sans); font-size: .82rem; letter-spacing: .1em; color: var(--red-ink); margin-bottom: .7rem; font-weight: 500; }
+.sec--ink .h2 { color: #fff; }
+.sec--ink .h2 .no { color: var(--red-lift); }
+.sec__lead { grid-column: 9 / 13; color: var(--text-2); font-size: 1.02rem; margin: 0; }
+.sec__head--stack .h2 { grid-column: 1 / 13; }
+.sec__head--stack .sec__lead { grid-column: 1 / 8; }
+.sec__head--stack .chain__acts { grid-column: 9 / 13; margin-top: .3rem; }
+.sec--ink .sec__lead { color: var(--on-ink-2); }
+.sec--ink .sec__lead strong { color: #fff; }
+
+/* ---------- 6. 系列：一條時間線，三列同格 ---------------------------------- */
+/* 2021 上鏈 → 2022 展場 → 2022–2026 UCX。三列一模一樣的格：編號在第 1 欄，
+   圖佔 2–8 欄、一律 4:3、同一套調色，文字在 9–12 欄。節奏靠內容的年份推進，
+   不靠版位變形。 */
+.series { list-style: none; border-top: 1px solid var(--line); }
+.row { align-items: start; padding: var(--s5) 0; border-bottom: 1px solid var(--line); }
+/* 左欄的數字是年份：時間軸就是這一頁的骨架，不另做一套 01／02／03 */
+.row__no { grid-column: 1 / 3; font-family: var(--mono); font-size: 1.35rem; color: var(--red); line-height: 1; padding-top: .3rem; letter-spacing: -.02em; }
+.row__fig { grid-column: 3 / 9; }
+.row__fig a { display: block; overflow: hidden; background: var(--ink); }
+.row__fig img {
+	width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+	filter: saturate(.82) contrast(1.04);        /* 來源不同，統一收一點飽和度 */
+	transition: transform .4s var(--ease-out), filter .4s var(--ease-out);
+}
+.row__fig a:hover img { transform: scale(1.02); filter: none; }
+/* 三列同寬；比例跟內容走：攝影 4:3、空間 21:9（寬銀幕）、化身 4:3＋紅框（鏈上記號） */
+.row--wide .row__fig img { aspect-ratio: 21 / 9; filter: grayscale(.35) saturate(.7) contrast(1.05); }
+.row--chain .row__fig a { border: 6px solid var(--red); }
+
+.row__body { grid-column: 9 / 13; display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; }
+.row__meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .8rem; margin: 0; }
+.row__meta .mono { color: var(--red-ink); }
+.row__meta .no-inline { display: none; }
+.row__title { font-size: clamp(1.4rem, 2.1vw, 1.8rem); line-height: 1.2; }
+.row__title a { color: var(--text); }
+.row__title a:hover { color: var(--red-ink); }
+.row__desc { color: var(--text-2); margin: 0; }
+.row__desc strong { color: var(--text); }
+.row__act { margin-top: .2rem; }
+
+/* ---------- 7. 鏈上收藏（墨底）：名冊，不是卡片 ---------------------------- */
+/* 五隻 CloneX 各自帶著原檔底色，放在墨底上最不打架。不畫框、不填白：
+   圖直接落在版面上，編號與身分用排版壓在下面，靠留白分隔。
+   #15755 是 UCX 主視覺與塔羅牌原型，佔 2×2；其餘四隻 1×1 填右側。 */
+.chain__acts { grid-column: 9 / 13; display: flex; flex-wrap: wrap; gap: .9rem var(--s4); align-items: baseline; }
+.sec--ink .more { color: var(--on-ink); border-color: rgba(255, 255, 255, .5); }
+.sec--ink .more:hover { color: #fff; border-color: #fff; }
+.chain__status { font-size: .84rem; color: var(--on-ink-2); min-height: 1.4em; margin: 0 0 var(--s3); }
+.chain__status strong { color: #fff; font-family: var(--mono); font-weight: 400; }
+
+/* clonex-gallery.js 會塞 Bootstrap 的 col-* 外框進來；這裡不理那些 class，
+   直接把 #clonex-grid 當 grid 容器。連別人的錢包時沒有特寫，就是一般四欄。 */
+#clonex-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); }
+#clonex-grid:empty { display: none; }
+#clonex-grid > * { min-width: 0; }
+#clonex-grid > .is-feat { grid-column: 1 / 3; grid-row: 1 / 3; order: -1; }
+.clonex-card { display: block; height: 100%; color: var(--on-ink); }
+.clonex-card:hover .clonex-id { color: var(--red-lift); }
+.clonex-card img, .clonex-noimg { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+/* 名冊：五張都留原底色（去色會讀成「已售出」），主從只靠尺寸與留白 */
+.clonex-noimg { display: grid; place-items: center; background: var(--ink-2); color: var(--on-ink-2); font-family: var(--mono); font-size: .8rem; }
+.clonex-meta { display: flex; flex-direction: column; gap: .1rem; padding: .8rem 0 0; }
+.clonex-id { font-family: var(--mono); font-size: .8rem; letter-spacing: .04em; color: #fff; transition: color .2s var(--ease-out); }
+.clonex-role { font-size: .84rem; color: var(--on-ink); }
+.is-feat .clonex-meta { flex-direction: row; align-items: baseline; gap: .9rem; padding-top: .9rem; }
+.is-feat .clonex-id { font-size: 1.1rem; }
+.is-feat .clonex-role { font-size: .95rem; }
+.clonex-feat-note { padding: .25rem 0 0; font-size: 1rem; color: var(--on-ink); }
+.clonex-skeleton { aspect-ratio: 1; background: var(--ink-2); animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+/* ---------- 8. 頁尾：紙底尾註，把時間軸收在這裡 ----------------------------- */
+.foot { background: var(--paper-2); color: var(--text-2); padding: var(--s5) 0 var(--s4); font-size: .92rem; }
+.foot .grid12 { border-top: 1px solid var(--text); padding-top: var(--s3); }
+.foot__col--brand { grid-column: 1 / 7; }
+.foot__col--index { grid-column: 7 / 10; }
+.foot__col--social { grid-column: 10 / 13; }
+.foot__brand { font-family: var(--serif); font-size: 1.4rem; color: var(--text); margin: 0 0 .5rem; }
+.foot__desc { max-width: 24em; margin: 0; }
+.foot__lab { display: block; margin-bottom: .8rem; color: var(--text); font-weight: 700; }
+.foot a { color: var(--text); }
+.foot a:hover { color: var(--red-ink); }
+.foot ul { list-style: none; display: grid; gap: .35rem; }
+.foot__copy { grid-column: 1 / 13; margin: var(--s4) 0 0; font-size: .82rem; color: var(--mute); }
+
+/* ---------- 9. 進場動畫 ---------------------------------------------------- */
+.rise { opacity: 0; transform: translateY(14px); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }
+.rise.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	.rise { opacity: 1; transform: none; transition: none; }
+	*, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ---------- 10. 斷點 ------------------------------------------------------- */
+@media (max-width: 1024px) {
+	.h2 { grid-column: 1 / 13; }
+	.sec__lead, .chain__acts { grid-column: 1 / 13; }
+	.row { grid-template-columns: 3.4rem repeat(11, minmax(0, 1fr)); }
+	.row__no { grid-column: 1; font-size: 1rem; }
+	.row__fig { grid-column: 2 / 8; }
+	.row__body { grid-column: 8 / 13; }
+	.sec__head--stack .sec__lead, .sec__head--stack .chain__acts { grid-column: 1 / 13; }
+	.foot__col--brand { grid-column: 1 / 13; }
+	.foot__col--index { grid-column: 1 / 7; }
+	.foot__col--social { grid-column: 7 / 13; }
+}
+@media (max-width: 760px) {
+	:root { --s6: 3.6rem; --nav-h: 54px; --inset-drop: 96px; }
+	/* 手機只留主 CTA；回本頁靠左上品牌標，其餘連結在頁尾 */
+	.nav__wide { display: none; }
+	.nav__links { gap: var(--s2); }
+	.nav__brand img { height: 17px; }
+
+	/* 手機是重排不是縮圖：標題在照片上方的墨底、照片 4:5 出血、化身框壓右下、
+	   導言與 CTA 在照片下方；所有文字仍在版心邊距內 */
+	.hero__photo { height: auto; display: flex; flex-direction: column; }
+	.hero__pic { position: relative; inset: auto; }
+	.hero__pic > img { aspect-ratio: 4 / 5; height: auto; }
+	.hero__pic::after { background: linear-gradient(0deg, rgba(10, 16, 36, .5) 0%, rgba(10, 16, 36, 0) 40%); }
+	.hero__copy { position: static; order: -1; display: block; padding: var(--s4) var(--gutter) var(--s3); }
+	/* 標題與主 CTA 留在第一屏，導言才移到照片下方 */
+	.hero__title { font-size: clamp(2.5rem, 12vw, 3.2rem); margin-bottom: var(--s3); max-width: 8em; }
+	.hero__copy .hero__lead { display: none; }
+	.hero__copy .hero__act { flex-direction: column; align-items: flex-start; gap: var(--s2); }
+	.hero__copy .btn { width: 100%; justify-content: center; }
+	.hero__below { padding-top: calc(var(--inset-drop) + var(--s3)); padding-bottom: var(--s3); }
+	.hero__below .hero__lead { max-width: none; margin: 0; }
+	.hero__below .hero__act { display: none; }
+	.hero__inset { right: var(--gutter); width: 50%; border-width: 4px; }
+	.tag { font-size: .84rem; padding: .45rem .7rem .4rem; }
+	.tag--camera { top: var(--s2); left: var(--gutter); }
+	.tag--chain { left: -4px; bottom: -4px; }
+	.tag .kicker { display: none; }
+
+	.sec--first { padding-top: var(--s5); }
+	.h2 { font-size: 2rem; }
+	.grid12 { gap: var(--s2); }
+	.sec__head { margin-bottom: var(--s4); }
+
+	/* 編號併進 meta 行、圖滿版心，不留空欄 */
+	.row { grid-template-columns: 1fr; gap: var(--s2); padding: var(--s4) 0; }
+	.row__no { display: none; }
+	.row__fig, .row__body { grid-column: 1; }
+	.row__meta .no-inline { display: inline; color: var(--red); font-family: var(--mono); font-size: 1rem; margin-right: .3rem; }
+	.row--chain .row__fig a { border-width: 4px; }
+
+	.chain__acts { flex-direction: column; align-items: flex-start; gap: .9rem; }
+	/* 特寫整寬，四隻小圖 2×2，不留孤兒格 */
+	#clonex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s2); }
+	#clonex-grid > .is-feat { grid-column: 1 / -1; grid-row: auto; }
+	.is-feat .clonex-meta { flex-direction: column; gap: .1rem; }
+
+	/* 12 欄格在手機收成 1 欄；所有跨欄設定一律歸 1 */
+	.grid12 { grid-template-columns: 1fr; }
+	.h2, .sec__lead, .chain__acts, .foot__col--brand, .foot__col--index, .foot__col--social, .foot__copy { grid-column: 1; }
+	.foot ul { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 761px) { .hero__below { display: none; } }

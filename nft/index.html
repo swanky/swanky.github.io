@@ -1,365 +1,198 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-TW">
 <head>
-	<!-- Favicons -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link href="../assets/img/Swanky_logo_icon32.png" rel="icon">
 	<link href="../assets/img/Swanky_logo_icon180.png" rel="apple-touch-icon">
 
-	<!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Swanky NFT線上展覽呈現史旺基工作室策劃的數位藝術與限量收藏，介紹創作者理念、特色系列與跨界合作，帶領觀眾探索制服女孩、美腿等影像作品的NFT體驗，並展示創作幕後故事與收藏者回饋。">
-        <meta name="keywords" content="Swanky NFT,NFT展覽,數位藝術,制服女孩,收藏資訊">
+	<meta name="description" content="Swanky NFT線上展覽呈現史旺基工作室策劃的數位藝術與限量收藏，介紹創作者理念、特色系列與跨界合作，帶領觀眾探索制服女孩、美腿等影像作品的NFT體驗，並展示創作幕後故事與收藏者回饋。">
+	<meta name="keywords" content="Swanky NFT,NFT展覽,數位藝術,制服女孩,收藏資訊">
 	<meta property="og:title" content="Swanky NFT — Art Collection">
 	<meta property="og:description" content="史旺基工作室策劃的數位藝術與限量收藏，制服女孩攝影作品的 NFT 體驗。">
-	<meta property="og:image" content="https://swanky.github.io/nft/assets/images/NFT_pics_800.jpg">
+	<meta property="og:image" content="https://swanky.github.io/assets/img/portfolio/33300626336_d82723bf49_k.jpeg">
 	<meta property="og:url" content="https://swanky.github.io/nft/">
 	<meta property="og:type" content="website">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 
+	<!-- Hero 照片是 LCP：預載 -->
+	<link rel="preload" as="image" href="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" fetchpriority="high">
 
-	<link rel="stylesheet" href="../nft/assets/fonts/icomoon/style.css">
-	<link rel="stylesheet" href="../nft/assets/fonts/flaticon/font/flaticon.css">
-
-	<link rel="stylesheet" href="../nft/assets/css/tiny-slider.css">
-	<link rel="stylesheet" href="../nft/assets/css/glightbox.min.css">
-	<link rel="stylesheet" href="../nft/assets/css/aos.css">
-	<link rel="stylesheet" href="../nft/assets/css/style.css">
-	<link rel="stylesheet" href="../nft/assets/css/nft-site.css">
+	<!-- 本頁不載入模板的 style.css／Bootstrap／輪播／AOS：版面自足，色票與 uniform-clonex/ 同一套 -->
+	<link rel="stylesheet" href="../nft/assets/css/hub.css">
 
 	<title>Swanky NFT &mdash; Art Collection</title>
 	<link rel="canonical" href="https://swanky.github.io/nft/">
-
-	<style>
-	.clonex-section { background:#13111C; }
-	.clonex-section .heading { color:#fff; }
-	.clonex-lead { color:#b8b3c7; max-width:640px; margin:0 auto; }
-	.clonex-controls { margin:22px 0 6px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-	.btn-clonex { background:#6E56CF; color:#fff; border:none; border-radius:8px; padding:12px 24px; font-weight:700; cursor:pointer; transition:background .2s; }
-	.btn-clonex:hover { background:#5a45b0; }
-	.btn-clonex-ghost { background:transparent; color:#b8b3c7; border:1px solid #3a3550; border-radius:8px; padding:12px 22px; cursor:pointer; transition:color .2s,border-color .2s; }
-	.btn-clonex-ghost:hover { color:#fff; border-color:#6E56CF; }
-	.clonex-status { color:#b8b3c7; font-size:.95rem; margin-top:14px; min-height:1.4em; }
-	.clonex-status strong { color:#fff; }
-	.clonex-card { display:block; background:#1d1a2b; border:1px solid #2a2640; border-radius:12px; overflow:hidden; text-decoration:none; transition:transform .2s,border-color .2s; }
-	.clonex-card:hover { transform:translateY(-4px); border-color:#6E56CF; }
-	.clonex-card img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
-	.clonex-noimg { width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; color:#6E56CF; font-weight:700; background:#15131f; }
-	.clonex-meta { padding:10px 12px; color:#e8e6f0; font-size:.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-	.clonex-skeleton { aspect-ratio:1/1; background:#1d1a2b; border-radius:12px; animation:clonexpulse 1.4s ease-in-out infinite; }
-	@keyframes clonexpulse { 0%,100%{opacity:.5;} 50%{opacity:1;} }
-	/* 桌面讓精選收藏排成一行（5 欄），消除 4+1 孤兒行 */
-	@media (min-width:992px){ #clonex-grid > [class*="col-"]{ flex:0 0 20%; max-width:20%; } }
-
-	/* banner hero 撐屏（WP-NFT）：legacy .post-entry .banner / .banner-img 預設 height:auto，此處覆寫 */
-	.banner-section .post-entry .banner { min-height: 70vh; }
-	.banner-section .post-entry .banner .banner-img { width: 100%; height: 70vh; object-fit: cover; }
-	@media (max-width: 767px) {
-	  .banner-section .post-entry .banner,
-	  .banner-section .post-entry .banner .banner-img { min-height: 56vh; height: 56vh; }
-	}
-	</style>
 </head>
 <body>
 
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
+	<a class="skip" href="#series">跳到主要內容</a>
 
-	<nav class="site-nav">
-		<div class="container">
-			<div class="site-navigation">
-
-				<a href="../nft/" class="nft-brand" aria-label="Swanky NFT 首頁">
-					<img src="../assets/img/Swanky_Logo.svg" alt="Swanky Studio 標誌">
-					<span class="nft-brand-tag">NFT</span>
-				</a>
-
-				<ul class="js-clone-nav site-menu">
-					<li class="active"><a href="../nft/">首頁</a></li>
-					<li><a href="../nft/uniform-clonex/">Uniform CloneX</a></li>
-					<li><a href="../nft/oursong/">NFT 作品</a></li>
-					<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">線上展間</a></li>
-					<li class="cta-button"><a href="../">Swanky Studio</a></li>
-				</ul>
-
-				<a href="#" class="burger site-menu-toggle js-menu-toggle" aria-label="開啟選單">
-					<span></span>
-				</a>
-
-			</div>
+	<nav class="nav" aria-label="主導覽">
+		<div class="wrap nav__in">
+			<a class="nav__brand" href="../nft/" aria-label="Swanky NFT 首頁">
+				<img src="../assets/img/Swanky_Logo.svg" alt="Swanky Studio 標誌">
+				<span class="nav__tag">NFT</span>
+			</a>
+			<ul class="nav__links">
+				<li class="nav__wide is-here"><a href="../nft/" aria-current="page">NFT 首頁</a></li>
+				<li class="nav__wide"><a href="../nft/oursong/">NFT 作品</a></li>
+				<li class="nav__wide"><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
+				<li class="cta"><a href="../nft/uniform-clonex/">Uniform CloneX</a></li>
+			</ul>
 		</div>
 	</nav>
 
-
-
-	<div class="banner-section section pt-5 pb-0">
-		<div class="container">
-			<h1 class="visually-hidden">Swanky NFT｜制服女孩 NFT 作品與鏈上 CloneX 收藏</h1>
-			<!--
-			<div class="row justify-content-center mb-5">
-				<div class="col-lg-7 text-center">
-					<h2 class="heading">Latest News</h2>
+	<!-- ================= Hero ================= -->
+	<header class="hero">
+		<div class="hero__photo">
+			<div class="hero__pic">
+				<img src="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" alt="制服女孩攝影系列作品：窗邊逆光下穿水手領制服的少女" width="2048" height="1365" fetchpriority="high" style="object-position: 62% 40%">
+				<span class="tag tag--camera"><span>相機</span><span class="kicker">制服女孩攝影 · 真人</span></span>
+			</div>
+			<div class="wrap hero__copy">
+				<p class="hero__tag">Swanky NFT · 制服女孩系列索引</p>
+				<h1 class="hero__title">制服女孩，<br>從相機到<em>鏈上</em></h1>
+				<p class="hero__lead">十年的制服女孩攝影，2021 年第一次上鏈發行，2022 年以 CloneX 化身組成水手服女子團體出道，2026 年整理成角色檔案。這一頁是三條線索的索引。</p>
+				<div class="hero__act">
+					<a class="btn" href="../nft/uniform-clonex/">進入 Uniform CloneX<span class="ar" aria-hidden="true">→</span></a>
+					<a class="more more--light" href="#series">先看三個系列<span class="ar" aria-hidden="true">↓</span></a>
 				</div>
 			</div>
-			-->
-			<div class="row">
-
-				<div class="col-lg-12">
-
-					<div class="posts-slide-wrap">
-						<div class="posts-slide" id="posts-slide">
-
-							<div class="item">
-								<div class="post-entry">
-
-									<div class="me-lg-12 thumbnail mb-12 mb-lg-0 ">
-										<div class="banner">
-
-                                                                                        <img src="../nft/assets/images/banner-1.png" alt="Uniform Girls NFT 展示橫幅一" class="img-fluid banner-img">
-
-										</div>
-										<div class="content align-self-center">
-										<div class="post-meta mb-12">
-											<a href="../nft/oursong/" class="category">攝影</a>, <a href="../nft/oursong/" class="category">OurSong</a> &mdash; <span class="date">2021</span>
-										</div>
-										<h2 class="heading"><a href="../nft/oursong/">制服女孩 NFT｜OurSong 限量發行</a></h2>
-									</div>
-									</div>
-
-									
-								</div>
-							</div>
-							<!-- END .item -->
-							<div class="item">
-								<div class="post-entry">
-
-									<div class="me-lg-12 thumbnail mb-12 mb-lg-0 ">
-										<div class="banner">
-
-                                                                                        <img src="../nft/assets/images/banner-2.png" alt="Crypto Girls NFT 展示橫幅二" class="img-fluid banner-img">
-
-										</div>
-										<div class="content align-self-center">
-										<div class="post-meta mb-12">
-											<a href="../nft/oursong/" class="category">攝影</a>, <a href="../nft/oursong/" class="category">Web3</a> &mdash; <span class="date">2021</span>
-										</div>
-										<h2 class="heading"><a href="../nft/oursong/">加密女孩 NFT｜Web3 攝影創作</a></h2>
-									</div>
-									</div>
-
-									
-								</div>
-							</div>
-							<!-- END .item -->
-							<div class="item">
-								<div class="post-entry">
-
-									<div class="me-lg-12 thumbnail mb-12 mb-lg-0 ">
-										<div class="banner">
-										
-                                                                                        <img src="../nft/assets/images/banner-3.png" alt="Swanky NFT 展間展示橫幅三" class="img-fluid banner-img">
-										
-										</div>
-										<div class="content align-self-center">
-										<div class="post-meta mb-12">
-											<a href="https://oncyber.io/swanky-exo-pod" class="category">展覽</a>, <a href="https://oncyber.io/swanky-exo-pod" class="category">oncyber</a> &mdash; <span class="date">2022</span>
-										</div>
-										<h2 class="heading"><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展覽｜oncyber 展間</a></h2>
-									</div>
-									</div>
-
-									
-								</div>
-							</div>
-							<!-- END .item -->
-
-
-
-						</div>
-					</div>
-					
-				</div>
-				
+			<figure class="hero__inset">
+				<img src="../nft/assets/images/ucx/members/15755/photoreal_face_34.webp" alt="CloneX #15755 擬真風格頭肩像，Uniform CloneX 主視覺成員" width="1024" height="1024" style="object-position: 45% 50%">
+				<span class="tag tag--chain"><span>鏈上</span><span class="kicker">CloneX #15755 · 化身</span></span>
+			</figure>
+		</div>
+		<!-- 手機版：導言與 CTA 移到照片下方（桌機隱藏，見 hub.css） -->
+		<div class="wrap hero__below">
+			<p class="hero__lead">十年的制服女孩攝影，2021 年第一次上鏈發行，2022 年以 CloneX 化身組成水手服女子團體出道，2026 年整理成角色檔案。這一頁是三條線索的索引。</p>
+			<div class="hero__act">
+				<a class="btn" href="../nft/uniform-clonex/">進入 Uniform CloneX<span class="ar" aria-hidden="true">→</span></a>
+				<a class="more more--light" href="#series">先看三個系列<span class="ar" aria-hidden="true">↓</span></a>
 			</div>
 		</div>
-	</div>
+	</header>
 
-	<!-- Section -->
-	<div class="btn-section">
-		<div class="container text-center">
-			<p class="enter-hint">作品都布置在一個 3D 線上展覽空間，可以像逛展場一樣走進去看。</p>
-			<a href="https://oncyber.io/swanky-exo-pod" class="btn-get-started" target="_blank" rel="noopener noreferrer">▶ 進入 3D 線上展間</a>
+	<!-- ================= 系列（時間序） ================= -->
+	<section class="sec sec--first" id="series">
+		<div class="wrap">
+			<div class="grid12 sec__head rise">
+				<h2 class="h2"><span class="no">系列</span>三條線索，照年份排</h2>
+				<p class="sec__lead">同一群制服女孩，三種存在方式：先是上鏈的攝影，再是走得進去的展場，最後是化身的團體。</p>
+			</div>
+
+			<ol class="series">
+				<li class="grid12 row rise">
+					<span class="row__no" aria-hidden="true">2021</span>
+					<figure class="row__fig">
+						<a href="../nft/oursong/"><img loading="lazy" src="../nft/oursong/web/tina1-content.jpg" alt="制服女孩 NFT 系列作品：戶外自然光下穿制服的女孩" width="760" height="760" style="object-position: 50% 25%"></a>
+					</figure>
+					<div class="row__body">
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2021</span><span class="mono">2021.07</span><span class="kicker">OurSong 發行</span></p>
+						<h3 class="row__title"><a href="../nft/oursong/">制服女孩 NFT ／ 加密女孩 NFT</a></h3>
+						<p class="row__desc">制服女孩攝影系列第一次上鏈，並與插畫家 Pixel RuRu、TY 合作推出插畫版本。</p>
+						<a class="more row__act" href="../nft/oursong/">看作品清單<span class="ar" aria-hidden="true">→</span></a>
+					</div>
+				</li>
+
+				<li class="grid12 row row--wide rise">
+					<span class="row__no" aria-hidden="true">2022</span>
+					<figure class="row__fig">
+						<a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="../nft/assets/images/banner-3.png" alt="Swanky NFT 3D 線上展間畫面" width="1296" height="608" style="object-position: 30% 50%"></a>
+					</figure>
+					<div class="row__body">
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2022</span><span class="mono">2022</span><span class="kicker">oncyber 線上展間</span></p>
+						<h3 class="row__title"><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></h3>
+						<p class="row__desc">作品都布置在一個 3D 線上展覽空間，可以像逛展場一樣走進去看。</p>
+						<a class="more row__act" href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">走進展間<span class="ar" aria-hidden="true">↗</span></a>
+					</div>
+				</li>
+
+				<li class="grid12 row row--chain rise">
+					<span class="row__no" aria-hidden="true">2026</span>
+					<figure class="row__fig">
+						<a href="../nft/uniform-clonex/"><img loading="lazy" src="../nft/assets/images/ucx/works/reroll-photoreal.jpg" alt="Uniform CloneX 作品 REROLL 擬真版畫面" width="1280" height="720"></a>
+					</figure>
+					<div class="row__body">
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2026</span><span class="mono">2022.12 — 2026</span><span class="kicker">CloneX 化身團體</span></p>
+						<h3 class="row__title"><a href="../nft/uniform-clonex/">Uniform CloneX</a></h3>
+						<p class="row__desc">史旺基持有的五隻 CloneX 組成的水手服女子團體：三位正團成員、兩位幕後角色，各有身分檔案、多視角視覺與影像作品。<strong>當一切都能重抽，統一反而是最強的宣言。</strong></p>
+						<a class="more row__act" href="../nft/uniform-clonex/">看角色檔案<span class="ar" aria-hidden="true">→</span></a>
+					</div>
+				</li>
+			</ol>
 		</div>
-	</div>
+	</section>
 
-	<!-- Section -->
-	<div class="section">
-		<div class="container">
-			
-			<div class="row justify-content-center mb-5">
-				<div class="col-lg-7 text-center">
-					<h2 class="heading">作品系列</h2>
+	<!-- ================= 鏈上收藏（連結錢包・即時讀取） ================= -->
+	<section class="sec sec--ink" id="clonex">
+		<div class="wrap">
+			<div class="grid12 sec__head sec__head--stack rise">
+				<h2 class="h2"><span class="no">收藏</span>鏈上的五位</h2>
+				<p class="sec__lead">以下五隻 CloneX 直接從以太坊鏈上即時讀取，就是組成 Uniform CloneX 的那五位。其中 <strong>#15755</strong> 後來被重新設計成 78 張原創塔羅牌。你也可以連結自己的錢包，展示你持有的 CloneX。</p>
+				<div class="chain__acts">
+					<a class="more" href="../tarot/decks/clonex/">看 #15755 的 78 張塔羅牌<span class="ar" aria-hidden="true">→</span></a>
+					<button id="clonex-connect" class="more" type="button">連結錢包看我的收藏<span class="ar" aria-hidden="true">→</span></button>
+					<button id="clonex-back" class="more" type="button" style="display:none;">返回史旺基的收藏</button>
 				</div>
 			</div>
-			
-			<div class="row g-5">
-				<div class="col-lg-4">
-					<div class="post-entry d-block small-post-entry-v">
-						<div class="thumbnail">
-							<a href="../nft/uniform-clonex/">
-								<img src="../nft/assets/images/ucx/group-shot/og.webp" alt="Uniform CloneX 正團三位成員的水手服合照" class="img-fluid">
-							</a>
-						</div>
-						<div class="content">
-							<div class="post-meta mb-1">
-								<a href="../nft/uniform-clonex/" class="category">CloneX</a>, <a href="../nft/uniform-clonex/" class="category">虛擬偶像</a> &mdash;
-								<span class="date">2026</span>
-							</div>
-							<h2 class="heading mb-3"><a href="../nft/uniform-clonex/">Uniform CloneX｜CloneX 水手服女子團體</a></h2>
-							<p></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="post-entry d-block small-post-entry-v">
-						<div class="thumbnail">
-							<a href="../nft/oursong/">
-                                                                <img src="../nft/assets/images/NFT_pics_800.jpg" alt="Uniform Girls ＆ Crypto Girls NFT 宣傳視覺" class="img-fluid">
-							</a>
-						</div>
-						<div class="content">
-							<div class="post-meta mb-1">
-								<a href="../nft/oursong/" class="category">攝影</a>, <a href="../nft/oursong/" class="category">OurSong</a> &mdash;
-								<span class="date">2021</span>
-								
-							</div>
-							<h2 class="heading mb-3"><a href="../nft/oursong/">Swanky｜Uniform Girls ＆ Crypto Girls</a></h2>
-							<p></p>							
-
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 ">
-					<div class="post-entry d-block small-post-entry-v">
-						<div class="thumbnail">
-							<a href="../nft/oursong/">
-                                                                <img src="../nft/assets/images/NFT_pics_ruru_800.jpg" alt="Swanky x Pixel RuRu NFT 合作視覺" class="img-fluid">
-							</a>
-						</div>
-						<div class="content">
-							<div class="post-meta mb-1">
-								<a href="../nft/oursong/" class="category">插畫合作</a>, <a href="../nft/oursong/" class="category">NFT</a> &mdash;
-								<span class="date">2021</span>
-								
-							</div>
-							<h2 class="heading mb-3"><a href="../nft/oursong/">Swanky x Pixel RuRu｜Uniform Girls ＆ Crypto Girls</a></h2>
-							<p></p>
-
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4">
-					<div class="post-entry d-block small-post-entry-v">
-						<div class="thumbnail">
-							<a href="../nft/oursong/">
-                                                                <img src="../nft/assets/images/NFT_pics_ty_800.jpg" alt="Swanky x TY NFT 合作視覺" class="img-fluid">
-							</a>
-						</div>
-						<div class="content">
-							<div class="post-meta mb-1">
-								<a href="../nft/oursong/" class="category">插畫合作</a>, <a href="../nft/oursong/" class="category">NFT</a> &mdash;
-								<span class="date">2021</span>
-								
-							</div>
-							<h2 class="heading mb-3"><a href="../nft/oursong/">Swanky x TY｜Uniform Girls ＆ Crypto Girls</a></h2>
-							<p></p>
-							
-						</div>
-					</div>
-				</div>
-
-			</div>
+			<p id="clonex-status" class="chain__status"></p>
+			<div id="clonex-grid"></div>
 		</div>
-	</div>
+	</section>
 
-	<!-- Section: 鏈上 CloneX 收藏（連結錢包・即時讀取） -->
-	<div class="section clonex-section" id="clonex">
-		<div class="container">
-			<div class="row justify-content-center mb-4">
-				<div class="col-lg-8 text-center">
-					<h2 class="heading">鏈上 CloneX 收藏</h2>
-					<p class="clonex-lead">以下收藏直接從以太坊鏈上即時讀取。你也可以連結自己的錢包，展示你持有的 CloneX。其中一隻 <strong>#15755</strong>，我還把它重新設計成 78 張原創塔羅牌——<a href="../tarot/decks/clonex/" style="color:#c9b6ff;border-bottom:1px solid #6E56CF;text-decoration:none;">看 Cute Luxe Cyber Tarot →</a></p>
-					<div class="clonex-controls">
-						<button id="clonex-connect" class="btn-clonex" type="button">🦊 連結錢包看我的收藏</button>
-						<button id="clonex-back" class="btn-clonex-ghost" type="button" style="display:none;">← 返回史旺基的收藏</button>
-					</div>
-					<p id="clonex-status" class="clonex-status"></p>
-				</div>
+	<footer class="foot">
+		<div class="wrap grid12">
+			<div class="foot__col foot__col--brand">
+				<p class="foot__brand">Swanky NFT</p>
+				<p class="foot__desc">史旺基工作室策劃的數位藝術與限量收藏：制服女孩攝影的上鏈版本，與它的 CloneX 化身。</p>
 			</div>
-			<div id="clonex-grid" class="row g-4 justify-content-center"></div>
-		</div>
-	</div>
-
-	<div class="site-footer bg-light">
-		<div class="container">
-			<div class="row justify-content-center copyright">
-
-				<div class="col-lg-7 text-center">
-
-					<div class="widget">
-						<ul class="social list-unstyled">
-							<li><a href="https://www.youtube.com/@SwankyHsiao"><span class="icon-youtube-play"></span></a></li>
-							<li><a href="https://www.facebook.com/SwankyParty"><span class="icon-facebook"></span></a></li>
-							<li><a href="https://x.com/swanky"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/swanky"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://www.flickr.com/photos/swanky-hsiao/"><span class="icon-flickr"></span></a></li>
-							<li><a href="https://www.pinterest.com/swanbear/"><span class="icon-pinterest"></span></a></li>
-
-						</ul>
-					</div>
-
-					<div class="widget">
-						<div class="copyright">
-						</br>
-							&copy; Copyright <strong><span>Swanky</span></strong>. All Rights Reserved
-						  </div>
-
-						<div class="d-block">
-							<a href="../index.html" class="m-2">Swanky Studio</a>
-						</div>
-					</div>
-
-				</div>
-
-
+			<div class="foot__col foot__col--index">
+				<span class="foot__lab">索引</span>
+				<ul>
+					<li><a href="../nft/uniform-clonex/">Uniform CloneX</a></li>
+					<li><a href="../nft/oursong/">NFT 作品</a></li>
+					<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
+					<li><a href="../">Swanky Studio 主站</a></li>
+				</ul>
 			</div>
-		</div>
-
-		<!-- Preloader -->
-		<div id="overlayer"></div>
-		<div class="loader">
-			<div class="spinner-border" role="status">
-				<span class="visually-hidden">Loading...</span>
+			<div class="foot__col foot__col--social">
+				<span class="foot__lab">社群</span>
+				<ul>
+					<li><a href="https://www.youtube.com/@SwankyHsiao">YouTube</a></li>
+					<li><a href="https://www.facebook.com/SwankyParty">Facebook</a></li>
+					<li><a href="https://x.com/swanky">X</a></li>
+					<li><a href="https://www.linkedin.com/in/swanky">LinkedIn</a></li>
+					<li><a href="https://www.flickr.com/photos/swanky-hsiao/">Flickr</a></li>
+					<li><a href="https://www.pinterest.com/swanbear/">Pinterest</a></li>
+				</ul>
 			</div>
+			<p class="foot__copy">&copy; Swanky. All Rights Reserved.</p>
 		</div>
+	</footer>
 
-
-		<script src="../nft/assets/js/bootstrap.bundle.min.js"></script>
-		<script src="../nft/assets/js/tiny-slider.js"></script>
-		<script src="../nft/assets/js/glightbox.min.js"></script>
-		<script src="../nft/assets/js/aos.js"></script>
-		<script src="../nft/assets/js/navbar.js"></script>
-		<script src="../nft/assets/js/counter.js"></script>
-		<script src="../nft/assets/js/custom.js"></script>
-		<script type="module" src="../nft/assets/js/clonex-gallery.js"></script>
-	</body>
-	</html>
+	<script>
+	/* 進場動畫：只改 opacity／transform；使用者關掉動效時直接顯示 */
+	(function () {
+		var items = [].slice.call(document.querySelectorAll(".rise"));
+		if (!("IntersectionObserver" in window) ||
+			window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			items.forEach(function (n) { n.classList.add("is-in"); });
+			return;
+		}
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+			});
+		}, { rootMargin: "0px 0px -8% 0px" });
+		items.forEach(function (n) { io.observe(n); });
+	})();
+	</script>
+	<script type="module" src="../nft/assets/js/clonex-gallery.js"></script>
+</body>
+</html>

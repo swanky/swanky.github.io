@@ -25,7 +25,7 @@
 跨頁「版面用滿感」由兩個結構指標決定，與色調無關，日後設計審查必須把它列為跨頁比對維度（2026-07 審查只比了元件層與色調層，漏掉此維度）：
 
 - **Hub／登陸頁 hero 撐屏**：`min-height: max(640px, 85svh)`＋`display:flex; align-items:center`（tarot decks 家族 680px 地板）；≤767px 一律退回 `min-height:auto`。先例：`.edu-hero`、`.explore-hero`、`.ct-section--hero`、`.tech-hero`、`.photo-author-hero`。
-- **深色滿版節奏帶**：每個 hub 頁至少 1 段深色滿版 section 製造明暗節奏。用色按家族 token：Base `#232020`（--c-ink）、Education `#26231f`、Technical `#07111f`、Tarot `#050914`、nft `#13111C`。深色帶上金字一律亮金 `#E5A300`（深金 `#8a5d00` 僅限亮底）；次要文字 `rgba(255,255,255,.72)` 起跳。
+- **深色滿版節奏帶**：每個 hub 頁至少 1 段深色滿版 section 製造明暗節奏。用色按家族 token：Base `#232020`（--c-ink）、Education `#26231f`、Technical `#07111f`、Tarot `#050914`、nft `#0a1024`（2026-09-02 起 /nft/ 首頁與 UCX 頁共用 ucx.css 的 `--ink`；舊 `#13111C` 僅剩 /nft/oursong/ 的模板頁）。深色帶上金字一律亮金 `#E5A300`（深金 `#8a5d00` 僅限亮底）；次要文字 `rgba(255,255,255,.72)` 起跳。
 - **工具頁例外（硬約束）**：輸入表單／工具主體必須在 1440×900 與 390×844 首屏內——工具頁 hero 不加 min-height，改用「亮色漸層＋細點陣質感層」＋頁尾 `.tool-cta-dark`（#232020）深色帶補節奏。
 - **Listing 頁輕量身分帶**：320–420px 深底帶（`.tech-listing-band`、`.press-hero`），不撐滿屏。
 

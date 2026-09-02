@@ -25,6 +25,18 @@ const LOCAL_IMAGES = {
 };
 const LOCAL_BASE = "../nft/assets/images/clonex/";
 
+// 預設藏品櫃的角色標籤（與 uniform-clonex/ 的檔案一致；連別人的錢包時沒有這層）。
+// 鍵是鏈上 token id，值是「名稱編號 · 身分」。#15755 是 UCX 主視覺、也是 78 張塔羅牌的原型，
+// 預設藏品櫃裡讓它佔大格。
+const ROLES = {
+  "9245": ["#15755", "正團 · 主視覺"],
+  "15939": ["#17474", "正團 · 引導者"],
+  "2692": ["#9268", "正團 · 街頭風"],
+  "9023": ["#15162", "幕後 · 造型師／技術總監"],
+  "9927": ["#17152", "幕後 · 製作人"],
+};
+const FEATURED = "9245";
+
 // 少數 CloneX 圖的官方 Arweave「路徑解析」在所有網關都壞（manifest 路徑問題、且 arweave.net
 // 未 seed 該副本），但底層 data txid 在部分 ar.io 網關仍可達 → 對這些 tokenId 改走 data txid 直連。
 // txid 取自 manifest 的 /raw/ 端點，並實測 vilenarios / frostor 對兩張皆回 200 image/png。
@@ -111,7 +123,7 @@ function placeholder(label) {
 }
 
 // 一張卡片。圖片三級 fallback：wsrv 縮圖 → 原圖 → 編號占位（整卡仍可點到 OpenSea）。
-function makeCard(item) {
+function makeCard(item, isGallery) {
   const a = document.createElement("a");
   a.className = "clonex-card";
   a.href = `https://opensea.io/assets/ethereum/${CLONEX}/${item.tokenId}`;
@@ -149,8 +161,26 @@ function makeCard(item) {
 
   const meta = document.createElement("div");
   meta.className = "clonex-meta";
-  meta.textContent = item.name;
+  const role = isGallery && ROLES[item.tokenId];
+  if (role) {
+    // 兩行：編號一行、身分一行，窄螢幕不必截斷
+    const id = document.createElement("span");
+    id.className = "clonex-id";
+    id.textContent = role[0];
+    const who = document.createElement("span");
+    who.className = "clonex-role";
+    who.textContent = role[1];
+    meta.append(id, who);
+  } else {
+    meta.textContent = item.name;
+  }
   a.appendChild(meta);
+  if (isGallery && item.tokenId === FEATURED) {
+    const note = document.createElement("div");
+    note.className = "clonex-feat-note";
+    note.textContent = "這一隻後來重製成 78 張原創塔羅牌";
+    a.appendChild(note);
+  }
   return a;
 }
 
@@ -175,7 +205,7 @@ async function loadCollection(address, label) {
     const count = Math.min(balance, MAX_SHOW);
     status.innerHTML =
       `${label} 共持有 <strong>${balance}</strong> 個 CloneX` +
-      (balance > count ? `，以下精選 ${count} 個：` : "：");
+      (balance > count ? `，以下精選 ${count} 個` : "");
 
     // 先放骨架卡片，資料到位後逐一替換
     for (let i = 0; i < count; i++) {
@@ -198,7 +228,9 @@ async function loadCollection(address, label) {
       const col = document.getElementById(`clonex-card-${it.i}`);
       if (!col) continue;
       col.innerHTML = "";
-      col.appendChild(makeCard(it));
+      const isGallery = address === GALLERY_ADDRESS;
+      col.appendChild(makeCard(it, isGallery));
+      col.classList.toggle("is-feat", isGallery && it.tokenId === FEATURED);
     }
   } catch (e) {
     status.textContent = e?.message || "讀取失敗，請稍後再試。";
@@ -218,7 +250,7 @@ async function connectWallet() {
     const addr = accounts[0];
     if (!addr) return;
     if (backBtn) backBtn.style.display = "";
-    if (connectBtn) connectBtn.textContent = `🦊 ${shortenAddress(addr)}`;
+    if (connectBtn) connectBtn.textContent = `已連結 ${shortenAddress(addr)}`;
     // 查詢仍走唯讀 RPC（穩定、且不受使用者錢包所在鏈影響）
     await loadCollection(addr, `你的錢包 ${shortenAddress(addr)}`);
   } catch (e) {
@@ -235,7 +267,7 @@ function init() {
   if (backBtn) {
     backBtn.addEventListener("click", () => {
       backBtn.style.display = "none";
-      connectBtn.textContent = "🦊 連結錢包看我的收藏";
+      connectBtn.textContent = "連結錢包看我的收藏";
       loadCollection(GALLERY_ADDRESS, "史旺基的收藏");
     });
   }
