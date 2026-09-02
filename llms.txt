@@ -105,7 +105,9 @@
 
 ## NFT 策展 NFT
 
-- [NFT 策展](https://swanky.github.io/nft/): Good Morning Frens (GMF)、ArtfN fair、GEISAI TAIWAN 等策展紀錄
+- [Swanky NFT 首頁](https://swanky.github.io/nft/): 制服女孩從相機到鏈上的三條線索——2021 OurSong 發行的制服女孩 NFT 系列、2022 的 3D 線上展間、2026 的 Uniform CloneX；並即時讀取五位 CloneX 成員的鏈上持有
+- [制服女孩 NFT 系列（OurSong，2021）](https://swanky.github.io/nft/oursong/): 2021 年 7 月在台灣平台 OurSong 發行的攝影 NFT 系列完整存檔——13 件作品的上架卡面與持有者解鎖內容、周邊物件、版權說明；平台已於 2024 年 11 月停止營運
+- [收藏展](https://swanky.github.io/nft/collection/): 史旺基 NFT 收藏的線上策展——六個展區：CloneX、藍籌與 PFP（MAYC、Meebits、MOAR）、村上隆（Murakami.Flowers、108 Flowers、招財貓）、潮流品牌（RTFKT × Nike、adidas、Moncler）、亞洲藝術與社群（Akibahara、GEISAI）、自己的發行；每件連回 OpenSea
 - [Uniform CloneX（UCX）](https://swanky.github.io/nft/uniform-clonex/): CloneX 水手服女子團體的角色檔案頁——三位正團成員與兩位幕後角色的身分檔案、多視角視覺、世界觀故事與影像作品。制服女孩攝影系列的 Web3 世代延伸
 
 ## 內容主題與專長 Topics & Expertise

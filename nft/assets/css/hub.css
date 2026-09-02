@@ -489,3 +489,60 @@ button { font: inherit; }
 	.arch__head { flex-direction: column; gap: .2rem; }
 	.foot ul { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- 收藏頁（/nft/collection/）：扉頁沿用 oursong 的紙底檔案語彙，
+   主體是每個主題一張方格——首件 2×2、其餘 1×1，硬邊、不調色（作品本身的色彩就是資訊） ---------- */
+.hero--arch__cap { display: flex; gap: .7rem; align-items: baseline; margin: .6rem 0 0; font-size: .84rem; color: var(--text-2); }
+.hero--arch__cap .mono { color: var(--text); }
+.hero--paper .hero--arch__fig img { aspect-ratio: 4 / 5; }
+.hero--arch .hero__title--sub { font-family: var(--sans); font-weight: 500; font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: var(--text-2); margin: 0 0 var(--s3); }
+/* 展區目錄：策展平面圖，不是資產清單——只有編號與展區名 */
+.rooms { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--text); }
+.rooms li { border-bottom: 1px solid var(--line); }
+.rooms a { display: grid; grid-template-columns: 2.6rem 1fr auto; align-items: baseline; gap: .6rem; padding: .55rem 0; color: var(--text); font-weight: 500; }
+.rooms a .mono { color: var(--mute); font-size: .86rem; }
+.rooms a .ar { color: var(--mute); font-size: .9rem; transition: transform .2s var(--ease-out); }
+.rooms a:hover { color: var(--red-ink); }
+.rooms a:hover .ar { transform: translateY(3px); color: var(--red-ink); }
+.hero--paper .stamp { grid-template-columns: auto 1fr; }
+.hero--paper .stamp a { color: var(--text); border-bottom: 1px solid var(--text); }
+.hero--paper .stamp a:hover { color: var(--red-ink); border-color: var(--red-ink); }
+.page-coll .sec--first { border-top: 1px solid var(--line); }
+.sec__lead .more { display: flex; width: max-content; margin-top: .7rem; }
+.coll { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s4) var(--s3); }
+.piece { margin: 0; }
+.piece--lead { grid-column: span 2; grid-row: span 2; }
+/* 團體展區：五位等寬一排，沒有誰是主角 */
+.coll--row { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.coll--row .piece--lead { grid-column: auto; grid-row: auto; }
+.coll--row .piece--lead .piece__meta { padding-top: .75rem; margin-top: 0; }
+.coll--row .piece--lead .piece__artist { font-size: .9rem; }
+.coll--row .piece--lead .piece__title { font-size: 1.02rem; line-height: 1.45; }
+.piece a { display: flex; flex-direction: column; height: 100%; color: inherit; }
+.piece__img { display: block; aspect-ratio: 1; overflow: hidden; background: var(--paper-2); }
+.sec--ink .piece__img { background: var(--ink-2); }
+.piece__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
+.piece a:hover img { transform: scale(1.03); }
+.piece__meta { display: flex; flex-direction: column; gap: .05rem; padding: .75rem 0 0; font-size: .86rem; line-height: 1.45; color: var(--text-2); }
+.piece__lot { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: .2rem; }
+.piece__artist { color: var(--text); font-weight: 700; font-size: .9rem; }
+.piece__title { font-family: var(--serif); font-style: italic; font-size: 1.02rem; color: var(--text); }
+.piece__medium { font-size: .78rem; color: var(--mute); margin-top: .15rem; }
+.piece a:hover .piece__title { color: var(--red-ink); }
+.piece--lead .piece__meta { padding-top: .9rem; margin-top: auto; }   /* 大圖的說明貼齊右側 2×2 的底線，不懸在中段 */
+.piece--lead .piece__artist { font-size: 1rem; }
+.piece--lead .piece__title { font-size: 1.45rem; line-height: 1.25; }
+.piece__meta .dot { margin: 0 .35rem; }
+.sec--ink .piece__meta { color: var(--on-ink-2); }
+.sec--ink .piece__lot, .sec--ink .piece__medium { color: var(--on-ink-2); }
+.sec--ink .piece__artist, .sec--ink .piece__title { color: #fff; }
+.sec--ink .piece a:hover .piece__title { color: var(--red-lift); }
+@media (max-width: 1024px) {
+	.coll { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.coll--row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+	.coll, .coll--row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+	.piece__meta { font-size: .8rem; }
+	.hero--paper .hero--arch__fig img { aspect-ratio: 1; }
+}

@@ -1,0 +1,630 @@
+{
+  "meta": {
+    "opensea": "https://opensea.io/swanky"
+  },
+  "lead": "這是一場線上策展，不是清單。史旺基把多年收藏的 NFT 分成六個展區陳列：從 Uniform CloneX 的五位成員，到同時期的藍籌頭像、村上隆的鏈上創作、潮流品牌的虛擬穿搭、亞洲藝術家與社群的發行，最後是自己做過的東西。每一件都能點進 OpenSea 看原件。",
+  "hero": {
+    "name": "#17854",
+    "collection": "Mutant Ape Yacht Club",
+    "href": "https://opensea.io/item/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/17854",
+    "img": "collection/pfp-17854-17854.webp",
+    "alt": "#17854，Mutant Ape Yacht Club 系列的頭像",
+    "pos": "50% 15%",
+    "collection_display": "Mutant Ape Yacht Club",
+    "cap": "封面拍品 · 見展區 02"
+  },
+  "themes": [
+    {
+      "id": "clonex",
+      "title": "CloneX",
+      "ink": false,
+      "lead": "五隻 CloneX 是這份收藏的核心，也是 Uniform CloneX 的五位成員。",
+      "link": {
+        "href": "../uniform-clonex/",
+        "label": "看她們的角色檔案"
+      },
+      "items": [
+        {
+          "name": "CloneX #15755",
+          "collection": "CLONE X - X TAKASHI MURAKAMI",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9245",
+          "img": "collection/clonex-clonex-15755-9245.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/7c37761125922b924c635420871807/647c37761125922b924c635420871807.png?w=800",
+          "collection_display": "CloneX × Takashi Murakami",
+          "title": "CloneX #15755",
+          "token_label": ""
+        },
+        {
+          "name": "CloneX #17474",
+          "collection": "CLONE X - X TAKASHI MURAKAMI",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/15939",
+          "img": "collection/clonex-clonex-17474-15939.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/4558c0fef4a5a094f11ddc4f627525/4a4558c0fef4a5a094f11ddc4f627525.png?w=800",
+          "collection_display": "CloneX × Takashi Murakami",
+          "title": "CloneX #17474",
+          "token_label": ""
+        },
+        {
+          "name": "CloneX #9268",
+          "collection": "CLONE X - X TAKASHI MURAKAMI",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/2692",
+          "img": "collection/clonex-clonex-9268-2692.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/8f9078f32b6a8765df93670f3e3271/788f9078f32b6a8765df93670f3e3271.png?w=800",
+          "collection_display": "CloneX × Takashi Murakami",
+          "title": "CloneX #9268",
+          "token_label": ""
+        },
+        {
+          "name": "CloneX #15162",
+          "collection": "CLONE X - X TAKASHI MURAKAMI",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9023",
+          "img": "collection/clonex-clonex-15162-9023.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/82f17cdf1e7c718b217f00c2efbd66/2482f17cdf1e7c718b217f00c2efbd66.png?w=800",
+          "collection_display": "CloneX × Takashi Murakami",
+          "title": "CloneX #15162",
+          "token_label": ""
+        },
+        {
+          "name": "CloneX #17152",
+          "collection": "CLONE X - X TAKASHI MURAKAMI",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9927",
+          "img": "collection/clonex-clonex-17152-9927.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/aa6fe23b433b9e35b7271dca016e29/60aa6fe23b433b9e35b7271dca016e29.png?w=800",
+          "collection_display": "CloneX × Takashi Murakami",
+          "title": "CloneX #17152",
+          "token_label": ""
+        }
+      ],
+      "layout": "row"
+    },
+    {
+      "id": "pfp",
+      "title": "藍籌與 PFP",
+      "ink": false,
+      "lead": "2021 到 2022 年間收的頭像型作品，多數是同時期最有代表性的系列。",
+      "items": [
+        {
+          "name": "#17854",
+          "collection": "Mutant Ape Yacht Club",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/17854",
+          "img": "collection/pfp-17854-17854.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/d323fa0b680bcd0424208e3cd4c329/56d323fa0b680bcd0424208e3cd4c329.png?w=800",
+          "collection_display": "Mutant Ape Yacht Club",
+          "title": "#17854",
+          "token_label": ""
+        },
+        {
+          "name": "Meebit #10829",
+          "collection": "Meebits",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7/10829",
+          "img": "collection/pfp-meebit-10829-10829.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7/7f149139267bcf12f5825076355f82/797f149139267bcf12f5825076355f82.png?w=800",
+          "collection_display": "Meebits",
+          "title": "Meebit #10829",
+          "token_label": ""
+        },
+        {
+          "name": "MOAR #3398",
+          "collection": "\"MOAR\" by Joan Cornella",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xeb3a9a839dfeeaf71db1b4ed6a8ae0ccb171b227/3398",
+          "img": "collection/pfp-moar-3398-3398.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xeb3a9a839dfeeaf71db1b4ed6a8ae0ccb171b227/ed01df2063ca9c9f215f04b9835c0439.png?w=800",
+          "collection_display": "MOAR by Joan Cornellà",
+          "title": "MOAR #3398",
+          "token_label": ""
+        },
+        {
+          "name": "MOAR #307",
+          "collection": "\"MOAR\" by Joan Cornella",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xeb3a9a839dfeeaf71db1b4ed6a8ae0ccb171b227/307",
+          "img": "collection/pfp-moar-307-307.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xeb3a9a839dfeeaf71db1b4ed6a8ae0ccb171b227/1ac1f5eecaf236c09e15f3a773a91f1f.png?w=800",
+          "collection_display": "MOAR by Joan Cornellà",
+          "title": "MOAR #307",
+          "token_label": ""
+        },
+        {
+          "name": "Pop Cat #2515",
+          "collection": "Pop Cats",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x1554f51f18f8e3fbe83e4442420e40efc57ff446/2514",
+          "img": "collection/pfp-pop-cat-2515-2514.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x1554f51f18f8e3fbe83e4442420e40efc57ff446/2e2073667e7b8736de30314735a283/0a2e2073667e7b8736de30314735a283.png?w=800",
+          "collection_display": "Pop Cats",
+          "title": "Pop Cat #2515",
+          "token_label": ""
+        },
+        {
+          "name": "Pop Cat #7318",
+          "collection": "Pop Cats",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x1554f51f18f8e3fbe83e4442420e40efc57ff446/7317",
+          "img": "collection/pfp-pop-cat-7318-7317.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x1554f51f18f8e3fbe83e4442420e40efc57ff446/84afdd7d092f723cb777754d945a9f/f784afdd7d092f723cb777754d945a9f.png?w=800",
+          "collection_display": "Pop Cats",
+          "title": "Pop Cat #7318",
+          "token_label": ""
+        },
+        {
+          "name": "Killer GF #4480",
+          "collection": "Killer GF",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x6be69b2a9b153737887cfcdca7781ed1511c7e36/4480",
+          "img": "collection/pfp-killer-gf-4480-4480.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x6be69b2a9b153737887cfcdca7781ed1511c7e36/587e1470067f63b1b8f68c34e527cb/b4587e1470067f63b1b8f68c34e527cb.png?w=800",
+          "collection_display": "Killer GF",
+          "title": "4480",
+          "token_label": "#4480"
+        },
+        {
+          "name": "uwucrew #5451",
+          "collection": "uwucrew",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xf75140376d246d8b1e5b8a48e3f00772468b3c0c/5451",
+          "img": "collection/pfp-uwucrew-5451-5451.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xf75140376d246d8b1e5b8a48e3f00772468b3c0c/928007e01fde84cebc94124aedccf6/80928007e01fde84cebc94124aedccf6.png?w=800",
+          "collection_display": "uwucrew",
+          "title": "5451",
+          "token_label": "#5451"
+        },
+        {
+          "name": "Doggy #3628",
+          "collection": "The Doggies (Snoop Dogg)",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6/3628",
+          "img": "collection/pfp-doggy-3628-3628.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6/be5da0c0cc6029b7d08c867dbc5690/4abe5da0c0cc6029b7d08c867dbc5690.jpeg?w=800",
+          "collection_display": "The Doggies by Snoop Dogg",
+          "title": "Doggy #3628",
+          "token_label": ""
+        }
+      ]
+    },
+    {
+      "id": "murakami",
+      "title": "村上隆",
+      "ink": false,
+      "lead": "從 Murakami.Flowers 到 Base 鏈上的 108 Flowers 與招財貓系列，一路收下來的村上隆作品。",
+      "items": [
+        {
+          "name": "Murakami.Flower #4099",
+          "collection": "Murakami.Flowers Official",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x7d8820fa92eb1584636f4f5b8515b5476b75171a/1214",
+          "img": "collection/murakami-murakami-flower-4099-1214.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x7d8820fa92eb1584636f4f5b8515b5476b75171a/547c51e233f101765986da6d6bd58106.png?w=800",
+          "collection_display": "Murakami.Flowers",
+          "title": "Murakami.Flower #4099",
+          "token_label": ""
+        },
+        {
+          "name": "Murakami.Flower #4243",
+          "collection": "Murakami.Flowers Official",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x7d8820fa92eb1584636f4f5b8515b5476b75171a/2802",
+          "img": "collection/murakami-murakami-flower-4243-2802.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x7d8820fa92eb1584636f4f5b8515b5476b75171a/50fe0020774684727183fe23279445d6.png?w=800",
+          "collection_display": "Murakami.Flowers",
+          "title": "Murakami.Flower #4243",
+          "token_label": ""
+        },
+        {
+          "name": "Murakami Lucky Coin #1233",
+          "collection": "Murakami.Flowers Coin",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x3e84607606b25f8a3c75b6db4a8a6683d1e40284/300",
+          "img": "collection/murakami-murakami-lucky-coin-1233-300.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x3e84607606b25f8a3c75b6db4a8a6683d1e40284/8a9d5b987b5becf12fae56ba5f889c/208a9d5b987b5becf12fae56ba5f889c.png?w=800",
+          "collection_display": "Murakami.Flowers Coin",
+          "title": "Murakami Lucky Coin #1233",
+          "token_label": ""
+        },
+        {
+          "name": "Smiling Girl SP-001 EN",
+          "collection": "108 Flowers NFT",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0x157fe708913afba61b897efde257e0211a1163e1/1",
+          "img": "collection/murakami-smiling-girl-sp-001-en-1.webp",
+          "src_url": "https://i2c.seadn.io/base/0x157fe708913afba61b897efde257e0211a1163e1/8c3afaa3e2a4ec31ced6b37b9f7b0b71.png?w=800",
+          "collection_display": "108 Flowers",
+          "title": "Smiling Girl SP-001 EN",
+          "token_label": "#1"
+        },
+        {
+          "name": "SAITAMA Chainsaw SP-111 EN",
+          "collection": "108 Flowers NFT",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0x157fe708913afba61b897efde257e0211a1163e1/111",
+          "img": "collection/murakami-saitama-chainsaw-sp-111-en-111.webp",
+          "src_url": "https://i2c.seadn.io/base/0x157fe708913afba61b897efde257e0211a1163e1/b8cc3bd88ff0677063936468314f3135.png?w=800",
+          "collection_display": "108 Flowers",
+          "title": "SAITAMA Chainsaw SP-111 EN",
+          "token_label": "#111"
+        },
+        {
+          "name": "Neon SP-109 JP",
+          "collection": "108 Flowers NFT",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0x157fe708913afba61b897efde257e0211a1163e1/223",
+          "img": "collection/murakami-neon-sp-109-jp-223.webp",
+          "src_url": "https://i2c.seadn.io/base/0x157fe708913afba61b897efde257e0211a1163e1/92fb02f6bfc1546625aa57ba3a024eff.png?w=800",
+          "collection_display": "108 Flowers",
+          "title": "Neon SP-109 JP",
+          "token_label": "#223"
+        },
+        {
+          "name": "Murakami Lucky Cat Coin Bank Feeding Game: Fat Cat",
+          "collection": "Murakami Lucky Cat Coin Bank Feeding Game",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x592b96241367bab3b2bf930c9d41bdf801749878/295",
+          "img": "collection/murakami-murakami-lucky-cat-coin-bank-feeding-game-fat-cat-295.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x592b96241367bab3b2bf930c9d41bdf801749878/6d22427055bfdd90f2a35fa4928bcd37.png?w=800",
+          "collection_display": "Murakami Lucky Cat Coin Bank",
+          "title": "Fat Cat",
+          "token_label": "#295"
+        },
+        {
+          "name": "Takashi Murakami",
+          "collection": "Lucky Cat Zombie NFT",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0x297fde96e49e83ee562b96e4c8a8a687fd01293c/72",
+          "img": "collection/murakami-takashi-murakami-72.webp",
+          "src_url": "https://i2c.seadn.io/base/0x297fde96e49e83ee562b96e4c8a8a687fd01293c/2486ae8a27c50ec694c2d356e44e70/d92486ae8a27c50ec694c2d356e44e70.png?w=800",
+          "collection_display": "Lucky Cat Zombie",
+          "title": "Takashi Murakami",
+          "token_label": "#72"
+        },
+        {
+          "name": "White Cat",
+          "collection": "Lucky Cat Zombie NFT",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0x297fde96e49e83ee562b96e4c8a8a687fd01293c/1",
+          "img": "collection/murakami-white-cat-1.webp",
+          "src_url": "https://i2c.seadn.io/base/0x297fde96e49e83ee562b96e4c8a8a687fd01293c/867e669b8f8580040e5a909b2148a9/d7867e669b8f8580040e5a909b2148a9.png?w=800",
+          "collection_display": "Lucky Cat Zombie",
+          "title": "White Cat",
+          "token_label": "#1"
+        }
+      ]
+    },
+    {
+      "id": "brands",
+      "title": "潮流品牌",
+      "ink": false,
+      "lead": "RTFKT × Nike 的虛擬鞋款與服飾、adidas 與 Moncler 的鏈上發行；團員腳上的鞋就是從這裡來的。",
+      "link": {
+        "href": "../uniform-clonex/#collection",
+        "label": "看團員穿的鞋"
+      },
+      "items": [
+        {
+          "name": "TM Kuma #216",
+          "collection": "RTFKT Project Animus",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xec99492dd9ef8ca48f691acd67d2c96a0a43935f/629",
+          "img": "collection/brands-tm-kuma-216-629.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xec99492dd9ef8ca48f691acd67d2c96a0a43935f/a73d052475c840216c4d3161ed97ee/aca73d052475c840216c4d3161ed97ee.png?w=800",
+          "collection_display": "RTFKT Project Animus",
+          "title": "TM Kuma #216",
+          "token_label": ""
+        },
+        {
+          "name": "Shelix #139",
+          "collection": "RTFKT Project Animus",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xec99492dd9ef8ca48f691acd67d2c96a0a43935f/12509",
+          "img": "collection/brands-shelix-139-12509.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xec99492dd9ef8ca48f691acd67d2c96a0a43935f/69847368032ef0051edd445bf6b00e/5769847368032ef0051edd445bf6b00e.png?w=800",
+          "collection_display": "RTFKT Project Animus",
+          "title": "Shelix #139",
+          "token_label": ""
+        },
+        {
+          "name": "RTFKT x Nike Air Force 1 - Angel 😇",
+          "collection": "RTFKT Clone X Forging SZN 1 (FORGED) ⚒️",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34721",
+          "img": "collection/brands-rtfkt-x-nike-air-force-1-angel-34721.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/d1d3cbe9c47bd2cb0f992f94eae73a/8ad1d3cbe9c47bd2cb0f992f94eae73a.png?w=800",
+          "collection_display": "RTFKT × Nike Forging SZN 1",
+          "title": "Air Force 1 · Angel",
+          "token_label": "#34721"
+        },
+        {
+          "name": "RTFKT x Nike Air Force 1 - Murakami Drip 🌸💧",
+          "collection": "RTFKT Clone X Forging SZN 1 (FORGED) ⚒️",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34722",
+          "img": "collection/brands-rtfkt-x-nike-air-force-1-murakami-drip-34722.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/d6ebf380b2a9abc80211671810f2a0/1dd6ebf380b2a9abc80211671810f2a0.png?w=800",
+          "collection_display": "RTFKT × Nike Forging SZN 1",
+          "title": "Air Force 1 · Murakami Drip",
+          "token_label": "#34722"
+        },
+        {
+          "name": "Murakami DNA Varsity 🌸",
+          "collection": "RTFKT Clone X Forging SZN 1 (FORGED) ⚒️",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/4462",
+          "img": "collection/brands-murakami-dna-varsity-4462.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/a8b38f1642649820587a53ec8b77d3/faa8b38f1642649820587a53ec8b77d3.png?w=800",
+          "collection_display": "RTFKT × Nike Forging SZN 1",
+          "title": "Murakami DNA Varsity",
+          "token_label": "#4462"
+        },
+        {
+          "name": "RTFKT Exo Pod",
+          "collection": "RTFKT Exodus Pods 🪐",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x895554bc4f48fe1c2bf5c198bfa3513da538f86b/1",
+          "img": "collection/brands-rtfkt-exo-pod-1.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x895554bc4f48fe1c2bf5c198bfa3513da538f86b/75637877b346ba2c2d85fe9699f63ec5.png?w=800",
+          "collection_display": "RTFKT Exodus Pods",
+          "title": "Exo Pod",
+          "token_label": "#1"
+        },
+        {
+          "name": "RTFKT x RIMOWA WorkerBot 🤖",
+          "collection": "RTFKT x RIMOWA Meta-Artisan Collection 🌌",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x253ef258563e146f685e60219da56a6b75178e19/5",
+          "img": "collection/brands-rtfkt-x-rimowa-workerbot-5.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x253ef258563e146f685e60219da56a6b75178e19/f08b0e788ac18237906a96540eed3186.png?w=800",
+          "collection_display": "RTFKT × RIMOWA Meta-Artisan",
+          "title": "WorkerBot",
+          "token_label": "#5"
+        },
+        {
+          "name": "RTFKT x Nike Dunk Genesis CRYPTOKICKS",
+          "collection": "RTFKT x Nike Dunk Genesis CRYPTOKICKS",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xf661d58cfe893993b11d53d11148c4650590c692/1560",
+          "img": "collection/brands-rtfkt-x-nike-dunk-genesis-cryptokicks-1560.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xf661d58cfe893993b11d53d11148c4650590c692/42d87ecd467c050fa94c92a6dbfec4/c442d87ecd467c050fa94c92a6dbfec4.png?w=800",
+          "collection_display": "RTFKT × Nike Dunk Genesis Cryptokicks",
+          "title": "Dunk Genesis Cryptokicks",
+          "token_label": "#1560"
+        },
+        {
+          "name": "RTFKT x NIKE AR HOODIE 🕊✔️",
+          "collection": "RTFKT X NIKE AR HOODIE FORGED ⚒️✅",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x1bb6edf7b129967d512086fbdf489ed659580916/625",
+          "img": "collection/brands-rtfkt-x-nike-ar-hoodie-625.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x1bb6edf7b129967d512086fbdf489ed659580916/218a6e14b7034f75d862c367f00b2fa0.png?w=800",
+          "collection_display": "RTFKT × Nike AR Hoodie",
+          "title": "AR Hoodie",
+          "token_label": "#625"
+        },
+        {
+          "name": "ALTS by adidas #1329",
+          "collection": "ALTS by adidas",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/1329",
+          "img": "collection/brands-alts-by-adidas-1329-1329.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/af9ab6eb36caf7fb2cdc0e5c93a6cd/8aaf9ab6eb36caf7fb2cdc0e5c93a6cd.jpeg?w=800",
+          "collection_display": "ALTS by adidas",
+          "title": "1329",
+          "token_label": "#1329"
+        },
+        {
+          "name": "ALTS by adidas #1063",
+          "collection": "ALTS by adidas",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/1063",
+          "img": "collection/brands-alts-by-adidas-1063-1063.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/d93df8270234d7e1289e3dfe13f85b/22d93df8270234d7e1289e3dfe13f85b.jpeg?w=800",
+          "collection_display": "ALTS by adidas",
+          "title": "1063",
+          "token_label": "#1063"
+        },
+        {
+          "name": "adidas Virtual Gear: Genesis 01 — C2172",
+          "collection": "adidas Virtual Gear - Genesis Collection",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xba0c9cf4da821dba98407cc4f9c11f6c7a5f9bbc/3250",
+          "img": "collection/brands-adidas-virtual-gear-genesis-01-c2172-3250.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xba0c9cf4da821dba98407cc4f9c11f6c7a5f9bbc/5f2bce028c9d2097c57bc2862341f1/3f5f2bce028c9d2097c57bc2862341f1.jpeg?w=800",
+          "collection_display": "adidas Virtual Gear Genesis",
+          "title": "adidas Virtual Gear: Genesis 01 — C2172",
+          "token_label": "#3250"
+        },
+        {
+          "name": "The Explorer #94",
+          "collection": "Moncler x adidas Originals: The Explorer",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x49afd53d774fb63d13065ebfc112e5bbfa078a07/94",
+          "img": "collection/brands-the-explorer-94-94.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x49afd53d774fb63d13065ebfc112e5bbfa078a07/bc2817588e188303746c14ec5c08a5/73bc2817588e188303746c14ec5c08a5.jpeg?w=800",
+          "collection_display": "Moncler × adidas Originals",
+          "title": "The Explorer #94",
+          "token_label": ""
+        }
+      ]
+    },
+    {
+      "id": "asia",
+      "title": "亞洲藝術與社群",
+      "ink": false,
+      "lead": "日本與台灣的藝術家、藝術祭與社群發行，包括 GEISAI 的官方 NFT。",
+      "items": [
+        {
+          "name": "Akibahara Flowers #6244",
+          "collection": "Akibahara Flowers",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/32",
+          "img": "collection/asia-akibahara-flowers-6244-32.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/57cf4287edffa092a03a82d54cadc6/2857cf4287edffa092a03a82d54cadc6.png?w=800",
+          "collection_display": "Akibahara Flowers",
+          "title": "6244",
+          "token_label": "#32"
+        },
+        {
+          "name": "Akibahara Flowers #9861",
+          "collection": "Akibahara Flowers",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/18",
+          "img": "collection/asia-akibahara-flowers-9861-18.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/d8c0b64a8b058a711013d2fa37f11d/ecd8c0b64a8b058a711013d2fa37f11d.png?w=800",
+          "collection_display": "Akibahara Flowers",
+          "title": "9861",
+          "token_label": "#18"
+        },
+        {
+          "name": "Akibahara People #2529",
+          "collection": "Akibahara Tokyou Mr.",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xc26d9546c0eabd4122c8d26d89a96c44b3387886/952",
+          "img": "collection/asia-akibahara-people-2529-952.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xc26d9546c0eabd4122c8d26d89a96c44b3387886/15065287d3efede643f595213bc66c/a915065287d3efede643f595213bc66c.png?w=800",
+          "collection_display": "Akibahara Tokyou Mr.",
+          "title": "Akibahara People #2529",
+          "token_label": ""
+        },
+        {
+          "name": "GEISAI #22 & Classic Grape×Violet #023",
+          "collection": "GEISAI #22 & Classic Official NFT",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x22673e5d3363f25b04e264f9bba705eef6b1ba66/5817",
+          "img": "collection/asia-geisai-22-classic-grape-violet-023-5817.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x22673e5d3363f25b04e264f9bba705eef6b1ba66/0344de3d5f1bd6d806ce2c0bca75b0/ff0344de3d5f1bd6d806ce2c0bca75b0.png?w=800",
+          "collection_display": "GEISAI #22 & Classic",
+          "title": "GEISAI #22 & Classic Grape×Violet #023",
+          "token_label": ""
+        },
+        {
+          "name": "GEISAI 2022 Royal Blue×Pure Blue #020",
+          "collection": "GEISAI 2022 Official NFT",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x015ac56d0cfb7adbac3ffbfabf67768f2f0996f3/4051",
+          "img": "collection/asia-geisai-2022-royal-blue-pure-blue-020-4051.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x015ac56d0cfb7adbac3ffbfabf67768f2f0996f3/49f57bb641e150ccd3419f5a3295e1/df49f57bb641e150ccd3419f5a3295e1.png?w=800",
+          "collection_display": "GEISAI 2022",
+          "title": "GEISAI 2022 Royal Blue×Pure Blue #020",
+          "token_label": ""
+        },
+        {
+          "name": "ZombiePod Genesis #3073",
+          "collection": "ZombiePod Genesis",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x66a702cce76f37c311dc2dd94e617f161a37a86c/1323",
+          "img": "collection/asia-zombiepod-genesis-1323.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x66a702cce76f37c311dc2dd94e617f161a37a86c/6f744264257a6e162fb5463cda12b8/fa6f744264257a6e162fb5463cda12b8.png?w=800",
+          "collection_display": "ZombiePod Genesis",
+          "title": "3073",
+          "token_label": "#1323"
+        },
+        {
+          "name": "ZombieClub Token #6355",
+          "collection": "ZombieClub Token",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x9c80777cae192e5031c38a0d951c55730ecc3f5e/1323",
+          "img": "collection/asia-zombieclub-token-6355-1323.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x9c80777cae192e5031c38a0d951c55730ecc3f5e/dc40b3b18b02afe565aa3a9318e259/2fdc40b3b18b02afe565aa3a9318e259.png?w=800",
+          "collection_display": "ZombieClub Token",
+          "title": "6355",
+          "token_label": "#1323"
+        },
+        {
+          "name": "E-Shell #6150",
+          "collection": "Elysium Shell",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xe41bea6888f771a0c16d7188284522b76c135252/2076",
+          "img": "collection/asia-e-shell-6150-2076.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xe41bea6888f771a0c16d7188284522b76c135252/f7f892cc5ea4e0c53b8af77368c1ce/96f7f892cc5ea4e0c53b8af77368c1ce.jpeg?w=800",
+          "collection_display": "Elysium Shell",
+          "title": "E-Shell #6150",
+          "token_label": ""
+        },
+        {
+          "name": "LAG#0915",
+          "collection": "Love Addicted Girls",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x9c99d7f09d4a7e23ea4e36aec4cb590c5bbdb0e2/915",
+          "img": "collection/asia-lag-0915-915.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x9c99d7f09d4a7e23ea4e36aec4cb590c5bbdb0e2/2d6b83d19fa8545670bc2c83f0407ff0.png?w=800",
+          "collection_display": "Love Addicted Girls",
+          "title": "LAG#0915",
+          "token_label": ""
+        }
+      ]
+    },
+    {
+      "id": "own",
+      "title": "自己的發行",
+      "ink": false,
+      "lead": "史旺基自己發行過的作品：攝影、合作系列與 3D 展間的物件。制服女孩 NFT 系列的完整存檔在另一頁。",
+      "link": {
+        "href": "../oursong/",
+        "label": "看制服女孩 NFT 系列"
+      },
+      "items": [
+        {
+          "name": "For Your Safety",
+          "collection": "Swanky Photography",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/30750157071964289780353448928087203838361554033752210686830979780373074935818",
+          "img": "collection/own-for-your-safety-935818.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/5a89de1f25b45e5aec633d3acbde6a/545a89de1f25b45e5aec633d3acbde6a.jpeg?w=800",
+          "collection_display": "Swanky Photography",
+          "title": "For Your Safety",
+          "token_label": ""
+        },
+        {
+          "name": "Crypto Girls / 3D Glasses",
+          "collection": "Swanky Collaboration NFT",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/30750157071964289780353448928087203838361554033752210686830979802363307491428",
+          "img": "collection/own-crypto-girls-3d-glasses-491428.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/03854802d34a52605250552491140c/6d03854802d34a52605250552491140c.png?w=800",
+          "collection_display": "Swanky Collaboration",
+          "title": "Crypto Girls / 3D Glasses",
+          "token_label": ""
+        },
+        {
+          "name": "Leopard wearing McDonald's hat",
+          "collection": "Swanky Collaboration NFT",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/30750157071964289780353448928087203838361554033752210686830979781472586563684",
+          "img": "collection/own-leopard-wearing-mcdonald-s-hat-563684.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/17e1f63a7c5cea3f84bf8c0565daa3/7617e1f63a7c5cea3f84bf8c0565daa3.png?w=800",
+          "collection_display": "Swanky Collaboration",
+          "title": "Leopard wearing McDonald's hat",
+          "token_label": ""
+        },
+        {
+          "name": "First GotchiGang Cosplay",
+          "collection": "Swanky Collaboration NFT",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/30750157071964289780353448928087203838361554033752210686830979782572098191460",
+          "img": "collection/own-first-gotchigang-cosplay-191460.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/22d8b4daa95ccb7242822a57ab5105/cf22d8b4daa95ccb7242822a57ab5105.png?w=800",
+          "collection_display": "Swanky Collaboration",
+          "title": "First GotchiGang Cosplay",
+          "token_label": ""
+        },
+        {
+          "name": "小異色瞳制服女孩",
+          "collection": "Swanky Pod Assets",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/30750157071964289780353448928087203838361554033752210686830979783671609819236",
+          "img": "collection/own-819236.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x2953399124f0cbb46d2cbacd8a89cf0599974963/9edc7f95a665b76f9ee58a62fce5ff/e99edc7f95a665b76f9ee58a62fce5ff.png?w=800",
+          "collection_display": "Swanky Pod Assets",
+          "title": "小異色瞳制服女孩",
+          "token_label": ""
+        }
+      ]
+    }
+  ],
+  "subtitle": "從一份私人收藏裡，選出值得放在一起看的作品"
+}
