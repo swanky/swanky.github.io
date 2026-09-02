@@ -16,14 +16,16 @@ const MAX_SHOW = 12; // 「精選」最多顯示張數（避免大持倉時拖�
 
 // 史旺基精選收藏的 5 張圖已下載存進 repo（800px webp），預設藏品櫃優先用本地檔 →
 // 永不依賴 RPC metadata / Arweave 網關，最穩。連錢包看「別人的」收藏時無本地檔，走鏈上。
+// 五位成員在首頁排成一列時，用 UCX 頁同一批 RTFKT 官方 3D 全身渲染（同底色、同鏡頭），
+// 而不是鏈上各自底色的頭像縮圖——這樣五張才像同一個團體。鏈上取圖仍是備援。
 const LOCAL_IMAGES = {
-  "9927": "9927.webp",   // CloneX #17152
-  "2692": "2692.webp",   // CloneX #9268
-  "9023": "9023.webp",   // CloneX #15162
-  "9245": "9245.webp",   // CloneX #15755
-  "15939": "15939.webp", // CloneX #17474
+  "9927": "17152/photoreal_body_front_tall.webp",   // CloneX #17152
+  "2692": "9268/photoreal_body_front_tall.webp",    // CloneX #9268
+  "9023": "15162/photoreal_body_front_tall.webp",   // CloneX #15162
+  "9245": "15755/photoreal_body_front_tall.webp",   // CloneX #15755
+  "15939": "17474/photoreal_body_front_tall.webp",  // CloneX #17474
 };
-const LOCAL_BASE = "../nft/assets/images/clonex/";
+const LOCAL_BASE = "../nft/assets/images/ucx/members/";
 
 // 預設藏品櫃的角色標籤（與 uniform-clonex/ 的檔案一致；連別人的錢包時沒有這層）。
 // 鍵是鏈上 token id，值是「名稱編號 · 身分」。#15755 是 UCX 主視覺、也是 78 張塔羅牌的原型，
@@ -36,6 +38,8 @@ const ROLES = {
   "9927": ["#17152", "幕後 · 製作人"],
 };
 const FEATURED = "9245";
+// 一列的順序（物件的數字鍵會被 JS 自動照數值排序，所以另用陣列寫死）：正團 #15755、#17474、#9268，幕後 #15162、#17152
+const LINEUP = ["9245", "15939", "2692", "9023", "9927"];
 
 // 少數 CloneX 圖的官方 Arweave「路徑解析」在所有網關都壞（manifest 路徑問題、且 arweave.net
 // 未 seed 該副本），但底層 data txid 在部分 ar.io 網關仍可達 → 對這些 tokenId 改走 data txid 直連。
@@ -184,6 +188,7 @@ async function loadCollection(address, label) {
   if (!grid || !status) return;
 
   grid.innerHTML = "";
+  grid.classList.toggle("is-lineup", address === GALLERY_ADDRESS);
   status.textContent = "讀取鏈上資料中…";
 
   try {
@@ -224,7 +229,10 @@ async function loadCollection(address, label) {
       col.innerHTML = "";
       const isGallery = address === GALLERY_ADDRESS;
       col.appendChild(makeCard(it, isGallery));
-      col.classList.toggle("is-feat", isGallery && it.tokenId === FEATURED);
+      // 一列五位、沒有特寫（見 hub.css .is-lineup）；順序照 ROLES：正團三位在前、幕後兩位在後
+      col.classList.remove("is-feat");
+      const rank = LINEUP.indexOf(String(it.tokenId));
+      col.style.order = isGallery && rank >= 0 ? String(rank) : "";
     }
   } catch (e) {
     status.textContent = e?.message || "讀取失敗，請稍後再試。";
