@@ -125,7 +125,7 @@ button { font: inherit; }
 .dip2__half img { width: 100%; height: 100%; object-fit: cover; }
 /* 兩張臉的眼睛要在同一條線上（約框高一半）：真人照放大一階、貼頂；
    化身圖放大一階半、貼底，裁掉頂端留白。 */
-.dip2__half--camera img { height: 170%; object-position: 50% 34%; }   /* 肖像原檔頭寬只有框寬三分之一，放大到與化身同一個頭的尺度、眼線對齊右半（約框高 42%） */
+.dip2__half--camera img { height: 160%; object-position: 50% 32%; }   /* 肖像原檔頭寬只有框寬三分之一，放大到與化身同一個頭的尺度、眼線對齊右半（約框高 42%） */
 .dip2__half--chain img { height: 100%; object-position: 45% 50%; }
 
 .tag {
@@ -275,6 +275,7 @@ button { font: inherit; }
 .foot a { color: var(--text); }
 .foot a:hover { color: var(--red-ink); }
 .foot ul { list-style: none; display: grid; gap: .35rem; }
+.foot .foot__meta ul { display: flex; }
 .foot__copy { grid-column: 1 / 13; margin: var(--s4) 0 0; font-size: .82rem; color: var(--mute); }
 
 /* ---------- 8b. 檔案頁（oursong/）專用：扉頁 hero、規格表、三態、成對存檔 -------- */
@@ -443,7 +444,8 @@ button { font: inherit; }
 	.dip2__half { aspect-ratio: 4 / 3; }
 
 	.dip2__half img { height: 100%; }
-	.dip2__half--camera img { height: 120%; object-position: 50% 20%; }
+	.dip2__half--camera img { height: 100%; object-position: 50% 30%; }
+	.row--text .row__body { grid-column: 1 / -1; }
 	.dip2__half--chain img { height: 100%; object-position: 45% 40%; }
 	/* 兩張圖上下相連成一組，標題緊接在圖下 */
 	.hero__title { font-size: clamp(2rem, 9.4vw, 2.6rem); }
@@ -500,14 +502,16 @@ button { font: inherit; }
 .hero--paper .hero--arch__fig img { aspect-ratio: 4 / 5; }
 .hero--arch .hero__title--sub { font-family: var(--sans); font-weight: 500; font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: var(--text-2); margin: 0 0 var(--s3); }
 /* 展區目錄：策展平面圖，不是資產清單——只有編號與展區名 */
-.rooms { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--text); }
-.rooms li { border-bottom: 1px solid var(--line); }
-.rooms a { display: grid; grid-template-columns: 2.6rem 1fr auto; align-items: baseline; gap: .6rem; padding: .55rem 0; color: var(--text); font-weight: 500; }
-.rooms a .mono { color: var(--mute); font-size: .86rem; }
-.rooms a .ar { color: var(--mute); font-size: .9rem; transition: transform .2s var(--ease-out); }
-.rooms a:hover { color: var(--red-ink); }
-.rooms a:hover .ar { transform: translateY(3px); color: var(--red-ink); }
+.rooms { border-top: 1px solid var(--text); border-bottom: 1px solid var(--line); background: var(--paper); }
+.rooms__list { list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0 var(--s4); }
+.rooms__list a { display: inline-flex; align-items: baseline; gap: .5rem; padding: .8rem 0; color: var(--text); font-weight: 500; font-size: .95rem; border-bottom: 2px solid transparent; }
+.rooms__list a .mono { color: var(--mute); font-size: .8rem; letter-spacing: .04em; }
+.rooms__list a:hover { color: var(--red-ink); border-color: var(--red); }
 .hero--paper .stamp { grid-template-columns: auto 1fr; }
+.page-coll .hero--arch__main { padding-bottom: var(--s4); }
+.page-coll .hero--arch__fig { align-self: start; padding-top: clamp(3rem, 8vh, 4.5rem); }
+.page-coll .hero--arch__fig img { aspect-ratio: 1; }
+.page-coll .sec__head { align-items: start; }
 .hero--paper .stamp a { color: var(--text); border-bottom: 1px solid var(--text); }
 .hero--paper .stamp a:hover { color: var(--red-ink); border-color: var(--red-ink); }
 .page-coll .sec--first { border-top: 1px solid var(--line); }
@@ -524,6 +528,7 @@ button { font: inherit; }
 .piece a { display: flex; flex-direction: column; height: 100%; color: inherit; }
 .piece__img { display: block; aspect-ratio: 1; overflow: hidden; background: var(--paper-2); }
 .sec--ink .piece__img { background: var(--ink-2); }
+.piece__img--dark { background: var(--ink); }   /* 作品本身是透明圓角（如 MAYC），墊深底讓它不會在紙上露出圓角 */
 .piece__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
 .piece a:hover img { transform: scale(1.03); }
 .piece__meta { display: flex; flex-direction: column; gap: .05rem; padding: .75rem 0 0; font-size: .86rem; line-height: 1.45; color: var(--text-2); }
@@ -532,7 +537,8 @@ button { font: inherit; }
 .piece__title { font-family: var(--serif); font-style: italic; font-size: 1.02rem; color: var(--text); }
 .piece__medium { font-size: .78rem; color: var(--mute); margin-top: .15rem; }
 .piece a:hover .piece__title { color: var(--red-ink); }
-.piece--lead .piece__meta { padding-top: .9rem; margin-top: auto; }   /* 大圖的說明貼齊右側 2×2 的底線，不懸在中段 */
+.piece--lead .piece__img { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }   /* 大圖撐滿兩列的高度，說明才會緊貼圖下、與第二排說明同底線 */
+.piece--lead .piece__meta { padding-top: .9rem; }
 .piece--lead .piece__artist { font-size: 1rem; }
 .piece--lead .piece__title { font-size: 1.45rem; line-height: 1.25; }
 .piece__meta .dot { margin: 0 .35rem; }

@@ -2,16 +2,18 @@
   "meta": {
     "opensea": "https://opensea.io/swanky"
   },
-  "lead": "這是一場線上策展，不是清單。史旺基把多年收藏的 NFT 分成六個展區陳列：從 Uniform CloneX 的五位成員，到同時期的藍籌頭像、村上隆的鏈上創作、潮流品牌的虛擬穿搭、亞洲藝術家與社群的發行，最後是自己做過的東西。每一件都能點進 OpenSea 看原件。",
+  "lead": "這是一場線上策展，不是清單。史旺基把多年收藏的 NFT 分區陳列：從 Uniform CloneX 的五位成員，到同時期的藍籌頭像、村上隆的鏈上創作、潮流品牌的虛擬穿搭、遊戲與元宇宙裡的土地與角色、亞洲藝術家與社群的發行，最後是自己做過的東西。每一件都能點進 OpenSea 看原件。",
   "hero": {
-    "name": "#17854",
-    "collection": "Mutant Ape Yacht Club",
-    "href": "https://opensea.io/item/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/17854",
-    "img": "collection/pfp-17854-17854.webp",
-    "alt": "#17854，Mutant Ape Yacht Club 系列的頭像",
-    "pos": "50% 15%",
-    "collection_display": "Mutant Ape Yacht Club",
-    "cap": "封面作品 · 見展區 02"
+    "name": "MOAR #2002",
+    "collection": "\"MOAR\" by Joan Cornella",
+    "collection_display": "MOAR by Joan Cornellà",
+    "href": "https://opensea.io/item/ethereum/0xeb3a9a839dfeeaf71db1b4ed6a8ae0ccb171b227/2002",
+    "img": "collection/hero-moar-2002.webp",
+    "alt": "MOAR #2002，Joan Cornellà 的 MOAR 系列",
+    "pos": "50% 20%",
+    "cap": "封面作品",
+    "w": 1000,
+    "h": 1000
   },
   "themes": [
     {
@@ -31,7 +33,7 @@
           "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9245",
           "img": "collection/clonex-clonex-15755-9245.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/7c37761125922b924c635420871807/647c37761125922b924c635420871807.png?w=800",
-          "collection_display": "CloneX × Takashi Murakami",
+          "collection_display": "",
           "title": "CloneX #15755",
           "token_label": ""
         },
@@ -42,7 +44,7 @@
           "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/15939",
           "img": "collection/clonex-clonex-17474-15939.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/4558c0fef4a5a094f11ddc4f627525/4a4558c0fef4a5a094f11ddc4f627525.png?w=800",
-          "collection_display": "CloneX × Takashi Murakami",
+          "collection_display": "",
           "title": "CloneX #17474",
           "token_label": ""
         },
@@ -53,7 +55,7 @@
           "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/2692",
           "img": "collection/clonex-clonex-9268-2692.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/8f9078f32b6a8765df93670f3e3271/788f9078f32b6a8765df93670f3e3271.png?w=800",
-          "collection_display": "CloneX × Takashi Murakami",
+          "collection_display": "",
           "title": "CloneX #9268",
           "token_label": ""
         },
@@ -64,7 +66,7 @@
           "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9023",
           "img": "collection/clonex-clonex-15162-9023.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/82f17cdf1e7c718b217f00c2efbd66/2482f17cdf1e7c718b217f00c2efbd66.png?w=800",
-          "collection_display": "CloneX × Takashi Murakami",
+          "collection_display": "",
           "title": "CloneX #15162",
           "token_label": ""
         },
@@ -75,7 +77,7 @@
           "href": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9927",
           "img": "collection/clonex-clonex-17152-9927.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/aa6fe23b433b9e35b7271dca016e29/60aa6fe23b433b9e35b7271dca016e29.png?w=800",
-          "collection_display": "CloneX × Takashi Murakami",
+          "collection_display": "",
           "title": "CloneX #17152",
           "token_label": ""
         }
@@ -97,7 +99,8 @@
           "src_url": "https://i2c.seadn.io/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/d323fa0b680bcd0424208e3cd4c329/56d323fa0b680bcd0424208e3cd4c329.png?w=800",
           "collection_display": "Mutant Ape Yacht Club",
           "title": "#17854",
-          "token_label": ""
+          "token_label": "",
+          "dark_bg": true
         },
         {
           "name": "Meebit #10829",
@@ -162,8 +165,8 @@
           "img": "collection/pfp-killer-gf-4480-4480.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x6be69b2a9b153737887cfcdca7781ed1511c7e36/587e1470067f63b1b8f68c34e527cb/b4587e1470067f63b1b8f68c34e527cb.png?w=800",
           "collection_display": "Killer GF",
-          "title": "4480",
-          "token_label": "#4480"
+          "title": "#4480",
+          "token_label": ""
         },
         {
           "name": "uwucrew #5451",
@@ -173,8 +176,8 @@
           "img": "collection/pfp-uwucrew-5451-5451.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0xf75140376d246d8b1e5b8a48e3f00772468b3c0c/928007e01fde84cebc94124aedccf6/80928007e01fde84cebc94124aedccf6.png?w=800",
           "collection_display": "uwucrew",
-          "title": "5451",
-          "token_label": "#5451"
+          "title": "#5451",
+          "token_label": ""
         },
         {
           "name": "Doggy #3628",
@@ -237,7 +240,7 @@
           "src_url": "https://i2c.seadn.io/base/0x157fe708913afba61b897efde257e0211a1163e1/8c3afaa3e2a4ec31ced6b37b9f7b0b71.png?w=800",
           "collection_display": "108 Flowers",
           "title": "Smiling Girl SP-001 EN",
-          "token_label": "#1"
+          "token_label": ""
         },
         {
           "name": "SAITAMA Chainsaw SP-111 EN",
@@ -248,7 +251,7 @@
           "src_url": "https://i2c.seadn.io/base/0x157fe708913afba61b897efde257e0211a1163e1/b8cc3bd88ff0677063936468314f3135.png?w=800",
           "collection_display": "108 Flowers",
           "title": "SAITAMA Chainsaw SP-111 EN",
-          "token_label": "#111"
+          "token_label": ""
         },
         {
           "name": "Neon SP-109 JP",
@@ -413,8 +416,8 @@
           "img": "collection/brands-alts-by-adidas-1329-1329.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/af9ab6eb36caf7fb2cdc0e5c93a6cd/8aaf9ab6eb36caf7fb2cdc0e5c93a6cd.jpeg?w=800",
           "collection_display": "ALTS by adidas",
-          "title": "1329",
-          "token_label": "#1329"
+          "title": "#1329",
+          "token_label": ""
         },
         {
           "name": "ALTS by adidas #1063",
@@ -424,8 +427,8 @@
           "img": "collection/brands-alts-by-adidas-1063-1063.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x749f5ddf5ab4c1f26f74560a78300563c34b417d/d93df8270234d7e1289e3dfe13f85b/22d93df8270234d7e1289e3dfe13f85b.jpeg?w=800",
           "collection_display": "ALTS by adidas",
-          "title": "1063",
-          "token_label": "#1063"
+          "title": "#1063",
+          "token_label": ""
         },
         {
           "name": "adidas Virtual Gear: Genesis 01 — C2172",
@@ -572,8 +575,8 @@
           "img": "collection/asia-akibahara-flowers-6244-32.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/57cf4287edffa092a03a82d54cadc6/2857cf4287edffa092a03a82d54cadc6.png?w=800",
           "collection_display": "Akibahara Flowers",
-          "title": "6244",
-          "token_label": "#32"
+          "title": "#6244",
+          "token_label": ""
         },
         {
           "name": "Akibahara Flowers #9861",
@@ -583,8 +586,8 @@
           "img": "collection/asia-akibahara-flowers-9861-18.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x6835c18fa53d830d44713fe4a0c489b79f9e6784/d8c0b64a8b058a711013d2fa37f11d/ecd8c0b64a8b058a711013d2fa37f11d.png?w=800",
           "collection_display": "Akibahara Flowers",
-          "title": "9861",
-          "token_label": "#18"
+          "title": "#9861",
+          "token_label": ""
         },
         {
           "name": "Akibahara People #2529",
@@ -627,8 +630,8 @@
           "img": "collection/asia-zombiepod-genesis-1323.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x66a702cce76f37c311dc2dd94e617f161a37a86c/6f744264257a6e162fb5463cda12b8/fa6f744264257a6e162fb5463cda12b8.png?w=800",
           "collection_display": "ZombiePod Genesis",
-          "title": "3073",
-          "token_label": "#1323"
+          "title": "#3073",
+          "token_label": ""
         },
         {
           "name": "ZombieClub Token #6355",
@@ -638,8 +641,8 @@
           "img": "collection/asia-zombieclub-token-6355-1323.webp",
           "src_url": "https://i2c.seadn.io/ethereum/0x9c80777cae192e5031c38a0d951c55730ecc3f5e/dc40b3b18b02afe565aa3a9318e259/2fdc40b3b18b02afe565aa3a9318e259.png?w=800",
           "collection_display": "ZombieClub Token",
-          "title": "6355",
-          "token_label": "#1323"
+          "title": "#6355",
+          "token_label": ""
         },
         {
           "name": "E-Shell #6150",

@@ -20,11 +20,11 @@ let lot = 0;
 const piece = (it, i) => `
 				<li class="piece${i === 0 ? " piece--lead" : ""}">
 					<a href="${esc(it.href)}" target="_blank" rel="noopener noreferrer">
-						<span class="piece__img"><img src="../assets/images/${esc(it.img)}" alt="${esc(it.name)}，${esc(it.collection)} 系列" width="${it.w || 800}" height="${it.h || 800}" loading="lazy"></span>
+						<span class="piece__img${it.dark_bg ? " piece__img--dark" : ""}"><img src="../assets/images/${esc(it.img)}" alt="${esc(it.name)}，${esc(it.collection)} 系列" width="${it.w || 800}" height="${it.h || 800}" loading="lazy"></span>
 						<span class="piece__meta">
 							<span class="piece__lot mono">No. ${String(++lot).padStart(2, "0")}</span>
-							<strong class="piece__artist">${esc(it.collection_display || it.collection)}</strong>
-							<span class="piece__title">${esc(it.title || it.name)}</span>
+							${(it.collection_display === "" ? "" : `<strong class="piece__artist">${esc(it.collection_display || it.collection)}</strong>
+							`)}							<span class="piece__title">${esc(it.title || it.name)}</span>
 							<span class="piece__medium">${CHAIN[it.chain] || esc(it.chain)}${it.token_label ? `<span class="dot" aria-hidden="true">·</span>${esc(it.token_label)}` : ""}</span>
 						</span>
 					</a>
@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>收藏展 | Swanky NFT</title>
-	<meta name="description" content="史旺基的 NFT 收藏線上策展：${data.themes.map((t) => t.title).join("、")}六個展區，每件作品都連回 OpenSea 原件。">
+	<meta name="description" content="史旺基的 NFT 收藏線上策展：${data.themes.map((t) => t.title).join("、")}${data.themes.length} 個展區，每件作品都連回 OpenSea 原件。">
 	<link rel="canonical" href="https://swanky.github.io/nft/collection/">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="收藏展 | Swanky NFT">
@@ -88,9 +88,6 @@ const html = `<!DOCTYPE html>
 				<h1 class="hero--arch__year">收藏展</h1>
 				<p class="hero__title hero__title--sub">${data.subtitle}</p>
 				<p class="hero__lead">${data.lead}</p>
-				<ol class="rooms" aria-label="展區目錄">${data.themes.map((t, i) => `
-					<li><a href="#${esc(t.id)}"><span class="mono">${String(i + 1).padStart(2, "0")}</span><span>${esc(t.title)}</span><span class="ar" aria-hidden="true">↓</span></a></li>`).join("")}
-				</ol>
 				<p class="stamp"><span class="mono">策展</span>史旺基。作品資料與持有狀態以 <a href="${esc(data.meta.opensea)}" target="_blank" rel="noopener noreferrer">OpenSea</a> 上的原件為準。</p>
 			</div>
 			<figure class="hero--arch__fig">
@@ -99,6 +96,13 @@ const html = `<!DOCTYPE html>
 			</figure>
 		</div>
 	</header>
+
+	<!-- 展區目錄：一條橫向導覽，像美術館平面圖上的章節列 -->
+	<nav class="rooms" aria-label="展區目錄">
+		<ol class="wrap rooms__list">${data.themes.map((t, i) => `
+			<li><a href="#${esc(t.id)}"><span class="mono">${String(i + 1).padStart(2, "0")}</span>${esc(t.title)}</a></li>`).join("")}
+		</ol>
+	</nav>
 ${data.themes.map(theme).join("\n")}
 
 	<footer class="foot">
