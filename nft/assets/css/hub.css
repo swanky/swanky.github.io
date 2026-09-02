@@ -240,7 +240,7 @@ button { font: inherit; }
 #clonex-grid:empty { display: none; }
 #clonex-grid > * { min-width: 0; }
 #clonex-grid > .is-feat { grid-column: 1 / 3; grid-row: 1 / 3; order: -1; }
-/* 自家五位：一列等寬全身像（RTFKT 官方渲染、同底色），順序＝正團三位在前、幕後兩位在後（JS 依 ROLES 排）；不套統一色調濾鏡 */
+/* 自家五位：一列等寬全身像（RTFKT 官方渲染、同底色），順序＝正團三位在前、幕後兩位在後（JS 依 LINEUP 陣列排）；不套統一色調濾鏡 */
 #clonex-grid.is-lineup { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s2); }
 #clonex-grid.is-lineup .clonex-card img { aspect-ratio: 2 / 3; object-position: 50% 0; filter: none; }
 .clonex-card { display: flex; flex-direction: column; height: 100%; color: var(--on-ink); }
