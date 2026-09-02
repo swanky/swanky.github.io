@@ -41,8 +41,8 @@
 	--measure: 34em;
 
 	--sans: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
-	--serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;   /* 標題：檔案／專刊的味道 */
-	--mono: "Space Mono", ui-monospace, monospace;
+	--serif: "Noto Serif", "Noto Serif TC", "Songti TC", "PMingLiU", serif;   /* 標題：檔案／專刊的味道；拉丁字走同家族襯線，不回退到黑體 */
+	--mono: var(--sans);   /* 全頁只有兩個字體聲音；「資料」靠等寬數字（tabular-nums）與字距區分 */
 
 	--nav-h: 58px;
 	--inset-drop: 210px;         /* hero 內嵌化身壓出下緣的量（約框高一半）：只咬住照片右下角，不蓋到肩線 */
@@ -68,7 +68,7 @@ button { font: inherit; }
 ::selection { background: var(--red); color: #fff; }
 
 /* 等寬字：只放數字型資料 */
-.mono { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--mono); font-size: .78rem; letter-spacing: .06em; font-variant-numeric: tabular-nums; font-weight: 500; }
 /* 小標（可含中文）：一般字體、小一號、稍加字距 */
 .kicker { font-size: .8rem; letter-spacing: .04em; color: var(--mute); }
 .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
@@ -98,7 +98,7 @@ button { font: inherit; }
 .nav__brand { display: flex; align-items: center; gap: .5rem; flex: 0 0 auto; }
 .nav__brand img { height: 20px; width: auto; filter: brightness(0) invert(1); }
 .nav__tag {
-	font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; color: var(--on-ink);
+	font-size: .68rem; letter-spacing: .14em; color: var(--on-ink); font-weight: 500;
 	border: 1px solid rgba(255, 255, 255, .3); border-radius: 3px; padding: .1rem .34rem;
 }
 .nav__links { display: flex; align-items: center; gap: var(--s3); list-style: none; margin-left: auto; min-width: 0; }
@@ -113,59 +113,57 @@ button { font: inherit; }
 }
 .skip:focus { transform: none; }
 
-/* ---------- 4. Hero：真人攝影出血，化身以對頁形式侵入 ---------------------- */
-/* 「從相機到鏈上」要在畫面上發生：整幅是相機那一端（真人制服女孩攝影，頭肩），
-   右下角一塊紅框是鏈上那一端（同一構圖的 CloneX 頭肩），壓過照片下緣跨進下一段。
-   兩張都是頭肩、都用同款標籤；紅框就是接縫。 */
-.hero { margin-top: var(--nav-h); position: relative; background: var(--ink); color: var(--on-ink); }
-.hero__photo { position: relative; height: clamp(560px, 80vh, 780px); }
-.hero__pic { position: absolute; inset: 0; overflow: hidden; }
-.hero__pic > img { width: 100%; height: 100%; object-fit: cover; }
-.hero__pic::after {
-	content: ""; position: absolute; inset: 0; z-index: 1;
-	background:
-		linear-gradient(90deg, rgba(10, 16, 36, .82) 0%, rgba(10, 16, 36, .5) 34%, rgba(10, 16, 36, 0) 62%),
-		linear-gradient(0deg, rgba(10, 16, 36, .62) 0%, rgba(10, 16, 36, 0) 40%);
+/* ---------- 4. Hero：等重雙聯畫 -------------------------------------------- */
+/* 「從相機到鏈上」做成版面本身：左半真人攝影、右半 CloneX 化身，同為正面頭肩、
+   同一視線高度，中間 6px 紅接縫；標題橫跨接縫壓在底部。導言與 CTA 退到圖下方。 */
+.hero { margin-top: var(--nav-h); background: var(--ink); color: var(--on-ink); }
+.dip2 {
+	position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+	background: var(--paper); height: clamp(520px, 78vh, 780px);
 }
-.hero__copy {
-	position: absolute; inset: 0; z-index: 2; pointer-events: none;
-	display: flex; flex-direction: column; justify-content: flex-end;
-	padding-bottom: clamp(2.4rem, 6vh, 3.8rem);
+.dip2__half { position: relative; margin: 0; overflow: hidden; background: var(--ink-2); }
+.dip2__half img { width: 100%; height: 100%; object-fit: cover; }
+/* 兩張臉的眼睛要在同一條線上（約框高一半）：真人照放大一階、貼頂；
+   化身圖放大一階半、貼底，裁掉頂端留白。 */
+.dip2__half--camera img { height: 130%; object-position: 62% 0; }   /* 放大到與化身同一個頭的尺度，眼睛約在框高一半 */
+.dip2__half--chain img { height: 100%; object-position: 45% 50%; }
+.dip2__half::after {                        /* 讓標題站得住的底部漸層，兩半各自一份 */
+	content: ""; position: absolute; inset: 0;
+	background: linear-gradient(0deg, rgba(10, 16, 36, .78) 0%, rgba(10, 16, 36, .2) 32%, rgba(10, 16, 36, 0) 50%);
 }
-.hero__copy > * { pointer-events: auto; }
-.hero__tag { color: var(--red-lift); margin: 0 0 var(--s2); font-size: .9rem; letter-spacing: .04em; }
-.hero__title {
-	font-size: clamp(2.8rem, 6.6vw, 5.6rem); line-height: 1.02; letter-spacing: -.02em;
-	color: #fff; margin: 0 0 var(--s3); max-width: 10em;
-}
-.hero__title em { font-style: normal; color: var(--red-lift); }
-.hero__lead { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.7; max-width: 27em; color: var(--on-ink); margin: 0 0 var(--s3); }
-.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
-
-/* 兩張圖同一款標籤：黑底白字，掛在各自框的左下角 */
 .tag {
-	position: absolute; z-index: 3; left: 0; bottom: 0;
+	position: absolute; z-index: 3; top: var(--s3);
 	display: inline-flex; align-items: baseline; gap: .6rem;
 	background: var(--ink); color: #fff; padding: .5rem .9rem .45rem;
 	font-weight: 700; font-size: .92rem; line-height: 1;
 }
 .tag .kicker { color: var(--on-ink-2); font-weight: 400; font-size: .74rem; }
-.tag--camera { left: var(--edge); bottom: auto; top: var(--s3); }
-.tag--chain { left: -6px; bottom: -6px; background: var(--red); }
-.tag--chain .kicker { color: #fff; opacity: .88; }
 
-.hero__inset {
-	position: absolute; z-index: 4; right: var(--edge);
-	bottom: calc(-1 * var(--inset-drop)); width: clamp(220px, 24vw, 340px);
-	border: 6px solid var(--red); background: var(--ink-2); margin: 0;
+.hero__copy {
+	position: absolute; inset: auto 0 0 0; z-index: 2; pointer-events: none;
+	padding-bottom: clamp(1.8rem, 5vh, 3rem);
 }
-.hero__inset img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.hero__title {
+	font-size: clamp(2.4rem, 5.4vw, 4.8rem); line-height: 1.05; letter-spacing: -.02em;
+	color: #fff; margin: 0; text-wrap: nowrap;
+}
+.hero__sub { padding: var(--s5) var(--gutter) var(--s6); align-items: start; }
+.hero__copyblock { grid-column: 1 / 7; }
+.hero__lead { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.7; max-width: 28em; color: var(--on-ink); margin: 0 0 var(--s3); }
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
+/* 右欄不留死區：這一頁的目錄，年份就是章節號 */
+.hero__index { grid-column: 8 / 13; list-style: none; border-top: 1px solid rgba(255, 255, 255, .2); }
+.hero__index li { border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.hero__index a { display: grid; grid-template-columns: 5.5rem 1fr; align-items: baseline; gap: var(--s2); padding: .9rem 0; color: var(--on-ink); }
+.hero__index a:hover { color: #fff; }
+.hero__index a:hover .hero__index-y { color: var(--red-lift); }
+.hero__index-y { font-family: var(--serif); font-size: 1.6rem; line-height: 1; letter-spacing: -.02em; color: var(--on-ink-2); transition: color .2s var(--ease-out); }
 
 /* 全頁唯一的實色按鈕 */
 .btn {
 	display: inline-flex; align-items: center; gap: .5rem; cursor: pointer;
-	background: var(--red); color: #fff; border: 1px solid var(--red); border-radius: 999px;
-	padding: .8rem 1.6rem; font-size: 1rem; font-weight: 500;
+	background: var(--red); color: #fff; border: 1px solid var(--red); border-radius: 3px;
+	padding: .8rem 1.5rem; font-size: 1rem; font-weight: 500;
 	transition: background .2s var(--ease-out), border-color .2s var(--ease-out), transform .2s var(--ease-out);
 }
 .btn:hover { background: var(--red-ink); border-color: var(--red-ink); color: #fff; transform: translateY(-1px); }
@@ -176,7 +174,7 @@ button { font: inherit; }
 /* 全頁只有一套水平基準：12 欄，左 1–8 欄給標題／編號／圖，右 9–12 欄給文字。
    區塊標題的引言、每一列的文字欄、都從第 9 欄開始。 */
 .sec { padding: var(--s6) 0; }
-.sec--first { padding-top: calc(var(--inset-drop) + var(--s5)); }
+.sec--first { padding-top: var(--s6); }
 .sec--ink { background: var(--ink); color: var(--on-ink); }
 .grid12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s3); }
 .sec__head { align-items: end; margin-bottom: var(--s5); }
@@ -197,8 +195,8 @@ button { font: inherit; }
    不靠版位變形。 */
 .series { list-style: none; border-top: 1px solid var(--line); }
 .row { align-items: start; padding: var(--s5) 0; border-bottom: 1px solid var(--line); }
-/* 左欄的數字是年份：時間軸就是這一頁的骨架，不另做一套 01／02／03 */
-.row__no { grid-column: 1 / 3; font-family: var(--mono); font-size: 1.35rem; color: var(--red); line-height: 1; padding-top: .3rem; letter-spacing: -.02em; }
+/* 左欄的年份是脊椎：宋體、放大到和 h2 同階，墨色不用紅 */
+.row__no { grid-column: 1 / 3; font-family: var(--serif); font-size: clamp(2rem, 3.4vw, 3rem); color: var(--text); line-height: .95; letter-spacing: -.03em; padding-top: .1rem; }
 .row__fig { grid-column: 3 / 9; }
 .row__fig a { display: block; overflow: hidden; background: var(--ink); }
 .row__fig img {
@@ -207,9 +205,16 @@ button { font: inherit; }
 	transition: transform .4s var(--ease-out), filter .4s var(--ease-out);
 }
 .row__fig a:hover img { transform: scale(1.02); filter: none; }
-/* 三列同寬；比例跟內容走：攝影 4:3、空間 21:9（寬銀幕）、化身 4:3＋紅框（鏈上記號） */
-.row--wide .row__fig img { aspect-ratio: 21 / 9; filter: grayscale(.35) saturate(.7) contrast(1.05); }
-.row--chain .row__fig a { border: 6px solid var(--red); }
+/* 三行有主從：2021 前史（小）→ 2022 過場（中）→ 2026 旗艦破格（圖從版心左緣起、佔 8 欄）。
+   同一個 4:3 框，只靠尺度說誰是重點，不加邊框。 */
+.row--y1 .row__fig { grid-column: 3 / 7; }
+.row--y2 .row__fig { grid-column: 3 / 8; }
+.row--y2 .row__fig img { filter: grayscale(.35) saturate(.7) contrast(1.05); }
+.row--y3 { padding-top: var(--s6); }
+.row--y3 .row__no { grid-column: 1 / 3; grid-row: 1; }
+.row--y3 .row__fig { grid-column: 1 / 9; grid-row: 2; margin-top: var(--s2); }
+.row--y3 .row__body { grid-row: 2; align-self: start; padding-top: var(--s2); }
+.row--y3 .row__title { font-size: clamp(1.8rem, 3vw, 2.6rem); }
 
 .row__body { grid-column: 9 / 13; display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; }
 .row__meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .8rem; margin: 0; }
@@ -241,31 +246,113 @@ button { font: inherit; }
 .clonex-card { display: block; height: 100%; color: var(--on-ink); }
 .clonex-card:hover .clonex-id { color: var(--red-lift); }
 .clonex-card img, .clonex-noimg { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
-/* 名冊：五張都留原底色（去色會讀成「已售出」），主從只靠尺寸與留白 */
+/* 名冊：五張都留原圖（放大裁頭會蓋住下方的身分標籤——iter8 評審抓到的真實瑕疵） */
 .clonex-noimg { display: grid; place-items: center; background: var(--ink-2); color: var(--on-ink-2); font-family: var(--mono); font-size: .8rem; }
 .clonex-meta { display: flex; flex-direction: column; gap: .1rem; padding: .8rem 0 0; }
-.clonex-id { font-family: var(--mono); font-size: .8rem; letter-spacing: .04em; color: #fff; transition: color .2s var(--ease-out); }
+.clonex-id { font-size: .84rem; letter-spacing: .04em; color: #fff; font-variant-numeric: tabular-nums; font-weight: 500; transition: color .2s var(--ease-out); }
 .clonex-role { font-size: .84rem; color: var(--on-ink); }
 .is-feat .clonex-meta { flex-direction: row; align-items: baseline; gap: .9rem; padding-top: .9rem; }
 .is-feat .clonex-id { font-size: 1.1rem; }
 .is-feat .clonex-role { font-size: .95rem; }
-.clonex-feat-note { padding: .25rem 0 0; font-size: 1rem; color: var(--on-ink); }
 .clonex-skeleton { aspect-ratio: 1; background: var(--ink-2); animation: pulse 1.4s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 
 /* ---------- 8. 頁尾：紙底尾註，把時間軸收在這裡 ----------------------------- */
 .foot { background: var(--paper-2); color: var(--text-2); padding: var(--s5) 0 var(--s4); font-size: .92rem; }
 .foot .grid12 { border-top: 1px solid var(--text); padding-top: var(--s3); }
-.foot__col--brand { grid-column: 1 / 7; }
-.foot__col--index { grid-column: 7 / 10; }
-.foot__col--social { grid-column: 10 / 13; }
-.foot__brand { font-family: var(--serif); font-size: 1.4rem; color: var(--text); margin: 0 0 .5rem; }
+.foot__col--brand { grid-column: 1 / 6; }
+.foot__col--index { grid-column: 6 / 9; }
+.foot__col--social { grid-column: 9 / 13; }
+.foot__brand { display: flex; align-items: center; gap: .5rem; margin: 0 0 .7rem; }
+.foot__brand img { height: 20px; width: auto; }
+.foot__brand .nav__tag { color: var(--text); border-color: var(--text); }
 .foot__desc { max-width: 24em; margin: 0; }
 .foot__lab { display: block; margin-bottom: .8rem; color: var(--text); font-weight: 700; }
 .foot a { color: var(--text); }
 .foot a:hover { color: var(--red-ink); }
 .foot ul { list-style: none; display: grid; gap: .35rem; }
 .foot__copy { grid-column: 1 / 13; margin: var(--s4) 0 0; font-size: .82rem; color: var(--mute); }
+
+/* ---------- 8b. 檔案頁（oursong/）專用：扉頁 hero、規格表、三態、成對存檔 -------- */
+/* 檔案扉頁：年份是版面上第二大的元素，照片出血到右側視窗邊，左欄是規格表。 */
+.hero--arch { padding: 0; }
+.hero--arch__grid {
+	display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	max-width: calc((100% + var(--maxw)) / 2); margin-left: auto;   /* 左緣對齊版心、右緣出血 */
+	padding-left: var(--gutter);
+}
+.hero--arch__main { padding: clamp(3rem, 9vh, 5.5rem) var(--s5) var(--s5) 0; align-self: end; }
+.hero--arch__year { font-size: clamp(3.5rem, 8vw, 7rem); line-height: .9; letter-spacing: -.04em; color: var(--red-lift); margin: .2rem 0 var(--s2); }
+.hero--arch .hero__title { font-size: clamp(2.2rem, 3.6vw, 3.2rem); margin: 0 0 var(--s3); text-wrap: balance; }
+.hero--arch .hero__lead { grid-column: auto; max-width: 26em; margin: 0 0 var(--s4); }
+.hero--arch__fig { position: relative; margin: 0; }
+.hero--arch__fig a { display: block; height: 100%; overflow: hidden; }
+.hero--arch__fig img { width: 100%; height: 100%; min-height: 560px; aspect-ratio: 4 / 5; object-fit: cover; }
+.fig-cap {
+	position: absolute; left: 0; bottom: 0; background: var(--ink); color: var(--on-ink);
+	padding: .5rem .9rem; font-size: .84rem; display: inline-flex; gap: .7rem; align-items: baseline;
+}
+.fig-cap .mono { color: var(--red-lift); }
+.lat { font-family: var(--serif); }   /* 標題內的拉丁字：同家族襯線 */
+
+/* 規格表：等寬數字靠左成一欄，單位與說明在後 */
+.facts { display: grid; border-top: 1px solid rgba(255, 255, 255, .22); }
+.facts div { display: grid; grid-template-columns: 4.5rem 1fr; gap: var(--s2); padding: .55rem 0; border-bottom: 1px solid rgba(255, 255, 255, .1); font-size: .92rem; }
+.facts dt { color: var(--on-ink-2); }
+.facts dd { margin: 0; color: #fff; display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap; }
+.facts dd .mono { font-size: .95rem; min-width: 4.2rem; color: #fff; }
+.facts a { color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .4); }
+
+/* 三態：攝影原作｜Pixel RuRu｜TY，一排三張同尺寸，標籤同一套 */
+.tri { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3); }
+.tri__item { margin: 0; }
+.tri__item a { display: block; overflow: hidden; background: var(--paper-2); }
+.tri__item img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .4s var(--ease-out); }
+.tri__item a:hover img { transform: scale(1.02); }
+.tri__item figcaption { display: grid; grid-template-columns: auto 1fr; gap: .2rem .8rem; padding-top: .8rem; font-size: .9rem; color: var(--text-2); }
+.tri__item figcaption .mono { grid-row: 1 / 3; font-size: 1.1rem; color: var(--red-ink); align-self: start; }
+.tri__item figcaption b { color: var(--text); }
+.tri__notes { margin-top: var(--s5); }
+.tri__note { grid-column: span 5; color: var(--text-2); }
+.tri__note:first-child { grid-column: 1 / 6; }
+.tri__note:last-child { grid-column: 7 / 12; }
+.tri__h { font-size: 1.25rem; margin-bottom: .6rem; }
+.tri__note p { margin: 0; }
+
+.bullets { list-style: none; display: grid; gap: .35rem; color: var(--text-2); font-size: .94rem; }
+.bullets li { padding-left: 1rem; position: relative; }
+.bullets li::before { content: ""; position: absolute; left: 0; top: .75em; width: .4rem; height: 1px; background: var(--text-2); }
+/* 成對存檔：一件＝一個細框，大編號當標頭，卡面在上、解鎖內容在下 */
+.pairs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.pair { display: grid; gap: 6px; padding: 6px; border: 1px solid rgba(255, 255, 255, .22); }
+.pair a { display: block; overflow: hidden; background: var(--ink-2); }
+.pair img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
+.pair a:hover img { transform: scale(1.03); }
+.pair__cover img { aspect-ratio: 760 / 1278; }
+.pair__content img { aspect-ratio: 1; }
+.pair__no { font-size: 1.5rem; line-height: 1; color: #fff; padding: .4rem .3rem .5rem; letter-spacing: -.02em; }
+/* 單件周邊：獨立一排，同一個 3:4 框，不與成組作品混排 */
+.singles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s2); margin-top: var(--s4); padding-top: var(--s4); border-top: 1px dashed rgba(255, 255, 255, .2); }
+.single { margin: 0; }
+.single a { display: block; overflow: hidden; background: var(--ink-2); }
+.single img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.single figcaption { padding-top: .5rem; font-size: .84rem; color: var(--on-ink-2); }
+
+.arch { padding: var(--s4) 0 var(--s5); border-top: 1px solid rgba(255, 255, 255, .14); }
+.arch__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem var(--s3); margin-bottom: var(--s3); }
+.arch__title { font-size: 1.35rem; color: #fff; }
+.arch__note { color: var(--on-ink-2); font-size: .9rem; margin: 0; max-width: 34em; }
+.arch__foot { color: var(--on-ink-2); font-size: .88rem; margin: var(--s2) 0 0; }
+.arch__foot a { color: var(--on-ink); border-bottom: 1px solid rgba(255, 255, 255, .4); }
+
+.grid12--top { align-items: start; }
+.h2--side { grid-column: 1 / 5; }
+.prose { grid-column: 5 / 12; color: var(--text-2); font-size: 1.05rem; padding-top: .4rem; }
+.prose p { margin-bottom: 1.1em; }
+.quote { margin: var(--s3) 0; padding: .2rem 0 .2rem var(--s3); border-left: 2px solid var(--text); color: var(--text); font-family: var(--serif); font-size: 1.3rem; line-height: 1.5; }
+.next { margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line); display: grid; gap: .5rem; justify-items: start; }
+.next__lab { font-size: .82rem; letter-spacing: .1em; color: var(--red-ink); font-weight: 500; margin: 0; }
+.next__txt { color: var(--text); margin: 0 0 .6rem; }
 
 /* ---------- 9. 進場動畫 ---------------------------------------------------- */
 .rise { opacity: 0; transform: translateY(14px); transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }
@@ -280,44 +367,50 @@ button { font: inherit; }
 @media (max-width: 1024px) {
 	.h2 { grid-column: 1 / 13; }
 	.sec__lead, .chain__acts { grid-column: 1 / 13; }
-	.row { grid-template-columns: 3.4rem repeat(11, minmax(0, 1fr)); }
-	.row__no { grid-column: 1; font-size: 1rem; }
-	.row__fig { grid-column: 2 / 8; }
+	.row { grid-template-columns: 4.2rem repeat(11, minmax(0, 1fr)); }
+	.row__no { grid-column: 1; font-size: 1.3rem; }
+	.row__fig, .row--y1 .row__fig, .row--y2 .row__fig { grid-column: 2 / 8; }
+	.row--y3 .row__fig { grid-column: 1 / 8; }
 	.row__body { grid-column: 8 / 13; }
+	.hero__copyblock, .hero__index { grid-column: 1 / 13; }
 	.sec__head--stack .sec__lead, .sec__head--stack .chain__acts { grid-column: 1 / 13; }
 	.foot__col--brand { grid-column: 1 / 13; }
 	.foot__col--index { grid-column: 1 / 7; }
 	.foot__col--social { grid-column: 7 / 13; }
+	.hero--arch__grid { grid-template-columns: 1fr; max-width: none; padding: 0; }
+	.hero--arch__main { padding: var(--s5) var(--gutter) var(--s4); }
+	.hero--arch__fig img { min-height: 0; aspect-ratio: 16 / 10; }
+	.h2--side, .prose { grid-column: 1 / 13; }
+	.tri__note:first-child, .tri__note:last-child { grid-column: 1 / 13; }
+	.pairs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
 	:root { --s6: 3.6rem; --nav-h: 54px; --inset-drop: 96px; }
 	/* 手機只留主 CTA；回本頁靠左上品牌標，其餘連結在頁尾 */
 	.nav__wide { display: none; }
-	.nav__links { gap: var(--s2); }
+	.nav__links { gap: .9rem; }
+	.nav__links a { font-size: .78rem; }
 	.nav__brand img { height: 17px; }
+	.nav__brand .nav__tag { display: none; }
 
-	/* 手機是重排不是縮圖：標題在照片上方的墨底、照片 4:5 出血、化身框壓右下、
-	   導言與 CTA 在照片下方；所有文字仍在版心邊距內 */
-	.hero__photo { height: auto; display: flex; flex-direction: column; }
-	.hero__pic { position: relative; inset: auto; }
-	.hero__pic > img { aspect-ratio: 4 / 5; height: auto; }
-	.hero__pic::after { background: linear-gradient(0deg, rgba(10, 16, 36, .5) 0%, rgba(10, 16, 36, 0) 40%); }
-	.hero__copy { position: static; order: -1; display: block; padding: var(--s4) var(--gutter) var(--s3); }
-	/* 標題與主 CTA 留在第一屏，導言才移到照片下方 */
-	.hero__title { font-size: clamp(2.5rem, 12vw, 3.2rem); margin-bottom: var(--s3); max-width: 8em; }
-	.hero__copy .hero__lead { display: none; }
-	.hero__copy .hero__act { flex-direction: column; align-items: flex-start; gap: var(--s2); }
-	.hero__copy .btn { width: 100%; justify-content: center; }
-	.hero__below { padding-top: calc(var(--inset-drop) + var(--s3)); padding-bottom: var(--s3); }
-	.hero__below .hero__lead { max-width: none; margin: 0; }
-	.hero__below .hero__act { display: none; }
-	.hero__inset { right: var(--gutter); width: 50%; border-width: 4px; }
-	.tag { font-size: .84rem; padding: .45rem .7rem .4rem; }
-	.tag--camera { top: var(--s2); left: var(--gutter); }
-	.tag--chain { left: -4px; bottom: -4px; }
-	.tag .kicker { display: none; }
+	/* 手機：標題在墨底 → 雙聯畫並排兩個正方 → 導言 → CTA；先看到東西再被要求行動 */
+	/* 手機：雙聯畫上下堆疊、各佔約半屏，標題橫在兩張之間的接縫上 */
+	.dip2 { height: auto; grid-template-columns: 1fr; gap: 4px; }
+	.dip2__half { aspect-ratio: 4 / 3; }
+	.dip2__half img { height: 100%; }
+	.dip2__half--camera img { height: 125%; object-position: 62% 0; }
+	.dip2__half--chain img { height: 100%; object-position: 45% 40%; }
+	.dip2__half::after { background: linear-gradient(0deg, rgba(10, 16, 36, .6) 0%, rgba(10, 16, 36, 0) 45%); }
+	.hero__copy { inset: auto 0 0 0; padding-bottom: var(--s3); }
+	.hero__title { font-size: clamp(2rem, 9.4vw, 2.6rem); text-wrap: balance; }
+	.hero__sub { padding: var(--s4) var(--gutter) var(--s5); gap: var(--s4); }
+	.hero__copyblock, .hero__index { grid-column: 1; }
+	.hero__act { flex-direction: column; align-items: flex-start; }
+	.hero__act .btn { width: 100%; justify-content: center; }
+	.hero__index a { grid-template-columns: 4.2rem 1fr; }
+	.hero__index-y { font-size: 1.3rem; }
 
-	.sec--first { padding-top: var(--s5); }
+	.sec--first { padding-top: var(--s6); }
 	.h2 { font-size: 2rem; }
 	.grid12 { gap: var(--s2); }
 	.sec__head { margin-bottom: var(--s4); }
@@ -325,9 +418,10 @@ button { font: inherit; }
 	/* 編號併進 meta 行、圖滿版心，不留空欄 */
 	.row { grid-template-columns: 1fr; gap: var(--s2); padding: var(--s4) 0; }
 	.row__no { display: none; }
-	.row__fig, .row__body { grid-column: 1; }
-	.row__meta .no-inline { display: inline; color: var(--red); font-family: var(--mono); font-size: 1rem; margin-right: .3rem; }
-	.row--chain .row__fig a { border-width: 4px; }
+	.row__fig, .row__body, .row--y1 .row__fig, .row--y2 .row__fig, .row--y3 .row__fig, .row--y3 .row__body { grid-column: 1; grid-row: auto; }
+	.row--y3 { padding-top: var(--s4); }
+	.row--y3 .row__fig { margin-top: 0; }
+	.row__meta .no-inline { display: inline; font-family: var(--serif); font-size: 1.15rem; color: var(--text); margin-right: .4rem; }
 
 	.chain__acts { flex-direction: column; align-items: flex-start; gap: .9rem; }
 	/* 特寫整寬，四隻小圖 2×2，不留孤兒格 */
@@ -337,7 +431,15 @@ button { font: inherit; }
 
 	/* 12 欄格在手機收成 1 欄；所有跨欄設定一律歸 1 */
 	.grid12 { grid-template-columns: 1fr; }
-	.h2, .sec__lead, .chain__acts, .foot__col--brand, .foot__col--index, .foot__col--social, .foot__copy { grid-column: 1; }
+	.h2, .sec__lead, .chain__acts, .foot__col--brand, .foot__col--index, .foot__col--social, .foot__copy,
+	.h2--side, .prose, .tri__note:first-child, .tri__note:last-child { grid-column: 1; }
+	.hero--arch__year { font-size: 3.4rem; }
+	.hero--arch__fig img { aspect-ratio: 4 / 5; }
+	.facts div { grid-template-columns: 4rem 1fr; }
+	.tri { grid-template-columns: 1fr; gap: var(--s4); }
+	.pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+	.singles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.pair__no { font-size: 1.2rem; }
+	.arch__head { flex-direction: column; gap: .2rem; }
 	.foot ul { grid-template-columns: 1fr 1fr; }
 }
-@media (min-width: 761px) { .hero__below { display: none; } }

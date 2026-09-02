@@ -17,7 +17,7 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif:wght@700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 
 	<!-- Hero 照片是 LCP：預載 -->
 	<link rel="preload" as="image" href="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" fetchpriority="high">
@@ -39,42 +39,41 @@
 				<span class="nav__tag">NFT</span>
 			</a>
 			<ul class="nav__links">
-				<li class="nav__wide is-here"><a href="../nft/" aria-current="page">NFT 首頁</a></li>
-				<li class="nav__wide"><a href="../nft/oursong/">NFT 作品</a></li>
-				<li class="nav__wide"><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
+				<li class="nav__wide"><a href="../nft/" aria-current="page">NFT 首頁</a></li>
+				<li><a href="../nft/oursong/">NFT 作品</a></li>
+				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
 				<li class="cta"><a href="../nft/uniform-clonex/">Uniform CloneX</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- ================= Hero ================= -->
+	<!-- ================= Hero：等重雙聯畫 ================= -->
+	<!-- 「從相機到鏈上」直接做成版面：左半真人制服女孩攝影、右半 CloneX 化身，
+	     同為正面頭肩、同一視線高度，中間一道紅接縫；標題橫跨接縫。 -->
 	<header class="hero">
-		<div class="hero__photo">
-			<div class="hero__pic">
-				<img src="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" alt="制服女孩攝影系列作品：窗邊逆光下穿水手領制服的少女" width="2048" height="1365" fetchpriority="high" style="object-position: 62% 40%">
-				<span class="tag tag--camera"><span>相機</span><span class="kicker">制服女孩攝影 · 真人</span></span>
-			</div>
+		<div class="dip2">
+			<figure class="dip2__half dip2__half--camera">
+				<img src="../assets/img/portfolio/33300626336_d82723bf49_k.jpeg" alt="相機：制服女孩攝影系列作品，教室窗邊穿水手服的少女正面微笑" width="2048" height="1365" fetchpriority="high">
+			</figure>
+			<figure class="dip2__half dip2__half--chain">
+				<img src="../nft/assets/images/ucx/members/15755/photoreal_face_34.webp" alt="鏈上：CloneX #15755 擬真風格頭肩像，Uniform CloneX 主視覺成員" width="1024" height="1024">
+			</figure>
 			<div class="wrap hero__copy">
-				<p class="hero__tag">Swanky NFT · 制服女孩系列索引</p>
-				<h1 class="hero__title">制服女孩，<br>從相機到<em>鏈上</em></h1>
+				<h1 class="hero__title">制服女孩，從相機到鏈上</h1>
+			</div>
+		</div>
+		<div class="wrap grid12 hero__sub">
+			<div class="hero__copyblock">
 				<p class="hero__lead">十年的制服女孩攝影，2021 年第一次上鏈發行，2022 年以 CloneX 化身組成水手服女子團體出道，2026 年整理成角色檔案。這一頁是三條線索的索引。</p>
 				<div class="hero__act">
 					<a class="btn" href="../nft/uniform-clonex/">進入 Uniform CloneX<span class="ar" aria-hidden="true">→</span></a>
-					<a class="more more--light" href="#series">先看三個系列<span class="ar" aria-hidden="true">↓</span></a>
 				</div>
 			</div>
-			<figure class="hero__inset">
-				<img src="../nft/assets/images/ucx/members/15755/photoreal_face_34.webp" alt="CloneX #15755 擬真風格頭肩像，Uniform CloneX 主視覺成員" width="1024" height="1024" style="object-position: 45% 50%">
-				<span class="tag tag--chain"><span>鏈上</span><span class="kicker">CloneX #15755 · 化身</span></span>
-			</figure>
-		</div>
-		<!-- 手機版：導言與 CTA 移到照片下方（桌機隱藏，見 hub.css） -->
-		<div class="wrap hero__below">
-			<p class="hero__lead">十年的制服女孩攝影，2021 年第一次上鏈發行，2022 年以 CloneX 化身組成水手服女子團體出道，2026 年整理成角色檔案。這一頁是三條線索的索引。</p>
-			<div class="hero__act">
-				<a class="btn" href="../nft/uniform-clonex/">進入 Uniform CloneX<span class="ar" aria-hidden="true">→</span></a>
-				<a class="more more--light" href="#series">先看三個系列<span class="ar" aria-hidden="true">↓</span></a>
-			</div>
+			<ol class="hero__index">
+				<li><a href="#y2021"><span class="hero__index-y">2021</span><span>制服女孩 NFT ／ 加密女孩 NFT</span></a></li>
+				<li><a href="#y2022"><span class="hero__index-y">2022</span><span>3D 線上展間</span></a></li>
+				<li><a href="#y2026"><span class="hero__index-y">2026</span><span>Uniform CloneX</span></a></li>
+			</ol>
 		</div>
 	</header>
 
@@ -87,39 +86,39 @@
 			</div>
 
 			<ol class="series">
-				<li class="grid12 row rise">
+				<li class="grid12 row row--y1 rise" id="y2021">
 					<span class="row__no" aria-hidden="true">2021</span>
 					<figure class="row__fig">
 						<a href="../nft/oursong/"><img loading="lazy" src="../nft/oursong/web/tina1-content.jpg" alt="制服女孩 NFT 系列作品：戶外自然光下穿制服的女孩" width="760" height="760" style="object-position: 50% 25%"></a>
 					</figure>
 					<div class="row__body">
-						<p class="row__meta"><span class="no-inline" aria-hidden="true">2021</span><span class="mono">2021.07</span><span class="kicker">OurSong 發行</span></p>
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2021</span><span class="kicker">7 月 · OurSong 發行</span></p>
 						<h3 class="row__title"><a href="../nft/oursong/">制服女孩 NFT ／ 加密女孩 NFT</a></h3>
 						<p class="row__desc">制服女孩攝影系列第一次上鏈，並與插畫家 Pixel RuRu、TY 合作推出插畫版本。</p>
 						<a class="more row__act" href="../nft/oursong/">看作品清單<span class="ar" aria-hidden="true">→</span></a>
 					</div>
 				</li>
 
-				<li class="grid12 row row--wide rise">
+				<li class="grid12 row row--y2 rise" id="y2022">
 					<span class="row__no" aria-hidden="true">2022</span>
 					<figure class="row__fig">
-						<a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="../nft/assets/images/banner-3.png" alt="Swanky NFT 3D 線上展間畫面" width="1296" height="608" style="object-position: 30% 50%"></a>
+						<a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="../nft/assets/images/banner-2.png" alt="3D 線上展間牆上掛著制服女孩攝影作品" width="1296" height="608" style="object-position: 50% 50%"></a>
 					</figure>
 					<div class="row__body">
-						<p class="row__meta"><span class="no-inline" aria-hidden="true">2022</span><span class="mono">2022</span><span class="kicker">oncyber 線上展間</span></p>
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2022</span><span class="kicker">oncyber 線上展間</span></p>
 						<h3 class="row__title"><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></h3>
-						<p class="row__desc">作品都布置在一個 3D 線上展覽空間，可以像逛展場一樣走進去看。</p>
+						<p class="row__desc">攝影作品掛進一個 3D 線上展覽空間的牆上，可以像逛展場一樣走進去看：相機拍下的照片，第一次以空間的形式住進鏈上。</p>
 						<a class="more row__act" href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">走進展間<span class="ar" aria-hidden="true">↗</span></a>
 					</div>
 				</li>
 
-				<li class="grid12 row row--chain rise">
+				<li class="grid12 row row--y3 rise" id="y2026">
 					<span class="row__no" aria-hidden="true">2026</span>
 					<figure class="row__fig">
 						<a href="../nft/uniform-clonex/"><img loading="lazy" src="../nft/assets/images/ucx/works/reroll-photoreal.jpg" alt="Uniform CloneX 作品 REROLL 擬真版畫面" width="1280" height="720"></a>
 					</figure>
 					<div class="row__body">
-						<p class="row__meta"><span class="no-inline" aria-hidden="true">2026</span><span class="mono">2022.12 — 2026</span><span class="kicker">CloneX 化身團體</span></p>
+						<p class="row__meta"><span class="no-inline" aria-hidden="true">2026</span><span class="kicker">自 2022 年 12 月出道 · CloneX 化身團體</span></p>
 						<h3 class="row__title"><a href="../nft/uniform-clonex/">Uniform CloneX</a></h3>
 						<p class="row__desc">史旺基持有的五隻 CloneX 組成的水手服女子團體：三位正團成員、兩位幕後角色，各有身分檔案、多視角視覺與影像作品。<strong>當一切都能重抽，統一反而是最強的宣言。</strong></p>
 						<a class="more row__act" href="../nft/uniform-clonex/">看角色檔案<span class="ar" aria-hidden="true">→</span></a>
@@ -134,7 +133,7 @@
 		<div class="wrap">
 			<div class="grid12 sec__head sec__head--stack rise">
 				<h2 class="h2"><span class="no">收藏</span>鏈上的五位</h2>
-				<p class="sec__lead">以下五隻 CloneX 直接從以太坊鏈上即時讀取，就是組成 Uniform CloneX 的那五位。其中 <strong>#15755</strong> 後來被重新設計成 78 張原創塔羅牌。你也可以連結自己的錢包，展示你持有的 CloneX。</p>
+				<p class="sec__lead">以下五隻 CloneX 直接從以太坊鏈上即時讀取，就是組成 Uniform CloneX 的那五位：三位正團、兩位幕後，主視覺 <strong>#15755</strong> 後來也重製成 78 張原創塔羅牌。你也可以連結自己的錢包，展示你持有的 CloneX。</p>
 				<div class="chain__acts">
 					<a class="more" href="../tarot/decks/clonex/">看 #15755 的 78 張塔羅牌<span class="ar" aria-hidden="true">→</span></a>
 					<button id="clonex-connect" class="more" type="button">連結錢包看我的收藏<span class="ar" aria-hidden="true">→</span></button>
@@ -149,7 +148,7 @@
 	<footer class="foot">
 		<div class="wrap grid12">
 			<div class="foot__col foot__col--brand">
-				<p class="foot__brand">Swanky NFT</p>
+				<p class="foot__brand"><img src="../assets/img/Swanky_Logo.svg" alt="Swanky Studio 標誌" width="110" height="26"><span class="nav__tag">NFT</span></p>
 				<p class="foot__desc">史旺基工作室策劃的數位藝術與限量收藏：制服女孩攝影的上鏈版本，與它的 CloneX 化身。</p>
 			</div>
 			<div class="foot__col foot__col--index">

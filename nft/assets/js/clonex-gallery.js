@@ -175,12 +175,6 @@ function makeCard(item, isGallery) {
     meta.textContent = item.name;
   }
   a.appendChild(meta);
-  if (isGallery && item.tokenId === FEATURED) {
-    const note = document.createElement("div");
-    note.className = "clonex-feat-note";
-    note.textContent = "這一隻後來重製成 78 張原創塔羅牌";
-    a.appendChild(note);
-  }
   return a;
 }
 
