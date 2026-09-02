@@ -14,7 +14,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const total = data.themes.reduce((n, t) => n + t.items.length, 0);
 const hero = data.hero;
 
-// 拍品式標籤（參考蘇富比／佳士得 NFT 專場的目錄）：全場連續 Lot 編號、系列名（相當於藝術家）在上、
+// 拍品式標籤（參考蘇富比／佳士得 NFT 專場的目錄）：全場連續 No. 編號（沒有東西在賣，不用 Lot）、系列名（相當於藝術家）在上、
 // 作品名襯線、最後一行是媒材與鏈。編號跨展區連續，讀起來像一本目錄而不是六張清單。
 let lot = 0;
 const piece = (it, i) => `
@@ -22,7 +22,7 @@ const piece = (it, i) => `
 					<a href="${esc(it.href)}" target="_blank" rel="noopener noreferrer">
 						<span class="piece__img"><img src="../assets/images/${esc(it.img)}" alt="${esc(it.name)}，${esc(it.collection)} 系列" width="${it.w || 800}" height="${it.h || 800}" loading="lazy"></span>
 						<span class="piece__meta">
-							<span class="piece__lot mono">Lot ${String(++lot).padStart(2, "0")}</span>
+							<span class="piece__lot mono">No. ${String(++lot).padStart(2, "0")}</span>
 							<strong class="piece__artist">${esc(it.collection_display || it.collection)}</strong>
 							<span class="piece__title">${esc(it.title || it.name)}</span>
 							<span class="piece__medium">${CHAIN[it.chain] || esc(it.chain)}${it.token_label ? `<span class="dot" aria-hidden="true">·</span>${esc(it.token_label)}` : ""}</span>

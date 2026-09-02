@@ -125,7 +125,7 @@ button { font: inherit; }
 .dip2__half img { width: 100%; height: 100%; object-fit: cover; }
 /* 兩張臉的眼睛要在同一條線上（約框高一半）：真人照放大一階、貼頂；
    化身圖放大一階半、貼底，裁掉頂端留白。 */
-.dip2__half--camera img { height: 130%; object-position: 62% 0; }   /* 放大到與化身同一個頭的尺度，眼睛約在框高一半 */
+.dip2__half--camera img { height: 170%; object-position: 50% 34%; }   /* 肖像原檔頭寬只有框寬三分之一，放大到與化身同一個頭的尺度、眼線對齊右半（約框高 42%） */
 .dip2__half--chain img { height: 100%; object-position: 45% 50%; }
 
 .tag {
@@ -208,6 +208,9 @@ button { font: inherit; }
 /* 三行有主從：2021 前史（小）→ 2022 過場（中）→ 2026 旗艦破格（圖從版心左緣起、佔 8 欄）。
    同一個 4:3 框，只靠尺度說誰是重點，不加邊框。 */
 .row--y1 .row__fig, .row--y2 .row__fig { grid-column: 3 / 7; }
+/* 純文字列（2022 展間）：內容接在年份旁、走同一條左緣，寬度收在一個閱讀量，上下用細線與前後列分開 */
+.row--text { padding-top: var(--s4); padding-bottom: var(--s4); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.row--text .row__body { grid-column: 3 / 9; }
 .row--y3 { padding-top: var(--s6); padding-bottom: var(--s6); }
 .row--y3 .row__fig { grid-column: 3 / 9; }
 .row--y3 .row__fig img { aspect-ratio: 16 / 10; }
@@ -413,6 +416,7 @@ button { font: inherit; }
 	.row__fig, .row--y1 .row__fig, .row--y2 .row__fig { grid-column: 2 / 8; }
 	.row--y3 .row__fig { grid-column: 2 / 8; }
 	.row__body { grid-column: 8 / 13; }
+	.row--text .row__body { grid-column: 2 / 12; }
 	.hero__copyblock { grid-column: 1 / 13; }
 	.sec__head--stack .sec__lead, .sec__head--stack .chain__acts { grid-column: 1 / 13; }
 	.foot__col--brand { grid-column: 1 / 13; }
@@ -443,9 +447,8 @@ button { font: inherit; }
 	.dip2__half { aspect-ratio: 4 / 3; }
 
 	.dip2__half img { height: 100%; }
-	.dip2__half--camera img { height: 125%; object-position: 62% 0; }
+	.dip2__half--camera img { height: 120%; object-position: 50% 20%; }
 	.dip2__half--chain img { height: 100%; object-position: 45% 40%; }
-	.dip2__half::after { background: linear-gradient(0deg, rgba(10, 16, 36, .6) 0%, rgba(10, 16, 36, 0) 45%); }
 	/* 兩張圖上下相連成一組，標題緊接在圖下 */
 	.hero__title { font-size: clamp(2rem, 9.4vw, 2.6rem); }
 	.hero__sub { padding: var(--s4) var(--gutter) var(--s5); gap: var(--s4); }

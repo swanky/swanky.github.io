@@ -11,7 +11,7 @@
     "alt": "#17854，Mutant Ape Yacht Club 系列的頭像",
     "pos": "50% 15%",
     "collection_display": "Mutant Ape Yacht Club",
-    "cap": "封面拍品 · 見展區 02"
+    "cap": "封面作品 · 見展區 02"
   },
   "themes": [
     {
@@ -447,6 +447,113 @@
           "src_url": "https://i2c.seadn.io/ethereum/0x49afd53d774fb63d13065ebfc112e5bbfa078a07/bc2817588e188303746c14ec5c08a5/73bc2817588e188303746c14ec5c08a5.jpeg?w=800",
           "collection_display": "Moncler × adidas Originals",
           "title": "The Explorer #94",
+          "token_label": ""
+        }
+      ]
+    },
+    {
+      "id": "metaverse",
+      "title": "遊戲與元宇宙",
+      "ink": false,
+      "lead": "The Sandbox 的土地與遊戲資產、Aavegotchi 的角色，都是能在虛擬世界裡實際使用的物件。",
+      "items": [
+        {
+          "name": "LAND (-90, -110)",
+          "collection": "The Sandbox LANDs",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0x9d305a42a3975ee4c1c57555bed5919889dce63f/38466",
+          "img": "collection/metaverse-land-90-110-38466.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0x9d305a42a3975ee4c1c57555bed5919889dce63f/79c91ee0fd11db4e239e631aab937c/2779c91ee0fd11db4e239e631aab937c.webp?w=800",
+          "collection_display": "The Sandbox",
+          "title": "LAND (-90, -110)",
+          "token_label": "#38466"
+        },
+        {
+          "name": "#24571 - SWANKY AAGENT",
+          "collection": "Aavegotchi",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/24571",
+          "img": "collection/metaverse-swanky-aagent-24571.png",
+          "src_url": "https://raw2.seadn.io/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/b709e98ca61d913925c6e8d3114616/2ab709e98ca61d913925c6e8d3114616.svg",
+          "collection_display": "Aavegotchi",
+          "title": "Swanky Aagent",
+          "token_label": "#24571"
+        },
+        {
+          "name": "#22599 - SWANKY MOON",
+          "collection": "Aavegotchi",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/22599",
+          "img": "collection/metaverse-swanky-moon-22599.png",
+          "src_url": "https://raw2.seadn.io/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/20987355ef5ba739abf8b7f909b5f8/2b20987355ef5ba739abf8b7f909b5f8.svg",
+          "collection_display": "Aavegotchi",
+          "title": "Swanky Moon",
+          "token_label": "#22599"
+        },
+        {
+          "name": "#23855 - SWANKY ASTRONAUT",
+          "collection": "Aavegotchi",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/23855",
+          "img": "collection/metaverse-swanky-astronaut-23855.png",
+          "src_url": "https://raw2.seadn.io/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/3ec5fbd165267a993619827ab600bf/fe3ec5fbd165267a993619827ab600bf.svg",
+          "collection_display": "Aavegotchi",
+          "title": "Swanky Astronaut",
+          "token_label": "#23855"
+        },
+        {
+          "name": "#4062 - SWANKY GECKO",
+          "collection": "Aavegotchi",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/4062",
+          "img": "collection/metaverse-swanky-gecko-4062.png",
+          "src_url": "https://raw2.seadn.io/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/14b518979147c48dfe9a6b6bec9d0b/fb14b518979147c48dfe9a6b6bec9d0b.svg",
+          "collection_display": "Aavegotchi",
+          "title": "Swanky Gecko",
+          "token_label": "#4062"
+        },
+        {
+          "name": "#15982 - SWANKY JEANS",
+          "collection": "Aavegotchi",
+          "chain": "base",
+          "href": "https://opensea.io/item/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/15982",
+          "img": "collection/metaverse-swanky-jeans-15982.png",
+          "src_url": "https://raw2.seadn.io/base/0xa99c4b08201f2913db8d28e71d020c4298f29dbf/b776e6f27b568da3a1ba8922c85443/05b776e6f27b568da3a1ba8922c85443.svg",
+          "collection_display": "Aavegotchi",
+          "title": "Swanky Jeans",
+          "token_label": "#15982"
+        },
+        {
+          "name": "Red Blazesaber",
+          "collection": "The Sandbox ASSETS",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0xa342f5d851e866e18ff98f351f2c6637f4478db5/37924427288805432584280756478790235990319514589322599597917639671059467732992",
+          "img": "collection/metaverse-red-blazesaber-732992.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0xa342f5d851e866e18ff98f351f2c6637f4478db5/d30c6b90f735dc411158f4a474373467.png?w=800",
+          "collection_display": "The Sandbox",
+          "title": "Red Blazesaber",
+          "token_label": ""
+        },
+        {
+          "name": "Guardian of the Sun",
+          "collection": "The Sandbox's ASSETs (Polygon)",
+          "chain": "polygon",
+          "href": "https://opensea.io/item/polygon/0xdbc52cd5b8eda1a7bcbabb838ca927d23e3673e5/24702885974884246512848156480702511474935906242489761226",
+          "img": "collection/metaverse-guardian-of-the-sun-761226.webp",
+          "src_url": "https://i2c.seadn.io/polygon/0xdbc52cd5b8eda1a7bcbabb838ca927d23e3673e5/472402d4d6948124289ce5d76bc496/17472402d4d6948124289ce5d76bc496.png?w=800",
+          "collection_display": "The Sandbox",
+          "title": "Guardian of the Sun",
+          "token_label": ""
+        },
+        {
+          "name": "Arcade Land X-Large #1100",
+          "collection": "Arcadeland",
+          "chain": "ethereum",
+          "href": "https://opensea.io/item/ethereum/0x4a8c9d751eeabc5521a68fb080dd7e72e46462af/1100",
+          "img": "collection/metaverse-arcade-land-x-large-1100-1100.webp",
+          "src_url": "https://i2c.seadn.io/ethereum/0x4a8c9d751eeabc5521a68fb080dd7e72e46462af/3648bb668013369e9e5af07e61b603f5.jpeg?w=800",
+          "collection_display": "Arcadeland",
+          "title": "Arcade Land X-Large #1100",
           "token_label": ""
         }
       ]
