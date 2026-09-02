@@ -230,7 +230,6 @@ async function loadCollection(address, label) {
       const isGallery = address === GALLERY_ADDRESS;
       col.appendChild(makeCard(it, isGallery));
       // 一列五位、沒有特寫（見 hub.css .is-lineup）；順序照 ROLES：正團三位在前、幕後兩位在後
-      col.classList.remove("is-feat");
       const rank = LINEUP.indexOf(String(it.tokenId));
       col.style.order = isGallery && rank >= 0 ? String(rank) : "";
     }
