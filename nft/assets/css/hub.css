@@ -170,7 +170,7 @@ button { font: inherit; }
 /* ---------- 5. 區塊外殼與標題（同一張 12 欄格） ---------------------------- */
 /* 全頁只有一套水平基準：12 欄，左 1–8 欄給標題／編號／圖，右 9–12 欄給文字。
    區塊標題的引言、每一列的文字欄、都從第 9 欄開始。 */
-.sec { padding: var(--s6) 0; }
+.sec { padding: var(--s6) 0; scroll-margin-top: calc(var(--nav-h) + var(--s3)); }   /* 錨點跳轉時避開固定導覽列 */
 .sec--first { padding-top: var(--s6); }
 .sec--ink { background: var(--ink); color: var(--on-ink); }
 .grid12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s3); }
@@ -508,9 +508,6 @@ button { font: inherit; }
 .rooms__list a .mono { color: var(--mute); font-size: .8rem; letter-spacing: .04em; }
 .rooms__list a:hover { color: var(--red-ink); border-color: var(--red); }
 .hero--paper .stamp { grid-template-columns: auto 1fr; }
-.page-coll .hero--arch__main { padding-bottom: var(--s4); }
-.page-coll .hero--arch__fig { align-self: start; padding-top: clamp(3rem, 8vh, 4.5rem); }
-.page-coll .hero--arch__fig img { aspect-ratio: 1; }
 .page-coll .sec__head { align-items: start; }
 .hero--paper .stamp a { color: var(--text); border-bottom: 1px solid var(--text); }
 .hero--paper .stamp a:hover { color: var(--red-ink); border-color: var(--red-ink); }
@@ -534,7 +531,7 @@ button { font: inherit; }
 .piece__meta { display: flex; flex-direction: column; gap: .05rem; padding: .75rem 0 0; font-size: .86rem; line-height: 1.45; color: var(--text-2); }
 .piece__lot { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: .2rem; }
 .piece__artist { color: var(--text); font-weight: 700; font-size: .9rem; }
-.piece__title { font-family: var(--serif); font-style: italic; font-size: 1.02rem; color: var(--text); }
+.piece__title { font-family: var(--serif); font-style: italic; font-size: 1.02rem; color: var(--text); overflow-wrap: anywhere; }
 .piece__medium { font-size: .78rem; color: var(--mute); margin-top: .15rem; }
 .piece a:hover .piece__title { color: var(--red-ink); }
 .piece--lead .piece__img { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }   /* 大圖撐滿兩列的高度，說明才會緊貼圖下、與第二排說明同底線 */
@@ -548,10 +545,109 @@ button { font: inherit; }
 .sec--ink .piece a:hover .piece__title { color: var(--red-lift); }
 @media (max-width: 1024px) {
 	.coll { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-	.coll--row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
 	.coll, .coll--row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
 	.piece__meta { font-size: .8rem; }
 	.hero--paper .hero--arch__fig img { aspect-ratio: 1; }
 }
+
+/* ---------- 收藏頁 v2（2026-09-07）：滿版封面＋七區五種版式 ----------------------
+   評審兩輪一致的天花板是「七區同一個模組」。現在每區照內容選版式（collection.json 的 layout）：
+   row 等寬一列（CloneX 五位）／dense 六欄密格＋首件 2×2（頭像類）／spread 兩張對頁＋一列小格（村上隆）／
+   catalog 六欄型錄、無主圖（鞋款服飾本來就是型錄）／banner 一張橫幅＋一列小格（自己的發行）／預設四欄＋首件 2×2。
+   欄數都照件數算過：每區最後一列都是滿的，手機上一列排不下的改成橫向滑。 ---------- */
+.hero--cover { position: relative; min-height: clamp(560px, 88vh, 920px); display: grid; align-items: end; overflow: hidden; background: var(--ink); color: var(--on-ink); }
+.hero--cover__img { position: absolute; inset: 0; display: block; }
+.hero--cover__img img { width: 100%; height: 100%; object-fit: cover; }
+/* 封面是淺底作品，字要壓得住：下半罩一層墨色漸層，上緣留一點壓住導覽列下的亮邊 */
+.hero--cover__img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 16, 36, .18) 0%, rgba(10, 16, 36, 0) 28%, rgba(10, 16, 36, .5) 58%, rgba(10, 16, 36, .94) 100%); }
+.hero--cover__body { position: relative; padding-top: var(--s6); padding-bottom: var(--s5); }
+.hero--cover .hero__tag { color: var(--red-lift); }
+.hero--cover__title { font-family: var(--serif); font-size: clamp(4rem, 11vw, 9rem); line-height: .9; letter-spacing: -.03em; color: #fff; margin: .2rem 0 var(--s3); text-shadow: 0 2px 24px rgba(10, 16, 36, .35); }
+.hero--cover .hero__title--sub { font-family: var(--sans); font-weight: 500; font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: #fff; margin: 0 0 var(--s2); max-width: 30em; }
+.hero--cover .hero__lead { color: var(--on-ink); max-width: 30em; }
+.hero--cover .stamp { max-width: 40em; color: var(--on-ink); border-color: rgba(255, 255, 255, .35); }   /* 封面上的小字要比一般 stamp 亮一級，壓在圖上才讀得到 */
+.hero--cover .stamp a { color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .6); }
+.hero--cover .stamp a:hover { border-color: #fff; }
+.hero--cover__cap { position: absolute; left: 0; right: 0; bottom: var(--s5); margin: auto; display: flex; justify-content: flex-end; gap: .7rem; align-items: baseline; font-size: .84rem; color: var(--on-ink); pointer-events: none; }
+.hero--cover__cap .mono { color: #fff; }
+.hero--cover__cap a { color: var(--on-ink); pointer-events: auto; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+.hero--cover__cap a:hover { color: #fff; border-color: #fff; }
+
+/* 鏈別膠囊：資料是資料，方形小標，不做圓角 */
+.pill { display: inline-block; font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1.4; padding: .1rem .4rem; border: 1px solid var(--line); border-radius: 2px; color: var(--mute); margin-right: .45rem; vertical-align: middle; }
+.piece__medium .mono { font-size: .74rem; letter-spacing: .04em; color: var(--mute); }
+.sec--ink .pill { border-color: rgba(255, 255, 255, .28); color: var(--on-ink-2); }
+.sec--ink .piece__medium .mono { color: var(--on-ink-2); }
+/* 透明底或非方形的作品（光劍、雕像、圓形硬幣）：整件放進框裡，不裁 */
+.piece__img--contain img { object-fit: contain; padding: 8%; }
+
+/* dense：六欄，首件 2×2；9 件＝兩列滿 */
+.coll--dense { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.coll--dense .piece__meta { font-size: .8rem; }
+.coll--dense .piece__artist { font-size: .8rem; }
+.coll--dense .piece__title { font-size: .92rem; }
+.coll--dense .piece--lead .piece__meta { font-size: .86rem; }
+.coll--dense .piece--lead .piece__artist { font-size: 1rem; }
+.coll--dense .piece--lead .piece__title { font-size: 1.45rem; line-height: 1.25; }
+
+/* spread：兩張大圖對頁，再一列七件直幅小格 */
+.coll--spread { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4) var(--s3); margin-bottom: var(--s4); }
+.coll--spread .piece--big .piece__meta { padding-top: .9rem; }
+.coll--spread .piece--big .piece__artist { font-size: 1rem; }
+.coll--spread .piece--big .piece__title { font-size: 1.45rem; line-height: 1.25; }
+.coll--strip { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.coll--strip .piece__img { aspect-ratio: .72; }
+.coll--strip .piece__img--contain img { padding: 0; }   /* 直幅格裡的方形硬幣：寬撐滿、上下留白就好，別再內縮 */
+.coll--strip .piece__meta { font-size: .78rem; }
+.coll--strip .piece__artist { font-size: .78rem; }
+.coll--strip .piece__title { font-size: .9rem; }
+
+/* catalog：六欄型錄，沒有主圖，鞋款與服飾一律同尺寸並排 */
+.coll--catalog { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+.coll--catalog .piece__meta { font-size: .78rem; }
+.coll--catalog .piece__artist { font-size: .78rem; }
+.coll--catalog .piece__title { font-size: .9rem; }
+
+/* banner：一張橫幅出血到版心兩緣，下接一列四件 */
+.coll--banner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.coll--banner .piece--banner { grid-column: 1 / -1; }
+.coll--banner .piece--banner .piece__img { aspect-ratio: 2.4; }
+.coll--banner .piece--banner .piece__meta { padding-top: .9rem; }
+.coll--banner .piece--banner .piece__artist { font-size: 1rem; }
+.coll--banner .piece--banner .piece__title { font-size: 1.45rem; line-height: 1.25; }
+
+/* 頁尾：兩群連結（站內／站外）＋一行說明，橫向一條 */
+.foot__meta--groups { justify-content: flex-start; gap: .6rem var(--s4); }
+.foot__meta--groups ul + ul { padding-left: var(--s4); border-left: 1px solid var(--line); }
+.foot__note { grid-column: 1 / 13; display: flex; justify-content: space-between; gap: var(--s3); margin: var(--s3) 0 0; font-size: .82rem; color: var(--mute); }
+
+@media (max-width: 1024px) {
+	.coll--dense, .coll--catalog { grid-template-columns: repeat(4, minmax(0, 1fr)); }   /* 9＝lead 4 格＋8＝三列滿；12＝三列滿 */
+	.coll--row { grid-template-columns: repeat(5, minmax(0, 1fr)); }   /* 五位一列撐到手機才改橫滑，別在平板變 3＋2 */
+	.hero--cover { min-height: clamp(480px, 80vh, 760px); }
+}
+@media (max-width: 760px) {
+	.hero--cover { min-height: 0; }
+	.hero--cover__body { padding-top: clamp(10rem, 40vh, 15rem); padding-bottom: var(--s4); }
+	.hero--cover__title { font-size: 3.6rem; }
+	.hero--cover__cap { position: relative; bottom: auto; justify-content: flex-start; padding-bottom: var(--s3); }   /* 要 relative 才會畫在 absolute 的封面圖之上 */
+	.hero--cover .stamp { display: none; }   /* 手機封面只留標題、副題、導語；策展聲明頁尾那行有 */
+	.coll--dense, .coll--catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3) var(--s2); }   /* 9＝lead 4＋8＝四列滿；12＝四列滿 */
+	.coll--spread { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); }
+	/* 一列排不下的（CloneX 五位、村上隆七件小格）改橫向滑，不留孤兒格 */
+	.coll--row, .coll--strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--s2); padding-bottom: .4rem; scrollbar-width: thin; }
+	.coll--row > *, .coll--strip > * { flex: 0 0 44%; scroll-snap-align: start; }
+	.coll--strip > * { flex-basis: 36%; }
+	.coll--banner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.coll--banner .piece--banner .piece__img { aspect-ratio: 1.5; }
+	.foot__meta--groups ul + ul { padding-left: 0; border-left: 0; }
+	.foot__note { flex-direction: column; gap: .3rem; }
+}
+
+/* 收尾段：墨底、一句話＋一個出口 */
+.close .close__h { grid-column: 1 / 7; }
+.close .close__lead { grid-column: 7 / 13; align-self: end; }
+.close .close__lead .more { display: flex; width: max-content; margin-top: var(--s2); }
+@media (max-width: 1024px) { .close .close__h, .close .close__lead { grid-column: 1 / 13; } }
