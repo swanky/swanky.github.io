@@ -229,9 +229,21 @@ async function loadCollection(address, label) {
       col.innerHTML = "";
       const isGallery = address === GALLERY_ADDRESS;
       col.appendChild(makeCard(it, isGallery));
-      // 一列五位、沒有特寫（見 hub.css .is-lineup）；順序照 ROLES：正團三位在前、幕後兩位在後
+      // 主視覺 #15755 在一列裡佔兩欄（hub.css .clonex-col--lead）
+      col.classList.toggle("clonex-col--lead", isGallery && String(it.tokenId) === FEATURED);
+      // 一列五位（見 hub.css .is-lineup）；順序照 LINEUP：正團三位在前、幕後兩位在後
       const rank = LINEUP.indexOf(String(it.tokenId));
       col.style.order = isGallery && rank >= 0 ? String(rank) : "";
+      col.dataset.rank = isGallery && rank >= 0 ? String(rank) : "";
+    }
+
+    // 手機上這一列是橫向捲動容器：只用 CSS order 排會讓瀏覽器把捲軸停在 DOM 第一張（視覺上的最後一位），
+    // 主視覺反而被推出畫面。所以真的把節點依名次重排，DOM 順序＝視覺順序。
+    if (address === GALLERY_ADDRESS) {
+      [...grid.children]
+        .sort((a, b) => (Number(a.dataset.rank) || 0) - (Number(b.dataset.rank) || 0))
+        .forEach((el) => grid.appendChild(el));
+      grid.scrollLeft = 0;
     }
   } catch (e) {
     status.textContent = e?.message || "讀取失敗，請稍後再試。";
