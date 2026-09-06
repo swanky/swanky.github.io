@@ -12,7 +12,7 @@ Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep st
 
 ## Working Style
 
-Execute autonomously; start without asking. Read relevant code first; make reasonable assumptions and proceed. Do the full job (edit, test, build); prefer the smallest maintainable diff. Report once at the end: files changed + why, verification output, remaining risks.
+Execute autonomously; start without asking. Read relevant code first; make reasonable assumptions and proceed. Do the full job (edit, test, build); prefer the smallest maintainable diff. Final report: files changed + why, verification output, remaining risks.
 
 - **Commander mode**: 主線程是指揮官，context 是最稀缺資源——但派工是用 token 換 context 的交易，token 額度同樣稀缺。預估讀 **>8 檔或 >1500 行**、**位置未知的開放式翻找**、批次改 **>2 檔**、或要**看任何圖檔**（使用者貼進對話的圖除外）→ 派 subagent，主線程只收結論＋file:line；**派工時 `model` 必填**（搜尋／機械修改用 haiku/sonnet，禁止繼承主線程模型），相關任務合併成一個 agent 派出（規則 `docs/agents/dispatch.md`，模板 `docs/agents/delegation-templates.md`）。已知位置的中量讀取主線程自己讀（吃 prompt cache 比派工便宜）。可能 >200 行的指令輸出一律截尾（`cmd 2>&1 | tail -30`）。
 - **Plan externalization**: ≥3 步驟的工作，開工前把步驟清單寫進 scratchpad 計畫檔，每完成一步立即更新；compaction 後第一動作＝重讀計畫檔。
@@ -39,7 +39,7 @@ Precedence when rules conflict: **user's live instruction > CLAUDE.md（適配�
 ## Environment Rules (Claude harness 專屬；跨 agent 環境事實見 AGENTS.md「環境事實」)
 
 - **git via the Bash tool**, never PowerShell (quoting/encoding mangles commit messages and paths).
-- **Verify writes with an independent tool**: after an important Edit/Write, confirm with `git diff --stat`, Read, or Grep before building on top. 這是寫入層驗證（每次寫入後）；交付層驗收另有規則（`docs/agents/dispatch.md` §7）。Never narrate a result you didn't actually receive.
+- **Verify writes with a cheap independent check**: after an important Edit/Write, confirm with `git diff --stat` or a Grep for the new text before building on top (don't re-Read the whole file — the harness already tracks edit results; the residual risk is a stray `jekyll serve --watch` reverting files between operations, see AGENTS.md). 這是寫入層驗證；交付層驗收另有規則（`docs/agents/dispatch.md` §7）。Never narrate a result you didn't actually receive.
 - **Waiting on CI/long jobs**: bare `sleep N && cmd` is blocked by the harness — use an `until`-loop poll (e.g. `until [ "$(gh run view <id> --json status --jq .status)" = "completed" ]; do sleep 15; done`) with `run_in_background`.
 - **Playwright page checks**: `browser_evaluate` runs against about:blank — use `browser_run_code_unsafe` + `page.evaluate` on the real page.
 

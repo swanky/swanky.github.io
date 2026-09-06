@@ -1,6 +1,6 @@
 ---
 name: codex-image
-description: 委派本機 codex CLI(內建 image_gen)生成或微調點陣圖(簡報配圖/插畫/示意圖),由目前 AI agent 統籌風格規範與驗收,確保與簡報內容一致。當使用者說「生圖」「生成圖片」「產一張圖」「AI 生圖」「簡報配圖」「codex 生圖」「改圖」「重生這張圖」「微調圖片」時觸發。
+description: 委派本機 codex CLI(內建 image_gen)生成或微調點陣圖(簡報配圖/插畫/示意圖),由目前 AI agent 統籌風格規範與驗收,確保與簡報內容一致。當使用者要生成新的圖片／插畫／配圖，或要修改、重生、微調一張既有的 AI 圖時觸發（不論是否點名 codex）。
 argument-hint: <圖片需求描述> [輸出路徑]
 allowed-tools: PowerShell, Read
 ---
@@ -59,7 +59,6 @@ to purchase more credits or try again at <date>.
 
 **這不是設定問題,不要試著改 config 或重登**——只能等重置或加購 credits。
 遇到此錯誤停下回報使用者,不要重試。
-(2026-08-06 實測即撞到此上限,當時重置時間為 2026-08-10 01:09。)
 
 ## Windows sandbox 陷阱:讀本機參考圖會失敗(2026-07-27 於 rwa 實測)
 

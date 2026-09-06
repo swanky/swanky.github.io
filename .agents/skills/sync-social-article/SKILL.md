@@ -195,14 +195,13 @@ Windows／Git Bash 陷阱：若 `bundle` wrapper 報 `No such file or directory 
 ```bash
 git add _posts/<date>-<slug>.md assets/img/linkedin/<slug>.jpg
 # 若第七步有歸入系列，一併加入被修改的 hub 頁面；若本次調整過 layout/CSS 也一併加入
-git commit -m "feat(technical): add <slug> article
-
-Co-Authored-By: <目前模型的署名，如 Claude Fable 5 <noreply@anthropic.com>>"
+git commit -m "feat(technical): add <slug> article"
 git push origin master
 ```
 
 commit message 規則：
 - 第一行：`feat(technical): add <slug> article`
+- 結尾的 AI 共同作者署名依當場執行器的既定慣例附上（本 skill 不指定模型名，見 AGENTS.md 跨 agent 原則）
 - 不要在 commit message 裡放中文標題（避免編碼問題）
 - 若 push 失敗，回報錯誤訊息，不要重試。
 
