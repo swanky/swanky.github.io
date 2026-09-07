@@ -888,7 +888,7 @@
       "type": "video",
       "title": "REROLL（卡通版）",
       "meta": "93 秒",
-      "desc": "同上，手繪質感的版本。",
+      "desc": "同一個 REROLL 故事，手繪質感的版本。",
       "url": "https://youtu.be/WO2lMCWzVNQ",
       "image": "works/reroll-cartoon.jpg",
       "fit": "cover"
@@ -898,7 +898,7 @@
       "type": "video",
       "title": "BUNNY AWAKENS",
       "meta": "30 秒",
-      "desc": "把 CloneX #15755 從一張 PFP 變成一個開始呼吸的角色。",
+      "desc": "把 CloneX #15755 從一張頭像變成一個開始呼吸的角色。",
       "url": "https://youtu.be/lXnwBJBcbXY",
       "image": "works/bunny-awakens.jpg",
       "fit": "cover"
@@ -916,12 +916,12 @@
     {
       "date": "2022-12",
       "type": "image",
-      "title": "UCX Poster",
+      "title": "UCX 團體海報",
       "meta": "11 位成員",
-      "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一隻 CloneX 均已取得其持有者授權。",
+      "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一位 CloneX 均已取得其持有者授權。",
       "url": null,
-      "image": "brand/poster_2022_4x3_600.webp",
-      "fit": "cover"
+      "image": "brand/poster_2022_red.webp",
+      "fit": "contain"
     },
     {
       "date": "2021",

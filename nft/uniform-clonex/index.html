@@ -7,7 +7,7 @@
 	<link href="../../assets/img/Swanky_logo_icon32.png" rel="icon">
 	<link href="../../assets/img/Swanky_logo_icon180.png" rel="apple-touch-icon">
 
-	<meta name="description" content="Uniform CloneX（UCX）——史旺基持有的 CloneX 水手服女子團體官方檔案頁：三位正團成員與兩位幕後角色的身分檔案、多視角視覺、世界觀故事與影像作品。制服女孩攝影系列的 Web3 世代延伸。">
+	<meta name="description" content="Uniform CloneX（UCX）——史旺基持有的 CloneX 水手服女子團體角色創作頁：三位正團成員與兩位幕後角色的身分檔案、多視角視覺、世界觀故事與影像作品。制服女孩攝影系列的 Web3 世代延伸。">
 	<meta name="keywords" content="Uniform CloneX,UCX,CloneX,RTFKT,虛擬偶像,水手服,NFT,Swanky">
 	<meta property="og:title" content="Uniform CloneX — CloneX 水手服女子團體">
 	<meta property="og:description" content="當一切都能重抽，統一反而是最強的宣言。三位正團成員、兩位幕後角色，與一個關於「選擇不變」的故事。">
@@ -17,21 +17,22 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif:wght@700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 
 	<!-- Hero 圖是 LCP：寫死在 HTML 並預載，不讓它等 JSON 回來才開始下載 -->
 	<link rel="preload" as="image" href="../assets/images/ucx/group-shot/hero.webp" fetchpriority="high">
 
 	<!-- 本頁不載入 /nft/ 子站的 style.css／nft-site.css／Bootstrap：版面自足，只外掛燈箱 -->
 	<link rel="stylesheet" href="../assets/css/glightbox.min.css">
+	<link rel="stylesheet" href="../assets/css/hub.css">
 	<link rel="stylesheet" href="../assets/css/ucx.css">
 
 	<title>Uniform CloneX &mdash; CloneX 水手服女子團體</title>
 	<link rel="canonical" href="https://swanky.github.io/nft/uniform-clonex/">
 </head>
-<body>
+<body class="page-ucx">
 
-	<a class="skip" href="#about">跳到主要內容</a>
+	<a class="skip" href="#main">跳到主要內容</a>
 
 	<nav class="nav" aria-label="主導覽">
 		<div class="wrap nav__in">
@@ -40,129 +41,101 @@
 				<span class="nav__tag">NFT</span>
 			</a>
 			<ul class="nav__links">
-				<li class="nav__wide"><a href="../">NFT 首頁</a></li>
-				<li class="nav__wide is-here"><a href="./" aria-current="page">Uniform CloneX</a></li>
+				<li><a href="../">NFT 首頁</a></li>
+				<li class="is-here"><a href="./" aria-current="page">Uniform CloneX</a></li>
 				<li><a href="../oursong/">NFT 作品</a></li>
 				<li><a href="../collection/">收藏展</a></li>
-				<li class="cta"><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">追蹤 @ucx_tw</a></li>
+				<li class="cta nav__wide"><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">追蹤 @ucx_tw</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- ================= Hero ================= -->
-	<header class="hero">
-		<div class="hero__bg">
-			<img id="ucx-hero-img" src="../assets/images/ucx/group-shot/hero.webp" alt="Uniform CloneX 正團三人合照" fetchpriority="high">
-		</div>
-		<div class="wrap hero__in">
-			<p class="hero__tag mono" id="ucx-tag">CloneX 水手服女子團體</p>
-			<h1 class="hero__name">
-				<img class="hero__logo" id="ucx-logo" src="../assets/images/ucx/brand/logo_Extra_Color_std(w).webp" alt="Uniform CloneX" width="320" height="180">
-				<span class="sr" id="ucx-name">Uniform CloneX</span>
-			</h1>
-			<p class="hero__lead" id="ucx-lead">當一切都能重抽，統一反而是最強的宣言。</p>
-			<div class="hero__act">
-				<a class="btn" href="#members">認識五位成員<span class="btn__ar" aria-hidden="true">↓</span></a>
-				<a class="btn btn--ghost" href="#works">看影像作品</a>
+	<header class="hero ucx-cover">
+		<div class="ucx-cover__copy">
+			<img class="hero__logo" id="ucx-logo" src="../assets/images/ucx/brand/logo_Extra_Color_std(w).webp" alt="Uniform CloneX" width="320" height="180">
+			<p class="hero__tag" id="ucx-tag">CloneX 水手服女子團體</p>
+			<h1 class="ucx-cover__title"><span class="sr" id="ucx-name">Uniform CloneX</span>可以變成任何人，<br>我們選擇自己</h1>
+			<p class="ucx-cover__lead" id="ucx-lead">當一切都能重抽，統一反而是最強的宣言。</p>
+			<div class="ucx-cover__actions">
+				<a class="btn" href="#works">看影像作品<span aria-hidden="true">↓</span></a>
+				<a class="more more--light" href="#members">認識五位成員<span aria-hidden="true">↓</span></a>
 			</div>
-			<dl class="hero__data" id="ucx-stats"></dl>
 		</div>
+		<figure class="ucx-cover__image">
+			<img id="ucx-hero-img" src="../assets/images/ucx/group-shot/hero.webp" alt="Uniform CloneX 三位正團成員穿著水手服並肩站立" fetchpriority="high" width="1536" height="1024">
+			<figcaption>三位正團，兩位幕後。一個關於「選擇不變」的故事。</figcaption>
+		</figure>
 	</header>
-	<div class="pleat" aria-hidden="true"></div>
 
 	<!-- 段落導覽：整頁很長，讓讀者隨時知道自己在哪一段、還有哪幾段 -->
 	<nav class="rail" aria-label="段落導覽">
 		<div class="wrap rail__in">
-			<span class="rail__lab mono">Contents</span>
+			<span class="rail__lab">本頁</span>
 			<ul class="rail__list">
 				<li><a href="#about">關於</a></li>
-				<li><a href="#members">正團</a></li>
-				<li><a href="#crew">幕後</a></li>
+				<li><a href="#members">五位成員</a></li>
+				<li><a href="#works">影像作品</a></li>
 				<li><a href="#story">世界觀</a></li>
-				<li><a href="#works">作品</a></li>
 				<li><a href="#collection">收藏</a></li>
-				<li><a href="#rights">聲明</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- ================= About ================= -->
-	<section class="sec" id="about">
-		<div class="wrap about rise">
-			<div>
-				<h2 class="h2"><span class="knot" aria-hidden="true"></span>關於 UCX</h2>
-				<div class="prose">
-					<p>Uniform CloneX 是一個穿制服的 CloneX 角色團體。本頁整理的是<strong>史旺基持有的五隻 CloneX</strong>——三位穿水手服的正團成員，以及兩位負責幕後的角色。</p>
-					<p>CloneX 的官方設定只有一段話：人類意識被轉移進「可自訂的化身」。官方從未替任何一隻 Clone 取過名字或寫過故事，所以這裡的角色設定與世界觀都是原創延伸——這也是它不牴觸官方正典的原因。</p>
-					<p>UCX 本身不是 2026 才有的——它<strong>2022 年 12 月就在 CloneX Taiwan 的線下聚會出道</strong>過，後來遇上那年的加密寒冬。這一頁是同一個團體的角色檔案化版本。</p>
-					<p>四個階段都在問同一件事：<strong>制服代表什麼</strong>。</p>
-				</div>
+	<main id="main">
+	<section class="sec ucx-about" id="about">
+		<div class="wrap grid12 sec__head">
+			<h2 class="h2"><span class="no">關於 UCX</span>制服一直是同一個題目</h2>
+			<div class="sec__lead">
+				<p>從制服女孩攝影、2021 年的 NFT 作品，到 2022 年 12 月在 CloneX Taiwan 聚會出道，UCX 把同一個創作題目帶進化身的世界。</p>
+				<p>這裡的五位角色來自史旺基持有的 CloneX。水手服、角色性格與故事是原創延伸，影像由 AI 生成。</p>
+				<a class="more" href="../../technical/ucx-uniform-clonex-origin/">閱讀出道紀錄<span aria-hidden="true">→</span></a>
 			</div>
-			<ul class="lineage">
-				<li><b>一代</b><span><strong>制服女孩攝影</strong>（真人）<br>十年拍攝，模特兒張小筑。</span></li>
-				<li><b>二代<br>2021.07</b><span><strong>制服女孩 NFT ／ 加密女孩 NFT</strong>（上鏈）<br>在 OurSong 發行，插畫 Pixel RuRu。</span></li>
-				<li><b>三代<br>2022.12</b><span><strong>UCX 出道</strong>（社群）<br>在 CloneX Taiwan 第二次線下聚會正式出道。<a href="../../technical/ucx-uniform-clonex-origin/">當時的第一手紀錄 →</a></span></li>
-				<li><b>本頁<br>2026</b><span><strong>五隻角色的檔案化</strong>（化身）<br>身分檔案、多視角視覺與影像作品。</span></li>
-			</ul>
 		</div>
 	</section>
 
 	<!-- ================= 正團 ================= -->
-	<section class="sec sec--tint" id="members">
+	<section class="sec sec--ink" id="members">
 		<div class="wrap">
-			<h2 class="h2 rise"><span class="knot" aria-hidden="true"></span>正團成員 <span class="h2__note" id="ucx-members-count"></span></h2>
-			<ul class="idx rise" id="ucx-member-idx"></ul>
-			<p class="figcap rise" id="ucx-onchain-note"></p>
+			<div class="grid12 sec__head"><h2 class="h2"><span class="no">成員</span>同一套制服，各自的選擇</h2><p class="sec__lead">三位站在台前，兩位推動幕後。點選人物，閱讀她們與他的故事。</p></div>
+			<ul class="lineup" id="ucx-member-idx" aria-label="五位成員，可左右捲動" tabindex="0"></ul>
+			<div class="lineup__toolbar"><p class="lineup__hint">點選人物，打開角色故事。</p><div class="exhibit-controls" data-scroll-for="ucx-member-idx" hidden><button type="button" data-step="-1" aria-label="查看前面的成員">←</button><button type="button" data-step="1" aria-label="查看後面的成員">→</button></div></div><h3 class="profiles__title">三位正團的故事</h3>
 			<div id="ucx-member-profiles"></div>
-		</div>
-	</section>
-
-	<!-- ================= 幕後 ================= -->
-	<section class="sec" id="crew">
-		<div class="wrap">
-			<h2 class="h2 rise"><span class="knot" aria-hidden="true"></span>幕後 <span class="h2__note">Crew</span></h2>
-			<p class="figcap rise" style="margin:0 0 var(--s3)">不在台前的兩位——設定與正團同源，這裡只放重點。</p>
-			<ul class="idx idx--sm rise" id="ucx-crew-idx"></ul>
-			<div id="ucx-crew-profiles"></div>
-		</div>
-	</section>
-
-	<!-- ================= Story ================= -->
-	<section class="sec sec--tint" id="story">
-		<div class="wrap">
-			<h2 class="h2 rise"><span class="knot" aria-hidden="true"></span>世界觀 <span class="h2__note">Story</span></h2>
-			<div class="tl" id="ucx-story"></div>
+			<div class="crew-profiles" id="crew"><h3 class="profiles__title">兩位幕後，讓團體走上舞台</h3><div id="ucx-crew-profiles"></div></div>
 		</div>
 	</section>
 
 	<!-- ================= Works ================= -->
 	<section class="sec" id="works">
 		<div class="wrap">
-			<h2 class="h2 rise"><span class="knot" aria-hidden="true"></span>影像作品 <span class="h2__note">Works</span></h2>
-			<div class="works rise" id="ucx-works"></div>
+			<h2 class="h2 rise"><span class="no">影像作品</span>先看見她們如何選擇</h2>
+			<p class="works__intro">一間可以重抽外型的店，與選擇留下原貌的角色。從 REROLL 的兩種版本開始看。</p><div class="works" id="ucx-works"></div>
+		</div>
+	</section>
+
+	<!-- ================= Story ================= -->
+	<section class="sec sec--ink" id="story">
+		<div class="wrap">
+			<h2 class="h2 rise"><span class="no">世界觀</span>我們選擇成為彼此的同類</h2>
+			<p class="story__lead">在可以無限重抽外型的世界裡，每天穿上同一套水手服、留著同一張臉，是她們刻意做出的決定。</p><details class="story-fold"><summary>閱讀完整世界觀與創作沿革</summary><div class="tl" id="ucx-story"></div></details>
 		</div>
 	</section>
 
 	<!-- ================= Collection ================= -->
-	<section class="sec sec--tint" id="collection">
+	<section class="sec" id="collection">
 		<div class="wrap">
-			<h2 class="h2 rise"><span class="knot" aria-hidden="true"></span>收藏 <span class="h2__note">RTFKT × Nike</span></h2>
-			<p class="figcap rise" style="margin:0 0 var(--s3)">團員腳上的鞋款來自這幾雙持有的 RTFKT NFT。</p>
+			<h2 class="h2 rise"><span class="no">服裝收藏</span>從收藏走進角色的衣櫃</h2>
+			<p class="figcap rise" style="margin:0 0 var(--s3)">成員腳上的鞋款來自這幾雙持有的 RTFKT NFT。</p>
 			<div class="kicks rise" id="ucx-kicks"></div>
 		</div>
 	</section>
 
-	<!-- ================= Rights ================= -->
-	<section class="sec sec--ink" id="rights">
+	<section class="sec sec--ink ucx-close" id="rights">
 		<div class="wrap">
-			<h2 class="h2"><span class="knot" aria-hidden="true"></span>聲明 <span class="h2__note">Rights</span></h2>
-			<ul class="rights" id="ucx-rights"></ul>
-			<p class="mono" style="color:var(--on-ink-2);margin:var(--s4) 0 .7rem">官方渠道</p>
-			<div class="chips" id="ucx-channels"></div>
-			<p class="mono" style="color:var(--on-ink-2);margin-top:var(--s3)">
-				製作過程與技術細節另見
-				<a href="../../technical/ai-video-production-rehearsal-seedance-workflow/">技術專欄</a>。
-			</p>
+			<div class="ucx-close__body">
+				<h2 class="h2"><span class="no">故事仍在繼續</span>下一幕，<br>還是我們</h2>
+				<div><p>從一張頭像，到開始呼吸的角色。追蹤 UCX，繼續看她們與他的故事。</p><div class="chips" id="ucx-channels"></div><a class="more more--light" href="../oursong/">回看制服女孩攝影作品<span aria-hidden="true">→</span></a></div>
+			</div>
+			<details class="rights-fold"><summary>創作來源、使用聲明與致謝</summary><ul class="rights" id="ucx-rights"></ul><p class="rights-process">製作過程與技術細節另見<a href="../../technical/ai-video-production-rehearsal-seedance-workflow/">技術專欄</a>。</p></details>
 		</div>
 	</section>
 
@@ -185,15 +158,16 @@
 	<noscript>
 		<style>
 			#ucx-fallback { display: block !important; }
-			#members, #crew, #story, #works, #collection { display: none; }
+			#members, #crew, #story, #works, #collection, .rail, .ucx-cover__actions, #rights { display: none; }
 		</style>
 	</noscript>
 
+	</main>
 	<footer class="foot">
 		<div class="wrap foot__in">
-			<div>&copy; Swanky. All Rights Reserved.</div>
+			<div class="foot__brand">Swanky NFT</div>
 			<ul class="foot__links">
-				<li><a href="../">NFT 策展</a></li>
+				<li><a href="../">NFT 首頁</a></li><li><a href="../collection/">收藏展</a></li>
 				<li><a href="../oursong/">NFT 作品</a></li>
 				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">線上展間</a></li>
 				<li><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">@ucx_tw</a></li>
@@ -203,6 +177,7 @@
 	</footer>
 
 	<script src="../assets/js/glightbox.min.js"></script>
+	<script src="../assets/js/exhibit-scroll.js"></script>
 	<script>
 	/* =====================================================================
 	   UCX 專區：內容全部由 assets/data/ucx.json 驅動。
@@ -230,14 +205,12 @@
 		function ext(url) { return /^https?:/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : ""; }
 
 		/* 人物索引：一眼看完本段有誰，點了跳到下面的完整檔案 */
-		function idxHTML(m) {
-			return '<li><a href="#clonex-' + esc(m.id) + '">' +
-				'<img loading="lazy" src="' + esc(asset(m.pfp)) + '" alt="">' +
-				'<span class="idx__txt">' +
-				(m.name ? '<span class="idx__id mono">#' + esc(m.id) + "</span>" : "") +
-				'<span class="idx__name">' + esc(m.name || ("CloneX #" + m.id)) + "</span>" +
-				'<span class="idx__role">' + esc(m.role) + "</span></span>" +
-				'<span class="idx__ar" aria-hidden="true">↓</span></a></li>';
+		function idxHTML(m, i) {
+			var views = (m.gallery && m.gallery.photoreal) || [];
+			var front = views.find(function (v) { return v.view === "body_front_tall"; });
+			return '<li class="lineup__person' + (i === 0 ? ' lineup__person--lead' : '') + '"><a href="#clonex-' + esc(m.id) + '">' +
+				'<span class="lineup__image"><img loading="lazy" src="' + esc(asset(front ? front.src : m.pfp)) + '" alt="' + esc(m.display + ' 全身造型') + '"></span>' +
+				'<span class="lineup__meta"><span class="lineup__id">#' + esc(m.id) + '</span><strong>' + esc(m.name || m.role) + '</strong><span>' + esc(m.name ? m.role : (i < 3 ? '正團成員' : '幕後成員')) + '</span></span></a></li>';
 		}
 
 		function specsHTML(specs) {
@@ -270,23 +243,23 @@
 				var n = ["cartoon", "photoreal"].reduce(function (a, k) {
 					return a + (((m.gallery || {})[k]) || []).length;
 				}, 0);
-				return '<details class="fold"><summary>' + esc(m.display) + ' 的多視角視覺（' + n +
+				return '<details class="fold"><summary>' + esc(m.display) + ' 的不同角度與造型（' + n +
 					' 張）</summary><div class="gal gal--sm">' + out + "</div></details>";
 			}
 			return '<div class="gal">' + out + "</div>";
 		}
 
 		function profileHTML(m, compact) {
-			var h = '<article class="mb rise' + (compact ? " mb--sm" : "") +
-				'" id="clonex-' + esc(m.id) + '"><div class="mb__in">';
+			var h = '<details class="mb' + (compact ? ' mb--sm' : '') + '" id="clonex-' + esc(m.id) + '">' +
+				'<summary><span class="mb__summary-id">#' + esc(m.id) + '</span><span class="mb__summary-name">' + esc(m.name || m.role) + '</span><span class="mb__summary-action">角色故事與圖集</span></summary><div class="mb__content"><div class="mb__in">';
 
 			/* 左欄：官方原貌＋鏈上出處 */
 			h += '<div><figure class="pfp">' +
 				'<a class="pfp__frame glightbox" href="' + esc(asset(m.pfp)) +
-				'" data-gallery="ucx-pfp" data-description="' + esc(m.display + " 官方 PFP") + '">' +
-				'<img loading="lazy" src="' + esc(asset(m.pfp)) + '" alt="' + esc(m.display + " 官方 PFP") + '">' +
-				'<span class="pfp__badge">Official PFP</span></a><figcaption>' +
-				'<span class="mono">Token ' + esc(m.token || "—") + "</span>";
+				'" data-gallery="ucx-pfp" data-description="' + esc(m.display + " 原始收藏頭像") + '">' +
+				'<img loading="lazy" src="' + esc(asset(m.pfp)) + '" alt="' + esc(m.display + " 原始收藏頭像") + '">' +
+				'<span class="pfp__badge">原始收藏頭像</span></a><figcaption>' +
+				'<span class="mono">鏈上編號 ' + esc(m.token || "—") + "</span>";
 			if (m.opensea) {
 				h += '<a class="oslink" href="' + esc(m.opensea) + '" target="_blank" rel="noopener noreferrer">OpenSea &nearr;</a>';
 			}
@@ -309,7 +282,7 @@
 				: specsHTML(m.specs);
 			h += "</div>";
 
-			return h + "</div>" + galleryHTML(m, compact) + "</article>";
+			return h + "</div>" + galleryHTML(m, compact) + "</div></details>";
 		}
 
 		function render(d) {
@@ -335,16 +308,12 @@
 				return '<a class="chip" href="' + esc(c.url) + '"' + ext(c.url) + ">" + esc(c.label) + "</a>";
 			}).join("");
 
-			el("ucx-stats").innerHTML = (g.stats || []).map(function (s) {
-				return "<div><dt>" + esc(s.k) + "</dt><dd>" + esc(s.v) + "</dd></div>";
-			}).join("");
 
 			var ms = d.members || [], cw = d.crew || [];
 
-			el("ucx-members-count").textContent = ms.length + " 位";
-			el("ucx-member-idx").innerHTML = ms.map(function (m) { return idxHTML(m); }).join("");
-			el("ucx-crew-idx").innerHTML   = cw.map(function (m) { return idxHTML(m); }).join("");
-			el("ucx-onchain-note").textContent = g.onchain_note || "";
+
+			el("ucx-member-idx").innerHTML = ms.concat(cw).map(function (m, i) { return idxHTML(m, i); }).join("");
+
 			el("ucx-member-profiles").innerHTML = ms.map(function (m) { return profileHTML(m, false); }).join("");
 			el("ucx-crew-profiles").innerHTML   = cw.map(function (m) { return profileHTML(m, true); }).join("");
 
@@ -365,16 +334,18 @@
 				return h + "</article>";
 			}).join("");
 
-			el("ucx-works").innerHTML = (d.works || []).map(function (w) {
+			el("ucx-works").innerHTML = (d.works || []).map(function (w, index, works) {
 				var title = w.url
 					? '<a href="' + esc(w.url) + '"' + ext(w.url) + ">" + esc(w.title) + "</a>"
 					: esc(w.title);
-				var h = '<article class="work' + (w.image ? "" : " work--soon") + '">';
+				var imageLink = w.url || (w.type === "image" && w.image ? asset(w.image) : "");
+				var lightbox = !w.url && imageLink;
+				var h = (w.type !== "video" && (index === 0 || works[index - 1].type === "video") ? '<p class="works__archive-label">從攝影、海報到塔羅牌</p>' : "") + '<article class="work ' + (w.type === "video" ? "work--video" + (index === 0 ? " work--feature" : "") : "work--archive") + '">';
 				if (w.image) {
-					h += '<div class="work__img' + (w.fit === "contain" ? " work__img--contain" : "") + '">' +
+					h += (imageLink ? '<a href="' + esc(imageLink) + '"' + ext(imageLink) + (lightbox ? ' data-gallery="ucx-works" data-title="' + esc(w.title) + '"' : '') + ' aria-label="' + esc((w.type === "video" ? "觀看影片：" : "查看作品：") + w.title) + '"' : '<div') + ' class="work__img' + (lightbox ? ' glightbox' : '') + (w.fit === "contain" ? " work__img--contain" : "") + '">' +
 						'<img loading="lazy" src="' + esc(asset(w.image)) + '" alt="' + esc(w.title) + '">' +
 						(w.type === "video" ? '<span class="work__play" aria-hidden="true"></span>' : "") +
-						"</div>";
+						(imageLink ? "</a>" : "</div>");
 				} else {
 					/* 還沒上線的作品給佔位框而不是空白，同一列的卡片高度才對得齊 */
 					h += '<div class="work__img work__img--soon"><span>影片準備中</span></div>';
@@ -405,6 +376,7 @@
 			}).join("");
 
 			if (window.GLightbox) { window.GLightbox({ selector: ".glightbox", loop: true }); }
+			if (window.initExhibitScroll) { window.initExhibitScroll(); }
 			reveal();
 		}
 
@@ -444,7 +416,7 @@
 				/* 手機上這條是橫向捲動的，把目前段落帶進視野 */
 				if (cur > -1 && list && list.scrollWidth > list.clientWidth) {
 					var li = links[cur].parentNode;
-					list.scrollTo({ left: li.offsetLeft - list.clientWidth / 2 + li.offsetWidth / 2, behavior: "smooth" });
+					list.scrollTo({ left: li.offsetLeft - list.clientWidth / 2 + li.offsetWidth / 2, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
 				}
 			}
 
@@ -458,6 +430,23 @@
 			update();
 		}
 
+		function openProfileHash() {
+			var target = document.getElementById(location.hash.slice(1));
+			if (!target) { return; }
+			if (target.matches('details.mb')) { target.open = true; }
+			target.scrollIntoView();
+		}
+		window.addEventListener('hashchange', openProfileHash);
+		document.addEventListener('click', function (event) {
+			var link = event.target.closest('.lineup a');
+			if (!link) { return; }
+			var target = document.getElementById(link.hash.slice(1));
+			if (target) {
+				target.open = true;
+				requestAnimationFrame(function () { target.querySelector('summary').focus({preventScroll:true}); target.scrollIntoView(); });
+			}
+		});
+
 		fetch(DATA_URL)
 			.then(function (r) {
 				if (!r.ok) { throw new Error("HTTP " + r.status); }
@@ -469,13 +458,16 @@
 				/* 帶錨點進來時，目標元素是 render 後才存在的，要自己補捲一次 */
 				if (location.hash.length > 1) {
 					var t = document.getElementById(location.hash.slice(1));
-					if (t) { t.scrollIntoView(); }
+					if (t) { openProfileHash(); }
 				}
 			})
 			.catch(function (e) {
 				/* 只剩一行錯誤訊息對讀者沒用：把靜態摘要頂上來，並收掉空的動態區塊 */
 				var fb = el("ucx-fallback");
 				if (fb) { fb.hidden = false; }
+				document.querySelector(".rail").hidden = true;
+				document.querySelector(".ucx-cover__actions").hidden = true;
+				el("rights").hidden = true;
 				["members", "crew", "story", "works", "collection"].forEach(function (id) {
 					var s = document.getElementById(id);
 					if (s) { s.hidden = true; }

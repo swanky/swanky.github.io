@@ -1,0 +1,90 @@
+/* Archive v2: an upright cover, three fact rows and four works per reading interval.
+   Page-scoped rules keep the homepage and collection exhibition unchanged. */
+.page-oursong .hero--arch__grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 3rem; }
+.page-oursong .hero--arch__main { align-self: center; padding: 2.5rem 0; }
+.page-oursong .hero--arch__fig { align-self: stretch; padding-top: 0; }
+.page-oursong .hero--arch__fig img { aspect-ratio: 4 / 5; height: 100%; object-fit: cover; }
+.page-oursong .hero__lead { font-size: 1rem; margin-bottom: 1.5rem; }
+.archive-start { margin-bottom: 2rem; }
+.page-oursong .stamp { font-size: .8rem; gap: .8rem; }
+.page-oursong .pairs { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2.5rem 3rem; }
+.archive-note { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,2fr); gap: 3rem; padding: 1.8rem 0; border-top: 1px solid rgba(255,255,255,.28); border-bottom: 1px solid rgba(255,255,255,.28); color: var(--on-ink-2); }
+.archive-note p { margin: 0; max-width: 35em; }
+.archive-note__label { font-family: var(--serif); font-size: 1.5rem; color: #fff; }
+.page-oursong .colophon { align-self: stretch; padding: 1rem 0 1rem 1.5rem; }
+.page-oursong .object { display: grid; grid-template-rows: auto 1fr; align-self: stretch; }
+.page-oursong .object a { width: 100%; height: 330px; display: flex; align-items: end; }
+.page-oursong .object img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+.page-oursong .object figcaption { align-content: start; }
+.page-oursong .rise { opacity: 1; transform: none; transition: none; }
+.page-oursong .sec__head { align-items: start; }
+.page-oursong .tri__notes { margin-top: 2rem; }
+.series__toolbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.2rem; }
+.series__toolbar p { color: var(--mute); margin: 0; font-size: .84rem; }
+.page-oursong .pair { align-items: start; gap: .5rem 8px; }
+.page-oursong .pair__cover { background: none; padding: 0; }
+.page-oursong .pair__content { background: none; }
+.page-oursong .pair__cover img { width: 100%; height: auto; aspect-ratio: 3 / 5; border: 5px solid var(--paper); object-fit: contain; background: var(--paper); }
+.page-oursong .pair__content img { height: auto; aspect-ratio: 1; }
+.page-oursong .pair__state { display: block; padding: .55rem 0 .15rem; font-size: .75rem; letter-spacing: .04em; color: var(--on-ink-2); }
+.page-oursong .pair__cap { padding-top: .5rem; border-top: 1px solid rgba(255,255,255,.18); font-size: .9rem; }
+.page-oursong .pair__cap .mono { font-family: var(--serif); font-size: 1.3rem; }
+.exhibit-controls { display: flex; gap: .6rem; flex: 0 0 auto; }
+.exhibit-controls[hidden] { display: none; }
+.exhibit-controls button { width: 44px; height: 44px; border: 1px solid currentColor; border-radius: 0; color: inherit; background: transparent; cursor: pointer; font: inherit; }
+.exhibit-controls button:disabled { opacity: .3; cursor: default; }
+.exhibit-controls button:not(:disabled):hover { color: var(--red-ink); }
+.archive-next { background: var(--ink); }
+.archive-next__link { display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: var(--maxw); margin: 0 auto; color: var(--on-ink); }
+.archive-next__link img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; }
+.archive-next__copy { padding: 2.5rem; }
+.archive-next__copy p { font-size: .84rem; color: var(--on-ink-2); }
+.archive-next__copy h2 { font-size: clamp(1.7rem,3.3vw,3rem); line-height: 1.4; margin-bottom: 1.5rem; }
+.archive-next__copy > span { padding-bottom: .3rem; border-bottom: 1px solid rgba(255,255,255,.5); }
+.archive-next__link:hover { color: #fff; }
+.archive-next__link:hover .archive-next__copy > span { border-color: var(--red-lift); }
+@media (max-width: 1024px) {
+ .page-oursong .hero--arch__grid { gap: 2rem; }
+ .page-oursong .hero--arch__year { font-size: 4rem; }
+ .page-oursong .hero--arch .hero__title { font-size: 2.4rem; }
+ .page-oursong .hero--arch__fig img { min-height: 100%; }
+ .page-oursong .object a { height: 260px; }
+}
+@media (max-width: 760px) {
+ .page-oursong .hero--arch__grid { grid-template-columns: 1fr; gap: 0; padding-top: 1.5rem; padding-bottom: 2rem; }
+ .page-oursong .hero--arch__main { display: contents; }
+ .page-oursong .hero--arch__year { display: none; }
+ .page-oursong .hero--arch .hero__tag { grid-row: 1; font-size: .75rem; }
+ .page-oursong .hero--arch .hero__title { grid-row: 2; font-size: 1.95rem; margin-bottom: 1.25rem; }
+ .page-oursong .hero--arch__fig { grid-row: 3; margin-bottom: 1.25rem; }
+ .page-oursong .hero--arch__fig img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
+ .page-oursong .hero__lead { grid-row: 4; font-size: .95rem; margin-bottom: 1rem; }
+ .page-oursong .archive-start { grid-row: 5; justify-self: start; margin-bottom: 1.75rem; }
+ .page-oursong .facts { grid-row: 6; }
+ .page-oursong .stamp { grid-row: 7; }
+ .page-oursong .tri { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--gutter) .5rem 0; margin-right: calc(-1 * var(--gutter)); scrollbar-width: thin; }
+ .page-oursong .tri__item { flex: 0 0 80%; scroll-snap-align: start; min-width: 0; }
+ .page-oursong .tri__item figcaption { font-size: .82rem; }
+ .page-oursong .tri__notes { gap: 1.5rem; }
+ .page-oursong .tri__h { font-size: 1.2rem; }
+ .page-oursong .pairs { grid-template-columns: 1fr; gap: 2rem; }
+ .archive-note { grid-template-columns: 1fr; gap: .8rem; padding: 1.5rem 0; }
+ .archive-note__label { font-size: 1.3rem; }
+ .page-oursong .colophon { padding: 1.5rem 0 0; }
+ .page-oursong .object a { height: 230px; }
+ .page-oursong .stamp { grid-template-columns: 1fr; gap: .3rem; }
+ .archive-next__link { grid-template-columns: 1fr; }
+ .archive-next__copy { padding: 1.5rem var(--gutter) 2.5rem; }
+ .page-oursong .foot__col--index, .page-oursong .foot__col--social { grid-column: span 6; }
+ .page-oursong .foot ul { grid-template-columns: 1fr; }
+ .page-oursong .nav__in { gap: .7rem; }
+ .page-oursong .nav__links { gap: .9rem; }
+ .page-oursong .nav__links a { font-size: .73rem; }
+}
+@media (max-width: 360px) {
+ .page-oursong .nav__in { padding-inline: 16px; gap: .75rem; }
+ .page-oursong .nav__links { gap: .85rem; }
+ .page-oursong .nav__links a { font-size: .76rem; }
+ .page-oursong .nav__links > li:first-child { display: none; }
+ .page-oursong .nav__brand img { height: 16px; }
+}
