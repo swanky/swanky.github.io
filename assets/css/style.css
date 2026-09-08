@@ -378,6 +378,21 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   display: block;
 }
 
+/* 手機選單面板是白底，但上方 #header.header-transparent／.header-scrolled 為了深色 hero
+   把一級連結設成白色（特異性含 id，勝過 .navbar-mobile a）——展開後就是白底白字、整片空白。
+   故在 mobile 展開狀態用同等特異性把文字改回深色。 */
+#header.header-transparent .navbar-mobile > ul > li > a,
+#header.header-scrolled .navbar-mobile > ul > li > a {
+  color: #343a40;
+}
+
+#header.header-transparent .navbar-mobile > ul > li > a:hover,
+#header.header-transparent .navbar-mobile > ul > li:hover > a,
+#header.header-scrolled .navbar-mobile > ul > li > a:hover,
+#header.header-scrolled .navbar-mobile > ul > li:hover > a {
+  color: #E5A300;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
