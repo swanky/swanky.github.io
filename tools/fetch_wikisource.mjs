@@ -113,28 +113,36 @@ export function extractMarks(paraText) {
 
 /** 錨點引文回溯的邊界：中文句讀。 */
 const ANCHOR_STOP = /[，。？！；：、「」『』（）〈〉《》…—　\s]/;
+/** 引文裡至少要有一個這種「實質字元」，不然就等於沒有資訊 */
+const ANCHOR_SUBSTANCE = /[^，。？！；：、「」『』（）〈〉《》…—　\s]/;
 const ANCHOR_MAX = 14;
 
 /**
  * 錨點引文＝批語插入點前面那一句正文，讀者靠它一眼看出這條批在批什麼。
  *
- * 兩條規則都是實測逼出來的：
- *   1. **緊鄰批語的那個句讀要收進引文**。脂批大量是句末側批（「…之熟套起法。」後面
+ * 三條規則都是實測逼出來的：
+ *   1. **緊鄰批語的標點要整群收進引文**。脂批大量是句末側批（「…之熟套起法。」後面
  *      直接接批語），只要遇標點就停，引文會是空字串——第 5 回有一半的批語踩到這個。
+ *      而且**必須跳過整群標點、不是只跳一個**：對話收尾是「。」」兩個標點連著，
+ *      只跳一個就會停在引號上，引文變成孤零零一個「」」——盲測抽樣時發現全庫有
+ *      851 條（23.7%）這樣退化，讀者看到會以為對位壞了。
  *   2. **不跨過前一條批語的位置**。否則「無稽也」的引文會把「於大荒山」一起吃進來，
  *      那是前一條批的地盤。
+ *   3. **引文全是標點就當沒有引文**（前一條批語剛好緊貼在標點之間的情形）。
+ *      寧可只顯示批語本文，也不要掛一個沒有資訊的符號上去。
  * 超過 14 字就從尾端截取（離批語最近的部分最有用），並在前面補「…」表示還有前文。
  */
 export function anchorFor(clean, offset, prevOffset = 0) {
   const lo = Math.max(prevOffset, 0);
   let start = offset;
-  if (start > lo && ANCHOR_STOP.test(clean[start - 1])) start -= 1;
+  while (start > lo && ANCHOR_STOP.test(clean[start - 1])) start -= 1;
   while (start > lo && !ANCHOR_STOP.test(clean[start - 1])) start -= 1;
   let text = clean.slice(start, offset);
   const truncated = text.length > ANCHOR_MAX;
   if (truncated) text = text.slice(text.length - ANCHOR_MAX);
   text = text.replace(/^[\s　]+|[\s　]+$/g, '');
-  return text && truncated ? `…${text}` : text;
+  if (!ANCHOR_SUBSTANCE.test(text)) return '';
+  return truncated ? `…${text}` : text;
 }
 
 /**

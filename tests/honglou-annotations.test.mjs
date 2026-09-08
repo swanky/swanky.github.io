@@ -20,6 +20,7 @@ import { test } from 'node:test';
 import {
   MARK_BEGIN, MARK_END, buildBlocks, applyBlocks, stripBlocks, loadAnnotations, parseNote, reassemble,
 } from '../tools/append_chapter_annotations.mjs';
+import { anchorFor } from '../tools/fetch_wikisource.mjs';
 
 const BOOK = 'honglou';
 const EDITION = 'gengchen-78';
@@ -119,7 +120,10 @@ test('對位是真的：每條錨點引文都是正文該位置之前的實際�
       withAnchor += 1;
       // 引文可能因為太長而從尾端截取，前面補了「…」——比對時去掉那個記號
       const anchor = r.anchor.startsWith('…') ? r.anchor.slice(1) : r.anchor;
-      assert.ok(para.slice(0, r.offset).endsWith(anchor),
+      // 引文不以空白結尾（那樣很醜），所以比對時也把正文那一側的尾部空白去掉——
+      // 底本裡確實有「…第一淫人也。」␣」這種收尾（第 5 回 a0131）。
+      const upto = para.slice(0, r.offset).replace(/[\s　]+$/, '');
+      assert.ok(upto.endsWith(anchor),
         `${r.id} 的引文「${r.anchor}」不是第 ${r.para} 段第 ${r.offset} 字之前的文字\n`
         + `  該處正文：…${para.slice(Math.max(0, r.offset - 24), r.offset)}`);
     }
@@ -289,4 +293,43 @@ test('有批語的章回頁：說明文案用白話、不再宣稱沒有對位�
   for (const w of jargon) {
     assert.ok(!copy[1].includes(w), `批語說明出現訪客看不懂的用語「${w}」`);
   }
+});
+
+test('anchorFor：連續標點群整群收進引文、全是標點時降級為不顯示', () => {
+  const at = (t, s) => t.indexOf(s) + s.length;
+  const cases = [
+    // [段落文字, 批語插在這段字之後, 前一條批語的位置, 期望引文]
+    ['　　原來，當年女媧氏煉石補天之時，於大荒山無稽崖煉成', '於大荒山', 0, '於大荒山'],
+    ['　　原來，當年女媧氏煉石補天之時，於大荒山無稽崖煉成', '無稽崖', 21, '無稽崖'],
+    // 對話收尾是「。」」兩個標點連著——只跳一個標點會讓引文變成孤零零的「」」
+    // （盲測抽樣時發現全庫 851 條這樣退化，讀者看到會以為對位壞了）
+    ['寶玉道：「你來了。」他便', '你來了。」', 0, '你來了。」'],
+    ['他便說道：「好極！」', '好極！」', 0, '好極！」'],
+    // 前一條批語剛好緊貼在標點之間：回溯無處可去，引文只剩標點 → 寧可不顯示
+    ['寶玉道：「你來了。」他便', '你來了。」', 8, ''],
+    // 太長就從尾端截取（離批語最近的部分最有用），前面補「…」
+    ['此等處實又非別部小說之熟套起法。', '之熟套起法。', 0, '…處實又非別部小說之熟套起法。'],
+  ];
+  for (const [text, upto, prev, want] of cases) {
+    assert.equal(anchorFor(text, at(text, upto), prev), want,
+      `批在「${upto}」之後（前一條 ${prev}）的引文不符`);
+  }
+});
+
+test('全庫的引文不得退化成純標點（讀者會以為對位壞了）', () => {
+  let degenerate = 0;
+  const samples = [];
+  for (const f of chapterFiles) {
+    const rows = loadAnnotations(BOOK, EDITION, chapterOf(f));
+    if (!rows) continue;
+    for (const r of rows) {
+      if (!r.anchor) continue;
+      if (!/[^，。？！；：、「」『』（）〈〉《》…—　\s]/.test(r.anchor)) {
+        degenerate += 1;
+        if (samples.length < 5) samples.push(`${r.id}「${r.anchor}」`);
+      }
+    }
+  }
+  assert.equal(degenerate, 0,
+    `有 ${degenerate} 條引文只剩標點符號，例如 ${samples.join('、')}`);
 });
