@@ -322,7 +322,9 @@ html.bk-paper {
    視覺原則：**明確次於正文**——小一級字、降低對比、左側一道細金線把它與正文分開，
    讓連續閱讀的人可以整塊跳過；要看的人一眼就知道這條批在批哪一句（錨點引文）。
    預設顯示（庚辰本這個底本的存在理由就是脂評）；讀者可用工具列的「批」鈕關掉，
-   關掉的狀態記在瀏覽器裡，沒有 JavaScript 時一律顯示。 */
+   關掉的狀態記在瀏覽器裡，沒有 JavaScript 時一律顯示。
+   一段掛 8 條以上的（全書 11.2%）改成預設收合的 <details>——版面實測量到 19 條會
+   佔掉桌機一整屏、手機 1.3 屏，等於把小說擠出畫面。 */
 .bk-ann {
   margin: -.55em 0 1.5em;
   padding: .15rem 0 .15rem clamp(.7rem, 1.6vw, 1.05rem);
@@ -331,7 +333,8 @@ html.bk-paper {
 .bk-ann--head { margin: 0 0 1.6em; }
 .bk-ann-list { margin: 0; padding: 0; list-style: none; }
 .bk-ann-item {
-  padding: .28rem 0;
+  padding: .42rem 0;
+  border-top: 1px dashed color-mix(in srgb, var(--bk-line) 70%, transparent);
   color: color-mix(in srgb, var(--bk-paper) 74%, var(--bk-muted));
   font-family: var(--bk-kai);
   font-size: calc(var(--bk-reader-size) * .8);
@@ -340,6 +343,7 @@ html.bk-paper {
   text-indent: 0;
   scroll-margin-top: calc(108px + 1rem);
 }
+.bk-ann-item:first-child { border-top: 0; }
 .bk-ann-item:target {
   background: color-mix(in srgb, var(--bk-gold) 16%, transparent);
   outline: 1px solid var(--bk-line);
@@ -353,8 +357,8 @@ html.bk-paper {
   display: inline-block;
   margin: 0 .5em 0 .3em;
   padding: .02em .5em;
-  border: 1px solid var(--bk-line);
-  background: var(--bk-bg);
+  border: 1px solid color-mix(in srgb, var(--bk-gold) 30%, var(--bk-line));
+  background: color-mix(in srgb, var(--bk-gold) 12%, var(--bk-bg));
   color: var(--bk-gold);
   font-family: var(--bk-sans);
   font-size: .7rem;
@@ -364,12 +368,31 @@ html.bk-paper {
 }
 .bk-ann-item--plain .bk-ann-text { color: color-mix(in srgb, var(--bk-paper) 66%, var(--bk-muted)); }
 
+/* 批語多到會蓋掉正文的段落：預設收起來，標題寫明有幾條 */
+.bk-ann--fold > .bk-ann-list { margin-top: .5rem; }
+.bk-ann-fold-sum {
+  color: var(--bk-muted);
+  font-family: var(--bk-sans);
+  font-size: .78rem;
+  letter-spacing: .06em;
+  cursor: pointer;
+  list-style: none;
+}
+.bk-ann-fold-sum::-webkit-details-marker { display: none; }
+.bk-ann-fold-sum::marker { content: ''; }
+.bk-ann-fold-sum::after {
+  content: '　展開';
+  color: var(--bk-gold);
+}
+.bk-ann--fold[open] > .bk-ann-fold-sum::after { content: '　收合'; }
+.bk-ann-fold-sum:hover, .bk-ann-fold-sum:focus-visible { color: var(--bk-gold-bright); }
+
 /* 工具列的開關；關掉時整塊批語不渲染（不是視覺隱藏——避免螢幕閱讀器仍讀出來） */
 .bk-ann-btn.is-off { color: var(--bk-gold); border-color: var(--bk-gold); }
 html.bk-ann-off .bk-ann { display: none; }
 
 @media (max-width: 480px) {
   .bk-ann { margin: -.3em 0 1.4em; padding-left: .6rem; }
-  .bk-ann-item { padding: .32rem 0; font-size: calc(var(--bk-reader-size) * .84); }
+  .bk-ann-item { padding: .46rem 0; font-size: calc(var(--bk-reader-size) * .84); }
   .bk-ann-src { font-size: .66rem; }
 }

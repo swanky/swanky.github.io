@@ -333,3 +333,32 @@ test('全庫的引文不得退化成純標點（讀者會以為對位壞了）',
   assert.equal(degenerate, 0,
     `有 ${degenerate} 條引文只剩標點符號，例如 ${samples.join('、')}`);
 });
+
+test('批語多的段落要預設收合、少的直接顯示（否則批語牆會把正文擠出畫面）', () => {
+  const FOLD_AT = 8;
+  let folded = 0;
+  let plain = 0;
+  for (const f of chapterFiles) {
+    const text = read(f);
+    for (const b of blocksOf(text)) {
+      const n = itemsOf(b.html).length;
+      const isFold = /<details class="bk-ann/.test(b.html);
+      if (n >= FOLD_AT) {
+        assert.ok(isFold,
+          `${f} 第 ${b.para} 段有 ${n} 條批語，應該預設收合（版面實測：19 條會佔掉桌機一整屏）`);
+        assert.match(b.html, new RegExp(`有 ${n} 條批語`),
+          `${f} 第 ${b.para} 段的收合標題沒寫明條數`);
+        folded += 1;
+      } else {
+        assert.equal(isFold, false,
+          `${f} 第 ${b.para} 段只有 ${n} 條批語，不該收起來（讀者不必多按一下）`);
+        assert.match(b.html, /<aside class="bk-ann/, `${f} 第 ${b.para} 段的區塊標籤不對`);
+        plain += 1;
+      }
+    }
+  }
+  // 實測分布：全書 1159 個區塊，8 條以上的 130 個（11.2%）
+  assert.equal(folded + plain, 1159, `區塊總數 ${folded + plain} 與實測的 1159 不符`);
+  assert.ok(folded > 0 && folded < plain / 4,
+    `收合 ${folded} 個、直接顯示 ${plain} 個——收合比例偏離預期（應約 11%）`);
+});

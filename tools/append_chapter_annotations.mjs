@@ -112,6 +112,18 @@ function itemHtml(row) {
 }
 
 /**
+ * 這一段的批語多到會蓋掉正文時，改成預設收合。
+ *
+ * 閾值從實測來：全書 1159 個批語區塊的中位數只有 2 條、平均 3.5 條，但分布很不均——
+ * 8 條以上的有 130 個（11.2%），10 條以上的 68 個（5.9%）。版面實測量到第 19 回第 32 段
+ * 掛了 19 條、批語區塊高 787px（跟那段正文本身 890px 幾乎一樣高），桌機要多滑一整屏
+ * 純批語才接回小說，手機（390 寬）更達 1.3 個螢幕高。設 8 是因為實測到 7～8 條時
+ * 閱讀節奏還可接受，再多就變成「批語牆」。收合的那 11.2% 涵蓋 34.7% 的批語，
+ * 其餘 88.8% 的區塊照舊直接顯示——不必為了少數重災區把所有批語都藏起來。
+ */
+const FOLD_AT = 8;
+
+/**
  * 把一回的批語依落點分組，回傳 Map：段號 → 區塊 HTML。
  * 段號 0 是回首（回前總批，以及回目裡夾的批）——渲染在第一個正文段之前。
  */
@@ -125,19 +137,26 @@ export function buildBlocks(rows) {
   }
   const blocks = new Map();
   for (const [key, group] of byPara) {
-    const head = key === 0
-      ? `${MARK_BEGIN} p0000：回首批語（抄本裡寫在正文之前），由 tools/append_chapter_annotations.mjs 產生，勿手改 -->`
-      : `${MARK_BEGIN} p${pad4(key)}：第 ${key} 段的批語，由 tools/append_chapter_annotations.mjs 產生，勿手改 -->`;
-    blocks.set(key, [
-      head,
-      `<aside class="bk-ann${key === 0 ? ' bk-ann--head' : ''}" data-ann-count="${group.length}"`
-        + ` aria-label="${key === 0 ? '這一回開頭的批語' : `第 ${key} 段的批語`}">`,
-      `  <ol class="bk-ann-list">`,
+    const where = key === 0 ? '這一回開頭' : `第 ${key} 段`;
+    const head = `${MARK_BEGIN} p${pad4(key)}：${where}的批語，`
+      + '由 tools/append_chapter_annotations.mjs 產生，勿手改 -->';
+    const cls = `bk-ann${key === 0 ? ' bk-ann--head' : ''}`;
+    const list = [
+      '  <ol class="bk-ann-list">',
       ...group.map((r) => `    ${itemHtml(r)}`),
       '  </ol>',
-      '</aside>',
-      MARK_END,
-    ].join('\n'));
+    ];
+    // 少量批語直接顯示（讀者不必多按一下）；多到會蓋掉正文的才收起來，
+    // 標題寫明有幾條，用原生 <details>，沒有 JavaScript 也展得開。
+    const body = group.length < FOLD_AT
+      ? [`<aside class="${cls}" data-ann-count="${group.length}" aria-label="${where}的批語">`, ...list, '</aside>']
+      : [
+        `<details class="${cls} bk-ann--fold" data-ann-count="${group.length}">`,
+        `  <summary class="bk-ann-fold-sum">${where}有 ${group.length} 條批語</summary>`,
+        ...list,
+        '</details>',
+      ];
+    blocks.set(key, [head, ...body, MARK_END].join('\n'));
   }
   return blocks;
 }
