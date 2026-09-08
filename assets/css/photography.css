@@ -470,6 +470,28 @@
   color: #9c988f;
 }
 
+/* 段末動線提示（2026-09-09）——GA4 顯示訪客看完「出版與獎項」最容易產生洽詢念頭，
+   但合作入口還隔著兩段。站主裁決不改段落順序（方案 B），只在段末補一句指路。 */
+.photo-author-section-jump {
+  margin: 30px 0 0;
+  color: var(--photo-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.photo-author-section-jump a {
+  color: var(--photo-gold-light) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(245, 197, 59, 0.4);
+  transition: border-color 180ms ease;
+}
+
+.photo-author-section-jump a:hover,
+.photo-author-section-jump a:focus-visible {
+  border-bottom-color: var(--photo-gold-light);
+}
+
 .photo-author-media {
   background: var(--photo-surface);
 }
