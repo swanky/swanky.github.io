@@ -169,7 +169,7 @@ breadcrumbs:
       <div class="edu-cta">
         <h2>選一個真正符合你情境的下一步</h2>
         <p>企業請提供團隊角色、預計人數與想解決的問題；個人模特兒課程請說明想改善的鏡頭表現與可配合時段。</p>
-        <div class="edu-cta__actions"><a class="edu-btn edu-btn--light" href="{{ enterprise_href }}">索取企業培訓建議</a><a class="edu-btn edu-btn--outline-light" href="{{ model_href }}">洽詢模特兒一對一課程</a></div>
+        <div class="edu-cta__actions"><a class="edu-btn edu-btn--light" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'enterprise_training_hub',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}" href="{{ enterprise_href }}">索取企業培訓建議</a><a class="edu-btn edu-btn--outline-light" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_hub',service:'model_coaching',cta_position:'bottom',from_page:window.location.pathname});}" href="{{ model_href }}">洽詢模特兒一對一課程</a></div>
       </div>
     </div>
   </section>

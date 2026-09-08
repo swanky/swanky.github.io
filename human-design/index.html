@@ -49,6 +49,7 @@ extra_css: |
   .hd-form-card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); max-width: 720px; margin: 0 auto; }
   .hd-form-card h2 { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .hd-form-card .form-hint { font-size: 0.85rem; color: var(--c-muted); margin-bottom: 22px; }
+  .hd-form-card .form-hint--field { margin: 6px 0 0; font-size: 0.8rem; }
   .hd-field { margin-bottom: 18px; }
   .hd-field > label { display: block; font-size: 0.88rem; font-weight: 600; color: #444; margin-bottom: 7px; }
   .hd-selects { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -579,6 +580,7 @@ extra_css: |
             <input type="text" class="hd-city-input" id="hd-city-search" placeholder="輸入城市名稱，例如：台北、Tokyo、紐約" autocomplete="off">
             <div class="hd-city-list" id="hd-city-list" role="listbox"></div>
           </div>
+          <p class="form-hint form-hint--field">請從跳出來的清單點選城市，才能對到正確的時區。</p>
           <div class="hd-city-quick" role="group" aria-label="常用出生城市">
             <span class="hd-city-quick-label">常用：</span>
             <button type="button" class="hd-city-chip" data-hd-city-for="hd" data-city-query="台北市" aria-pressed="false">台北</button>

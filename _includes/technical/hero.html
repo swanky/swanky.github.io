@@ -6,8 +6,14 @@
       <h1>{{ include.title }}</h1>
       <p class="tech-hero-lead">{{ include.lead }}</p>
       <div class="tech-hero-actions">
-        {% if include.primary_href %}<a class="tech-btn {% if include.theme == 'web3' %}tech-btn--gold{% else %}tech-btn--primary{% endif %}" href="{{ include.primary_href }}">{{ include.primary_label }}</a>{% endif %}
+        {% if include.primary_href %}<a class="tech-btn {% if include.theme == 'web3' %}tech-btn--gold{% else %}tech-btn--primary{% endif %}" href="{{ include.primary_href }}"{% if include.primary_service %} onclick="if(window.gtag){gtag('event','service_page_click',{service:'{{ include.primary_service }}',cta_position:'hero',from_page:window.location.pathname});}"{% endif %}>{{ include.primary_label }}</a>{% endif %}
         {% if include.secondary_href %}<a class="tech-btn tech-btn--ghost" href="{{ include.secondary_href }}">{{ include.secondary_label }}</a>{% endif %}
+        {%- comment -%}
+          第三顆按鈕（選填）：GA4 2026-08 分析指出技術顧問頁的洽詢入口只在頁尾、
+          且沒有追蹤。這顆把首屏導到頁尾的洽詢區並記事件；事件名用 service_page_click
+          而不是 contact_cta_click，因為它是「導覽到洽詢區」不是實際來信。
+        {%- endcomment -%}
+        {% if include.tertiary_href %}<a class="tech-btn tech-btn--ghost" href="{{ include.tertiary_href }}"{% if include.tertiary_service %} onclick="if(window.gtag){gtag('event','service_page_click',{service:'{{ include.tertiary_service }}',cta_position:'hero',from_page:window.location.pathname});}"{% endif %}>{{ include.tertiary_label }}</a>{% endif %}
       </div>
     </div>
     <div class="tech-hero-media">

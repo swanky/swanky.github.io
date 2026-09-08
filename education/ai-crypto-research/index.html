@@ -28,7 +28,7 @@ breadcrumbs:
 想研究的公開專案（可留白）：{% endcapture %}
 {% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Co-hosted Course" status="只接受合作主辦洽詢" title="AI Agent × Crypto Research 合作課程" lead="不是用 AI 產出一篇看起來很完整的報告，而是建立研究、交叉查證與風險檢查流程。講座與工作坊依主辦受眾組合。" image="/assets/img/illustrations/claude-code-terminal.svg" alt="AI Agent 加密市場研究與風險檢查工作流示意圖" contain=true primary_href=inquiry_href primary_label="洽談合作開班" secondary_href="#formats" secondary_label="比較形式與成果" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_cohost',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Co-hosted Course" status="只接受合作主辦洽詢" title="AI Agent × Crypto Research 合作課程" lead="不是用 AI 產出一篇看起來很完整的報告，而是建立研究、交叉查證與風險檢查流程。講座與工作坊依主辦受眾組合。" image="/assets/img/illustrations/claude-code-terminal.svg" alt="AI Agent 加密市場研究與風險檢查工作流示意圖" contain=true primary_href=inquiry_href primary_label="洽談合作開班" secondary_href="#formats" secondary_label="比較形式與成果" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_cohost',service:'ai_crypto_research',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact"><div class="edu-container"><div class="edu-callout"><strong>不直接收個人名單。</strong>這個頁面服務社群、場地與教育平台主辦者。課程不提供明牌、投資建議或收益保證，也不使用學員持倉、錢包、帳號或私人研究資料。</div></div></section>
 
@@ -61,5 +61,5 @@ breadcrumbs:
 
   <section class="edu-section"><div class="edu-container"><div class="edu-callout"><strong>風險聲明：</strong>本課程為技術與研究方法教育，不構成投資、財務、法律或稅務建議。加密資產價格波動劇烈，風險極高；課程不提供明牌、不保證收益，也不代替個人投資判斷。</div></div></section>
 
-  {% include education/cta.html title="先告訴我你的受眾，不用先把活動辦法寫完" text="提供主辦單位、主要受眾、預估人數、希望形式與預計日期。我會依目標建議講座或工作坊深度，其他分工再一起確認。" href=inquiry_href label="洽談 AI × Crypto 合作課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_cohost_bottom',from_page:window.location.pathname});}" secondary_href="/education/crypto/web3-essentials/" secondary_label="先讀 Web3 入門精選" %}
+  {% include education/cta.html title="先告訴我你的受眾，不用先把活動辦法寫完" text="提供主辦單位、主要受眾、預估人數、希望形式與預計日期。我會依目標建議講座或工作坊深度，其他分工再一起確認。" href=inquiry_href label="洽談 AI × Crypto 合作課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_cohost_bottom',service:'ai_crypto_research',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/education/crypto/web3-essentials/" secondary_label="先讀 Web3 入門精選" %}
 </main>

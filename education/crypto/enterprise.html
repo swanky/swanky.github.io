@@ -29,7 +29,7 @@ breadcrumbs:
 預計日期：{% endcapture %}
 {% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Enterprise Web3 Training" title=c.name lead=c.tagline image="/assets/img/illustrations/enterprise-training.svg" alt="Web3 企業培訓的決策、風險與實務路徑示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#paths" secondary_label="比較三條路徑" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'web3_enterprise',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Enterprise Web3 Training" title=c.name lead=c.tagline image="/assets/img/illustrations/enterprise-training.svg" alt="Web3 企業培訓的決策、風險與實務路徑示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#paths" secondary_label="比較三條路徑" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'web3_enterprise',service:'web3_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact"><div class="edu-container"><div class="edu-callout edu-callout--blue"><strong>13 個模組是能力庫，不是必修清單。</strong>企業先選要改善的判斷或工作情境，再決定需要哪些模組與時數。價格在需求確認後提供。</div></div></section>
 
@@ -90,5 +90,5 @@ breadcrumbs:
     <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header>{% for item in c.faq %}<details class="edu-details"><summary>{{ item.q }}</summary><div class="edu-details__body">{{ item.a }}</div></details>{% endfor %}</div>
   </section>
 
-  {% include education/cta.html title="先說明團隊要判斷什麼" text="來信提供團隊角色、人數、希望時數與目前想釐清的議題。我會從三條路徑與 13 模組中提出建議，不先推完整大全。" href=inquiry_href label="索取 Web3 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'web3_enterprise_bottom',from_page:window.location.pathname});}" secondary_href="/education/crypto/web3-essentials/" secondary_label="先讀 Web3 入門精選" %}
+  {% include education/cta.html title="先說明團隊要判斷什麼" text="來信提供團隊角色、人數、希望時數與目前想釐清的議題。我會從三條路徑與 13 模組中提出建議，不先推完整大全。" href=inquiry_href label="索取 Web3 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'web3_enterprise_bottom',service:'web3_training',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/education/crypto/web3-essentials/" secondary_label="先讀 Web3 入門精選" %}
 </main>

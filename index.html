@@ -179,7 +179,7 @@ extra_css: |
               {% if service.eyebrow %}<span class="svc-eyebrow">{{ service.eyebrow }}</span>{% endif %}
               <h3 class="title">{{ service.title }}</h3>
               <p class="description">{{ service.description }}</p>
-              {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3" onclick="if(window.gtag){gtag('event','service_page_click',{'service':'{{ service.title }}'});}">{{ service.cta_text }}</a>{% endif %}
+              {% if service.url %}<a href="{{ service.url | relative_url }}" class="btn-get-started mt-3" onclick="if(window.gtag){gtag('event','service_page_click',{'service':'{{ service.title }}',cta_position:'home',from_page:window.location.pathname});}">{{ service.cta_text }}</a>{% endif %}
             </div>
           </div>
           {% endfor %}

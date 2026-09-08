@@ -27,7 +27,7 @@ breadcrumbs:
 預計日期：{% endcapture %}
 {% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline image="/assets/img/illustrations/claude-code-course.svg" alt="Agentic Engineering 企業培訓：需求、規格、驗證與交付流程示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline image="/assets/img/illustrations/claude-code-course.svg" alt="Agentic Engineering 企業培訓：需求、規格、驗證與交付流程示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact">
     <div class="edu-container">
@@ -138,5 +138,5 @@ breadcrumbs:
     </div>
   </section>
 
-  {% include education/cta.html title="先說清楚團隊要解決什麼" text="來信提供團隊角色、人數、希望時數與目前卡住的問題。我會依需求建議適合的試辦深度，不先塞一套九堂課給你。" href=inquiry_href label="索取 Agentic Engineering 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_bottom',from_page:window.location.pathname});}" secondary_href="/technical/agentic-engineering/" secondary_label="先讀 Agentic Engineering 系列" %}
+  {% include education/cta.html title="先說清楚團隊要解決什麼" text="來信提供團隊角色、人數、希望時數與目前卡住的問題。我會依需求建議適合的試辦深度，不先塞一套九堂課給你。" href=inquiry_href label="索取 Agentic Engineering 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_bottom',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/technical/agentic-engineering/" secondary_label="先讀 Agentic Engineering 系列" %}
 </main>

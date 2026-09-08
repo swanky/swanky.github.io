@@ -25,7 +25,7 @@ breadcrumbs:
 是否有意願了解合作人才庫（不影響報名）：{% endcapture %}
 {% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Portrait Coaching" status="女性限定・主推一對一" title="模特兒鏡頭表現一對一課程" lead="不是教你背一百個姿勢，而是找到身體、表情與鏡頭之間的關係。學完直接拍，每位學員自選 5 張精修數位照片。" image="/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg" alt="女性模特兒擺姿與鏡頭表現作品" primary_href=inquiry_href primary_label="洽詢一對一課程" secondary_href="#outcomes" secondary_label="先看會帶走什麼" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Portrait Coaching" status="女性限定・主推一對一" title="模特兒鏡頭表現一對一課程" lead="不是教你背一百個姿勢，而是找到身體、表情與鏡頭之間的關係。學完直接拍，每位學員自選 5 張精修數位照片。" image="/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg" alt="女性模特兒擺姿與鏡頭表現作品" primary_href=inquiry_href primary_label="洽詢一對一課程" secondary_href="#outcomes" secondary_label="先看會帶走什麼" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching',service:'model_coaching',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact"><div class="edu-container"><div class="edu-callout"><strong>課程與合作機會分開。</strong>報名不代表試鏡，也不保證未來工作；學員可自願加入合作人才庫，後續拍攝內容、費用與作品授權另行確認。</div></div></section>
 
@@ -88,5 +88,5 @@ breadcrumbs:
 
   <section class="edu-section"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header><details class="edu-details"><summary>課程價格是多少？</summary><div class="edu-details__body">一對一與小班皆依時數、場地與需求洽詢報價，網站不公開固定價格。交付內容會在確認方案時寫清楚。</div></details><details class="edu-details"><summary>會提供全部毛片嗎？</summary><div class="edu-details__body">不會。每位學員從拍攝成品中自選 5 張精修數位照片。</div></details><details class="edu-details"><summary>高中生可以參加嗎？</summary><div class="edu-details__body">可以洽詢。未滿 18 歲者須由法定代理人同意並共同確認課程、拍攝與照片使用方式。</div></details><details class="edu-details"><summary>報名就會得到合作機會嗎？</summary><div class="edu-details__body">不會。合作人才庫採自願加入，未來有適合企劃時另行邀請並協議條件；不加入也不影響課程與照片交付。</div></details></div></section>
 
-  {% include education/cta.html title="先告訴我，你最怕鏡頭裡的哪一件事" text="來信確認是否已滿 18 歲，並說明想改善的鏡頭表現、偏好風格與可配合時段。我會依需求回覆一對一或小班的安排與報價。" href=inquiry_href label="洽詢模特兒一對一課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_bottom',from_page:window.location.pathname});}" secondary_href="/photography/" secondary_label="先看攝影作品" %}
+  {% include education/cta.html title="先告訴我，你最怕鏡頭裡的哪一件事" text="來信確認是否已滿 18 歲，並說明想改善的鏡頭表現、偏好風格與可配合時段。我會依需求回覆一對一或小班的安排與報價。" href=inquiry_href label="洽詢模特兒一對一課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_bottom',service:'model_coaching',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/photography/" secondary_label="先看攝影作品" %}
 </main>
