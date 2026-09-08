@@ -316,61 +316,60 @@ html.bk-paper {
   .anchor-flash { animation: none; background: color-mix(in srgb, var(--bk-gold) 34%, transparent); }
 }
 
-/* ── 本回批語：抄本夾註一覽（2026-09） ──
-   靜態寫在章回頁尾端（tools/append_chapter_annotations.mjs 產生），預設收合。
-   抄本沒有標明每條批語對應正文哪一句，所以只按抄本原順序條列，不做段落對位。 */
+/* ── 抄本批語：逐段對位（2026-09-08 改版）──
+   靜態寫在每一段正文之後（tools/append_chapter_annotations.mjs 產生），
+   位置來自抄本原始碼裡批語內嵌的地方，不是推測的。
+   視覺原則：**明確次於正文**——小一級字、降低對比、左側一道細金線把它與正文分開，
+   讓連續閱讀的人可以整塊跳過；要看的人一眼就知道這條批在批哪一句（錨點引文）。
+   預設顯示（庚辰本這個底本的存在理由就是脂評）；讀者可用工具列的「批」鈕關掉，
+   關掉的狀態記在瀏覽器裡，沒有 JavaScript 時一律顯示。 */
 .bk-ann {
-  margin: clamp(36px, 5vw, 56px) 0 0;
-  border: 1px solid var(--bk-line);
-  background: var(--bk-panel);
+  margin: -.55em 0 1.5em;
+  padding: .15rem 0 .15rem clamp(.7rem, 1.6vw, 1.05rem);
+  border-left: 2px solid color-mix(in srgb, var(--bk-gold) 40%, transparent);
 }
-.bk-ann-summary {
-  display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem .8rem;
-  padding: .95rem clamp(1rem, 2.4vw, 1.5rem);
-  font-family: var(--bk-serif); font-size: 1.02rem; letter-spacing: .12em;
-  color: var(--bk-paper); cursor: pointer;
-}
-.bk-ann-summary::-webkit-details-marker { display: none; }
-.bk-ann-summary::marker { content: ''; }
-.bk-ann-summary b { font-weight: 700; }
-.bk-ann-summary::after {
-  content: '展開'; margin-left: auto; padding: .1em .7em;
-  border: 1px solid var(--bk-line); color: var(--bk-gold);
-  font-family: var(--bk-sans); font-size: .74rem; letter-spacing: .1em;
-}
-.bk-ann[open] .bk-ann-summary::after { content: '收合'; }
-.bk-ann-summary:hover, .bk-ann-summary:focus-visible { color: var(--bk-gold-bright); }
-.bk-ann-count { color: var(--bk-muted); font-family: var(--bk-sans); font-size: .78rem; letter-spacing: .08em; }
-.bk-ann-inner { padding: 0 clamp(1rem, 2.4vw, 1.5rem) clamp(1.1rem, 2.4vw, 1.5rem); border-top: 1px solid var(--bk-line); }
-.bk-ann-intro {
-  margin: 1rem 0 1.2rem; text-indent: 0; text-align: justify;
-  color: color-mix(in srgb, var(--bk-paper) 82%, var(--bk-muted));
-  font-family: var(--bk-sans); font-size: .84rem; line-height: 1.9;
-}
-.bk-ann-list { margin: 0; padding: 0; list-style: none; counter-reset: bk-ann; }
+.bk-ann--head { margin: 0 0 1.6em; }
+.bk-ann-list { margin: 0; padding: 0; list-style: none; }
 .bk-ann-item {
-  counter-increment: bk-ann;
-  padding: .7rem 0 .7rem 2.4em; border-top: 1px dashed var(--bk-line);
-  position: relative; font-family: var(--bk-kai); font-size: calc(var(--bk-reader-size) * .92);
-  line-height: 1.95; text-align: justify; scroll-margin-top: calc(108px + 1rem);
+  padding: .28rem 0;
+  color: color-mix(in srgb, var(--bk-paper) 74%, var(--bk-muted));
+  font-family: var(--bk-kai);
+  font-size: calc(var(--bk-reader-size) * .8);
+  line-height: 1.85;
+  text-align: justify;
+  text-indent: 0;
+  scroll-margin-top: calc(108px + 1rem);
 }
-.bk-ann-item::before {
-  content: counter(bk-ann); position: absolute; left: 0; top: .95em;
-  width: 2em; text-align: right; color: var(--bk-muted);
-  font-family: var(--bk-sans); font-size: .72rem; letter-spacing: .04em;
+.bk-ann-item:target {
+  background: color-mix(in srgb, var(--bk-gold) 16%, transparent);
+  outline: 1px solid var(--bk-line);
+  outline-offset: .25em;
 }
-.bk-ann-item:first-child { border-top: 0; }
-.bk-ann-item:target { background: color-mix(in srgb, var(--bk-gold) 16%, transparent); }
+/* 錨點引文＝批語旁邊那一句正文，用金色與引號標出來，讀者才知道批的是哪裡 */
+.bk-ann-at { color: var(--bk-gold); }
+.bk-ann-at::before { content: '「'; }
+.bk-ann-at::after { content: '」'; }
 .bk-ann-src {
-  display: inline-block; margin-right: .6em; padding: .05em .6em;
-  border: 1px solid var(--bk-line); background: var(--bk-bg);
-  color: var(--bk-gold); font-family: var(--bk-sans); font-size: .72rem;
-  letter-spacing: .06em; white-space: nowrap; vertical-align: .12em;
+  display: inline-block;
+  margin: 0 .5em 0 .3em;
+  padding: .02em .5em;
+  border: 1px solid var(--bk-line);
+  background: var(--bk-bg);
+  color: var(--bk-gold);
+  font-family: var(--bk-sans);
+  font-size: .7rem;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  vertical-align: .14em;
 }
-.bk-ann-text { color: var(--bk-paper); }
+.bk-ann-item--plain .bk-ann-text { color: color-mix(in srgb, var(--bk-paper) 66%, var(--bk-muted)); }
+
+/* 工具列的開關；關掉時整塊批語不渲染（不是視覺隱藏——避免螢幕閱讀器仍讀出來） */
+.bk-ann-btn.is-off { color: var(--bk-gold); border-color: var(--bk-gold); }
+html.bk-ann-off .bk-ann { display: none; }
 
 @media (max-width: 480px) {
-  .bk-ann-summary { padding: .8rem .85rem; font-size: .96rem; }
-  .bk-ann-inner { padding: 0 .85rem 1rem; }
-  .bk-ann-item { padding-left: 2.1em; }
+  .bk-ann { margin: -.3em 0 1.4em; padding-left: .6rem; }
+  .bk-ann-item { padding: .32rem 0; font-size: calc(var(--bk-reader-size) * .84); }
+  .bk-ann-src { font-size: .66rem; }
 }

@@ -1,26 +1,28 @@
 /**
- * 把抄本夾註（批語）貼進既有章回頁——「本回批語一覽」最小可上線版。
+ * 把抄本夾註（批語）貼進既有章回頁——**逐句對位版**：每一條批語掛在它原本所批的
+ * 那一段之後，並附上批語插入點前面那一句正文（錨點引文），讀者一眼看得出它在批什麼。
  *
  * 為什麼是獨立一支腳本、不併進 import_book_chapters.mjs：
  *   後者會先清掉整個 (book, edition) 的舊輸出再重寫 front matter 與正文，
- *   是「原文匯入」的單一職責。批語是輔助層，只在既有檔案尾端加一個帶標記的
- *   區塊，**正文與 front matter 一個位元都不碰**。
+ *   是「原文匯入」的單一職責。批語是輔助層，只在段落之間插入帶標記的區塊，
+ *   **正文段落與 front matter 一個位元都不碰**（applyBlocks 有保命檢查）。
  *   ⚠ 每次跑完 import_book_chapters.mjs，都要再跑一次本腳本把批語區塊補回去。
  *
  * 為什麼是靜態寫入、不做前端載入：
  *   實測資料量（庚辰本 4008 條、批語文字合計 354KB）平均每回只增 4.7KB、
  *   最大一回（第 19 回 220 條）18.5KB，章回頁本身約 24KB——靜態寫入零前端負擔，
- *   而且搜尋引擎與站內搜尋看得到。
+ *   而且搜尋引擎與站內搜尋看得到，關掉 JavaScript 也完整。
  *
- * 對位問題（老實說）：
- *   批語資料只有 {id, chapter, order, note} 四個欄位，**沒有任何段落對位欄位**；
- *   order 只是抽取時的先後順序。抽取器（fetch_wikisource.mjs）在單一線性掃描中
- *   把批語從正文挖掉才切段落，當下沒有記錄位置，事後無法可靠回填。真正的逐句
- *   對位要重抓維基文庫並加位移追蹤，屬另案前置工程。所以頁面上老實寫「照抄本
- *   原本的順序條列」，不假裝對得回段落。
+ * 對位資料從哪來（2026-09-08 起）：
+ *   `fetch_wikisource.mjs` 在把批語從正文挖掉時插一個位置標記，讓它跟著正文走完
+ *   整條轉換管線，段落切好之後才掃描標記落點——所以 `para`／`offset`／`anchor`
+ *   是**機械取得的原始位置**，不是推測，也沒有 AI 判斷的空間。維基文庫的抄本
+ *   原始碼裡批語就內嵌在它所批的詞後面（「於大荒山{{~~|【甲側：荒唐也。】}}無稽崖」）。
+ *   實測 4008 條裡 3769 條（94.0%）對到段內某個字旁邊；剩下 239 條在抄本裡本來就
+ *   整段獨立（回前／回末總批），掛在該段之後。
  *
  * 批語文字一字不改：出處記號只做「拆出來當小標」的呈現，不改寫、不潤飾、不翻譯。
- * 拆不出來的整條原樣顯示，並在報告裡計數。
+ * 拆不出來的整條原樣顯示，並在報告裡計數。錨點引文一律從正文機械切取，不改寫。
  *
  * 用法：
  *   node tools/append_chapter_annotations.mjs <book_id> <edition_id> [--check]
@@ -32,8 +34,13 @@ import { join } from 'node:path';
 
 export const MARK_BEGIN = '<!-- annotations:begin';
 export const MARK_END = '<!-- annotations:end -->';
+/** 一個批語區塊的完整範圍（begin 標記帶段號，所以一頁會有很多個） */
+const BLOCK_RE = /<!-- annotations:begin[^>]*-->[\s\S]*?<!-- annotations:end -->\n?/g;
+/** 正文段落：id 的數字部分就是 fetch_wikisource 記下的 para（回目算第 1 段、不渲染成 <p>） */
+const PARA_RE = /<p id="p-\d{3}-(\d{4})">[\s\S]*?<\/p>/g;
 
 const pad3 = (n) => String(n).padStart(3, '0');
+const pad4 = (n) => String(n).padStart(4, '0');
 
 /**
  * 出處記號白名單：**逐字列出實際資料裡出現過的記號**，不寫成「抄本名＋批型」的
@@ -91,54 +98,81 @@ export function loadAnnotations(bookId, editionId, chapter) {
   return rows;
 }
 
-/** 產生批語區塊 HTML（含前後標記）。純函式，測試直接呼叫。 */
-export function buildBlock(rows) {
-  const items = rows.map((r) => {
-    const { tag, text } = parseNote(r.note);
-    const body = `<span class="bk-ann-text">${escNote(text)}</span>`;
-    return tag === null
-      ? `      <li class="bk-ann-item bk-ann-item--plain" id="${r.id}">${body}</li>`
-      : `      <li class="bk-ann-item" id="${r.id}"><span class="bk-ann-src">${esc(tag)}</span>${body}</li>`;
-  });
-  // 文案紅線：這個底本的忠實度是 transcribed（用字與原抄本可能有少量出入），所以只能說
-  // 「照原樣收錄、站上不改一個字」，不能說「照抄本原樣」——那是冒充逐字。出處記號也不
-  // 宣稱是「抄本上原有」（記號裡有甲戌／蒙／靖等他本的名字，來源關係 repo metadata 沒有
-  // 記載，不得推斷）。
-  const intro = '這些批語出自早期抄本，原本夾在抄本的正文之間。抄本本身沒有標明每一條寫在正文的哪一句旁邊，'
-    + '所以這裡照抄本原本的先後順序條列，不對應上面的段落。每條開頭的小字是出處記號，照原樣保留；'
-    + '批語文字照原樣收錄，站上不改一個字。';
-  return [
-    `${MARK_BEGIN}：本回批語，由 tools/append_chapter_annotations.mjs 產生，勿手改 -->`,
-    `<details class="bk-ann" id="annotations" data-ann-count="${rows.length}">`,
-    `  <summary class="bk-ann-summary"><b>本回批語</b><span class="bk-ann-count">共 ${rows.length} 條</span></summary>`,
-    '  <div class="bk-ann-inner">',
-    `    <p class="bk-ann-intro">${intro}</p>`,
-    '    <ol class="bk-ann-list">',
-    ...items,
-    '    </ol>',
-    '  </div>',
-    '</details>',
-    MARK_END,
-  ].join('\n');
+/**
+ * 一條批語的 `<li>`。
+ * 錨點引文（`bk-ann-at`）＝批語插入點前面那一句正文，機械切取；空的就不渲染那個 span
+ * （批在段首、或前一條批語就緊貼在旁邊的情形，實測 184 條）。
+ */
+function itemHtml(row) {
+  const { tag, text } = parseNote(row.note);
+  const at = row.anchor ? `<span class="bk-ann-at">${esc(row.anchor)}</span>` : '';
+  const src = tag === null ? '' : `<span class="bk-ann-src">${esc(tag)}</span>`;
+  const cls = tag === null ? 'bk-ann-item bk-ann-item--plain' : 'bk-ann-item';
+  return `<li class="${cls}" id="${row.id}">${at}${src}<span class="bk-ann-text">${escNote(text)}</span></li>`;
 }
 
-/** 把區塊塞進（或換掉）章回頁尾端；block=null 就把舊區塊清掉。回傳新的整份檔案內容。 */
-export function applyBlock(fileText, block) {
-  const src = fileText.replace(/\r\n/g, '\n');
-  const b = src.indexOf(MARK_BEGIN);
-  const e = src.indexOf(MARK_END);
-  let base = src;
-  if (b !== -1 && e !== -1) {
-    base = src.slice(0, b).replace(/\n+$/, '\n') + src.slice(e + MARK_END.length).replace(/^\n+/, '');
+/**
+ * 把一回的批語依落點分組，回傳 Map：段號 → 區塊 HTML。
+ * 段號 0 是回首（回前總批，以及回目裡夾的批）——渲染在第一個正文段之前。
+ */
+export function buildBlocks(rows) {
+  const byPara = new Map();
+  for (const r of rows) {
+    // para 0（回首）與 para 1（回目，不渲染成 <p>）都歸到回首區
+    const key = r.para <= 1 ? 0 : r.para;
+    if (!byPara.has(key)) byPara.set(key, []);
+    byPara.get(key).push(r);
   }
-  base = base.replace(/\n+$/, '\n');
-  return block ? `${base}${block}\n` : base;
+  const blocks = new Map();
+  for (const [key, group] of byPara) {
+    const head = key === 0
+      ? `${MARK_BEGIN} p0000：回首批語（抄本裡寫在正文之前），由 tools/append_chapter_annotations.mjs 產生，勿手改 -->`
+      : `${MARK_BEGIN} p${pad4(key)}：第 ${key} 段的批語，由 tools/append_chapter_annotations.mjs 產生，勿手改 -->`;
+    blocks.set(key, [
+      head,
+      `<aside class="bk-ann${key === 0 ? ' bk-ann--head' : ''}" data-ann-count="${group.length}"`
+        + ` aria-label="${key === 0 ? '這一回開頭的批語' : `第 ${key} 段的批語`}">`,
+      `  <ol class="bk-ann-list">`,
+      ...group.map((r) => `    ${itemHtml(r)}`),
+      '  </ol>',
+      '</aside>',
+      MARK_END,
+    ].join('\n'));
+  }
+  return blocks;
 }
 
-/** 把區塊剝掉，用來證明「正文零改動」。 */
-export function stripBlock(fileText) {
-  return applyBlock(fileText, null);
+/** 把所有批語區塊剝掉，用來證明「正文零改動」。 */
+export function stripBlocks(fileText) {
+  return fileText.replace(/\r\n/g, '\n').replace(BLOCK_RE, '');
 }
+
+/**
+ * 把區塊插進章回頁：回首區放在第一個正文段之前，其餘各放在對應段落之後。
+ * blocks=null／空 Map 就只把舊區塊清掉。回傳新的整份檔案內容。
+ *
+ * 落點對得起來的關鍵：段落 id 的數字部分就是 fetch_wikisource 記下的 para
+ * （`p-001-0003` ↔ para 3），兩邊同一套編號，不需要另外對照表。
+ */
+export function applyBlocks(fileText, blocks) {
+  const base = stripBlocks(fileText);
+  if (!blocks || blocks.size === 0) return base.replace(/\n{3,}/g, '\n\n');
+  const out = base.replace(PARA_RE, (whole, num) => {
+    const b = blocks.get(Number(num));
+    return b ? `${whole}\n${b}` : whole;
+  });
+  const head = blocks.get(0);
+  if (!head) return out;
+  // 回首區插在第一個正文段之前（第一段的 id 在 strip 後的字串裡找，位置沒有偏移問題
+  // ——head 是最後才插的）
+  const i = out.indexOf('<p id="p-');
+  if (i === -1) return `${head}\n${out}`;
+  return `${out.slice(0, i)}${head}\n${out.slice(i)}`;
+}
+
+// ── 舊介面（單一回末清單）已移除；保留名稱只為讓誤用立刻壞掉而不是靜默跑錯 ──
+export const buildBlock = () => { throw new Error('buildBlock 已改為 buildBlocks（逐段對位）'); };
+export const applyBlock = () => { throw new Error('applyBlock 已改為 applyBlocks（逐段對位）'); };
 
 // ── CLI ────────────────────────────────────────────────────────
 const invoked = (process.argv[1] || '').replace(/\\/g, '/');
@@ -160,6 +194,9 @@ if (invoked.endsWith('tools/append_chapter_annotations.mjs')) {
   let totalNotes = 0;
   let withBlock = 0;
   let plainCount = 0;
+  let inPara = 0;
+  let withAnchor = 0;
+  let orphan = 0;
   const noData = [];
   const tagUse = new Map();
   const drift = [];
@@ -169,22 +206,31 @@ if (invoked.endsWith('tools/append_chapter_annotations.mjs')) {
     const rows = loadAnnotations(bookId, editionId, chapter);
     const path = join('_books', f);
     const before = readFileSync(path, 'utf8');
-    let block = null;
+    let blocks = null;
     if (rows && rows.length) {
-      block = buildBlock(rows);
-      totalNotes += rows.length;
-      withBlock += 1;
+      // 落點檢查：para 指到的段落必須真的存在於頁面上，否則批語會靜靜地消失
+      const ids = new Set([...before.matchAll(/<p id="p-\d{3}-(\d{4})">/g)].map((m) => Number(m[1])));
       for (const r of rows) {
+        if (r.para > 1 && !ids.has(r.para)) {
+          console.error(`✗ ${path}：${r.id} 指向第 ${r.para} 段，但頁面上沒有這一段`);
+          process.exit(1);
+        }
+        if (r.offset >= 0) inPara += 1;
+        if (r.anchor) withAnchor += 1;
+        if (r.para <= 1) orphan += 1;
         const { tag } = parseNote(r.note);
         if (tag === null) plainCount += 1;
         else tagUse.set(tag, (tagUse.get(tag) || 0) + 1);
       }
+      blocks = buildBlocks(rows);
+      totalNotes += rows.length;
+      withBlock += 1;
     } else {
       noData.push(chapter);
     }
-    const after = applyBlock(before, block);
+    const after = applyBlocks(before, blocks);
     // 保命檢查：剝掉區塊後必須與原檔（同樣剝掉舊區塊）逐字相同，否則就是動到正文了
-    if (stripBlock(after) !== stripBlock(before)) {
+    if (stripBlocks(after) !== stripBlocks(before)) {
       console.error(`✗ ${path}：區塊以外的內容被改動了，中止`);
       process.exit(1);
     }
@@ -196,6 +242,7 @@ if (invoked.endsWith('tools/append_chapter_annotations.mjs')) {
 
   console.log(`${checkOnly ? '檢查' : '寫入'} ${withBlock} 篇批語區塊／共 ${files.length} 篇（${bookId}・${editionId}）`);
   console.log(`批語總計 ${totalNotes} 條：出處記號拆出 ${totalNotes - plainCount} 條、原樣顯示（拆不出出處）${plainCount} 條`);
+  console.log(`對位：段內某個字旁邊 ${inPara} 條（${(inPara / totalNotes * 100).toFixed(1)}%）、附得出引文 ${withAnchor} 條、抄本裡本來就獨立成段（回首／段後）${orphan + (totalNotes - inPara - orphan)} 條`);
   console.log(`沒有批語資料、不出現區塊的回：${noData.length ? noData.join('、') : '無'}`);
   const top = [...tagUse.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
   console.log(`出處記號前八名：${top.map(([t, c]) => `${t} ${c}`).join('／')}`);

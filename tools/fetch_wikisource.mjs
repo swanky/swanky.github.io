@@ -33,7 +33,10 @@ const PAGE_TPL = arg('page');
 const FROM = Number(arg('from', 1));
 const TO = Number(arg('to', 1));
 const DRY = argv.includes('--dry') ? Number(arg('dry', 3)) : 0;
-if (!BOOK || !EDITION || !PAGE_TPL) {
+// 這個檢查與底下的抓取流程只在「直接用 node 跑這支檔案」時才執行——測試要 import
+// wikitextToPlain／extractMarks／anchorFor 這些純函式來驗對位，不能一 import 就 exit。
+const RUN_AS_CLI = (process.argv[1] || '').replace(/\\/g, '/').endsWith('tools/fetch_wikisource.mjs');
+if (RUN_AS_CLI && (!BOOK || !EDITION || !PAGE_TPL)) {
   console.error('用法：node tools/fetch_wikisource.mjs --book <id> --edition <id> --page "書名/第{NNN}回" --from 1 --to 120 [--dry 3]');
   process.exit(1);
 }
@@ -68,6 +71,70 @@ async function fetchRaw(pageName) {
     await sleep(1200 * attempt);
   }
   throw new Error('unreachable');
+}
+
+/**
+ * 批語位置標記（Unicode 私用區）。
+ *
+ * 為什麼用標記搬運、不記字元位移：批語被挖掉的當下雖然知道位移，但正文接著還要
+ * 經過 <poem>／<br>／繁簡標記／導覽行／連結／段落邊界／空白收斂一連串 replace，
+ * 位移全部失效。改成插一個標記讓它**跟著正文走完整條管線**，最後在段落切好之後
+ * 才掃描標記所在位置——位移會被破壞，標記不會。
+ *
+ * 選字條件：不是空白（不受 trim 與空白收斂影響）、不含 `{{`／`[[`／`<`／`【`
+ * （不被任何轉換規則匹配）、對 `^　　` 段落邊界判斷的行為與 `{{` 一致（皆為非空白）。
+ */
+const MARK_OPEN = '\uE000';
+const MARK_CLOSE = '\uE001';
+export const MARK_RE = /[\uE000\uE001]/;
+const mark = (i) => `${MARK_OPEN}${i}${MARK_CLOSE}`;
+
+/**
+ * 從一個段落裡取出所有批語標記，回傳去掉標記後的乾淨文字與每條的位置。
+ * offset 是**移除全部標記後**的段內字元位置，所以前面標記的寬度不會累積成誤差。
+ */
+export function extractMarks(paraText) {
+  let clean = '';
+  const hits = [];
+  let i = 0;
+  while (i < paraText.length) {
+    if (paraText[i] === MARK_OPEN) {
+      const close = paraText.indexOf(MARK_CLOSE, i);
+      if (close === -1) { clean += paraText[i]; i += 1; continue; }
+      hits.push({ idx: Number(paraText.slice(i + 1, close)), offset: clean.length });
+      i = close + 1;
+      continue;
+    }
+    clean += paraText[i];
+    i += 1;
+  }
+  return { clean, hits };
+}
+
+/** 錨點引文回溯的邊界：中文句讀。 */
+const ANCHOR_STOP = /[，。？！；：、「」『』（）〈〉《》…—　\s]/;
+const ANCHOR_MAX = 14;
+
+/**
+ * 錨點引文＝批語插入點前面那一句正文，讀者靠它一眼看出這條批在批什麼。
+ *
+ * 兩條規則都是實測逼出來的：
+ *   1. **緊鄰批語的那個句讀要收進引文**。脂批大量是句末側批（「…之熟套起法。」後面
+ *      直接接批語），只要遇標點就停，引文會是空字串——第 5 回有一半的批語踩到這個。
+ *   2. **不跨過前一條批語的位置**。否則「無稽也」的引文會把「於大荒山」一起吃進來，
+ *      那是前一條批的地盤。
+ * 超過 14 字就從尾端截取（離批語最近的部分最有用），並在前面補「…」表示還有前文。
+ */
+export function anchorFor(clean, offset, prevOffset = 0) {
+  const lo = Math.max(prevOffset, 0);
+  let start = offset;
+  if (start > lo && ANCHOR_STOP.test(clean[start - 1])) start -= 1;
+  while (start > lo && !ANCHOR_STOP.test(clean[start - 1])) start -= 1;
+  let text = clean.slice(start, offset);
+  const truncated = text.length > ANCHOR_MAX;
+  if (truncated) text = text.slice(text.length - ANCHOR_MAX);
+  text = text.replace(/^[\s　]+|[\s　]+$/g, '');
+  return text && truncated ? `…${text}` : text;
 }
 
 /**
@@ -112,6 +179,7 @@ export function replaceTemplates(s, handler) {
 export function wikitextToPlain(wt) {
   let s = wt.replace(/\r\n/g, '\n');
   const annotations = [];
+  const headingAnnIdx = new Set();
   let headerHeading = '';
 
   // 2) 編者註腳與註釋段——現代附加物，不是小說原文
@@ -136,7 +204,12 @@ export function wikitextToPlain(wt) {
       const flat = replaceTemplates(inner, (x) => {
         const b = x.indexOf('|');
         const body = b === -1 ? '' : x.slice(b + 1);
-        if (/^\s*【/.test(body)) annotations.push(body.replace(/\s+/g, ' ').trim());
+        // 回目裡夾的批語（庚辰本第 3 回）：headerHeading 之後會被清掉，插標記沒有意義，
+        // 直接記成「掛在回目下」。
+        if (/^\s*【/.test(body)) {
+          annotations.push(body.replace(/\s+/g, ' ').trim());
+          headingAnnIdx.add(annotations.length - 1);
+        }
         return '';
       });
       // section 的值可能跨行：庚辰本第 39 回把回目下聯寫在下一行的 '''…''' 裡，
@@ -167,7 +240,7 @@ export function wikitextToPlain(wt) {
         const b = x.indexOf('|');
         return b === -1 ? '' : x.slice(b + 1);
       }).replace(/\s+/g, ' ').trim());
-      return '';
+      return mark(annotations.length - 1);                     // 留下標記，位置隨正文一起走
     }
     // 回傳的內容可能還有巢狀模板（例：{{~~|正文…{{~|校記}}…}}），要再掃一次，
     // 否則會留下未處理的 {{ 被殘留檢查擋下（庚辰本第 4 回就是這樣）。
@@ -179,7 +252,7 @@ export function wikitextToPlain(wt) {
   //     （第 22 回）。判準與模板內一致：【】內出現 批／側／眉／夾／雙 這類批語標記。
   s = s.replace(/【[^】]{0,10}[批側眉夾雙][\s\S]{0,4000}?】/g, (note) => {
     annotations.push(note.replace(/\s+/g, ' ').trim());
-    return '';
+    return mark(annotations.length - 1);
   });
 
   // 4) <poem> 內每一行都是語意行（詩詞、唱詞），標上縮排讓下游的
@@ -231,16 +304,82 @@ export function wikitextToPlain(wt) {
   s = s.split('\n').map((l) => (/^[\s　]+\S/.test(l) ? l.replace(/\s+$/, '') : l.trim())).join('\n');
   s = s.replace(/\n{3,}/g, '\n\n').trim();
 
-  // 12) 回目：內文沒有時用 header 的 section 補上（庚辰本的回目只在 header 裡）
+  // 12) 批語對位（分三步，順序不能顛倒）。
+  //
+  //     標記已經隨正文走完整條管線、段落也切好了，現在才掃描標記落在哪裡，記下
+  //     「第幾段、段內第幾個字、前面那一小段正文」，然後把標記從正文移除。
+  //     **正文必須與「從來沒有插過標記」的結果逐字相同**——重抓後 chapters/*.txt
+  //     的 git diff 為空就是這件事的證明。前三版都在這裡寫錯，各是一種不同的錯：
+  //       a. 整段只有批語的段落（回前總批）在原版是變成空行、被上一步的 trim 連著
+  //          下一段的段首縮排一起吃掉。所以要先把這種段落抽掉、再收斂首尾，
+  //          否則第一個正文段會多出「　　」（58 個檔案的假差異）。
+  //       b. 回目的有無也要看**抽掉之後**的第一段，否則第 5 回會被誤判成「內文沒有
+  //          回目」而多補一行「第五回」。
+  //       c. 批語**獨占一行**時（詩句段落裡常見），把標記拿掉會留下一個空行、
+  //          把那一段劈成兩段，後面所有段號跟著位移（第 5 回 a0023 的 offset
+  //          就大過了它所指的那一段）。所以先把獨占一行的標記併回前一行末尾——
+  //          語意上它本來就是批在前一行。
+  s = s.replace(/([^\n])\n[ \t\u3000]*(\uE000\d+\uE001)/g, '$1$2');
+  const positions = [];
+
+  // 12a) 先抽掉「整段只有批語」的段落，記下它們掛在第幾段之後，然後收斂首尾。
+  //      para === 0 表示連前一段都還沒有，就是回首。
+  const kept = [];
+  let seen = 0;
+  for (const raw of s.split(/\n\s*\n/)) {
+    const { clean, hits } = extractMarks(raw);
+    if (!clean.trim()) {
+      for (const h of hits) positions[h.idx] = { para: seen, offset: -1, anchor: '' };
+      continue;
+    }
+    seen += 1;
+    kept.push(raw);                       // 原樣保留（段內標記留著），位置下一步才算
+  }
+  s = kept.join('\n\n').replace(/\n{3,}/g, '\n\n').trim();
+
+  // 12b) 段內對位：offset 是移除全部標記後的段內字元位置，所以前面標記的寬度
+  //      不會累積成誤差。para 與頁面段落 id `p-{回}-{para}` 對齊。
+  //      ⚠ 段尾空白要在這裡就裁掉（下游 splitParagraphs 也會裁）——否則批語剛好
+  //      落在段尾空白之後時，offset 會大過最終段落的長度一格（第 6 回 a0088）。
+  const clean = [];
+  s.split(/\n\s*\n/).forEach((raw, k) => {
+    const got = extractMarks(raw);
+    const body = got.clean.replace(/\s+$/, '');
+    let prevOffset = 0;
+    for (const h of got.hits) {
+      const offset = Math.min(h.offset, body.length);
+      positions[h.idx] = { para: k + 1, offset, anchor: anchorFor(body, offset, prevOffset) };
+      prevOffset = offset;
+    }
+    clean.push(body);
+  });
+  s = clean.join('\n\n');
+
+  // 13) 回目：內文沒有時用 header 的 section 補上（庚辰本的回目只在 header 裡）。
+  //     補了就多一段，前面算好的段號要跟著往後推一位。
   const firstPara = s.split(/\n\s*\n/)[0] || '';
   const looksLikeHeading = /^(第[一二三四五六七八九十百零〇\d]+回|楔子|引子|卷首|凡例)/.test(firstPara.trim());
-  if (!looksLikeHeading && headerHeading) s = `${headerHeading}\n\n${s}`;
+  if (!looksLikeHeading && headerHeading) {
+    s = `${headerHeading}\n\n${s}`;
+    for (const pos of positions) if (pos) pos.para += 1;
+  }
+  // 回目裡夾的批語（庚辰本第 3 回）沒有走標記那條路，直接掛在回目下
+  for (const i of headingAnnIdx) positions[i] = { para: 1, offset: -1, anchor: '' };
 
-  return { text: `${s}\n`, heading: headerHeading, annotations };
+  // 保命檢查：每一條批語都要有落點。少了就是標記被某條轉換規則吃掉了——那是 bug，
+  // 不能靜靜地把批語變成「沒有位置」混過去。
+  const lost = annotations.map((_, i) => i).filter((i) => !positions[i]);
+  if (lost.length) {
+    throw new Error(`${lost.length} 條批語的位置標記在轉換過程中遺失（第 ${lost.slice(0, 5).map((i) => i + 1).join('、')} 條）`);
+  }
+
+  return { text: `${s}\n`, heading: headerHeading, annotations, positions };
 }
 
 const splitParagraphs = (t) => t.split(/\n\s*\n/).map((p) => p.replace(/\s+$/, '')).filter((p) => p.trim());
 
+// ── 以下是 CLI 流程（直接執行才跑）；刻意不縮排，以免整段 diff 只為了空白 ──
+if (RUN_AS_CLI) {
 const outDir = join('content', BOOK, 'editions', EDITION);
 const write = (p, s) => { mkdirSync(dirname(p), { recursive: true }); writeFileSync(p, s, 'utf8'); };
 
@@ -274,6 +413,7 @@ for (let i = 0; i < limit; i += 1) {
     [/^==+/m, '章節標題 =='], [/\{\{/, '模板 {{'], [/\[\[/, '連結 [['],
     [/<ref/i, '註腳 <ref'], [/<\/?[a-z]+[^>]*>/i, 'HTML 標籤'], [/-\{/, '轉換標記 -{'],
     [/【[^】]{0,8}[側眉夾雙批]/, '未抽出的抄本夾註'],
+    [MARK_RE, '批語位置標記（應在對位後全部移除）'],
   ].filter(([re]) => re.test(plain)).map(([, name]) => name);
   if (residue.length) problems.push(`第 ${n} 回：轉換後仍殘留 ${residue.join('、')}`);
 
@@ -300,7 +440,7 @@ for (let i = 0; i < limit; i += 1) {
     write(join(outDir, 'chapters', `${pad3(n)}.txt`), text);
     if (conv.annotations.length) {
       write(join(outDir, 'annotations', `${pad3(n)}.jsonl`),
-        `${conv.annotations.map((a, k) => JSON.stringify({ id: `${BOOK}-${pad3(n)}-a${String(k + 1).padStart(4, '0')}`, chapter: n, order: k + 1, note: a })).join('\n')}\n`);
+        `${conv.annotations.map((a, k) => JSON.stringify({ id: `${BOOK}-${pad3(n)}-a${String(k + 1).padStart(4, '0')}`, chapter: n, order: k + 1, note: a, ...conv.positions[k] })).join('\n')}\n`);
     }
   }
 
@@ -309,6 +449,16 @@ for (let i = 0; i < limit; i += 1) {
     console.log(`      首段：${(paras[1] || '').slice(0, 44)}…`);
     console.log(`      末段：${(paras[paras.length - 1] || '').slice(0, 44)}…`);
     if (conv.annotations.length) console.log(`      夾註樣本：${conv.annotations[0].slice(0, 44)}…`);
+    // 對位抽驗：印出前八條落在哪一段的哪個字後面，並就地核對錨點引文真的是那段的子字串。
+    // 這是「位置對不對」最便宜的檢查手段——不必等資料寫進站上才發現對錯。
+    for (const [k2, a] of conv.annotations.slice(0, 8).entries()) {
+      const pos = conv.positions[k2];
+      const seg = paras[pos.para - 1] || '';
+      const where = pos.offset >= 0 ? `第${pos.offset}字後` : '（掛在段後）';
+      const ok = pos.offset < 0 || pos.anchor === ''
+        || seg.slice(0, pos.offset).endsWith(pos.anchor);
+      console.log(`      #${k2 + 1} 第${pos.para}段 ${where} 引文「${pos.anchor}」${ok ? '' : '  ✗ 引文與正文對不上'} → ${a.slice(0, 36)}`);
+    }
   }
   await sleep(350);   // 對維基文庫客氣一點
 }
@@ -344,3 +494,5 @@ if (problems.length) {
   process.exit(1);
 }
 console.log(`\n${DRY ? '試抓' : '抓取'}完成，段落與回目檢查全過`);
+
+}

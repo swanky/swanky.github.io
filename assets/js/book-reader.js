@@ -114,6 +114,26 @@
     syncPaper();
   }
 
+  // ── 抄本批語顯示／隱藏（只有庚辰本這類帶批語的底本會出現這個鈕）──
+  //    預設顯示：這個底本的存在理由就是脂評，預設藏起來等於白做。
+  //    關掉的狀態記在瀏覽器（鍵 bk-ann，'0'＝關），class 由 head 的防閃爍腳本先行套用；
+  //    沒有 JavaScript 時一律顯示，內容不會因此消失。
+  var annBtn = document.querySelector('[data-ann-toggle]');
+  if (annBtn) {
+    var syncAnn = function () {
+      var off = root.classList.contains('bk-ann-off');
+      annBtn.setAttribute('aria-pressed', String(!off));
+      annBtn.classList.toggle('is-off', off);
+      annBtn.title = off ? '目前不顯示批語，按一下顯示' : '目前顯示批語，按一下隱藏';
+    };
+    annBtn.addEventListener('click', function () {
+      root.classList.toggle('bk-ann-off');
+      try { localStorage.setItem('bk-ann', root.classList.contains('bk-ann-off') ? '0' : '1'); } catch (e) { /* 忽略 */ }
+      syncAnn();
+    });
+    syncAnn();
+  }
+
   // ── 閱讀進度條 ──
   var bar = document.querySelector('[data-progress]');
   if (bar) {

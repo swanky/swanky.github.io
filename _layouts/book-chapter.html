@@ -53,7 +53,14 @@
   <a class="bk-skip" href="#chapter-body">跳到本回內文</a>
   <div class="bk-progress" aria-hidden="true"><span data-progress></span></div>
 
-  {%- include book/topbar.html brand_url=book_url brand_name=book.title brand_sub=edition.label seal=seal toc_url=toc_url reader_tools=true -%}
+  {%- comment -%}
+    這一回有沒有批語，由章回檔自己帶（tools/append_chapter_annotations.mjs 產生的標記）。
+    先算出來，因為工具列的「批」開關鈕與下方的收錄說明都要看它。
+  {%- endcomment -%}
+  {%- assign has_ann = false -%}
+  {%- if content contains 'annotations:begin' -%}{%- assign has_ann = true -%}{%- endif -%}
+
+  {%- include book/topbar.html brand_url=book_url brand_name=book.title brand_sub=edition.label seal=seal toc_url=toc_url reader_tools=true ann_toggle=has_ann -%}
 
   {%- assign siblings = site.books | where: 'book_id', page.book_id | where: 'edition_id', page.edition_id | sort: 'chapter' -%}
   {%- assign idx = -1 -%}
@@ -103,11 +110,9 @@
     </nav>
 
     {%- comment -%}
-      本頁尾端有沒有批語區塊，由章回檔自己帶（tools/append_chapter_annotations.mjs 產生
-      的標記）。有批語的底本不能再說「本頁只呈現原文」——那句話會變成不實陳述。
+      has_ann 在頁首就算好了（工具列的開關鈕也要用）。有批語的底本不能再說
+      「本頁只呈現原文」——那句話會變成不實陳述。
     {%- endcomment -%}
-    {%- assign has_ann = false -%}
-    {%- if content contains 'annotations:begin' -%}{%- assign has_ann = true -%}{%- endif -%}
     <aside class="bk-note" aria-label="收錄說明">
       <h2>收錄說明</h2>
       {%- comment -%}
@@ -124,7 +129,7 @@
       <p>本頁是《{{ book.title }}》{{ edition.label }}的原文，站上<b>不做任何改動</b>。但有一點要老實說：這份謄本有一部分用字被轉換過（例如「裡」寫成「里」、「於」寫成「于」），所以我們不會說它一字未改。想讀用字更講究的版本，可以對照本書的其他底本。</p>
       {%- endcase -%}
       {%- if has_ann -%}
-      <p>正文裡沒有夾進任何一條批語：抄本上的批語與原文分開保存，這一回的批語另外列在正文後面的<a href="#annotations">本回批語</a>。抄本本身沒有標明每一條批語寫在正文的哪一句旁邊，所以那裡是照抄本原本的先後順序條列。</p>
+      <p>這一回的批語照抄本原本夾在正文裡的位置，分別列在它所批的那一段後面；每條開頭用引號標出它旁邊的那一句原文，接著是出處記號與批語本文。批語字體小一級、左邊有一道細線，和正文分得開，正文一個字都沒有被夾進去。想只讀原文，按上方工具列的「批」就能把批語收起來。</p>
       {%- endif -%}
       <dl>
         <dt>底本</dt><dd>{{ edition.label }}{% if edition.note %}（{{ edition.note }}）{% endif %}</dd>
@@ -137,7 +142,7 @@
   </main>
 
   {%- include book/footer.html -%}
-  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260811-1" defer></script>
+  <script src="{{ '/assets/js/book-reader.js' | relative_url }}?v=20260908-1" defer></script>
   {%- if bk_anchors and bk_anchors.size > 0 -%}
   <script src="{{ '/assets/js/chapter-anchors.js' | relative_url }}?v=20260815-1" defer></script>
   {%- endif -%}
