@@ -367,6 +367,10 @@ html.bk-paper {
   vertical-align: .14em;
 }
 .bk-ann-item--plain .bk-ann-text { color: color-mix(in srgb, var(--bk-paper) 66%, var(--bk-muted)); }
+/* 米紙模式：出處標籤的淡金底把背景推向文字自己的金色，對比從 5.28 掉到 4.38:1（AA 要 4.5）。
+   底色保留（標籤的跳出度靠它），改把文字加深到 85% 金——量到 5.44:1，有餘裕。
+   深色模式的同一標籤是 6.99:1，不必動。 */
+html.bk-paper .bk-ann-src { color: color-mix(in srgb, var(--bk-gold) 85%, #000); }
 
 /* 批語多到會蓋掉正文的段落：預設收起來，標題寫明有幾條 */
 .bk-ann--fold > .bk-ann-list { margin-top: .5rem; }
