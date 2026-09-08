@@ -14,7 +14,15 @@ const ep02VideoId = 'NMFgHt9YgE8';
 const ep03VideoId = 'pOcVepABSt8';
 
 test('《梅香境》頁首提供公開影片入口', () => {
-  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 至 EP07 影像<\/a>/);
+  assert.match(page, /class="button button-ghost" href="#ep01-film">觀看 EP01 至 EP08 影像<\/a>/);
+});
+
+test('EP08〈紅妝鬥氣〉首映區與卡片觀看連結齊備', () => {
+  assert.match(page, /<section id="ep08-film" class="cycle-premiere reveal"/);
+  assert.match(page, /https:\/\/www\.youtube-nocookie\.com\/embed\/biJZfl92ys0/);
+  assert.match(page, /title="《金瓶梅》影像十部曲 EP08〈紅妝鬥氣〉"/);
+  assert.match(page, /<a class="cycle-watch-link" href="#ep08-film">/);
+  assert.match(page, /<header><span>EP08<\/span><small>第八集已公開 · 取材自第四十、四十一回<\/small><\/header>/);
 });
 
 test('首頁精選作品提供 EP01 導流但不重複嵌入播放器', () => {
