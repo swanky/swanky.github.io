@@ -14,7 +14,11 @@
 .page-oursong .colophon { align-self: stretch; padding: 1rem 0 1rem 1.5rem; }
 .page-oursong .object { display: grid; grid-template-rows: auto 1fr; align-self: stretch; }
 .page-oursong .object a { width: 100%; height: 330px; display: flex; align-items: end; }
-.page-oursong .object img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+.page-oursong .object img { width: 100%; height: 100%; object-fit: contain; object-position: left bottom; }
+.page-oursong .object figcaption span { text-wrap: balance; }
+.page-oursong .arch__note { text-wrap: pretty; }
+.arch__note-item { white-space: nowrap; }
+.page-oursong .foot__brand { color: var(--text); font-weight: 700; }
 .page-oursong .object figcaption { align-content: start; }
 .page-oursong .rise { opacity: 1; transform: none; transition: none; }
 .page-oursong .sec__head { align-items: start; }
@@ -75,8 +79,12 @@
  .page-oursong .stamp { grid-template-columns: 1fr; gap: .3rem; }
  .archive-next__link { grid-template-columns: 1fr; }
  .archive-next__copy { padding: 1.5rem var(--gutter) 2.5rem; }
- .page-oursong .foot__col--index, .page-oursong .foot__col--social { grid-column: span 6; }
+ .page-oursong .foot .grid12 { grid-template-columns: 1fr 1fr; }
+ .page-oursong .foot__col--brand, .page-oursong .foot__copy { grid-column: 1 / -1; }
+ .page-oursong .foot__col--index { grid-column: 1; }
+ .page-oursong .foot__col--social { grid-column: 2; }
  .page-oursong .foot ul { grid-template-columns: 1fr; }
+ .page-oursong .spread__model { flex-basis: 100%; margin-left: 0; }
  .page-oursong .nav__in { gap: .7rem; }
  .page-oursong .nav__links { gap: .9rem; }
  .page-oursong .nav__links a { font-size: .73rem; }
