@@ -26,7 +26,7 @@
         "v": "2021 NFT → 2022 UCX 出道 → 2026 角色檔案"
       }
     ],
-    "onchain_note": "CloneX 有兩組數字：名稱編號（如 #15755）與鏈上 token id（如 9245），兩者不相等。本頁的 OpenSea 連結一律用 token id。"
+    "onchain_note": "CloneX 每一位有兩組號碼：名稱編號（如 #15755）與鏈上編號（如 9245），兩者不同；OpenSea 連結用的是鏈上編號。"
   },
   "brand": {
     "colors": {
@@ -911,7 +911,7 @@
       "date": "2026-07",
       "type": "project",
       "title": "Cyber Tarot：78 張塔羅牌",
-      "group": "從攝影、海報到塔羅牌",
+      "group": "平面作品：塔羅牌、海報、攝影",
       "meta": null,
       "desc": "以 Bunny 為主體重新設計的完整塔羅牌組。",
       "url": "https://swanky.github.io/tarot/decks/",
@@ -922,7 +922,7 @@
       "date": "2022-12",
       "type": "image",
       "title": "UCX 團體海報",
-      "group": "從攝影、海報到塔羅牌",
+      "group": "平面作品：塔羅牌、海報、攝影",
       "meta": "11 位成員",
       "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一位 CloneX 均已取得其持有者授權。",
       "url": null,
@@ -946,8 +946,8 @@
       "fit": "cover-bottom",
       "src": "wearables/dunk-genesis-angel.webp",
       "thumb": "wearables/dunk-genesis-angel_400.webp",
-      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS — Angel",
-      "desc": "金色重裝甲，鞋跟金色翼狀鰭片，中段藍天白雲印花",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS",
+      "desc": "Angel · 金色重裝甲，鞋跟金色翼狀鰭片，中段藍天白雲印花",
       "opensea": null
     },
     {
@@ -955,24 +955,24 @@
       "fit": "contain",
       "src": "wearables/dunk-genesis-1560.webp",
       "thumb": "wearables/dunk-genesis-1560_400.webp",
-      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS #1560",
-      "desc": "銀灰裝甲板，發光青綠側標",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS",
+      "desc": "#1560 · 銀灰裝甲板，發光青綠側標",
       "opensea": "https://opensea.io/item/ethereum/0xf661d58cfe893993b11d53d11148c4650590c692/1560"
     },
     {
       "slug": "af1-angel-34721",
       "src": "wearables/af1-angel-34721.webp",
       "thumb": "wearables/af1-angel-34721_400.webp",
-      "title": "RTFKT × Nike Air Force 1 — Angel #34721",
-      "desc": "白＋米色麂皮，金色閃電狀側標，可拆金色羽翼",
+      "title": "RTFKT × Nike Air Force 1",
+      "desc": "Angel #34721 · 白＋米色麂皮，金色閃電狀側標，可拆金色羽翼",
       "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34721"
     },
     {
       "slug": "af1-human-34720",
       "src": "wearables/af1-human-34720.webp",
       "thumb": "wearables/af1-human-34720_400.webp",
-      "title": "RTFKT × Nike Air Force 1 — Human #34720",
-      "desc": "淡粉鞋身，亮藍閃電狀側標",
+      "title": "RTFKT × Nike Air Force 1",
+      "desc": "Human #34720 · 淡粉鞋身，亮藍閃電狀側標",
       "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34720"
     }
   ],

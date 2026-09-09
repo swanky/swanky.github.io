@@ -428,10 +428,10 @@ button { font: inherit; }
 	:root { --s6: 3.6rem; --nav-h: 54px; --inset-drop: 96px; }
 	/* 手機只留主 CTA；回本頁靠左上品牌標，其餘連結在頁尾 */
 	/* 手機導覽：不再藏項目，改可橫滑＋右緣漸淡（padding-right 讓最後一項滑到底時完整） */
-	.nav__links { overflow-x: auto; scrollbar-width: none; padding-right: 28px; mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+	.nav__links { overflow-x: auto; scrollbar-width: none; padding-right: 64px; mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); }
 	.nav__links::-webkit-scrollbar { display: none; }
 	/* 所有橫滑列：右緣漸淡當「還有內容」提示，露邊被切的圖說不再像溢出 */
-	#clonex-grid.is-lineup, .coll--row, .coll--strip { mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); padding-right: 40px; }
+	#clonex-grid.is-lineup, .coll--row, .coll--strip { mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); padding-right: 64px; }
 	.nav__links { gap: .9rem; }
 	.nav__links a { font-size: .78rem; }
 	.nav__brand img { height: 17px; }

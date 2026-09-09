@@ -30,7 +30,8 @@
 .page-oursong .rise { opacity: 1; transform: none; transition: none; }
 .page-oursong .sec__head { align-items: start; }
 .page-oursong .tri__notes { margin-top: 2rem; }
-.series__toolbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.2rem; }
+/* 「左右翻閱」只在手機輪播時才成立，桌機三欄全可見就不顯示 */
+.series__toolbar { display: none; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.2rem; }
 .series__toolbar p { color: var(--mute); margin: 0; font-size: .84rem; text-wrap: balance; }
 .page-oursong .pair { align-items: start; gap: .5rem 8px; }
 .page-oursong .pair__cover { background: none; padding: 0; }
@@ -73,7 +74,10 @@
  .page-oursong .archive-start { grid-row: 5; justify-self: start; margin-bottom: 1.75rem; }
  .page-oursong .facts { grid-row: 6; }
  .page-oursong .stamp { grid-row: 7; }
- .page-oursong .tri { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 40px .5rem 0; margin-right: calc(-1 * var(--gutter)); scrollbar-width: thin; mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+ .series__toolbar { display: flex; }
+ .arch__sep { display: none; }
+ .arch__note-item { display: block; }
+ .page-oursong .tri { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 64px .5rem 0; margin-right: calc(-1 * var(--gutter)); scrollbar-width: thin; mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); }
  .page-oursong .tri__item { flex: 0 0 80%; scroll-snap-align: start; min-width: 0; }
  .page-oursong .tri__item figcaption { font-size: .82rem; }
  .page-oursong .tri__notes { gap: 1.5rem; }

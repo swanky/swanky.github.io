@@ -35,7 +35,9 @@
 /* 成員卡是唯一入口：收合的檔案不顯示 summary，避免名單出現兩次；打開的才有邊框與「收合檔案」列 */
 .mb:not([open]) > summary { display: none; }
 .mb[open] { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 1.5rem; }
-.mb > summary { display: flex; align-items: baseline; gap: 1.2rem; padding: 1.25rem 0; cursor: pointer; list-style: none; }
+.mb > summary { display: flex; align-items: baseline; justify-content: flex-end; gap: .6rem; padding: 1rem 0; cursor: pointer; list-style: none; }
+/* 檔案標頭只剩「收合檔案 －」：編號與名字內文已有，不重複 */
+.mb__summary-id, .mb__summary-name { display: none; }
 .mb > summary::-webkit-details-marker { display: none; }
 .mb > summary::after { content: '＋'; flex: 0 0 auto; }
 .mb[open] > summary::after { content: '－'; }
@@ -65,7 +67,7 @@
 .fold > summary, .story-fold > summary { cursor: pointer; padding: 1rem 0; text-decoration: underline; text-underline-offset: .3em; }
 .gal { margin-top: 2rem; }
 .gal__lab { margin: 1.5rem 0 .8rem; }
-.gal__grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: .8rem; }
+.gal__grid { display: grid; grid-template-columns: repeat(var(--gal-n, 6),minmax(0,1fr)); gap: .8rem; }
 .gal__item { display: block; min-width: 0; color: inherit; }
 .gal__item img { width: 100%; aspect-ratio: 3 / 4; object-fit: contain; background: var(--paper-2); }
 .gal__cap { display: block; font-size: .78rem; margin-top: .3rem; }
@@ -115,9 +117,10 @@
 .kicks { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1.5rem; margin-top: 2rem; }
 .kick { display: flex; flex-direction: column; }
 .kick__body { display: flex; flex-direction: column; flex: 1; }
-.kick__img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; background: #fff; border: 1px solid var(--line); }
-.kick__img--contain img { object-fit: contain; }
-.kick__img--bottom img { object-position: center bottom; }
+/* 四雙一律完整呈現（contain）；白底渲染圖上方大片空白用 cover-bottom 裁掉，鞋不受影響 */
+.kick__img img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; object-position: center; background: #fff; border: 1px solid var(--line); }
+.kick__img--bottom img { object-fit: cover; object-position: center bottom; }
+.pfp__note { margin-top: .6rem; font-size: .78rem; }
 .kicks__note { margin-top: 1.5rem; font-size: .9rem; color: var(--text-2); }
 .kicks__note a { color: var(--text); text-decoration: underline; text-underline-offset: .25em; }
 .kick__title { font-family: var(--sans); font-size: 1rem; margin: 1rem 0 .5rem; }
@@ -150,7 +153,7 @@
  .hero__logo { width: 120px; }
  .lineup { gap: .65rem; }
  .lineup__meta strong, .lineup__person--lead strong { font-size: 1rem; }
- .gal__grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+ .gal__grid { grid-template-columns: repeat(var(--gal-m, 4),minmax(0,1fr)); }
 }
 @media (max-width: 760px) {
  .ucx-cover { grid-template-columns: 1fr; }
@@ -166,20 +169,16 @@
  .ucx-cover__actions .btn, .ucx-cover__actions .more { font-size: .92rem; }
  .rail__lab { display: none; }
  .rail__list { gap: 1.2rem; }
- .lineup { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin-right: calc(-1 * var(--gutter)); padding: 0 40px .6rem 0; gap: 1rem; scrollbar-width: thin; mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+ .lineup { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin-right: calc(-1 * var(--gutter)); padding: 0 40px .6rem 0; gap: 1rem; scrollbar-width: thin; mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); }
  .lineup__person { flex: 0 0 43%; scroll-snap-align: start; }
  .lineup__image { height: 280px; }
  .br-m { display: inline; }
  .page-ucx .nav__in { gap: .7rem; }
  .page-ucx .nav__links { gap: .9rem; }
  .page-ucx .nav__links a { font-size: .73rem; }
- .mb > summary { gap: .6rem; flex-wrap: wrap; }
- .mb__summary-name { font-size: 1.1rem; }
- .mb__summary-action { order: 2; flex-basis: 100%; margin-left: 4.5rem; }
- .mb > summary::after { margin-left: auto; }
  .mb__in { grid-template-columns: 1fr; gap: 1.5rem; }
  .pfp { max-width: 260px; }
- .gal__grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; }
+ .gal__grid { grid-template-columns: repeat(var(--gal-m, 3),minmax(0,1fr)); gap: .6rem; }
  .works { grid-template-columns: 1fr; gap: 2.5rem; }
  .work--video, .work--archive { grid-column: 1; }
  .work--video .work__body { display: block; }

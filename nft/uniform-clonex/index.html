@@ -171,7 +171,6 @@
 				<li><a href="../">NFT 首頁</a></li>
 				<li><a href="../oursong/">NFT 作品</a></li>
 				<li><a href="../collection/">收藏展</a></li>
-				<li><a href="./">Uniform CloneX</a></li>
 				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
 				<li><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">@ucx_tw</a></li>
 				<li><a href="../../">Swanky Studio</a></li>
@@ -190,6 +189,7 @@
 		"use strict";
 
 		var DATA_URL   = "../assets/data/ucx.json";
+		var onchainNote = "";
 		var ASSET_BASE = "../assets/images/ucx/";
 
 		function el(id) { return document.getElementById(id); }
@@ -228,8 +228,11 @@
 			[["cartoon", "卡通風格"], ["photoreal", "擬真風格"]].forEach(function (pair) {
 				var items = (m.gallery && m.gallery[pair[0]]) || [];
 				if (!items.length) { return; }
+				/* 欄數照張數算：7 張桌機 7 欄、手機 4＋3，不留單張孤兒格 */
+				var gn = items.length <= 7 ? items.length : 6;
+				var gm = items.length % 3 === 0 ? 3 : (items.length % 4 === 0 || items.length === 7 ? 4 : 3);
 				out += '<p class="gal__lab mono">' + esc(pair[1]) + " · " + items.length + " 張</p>" +
-					'<div class="gal__grid">';
+					'<div class="gal__grid" style="--gal-n:' + gn + ';--gal-m:' + gm + '">';
 				items.forEach(function (g) {
 					out += '<a class="gal__item glightbox" href="' + esc(asset(g.src)) +
 						'" data-gallery="ucx-' + esc(m.id) + "-" + esc(pair[0]) +
@@ -266,7 +269,7 @@
 			if (m.opensea) {
 				h += '<a class="oslink" href="' + esc(m.opensea) + '" target="_blank" rel="noopener noreferrer">OpenSea &nearr;</a>';
 			}
-			h += "</figcaption></figure></div>";
+			h += "</figcaption></figure>" + (onchainNote ? '<p class="note pfp__note">' + esc(onchainNote) + "</p>" : "") + "</div>";
 
 			/* 右欄：文案、規格、官方 DNA 原句 */
 			h += "<div>" +
@@ -276,9 +279,9 @@
 				'<div class="prose">' + paras(m.bio) + "</div>";
 			if (m.note) { h += '<p class="note">' + esc(m.note) + "</p>"; }
 			if (m.dna_official) {
-				h += '<div class="dna"><span class="dna__lab">DNA · ' + esc(m.dna) + "</span>" +
+				h += '<div class="dna"><span class="dna__lab">DNA（官方設定的族別）· ' + esc(m.dna) + "</span>" +
 					'<p class="dna__q">&ldquo;' + esc(m.dna_official) + '&rdquo;</p>' +
-					'<p class="dna__src">RTFKT 官方 2021-12 pre-reveal 推文原句</p></div>';
+					'<p class="dna__src">RTFKT 官方 2021 年 12 月公開前的推文原句</p></div>';
 			}
 			h += compact
 				? '<details class="fold"><summary>角色設定表</summary>' + specsHTML(m.specs) + "</details>"
@@ -290,6 +293,7 @@
 
 		function render(d) {
 			var g = d.group || {};
+			onchainNote = g.onchain_note || "";
 			el("ucx-name").textContent = g.name || "Uniform CloneX";
 			el("ucx-tag").textContent  = g.tagline || "";
 			el("ucx-lead").textContent = g.lead || "";
