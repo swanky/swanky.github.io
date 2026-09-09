@@ -6,15 +6,22 @@
 .page-oursong .hero--arch__fig img { aspect-ratio: 4 / 5; height: 100%; object-fit: cover; }
 .page-oursong .hero__lead { font-size: 1rem; margin-bottom: 1.5rem; }
 .archive-start { margin-bottom: 2rem; }
-.page-oursong .stamp { font-size: .8rem; gap: .8rem; }
+.page-oursong .stamp { font-size: .8rem; gap: .8rem; margin-top: 0; border-top: 0; padding-top: .6rem; }
 .page-oursong .pairs { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2.5rem 3rem; }
 .archive-note { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,2fr); gap: 3rem; padding: 1.8rem 0; border-top: 1px solid rgba(255,255,255,.28); border-bottom: 1px solid rgba(255,255,255,.28); color: var(--on-ink-2); }
 .archive-note p { margin: 0; max-width: 35em; }
 .archive-note__label { font-family: var(--serif); font-size: 1.5rem; color: #fff; }
 .page-oursong .colophon { align-self: stretch; padding: 1rem 0 1rem 1.5rem; }
 .page-oursong .object { display: grid; grid-template-rows: auto 1fr; align-self: stretch; }
-.page-oursong .object a { width: 100%; height: 330px; display: flex; align-items: end; }
-.page-oursong .object img { width: 100%; height: 100%; object-fit: contain; object-position: left bottom; }
+/* 周邊物件：四個等尺寸襯框，物件置中、圖說對齊框左緣（框是視覺錨，不是圖） */
+.page-oursong .object a { width: 100%; height: 330px; display: flex; align-items: center; justify-content: center; padding: 1rem; box-sizing: border-box; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04); }
+.page-oursong .object img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+/* 06 主打：與成對格同一套文法放大——左卡面 3:5、右內容 1:1，3fr/5fr 讓兩者等高、頂緣對齊 */
+.page-oursong .spread { grid-template-columns: minmax(0,3fr) minmax(0,5fr); gap: .5rem 8px; align-items: start; }
+.page-oursong .spread__cover { padding: 0; background: none; align-self: start; }
+.page-oursong .spread__cover img { aspect-ratio: 3 / 5; box-sizing: border-box; border: 5px solid var(--paper); object-fit: contain; background: var(--paper); }
+.page-oursong .spread__content { background: none; }
+.page-oursong .spread__content img { aspect-ratio: 1; object-fit: cover; object-position: center; }
 .page-oursong .object figcaption span { text-wrap: balance; }
 .page-oursong .arch__note { text-wrap: pretty; }
 .arch__note-item { white-space: nowrap; }
@@ -24,7 +31,7 @@
 .page-oursong .sec__head { align-items: start; }
 .page-oursong .tri__notes { margin-top: 2rem; }
 .series__toolbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.2rem; }
-.series__toolbar p { color: var(--mute); margin: 0; font-size: .84rem; }
+.series__toolbar p { color: var(--mute); margin: 0; font-size: .84rem; text-wrap: balance; }
 .page-oursong .pair { align-items: start; gap: .5rem 8px; }
 .page-oursong .pair__cover { background: none; padding: 0; }
 .page-oursong .pair__content { background: none; }
@@ -39,7 +46,7 @@
 .exhibit-controls button:disabled { opacity: .3; cursor: default; }
 .exhibit-controls button:not(:disabled):hover { color: var(--red-ink); }
 .archive-next { background: var(--ink); }
-.archive-next__link { display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: var(--maxw); margin: 0 auto; color: var(--on-ink); }
+.archive-next__link { display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); color: var(--on-ink); }
 .archive-next__link img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; }
 .archive-next__copy { padding: 2.5rem; }
 .archive-next__copy p { font-size: .84rem; color: var(--on-ink-2); }
@@ -66,7 +73,7 @@
  .page-oursong .archive-start { grid-row: 5; justify-self: start; margin-bottom: 1.75rem; }
  .page-oursong .facts { grid-row: 6; }
  .page-oursong .stamp { grid-row: 7; }
- .page-oursong .tri { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--gutter) .5rem 0; margin-right: calc(-1 * var(--gutter)); scrollbar-width: thin; }
+ .page-oursong .tri { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 40px .5rem 0; margin-right: calc(-1 * var(--gutter)); scrollbar-width: thin; mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
  .page-oursong .tri__item { flex: 0 0 80%; scroll-snap-align: start; min-width: 0; }
  .page-oursong .tri__item figcaption { font-size: .82rem; }
  .page-oursong .tri__notes { gap: 1.5rem; }
@@ -77,7 +84,9 @@
  .page-oursong .colophon { padding: 1.5rem 0 0; }
  .page-oursong .object a { height: 230px; }
  .page-oursong .stamp { grid-template-columns: 1fr; gap: .3rem; }
- .archive-next__link { grid-template-columns: 1fr; }
+ .archive-next__link { grid-template-columns: 1fr; padding: 0; }
+ .page-oursong .spread { grid-template-columns: minmax(0,3fr) minmax(0,5fr); }
+ .page-oursong .spread__cover { width: auto; }
  .archive-next__copy { padding: 1.5rem var(--gutter) 2.5rem; }
  .page-oursong .foot .grid12 { grid-template-columns: 1fr 1fr; }
  .page-oursong .foot__col--brand, .page-oursong .foot__copy { grid-column: 1 / -1; }
@@ -93,6 +102,5 @@
  .page-oursong .nav__in { padding-inline: 16px; gap: .75rem; }
  .page-oursong .nav__links { gap: .85rem; }
  .page-oursong .nav__links a { font-size: .76rem; }
- .page-oursong .nav__links > li:first-child { display: none; }
  .page-oursong .nav__brand img { height: 16px; }
 }

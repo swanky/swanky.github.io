@@ -42,10 +42,10 @@
 			</a>
 			<ul class="nav__links">
 				<li><a href="../">NFT 首頁</a></li>
-				<li class="is-here"><a href="./" aria-current="page">Uniform CloneX</a></li>
 				<li><a href="../oursong/">NFT 作品</a></li>
 				<li><a href="../collection/">收藏展</a></li>
-				<li class="cta nav__wide"><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">追蹤 @ucx_tw</a></li>
+				<li class="is-here"><a href="./" aria-current="page">Uniform CloneX</a></li>
+				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -96,11 +96,11 @@
 	<!-- ================= 正團 ================= -->
 	<section class="sec sec--ink" id="members">
 		<div class="wrap">
-			<div class="grid12 sec__head"><h2 class="h2"><span class="no">成員</span>同一套制服，各自的選擇</h2><p class="sec__lead">三位站在台前，兩位推動幕後。點選人物，閱讀她們與他的故事。</p></div>
+			<div class="grid12 sec__head"><h2 class="h2"><span class="no">成員</span>同一套制服，各自的選擇</h2><p class="sec__lead">三位站在台前，兩位推動幕後。</p></div>
 			<ul class="lineup" id="ucx-member-idx" aria-label="五位成員，可左右捲動" tabindex="0"></ul>
 			<div class="lineup__toolbar"><p class="lineup__hint">點選人物，打開角色故事。</p><div class="exhibit-controls" data-scroll-for="ucx-member-idx" hidden><button type="button" data-step="-1" aria-label="查看前面的成員">←</button><button type="button" data-step="1" aria-label="查看後面的成員">→</button></div></div><h3 class="profiles__title">三位正團的故事</h3>
 			<div id="ucx-member-profiles"></div>
-			<div class="crew-profiles" id="crew"><h3 class="profiles__title">兩位幕後，讓團體走上舞台</h3><div id="ucx-crew-profiles"></div></div>
+			<div class="crew-profiles" id="crew"><div id="ucx-crew-profiles"></div></div>
 		</div>
 	</section>
 
@@ -123,9 +123,10 @@
 	<!-- ================= Collection ================= -->
 	<section class="sec" id="collection">
 		<div class="wrap">
-			<h2 class="h2 rise"><span class="no">服裝收藏</span>從收藏走進角色的衣櫃</h2>
-			<p class="works__intro rise">成員腳上的鞋款來自這幾雙持有的 RTFKT NFT。</p>
+			<h2 class="h2 rise"><span class="no">鞋款收藏</span>從收藏走進角色的衣櫃</h2>
+			<p class="works__intro rise">成員腳上的鞋，都是實際持有的 RTFKT 虛擬鞋款。</p>
 			<div class="kicks rise" id="ucx-kicks"></div>
+			<p class="kicks__note rise">四雙都收在<a href="../collection/#brands">收藏展的潮流品牌區</a>，可以從那裡點進 OpenSea 看原件。</p>
 		</div>
 	</section>
 
@@ -167,9 +168,11 @@
 		<div class="wrap foot__in">
 			<div class="foot__brand">Swanky NFT</div>
 			<ul class="foot__links">
-				<li><a href="../">NFT 首頁</a></li><li><a href="../collection/">收藏展</a></li>
+				<li><a href="../">NFT 首頁</a></li>
 				<li><a href="../oursong/">NFT 作品</a></li>
-				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">線上展間</a></li>
+				<li><a href="../collection/">收藏展</a></li>
+				<li><a href="./">Uniform CloneX</a></li>
+				<li><a href="https://oncyber.io/swanky-exo-pod" target="_blank" rel="noopener noreferrer">3D 線上展間</a></li>
 				<li><a href="https://x.com/ucx_tw" target="_blank" rel="noopener noreferrer">@ucx_tw</a></li>
 				<li><a href="../../">Swanky Studio</a></li>
 			</ul>
@@ -251,7 +254,7 @@
 
 		function profileHTML(m, compact) {
 			var h = '<details class="mb' + (compact ? ' mb--sm' : '') + '" id="clonex-' + esc(m.id) + '">' +
-				'<summary><span class="mb__summary-id">#' + esc(m.id) + '</span><span class="mb__summary-name">' + esc(m.name || m.role) + '</span><span class="mb__summary-action">角色故事與圖集</span></summary><div class="mb__content"><div class="mb__in">';
+				'<summary><span class="mb__summary-id">#' + esc(m.id) + '</span><span class="mb__summary-name">' + esc(m.name || m.role) + '</span><span class="mb__summary-action">收合檔案</span></summary><div class="mb__content"><div class="mb__in">';
 
 			/* 左欄：官方原貌＋鏈上出處 */
 			h += '<div><figure class="pfp">' +
@@ -315,6 +318,8 @@
 			el("ucx-member-idx").innerHTML = ms.concat(cw).map(function (m, i) { return idxHTML(m, i); }).join("");
 
 			el("ucx-member-profiles").innerHTML = ms.map(function (m) { return profileHTML(m, false); }).join("");
+			var firstProfile = document.querySelector("#ucx-member-profiles details.mb");
+			if (firstProfile) { firstProfile.open = true; }
 			el("ucx-crew-profiles").innerHTML   = cw.map(function (m) { return profileHTML(m, true); }).join("");
 
 			el("ucx-story").innerHTML = (d.story || []).map(function (c) {
@@ -340,7 +345,7 @@
 					: esc(w.title);
 				var imageLink = w.url || (w.type === "image" && w.image ? asset(w.image) : "");
 				var lightbox = !w.url && imageLink;
-				var h = (w.type !== "video" && (index === 0 || works[index - 1].type === "video") ? '<p class="works__archive-label">從攝影、海報到塔羅牌</p>' : "") + '<article class="work ' + (w.type === "video" ? "work--video" + (index === 0 ? " work--feature" : "") : "work--archive") + '">';
+				var h = (w.group && (index === 0 || works[index - 1].group !== w.group) ? '<p class="works__label">' + esc(w.group) + "</p>" : "") + '<article class="work ' + (w.type === "video" ? "work--video" + (w.feature ? " work--feature" : "") : "work--archive") + '">';
 				if (w.image) {
 					h += (imageLink ? '<a href="' + esc(imageLink) + '"' + ext(imageLink) + (lightbox ? ' data-gallery="ucx-works" data-title="' + esc(w.title) + '"' : '') + ' aria-label="' + esc((w.type === "video" ? "觀看影片：" : "查看作品：") + w.title) + '"' : '<div') + ' class="work__img' + (lightbox ? ' glightbox' : '') + (w.fit === "contain" ? " work__img--contain" : "") + '">' +
 						'<img loading="lazy" src="' + esc(asset(w.image)) + '" alt="' + esc(w.title) + '">' +
@@ -360,14 +365,10 @@
 			}).join("");
 
 			el("ucx-kicks").innerHTML = (d.collection || []).map(function (k) {
-				var h = '<article class="kick"><div class="kick__img">' +
+				var h = '<article class="kick"><div class="kick__img' + (k.fit === "contain" ? " kick__img--contain" : (k.fit === "cover-bottom" ? " kick__img--bottom" : "")) + '">' +
 					'<img loading="lazy" src="' + esc(asset(k.src)) + '" alt="' + esc(k.title) + '"></div>' +
 					'<div class="kick__body"><h3 class="kick__title">' + esc(k.title) + "</h3>" +
 					'<p class="kick__desc">' + esc(k.desc) + "</p>";
-				if (k.opensea) {
-					h += '<a class="oslink" href="' + esc(k.opensea) +
-						'" target="_blank" rel="noopener noreferrer">OpenSea &nearr;</a>';
-				}
 				return h + "</div></article>";
 			}).join("");
 
@@ -442,6 +443,7 @@
 			if (!link) { return; }
 			var target = document.getElementById(link.hash.slice(1));
 			if (target) {
+				[].forEach.call(document.querySelectorAll("details.mb[open]"), function (d) { if (d !== target) { d.open = false; } });
 				target.open = true;
 				requestAnimationFrame(function () { target.querySelector('summary').focus({preventScroll:true}); target.scrollIntoView(); });
 			}

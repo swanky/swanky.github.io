@@ -877,6 +877,7 @@
       "date": "2026-08",
       "type": "video",
       "title": "REROLL（擬真版）",
+      "group": "01–02 · REROLL：同一支影片，兩種畫風",
       "meta": "93 秒",
       "desc": "同一個故事的兩種視覺語言之一。一間可以重抽外型的店。",
       "url": "https://youtu.be/9CxNWxmb5qY",
@@ -887,6 +888,7 @@
       "date": "2026-08",
       "type": "video",
       "title": "REROLL（卡通版）",
+      "group": "01–02 · REROLL：同一支影片，兩種畫風",
       "meta": "93 秒",
       "desc": "同一個 REROLL 故事，手繪質感的版本。",
       "url": "https://youtu.be/WO2lMCWzVNQ",
@@ -897,6 +899,8 @@
       "date": "2026-08",
       "type": "video",
       "title": "BUNNY AWAKENS",
+      "group": "03 · 壓軸",
+      "feature": true,
       "meta": "30 秒",
       "desc": "把 CloneX #15755 從一張頭像變成一個開始呼吸的角色。",
       "url": "https://youtu.be/lXnwBJBcbXY",
@@ -907,6 +911,7 @@
       "date": "2026-07",
       "type": "project",
       "title": "Cyber Tarot：78 張塔羅牌",
+      "group": "從攝影、海報到塔羅牌",
       "meta": null,
       "desc": "以 Bunny 為主體重新設計的完整塔羅牌組。",
       "url": "https://swanky.github.io/tarot/decks/",
@@ -917,6 +922,7 @@
       "date": "2022-12",
       "type": "image",
       "title": "UCX 團體海報",
+      "group": "從攝影、海報到塔羅牌",
       "meta": "11 位成員",
       "desc": "UCX 團體海報，紅底直式，底部標註各成員編號。當時另有青綠色宣傳酷卡，標語「拍照打卡送海報」指的就是這張。畫面中每一位 CloneX 均已取得其持有者授權。",
       "url": null,
@@ -926,7 +932,7 @@
     {
       "date": "2021",
       "type": "project",
-      "title": "制服女孩與加密女孩 NFT",
+      "title": "制服女孩與加⁠密女孩 NFT",
       "meta": null,
       "desc": "十年制服女孩攝影系列的鏈上第一代。收益與模特兒對半分潤。",
       "url": "../oursong/",
@@ -937,17 +943,19 @@
   "collection": [
     {
       "slug": "dunk-genesis-angel",
+      "fit": "cover-bottom",
       "src": "wearables/dunk-genesis-angel.webp",
       "thumb": "wearables/dunk-genesis-angel_400.webp",
-      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS — Angel",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS — Angel",
       "desc": "金色重裝甲，鞋跟金色翼狀鰭片，中段藍天白雲印花",
       "opensea": null
     },
     {
       "slug": "dunk-genesis-1560",
+      "fit": "contain",
       "src": "wearables/dunk-genesis-1560.webp",
       "thumb": "wearables/dunk-genesis-1560_400.webp",
-      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS #1560",
+      "title": "RTFKT × Nike Dunk Genesis CRYPTOKICKS #1560",
       "desc": "銀灰裝甲板，發光青綠側標",
       "opensea": "https://opensea.io/item/ethereum/0xf661d58cfe893993b11d53d11148c4650590c692/1560"
     },
@@ -955,7 +963,7 @@
       "slug": "af1-angel-34721",
       "src": "wearables/af1-angel-34721.webp",
       "thumb": "wearables/af1-angel-34721_400.webp",
-      "title": "RTFKT × Nike Air Force 1 — Angel #34721",
+      "title": "RTFKT × Nike Air Force 1 — Angel #34721",
       "desc": "白＋米色麂皮，金色閃電狀側標，可拆金色羽翼",
       "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34721"
     },
@@ -963,7 +971,7 @@
       "slug": "af1-human-34720",
       "src": "wearables/af1-human-34720.webp",
       "thumb": "wearables/af1-human-34720_400.webp",
-      "title": "RTFKT × Nike Air Force 1 — Human #34720",
+      "title": "RTFKT × Nike Air Force 1 — Human #34720",
       "desc": "淡粉鞋身，亮藍閃電狀側標",
       "opensea": "https://opensea.io/item/ethereum/0x52a043ec29fbb9a1b142b8913a76c0bc592d0849/34720"
     }
