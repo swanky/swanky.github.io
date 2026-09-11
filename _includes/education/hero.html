@@ -5,6 +5,7 @@
       {% if include.eyebrow %}<span class="edu-eyebrow">{{ include.eyebrow }}</span>{% endif %}
       <h1>{{ include.title }}</h1>
       <p class="edu-hero__lead">{{ include.lead }}</p>
+      {% if include.trust %}<p class="edu-hero__trust">{{ include.trust }}</p>{% endif %}
       {% if include.primary_href or include.secondary_href %}
       <div class="edu-hero__actions">
         {% if include.primary_href %}<a class="edu-btn" href="{{ include.primary_href }}"{% if include.analytics %} onclick="{{ include.analytics }}"{% endif %}>{{ include.primary_label }}</a>{% endif %}

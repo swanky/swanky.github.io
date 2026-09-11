@@ -1,10 +1,20 @@
+{%- comment -%}
+  卡片縮圖：封面原圖多為 1600px 以上、平均 200KB＋，列表頁一次載 60 張太重。
+  tools/make-cover-thumbs.ps1 會為每張 .jpg/.jpeg 封面產生同名 -card.jpg（640px 寬）；
+  這裡「有縮圖就用、沒有就退回原圖」，新文章忘了跑腳本也不會壞，只是重一點。
+  card_thumbs 每次 include 只算一遍（不是每張卡一遍）。
+{%- endcomment -%}
+{% assign card_thumbs = site.static_files | where_exp: "f", "f.path contains '-card.jpg'" | map: "path" %}
 {% for article in include.articles %}
 <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 100 }}">
   <div class="card">
     {% if include.number %}<span class="card-step">{{ include.number }}</span>{% endif %}
     {% if article.cover_image %}
+    {% assign card_src = article.cover_image %}
+    {% assign card_thumb = card_src | replace: '.jpg', '-card.jpg' | replace: '.jpeg', '-card.jpg' | replace: '.JPG', '-card.jpg' %}
+    {% if card_thumb != card_src and card_thumbs contains card_thumb %}{% assign card_src = card_thumb %}{% endif %}
     <div class="card-img article-card-img">
-      <a href="{{ article.url | relative_url }}"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy"></a>
+      <a href="{{ article.url | relative_url }}"><img src="{{ card_src | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy" decoding="async"></a>
     </div>
     {% endif %}
     <div class="card-body">

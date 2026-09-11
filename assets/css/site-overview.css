@@ -286,3 +286,32 @@ body.site-overview-open {
     transition: none;
   }
 }
+
+/* 2026-09-11：合作入口提到頂欄；手機面板列高加大、頂欄改不透明（原半透明會透出底下文字） */
+.site-overview__bar { background: #232020; }
+.site-overview__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 8px 16px;
+  color: #111;
+  background: #E5A300;
+  border-radius: 50px;
+  font: 700 12px/1 "Open Sans", sans-serif;
+  letter-spacing: .08em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-overview__contact:hover,
+.site-overview__contact:focus-visible { background: #F5C53B; color: #111; }
+.site-overview__contact:focus-visible { outline: 3px solid #F5C53B; outline-offset: 3px; }
+@media (max-width: 700px) {
+  .site-overview__links { gap: 2px 18px; }
+  .site-overview__links a { padding: 6px 0; line-height: 1.6; }
+}
+/* 驗收回饋：手機頂欄品牌字不換行；分類標題連結加大可點高度 */
+@media (max-width: 700px) {
+  .site-overview__brand { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 11px; letter-spacing: .1em; }
+  .site-overview__grid h3 a { display: inline-block; padding: 8px 0; }
+}

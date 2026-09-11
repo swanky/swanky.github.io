@@ -146,7 +146,7 @@
 .tech-btn--gold:hover { background: #c88e00; color: #15120a; }
 .tech-btn--light { background: #fff; color: var(--tech-ink); }
 .tech-btn--light:hover { background: #e9eef7; color: var(--tech-ink); }
-.tech-btn--ghost { border-color: rgba(255,255,255,.28); color: #fff; background: rgba(255,255,255,.06); }
+.tech-btn--ghost { border-color: rgba(255,255,255,.55); color: #fff; background: rgba(255,255,255,.12); }
 .tech-btn--ghost:hover { border-color: rgba(255,255,255,.55); background: rgba(255,255,255,.1); color: #fff; }
 .tech-btn--outline { border-color: var(--tech-line); color: var(--tech-ink); background: transparent; }
 .tech-btn--outline:hover { border-color: var(--tech-blue); color: var(--tech-blue); }

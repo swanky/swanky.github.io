@@ -36,6 +36,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 
 - 文章放 `_posts/YYYY-MM-DD-slug.md`，`layout: article`；`categories: [technical]`（技術顧問）、`[claude-code]`（AI學習分享）或 `[photography]`（攝影作品）。
 - `cover_image` 一律 `.jpg`（PNG 來源先轉 JPEG）；列表卡片會把封面裁成 16:9，選圖／裁圖要預留。
+- 新增文章後跑一次 `pwsh -File tools/make-cover-thumbs.ps1`：為每張 .jpg／.jpeg 封面產生同名 `-card.jpg`（640px 寬）給列表卡片用；可重跑、只補缺的。卡片模板「有縮圖就用、沒有就退回原圖」，忘了跑不會壞，只是列表頁變重（2026-09-11 實測 63 張原圖一頁 4MB）。
 - 同步自 LinkedIn／X 的文章：設 `hero_image: true`；`source_url` 填 LinkedIn（一律 `www.` 子網域）、`source_url_x` 填 X。layout 會自動渲染單／雙來源連結。
 - Bootstrap Icons：使用前先確認 glyph class 存在於 vendored CSS（缺字渲染成空方塊——曾是正式站 bug）。
 - `hero_image: true` 只在封面是「設計過的 banner」時加；隨手圖或無封面就省略（單篇頁 banner 預設不顯示）。

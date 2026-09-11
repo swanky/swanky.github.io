@@ -1279,3 +1279,33 @@ body[data-universe="work"] { --universe-color: var(--gold); }
 
 :focus-visible { outline: 3px solid var(--gold-2); outline-offset: 4px; }
 .act-work :focus-visible, .skip-link:focus-visible, body.nav-on-paper .topbar :focus-visible { outline-color: var(--gold-deep); }
+
+/* 2026-09-11 手機版六幕導覽：原本只剩 6 顆 7px 無字灰點，訪客看不出是導覽也點不到。
+   改成可橫向滑動的文字列（標籤顯示、點縮小為前綴），列高 ≥ 32px 方便點按。 */
+@media (max-width: 720px) {
+  .topbar { gap: .6rem; }
+  .acts-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: .35rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding: 0 .1rem;
+  }
+  .acts-nav::-webkit-scrollbar { display: none; }
+  .acts-nav a {
+    flex: 0 0 auto;
+    min-height: 32px;
+    padding: .3rem .45rem;
+    border-radius: 999px;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    scroll-snap-align: start;
+    opacity: .78;
+  }
+  .acts-nav a.is-active { opacity: 1; background: rgba(255,255,255,.08); }
+  .acts-nav .dot { width: 5px; height: 5px; flex: 0 0 auto; }
+  .acts-nav .dot-label { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+}

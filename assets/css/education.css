@@ -316,3 +316,6 @@
 @media (prefers-reduced-motion: reduce) {
   .education-page *, .education-page *::before, .education-page *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* 2026-09-11 首屏講師信任線（企業內訓：先知道講師是誰） */
+.edu-hero__trust { max-width: 720px; margin: 14px 0 0; color: #6b625a; font-size: .95rem; line-height: 1.7; }

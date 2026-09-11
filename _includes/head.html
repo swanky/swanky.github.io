@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="theme-color" content="#E5A300">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
@@ -24,7 +25,10 @@
 {% elsif page.cover_image %}
 <meta property="og:image" content="{{ page.cover_image | absolute_url }}">
 {% else %}
-<meta property="og:image" content="{{ '/assets/img/About_r.jpg' | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/img/og-default.jpg' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="史旺基 Swanky Hsiao — 得獎攝影師 × 大型電信業技術主管 × Web3 教育者">
 {% endif %}
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:locale" content="zh_TW">
@@ -39,7 +43,7 @@
 {% elsif page.cover_image %}
 <meta name="twitter:image" content="{{ page.cover_image | absolute_url }}">
 {% else %}
-<meta name="twitter:image" content="{{ '/assets/img/About_r.jpg' | absolute_url }}">
+<meta name="twitter:image" content="{{ '/assets/img/og-default.jpg' | absolute_url }}">
 {% endif %}
 <meta name="twitter:site" content="@swanky">
 

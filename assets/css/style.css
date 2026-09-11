@@ -411,7 +411,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   width: 130%;
   height: 95%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-  url("../img/portfolio/33300626336_d82723bf49_k.jpeg") 60% 15% no-repeat;
+  url("../img/hero-home-1600.jpg") 60% 15% no-repeat;
   background-size: cover;
   z-index: 0;
   border-radius: 0 0 50% 50%;
@@ -5232,4 +5232,227 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
   .qimen-cell-sub { display: none; }
   .qimen-tone { font-size: 0.6rem; padding: 1px 5px; }
   .qimen-grid.is-demo::after { font-size: 2rem; }
+}
+
+/*--------------------------------------------------------------
+# 2026-09-11 全站優化：首屏身分、合作入口、無障礙
+--------------------------------------------------------------*/
+/* Skip link：平常收在畫面外，Tab 到才滑進來（鍵盤／讀屏使用者跳過導覽） */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 1100;
+  padding: 10px 18px;
+  border-radius: 0 0 10px 10px;
+  background: #232020;
+  color: #E5A300;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top .2s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #E5A300;
+  outline-offset: 2px;
+}
+main#main { scroll-margin-top: 80px; }
+
+/* 桌機下拉選單：原本只有 :hover，鍵盤 Tab 進去打不開；用 :focus-within 補上。
+   手機（≤991px）走 JS 的 .dropdown-active，不套用，避免焦點一到就自動展開。 */
+@media (min-width: 992px) {
+  .navbar .dropdown:focus-within > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  .navbar .dropdown .dropdown:focus-within > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+}
+
+/* Footer 合作入口：金底深字藥丸（行銷／導流按鈕語言） */
+#footer .footer-contact p a { color: #8B5E00; }
+#footer .footer-cta {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 11px 26px;
+  border-radius: 50px;
+  background: #E5A300;
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  transition: background .3s, transform .3s;
+}
+#footer .footer-cta:hover,
+#footer .footer-cta:focus-visible {
+  background: #C98E00;
+  color: #111;
+  transform: translateY(-1px);
+}
+
+/* 首頁 hero：名字領銜（史旺基 大／Swanky Hsiao 小、金），身分一句、佐證一句、價值一句 */
+#hero .hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #F5C53B;
+  margin: 0 auto 14px;
+  width: auto;
+}
+#hero h1 {
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+#hero h1 span {
+  display: block;
+  margin-top: 8px;
+  font-size: .5em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #F5C53B;
+}
+#hero .hero-identity {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+#hero .hero-proof {
+  font-size: .98rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.88);
+  margin-bottom: 14px;
+}
+#hero .hero-more {
+  display: inline-block;
+  margin-top: 22px;
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  padding-bottom: 2px;
+  transition: color .3s, border-color .3s;
+}
+#hero .hero-more:hover,
+#hero .hero-more:focus-visible {
+  color: #F5C53B;
+  border-color: #F5C53B;
+}
+#hero .hero-more .bi { vertical-align: -2px; }
+
+/* 合作方式區：三張卡之後的直達洽詢行 */
+.services .services-contact-line {
+  text-align: center;
+  margin: 8px 0 26px;
+  color: #555;
+}
+.services .services-contact-line a {
+  color: #8B5E00;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.services .services-contact-line a:hover { color: #E5A300; }
+
+/* 手機：hero 由固定 90vh 改為隨內容長（否則第三顆 CTA 與「先看代表作」會被 overflow:hidden 裁掉） */
+@media (max-width: 767px) {
+  #hero {
+    height: auto;
+    min-height: 90vh;
+    padding: 104px 0 64px;
+  }
+  #hero h1 { font-size: 40px; }
+  #hero .hero-identity { font-size: 1.05rem; }
+  #hero .hero-proof { font-size: .92rem; }
+  #hero p { width: 90%; }
+}
+@media (max-width: 575px) {
+  #hero h1 { font-size: 36px; }
+  #hero .hero-cta { flex-direction: column; align-items: stretch; width: 88%; margin-left: auto; margin-right: auto; }
+  #hero .hero-cta .btn-get-started { text-align: center; }
+}
+
+/* 手機選單底部的合作洽詢（桌機導覽列結構不變、不顯示） */
+.navbar .nav-contact { display: none; }
+.navbar-mobile .nav-contact { display: block; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,.08); }
+.navbar-mobile .nav-contact > a { color: #8B5E00; font-weight: 700; }
+.navbar-mobile .nav-contact > a .bi { margin-right: 4px; }
+/* 手機 hero：獎項佐證那句下移到數據帶（數據帶 caption 已有同句），首屏只留名字／身分／價值／CTA */
+@media (max-width: 575px) {
+  #hero .hero-proof { display: none; }
+}
+/* 他人評語：限制寬度置中，避免長引言橫跨整版 */
+.testimonials .testimonial-item { max-width: 820px; margin: 0 auto; }
+/* 驗收回饋：手機選單洽詢列的圖示被 space-between 推到最左，改靠左排＋間距 */
+.navbar-mobile .nav-contact > a { justify-content: flex-start; gap: 8px; }
+/* hero 三句用 text-wrap: balance 避免句尾孤行（支援的瀏覽器才生效，其餘照舊） */
+#hero .hero-identity, #hero .hero-proof, #hero .hero-value { text-wrap: balance; }
+/* 合作方式卡：內文撐開，四張卡的按鈕對齊底線 */
+.services .icon-box { display: flex; flex-direction: column; }
+.services .icon-box .description { flex: 1 1 auto; }
+/* flex column 預設 stretch 會把 icon 方塊與藥丸按鈕拉成滿寬，全部改回自然寬度靠左 */
+.services .icon-box > .icon,
+.services .icon-box > .svc-eyebrow,
+.services .icon-box > .btn-get-started { align-self: flex-start; }
+/* 桌機導覽列常駐洽詢鈕：金底 header 用深底金字、透明／捲動深底用金底深字；<1200px 隱藏（手機選單另有洽詢項） */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: #232020;
+  color: #E5A300;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.nav-cta:hover,
+.nav-cta:focus-visible { background: #111; color: #F5C53B; transform: translateY(-1px); text-decoration: none; }
+.nav-cta:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
+#header.header-transparent .nav-cta,
+#header.header-scrolled .nav-cta { background: #E5A300; color: #111; }
+#header.header-transparent .nav-cta:hover,
+#header.header-transparent .nav-cta:focus-visible,
+#header.header-scrolled .nav-cta:hover,
+#header.header-scrolled .nav-cta:focus-visible { background: #F5C53B; color: #111; }
+#header.header-transparent .nav-cta:focus-visible,
+#header.header-scrolled .nav-cta:focus-visible { outline-color: #F5C53B; }
+@media (max-width: 1199px) {
+  .nav-cta { display: none; }
+}
+/* .navbar a（display:flex／padding／color:#111）特異性高於 .nav-cta，上面的按鈕樣式會被蓋掉；
+   這裡用 #header .navbar .nav-cta 重申一次。導覽列在 <1400px 已無空位（會換行），該區間隱藏。 */
+#header .navbar .nav-cta {
+  display: inline-flex;
+  justify-content: center;
+  padding: 8px 18px;
+  margin-left: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #E5A300;
+  background: #232020;
+}
+#header .navbar .nav-cta:hover,
+#header .navbar .nav-cta:focus-visible { color: #F5C53B; background: #111; }
+#header.header-transparent .navbar .nav-cta,
+#header.header-scrolled .navbar .nav-cta { color: #111; background: #E5A300; }
+#header.header-transparent .navbar .nav-cta:hover,
+#header.header-transparent .navbar .nav-cta:focus-visible,
+#header.header-scrolled .navbar .nav-cta:hover,
+#header.header-scrolled .navbar .nav-cta:focus-visible { color: #111; background: #F5C53B; }
+@media (max-width: 1399px) {
+  #header .navbar .nav-cta { display: none; }
 }
