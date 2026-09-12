@@ -6887,3 +6887,8 @@ section.testimonials { background: var(--c-cream); }
 }
 .site-overview__links a[aria-current="page"] { color: #F5C53B; font-weight: 700; }
 #footer .footer-nav a[aria-current="page"] { color: #F5C53B; }
+
+/* 深色 CTA 帶裡的白底卡片：tools.css／頁面 extra_css 的 `.tool-cta-dark h3 { color:#fff }` 會把卡片標題也漂白
+   （對比掃描抓到 /qimen/ 與 /tarot/draw/ 白字壓白卡）；用較高特異性把卡片內文字拉回墨色 */
+.tool-cta-dark :is(.qimen-cta-card, .tarot-product-card, .tool-card, .hd-product-card) :is(h2, h3, h4) { color: var(--c-ink); }
+.tool-cta-dark :is(.qimen-cta-card, .tarot-product-card, .tool-card, .hd-product-card) :is(p, li) { color: var(--c-body); }
