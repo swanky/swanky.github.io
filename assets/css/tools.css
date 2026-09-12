@@ -1,0 +1,349 @@
+/*==============================================================
+# tools.css — 自我探索工具頁家族共用層
+# 適用頁（front matter use_tools_css: true）：
+#   /human-design/、/human-design/relationship/、/astrology/、/bazi/、
+#   /bazi/daily/、/iching/、/numerology/、/qimen/、/qimen/tool/
+#
+# 定位：這一層收斂「表單、10px 按鈕、結果卡、隱私／免責／方法說明、
+# FAQ 手風琴、深色 CTA 帶」這些跨頁重複的視覺規則，取代過去每頁
+# extra_css 各自複製一份（2026-07 設計審查點名的 drift 重災區）。
+# 载入順序：style.css → tools.css（見 head.html use_tools_css 旗標），
+# 可用等同特異性覆蓋 style.css 舊「自我探索實驗室／奇門」段落。
+# 頁面 extra_css 只保留「該頁獨有」規則（bodygraph 容器、星盤 SVG、
+# 命式卡、九宮格教育示意等）。
+#
+# 沿用既有 class 名稱（各頁 HTML／JS 產生的結果 DOM 不變，見 AGENTS.md
+# 不得改 assets/js/**）：用「群組選擇器」把同義但拼字不同的既有 class
+# 併成一套規則，而不是重新命名 HTML。
+==============================================================*/
+
+/* ---------- 0. 頁面色彩掛鉤（birth-form.html 等既有元件讀取） ---------- */
+#main {
+  --tool-accent: var(--c-gold);
+  --tool-accent-hover: var(--c-gold-deep);
+  --tool-accent-ring: rgba(229, 163, 0, .16);
+  --tool-heading: var(--c-ink);
+}
+
+/* ---------- 1. Hero：暖金漸層＋細點陣質感層（工具頁不撐屏，首屏留給表單） ---------- */
+.num-hero, .wd-hero, .ich-hero, .astro-hero, .bazi-hero, .qimen-hero, .hd-hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(229, 163, 0, .14), transparent 42%),
+    linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
+  padding: clamp(20px, 4vw, 30px) 0 clamp(16px, 3vw, 22px);
+}
+
+.num-hero::before, .wd-hero::before, .ich-hero::before, .astro-hero::before,
+.bazi-hero::before, .qimen-hero::before, .hd-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .6;
+  background-image:
+    linear-gradient(rgba(180, 140, 40, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 140, 40, .05) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.num-hero > .container, .num-hero > *,
+.wd-hero > .container, .wd-hero > *,
+.ich-hero > .container, .ich-hero > *,
+.astro-hero > .container, .astro-hero > *,
+.bazi-hero > .container, .bazi-hero > *,
+.qimen-hero > .container, .qimen-hero > *,
+.hd-hero > .container, .hd-hero > * { position: relative; z-index: 1; }
+
+.num-hero h1, .wd-hero h1, .ich-hero h1, .astro-hero h1,
+.bazi-hero h1, .qimen-hero h1, .hd-hero h1 {
+  font-size: var(--step-4);
+  font-weight: 600;
+  color: var(--c-ink);
+  margin: 0 0 var(--space-2xs);
+  line-height: 1.2;
+}
+
+.num-hero .lead, .wd-hero .lead, .ich-hero .lead, .astro-hero .lead,
+.bazi-hero .lead, .qimen-hero .lead, .hd-hero .lead {
+  font-size: var(--step-0);
+  color: var(--c-muted);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto var(--space-xs);
+}
+
+.hd-hero .lead { max-width: 46em; margin-left: 0; margin-right: 0; }
+
+.num-section, .wd-section, .ich-section, .astro-section, .bazi-section, .hd-section {
+  padding: clamp(14px, 3vw, 20px) 0 clamp(20px, 4vw, 28px);
+}
+
+.qimen-section { padding: clamp(18px, 3.5vw, 26px) 0 clamp(24px, 4.5vw, 30px); }
+
+@media (max-width: 767px) {
+  .num-hero, .wd-hero, .ich-hero, .astro-hero, .bazi-hero, .qimen-hero, .hd-hero {
+    padding: clamp(12px, 5vw, 18px) 0 clamp(10px, 4vw, 14px);
+  }
+  .num-hero h1, .wd-hero h1, .ich-hero h1, .astro-hero h1,
+  .bazi-hero h1, .qimen-hero h1, .hd-hero h1 { font-size: clamp(1.5rem, 7vw, 1.85rem); }
+  .num-hero .lead, .wd-hero .lead, .ich-hero .lead, .astro-hero .lead,
+  .bazi-hero .lead, .qimen-hero .lead, .hd-hero .lead { font-size: .92rem; line-height: 1.5; margin-bottom: var(--space-2xs); }
+}
+
+/* beta／示意 徽章 pill（誠實紅線標示，文字不動，只統一視覺） */
+.astro-beta, .bazi-beta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1px solid var(--c-line-2); border-radius: var(--r-pill);
+  padding: 5px 15px; font-size: var(--step--1); color: var(--c-gold-deep);
+}
+
+/* ---------- 2. 表單控制項（birth-form.html 共用出生表單＋HD／合盤／易經／靈數的自有表單） ---------- */
+.tool-form-card, .hd-form-card, .ich-form-card, .num-form-card, .qimen-form-card {
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-1);
+}
+
+.tool-form-card h2, .hd-form-card h2, .ich-form-card h2, .num-form-card h2, .qimen-form-card > h2 {
+  font-family: var(--font-display);
+  color: var(--c-ink);
+}
+
+.tool-field > label, .hd-field > label, .num-field > label, .ich-field > label,
+.qimen-form-card label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--c-ink-2);
+}
+
+/* 輸入控制項：44px 觸控高度、10px 圓角、金色 focus ring、accent-color 打勾 */
+.tool-selects select, .tool-form-card input[type=text],
+.hd-selects select, .hd-city-input, #hd-manual-tz,
+.ich-selects select, .ich-selects input, #iching-question,
+.num-field input[type=date],
+.qimen-form-card input, .qimen-form-card select, .qimen-form-card textarea {
+  min-height: 44px;
+  border: 1px solid var(--c-line-2);
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: var(--step--1);
+  color: var(--c-ink-2);
+  background: #fff;
+  transition: border-color var(--dur-1) ease, box-shadow var(--dur-1) ease;
+}
+
+.tool-selects select:focus, .tool-form-card input:focus,
+.hd-selects select:focus, .hd-city-input:focus, #hd-manual-tz:focus,
+.ich-selects select:focus, .ich-selects input:focus, #iching-question:focus,
+.num-field input:focus,
+.qimen-form-card input:focus, .qimen-form-card select:focus, .qimen-form-card textarea:focus {
+  outline: none;
+  border-color: var(--c-gold);
+  box-shadow: 0 0 0 3px var(--tool-accent-ring);
+}
+
+.tool-check input, .hd-check input { accent-color: var(--c-gold); }
+
+@supports (field-sizing: content) {
+  .tool-form-card input[type=text], .hd-city-input { field-sizing: content; }
+}
+
+/* 主要操作鈕：10px 圓角矩形，金底深字，hover 墨底金字（工具語言＝按鈕語言 D1 決策） */
+.tool-compute-btn, .hd-btn-generate, .num-btn, .ich-cast-btn,
+.qimen-form-btn, .wd-dl-btn {
+  min-height: 44px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--r-sm);
+  background: var(--c-gold);
+  color: #111;
+  font-weight: 700;
+  font-size: var(--step-0);
+  cursor: pointer;
+  transition: background-color var(--dur-2) ease, color var(--dur-2) ease, transform var(--dur-2) var(--ease-out);
+}
+
+.tool-compute-btn:hover, .hd-btn-generate:hover, .num-btn:hover, .ich-cast-btn:hover,
+.qimen-form-btn:hover, .wd-dl-btn:hover {
+  background: var(--c-ink);
+  color: var(--c-gold-2);
+}
+
+.tool-compute-btn:focus-visible, .hd-btn-generate:focus-visible, .num-btn:focus-visible,
+.ich-cast-btn:focus-visible, .qimen-form-btn:focus-visible, .wd-dl-btn:focus-visible {
+  outline: 3px solid var(--c-gold);
+  outline-offset: 2px;
+}
+
+/* 次要操作鈕（描邊，結果頁動作列：複製／下載／查看合盤等） */
+.hd-result-actions button, .hd-result-actions a,
+.hd-download-v2 button, .hdc-btn, .bazi-dl-btn {
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--c-gold);
+  background: #fff;
+  color: var(--c-gold-deep);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--dur-2) ease, color var(--dur-2) ease;
+}
+
+.hd-result-actions button:hover, .hd-result-actions a:hover,
+.hd-download-v2 button:hover, .hdc-btn:hover, .bazi-dl-btn:hover {
+  background: var(--c-gold);
+  color: #111;
+}
+
+.hd-result-actions button.is-primary, .hd-download-v2 button.is-primary, .hdc-btn-gold {
+  background: var(--c-gold);
+  color: #111;
+}
+
+/* CTA 精選卡按鈕（奇門策略地圖：主／次兩階） */
+.qimen-cta-btn { border-radius: var(--r-sm); }
+.qimen-cta-btn:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 2px; }
+
+/* details 收合（選填設定／進階選項）統一視覺 */
+.tool-form-extra, .hd-form-extra, .bazi-adv {
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-sm);
+  background: var(--c-cream);
+}
+
+/* ---------- 3. 隱私 pill／完整框／免責框／方法說明（含 HD 自有版本，視覺統一） ---------- */
+.tool-privacy-pill, .hd-privacy-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1px solid var(--c-line-2); border-radius: var(--r-pill);
+  padding: 6px 16px; font-size: var(--step--1); color: var(--c-gold-deep);
+}
+.tool-privacy-pill i, .hd-privacy-pill i { color: var(--c-gold); }
+
+.tool-disclaimer, .hd-disclaimer {
+  font-size: var(--step--1); color: var(--c-muted); line-height: 1.75;
+  max-width: 820px; margin: 0 auto;
+  background: var(--c-paper-2);
+  border-radius: var(--r-sm);
+  padding: 20px 24px;
+}
+.tool-disclaimer strong, .hd-disclaimer strong { color: var(--c-muted); }
+
+.tool-method .accordion-button, .tool-method-note .accordion-button {
+  font-weight: 600;
+  color: var(--c-ink-2);
+  font-family: var(--font-sans);
+}
+.tool-method .accordion-button:not(.collapsed) { background: var(--c-gold-tint); color: var(--c-gold-deep); }
+.tool-method .accordion-button:focus { box-shadow: 0 0 0 3px var(--tool-accent-ring); border-color: var(--c-line-2); }
+.tool-method .accordion-button i { margin-right: 8px; color: var(--c-gold); }
+
+/* ---------- 4. FAQ 手風琴（三套並存收斂成一套：不論 include 或手寫 accordion，一律套此規則） ---------- */
+#hdFaq .accordion-button, #wdFaq .accordion-button, #ichFaq .accordion-button,
+#numFaq .accordion-button, #astroFaq .accordion-button, #baziFaq .accordion-button,
+#qimenFaq .accordion-button {
+  font-weight: 600;
+  font-family: var(--font-sans);
+  color: var(--c-ink-2);
+}
+#hdFaq .accordion-button:not(.collapsed), #wdFaq .accordion-button:not(.collapsed),
+#ichFaq .accordion-button:not(.collapsed), #numFaq .accordion-button:not(.collapsed),
+#astroFaq .accordion-button:not(.collapsed), #baziFaq .accordion-button:not(.collapsed),
+#qimenFaq .accordion-button:not(.collapsed) {
+  background: var(--c-gold-tint);
+  color: var(--c-gold-deep);
+}
+#hdFaq .accordion-button:focus, #wdFaq .accordion-button:focus, #ichFaq .accordion-button:focus,
+#numFaq .accordion-button:focus, #astroFaq .accordion-button:focus, #baziFaq .accordion-button:focus,
+#qimenFaq .accordion-button:focus {
+  box-shadow: 0 0 0 3px var(--tool-accent-ring);
+  border-color: var(--c-line-2);
+}
+
+/* ---------- 5. 結果卡表面語言（同一套白卡＋暖陰影，取代各頁各寫一份） ---------- */
+.astro-panel, .astro-big, .bazi-panel, .bazi-sum-item, .hdc-cat, .hdc-sum-card,
+.hdc-center, .hdc-edu-item, .num-seg, .iching-seg, .qimen-cta-card, .hd-sum-card,
+.hd-product-card {
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-1);
+}
+
+.num-seg, .iching-seg { border-left: 4px solid var(--c-gold); border-radius: var(--r-md); box-shadow: none; }
+.num-seg.is-challenge, .iching-seg.is-change { border-left-color: var(--c-gold-deep); }
+.num-seg h4, .iching-seg h4 { font-family: var(--font-sans); font-size: .82rem; font-weight: 700; color: var(--c-gold-deep); letter-spacing: .5px; margin: 0 0 8px; }
+.num-seg p, .iching-seg p, .iching-seg li { font-size: .95rem; color: var(--c-body); line-height: 1.85; margin: 0; }
+
+/* 結果頁邀請卡（虛線框：深度版／付費報告的輕量導流） */
+.num-cta, .ich-cta {
+  text-align: center;
+  background: var(--c-cream);
+  border: 1px dashed var(--c-gold-2);
+  border-radius: var(--r-md);
+  padding: 20px;
+  margin: 8px auto 0;
+}
+.num-cta p, .ich-cta p { color: var(--c-muted); margin: 0 0 12px; font-size: .94rem; }
+.num-cta a, .ich-cta a {
+  display: inline-block;
+  background: var(--c-gold);
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 11px 26px;
+  border-radius: var(--r-sm);
+  transition: background-color var(--dur-2) ease;
+}
+.num-cta a:hover, .ich-cta a:hover { background: var(--c-gold-deep); color: #fff; }
+
+/* ---------- 6. 深色 CTA 帶（工具頁尾節奏帶；可掛 data-silk="ink" use_silk: true） ---------- */
+.tool-cta-dark {
+  background: var(--c-ink);
+  color: #fff;
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+.tool-cta-dark h2, .tool-cta-dark h3 { color: #fff; margin: 0 0 10px; }
+.tool-cta-dark p { max-width: 600px; margin: 0 auto 20px; color: rgba(255, 255, 255, .75); line-height: 1.75; }
+.tool-cta-dark .tool-compute-btn, .tool-cta-dark .hd-btn-generate {
+  display: inline-block; width: auto; padding: 13px 30px;
+}
+@media (max-width: 767px) { .tool-cta-dark { padding: var(--space-l) 0; } }
+
+/* 深色帶內：既有淺色卡片維持原色，避免白字疊白底（各頁個別覆蓋見頁面 extra_css） */
+.tool-cta-dark .num-cta p, .tool-cta-dark .ich-cta p { color: #6b6252; }
+.tool-cta-dark .hdc-report { text-align: left; }
+.tool-cta-dark .hdc-report h2 { color: #111; }
+
+/* ---------- 7. 母頁返回連結（8B5E00/a5791f 兩種近似金棕，統一成 --c-gold-deep） ---------- */
+.hd-backlink, .bazi-backlink, .wd-backlink, .num-backlink, .ich-backlink, .astro-backlink {
+  color: var(--c-gold-deep);
+  text-decoration: none;
+  font-weight: 600;
+}
+.hd-backlink:hover, .bazi-backlink:hover, .wd-backlink:hover, .num-backlink:hover,
+.ich-backlink:hover, .astro-backlink:hover { color: var(--c-gold); }
+
+/* ---------- 8.1 合盤頁原生 details FAQ（與 Bootstrap 手風琴視覺統一：白卡＋圓角＋＋/－ 展開符號） ---------- */
+.hdc-faq summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 28px;
+  font-family: var(--font-sans);
+}
+.hdc-faq summary::-webkit-details-marker { display: none; }
+.hdc-faq summary::after {
+  content: '+';
+  position: absolute; right: 2px; top: 0;
+  color: var(--c-gold-deep); font-weight: 700; font-size: 1.15rem; line-height: 1;
+}
+.hdc-faq details[open] summary::after { content: '\2212'; }
+
+/* ---------- 8. 步驟編號（合盤表單 A／B 兩步；日後其他頁沿用同一套） ---------- */
+.hdc-step {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--c-gold); color: #fff; font-size: var(--step--1); flex: none;
+}

@@ -15,43 +15,15 @@ breadcrumbs:
   - name: 示意工具
     url: /qimen/tool/
 use_qimen_demo: true
+use_tools_css: true
 extra_css: |
-  /* ===== WP-TOOLS-1：.qimen-hero 定義在 style.css，inline 覆寫質感層（不加高度）＋深色 CTA 帶 ===== */
-  .qimen-hero {
-    position: relative;
-    background:
-      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
-      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
-  }
-  .qimen-hero::before {
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
-    background-image:
-      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
-    background-size: 46px 46px;
-  }
-  .qimen-hero > .container, .qimen-hero > * { position: relative; z-index: 1; }
-
-  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
-  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
-  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
-  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
-  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
-
-  /* 工具首屏：教育告知仍完整保留，只收斂 banner、hero 與表單的垂直密度。 */
+  /* 本頁獨有：教育告知 banner＋示意表單密度（hero／CTA 深色帶共用規則已移至 assets/css/tools.css） */
   .qimen-demo-banner .container { padding-top: 8px; padding-bottom: 8px; font-size: .82rem; line-height: 1.5; }
-  .qimen-hero { padding: 24px 0 20px; }
-  .qimen-hero h1 { font-size: 1.85rem; }
-  .qimen-hero .lead { font-size: .96rem; line-height: 1.62; }
-  .qimen-section { padding: 20px 0 28px; }
   .qimen-form-card { padding: 20px; }
   .qimen-form-card label { margin-top: 10px; }
   .qimen-form-card textarea { min-height: 74px; }
   @media (max-width: 767px) {
     .qimen-demo-banner .container { font-size: .78rem; }
-    .qimen-hero { padding: 20px 0 16px; }
-    .qimen-hero .lead { font-size: .9rem; line-height: 1.55; }
-    .qimen-section { padding-top: 16px; }
     .qimen-form-card { padding: 17px; }
   }
 ---

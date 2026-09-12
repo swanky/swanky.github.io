@@ -13,6 +13,7 @@ breadcrumbs:
   - name: 易經問卦
     url: /iching/
 use_iching: true
+use_tools_css: true
 extra_head: |
   <script type="application/ld+json">
   {
@@ -29,67 +30,28 @@ extra_head: |
   }
   </script>
 extra_css: |
-  .ich-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; text-align: center; }
-  .ich-hero h1 { font-size: 2rem; font-weight: 700; color: #3a3226; margin-bottom: 12px; }
-  .ich-hero .lead { font-size: 1.02rem; color: #6b6252; max-width: 620px; margin: 0 auto 16px; line-height: 1.75; }
-  .ich-section { padding: 38px 0; }
-  .ich-form-card { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 26px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
-  .ich-form-card h2 { font-size: 1.12rem; font-weight: 700; color: #3a3226; margin: 0 0 16px; }
+  /* hero／表單／按鈕／CTA 邀請卡／FAQ／深色帶共用規則已移至 assets/css/tools.css；本頁只留獨有版型 */
+  .ich-hero .lead { max-width: 620px; }
+  .ich-form-card { max-width: 680px; margin: 0 auto; padding: 26px; }
   .ich-field { margin-bottom: 16px; }
-  .ich-field > label { display: block; font-size: 0.86rem; font-weight: 600; color: #444; margin-bottom: 7px; }
-  #iching-question { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 11px 12px; font-size: 0.98rem; color: #333; resize: vertical; min-height: 76px; }
-  .ich-topic { font-size: 0.86rem; color: #a5791f; margin: 6px 0 0; }
+  #iching-question { width: 100%; resize: vertical; min-height: 76px; }
+  .ich-topic { font-size: 0.86rem; color: var(--c-gold-deep); margin: 6px 0 0; }
   .ich-selects { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .ich-selects select, .ich-selects input { border: 1px solid #ddd; border-radius: 8px; padding: 9px 10px; font-size: 0.95rem; color: #333; background: #fff; }
   .ich-selects input { width: 90px; }
-  .ich-cast-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #E5A300; color: #111; font-weight: 700; font-size: 1.02rem; cursor: pointer; margin-top: 6px; }
+  .ich-cast-btn { width: 100%; margin-top: 6px; }
   .ich-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; }
   .ich-result { max-width: 720px; margin: 30px auto 0; }
   .ich-heximg { display: flex; justify-content: center; margin: 4px 0 14px; }
   .ich-heximg svg { max-width: 100%; height: auto; }
   .ich-hexname { text-align: center; margin-bottom: 22px; }
-  .iching-benname { font-size: 1.4rem; font-weight: 800; color: #3a3226; }
-  .iching-arrow { color: #E5A300; margin: 0 4px; }
-  .iching-zhiname { font-size: 1.2rem; font-weight: 700; color: #a5791f; }
+  .iching-benname { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--c-ink); }
+  .iching-arrow { color: var(--c-gold); margin: 0 4px; }
+  .iching-zhiname { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--c-gold-deep); }
   .iching-method-tag { display: inline-block; margin-left: 8px; font-size: 0.76rem; color: #a89a7a; background: #f6efdf; border-radius: 20px; padding: 3px 10px; vertical-align: middle; }
-  .iching-seg { background: #fff; border: 1px solid #eee; border-left: 4px solid #E5A300; border-radius: 12px; padding: 16px 20px; margin-bottom: 14px; }
-  .iching-seg.is-change { border-left-color: #a5791f; background: #fffdf8; }
-  .iching-seg h4 { font-size: 0.82rem; font-weight: 700; color: #b6820a; letter-spacing: 0.5px; margin: 0 0 8px; }
-  .iching-seg p { font-size: 0.95rem; color: #444; line-height: 1.85; margin: 0; }
+  .iching-seg { padding: 16px 20px; margin-bottom: 14px; }
+  .iching-seg.is-change { border-left-color: var(--c-gold-deep); background: var(--c-cream); }
   .iching-seg ul { margin: 0; padding-left: 20px; }
-  .iching-seg li { font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 6px; }
-  .ich-cta { max-width: 720px; margin: 8px auto 0; text-align: center; background: #fffdf8; border: 1px dashed #ecd9a6; border-radius: 12px; padding: 20px; }
-  .ich-cta p { color: #6b6252; margin: 0 0 12px; font-size: 0.94rem; }
-  .ich-cta a { display: inline-block; background: #E5A300; color: #111; font-weight: 700; text-decoration: none; padding: 11px 26px; border-radius: 10px; }
-  .ich-backlink { color: #a5791f; text-decoration: none; font-weight: 600; }
-  #ichFaq .accordion-button { font-weight: 700; color: #111; }
-  #ichFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
-  #ichFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
-
-  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
-  .ich-hero {
-    position: relative;
-    background:
-      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
-      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
-  }
-  .ich-hero::before {
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
-    background-image:
-      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
-    background-size: 46px 46px;
-  }
-  .ich-hero > .container, .ich-hero > * { position: relative; z-index: 1; }
-
-  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
-  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
-  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
-  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
-  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
-
-  /* ich-cta 深色帶內：既有淺色虛線卡維持原文字色 */
-  .tool-cta-dark .ich-cta p { color: #6b6252; }
+  .ich-cta { max-width: 720px; }
 ---
 
 <main id="main">

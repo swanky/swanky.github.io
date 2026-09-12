@@ -13,6 +13,7 @@ breadcrumbs:
   - name: 星座命盤
     url: /astrology/
 use_astrology: true
+use_tools_css: true
 extra_head: |
   <script type="application/ld+json">
   {
@@ -40,74 +41,37 @@ faq:
   - q: "用哪一種宮位制？跟人類圖差在哪？"
     a: "宮位預設整宮制（Whole Sign），可切換等宮制（Equal）。人類圖用的是同一套天文計算，但呈現的是能量類型與通道；星座命盤呈現的是心理結構、關係模式與宮位主題。"
 extra_css: |
-  .astro-hero { background: linear-gradient(135deg, #fffaf0 0%, #fdf3e0 100%); padding: 56px 0 40px; text-align: center; }
-  .astro-hero h1 { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 12px; }
-  .astro-hero .lead { font-size: 1.02rem; color: #555; max-width: 600px; margin: 0 auto 16px; line-height: 1.75; }
-  .astro-beta { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #e8d49a; border-radius: 50px; padding: 5px 15px; font-size: 0.82rem; color: #8B5E00; }
-  .astro-section { padding: 38px 0; }
+  /* hero／表單／按鈕／FAQ／深色帶共用規則已移至 assets/css/tools.css；本頁只留獨有版型（星盤結果） */
+  .astro-hero .lead { max-width: 600px; }
   .astro-result { max-width: 900px; margin: 30px auto 0; }
-  .astro-beta-note { background: rgba(229,163,0,.10); border: 1px solid #ecd9a8; color: #8B5E00; border-radius: 10px; padding: 13px 16px; font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
+  .astro-beta-note { background: var(--c-gold-tint); border: 1px solid #ecd9a8; color: var(--c-gold-deep); border-radius: 10px; padding: 13px 16px; font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
   .astro-big-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; }
-  .astro-big { background: #fff; border: 1px solid #eee; border-radius: 13px; padding: 18px; display: flex; gap: 12px; }
-  .astro-big-glyph { font-size: 1.8rem; color: var(--c-gold, #E5A300); flex-shrink: 0; }
-  .astro-big-label { font-size: 0.72rem; font-weight: 700; color: #8B5E00; letter-spacing: 0.5px; display: block; }
-  .astro-big-body b { font-size: 1.02rem; color: #111; display: block; margin: 2px 0 6px; }
+  .astro-big { padding: 18px; display: flex; gap: 12px; }
+  .astro-big-glyph { font-size: 1.8rem; color: var(--c-gold); flex-shrink: 0; }
+  .astro-big-label { font-size: 0.72rem; font-weight: 700; color: var(--c-gold-deep); letter-spacing: 0.5px; display: block; }
+  .astro-big-body b { font-size: 1.02rem; color: var(--c-ink); display: block; margin: 2px 0 6px; }
   .astro-big-body p { font-size: 0.84rem; color: #666; line-height: 1.65; margin: 0; }
   .astro-wheel-wrap { display: flex; justify-content: center; margin: 10px 0 26px; }
   .astro-wheel-wrap svg { max-width: 100%; width: 440px; height: auto; }
-  .astro-panel { background: #fff; border: 1px solid #eee; border-radius: 13px; padding: 22px 24px; margin-bottom: 20px; }
-  .astro-panel h3 { font-size: 1.08rem; font-weight: 700; color: #111; margin: 0 0 14px; }
+  .astro-panel { padding: 22px 24px; margin-bottom: 20px; }
+  .astro-panel h3 { font-family: var(--font-display); font-size: 1.08rem; font-weight: 600; color: var(--c-ink); margin: 0 0 14px; }
   .astro-table-wrap { overflow-x: auto; }
   .astro-table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 440px; }
-  .astro-table-wrap th, .astro-table-wrap td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #f0f0f0; }
-  .astro-table-wrap th { color: #8B5E00; font-weight: 700; }
-  .astro-table-wrap tr.is-angle td { background: rgba(229,163,0,.10); font-weight: 600; }
+  .astro-table-wrap th, .astro-table-wrap td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--c-line); }
+  .astro-table-wrap th { color: var(--c-gold-deep); font-weight: 700; }
+  .astro-table-wrap tr.is-angle td { background: var(--c-gold-tint); font-weight: 600; }
   .astro-reading { border-left: 3px solid #e8d49a; padding: 6px 0 6px 14px; margin-bottom: 14px; }
   .astro-reading.is-gen { border-left-color: #ddd; opacity: 0.9; }
   .astro-reading-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
-  .astro-reading-pt { font-size: 0.98rem; font-weight: 700; color: #111; }
-  .astro-reading-frame { font-size: 0.76rem; color: #8B5E00; }
+  .astro-reading-pt { font-size: 0.98rem; font-weight: 700; color: var(--c-ink); }
+  .astro-reading-frame { font-size: 0.76rem; color: var(--c-gold-deep); }
   .astro-reading p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 0; }
   .astro-asp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
-  .astro-asp-list li { display: flex; justify-content: space-between; gap: 8px; background: rgba(229,163,0,.10); border-radius: 8px; padding: 8px 12px; font-size: 0.85rem; color: #444; }
-  .astro-asp-list li span { color: #8B5E00; }
+  .astro-asp-list li { display: flex; justify-content: space-between; gap: 8px; background: var(--c-gold-tint); border-radius: 8px; padding: 8px 12px; font-size: 0.85rem; color: #444; }
+  .astro-asp-list li span { color: var(--c-gold-deep); }
   .astro-hint { font-size: 0.88rem; color: var(--c-muted); }
   @media (max-width: 768px) { .astro-big-three { grid-template-columns: 1fr; } }
-  #astroFaq .accordion-button { font-weight: 700; color: #111; }
-  #astroFaq .accordion-button:not(.collapsed) { background: rgba(229,163,0,.10); color: #111; }
-  #astroFaq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(229,163,0,.35); border-color: #f0dca8; }
-
-  /* ===== WP-TOOLS-1：hero 質感層＋深色 CTA 帶（不加高度） ===== */
-  .astro-hero {
-    position: relative;
-    background:
-      radial-gradient(circle at 85% 12%, rgba(229,163,0,.12), transparent 42%),
-      linear-gradient(135deg, #fffdf8 0%, #fdf1da 100%);
-  }
-  .astro-hero::before {
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:.6;
-    background-image:
-      linear-gradient(rgba(180,140,40,.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(180,140,40,.05) 1px, transparent 1px);
-    background-size: 46px 46px;
-  }
-  .astro-hero > .container, .astro-hero > * { position: relative; z-index: 1; }
-
-  .tool-cta-dark { background:#232020; color:#fff; padding:56px 0; text-align:center; }
-  .tool-cta-dark h2, .tool-cta-dark h3 { color:#fff; margin:0 0 10px; }
-  .tool-cta-dark p { max-width:600px; margin:0 auto 20px; color:rgba(255,255,255,.75); line-height:1.75; }
-  .tool-cta-dark .tool-compute-btn { display:inline-block; width:auto; padding:13px 30px; }
-  @media (max-width:767px){ .tool-cta-dark{ padding:44px 0; } }
-
-  /* 工具首屏：保留同一套暖金 hero 與 10px 操作按鈕，只壓縮非必要留白。 */
-  .astro-hero { padding: 22px 0 18px; }
-  .astro-hero h1 { margin: 5px 0 7px; }
-  .astro-hero .lead { margin-bottom: 10px; line-height: 1.58; }
-  .astro-section { padding: 14px 0 22px; }
   @media (max-width: 767px) {
-    .astro-hero { padding: 10px 0 8px; }
-    .astro-hero .lead { font-size: .94rem; line-height: 1.55; }
-    .astro-beta { padding: 4px 12px; }
     .tool-form-extra { margin-bottom: 8px; }
     .tool-form-extra summary { padding: 6px 0; }
   }
