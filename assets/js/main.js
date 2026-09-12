@@ -120,6 +120,18 @@
   }
 
   /**
+   * 目前所在頁標示：下拉子項、總覽面板、頁尾索引裡與目前網址相同的連結加 aria-current
+   * （一級導覽的 active 由 Liquid 在 build 時決定；子項清單是靜態的，改在前端比對 pathname）
+   */
+  const here = location.pathname.replace(/index\.html$/, '')
+  select('.navbar .dropdown ul a, .site-overview__links a, #footer .footer-nav a', true).forEach((link) => {
+    try {
+      const path = new URL(link.href, location.href).pathname.replace(/index\.html$/, '')
+      if (path === here) link.setAttribute('aria-current', 'page')
+    } catch (e) { /* mailto 等非 http 連結略過 */ }
+  })
+
+  /**
    * Back to top button
    */
   let backtotop = select('.back-to-top')

@@ -6862,3 +6862,23 @@ section.testimonials { background: var(--c-cream); }
 .not-found-links a:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); border-color: rgba(229, 163, 0, .5); color: var(--c-ink); }
 .not-found-links span { font-family: var(--font-display); font-size: var(--step-1); font-weight: 600; }
 .not-found-links small { font-size: var(--step--1); color: var(--c-muted); }
+
+/* ---------- 14. 評審修正（2026-09-12 第二輪） ---------- */
+/* 他人評語：與區塊標題共用同一左邊界（原本 margin:auto 置中，桌機看起來像跳出網格） */
+.testimonials .testimonial-item {
+  margin: 0;
+  max-width: 760px;
+  padding: 4px 0 4px 28px;
+  border-left: 3px solid var(--c-gold);
+}
+.testimonials .testimonial-item .quote-icon-left { margin-bottom: 10px; }
+
+/* 下拉／總覽／頁尾索引：標出目前所在頁（main.js 依 pathname 加 aria-current） */
+.navbar .dropdown ul a[aria-current="page"],
+.navbar-mobile .dropdown ul a[aria-current="page"] {
+  color: #8a5d00;
+  background: #fdf3e0;
+  font-weight: 700;
+}
+.site-overview__links a[aria-current="page"] { color: #F5C53B; font-weight: 700; }
+#footer .footer-nav a[aria-current="page"] { color: #F5C53B; }
