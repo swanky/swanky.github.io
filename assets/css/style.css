@@ -5581,6 +5581,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 p { text-wrap: pretty; }
 
+/* 字型預算：中文襯線每個 unicode-range 切片 ~40KB，只給 h1–h3 與少數顯示元素用；
+   h4–h6 與卡片標題維持無襯線，否則文章列表頁一次會拉 30+ 片 */
+h3, h4, h5, h6,
+.card .card-title { font-family: var(--font-sans); letter-spacing: 0; }
+
 img, video { max-width: 100%; height: auto; }
 svg { max-width: 100%; }
 
@@ -6115,9 +6120,9 @@ main#main { scroll-margin-top: var(--header-h); }
 .card .card-body { padding: 20px 22px 24px; }
 
 .card .card-title {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
   line-height: 1.35;
   margin-bottom: 8px;
 }
@@ -6213,9 +6218,9 @@ main#main { scroll-margin-top: var(--header-h); }
 .team .member .member-info { padding: 6px 20px 22px; }
 
 .team .member .member-info h4 {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
 }
 
 .team .member .member-info span { color: var(--c-gold-deep); letter-spacing: .08em; }
@@ -6403,7 +6408,7 @@ main#main { scroll-margin-top: var(--header-h); }
 }
 
 /* 他人評語 */
-.testimonials .testimonial-item h3 { font-family: var(--font-display); font-size: 1.25rem; }
+.testimonials .testimonial-item h3 { font-family: var(--font-sans); font-size: 1.125rem; }
 .testimonials .testimonial-item p {
   font-family: var(--font-display);
   font-style: normal;
@@ -6479,7 +6484,7 @@ section.testimonials { background: var(--c-cream); }
 .post-content h2:first-child { padding-top: 0; border-top: 0; }
 
 .post-content h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: var(--step-1);
   border-left-width: 3px;
   border-left-color: #E5A300;
