@@ -5128,6 +5128,9 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .qimen-hero { background: linear-gradient(135deg, #f7f4ee 0%, #efe9dd 100%); padding: 60px 0 46px; }
 .qimen-hero h1 { font-size: 2.1rem; font-weight: 700; color: #111; margin-bottom: 14px; text-align: center; }
 .qimen-hero .lead { font-size: 1.05rem; color: #555; max-width: 740px; margin: 0 auto; line-height: 1.8; text-align: center; }
+.qimen-hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+.qimen-hero-actions .qimen-cta-btn { display: inline-block; margin-top: 0; min-width: 200px; padding: 12px 24px; }
+#qimen-scenarios { scroll-margin-top: calc(var(--header-h, 76px) + 12px); }
 .qimen-section { padding: 46px 0; }
 .qimen-section.alt { background: #fff; }
 .qimen-section-title { text-align: center; font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 8px; }
