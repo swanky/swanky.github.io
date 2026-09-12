@@ -5596,7 +5596,6 @@ a:hover { color: var(--c-gold); }
 :focus-visible {
   outline: 3px solid var(--c-gold);
   outline-offset: 3px;
-  border-radius: 4px;
 }
 
 ::selection { background: #F5C53B; color: #232020; }
