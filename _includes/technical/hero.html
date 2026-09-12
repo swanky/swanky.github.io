@@ -1,4 +1,4 @@
-<section class="tech-hero tech-hero--{{ include.theme | default: 'ai' }}">
+<section class="tech-hero tech-hero--{{ include.theme | default: 'ai' }}"{% if include.silk %} data-silk="{{ include.silk }}"{% if include.silk_speed %} data-silk-speed="{{ include.silk_speed }}"{% endif %}{% endif %}>
   <div class="tech-shell tech-hero-grid">
     <div class="tech-hero-copy">
       {% if include.status %}<span class="tech-hero-status">{{ include.status }}</span>{% endif %}

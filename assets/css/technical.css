@@ -1,18 +1,28 @@
-/* Technical consulting pages — image-led, AI blue + Web3 gold, scoped to .technical-page. */
+/* Technical consulting pages — image-led, AI blue + Web3 gold, scoped to .technical-page.
+   色彩：深藍 #07111f／AI 藍 #176bff／亮藍 #50b8ff 是本家族刻意的識別色（docs/design.md
+   「Technical 深藍」），不對應系統 token；金、中性灰、紙白改直接引用系統 v2 token，
+   避免同一色系在檔案裡重複寫死相近的十六進位。這兩顆 root 級變數給不在 .technical-page
+   容器內的 listing 頁（articles/agentic-engineering/rwa 共用 .tech-listing-band 等 class）用。 */
+:root {
+  --tech-family-blue-bright: #50b8ff;
+  --tech-family-gold-bright: #ffc94f;
+}
+
 .technical-page {
   --tech-ink: #07111f;
   --tech-ink-2: #111f35;
-  --tech-muted: #5c6677;
-  --tech-paper: #f7f5ef;
+  --tech-muted: var(--c-muted);
+  --tech-paper: var(--c-paper-2);
   --tech-white: #fff;
   --tech-blue: #176bff;
-  --tech-blue-bright: #50b8ff;
+  --tech-blue-bright: var(--tech-family-blue-bright);
   --tech-blue-soft: #eaf2ff;
-  --tech-gold: #e5a300;
-  --tech-gold-soft: #fff4cf;
+  --tech-gold: var(--c-gold);
+  --tech-gold-soft: var(--c-gold-tint);
   --tech-line: rgba(7, 17, 31, .13);
   --tech-dark-line: rgba(255, 255, 255, .14);
   --tech-shadow: 0 24px 70px rgba(7, 17, 31, .14);
+  --tech-danger: #a24949;
   overflow: hidden;
   background: var(--tech-white);
   color: var(--tech-ink);
@@ -21,8 +31,8 @@
 
 .technical-page *, .technical-page *::before, .technical-page *::after { box-sizing: border-box; }
 .technical-page img { display: block; max-width: 100%; }
-.technical-page a:not(.tech-btn):not(.tech-text-link) { color: inherit; }
-.technical-page a:not(.tech-btn):not(.tech-text-link):hover { color: inherit; }
+.technical-page a:not(.tech-btn):not(.tech-text-link):not(.btn-cta) { color: inherit; }
+.technical-page a:not(.tech-btn):not(.tech-text-link):not(.btn-cta):hover { color: inherit; }
 .tech-shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .tech-section { padding: 88px 0; }
 .tech-section--compact { padding: 58px 0; }
@@ -64,17 +74,19 @@
 
 .tech-hero {
   position: relative;
-  min-height: 680px;
+  min-height: max(640px, 85svh);
+  display: flex;
+  align-items: center;
   padding: 84px 0 90px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 86% 10%, rgba(23, 107, 255, .26), transparent 34%),
+    radial-gradient(circle at 86% 10%, color-mix(in srgb, var(--tech-blue) 26%, transparent), transparent 34%),
     linear-gradient(135deg, #07111f 0%, #0b1930 55%, #101829 100%);
   color: #fff;
 }
 .tech-hero--web3 {
   background:
-    radial-gradient(circle at 86% 10%, rgba(229, 163, 0, .22), transparent 34%),
+    radial-gradient(circle at 86% 10%, color-mix(in srgb, var(--tech-gold) 22%, transparent), transparent 34%),
     linear-gradient(135deg, #0b101b 0%, #10192b 58%, #171405 100%);
 }
 .tech-hero::after {
@@ -202,7 +214,7 @@
 .tech-service-card h3 { margin: 0 0 12px; font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -.03em; }
 .tech-service-card p { margin: 0; color: var(--tech-muted); line-height: 1.72; }
 .tech-service-list { display: grid; gap: 8px; margin: 20px 0 26px; padding: 0; list-style: none; }
-.tech-service-list li { display: flex; gap: 9px; color: #26354a; font-size: .92rem; line-height: 1.5; }
+.tech-service-list li { display: flex; gap: 9px; color: var(--tech-ink-2); font-size: .92rem; line-height: 1.5; }
 .tech-service-list li::before { color: var(--tech-blue); content: "✓"; font-weight: 900; }
 .tech-service-card--web3 .tech-service-list li::before { color: var(--tech-gold); }
 .tech-service-action { margin-top: auto; }
@@ -220,7 +232,7 @@
 }
 .tech-compare-card h3, .tech-start-card h3, .tech-deliverable-card h3 { margin: 0 0 10px; color: var(--tech-ink); font-size: 1.2rem; font-weight: 800; }
 .tech-compare-card p, .tech-start-card p, .tech-deliverable-card p { margin: 0; color: var(--tech-muted); line-height: 1.68; }
-.tech-compare-card--consulting { border-color: rgba(23,107,255,.3); background: linear-gradient(135deg,#fff,#f0f6ff); }
+.tech-compare-card--consulting { border-color: color-mix(in srgb, var(--tech-blue) 30%, transparent); background: linear-gradient(135deg, #fff, var(--tech-blue-soft)); }
 .tech-start-grid { grid-template-columns: repeat(3, 1fr); }
 .tech-start-card { position: relative; padding-top: 68px; }
 .tech-start-no { position: absolute; top: 24px; left: 28px; color: var(--tech-blue); font-family: ui-monospace, monospace; font-size: .76rem; font-weight: 800; letter-spacing: .12em; }
@@ -264,7 +276,7 @@
   border-bottom: 1px solid var(--tech-line);
 }
 .tech-evidence-item:last-child { border-bottom: 0; }
-.tech-evidence-rank { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--tech-gold-soft); color: #8b6100; font-weight: 900; }
+.tech-evidence-rank { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--tech-gold-soft); color: var(--c-gold-deep); font-family: var(--font-display); font-style: italic; font-weight: 600; font-size: 1.1rem; }
 .tech-evidence-item h3 { margin: 0 0 6px; font-size: 1.08rem; font-weight: 800; }
 .tech-evidence-item p { margin: 0; color: var(--tech-muted); line-height: 1.65; }
 
@@ -345,7 +357,7 @@
 .tech-check-list, .tech-x-list { display: grid; gap: 9px; margin: 18px 0 0; padding: 0; list-style: none; }
 .tech-check-list li, .tech-x-list li { display: flex; gap: 10px; color: var(--tech-muted); line-height: 1.55; }
 .tech-check-list li::before { color: var(--tech-blue); content: "✓"; font-weight: 900; }
-.tech-x-list li::before { color: #a24949; content: "×"; font-weight: 900; }
+.tech-x-list li::before { color: var(--tech-danger); content: "×"; font-weight: 900; }
 .tech-section--dark .tech-check-list li, .tech-section--dark .tech-x-list li { color: rgba(255,255,255,.78); }
 .tech-section--dark .tech-x-list li::before { color: #ff8f8f; }
 
@@ -406,20 +418,59 @@
 .tech-listing-band {
   min-height: 360px; display: flex; align-items: center; padding: 64px 0;
   background:
-    radial-gradient(circle at 86% 12%, rgba(23,107,255,.24), transparent 40%),
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, #176bff 24%, transparent), transparent 40%),
     linear-gradient(135deg, #07111f 0%, #0b1930 100%);
   color: #fff; text-align: center;
 }
 .tech-listing-band--web3 {
   background:
-    radial-gradient(circle at 86% 12%, rgba(229,163,0,.22), transparent 40%),
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--c-gold) 22%, transparent), transparent 40%),
     linear-gradient(135deg, #0b101b 0%, #171405 100%);
 }
-.tech-listing-band .tlb-eyebrow { display:block; color:#50b8ff; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
-.tech-listing-band--web3 .tlb-eyebrow { color:#ffc94f; }
-.tech-listing-band h1 { margin:0 0 12px; color:#fff; font-family:"Playfair Display","Songti SC",Georgia,serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:700; }
+.tech-listing-band .tlb-eyebrow { display:block; color: var(--tech-family-blue-bright); font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+.tech-listing-band--web3 .tlb-eyebrow { color: var(--tech-family-gold-bright); }
+.tech-listing-band h1 { margin:0 0 12px; color:#fff; font-family: var(--font-display); font-size:clamp(2rem,4.5vw,3.2rem); font-weight:700; }
 .tech-listing-band p { margin:0 auto; max-width:640px; color:rgba(255,255,255,.78); line-height:1.75; }
-@media (max-width:767px){ .tech-listing-band{ min-height:260px; padding:44px 0; } }
+@media (max-width:767px){ .tech-listing-band{ min-height:320px; padding:44px 0; } }
+
+/* ---------- Listing 頁共用元件（articles／agentic-engineering／rwa，不掛 .technical-page） ----------
+   這三頁的 .agentic-thesis／.hub-banner／.series-group-title／.card-step 定義在 style.css
+   （跨頁沿用同一套視覺），這裡用相同選擇器覆寫顏色與字體改成 v2 token；因為只有這三頁
+   會用到這幾個 class，不會外溢影響其他家族。 */
+.agentic-thesis {
+  border-radius: var(--r-lg);
+  border-left-color: var(--c-gold);
+  background: var(--c-cream);
+  box-shadow: var(--shadow-1);
+}
+.agentic-thesis p { font-family: var(--font-sans); color: var(--c-ink-2); }
+.agentic-thesis .agentic-thesis-cta { color: var(--c-gold-deep); }
+.agentic-thesis a { color: var(--c-gold-deep); text-decoration-color: color-mix(in srgb, var(--c-gold) 50%, transparent); }
+.agentic-thesis a:hover { color: var(--c-gold); text-decoration-color: var(--c-gold); }
+
+.hub-banner {
+  border-radius: var(--r-lg);
+  border-color: var(--c-line);
+  background: linear-gradient(135deg, var(--c-gold-soft) 0%, var(--c-cream) 100%);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
+}
+.hub-banner:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.hub-banner-text h2 { font-family: var(--font-display); color: var(--c-ink); }
+.hub-banner-text p { font-family: var(--font-sans); color: var(--c-body); }
+
+.series-group-title { border-left-color: var(--c-gold); }
+.series-group-title h2 { font-family: var(--font-display); color: var(--c-ink); }
+.series-group-title p { font-family: var(--font-sans); color: var(--c-muted); }
+
+.service-details .card .card-step {
+  background: var(--c-gold);
+  color: #111;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  box-shadow: var(--shadow-1);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .technical-page *, .technical-page *::before, .technical-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
