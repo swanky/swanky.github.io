@@ -1,6 +1,8 @@
 .photo-author-page {
-  --photo-gold: #e5a300;
-  --photo-gold-light: #f5c53b;
+  /* noir 是刻意與亮紙系統分離的第二調性（docs/design.md「Photography 作者頁深色 noir」），
+     但金色與動效仍橋接回系統 token，讓全站金色調整能一次改到底。 */
+  --photo-gold: var(--c-gold);
+  --photo-gold-light: var(--c-gold-2);
   --photo-ink: #10100f;
   --photo-charcoal: #181816;
   --photo-paper: #f3efe6;
@@ -35,12 +37,14 @@
 .photo-author-shell {
   width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
+  container-type: inline-size;
+  container-name: photo-shell;
 }
 
 .photo-author-eyebrow {
   margin: 0 0 14px;
   color: var(--photo-gold-light);
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -80,7 +84,7 @@
 .photo-author-hero h1 {
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.8rem, 4.8vw, 5.6rem);
   font-weight: 400;
   line-height: 0.98;
@@ -144,36 +148,48 @@
   text-underline-offset: 4px;
 }
 
+/* 系統行銷藥丸語言（同 .btn-color／.btn-cta 視覺規格）：金底深字，hover 轉墨底金字＋上浮＋金色陰影 */
 .photo-author-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .5em;
   min-height: 48px;
   padding: 12px 24px;
-  border: 1px solid var(--photo-gold);
-  border-radius: 999px;
+  border: 1.5px solid var(--photo-gold);
+  border-radius: var(--r-pill);
   background: var(--photo-gold);
   color: #111 !important;
+  font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-decoration: none !important;
-  transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease;
+  transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), background-color var(--dur-2) ease, color var(--dur-2) ease, border-color var(--dur-2) ease;
 }
 
-.photo-author-button:hover {
-  background: var(--photo-gold-light);
-  color: #111 !important;
+.photo-author-button:hover,
+.photo-author-button:focus-visible {
+  background: var(--photo-ink);
+  border-color: var(--photo-ink);
+  color: var(--photo-gold-light) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
 .photo-author-button--ghost {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, .55);
   color: #f8f4ea !important;
 }
 
-.photo-author-button--ghost:hover {
-  background: rgba(229, 163, 0, 0.13);
-  color: #fff !important;
+.photo-author-button--ghost:hover,
+.photo-author-button--ghost:focus-visible {
+  background: var(--photo-gold);
+  border-color: var(--photo-gold);
+  color: #111 !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
 .photo-author-section {
@@ -190,7 +206,7 @@
 .photo-author-section-head h2 {
   margin: 0;
   color: inherit;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.35rem, 5vw, 5.4rem);
   font-weight: 400;
   line-height: 1.05;
@@ -205,9 +221,18 @@
   line-height: 1.85;
 }
 
+/* 作品格線：依容器寬度（非視窗寬度）決定欄數，巢狀在較窄容器內也能正確換欄 */
 .photo-author-masonry {
   column-count: 3;
   column-gap: 18px;
+}
+
+@container photo-shell (max-width: 960px) {
+  .photo-author-masonry { column-count: 2; }
+}
+
+@container photo-shell (max-width: 640px) {
+  .photo-author-masonry { column-count: 1; }
 }
 
 .photo-author-work {
@@ -242,7 +267,7 @@
 
 .photo-author-work-copy strong {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -263,7 +288,7 @@
 .photo-author-statement blockquote {
   max-width: 980px;
   margin: 0 auto;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4.7vw, 5rem);
   font-weight: 400;
   line-height: 1.12;
@@ -315,7 +340,7 @@
 .photo-author-series-copy h3 {
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 4.3rem);
   font-weight: 400;
   line-height: 1.06;
@@ -411,7 +436,7 @@
 .photo-author-era h3 {
   margin: 18px 0 13px;
   color: #1a1917;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: 1.55rem;
   font-weight: 400;
 }
@@ -448,7 +473,7 @@
 
 .photo-author-proof b {
   color: var(--photo-gold-light);
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.3rem, 4vw, 4.2rem);
   font-weight: 400;
   line-height: 1;
@@ -529,7 +554,7 @@
 .photo-author-media-copy h3 {
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.65rem, 2.8vw, 2.7rem);
   font-weight: 400;
   line-height: 1.2;
@@ -576,7 +601,7 @@
 .photo-author-archive-card h3 {
   margin: 0;
   color: #1a1917;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: 1.65rem;
   font-weight: 400;
 }
@@ -604,7 +629,7 @@
   max-width: 900px;
   margin: 0 auto;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.3rem, 5vw, 5.4rem);
   font-weight: 400;
   line-height: 1.05;
@@ -636,7 +661,7 @@
 .photo-author-collaboration-grid h3 {
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: 1.55rem;
   font-weight: 400;
 }
@@ -672,10 +697,6 @@
   .photo-author-hero-copy {
     padding-top: 62px;
     padding-bottom: 74px;
-  }
-
-  .photo-author-masonry {
-    column-count: 2;
   }
 
   .photo-author-timeline,
@@ -734,10 +755,6 @@
     gap: 14px;
   }
 
-  .photo-author-masonry {
-    column-count: 1;
-  }
-
   .photo-author-series-card {
     grid-template-columns: 1fr;
   }
@@ -781,7 +798,7 @@
   max-width: 1100px;
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.8rem, 6.3vw, 6.8rem);
   font-weight: 400;
   line-height: 1.02;
@@ -797,6 +814,8 @@
 }
 
 .photo-subpage-work-grid { columns: 3; column-gap: 18px; }
+@container photo-shell (max-width: 960px) { .photo-subpage-work-grid { columns: 2; } }
+@container photo-shell (max-width: 640px) { .photo-subpage-work-grid { columns: 1; } }
 .photo-subpage-work {
   display: inline-block;
   width: 100%;
@@ -806,7 +825,12 @@
   background: var(--photo-surface);
   vertical-align: top;
 }
-.photo-subpage-image-link { display: block; background: var(--photo-black); }
+.photo-subpage-image-link { display: block; background: var(--photo-black); overflow: hidden; }
+.photo-subpage-image-link img { transition: transform var(--dur-3) var(--ease-out); }
+.photo-subpage-work:hover .photo-subpage-image-link img { transform: scale(1.045); }
+@media (prefers-reduced-motion: reduce) {
+  .photo-subpage-work:hover .photo-subpage-image-link img { transform: none; }
+}
 .photo-author-subpage .photo-subpage-image {
   display: block;
   width: 100%;
@@ -825,7 +849,7 @@
 .photo-subpage-awards h2 {
   margin: 0;
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.4vw, 2.3rem);
   font-weight: 400;
   line-height: 1.15;
@@ -864,7 +888,7 @@
 .photo-subpage-related-publications h3 {
   margin: 0;
   color: #1a1917;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 400;
   line-height: 1.08;
@@ -884,7 +908,7 @@
 .photo-subpage-case > div:not(.photo-subpage-case-media),
 .photo-subpage-publication > div,
 .photo-subpage-awards article > div { padding: clamp(24px, 4vw, 44px); }
-.photo-subpage-person h3 { margin: 0; color: #fff; font-family: "Playfair Display", serif; font-size: 1.8rem; font-weight: 400; }
+.photo-subpage-person h3 { margin: 0; color: #fff; font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; }
 .photo-subpage-person p:not(.photo-author-eyebrow),
 .photo-subpage-case p:not(.photo-author-eyebrow),
 .photo-subpage-publication p:not(.photo-author-eyebrow),
@@ -902,6 +926,74 @@
 .photo-subpage-publication dt { color: #858178; font-weight: 400; }
 .photo-subpage-publication dd { margin: 0; color: #f4f0e7; }
 .photo-subpage-awards > article { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 1.2fr); }
+
+/* 獎項時間軸：改為單欄縱向排列＋左側年份／連接線，取代原本的雙欄卡片格線，
+   讓「哪一年、哪個獎、哪件作品」一眼可讀（見 photography/awards.html #award-timeline）。 */
+.photo-subpage-awards--timeline { grid-template-columns: 1fr; gap: 0; }
+
+.photo-subpage-awards--timeline > article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 72px minmax(140px, .42fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 0 clamp(16px, 3vw, 32px);
+  padding: clamp(26px, 4vw, 40px) 0;
+  border: 0;
+  border-bottom: 1px solid var(--photo-line);
+  background: transparent;
+  overflow: visible;
+}
+
+.photo-subpage-awards--timeline > article:first-child { padding-top: 0; }
+.photo-subpage-awards--timeline > article:last-child { border-bottom: 0; }
+
+.photo-subpage-awards--timeline > article::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--photo-line);
+}
+
+.photo-subpage-awards--timeline > article:first-child::before { top: clamp(26px, 4vw, 40px); }
+.photo-subpage-awards--timeline > article:last-child::before { bottom: calc(100% - clamp(26px, 4vw, 40px) - 12px); }
+
+.photo-subpage-award-year {
+  position: relative;
+  padding-top: 4px;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--photo-gold-light);
+}
+
+.photo-subpage-award-year::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--photo-gold);
+  box-shadow: 0 0 0 4px var(--photo-ink);
+}
+
+.photo-subpage-awards--timeline .photo-subpage-image { border: 1px solid var(--photo-line); }
+
+@container photo-shell (max-width: 640px) {
+  .photo-subpage-awards--timeline > article {
+    grid-template-columns: 40px minmax(96px, .48fr) minmax(0, 1fr);
+    gap: 0 14px;
+  }
+  .photo-subpage-awards--timeline > article::before,
+  .photo-subpage-award-year::before { left: 19px; }
+  .photo-subpage-award-year { font-size: 1rem; }
+}
 .photo-subpage-details { margin-top: 48px; border: 1px solid var(--photo-line); }
 .photo-subpage-details summary { padding: 22px 26px; color: #f5f1e8; font-weight: 700; cursor: pointer; }
 .photo-subpage-compact-grid,
@@ -949,17 +1041,16 @@
    避免整列被最高的圖撐開、在矮圖下方留出大片空白。
    刻意不裁切——攝影作品一律保留完整比例（見 tests/photography-curation.test.mjs）。 */
 .photo-subpage-square-grid--natural { align-items: start; }
+@container photo-shell (max-width: 960px) { .photo-subpage-square-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@container photo-shell (max-width: 640px) { .photo-subpage-square-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 @media (max-width: 1000px) {
-  .photo-subpage-work-grid { columns: 2; }
   .photo-subpage-publication-grid,
   .photo-subpage-compact-grid,
   .photo-subpage-archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .photo-subpage-square-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
-  .photo-subpage-work-grid { columns: 1; }
   .photo-subpage-people-grid,
   .photo-subpage-case-grid,
   .photo-subpage-publication-grid,
@@ -968,9 +1059,7 @@
   .photo-subpage-archive-grid { grid-template-columns: 1fr; }
   .photo-subpage-person,
   .photo-subpage-case,
-  .photo-subpage-publication-grid--evidence .photo-subpage-publication,
-  .photo-subpage-awards > article { grid-template-columns: 1fr; }
-  .photo-subpage-square-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo-subpage-publication-grid--evidence .photo-subpage-publication { grid-template-columns: 1fr; }
   .photo-subpage-case-media { columns: 1; }
   .photo-subpage-hero { padding-top: 72px; }
 }

@@ -12,21 +12,21 @@ breadcrumbs:
   - name: 歷年記錄
     url: /photography/archive/
 extra_css: >
-  .archive-section { padding: 30px 0 10px; border-top: 2px solid #f0f0f0; margin-top: 20px; }
-  .archive-section h2 { color: #E5A300; font-size: 1.5rem; margin-bottom: 16px; }
+  .archive-section { padding: 30px 0 10px; border-top: 1px solid var(--c-line); margin-top: 20px; }
+  .archive-section h2 { color: var(--c-gold-deep); font-size: 1.5rem; margin-bottom: 16px; }
   .archive-section h3 { font-size: 1.15rem; margin-top: 20px; margin-bottom: 8px; }
   .archive-section ul { padding-left: 1.2rem; }
   .archive-section ul li { margin-bottom: 6px; line-height: 1.6; }
-  .archive-section a { color: #4fa6d5; }
-  .archive-section a:hover { color: #E5A300; }
-  .badge-broken { background:#dc3545; color:#fff; font-size:0.7rem; padding:2px 6px; border-radius:3px; margin-left:4px; vertical-align:middle; }
-  .badge-likely-broken { background:#fd7e14; color:#fff; font-size:0.7rem; padding:2px 6px; border-radius:3px; margin-left:4px; vertical-align:middle; }
-  .award-img { max-width: 220px; border-radius: 6px; margin-bottom: 10px; }
-  .book-row { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff; }
-  .book-row h4 { margin-top: 0; }
+  .archive-section a { color: var(--c-gold-deep); }
+  .archive-section a:hover { color: var(--c-gold); }
+  .badge-broken { background: var(--c-gold-soft); color: var(--c-gold-deep); border: 1px solid var(--c-line-2); font-size: 0.72rem; font-weight: 600; padding: 2px 7px; border-radius: var(--r-sm); margin-left: 4px; vertical-align: middle; }
+  .badge-likely-broken { background: var(--c-paper-2); color: var(--c-muted); border: 1px solid var(--c-line-2); font-size: 0.72rem; font-weight: 600; padding: 2px 7px; border-radius: var(--r-sm); margin-left: 4px; vertical-align: middle; }
+  .award-img { max-width: 220px; border-radius: var(--r-sm); margin-bottom: 10px; }
+  .book-row { border: 1px solid var(--c-line); border-radius: var(--r-md); padding: 16px; margin-bottom: 16px; background: #fff; }
+  .book-row h4 { margin-top: 0; font-family: var(--font-display); }
   .sidebar-nav { position: sticky; top: 90px; }
-  .sidebar-nav .nav-link { color: #444; font-size: 0.9rem; padding: 4px 8px; }
-  .sidebar-nav .nav-link:hover, .sidebar-nav .nav-link.active { color: #E5A300; }
+  .sidebar-nav .nav-link { color: var(--c-muted); font-size: 0.9rem; padding: 4px 8px; }
+  .sidebar-nav .nav-link:hover, .sidebar-nav .nav-link.active { color: var(--c-gold-deep); }
 ---
 
   <div class="section-title works">
@@ -325,14 +325,14 @@ extra_css: >
   </div><!-- /container -->
 
   <!-- 精選作品 -->
-  <section id="facebook-highlights" style="padding: 40px 0 60px; background: #f9f6f0;">
-    <div class="container" data-aos="fade-up">
+  <section id="facebook-highlights" style="padding: 40px 0 60px; background: var(--c-cream);">
+    <div class="container">
       <div class="section-title">
         <h2>精選作品</h2>
         <p>高互動攝影作品精選</p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="col-lg-4 col-md-6 mb-4">
           <a href="{{ '/photography/ubike-uniform-girl/' | relative_url }}" style="text-decoration:none;color:inherit;">
             <div class="card border-0 shadow-sm">
               <img src="{{ '/assets/facebook-archive/photos/2020-03-08_10160006143465329_0.jpg' | relative_url }}" class="card-img-top img-fluid" alt="制服女孩騎 UBike" loading="lazy" style="width:100%;height:auto;">
@@ -343,7 +343,7 @@ extra_css: >
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 mb-4">
           <a href="{{ '/photography/agile-blockchain-engineer/' | relative_url }}" style="text-decoration:none;color:inherit;">
             <div class="card border-0 shadow-sm">
               <img src="{{ '/assets/facebook-archive/photos/2019-07-09_10159101519745329_0.jpg' | relative_url }}" class="card-img-top img-fluid" alt="讀 Head First Agile 的區塊鏈工程師" loading="lazy" style="width:100%;height:auto;">
@@ -354,7 +354,7 @@ extra_css: >
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 mb-4">
           <a href="{{ '/photography/uniform-girl-hsianhs/' | relative_url }}" style="text-decoration:none;color:inherit;">
             <div class="card border-0 shadow-sm">
               <img src="{{ '/assets/facebook-archive/photos/2018-08-18_10158075093130329_0.jpg' | relative_url }}" class="card-img-top img-fluid" alt="制服女孩嫺嫺" loading="lazy" style="width:100%;height:auto;">
