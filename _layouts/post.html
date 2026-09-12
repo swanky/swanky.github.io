@@ -6,7 +6,7 @@ layout: default
 
 <main id="main">
 
-  <section class="blog-post">
+  <section class="blog-post photo-post">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -19,20 +19,20 @@ layout: default
       </div>
 
       {% if page.model_social %}
-      <div class="text-center mb-4">
+      <div class="photo-post-social">
         {% for link in page.model_social %}
-        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" style="color:#E5A300; margin: 0 8px;"><i class="bi bi-{{ link.icon }}"></i> {{ link.name }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><i class="bi bi-{{ link.icon }}" aria-hidden="true"></i> {{ link.name }}</a>
         {% endfor %}
       </div>
       {% endif %}
 
-      <div class="text-center mb-4">
+      <div class="photo-post-actions">
         {% if page.flickr_album %}
-        <a href="{{ page.flickr_album }}" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ff0084; color:#fff; border-radius:50px; padding:8px 20px; font-size:0.85rem; font-weight:600; text-decoration:none; margin-right:8px;">
-          <i class="bx bxl-flickr"></i> Flickr 相簿
+        <a href="{{ page.flickr_album }}" target="_blank" rel="noopener noreferrer" class="btn-flickr-pill">
+          <i class="bx bxl-flickr" aria-hidden="true"></i> Flickr 相簿
         </a>
         {% endif %}
-        <a href="{{ '/photography/gallery/' | relative_url }}" style="display:inline-block; color:#E5A300; font-size:0.85rem; text-decoration:none;">&larr; 返回攝影作品精選</a>
+        <a href="{{ '/photography/gallery/' | relative_url }}" class="photo-post-back">&larr; 返回攝影作品精選</a>
       </div>
 
       <div class="post-content">
@@ -43,8 +43,8 @@ layout: default
       {% include author-bio.html %}
       {% include article-cta.html context='photography' %}
 
-      <div class="text-center mt-4 mb-4">
-        <a href="{{ '/photography/gallery/' | relative_url }}" style="color:#E5A300;">&larr; 返回攝影作品精選</a>
+      <div class="article-footer-nav">
+        <a href="{{ '/photography/gallery/' | relative_url }}">&larr; 返回攝影作品精選</a>
       </div>
 
     </div>

@@ -1,0 +1,27 @@
+---
+layout: page
+title: 找不到這一頁
+description: 這個網址不存在或已搬家。從下方的分區入口，或回到首頁重新開始。
+permalink: /404.html
+sitemap: false
+nav_active: none
+---
+<section class="not-found">
+  <div class="container">
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1>找不到這一頁</h1>
+    <p class="not-found-lead">這個網址不存在，或已經搬到別的地方。先從下面的入口挑一條路，或直接回到首頁。</p>
+    <div class="not-found-actions">
+      <a class="btn-color" href="{{ '/' | relative_url }}">回到首頁</a>
+      <button class="not-found-overview" type="button" popovertarget="site-overview">打開網站總覽</button>
+    </div>
+    <nav class="not-found-links" aria-label="主要分區">
+      <a href="{{ '/photography/' | relative_url }}"><span>攝影寫真</span><small>得獎人像與制服女孩系列</small></a>
+      <a href="{{ '/technical/' | relative_url }}"><span>技術顧問</span><small>AI Agent 導入、Web3 與軟體工程</small></a>
+      <a href="{{ '/education/' | relative_url }}"><span>教育訓練</span><small>企業內訓、講座與大學課程</small></a>
+      <a href="{{ '/explore/' | relative_url }}"><span>自我探索</span><small>人類圖、塔羅、星座、八字工具</small></a>
+      <a href="{{ '/books/' | relative_url }}"><span>古典文學</span><small>金瓶梅宇宙與古典小說書房</small></a>
+      <a href="{{ '/technical/articles/' | relative_url }}"><span>專欄文章</span><small>技術領導、Web3 與 AI 的第一手思考</small></a>
+    </nav>
+  </div>
+</section>

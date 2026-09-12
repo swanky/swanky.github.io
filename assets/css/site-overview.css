@@ -21,7 +21,7 @@
   background: transparent;
   border: 1px solid rgba(17, 17, 17, .55);
   border-radius: 50px;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-sans, "Lato", sans-serif);
   font-size: 13px;
   letter-spacing: .06em;
   white-space: nowrap;
@@ -134,7 +134,7 @@ body.site-overview-open {
 
 .site-overview__brand {
   color: rgba(255, 255, 255, .66);
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-sans, "Lato", sans-serif);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .16em;
@@ -149,7 +149,7 @@ body.site-overview-open {
   color: rgba(255, 255, 255, .78);
   background: transparent;
   border: 0;
-  font: 600 12px/1 "Open Sans", sans-serif;
+  font: 600 12px/1 var(--font-sans, "Lato", sans-serif);
   letter-spacing: .14em;
   cursor: pointer;
 }
@@ -183,8 +183,10 @@ body.site-overview-open {
   margin: auto auto 0;
   padding: clamp(30px, 5vh, 56px) 0 clamp(22px, 4vh, 40px);
   color: #fff;
+  font-family: var(--font-display, Georgia, serif);
   font-size: clamp(26px, 3.6vw, 44px);
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -.01em;
   line-height: 1.3;
 }
 
