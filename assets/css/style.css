@@ -5604,14 +5604,27 @@ a:hover { color: var(--c-gold); }
 main#main { scroll-margin-top: var(--header-h); }
 
 /* ---------- 2. Header：墨色玻璃框（三種狀態統一：預設／捲動＝墨玻璃，首頁頂端＝透明） ---------- */
+/* 玻璃底放在 ::after 而不是 #header 本體：backdrop-filter 會讓 position:fixed 的子孫
+   （手機選單抽屜 .navbar-mobile）改以 header 為包含區塊，抽屜就被夾成一條 64px 的窄條。 */
 #header {
   height: var(--header-h);
+  background: transparent;
+  border-bottom: 0;
+  transition: height var(--dur-2) var(--ease-out), box-shadow var(--dur-2) ease;
+  view-transition-name: site-header;
+}
+
+#header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(35, 32, 32, .82);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
   backdrop-filter: blur(18px) saturate(1.4);
   border-bottom: 1px solid rgba(255, 255, 255, .07);
-  transition: height var(--dur-2) var(--ease-out), background-color var(--dur-2) ease, box-shadow var(--dur-2) ease;
-  view-transition-name: site-header;
+  transition: background-color var(--dur-2) ease, border-color var(--dur-2) ease;
+  pointer-events: none;
 }
 
 #header::before {
@@ -5623,7 +5636,9 @@ main#main { scroll-margin-top: var(--header-h); }
   pointer-events: none;
 }
 
-#header.header-transparent {
+#header.header-transparent { background: transparent; }
+
+#header.header-transparent::after {
   background: linear-gradient(to bottom, rgba(0, 0, 0, .42), rgba(0, 0, 0, 0));
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
@@ -5632,10 +5647,13 @@ main#main { scroll-margin-top: var(--header-h); }
 
 #header.header-scrolled {
   height: var(--header-h-scrolled);
-  background: rgba(35, 32, 32, .9);
+  background: transparent;
   box-shadow: 0 14px 34px -18px rgba(0, 0, 0, .5);
-  -webkit-backdrop-filter: blur(18px) saturate(1.4);
-  backdrop-filter: blur(18px) saturate(1.4);
+}
+
+#header.header-scrolled::after {
+  background: rgba(35, 32, 32, .9);
+  border-bottom-color: rgba(255, 255, 255, .07);
 }
 
 #header .logo img,
@@ -6285,6 +6303,8 @@ main#main { scroll-margin-top: var(--header-h); }
   margin-top: 12px;
   color: #F5C53B;
 }
+
+.nw { white-space: nowrap; }
 
 #hero .hero-identity {
   font-size: var(--step-1);
