@@ -38,7 +38,7 @@ breadcrumbs:
       <header class="edu-section-head"><span class="edu-eyebrow">Three Paths</span><h2>先看角色，再看課表</h2><p>主管、法務與工程團隊需要的 Web3 深度不一樣。三條路徑各自有問題、成果與建議模組，不用從 M01 一路念到 M13。</p></header>
       <div class="edu-card-grid">
         {% for path in c.paths %}
-        <article class="edu-card{% if forloop.index == 2 %} edu-card--featured{% endif %}" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}">
+        <article class="edu-card{% if forloop.index == 2 %} edu-card--featured{% endif %}">
           <div class="edu-badges"><span class="edu-badge">路徑 {{ path.id }}</span><span class="edu-badge edu-badge--blue">{{ path.duration }}</span></div>
           <h3>{{ path.name }}</h3>
           <p><strong>適合：</strong>{{ path.audience }}</p>
@@ -55,7 +55,7 @@ breadcrumbs:
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Depth</span><h2>同一條路徑，也可以有不同深度</h2><p>時數不是越長越好。先確認團隊要做決策、建立共同語言，還是真的要進入操作與系統細節。</p></header>
       <div class="edu-card-grid">
-        {% for format in c.formats %}<article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}"><div class="edu-badges"><span class="edu-badge">{{ format.duration }}</span><span class="edu-badge edu-badge--muted">{{ format.modules }}</span></div><h3>{{ format.name }}</h3><p>{{ format.text }}</p></article>{% endfor %}
+        {% for format in c.formats %}<article class="edu-card"><div class="edu-badges"><span class="edu-badge">{{ format.duration }}</span><span class="edu-badge edu-badge--muted">{{ format.modules }}</span></div><h3>{{ format.name }}</h3><p>{{ format.text }}</p></article>{% endfor %}
       </div>
     </div>
   </section>

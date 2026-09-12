@@ -31,7 +31,7 @@ breadcrumbs:
 
   <section class="edu-section edu-section--compact">
     <div class="edu-container">
-      <div class="edu-callout edu-callout--blue" data-aos="fade-up">
+      <div class="edu-callout edu-callout--blue">
         <strong>這不是多工具功能大全。</strong> {{ c.subtitle }} 課程不要求提供公司機密、密碼、金鑰或客戶資料，實作預設使用公開或練習專案。
       </div>
     </div>
@@ -46,7 +46,7 @@ breadcrumbs:
       </header>
       <div class="edu-outcome-grid">
         {% for item in c.principles %}
-        <article class="edu-outcome" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}">
+        <article class="edu-outcome">
           <i class="{{ item.icon }}" aria-hidden="true"></i>
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
@@ -65,7 +65,7 @@ breadcrumbs:
       </header>
       <div class="edu-card-grid">
         {% for format in c.formats %}
-        <article class="edu-card{% if forloop.index == 2 %} edu-card--featured{% endif %}" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 80 }}">
+        <article class="edu-card{% if forloop.index == 2 %} edu-card--featured{% endif %}">
           <div class="edu-badges"><span class="edu-badge">{{ format.duration }}</span></div>
           <h3>{{ format.name }}</h3>
           <p><strong>適合：</strong>{{ format.audience }}</p>
@@ -85,8 +85,8 @@ breadcrumbs:
       </header>
       <div class="edu-card-grid edu-card-grid--two">
         {% for item in c.outcomes %}
-        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 60 }}">
-          <i class="{{ item.icon }}" style="color:#9b6c00;font-size:1.35rem" aria-hidden="true"></i>
+        <article class="edu-card">
+          <i class="{{ item.icon }} edu-card__icon" aria-hidden="true"></i>
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
         </article>
@@ -103,7 +103,7 @@ breadcrumbs:
         <p>Claude Code 是主要示範環境；課程會說清楚哪些是工程方法，哪些只是工具實作。</p>
       </header>
       <p class="edu-table-hint">手機可左右滑動查看完整表格。</p>
-      <div class="edu-table-wrap" data-aos="fade-up">
+      <div class="edu-table-wrap">
         <table class="edu-table">
           <thead><tr><th>#</th><th>主題</th><th>階段</th><th>實作</th><th>帶走</th></tr></thead>
           <tbody>

@@ -43,7 +43,7 @@ advanced_posts:
       {% for slug in page.essentials_posts %}
         {% assign matches = site.posts | where_exp: "p", "p.url contains slug" %}
         {% for article in matches %}
-        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
+        <article class="edu-card">
           {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <h3>{{ article.title }}</h3>{% if article.description %}<p>{{ article.description }}</p>{% endif %}<a class="edu-card__link" href="{{ article.url | relative_url }}">閱讀文章 →</a>
         </article>
@@ -57,7 +57,7 @@ advanced_posts:
       {% for slug in page.advanced_posts %}
         {% assign matches = site.posts | where_exp: "p", "p.url contains slug" %}
         {% for article in matches %}
-        <article class="edu-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 3 | times: 70 }}">
+        <article class="edu-card">
           {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <h3>{{ article.title }}</h3>{% if article.description %}<p>{{ article.description }}</p>{% endif %}<a class="edu-card__link" href="{{ article.url | relative_url }}">閱讀文章 →</a>
         </article>
