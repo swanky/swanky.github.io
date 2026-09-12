@@ -5569,12 +5569,13 @@ body {
   font-optical-sizing: auto;
 }
 
+/* 標題顏色刻意「不」在此全域設定：各家族的深色帶標題靠繼承父層文字色（例：塔羅 hub 的
+   .ct-hero-copy h1），全域一設墨色就會變成深字壓深底。墨色只在下方已知的亮色情境明確指定。 */
 h1, h2, h3, h4, h5, h6, .font-primary {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -.01em;
-  color: var(--c-ink);
   text-wrap: balance;
   font-optical-sizing: auto;
 }
@@ -6101,6 +6102,7 @@ main#main { scroll-margin-top: var(--header-h); }
   font-weight: 600;
   letter-spacing: -.015em;
   line-height: 1.15;
+  color: var(--c-ink);
 }
 
 .section-title h1::after,
@@ -6184,6 +6186,7 @@ main#main { scroll-margin-top: var(--header-h); }
   font-size: var(--step-2);
   font-weight: 600;
   letter-spacing: -.01em;
+  color: var(--c-ink);
 }
 
 .services .icon-box .btn-get-started { padding: 12px 22px; font-size: 13px; }
@@ -6239,6 +6242,7 @@ main#main { scroll-margin-top: var(--header-h); }
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 700;
+  color: var(--c-ink);
 }
 
 .team .member .member-info span { color: var(--c-gold-deep); letter-spacing: .08em; }
@@ -6415,6 +6419,7 @@ main#main { scroll-margin-top: var(--header-h); }
   font-size: 1.05rem;
   letter-spacing: 0;
   line-height: 1.45;
+  color: var(--c-ink);
 }
 
 .why-us .icon-box .description { color: var(--c-body); }
@@ -6428,7 +6433,7 @@ main#main { scroll-margin-top: var(--header-h); }
 }
 
 /* 他人評語 */
-.testimonials .testimonial-item h3 { font-family: var(--font-sans); font-size: 1.125rem; }
+.testimonials .testimonial-item h3 { font-family: var(--font-sans); font-size: 1.125rem; color: var(--c-ink); }
 .testimonials .testimonial-item p {
   font-family: var(--font-display);
   font-style: normal;
@@ -6446,7 +6451,7 @@ main#main { scroll-margin-top: var(--header-h); }
 }
 
 .explore-home-cta:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
-.explore-home-cta-txt b { font-family: var(--font-display); font-size: 1.15rem; }
+.explore-home-cta-txt b { font-family: var(--font-display); font-size: 1.15rem; color: var(--c-ink); }
 
 /* 區塊節奏 */
 section.services { background: var(--c-cream); }
@@ -6806,7 +6811,7 @@ section.testimonials { background: var(--c-cream); }
   margin: 0 0 12px;
 }
 
-.not-found h1 { font-size: var(--step-4); margin-bottom: 12px; }
+.not-found h1 { font-size: var(--step-4); margin-bottom: 12px; color: var(--c-ink); }
 
 .not-found-lead { max-width: 46ch; margin: 0 auto 26px; color: var(--c-muted); }
 
