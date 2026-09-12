@@ -71,7 +71,7 @@ extra_css: |
   .tarot-q-card h2 { font-size: 1.12rem; font-weight: 700; color: #111; margin-bottom: 4px; }
   .tarot-hint { font-size: 0.85rem; color: var(--c-muted); margin-bottom: 14px; }
   .tarot-tip { margin: -2px 0 14px; font-size: 0.86rem; }
-  .tarot-tip summary { cursor: pointer; color: #b6820a; font-weight: 600; list-style: none; }
+  .tarot-tip summary { cursor: pointer; color: var(--c-gold-deep); font-weight: 600; list-style: none; }
   .tarot-tip summary::-webkit-details-marker { display: none; }
   .tarot-tip summary i { color: var(--c-gold); margin-right: 4px; }
   .tarot-tip[open] summary { margin-bottom: 8px; }
@@ -88,7 +88,7 @@ extra_css: |
   .tarot-spread-btn:hover { border-color: var(--c-gold); }
   .tarot-spread-btn.is-active { border-color: var(--c-gold); background: #fffaf0; box-shadow: 0 4px 14px rgba(229,163,0,0.12); }
   .tarot-spread-name { font-size: 0.98rem; font-weight: 700; color: #111; }
-  .tarot-spread-count { font-size: 0.74rem; font-weight: 700; color: var(--c-gold); letter-spacing: 1px; }
+  .tarot-spread-count { font-size: 0.74rem; font-weight: 700; color: var(--c-gold-deep); letter-spacing: 1px; }
   .tarot-spread-blurb { font-size: 0.8rem; color: var(--c-muted); line-height: 1.5; }
   .tarot-topic-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 8px 0 6px; }
   .tarot-topic-btn { text-align: center; background: #fff; border: 1.5px solid #e8e2d4; border-radius: 10px; padding: 12px 8px; cursor: pointer; transition: 0.2s; display: flex; flex-direction: column; gap: 3px; }
@@ -106,7 +106,7 @@ extra_css: |
   .tarot-question-echo .tarot-q-spread { display: inline-block; font-size: 0.74rem; font-weight: 700; color: #111; background: var(--c-gold); border-radius: 5px; padding: 2px 9px; margin-right: 8px; vertical-align: middle; }
   .tarot-cards { display: flex; flex-wrap: wrap; gap: 22px 18px; justify-content: center; margin: 10px 0 4px; }
   .tarot-card-slot { display: flex; flex-direction: column; align-items: center; gap: 9px; }
-  .tarot-card-pos { font-size: 0.82rem; font-weight: 700; color: #b6820a; }
+  .tarot-card-pos { font-size: 0.82rem; font-weight: 700; color: var(--c-gold-deep); }
   .tarot-card { width: 150px; height: 225px; perspective: 1000px; cursor: pointer; }
   .tarot-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.65s cubic-bezier(.4,0,.2,1); }
   .tarot-card.is-flipped .tarot-card-inner { transform: rotateY(180deg); }
@@ -145,7 +145,7 @@ extra_css: |
   .tarot-reading-frame { font-size: 0.95rem; color: #555; margin: 0 0 8px; }
   .tarot-reading-symbol { font-size: 0.93rem; color: #444; line-height: 1.85; margin: 0 0 14px; }
   .tarot-reading-work { background: #fafafa; border-radius: 9px; padding: 13px 15px; margin-bottom: 12px; }
-  .tarot-reading-work h5, .tarot-reading-reflect h5 { font-size: 0.8rem; font-weight: 700; color: #b6820a; margin: 0 0 6px; letter-spacing: 0.5px; }
+  .tarot-reading-work h5, .tarot-reading-reflect h5 { font-size: 0.8rem; font-weight: 700; color: var(--c-gold-deep); margin: 0 0 6px; letter-spacing: 0.5px; }
   .tarot-reading-work p { font-size: 0.9rem; color: #555; line-height: 1.8; margin: 0; }
   .tarot-reading-reversed { font-size: 0.89rem; color: #6b6457; background: #fffaf0; border: 1px dashed #ecd9a6; border-radius: 9px; padding: 11px 14px; line-height: 1.75; margin: 0 0 12px; }
   .tarot-reading-reflect { margin-bottom: 12px; }
@@ -153,7 +153,7 @@ extra_css: |
   .tarot-reading-reflect li { font-size: 0.91rem; color: #4a4a45; line-height: 1.7; padding: 3px 0 3px 18px; position: relative; }
   .tarot-reading-reflect li::before { content: "—"; position: absolute; left: 0; color: var(--c-gold); }
   .tarot-reading-action { font-size: 0.92rem; color: #333; margin: 0; background: #fffaf0; border-radius: 9px; padding: 12px 15px; }
-  .tarot-reading-action b { color: #b6820a; }
+  .tarot-reading-action b { color: var(--c-gold-deep); }
 
   .tarot-result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 26px 0 6px; }
   .tarot-result-actions button { padding: 11px 22px; border-radius: 10px; font-size: 0.92rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--c-gold); background: #fff; color: #c98f00; transition: 0.25s; }
@@ -199,7 +199,7 @@ extra_css: |
   .tarot-funnel-cta:hover { background: #c98f00; color: #111; text-decoration: none; }
   .tarot-funnel-mini { font-size: 0.78rem; color: #a99; margin: 12px 0 0 !important; }
   .tarot-funnel-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-  .tarot-funnel-plans { font-size: 0.86rem; color: #b6820a; text-decoration: none; border-bottom: 1px dashed #e6c879; }
+  .tarot-funnel-plans { font-size: 0.86rem; color: var(--c-gold-deep); text-decoration: none; border-bottom: 1px dashed #e6c879; }
   .tarot-funnel-plans:hover { color: var(--c-gold); }
 
   .tarot-positioning { background: #fafafa; }
@@ -254,7 +254,7 @@ extra_css: |
   .faq-section .accordion-button { font-size: 1.05rem; font-weight: 700; color: #111; background: #fff; }
   .faq-section .accordion-button:not(.collapsed) { color: #111; background: #fffaf0; box-shadow: inset 0 -1px 0 rgba(229,163,0,0.18); }
   .faq-section .accordion-button:focus { border-color: var(--c-gold); outline: 3px solid rgba(229,163,0,0.45); outline-offset: -2px; }
-  .faq-section .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b6820a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+  .faq-section .accordion-button::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238a5d00'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
   .faq-section .accordion-button:not(.collapsed)::after { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E5A300'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
   .faq-section .accordion-body { color: #555; }
 

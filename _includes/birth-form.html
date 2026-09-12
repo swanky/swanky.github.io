@@ -14,21 +14,21 @@ birth-form.html — 自我探索實驗室共用出生表單（astrology / bazi /
   <div class="tool-field">
     <label>{{ include.date_label | default: '出生日期' }}</label>
     <div class="tool-selects">
-      <select id="{{ include.prefix }}-y"></select> 年
-      <select id="{{ include.prefix }}-mo"></select> 月
-      <select id="{{ include.prefix }}-d"></select> 日
+      <select id="{{ include.prefix }}-y" aria-label="出生年"></select> 年
+      <select id="{{ include.prefix }}-mo" aria-label="出生月"></select> 月
+      <select id="{{ include.prefix }}-d" aria-label="出生日"></select> 日
     </div>
   </div>
   <div class="tool-field" id="{{ include.prefix }}-time-row">
     <label>出生時間</label>
     <div class="tool-selects">
-      <select id="{{ include.prefix }}-h"></select> 時
-      <select id="{{ include.prefix }}-mi"></select> 分
+      <select id="{{ include.prefix }}-h" aria-label="出生時"></select> 時
+      <select id="{{ include.prefix }}-mi" aria-label="出生分"></select> 分
     </div>
     <label class="tool-check"><input type="checkbox" id="{{ include.prefix }}-time-unknown"> {{ include.time_unknown_label }}</label>
   </div>
   <div class="tool-field">
-    <label>出生城市</label>
+    <label for="{{ include.prefix }}-city">出生城市</label>
     <div class="tool-selects"><select id="{{ include.prefix }}-city" class="tool-city"></select></div>
   </div>
   {{ include.extra }}

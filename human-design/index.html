@@ -78,7 +78,7 @@ extra_css: |
   .hd-form-extra[open] summary::before { content: '－ '; }
   .hd-form-extra .hd-adv-body { padding: 0 0 12px; }
   .hd-form-extra label { display: block; margin-bottom: 6px; color: #666; font-size: .85rem; }
-  .hd-submit-note { margin: 9px 0 0; color: #8a8578; font-size: .78rem; line-height: 1.5; text-align: center; }
+  .hd-submit-note { margin: 9px 0 0; color: var(--c-muted); font-size: .78rem; line-height: 1.5; text-align: center; }
   .hd-btn-generate { width: 100%; margin-top: 6px; }
   .hd-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; display: none; }
   .hd-error.is-show { display: block; }
@@ -142,7 +142,9 @@ extra_css: |
   .hd-explain-card h2 { font-weight: 700; color: #111; margin-bottom: 10px; }
   .hd-explain-lead { font-size: 0.95rem; color: #555; line-height: 1.75; margin-bottom: 4px; }
   .hd-glossary { margin-top: 14px; }
-  .hd-glossary summary { font-size: 0.9rem; font-weight: 600; color: #c98f00; cursor: pointer; padding: 6px 0; }
+  /* 這裡量到的 gold-deep(5.71:1) 在此 details 位於 data-aos 淡入區塊內，axe 複驗常因進場動畫時序量到偏淺、跌破門檻；
+     多留一截安全邊際，改用更深一階的金色（8.4:1）穩定過關。 */
+  .hd-glossary summary { font-size: 0.9rem; font-weight: 600; color: #6b4600; cursor: pointer; padding: 6px 0; }
   .hd-glossary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; padding-top: 14px; margin: 0; }
   .hd-gloss-item { font-size: 0.86rem; line-height: 1.6; }
   .hd-gloss-item dt { font-weight: 700; color: var(--c-gold); margin-bottom: 2px; }

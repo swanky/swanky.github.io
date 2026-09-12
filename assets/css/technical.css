@@ -1,8 +1,11 @@
 /* Technical consulting pages — image-led, AI blue + Web3 gold, scoped to .technical-page.
-   色彩：深藍 #07111f／AI 藍 #176bff／亮藍 #50b8ff 是本家族刻意的識別色（docs/design.md
-   「Technical 深藍」），不對應系統 token；金、中性灰、紙白改直接引用系統 v2 token，
-   避免同一色系在檔案裡重複寫死相近的十六進位。這兩顆 root 級變數給不在 .technical-page
-   容器內的 listing 頁（articles/agentic-engineering/rwa 共用 .tech-listing-band 等 class）用。 */
+   色彩：深藍 #07111f／亮藍 #50b8ff 是本家族刻意的識別色（docs/design.md「Technical 深藍」），
+   不對應系統 token；金、中性灰、紙白改直接引用系統 v2 token，避免同一色系在檔案裡重複寫死
+   相近的十六進位。--tech-blue 原為 #176bff，2026-09-12 axe 對比複驗發現亮底文字（.tech-eyebrow／
+   .tech-text-link 等）只有 4.06–4.1:1 未達 AA，改深一階為 #0b5ed7（亮底 ≥5.2）；深色帶另走
+   --tech-blue-bright（#50b8ff）未受影響，識別色定義如需回頭核對請看 docs/design.md。
+   這兩顆 root 級變數給不在 .technical-page 容器內的 listing 頁（articles/agentic-engineering/rwa
+   共用 .tech-listing-band 等 class）用。 */
 :root {
   --tech-family-blue-bright: #50b8ff;
   --tech-family-gold-bright: #ffc94f;
@@ -14,7 +17,7 @@
   --tech-muted: var(--c-muted);
   --tech-paper: var(--c-paper-2);
   --tech-white: #fff;
-  --tech-blue: #176bff;
+  --tech-blue: #0b5ed7;
   --tech-blue-bright: var(--tech-family-blue-bright);
   --tech-blue-soft: #eaf2ff;
   --tech-gold: var(--c-gold);
@@ -53,7 +56,7 @@
   text-transform: uppercase;
 }
 .tech-eyebrow::before { width: 26px; height: 2px; content: ""; background: currentColor; }
-.tech-eyebrow--gold { color: #ad7900; }
+.tech-eyebrow--gold { color: var(--c-gold-deep); }
 .tech-section--dark .tech-eyebrow { color: var(--tech-blue-bright); }
 .tech-section--dark .tech-eyebrow--gold { color: #ffc94f; }
 

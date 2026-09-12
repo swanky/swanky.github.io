@@ -373,7 +373,15 @@
 }
 
 .photo-author-light .photo-author-eyebrow {
-  color: #9b6e00;
+  color: var(--c-gold-deep);
+}
+
+/* 亮底 section 裡巢狀的深色卡片（如 gallery.html 的 .photo-author-series-card、
+   uniform-girl.html 的 .photo-subpage-publication）不能沿用亮底的深金字色——
+   深底改回亮金，維持 AA。 */
+.photo-author-light .photo-author-series-card .photo-author-eyebrow,
+.photo-author-light .photo-subpage-publication .photo-author-eyebrow {
+  color: var(--photo-gold-light);
 }
 
 .photo-author-light .photo-author-section-head p {
@@ -427,7 +435,7 @@
 }
 
 .photo-author-era time {
-  color: #9b6e00;
+  color: var(--c-gold-deep);
   font-size: 0.77rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1012,7 +1020,7 @@
 }
 .photo-subpage-compact-grid a { min-height: 0; border-color: var(--photo-line); background: var(--photo-ink); color: #f3efe6 !important; }
 .photo-subpage-compact-grid span,
-.photo-subpage-archive-grid span { margin-top: 7px; color: #777168; line-height: 1.55; }
+.photo-subpage-archive-grid span { margin-top: 7px; color: var(--c-muted); line-height: 1.55; }
 .photo-subpage-archive-grid small { margin-top: auto; padding-top: 18px; color: #926800; }
 
 .photo-author-section:not(.photo-author-light) .photo-subpage-archive-grid a {
