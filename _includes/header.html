@@ -19,9 +19,9 @@
 
     <nav id="navbar" class="navbar" aria-label="主選單">
       <ul id="primary-navigation">
-        <li><a {% if nav_active == 'home' %}class="active" {% endif %}href="{{ '/' | relative_url }}">主頁</a></li>
-        <li><a {% if nav_active == 'story' %}class="active" {% endif %}href="{{ '/story/' | relative_url }}">三個宇宙</a></li>
-        <li class="dropdown"><a href="{{ '/photography/' | relative_url }}"{% if nav_active == 'photography' %} class="active"{% endif %}><span>攝影寫真</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a {% if nav_active == 'home' %}class="active" aria-current="page" {% endif %}href="{{ '/' | relative_url }}">主頁</a></li>
+        <li><a {% if nav_active == 'story' %}class="active" aria-current="page" {% endif %}href="{{ '/story/' | relative_url }}">三個宇宙</a></li>
+        <li class="dropdown"><a href="{{ '/photography/' | relative_url }}"{% if nav_active == 'photography' %} class=\"active\" aria-current=\"true\"{% endif %}><span>攝影寫真</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/photography/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/photography/photo-albums/' | relative_url }}">出版</a></li>
@@ -37,7 +37,7 @@
             </li>
           </ul>
         </li>
-        <li class="dropdown"><a href="{{ '/technical/' | relative_url }}"{% if nav_active == 'technical' %} class="active"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/technical/' | relative_url }}"{% if nav_active == 'technical' %} class=\"active\" aria-current=\"true\"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/technical/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a></li>
@@ -48,7 +48,7 @@
             <li><a href="{{ '/technical/articles/' | relative_url }}">專欄文章</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="{{ '/education/' | relative_url }}"{% if nav_active == 'education' %} class="active"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/education/' | relative_url }}"{% if nav_active == 'education' %} class=\"active\" aria-current=\"true\"{% endif %}><span>教育訓練</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/education/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/education/agentic-engineering/' | relative_url }}">Agentic Engineering 企業培訓</a></li>
@@ -59,7 +59,7 @@
             <li><a href="{{ '/education/crypto/' | relative_url }}">Web3 教育</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="{{ '/explore/' | relative_url }}"{% if explore_navs contains nav_active %} class="active"{% endif %}><span>自我探索</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/explore/' | relative_url }}"{% if explore_navs contains nav_active %} class="active" aria-current="true"{% endif %}><span>自我探索</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/explore/' | relative_url }}">總覽</a></li>
             {% for t in nav_tools %}<li><a href="{{ t.route | relative_url }}">{{ t.nav_label }}</a></li>
@@ -67,7 +67,7 @@
           </ul>
         </li>
         {% comment %} 古典文學專區：金瓶梅宇宙（旗艦子站）＋古典小說書房（/books/ 通用層）；書單由 _data/books.yml 生成，加一本書免改本檔 {% endcomment %}
-        <li class="dropdown"><a href="{{ '/books/' | relative_url }}"{% if nav_active == 'jinpingmei' or nav_active == 'books' %} class="active"{% endif %}><span>古典文學</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/books/' | relative_url }}"{% if nav_active == 'jinpingmei' or nav_active == 'books' %} class="active" aria-current="true"{% endif %}><span>古典文學</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/books/' | relative_url }}">書房總覽</a></li>
             <li class="dropdown"><a href="{{ '/jinpingmei/' | relative_url }}"><span>金瓶梅宇宙</span> <i class="bi bi-chevron-right"></i></a>
@@ -86,8 +86,8 @@
             {% endunless %}{% endfor %}
           </ul>
         </li>
-        <li><a {% if nav_active == 'press' %}class="active" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
-        <li class="dropdown"><a href="{{ '/nft/' | relative_url }}"{% if nav_active == 'nft' %} class="active"{% endif %}><span>NFT策展</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a {% if nav_active == 'press' %}class="active" aria-current="page" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
+        <li class="dropdown"><a href="{{ '/nft/' | relative_url }}"{% if nav_active == 'nft' %} class=\"active\" aria-current=\"true\"{% endif %}><span>NFT策展</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/nft/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/nft/uniform-clonex/' | relative_url }}">Uniform CloneX</a></li>

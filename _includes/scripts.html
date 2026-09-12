@@ -11,6 +11,11 @@
 <!-- Template Main JS File -->
 <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 
+{% if page.use_silk %}
+<!-- 深色帶流動絲綢背景：WebGL fragment shader，無 WebGL／reduce-motion／?nogl=1 皆退回純 CSS -->
+<script type="module" src="{{ '/assets/js/silk.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.use_human_design %}
 <!-- Human Design tool: vendor UMD (global Astronomy) loads before the ES module by spec -->
 <script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>

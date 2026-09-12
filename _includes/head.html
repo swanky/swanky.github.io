@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="theme-color" content="#E5A300">
+<meta name="theme-color" content="#232020">
+<meta name="color-scheme" content="light">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
@@ -62,13 +63,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+{% if page.header_transparent %}<link rel="preload" as="image" href="{{ '/assets/img/hero-home-1600.jpg' | relative_url }}" fetchpriority="high">{% endif %}
+
 <!-- Favicons -->
 <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
 <link href="{{ '/assets/img/Swanky_logo_icon180.png' | relative_url }}" rel="apple-touch-icon">
 
 <!-- Google Fonts -->
+<!-- 顯示字：Fraunces（拉丁、可變光學尺寸）＋ Noto Serif TC（中文、可變字重，Google Fonts 依 unicode-range 切片只下載用到的字）；內文 Lato＋系統中文黑體 -->
 <link
-  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Serif+TC:wght@300..900&display=swap"
   rel="stylesheet">
 
 <!-- Vendor CSS Files -->
@@ -86,6 +90,11 @@
 {% if page.nav_active == 'technical' %}<link href="{{ '/assets/css/technical.css' | relative_url }}" rel="stylesheet">{% endif %}
 {% if page.use_photography_author %}<link href="{{ '/assets/css/photography.css' | relative_url }}?v=20260909-1" rel="stylesheet">{% endif %}
 {% if page.use_tarot_lab %}<link href="{{ '/assets/css/tarot-lab.css' | relative_url }}?v=20260714-4" rel="stylesheet">{% endif %}
+{% if page.use_tools_css %}<link href="{{ '/assets/css/tools.css' | relative_url }}" rel="stylesheet">{% endif %}
+
+<script type="speculationrules">
+{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/assets/*","/nft/*","/*.pdf","/*.xml","/*.json"]}}]},"eagerness":"moderate"}]}
+</script>
 
 <!-- 無 JS 兜底：AOS 進場動畫用 opacity:0 鎖住 [data-aos] 內容，靠 JS scroll 才顯現。
      無 JS（含部分 SEO/OG 截圖爬蟲不執行或不捲動）時強制顯示，避免分享卡與爬蟲看到空白頁。

@@ -1,11 +1,19 @@
 <!-- ======= Footer ======= -->
-<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+{% comment %} 書尾：品牌一句身分（沿用首頁 hero 既有文案）＋聯絡＋社群＋分區索引。
+h2 標題與 18px 規格受 tests/heading-hierarchy 鎖定；分區索引與 header 同源分類名。 {% endcomment %}
+<footer id="footer">
 
   <div class="footer-top">
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-6 col-md-6 footer-contact">
+        <div class="col-lg-5 footer-brand">
+          <a class="footer-logo" href="{{ '/' | relative_url }}" aria-label="回到首頁"><img src="{{ '/assets/img/Swanky_Logo_w.svg' | relative_url }}" alt="Swanky Studio 史旺基工作室" width="120" height="40" loading="lazy"></a>
+          <p class="footer-tagline">史旺基 Swanky Hsiao<br>得獎攝影師 × 大型電信業技術主管 × Web3 教育者</p>
+          <p class="footer-statement">攝影寫真、技術顧問、教育訓練與自我探索工具——同一個人的多重身分，都在這個網站交會。</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-contact">
           <h2>聯絡方式</h2>
           <p>熱愛攝影、研究區塊鏈，有什麼新奇有趣的項目嗎？任何合作歡迎洽詢聯繫。</p>
           <p>
@@ -15,7 +23,7 @@
 
         </div>
 
-        <div class="col-lg-6 col-md-6 footer-info">
+        <div class="col-lg-3 col-md-6 footer-info">
           <h2>社群平台</h2>
           <div class="social-links mt-3">
             {% for link in site.data.social_links %}
@@ -25,12 +33,26 @@
         </div>
 
       </div>
+
+      <nav class="footer-nav" aria-label="網站分區">
+        <a href="{{ '/story/' | relative_url }}">三個宇宙</a>
+        <a href="{{ '/photography/' | relative_url }}">攝影寫真</a>
+        <a href="{{ '/technical/' | relative_url }}">技術顧問</a>
+        <a href="{{ '/education/' | relative_url }}">教育訓練</a>
+        <a href="{{ '/explore/' | relative_url }}">自我探索</a>
+        <a href="{{ '/books/' | relative_url }}">古典文學</a>
+        <a href="{{ '/press/' | relative_url }}">媒體報導</a>
+        <a href="{{ '/nft/' | relative_url }}">NFT 策展</a>
+        <a href="{{ '/technical/articles/' | relative_url }}">專欄文章</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS 訂閱</a>
+      </nav>
     </div>
   </div>
 
   <div class="container">
     <div class="copyright">
-      &copy; {{ 'now' | date: '%Y' }} <strong><span>Swanky Studio</span></strong>. All Rights Reserved
+      <span>&copy; {{ 'now' | date: '%Y' }} <strong><span>Swanky Studio</span></strong>. All Rights Reserved</span>
+      <span>史旺基工作室</span>
     </div>
   </div>
 </footer><!-- End Footer -->
