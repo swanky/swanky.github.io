@@ -10,38 +10,43 @@ breadcrumbs:
   - name: 媒體報導
     url: /press/
 extra_css: >
-  .press-section { padding: 30px 0 10px; border-top: 2px solid #f0f0f0; margin-top: 20px; }
-  .press-section:first-of-type { border-top: none; margin-top: 0; }
-  .press-section h2 { color: #E5A300; font-size: 1.5rem; margin-bottom: 16px; }
-  .press-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 16px; background: #fff; transition: box-shadow 0.2s; }
-  .press-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-  .press-card h3 { margin-top: 0; margin-bottom: 6px; font-size: 1.1rem; }
-  .press-card h3 a { color: #333; }
-  .press-card h3 a:hover { color: #E5A300; }
-  .press-card .meta { color: var(--c-muted); font-size: 0.85rem; margin-bottom: 8px; }
-  .press-card .meta .source { color: #8B5E00; font-weight: 600; }
-  .press-card p { max-width: 70ch; margin-bottom: 8px; font-size: 0.95rem; line-height: 1.6; }
-  .press-card .btn-sm { font-size: 0.8rem; }
-  .badge-archived { background: #8B5E00; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
-  .badge-unavailable { background: #A63A2B; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
-  .badge-external { background: #5f5b53; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
-  .press-intro { background: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.7; }
-  .press-hero {
-    min-height: 340px; display:flex; align-items:center; padding:60px 0;
-    background: linear-gradient(135deg, #2b2724 0%, #232020 100%);
-    color:#fff; text-align:center;
-  }
-  .press-hero .ph-eyebrow { display:block; color:#E5A300; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
-  .press-hero h1 { margin:0 0 12px; color:#fff; }
-  .press-hero p { margin:0 auto; max-width:620px; color:rgba(255,255,255,.78); }
-  @media (max-width:767px){ .press-hero{ min-height:240px; padding:42px 0; } }
-  .press-figure { margin: 14px 0 12px; }
-  .press-figure img { display:block; width:100%; max-width:420px; height:auto; border-radius:6px; border:1px solid #e8e4dc; background:#faf9f7; }
-  .press-figure figcaption { font-size:.8rem; color:#8a8177; margin-top:6px; line-height:1.5; }
-  .press-figures { display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 12px; }
+  .press-hero { min-height: 340px; display:flex; align-items:center; padding: 60px 0; position:relative; background: radial-gradient(120% 160% at 18% -20%, rgba(245,197,59,.16), transparent 55%), var(--c-ink); color:#fff; text-align:center; }
+  .press-hero .ph-eyebrow { display:block; color: var(--c-gold); font-size:.78rem; font-weight:700; letter-spacing:.24em; text-transform:uppercase; margin-bottom:14px; }
+  .press-hero h1 { margin:0 0 14px; color:#fff; font-size: var(--step-4); }
+  .press-hero p { margin:0 auto; max-width:620px; color:rgba(255,255,255,.78); font-size: var(--step-0); line-height:1.75; }
+  @media (max-width:767px){ .press-hero{ min-height:260px; padding:44px 0; } }
+  .press-body-wrap { padding-bottom: var(--space-2xl); }
+  .press-intro { background: var(--c-gold-tint); border: 1px solid var(--c-line); border-radius: var(--r-md); padding: var(--space-s) var(--space-m); margin-bottom: var(--space-l); font-size: var(--step--1); line-height: 1.75; color: var(--c-ink-2); }
+  .press-intro i { color: var(--c-gold-deep); }
+  .press-section { display:grid; grid-template-columns: 1fr; gap: var(--space-m); padding: var(--space-l) 0 var(--space-xs); border-top: 1px solid var(--c-line); margin-top: var(--space-l); }
+  .press-section:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  @media (min-width:900px){ .press-section { grid-template-columns: repeat(2, 1fr); column-gap: var(--space-m); row-gap: var(--space-m); } }
+  .press-section h2 { grid-column: 1 / -1; display:flex; align-items:center; gap: 10px; font-family: var(--font-display); font-size: var(--step-3); font-weight: 600; letter-spacing: -.01em; color: var(--c-ink); margin: 0 0 var(--space-2xs); }
+  .press-section h2 .bi { font-size: .75em; color: var(--c-gold-deep); }
+  .press-section h2::after { content:''; flex:1; height:1px; background: var(--c-line-2); margin-left: 4px; }
+  .press-card { border: 1px solid var(--c-line); border-radius: var(--r-lg); background: #fff; box-shadow: var(--shadow-1); padding: var(--space-s) var(--space-m) var(--space-m); transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), border-color var(--dur-2) ease; }
+  .press-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); border-color: rgba(229,163,0,.4); }
+  .press-card h3 { font-family: var(--font-display); font-size: var(--step-1); font-weight: 600; line-height: 1.4; letter-spacing: -.005em; margin: 0 0 8px; color: var(--c-ink); }
+  .press-card h3 a { color: var(--c-ink); text-decoration: none; }
+  .press-card h3 a:hover { color: var(--c-gold-deep); }
+  .press-card .meta { display:flex; flex-wrap:wrap; align-items:center; gap: 6px 10px; color: var(--c-muted); font-size: 12px; letter-spacing: .02em; margin-bottom: 10px; }
+  .press-card .meta .source { color: var(--c-gold-deep); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 11px; }
+  .press-card p { max-width: 70ch; margin-bottom: 10px; font-size: var(--step--1); line-height: 1.7; color: var(--c-body); }
+  .press-card .btn-sm { border-radius: 10px; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 7px 14px; border: 1px solid var(--c-line-2); color: var(--c-body); background: #fff; transition: background-color var(--dur-2) ease, color var(--dur-2) ease, border-color var(--dur-2) ease; }
+  .press-card .btn-sm:hover { background: var(--c-ink); color: var(--c-gold-2); border-color: var(--c-ink); text-decoration: none; }
+  .press-card .btn-sm:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 2px; }
+  .press-card .btn-color.btn-sm { border: none; }
+  .badge-archived, .badge-unavailable, .badge-external { display:inline-flex; align-items:center; border-radius: var(--r-pill); font-size: 11px; font-weight: 700; letter-spacing: .03em; padding: 3px 10px; margin-left: 6px; vertical-align: middle; }
+  .badge-archived { background: var(--c-gold-deep); color: #fff; }
+  .badge-unavailable { background: #A63A2B; color: #fff; }
+  .badge-external { background: var(--c-muted); color: #fff; }
+  .press-figure { margin: var(--space-s) 0; }
+  .press-figure img { display:block; width:100%; max-width:420px; height:auto; border-radius: var(--r-md); border:1px solid var(--c-line); background: var(--c-paper); box-shadow: var(--shadow-1); }
+  .press-figure figcaption { font-size: 12px; color: var(--c-muted); margin-top:6px; line-height:1.5; }
+  .press-figures { display:flex; gap:12px; flex-wrap:wrap; margin: var(--space-s) 0; }
   .press-figures figure { flex:1 1 220px; max-width:320px; margin:0; }
-  .press-figures img { display:block; width:100%; height:auto; border-radius:6px; border:1px solid #e8e4dc; background:#faf9f7; }
-  .press-figures figcaption { font-size:.78rem; color:#8a8177; margin-top:6px; line-height:1.5; }
+  .press-figures img { display:block; width:100%; height:auto; border-radius: var(--r-md); border:1px solid var(--c-line); background: var(--c-paper); box-shadow: var(--shadow-1); }
+  .press-figures figcaption { font-size: 12px; color: var(--c-muted); margin-top:6px; line-height:1.5; }
 ---
 
   <section class="press-hero">
@@ -52,7 +57,7 @@ extra_css: >
     </div>
   </section>
 
-  <div class="container" style="padding-bottom: 60px;">
+  <div class="container press-body-wrap">
 
     <div class="press-intro">
       <i class="bi bi-info-circle me-1"></i>
