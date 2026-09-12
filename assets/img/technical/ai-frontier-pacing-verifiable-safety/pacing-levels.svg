@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc"><title id="title">同一個控速提案，三種權限</title><desc id="desc">依 Dario Amodei 控速長文整理，三層分別依賴公司承諾、產業及政府協調、全球談判，不代表已完成。</desc>
+<rect width="1200" height="1080" rx="28" fill="#07111f"/><g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+<text x="64" y="96" font-size="58" fill="#ffffff" font-weight="700">同一個控速提案，三種權限</text>
+<text x="64" y="163" font-size="40" fill="#b9c9da" font-weight="400">先分清楚承諾與落地，不把提案當成進度</text>
+<rect x="56" y="206" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="206" width="8" height="229" rx="4" fill="#67deef"/>
+<text x="92" y="261" font-size="36" fill="#67deef" font-weight="700">公司層｜已提出承諾</text>
+<text x="92" y="318" font-size="48" fill="#ffffff" font-weight="700">外部團隊持續進場</text>
+<text x="92" y="372" font-size="42" fill="#e8edf4" font-weight="400">檢查訓練流程、事故與安全實務</text>
+<text x="92" y="419" font-size="42" fill="#e8edf4" font-weight="400">能否獨立發表，是重要驗收點</text>
+<rect x="56" y="457" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="457" width="8" height="229" rx="4" fill="#ffcf66"/>
+<text x="92" y="512" font-size="36" fill="#ffcf66" font-weight="700">產業與政府層｜需要協調</text>
+<text x="92" y="569" font-size="48" fill="#ffffff" font-weight="700">能力跨門檻，就要補安全證據</text>
+<text x="92" y="623" font-size="42" fill="#e8edf4" font-weight="400">共同標準、檢查點與政府支持</text>
+<text x="92" y="670" font-size="42" fill="#e8edf4" font-weight="400">不是單一公司說了就能生效</text>
+<rect x="56" y="708" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="708" width="8" height="229" rx="4" fill="#b6acff"/>
+<text x="92" y="763" font-size="36" fill="#b6acff" font-weight="700">全球層｜需要談判與查核</text>
+<text x="92" y="820" font-size="48" fill="#ffffff" font-weight="700">從狹窄禁令，到自我改進速限</text>
+<text x="92" y="874" font-size="42" fill="#e8edf4" font-weight="400">先確認能驗證什麼、違約怎麼辦</text>
+<text x="92" y="921" font-size="42" fill="#e8edf4" font-weight="400">全面控速仍是最難的一層</text>
+<text x="64" y="1030" font-size="40" fill="#ffcf66" font-weight="600">三層可以並行；承諾不等於制度已經運作。</text>
+</g></svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1080" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc"><title id="title">「不用來訓練」不是全部答案</title><desc id="desc">依消費者說明與商用條款區分資料治理問題。圖為作者檢查框架，並非法律結論或對資料處理的授權。</desc>
+<rect width="1200" height="1080" rx="28" fill="#07111f"/><g font-family="Noto Sans TC,Microsoft JhengHei,sans-serif">
+<text x="64" y="96" font-size="58" fill="#ffffff" font-weight="700">「不用來訓練」不是全部答案</text>
+<text x="64" y="163" font-size="40" fill="#b9c9da" font-weight="400">先辨認產品與合約，再分開問三件事</text>
+<rect x="56" y="206" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="206" width="8" height="229" rx="4" fill="#67deef"/>
+<text x="92" y="261" font-size="36" fill="#67deef" font-weight="700">用途一｜改善模型</text>
+<text x="92" y="318" font-size="48" fill="#ffffff" font-weight="700">什麼資料可以用於訓練？</text>
+<text x="92" y="372" font-size="42" fill="#e8edf4" font-weight="400">依方案與設定確認使用範圍</text>
+<text x="92" y="419" font-size="42" fill="#e8edf4" font-weight="400">不要把個人訂閱當成商用合約</text>
+<rect x="56" y="457" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="457" width="8" height="229" rx="4" fill="#ffcf66"/>
+<text x="92" y="512" font-size="36" fill="#ffcf66" font-weight="700">用途二｜濫用調查</text>
+<text x="92" y="569" font-size="48" fill="#ffffff" font-weight="700">誰能檢視？可以保留多久？</text>
+<text x="92" y="623" font-size="42" fill="#e8edf4" font-weight="400">確認觸發條件、存取與保留例外</text>
+<text x="92" y="670" font-size="42" fill="#e8edf4" font-weight="400">安全用途仍需明確依據與限制</text>
+<rect x="56" y="708" width="1088" height="229" rx="18" fill="#122238" stroke="#314963" stroke-width="2"/>
+<rect x="56" y="708" width="8" height="229" rx="4" fill="#b6acff"/>
+<text x="92" y="763" font-size="36" fill="#b6acff" font-weight="700">用途三｜公開報告</text>
+<text x="92" y="820" font-size="48" fill="#ffffff" font-weight="700">哪些資訊真的需要揭露？</text>
+<text x="92" y="874" font-size="42" fill="#e8edf4" font-weight="400">檢查必要性、去識別與受害者風險</text>
+<text x="92" y="921" font-size="42" fill="#e8edf4" font-weight="400">可調查，不代表可任意公開</text>
+<text x="64" y="1030" font-size="40" fill="#ffcf66" font-weight="600">這是三道檢查問題，不是三項概括授權。</text>
+</g></svg>
