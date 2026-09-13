@@ -149,3 +149,77 @@
 @media (prefers-reduced-motion: reduce) {
   .pb-print img { transition: none; }
 }
+
+/* ── 寫真集入口卡（掛在角色輯相冊下方；資料源 packs[].albums，2026-09-13） ── */
+.pb-album-link {
+  position: relative; display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px); align-items: center;
+  margin-top: clamp(20px, 3vw, 36px); padding: clamp(18px, 2.4vw, 28px);
+  border: 1px solid var(--jpm-gold); background: var(--jpm-panel);
+}
+.pb-album-link-cover { display: block; }
+.pb-album-link-cover .pb-print { transform: rotate(-1.4deg); }
+.pb-album-link-cover .pb-print img { filter: none; }
+.pb-album-link-kicker { display: inline-block; font-family: var(--jpm-kai); font-size: .74rem; letter-spacing: .3em; color: var(--jpm-gold); }
+.pb-album-link h3 { margin: .4rem 0 .6rem; font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.25; letter-spacing: .06em; }
+.pb-album-link h3 small { display: block; margin-top: .35rem; font-size: .5em; font-weight: 700; letter-spacing: .18em; color: var(--jpm-muted); }
+.pb-album-link p { margin: 0 0 1.1rem; max-width: 34em; color: var(--jpm-muted); font-size: .95rem; line-height: 2; }
+.pb-album-link-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.4rem; }
+
+/* ── 專輯頁（/jinpingmei/photobook/<album>/；lp-* 只在專輯頁出現） ── */
+.lp-hero { padding-bottom: clamp(24px, 4vw, 40px); }
+.lp-cover { width: min(100%, 340px); justify-self: end; transform: rotate(1.6deg); }
+.lp-cover img { filter: none; }
+.lp-cta-pdf { flex-direction: column; align-items: flex-start; gap: .15em; line-height: 1.3; }
+.lp-cta-pdf small { font-size: .62em; letter-spacing: .12em; opacity: .85; }
+.lp-links { display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; margin: 1.4rem 0 0; font-size: .86rem; letter-spacing: .08em; }
+.lp-links a { padding-bottom: .1em; border-bottom: 1px solid var(--jpm-line); color: var(--jpm-gold-bright); }
+.lp-links a:hover { border-color: var(--jpm-gold); }
+
+.lp-toc { display: flex; flex-wrap: wrap; gap: .6rem .9rem; padding: 1rem 0; border-top: 1px solid var(--jpm-line); border-bottom: 1px solid var(--jpm-line); }
+.lp-toc a { display: inline-flex; align-items: baseline; gap: .5em; padding: .45em .9em; border: 1px solid var(--jpm-line); font-family: var(--jpm-kai); font-size: .9rem; letter-spacing: .1em; color: var(--jpm-paper); }
+.lp-toc a b { font-family: var(--jpm-serif); font-size: .8em; letter-spacing: .1em; color: var(--jpm-gold); }
+.lp-toc a:hover { border-color: var(--jpm-gold); color: var(--jpm-gold-bright); }
+
+.lp-chapter { padding: clamp(44px, 6vw, 80px) 0 0; scroll-margin-top: 16px; }
+.lp-chapter-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: clamp(22px, 3vw, 34px); padding-bottom: .7rem; border-bottom: 1px solid var(--jpm-line); }
+.lp-chapter-head h2 { margin: 0; font-family: var(--jpm-serif); font-weight: 900; font-size: clamp(1.45rem, 2.6vw, 2rem); line-height: 1.3; letter-spacing: .08em; }
+.lp-ch-no { display: inline-block; margin-right: .7em; padding: .05em .5em; border: 1px solid var(--jpm-gold); vertical-align: .25em; font-size: .62em; letter-spacing: .2em; color: var(--jpm-gold); }
+.lp-ch-count { white-space: nowrap; font-size: .78rem; letter-spacing: .22em; color: var(--jpm-muted); }
+
+/* 排版列：直式（1024×1536）與橫式（1536×1024）同列時，圖寬取 4:9 兩張高度剛好相同。
+   裱框有固定內距（--lp-pad），所以欄寬不能直接 4fr/9fr——
+   解 1.5(w1−2p) = (2/3)(w2−2p)、w1+w2 = 100%−gap，得 w1 = (4(100%−gap) + 10p) / 13。 */
+.lp-row { --lp-gap: clamp(18px, 2.6vw, 30px); --lp-pad: clamp(10px, 1.3vw, 15px); display: grid; gap: var(--lp-gap); align-items: start; margin-bottom: clamp(26px, 3.4vw, 40px); }
+.lp-print { padding: var(--lp-pad) var(--lp-pad) 0; }
+.lp-row--pair { grid-template-columns: calc((4 * (100% - var(--lp-gap)) + 10 * var(--lp-pad)) / 13) minmax(0, 1fr); }
+.lp-row--rev { grid-template-columns: minmax(0, 1fr) calc((4 * (100% - var(--lp-gap)) + 10 * var(--lp-pad)) / 13); }
+.lp-row--duo { grid-template-columns: 1fr 1fr; }
+.lp-row--wide, .lp-row--solo { grid-template-columns: 1fr; }
+.lp-row--solo .lp-print { width: min(100%, 520px); margin-inline: auto; }
+/* 寫真集不做墨化顯影：讀者一路翻下去，色彩本身就是內容 */
+.lp-print img { filter: none; }
+.lp-print .fcap { letter-spacing: .2em; text-indent: .2em; }
+
+.lp-download { margin-top: clamp(44px, 6vw, 72px); }
+.lp-download .act-cta { margin-top: .4rem; }
+.lp-credit { margin: 1.6rem auto 0; text-align: center; font-size: .78rem; letter-spacing: .06em; color: var(--jpm-muted); }
+
+@media (max-width: 720px) {
+  .pb-album-link { grid-template-columns: 1fr; }
+  .pb-album-link-cover { width: min(100%, 250px); margin-inline: auto; }
+  .lp-hero .jpu-hero { grid-template-columns: 1fr; }
+  .lp-cover { justify-self: center; width: min(100%, 300px); transform: rotate(1.2deg); }
+  .lp-row--pair, .lp-row--rev, .lp-row--duo { grid-template-columns: 1fr; }
+  .lp-row--solo .lp-print { width: 100%; }
+  .lp-chapter-head { flex-direction: column; align-items: flex-start; gap: .4rem; }
+  .lp-toc a { padding: .4em .7em; font-size: .82rem; }
+}
+
+/* 手機燈箱：glightbox 在 768px 以下把上一張／下一張按鈕移到畫面外（top:-100%）只留滑動手勢；
+   36 張的寫真集在手機也要看得到按鈕——移到底部兩角，不壓到照片主體。只作用於專輯頁（body.jpm-lp）。 */
+@media (max-width: 768px) {
+  body.jpm-lp .glightbox-clean .gprev, body.jpm-lp .glightbox-clean .gnext { top: auto; bottom: 16px; width: 48px; height: 48px; }
+  body.jpm-lp .glightbox-clean .gprev { left: 16px; }
+  body.jpm-lp .glightbox-clean .gnext { right: 16px; }
+}

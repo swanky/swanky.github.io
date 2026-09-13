@@ -28,7 +28,7 @@ permalink: /jinpingmei/photobook/
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260901-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260814-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260913-1" rel="stylesheet">
   {% include jinpingmei/gtag.html %}
 </head>
 <body class="jpm jpm-pb">
@@ -50,6 +50,8 @@ permalink: /jinpingmei/photobook/
   {%- assign total = 0 -%}
   {%- for p in pb.packs -%}{%- assign total = total | plus: p.shots.size -%}{%- endfor -%}
   {%- assign npacks = pb.packs.size -%}
+  {%- assign nalbums = 0 -%}
+  {%- for p in pb.packs -%}{%- if p.albums -%}{%- assign nalbums = nalbums | plus: p.albums.size -%}{%- endif -%}{%- endfor -%}
 
   <main id="pb-main">
 
@@ -63,6 +65,9 @@ permalink: /jinpingmei/photobook/
           <ul class="pb-count reveal" aria-label="收錄進度">
             <li>現收 <b>{% if npacks <= zhs.size %}{% assign ni = npacks | minus: 1 %}{{ zhs[ni] }}{% else %}{{ npacks }}{% endif %}</b> 輯</li>
             <li><b>{% if total <= zhs.size %}{% assign ti = total | minus: 1 %}{{ zhs[ti] }}{% else %}{{ total }}{% endif %}</b> 幀寫真</li>
+            {%- if nalbums > 0 %}
+            <li>另收 <b>{% if nalbums <= zhs.size %}{% assign ai = nalbums | minus: 1 %}{{ zhs[ai] }}{% else %}{{ nalbums }}{% endif %}</b> 本寫真集</li>
+            {%- endif %}
             <li>陸續進棚</li>
           </ul>
         </div>
@@ -70,6 +75,9 @@ permalink: /jinpingmei/photobook/
           {%- for p in pb.packs -%}
           {%- assign shortname = p.name | slice: 1, 2 -%}
           <span><small>{{ p.shots.size }} 幀</small>{{ shortname }}</span>
+          {%- if p.albums -%}{%- for a in p.albums -%}{%- assign al = site.data[a.data] -%}
+          <span><small>寫真集 {{ al.count }} 張</small>{{ shortname }}</span>
+          {%- endfor -%}{%- endif -%}
           {%- endfor -%}
           <footer>寫真目次</footer>
         </aside>
@@ -122,6 +130,29 @@ permalink: /jinpingmei/photobook/
             </figure>
             {%- endfor %}
           </div>
+          {%- comment -%}獨立寫真集入口卡（packs[].albums；封面用 480 預覽、PDF 直接下載）。{%- endcomment -%}
+          {%- if p.albums -%}
+          {%- for a in p.albums -%}
+          {%- assign al = site.data[a.data] -%}
+          {%- capture alurl %}/jinpingmei/photobook/{{ al.slug }}/{% endcapture -%}
+          {%- capture alcover %}{{ alurl }}images/{{ al.cover }}-480.webp{% endcapture -%}
+          {%- assign alcovershot = al.chapters[0].shots[0] -%}
+          <aside class="pb-album-link reveal" aria-labelledby="pb-album-{{ al.slug }}">
+            <a class="pb-album-link-cover" href="{{ alurl | relative_url }}" tabindex="-1" aria-hidden="true">
+              <figure class="pb-print"><img src="{{ alcover | relative_url }}" alt="" width="480" height="720" loading="lazy" decoding="async"><figcaption><span class="fno">封面</span><span class="fcap">{{ alcovershot.title }}</span></figcaption></figure>
+            </a>
+            <div>
+              <span class="pb-album-link-kicker">整本寫真集 · 新輯</span>
+              <h3 id="pb-album-{{ al.slug }}">{{ al.title }}<small>{{ al.name }} · {{ al.subtitle }} · {{ al.count }} 張寫真</small></h3>
+              <p>{{ al.blurb }}{{ al.name }}離開設定表，走進海邊小鎮的街角、咖啡店與海岸。現代時尚改編，主角為 AI 生成的虛構成年角色。</p>
+              <div class="pb-album-link-ctas">
+                <a class="act-cta" href="{{ alurl | relative_url }}">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
+                <a class="pb-cta" href="{{ alurl | append: al.pdf | relative_url }}" download>下載完整寫真集（PDF，{{ al.pdf_size }}）</a>
+              </div>
+            </div>
+          </aside>
+          {%- endfor -%}
+          {%- endif %}
         </article>
         {%- endfor %}
       </div>

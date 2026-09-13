@@ -1,0 +1,265 @@
+# 李瓶兒《不趕時間的你》36 張數位寫真集——專輯頁 /jinpingmei/photobook/li-pinger-no-hurry/ 的資料源。
+#
+# 渲染：jinpingmei/photobook/li-pinger-no-hurry/index.html（章節×幀，直式跨 1 欄、橫式跨 2 欄）。
+# 圖檔：jinpingmei/photobook/li-pinger-no-hurry/images/{file}.webp（原圖 1024×1536／1536×1024）、
+#       {file}-1080.webp（頁面格線用預覽，長邊 1080）、LP36-01-480.webp（寫真館入口卡）、
+#       li-pinger-no-hurry-og.jpg（社群分享圖 1200×630，取自第 18 幀）。
+# 素材正本與製程紀錄（process/、manifest.json）留在本機研究目錄，不上站。
+# 尺度判圖 2026-09-13：36/36 PASS（判準同 _data/jinpingmei_photobook.yml：無裸露，上限露肩／高衩／抹胸），
+#   07–12、25、26、29 露肩／低領貼上限；站主同日明示授權公開。
+# num：章號字串（不要叫 no——YAML 1.1 會把 no 解析成布林 false，Liquid 就取不到）。
+# rows：每章的排版列（填幀號 n）。直式＋橫式同列＝等高雙欄（4:9）；兩張直式同列＝對開；單張橫式＝滿版。
+# alt 只寫畫面（場景＋動作＋服裝色）；模板會補上角色名與「（AI 生成，非真人照片）」。
+slug: li-pinger-no-hurry
+character: lipinger
+name: 李瓶兒
+title: 不趕時間的你
+subtitle: 海邊的兩日
+count: 36
+cover: LP36-01
+og: li-pinger-no-hurry-og.jpg
+pdf: Li-Ping-Er-No-Hurry-36.pdf
+pdf_size: 約 30 MB
+tagline: 留在街角的一道光，坐到午後的咖啡店。這一次，把時間留給相遇的人。
+blurb: 海邊的兩日，36 張現代時尚寫真。
+chapters:
+  - num: "01"
+    rows: [[1, 2], [3, 4], [5, 6]]
+    title: 在街角等你
+    shots:
+      - n: 1
+        file: LP36-01
+        title: 你終於來了
+        alt: 白色削肩背心倚靠海港咖啡館門框
+        width: 1024
+        height: 1536
+      - n: 2
+        file: LP36-02
+        title: 光走在前面
+        alt: 白色背心牛仔褲漫步海港石板巷弄
+        width: 1536
+        height: 1024
+      - n: 3
+        file: LP36-03
+        title: 就在轉角
+        alt: 側身倚著磚牆微笑望向海港碼頭
+        width: 1024
+        height: 1536
+      - n: 4
+        file: LP36-04
+        title: 風剛好經過
+        alt: 趴在藍綠窗台望向鏡頭陽光灑落
+        width: 1536
+        height: 1024
+      - n: 5
+        file: LP36-05
+        title: 聽見了嗎
+        alt: 閉眼倚牆感受海風輕拂白色背心
+        width: 1024
+        height: 1536
+      - n: 6
+        file: LP36-06
+        title: 一起走吧
+        alt: 白背心牛仔褲轉身望向海港街道
+        width: 1536
+        height: 1024
+  - num: "02"
+    rows: [[7, 8], [9], [10, 11], [12]]
+    title: 把午後留給你
+    shots:
+      - n: 7
+        file: LP36-07
+        title: 這個位子給你
+        alt: 鵝黃色單肩背心紅裙坐咖啡廳沙發
+        width: 1024
+        height: 1536
+      - n: 8
+        file: LP36-08
+        title: 有一點酸
+        alt: 單肩鵝黃背心含著吸管俏皮嘟嘴
+        width: 1024
+        height: 1536
+      - n: 9
+        file: LP36-09
+        title: 笑到停下來
+        alt: 單肩鵝黃背心托腮微笑望向鏡頭
+        width: 1536
+        height: 1024
+      - n: 10
+        file: LP36-10
+        title: 花也在看你
+        alt: 單肩鵝黃背心側頭望向窗外街景
+        width: 1024
+        height: 1536
+      - n: 11
+        file: LP36-11
+        title: 窗外有人叫你
+        alt: 單肩鵝黃背心手扶桌面望向遠方
+        width: 1536
+        height: 1024
+      - n: 12
+        file: LP36-12
+        title: 再留五分鐘
+        alt: 紅裙翹腳坐咖啡廳窗邊陽光灑落
+        width: 1536
+        height: 1024
+  - num: "03"
+    rows: [[13, 14], [15, 16], [17, 18]]
+    title: 沿著海岸走
+    shots:
+      - n: 13
+        file: LP36-13
+        title: 海風替你回答
+        alt: 白襯衫深藍短褲倚牆眺望海灣
+        width: 1024
+        height: 1536
+      - n: 14
+        file: LP36-14
+        title: 把陽光留住
+        alt: 白襯衫短褲手扶木欄眺望沙灘海岸
+        width: 1536
+        height: 1024
+      - n: 15
+        file: LP36-15
+        title: 坐到風停下來
+        alt: 白襯衫深藍短褲坐石牆邊望海
+        width: 1024
+        height: 1536
+      - n: 16
+        file: LP36-16
+        title: 海風吹來時
+        alt: 白襯衫短褲倚木欄開心大笑面向海景
+        width: 1536
+        height: 1024
+      - n: 17
+        file: LP36-17
+        title: 太陽的形狀
+        alt: 白襯衫短褲手拿草帽倚木欄微笑
+        width: 1024
+        height: 1536
+      - n: 18
+        file: LP36-18
+        title: 海岸回望
+        alt: 白襯衫倚石牆微笑背對藍色海灣
+        width: 1536
+        height: 1024
+  - num: "04"
+    rows: [[19, 20], [21, 22], [23, 24]]
+    title: 天色慢慢變深
+    shots:
+      - n: 19
+        file: LP36-19
+        title: 天色正好
+        alt: 酒紅方領洋裝托腮坐窗邊小憩
+        width: 1024
+        height: 1536
+      - n: 20
+        file: LP36-20
+        title: 把這一頁讀完
+        alt: 酒紅洋裝翹腳坐窗邊翻閱書本
+        width: 1536
+        height: 1024
+      - n: 21
+        file: LP36-21
+        title: 話還沒說完
+        alt: 酒紅方領洋裝雙手托腮微笑
+        width: 1024
+        height: 1536
+      - n: 22
+        file: LP36-22
+        title: 把今天記下來
+        alt: 酒紅洋裝伏案提筆寫信望向窗外
+        width: 1536
+        height: 1024
+      - n: 23
+        file: LP36-23
+        title: 夜色留下來
+        alt: 酒紅洋裝倚靠木椅望向窗外夜景
+        width: 1024
+        height: 1536
+      - n: 24
+        file: LP36-24
+        title: 說好明天見
+        alt: 酒紅洋裝坐窗邊手扶窗框望遠方
+        width: 1536
+        height: 1024
+  - num: "05"
+    rows: [[25, 26], [27, 28], [29, 30]]
+    title: 早晨不用趕路
+    shots:
+      - n: 25
+        file: LP36-25
+        title: 光先到了
+        alt: 米白背心開襟外衫倚窗簾望鏡頭
+        width: 1024
+        height: 1536
+      - n: 26
+        file: LP36-26
+        title: 咖啡還熱著
+        alt: 米白背心手捧藍色馬克杯淺笑
+        width: 1536
+        height: 1024
+      - n: 27
+        file: LP36-27
+        title: 慢慢伸個懶腰
+        alt: 米白背心短褲舉手扶窗伸懶腰
+        width: 1024
+        height: 1536
+      - n: 28
+        file: LP36-28
+        title: 出門前再讀一頁
+        alt: 藍色襯衫坐窗邊翻書望向海景
+        width: 1536
+        height: 1024
+      - n: 29
+        file: LP36-29
+        title: 原來你也記得
+        alt: 米白背心外衫手托下巴微笑
+        width: 1024
+        height: 1536
+      - n: 30
+        file: LP36-30
+        title: 把房間留在昨天
+        alt: 米白背心短褲側身望向窗外海景
+        width: 1536
+        height: 1024
+  - num: "06"
+    rows: [[31, 32], [33, 34], [35, 36]]
+    title: 下次，還一起走
+    shots:
+      - n: 31
+        file: LP36-31
+        title: 再走一次那條路
+        alt: 白背心粉色寬褲坐長椅倚欄望海
+        width: 1024
+        height: 1536
+      - n: 32
+        file: LP36-32
+        title: 等你抬起頭
+        alt: 白背心倚老車站窗台望向鏡頭
+        width: 1536
+        height: 1024
+      - n: 33
+        file: LP36-33
+        title: 你看，真的有花
+        alt: 白背心倚窗台伸手撥花微笑
+        width: 1024
+        height: 1536
+      - n: 34
+        file: LP36-34
+        title: 最後坐一會
+        alt: 白背心倚石欄托腮望向鏡頭
+        width: 1536
+        height: 1024
+      - n: 35
+        file: LP36-35
+        title: 下次還一起來
+        alt: 白背心粉色寬褲坐長椅望向海面
+        width: 1024
+        height: 1536
+      - n: 36
+        file: LP36-36
+        title: 還有一點時間
+        alt: 白背心粉色長裙站台回眸望海
+        width: 1536
+        height: 1024

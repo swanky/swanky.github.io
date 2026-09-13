@@ -1,0 +1,170 @@
+---
+layout: null
+title: 李瓶兒《不趕時間的你》｜金瓶梅角色寫真集
+description: 金瓶梅宇宙角色寫真集：李瓶兒《不趕時間的你》——海邊的兩日，36 張現代時尚寫真，可線上翻閱、前後切換與下載完整寫真集。全部影像皆為 AI 生成的虛構成年角色，並非真人照片。
+permalink: /jinpingmei/photobook/li-pinger-no-hurry/
+---
+{%- assign al = site.data.jinpingmei_photobook_lp36 -%}
+{%- capture base %}/jinpingmei/photobook/{{ al.slug }}/{% endcapture -%}
+{%- capture imgdir %}{{ base }}images/{% endcapture -%}
+{%- capture pdfurl %}{{ base }}{{ al.pdf }}{% endcapture -%}
+{%- capture curl %}/jinpingmei/characters/{{ al.character }}/{% endcapture -%}
+{%- assign coverShot = al.chapters[0].shots[0] -%}
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ imgdir | append: al.og | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260913-1" rel="stylesheet">
+  {% include jinpingmei/gtag.html %}
+</head>
+<body class="jpm jpm-pb jpm-lp">
+  <a class="jpm-skip" href="#pb-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a class="hide-m" href="{{ '/' | relative_url }}">回主站</a>
+    </nav>
+  </header>
+
+  <main id="pb-main">
+
+    <!-- ── 開卷 ── -->
+    <section class="jpm-section lp-hero">
+      <div class="jpu-hero jpm-shell">
+        <div>
+          <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真集</span></p>
+          <h1 class="act-title reveal">{{ al.title }}<small>{{ al.name }} · {{ al.subtitle }} · {{ al.count }} 張寫真</small></h1>
+          <p class="act-lead reveal">{{ al.tagline }}<br>{{ al.name }}離開設定表，走進海邊小鎮的兩日——街角、咖啡店、海岸，與清晨的窗邊。本輯為現代時尚改編，主角是 <b>AI 生成的虛構成年角色</b>（設定二十七歲），並非真人照片。</p>
+          <div class="act-cta-row reveal">
+            <a class="act-cta" href="#photos">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
+            <a class="act-cta lp-cta-pdf" href="{{ pdfurl | relative_url }}" download>下載完整寫真集<small>PDF · {{ al.pdf_size }}</small></a>
+          </div>
+          <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ curl | relative_url }}">看{{ al.name }}的角色檔案 →</a></p>
+        </div>
+        <figure class="pb-print lp-cover reveal">
+          <img src="{{ imgdir | append: al.cover | append: '-1080.webp' | relative_url }}" alt="寫真集封面：{{ al.name }}，{{ coverShot.alt }}（AI 生成，非真人照片）" width="720" height="1080" fetchpriority="high" decoding="async">
+          <figcaption><span class="fno">封面</span><span class="fcap">{{ coverShot.title }}</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── 目次 ── -->
+    <nav class="jpm-shell lp-toc reveal" aria-label="章節目次">
+      {%- for c in al.chapters %}
+      <a href="#chapter-{{ c.num }}"><b>{{ c.num }}</b>{{ c.title }}</a>
+      {%- endfor %}
+    </nav>
+
+    <!-- ── 六章・三十六幀 ── -->
+    <div id="photos">
+      {%- for c in al.chapters %}
+      <section class="lp-chapter" id="chapter-{{ c.num }}" aria-labelledby="lp-ch-{{ c.num }}">
+        <div class="jpm-shell">
+          <header class="lp-chapter-head reveal">
+            <h2 id="lp-ch-{{ c.num }}"><span class="lp-ch-no">{{ c.num }}</span>{{ c.title }}</h2>
+            <span class="lp-ch-count">{{ c.shots.size }} 幀 · No.{% if c.shots.first.n < 10 %}0{% endif %}{{ c.shots.first.n }}–{{ c.shots.last.n }}</span>
+          </header>
+          {%- for row in c.rows %}
+          {%- assign pat = "" -%}
+          {%- for n in row -%}
+            {%- assign s = c.shots | where: "n", n | first -%}
+            {%- if s.height > s.width -%}{%- assign pat = pat | append: "P" -%}{%- else -%}{%- assign pat = pat | append: "L" -%}{%- endif -%}
+          {%- endfor -%}
+          {%- case pat -%}
+            {%- when "PL" -%}{%- assign rcls = "lp-row--pair" -%}
+            {%- when "LP" -%}{%- assign rcls = "lp-row--pair lp-row--rev" -%}
+            {%- when "PP" -%}{%- assign rcls = "lp-row--duo" -%}
+            {%- when "L" -%}{%- assign rcls = "lp-row--wide" -%}
+            {%- else -%}{%- assign rcls = "lp-row--solo" -%}
+          {%- endcase %}
+          <div class="lp-row {{ rcls }}">
+            {%- for n in row %}
+            {%- assign s = c.shots | where: "n", n | first -%}
+            {%- capture nn %}{% if s.n < 10 %}0{% endif %}{{ s.n }}{% endcapture -%}
+            {%- capture full %}{{ imgdir }}{{ s.file }}.webp{% endcapture -%}
+            {%- capture prev %}{{ imgdir }}{{ s.file }}-1080.webp{% endcapture -%}
+            {%- if s.height > s.width -%}{%- assign pw = 720 -%}{%- assign ph = 1080 -%}{%- else -%}{%- assign pw = 1080 -%}{%- assign ph = 720 -%}{%- endif %}
+            <figure class="pb-print lp-print">
+              <a href="{{ full | relative_url }}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ prev | relative_url }}" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}</span></figcaption>
+            </figure>
+            {%- endfor %}
+          </div>
+          {%- endfor %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
+
+    <!-- ── 整本帶走 ── -->
+    <div class="jpm-shell">
+      <aside class="pb-teaser lp-download reveal" aria-label="下載寫真集">
+        <b>整本帶走</b>
+        <p>{{ al.count }} 張寫真裝成一本數位寫真集，共 40 頁，可免費下載收藏。檔案 {{ al.pdf_size }}，手機下載前請留意流量。</p>
+        <a class="act-cta lp-cta-pdf" href="{{ pdfurl | relative_url }}" download>下載完整寫真集<small>PDF · {{ al.pdf_size }}</small></a>
+        <p><a href="{{ '/jinpingmei/photobook/' | relative_url }}">回寫真館，看其他角色的寫真 →</a></p>
+      </aside>
+    </div>
+
+    <!-- ── 凡例 ── -->
+    <div class="jpm-shell">
+      <aside class="paiji reveal" aria-labelledby="lp-paiji">
+        <div class="paiji-frame">
+          <p class="paiji-head" id="lp-paiji"><b>凡例</b><small>本輯的誠實標示</small></p>
+          <ul>
+            <li>{{ al.name }}是《金瓶梅》書中角色；本輯為現代時尚改編，主角是 <b>AI 生成的虛構成年角色</b>（設定二十七歲），並非真人照片，場景亦為虛構。</li>
+            <li>全輯<b>無裸露</b>；原典含成人內容，建議成年讀者。</li>
+            <li>寫真對象出自<a href="{{ curl | relative_url }}">角色研究館</a>考證過的角色檔案；其他角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。</li>
+            <li>本輯以數位形式公開，完整寫真集可免費下載；未推出印刷版。</li>
+          </ul>
+          <span class="paiji-seal" aria-hidden="true"><i>寫真集</i></span>
+        </div>
+      </aside>
+      <p class="lp-credit">攝影企劃與編輯方向：史旺基。圖像：AI 生成（Codex ImageGen）。角色外觀依指定母版製作；場景為虛構。</p>
+    </div>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>

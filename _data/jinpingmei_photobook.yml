@@ -8,6 +8,8 @@
 # 角色頁與寫真館都會自動長出來。pack 級欄位：
 #   note  — 相冊導語（文案，寫真館用）
 #   quote — 逐字引文（一律複製角色頁「原文依據」既有引文，不得憑記憶寫）
+#   albums — 獨立寫真集清單（選填）：每項 data＝_data/ 檔名（如 jinpingmei_photobook_lp36），
+#            專輯頁自有路徑 /jinpingmei/photobook/{slug}/；寫真館在該輯相冊下方、角色頁寫真段都會長出入口。
 packs:
   - slug: panjinlian
     name: 潘金蓮
@@ -61,6 +63,9 @@ packs:
         height: 1536
   - slug: lipinger
     name: 李瓶兒
+    # 獨立寫真集（整本作品，有自己的專輯頁）；data＝_data/ 裡的檔名。寫真館與角色頁會長出入口卡，shots 幀數不計入。
+    albums:
+      - data: jinpingmei_photobook_lp36
     note: 從雨夜窗邊走到夕照網球場、皮拉提斯教室與單車雨夜；她的安靜、甜笑與驚喜，讓同一張臉有了不同節奏。
     quote: 好個溫克性兒
     shots:
