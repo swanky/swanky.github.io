@@ -3,3 +3,6 @@
 # 驗證器本身另有 LF 正規化，所以就算誤簽成 CRLF 也不會誤報；這條是多一層保險。
 content/** text eol=lf
 schema/*.json text eol=lf
+
+# 寫真集 PDF 是二進位檔——沒有這條 git 會把它當文字檔統計（曾顯示 1802 行），autocrlf 環境下有被換行正規化弄壞的風險。
+*.pdf binary
