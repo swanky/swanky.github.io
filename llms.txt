@@ -40,6 +40,13 @@
 
 代表文章：
 
+- [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
+- [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
+- [Dario 說 AI 該慢一點：我支持驗證，但不想把規則也外包給供應商](https://swanky.github.io/technical/ai-frontier-pacing-verifiable-safety/)
+- [我讓五隻 CloneX 跳 KPOP：參考影片可能才是瓶頸](https://swanky.github.io/technical/clonex-bunny-dance-reference-bottleneck/)
+- [AI 影片不是輸入一句話就好：6 天彩排 3 支成片，我踩過的審核、參考圖與成本問題](https://swanky.github.io/technical/ai-video-production-rehearsal-seedance-workflow/)
+- [Bot Mode 不是多開幾個聊天視窗：AI Agent 正從 Session 走向有名字的長期同事](https://swanky.github.io/technical/hermes-bot-mode-persistent-ai-team/)
+- [Matt Pocock × Uncle Bob：AI 寫程式愈快，軟體基本功愈不能省](https://swanky.github.io/technical/uncle-bob-ai-software-fundamentals/)
 - [「Scaffolding is coping」不是不要規範：AI Agent 架構該刪什麼、留下什麼](https://swanky.github.io/technical/scaffolding-thin-harness-agent-architecture/)
 - [AI Agent 讓「外科手術團隊」復活了：一個人帶一群 Agent，瓶頸仍是人腦](https://swanky.github.io/technical/ai-agent-surgical-team/)
 - [可上線的 AI Agent，不是更會自主：從 Context、Evidence、State 到 Permission 的四層控制面](https://swanky.github.io/technical/production-ai-agent-control-planes/)
