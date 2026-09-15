@@ -8,6 +8,7 @@
     <a href="mailto:swanky.hsiao@gmail.com?subject=攝影預約洽詢" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'photography',service:'photography',cta_position:'article',from_page:'{{ page.url }}'});}">來信預約</a>
     <a href="{{ '/photography/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',cta_position:'article',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
   </div>
+  {% include contact-fallback.html service="photography" position="article" %}
 </div>
 {% elsif cta_context == 'ai-visual' %}
 <div class="article-cta">
@@ -44,6 +45,7 @@
     <a href="{{ '/education/agentic-engineering/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'article',from_page:'{{ page.url }}'});}">看企業培訓方案 &rarr;</a>
     <a href="mailto:swanky.hsiao@gmail.com?subject={{ '[企業培訓洽詢] Agentic Engineering' | url_encode }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_article',service:'agentic_engineering_training',cta_position:'article',from_page:'{{ page.url }}'});}">來信洽詢</a>
   </div>
+  {% include contact-fallback.html service="agentic_engineering_training" position="article" %}
 </div>
 {% else %}
 <div class="article-cta">
@@ -54,5 +56,6 @@
     <a href="{{ '/technical/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'technical',cta_position:'article',from_page:'{{ page.url }}'});}">技術顧問 &rarr;</a>
     <a href="{{ '/education/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'education',cta_position:'article',from_page:'{{ page.url }}'});}">教育訓練 &rarr;</a>
   </div>
+  {% include contact-fallback.html service="technical" position="article" %}
 </div>
 {% endif %}

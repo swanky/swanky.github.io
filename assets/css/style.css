@@ -6896,3 +6896,33 @@ section.testimonials { background: var(--c-cream); }
    （對比掃描抓到 /qimen/ 與 /tarot/draw/ 白字壓白卡）；用較高特異性把卡片內文字拉回墨色 */
 .tool-cta-dark :is(.qimen-cta-card, .tarot-product-card, .tool-card, .hd-product-card) :is(h2, h3, h4) { color: var(--c-ink); }
 .tool-cta-dark :is(.qimen-cta-card, .tarot-product-card, .tool-card, .hd-product-card) :is(p, li) { color: var(--c-body); }
+
+/* 洽詢按鈕旁的信箱備援（_includes/contact-fallback.html）。
+   currentColor + opacity：同一套樣式要同時活在亮色卡片與深色洽詢帶上，
+   寫死顏色就會在其中一邊變成低對比。 */
+.contact-fallback {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+  margin: 14px 0 0;
+  text-align: center;
+  opacity: .78;
+}
+
+.contact-fallback a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-word;
+}
+
+.contact-fallback a:hover {
+  opacity: .85;
+}
+
+/* 亮色卡片上的基準色是中灰 #4d4742，餘裕本來就小，再乘 .78 會掉到 4.72:1（AA 門檻 4.5
+   只剩 0.22 的餘裕，目視也明顯比深色區那兩處淡）。深色區的白字扣 22% 仍有 11:1，
+   不必動——所以只提亮這一處，而不是全域調高。實測 2026-09-15。 */
+.article-cta .contact-fallback {
+  opacity: .88;
+}

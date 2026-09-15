@@ -1,0 +1,14 @@
+{%- comment -%}
+  洽詢按鈕旁的信箱備援（2026-09-15 新增）。
+
+  為什麼存在：站上每一顆洽詢按鈕都是 mailto，訪客若沒設定預設郵件程式（用網頁版 Gmail
+  的人尤其常見），按下去畫面完全沒反應——他既不知道發生了什麼，也看不到信箱可以自己寄。
+  GA4 2026-08-16～09-14：contact_cta_click 26 次、站主實際收到 0 封。這一行把信箱印成
+  看得見、可選取複製的文字，讓按鈕沒作用的人仍然寄得出信。
+
+  用法：{% raw %}{% include contact-fallback.html service="technical" position="article" %}{% endraw %}
+  事件沿用既有的 contact_cta_click ＋ service／cta_position 維度（勿改，會斷 2026-09-09
+  埋點整理的資料連續性）；cta_type 加 _fallback 後綴，才分得出是按鈕還是這行文字。
+  顏色刻意用 currentColor＋opacity，深色區與亮色卡片都能自動適應。
+{%- endcomment -%}
+<p class="contact-fallback">或直接寫信到 <a href="mailto:{{ site.email }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'{{ include.service }}_fallback',service:'{{ include.service }}',cta_position:'{{ include.position }}',from_page:window.location.pathname});}">{{ site.email }}</a></p>
