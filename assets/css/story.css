@@ -132,7 +132,11 @@ body.nav-on-paper .topbar {
   font-size: .72rem;
   letter-spacing: .12em;
   color: inherit;
-  opacity: .62;
+  /* 非目前所在宇宙的項目原本壓到 .62，實測對比只有 3.45:1，而且與捲動無關——
+     只要不在那一頁就長期是暗的（2026-09-15 實測）。底色本身對比有 7.95:1，
+     問題出在這個透明度折扣，拿掉即可；「目前所在」改用下方圓點與字重區分，
+     不再靠把其他項目調暗來凸顯。 */
+  opacity: 1;
   transition: opacity .3s;
 }
 .acts-nav a:hover, .acts-nav a.is-active { opacity: 1; }
@@ -160,7 +164,7 @@ body.nav-on-paper .topbar {
 
 @media (max-width: 720px) {
   .dot-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .acts-nav a { opacity: .8; }
+  .acts-nav a { opacity: 1; }
 }
 
 /* --------------------------------------------------------------------------
@@ -181,7 +185,13 @@ body.nav-on-paper .topbar {
 
 @media (prefers-reduced-motion: no-preference) {
   html.reveal-ready .reveal {
-    opacity: .62;
+    /* 靜止態 .62 會讓灰字在深底上掉到 3.04:1；快速捲動時那零點幾秒的暗字仍會被看到。
+       提到 .85 一次解掉 16 組配色（逐一改文字顏色反而會動到定稿後的色彩），
+       進場「由暗漸亮」的感覺保留（2026-09-15 站主看過前後對照圖後裁可）。
+       為什麼是 .85 不是 .78：這些文字本身的顏色就帶 60% 透明（rgba(239,233,221,.6)），
+       兩層相乘後實際只有 .468，實測 .78 僅 4.16:1、.82 僅 4.49:1 仍在門檻下，
+       .85 實測 4.75:1 才有安全邊際。 */
+    opacity: .85;
     transform: translateY(2.2rem);
     transition: opacity .9s ease, transform .9s var(--ease-out);
   }
@@ -200,7 +210,7 @@ body.nav-on-paper .topbar {
   }
 }
 @keyframes reveal-rise {
-  from { opacity: .62; transform: translateY(1.15rem); }
+  from { opacity: .85; transform: translateY(1.15rem); }
   to   { opacity: 1; transform: none; }
 }
 
@@ -1303,7 +1313,8 @@ body[data-universe="work"] { --universe-color: var(--gold); }
     font-size: .7rem;
     letter-spacing: .08em;
     scroll-snap-align: start;
-    opacity: .78;
+    /* 同上：手機版也不再用透明度區分「非目前分頁」，is-active 靠背景膠囊辨識 */
+    opacity: 1;
   }
   .acts-nav a.is-active { opacity: 1; background: rgba(255,255,255,.08); }
   .acts-nav .dot { width: 5px; height: 5px; flex: 0 0 auto; }
