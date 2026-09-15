@@ -243,6 +243,16 @@ extra_css: |
   .hd-interest-strip strong { color: #2c2924; }
   .hd-interest-strip a { flex: 0 0 auto; padding: 9px 14px; border: 1px solid #E5A300; border-radius: 10px; color: #8B5E00; font-size: .8rem; font-weight: 700; text-decoration: none; transition: .2s; }
   .hd-interest-strip a:hover { background: #E5A300; color: #111; }
+
+  /* 免費結果結束後的下一步（三張卡＝合盤／工具館／更新通知）。與付費區刻意分開：
+     付費區是白底金框的商品卡，這裡是米底、無金框的輕量卡，讓「免費的下一步」不被讀成推銷。 */
+  .hd-next-steps { max-width: 1000px; margin: 30px auto 6px; }
+  .hd-next-steps h3 { margin: 0 0 14px; font-size: 1.12rem; font-weight: 800; color: #2c2924; text-align: center; }
+  .hd-next-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .hd-next-card { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border: 1px solid #e7ddc6; border-radius: 14px; background: #fffdf7; color: #2c2924; text-align: left; text-decoration: none; font: inherit; cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .2s; }
+  .hd-next-card:hover, .hd-next-card:focus-visible { border-color: #E5A300; box-shadow: 0 10px 26px rgba(70,54,18,.10); transform: translateY(-2px); color: #2c2924; }
+  .hd-next-title { font-size: .95rem; font-weight: 700; line-height: 1.45; }
+  .hd-next-desc { font-size: .82rem; line-height: 1.6; color: #675f52; }
   /* 穩定幣付款區 */
   .hd-crypto-pay { max-width: 880px; margin: 30px auto 0; background: linear-gradient(135deg,#fffaf0,#fff6e3); border: 1px solid #f0dca8; border-radius: 16px; padding: 30px 28px; text-align: center; }
   .hd-crypto-pay h3 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 8px; }
@@ -398,6 +408,7 @@ extra_css: |
     .hd-report-preview-body { padding: 3px 18px 18px; }
     .hd-interest-strip { align-items: stretch; flex-direction: column; gap: 10px; padding: 15px 18px 17px; }
     .hd-interest-strip a { text-align: center; }
+    .hd-next-grid { grid-template-columns: 1fr; }
   }
 
   /* ============================================================
@@ -650,7 +661,6 @@ extra_css: |
       <div class="hd-result-actions">
         <button class="is-primary" id="hd-download-png">下載人類圖圖卡 (PNG)</button>
         <button id="hd-share-link">複製分享連結</button>
-        <button id="hd-goto-composite">加入另一個人，看你們的合盤 →</button>
         <button id="hd-reset">重新輸入</button>
         <a href="#hd-result-offer" id="hd-report-link">把這張圖用進工作：看深度報告 ↓</a>
       </div>
@@ -662,6 +672,28 @@ extra_css: |
 
       <!-- Layer 1 續：設計重點白話展開 -->
       <div id="hd-readout"></div>
+
+      <!-- 免費結果結束後的下一步。GA4 2026-08-16～09-14：96 次成功排盤，合盤只被點 3 次（3.1%）、
+           更新通知 0 次。原因不是缺功能，是位置——合盤原本混在「下載／複製連結／重新輸入」那排
+           工具按鈕裡，讀起來像工具列不像下一步；工具館入口在 hero（結果之前），排完盤往下捲不會
+           經過。這裡不新增任何機制，只把三個既有入口收攏到使用者剛拿到結果的那一屏。 -->
+      <section class="hd-next-steps" aria-labelledby="hd-next-steps-title">
+        <h3 id="hd-next-steps-title">拿到圖之後，還可以這樣用</h3>
+        <div class="hd-next-grid">
+          <button type="button" class="hd-next-card" id="hd-goto-composite">
+            <span class="hd-next-title">加入另一個人，看你們的合盤 →</span>
+            <span class="hd-next-desc">用你剛才輸入的資料，直接看你和伴侶或同事之間怎麼互相影響。</span>
+          </button>
+          <a class="hd-next-card" href="{{ '/explore/' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_goto_explore',{source:'result'});}">
+            <span class="hd-next-title">試試其他自我探索工具 →</span>
+            <span class="hd-next-desc">星盤、八字、易經、塔羅牌都在同一個地方，一樣免費。</span>
+          </a>
+          <a class="hd-next-card" id="hd-interest-contact" href="mailto:{{ site.email }}?subject={{ '[人類圖] 更新通知登記' | url_encode }}&body={{ '嗨，史旺基，我想收到人類圖工具與報告主題的重要更新通知。我最想看到的主題（選填）：' | url_encode }}" onclick="if(window.gtag){gtag('event','hd_interest_contact',{source:'result'});}">
+            <span class="hd-next-title">有新東西時通知我 →</span>
+            <span class="hd-next-desc">只有新的報告主題或重要工具更新時才會寄信。</span>
+          </a>
+        </div>
+      </section>
 
       <!-- 生成後付費下一步：先交付完整免費摘要，再說明付費報告多解決什麼 -->
       <aside class="hd-result-offer" id="hd-result-offer" aria-labelledby="hd-result-offer-title">
@@ -723,10 +755,6 @@ extra_css: |
             <p class="hd-report-sample-note">以上是內容結構示意；你收到的文字會依自己的圖與所選主題重新整理。</p>
           </div>
         </details>
-        <div class="hd-interest-strip">
-          <p><strong>現在還不需要報告？</strong>可先登記更新通知；只有新報告主題或重要工具更新時才會寄信。</p>
-          <a id="hd-interest-contact" href="mailto:{{ site.email }}?subject={{ '[人類圖] 更新通知登記' | url_encode }}&body={{ '嗨，史旺基，我想收到人類圖工具與報告主題的重要更新通知。我最想看到的主題（選填）：' | url_encode }}" onclick="if(window.gtag){gtag('event','hd_interest_contact',{source:'result'});}">用電子郵件登記通知 →</a>
-        </div>
       </aside>
 
       <!-- Layer 2：通道 / 中心 / 輪迴交叉 / 行星細節（v2 摺疊預設收合；v1 攤平） -->
