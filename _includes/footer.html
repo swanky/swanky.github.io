@@ -19,7 +19,7 @@ h2 標題與 18px 規格受 tests/heading-hierarchy 鎖定；分區索引與 hea
           <p>
             <strong>Email:</strong> <a href="mailto:{{ site.email }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'footer_email',service:'general',cta_position:'footer',from_page:window.location.pathname});}">{{ site.email }}</a>
           </p>
-          <a class="footer-cta" href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'footer',service:'general',cta_position:'footer',from_page:window.location.pathname});}">來信洽詢合作</a>
+          <a class="footer-cta" href="{{ '/contact/' | relative_url }}?service=general&from=footer" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'footer',service:'general',cta_position:'footer',from_page:window.location.pathname});}">來信洽詢合作</a>
 
         </div>
 

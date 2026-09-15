@@ -28,6 +28,7 @@
 ## 技術顧問 Technical Consulting
 
 - [技術顧問總覽](https://swanky.github.io/technical/): Java 架構、敏捷教練、區塊鏈 R&D 諮詢服務
+- [洽詢合作](https://swanky.github.io/contact/): 技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作的單一洽詢入口
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
 - [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
 
@@ -139,4 +140,4 @@
 
 古典小說原文屬公共領域；各書的底本、來源與授權條件詳見該書頁面標示（部分維基文庫校對層為 CC BY-SA 4.0／GFDL）。
 
-聯絡合作或諮詢：swanky.hsiao@gmail.com
+聯絡合作或諮詢：填 [洽詢表單](https://swanky.github.io/contact/) 或來信 swanky.hsiao@gmail.com

@@ -35,7 +35,7 @@ extra_css: |
           <p class="hero-value">協助技術團隊與創作者，把 AI Agent、Web3 與軟體工程流程，導入成可重複、可驗證、可產出的工作流。</p>
           <div class="hero-cta">
             <a href="{{ '/technical/ai-agent-consulting/' | relative_url }}" class="btn-get-started btn-primary-solid" onclick="if(window.gtag){gtag('event','service_page_click',{service:'ai_agent_consulting',cta_position:'hero',from_page:window.location.pathname});}">AI Agent 導入顧問</a>
-            <a href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" class="btn-get-started" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'hero',service:'general',cta_position:'hero',from_page:window.location.pathname});}">合作洽詢</a>
+            <a href="{{ '/contact/' | relative_url }}?service=general&from=hero" class="btn-get-started" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'hero',service:'general',cta_position:'hero',from_page:window.location.pathname});}">合作洽詢</a>
             <a href="{{ '/story/' | relative_url }}" class="btn-get-started" onclick="if(window.gtag){gtag('event','story_entry_click',{from:'hero'});}">走進三個宇宙</a>
           </div>
           <a href="#selected-works" class="hero-more">先看代表作 <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
@@ -122,7 +122,7 @@ extra_css: |
           {% endfor %}
         </div>
 
-        <p class="services-contact-line" data-aos="fade-up">還不確定從哪裡開始？<a href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'home_services',service:'general',cta_position:'home_services',from_page:window.location.pathname});}">來信聊聊你的需求 <i class="bi bi-envelope" aria-hidden="true"></i></a></p>
+        <p class="services-contact-line" data-aos="fade-up">還不確定從哪裡開始？<a href="{{ '/contact/' | relative_url }}?service=general&from=home_services" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'home_services',service:'general',cta_position:'home_services',from_page:window.location.pathname});}">來信聊聊你的需求 <i class="bi bi-envelope" aria-hidden="true"></i></a></p>
 
         <a href="{{ '/explore/' | relative_url }}" class="explore-home-cta" data-aos="fade-up">
           <span class="explore-home-cta-ico"><i class="bi bi-compass"></i></span>

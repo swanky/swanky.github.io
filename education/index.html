@@ -11,26 +11,8 @@ breadcrumbs:
   - name: 教育訓練
     url: /education/
 ---
-{% capture enterprise_subject %}[企業培訓洽詢] AI／Web3 培訓需求{% endcapture %}
-{% capture enterprise_body %}您好，我想了解企業培訓。
-
-公司／單位：
-感興趣的方向（Agentic Engineering／Web3／跨主軸）：
-團隊角色：
-預計人數：
-希望時數：
-想解決的問題：
-預計日期：{% endcapture %}
-{% capture enterprise_href %}mailto:swanky.hsiao@gmail.com?subject={{ enterprise_subject | url_encode }}&body={{ enterprise_body | url_encode }}{% endcapture %}
-{% capture model_subject %}[模特兒一對一課程洽詢] 鏡頭表現與作品拍攝{% endcapture %}
-{% capture model_body %}您好，我想了解模特兒鏡頭表現一對一課程。
-
-是否已滿 18 歲（未滿 18 歲須由法定代理人共同確認）：
-想改善的鏡頭表現：
-偏好的拍攝風格：
-希望一對一或小班：
-可配合時段：{% endcapture %}
-{% capture model_href %}mailto:swanky.hsiao@gmail.com?subject={{ model_subject | url_encode }}&body={{ model_body | url_encode }}{% endcapture %}
+{% capture enterprise_href %}{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=education_hub{% endcapture %}
+{% capture model_href %}{{ '/contact/' | relative_url }}?service=model_coaching&from=education_hub{% endcapture %}
 <main id="main" class="education-page education-page--hub">
   {% include education/hero.html eyebrow="Education" title="企業培訓與個人實戰課程" lead="企業需要的是能判斷、能實作的共同方法；個人學習則要真的帶走成果。先選你的情境，再看適合的課程。" image="/education/crypto/img/swanky_crypto_class.jpg" alt="史旺基過往課程的多人實作現場" media_label="真實教學紀錄" trust="講師：史旺基——大型電信業技術主管、東吳大學區塊鏈課程兼任助理教授，作品曾登上《TIME》雜誌的得獎攝影師。" caption="自 2018 年起持續於東吳大學授課，Web3 企業內訓 7 場以上；個人課程以實際攝影作品呈現。" primary_href="#enterprise" primary_label="找企業培訓" secondary_href="#individual" secondary_label="找個人課程" %}
 

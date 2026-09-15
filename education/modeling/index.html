@@ -14,16 +14,7 @@ breadcrumbs:
   - name: 模特兒鏡頭表現一對一課程
     url: /education/modeling/
 ---
-{% capture inquiry_subject %}[模特兒一對一課程洽詢] 鏡頭表現與作品拍攝{% endcapture %}
-{% capture inquiry_body %}您好，我想了解模特兒鏡頭表現一對一課程。
-
-是否已滿 18 歲（未滿 18 歲須由法定代理人共同確認）：
-想改善的鏡頭表現：
-偏好的拍攝風格：
-希望一對一或小班：
-可配合時段：
-是否有意願了解合作人才庫（不影響報名）：{% endcapture %}
-{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
+{% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=model_coaching&from=model_coaching_page{% endcapture %}
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Portrait Coaching" status="女性限定・主推一對一" title="模特兒鏡頭表現一對一課程" lead="不是教你背一百個姿勢，而是找到身體、表情與鏡頭之間的關係。學完直接拍，每位學員自選 5 張精修數位照片。" image="/assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg" alt="女性模特兒擺姿與鏡頭表現作品" primary_href=inquiry_href primary_label="洽詢一對一課程" secondary_href="#outcomes" secondary_label="先看會帶走什麼" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching',service:'model_coaching',cta_position:'hero',from_page:window.location.pathname});}" %}
 

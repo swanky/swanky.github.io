@@ -5,7 +5,7 @@
   <h3>喜歡這些影像？</h3>
   <p>人像寫真、形象照、活動紀錄與商業攝影皆可預約。先聊聊你想留下的樣子，再談怎麼拍。</p>
   <div class="article-cta-actions">
-    <a href="mailto:swanky.hsiao@gmail.com?subject=攝影預約洽詢" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'photography',service:'photography',cta_position:'article',from_page:'{{ page.url }}'});}">來信預約</a>
+    <a href="{{ '/contact/' | relative_url }}?service=photography&from=article" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'photography',service:'photography',cta_position:'article',from_page:'{{ page.url }}'});}">來信預約</a>
     <a href="{{ '/photography/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'photography',cta_position:'article',from_page:'{{ page.url }}'});}">看攝影作品 &rarr;</a>
   </div>
   {% include contact-fallback.html service="photography" position="article" %}
@@ -43,7 +43,7 @@
   <p>這些方法已整理成企業試辦方案：從 2–3 小時導入、半天 E2E 實作，到 9 堂完整培訓。核心方法跨工具，Claude Code 作主要示範。</p>
   <div class="article-cta-actions">
     <a href="{{ '/education/agentic-engineering/' | relative_url }}" class="btn-cta" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'article',from_page:'{{ page.url }}'});}">看企業培訓方案 &rarr;</a>
-    <a href="mailto:swanky.hsiao@gmail.com?subject={{ '[企業培訓洽詢] Agentic Engineering' | url_encode }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_article',service:'agentic_engineering_training',cta_position:'article',from_page:'{{ page.url }}'});}">來信洽詢</a>
+    <a href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=article" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_article',service:'agentic_engineering_training',cta_position:'article',from_page:'{{ page.url }}'});}">來信洽詢</a>
   </div>
   {% include contact-fallback.html service="agentic_engineering_training" position="article" %}
 </div>
@@ -52,7 +52,7 @@
   <h3>有技術顧問、內訓或講座需求？</h3>
   <p>提供技術架構與 AI／Agentic Engineering 導入顧問、企業內訓，以及區塊鏈與 Web3 課程。有需求歡迎來信聊聊——先對齊你的場景，再談怎麼做。</p>
   <div class="article-cta-actions">
-    <a href="mailto:swanky.hsiao@gmail.com?subject=技術顧問／內訓洽詢" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'technical',service:'technical',cta_position:'article',from_page:'{{ page.url }}'});}">來信聊聊</a>
+    <a href="{{ '/contact/' | relative_url }}?service=technical&from=article" class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'technical',service:'technical',cta_position:'article',from_page:'{{ page.url }}'});}">來信聊聊</a>
     <a href="{{ '/technical/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'technical',cta_position:'article',from_page:'{{ page.url }}'});}">技術顧問 &rarr;</a>
     <a href="{{ '/education/' | relative_url }}" class="article-cta-secondary" onclick="if(window.gtag){gtag('event','service_page_click',{service:'education',cta_position:'article',from_page:'{{ page.url }}'});}">教育訓練 &rarr;</a>
   </div>

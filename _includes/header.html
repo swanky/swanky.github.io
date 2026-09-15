@@ -94,12 +94,12 @@
             <li><a href="{{ '/nft/oursong/' | relative_url }}">制服女孩 NFT 系列</a></li>
       </ul>
         </li>
-        <li class="nav-contact"><a href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'mobile_nav',service:'general',cta_position:'mobile_nav',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a></li>
+        <li class="nav-contact"><a href="{{ '/contact/' | relative_url }}?service=general&from=mobile_nav" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'mobile_nav',service:'general',cta_position:'mobile_nav',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a></li>
       </ul>
       <button class="site-overview-trigger" type="button" popovertarget="site-overview" aria-expanded="false">
         <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i><span>總覽</span>
       </button>
-      <a class="nav-cta" href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'nav',service:'general',cta_position:'nav',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a>
+      <a class="nav-cta" href="{{ '/contact/' | relative_url }}?service=general&from=nav" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'nav',service:'general',cta_position:'nav',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a>
       <button class="mobile-nav-toggle" type="button" aria-label="開啟主選單" aria-controls="primary-navigation" aria-expanded="false">
         <i class="bi bi-list" aria-hidden="true"></i>
       </button>
@@ -114,7 +114,7 @@
 <div id="site-overview" class="site-overview" popover role="dialog" aria-labelledby="site-overview-title">
   <div class="site-overview__bar">
     <span class="site-overview__brand">SWANKY STUDIO ／ 網站總覽</span>
-    <a class="site-overview__contact" href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'site_overview',service:'general',cta_position:'site_overview',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a>
+    <a class="site-overview__contact" href="{{ '/contact/' | relative_url }}?service=general&from=site_overview" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'site_overview',service:'general',cta_position:'site_overview',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a>
     <button class="site-overview__close" type="button" popovertarget="site-overview" popovertargetaction="hide" autofocus>
       <span class="site-overview__close-label">關閉</span><span class="site-overview__close-x" aria-hidden="true">×</span>
     </button>

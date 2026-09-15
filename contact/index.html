@@ -119,11 +119,52 @@ extra_css: |
     var position = params.get('from') || 'contact_page';
     document.getElementById('cf-from-page').value = params.get('page') || document.referrer || '';
 
+    // 各服務別的填寫提示：沿用各服務頁 mailto 版本裡本來就在問的問題，一字未改寫——
+    // 那些問題是站主整理過的，換成表單不該把它們弄丟，否則訪客只會寫「想了解一下」。
+    var HINTS = {
+      ai_agent_consulting: '組織／團隊：
+聯絡人與職務：
+目前情境與要作的決策：
+最想解決的問題：
+預計時程：
+預算區間（選填）：
+
+請勿附上程式碼、架構圖、帳密或其他機密資料。',
+      web3_consulting: '組織／團隊：
+聯絡人與職務：
+目前情境與要作的決策：
+最想解決的問題：
+目前階段（概念／評估／PoC／既有專案）：
+預計時程：
+預算區間（選填）：
+
+請勿附上程式碼、架構圖、錢包、帳密或其他機密資料。',
+      agentic_engineering_training: '團隊角色、人數、希望時數與目前卡住的問題。',
+      web3_training: '團隊角色、人數、希望時數與目前想釐清的議題。',
+      ai_crypto_research: '主辦單位、主要受眾、預估人數、希望形式與預計日期。',
+      model_coaching: '是否已滿 18 歲、想改善的鏡頭表現、偏好風格與可配合時段。',
+      photography: '想嘗試的主題／風格：
+可配合時段：
+公開作品或社群連結（模特兒合作請附）：
+其他想先確認的事情：'
+    };
+
+    function applyHint(key) {
+      var box = document.getElementById('cf-message');
+      if (box && HINTS[key]) box.placeholder = HINTS[key];
+    }
+
     // 從按鈕帶過來的服務別，預先選好，訪客少填一步
     if (service) {
       var sel = document.getElementById('cf-topic');
-      if (sel && sel.querySelector('option[value="' + service.replace(/"/g, '') + '"]')) sel.value = service;
+      if (sel && sel.querySelector('option[value="' + service.replace(/"/g, '') + '"]')) {
+        sel.value = service;
+        applyHint(service);
+      }
     }
+    // 訪客自己改下拉時，提示跟著換
+    var topicSel = document.getElementById('cf-topic');
+    if (topicSel) topicSel.addEventListener('change', function () { applyHint(topicSel.value); });
 
     function say(msg, kind) {
       status.textContent = msg;

@@ -15,18 +15,7 @@ breadcrumbs:
   - name: AI Agent × Crypto Research 合作課程
     url: /education/ai-crypto-research/
 ---
-{% capture inquiry_subject %}[合作開班洽詢] AI Agent × Crypto Research{% endcapture %}
-{% capture inquiry_body %}您好，我想洽談 AI Agent × Crypto Research 合作課程。
-
-主辦單位／社群：
-主要受眾：
-預估人數：
-希望形式（60–90 分鐘講座／2–6 小時工作坊／尚未確定）：
-可提供的資源（招生／場地／收款／平台等，可先簡述）：
-希望學員帶走的成果：
-預計日期：
-想研究的公開專案（可留白）：{% endcapture %}
-{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
+{% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=ai_crypto_research&from=ai_crypto_research_page{% endcapture %}
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Co-hosted Course" status="只接受合作主辦洽詢" title="AI Agent × Crypto Research 合作課程" lead="不是用 AI 產出一篇看起來很完整的報告，而是建立研究、交叉查證與風險檢查流程。講座與工作坊依主辦受眾組合。" image="/assets/img/illustrations/claude-code-terminal.svg" alt="AI Agent 加密市場研究與風險檢查工作流示意圖" contain=true primary_href=inquiry_href primary_label="洽談合作開班" secondary_href="#formats" secondary_label="比較形式與成果" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_cohost',service:'ai_crypto_research',cta_position:'hero',from_page:window.location.pathname});}" %}
 

@@ -16,16 +16,7 @@ breadcrumbs:
     url: /education/agentic-engineering/
 ---
 {% assign c = site.data.courses.agentic_engineering %}
-{% capture inquiry_subject %}[企業培訓洽詢] Agentic Engineering 培訓需求{% endcapture %}
-{% capture inquiry_body %}您好，我想了解 Agentic Engineering 企業培訓。
-
-公司／單位：
-團隊角色：
-預計人數：
-希望時數（2–3 小時／半天／9 堂／尚未確定）：
-想解決的問題：
-預計日期：{% endcapture %}
-{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
+{% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=agentic_engineering_page{% endcapture %}
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline image="/assets/img/illustrations/claude-code-course.svg" alt="Agentic Engineering 企業培訓：需求、規格、驗證與交付流程示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 

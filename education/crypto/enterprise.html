@@ -17,17 +17,7 @@ breadcrumbs:
     url: /education/crypto/enterprise/
 ---
 {% assign c = site.data.courses.web3_enterprise %}
-{% capture inquiry_subject %}[企業培訓洽詢] Web3 培訓需求{% endcapture %}
-{% capture inquiry_body %}您好，我想了解 Web3 企業培訓。
-
-公司／單位：
-感興趣的路徑（主管決策／RWA 風險與合規／產品與技術／尚未確定）：
-團隊角色：
-預計人數：
-希望時數：
-想解決的問題：
-預計日期：{% endcapture %}
-{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode }}&body={{ inquiry_body | url_encode }}{% endcapture %}
+{% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=web3_training&from=web3_enterprise_page{% endcapture %}
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Enterprise Web3 Training" title=c.name lead=c.tagline image="/assets/img/illustrations/enterprise-training.svg" alt="Web3 企業培訓的決策、風險與實務路徑示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#paths" secondary_label="比較三條路徑" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'web3_enterprise',service:'web3_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
