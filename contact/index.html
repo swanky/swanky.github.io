@@ -1,0 +1,169 @@
+---
+layout: page
+title: 洽詢合作
+seo_title: 洽詢合作｜技術顧問、企業內訓、攝影與模特兒合作
+permalink: /contact/
+description: 想談技術顧問、AI Agent 導入、Web3 課程、企業內訓或攝影合作，填這張表最快。也可以直接寫信到 swanky.hsiao@gmail.com。
+nav_active: contact
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 洽詢合作
+    url: /contact/
+extra_css: |
+  .contact-wrap { max-width: 720px; margin: 0 auto; padding: 46px 20px 70px; }
+  .contact-wrap h1 { font-size: 2rem; font-weight: 800; color: #2c2924; margin: 0 0 12px; }
+  .contact-lead { font-size: .96rem; line-height: 1.8; color: #4d4742; margin: 0 0 26px; }
+  .contact-form { display: grid; gap: 18px; background: #fffdf7; border: 1px solid #e7ddc6; border-radius: 16px; padding: 26px 24px; }
+  .contact-field { display: grid; gap: 7px; }
+  .contact-field label { font-size: .9rem; font-weight: 700; color: #2c2924; }
+  .contact-field .hint { font-size: .8rem; font-weight: 400; color: #675f52; }
+  .contact-field input, .contact-field select, .contact-field textarea { width: 100%; padding: 11px 13px; border: 1px solid #ddd3bc; border-radius: 10px; background: #fff; color: #2c2924; font: inherit; font-size: .94rem; }
+  .contact-field input:focus, .contact-field select:focus, .contact-field textarea:focus { outline: 3px solid #E5A300; outline-offset: 1px; border-color: #E5A300; }
+  .contact-field textarea { min-height: 150px; resize: vertical; line-height: 1.7; }
+  .contact-submit { justify-self: start; padding: 12px 34px; border: 0; border-radius: 50px; background: #E5A300; color: #111; font-family: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; transition: background .2s; }
+  .contact-submit:hover:not(:disabled) { background: #c98c00; }
+  .contact-submit:disabled { opacity: .6; cursor: progress; }
+  .contact-status { font-size: .9rem; line-height: 1.7; margin: 0; }
+  .contact-status.is-ok { color: #1f6b3a; font-weight: 700; }
+  .contact-status.is-err { color: #9d2f2f; font-weight: 700; }
+  .contact-alt { margin: 26px 0 0; font-size: .88rem; line-height: 1.8; color: #4d4742; }
+  .contact-alt a { color: inherit; text-decoration: underline; text-underline-offset: 3px; word-break: break-word; }
+  .contact-note { margin: 14px 0 0; font-size: .82rem; line-height: 1.75; color: #675f52; }
+  /* honeypot：給機器人看的欄位，真人永遠看不到也不會填 */
+  .contact-gotcha { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+---
+
+<div class="contact-wrap">
+  <h1>洽詢合作</h1>
+  <p class="contact-lead">不確定也沒關係。簡單說明目前遇到的問題與預計時程即可，不需要先交敏感資料。技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作都從這裡開始。</p>
+
+  <form class="contact-form" id="contact-form" novalidate>
+    {%- comment -%}
+      欄位名稱不可改成一般命名：Forminit 只認 fi-{blockType}-{name} 這個規則
+      （官方 https://forminit.com/docs/form-blocks ）。2026-09-15 第一版用 name／email／
+      message 直接被退件：「none of your fields use Forminit's block keys」。
+      _gotcha 是另一套機制（honeypot），維持原名不加前綴。
+
+      稱呼刻意**不**用 fi-sender-fullName：Forminit 對 sender 的姓名欄位只接受英文字母、
+      空格、連字號、撇號與句點，中文名字一律被退件（2026-09-15 實測：「表單測試（請忽略）」
+      → Invalid characters in name field）。這是繁體中文站的硬傷，所以稱呼改走自訂文字區塊
+      fi-text-name，不受那條驗證管轄。sender 區塊只保留 email——官方規定 sender 至少要有
+      userId／email／phone／firstName／lastName／fullName 其中之一，email 就滿足了。
+    {%- endcomment -%}
+    <div class="contact-field">
+      <label for="cf-name">怎麼稱呼你 <span class="hint">（必填）</span></label>
+      <input type="text" id="cf-name" name="fi-text-name" required autocomplete="name" maxlength="60">
+    </div>
+
+    <div class="contact-field">
+      <label for="cf-email">你的電子郵件 <span class="hint">（必填，我回信會寄到這裡）</span></label>
+      <input type="email" id="cf-email" name="fi-sender-email" required autocomplete="email" maxlength="120">
+    </div>
+
+    <div class="contact-field">
+      <label for="cf-topic">想談的是</label>
+      <select id="cf-topic" name="fi-select-topic">
+        <option value="ai_agent_consulting">AI Agent 導入顧問</option>
+        <option value="web3_consulting">Web3 技術顧問</option>
+        <option value="technical">其他技術顧問需求</option>
+        <option value="agentic_engineering_training">Agentic Engineering 企業培訓</option>
+        <option value="web3_training">Web3 課程與企業內訓</option>
+        <option value="ai_crypto_research">AI × 加密研究合作課程</option>
+        <option value="model_coaching">模特兒課程</option>
+        <option value="photography">攝影或模特兒合作</option>
+        <option value="general" selected>其他／還不確定</option>
+      </select>
+    </div>
+
+    <div class="contact-field">
+      <label for="cf-message">想談的內容 <span class="hint">（必填）</span></label>
+      <textarea id="cf-message" name="fi-text-message" required maxlength="3000" placeholder="例如：我們團隊想試著把 AI 寫程式納入既有流程，但不知道從哪裡開始評估，預計下一季試行。"></textarea>
+    </div>
+
+    <div class="contact-gotcha" aria-hidden="true">
+      <label for="cf-gotcha">這一欄請留空</label>
+      <input type="text" id="cf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
+
+    <input type="hidden" name="fi-text-from_page" id="cf-from-page" value="">
+
+    <button class="contact-submit" type="submit" id="cf-submit">送出</button>
+    <p class="contact-status" id="cf-status" role="status" aria-live="polite"></p>
+  </form>
+
+  <noscript>
+    <p class="contact-alt"><strong>這張表單需要瀏覽器執行 JavaScript 才能送出。</strong>如果送不出去，直接寫信到 <a href="mailto:{{ site.email }}">{{ site.email }}</a> 一樣可以，內容想寫什麼都行。</p>
+  </noscript>
+
+  <p class="contact-alt">不想填表單？直接寫信到 <a href="mailto:{{ site.email }}?subject={{ '合作洽詢' | url_encode }}">{{ site.email }}</a> 也可以。</p>
+
+  <p class="contact-note">你填的內容會經由表單服務商 Forminit 轉送到史旺基的信箱，資料存放在歐盟（愛爾蘭）的伺服器，只用來回覆你這次的洽詢。</p>
+</div>
+
+<script src="https://forminit.com/sdk/v1/forminit.js" defer></script>
+<script>
+  (function () {
+    'use strict';
+    // 表單送出的量測與 mailto 按鈕分開：按鈕仍送 contact_cta_click，這裡送 contact_form_submit，
+    // 兩者共用 service／cta_position 兩個維度（2026-09-09 埋點整理的既有維度，不得更名），
+    // 這樣「按了幾次」與「真的送出幾封」才對得起來——這正是做表單的目的。
+    var FORM_ID = 'wy0mvwqq256';
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('cf-status');
+    var button = document.getElementById('cf-submit');
+    if (!form) return;
+
+    var params = new URLSearchParams(location.search);
+    var service = params.get('service') || '';
+    var position = params.get('from') || 'contact_page';
+    document.getElementById('cf-from-page').value = params.get('page') || document.referrer || '';
+
+    // 從按鈕帶過來的服務別，預先選好，訪客少填一步
+    if (service) {
+      var sel = document.getElementById('cf-topic');
+      if (sel && sel.querySelector('option[value="' + service.replace(/"/g, '') + '"]')) sel.value = service;
+    }
+
+    function say(msg, kind) {
+      status.textContent = msg;
+      status.className = 'contact-status' + (kind ? ' is-' + kind : '');
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        say('還有必填欄位沒填完，麻煩再看一下。', 'err');
+        form.reportValidity();
+        return;
+      }
+      if (typeof Forminit === 'undefined') {
+        say('表單暫時送不出去，麻煩直接寫信到 {{ site.email }}，內容一樣就好。', 'err');
+        return;
+      }
+      button.disabled = true;
+      say('送出中…');
+
+      var chosen = (document.getElementById('cf-topic') || {}).value || 'general';
+      new Forminit().submit(FORM_ID, new FormData(form)).then(function (res) {
+        button.disabled = false;
+        if (res && res.error) {
+          say('送出時出了點問題：' + (res.error.message || '請再試一次') + '。若一直不行，直接寫信到 {{ site.email }} 也可以。', 'err');
+          return;
+        }
+        say('已經送出了，謝謝你——我看到後會回信到你留的信箱。', 'ok');
+        form.reset();
+        if (window.gtag) {
+          gtag('event', 'contact_form_submit', {
+            service: chosen,
+            cta_position: position,
+            from_page: window.location.pathname
+          });
+        }
+      }).catch(function () {
+        button.disabled = false;
+        say('送出時出了點問題，麻煩再試一次；若一直不行，直接寫信到 {{ site.email }} 也可以。', 'err');
+      });
+    });
+  }());
+</script>
