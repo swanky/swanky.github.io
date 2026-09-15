@@ -290,6 +290,10 @@ details.jpm-details .lbl { display: block; margin: 0 0 .35rem; color: var(--jpm-
 .film-player img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
 .film-player:hover img { transform: scale(1.035); }
 .film-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+/* 無 JS 時的後備連結：門面是「點了才載入 YouTube」，沒有 JS 就永遠停在劇照上、
+   播放鈕按了沒反應（2026-08 稽核 P1-4）。noscript 連結直接把人送到 YouTube。 */
+.film-noscript { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2; padding: 10px 18px; background: rgba(14,13,11,.86); border: 1px solid var(--jpm-line); color: #f3ead7; font-size: .86rem; text-decoration: none; }
+.film-noscript:hover { background: rgba(14,13,11,.96); color: #fff; }
 .film-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; background: linear-gradient(180deg, rgba(10, 9, 7, .06) 46%, rgba(10, 9, 7, .66)); border: 0; cursor: pointer; color: var(--jpm-paper); font-family: var(--jpm-sans); font-size: .8rem; letter-spacing: .34em; text-indent: .34em; }
 .film-play i { position: relative; display: block; width: 74px; height: 74px; border-radius: 50%; border: 1px solid rgba(233, 224, 203, .85); background: rgba(14, 13, 11, .42); backdrop-filter: blur(3px); transition: background .35s, transform .35s; }
 .film-play i::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-left: 17px solid var(--jpm-paper); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }

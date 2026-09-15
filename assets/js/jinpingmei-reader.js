@@ -10,10 +10,29 @@
   var reader = document.querySelector('.jpm-reader');
   var posTimer = null;
   var markedRead = false;
+  // 進度只算正文區塊（.jpm-reader＝<article id="chapter-body">），不含回內導航、換頁列、
+  // 收錄說明與頁尾。舊版用整份文件算，讀完最後一句還停在八成多，而且「讀過 70% 記為已讀」
+  // 會被頁尾稀釋——同一回讀完卻沒被標成已讀（2026-08 稽核 P0-2）。
+  // POS_SCHEMA 是為了平滑遷移：舊紀錄的 pct 是文件基準，恢復位置時要用舊公式換算。
+  var POS_SCHEMA = 2;
+  function bodyTop() { return reader.getBoundingClientRect().top + window.scrollY; }
   function currentPct() {
     var doc = document.documentElement;
-    var max = doc.scrollHeight - window.innerHeight;
-    return max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    if (!reader || reader.offsetHeight <= 0) {
+      var max = doc.scrollHeight - window.innerHeight;
+      return max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    }
+    // 讀到的量＝視窗底緣越過正文起點的距離；正文底緣進到視窗底緣時＝100%
+    var read = window.scrollY + window.innerHeight - bodyTop();
+    return Math.max(0, Math.min(1, read / reader.offsetHeight));
+  }
+  function scrollToPct(pct, schema) {
+    var doc = document.documentElement;
+    if (schema !== POS_SCHEMA || !reader || reader.offsetHeight <= 0) {
+      window.scrollTo({ top: pct * (doc.scrollHeight - window.innerHeight), behavior: 'instant' });
+      return;
+    }
+    window.scrollTo({ top: Math.max(0, bodyTop() + pct * reader.offsetHeight - window.innerHeight), behavior: 'instant' });
   }
   function savePos() {
     var meta = document.querySelector('.jpm-reader-head');
@@ -26,6 +45,7 @@
       label: h1 ? h1.childNodes[0].textContent.trim() : '',
       edition: vol ? vol.textContent.split('・')[0] : '',
       pct: Math.round(pct * 1000) / 1000,
+      v: POS_SCHEMA,
       t: Date.now()
     });
     if (!markedRead && pct >= 0.7) {
@@ -49,8 +69,7 @@
     if (location.hash === '#continue' && prevPos && prevPos.url === location.pathname && prevPos.pct > 0.02) {
       window.addEventListener('load', function () {
         setTimeout(function () {
-          var doc = document.documentElement;
-          window.scrollTo({ top: prevPos.pct * (doc.scrollHeight - window.innerHeight), behavior: 'instant' });
+          scrollToPct(prevPos.pct, prevPos.v);
           savePos();
         }, 60);
       });
@@ -98,9 +117,8 @@
   if (bar) {
     var ticking = false;
     var update = function () {
-      var doc = document.documentElement;
-      var max = doc.scrollHeight - window.innerHeight;
-      bar.style.width = max > 0 ? (Math.min(1, window.scrollY / max) * 100).toFixed(2) + '%' : '0%';
+      // 與續讀記憶同一個基準（正文區塊），否則進度條與「讀到 X%」會對不起來
+      bar.style.width = (currentPct() * 100).toFixed(2) + '%';
       ticking = false;
     };
     window.addEventListener('scroll', function () {
