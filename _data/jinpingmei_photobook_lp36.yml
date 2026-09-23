@@ -20,8 +20,12 @@ cover: LP36-01
 og: li-pinger-no-hurry-og.jpg
 pdf: Li-Ping-Er-No-Hurry-36.pdf
 pdf_size: 約 30 MB
+pdf_pages: 40
+volume: 第一輯
 tagline: 留在街角的一道光，坐到午後的咖啡店。這一次，把時間留給相遇的人。
 blurb: 海邊的兩日，36 張現代時尚寫真。
+# lead：寫真館入口卡的一句導語（接在 blurb 之後；館頁模板不再硬編碼各輯文案）。
+lead: 李瓶兒離開設定表，走進海邊小鎮的街角、咖啡店與海岸。現代時尚改編，主角為 AI 生成的虛構成年角色。
 chapters:
   - num: "01"
     rows: [[1, 2], [3, 4], [5, 6]]

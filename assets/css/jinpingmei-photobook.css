@@ -205,6 +205,24 @@
 .lp-download .act-cta { margin-top: .4rem; }
 .lp-credit { margin: 1.6rem auto 0; text-align: center; font-size: .78rem; letter-spacing: .06em; color: var(--jpm-muted); }
 
+/* ── 第二輯起的加料（《瓶中有光》）：英文副題、策展前言、章節狀態／場景／手法、逐幀雙語圖說、Flickr 連結 ── */
+.lp-title-en { margin: -.4rem 0 1rem; font-family: var(--jpm-serif); font-size: .92rem; font-style: italic; letter-spacing: .12em; color: var(--jpm-gold); }
+.lp-foreword { margin: clamp(28px, 4vw, 48px) auto 0; padding: clamp(20px, 3vw, 34px) clamp(20px, 3.4vw, 40px); max-width: 44em; border: 1px solid var(--jpm-line); border-left: 3px solid var(--jpm-gold); }
+.lp-foreword p { margin: 0; font-family: var(--jpm-kai); font-size: clamp(1rem, 1.6vw, 1.12rem); line-height: 2.1; letter-spacing: .06em; color: #e2d8bf; }
+.lp-foreword footer { margin-top: .9rem; font-size: .68rem; letter-spacing: .3em; color: var(--jpm-muted); }
+.lp-toc a small { font-size: .74em; letter-spacing: .12em; color: var(--jpm-muted); }
+.lp-ch-state { margin-left: .5em; font-family: var(--jpm-kai); font-weight: 400; font-size: .62em; letter-spacing: .14em; color: var(--jpm-gold); }
+.lp-ch-meta { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin: -.4rem 0 .9rem; font-size: .86rem; letter-spacing: .06em; color: var(--jpm-paper); }
+.lp-ch-meta small { display: inline-block; margin-right: .7em; padding: .05em .5em; border: 1px solid var(--jpm-line); font-size: .72em; letter-spacing: .2em; color: var(--jpm-muted); vertical-align: .1em; }
+.lp-ch-text { margin: 0 0 clamp(22px, 3vw, 34px); max-width: 40em; font-size: .95rem; line-height: 2.05; color: var(--jpm-muted); }
+.lp-print--captioned figcaption { flex-wrap: wrap; align-items: baseline; row-gap: .45rem; padding-bottom: .8rem; }
+.lp-print--captioned .fcap small { display: block; margin-top: .1em; font-family: var(--jpm-serif); font-weight: 400; font-size: .64em; font-style: italic; letter-spacing: .06em; text-indent: 0; color: #8a6b32; }
+.lp-desc { flex-basis: 100%; margin: 0; font-family: var(--jpm-sans); font-size: .84rem; line-height: 1.85; letter-spacing: .02em; color: #3d3222; }
+.lp-desc--en { font-size: .76rem; line-height: 1.7; color: #7a6a52; }
+.lp-flickr { flex-basis: 100%; font-size: .7rem; letter-spacing: .16em; color: #8a6b32; text-decoration: none; }
+.lp-flickr:hover { color: #2f2617; text-decoration: underline; }
+.lp-download p a + a { margin-left: 1em; }
+
 @media (max-width: 720px) {
   .pb-album-link { grid-template-columns: 1fr; }
   .pb-album-link-cover { width: min(100%, 250px); margin-inline: auto; }
@@ -213,6 +231,8 @@
   .lp-row--pair, .lp-row--rev, .lp-row--duo { grid-template-columns: 1fr; }
   .lp-row--solo .lp-print { width: 100%; }
   .lp-chapter-head { flex-direction: column; align-items: flex-start; gap: .4rem; }
+  .lp-ch-meta { flex-direction: column; gap: .4rem; }
+  .lp-foreword { border-left-width: 2px; }
   .lp-toc a { padding: .4em .7em; font-size: .82rem; }
 }
 

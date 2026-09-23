@@ -28,7 +28,7 @@ permalink: /jinpingmei/photobook/
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260915-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260913-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260923-1" rel="stylesheet">
   {% include jinpingmei/gtag.html %}
 </head>
 <body class="jpm jpm-pb">
@@ -142,9 +142,9 @@ permalink: /jinpingmei/photobook/
               <figure class="pb-print"><img src="{{ alcover | relative_url }}" alt="" width="480" height="720" loading="lazy" decoding="async"><figcaption><span class="fno">封面</span><span class="fcap">{{ alcovershot.title }}</span></figcaption></figure>
             </a>
             <div>
-              <span class="pb-album-link-kicker">整本寫真集 · 新輯</span>
+              <span class="pb-album-link-kicker">整本寫真集{% if al.volume %} · {{ al.volume }}{% endif %}</span>
               <h3 id="pb-album-{{ al.slug }}">{{ al.title }}<small>{{ al.name }} · {{ al.subtitle }} · {{ al.count }} 張寫真</small></h3>
-              <p>{{ al.blurb }}{{ al.name }}離開設定表，走進海邊小鎮的街角、咖啡店與海岸。現代時尚改編，主角為 AI 生成的虛構成年角色。</p>
+              <p>{{ al.blurb }}{{ al.lead }}</p>
               <div class="pb-album-link-ctas">
                 <a class="act-cta" href="{{ alurl | relative_url }}">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
                 <a class="pb-cta" href="{{ alurl | append: al.pdf | relative_url }}" download>下載完整寫真集（PDF，{{ al.pdf_size }}）</a>

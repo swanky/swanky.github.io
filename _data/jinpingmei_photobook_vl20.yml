@@ -1,0 +1,269 @@
+# 李瓶兒《瓶中有光》20 張數位寫真集——專輯頁 /jinpingmei/photobook/li-pinger-vessel-of-light/ 的資料源。
+#
+# 結構與 jinpingmei_photobook_lp36.yml 相同（章節×幀；直式跨 1 欄、橫式跨 2 欄）。
+# 圖檔：jinpingmei/photobook/li-pinger-vessel-of-light/images/{file}.webp（原圖 1024×1536／1536×1024）、
+#       {file}-1080.webp（格線預覽，長邊 1080）、VL20-01-480.webp（寫真館入口卡）、
+#       li-pinger-vessel-of-light-og.jpg（社群分享圖 1200×630，取自第 18 幀）。
+# 尺度判圖 2026-09-23：20/20 站主 review-02 逐張 approve；07 為肩臂裸露、胸口以濕蓮葉與白紗完全覆蓋（隱含裸露、無直接露出），
+#   02／06／11 露肩或裸背；Flickr 上 07 設 Moderate、其餘 Safe。若沿用 2026-08-08「無裸露，上限露肩／高衩／抹胸」判準，07 需站主再確認是否上站。
+# PDF：Li-Ping-Er-Vessel-of-Light-20.pdf（31 頁數位閱讀版，直式 540×720 pt；publication/build_pdf.py 產生），放在專輯頁目錄下與圖檔同層。
+# num：章號字串；rows：每章排版列（幀號）；alt 只寫畫面（場景＋動作＋服裝色），模板補角色名與「（AI 生成，非真人照片）」。
+slug: li-pinger-vessel-of-light
+character: lipinger
+name: 李瓶兒
+title: 瓶中有光
+title_en: Light Kept in a Vessel
+subtitle: 一個瓶子的五個狀態
+count: 20
+cover: VL20-01
+og: li-pinger-vessel-of-light-og.jpg
+pdf: Li-Ping-Er-Vessel-of-Light-20.pdf
+pdf_size: 約 14 MB
+pdf_pages: 31
+volume: 第二輯
+tagline: "一個瓶子的一生：被注滿、開花、被遮、變空，然後被記住。"
+blurb: "五個房間、五條路線，20 張以器物寫人的當代寫真。"
+lead: "李瓶兒離開設定表，走進五個虛構的房間：紅漆金箔、白色花房、黑白長廊、起霧的空屋與一座空舞台。當代訂製造型，主角為 AI 生成的虛構成年角色。"
+foreword: "她叫瓶兒。一個瓶子的一生大約只有幾件事：被注滿、插上花、被放在陰影裡、慢慢變空，然後被誰記住。這本寫真集沒有情節，只有一個女人與一個器物在五個房間裡的關係。第一間是紅漆與金箔，光被小心地倒進去；第二間全是白色與水氣，花壓在玻璃上盛開；第三間只剩黑與白，格柵的影子落在肩上，她不躲；第四間起了霧，瓶子空著，她坐在旁邊；第五間是一座空舞台，瓶子被放大到可以走進去，她走進去，回頭看了一眼。光還在瓶子裡。"
+flickr_album: https://www.flickr.com/photos/swanky-hsiao/albums/72177720335779143/
+chapters:
+  - num: "01"
+    rows: [[1, 2], [3], [4]]
+    title: 攜光而來
+    state: 被注滿
+    route: "S05 濃色室內・造型與裝飾性人像"
+    room: "紅漆金箔的房"
+    text: "她帶著財物與體面進入一間紅漆金箔的房，把光小心地倒進瓶子。端整、豐盈、自持的富裕：不是炫耀，是「我知道自己值得被好好放著」。藕色緞禮服、一支銀簪、紫瑛耳墜、紅緞高跟鞋；青瓷瓶、牡丹、黃銅水壺、鍍金鏡。"
+    shots:
+      - n: 1
+        file: VL20-01
+        flickr_id: "55546185608"
+        title: 封面
+        title_en: "Cover"
+        caption: "她坐在絲絨長椅的扶手上，手扶著青瓷瓶口，兩枝牡丹橫過鎖骨，直視鏡頭。光被小心地倒進去，她知道自己值得被好好放著。"
+        caption_en: "Seated on the arm of a velvet chaise, one hand on the lip of a celadon vase, two peony stems crossing her collarbone, eyes on the lens."
+        alt: 藕色露肩緞禮服坐在絲絨長椅扶手手扶青瓷瓶口牡丹橫過鎖骨紅漆牆
+        width: 1024
+        height: 1536
+      - n: 2
+        file: VL20-02
+        flickr_id: "55546078631"
+        title: 鏡前
+        title_en: "Before the Mirror"
+        caption: "背對鏡頭，臉只在鍍金鏡裡出現。舉起的手捏著髮髻後那支銀簪，鏡中的手也捏著同一支簪。她看的是自己。"
+        caption_en: "Back to the camera, her face appears only in the gilt mirror; the raised hand pinches the single silver hairpin, and so does its reflection."
+        alt: 藕色緞禮服背對鏡頭在鍍金大鏡前整理銀髮簪紅漆牆黃銅檯燈
+        width: 1024
+        height: 1536
+      - n: 3
+        file: VL20-03
+        flickr_id: "55545049002"
+        title: 牡丹貼頰
+        title_en: "Peony at the Cheek"
+        caption: "頭肩特寫。一朵淡色牡丹貼在下顎，五指扶著花莖，視線落向畫外的黃銅檯燈。花與身體必須真的碰到。"
+        caption_en: "Head-and-shoulders close-up: a pale peony rests against her jaw, fingers on the stem, gaze toward the brass lamp off frame."
+        alt: 頭肩特寫淡色牡丹貼在下顎紫瑛耳墜暖光紅漆牆
+        width: 1024
+        height: 1536
+      - n: 4
+        file: VL20-04
+        flickr_id: "55545049177"
+        title: 注水
+        title_en: "Pouring"
+        caption: "橫幅全身。她側身微彎，用黃銅水壺往青瓷瓶注水，紅鞋落在深色地板上，人物只佔畫面右側三分之一，其餘留給鏡、燈與牆。"
+        caption_en: "Full-length landscape: in profile she pours water from a brass ewer into the vase, red heels on the dark floor, the room's mirror and lamp holding the left two-thirds."
+        alt: 藕色長禮服側身用黃銅水壺往青瓷瓶注水紅緞高跟鞋紅漆牆鍍金鏡
+        width: 1536
+        height: 1024
+  - num: "02"
+    rows: [[5, 6], [7, 8]]
+    title: 花房
+    state: 開花
+    route: "S02 柔亮高調・窗光與日光寫真"
+    room: "白色花房，霧面玻璃有水氣"
+    text: "得寵的季節，全是白與水氣，花壓在玻璃上盛開。明亮、濕潤、被寵愛但不天真，有一點不安的甜。象牙真絲與層層白紗、濕牡丹、蓮葉、水珠。"
+    shots:
+      - n: 5
+        file: VL20-05
+        flickr_id: "55546186398"
+        title: 玻璃與掌
+        title_en: "Glass and Palm"
+        caption: "隔著起霧的玻璃拍。掌心把一朵濕牡丹壓平在玻璃上，五指張開；臉貼近另一側較清的玻璃，眼瞼半垂、唇微啟、頭略向肩傾。"
+        caption_en: "Shot through fogged glass: her palm flattens a wet peony against the pane, fingers spread; her face leans close to a clearer patch, eyelids soft, lips parted."
+        alt: 隔著起霧玻璃掌心壓平濕牡丹象牙白紗禮服臉貼近玻璃高調白光
+        width: 1024
+        height: 1536
+      - n: 6
+        file: VL20-06
+        flickr_id: "55545049442"
+        title: 落瓣
+        title_en: "Falling Petals"
+        caption: "她側坐在白大理石長凳上，膝上滿是牡丹花瓣，一手抓起一把讓它們落下，幾片在動態模糊裡；另一手撐在身後，回頭看向鏡頭。"
+        caption_en: "Seated in profile on a white marble bench, lap full of petals, she lifts a handful and lets them fall, a few blurred in motion, glancing back over her shoulder."
+        alt: 側坐白大理石長凳膝上牡丹花瓣一手放落花瓣象牙削肩禮服白紗層次領花房
+        width: 1024
+        height: 1536
+      - n: 7
+        file: VL20-07
+        flickr_id: "55546244499"
+        title: 蓮葉與白布
+        title_en: "Lotus Leaf and Linen"
+        caption: "微俯角的美妝特寫。她躺在鋪了白麻布的長凳上，髮絲鋪開，肩與手臂裸露，兩片濕蓮葉與一褶白紗完全覆蓋胸口，水珠停在葉面與皮膚上。"
+        caption_en: "Beauty close-up from slightly above: lying on white linen, hair fanned out, shoulders bare, two wet lotus leaves and a fold of organza covering her chest, droplets on leaf and skin."
+        alt: 俯角特寫躺在白麻布上髮絲鋪開濕蓮葉與白紗覆胸水珠高調白光
+        width: 1024
+        height: 1536
+      - n: 8
+        file: VL20-08
+        flickr_id: "55546462305"
+        title: 穿過白紗
+        title_en: "Through the Organza"
+        caption: "全身。她從垂掛的白紗條之間走向鏡頭，一手撥開紗、一手輕提裙襬，視線落在腳前濕潤的石徑上。"
+        caption_en: "Full-length: she walks toward the camera between hanging strips of white organza, one arm parting the fabric, the other lifting the hem, eyes on the wet stone path."
+        alt: 全身穿過垂掛白紗條象牙真絲長裙一手撥紗一手提裙襬濕石徑花房
+        width: 1024
+        height: 1536
+  - num: "03"
+    rows: [[9], [10, 11], [12]]
+    title: 多舌之家
+    state: 被遮
+    route: "BW-D 深黑強反差黑白"
+    room: "深色長廊，雕花木格柵投下硬影"
+    text: "房子裡有很多舌頭。格柵的影子落在她身上，她不躲。被議論而自持，忍讓裡有力量。男裝式白襯衫、黑寬褲、赤足；長桌、格柵、一道亮門。"
+    shots:
+      - n: 9
+        file: VL20-09
+        flickr_id: "55545050402"
+        title: 長桌盡頭
+        title_en: "End of the Long Table"
+        caption: "黑白橫幅。她坐在長桌盡頭，手肘撐桌、十指交握在唇前，只有眼睛與上臉受光；格柵的光橫過桌面，桌下沉入黑。她直視鏡頭。"
+        caption_en: "Black-and-white landscape: at the end of a long table, elbows down, fingers interlaced before her mouth so only the eyes are lit; lattice light bars cross the table, the rest falls to black."
+        alt: 黑白橫幅坐在長桌盡頭十指交握在唇前只有眼睛受光格柵光橫過桌面白襯衫
+        width: 1536
+        height: 1024
+      - n: 10
+        file: VL20-10
+        flickr_id: "55546245349"
+        title: 倚格柵
+        title_en: "Against the Lattice"
+        caption: "半身。肩膀側靠雕花木格柵，身體轉向鏡頭三十度，一手在身後抓著屏風邊緣，另一手搭在前臂；格影落在領口與襯衫。她不躲。"
+        caption_en: "Half-length: shoulder against a carved lattice screen, body turned thirty degrees, one hand gripping the screen edge behind her; lattice shadows fall across collar and shirt."
+        alt: 黑白半身肩靠雕花木格柵敞領白襯衫黑寬褲一手抓屏風邊格影落在襯衫
+        width: 1024
+        height: 1536
+      - n: 11
+        file: VL20-11
+        flickr_id: "55545050972"
+        title: 掩耳
+        title_en: "Covering the Ear"
+        caption: "近景。左手掌貼著左耳，五指張開跨過太陽穴與下顎；閉眼、閉唇、頭微低。單一硬側光只照臉、手背與裸露的右肩，其餘全黑。"
+        caption_en: "Close portrait: her left palm covers her left ear, fingers spread across temple and jaw; eyes closed, head slightly bowed. One hard side light touches only face, hand and bare shoulder."
+        alt: 黑白近景左手掌掩左耳閉眼硬側光只照臉手背與滑落單肩襯衫其餘全黑
+        width: 1024
+        height: 1536
+      - n: 12
+        file: VL20-12
+        flickr_id: "55546245964"
+        title: 門光回望
+        title_en: "Looking Back at the Door"
+        caption: "全身。她走向長廊盡頭那扇亮門，回頭越過左肩看向鏡頭。白襯衫與臉的邊緣是唯一受光的面，兩條前臂沉入黑。"
+        caption_en: "Full-length: she walks toward the bright doorway at the end of the corridor and looks back over her left shoulder; the white shirt and the edge of her face are the only lit planes."
+        alt: 黑白全身走向長廊盡頭亮門回頭越過左肩看鏡頭白襯衫黑寬褲赤足
+        width: 1024
+        height: 1536
+  - num: "04"
+    rows: [[13, 14], [15], [16]]
+    title: 霧起
+    state: 變空
+    route: "S04 冷青低彩・偏灰白的人像處理"
+    room: "第一章的紅屋被清空、蓋上防塵布、起了霧"
+    text: "同一間紅屋，家具蓋上白布，紅牆在冷光下退成暗褐。瓶子空著，她坐在旁邊。失去之後的安靜：不哭，只是房間變大了。鴿灰啞光真絲吊帶裙、灰藍羊毛披肩、赤足。"
+    shots:
+      - n: 13
+        file: VL20-13
+        flickr_id: "55546463540"
+        title: 空瓶旁
+        title_en: "Beside the Empty Vase"
+        caption: "紅屋清空、蓋上防塵布、起了霧。她坐在地上抱膝，臉靠在膝上，一臂環住空青瓷瓶的瓶頸，看進空瓶口。房間變大了。"
+        caption_en: "The red room emptied, furniture under dust sheets, haze in the air: she sits on the floor hugging her knees, one arm around the neck of the empty celadon vase, looking into its mouth."
+        alt: 坐地抱膝臉靠膝一臂環住空青瓷瓶頸鴿灰吊帶裙灰藍披肩蓋防塵布的家具起霧房間
+        width: 1024
+        height: 1536
+      - n: 14
+        file: VL20-14
+        flickr_id: "55546246529"
+        title: 看水
+        title_en: "Watching the Water"
+        caption: "低角近景。她跪著，一手平貼地板，俯身看地上一小片映著霧窗的水；唇微啟。慢速快門讓邊緣柔化，眼睛仍清楚。"
+        caption_en: "Low close half-body: kneeling, one hand flat on the floor, she leans over a small pool of water reflecting the fogged window, lips parted; edges soften, the eyes stay resolved."
+        alt: 低角跪姿一手平貼地板俯身看地上映著霧窗的水鴿灰吊帶裙灰藍披肩冷青低彩
+        width: 1024
+        height: 1536
+      - n: 15
+        file: VL20-15
+        flickr_id: "55546081696"
+        title: 抹開霧
+        title_en: "Wiping the Fog"
+        caption: "橫幅，從窗外往裡拍。她站在窗前，掌心在結露的玻璃上抹開一道清痕，部分的臉透過清痕清楚可見，其餘被霧氣軟化。"
+        caption_en: "Landscape, from outside the fogged window: she stands at the pane, her palm wiping a single clear streak through the condensation; part of her face sharp through the streak, the rest softened."
+        alt: 橫幅從窗外往裡拍掌心在結露玻璃抹開清痕部分臉清楚其餘霧化鴿灰裙灰藍披肩
+        width: 1536
+        height: 1024
+      - n: 16
+        file: VL20-16
+        flickr_id: "55545052282"
+        title: 防塵布
+        title_en: "Dust Sheet"
+        caption: "側面半身。披肩回到雙肩，她雙手抓著防塵布的邊，把它從蓋著的椅子上掀起，白布在她與窗之間揚起如簾；她低頭看著布褶。"
+        caption_en: "Half-length in profile: cape over both shoulders, both hands gripping the edge of a dust sheet, lifting it off the covered chair so the cotton billows between her and the window."
+        alt: 側面半身雙手掀起白色防塵布布揚起如簾灰藍披肩鴿灰裙起霧窗光冷青低彩
+        width: 1024
+        height: 1536
+  - num: "05"
+    rows: [[17], [18], [19, 20]]
+    title: 餘像
+    state: 被記住
+    route: "S06 極簡背景・方向光肖像"
+    room: "空攝影棚，灰色無縫背景"
+    text: "一座空舞台。瓶子被放大到可以走進去，牡丹用鐵絲吊在半空。她走進去，回頭看了一眼。夢的邏輯、被記住的樣子：不是鬼魂，是影像本身。藕色高級訂製禮服、多支銀簪組成的頭飾、紅緞高跟鞋。"
+    shots:
+      - n: 17
+        file: VL20-17
+        flickr_id: "55546247454"
+        title: 巨瓶
+        title_en: "The Giant Vase"
+        caption: "空攝影棚，灰色無縫背景。一只兩公尺長的青瓷瓶側倒在地，她全身站在瓶口旁，一手扶瓶緣、一手攏起裙擺，看進瓶內；一盞硬光拉出兩道長投影。"
+        caption_en: "Empty studio, grey seamless: a two-metre celadon vase lies on its side; full-length she stands at its mouth, one hand on the rim, the other gathering her skirt, looking in; one hard light, two long shadows."
+        alt: 灰色無縫背景兩公尺側倒巨型青瓷瓶全身站瓶口旁藕色高級訂製禮服銀簪頭飾紅緞高跟鞋長投影
+        width: 1024
+        height: 1536
+      - n: 18
+        file: VL20-18
+        flickr_id: "55546082906"
+        title: 吊花與鐵床
+        title_en: "Hanging Peonies, Iron Bed"
+        caption: "橫幅。黑地板中央一張素鐵床，數百朵淡色紙牡丹用細鐵絲吊在半空、高低不一，鐵絲看得見。她坐在床沿，上身轉向鏡頭，伸手碰其中一朵。"
+        caption_en: "Landscape: a plain iron bed alone on the black studio floor, hundreds of pale paper peonies hanging above on visible wires; she sits on the edge, torso turned to the camera, reaching for one bloom."
+        alt: 橫幅黑地板中央素鐵床數百朵紙牡丹以鐵絲吊在半空坐床沿伸手碰花藕色禮服
+        width: 1536
+        height: 1024
+      - n: 19
+        file: VL20-19
+        flickr_id: "55546083301"
+        title: 一道光
+        title_en: "One Beam of Light"
+        caption: "近景。臉從黑裡浮出，一道硬光橫過眼睛與銀簪頭飾，下半臉留在陰影；幾片淡色花瓣在她面前凝在半空，一隻手在畫面右下張開。"
+        caption_en: "Close portrait: her face emerges from black, a single hard beam crossing the eyes and the silver-hairpin headpiece, the lower face in shadow; a few pale petals hang frozen in the air before her."
+        alt: 近景臉從黑裡浮出一道硬光橫過眼睛與銀簪頭飾花瓣凝在半空手在右下張開
+        width: 1024
+        height: 1536
+      - n: 20
+        file: VL20-20
+        flickr_id: "55546083496"
+        title: 一支銀簪
+        title_en: "A Single Silver Hairpin"
+        caption: "七分身。她坐在灰無縫中央一張素木椅上，雙膝併攏微向左，指尖舉起一支銀簪到眼前細看。整本書從一支簪開始，也在一支簪結束。"
+        caption_en: "Three-quarter length: on a plain wooden chair at the centre of the grey seamless, knees together, she holds a single silver hairpin up to her eyes between thumb and forefinger. The book began with this pin and ends with it."
+        alt: 七分身坐灰無縫中央素木椅雙膝併攏指尖舉起一支銀簪細看藕色禮服紅緞高跟鞋
+        width: 1024
+        height: 1536

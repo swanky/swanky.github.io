@@ -89,6 +89,7 @@
 - [影像工作室](https://swanky.github.io/jinpingmei/studio/): AI 虛擬劇組如何重製金瓶梅
 - [寫真館](https://swanky.github.io/jinpingmei/photobook/): 金瓶梅角色寫真集
 - [李瓶兒《不趕時間的你》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-no-hurry/): 金瓶梅宇宙角色寫真集：李瓶兒《不趕時間的你》——海邊的兩日，36 張現代時尚寫真，可線上翻閱、前後切換與下載完整寫真集。全部影像皆為 AI 生成的虛構成年角色，並非真人照片。
+- [李瓶兒《瓶中有光》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-vessel-of-light/): 金瓶梅宇宙角色寫真集第二輯：李瓶兒《瓶中有光》——一個瓶子的五個狀態，五個房間、20 張以器物寫人的當代寫真，附雙語圖說，可線上翻閱、前後切換與下載完整寫真集。全部影像皆為 AI 生成的虛構成年角色，並非真人照片。
 - [金瓶異夢：十二花界（梅香境）](https://swanky.github.io/games/plum/): 開發中的單機劇情向戰棋 SRPG
 
 ## 自我探索實驗室 Self-Discovery Tools
