@@ -1,0 +1,149 @@
+---
+layout: home
+title: 史旺姬《把光留給日常》
+seo_title: 史旺姬《把光留給日常》｜史旺基原創虛擬人物影像
+description: 史旺姬《把光留給日常》：36 張原創虛擬人物影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
+keywords: 史旺姬,把光留給日常,虛擬人物,AI 生成影像,虛擬角色經紀公司,史旺基
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: 把光留給日常
+    url: /photography/swanky-ji-everyday-light/
+use_glightbox: true
+use_photography_author: true
+og_image: /assets/img/photography/swanky-ji-everyday-light/cover.jpg
+permalink: /photography/swanky-ji-everyday-light/
+---
+{%- comment -%}
+史旺姬《把光留給日常》作品頁。全資料驅動：_data/swanky_ji_everyday_light.json（移交包逐位元照搬；圖說／alt／章節文／創作理念／揭露句皆從資料讀，不改寫）。
+複製給下一本時只需改 front matter、下方 book 資料鍵與 pdf_size。
+版面沿用 /photography/swanky-ji-open-worlds/：橫幅跨兩欄、直幅兩兩成對、孤直幅置中。
+{%- endcomment -%}
+{% assign book = site.data.swanky_ji_everyday_light %}
+{% assign pdf_size = '約 22 MB' %}
+{% assign ai_tag = '（AI 生成，非真人照片）' %}
+{% assign cover = book.photos | where: "order", book.cover_photo | first %}
+{% assign stills = book.photos | where: "still_life", true %}
+{% capture hero_intro %}史旺姬，史旺基的原創虛擬人物。{{ book.statement[0] }} {{ book.disclosure }}{% endcapture %}
+{% capture pdf_label %}下載完整寫真集（PDF，{{ pdf_size }}）{% endcapture %}
+<main id="main" class="photo-author-page photo-author-subpage sjw-page">
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label=pdf_label %}
+  {% include photography/subpage-nav.html %}
+
+  <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
+    <div class="photo-author-shell">
+      <p class="sjw-meta">{{ book.count }} 張原創影像 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
+      <article class="photo-author-series-card sjw-cover">
+        <a href="{{ cover.image | relative_url }}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjl-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
+          <img src="{{ cover.preview | relative_url }}" srcset="{{ cover.preview | relative_url }} {% if cover.height > cover.width %}640{% else %}960{% endif %}w, {{ cover.image | relative_url }} {{ cover.width }}w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+        </a>
+        <div class="photo-author-series-copy">
+          <p class="photo-author-eyebrow">STATEMENT · 封面 No.{{ cover.order }}</p>
+          <h3 id="statement-title">創作理念</h3>
+          {%- for para in book.statement %}
+          <p>{{ para }}</p>
+          {%- endfor %}
+          <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">在 Flickr 看完整相簿 ↗</a>
+        </div>
+      </article>
+      <nav class="sjw-toc" aria-label="章節目次">
+        {% for c in book.chapters %}<a href="#chapter-{{ c.number }}"><b>0{{ c.number }}</b>{{ c.title }}</a>{% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  {% for c in book.chapters %}
+  {% assign shots = book.photos | where: "chapter", c.number %}
+  {% capture first_no %}{% if shots.first.order < 10 %}0{% endif %}{{ shots.first.order }}{% endcapture %}
+  {% capture last_no %}{% if shots.last.order < 10 %}0{% endif %}{{ shots.last.order }}{% endcapture %}
+  {% assign lines = c.text | split: ' ' %}
+  <section class="photo-author-section sjw-chapter" id="chapter-{{ c.number }}" aria-labelledby="chapter-{{ c.number }}-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">0{{ c.number }} · {% case book.chapters.size %}{% when 3 %}THREE{% when 4 %}FOUR{% when 5 %}FIVE{% else %}{{ book.chapters.size }}{% endcase %} CHAPTERS</p>
+        <div>
+          <h2 id="chapter-{{ c.number }}-title">{{ c.title }}</h2>
+          <p>{% for line in lines %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
+          <p class="sjw-count">{{ shots.size }} 張 · No.{{ first_no }}–{{ last_no }}</p>
+        </div>
+      </header>
+      <div class="sjw-grid">
+        {%- assign pending = false -%}
+        {%- for p in shots -%}
+        {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+        {%- if p.height > p.width -%}
+          {%- assign pw = 640 -%}
+          {%- if pending -%}
+            {%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = false -%}
+          {%- else -%}
+            {%- assign nxt = shots[forloop.index] -%}
+            {%- assign cls = 'sjw-figure--solo' -%}
+            {%- if nxt -%}{%- if nxt.height > nxt.width -%}{%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = true -%}{%- endif -%}{%- endif -%}
+          {%- endif -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(50vw - 36px), 648px' -%}
+        {%- else -%}
+          {%- assign pw = 960 -%}
+          {%- assign cls = 'sjw-figure--wide' -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
+        {%- endif %}
+        <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
+          <a href="{{ p.image | relative_url }}" class="portfolio-lightbox" data-gallery="sjl-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
+            <img src="{{ p.preview | relative_url }}" srcset="{{ p.preview | relative_url }} {{ pw }}w, {{ p.image | relative_url }} {{ p.width }}w" sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="sjw-no">No.{{ nn }}</span>
+            <span class="sjw-title">{{ p.title }}</span>
+            <a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a>
+            <p class="sjw-caption">{{ p.caption }}</p>
+          </figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <section class="photo-author-section photo-author-light sjw-closing" id="after" aria-labelledby="after-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ book.model }} × SWANKY</p>
+        <div>
+          <h2 id="after-title">翻到最後，仍有下一束光。</h2>
+          <p>{{ book.statement | last }}</p>
+          <p>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</p>
+        </div>
+      </header>
+      <div class="photo-author-archive-grid">
+        <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download>
+          <h3>下載完整寫真集</h3>
+          <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
+          <span>下載 PDF →</span>
+        </a>
+        <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer">
+          <h3>在 Flickr 看完整相簿</h3>
+          <p>{{ book.flickr_album_title }}。{{ book.count }} 張各自上傳，可逐張檢視。</p>
+          <span>前往 Flickr ↗</span>
+        </a>
+        <a href="{{ '/photography/#virtual-agency' | relative_url }}" class="photo-author-archive-card">
+          <h3>虛擬角色經紀公司</h3>
+          <p>史旺姬的其他作品與其他虛擬人物的入口，收在攝影作品區。</p>
+          <span>回到攝影作品 →</span>
+        </a>
+      </div>
+      <aside class="sjw-notes" aria-labelledby="sjw-notes-title">
+        <p class="photo-author-eyebrow" id="sjw-notes-title">誠實標示</p>
+        <ul>
+          <li>{{ book.disclosure }}</li>
+          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序與圖說依原作編排；其中 {{ stills.size }} 幀沒有人物出鏡，同樣為 AI 生成影像。</li>
+          <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</li>
+          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集為 {{ book.pdf_pages }} 頁 PDF，免費下載。</li>
+          <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
+        </ul>
+        <p class="sjw-credit">{{ book.creator }} · 2026 · 原創虛擬人物影像 · {{ book.title }}</p>
+      </aside>
+    </div>
+  </section>
+</main>

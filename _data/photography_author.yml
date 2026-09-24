@@ -263,6 +263,9 @@ virtual_agency:
       width: 1536
       height: 1024
       works:
+        - title: 《把光留給日常》
+          meta: 36 張 · 四章 · 2026-09
+          url: /photography/swanky-ji-everyday-light/
         - title: 《她把風景打開》
           meta: 36 張 · 三章 · 2026-09
           url: /photography/swanky-ji-open-worlds/
@@ -292,7 +295,7 @@ virtual_agency:
     - name: 潘金蓮
       eyebrow: 《金瓶梅》角色改編
       description: 從窗邊、妝台一路走到晨跑、網球與拳擊場；冷眼、壞笑與開懷，都是她善變而鮮明的一面。
-      url: /jinpingmei/photobook/#pb-panjinlian
+      url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/
       image: /assets/img/jinpingmei/photobook/panjinlian-01.jpg
       srcset:
         - src: /assets/img/jinpingmei/photobook/panjinlian-01-480.jpg
@@ -303,6 +306,9 @@ virtual_agency:
       width: 1023
       height: 1537
       works:
+        - title: 《她先看見》
+          meta: 36 張 · 四章 · 2026-09
+          url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/
         - title: 角色寫真
           meta: 9 幀 · 寫真館
           url: /jinpingmei/photobook/#pb-panjinlian

@@ -10,9 +10,16 @@
 #   quote — 逐字引文（一律複製角色頁「原文依據」既有引文，不得憑記憶寫）
 #   albums — 獨立寫真集清單（選填）：每項 data＝_data/ 檔名（如 jinpingmei_photobook_lp36），
 #            專輯頁自有路徑 /jinpingmei/photobook/{slug}/；寫真館在該輯相冊下方、角色頁寫真段都會長出入口。
+#            data 也可指向移交包 JSON（含 photos[]，如 pan_jinlian_she_sees_it_first）：加 kind: json 與 pdf_size，
+#            館頁與角色頁模板以 al.photos 是否存在判斷 schema；JSON 逐位元照搬不改。
 packs:
   - slug: panjinlian
     name: 潘金蓮
+    # 獨立寫真集（移交包 JSON schema；圖檔在 /assets/img/photography/pan-jinlian-she-sees-it-first/，PDF 在 /assets/downloads/）
+    albums:
+      - data: pan_jinlian_she_sees_it_first
+        kind: json
+        pdf_size: 約 21 MB
     note: 從窗邊、妝台一路走到晨跑、網球與拳擊場；冷眼、壞笑與開懷，都是她善變而鮮明的一面。
     quote: 本性機變伶俐
     shots:

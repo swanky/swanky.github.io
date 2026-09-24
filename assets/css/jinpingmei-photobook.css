@@ -168,7 +168,9 @@
 
 /* ── 專輯頁（/jinpingmei/photobook/<album>/；lp-* 只在專輯頁出現） ── */
 .lp-hero { padding-bottom: clamp(24px, 4vw, 40px); }
-.lp-cover { width: min(100%, 340px); justify-self: end; transform: rotate(1.6deg); }
+/* 封面欄寬用 grid 欄位鎖死：img 的 width 屬性（橫幅 960）會撐大 auto 欄的 intrinsic size，把左欄壓到不可讀（2026-09-24 潘金蓮橫幅封面踩到）。 */
+.lp-hero .jpu-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); }
+.lp-cover { width: 100%; max-width: 340px; justify-self: end; transform: rotate(1.6deg); }
 .lp-cover img { filter: none; }
 .lp-cta-pdf { flex-direction: column; align-items: flex-start; gap: .15em; line-height: 1.3; }
 .lp-cta-pdf small { font-size: .62em; letter-spacing: .12em; opacity: .85; }
@@ -227,7 +229,7 @@
   .pb-album-link { grid-template-columns: 1fr; }
   .pb-album-link-cover { width: min(100%, 250px); margin-inline: auto; }
   .lp-hero .jpu-hero { grid-template-columns: 1fr; }
-  .lp-cover { justify-self: center; width: min(100%, 300px); transform: rotate(1.2deg); }
+  .lp-cover { justify-self: center; width: 100%; max-width: 300px; transform: rotate(1.2deg); }
   .lp-row--pair, .lp-row--rev, .lp-row--duo { grid-template-columns: 1fr; }
   .lp-row--solo .lp-print { width: 100%; }
   .lp-chapter-head { flex-direction: column; align-items: flex-start; gap: .4rem; }

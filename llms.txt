@@ -19,6 +19,7 @@
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
 - [虛擬角色經紀公司](https://swanky.github.io/photography/#virtual-agency): 攝影區內的虛擬人物作品入口：史旺姬、李瓶兒、潘金蓮的寫真，全部由 AI 生成，並非真人照片
 - [史旺姬《她把風景打開》](https://swanky.github.io/photography/swanky-ji-open-worlds/): 史旺姬《她把風景打開》：36張原創虛擬人物影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
+- [史旺姬《把光留給日常》](https://swanky.github.io/photography/swanky-ji-everyday-light/): 史旺姬《把光留給日常》：36 張原創虛擬人物影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
 - [出版攝影集](https://swanky.github.io/photography/photo-albums/): 《制服．女孩 × 史旺基》系列、《高校制服戀物論》
 - [攝影獎項](https://swanky.github.io/photography/awards/): 法國 PX3、美國 IPA、TIME Magazine 等紀錄
 - [個人作品](https://swanky.github.io/photography/personal-works/): 人像、紀實、藝術攝影個人創作
@@ -93,6 +94,7 @@
 - [寫真館](https://swanky.github.io/jinpingmei/photobook/): 金瓶梅角色寫真集
 - [李瓶兒《不趕時間的你》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-no-hurry/): 金瓶梅宇宙角色寫真集：李瓶兒《不趕時間的你》——海邊的兩日，36 張現代時尚寫真，可線上翻閱、前後切換與下載完整寫真集。全部影像皆為 AI 生成的虛構成年角色，並非真人照片。
 - [李瓶兒《瓶中有光》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-vessel-of-light/): 金瓶梅宇宙角色寫真集第二輯：李瓶兒《瓶中有光》——一個瓶子的五個狀態，五個房間、20 張以器物寫人的當代寫真，附雙語圖說，可線上翻閱、前後切換與下載完整寫真集。全部影像皆為 AI 生成的虛構成年角色，並非真人照片。
+- [潘金蓮《她先看見》寫真集](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-she-sees-it-first/): 潘金蓮《她先看見》：36 張虛構人物影像，在竹簾、迴廊、黑白肖像與茶盞之間，從一次對看慢慢靠近。可逐張觀看或下載完整寫真集。
 - [金瓶異夢：十二花界（梅香境）](https://swanky.github.io/games/plum/): 開發中的單機劇情向戰棋 SRPG
 
 ## 自我探索實驗室 Self-Discovery Tools
