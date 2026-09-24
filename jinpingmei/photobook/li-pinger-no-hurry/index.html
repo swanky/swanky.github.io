@@ -32,6 +32,7 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://live.staticflickr.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
@@ -65,10 +66,11 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
             <a class="act-cta" href="#photos">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
             <a class="act-cta lp-cta-pdf" href="{{ pdfurl | relative_url }}" download>下載完整寫真集<small>PDF · {{ al.pdf_size }}</small></a>
           </div>
-          <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ curl | relative_url }}">看{{ al.name }}的角色檔案 →</a></p>
+          <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ curl | relative_url }}">看{{ al.name }}的角色檔案 →</a>{% if al.flickr_album %}<a href="{{ al.flickr_album }}" target="_blank" rel="noopener">在 Flickr 看相簿 ↗</a>{% endif %}</p>
         </div>
         <figure class="pb-print lp-cover reveal">
-          <img src="{{ imgdir | append: al.cover | append: '-1080.webp' | relative_url }}" alt="寫真集封面：{{ al.name }}，{{ coverShot.alt }}（AI 生成，非真人照片）" width="720" height="1080" fetchpriority="high" decoding="async">
+          {%- assign cfid = coverShot.flickr_id | append: '' -%}{%- assign cfs = site.data.flickr_static[cfid] -%}
+          <img src="{% if cfs %}https://live.staticflickr.com/{{ cfs.server }}/{{ cfid }}_{{ cfs.secret }}_z.jpg{% else %}{{ imgdir | append: al.cover | append: '-1080.webp' | relative_url }}{% endif %}" alt="寫真集封面：{{ al.name }}，{{ coverShot.alt }}（AI 生成，非真人照片）" width="720" height="1080" fetchpriority="high" decoding="async">
           <figcaption><span class="fno">封面</span><span class="fcap">{{ coverShot.title }}</span></figcaption>
         </figure>
       </div>
@@ -110,9 +112,21 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
             {%- capture full %}{{ imgdir }}{{ s.file }}.webp{% endcapture -%}
             {%- capture prev %}{{ imgdir }}{{ s.file }}-1080.webp{% endcapture -%}
             {%- if s.height > s.width -%}{%- assign pw = 720 -%}{%- assign ph = 1080 -%}{%- else -%}{%- assign pw = 1080 -%}{%- assign ph = 720 -%}{%- endif %}
-            <figure class="pb-print lp-print">
-              <a href="{{ full | relative_url }}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ prev | relative_url }}" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
-              <figcaption><span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}</span></figcaption>
+            {%- assign fid = s.flickr_id | append: '' -%}
+            {%- assign fs = site.data.flickr_static[fid] -%}
+            {%- if fs -%}
+              {%- capture fb %}https://live.staticflickr.com/{{ fs.server }}/{{ fid }}_{{ fs.secret }}{% endcapture -%}
+              {%- assign zw = fs.bw | times: 640 | divided_by: 1024 -%}
+              {%- assign cw = fs.bw | times: 800 | divided_by: 1024 -%}
+              {%- capture img_src %}{{ fb }}_b.jpg{% endcapture -%}
+              {%- capture img_srcset %} srcset="{{ fb }}_z.jpg {{ zw }}w, {{ fb }}_c.jpg {{ cw }}w, {{ fb }}_b.jpg {{ fs.bw }}w" sizes="{% if s.height > s.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}"{% endcapture -%}
+            {%- else -%}
+              {%- capture img_src %}{{ prev | relative_url }}{% endcapture -%}
+              {%- assign img_srcset = '' -%}
+            {%- endif -%}
+            <figure class="pb-print lp-print{% if s.flickr_id %} lp-print--captioned{% endif %}">
+              <a href="{{ full | relative_url }}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ img_src }}"{{ img_srcset }} alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}</span>{% if s.flickr_id %}<a class="lp-flickr" href="https://www.flickr.com/photos/swanky-hsiao/{{ s.flickr_id }}/" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>{% endif %}</figcaption>
             </figure>
             {%- endfor %}
           </div>
@@ -128,7 +142,7 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
         <b>整本帶走</b>
         <p>{{ al.count }} 張寫真裝成一本數位寫真集，共 {{ al.pdf_pages }} 頁，可免費下載收藏。檔案 {{ al.pdf_size }}，手機下載前請留意流量。</p>
         <a class="act-cta lp-cta-pdf" href="{{ pdfurl | relative_url }}" download>下載完整寫真集<small>PDF · {{ al.pdf_size }}</small></a>
-        <p><a href="{{ '/jinpingmei/photobook/' | relative_url }}">回寫真館，看其他角色的寫真 →</a></p>
+        <p><a href="{{ '/jinpingmei/photobook/' | relative_url }}">回寫真館，看其他角色的寫真 →</a>{% if al.flickr_album %} <a href="{{ al.flickr_album }}" target="_blank" rel="noopener">或到 Flickr 看整本相簿 ↗</a>{% endif %}</p>
       </aside>
     </div>
 
