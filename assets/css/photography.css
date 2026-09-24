@@ -1071,3 +1071,111 @@
   .photo-subpage-case-media { columns: 1; }
   .photo-subpage-hero { padding-top: 72px; }
 }
+
+/* ── 虛擬角色經紀公司（攝影頁 03）＋史旺姬作品頁（2026-09-24） ── */
+.photo-author-section-note { max-width: 760px; margin: -6px 0 30px; color: #bdb8ae; line-height: 1.85; }
+/* Grid 而非 CSS 多欄：多欄會依高度平衡分配，三卡高度不一時第三欄會空掉（2026-09-24 視覺 QA 抓到） */
+.photo-author-talent-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+@container photo-shell (max-width: 960px) { .photo-author-talent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container photo-shell (max-width: 640px) { .photo-author-talent-grid { grid-template-columns: 1fr; } }
+.photo-author-talent {
+  min-width: 0;
+  border: 1px solid var(--photo-line);
+  background: var(--photo-surface);
+}
+.photo-author-talent-media { position: relative; display: block; overflow: hidden; background: var(--photo-black); }
+.photo-author-talent-media img { display: block; width: 100%; height: auto; transition: transform var(--dur-3) var(--ease-out); }
+.photo-author-talent:hover .photo-author-talent-media img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) {
+  .photo-author-talent:hover .photo-author-talent-media img { transform: none; }
+}
+.photo-author-ai-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 9px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.photo-author-talent-copy { padding: 20px 22px 24px; }
+.photo-author-talent-copy h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.photo-author-talent-copy > p:not(.photo-author-eyebrow) { margin: 10px 0 16px; color: #aaa69d; line-height: 1.75; }
+.photo-author-talent-works { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--photo-line); }
+.photo-author-talent-works li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--photo-line);
+}
+.photo-author-talent-works a { color: #fff !important; font-weight: 700; text-decoration: none !important; }
+.photo-author-talent-works a:hover { color: var(--photo-gold-light) !important; }
+.photo-author-talent-works small { flex-shrink: 0; color: #8f8b82; font-size: 0.8rem; }
+.photo-author-section-links { display: flex; flex-wrap: wrap; gap: 4px 32px; margin-top: 26px; }
+
+/* 史旺姬《她把風景打開》 */
+.sjw-meta { margin: 0 0 26px; color: #8f8b82; font-family: var(--font-sans); font-size: 0.82rem; letter-spacing: 0.04em; }
+.sjw-cover .photo-author-series-copy p { margin: 16px 0 0; }
+.sjw-cover .photo-author-series-copy .photo-author-text-link { display: inline-block; margin-top: 24px; }
+.sjw-toc { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.sjw-toc a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--photo-line);
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.sjw-toc a b { color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.16em; }
+.sjw-toc a:hover { border-color: var(--photo-gold-light); }
+.sjw-chapter { scroll-margin-top: 90px; }
+.sjw-count { margin-top: 10px !important; color: #8f8b82 !important; font-family: var(--font-sans); font-size: 0.8rem !important; letter-spacing: 0.08em; }
+.sjw-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 24px; align-items: start; }
+.sjw-figure { margin: 0; min-width: 0; }
+.sjw-figure--wide { grid-column: 1 / -1; }
+.sjw-figure--solo { grid-column: 1 / -1; width: calc(50% - 12px); margin-inline: auto; }
+.sjw-figure > a { display: block; background: var(--photo-black); }
+.sjw-figure img { display: block; width: 100%; height: auto; }
+.sjw-figure figcaption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 14px;
+  row-gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--photo-line);
+}
+.sjw-no { color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.16em; }
+.sjw-title { color: #fff; font-family: var(--font-display); font-size: 1.3rem; line-height: 1.2; }
+.sjw-flickr { padding: 0 !important; font-size: 0.78rem !important; }
+.sjw-caption { grid-column: 2 / -1; margin: 0; color: #aaa69d; font-size: 0.95rem; line-height: 1.75; }
+.sjw-closing .photo-author-section-head p + p { margin-top: 12px; }
+.sjw-notes { margin-top: 34px; padding: 26px 28px; border: 1px solid #cbc4b7; background: rgba(255, 255, 255, 0.44); }
+.sjw-notes ul { margin: 0; padding-left: 1.2em; color: #4a4741; line-height: 1.85; }
+.sjw-notes li + li { margin-top: 8px; }
+.sjw-notes a { color: #8c6300; font-weight: 700; }
+.sjw-credit { margin: 22px 0 0; color: #69665f; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.06em; }
+@media (max-width: 720px) {
+  .sjw-grid { grid-template-columns: 1fr; gap: 32px; }
+  .sjw-figure--solo { width: 100%; }
+  .sjw-figure figcaption { grid-template-columns: auto minmax(0, 1fr); }
+  .sjw-flickr,
+  .sjw-caption { grid-column: 1 / -1; }
+  .sjw-notes { padding: 20px 18px; }
+}

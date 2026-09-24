@@ -138,10 +138,57 @@ og_image: /assets/img/photography/selected/24350775633.jpg
     </div>
   </section>
 
+  <section class="photo-author-section" id="virtual-agency" aria-labelledby="virtual-agency-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ photography.virtual_agency.eyebrow }}</p>
+        <div>
+          <h2 id="virtual-agency-title">{{ photography.virtual_agency.title }}</h2>
+          <p>{{ photography.virtual_agency.intro }}</p>
+        </div>
+      </header>
+      <p class="photo-author-section-note">{{ photography.virtual_agency.disclosure }}</p>
+
+      <div class="photo-author-talent-grid">
+        {% for talent in photography.virtual_agency.talents %}
+        <article class="photo-author-talent">
+          <a href="{{ talent.url | relative_url }}" class="photo-author-talent-media">
+            <img src="{{ talent.image | relative_url }}"
+              srcset="{% for s in talent.srcset %}{{ s.src | relative_url }} {{ s.w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+              sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1000px) calc(50vw - 33px), 33vw"
+              alt="{{ talent.alt }}（AI 生成，非真人照片）"
+              width="{{ talent.width }}"
+              height="{{ talent.height }}"
+              loading="lazy"
+              decoding="async">
+            <span class="photo-author-ai-badge" aria-hidden="true">AI 生成 · 非真人照片</span>
+          </a>
+          <div class="photo-author-talent-copy">
+            <p class="photo-author-eyebrow">{{ talent.eyebrow }}</p>
+            <h3>{{ talent.name }}</h3>
+            <p>{{ talent.description }}</p>
+            <ul class="photo-author-talent-works">
+              {% for work in talent.works %}
+              <li><a href="{{ work.url | relative_url }}">{{ work.title }}</a><small>{{ work.meta }}</small></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <div class="photo-author-section-links">
+        {% for link in photography.virtual_agency.links %}
+        <a href="{{ link.url | relative_url }}" class="photo-author-text-link">{{ link.label }} →</a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="photo-author-section photo-author-light" id="history" aria-labelledby="history-title">
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
-        <p class="photo-author-eyebrow">03 · PHOTOGRAPHY JOURNEY</p>
+        <p class="photo-author-eyebrow">04 · PHOTOGRAPHY JOURNEY</p>
         <div>
           <h2 id="history-title">不是履歷，是轉變。</h2>
           <p>從網路相簿、人物合作到概念系列、展覽與出版，每個階段都改變了觀看與拍攝的方法。</p>
@@ -163,7 +210,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
   <section class="photo-author-section" id="recognition" aria-labelledby="recognition-title">
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
-        <p class="photo-author-eyebrow">04 · RECOGNITION</p>
+        <p class="photo-author-eyebrow">05 · RECOGNITION</p>
         <div>
           <h2 id="recognition-title">作品先說話，經歷再加深信任。</h2>
           <p>出版、國際攝影獎、媒體刊登與長期線上傳播，共同留下這段攝影歷程的座標。</p>
@@ -186,7 +233,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
   <section class="photo-author-section photo-author-media" id="media" aria-labelledby="media-title">
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
-        <p class="photo-author-eyebrow">05 · ON SCREEN</p>
+        <p class="photo-author-eyebrow">06 · ON SCREEN</p>
         <div>
           <h2 id="media-title">在鏡頭之外，也留下公開影像紀錄。</h2>
           <p>兩段影片分別記下主流電視節目的拍攝現場，以及 Flickr／部落格攝影時期的公開訪談。</p>
@@ -220,7 +267,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
   <section class="photo-author-section photo-author-light" id="archive" aria-labelledby="archive-title">
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
-        <p class="photo-author-eyebrow">06 · EXPLORE THE ARCHIVE</p>
+        <p class="photo-author-eyebrow">07 · EXPLORE THE ARCHIVE</p>
         <div>
           <h2 id="archive-title">繼續往裡面走。</h2>
           <p>代表作是入口；出版、獎項、人物、商業合作、媒體與完整歷程，則保存了這段創作的不同切面。</p>

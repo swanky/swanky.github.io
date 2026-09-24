@@ -17,6 +17,8 @@
 ## 攝影寫真 Photography
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
+- [虛擬角色經紀公司](https://swanky.github.io/photography/#virtual-agency): 攝影區內的虛擬人物作品入口：史旺姬、李瓶兒、潘金蓮的寫真，全部由 AI 生成，並非真人照片
+- [史旺姬《她把風景打開》](https://swanky.github.io/photography/swanky-ji-open-worlds/): 史旺姬《她把風景打開》：36張原創虛擬人物影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
 - [出版攝影集](https://swanky.github.io/photography/photo-albums/): 《制服．女孩 × 史旺基》系列、《高校制服戀物論》
 - [攝影獎項](https://swanky.github.io/photography/awards/): 法國 PX3、美國 IPA、TIME Magazine 等紀錄
 - [個人作品](https://swanky.github.io/photography/personal-works/): 人像、紀實、藝術攝影個人創作
@@ -41,6 +43,7 @@
 
 代表文章：
 
+- [AI 不是我的替身，而是我跨出邊界的方法](https://swanky.github.io/technical/ai-photography-virtual-agency/)
 - [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
 - [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
 - [Dario 說 AI 該慢一點：我支持驗證，但不想把規則也外包給供應商](https://swanky.github.io/technical/ai-frontier-pacing-verifiable-safety/)
