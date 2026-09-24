@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1000" viewBox="0 0 960 1000" role="img" aria-labelledby="title desc">
+  <title id="title">從試作到公開，不能只按一次同意</title>
+  <desc id="desc">作者提出的真人合作流程：說清楚素材用途，雙方同意後少量試作，由本人確認作品，再確認公開與商業使用範圍，之後才可在約定範圍內公開。對作品或用途有異議就停止，回到相應步驟重談。Codex可以協助整理紀錄，不替本人核可。</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#80d6d2"/></marker></defs>
+  <rect width="960" height="1000" rx="24" fill="#121c28"/>
+  <g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+    <text x="48" y="66" fill="#f6f0e5" font-size="36" font-weight="700">從試作到公開，不能只按一次同意</text>
+    <text x="48" y="110" fill="#c8d2d9" font-size="24">我的合作提案：每一步只往已經確認的範圍走。</text>
+    <g fill="#24323e" stroke="#647685" stroke-width="1.5">
+      <rect x="48" y="146" width="580" height="110" rx="14"/>
+      <rect x="48" y="306" width="580" height="110" rx="14"/>
+      <rect x="48" y="466" width="580" height="110" rx="14"/>
+      <rect x="48" y="626" width="580" height="110" rx="14"/>
+      <rect x="48" y="786" width="580" height="110" rx="14" fill="#234444" stroke="#80d6d2"/>
+    </g>
+    <g fill="#f6f0e5" font-size="28" font-weight="700">
+      <text x="76" y="191">先說清楚素材用途</text>
+      <text x="76" y="351">做少量試作</text>
+      <text x="76" y="511">由本人確認角色與作品</text>
+      <text x="76" y="671">另外確認發布用途</text>
+      <text x="76" y="831">只在約定範圍內公開</text>
+    </g>
+    <g fill="#c8d2d9" font-size="23">
+      <text x="76" y="231">哪些照片可用？要做什麼？由誰保管？</text>
+      <text x="76" y="391">先比較方向，不急著大量生成。</text>
+      <text x="76" y="551">她可以選、可以改，也可以說不要。</text>
+      <text x="76" y="711">公開平台、期間、商業用途分開談。</text>
+      <text x="76" y="871">新增用途時重談，不沿用一次的同意。</text>
+    </g>
+    <g stroke="#80d6d2" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M338 256V292"/><path d="M338 416V452"/>
+      <path d="M338 576V612"/><path d="M338 736V772"/>
+    </g>
+    <g fill="#80d6d2" font-size="21">
+      <text x="360" y="287">同意試作</text>
+      <text x="360" y="447">交給本人檢視</text>
+      <text x="360" y="607">作品確認</text>
+      <text x="360" y="767">本人核可發布用途</text>
+    </g>
+    <rect x="660" y="466" width="252" height="270" rx="14" fill="#3c2938" stroke="#e0b2d8"/>
+    <path d="M628 521H660M628 681H660" fill="none" stroke="#e0b2d8" stroke-width="3" stroke-dasharray="6 5"/>
+    <g fill="#f3d6ec" font-size="25">
+      <text x="688" y="512" font-weight="700">有異議就停下</text>
+      <text x="688" y="563">作品不認同：</text>
+      <text x="688" y="600">回到試作修改。</text>
+      <text x="688" y="652">用途未談妥：</text>
+      <text x="688" y="689">先不要公開。</text>
+    </g>
+    <text x="48" y="949" fill="#f1c77f" font-size="25">工具幫忙留下紀錄；同意不能由自動流程代填。</text>
+  </g>
+</svg>

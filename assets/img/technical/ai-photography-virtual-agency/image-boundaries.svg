@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="760" viewBox="0 0 960 760" role="img" aria-labelledby="title desc">
+  <title id="title">都叫影像，與人的關係卻不同</title>
+  <desc id="desc">三個平行的創作類型：真實攝影記錄發生過的相遇；原創或改編的虛構角色創造沒有發生的故事；真人數位分身使用本人授權的形象。三者不是互相取代的順序。</desc>
+  <rect width="960" height="760" rx="24" fill="#121c28"/>
+  <g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+    <text x="48" y="68" fill="#f6f0e5" font-size="38" font-weight="700">都叫影像，與人的關係卻不同</text>
+    <text x="48" y="113" fill="#c8d2d9" font-size="24">本文的創作分類，不是從舊到新的淘汰順序。</text>
+    <rect x="40" y="148" width="880" height="160" rx="16" fill="#24323e"/>
+    <rect x="40" y="148" width="8" height="160" rx="4" fill="#e8b967"/>
+    <text x="72" y="197" fill="#f1c77f" font-size="30" font-weight="700">真實攝影</text>
+    <text x="72" y="244" fill="#ffffff" font-size="28">記錄那個人，曾經在那裡。</text>
+    <text x="72" y="282" fill="#c8d2d9" font-size="24">重點是共同經歷；公開作品仍須尊重使用範圍。</text>
+    <rect x="40" y="328" width="880" height="160" rx="16" fill="#24323e"/>
+    <rect x="40" y="328" width="8" height="160" rx="4" fill="#80d6d2"/>
+    <text x="72" y="377" fill="#80d6d2" font-size="30" font-weight="700">虛構角色：原創或改編</text>
+    <text x="72" y="424" fill="#ffffff" font-size="28">創造一個人物，持續為她製作作品。</text>
+    <text x="72" y="462" fill="#c8d2d9" font-size="24">清楚介紹為虛構；不冒充真人紀錄或真實履歷。</text>
+    <rect x="40" y="508" width="880" height="160" rx="16" fill="#24323e"/>
+    <rect x="40" y="508" width="8" height="160" rx="4" fill="#e0b2d8"/>
+    <text x="72" y="557" fill="#e0b2d8" font-size="30" font-weight="700">真人授權數位分身</text>
+    <text x="72" y="604" fill="#ffffff" font-size="28">形象連著本人，創作也要留下她的決定權。</text>
+    <text x="72" y="642" fill="#c8d2d9" font-size="24">素材、作品、公開與商業使用，分開確認。</text>
+    <text x="48" y="714" fill="#f1c77f" font-size="26">生成得出來，不代表可以替那個人決定。</text>
+  </g>
+</svg>
