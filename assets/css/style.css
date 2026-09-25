@@ -7252,3 +7252,52 @@ section.testimonials { background: var(--c-cream); }
   .wc-banner:hover img, .wc-row:hover .wc-row-thumb img, .works-list--thumbs .work-row:hover .w-thumb img,
   .wc-banner:hover .wc-cta i, .wc-row:hover .wc-cta i { transform: none; }
 }
+
+/* ---------- 15. 首頁 合作方式：白卡格 → 編輯式髮絲線欄（2026-09-25，設計 QA F1） ----------
+   代表成果索引列之後緊接四張白色圓角卡，兩區形式重複、下滑到中段編輯感中斷。
+   改成與 .works-list 同語彙：透明底、上緣 1px 髮絲線、Fraunces 斜體金序號（既有），
+   hover 只換線色與標題色、不浮起；帶底改 --c-paper-2 與索引列區分。自我探索實驗室入口同步改上下髮絲線。 */
+section.services { background: var(--c-paper-2); }
+
+.services .icon-box,
+.services .icon-box:hover,
+.services .icon-box-gold-1:hover,
+.services .icon-box-gold-2:hover,
+.services .icon-box-gold-3:hover,
+.services .icon-box-gold-4:hover {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--c-line-2);
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.services .icon-box {
+  padding: 26px 6px 30px;
+  transition: border-top-color var(--dur-2) ease;
+}
+
+.services .icon-box:hover { border-top-color: #E5A300; }
+.services .icon-box:hover .title { color: var(--c-gold-deep); }
+.services .title { transition: color var(--dur-1) ease; }
+.services .icon-box::before { opacity: 1; margin-bottom: 18px; }
+
+.explore-home-cta,
+.explore-home-cta:hover {
+  max-width: none; /* 原 900px 置中盒；改與四欄同寬，髮絲線對齊欄外緣 */
+  padding: 22px 6px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--c-line-2);
+  border-bottom: 1px solid var(--c-line-2);
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.explore-home-cta:hover { background: var(--c-gold-tint); }
+
+@media (prefers-reduced-motion: reduce) {
+  .services .icon-box, .services .title, .explore-home-cta { transition: none; }
+}
