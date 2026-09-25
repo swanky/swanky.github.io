@@ -1,0 +1,22 @@
+{%- comment -%}合作凡例（紙底、兩欄條目式，三條同一語法）；洽詢是一行大字宋體底線連結，不是 CTA 帶。首頁與洽詢頁共用；洽詢頁的連結直接開表單並附信箱備援。{%- endcomment -%}
+{%- assign bm = site.data.models -%}
+<section class="sm-terms" aria-labelledby="sm-terms-title">
+  <div class="sm-shell sm-terms__grid">
+    <h2 id="sm-terms-title">{% for line in bm.principles.title_lines %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</h2>
+    <div class="sm-terms__body">
+      <dl class="sm-rules">
+        {% for it in bm.principles.items %}
+        <div><dt>{{ it.title }}</dt><dd>{{ it.text }}</dd></div>
+        {% endfor %}
+      </dl>
+      <p class="sm-terms__status">{{ bm.inquiry.status }}</p>
+      {% if page.url == '/photography/models/inquiry/' %}
+      <a class="sm-action" href="{{ '/contact/' | relative_url }}?service=photography&from=models" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'models_inquiry',service:'photography',cta_position:'models_terms',from_page:window.location.pathname});}">填寫洽詢表單</a>
+      {% include contact-fallback.html service="photography" position="models_terms" %}
+      {% else %}
+      <a class="sm-action" href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>
+      {% endif %}
+      <p class="sm-terms__aside">真人模特兒的拍攝合作不在這個子站處理，請走<a href="{{ '/photography/#model-collaboration' | relative_url }}">攝影作品區的模特兒合作</a>。</p>
+    </div>
+  </div>
+</section>

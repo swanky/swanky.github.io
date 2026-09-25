@@ -11,7 +11,7 @@
  *   回傳 url 形如 https://live.staticflickr.com/{server}/{id}_{secret}_b.jpg，另有 width／height。
  *
  * 掃描的資料檔（有 flickr_id 的寫真集）：
- *   _data/swanky_ji_open_worlds.json、_data/swanky_ji_everyday_light.json、_data/pan_jinlian_she_sees_it_first.json（photos[].flickr_id）
+ *   _data/swanky_ji_open_worlds.json、_data/swanky_ji_everyday_light.json、_data/pan_jinlian_she_sees_it_first.json、_data/pan_jinlian_tonight_she_opens.json（photos[].flickr_id）
  *   _data/jinpingmei_photobook_vl20.yml（chapters[].shots[].flickr_id）
  *   _data/jinpingmei_photobook_lp36.yml（同上；36 個 id 取自攝影 workspace 的 upload-results，2026-09-24 補齊）
  *
@@ -26,7 +26,7 @@ import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(root, '_data', 'flickr_static.json');
-const JSON_BOOKS = ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'pan_jinlian_she_sees_it_first'];
+const JSON_BOOKS = ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'pan_jinlian_she_sees_it_first', 'pan_jinlian_tonight_she_opens'];
 const YML_BOOKS = ['jinpingmei_photobook_vl20', 'jinpingmei_photobook_lp36'];
 const refresh = process.argv.includes('--refresh');
 

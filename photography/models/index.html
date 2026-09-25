@@ -1,0 +1,107 @@
+---
+layout: models
+title: SWANKY MODELS｜虛擬模特兒經紀
+seo_title: SWANKY MODELS 虛擬模特兒經紀｜史旺基旗下 AI 虛擬人物與概念寫真
+description: SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、李瓶兒、潘金蓮三位寫真模特兒與六本概念寫真集，另有史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象；全部由 AI 生成，並非真人照片。
+keywords: SWANKY MODELS,虛擬模特兒,虛擬模特兒經紀,虛擬人物,AI 生成影像,史旺姬,李瓶兒,潘金蓮,史旺基
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: SWANKY MODELS 虛擬模特兒經紀
+    url: /photography/models/
+use_glightbox: true
+use_models: true
+preconnect_flickr: true
+og_image: /assets/img/photography/swanky-ji-open-worlds/cover.jpg
+permalink: /photography/models/
+---
+{%- comment -%}
+SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由子站接管外殼）。
+資料源 _data/models.yml；名冊照走 _includes/models/digital.html，作品跨頁走 _includes/models/photo.html（mobile_n＝手機改用直幅）。
+版面：報頭（folio＋SVG 字標）→ 襯線導言 → 名冊（依人數 3–5 欄；手機橫滑；有多個分組時才顯示分組標籤）→
+作品跨頁：第一本滿版、其餘兩本一組並排（節奏不同）→ 收尾：一句標題＋一個動作（洽詢表單）→ 兩行 colophon。
+站主 2026-09-25 定案：字標撐滿版心、連結不加箭頭、手機名冊橫滑、名冊照不再追一致；免責只在頁尾。
+{%- endcomment -%}
+{% assign m = site.data.models %}
+{%- assign pub = m.talents | where_exp: "t", "t.public != false" -%}
+{%- assign n_talents = pub | size -%}
+{%- assign divisions_used = 0 -%}
+{%- for d in m.divisions %}{% assign dt = pub | where: "division", d.key %}{% if dt.size > 0 %}{% assign divisions_used = divisions_used | plus: 1 %}{% endif %}{% endfor -%}
+<main id="main" class="sm-page sm-home">
+  {% include models/nav.html %}
+
+  <section class="sm-hero" aria-labelledby="sm-hero-title">
+    <div class="sm-shell">
+      <h1 id="sm-hero-title" class="sm-hero__wordmark">
+        <svg class="sm-hero__wm sm-hero__wm--one" viewBox="0 0 1000 116" width="100%" role="img" aria-labelledby="sm-wordmark-title" focusable="false"><title id="sm-wordmark-title">Swanky Models</title><text x="-6" y="110" textLength="1012" lengthAdjust="spacing">SWANKY MODELS</text></svg>
+        <svg class="sm-hero__wm sm-hero__wm--two" viewBox="0 0 1000 220" width="100%" aria-hidden="true" focusable="false"><text x="-6" y="210" textLength="1012" lengthAdjust="spacing">SWANKY</text></svg>
+        <svg class="sm-hero__wm sm-hero__wm--two" viewBox="0 0 1000 220" width="100%" aria-hidden="true" focusable="false"><text x="-6" y="210" textLength="1012" lengthAdjust="spacing">MODELS</text></svg>
+      </h1>
+      {%- assign lead_parts = m.home.lead | split: "。" -%}
+      {%- assign lead_b = lead_parts[1] | split: "：" -%}
+      {%- assign claim_parts = lead_b[1] | split: "、" -%}
+      <p class="sm-hero__claim">{% for cp in claim_parts %}<span class="sm-ph">{{ cp }}{% unless forloop.last %}、{% else %}。{% endunless %}</span>{% endfor %}</p>
+      <p class="sm-hero__standfirst">{{ lead_b[0] }}。這裡的人物不是真人。</p>
+    </div>
+    {%- assign hero_t = pub | where: "slug", "swanky-ji" | first -%}
+    {%- assign hsp = hero_t.spread -%}{%- assign hbk = site.data[hsp.book] -%}{%- assign hsb = hero_t.books | where: "data", hsp.book | first -%}{%- assign hset = hbk.setting | default: hbk.subtitle -%}
+    <figure class="sm-spread sm-spread--full sm-spread--hero">
+      {% include models/photo.html book=hsp.book kind=hsp.kind n=hsp.n mobile_n=hsp.mobile_n sizes="100vw" href=hsb.url local_full=true eager=true %}
+      <figcaption class="sm-shell sm-spread__cap">
+        <a class="sm-spread__title" href="{{ hsb.url | relative_url }}">《{{ hbk.title }}》</a>
+        <span class="sm-spread__meta">{{ hero_t.name }}{% if hset %} · {{ hset }}{% endif %}</span>
+      </figcaption>
+    </figure>
+    {% for d in m.divisions %}
+      {%- assign dt = pub | where: "division", d.key -%}
+      {%- if dt.size == 0 %}{% continue %}{% endif -%}
+      {%- if divisions_used > 1 %}<h2 class="sm-shell sm-board__division{% if d.minor %} sm-board__division--minor{% endif %}">{{ d.label }}</h2>{% endif -%}
+      {%- assign board_cols = d.cols | default: 3 -%}{%- if dt.size < board_cols and d.minor != true %}{% assign board_cols = dt.size %}{% endif -%}
+    <ol class="sm-shell sm-board sm-board--{{ board_cols }} sm-board--{{ d.key }}" aria-label="{{ d.label }}">
+      {%- if d.key == 'photobook' %}{% assign board_sizes = "(max-width: 767px) 60vw, 34vw" %}{% assign eager = true %}{% else %}{% assign board_sizes = "(max-width: 767px) 24vw, 14vw" %}{% assign eager = false %}{% endif -%}
+      {% for t in dt %}
+        {%- capture turl %}/photography/models/talent/{{ t.slug }}/{% endcapture -%}
+      <li>
+        <a href="{{ turl | relative_url }}">
+          {% if t.digital %}{% include models/digital.html t=t sizes=board_sizes eager=eager %}{% else %}{% include models/photo.html book=t.portrait.book kind=t.portrait.kind n=t.portrait.n sizes=board_sizes eager=eager %}{% endif %}
+          <span class="sm-board__cap"><span class="sm-board__name">{{ t.short | default: t.name }}{% if t.flag and t.kind_label == "" %}<sup class="sm-board__mark">†</sup>{% endif %}</span><span class="sm-board__line">{{ t.kind_label }}{% if t.flag %}<sup class="sm-board__mark" aria-label="{{ t.flag }}">†</sup>{% endif %}</span></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+      {%- assign flagged = dt | where_exp: "t", "t.flag" -%}
+      {%- if flagged.size > 0 %}<p class="sm-shell sm-board__note">† {{ flagged[0].flag }}</p>{% endif -%}
+    {% endfor %}
+  </section>
+
+  {%- assign spread_talents = pub | where_exp: "t", "t.spread" | where_exp: "t", "t.slug != 'swanky-ji'" -%}
+  <section class="sm-spreads" aria-labelledby="sm-spreads-title">
+    <h2 class="sm-shell sm-board__division" id="sm-spreads-title">寫真集</h2>
+    {% if spread_talents.size > 0 %}
+    <div class="sm-shell sm-spreads__pair">
+      {% for t in spread_talents %}
+        {%- assign sp = t.spread -%}{%- assign bk = site.data[sp.book] -%}{%- assign sb = t.books | where: "data", sp.book | first -%}{%- assign bset = bk.setting | default: bk.subtitle -%}
+      <figure class="sm-spread sm-spread--half">
+        {% include models/photo.html book=sp.book kind=sp.kind n=sp.n mobile_n=sp.mobile_n sizes="(max-width: 767px) 100vw, 50vw" href=sb.url %}
+        <figcaption class="sm-spread__cap">
+          <a class="sm-spread__title" href="{{ sb.url | relative_url }}">《{{ bk.title }}》</a>
+          <span class="sm-spread__meta">{{ t.name }}{% if bset %} · {{ bset }}{% endif %} · {{ bk.count }} 張 · {{ bk.chapters.size }} 章</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  <section class="sm-cta" aria-labelledby="sm-cta-title">
+    <div class="sm-shell sm-cta__inner">
+      <h2 id="sm-cta-title">{% for line in m.inquiry.title_lines %}{{ line }}{% unless forloop.last %}<br class="sm-br-m">{% endunless %}{% endfor %}</h2>
+      <p class="sm-cta__row"><a class="sm-action" href="{{ '/contact/' | relative_url }}?service=photography&from=models" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'models_inquiry',service:'photography',cta_position:'models_home',from_page:window.location.pathname});}">填寫洽詢表單</a><a class="sm-cta__alt" href="{{ '/photography/models/inquiry/' | relative_url }}">先看合作原則</a></p>
+    </div>
+  </section>
+
+  {% include models/footer.html %}
+</main>

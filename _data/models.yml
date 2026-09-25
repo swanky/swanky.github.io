@@ -1,0 +1,262 @@
+# SWANKY MODELS｜虛擬模特兒經紀（/photography/models/；2026-09-24 立）——子站單一真相源。
+#
+# 規則：
+# - 旗下人物皆為 AI 生成的虛擬人物，不是真人；模板會替每張圖的 alt 補「（AI 生成，非真人照片）」並掛徽章。
+# - 介紹文字一律沿用作品資料既有文案（JSON 的 description／disclosure、yml 的 lead／note／quote），
+#   不另創背景設定，也不編身高、三圍等經紀卡規格——資料裡沒有的欄位就不出現。
+# - 作品全是自主企劃的概念作品，不得寫成商業委託實績；不寫價格，不寫服務承諾。
+# - 新人物＝加一個 talent＋建 photography/models/talent/<slug>/index.html（只有 front matter＋include）；
+#   新作品＝在該 talent 的 books 加一行（data＝_data 檔名；kind＝json（移交包 photos[]）或 yml（寫真館 chapters[].shots[]））。
+# - 圖片一律用 {book, kind, n} 參照既有作品資料，由 _includes/models/photo.html 解析（Flickr 直連＋本地原圖放大）。
+# - 名冊照（digital: true）是 2026-09-25 以角色母版為身份參考、在同一場攝影棚設定下各生成一張的站姿四分之三身像，
+#   本地檔 /assets/img/photography/models/digitals/<slug>.webp，由 _includes/models/digital.html 輸出；spread 是首頁跨頁用的橫幅（既有書圖）。
+
+brand:
+  name: SWANKY MODELS
+  tagline: 虛擬模特兒經紀
+  claim: 旗下模特兒皆為 AI 生成的虛擬人物，並非真人。
+  creator: 史旺基 Swanky 企劃、視覺統籌、選片與審定。
+
+home:
+  eyebrow: VIRTUAL MODEL AGENCY · TAIPEI · 2026
+  lead: 這裡的人物不是真人，是史旺基企劃、視覺統籌、選片與審定的虛擬角色。攝影多年累積的眼光，換一種媒材繼續用：人物怎麼站、光從哪裡來、她和場景的關係是什麼。
+  disclosure: 以下角色與作品全部由 AI 生成，並非真人照片，也不是實拍紀錄；每一輯的作品頁都寫明製作方式與虛構場景。
+  # 以下引文出自專欄〈AI 不是我的替身，而是我跨出邊界的方法〉，逐字沿用。
+  statement_quote: 虛擬經紀公司首先應該是一個角色創作與管理的工作室，而不是無限生圖的資料夾。
+  statement_quote_lines: [虛擬經紀公司首先應該是, 一個角色創作與管理的工作室，, 而不是無限生圖的資料夾。]
+  statement_body: 如果一個角色能有自己的視覺語言、作品與故事，攝影師是否也能成為她的共同創作者、導演與經紀人？這當然還不能證明一間虛擬經紀公司已經成立，更不能證明商業模式可行。但至少可以先拿出作品，而不是只說「未來可以做到」。
+  # 宣言跨頁的暗房照片（規則：全站最暗的橫幅之一，亮度 57；劇場布幕裡展開的海，對應「工作室」的意象）
+  manifesto: { book: swanky_ji_open_worlds, kind: json, n: 28 }
+  article:
+    label: 為什麼攝影師要開一間虛擬角色經紀公司
+    url: /technical/ai-photography-virtual-agency/
+
+# 合作原則：逐字取自同一篇專欄，站主的第一人稱保留。
+principles:
+  eyebrow: HOW WE WORK
+  title: 兩種合作，各有各的紅線。
+  title_lines: [兩種合作，, 各有各的紅線。]
+  items:
+    - title: 虛構角色
+      text: 包括原創人物，以及李瓶兒這類文學角色的改編。她可以有完整的外觀、性格與故事，但必須被清楚介紹為虛構人物，改編也要交代來源。
+    - title: 真人的授權數位分身
+      text: 她與一位真實的人相連，因此作品怎麼製作、在哪裡公開、是否用於商業合作，都不能只由我單方面決定。目前只是合作原則，不是已上線的服務。
+    - title: 先小、再確認
+      text: 先說清楚素材用途，再做少量試作；先確認角色與作品，再另外確認公開及商業使用。圖像完成，不等於取得發布許可。
+
+inquiry:
+  eyebrow: INQUIRY
+  title: 想一起試一件還沒有人做過的事？
+  title_lines: [想一起試一件, 還沒有人做過的事？]
+  status: SWANKY MODELS 目前處於作品與概念階段，尚無商業委託案例；這一頁不是價目表，而是一個開始討論的入口。
+  topics:
+    - title: 讓旗下虛擬人物出現在你的企劃裡
+      text: 展覽、出版、內容合作或共同創作。先說用途與情境，我們再一起看哪一位、哪一種做法合適。
+    - title: 討論真人授權數位分身的做法
+      text: 依上面的合作原則進行：先談素材用途與範圍、做少量試作、由本人確認作品，再另外確認公開與商業使用。
+    - title: 真人模特兒合作提案
+      text: 不在這個子站處理。真人拍攝請走攝影作品區的「模特兒合作」，那裡寫了合作方式與界線。
+      url: /photography/#model-collaboration
+      cta: 前往模特兒合作
+  note: 初次來信不需提供身分證、住址等敏感資料；提案不代表一定合作，會依主題與雙方適合度回覆。
+
+# 名冊分組（首頁與名單頁依人數自動排版；只有一組有人時不顯示分組標籤）。之後加入的角色 IP 用 character。
+divisions:
+  - { key: photobook, label: 寫真模特兒, cols: 3 }   # cols＝桌機每列幾位（主力大圖）
+  - { key: character, label: 鏈上角色, cols: 7, minor: true }       # 角色 IP 小圖一列六位，像 new faces 板
+
+talents:
+  - slug: swanky-ji
+    name: 史旺姬
+    division: photobook
+    kind: original
+    kind_label: 原創虛擬人物
+    debut: 2026
+    intro: 史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。
+    disclosure: 史旺姬為史旺基的原創虛擬人物。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    portrait: { book: swanky_ji_everyday_light, kind: json, n: 12 }
+    hero: { book: swanky_ji_open_worlds, kind: json, n: 35 }
+    digital: true   # 名冊照 /assets/img/photography/models/digitals/swanky-ji.webp（2026-09-25 同棚同光三張之一）
+    spread: { book: swanky_ji_open_worlds, kind: json, n: 35, mobile_n: 26 }   # 首頁跨頁：代表作封面（橫幅）；手機改直幅 26「拉開布幕的一角」
+    books:
+      - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }
+      - { data: swanky_ji_open_worlds, kind: json, url: /photography/swanky-ji-open-worlds/ }
+
+  - slug: li-pinger
+    name: 李瓶兒
+    division: photobook
+    kind: adaptation
+    kind_label: 《金瓶梅》角色改編
+    debut: 2026
+    source:
+      label: 角色研究館：李瓶兒
+      url: /jinpingmei/characters/lipinger/
+    pack: lipinger
+    disclosure: 李瓶兒為文學角色的虛構改編形象。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    portrait: { book: jinpingmei_photobook_vl20, kind: yml, n: 3 }
+    hero: { book: jinpingmei_photobook_lp36, kind: yml, n: 4 }
+    digital: true
+    spread: { book: jinpingmei_photobook_vl20, kind: yml, n: 18, mobile_n: 1 }   # 首頁跨頁：最新一本《瓶中有光》的橫幅（紙牡丹）；手機改直幅封面 01
+    books:
+      - { data: jinpingmei_photobook_lp36, kind: yml, url: /jinpingmei/photobook/li-pinger-no-hurry/ }
+      - { data: jinpingmei_photobook_vl20, kind: yml, url: /jinpingmei/photobook/li-pinger-vessel-of-light/ }
+
+  - slug: pan-jinlian
+    name: 潘金蓮
+    division: photobook
+    kind: adaptation
+    kind_label: 《金瓶梅》角色改編
+    debut: 2026
+    source:
+      label: 角色研究館：潘金蓮
+      url: /jinpingmei/characters/panjinlian/
+    pack: panjinlian
+    disclosure: 潘金蓮為文學角色的虛構改編形象。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    portrait: { book: pan_jinlian_she_sees_it_first, kind: json, n: 12 }
+    hero: { book: pan_jinlian_she_sees_it_first, kind: json, n: 6 }
+    digital: true
+    spread: { book: pan_jinlian_tonight_she_opens, kind: json, n: 1, mobile_n: 2 }   # 首頁跨頁：封面 12 為直幅，改用 01「門外的藍」（橫幅）；手機用 02「一張給你」
+    books:
+      - { data: pan_jinlian_tonight_she_opens, kind: json, url: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/, pdf_size: 約 24 MB }
+      - { data: pan_jinlian_she_sees_it_first, kind: json, url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/, pdf_size: 約 21 MB }
+
+  # ── 角色 IP（2026-09-25 站主指示納入：五位 CloneX、Meebit、MAYC；身份依攝影工作區 approved-cast-r05 的核准呈現，名冊照為同棚生成）──
+  # 文案只寫可查證的事實（持有的 token、改編方式、作品籌備中），不編性格與故事；作品進站後在 books 加一行即可。
+  - slug: bunny-15755
+    links:
+      - { label: NFT 收藏展：CloneX, url: /nft/collection/#clonex }
+      - { label: Uniform CloneX 企劃, url: /nft/uniform-clonex/#members }
+    name: Bunny 邦妮
+    division: character
+    kind: nft
+    kind_label: "CloneX #15755"
+    debut: 2026
+    intro: "史旺基持有的 CloneX #15755，以官方 token 圖為依據做成的攝影式改編形象；作品籌備中。"
+    disclosure: "Bunny 邦妮為史旺基持有的 CloneX #15755 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
+    presentations:
+      - { key: studio, label: 名冊照, file: bunny-15755 }
+      - { key: photoreal, label: 擬真, file: bunny-15755-photoreal, w: 1024, h: 1536 }
+      - { key: cartoon, label: 卡通, file: bunny-15755-cartoon, w: 1024, h: 1536 }
+      - { key: human, label: 人類偽裝, file: bunny-15755-human, w: 1254, h: 1254 }
+      - { key: daily, label: 惡魔平時, file: bunny-15755-daily, w: 1536, h: 1536 }
+      - { key: awakened, label: 力量解放, file: bunny-15755-awakened, w: 1254, h: 1254 }
+    books: []
+  - slug: clonex-9268
+    links:
+      - { label: NFT 收藏展：CloneX, url: /nft/collection/#clonex }
+      - { label: Uniform CloneX 企劃, url: /nft/uniform-clonex/#members }
+    name: Sparky
+    division: character
+    kind: nft
+    kind_label: "CloneX #9268"
+    debut: 2026
+    intro: "史旺基持有的 CloneX #9268，以官方 token 圖為依據做成的攝影式改編形象；作品籌備中。"
+    disclosure: "Sparky為史旺基持有的 CloneX #9268 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
+    presentations:
+      - { key: studio, label: 名冊照, file: clonex-9268 }
+      - { key: photoreal, label: 擬真, file: clonex-9268-photoreal, w: 1024, h: 1536 }
+      - { key: cartoon, label: 卡通, file: clonex-9268-cartoon, w: 1024, h: 1536 }
+    books: []
+  - slug: clonex-15162
+    links:
+      - { label: NFT 收藏展：CloneX, url: /nft/collection/#clonex }
+      - { label: Uniform CloneX 企劃, url: /nft/uniform-clonex/#members }
+    name: "CloneX #15162"
+    division: character
+    kind: nft
+    short: "#15162"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
+    kind_label: "CloneX"
+    debut: 2026
+    intro: "史旺基持有的 CloneX #15162，以官方 token 圖為依據做成的攝影式改編形象；作品籌備中。"
+    disclosure: "CloneX #15162為史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
+    presentations:
+      - { key: studio, label: 名冊照, file: clonex-15162 }
+      - { key: photoreal, label: 擬真, file: clonex-15162-photoreal, w: 1024, h: 1536 }
+      - { key: cartoon, label: 卡通, file: clonex-15162-cartoon, w: 1024, h: 1536 }
+    books: []
+  - slug: clonex-17474
+    links:
+      - { label: NFT 收藏展：CloneX, url: /nft/collection/#clonex }
+      - { label: Uniform CloneX 企劃, url: /nft/uniform-clonex/#members }
+    name: "CloneX #17474"
+    division: character
+    kind: nft
+    short: "#17474"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
+    kind_label: "CloneX"
+    debut: 2026
+    intro: "史旺基持有的 CloneX #17474，以官方 token 圖為依據做成的攝影式改編形象；作品籌備中。"
+    disclosure: "CloneX #17474為史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
+    presentations:
+      - { key: studio, label: 名冊照, file: clonex-17474 }
+      - { key: photoreal, label: 擬真, file: clonex-17474-photoreal, w: 1024, h: 1536 }
+      - { key: cartoon, label: 卡通, file: clonex-17474-cartoon, w: 1024, h: 1536 }
+    books: []
+  - slug: clonex-17152
+    links:
+      - { label: NFT 收藏展：CloneX, url: /nft/collection/#clonex }
+      - { label: Uniform CloneX 企劃, url: /nft/uniform-clonex/#members }
+    name: "CloneX #17152"
+    division: character
+    kind: nft
+    short: "#17152"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
+    kind_label: "CloneX"
+    debut: 2026
+    intro: "史旺基持有的 CloneX #17152，以官方 token 圖為依據做成的攝影式改編形象；因造型含村上隆 IP，只作概念展示、不參與商業合作。"
+    disclosure: "CloneX #17152為史旺基持有的 CloneX #17152 的攝影式改編形象，人物由 AI 生成，並非真人；造型含村上隆 IP，不參與商業合作，僅作概念展示。"
+    # 站主 2026-09-25：公開列出，但含村上隆 IP（DOB 帽、Jellyfish Eyes 夾克），不參與商業合作
+    commercial: false
+    flag: 含村上隆 IP，不參與商業合作
+    digital: true
+    presentations:
+      - { key: studio, label: 名冊照, file: clonex-17152 }
+      - { key: photoreal, label: 擬真, file: clonex-17152-photoreal, w: 1024, h: 1536 }
+      - { key: cartoon, label: 卡通, file: clonex-17152-cartoon, w: 1024, h: 1536 }
+    books: []
+  - slug: meebit-10829
+    links:
+      - { label: NFT 收藏展：PFP, url: /nft/collection/#pfp }
+    name: "Meebit #10829"
+    division: character
+    kind: nft
+    short: "#10829"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
+    kind_label: "Meebits"
+    debut: 2026
+    # 兩種核准形象可切換（站主 2026-09-25：「讓別人依據場景來選擇她的形象」）；file＝digitals/ 內的檔名（不含副檔名）
+    presentations:
+      - { key: voxel, label: 方塊版, file: meebit-10829 }
+      - { key: human, label: 擬真版, file: meebit-10829-human }
+    intro: "史旺基持有的 Meebits #10829，有方塊與擬真兩種核准形象，可依場景選擇；作品籌備中。"
+    disclosure: "Meebit #10829為史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    books: []
+  - slug: mayc-17854
+    links:
+      - { label: NFT 收藏展：PFP, url: /nft/collection/#pfp }
+    name: "MAYC #17854"
+    division: character
+    kind: nft
+    short: "#17854"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
+    kind_label: "MAYC"
+    debut: 2026
+    intro: "史旺基持有的 MAYC #17854，以官方 token 圖為依據做成的攝影式改編形象；作品籌備中。"
+    disclosure: "MAYC #17854為史旺基持有的 MAYC #17854 的攝影式改編形象，人物由 AI 生成，並非真人；作品籌備中，尚無公開寫真集。"
+    digital: true
+    books: []
+
+links:
+  - label: Swanky Studio 首頁
+    url: /
+  - label: 攝影作品總覽
+    url: /photography/
+  - label: 金瓶梅角色寫真館
+    url: /jinpingmei/photobook/
+  - label: 為什麼開這間虛擬經紀公司
+    url: /technical/ai-photography-virtual-agency/

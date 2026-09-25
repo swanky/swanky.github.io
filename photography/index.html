@@ -47,6 +47,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
     <span>快速前往</span>
     <div>
       <a href="{{ '/photography/gallery/' | relative_url }}">作品與系列</a>
+      <a href="{{ '/photography/models/' | relative_url }}">虛擬模特兒</a>
       {% for item in photography.archive_links %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endfor %}
@@ -139,48 +140,52 @@ og_image: /assets/img/photography/selected/24350775633.jpg
   </section>
 
   <section class="photo-author-section" id="virtual-agency" aria-labelledby="virtual-agency-title">
+    {%- comment -%}SWANKY MODELS 入口（2026-09-24 由原「虛擬角色經紀公司」區塊改成）：人物與文案讀 _data/models.yml，子站在 /photography/models/。錨點 #virtual-agency 保留給既有連結。{%- endcomment -%}
+    {%- assign models = site.data.models -%}
+    {%- assign agency_books = 0 -%}{%- for t in models.talents -%}{%- assign agency_books = agency_books | plus: t.books.size -%}{%- endfor -%}
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
-        <p class="photo-author-eyebrow">{{ photography.virtual_agency.eyebrow }}</p>
+        <p class="photo-author-eyebrow">03 · SWANKY MODELS</p>
         <div>
-          <h2 id="virtual-agency-title">{{ photography.virtual_agency.title }}</h2>
-          <p>{{ photography.virtual_agency.intro }}</p>
+          <h2 id="virtual-agency-title">虛擬模特兒經紀。</h2>
+          <p>{{ models.home.lead }}</p>
         </div>
       </header>
-      <p class="photo-author-section-note">{{ photography.virtual_agency.disclosure }}</p>
+      <p class="photo-author-section-note">{{ models.home.disclosure }}</p>
 
-      <div class="photo-author-talent-grid">
-        {% for talent in photography.virtual_agency.talents %}
-        <article class="photo-author-talent">
-          <a href="{{ talent.url | relative_url }}" class="photo-author-talent-media">
-            <img src="{{ talent.image | relative_url }}"
-              srcset="{% for s in talent.srcset %}{{ s.src | relative_url }} {{ s.w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
-              sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1000px) calc(50vw - 33px), 33vw"
-              alt="{{ talent.alt }}（AI 生成，非真人照片）"
-              width="{{ talent.width }}"
-              height="{{ talent.height }}"
-              loading="lazy"
-              decoding="async">
-            <span class="photo-author-ai-badge" aria-hidden="true">AI 生成 · 非真人照片</span>
+      <div class="photo-author-agency">
+        <div class="photo-author-agency-strip" aria-label="旗下模特兒">
+          {%- assign strip_talents = models.talents | where: "division", "photobook" -%}
+          {% for t in strip_talents %}
+            {%- assign ap = t.portrait -%}
+            {%- capture turl %}/photography/models/talent/{{ t.slug }}/{% endcapture -%}
+          <a class="photo-author-agency-model" href="{{ turl | relative_url }}">
+            {% if t.digital %}{% include models/digital.html t=t sizes="(max-width: 720px) calc(33vw - 14px), (max-width: 1000px) calc(33vw - 24px), 226px" %}{% else %}{% include models/photo.html book=ap.book kind=ap.kind n=ap.n sizes="(max-width: 720px) calc(33vw - 14px), (max-width: 1000px) calc(33vw - 24px), 226px" %}{% endif %}
+            <span class="photo-author-ai-badge" aria-hidden="true">AI 生成 · 非真人</span>
+            <b>{{ t.name }}</b><small>{{ t.kind_label }}</small>
           </a>
-          <div class="photo-author-talent-copy">
-            <p class="photo-author-eyebrow">{{ talent.eyebrow }}</p>
-            <h3>{{ talent.name }}</h3>
-            <p>{{ talent.description }}</p>
-            <ul class="photo-author-talent-works">
-              {% for work in talent.works %}
-              <li><a href="{{ work.url | relative_url }}">{{ work.title }}</a><small>{{ work.meta }}</small></li>
-              {% endfor %}
-            </ul>
+          {% endfor %}
+        </div>
+        <div class="photo-author-agency-copy">
+          <p class="photo-author-eyebrow">{% assign pub_talents = models.talents | where_exp: "t", "t.public != false" %}{{ pub_talents.size }} 位模特兒與角色 · {{ agency_books }} 本概念寫真集</p>
+          <h3>{{ models.brand.name }}</h3>
+          <p class="photo-author-agency-quote">「{{ models.home.statement_quote }}」</p>
+          <p>旗下人物的介紹、作品集與合作原則，獨立成一個經紀公司子站；概念作品全部自主企劃，不是商業委託。</p>
+          <nav class="photo-author-agency-nav" aria-label="SWANKY MODELS 子站">
+            <a href="{{ '/photography/models/talent/' | relative_url }}">模特兒名單</a>
+            <a href="{{ '/photography/models/work/' | relative_url }}">作品案例</a>
+            <a href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>
+          </nav>
+          <div class="photo-author-actions">
+            <a href="{{ '/photography/models/' | relative_url }}" class="photo-author-button">進入 SWANKY MODELS</a>
+            <a href="{{ '/photography/models/work/' | relative_url }}" class="photo-author-button photo-author-button--ghost">看作品案例</a>
           </div>
-        </article>
-        {% endfor %}
+        </div>
       </div>
 
       <div class="photo-author-section-links">
-        {% for link in photography.virtual_agency.links %}
-        <a href="{{ link.url | relative_url }}" class="photo-author-text-link">{{ link.label }} →</a>
-        {% endfor %}
+        <a href="{{ models.home.article.url | relative_url }}" class="photo-author-text-link">{{ models.home.article.label }} →</a>
+        <a href="{{ '/jinpingmei/photobook/' | relative_url }}" class="photo-author-text-link">金瓶梅角色寫真館 →</a>
       </div>
     </div>
   </section>

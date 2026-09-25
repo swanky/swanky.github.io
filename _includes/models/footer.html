@@ -1,0 +1,13 @@
+{%- comment -%}SWANKY MODELS 頁尾（子站接管外殼，這就是 footer）：兩行 colophon——第一行字標＋索引連結，第二行虛擬身分聲明＋署名＋版權。{%- endcomment -%}
+{%- assign sf = site.data.models -%}
+<footer class="sm-close" aria-label="SWANKY MODELS 頁尾">
+  <div class="sm-shell">
+    <div class="sm-close__row">
+      <nav class="sm-close__index" aria-label="相關頁面">
+        <span class="sm-close__group"><span class="sm-close__label">SWANKY MODELS</span><a href="{{ '/photography/models/talent/' | relative_url }}">模特兒名單</a><a href="{{ '/photography/models/work/' | relative_url }}">作品案例</a><a href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a></span>
+        <span class="sm-close__group"><span class="sm-close__label">Swanky Studio</span>{% for l in sf.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% endfor %}</span>
+      </nav>
+    </div>
+    <p class="sm-close__colophon">{{ sf.brand.claim }}{{ sf.brand.creator }}<span>© {{ 'now' | date: '%Y' }} Swanky Studio · Taipei</span></p>
+  </div>
+</footer>

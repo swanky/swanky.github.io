@@ -1072,23 +1072,8 @@
   .photo-subpage-hero { padding-top: 72px; }
 }
 
-/* ── 虛擬角色經紀公司（攝影頁 03）＋史旺姬作品頁（2026-09-24） ── */
+/* ── SWANKY MODELS 入口（攝影頁 03）＋史旺姬作品頁（2026-09-24） ── */
 .photo-author-section-note { max-width: 760px; margin: -6px 0 30px; color: #bdb8ae; line-height: 1.85; }
-/* Grid 而非 CSS 多欄：多欄會依高度平衡分配，三卡高度不一時第三欄會空掉（2026-09-24 視覺 QA 抓到） */
-.photo-author-talent-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
-@container photo-shell (max-width: 960px) { .photo-author-talent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@container photo-shell (max-width: 640px) { .photo-author-talent-grid { grid-template-columns: 1fr; } }
-.photo-author-talent {
-  min-width: 0;
-  border: 1px solid var(--photo-line);
-  background: var(--photo-surface);
-}
-.photo-author-talent-media { position: relative; display: block; overflow: hidden; background: var(--photo-black); }
-.photo-author-talent-media img { display: block; width: 100%; height: auto; transition: transform var(--dur-3) var(--ease-out); }
-.photo-author-talent:hover .photo-author-talent-media img { transform: scale(1.03); }
-@media (prefers-reduced-motion: reduce) {
-  .photo-author-talent:hover .photo-author-talent-media img { transform: none; }
-}
 .photo-author-ai-badge {
   position: absolute;
   right: 12px;
@@ -1102,28 +1087,30 @@
   font-weight: 700;
   letter-spacing: 0.14em;
 }
-.photo-author-talent-copy { padding: 20px 22px 24px; }
-.photo-author-talent-copy h3 {
-  margin: 0;
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.4vw, 2.3rem);
-  font-weight: 400;
-  line-height: 1.15;
+/* SWANKY MODELS 入口（2026-09-24）：三位模特兒直幅＋文案；人物讀 _data/models.yml，圖片經 _includes/models/photo.html */
+.photo-author-agency { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr); border: 1px solid var(--photo-line); background: var(--photo-charcoal); }
+.photo-author-agency-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; padding: clamp(18px, 3vw, 36px); background: var(--photo-black); }
+.photo-author-agency-model { position: relative; display: block; min-width: 0; color: #fff !important; text-decoration: none !important; }
+.photo-author-agency-model:nth-child(2) { transform: translateY(-16px); }
+.photo-author-agency-model .sm-media { display: block; overflow: hidden; background: #000; }
+.photo-author-agency-model .sm-media img { display: block; width: 100%; height: auto; transition: transform var(--dur-3) var(--ease-out); }
+.photo-author-agency-model:hover .sm-media img { transform: scale(1.03); }
+.photo-author-agency-model .photo-author-ai-badge { top: 10px; right: 10px; bottom: auto; }
+.photo-author-agency-model b { display: block; margin-top: 10px; font-size: 0.95rem; }
+.photo-author-agency-model small { display: block; color: #8f8b82; font-size: 0.72rem; letter-spacing: 0.04em; }
+.photo-author-agency-copy { padding: clamp(28px, 4vw, 56px); }
+.photo-author-agency-copy h3 { margin: 0; color: #fff; font-family: var(--font-sans); font-size: clamp(1.6rem, 2.6vw, 2.4rem); font-weight: 900; letter-spacing: 0.14em; }
+.photo-author-agency-quote { margin: 18px 0 0 !important; color: #f3efe6 !important; font-family: var(--font-display); font-size: clamp(1.15rem, 1.6vw, 1.45rem); line-height: 1.5; }
+.photo-author-agency-copy > p:not(.photo-author-eyebrow):not(.photo-author-agency-quote) { margin: 14px 0 0; color: #aaa69d; line-height: 1.8; }
+.photo-author-agency-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 22px 0 0; padding: 14px 0 0; border-top: 1px solid var(--photo-line); }
+.photo-author-agency-nav a { color: #c9c4ba !important; font-size: 0.86rem; font-weight: 700; text-decoration: none !important; }
+.photo-author-agency-nav a:hover { color: var(--photo-gold-light) !important; }
+.photo-author-agency-copy .photo-author-actions { margin-top: 26px; }
+@media (prefers-reduced-motion: reduce) { .photo-author-agency-model:hover .sm-media img { transform: none; } }
+@container photo-shell (max-width: 900px) {
+  .photo-author-agency { grid-template-columns: 1fr; }
+  .photo-author-agency-model:nth-child(2) { transform: none; }
 }
-.photo-author-talent-copy > p:not(.photo-author-eyebrow) { margin: 10px 0 16px; color: #aaa69d; line-height: 1.75; }
-.photo-author-talent-works { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--photo-line); }
-.photo-author-talent-works li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--photo-line);
-}
-.photo-author-talent-works a { color: #fff !important; font-weight: 700; text-decoration: none !important; }
-.photo-author-talent-works a:hover { color: var(--photo-gold-light) !important; }
-.photo-author-talent-works small { flex-shrink: 0; color: #8f8b82; font-size: 0.8rem; }
 .photo-author-section-links { display: flex; flex-wrap: wrap; gap: 4px 32px; margin-top: 26px; }
 
 /* 史旺姬《她把風景打開》 */

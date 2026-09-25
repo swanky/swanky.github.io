@@ -1,0 +1,65 @@
+---
+layout: models
+title: 合作洽詢｜SWANKY MODELS
+seo_title: 合作洽詢｜SWANKY MODELS 虛擬模特兒經紀
+description: SWANKY MODELS 合作洽詢：目前為作品與概念階段，尚無商業委託案例。說明虛構角色與真人授權數位分身的合作原則、可以先聊的三件事，以及來信方式；真人模特兒合作另走攝影作品區。
+keywords: SWANKY MODELS,合作洽詢,虛擬模特兒,虛擬人物合作,數位分身,史旺基
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: SWANKY MODELS 虛擬模特兒經紀
+    url: /photography/models/
+  - name: 合作洽詢
+    url: /photography/models/inquiry/
+use_models: true
+og_image: /assets/img/photography/swanky-ji-open-worlds/cover.jpg
+permalink: /photography/models/inquiry/
+---
+{% assign m = site.data.models %}
+<main id="main" class="sm-page sm-inquiry">
+  {% include models/nav.html %}
+
+  <header class="sm-pagehead" aria-labelledby="sm-inquiry-title">
+    <div class="sm-shell">
+      <div class="sm-pagehead__grid">
+        <h1 id="sm-inquiry-title">{{ m.inquiry.title }}</h1>
+        <p>{{ m.inquiry.status }}</p>
+        <p class="sm-disclosure">{{ m.brand.claim }}真人模特兒的拍攝合作不在這裡處理，請走攝影作品區的<a href="{{ '/photography/#model-collaboration' | relative_url }}">模特兒合作</a>。</p>
+      </div>
+    </div>
+  </header>
+
+  <blockquote class="sm-quote" cite="{{ m.home.article.url | relative_url }}">
+    <div class="sm-shell sm-quote__grid">
+      <p class="sm-quote__label">{{ m.home.article.label }}</p>
+      <div>
+        <p class="sm-quote__text">{% for line in m.home.statement_quote_lines %}{{ line }}{% unless forloop.last %}<br class="sm-br">{% endunless %}{% endfor %}</p>
+        <footer>史旺基，<a href="{{ m.home.article.url | relative_url }}">〈AI 不是我的替身，而是我跨出邊界的方法〉</a></footer>
+      </div>
+    </div>
+  </blockquote>
+
+  <section class="sm-section" aria-labelledby="sm-topics-title">
+    <div class="sm-shell">
+      <header class="sm-section__head">
+        <h2 id="sm-topics-title">可以先聊的三件事</h2>
+        <p>先寫用途、情境與想合作的模特兒，不用附企劃書。{{ m.inquiry.note }}</p>
+      </header>
+      <ol class="sm-topics">
+        {% for tp in m.inquiry.topics %}
+        <li>
+          <h3>{{ tp.title }}</h3>
+          <div><p>{{ tp.text }}</p>{% if tp.url %}<a class="sm-textlink" href="{{ tp.url | relative_url }}">{{ tp.cta }}</a>{% endif %}</div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  {% include models/band.html %}
+
+  {% include models/footer.html %}
+</main>

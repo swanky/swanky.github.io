@@ -1,0 +1,218 @@
+---
+layout: null
+title: 潘金蓮《今晚，由她開場》｜金瓶梅角色寫真集
+description: 潘金蓮《今晚，由她開場》：36 張虛擬人物影像，從遞票、拉幕到關燈與散場，讓她主動決定一夜的開始與結束。
+permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
+---
+{%- comment -%}
+潘金蓮《今晚，由她開場》專輯頁。資料驅動：_data/pan_jinlian_tonight_she_opens.json（移交包逐位元照搬；圖說／alt／章節文／創作理念／揭露句皆從資料讀，不改寫）。
+版型沿用寫真館兄弟頁（pan-jinlian-she-sees-it-first 等），排版列由資料算：橫幅獨佔一列（lp-row--wide）、連續兩張直幅成對（lp-row--duo）、孤直幅置中（lp-row--solo）。
+圖檔與 PDF 路徑照移交包放在 /assets/img/photography/<slug>/ 與 /assets/downloads/<slug>/（JSON 內的路徑即真實路徑）。
+{%- endcomment -%}
+{%- assign book = site.data.pan_jinlian_tonight_she_opens -%}
+{%- assign pdf_size = '約 24 MB' -%}
+{%- assign ai_tag = '（AI 生成，非真人照片）' -%}
+{%- capture curl %}/jinpingmei/characters/panjinlian/{% endcapture -%}
+{%- assign cover = book.photos | where: "order", book.cover_photo | first -%}
+{%- assign stills = book.photos | where: "still_life", true -%}
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ book.og_image | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://live.staticflickr.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260915-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260924-1" rel="stylesheet">
+  {% include jinpingmei/gtag.html %}
+</head>
+<body class="jpm jpm-pb jpm-lp">
+  <a class="jpm-skip" href="#pb-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a class="hide-m" href="{{ '/' | relative_url }}">回主站</a>
+    </nav>
+  </header>
+
+  <main id="pb-main">
+
+    <!-- ── 開卷 ── -->
+    <section class="jpm-section lp-hero">
+      <div class="jpu-hero jpm-shell">
+        <div>
+          <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真集</span></p>
+          <h1 class="act-title reveal">{{ book.title }}<small>{{ book.model }} · {{ book.setting }} · {{ book.count }} 張寫真</small></h1>
+          <p class="act-lead reveal">{{ book.statement[0] }}<br>{{ book.disclosure }}</p>
+          <div class="act-cta-row reveal">
+            <a class="act-cta" href="#photos">翻開 {{ book.count }} 張寫真<i aria-hidden="true">→</i></a>
+            <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>PDF · {{ pdf_size }}</small></a>
+          </div>
+          <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ curl | relative_url }}">看{{ book.model }}的角色檔案 →</a><a href="{{ book.flickr_album }}" target="_blank" rel="noopener">在 Flickr 看相簿 ↗</a></p>
+        </div>
+        <figure class="pb-print lp-cover reveal">
+          {%- assign cfid = cover.flickr_id | append: '' -%}{%- assign cfs = site.data.flickr_static[cfid] -%}
+          <img src="{% if cfs %}https://live.staticflickr.com/{{ cfs.server }}/{{ cfid }}_{{ cfs.secret }}_z.jpg{% else %}{{ cover.preview | relative_url }}{% endif %}" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{% if cover.height > cover.width %}640{% else %}960{% endif %}" height="{% if cover.height > cover.width %}960{% else %}640{% endif %}" fetchpriority="high" decoding="async">
+          <figcaption><span class="fno">封面</span><span class="fcap">{{ cover.title }}</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── 創作理念 ── -->
+    <div class="jpm-shell">
+      <blockquote class="lp-foreword reveal">
+        {%- for para in book.statement offset:1 %}
+        <p>{{ para }}</p>
+        {%- endfor %}
+        <footer>創作理念</footer>
+      </blockquote>
+    </div>
+
+    <!-- ── 目次 ── -->
+    <nav class="jpm-shell lp-toc reveal" aria-label="章節目次">
+      {%- for c in book.chapters %}
+      <a href="#chapter-{{ c.number }}"><b>0{{ c.number }}</b>{{ c.title }}</a>
+      {%- endfor %}
+    </nav>
+
+    <!-- ── 四章・三十六幀 ── -->
+    <div id="photos">
+      {%- for c in book.chapters %}
+      {%- assign shots = book.photos | where: "chapter", c.number -%}
+      {%- capture first_no %}{% if shots.first.order < 10 %}0{% endif %}{{ shots.first.order }}{% endcapture -%}
+      {%- capture last_no %}{% if shots.last.order < 10 %}0{% endif %}{{ shots.last.order }}{% endcapture -%}
+      {%- assign lines = c.text | split: ' ' -%}
+      <section class="lp-chapter" id="chapter-{{ c.number }}" aria-labelledby="lp-ch-{{ c.number }}">
+        <div class="jpm-shell">
+          <header class="lp-chapter-head reveal">
+            <h2 id="lp-ch-{{ c.number }}"><span class="lp-ch-no">0{{ c.number }}</span>{{ c.title }}</h2>
+            <span class="lp-ch-count">{{ shots.size }} 幀 · No.{{ first_no }}–{{ last_no }}</span>
+          </header>
+          <p class="lp-ch-text reveal">{% for line in lines %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
+          {%- assign pending = false -%}
+          {%- for p in shots -%}
+          {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+          {%- if p.preview_width -%}{%- assign pw = p.preview_width -%}{%- assign ph = p.preview_height -%}{%- elsif p.height >= p.width -%}{%- assign pw = 640 -%}{%- assign ph = 960 -%}{%- else -%}{%- assign pw = 960 -%}{%- assign ph = 640 -%}{%- endif -%}
+          {%- assign fid = p.flickr_id | append: '' -%}
+          {%- assign fs = site.data.flickr_static[fid] -%}
+          {%- if fs -%}
+            {%- capture fb %}https://live.staticflickr.com/{{ fs.server }}/{{ fid }}_{{ fs.secret }}{% endcapture -%}
+            {%- assign zw = fs.bw | times: 640 | divided_by: 1024 -%}
+            {%- assign cw = fs.bw | times: 800 | divided_by: 1024 -%}
+            {%- capture img_src %}{{ fb }}_b.jpg{% endcapture -%}
+            {%- capture img_srcset %} srcset="{{ fb }}_z.jpg {{ zw }}w, {{ fb }}_c.jpg {{ cw }}w, {{ fb }}_b.jpg {{ fs.bw }}w" sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}"{% endcapture -%}
+          {%- else -%}
+            {%- capture img_src %}{{ p.preview | relative_url }}{% endcapture -%}
+            {%- assign img_srcset = '' -%}
+          {%- endif -%}
+          {%- capture fig %}
+            <figure class="pb-print lp-print lp-print--captioned">
+              <a href="{{ p.image | relative_url }}" class="jpm-zoom" data-gallery="pnc36" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}"><img src="{{ img_src }}"{{ img_srcset }} alt="{{ p.alt }}{{ ai_tag }}" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <figcaption>
+                <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.title }}</span>
+                <span class="lp-desc">{{ p.caption }}</span>
+                <a class="lp-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>
+              </figcaption>
+            </figure>
+          {%- endcapture -%}
+          {%- if p.height >= p.width -%}
+            {%- if pending %}
+            {{ fig }}
+          </div>
+              {%- assign pending = false -%}
+            {%- else -%}
+              {%- assign nxt = shots[forloop.index] -%}
+              {%- assign isduo = false -%}
+              {%- if nxt -%}{%- if nxt.height > nxt.width -%}{%- assign isduo = true -%}{%- endif -%}{%- endif -%}
+              {%- if isduo %}
+          <div class="lp-row lp-row--duo">
+            {{ fig }}
+                {%- assign pending = true -%}
+              {%- else %}
+          <div class="lp-row lp-row--solo">
+            {{ fig }}
+          </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- else %}
+          <div class="lp-row lp-row--wide">
+            {{ fig }}
+          </div>
+          {%- endif -%}
+          {%- endfor %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
+
+    <!-- ── 整本帶走 ── -->
+    <div class="jpm-shell">
+      <aside class="pb-teaser lp-download reveal" aria-label="下載寫真集">
+        <b>整本帶走</b>
+        <p>{{ book.count }} 張寫真裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
+        <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>PDF · {{ pdf_size }}</small></a>
+        <p><a href="{{ '/jinpingmei/photobook/' | relative_url }}">回寫真館，看其他角色的寫真 →</a> <a href="{{ book.flickr_album }}" target="_blank" rel="noopener">或到 Flickr 看整本相簿 ↗</a></p>
+      </aside>
+    </div>
+
+    <!-- ── 凡例 ── -->
+    <div class="jpm-shell">
+      <aside class="paiji reveal" aria-labelledby="lp-paiji">
+        <div class="paiji-frame">
+          <p class="paiji-head" id="lp-paiji"><b>凡例</b><small>本輯的誠實標示</small></p>
+          <ul>
+            <li>{{ book.model }}是《金瓶梅》書中角色；{{ book.disclosure }}</li>
+            <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構；其中 {{ stills.size }} 幀沒有人物出鏡，同樣為 AI 生成影像。</li>
+            <li>原典含成人內容，建議成年讀者。</li>
+            <li>寫真對象出自<a href="{{ curl | relative_url }}">角色研究館</a>考證過的角色檔案；其他角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。</li>
+            <li>每一幀都附 Flickr 連結，可對照原始上傳；本輯以數位形式公開，完整寫真集可免費下載。</li>
+            <li>這一輯怎麼做、為什麼做，寫在專欄〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉與〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉。</li>
+          </ul>
+          <span class="paiji-seal" aria-hidden="true"><i>寫真集</i></span>
+        </div>
+      </aside>
+      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。圖像：AI 生成；場景為虛構。</p>
+    </div>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>

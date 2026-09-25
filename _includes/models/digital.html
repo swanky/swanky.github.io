@@ -1,0 +1,20 @@
+{%- comment -%}
+SWANKY MODELS 名冊照（2026-09-25）：三位模特兒在同一場攝影棚、同一窗光、同一鏡頭、同一調色下各拍一張站姿四分之三身像，
+本地檔 /assets/img/photography/models/digitals/<slug>.webp（1024×1536 原生 2:3）＋ -480／-768 縮圖；一律原比例、不裁切。
+alt 一律補「（AI 生成，非真人照片）」。
+參數：t（talents 項目，需有 digital: true）、sizes（必填，依實際版面寬）、href（給則包頁面連結）、gallery（給則包成放大連結）、eager（首屏圖）
+  file（選填：改用 digitals/<file>.webp，給可切換形象用）、label（選填：alt 內的形象名）、w／h（選填：非 1024×1536 的形象圖尺寸）
+{%- endcomment -%}
+{%- assign md_t = include.t -%}
+{%- assign md_file = include.file | default: md_t.slug -%}
+{%- capture md_base %}/assets/img/photography/models/digitals/{{ md_file }}{% endcapture -%}
+{%- capture md_full %}{{ md_base }}.webp{% endcapture -%}
+{%- capture md_alt %}{{ md_t.name }}，SWANKY MODELS 名冊照{% if include.label %}（{{ include.label }}）{% endif %}（AI 生成，非真人照片）{% endcapture -%}
+{%- capture md_img -%}<img src="{{ md_base | append: '-768.webp' | relative_url }}" srcset="{{ md_base | append: '-480.webp' | relative_url }} 480w, {{ md_base | append: '-768.webp' | relative_url }} 768w, {{ md_full | relative_url }} 1024w" sizes="{{ include.sizes }}" alt="{{ md_alt }}" width="{{ include.w | default: 1024 }}" height="{{ include.h | default: 1536 }}"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">{%- endcapture -%}
+{%- if include.gallery -%}
+<a href="{{ md_full | relative_url }}" class="sm-media sm-media--portrait sm-media--digital portfolio-lightbox" data-gallery="{{ include.gallery }}" title="{{ md_alt }}">{{ md_img }}</a>
+{%- elsif include.href -%}
+<a href="{{ include.href | relative_url }}" class="sm-media sm-media--portrait sm-media--digital">{{ md_img }}</a>
+{%- else -%}
+<span class="sm-media sm-media--portrait sm-media--digital">{{ md_img }}</span>
+{%- endif -%}

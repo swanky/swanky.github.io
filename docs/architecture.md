@@ -25,7 +25,7 @@ default.html  →  head.html + header.html + {{ content }} + footer.html + scrip
 
 ```
 主頁          /
-攝影寫真      /photography/  → photo-albums/ awards/ personal-works/ archive/ uniform/
+攝影寫真      /photography/  → photo-albums/ awards/ personal-works/ archive/ uniform/ models/ (SWANKY MODELS 虛擬模特兒經紀子站：talent/<slug>/ work/ inquiry/；資料源 _data/models.yml，圖片經 _includes/models/photo.html 參照既有寫真集資料)
 技術顧問      /technical/    → articles/ ai-agent-consulting/ (AI Agent 導入顧問 offer page, homepage-funnel CTA target)
 教育訓練      /education/    → modeling/ crypto/ (trading/ defi/ nft/) ai/ claude-code/
 人類圖        /human-design/ ← client-side tool (see Human Design Generator below)
@@ -60,6 +60,7 @@ NFT策展       /nft/          ← separate mini-site, excluded from Jekyll; ind
 - `extra_head` — Additional HTML injected into `<head>` (e.g. JSON-LD blocks)
 - `use_isotope` — Loads Isotope JS (photography grid pages)
 - `use_glightbox` — Loads GLightbox CSS+JS (photography lightbox pages)
+- `use_models` — Loads `assets/css/models.css` (SWANKY MODELS sub-site pages under `/photography/models/`; light gallery theme, `sm-` prefix)
 - `use_purecounter` — Loads PureCounter JS (education/crypto, education/modeling pages)
 - `use_human_design` — Loads the Human Design engine (vendor astronomy-engine UMD + `hd-ui.js` ES module) via `scripts.html`
 - `use_tarot` — Loads the Tarot engine (`tarot-ui.js` ES module) via `scripts.html`

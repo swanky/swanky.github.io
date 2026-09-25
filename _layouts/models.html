@@ -1,0 +1,35 @@
+---
+layout: null
+---
+{%- comment -%}
+SWANKY MODELS 子站版型（2026-09-24）：子站接管整個外殼——不掛全站 header／footer（比照金瓶梅子站 layout: null 的先例），
+只留 head.html（SEO／OG／GA／CSS 旗標）、BreadcrumbList JSON-LD 與 scripts.html（GLightbox、main.js）。
+回全站的入口在子站導覽列（Swanky Studio／攝影作品）與頁尾索引列。
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  {% include head.html %}
+  {% if page.extra_css %}
+  <style>
+    {{ page.extra_css }}
+  </style>
+  {% endif %}
+  {% if page.extra_head %}
+  {{ page.extra_head }}
+  {% endif %}
+</head>
+
+<body class="sm-body">
+
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  {% include breadcrumbs-jsonld.html %}
+
+  {{ content }}
+
+  {% include scripts.html %}
+
+</body>
+
+</html>

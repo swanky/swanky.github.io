@@ -1,0 +1,157 @@
+{%- comment -%}
+模特兒個人頁主體（/photography/models/talent/<slug>/）。參數：slug（_data/models.yml talents[].slug）。
+結構：導覽 → 檔案卡（直幅＋介紹＋資料裡有的數據）→ 作品集（每本：封面＋各章首張的等高膠卷列）→ 角色寫真（僅金瓶梅角色）→ 其他模特兒 → 收尾帶。
+文案來源：talent.intro（原創人物）或寫真館 pack.note／quote（改編角色）；每本書的 description／lead 逐字沿用。
+{%- endcomment -%}
+{%- assign t = site.data.models.talents | where: "slug", include.slug | first -%}
+{%- assign tp_count = 0 -%}
+{%- for tp_b in t.books -%}{%- assign tp_bd = site.data[tp_b.data] -%}{%- assign tp_count = tp_count | plus: tp_bd.count -%}{%- endfor -%}
+{%- if t.pack -%}{%- assign pack = site.data.jinpingmei_photobook.packs | where: "slug", t.pack | first -%}{%- else -%}{%- assign pack = nil -%}{%- endif -%}
+{%- assign tp_intro = t.intro | default: pack.note -%}
+{%- assign tp_portrait = t.portrait -%}
+<main id="main" class="sm-page sm-talent">
+  {% include models/nav.html %}
+
+  <header class="sm-profile" aria-labelledby="talent-title">
+    <div class="sm-shell sm-profile__grid">
+      <div class="sm-profile__portrait">
+        {% if t.presentations %}
+        <div class="sm-switch" data-sm-switch>
+          {% for pr in t.presentations %}<div class="sm-switch__pane" data-key="{{ pr.key }}"{% unless forloop.first %} hidden{% endunless %}>{% include models/digital.html t=t file=pr.file label=pr.label w=pr.w h=pr.h sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1100px) 42vw, 480px" gallery="sm-profile" eager=forloop.first %}</div>{% endfor %}
+          <p class="sm-switch__tabs" aria-label="切換形象">{% for pr in t.presentations %}<button type="button" class="sm-switch__tab" data-key="{{ pr.key }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ pr.label }}</button>{% endfor %}</p>
+        </div>
+        {% elsif t.digital %}{% include models/digital.html t=t sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1100px) 42vw, 480px" gallery="sm-profile" eager=true %}{% else %}{% include models/photo.html book=tp_portrait.book kind=tp_portrait.kind n=tp_portrait.n sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1100px) 42vw, 480px" gallery="sm-profile" eager=true %}{% endif %}
+      </div>
+      <div class="sm-profile__copy">
+        <p class="sm-eyebrow">{{ t.kind_label }}</p>
+        <h1 id="talent-title">{{ t.name }}</h1>
+        <p class="sm-profile__intro">{{ tp_intro }}</p>
+        {% if pack.quote %}<p class="sm-profile__quote">「{{ pack.quote }}」——原著寫她的一句話</p>{% endif %}
+        <dl class="sm-facts">
+          <div><dt>身分</dt><dd>{{ t.kind_label }}</dd></div>
+          <div><dt>出道</dt><dd>{{ t.debut }}</dd></div>
+          <div><dt>作品</dt><dd>{% if t.books.size > 0 %}{{ t.books.size }} 本寫真集 · {{ tp_count }} 張{% if pack %} · 角色寫真 {{ pack.shots.size }} 幀{% endif %}{% else %}籌備中，尚無公開作品{% endif %}</dd></div>
+          {% if t.source %}<div><dt>改編來源</dt><dd><a href="{{ t.source.url | relative_url }}">{{ t.source.label }}</a></dd></div>{% endif %}
+          {% if t.links %}<div><dt>對照</dt><dd>{% for l in t.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% unless forloop.last %}<span class="sm-facts__sep">／</span>{% endunless %}{% endfor %}</dd></div>{% endif %}
+          {% if t.commercial == false %}<div><dt>合作</dt><dd>{{ t.flag }}</dd></div>{% endif %}
+          {% if t.presentations %}<div><dt>形象</dt><dd>{% for pr in t.presentations %}{{ pr.label }}{% unless forloop.last %}、{% endunless %}{% endfor %}，依場景選擇</dd></div>{% endif %}
+        </dl>
+        <p class="sm-disclosure">{{ t.disclosure }}</p>
+        <div class="sm-actions">
+          {% if t.books.size > 0 %}<a class="sm-btn" href="#portfolio">看作品集</a>{% endif %}
+          <a class="sm-btn sm-btn--ghost" href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% if t.books.size > 0 %}
+  <section class="sm-section" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="sm-shell">
+      <header class="sm-section__head">
+        <h2 id="portfolio-title">作品集</h2>
+        <p>每本只放封面與各章首張，完整內容請翻閱整本寫真集。全部為自主企劃的概念作品，不是商業委託。</p>
+      </header>
+
+      {% for b in t.books %}
+        {%- assign bk = site.data[b.data] -%}
+        {%- if b.kind == 'json' -%}
+          {%- assign bk_setting = bk.setting -%}{%- assign bk_desc = bk.description -%}{%- assign bk_cover_n = bk.cover_photo -%}
+          {%- capture bk_when %}{{ bk.date | slice: 0, 7 }}{% endcapture -%}
+          {%- assign bk_pdf = bk.pdf -%}{%- assign bk_pdf_size = b.pdf_size -%}
+        {%- else -%}
+          {%- assign bk_setting = bk.subtitle -%}{%- assign bk_desc = bk.lead -%}
+          {%- for bk_c in bk.chapters -%}{%- for bk_s in bk_c.shots -%}{%- if bk_s.file == bk.cover -%}{%- assign bk_cover_n = bk_s.n -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+          {%- assign bk_when = bk.volume -%}
+          {%- capture bk_pdf %}{{ b.url }}{{ bk.pdf }}{% endcapture -%}{%- assign bk_pdf_size = bk.pdf_size -%}
+        {%- endif -%}
+        {%- capture bk_gallery %}sm-book-{{ bk.slug }}{% endcapture -%}
+      <article class="sm-book" id="book-{{ bk.slug }}" aria-labelledby="book-{{ bk.slug }}-title">
+        <header class="sm-book__head">
+          <div>
+            <p class="sm-eyebrow">概念作品 · 自主企劃{% if bk_when and bk_when != '' %} · {{ bk_when }}{% endif %}</p>
+            <h3 id="book-{{ bk.slug }}-title"><a href="{{ b.url | relative_url }}">《{{ bk.title }}》</a></h3>
+            <p class="sm-book__meta">{{ bk.count }} 張 · {{ bk.chapters.size }} 章{% if bk_setting %} · {{ bk_setting }}{% endif %}</p>
+          </div>
+          <p class="sm-book__desc">{{ bk_desc }}</p>
+        </header>
+        <div class="sm-book__cover">
+          {% include models/photo.html book=b.data kind=b.kind n=bk_cover_n sizes="(max-width: 767px) calc(100vw - 32px), min(100vw - 48px, 1320px)" sizes_portrait="(max-width: 767px) calc(100vw - 32px), 620px" gallery=bk_gallery figure=true %}
+        </div>
+        <p class="sm-strip__label">各章首張 · 點圖放大，左右鍵逐張看</p>
+        <div class="sm-strip" role="list">
+          {% for c in bk.chapters %}
+            {%- if b.kind == 'json' -%}
+              {%- assign cf = bk.photos | where: "chapter", c.number | first -%}{%- assign cf_n = cf.order -%}
+            {%- else -%}
+              {%- assign cf = c.shots | first -%}{%- assign cf_n = cf.n -%}
+            {%- endif -%}
+            {%- unless cf_n == bk_cover_n -%}
+            <div class="sm-strip__item" role="listitem">
+              {% include models/photo.html book=b.data kind=b.kind n=cf_n sizes="(max-width: 767px) 390px, 540px" sizes_portrait="(max-width: 767px) 174px, 240px" gallery=bk_gallery figure=true %}
+            </div>
+            {%- endunless -%}
+          {% endfor %}
+        </div>
+        <div class="sm-book__links">
+          <a class="sm-btn sm-btn--ghost" href="{{ b.url | relative_url }}">翻閱整本《{{ bk.title }}》</a>
+          {% if bk_pdf %}<a class="sm-textlink" href="{{ bk_pdf | relative_url }}" download>下載完整寫真集（PDF{% if bk_pdf_size %}，{{ bk_pdf_size }}{% endif %}）</a>{% endif %}
+          {% if bk.flickr_album %}<a class="sm-textlink" href="{{ bk.flickr_album }}" target="_blank" rel="noopener noreferrer">在 Flickr 看相簿 ↗</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% else %}
+  <section class="sm-section" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="sm-shell">
+      <header class="sm-section__head">
+        <h2 id="portfolio-title">作品</h2>
+        <p>{{ t.name }}的寫真作品籌備中，目前只有這張名冊照；企劃合作可先到<a href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>談。</p>
+      </header>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if pack %}
+  <section class="sm-section sm-section--tint" id="character-shots" aria-labelledby="character-shots-title">
+    <div class="sm-shell">
+      <header class="sm-section__head">
+        <h2 id="character-shots-title">角色寫真 · {{ pack.shots.size }} 幀</h2>
+        <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。圖為 AI 生成，並非真人照片。</p>
+      </header>
+      <div class="sm-digitals">
+        {% for s in pack.shots %}
+          {%- capture ds_src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
+          {%- capture ds_prev %}/assets/img/jinpingmei/photobook/{{ s.image | replace: '.jpg', '-480.jpg' }}{% endcapture -%}
+        <figure class="sm-figure sm-figure--portrait">
+          <a href="{{ ds_src | relative_url }}" class="sm-media sm-media--portrait portfolio-lightbox" data-gallery="sm-character-shots" title="{{ s.caption }}｜{{ s.alt }}（AI 生成，非真人照片）">
+            <img src="{{ ds_prev | relative_url }}" srcset="{{ ds_prev | relative_url }} 480w, {{ ds_src | relative_url }} {{ s.width }}w" sizes="(max-width: 767px) calc(50vw - 20px), (max-width: 1100px) calc(33vw - 20px), 306px" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>{{ s.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+      <p class="sm-note">全部角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | append: '#pb-' | append: t.pack | relative_url }}">金瓶梅角色寫真館</a>；人物設定與原文依據在<a href="{{ t.source.url | relative_url }}">{{ t.source.label }}</a>。</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="sm-section" aria-labelledby="others-title">
+    <div class="sm-shell">
+      <header class="sm-section__head sm-section__head--row">
+        <h2 id="others-title">其他模特兒</h2>
+        <a class="sm-textlink" href="{{ '/photography/models/talent/' | relative_url }}">完整名單</a>
+      </header>
+      <div class="sm-roster sm-roster--2">
+        {%- assign others = site.data.models.talents | where_exp: "o", "o.public != false" | where_exp: "o", "o.slug != t.slug" -%}
+        {% for o in others limit: 4 %}
+          {% include models/talent-card.html t=o sizes="(max-width: 767px) calc(100vw - 32px), min(50vw - 24px, 648px)" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% include models/footer.html %}
+</main>
+{% if t.presentations %}<script>(function(){var w=document.querySelector('[data-sm-switch]');if(!w)return;var tabs=w.querySelectorAll('.sm-switch__tab'),panes=w.querySelectorAll('.sm-switch__pane');tabs.forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-key');panes.forEach(function(p){p.hidden=p.getAttribute('data-key')!==k;});tabs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});});});})();</script>{% endif %}

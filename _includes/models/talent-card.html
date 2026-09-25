@@ -1,0 +1,22 @@
+{%- comment -%}
+模特兒名單卡（首頁、名單頁、個人頁「其他模特兒」共用）。參數：t（talents 項目）、sizes（依版面欄寬）、heading（標題層級數字，預設 3）。
+數據只用資料裡有的：身分標籤、寫真集本數與張數、角色寫真幀數；不編身高三圍。
+{%- endcomment -%}
+{%- assign tc_t = include.t -%}
+{%- assign tc_count = 0 -%}
+{%- for tc_b in tc_t.books -%}{%- assign tc_bd = site.data[tc_b.data] -%}{%- assign tc_count = tc_count | plus: tc_bd.count -%}{%- endfor -%}
+{%- if tc_t.pack -%}{%- assign tc_pack = site.data.jinpingmei_photobook.packs | where: "slug", tc_t.pack | first -%}{%- else -%}{%- assign tc_pack = nil -%}{%- endif -%}
+{%- assign tc_intro = tc_t.intro | default: tc_pack.note -%}
+{%- capture tc_url %}/photography/models/talent/{{ tc_t.slug }}/{% endcapture -%}
+{%- assign tc_p = tc_t.portrait -%}
+{%- assign tc_h = include.heading | default: 3 -%}
+<article class="sm-card">
+  {% if tc_t.digital %}{% include models/digital.html t=tc_t sizes=include.sizes href=tc_url %}{% else %}{% include models/photo.html book=tc_p.book kind=tc_p.kind n=tc_p.n sizes=include.sizes href=tc_url %}{% endif %}
+  <div class="sm-card__body">
+    <p class="sm-eyebrow">{{ tc_t.kind_label }}</p>
+    <h{{ tc_h }} class="sm-card__name"><a href="{{ tc_url | relative_url }}">{{ tc_t.name }}</a></h{{ tc_h }}>
+    <p class="sm-card__meta">{% if tc_t.books.size > 0 %}{{ tc_t.books.size }} 本寫真集 · {{ tc_count }} 張{% if tc_pack %} · 角色寫真 {{ tc_pack.shots.size }} 幀{% endif %}{% else %}作品籌備中{% endif %}{% if tc_t.flag %}<span class="sm-card__flag">{{ tc_t.flag }}</span>{% endif %}</p>
+    <p class="sm-card__intro">{{ tc_intro }}</p>
+    <a class="sm-textlink" href="{{ tc_url | relative_url }}">{% if tc_t.books.size > 0 %}個人介紹與作品集{% else %}個人介紹{% endif %}</a>
+  </div>
+</article>

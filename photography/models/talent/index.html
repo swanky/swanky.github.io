@@ -1,0 +1,74 @@
+---
+layout: models
+title: 模特兒名單｜SWANKY MODELS
+seo_title: 模特兒名單｜SWANKY MODELS 虛擬模特兒經紀
+description: SWANKY MODELS 模特兒名單：史旺姬（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），以及史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
+keywords: SWANKY MODELS,虛擬模特兒,模特兒名單,史旺姬,李瓶兒,潘金蓮,AI 生成影像,虛擬人物
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: SWANKY MODELS 虛擬模特兒經紀
+    url: /photography/models/
+  - name: 模特兒名單
+    url: /photography/models/talent/
+use_glightbox: true
+use_models: true
+preconnect_flickr: true
+og_image: /assets/img/photography/swanky-ji-everyday-light/cover.jpg
+permalink: /photography/models/talent/
+---
+{% assign m = site.data.models %}
+{%- assign pub = m.talents | where_exp: "t", "t.public != false" -%}
+{%- assign nft = pub | where: "kind", "nft" -%}
+<main id="main" class="sm-page sm-list">
+  {% include models/nav.html %}
+
+  <header class="sm-pagehead" aria-labelledby="sm-list-title">
+    <div class="sm-shell sm-pagehead__grid">
+      <h1 id="sm-list-title">模特兒名單</h1>
+      <p>{{ m.home.disclosure }}</p>
+    </div>
+  </header>
+
+  <section class="sm-section" aria-label="旗下模特兒">
+    <div class="sm-shell">
+      {% for d in m.divisions %}{% assign dt = pub | where: "division", d.key %}{% if dt.size == 0 %}{% continue %}{% endif %}
+      <h2 class="sm-roster__division">{{ d.label }}</h2>
+      <div class="sm-roster sm-roster--large">
+        {% for t in dt %}{% include models/talent-card.html t=t heading=3 sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1100px) calc(50vw - 24px), 424px" %}{% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="sm-section sm-section--tint" aria-labelledby="sm-kinds-title">
+    <div class="sm-shell sm-kinds">
+      <header class="sm-section__head">
+        <h2 id="sm-kinds-title">名單上的{% if nft.size > 0 %}三{% else %}兩{% endif %}種身分</h2>
+        <p>每一種都清楚標示為虛擬人物；改編角色另交代來源。</p>
+      </header>
+      <div class="sm-kinds__grid">
+        <article>
+          <h3>原創虛擬人物</h3>
+          <p>由史旺基從零建立的角色，外觀、性格與故事都是原創。目前一位：史旺姬。</p>
+        </article>
+        <article>
+          <h3>《金瓶梅》角色改編</h3>
+          <p>來自古典小說的角色，離開設定表、走進現代場景的虛構改編形象；每位都連回<a href="{{ '/jinpingmei/characters/' | relative_url }}">金瓶梅角色研究館</a>交代來源。目前兩位：李瓶兒、潘金蓮。</p>
+        </article>
+        {% if nft.size > 0 %}
+        <article>
+          <h3>持有的 NFT 角色改編</h3>
+          <p>史旺基持有的 CloneX、Meebits、MAYC 角色，以官方 token 圖為依據做成攝影式的改編形象；作品籌備中，尚無公開寫真集。目前 {{ nft.size }} 位。</p>
+        </article>
+        {% endif %}
+      </div>
+      <p class="sm-note">{{ m.principles.items[0].text }}</p>
+    </div>
+  </section>
+
+  {% include models/footer.html %}
+</main>

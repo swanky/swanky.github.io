@@ -1,0 +1,14 @@
+{%- comment -%}SWANKY MODELS 子站導覽列：一行、無底線。首頁左邊是回 Swanky Studio；內頁左邊是小字標。右邊三個分頁（攝影作品總覽在頁尾，避免與「作品」混淆）。{%- endcomment -%}
+{%- assign sm_root = '/photography/models/' -%}
+{%- assign sm_brand = site.data.models.brand -%}
+<nav class="sm-nav" aria-label="SWANKY MODELS 子站導覽">
+  <div class="sm-shell sm-nav__row">
+    {% if page.url != sm_root %}<a class="sm-nav__brand" href="{{ sm_root | relative_url }}"><span class="sm-wordmark">{{ sm_brand.name }}</span></a>{% endif %}
+    <div class="sm-nav__links">
+      <a href="{{ sm_root | append: 'talent/' | relative_url }}"{% if page.url contains '/models/talent/' %} class="is-active"{% if page.url == '/photography/models/talent/' %} aria-current="page"{% endif %}{% endif %}>模特兒</a>
+      <a href="{{ sm_root | append: 'work/' | relative_url }}"{% if page.url == '/photography/models/work/' %} class="is-active" aria-current="page"{% endif %}>作品</a>
+      <a href="{{ sm_root | append: 'inquiry/' | relative_url }}"{% if page.url == '/photography/models/inquiry/' %} class="is-active" aria-current="page"{% endif %}>洽詢</a>
+      <a class="sm-nav__parent" href="{{ '/' | relative_url }}">Swanky Studio</a>
+    </div>
+  </div>
+</nav>
