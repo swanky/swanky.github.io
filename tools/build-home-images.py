@@ -8,7 +8,9 @@
   - 三本《制服．女孩》：三張真實封面在暖紙底上排成一張 4:3 合成圖（不用 books.jpg，
     那張合照含五本出版與人物，會與「三本」矛盾）
   - 最新創作橫幅：16:9，800w／1400w（桌機 2.2:1 由 CSS object-fit 再裁）
-  - 《金瓶異夢》縮圖：16:9，360w／540w
+  - 《金瓶異夢》縮圖：16:9，360w／540w（版位 280px）
+  - 「認識史旺基」肖像：1:1，640w／1200w（版位最寬 696px；原 About_r.jpg 不刪，JSON-LD 與其他頁仍用）
+  - 「其他亮點」兩張活動照：16:9，420w／840w（CSS object-fit cover 16:9，這裡先裁好；原 jpeg 不刪）
 
 執行：python -X utf8 tools/build-home-images.py   （需 Pillow，含 WebP 支援）
 輸出檔要一起 commit（GitHub Pages 從 git 建置）。
@@ -100,8 +102,13 @@ def main() -> None:
     save_set(cover_crop(load("/assets/img/sec/014_Dulce_1.jpg"), 4 / 3, (0.5, 0.42)), "hl-px3", [360, 480])
     # 最新創作橫幅 16:9（主體偏左，焦點 x=0.35；版位最寬 1296px）
     save_set(cover_crop(load("/assets/img/photography/swanky-ji-open-worlds/SJW-35.webp"), 16 / 9, (0.35, 0.5)), "creative-open-worlds", [800, 1400], quality=76)
-    # 《金瓶異夢》16:9（版位 260px）
+    # 《金瓶異夢》16:9（版位 280px）
     save_set(load("/assets/img/games/plum/cinematic/hero-poster-v2.jpg"), "creative-plum", [360, 540])
+    # 認識史旺基：肖像 1:1（版位 col-lg-6 ≈ 636px，1200w 供 2x）
+    save_set(load("/assets/img/About_r.jpg"), "about-portrait", [640, 1200])
+    # 其他亮點：兩張活動照裁 16:9（焦點略高於中心，保住人頭；版位 col-lg-4 ≈ 416px）
+    save_set(cover_crop(load("/assets/img/5216352222_8ca73e82e4_b.jpeg"), 16 / 9, (0.5, 0.42)), "more-geisai", [420, 840])
+    save_set(cover_crop(load("/assets/img/4801766899_b37627045d_b.jpeg"), 16 / 9, (0.5, 0.42)), "more-punch-party", [420, 840])
 
 
 if __name__ == "__main__":

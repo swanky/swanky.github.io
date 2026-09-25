@@ -7172,7 +7172,7 @@ section.testimonials { background: var(--c-cream); }
 /* 次要一列：《金瓶異夢》 */
 .wc-row {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr); /* 縮圖高 157.5px ≈ 文字塊 158px，eyebrow 不再高出縮圖頂 */
   gap: 12px 28px;
   align-items: center;
   margin-top: var(--space-m);

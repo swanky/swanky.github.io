@@ -130,7 +130,7 @@ extra_css: |
           {% for c in site.data.selected_works.creative offset: 1 %}
           <a class="wc-row" href="{{ c.url | relative_url }}" data-aos="fade-up">
             <div class="wc-row-thumb">
-              <img loading="lazy" decoding="async" src="{{ c.image | append: '-360.webp' | relative_url }}" srcset="{{ c.image | append: '-360.webp' | relative_url }} 360w, {{ c.image | append: '-540.webp' | relative_url }} 540w" sizes="(max-width: 767px) 128px, 260px" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}">
+              <img loading="lazy" decoding="async" src="{{ c.image | append: '-360.webp' | relative_url }}" srcset="{{ c.image | append: '-360.webp' | relative_url }} 360w, {{ c.image | append: '-540.webp' | relative_url }} 540w" sizes="(max-width: 767px) 128px, 280px" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}">
             </div>
             <div class="wc-row-body">
               <span class="wc-eyebrow">{{ c.label }} · {{ c.year }} · <span class="wc-ai-inline">{{ c.ai_note }}</span></span>
@@ -185,7 +185,7 @@ extra_css: |
 
         <div class="row">
           <div class="col-lg-6 video-box">
-            <img loading="lazy" src="{{ '/assets/img/About_r.jpg' | relative_url }}" class="img-fluid" width="1200" height="1200" alt="史旺基的肖像照片">
+            <img loading="lazy" decoding="async" src="{{ '/assets/img/home/about-portrait-640.webp' | relative_url }}" srcset="{{ '/assets/img/home/about-portrait-640.webp' | relative_url }} 640w, {{ '/assets/img/home/about-portrait-1200.webp' | relative_url }} 1200w" sizes="(min-width: 992px) 636px, (min-width: 768px) 696px, calc(100vw - 24px)" class="img-fluid" width="1200" height="1200" alt="史旺基的肖像照片">
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
@@ -266,7 +266,7 @@ extra_css: |
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
-            <img loading="lazy" src="{{ '/assets/img/5216352222_8ca73e82e4_b.jpeg' | relative_url }}" class="img-fluid" width="1024" height="683" alt="GEISAI TAIWAN #2 展覽攤位照片">
+            <img loading="lazy" decoding="async" src="{{ '/assets/img/home/more-geisai-420.webp' | relative_url }}" srcset="{{ '/assets/img/home/more-geisai-420.webp' | relative_url }} 420w, {{ '/assets/img/home/more-geisai-840.webp' | relative_url }} 840w" sizes="(min-width: 992px) 416px, (min-width: 768px) 336px, calc(100vw - 24px)" class="img-fluid" width="840" height="472" alt="GEISAI TAIWAN #2 展覽攤位照片">
             <div class="social">
               <a href="https://www.flickr.com/photos/swanky-hsiao/sets/72157625363874657/">展覽花絮 <i class="bi bi-images"></i></a>
             </div>
@@ -282,7 +282,7 @@ extra_css: |
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
           <div class="member-img">
-            <img loading="lazy" src="{{ '/assets/img/4801766899_b37627045d_b.jpeg' | relative_url }}" class="img-fluid" width="1024" height="683" alt="Punch Party 16 七分鐘快講活動現場">
+            <img loading="lazy" decoding="async" src="{{ '/assets/img/home/more-punch-party-420.webp' | relative_url }}" srcset="{{ '/assets/img/home/more-punch-party-420.webp' | relative_url }} 420w, {{ '/assets/img/home/more-punch-party-840.webp' | relative_url }} 840w" sizes="(min-width: 992px) 416px, (min-width: 768px) 336px, calc(100vw - 24px)" class="img-fluid" width="840" height="472" alt="Punch Party 16 七分鐘快講活動現場">
             <div class="social">
               <a href="https://www.facebook.com/media/set/?set=a.471421070328.249604.172447000328&type=3">投影片 <i class="bi bi-images"></i></a>
             </div>
