@@ -6929,7 +6929,7 @@ section.testimonials { background: var(--c-cream); }
 
 /* ---------- 14. 首頁 代表成果 / Selected Highlights（2026-09-25，取代「精選歷程」清單） ----------
    四張作品圖卡（同 .team .member 卡片表面）＋創作子區（最新創作大圖卡＋《金瓶異夢》，AI 生成標示）。
-   舊 .works-list／.work-row 規則刻意保留不刪（v2 段落有測試以字串鎖定）。 */
+   舊 .works-list／.work-row 規則已無頁面使用，暫留不刪（避免動到 v2 段落既有行號與樣板遺留區）。 */
 .hl-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
