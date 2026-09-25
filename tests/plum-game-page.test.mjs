@@ -25,11 +25,15 @@ test('EP08〈紅妝鬥氣〉首映區與卡片觀看連結齊備', () => {
   assert.match(page, /<header><span>EP08<\/span><small>第八集已公開 · 取材自第四十、四十一回<\/small><\/header>/);
 });
 
-test('首頁精選作品提供 EP01 導流但不重複嵌入播放器', () => {
-  assert.match(selectedWorks, /- num: "07"/);
-  assert.match(selectedWorks, /title: 《金瓶異夢：十二花界》文學影像首集/);
-  assert.match(selectedWorks, /url: "\/games\/plum\/#ep01-film"/);
-  assert.match(selectedWorks, /meta: GAME · LITERARY FILM · AI/);
+test('首頁創作區連向《金瓶異夢》十部曲、描述不再停在「首集」、且不重複嵌入播放器', () => {
+  // 2026-09-25：首頁 #selected-works 改版為「代表成果」＋創作子區；《金瓶異夢》移入 creative 清單
+  assert.match(selectedWorks, /^creative:/m);
+  assert.match(selectedWorks, /key: plum/);
+  assert.match(selectedWorks, /title: 《金瓶異夢：十二花界》/);
+  assert.match(selectedWorks, /url: "\/games\/plum\/#literary-cycle"/);
+  assert.match(selectedWorks, /EP01 至 EP10 已全數公開/);
+  assert.match(selectedWorks, /ai_note: AI 生成影像與語音/);
+  assert.doesNotMatch(selectedWorks, /首集/);
   assert.doesNotMatch(selectedWorks, /youtube(?:-nocookie)?\.com\/embed/);
 });
 

@@ -1,50 +1,80 @@
-# 代表作品 / 精選歷程 —— 跨領域揉成一條敘事，承載「多才多藝 × 單一身分」。
-# 用於首頁 selected-works 區（雜誌目錄式清單）。
-- num: "01"
-  title: 登上美國《TIME》時代雜誌
-  year: "2012"
-  desc: RedBall Project 專題作品刊登於 TIME Magazine 美國版、iPad 版與 TIME For Kids，攝影作品躍上國際媒體版面。
-  meta: PRESS · PHOTOGRAPHY
-  url: /press/
+# 首頁 #selected-works「代表成果 / Selected Highlights」（2026-09-25 改版）
+# highlights：四件代表成果，順序固定（站主指定，非年代序），每張以代表作品圖片為主。
+# creative：創作區（最新創作大圖卡＋《金瓶異夢》），皆為 AI 生成影像，卡片上明示。
+# 所有成就描述必須對得上站上既有頁面／資料（press、photography_publications、photography_awards、soochow、games/plum）。
+highlights:
+  - title: 作品登上美國《TIME》雜誌
+    year: "2012"
+    desc: 「RedBall Project」專題照片刊登於《TIME》美國版、iPad 版與 TIME For Kids。
+    meta: PRESS · PHOTOGRAPHY
+    url: /press/
+    image: /assets/img/press/time-magazine-redball.jpg
+    width: 1280
+    height: 1280
+    alt: TIME Magazine 實體雜誌攤開於桌面，刊出 RedBall Project 專題頁面
 
-- num: "02"
-  title: 法國 PX3 × 美國 IPA 國際攝影獎
-  year: "2011–2014"
-  desc: 人像與寫真作品多次獲法國 PX3（Prix de la Photographie Paris）與美國 IPA 國際攝影獎肯定。
-  meta: PHOTOGRAPHY · AWARD
-  url: /photography/awards/
+  - title: 出版三本《制服．女孩》攝影書
+    year: "2014–2016"
+    desc: 三本個人攝影作品書，把長期拍攝的制服與青春人像集結成冊。
+    meta: BOOKS · PHOTOGRAPHY
+    url: /photography/uniform-girl/
+    # 三張真實封面併排（books.jpg 合照含五本出版與人物，裁切會誤導「三本」）
+    alt: 《制服．女孩 × 史旺基》第一、二、三集攝影作品書封面
+    images:
+      - src: /assets/img/portfolio/portfolio-1.jpeg
+        width: 308
+        height: 427
+      - src: /assets/img/portfolio/portfolio-2.jpeg
+        width: 308
+        height: 421
+      - src: /assets/img/portfolio/portfolio-5.jpeg
+        width: 767
+        height: 1050
 
-- num: "03"
-  title: 數位發展部 — 區塊鏈創新產業計畫
-  year: "2022–2025"
-  desc: 任職資策會期間主持「區塊鏈創新產業資料管理應用計畫」，協助建立可信區塊鏈應用基礎建設聯盟（TBSI），推動產業標準化。
-  meta: WEB3 · GOVTECH
-  url: /technical/
+  - title: 法國 PX3 攝影獎 廣告類銀獎
+    year: "2013"
+    desc: 以《For Your Safety》系列獲巴黎攝影大賽廣告類二等獎，另多次獲 PX3 與美國 IPA 榮譽提名。
+    meta: AWARD · PHOTOGRAPHY
+    url: /photography/awards/
+    image: /assets/img/sec/014_Dulce_1.jpg
+    width: 1024
+    height: 1024
+    alt: For Your Safety 系列得獎作品 — Dulce 人像攝影
 
-- num: "04"
-  title: 東吳大學 區塊鏈課程兼任助理教授
-  year: "連續 8 年"
-  desc: 於巨量資料管理學院開設區塊鏈課程，內容涵蓋加密貨幣、DeFi、NFT 與 Web3，並完成多場企業內訓。
-  meta: EDUCATION · WEB3
-  url: /education/crypto/soochow/
+  - title: 自 2018 年在東吳大學教區塊鏈
+    year: "2018 起"
+    desc: 東吳大學區塊鏈課程兼任助理教授，每學期 18 堂，從錢包與交易講到 DeFi、NFT 與 Web3。
+    meta: TEACHING · WEB3
+    url: /education/crypto/soochow/
+    image: /education/crypto/img/swanky_crypto_class.jpg
+    width: 1478
+    height: 1108
+    alt: 史旺基過往課程的多人實作現場
 
-- num: "05"
-  title: Good Morning Frens（GMF）共同創辦人
-  year: "2022"
-  desc: 共同創辦 Web3 交友項目，透過掃描用戶 NFT 收藏建立鏈上身份，結合 Web2 個人資料促成人們交流。
-  meta: WEB3 · FOUNDER
-  url: /nft/
+creative:
+  - key: open-worlds
+    label: 最新創作
+    title: 她把風景打開
+    year: "2026"
+    desc: 史旺姬，史旺基的原創虛擬人物。36 張影像從海風、玻璃屋走進可以觸碰的照片。人物與場景皆由 AI 生成，並非真人實拍。
+    ai_note: AI 生成，非真人照片
+    cta: 看 36 張作品
+    url: /photography/swanky-ji-open-worlds/
+    image: /assets/img/photography/swanky-ji-open-worlds/SJW-35.webp
+    preview: /assets/img/photography/swanky-ji-open-worlds/SJW-35-960.webp
+    width: 1536
+    height: 1024
+    alt: 史旺姬置身印有海景的布幕與攝影劇場的虛構影像：她把風景打開（AI 生成，非真人照片）
 
-- num: "06"
-  title: Agentic Engineering ＆ RWA 技術專欄
-  year: "2025–2026"
-  desc: 持續撰寫 AI 代理工程與現實世界資產（RWA）代幣化系列，將第一線實作經驗整理成公開觀點與教學。
-  meta: TECH · WRITING
-  url: /technical/
-
-- num: "07"
-  title: 《金瓶異夢：十二花界》文學影像首集
-  year: "2026"
-  desc: 以《金瓶梅》第二、三回為起點，透過 AI 影像與語音重建叉竿落下的相遇，也為開發中的單機戰棋《梅香境》整理角色與視覺母題。
-  meta: GAME · LITERARY FILM · AI
-  url: "/games/plum/#ep01-film"
+  - key: plum
+    label: 文學影像十部曲
+    title: 《金瓶異夢：十二花界》
+    year: "2026"
+    desc: 以《金瓶梅》為本的文學影像十部曲 EP01 至 EP10 已全數公開，同時為開發中的單機戰棋《梅香境》整理角色與視覺母題。
+    ai_note: AI 生成影像與語音
+    cta: 看十部曲
+    url: "/games/plum/#literary-cycle"
+    image: /assets/img/games/plum/cinematic/hero-poster-v2.jpg
+    width: 1920
+    height: 1080
+    alt: 《金瓶異夢：十二花界》主視覺海報

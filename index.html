@@ -81,27 +81,63 @@ extra_css: |
 
       </div>
     </section><!-- End Facts Section -->
-    <!-- ======= Selected Works / 精選歷程 Section ======= -->
+    <!-- ======= Selected Highlights / 代表成果 Section ======= -->
     <section class="selected-works" id="selected-works">
       <div class="container">
 
-        {% include section-eyebrow.html en="Selected Works" zh="精選<em>歷程</em>" lead="從攝影、媒體到區塊鏈與教學——跨領域累積的代表里程碑。" %}
+        {% include section-eyebrow.html en="Selected Highlights" zh="代表<em>成果</em>" lead="四件最能代表史旺基的成果，先看作品，再認識人。" %}
 
-        <div class="works-list">
-          {% for w in site.data.selected_works %}
-          <a class="work-row" href="{{ w.url | relative_url }}" data-aos="fade-up">
-            <div class="w-num">{{ w.num }}</div>
-            <div class="w-body">
-              <div class="w-title">{{ w.title }}</div>
-              <p class="w-desc">{{ w.desc }}</p>
+        <div class="hl-grid">
+          {% for w in site.data.selected_works.highlights %}
+          <a class="hl-card" href="{{ w.url | relative_url }}" data-aos="fade-up"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 80 }}"{% endunless %}>
+            {% if w.images %}
+            <div class="hl-media hl-media--trio" role="img" aria-label="{{ w.alt }}">
+              {% for cover in w.images %}<img loading="lazy" decoding="async" src="{{ cover.src | relative_url }}" alt="" width="{{ cover.width }}" height="{{ cover.height }}">{% endfor %}
             </div>
-            <div class="w-meta"><span class="w-year">{{ w.year }}</span>{{ w.meta }}</div>
+            {% else %}
+            <div class="hl-media">
+              <img loading="lazy" decoding="async" src="{{ w.image | relative_url }}" alt="{{ w.alt }}" width="{{ w.width }}" height="{{ w.height }}">
+            </div>
+            {% endif %}
+            <div class="hl-body">
+              <span class="hl-meta"><b>{{ w.year }}</b> · {{ w.meta }}</span>
+              <h3 class="hl-title">{{ w.title }}</h3>
+              <p class="hl-desc">{{ w.desc }}</p>
+            </div>
           </a>
           {% endfor %}
         </div>
 
+        <div class="hl-creative" id="creative-works">
+          <div class="hl-subhead" data-aos="fade-up">
+            <span class="eyebrow">Creative Works</span>
+            <h3>最新<em>創作</em></h3>
+            <p>虛擬人物寫真與古典文學影像，畫面皆由 AI 生成、由史旺基企劃與審定，卡片上都有標示。</p>
+          </div>
+          <div class="hl-creative-grid">
+            {% for c in site.data.selected_works.creative %}
+            <a class="hl-feature hl-feature--{{ c.key }}" href="{{ c.url | relative_url }}" data-aos="fade-up"{% unless forloop.first %} data-aos-delay="100"{% endunless %}>
+              <div class="hl-feature-media">
+                {% if c.preview %}
+                <img loading="lazy" decoding="async" src="{{ c.preview | relative_url }}" srcset="{{ c.preview | relative_url }} 960w, {{ c.image | relative_url }} {{ c.width }}w" sizes="(max-width: 991px) calc(100vw - 32px), 640px" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}">
+                {% else %}
+                <img loading="lazy" decoding="async" src="{{ c.image | relative_url }}" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}">
+                {% endif %}
+                <span class="hl-ai-badge"><i class="bi bi-stars" aria-hidden="true"></i>{{ c.ai_note }}</span>
+              </div>
+              <div class="hl-feature-body">
+                <span class="hl-meta"><b>{{ c.label }}</b> · {{ c.year }}</span>
+                <h4 class="hl-feature-title">{{ c.title }}</h4>
+                <p class="hl-desc">{{ c.desc }}</p>
+                <span class="hl-feature-cta">{{ c.cta }} <i class="bi bi-arrow-right-short" aria-hidden="true"></i></span>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+
       </div>
-    </section><!-- End Selected Works Section -->
+    </section><!-- End Selected Highlights Section -->
     <!-- ======= Services / 合作方式 Section ======= -->
     <section class="services section-bg" id="services">
       <div class="container">
