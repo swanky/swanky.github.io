@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">短期反彈，不等於全面復甦</title><desc id="desc">CryptoSlam兩個滾動時間窗各自的成交額及網站顯示變動；7天上升52.97%，30天下降69.13%。不得相加，也不是投資報酬。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#996514"/></marker></defs>
+<rect width="1200" height="650" rx="22" fill="#fbfaf5"/>
+<g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<text x="52" y="68" font-size="42" fill="#172b2a" font-weight="700" text-anchor="start">短期反彈，不等於全面復甦</text>
+<text x="52" y="118" font-size="29" fill="#526961" font-weight="400" text-anchor="start">同一次查閱，時間窗不同，會得到不同的市場印象。</text>
+<rect x="52" y="160" width="526" height="300" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="82" y="209" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">最近 7 天</text>
+<text x="82" y="280" font-size="48" fill="#172b2a" font-weight="700" text-anchor="start">US$ 54.82M</text>
+<text x="82" y="347" font-size="53" fill="#14734f" font-weight="700" text-anchor="start">+52.97%</text>
+<text x="82" y="416" font-size="27" fill="#526961" font-weight="400" text-anchor="start">網站顯示的同期變動</text>
+<rect x="622" y="160" width="526" height="300" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="652" y="209" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">最近 30 天</text>
+<text x="652" y="280" font-size="48" fill="#172b2a" font-weight="700" text-anchor="start">US$ 192.81M</text>
+<text x="652" y="347" font-size="53" fill="#b4423c" font-weight="700" text-anchor="start">-69.13%</text>
+<text x="652" y="416" font-size="27" fill="#526961" font-weight="400" text-anchor="start">網站顯示的同期變動</text>
+<text x="52" y="518" font-size="31" fill="#172b2a" font-weight="700" text-anchor="start">不能相加：30 天的範圍已包含最近 7 天。</text>
+<text x="52" y="566" font-size="30" fill="#526961" font-weight="400" text-anchor="start">成交額 ≠ 持有人獲利；買方錢包 ≠ 不重複的真人。</text>
+<text x="52" y="615" font-size="24" fill="#526961" font-weight="400" text-anchor="start">來源：CryptoSlam｜2026-09-25 台北上午滾動快照｜M＝百萬美元</text>
+</g></svg>

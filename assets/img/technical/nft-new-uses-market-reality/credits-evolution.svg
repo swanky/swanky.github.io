@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+<title id="title">一筆支付，如何變成可以演化的作品？</title><desc id="desc">依Jack Butcher Credits官方設計重畫流程：合格支付的交易編號雜湊成256位元，再組成四個8乘8色版。Credit本身為作品，另可選擇燃燒80張製作Statement，組裝在查閱時尚未開放。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#996514"/></marker></defs>
+<rect width="1200" height="780" rx="22" fill="#fbfaf5"/>
+<g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<text x="52" y="68" font-size="42" fill="#172b2a" font-weight="700" text-anchor="start">一筆支付，如何變成可以演化的作品？</text>
+<text x="52" y="116" font-size="29" fill="#526961" font-weight="400" text-anchor="start">Credits 的重點，不只在交易價格。</text>
+<rect x="52" y="168" width="324" height="191" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="77" y="216" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">支付紀錄</text>
+<text x="77" y="276" font-size="28" fill="#172b2a" font-weight="400" text-anchor="start">合格的 8 美元支付</text>
+<text x="77" y="322" font-size="26" fill="#526961" font-weight="400" text-anchor="start">X Money 交易編號</text>
+<rect x="438" y="168" width="324" height="191" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="463" y="216" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">轉成圖像</text>
+<text x="463" y="276" font-size="28" fill="#172b2a" font-weight="400" text-anchor="start">256 位元</text>
+<text x="463" y="322" font-size="26" fill="#526961" font-weight="400" text-anchor="start">四個 8 × 8 色版</text>
+<rect x="824" y="168" width="324" height="191" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="849" y="216" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">一張 Credit</text>
+<text x="849" y="276" font-size="28" fill="#172b2a" font-weight="400" text-anchor="start">完整的獨立作品</text>
+<text x="849" y="322" font-size="26" fill="#526961" font-weight="400" text-anchor="start">色彩依紀錄變化</text>
+<path d="M382 260 H430" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M768 260 H817" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="100" y="416" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="113" y="416" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="126" y="416" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="139" y="416" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="100" y="429" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="113" y="429" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="126" y="429" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="139" y="429" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="100" y="442" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="113" y="442" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="126" y="442" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="139" y="442" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="100" y="455" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="113" y="455" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="126" y="455" width="11" height="11" fill="#00a7bd" opacity="1"/>
+<rect x="139" y="455" width="11" height="11" fill="#00a7bd" opacity="0.25"/>
+<rect x="175" y="416" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="188" y="416" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="201" y="416" width="11" height="11" fill="#d63281" opacity="0.25"/>
+<rect x="214" y="416" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="175" y="429" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="188" y="429" width="11" height="11" fill="#d63281" opacity="0.25"/>
+<rect x="201" y="429" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="214" y="429" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="175" y="442" width="11" height="11" fill="#d63281" opacity="0.25"/>
+<rect x="188" y="442" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="201" y="442" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="214" y="442" width="11" height="11" fill="#d63281" opacity="0.25"/>
+<rect x="175" y="455" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="188" y="455" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="201" y="455" width="11" height="11" fill="#d63281" opacity="0.25"/>
+<rect x="214" y="455" width="11" height="11" fill="#d63281" opacity="1"/>
+<rect x="250" y="416" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="263" y="416" width="11" height="11" fill="#ecbf1b" opacity="0.25"/>
+<rect x="276" y="416" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="289" y="416" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="250" y="429" width="11" height="11" fill="#ecbf1b" opacity="0.25"/>
+<rect x="263" y="429" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="276" y="429" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="289" y="429" width="11" height="11" fill="#ecbf1b" opacity="0.25"/>
+<rect x="250" y="442" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="263" y="442" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="276" y="442" width="11" height="11" fill="#ecbf1b" opacity="0.25"/>
+<rect x="289" y="442" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="250" y="455" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="263" y="455" width="11" height="11" fill="#ecbf1b" opacity="0.25"/>
+<rect x="276" y="455" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="289" y="455" width="11" height="11" fill="#ecbf1b" opacity="1"/>
+<rect x="325" y="416" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<rect x="338" y="416" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="351" y="416" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="364" y="416" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<rect x="325" y="429" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="338" y="429" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="351" y="429" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<rect x="364" y="429" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="325" y="442" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="338" y="442" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<rect x="351" y="442" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="364" y="442" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="325" y="455" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<rect x="338" y="455" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="351" y="455" width="11" height="11" fill="#172b2a" opacity="1"/>
+<rect x="364" y="455" width="11" height="11" fill="#172b2a" opacity="0.25"/>
+<text x="52" y="511" font-size="25" fill="#526961" font-weight="400" text-anchor="start">色版概念示意，非原作重製</text>
+<path d="M986 369 V409 H630 V439" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="506" y="458" width="642" height="160" rx="16" fill="#eef4ed" stroke="#d5ded7" stroke-width="2"/>
+<text x="537" y="510" font-size="33" fill="#172b2a" font-weight="700" text-anchor="start">另一條路：燃燒 80 張 → Statement</text>
+<text x="537" y="565" font-size="30" fill="#526961" font-weight="400" text-anchor="start">不是免費加送，也不是保證升值。</text>
+<text x="52" y="680" font-size="30" fill="#172b2a" font-weight="700" text-anchor="start">截至查閱時，官網仍列組裝尚待開放。</text>
+<text x="52" y="735" font-size="25" fill="#526961" font-weight="400" text-anchor="start">來源：Jack Butcher 官方 Credits 頁｜2026-09-25 查閱</text>
+</g></svg>

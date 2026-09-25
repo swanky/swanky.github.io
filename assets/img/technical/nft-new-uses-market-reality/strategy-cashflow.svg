@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+<title id="title">回購循環，仍然需要有人付錢</title><desc id="desc">依TokenStrategy一般NFT策略文件整理：交易代幣產生費用，費用購買NFT，掛售須有買家成交，售出所得買回銷毀策略代幣。交易量下降或NFT無人接手會中斷循環。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#996514"/></marker></defs>
+<rect width="1200" height="840" rx="22" fill="#fbfaf5"/>
+<g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<text x="52" y="68" font-size="42" fill="#172b2a" font-weight="700" text-anchor="start">回購循環，仍然需要有人付錢</text>
+<text x="52" y="115" font-size="28" fill="#526961" font-weight="400" text-anchor="start">通用 NFT Strategy 規則示意，不是個別部署的收益預測。</text>
+<rect x="52" y="163" width="482" height="203" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="80" y="215" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">1  交易策略代幣</text>
+<text x="80" y="274" font-size="30" fill="#172b2a" font-weight="400" text-anchor="start">買賣費用 10%</text>
+<text x="80" y="322" font-size="28" fill="#526961" font-weight="400" text-anchor="start">交易額的 8% 用於購藏</text>
+<rect x="666" y="163" width="482" height="203" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="694" y="215" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">2  購買 NFT</text>
+<text x="694" y="274" font-size="30" fill="#172b2a" font-weight="400" text-anchor="start">資金累積後收購</text>
+<text x="694" y="322" font-size="28" fill="#526961" font-weight="400" text-anchor="start">形成協議庫存</text>
+<rect x="666" y="459" width="482" height="203" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="694" y="511" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">3  等待 NFT 買家</text>
+<text x="694" y="570" font-size="30" fill="#172b2a" font-weight="400" text-anchor="start">只有買家付錢成交</text>
+<text x="694" y="618" font-size="28" fill="#526961" font-weight="400" text-anchor="start">才有收入可用於回購</text>
+<rect x="52" y="459" width="482" height="203" rx="16" fill="#ffffff" stroke="#d5ded7" stroke-width="2"/>
+<text x="80" y="511" font-size="34" fill="#172b2a" font-weight="700" text-anchor="start">4  回購策略代幣</text>
+<text x="80" y="570" font-size="30" fill="#172b2a" font-weight="400" text-anchor="start">使用 NFT 售出所得</text>
+<text x="80" y="618" font-size="28" fill="#526961" font-weight="400" text-anchor="start">買回後銷毀，非贖回權</text>
+<path d="M545 262 H653" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M906 379 V446" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M653 560 H545" fill="none" stroke="#996514" stroke-width="4" marker-end="url(#arrow)"/>
+
+<text x="600" y="406" font-size="31" fill="#b4423c" font-weight="700" text-anchor="middle">斷點</text>
+<text x="600" y="444" font-size="25" fill="#b4423c" font-weight="700" text-anchor="middle">量縮／賣不動</text>
+<text x="52" y="719" font-size="29" fill="#526961" font-weight="400" text-anchor="start">剩餘費用：1% 回購銷毀 PNKSTR；1% 給系列擁有者。</text>
+<text x="52" y="764" font-size="31" fill="#172b2a" font-weight="700" text-anchor="start">銷毀改變供給，不保證價格，也不能取代外部買家。</text>
+<text x="52" y="814" font-size="24" fill="#526961" font-weight="400" text-anchor="start">來源：TokenStrategy NFT Strategies｜百分比指交易額的比例</text>
+</g></svg>
