@@ -91,8 +91,13 @@ extra_css: |
           {% for w in site.data.selected_works.highlights %}
           <a class="work-row" href="{{ w.url | relative_url }}" data-aos="fade-up"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 60 }}"{% endunless %}>
             <div class="w-num">{{ forloop.index | prepend: '0' }}</div>
-            <div class="w-thumb">
+            <div class="w-thumb{% unless w.thumb %} w-thumb--tile{% endunless %}">
+              {% if w.thumb %}
               <img loading="lazy" decoding="async" src="{{ w.thumb | append: '-360.webp' | relative_url }}" srcset="{{ w.thumb | append: '-360.webp' | relative_url }} 360w, {{ w.thumb | append: '-480.webp' | relative_url }} 480w" sizes="(max-width: 767px) 110px, 200px" alt="{{ w.alt }}" width="480" height="360">
+              {% else %}
+              <span class="w-tile-main">{{ w.tile.main }}</span>
+              <span class="w-tile-sub">{{ w.tile.sub }}</span>
+              {% endif %}
             </div>
             <div class="w-body">
               <div class="w-title">{{ w.title }}</div>

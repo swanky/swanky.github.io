@@ -1,5 +1,6 @@
 # 首頁 #selected-works「代表成果 / Selected Highlights」（2026-09-25 v2：編輯索引列＋單一大圖）
-# highlights：四件代表成果，順序固定（站主指定，非年代序）。thumb 為 assets/img/home/<stem>-{360,720}.webp（4:3）。
+# highlights：四件代表成果，順序固定（站主指定，非年代序）。thumb 為 assets/img/home/<stem>-{360,480}.webp（4:3）。
+#   沒有 thumb 的項目改用 tile（文字磚）：東吳列站上沒有真正的課堂照片（課程頁用的是示意插畫），不拿別的課的照片冒充。
 # creative：創作區——第一筆是滿版橫幅（16:9 來源，桌機由 CSS 裁 2.2:1），第二筆是次要一列；皆為 AI 生成，卡上明示。
 # 圖片由 tools/build-home-images.py 產生（來源都是 repo 既有圖），輸出檔要一起 commit。
 # 所有成就描述必須對得上站上既有頁面／資料（press、photography_publications、photography_awards、soochow、games/plum）。
@@ -33,8 +34,9 @@ highlights:
     desc: 東吳大學區塊鏈課程兼任助理教授，目前一學期 18 堂，從錢包與交易講到 DeFi、NFT 與 Web3。
     meta: TEACHING · WEB3
     url: /education/crypto/soochow/
-    thumb: /assets/img/home/hl-soochow
-    alt: 史旺基過往課程的多人實作現場
+    tile:
+      main: 東吳大學
+      sub: 區塊鏈課程
 
 creative:
   - key: open-worlds

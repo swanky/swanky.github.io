@@ -3,11 +3,12 @@
 """首頁「代表成果／最新創作」區的輕量圖片產生器（2026-09-25）。
 
 來源都是 repo 內既有圖檔，輸出到 assets/img/home/ 為 WebP，兩種寬度供 srcset：
-  - 四張代表成果縮圖：4:3，360w／720w（版面顯示 110–200px）
+  - 三張代表成果縮圖：4:3，360w／480w（版面顯示 110–200px）；東吳列站上沒有真正的課堂照片，
+    首頁改用 CSS 文字磚（見 _data/selected_works.yml 的 tile），不產圖
   - 三本《制服．女孩》：三張真實封面在暖紙底上排成一張 4:3 合成圖（不用 books.jpg，
     那張合照含五本出版與人物，會與「三本」矛盾）
   - 最新創作橫幅：16:9，800w／1400w（桌機 2.2:1 由 CSS object-fit 再裁）
-  - 《金瓶異夢》縮圖：16:9，360w／720w
+  - 《金瓶異夢》縮圖：16:9，360w／540w
 
 執行：python -X utf8 tools/build-home-images.py   （需 Pillow，含 WebP 支援）
 輸出檔要一起 commit（GitHub Pages 從 git 建置）。
@@ -93,11 +94,10 @@ def books_composite() -> Image.Image:
 
 
 def main() -> None:
-    # 代表成果四張縮圖 4:3（版位 200px，480w 供 2x 螢幕）
+    # 代表成果三張縮圖 4:3（版位 200px，480w 供 2x 螢幕）
     save_set(cover_crop(load("/assets/img/press/time-magazine-redball.jpg"), 4 / 3, (0.5, 0.5)), "hl-time", [360, 480])
     save_set(books_composite(), "hl-books", [360, 480])
     save_set(cover_crop(load("/assets/img/sec/014_Dulce_1.jpg"), 4 / 3, (0.5, 0.42)), "hl-px3", [360, 480])
-    save_set(cover_crop(load("/education/crypto/img/swanky_crypto_class.jpg"), 4 / 3), "hl-soochow", [360, 480])
     # 最新創作橫幅 16:9（主體偏左，焦點 x=0.35；版位最寬 1296px）
     save_set(cover_crop(load("/assets/img/photography/swanky-ji-open-worlds/SJW-35.webp"), 16 / 9, (0.35, 0.5)), "creative-open-worlds", [800, 1400], quality=76)
     # 《金瓶異夢》16:9（版位 260px）

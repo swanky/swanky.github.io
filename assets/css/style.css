@@ -6964,6 +6964,37 @@ section.testimonials { background: var(--c-cream); }
 
 .works-list--thumbs .work-row:hover .w-thumb img { transform: scale(1.04); }
 
+/* 文字磚：沒有真實照片的項目（東吳列）不拿別的照片冒充，縮圖位改成墨底金字的名牌；
+   字級以容器寬度計（cqw），桌機 200px／窄容器 110px 都不用另寫尺寸 */
+.works-list--thumbs .w-thumb--tile {
+  container-type: inline-size;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  row-gap: 5cqw;
+  padding: 8%;
+  background: var(--c-ink);
+  text-align: center;
+}
+
+.works-list--thumbs .w-tile-main {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 16cqw;
+  line-height: 1.1;
+  letter-spacing: .08em;
+  color: var(--c-paper);
+}
+
+.works-list--thumbs .w-tile-sub {
+  font-family: var(--font-sans);
+  font-size: max(9px, 7cqw);
+  letter-spacing: .2em;
+  color: var(--c-gold);
+  padding-top: 4cqw;
+  border-top: 1px solid rgba(229, 163, 0, .55);
+}
+
 .works-list--thumbs .w-desc { max-width: 56ch; }
 
 /* 窄容器：序號與 meta 同列在上，縮圖與文字在下（沿用既有容器查詢） */
