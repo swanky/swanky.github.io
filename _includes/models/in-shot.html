@@ -1,0 +1,15 @@
+{%- comment -%}
+判斷某張照片裡有沒有這位模特兒，結果寫進 in_shot（true／false；Jekyll include 與呼叫端共用變數）。
+參數：p（照片：移交包 photos[] 或寫真館 shots[]）、bk（該本書的 site.data）、t（models.yml 的 talent）。
+- 照片有 characters（NFT 移交包逐張角色 id）→ 以 t.slug 比對。
+- 多人合輯但沒有逐張角色（《畫面之外》models 兩位）→ 以 alt 第一個「，」之前的主詞比對 t.name
+  （移交 alt 固定寫成「成年虛構角色李瓶兒／潘金蓮／李瓶兒與潘金蓮，…」或「場景細節，…」；tests/flickr-photobooks.test.mjs 釘住這個格式）。
+- 其餘是個人寫真集，一律算有。
+{%- endcomment -%}
+{%- assign in_shot = true -%}
+{%- if include.p.characters -%}
+  {%- unless include.p.characters contains include.t.slug -%}{%- assign in_shot = false -%}{%- endunless -%}
+{%- elsif include.bk.models.size > 1 -%}
+  {%- assign in_shot_who = include.p.alt | split: '，' | first -%}
+  {%- unless in_shot_who contains include.t.name -%}{%- assign in_shot = false -%}{%- endunless -%}
+{%- endif -%}

@@ -80,16 +80,18 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
   {%- assign spread_talents = pub | where_exp: "t", "t.spread" | where_exp: "t", "t.slug != 'swanky-ji'" -%}
   <section class="sm-spreads" aria-labelledby="sm-spreads-title">
     <h2 class="sm-shell sm-board__division" id="sm-spreads-title">寫真集</h2>
-    {% assign shared = site.data.beyond_the_frame %}
     <div class="sm-shell sm-cases">
+      {% for sb in site.data.models.home.shared_books %}
+      {%- assign shared = site.data[sb.data] -%}
       <article class="sm-case">
-        <a class="sm-case__media sm-media" href="{{ shared.permalink | relative_url }}"><img src="{{ shared.card_image | relative_url }}" alt="李瓶兒與潘金蓮《畫面之外》封面（AI 生成，成年虛構角色）" width="640" height="480" loading="lazy" decoding="async"></a>
+        <a class="sm-case__media sm-media" href="{{ sb.url | relative_url }}"><img src="{{ sb.image | relative_url }}" alt="{{ sb.alt }}" width="{{ sb.w }}" height="{{ sb.h }}" loading="lazy" decoding="async"></a>
         <div class="sm-case__body">
-          <p class="sm-eyebrow">李瓶兒與潘金蓮 · 36 張 · 五章</p>
-          <h3 class="sm-case__title"><a href="{{ shared.permalink | relative_url }}">《{{ shared.title }}》</a></h3>
+          <p class="sm-eyebrow">{{ sb.cast }} · {{ shared.count }} 張 · {{ shared.chapters.size }} 章</p>
+          <h3 class="sm-case__title"><a href="{{ sb.url | relative_url }}">《{{ shared.title }}》</a></h3>
           <p class="sm-case__desc">{{ shared.description }}</p>
         </div>
       </article>
+      {% endfor %}
     </div>
 
     {% if spread_talents.size > 0 %}

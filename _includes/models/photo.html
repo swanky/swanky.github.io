@@ -1,7 +1,7 @@
 {%- comment -%}
 SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作品資料，輸出格線用 <img>。
 格線圖走 Flickr 直連（srcset 使用公開的實際尺寸，見 tools/flickr-static-map.mjs），
-沒有對照表時退回本地預覽；預覽與放大連結均使用 Flickr 實際尺寸網址。alt 補 AI 揭露。
+沒有對照表時退回本地預覽；預覽與放大連結均使用 Flickr 實際尺寸網址。alt 補 AI 揭露（alt 已含「AI 生成」則不重複）。
 參數：
   book（_data 檔名）、kind（json＝移交包 photos[]；yml＝寫真館 chapters[].shots[]）、n（張序 order／n）
   sizes（必填，依實際版面寬）、sizes_portrait（選填，直幅另給）
@@ -29,6 +29,8 @@ SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作
   {%- assign mp_alt = mp_shot.alt -%}
   {%- assign mp_prev_w_p = 640 -%}{%- assign mp_prev_w_l = 960 -%}
 {%- endif -%}
+{%- comment -%}移交 alt 已自帶 AI 揭露（如 NFT「（AI 生成影像）」）就不再重複補{%- endcomment -%}
+{%- if mp_alt contains 'AI 生成' -%}{%- assign mp_ai = '' -%}{%- else -%}{%- assign mp_ai = '（AI 生成，非真人照片）' -%}{%- endif -%}
 {%- assign mp_title = mp_shot.title -%}
 {%- assign mp_w = mp_shot.width -%}{%- assign mp_h = mp_shot.height -%}
 {%- if mp_h > mp_w -%}{%- assign mp_orient = 'portrait' -%}{%- else -%}{%- assign mp_orient = 'landscape' -%}{%- endif -%}
@@ -45,11 +47,11 @@ SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作
   {%- capture mp_srcset %}{{ mp_prev | relative_url }} {% if mp_orient == 'portrait' %}{{ mp_prev_w_p }}{% else %}{{ mp_prev_w_l }}{% endif %}w, {{ mp_full | relative_url }} {{ mp_w }}w{% endcapture -%}
 {%- endif -%}
 {%- if include.source_only -%}<source media="(max-width: 767px)" srcset="{{ mp_srcset }}" sizes="{{ mp_sizes }}" width="{{ mp_w }}" height="{{ mp_h }}">{%- else -%}
-{%- capture mp_img -%}{% if include.mobile_n %}<picture>{{ mp_source }}{% endif %}<img src="{{ mp_src }}" srcset="{{ mp_srcset }}" sizes="{{ mp_sizes }}" alt="{{ mp_alt }}（AI 生成，非真人照片）" width="{{ mp_w }}" height="{{ mp_h }}"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">{% if include.mobile_n %}</picture>{% endif %}{% if include.badge %}<span class="sm-ai" aria-hidden="true">AI 生成 · 非真人</span>{% endif %}{%- endcapture -%}
+{%- capture mp_img -%}{% if include.mobile_n %}<picture>{{ mp_source }}{% endif %}<img src="{{ mp_src }}" srcset="{{ mp_srcset }}" sizes="{{ mp_sizes }}" alt="{{ mp_alt }}{{ mp_ai }}" width="{{ mp_w }}" height="{{ mp_h }}"{% if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">{% if include.mobile_n %}</picture>{% endif %}{% if include.badge %}<span class="sm-ai" aria-hidden="true">AI 生成 · 非真人</span>{% endif %}{%- endcapture -%}
 {%- capture mp_nn %}{% if mp_n < 10 %}0{% endif %}{{ mp_n }}{% endcapture -%}
-{%- if include.figure %}<figure class="sm-figure sm-figure--{{ mp_orient }}">{% endif -%}
+{%- if include.figure %}<figure class="sm-figure sm-figure--{{ mp_orient }}{% if mp_h == mp_w %} sm-figure--square{% endif %}">{% endif -%}
 {%- if include.gallery -%}
-<a href="{{ mp_full | relative_url }}" class="sm-media sm-media--{{ mp_orient }} portfolio-lightbox" data-gallery="{{ include.gallery }}" title="No.{{ mp_nn }} {{ mp_title }}｜{{ mp_alt }}（AI 生成，非真人照片）">{{ mp_img }}</a>
+<a href="{{ mp_full | relative_url }}" class="sm-media sm-media--{{ mp_orient }} portfolio-lightbox" data-gallery="{{ include.gallery }}" title="No.{{ mp_nn }} {{ mp_title }}｜{{ mp_alt }}{{ mp_ai }}">{{ mp_img }}</a>
 {%- elsif include.href -%}
 <a href="{{ include.href | relative_url }}" class="sm-media sm-media--{{ mp_orient }}">{{ mp_img }}</a>
 {%- else -%}

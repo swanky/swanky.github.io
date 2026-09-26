@@ -4,8 +4,7 @@
 文案來源：talent.intro（原創人物）或寫真館 pack.note／quote（改編角色）；每本書的 description／lead 逐字沿用。
 {%- endcomment -%}
 {%- assign t = site.data.models.talents | where: "slug", include.slug | first -%}
-{%- assign tp_count = 0 -%}
-{%- for tp_b in t.books -%}{%- assign tp_bd = site.data[tp_b.data] -%}{%- assign tp_count = tp_count | plus: tp_bd.count -%}{%- endfor -%}
+{%- include models/talent-count.html t=t -%}{%- assign tp_count = tn_count -%}
 {%- if t.pack -%}{%- assign pack = site.data.jinpingmei_photobook.packs | where: "slug", t.pack | first -%}{%- else -%}{%- assign pack = nil -%}{%- endif -%}
 {%- assign tp_intro = t.intro | default: pack.note -%}
 {%- assign tp_portrait = t.portrait -%}
@@ -65,6 +64,16 @@
           {%- assign bk_when = bk.volume -%}
           {%- capture bk_pdf %}{{ b.url }}{{ bk.pdf }}{% endcapture -%}{%- assign bk_pdf_size = bk.pdf_size -%}
         {%- endif -%}
+        {%- assign bk_shared = false -%}
+        {%- if bk.characters -%}{%- assign bk_shared = true -%}{%- elsif bk.models.size > 1 -%}{%- assign bk_shared = true -%}{%- endif -%}
+        {%- if bk_shared -%}
+          {%- comment -%}多人合輯：封面沒有本人時，改用本人出鏡的第一張（放在名字旁的圖必須是這位模特兒）{%- endcomment -%}
+          {%- assign bk_cover_p = bk.photos | where: "order", bk_cover_n | first -%}
+          {%- include models/in-shot.html p=bk_cover_p bk=bk t=t -%}
+          {%- unless in_shot -%}
+            {%- for bk_p in bk.photos -%}{%- include models/in-shot.html p=bk_p bk=bk t=t -%}{%- if in_shot -%}{%- assign bk_cover_n = bk_p.order -%}{%- break -%}{%- endif -%}{%- endfor -%}
+          {%- endunless -%}
+        {%- endif -%}
         {%- assign bk_slug = bk.slug | default: b.data -%}
         {%- capture bk_gallery %}sm-book-{{ bk_slug }}{% endcapture -%}
       <article class="sm-book" id="book-{{ bk_slug }}" aria-labelledby="book-{{ bk_slug }}-title">
@@ -79,22 +88,30 @@
         <div class="sm-book__cover">
           {% include models/photo.html book=b.data kind=b.kind n=bk_cover_n sizes="(max-width: 767px) calc(100vw - 32px), min(100vw - 48px, 1320px)" sizes_portrait="(max-width: 767px) calc(100vw - 32px), 620px" gallery=bk_gallery figure=true %}
         </div>
-        <p class="sm-strip__label">各章首張 · 點圖放大，左右鍵逐張看</p>
-        <div class="sm-strip" role="list">
+        {%- capture bk_strip -%}
           {% for c in bk.chapters %}
             {%- if b.kind == 'json' -%}
               {%- assign chapter_key = c.number | default: c.id -%}
-              {%- assign cf = bk.photos | where: "chapter", chapter_key | first -%}{%- assign cf_n = cf.order -%}
+              {%- assign cf_n = nil -%}
+              {%- assign cf_shots = bk.photos | where: "chapter", chapter_key -%}
+              {%- comment -%}多人合輯只取本人出鏡的第一張；本人沒出現的章節略過{%- endcomment -%}
+              {%- for cf in cf_shots -%}{%- include models/in-shot.html p=cf bk=bk t=t -%}{%- if in_shot -%}{%- assign cf_n = cf.order -%}{%- break -%}{%- endif -%}{%- endfor -%}
             {%- else -%}
               {%- assign cf = c.shots | first -%}{%- assign cf_n = cf.n -%}
             {%- endif -%}
-            {%- unless cf_n == bk_cover_n -%}
+            {%- if cf_n and cf_n != bk_cover_n -%}
             <div class="sm-strip__item" role="listitem">
               {% include models/photo.html book=b.data kind=b.kind n=cf_n sizes="(max-width: 767px) 390px, 540px" sizes_portrait="(max-width: 767px) 174px, 240px" gallery=bk_gallery figure=true %}
             </div>
-            {%- endunless -%}
+            {%- endif -%}
           {% endfor %}
+        {%- endcapture -%}
+        {%- if bk_strip contains 'sm-strip__item' %}
+        <p class="sm-strip__label">{% if bk_shared %}各章出鏡首張{% else %}各章首張{% endif %} · 點圖放大，左右鍵逐張看</p>
+        <div class="sm-strip" role="list">
+          {{ bk_strip }}
         </div>
+        {%- endif %}
         <div class="sm-book__links">
           <a class="sm-btn sm-btn--ghost" href="{{ b.url | relative_url }}">翻閱整本《{{ bk.title }}》</a>
           {% if bk_pdf %}<a class="sm-textlink" href="{{ bk_pdf | relative_url }}" download>下載完整寫真集{% if bk_pdf_size %}（{{ bk_pdf_size }}）{% endif %}</a>{% endif %}

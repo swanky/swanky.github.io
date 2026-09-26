@@ -1,0 +1,18 @@
+{%- comment -%}
+模特兒的出鏡張數，結果寫進 tn_count。參數：t（models.yml 的 talent）。
+個人寫真集整本計入；多人合輯只算本人出鏡的張數（判斷見 models/in-shot.html），不把整本張數算到每位角色頭上。
+{%- endcomment -%}
+{%- assign tn_count = 0 -%}
+{%- for tn_b in include.t.books -%}
+  {%- assign tn_bd = site.data[tn_b.data] -%}
+  {%- assign tn_shared = false -%}
+  {%- if tn_bd.characters -%}{%- assign tn_shared = true -%}{%- elsif tn_bd.models.size > 1 -%}{%- assign tn_shared = true -%}{%- endif -%}
+  {%- if tn_shared -%}
+    {%- for tn_p in tn_bd.photos -%}
+      {%- include models/in-shot.html p=tn_p bk=tn_bd t=include.t -%}
+      {%- if in_shot -%}{%- assign tn_count = tn_count | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- assign tn_count = tn_count | plus: tn_bd.count -%}
+  {%- endif -%}
+{%- endfor -%}

@@ -30,6 +30,10 @@ home:
   article:
     label: 為什麼攝影師要開一間虛擬角色經紀公司
     url: /technical/ai-photography-virtual-agency/
+  # 首頁「寫真集」區的多人合輯卡片（依序顯示；張數與章數從該書資料讀取，網址以 talents[].books 為準——移交 JSON 的 permalink 不一定是上線網址）
+  shared_books:
+    - { data: beyond_the_frame, url: /jinpingmei/photobook/beyond-the-frame/, image: /assets/img/photography/beyond-the-frame/cover-card.jpg, w: 640, h: 480, cast: 李瓶兒與潘金蓮, alt: "李瓶兒與潘金蓮《畫面之外》封面（AI 生成，成年虛構角色）" }
+    - { data: nft_seven_eight, url: /nft/photobook/seven-names-eight-presences/, image: /assets/img/photography/nft-seven-eight/cover-card.jpg, w: 640, h: 360, cast: NFT 七位角色, alt: "NFT 七位角色《七個名字，八種在場》封面（AI 生成）" }
 
 # 合作原則：逐字取自同一篇專欄，站主的第一人稱保留。
 principles:
@@ -133,7 +137,7 @@ talents:
     kind: nft
     kind_label: "CloneX #15755"
     debut: 2026
-    intro: "史旺基持有的 CloneX #15755，以官方 token 圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
+    intro: "史旺基持有的 CloneX #15755，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
     disclosure: "Bunny 邦妮為史旺基持有的 CloneX #15755 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
@@ -155,8 +159,8 @@ talents:
     kind: nft
     kind_label: "CloneX #9268"
     debut: 2026
-    intro: "史旺基持有的 CloneX #9268，以官方 token 圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "Sparky為史旺基持有的 CloneX #9268 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    intro: "史旺基持有的 CloneX #9268，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
+    disclosure: "Sparky 為史旺基持有的 CloneX #9268 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -175,8 +179,8 @@ talents:
     short: "#15162"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
     kind_label: "CloneX"
     debut: 2026
-    intro: "史旺基持有的 CloneX #15162，以官方 token 圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "CloneX #15162為史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    intro: "史旺基持有的 CloneX #15162，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
+    disclosure: "史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -195,8 +199,8 @@ talents:
     short: "#17474"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
     kind_label: "CloneX"
     debut: 2026
-    intro: "史旺基持有的 CloneX #17474，以官方 token 圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "CloneX #17474為史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    intro: "史旺基持有的 CloneX #17474，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
+    disclosure: "史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -215,8 +219,8 @@ talents:
     short: "#17152"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
     kind_label: "CloneX"
     debut: 2026
-    intro: "史旺基持有的 CloneX #17152，以官方 token 圖為依據做成的攝影式改編形象；因造型含村上隆 IP，只作概念展示、不參與商業合作。"
-    disclosure: "CloneX #17152為史旺基持有的 CloneX #17152 的攝影式改編形象，人物由 AI 生成，並非真人；造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。"
+    intro: "史旺基持有的 CloneX #17152，以官方角色圖為依據做成的攝影式改編形象；因造型含村上隆 IP，只作概念展示、不參與商業合作。"
+    disclosure: "史旺基持有的 CloneX #17152 的攝影式改編形象，人物由 AI 生成，並非真人；造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。"
     # 站主 2026-09-25：公開列出，但含村上隆 IP（DOB 帽、Jellyfish Eyes 夾克），不參與商業合作
     commercial: false
     flag: 含村上隆 IP，不參與商業合作
@@ -241,7 +245,7 @@ talents:
       - { key: voxel, label: 方塊版, file: meebit-10829 }
       - { key: human, label: 擬真版, file: meebit-10829-human }
     intro: "史旺基持有的 Meebits #10829，有方塊與擬真兩種核准形象，可依場景選擇；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "Meebit #10829為史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     books:
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }
@@ -254,8 +258,8 @@ talents:
     short: "#17854"   # 名冊板第一行：編號當名字（有暱稱的用暱稱）
     kind_label: "MAYC"
     debut: 2026
-    intro: "史旺基持有的 MAYC #17854，以官方 token 圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "MAYC #17854為史旺基持有的 MAYC #17854 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    intro: "史旺基持有的 MAYC #17854，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
+    disclosure: "史旺基持有的 MAYC #17854 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     books:
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }
