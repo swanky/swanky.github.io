@@ -1,0 +1,6 @@
+{%- comment -%}A reviewed local image identity resolves to a public Flickr size. Unmapped assets keep their existing path.{%- endcomment -%}
+{%- assign fu_id = include.id | default: site.data.flickr_image_paths[include.image] | append: '' -%}
+{%- assign fu_photo = site.data.flickr_static[fu_id] -%}
+{%- if fu_photo.full -%}
+  {%- if include.preview -%}{{ fu_photo.src }}{%- else -%}{{ fu_photo.full }}{%- endif -%}
+{%- else -%}{{ include.image | relative_url }}{%- endif -%}

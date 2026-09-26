@@ -1,0 +1,106 @@
+---
+layout: home
+title: 七個名字，八種在場｜NFT 七位角色寫真集
+description: 七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。人物與場景由 AI 生成，可逐張觀看並下載完整寫真集。
+keywords: 七個名字八種在場,CloneX,Meebits,MAYC,NFT角色,AI生成影像,史旺基
+nav_active: nft
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: NFT 創作
+    url: /nft/
+  - name: 七個名字，八種在場
+    url: /nft/photobook/seven-names-eight-presences/
+use_glightbox: true
+use_photography_author: true
+preconnect_flickr: true
+og_image: /assets/img/photography/nft-seven-eight/cover.jpg
+permalink: /nft/photobook/seven-names-eight-presences/
+---
+{%- comment -%}The owner selected the NFT URL. Jekyll source stays outside the independent nft mini-site; the handoff JSON remains byte-for-byte unchanged.{%- endcomment -%}
+{% assign book = site.data.nft_seven_eight %}
+{% assign cover = book.photos | where: "order", book.cover_photo | first %}
+<main id="main" class="photo-author-page photo-author-subpage sjw-page nse-page">
+  {% include photography/subpage-hero.html eyebrow="NFT CHARACTERS · 2026 · 42 PHOTOGRAPHS" title=book.title intro=book.description primary_url="#chapter-01" primary_label="開始閱讀42張" secondary_url=book.pdf secondary_label="下載完整寫真集" %}
+  <nav class="photo-author-quick-nav" aria-label="作品導覽"><span>NFT 寫真集</span><div>
+    <a href="{{ '/nft/' | relative_url }}">NFT 創作</a>
+    <a href="{{ '/photography/models/work/' | relative_url }}">全部寫真集</a>
+    <a href="#characters">認識七位角色</a>
+    <a href="{{ book.flickr_album }}" target="_blank" rel="noopener noreferrer">前往Flickr相簿 ↗</a>
+  </div></nav>
+
+  <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
+    <div class="photo-author-shell">
+      <p class="sjw-meta">{{ book.count }} 張影像 · {{ book.chapters.size }} 章 · 七位角色／八個呈現 · {{ book.pdf_pages }} 頁完整寫真集</p>
+      <article class="photo-author-series-card sjw-cover">
+        <a href="{% include flickr/url.html id=cover.flickr_id image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="nse-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+        </a>
+        <div class="photo-author-series-copy">
+          <p class="photo-author-eyebrow">STATEMENT · 創作說明</p>
+          <h2 id="statement-title">七個名字，並不只有七種在場。</h2>
+          <p>{{ book.statement }}</p>
+          <p class="nse-disclosure">{{ book.disclosure }}</p>
+          <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">前往Flickr相簿 ↗</a>
+        </div>
+      </article>
+      <nav class="sjw-toc" aria-label="章節目次">
+        {% for c in book.chapters %}<a href="#chapter-{{ c.id }}"><b>{{ c.id }}</b>{{ c.title }}</a>{% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  <div id="photos">
+  {% for c in book.chapters %}
+  {% assign shots = book.photos | where: "chapter", c.id %}
+  <section class="photo-author-section sjw-chapter" id="chapter-{{ c.id }}" aria-labelledby="chapter-{{ c.id }}-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ c.id }} · {{ c.cast }}</p>
+        <div><h2 id="chapter-{{ c.id }}-title">{{ c.title }}</h2><p class="nse-chapter-copy">{{ c.copy }}</p><p class="sjw-count">{{ shots.size }} 張 · No.{{ shots.first.order }}–{{ shots.last.order }}</p></div>
+      </header>
+      <div class="sjw-grid">
+        {%- assign pending = false -%}
+        {%- for p in shots -%}
+        {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+        {%- if p.height > p.width -%}
+          {%- if pending -%}
+            {%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = false -%}
+          {%- else -%}
+            {%- assign nxt = shots[forloop.index] -%}{%- assign cls = 'sjw-figure--solo' -%}
+            {%- if nxt and nxt.height > nxt.width -%}{%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = true -%}{%- endif -%}
+          {%- endif -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(50vw - 36px), 648px' -%}
+        {%- else -%}
+          {%- assign cls = 'sjw-figure--wide' -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
+        {%- endif %}
+        <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}（AI 生成影像）" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="sjw-no">No.{{ nn }}</span><span class="sjw-title">{{ p.title }}</span><a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a><p class="sjw-caption">{{ p.caption }}</p></figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+
+  <section class="photo-author-section photo-author-light sjw-closing" id="characters" aria-labelledby="characters-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head"><p class="photo-author-eyebrow">SEVEN NAMES · EIGHT PRESENCES</p><div><h2 id="characters-title">七位角色，各自走進生活。</h2><p>Meebit 是同一位角色的方塊與成年女性呈現；本冊共七位角色、八個呈現。角色的身份、形象與合作範圍，請見各自的介紹。</p></div></header>
+      <nav class="photo-author-section-links" aria-label="七位角色">{% for character in book.characters %}<a class="photo-author-text-link" href="{{ character.talent_url | relative_url }}">{{ character.name }}</a>{% endfor %}</nav>
+      <div class="photo-author-archive-grid">
+        <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download><h3>下載完整寫真集</h3><p>{{ book.pdf_pages }} 頁、{{ book.count }} 張影像與創作說明，約 27 MB，可免費下載收藏。</p><span>下載整本 →</span></a>
+        <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer"><h3>前往Flickr相簿</h3><p>依書序收錄 {{ book.count }} 張公開作品，可逐張檢視。</p><span>前往 Flickr ↗</span></a>
+        <a href="{{ '/photography/models/work/' | relative_url }}" class="photo-author-archive-card"><h3>其他概念寫真集</h3><p>在 SWANKY MODELS 繼續閱讀不同人物的創作。</p><span>看作品案例 →</span></a>
+      </div>
+      <aside class="sjw-notes" aria-label="影像與角色說明"><p>{{ book.disclosure }}</p><p>本冊為個人藝術創作展示。角色既有的合作限制仍適用；CloneX #17152 的造型含村上隆 IP，不參與商業合作，僅作概念展示。</p><p class="sjw-credit">史旺基 Swanky · 2026 · {{ book.title }}</p></aside>
+    </div>
+  </section>
+</main>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageGallery","name":{{ book.title | jsonify }},"description":{{ page.description | append: ' ' | append: book.disclosure | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ book.cover | absolute_url | jsonify }},"datePublished":{{ book.date | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"associatedMedia":[{% for p in book.photos %}{% capture public_image %}{% include flickr/url.html id=p.flickr_id image=p.image %}{% endcapture %}{"@type":"ImageObject","name":{{ p.title | jsonify }},"caption":{{ p.caption | jsonify }},"contentUrl":{{ public_image | strip | jsonify }},"width":{{ p.width }},"height":{{ p.height }},"sameAs":{{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasPart":{"@type":"Book","name":{{ book.title | jsonify }},"numberOfPages":{{ book.pdf_pages }},"url":{{ book.pdf | absolute_url | jsonify }},"inLanguage":"zh-TW"}}
+</script>

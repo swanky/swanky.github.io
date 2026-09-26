@@ -9,3 +9,4 @@ schema/*.json text eol=lf
 
 # 核准移交的公開資料保持原始位元組，供接收與部署 SHA-256 核對。
 _data/beyond_the_frame.json -text
+_data/nft_seven_eight.json -text

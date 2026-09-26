@@ -70,7 +70,7 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
         </div>
         <figure class="pb-print lp-cover reveal">
           {%- assign cfid = coverShot.flickr_id | append: '' -%}{%- assign cfs = site.data.flickr_static[cfid] -%}
-          <img src="{% if cfs %}https://live.staticflickr.com/{{ cfs.server }}/{{ cfid }}_{{ cfs.secret }}_z.jpg{% else %}{{ imgdir | append: al.cover | append: '-1080.webp' | relative_url }}{% endif %}" alt="寫真集封面：{{ al.name }}，{{ coverShot.alt }}（AI 生成，非真人照片）" width="720" height="1080" fetchpriority="high" decoding="async">
+          <img {% include flickr/source.html id=coverShot.flickr_id %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ al.name }}，{{ coverShot.alt }}（AI 生成，非真人照片）" width="720" height="1080" fetchpriority="high" decoding="async">
           <figcaption><span class="fno">封面</span><span class="fcap">{{ coverShot.title }}</span></figcaption>
         </figure>
       </div>
@@ -112,20 +112,9 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
             {%- capture full %}{{ imgdir }}{{ s.file }}.webp{% endcapture -%}
             {%- capture prev %}{{ imgdir }}{{ s.file }}-1080.webp{% endcapture -%}
             {%- if s.height > s.width -%}{%- assign pw = 720 -%}{%- assign ph = 1080 -%}{%- else -%}{%- assign pw = 1080 -%}{%- assign ph = 720 -%}{%- endif %}
-            {%- assign fid = s.flickr_id | append: '' -%}
-            {%- assign fs = site.data.flickr_static[fid] -%}
-            {%- if fs -%}
-              {%- capture fb %}https://live.staticflickr.com/{{ fs.server }}/{{ fid }}_{{ fs.secret }}{% endcapture -%}
-              {%- assign zw = fs.bw | times: 640 | divided_by: 1024 -%}
-              {%- assign cw = fs.bw | times: 800 | divided_by: 1024 -%}
-              {%- capture img_src %}{{ fb }}_b.jpg{% endcapture -%}
-              {%- capture img_srcset %} srcset="{{ fb }}_z.jpg {{ zw }}w, {{ fb }}_c.jpg {{ cw }}w, {{ fb }}_b.jpg {{ fs.bw }}w" sizes="{% if s.height > s.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}"{% endcapture -%}
-            {%- else -%}
-              {%- capture img_src %}{{ prev | relative_url }}{% endcapture -%}
-              {%- assign img_srcset = '' -%}
-            {%- endif -%}
+
             <figure class="pb-print lp-print{% if s.flickr_id %} lp-print--captioned{% endif %}">
-              <a href="{{ full | relative_url }}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ img_src }}"{{ img_srcset }} alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=full %}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img {% include flickr/source.html id=s.flickr_id image=prev %} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 1120px" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
               <figcaption><span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}</span>{% if s.flickr_id %}<a class="lp-flickr" href="https://www.flickr.com/photos/swanky-hsiao/{{ s.flickr_id }}/" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>{% endif %}</figcaption>
             </figure>
             {%- endfor %}

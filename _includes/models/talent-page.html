@@ -65,12 +65,13 @@
           {%- assign bk_when = bk.volume -%}
           {%- capture bk_pdf %}{{ b.url }}{{ bk.pdf }}{% endcapture -%}{%- assign bk_pdf_size = bk.pdf_size -%}
         {%- endif -%}
-        {%- capture bk_gallery %}sm-book-{{ bk.slug }}{% endcapture -%}
-      <article class="sm-book" id="book-{{ bk.slug }}" aria-labelledby="book-{{ bk.slug }}-title">
+        {%- assign bk_slug = bk.slug | default: b.data -%}
+        {%- capture bk_gallery %}sm-book-{{ bk_slug }}{% endcapture -%}
+      <article class="sm-book" id="book-{{ bk_slug }}" aria-labelledby="book-{{ bk_slug }}-title">
         <header class="sm-book__head">
           <div>
             <p class="sm-eyebrow">概念作品 · 自主企劃{% if bk_when and bk_when != '' %} · {{ bk_when }}{% endif %}</p>
-            <h3 id="book-{{ bk.slug }}-title"><a href="{{ b.url | relative_url }}">《{{ bk.title }}》</a></h3>
+            <h3 id="book-{{ bk_slug }}-title"><a href="{{ b.url | relative_url }}">《{{ bk.title }}》</a></h3>
             <p class="sm-book__meta">{{ bk.count }} 張 · {{ bk.chapters.size }} 章{% if bk_setting %} · {{ bk_setting }}{% endif %}</p>
           </div>
           <p class="sm-book__desc">{{ bk_desc }}</p>

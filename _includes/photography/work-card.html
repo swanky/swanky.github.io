@@ -1,5 +1,5 @@
 <article class="photo-subpage-work">
-  <a href="{{ include.work.image | relative_url }}" class="photo-subpage-image-link{% if include.lightbox %} portfolio-lightbox{% endif %}"{% if include.lightbox %} data-gallery="{{ include.gallery }}" title="{{ include.work.title }}"{% endif %}>
+  <a href="{% include flickr/url.html image=include.work.image %}" class="photo-subpage-image-link{% if include.lightbox %} portfolio-lightbox{% endif %}"{% if include.lightbox %} data-gallery="{{ include.gallery }}" title="{{ include.work.title }}"{% endif %}>
     {% include photography/responsive-image.html image=include.work.image alt=include.work.alt sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1000px) calc(50vw - 33px), (max-width: 1368px) calc(33vw - 28px), 428px" %}
   </a>
   <div class="photo-subpage-work-copy">

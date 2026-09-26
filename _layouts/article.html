@@ -16,7 +16,7 @@ layout: default
 
       {% if page.hero_image and page.cover_image %}
       <div class="article-cover">
-        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
+        <img {% include flickr/source.html image=page.cover_image %} sizes="(max-width: 767px) 100vw, 700px" alt="{{ page.cover_alt | default: page.title }}">
       </div>
       {% endif %}
 

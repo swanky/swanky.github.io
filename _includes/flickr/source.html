@@ -1,0 +1,10 @@
+{%- comment -%}Only src/srcset attributes; caller retains alt, sizing, loading and framing. Width descriptors use actual Flickr dimensions.{%- endcomment -%}
+{%- assign fs_id = include.id | default: site.data.flickr_image_paths[include.image] | append: '' -%}
+{%- assign fs_photo = site.data.flickr_static[fs_id] -%}
+{%- if fs_photo.src -%}
+src="{{ fs_photo.src }}" srcset="{{ fs_photo.srcset }}"
+{%- else -%}
+{%- assign fs_local = site.data.photography_image_manifest[include.image] -%}
+{%- assign fs_fallback = fs_local.src_960 | default: fs_local.src_480 | default: include.image -%}
+src="{{ fs_fallback | relative_url }}"{% if fs_local.src_480 and fs_local.src_960 %} srcset="{{ fs_local.src_480 | relative_url }} 480w, {{ fs_local.src_960 | relative_url }} 960w"{% endif %}
+{%- endif -%}

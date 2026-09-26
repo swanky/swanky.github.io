@@ -22,9 +22,9 @@
 <meta property="og:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
-<meta property="og:image" content="{{ page.og_image | absolute_url }}">
+<meta property="og:image" content="{% capture share_image %}{% include flickr/url.html image=page.og_image %}{% endcapture %}{{ share_image | strip | absolute_url }}">
 {% elsif page.cover_image %}
-<meta property="og:image" content="{{ page.cover_image | absolute_url }}">
+<meta property="og:image" content="{% capture share_image %}{% include flickr/url.html image=page.cover_image %}{% endcapture %}{{ share_image | strip | absolute_url }}">
 {% else %}
 <meta property="og:image" content="{{ '/assets/img/og-default.jpg' | absolute_url }}">
 <meta property="og:image:width" content="1200">
@@ -40,9 +40,9 @@
 <meta name="twitter:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
-<meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
+<meta name="twitter:image" content="{% capture share_image %}{% include flickr/url.html image=page.og_image %}{% endcapture %}{{ share_image | strip | absolute_url }}">
 {% elsif page.cover_image %}
-<meta name="twitter:image" content="{{ page.cover_image | absolute_url }}">
+<meta name="twitter:image" content="{% capture share_image %}{% include flickr/url.html image=page.cover_image %}{% endcapture %}{{ share_image | strip | absolute_url }}">
 {% else %}
 <meta name="twitter:image" content="{{ '/assets/img/og-default.jpg' | absolute_url }}">
 {% endif %}
@@ -82,7 +82,7 @@
 <link href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}" rel="stylesheet">
 <link href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" rel="stylesheet">
 {% if page.use_glightbox %}<link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">{% endif %}
-{% if page.preconnect_flickr %}<link rel="preconnect" href="https://live.staticflickr.com">{% endif %}
+{% if page.preconnect_flickr or page.nav_active == 'photography' or page.url == '/' %}<link rel="preconnect" href="https://live.staticflickr.com">{% endif %}
 
 <!-- Template Main CSS File -->
 <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">

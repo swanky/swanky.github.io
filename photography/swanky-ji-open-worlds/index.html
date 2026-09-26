@@ -37,13 +37,8 @@ permalink: /photography/swanky-ji-open-worlds/
     <div class="photo-author-shell">
       <p class="sjw-meta">{{ book.count }} 張原創影像 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
       <article class="photo-author-series-card sjw-cover">
-        <a href="{{ cover.image | relative_url }}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjw-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
-          {%- assign cfid = cover.flickr_id | append: '' -%}{%- assign cfs = site.data.flickr_static[cfid] -%}
-          {%- if cfs -%}{%- capture cfb %}https://live.staticflickr.com/{{ cfs.server }}/{{ cfid }}_{{ cfs.secret }}{% endcapture -%}{%- assign czw = cfs.bw | times: 640 | divided_by: 1024 -%}{%- assign ccw = cfs.bw | times: 800 | divided_by: 1024 -%}
-          <img src="{{ cfb }}_b.jpg" srcset="{{ cfb }}_z.jpg {{ czw }}w, {{ cfb }}_c.jpg {{ ccw }}w, {{ cfb }}_b.jpg {{ cfs.bw }}w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
-          {%- else -%}
-          <img src="{{ cover.preview | relative_url }}" srcset="{{ cover.preview | relative_url }} {% if cover.height > cover.width %}640{% else %}960{% endif %}w, {{ cover.image | relative_url }} {{ cover.width }}w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
-          {%- endif %}
+        <a href="{% include flickr/url.html image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjw-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
         </a>
         <div class="photo-author-series-copy">
           <p class="photo-author-eyebrow">STATEMENT · 封面 No.{{ cover.order }}</p>
@@ -93,21 +88,9 @@ permalink: /photography/swanky-ji-open-worlds/
           {%- assign cls = 'sjw-figure--wide' -%}
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
-        {%- assign fid = p.flickr_id | append: '' -%}
-        {%- assign fs = site.data.flickr_static[fid] -%}
-        {%- if fs -%}
-          {%- capture fb %}https://live.staticflickr.com/{{ fs.server }}/{{ fid }}_{{ fs.secret }}{% endcapture -%}
-          {%- assign zw = fs.bw | times: 640 | divided_by: 1024 -%}
-          {%- assign cw = fs.bw | times: 800 | divided_by: 1024 -%}
-          {%- capture img_src %}{{ fb }}_b.jpg{% endcapture -%}
-          {%- capture img_srcset %}{{ fb }}_z.jpg {{ zw }}w, {{ fb }}_c.jpg {{ cw }}w, {{ fb }}_b.jpg {{ fs.bw }}w{% endcapture -%}
-        {%- else -%}
-          {%- capture img_src %}{{ p.preview | relative_url }}{% endcapture -%}
-          {%- capture img_srcset %}{{ p.preview | relative_url }} {{ pw }}w, {{ p.image | relative_url }} {{ p.width }}w{% endcapture -%}
-        {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
-          <a href="{{ p.image | relative_url }}" class="portfolio-lightbox" data-gallery="sjw-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
-            <img src="{{ img_src }}" srcset="{{ img_srcset }}" sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="sjw-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption>
             <span class="sjw-no">No.{{ nn }}</span>

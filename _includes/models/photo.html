@@ -1,13 +1,13 @@
 {%- comment -%}
 SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作品資料，輸出格線用 <img>。
-格線圖走 Flickr 直連（_z／_c／_b srcset；GitHub Pages 圖片慢，見 tools/flickr-static-map.mjs），
-沒有對照表時退回本地預覽；放大連結一律指向本站原尺寸 webp。alt 一律補「（AI 生成，非真人照片）」。
+格線圖走 Flickr 直連（srcset 使用公開的實際尺寸，見 tools/flickr-static-map.mjs），
+沒有對照表時退回本地預覽；預覽與放大連結均使用 Flickr 實際尺寸網址。alt 補 AI 揭露。
 參數：
   book（_data 檔名）、kind（json＝移交包 photos[]；yml＝寫真館 chapters[].shots[]）、n（張序 order／n）
   sizes（必填，依實際版面寬）、sizes_portrait（選填，直幅另給）
   gallery（給則包成 .portfolio-lightbox 放大連結）、href（給則包成頁面連結）；兩者皆無則輸出 <span>
   eager（首屏圖：fetchpriority=high、不 lazy）、badge（疊 AI 徽章）、figure（包成 <figure>＋張序圖說）
-  local_full（滿版跨頁用：Flickr 直連最大只有 _b 1024，超過 1024px 的版面再加本站原尺寸 webp 當最大候選）
+  local_full（保留舊呼叫相容性；有 Flickr 對照時，大尺寸候選也來自 Flickr）
   mobile_n（給則手機（≤767px）改用同書另一張——通常是直幅——以 <picture><source media> 切換，桌機仍用 n；不裁切）
   source_only（內部用：只輸出 <source media="(max-width: 767px)">，供 mobile_n 遞迴呼叫）
 {%- endcomment -%}
@@ -36,12 +36,10 @@ SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作
 {%- if mp_orient == 'portrait' and include.sizes_portrait -%}{%- assign mp_sizes = include.sizes_portrait -%}{%- endif -%}
 {%- assign mp_fid = mp_shot.flickr_id | append: '' -%}
 {%- assign mp_fs = site.data.flickr_static[mp_fid] -%}
-{%- if mp_fs -%}
-  {%- capture mp_fb %}https://live.staticflickr.com/{{ mp_fs.server }}/{{ mp_fid }}_{{ mp_fs.secret }}{% endcapture -%}
-  {%- assign mp_zw = mp_fs.bw | times: 640 | divided_by: 1024 -%}
-  {%- assign mp_cw = mp_fs.bw | times: 800 | divided_by: 1024 -%}
-  {%- capture mp_src %}{{ mp_fb }}_b.jpg{% endcapture -%}
-  {%- capture mp_srcset %}{{ mp_fb }}_z.jpg {{ mp_zw }}w, {{ mp_fb }}_c.jpg {{ mp_cw }}w, {{ mp_fb }}_b.jpg {{ mp_fs.bw }}w{% if include.local_full %}, {{ mp_full | relative_url }} {{ mp_w }}w{% endif %}{% endcapture -%}
+{%- if mp_fs.src -%}
+  {%- assign mp_src = mp_fs.src -%}
+  {%- assign mp_srcset = mp_fs.srcset -%}
+  {%- assign mp_full = mp_fs.full -%}
 {%- else -%}
   {%- capture mp_src %}{{ mp_prev | relative_url }}{% endcapture -%}
   {%- capture mp_srcset %}{{ mp_prev | relative_url }} {% if mp_orient == 'portrait' %}{{ mp_prev_w_p }}{% else %}{{ mp_prev_w_l }}{% endif %}w, {{ mp_full | relative_url }} {{ mp_w }}w{% endcapture -%}

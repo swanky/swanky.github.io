@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "title": "七個名字，八種在場",
+  "subtitle": "NFT 七位角色／八個呈現",
+  "date": "2026-09-26",
+  "count": 42,
+  "pdf_pages": 52,
+  "character_count": 7,
+  "presentation_count": 8,
+  "description": "七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。人物與場景由 AI 生成，可逐張觀看並下載完整寫真集。",
+  "statement": "七個名字，並不只有七種站在世界裡的方法。帽飾需要替門框讓位，瓷紋碰見冰，方塊的手學著製圓；同一個名字，也能以兩種身體並肩走。42 張影像，從空間、碰觸與同行，走到光環也能下班的時刻。",
+  "disclosure": "七位角色以史旺基收藏的 NFT 圖像為身份來源，人物與場景由 AI 生成，非真人實拍。人類呈現為明確成年改編；Meebit 同時保留方塊與成年女性呈現，MAYC 保留猿類呈現。史旺基 Swanky 企劃、選片與審定。個人藝術創作展示，非 NFT 官方故事或合作。",
+  "chapters": [
+    {
+      "id": "01",
+      "title": "先替世界讓一點位置",
+      "cast": "CloneX #17152",
+      "copy": "一頂帽子先佔住了房間。坐下、轉身，再低一點頭；走出去，也有自己的姿勢。"
+    },
+    {
+      "id": "02",
+      "title": "觸到邊界的時候",
+      "cast": "Bunny 邦妮 / CloneX #15755",
+      "copy": "光在瓷紋上停一下。指尖遇見冰，眼睛透過融化的邊緣；最後，身體走過那一層薄薄的牆。"
+    },
+    {
+      "id": "03",
+      "title": "比街道快半拍",
+      "cast": "CloneX #15162",
+      "copy": "先替小城吹一口風，再把自己交給空氣。步子落地，街燈往後退；桌上的一場小事故，讓速度變成笑聲。"
+    },
+    {
+      "id": "04",
+      "title": "笑容有自己的光",
+      "cast": "Sparky / CloneX #9268",
+      "copy": "銀色先藏在笑裡，又散進一張皺起的薄箔。水面把臉分成兩半，風把笑帶走；躺下以後，亮點還在。"
+    },
+    {
+      "id": "05",
+      "title": "同一個名字，兩種觸感",
+      "cast": "Meebit #10829 / 方塊與女性擬人呈現",
+      "copy": "方手留下方印，指尖照顧不圓的邊。相同的名字，學會兩種碰觸；有時一起做一只碗，有時只是靠一下。"
+    },
+    {
+      "id": "06",
+      "title": "肩上的同行者",
+      "cast": "MAYC #17854 / 猿類擬真呈現",
+      "copy": "出門時總有同行者。傘向肩上偏一點，雨還留在窗外；回程的座位，容得下彼此。"
+    },
+    {
+      "id": "07",
+      "title": "光環也需要下班",
+      "cast": "CloneX #17474 / 女性呈現",
+      "copy": "光環先像一個宣告，後來只是陪著她。蹲下、坐下，替朋友扶住一場風；修完鐘，夜車讓眼睛慢慢合上。"
+    }
+  ],
+  "characters": [
+    {
+      "id": "clonex-17152",
+      "name": "CloneX #17152",
+      "talent_url": "/photography/models/talent/clonex-17152/"
+    },
+    {
+      "id": "bunny-15755",
+      "name": "Bunny 邦妮／CloneX #15755",
+      "talent_url": "/photography/models/talent/bunny-15755/"
+    },
+    {
+      "id": "clonex-15162",
+      "name": "CloneX #15162",
+      "talent_url": "/photography/models/talent/clonex-15162/"
+    },
+    {
+      "id": "clonex-9268",
+      "name": "Sparky／CloneX #9268",
+      "talent_url": "/photography/models/talent/clonex-9268/"
+    },
+    {
+      "id": "meebit-10829",
+      "name": "Meebit #10829",
+      "talent_url": "/photography/models/talent/meebit-10829/"
+    },
+    {
+      "id": "mayc-17854",
+      "name": "MAYC #17854",
+      "talent_url": "/photography/models/talent/mayc-17854/"
+    },
+    {
+      "id": "clonex-17474",
+      "name": "CloneX #17474",
+      "talent_url": "/photography/models/talent/clonex-17474/"
+    }
+  ],
+  "photos": [
+    {
+      "order": 1,
+      "id": "cast-clonex-17152",
+      "title": "帽子裡的宇宙",
+      "caption": "先坐一會，讓每一個圓都有自己的位置。",
+      "chapter": "01",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17152"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-01.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-01-960.webp",
+      "alt": "戴大型白色彩耳帽的角色坐在暗色房間裡，身旁散落圓球。（AI 生成影像）",
+      "flickr_id": "55551559481",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551559481/"
+    },
+    {
+      "order": 2,
+      "id": "cx17152-corner-room-a01",
+      "title": "房間的一個角",
+      "caption": "牆面越安靜，輪廓越有聲音。",
+      "chapter": "01",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17152"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-02.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-02-960.webp",
+      "alt": "戴大型彩耳帽的角色坐在淺灰牆角，手掌扶牆，一膝抬起。（AI 生成影像）",
+      "flickr_id": "55551946365",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551946365/"
+    },
+    {
+      "order": 3,
+      "id": "cx17152-doorway-a01",
+      "title": "低一點頭就能通過",
+      "caption": "出去的姿勢，也屬於自己。",
+      "chapter": "01",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17152"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-03.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-03-960.webp",
+      "alt": "角色低頭扶著大帽子，跨過斑駁綠門。（AI 生成影像）",
+      "flickr_id": "55551669923",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551669923/"
+    },
+    {
+      "order": 4,
+      "id": "cast-bunny-15755",
+      "title": "琴房的停頓",
+      "caption": "聲音還沒開始，光先抵達。",
+      "chapter": "02",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-04.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-04-960.webp",
+      "alt": "Bunny 邦妮穿深藍背心站在紅紫琴房，一手搭著鋼琴。（AI 生成影像）",
+      "flickr_id": "55551669998",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551669998/"
+    },
+    {
+      "order": 5,
+      "id": "bunny-noon-reframed-a02",
+      "title": "正午的輪廓",
+      "caption": "影子替耳朵再畫一次線。",
+      "chapter": "02",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-05.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-05-960.webp",
+      "alt": "Bunny 邦妮穿黑色上衣站在粗糙牆前，陽光照出兔耳與髮絲的輪廓。（AI 生成影像）",
+      "flickr_id": "55551560881",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551560881/"
+    },
+    {
+      "order": 6,
+      "id": "bunny-held-diagonal-a01",
+      "title": "透明的支點",
+      "caption": "身體把一條斜線交给椅背。",
+      "chapter": "02",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-06.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-06-960.webp",
+      "alt": "Bunny 邦妮雙手扶著透明椅背，一膝跪椅、另一足落地，身體傾斜。（AI 生成影像）",
+      "flickr_id": "55551560991",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551560991/"
+    },
+    {
+      "order": 7,
+      "id": "bunny-ice-listening-a01",
+      "title": "冰面正在說話",
+      "caption": "指尖停在最細的裂紋上。",
+      "chapter": "02",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-07.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-07-960.webp",
+      "alt": "Bunny 邦妮蹲在冬日冰池旁，伸手觸碰冰面。（AI 生成影像）",
+      "flickr_id": "55550535672",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550535672/"
+    },
+    {
+      "order": 8,
+      "id": "bunny-thaw-lens-a01",
+      "title": "融化的鏡片",
+      "caption": "透過這一小片，重新看你。",
+      "chapter": "02",
+      "width": 1254,
+      "height": 1254,
+      "orientation": "portrait",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-08.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-08-960.webp",
+      "alt": "Bunny 邦妮雙手舉起滴水冰片，透過融化的邊緣望向鏡頭。（AI 生成影像）",
+      "flickr_id": "55551561296",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551561296/"
+    },
+    {
+      "order": 9,
+      "id": "bunny-thinnest-wall-a01",
+      "title": "最薄的一道牆",
+      "caption": "邊界有時只需要一步。",
+      "chapter": "02",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "bunny-15755"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-09.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-09-960.webp",
+      "alt": "Bunny 邦妮扶住框架，手掌穿過虹彩薄膜，向前跨步。（AI 生成影像）",
+      "flickr_id": "55551733514",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551733514/"
+    },
+    {
+      "order": 10,
+      "id": "cast-clonex-15162",
+      "title": "粉色的工作日",
+      "caption": "今天先從一個笑開始。",
+      "chapter": "03",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-10.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-10-960.webp",
+      "alt": "粉紅雙馬尾的 CloneX #15162 穿亮粉背心，一靴踏上階面。（AI 生成影像）",
+      "flickr_id": "55551670908",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551670908/"
+    },
+    {
+      "order": 11,
+      "id": "cx15162-city-breath-a01",
+      "title": "替小城起風",
+      "caption": "風從一口呼吸開始。",
+      "chapter": "03",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-11.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-11-960.webp",
+      "alt": "CloneX #15162 俯身向微縮街道吹氣，前景立著小風車。（AI 生成影像）",
+      "flickr_id": "55551561861",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551561861/"
+    },
+    {
+      "order": 12,
+      "id": "cx15162-one-beat-air-a01",
+      "title": "離地一拍",
+      "caption": "影子留在地上，笑先飛起來。",
+      "chapter": "03",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-12.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-12-960.webp",
+      "alt": "從上方觀看 CloneX #15162 在彩色球場上騰空，四肢伸向不同方向。（AI 生成影像）",
+      "flickr_id": "55551947540",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551947540/"
+    },
+    {
+      "order": 13,
+      "id": "cx15162-grounded-rhythm-a02",
+      "title": "步子落地",
+      "caption": "亮色跟著身體往前。",
+      "chapter": "03",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-13.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-13-960.webp",
+      "alt": "CloneX #15162 穿短西裝與長褲，在白色空間中擺臂邁步。（AI 生成影像）",
+      "flickr_id": "55551562036",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562036/"
+    },
+    {
+      "order": 14,
+      "id": "cx15162-colour-escape-a01",
+      "title": "街燈往後退",
+      "caption": "城市慢了一點，她剛好經過。",
+      "chapter": "03",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-14.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-14-960.webp",
+      "alt": "CloneX #15162 行經雨夜街道，粉髮與藍黃光線的拖影交錯。（AI 生成影像）",
+      "flickr_id": "55551733954",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551733954/"
+    },
+    {
+      "order": 15,
+      "id": "duo-small-disaster-a02",
+      "title": "先救那杯茶",
+      "caption": "木塊倒下以前，兩個人已經笑了。",
+      "chapter": "03",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "bunny-15755",
+        "clonex-15162"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-15.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-15-960.webp",
+      "alt": "Bunny 邦妮在木桌上抽積木，粉紅雙馬尾的夥伴伸手護住茶杯。（AI 生成影像）",
+      "flickr_id": "55551734079",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734079/"
+    },
+    {
+      "order": 16,
+      "id": "cast-clonex-9268",
+      "title": "泳池沒有水",
+      "caption": "笑容先填滿空下來的位置。",
+      "chapter": "04",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-16.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-16-960.webp",
+      "alt": "Sparky 坐在藍色瓷磚空池邊，雙手支撐身體，露出銀色牙飾。（AI 生成影像）",
+      "flickr_id": "55551947995",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551947995/"
+    },
+    {
+      "order": 17,
+      "id": "cx9268-silver-laugh-a01",
+      "title": "銀色的一瞬",
+      "caption": "一個笑，就有足夠的亮點。",
+      "chapter": "04",
+      "width": 1254,
+      "height": 1254,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-17.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-17-960.webp",
+      "alt": "Sparky 的笑臉近像，銀色牙飾與藍色項鍊映著亮光。（AI 生成影像）",
+      "flickr_id": "55550536792",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550536792/"
+    },
+    {
+      "order": 18,
+      "id": "cx9268-silver-fold-a01",
+      "title": "把亮面握起來",
+      "caption": "笑裡的切面，延伸到手裡。",
+      "chapter": "04",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-18.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-18-960.webp",
+      "alt": "Sparky 在暗色背景前雙手握起銀箔，皺褶與牙飾彼此呼應。（AI 生成影像）",
+      "flickr_id": "55551562456",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562456/"
+    },
+    {
+      "order": 19,
+      "id": "cx9268-smile-below-water-a01",
+      "title": "水線以下",
+      "caption": "水面經過，笑還在原處。",
+      "chapter": "04",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-19.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-19-960.webp",
+      "alt": "Sparky 的臉跨在水線上下，水面波紋延伸到銀色笑容旁。（AI 生成影像）",
+      "flickr_id": "55550536932",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550536932/"
+    },
+    {
+      "order": 20,
+      "id": "cx9268-laugh-in-wind-a01",
+      "title": "風裡笑開",
+      "caption": "有些亮，是收不回去的。",
+      "chapter": "04",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-20.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-20-960.webp",
+      "alt": "Sparky 在灰色海堤前閉眼笑著，雙臂環抱，黑髮被風吹起。（AI 生成影像）",
+      "flickr_id": "55550537047",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537047/"
+    },
+    {
+      "order": 21,
+      "id": "cx9268-grin-reclines-a01",
+      "title": "把重心放低",
+      "caption": "躺下，世界就空出半邊。",
+      "chapter": "04",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-9268"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-21.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-21-960.webp",
+      "alt": "Sparky 穿棕色套裝躺在綠地右側，屈膝休息，左側留出大片空間。（AI 生成影像）",
+      "flickr_id": "55551734519",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734519/"
+    },
+    {
+      "order": 22,
+      "id": "cast-meebit-10829",
+      "title": "方形的她",
+      "caption": "窗光照出每一條直角。",
+      "chapter": "05",
+      "width": 1254,
+      "height": 1254,
+      "orientation": "portrait",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-22.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-22-960.webp",
+      "alt": "方塊版 Meebit #10829 穿綠衣灰裙，站在日光照入的室內。（AI 生成影像）",
+      "flickr_id": "55551948430",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551948430/"
+    },
+    {
+      "order": 23,
+      "id": "cast-meebit-10829-human-a01",
+      "title": "另一種她",
+      "caption": "同樣的綠色，有不同的呼吸。",
+      "chapter": "05",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-23.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-23-960.webp",
+      "alt": "Meebit #10829 的成年女性呈現穿綠色短上衣與灰裙，靠桌站立。（AI 生成影像）",
+      "flickr_id": "55551734694",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734694/"
+    },
+    {
+      "order": 24,
+      "id": "me-edge-of-circle-a01",
+      "title": "圓的外面",
+      "caption": "一條線就足以改變站的位置。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-24.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-24-960.webp",
+      "alt": "小小的方塊 Meebit 站在土黃色空間中，遠處是一個白色大圓。（AI 生成影像）",
+      "flickr_id": "55551562951",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562951/"
+    },
+    {
+      "order": 25,
+      "id": "me-first-circle-a01",
+      "title": "第一次做圓",
+      "caption": "方手也能照顧一個圓。",
+      "chapter": "05",
+      "width": 1254,
+      "height": 1254,
+      "orientation": "portrait",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-25.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-25-960.webp",
+      "alt": "方塊 Meebit 坐在陶輪前，以兩隻長方形手圍住中央陶器。（AI 生成影像）",
+      "flickr_id": "55551672043",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672043/"
+    },
+    {
+      "order": 26,
+      "id": "me-square-signature-a01",
+      "title": "留下方印",
+      "caption": "碰過的地方，記得手的形狀。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-26.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-26-960.webp",
+      "alt": "方塊 Meebit 在陶碗旁伸出方手，碗內留著方形痕跡。（AI 生成影像）",
+      "flickr_id": "55551948710",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551948710/"
+    },
+    {
+      "order": 27,
+      "id": "me-human-soft-edge-a01",
+      "title": "照顧不圓的邊",
+      "caption": "指尖沿著慢慢長出的輪廓。",
+      "chapter": "05",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-27.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-27-960.webp",
+      "alt": "Meebit 的成年女性呈現一手托住陶碗，另一手輕觸碗緣。（AI 生成影像）",
+      "flickr_id": "55550537557",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537557/"
+    },
+    {
+      "order": 28,
+      "id": "me-shared-bowl-a01",
+      "title": "一起完成一只碗",
+      "caption": "不一樣的手，可以碰同一件事。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-28.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-28-960.webp",
+      "alt": "Meebit 的成年女性與方塊呈現一起坐在陶桌旁，伸手靠近同一只碗。（AI 生成影像）",
+      "flickr_id": "55551949050",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949050/"
+    },
+    {
+      "order": 29,
+      "id": "me-between-hard-hands-a01",
+      "title": "稜角之間的粉塵",
+      "caption": "短短一拍，邊緣變得很輕。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-29.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-29-960.webp",
+      "alt": "方塊 Meebit 在黑色背景前拍動雙手，粉塵從稜角之間散開。（AI 生成影像）",
+      "flickr_id": "55551735179",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735179/"
+    },
+    {
+      "order": 30,
+      "id": "me-water-loosens-square-a01",
+      "title": "水會把方形放鬆",
+      "caption": "倒影不必和身體一樣筆直。",
+      "chapter": "05",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-30.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-30-960.webp",
+      "alt": "方塊 Meebit 站在水中，平直身體映出曲折倒影，圓形水波向外散開。（AI 生成影像）",
+      "flickr_id": "55551949230",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949230/"
+    },
+    {
+      "order": 31,
+      "id": "me-a-place-for-the-cheek-a01",
+      "title": "可以靠一下",
+      "caption": "原來稜角，也能是休息的地方。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-31.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-31-960.webp",
+      "alt": "Meebit 的成年女性呈現把臉頰靠在方塊手上，真手扶著方塊前臂。（AI 生成影像）",
+      "flickr_id": "55550537912",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537912/"
+    },
+    {
+      "order": 32,
+      "id": "me-two-ways-through-a04",
+      "title": "兩種走法",
+      "caption": "同一扇門，各有自己的步伐。",
+      "chapter": "05",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "meebit-10829"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-32.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-32-960.webp",
+      "alt": "Meebit 的成年女性與方塊呈現背向鏡頭走入門內，兩者轉頭互相望向對方。（AI 生成影像）",
+      "flickr_id": "55551735384",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735384/"
+    },
+    {
+      "order": 33,
+      "id": "cast-mayc-17854-ape-photo-a04",
+      "title": "肩上總有誰",
+      "caption": "還沒出發，同行者已經在了。",
+      "chapter": "06",
+      "width": 1254,
+      "height": 1254,
+      "orientation": "portrait",
+      "characters": [
+        "mayc-17854"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-33.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-33-960.webp",
+      "alt": "MAYC #17854 以長頸猿類呈現坐在暖色空間裡，豹紋伴生物跨在肩上。（AI 生成影像）",
+      "flickr_id": "55551949440",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949440/"
+    },
+    {
+      "order": 34,
+      "id": "mayc-small-shelter-a01",
+      "title": "傘向旁邊偏一點",
+      "caption": "雨落下來，先照顧肩上的牠。",
+      "chapter": "06",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "mayc-17854"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-34.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-34-960.webp",
+      "alt": "MAYC #17854 舉起黃傘，傘面罩向肩上的豹紋伴生物。（AI 生成影像）",
+      "flickr_id": "55551672783",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672783/"
+    },
+    {
+      "order": 35,
+      "id": "mayc-after-rain-a02",
+      "title": "帶著雨回去",
+      "caption": "合起的傘，還留著外面的天氣。",
+      "chapter": "06",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "mayc-17854"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-35.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-35-960.webp",
+      "alt": "雨後的 MAYC #17854 雙手握著收起的傘，肩上伴生物與牠一起停留。（AI 生成影像）",
+      "flickr_id": "55551735609",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735609/"
+    },
+    {
+      "order": 36,
+      "id": "cast-clonex-17474-female-a01",
+      "title": "光環的白晝",
+      "caption": "世界先替她畫一個圓。",
+      "chapter": "07",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-36.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-36-960.webp",
+      "alt": "戴單一金色光環的 CloneX #17474 穿深藍服裝，站在金色環形建築前。（AI 生成影像）",
+      "flickr_id": "55551672933",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672933/"
+    },
+    {
+      "order": 37,
+      "id": "cx17474-red-angle-a01",
+      "title": "低處的角度",
+      "caption": "蹲下，目光也可以很有力量。",
+      "chapter": "07",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-37.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-37-960.webp",
+      "alt": "CloneX #17474 穿黑衣低蹲，一手貼地、另一手搭在膝上。（AI 生成影像）",
+      "flickr_id": "55551672968",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672968/"
+    },
+    {
+      "order": 38,
+      "id": "cx17474-copper-rest-a01",
+      "title": "把銅色攤開",
+      "caption": "亮面落在地上，身體安靜下來。",
+      "chapter": "07",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-38.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-38-960.webp",
+      "alt": "CloneX #17474 在藍牆前靠著木凳坐下，銅色長裙向兩側攤開。（AI 生成影像）",
+      "flickr_id": "55551949750",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949750/"
+    },
+    {
+      "order": 39,
+      "id": "duo-umbrella-surrenders-a02",
+      "title": "傘先投降",
+      "caption": "風一來，站穩也變成兩個人的事。",
+      "chapter": "07",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-15162",
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-39.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-39-960.webp",
+      "alt": "粉紅雙馬尾角色與戴金環角色站在風雨中，一人握著翻起的傘，另一人扶住夥伴。（AI 生成影像）",
+      "flickr_id": "55551735784",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735784/"
+    },
+    {
+      "order": 40,
+      "id": "cx-nightshift-a02",
+      "title": "把夜晚修好",
+      "caption": "時間停下來，手還在工作。",
+      "chapter": "07",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-40.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-40-960.webp",
+      "alt": "CloneX #17474 在暗處修理一座鐘，雙手靠著鐘身，金色光環懸在頭上。（AI 生成影像）",
+      "flickr_id": "55550538492",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550538492/"
+    },
+    {
+      "order": 41,
+      "id": "cx-small-night-visitor-a01",
+      "title": "夜裡的小訪客",
+      "caption": "一點光，等來一雙翅膀。",
+      "chapter": "07",
+      "width": 1024,
+      "height": 1536,
+      "orientation": "portrait",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-41.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-41-960.webp",
+      "alt": "CloneX #17474 抬眼看向近旁飛蛾，金色光環在暗處映出暖色。（AI 生成影像）",
+      "flickr_id": "55550538547",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550538547/"
+    },
+    {
+      "order": 42,
+      "id": "cx-off-duty-a01",
+      "title": "末班車的休息",
+      "caption": "今天到這裡，眼睛可以先合上。",
+      "chapter": "07",
+      "width": 1536,
+      "height": 1024,
+      "orientation": "landscape",
+      "characters": [
+        "clonex-17474"
+      ],
+      "image": "/assets/img/photography/nft-seven-eight/NSE-42.webp",
+      "preview": "/assets/img/photography/nft-seven-eight/NSE-42-960.webp",
+      "alt": "CloneX #17474 在空車廂裡閉眼靠窗，手臂交疊在袋上，雙靴落地。（AI 生成影像）",
+      "flickr_id": "55551949995",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949995/"
+    }
+  ],
+  "cover_photo": 32,
+  "cover": "/assets/img/photography/nft-seven-eight/cover.jpg",
+  "pdf": "/assets/downloads/nft-seven-eight/Seven-Names-Eight-Presences-42.pdf",
+  "flickr_album": "https://www.flickr.com/photos/88607481@N00/albums/72177720335843364/",
+  "permalink": "/photography/nft-seven-eight/"
+}

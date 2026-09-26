@@ -150,7 +150,7 @@ permalink: /jinpingmei/photobook/
           {%- endif -%}
           <aside class="pb-album-link reveal" aria-labelledby="pb-album-{{ p.slug }}-{{ al.slug }}">
             <a class="pb-album-link-cover" href="{{ alurl | relative_url }}" tabindex="-1" aria-hidden="true">
-              <figure class="pb-print"><img src="{{ alcover | relative_url }}" alt="" width="{{ alcw }}" height="{{ alch }}" loading="lazy" decoding="async"><figcaption><span class="fno">封面</span><span class="fcap">{{ alcovershot.title }}</span></figcaption></figure>
+              <figure class="pb-print"><img {% include flickr/source.html image=alcover %} sizes="(max-width: 720px) 40vw, 280px" alt="" width="{{ alcw }}" height="{{ alch }}" loading="lazy" decoding="async"><figcaption><span class="fno">封面</span><span class="fcap">{{ alcovershot.title }}</span></figcaption></figure>
             </a>
             <div>
               <span class="pb-album-link-kicker">整本寫真集{% if al.volume %} · {{ al.volume }}{% endif %}</span>

@@ -16,6 +16,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://live.staticflickr.com">
   <meta name="theme-color" content="#0e0d0b">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description }}">
@@ -106,7 +107,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
           <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ '/jinpingmei/characters/lipinger/' | relative_url }}">認識李瓶兒 →</a><a href="{{ '/jinpingmei/characters/panjinlian/' | relative_url }}">認識潘金蓮 →</a><a href="{{ book.flickr_album }}" target="_blank" rel="noopener">在 Flickr 看相簿 ↗</a></p>
         </div>
         <figure class="pb-print lp-cover reveal">
-          <img src="{{ cover.preview | relative_url }}" srcset="{{ cover.preview | relative_url }} {{ cover.preview_width }}w, {{ cover.image | relative_url }} {{ cover.width }}w" sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
           <figcaption><span class="fno">封面</span><span class="fcap">{{ cover.title }}</span></figcaption>
         </figure>
       </div>
@@ -147,7 +148,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
           {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
           {%- capture fig %}
             <figure class="pb-print lp-print lp-print--captioned" id="photo-{{ nn }}">
-              <a href="{{ p.image | relative_url }}" class="jpm-zoom" data-gallery="beyond-the-frame" title="No.{{ nn }} {{ p.caption }}{{ ai_tag }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}"><img src="{{ p.preview | relative_url }}" srcset="{{ p.preview | relative_url }} {{ p.preview_width }}w, {{ p.image | relative_url }} {{ p.width }}w" sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 60px), 520px{% else %}(max-width: 720px) calc(100vw - 60px), (max-width: 1200px) calc(100vw - 100px), 1090px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="beyond-the-frame" title="No.{{ nn }} {{ p.caption }}{{ ai_tag }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 60px), 520px{% else %}(max-width: 720px) calc(100vw - 60px), (max-width: 1200px) calc(100vw - 100px), 1090px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async"></a>
               <figcaption>
                 <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.caption }}</span>
                 <a class="lp-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>

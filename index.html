@@ -117,7 +117,7 @@ extra_css: |
 
           {% assign banner = site.data.selected_works.creative | first %}
           <a class="wc-banner" href="{{ banner.url | relative_url }}" data-aos="fade-up">
-            <img loading="lazy" decoding="async" src="{{ banner.image | append: '-800.webp' | relative_url }}" srcset="{{ banner.image | append: '-800.webp' | relative_url }} 800w, {{ banner.image | append: '-1400.webp' | relative_url }} 1400w" sizes="(max-width: 1368px) calc(100vw - 24px), 1296px" alt="{{ banner.alt }}" width="{{ banner.width }}" height="{{ banner.height }}">
+            <img loading="lazy" decoding="async" {% capture banner_source %}{{ banner.image }}-800.webp{% endcapture %}{% include flickr/source.html image=banner_source %} sizes="(max-width: 1368px) calc(100vw - 24px), 1296px" alt="{{ banner.alt }}" width="{{ banner.width }}" height="{{ banner.height }}">
             <span class="wc-ai">{{ banner.ai_note }}</span>
             <div class="wc-banner-text">
               <span class="wc-eyebrow">{{ banner.label }} · {{ banner.year }}</span>
