@@ -88,11 +88,12 @@
           </ul>
         </li>
         <li><a {% if nav_active == 'press' %}class="active" aria-current="page" {% endif %}href="{{ '/press/' | relative_url }}">媒體報導</a></li>
-        <li class="dropdown"><a href="{{ '/nft/' | relative_url }}"{% if nav_active == 'nft' %} class=\"active\" aria-current=\"true\"{% endif %}><span>NFT策展</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="{{ '/nft/' | relative_url }}"{% if nav_active == 'nft' %} class=\"active\" aria-current=\"true\"{% endif %}><span>NFT 策展</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{{ '/nft/' | relative_url }}">總覽</a></li>
             <li><a href="{{ '/nft/uniform-clonex/' | relative_url }}">Uniform CloneX</a></li>
             <li><a href="{{ '/nft/oursong/' | relative_url }}">制服女孩 NFT 系列</a></li>
+            <li><a href="{{ '/nft/photobook/seven-names-eight-presences/' | relative_url }}">角色寫真集</a></li>
       </ul>
         </li>
         <li class="nav-contact"><a href="{{ '/contact/' | relative_url }}?service=general&from=mobile_nav" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'mobile_nav',service:'general',cta_position:'mobile_nav',from_page:window.location.pathname});}"><i class="bi bi-envelope" aria-hidden="true"></i> 合作洽詢</a></li>
@@ -199,6 +200,7 @@
         <a href="{{ '/nft/' | relative_url }}">NFT 策展</a>
         <a href="{{ '/nft/uniform-clonex/' | relative_url }}">Uniform CloneX</a>
         <a href="{{ '/nft/oursong/' | relative_url }}">制服女孩 NFT 系列</a>
+        <a href="{{ '/nft/photobook/seven-names-eight-presences/' | relative_url }}">NFT 角色寫真集</a>
         <a href="mailto:{{ site.email }}">寫信聯絡</a>
       </div>
     </section>

@@ -33,7 +33,7 @@ permalink: /photography/swanky-ji-everyday-light/
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 {% assign stills = book.photos | where: "still_life", true %}
 {% capture hero_intro %}史旺姬，史旺基的原創虛擬人物。{{ book.statement[0] }} {{ book.disclosure }}{% endcapture %}
-{% capture pdf_label %}下載完整寫真集（PDF，{{ pdf_size }}）{% endcapture %}
+{% capture pdf_label %}下載完整寫真集（{{ pdf_size }}）{% endcapture %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
   {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label=pdf_label %}
   {% include photography/subpage-nav.html %}
@@ -125,7 +125,7 @@ permalink: /photography/swanky-ji-everyday-light/
         <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download>
           <h3>下載完整寫真集</h3>
           <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
-          <span>下載 PDF →</span>
+          <span>下載整本 →</span>
         </a>
         <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer">
           <h3>在 Flickr 看完整相簿</h3>
@@ -144,7 +144,7 @@ permalink: /photography/swanky-ji-everyday-light/
           <li>{{ book.disclosure }}</li>
           <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序與圖說依原作編排；其中 {{ stills.size }} 幀沒有人物出鏡，同樣為 AI 生成影像。</li>
           <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</li>
-          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集為 {{ book.pdf_pages }} 頁 PDF，免費下載。</li>
+          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集共 {{ book.pdf_pages }} 頁，可免費下載。</li>
           <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
         </ul>
         <p class="sjw-credit">{{ book.creator }} · 2026 · 原創虛擬人物影像 · {{ book.title }}</p>

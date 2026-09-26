@@ -30,7 +30,7 @@ permalink: /photography/swanky-ji-open-worlds/
 {% assign ai_tag = '（AI 生成，非真人照片）' %}
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
-  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label="下載完整寫真集（PDF，約 32 MB）" %}
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label="下載完整寫真集（約 32 MB）" %}
   {% include photography/subpage-nav.html %}
 
   <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
@@ -119,7 +119,7 @@ permalink: /photography/swanky-ji-open-worlds/
         <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download>
           <h3>下載完整寫真集</h3>
           <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案約 32 MB，手機下載前請留意流量。</p>
-          <span>下載 PDF →</span>
+          <span>下載整本 →</span>
         </a>
         <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer">
           <h3>在 Flickr 看完整相簿</h3>
@@ -138,7 +138,7 @@ permalink: /photography/swanky-ji-open-worlds/
           <li>史旺姬為史旺基的原創虛擬人物。全冊 {{ book.count }} 張影像的角色與場景皆由 AI 生成，並非真人實拍。</li>
           <li>史旺基負責企劃、視覺統籌、選片與審定；創作保留攝影對人物、光線、動作與空間的安排。</li>
           <li>「未顯影的遠方」是本系列的詩性場域名稱；海岸、溫室與攝影劇場三個場景均為虛構。</li>
-          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集為 {{ book.pdf_pages }} 頁 PDF，免費下載。</li>
+          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集共 {{ book.pdf_pages }} 頁，可免費下載。</li>
           <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
         </ul>
         <p class="sjw-credit">史旺基 Swanky · 2026 · 原創虛擬人物影像 · 她把風景打開</p>
