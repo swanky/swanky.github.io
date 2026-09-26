@@ -17,7 +17,7 @@
     <figure class="edu-hero__media{% if include.contain %} edu-hero__media--contain{% endif %}">
       <div class="edu-hero__visuals">
         <div class="edu-hero__primary">
-          <img {% include flickr/source.html image=include.image %} sizes="(max-width: 767px) 100vw, 50vw" alt="{{ include.alt }}" loading="eager" fetchpriority="high" decoding="async">
+          <img {% include flickr/source.html image=include.image sizes="(max-width: 767px) 100vw, 50vw" %} alt="{{ include.alt }}" loading="eager" fetchpriority="high" decoding="async">
           {% if include.media_label %}<span class="edu-media-label">{{ include.media_label }}</span>{% endif %}
         </div>
       </div>

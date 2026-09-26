@@ -131,7 +131,7 @@ permalink: /jinpingmei/photobook/li-pinger-vessel-of-light/
             {%- if s.height > s.width -%}{%- assign pw = 720 -%}{%- assign ph = 1080 -%}{%- else -%}{%- assign pw = 1080 -%}{%- assign ph = 720 -%}{%- endif %}
 
             <figure class="pb-print lp-print lp-print--captioned">
-              <a href="{% include flickr/url.html image=full %}" class="jpm-zoom" data-gallery="vl20" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img {% include flickr/source.html id=s.flickr_id image=prev %} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 1120px" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=full %}" class="jpm-zoom" data-gallery="vl20" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img {% include flickr/source.html id=s.flickr_id image=prev %} sizes="{% if s.height > s.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
               <figcaption>
                 <span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}{% if s.title_en %}<small lang="en">{{ s.title_en }}</small>{% endif %}</span>
                 {%- if s.caption %}<span class="lp-desc">{{ s.caption }}</span>{% endif %}

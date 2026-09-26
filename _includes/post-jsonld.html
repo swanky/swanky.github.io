@@ -5,7 +5,7 @@
   "@type": "BlogPosting",
   "headline": {{ page.title | jsonify }},
   {% if page.description %}"description": {{ page.description | jsonify }},{% endif %}
-  {% if page.cover_image %}"image": "{% capture jsonld_image %}{% include flickr/url.html image=page.cover_image %}{% endcapture %}{{ jsonld_image | strip | absolute_url }}",{% endif %}
+  {% if page.cover_image %}"image": "{{ page.cover_image | absolute_url }}",{% endif %}
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
   "author": {

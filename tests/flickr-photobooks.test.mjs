@@ -64,3 +64,17 @@ test('Seven Names preserves the approved release, all 42 photos, seven chapters 
     assert.ok(p.alt.includes('AI'));
   }
 });
+
+test('Cropped or specially compressed derivatives stay local instead of being swapped for larger Flickr originals', () => {
+  // 首頁 WebP 是裁好壓好的版位圖、-card.jpg 是列表縮圖；對到 Flickr 會換成 3–5 倍大的原圖
+  const derivatives = Object.keys(paths).filter(path => path.startsWith('/assets/img/home/') || path.endsWith('-card.jpg'));
+  assert.deepEqual(derivatives, []);
+});
+
+test('Beyond the Frame alt text names who is in each frame (models/in-shot.html relies on it)', () => {
+  // 多人合輯沒有逐張角色欄位，出鏡張數與角色頁選圖靠 alt 第一個「，」前的主詞判斷
+  const book = JSON.parse(read('_data/beyond_the_frame.json'));
+  const subjects = new Set(book.photos.map(p => p.alt.split('，')[0]));
+  assert.deepEqual([...subjects].sort(), ['場景細節', '成年虛構角色李瓶兒', '成年虛構角色李瓶兒與潘金蓮', '成年虛構角色潘金蓮'].sort());
+  assert.deepEqual(book.models, ['李瓶兒', '潘金蓮']);
+});

@@ -119,7 +119,7 @@ permalink: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/
 
           {%- capture fig %}
             <figure class="pb-print lp-print lp-print--captioned">
-              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="pjs36" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 1120px" alt="{{ p.alt }}{{ ai_tag }}" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="pjs36" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height > p.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
               <figcaption>
                 <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.title }}</span>
                 <span class="lp-desc">{{ p.caption }}</span>

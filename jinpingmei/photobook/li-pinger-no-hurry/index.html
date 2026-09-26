@@ -114,7 +114,7 @@ permalink: /jinpingmei/photobook/li-pinger-no-hurry/
             {%- if s.height > s.width -%}{%- assign pw = 720 -%}{%- assign ph = 1080 -%}{%- else -%}{%- assign pw = 1080 -%}{%- assign ph = 720 -%}{%- endif %}
 
             <figure class="pb-print lp-print{% if s.flickr_id %} lp-print--captioned{% endif %}">
-              <a href="{% include flickr/url.html image=full %}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img {% include flickr/source.html id=s.flickr_id image=prev %} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 1120px" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=full %}" class="jpm-zoom" data-gallery="lp36" title="No.{{ nn }} {{ s.title }}｜{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）"><img {% include flickr/source.html id=s.flickr_id image=prev %} sizes="{% if s.height > s.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}" alt="{{ al.name }}，{{ s.alt }}（AI 生成，非真人照片）" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
               <figcaption><span class="fno">No.{{ nn }}</span><span class="fcap">{{ s.title }}</span>{% if s.flickr_id %}<a class="lp-flickr" href="https://www.flickr.com/photos/swanky-hsiao/{{ s.flickr_id }}/" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>{% endif %}</figcaption>
             </figure>
             {%- endfor %}

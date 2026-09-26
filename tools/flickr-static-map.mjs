@@ -1,10 +1,24 @@
 #!/usr/bin/env node
-/** Cache exact public Flickr sizes, without API keys or login.
- * node tools/flickr-static-map.mjs [--refresh]
- * Keep handoff data unchanged; flickr_image_paths.json maps reviewed local assets.
- * Large sizes have distinct URLs. Never guess their secrets or use square crops.
+/**
+ * 產生 _data/flickr_static.json（每張照片的 Flickr 公開尺寸）與 assets/data/flickr-fallbacks.json
+ * （Flickr 圖片載入失敗時，assets/js/flickr-fallback.js 換回的本地副本）。
+ *
+ * 為什麼走 Flickr：GitHub Pages 圖片走 Fastly 新加坡節點、邊緣快取只有 10 分鐘（max-age=600 不可調），
+ * 2026-09-24 實測每張 0.8–2.4 秒；Flickr live.staticflickr.com 同尺寸 0.4 秒、二次 0.08 秒。
+ * 所以寫真集與攝影頁的 <img> 改吃 Flickr，本地檔保留為備援。
+ *
+ * 為什麼解析公開照片頁、不用 oEmbed：oEmbed 最大只回 _b（1024），_h／_k 等大尺寸的 secret 與 _b 不同、oEmbed 不給；
+ * 公開照片頁內嵌的 modelExport 有全部公開尺寸，不需 API key、不碰憑證。這是 Flickr 的非公開格式，改版就可能失效——
+ * 失敗的 id 保留舊資料並以非零碼結束，不會寫壞既有對照。不猜 secret、不收正方形裁切（sq／q），只收長邊 320–2048 的尺寸。
+ *
+ * 來源 id：寫真集資料檔的 photos[]／shots[].flickr_id，加上 _data/flickr_image_paths.json（人工核對過的「本地路徑 → Flickr id」）。
+ * flickr_image_paths.json 只放與 Flickr 原圖同構圖的本地檔；已裁切或特製壓縮的衍生圖（首頁 WebP、列表 -card.jpg）不要放進來，
+ * 否則模板會把它們換成更大的 Flickr 原圖。移交的寫真集資料檔一律不改動。
+ *
+ * 用法：node tools/flickr-static-map.mjs            # 只抓缺的 id（增量），並重寫備援對照（沒有缺的就不連網）
+ *       node tools/flickr-static-map.mjs --refresh  # 全部重抓
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,7 +33,8 @@ for (const name of ['jinpingmei_photobook_vl20', 'jinpingmei_photobook_lp36']) {
   for (const m of readFileSync(join(root, '_data', `${name}.yml`), 'utf8').matchAll(/flickr_id:\s*"?(\d+)"?/g)) ids.add(m[1]);
 }
 const pathsFile = join(root, '_data/flickr_image_paths.json');
-if (existsSync(pathsFile)) for (const id of Object.values(JSON.parse(readFileSync(pathsFile, 'utf8')))) ids.add(String(id));
+const paths = existsSync(pathsFile) ? JSON.parse(readFileSync(pathsFile, 'utf8')) : {};
+for (const id of Object.values(paths)) ids.add(String(id));
 const map = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
 const todo = [...ids].filter(id => refresh || !map[id]?.sizes);
 function publicModel(html) {
@@ -73,15 +88,34 @@ async function fetchPhoto(id) {
 console.log(`photos=${ids.size} cached=${ids.size - todo.length} fetch=${todo.length}`);
 let completed = 0;
 const failures = [];
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function worker() {
   while (todo.length) {
     const id = todo.shift();
     try { map[id] = await fetchPhoto(id); }
     catch (error) { failures.push(id); console.error(`FAIL ${id}: ${error.message}`); }
     if (++completed % 25 === 0) console.log(`checked ${completed}`);
+    await sleep(150); // 對 Flickr 客氣一點：三路並行、每路請求間隔 150ms
   }
 }
-await Promise.all(Array.from({ length: 5 }, worker));
+await Promise.all(Array.from({ length: 3 }, worker));
 writeFileSync(out, JSON.stringify(Object.fromEntries(Object.keys(map).sort().map(id => [id, map[id]])), null, 2) + '\n');
 console.log(`cached=${Object.keys(map).length} failed=${failures.length}`);
 if (failures.length) process.exitCode = 1;
+
+// 備援對照：每個 id 取 flickr_image_paths.json 裡最大的本地副本（畫質最接近 Flickr 大圖）；同大小取路徑排序第一個。
+const localCopies = {};
+for (const [path, id] of Object.entries(paths)) (localCopies[String(id)] ||= []).push(path);
+const fallbackLines = [];
+const orphans = [];
+for (const id of Object.keys(map).sort()) {
+  const best = (localCopies[id] || []).filter(p => existsSync(join(root, p)))
+    .map(p => [p, statSync(join(root, p)).size])
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
+  if (best) fallbackLines.push(`  ${JSON.stringify(id)}: ${JSON.stringify(best[0])}`);
+  else orphans.push(id);
+}
+// 手寫 JSON 以保持字串排序（JSON.stringify 會把像陣列索引的 id 排到最前面）
+writeFileSync(join(root, 'assets/data/flickr-fallbacks.json'), `{\n${fallbackLines.join(',\n')}\n}\n`);
+console.log(`fallbacks=${fallbackLines.length}`);
+if (orphans.length) { console.error(`NO LOCAL COPY: ${orphans.join(', ')}`); process.exitCode = 1; }
