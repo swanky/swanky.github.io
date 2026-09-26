@@ -20,7 +20,7 @@ yml（寫真館：title／count／chapters／subtitle／lead／cover=檔名／vo
   <div class="sm-case__body">
     <p class="sm-eyebrow">概念作品 · 自主企劃{% if bc_when and bc_when != '' %} · {{ bc_when }}{% endif %}</p>
     <h3 class="sm-case__title"><a href="{{ bc_b.url | relative_url }}">《{{ bc.title }}》</a></h3>
-    <p class="sm-case__meta"><a href="{{ '/photography/models/talent/' | append: include.t.slug | append: '/' | relative_url }}">{{ include.t.name }}</a> · {{ bc.count }} 張 · {{ bc.chapters.size }} 章{% if bc_setting %} · {{ bc_setting }}{% endif %}</p>
+    <p class="sm-case__meta">{% if bc.models %}{% for person in bc.models %}{% assign talent = site.data.models.talents | where: "name", person | first %}<a href="{{ '/photography/models/talent/' | append: talent.slug | append: '/' | relative_url }}">{{ person }}</a>{% unless forloop.last %}與{% endunless %}{% endfor %}{% else %}<a href="{{ '/photography/models/talent/' | append: include.t.slug | append: '/' | relative_url }}">{{ include.t.name }}</a>{% endif %} · {{ bc.count }} 張 · {{ bc.chapters.size }} 章{% if bc_setting %} · {{ bc_setting }}{% endif %}</p>
     <p class="sm-case__desc">{{ bc_desc }}</p>
     <div class="sm-case__links">
       <a class="sm-btn sm-btn--ghost" href="{{ bc_b.url | relative_url }}">翻閱整本</a>

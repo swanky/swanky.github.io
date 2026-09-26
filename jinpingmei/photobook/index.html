@@ -50,8 +50,8 @@ permalink: /jinpingmei/photobook/
   {%- assign total = 0 -%}
   {%- for p in pb.packs -%}{%- assign total = total | plus: p.shots.size -%}{%- endfor -%}
   {%- assign npacks = pb.packs.size -%}
-  {%- assign nalbums = 0 -%}
-  {%- for p in pb.packs -%}{%- if p.albums -%}{%- assign nalbums = nalbums | plus: p.albums.size -%}{%- endif -%}{%- endfor -%}
+  {%- assign albums = pb.packs | map: "albums" | map: "data" | compact | uniq -%}
+  {%- assign nalbums = albums.size -%}
 
   <main id="pb-main">
 
@@ -137,7 +137,7 @@ permalink: /jinpingmei/photobook/
           {%- capture alurl %}/jinpingmei/photobook/{{ al.slug }}/{% endcapture -%}
           {%- if al.photos -%}
             {%- comment -%}移交包 JSON schema（photos[]／model／setting／description／cover_photo／pdf 絕對路徑；pdf_size 由 albums 條目提供）。{%- endcomment -%}
-            {%- assign alname = al.model -%}{%- assign alsubtitle = al.setting -%}{%- assign allead = al.description -%}
+            {%- assign alname = al.model -%}{%- if al.models -%}{%- assign alname = al.models | join: "與" -%}{%- endif -%}{%- assign alsubtitle = al.setting -%}{%- assign allead = al.description -%}
             {%- assign covidx = al.cover_photo | minus: 1 -%}{%- assign alcovershot = al.photos[covidx] -%}
             {%- assign alcover = alcovershot.preview -%}
             {%- if alcovershot.height > alcovershot.width -%}{%- assign alcw = 640 -%}{%- assign alch = 960 -%}{%- else -%}{%- assign alcw = 960 -%}{%- assign alch = 640 -%}{%- endif -%}
@@ -148,17 +148,17 @@ permalink: /jinpingmei/photobook/
             {%- assign alcovershot = al.chapters[0].shots[0] -%}{%- assign alcw = 480 -%}{%- assign alch = 720 -%}
             {%- capture alpdf %}{{ alurl }}{{ al.pdf }}{% endcapture -%}{%- assign alpdfsize = al.pdf_size -%}
           {%- endif -%}
-          <aside class="pb-album-link reveal" aria-labelledby="pb-album-{{ al.slug }}">
+          <aside class="pb-album-link reveal" aria-labelledby="pb-album-{{ p.slug }}-{{ al.slug }}">
             <a class="pb-album-link-cover" href="{{ alurl | relative_url }}" tabindex="-1" aria-hidden="true">
               <figure class="pb-print"><img src="{{ alcover | relative_url }}" alt="" width="{{ alcw }}" height="{{ alch }}" loading="lazy" decoding="async"><figcaption><span class="fno">封面</span><span class="fcap">{{ alcovershot.title }}</span></figcaption></figure>
             </a>
             <div>
               <span class="pb-album-link-kicker">整本寫真集{% if al.volume %} · {{ al.volume }}{% endif %}</span>
-              <h3 id="pb-album-{{ al.slug }}">{{ al.title }}<small>{{ alname }} · {{ alsubtitle }} · {{ al.count }} 張寫真</small></h3>
+              <h3 id="pb-album-{{ p.slug }}-{{ al.slug }}">{{ al.title }}<small>{{ alname }} · {{ alsubtitle }} · {{ al.count }} 張寫真</small></h3>
               <p>{{ allead }}</p>
               <div class="pb-album-link-ctas">
                 <a class="act-cta" href="{{ alurl | relative_url }}">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
-                <a class="pb-cta" href="{{ alpdf | relative_url }}" download>下載完整寫真集（PDF，{{ alpdfsize }}）</a>
+                <a class="pb-cta" href="{{ alpdf | relative_url }}" download>下載完整寫真集（{{ alpdfsize }}）</a>
               </div>
             </div>
           </aside>

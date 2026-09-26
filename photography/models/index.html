@@ -2,7 +2,7 @@
 layout: models
 title: SWANKY MODELS｜虛擬模特兒經紀
 seo_title: SWANKY MODELS 虛擬模特兒經紀｜史旺基旗下 AI 虛擬人物與概念寫真
-description: SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、李瓶兒、潘金蓮三位寫真模特兒與六本概念寫真集，另有史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象；全部由 AI 生成，並非真人照片。
+description: SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、李瓶兒、潘金蓮三位寫真模特兒與七本概念寫真集，另有史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象；全部由 AI 生成，並非真人照片。
 keywords: SWANKY MODELS,虛擬模特兒,虛擬模特兒經紀,虛擬人物,AI 生成影像,史旺姬,李瓶兒,潘金蓮,史旺基
 nav_active: photography
 breadcrumbs:
@@ -80,6 +80,18 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
   {%- assign spread_talents = pub | where_exp: "t", "t.spread" | where_exp: "t", "t.slug != 'swanky-ji'" -%}
   <section class="sm-spreads" aria-labelledby="sm-spreads-title">
     <h2 class="sm-shell sm-board__division" id="sm-spreads-title">寫真集</h2>
+    {% assign shared = site.data.beyond_the_frame %}
+    <div class="sm-shell sm-cases">
+      <article class="sm-case">
+        <a class="sm-case__media sm-media" href="{{ shared.permalink | relative_url }}"><img src="{{ shared.card_image | relative_url }}" alt="李瓶兒與潘金蓮《畫面之外》封面（AI 生成，成年虛構角色）" width="640" height="480" loading="lazy" decoding="async"></a>
+        <div class="sm-case__body">
+          <p class="sm-eyebrow">李瓶兒與潘金蓮 · 36 張 · 五章</p>
+          <h3 class="sm-case__title"><a href="{{ shared.permalink | relative_url }}">《{{ shared.title }}》</a></h3>
+          <p class="sm-case__desc">{{ shared.description }}</p>
+        </div>
+      </article>
+    </div>
+
     {% if spread_talents.size > 0 %}
     <div class="sm-shell sm-spreads__pair">
       {% for t in spread_talents %}

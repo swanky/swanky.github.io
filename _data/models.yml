@@ -98,6 +98,7 @@ talents:
     digital: true
     spread: { book: jinpingmei_photobook_vl20, kind: yml, n: 18, mobile_n: 1 }   # 首頁跨頁：最新一本《瓶中有光》的橫幅（紙牡丹）；手機改直幅封面 01
     books:
+      - { data: beyond_the_frame, kind: json, url: /jinpingmei/photobook/beyond-the-frame/, pdf_size: 約 21 MB }
       - { data: jinpingmei_photobook_lp36, kind: yml, url: /jinpingmei/photobook/li-pinger-no-hurry/ }
       - { data: jinpingmei_photobook_vl20, kind: yml, url: /jinpingmei/photobook/li-pinger-vessel-of-light/ }
 
@@ -117,6 +118,7 @@ talents:
     digital: true
     spread: { book: pan_jinlian_tonight_she_opens, kind: json, n: 1, mobile_n: 2 }   # 首頁跨頁：封面 12 為直幅，改用 01「門外的藍」（橫幅）；手機用 02「一張給你」
     books:
+      - { data: beyond_the_frame, kind: json, url: /jinpingmei/photobook/beyond-the-frame/, pdf_size: 約 21 MB }
       - { data: pan_jinlian_tonight_she_opens, kind: json, url: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/, pdf_size: 約 24 MB }
       - { data: pan_jinlian_she_sees_it_first, kind: json, url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/, pdf_size: 約 21 MB }
 

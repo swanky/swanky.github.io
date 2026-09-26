@@ -13,7 +13,7 @@
   {%- comment -%}獨立寫真集（packs[].albums）——有才輸出。{%- endcomment -%}
   {%- if pack.albums -%}{%- for a in pack.albums -%}{%- assign al = site.data[a.data] -%}{%- capture alurl %}/jinpingmei/photobook/{{ al.slug }}/{% endcapture -%}
   {%- if al.photos -%}{%- assign alpdf = al.pdf -%}{%- assign alpdfsize = a.pdf_size -%}{%- else -%}{%- capture alpdf %}{{ alurl }}{{ al.pdf }}{% endcapture -%}{%- assign alpdfsize = al.pdf_size -%}{%- endif -%}
-  <p>另有整本寫真集《<a href="{{ alurl | relative_url }}">{{ al.title }}</a>》（{{ al.count }} 張，可線上翻閱或<a href="{{ alpdf | relative_url }}" download>下載完整寫真集</a>，PDF，{{ alpdfsize }}）。</p>
+  <p>另有整本寫真集《<a href="{{ alurl | relative_url }}">{{ al.title }}</a>》（{{ al.count }} 張，可線上翻閱或<a href="{{ alpdf | relative_url }}" download>下載完整寫真集</a>，{{ alpdfsize }}）。</p>
   {%- endfor -%}{%- endif -%}</div>
   {%- comment -%}單張的 pack 也維持兩欄格線，避免直式寫真在桌機撐到全版寬。{%- endcomment -%}
   {%- assign pbcols = pack.shots | size -%}

@@ -2,7 +2,7 @@
 layout: models
 title: 作品案例｜SWANKY MODELS
 seo_title: 作品案例｜SWANKY MODELS 虛擬模特兒經紀
-description: SWANKY MODELS 作品案例：六本概念寫真集（史旺姬兩本、李瓶兒兩本、潘金蓮兩本），皆為自主企劃的概念作品，不是商業委託；全部影像由 AI 生成，可線上翻閱、下載 PDF 並對照 Flickr 相簿。
+description: SWANKY MODELS 作品案例：七本概念寫真集（史旺姬、李瓶兒、潘金蓮各兩本，另有李瓶兒與潘金蓮共同演出的《畫面之外》），皆為自主企劃的概念作品，不是商業委託；全部影像由 AI 生成，可線上翻閱、下載完整寫真集並對照 Flickr 相簿。
 keywords: SWANKY MODELS,概念寫真集,虛擬模特兒作品,史旺姬,李瓶兒,潘金蓮,AI 生成影像,史旺基
 nav_active: photography
 breadcrumbs:
@@ -21,7 +21,8 @@ og_image: /assets/img/photography/pan-jinlian-she-sees-it-first/cover.jpg
 permalink: /photography/models/work/
 ---
 {% assign m = site.data.models %}
-{%- assign work_total = 0 -%}{%- for t in m.talents -%}{%- assign work_total = work_total | plus: t.books.size -%}{%- endfor -%}
+{%- assign works = m.talents | map: "books" | map: "data" | uniq -%}
+{%- assign work_total = works.size -%}
 <main id="main" class="sm-page sm-workpage">
   {% include models/nav.html %}
 
@@ -34,7 +35,9 @@ permalink: /photography/models/work/
 
   <section class="sm-section" aria-label="概念寫真集">
     <div class="sm-shell sm-cases">
+      {% assign seen = "|" %}
       {% for t in m.talents %}{% for b in t.books %}
+        {% assign key = b.data | prepend: "|" | append: "|" %}{% if seen contains key %}{% continue %}{% endif %}{% assign seen = seen | append: key %}
         {% include models/book-card.html b=b t=t sizes="(max-width: 767px) calc(100vw - 32px), 460px" sizes_portrait="(max-width: 767px) calc(100vw - 32px), 400px" %}
       {% endfor %}{% endfor %}
     </div>
@@ -47,7 +50,7 @@ permalink: /photography/models/work/
         <p>四件事，讓你知道眼前這些影像是什麼、不是什麼。</p>
       </header>
       <ol class="sm-bullets">
-        <li>每本都可以在作品頁逐張線上翻閱，也提供完整寫真集 PDF 免費下載；每張影像都附 Flickr 連結，可對照原始上傳。</li>
+        <li>每本都可以在作品頁逐張線上翻閱，也提供完整寫真集免費下載；每張影像都附 Flickr 連結，可對照原始上傳。</li>
         <li>人物與場景皆由 AI 生成，並非真人實拍；作品頁都寫明製作方式與虛構場景，改編角色另交代原著來源。</li>
         <li>史旺基負責企劃、視覺統籌、選片與審定；創作保留攝影對人物、光線、動作與空間的安排。</li>
         <li>這些是概念作品，不是商業委託；想討論合作，請到<a href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>。</li>

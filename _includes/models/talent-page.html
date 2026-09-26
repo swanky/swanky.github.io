@@ -82,7 +82,8 @@
         <div class="sm-strip" role="list">
           {% for c in bk.chapters %}
             {%- if b.kind == 'json' -%}
-              {%- assign cf = bk.photos | where: "chapter", c.number | first -%}{%- assign cf_n = cf.order -%}
+              {%- assign chapter_key = c.number | default: c.id -%}
+              {%- assign cf = bk.photos | where: "chapter", chapter_key | first -%}{%- assign cf_n = cf.order -%}
             {%- else -%}
               {%- assign cf = c.shots | first -%}{%- assign cf_n = cf.n -%}
             {%- endif -%}
@@ -95,7 +96,7 @@
         </div>
         <div class="sm-book__links">
           <a class="sm-btn sm-btn--ghost" href="{{ b.url | relative_url }}">翻閱整本《{{ bk.title }}》</a>
-          {% if bk_pdf %}<a class="sm-textlink" href="{{ bk_pdf | relative_url }}" download>下載完整寫真集（PDF{% if bk_pdf_size %}，{{ bk_pdf_size }}{% endif %}）</a>{% endif %}
+          {% if bk_pdf %}<a class="sm-textlink" href="{{ bk_pdf | relative_url }}" download>下載完整寫真集{% if bk_pdf_size %}（{{ bk_pdf_size }}）{% endif %}</a>{% endif %}
           {% if bk.flickr_album %}<a class="sm-textlink" href="{{ bk.flickr_album }}" target="_blank" rel="noopener noreferrer">在 Flickr 看相簿 ↗</a>{% endif %}
         </div>
       </article>

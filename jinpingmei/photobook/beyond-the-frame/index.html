@@ -1,0 +1,235 @@
+---
+layout: null
+title: 李瓶兒與潘金蓮《畫面之外》｜金瓶梅角色寫真集
+description: 李瓶兒與潘金蓮把海收進手裡、讓牆鬆開，也把天氣交給彼此。36 張概念影像，重新安排觀看與被觀看的位置。
+permalink: /jinpingmei/photobook/beyond-the-frame/
+---
+{%- comment -%}核准公開資料逐位元匯入；保留五章、36 張順序、完整構圖與圖說。{%- endcomment -%}
+{%- assign book = site.data.beyond_the_frame -%}
+{%- assign pdf_size = '約 21 MB' -%}
+{%- assign ai_tag = '（AI 生成，非真人照片）' -%}
+
+{%- assign cover = book.photos | where: "order", book.cover_photo | first -%}
+
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="Swanky Studio 史旺基工作室">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ book.og_image | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面，AI 生成的成年虛構角色影像">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ book.og_image | absolute_url }}">
+  <meta name="twitter:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面，AI 生成的成年虛構角色影像">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.description | append: ' ' | append: book.disclosure | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "image": {{ book.og_image | absolute_url | jsonify }},
+    "datePublished": {{ book.published_date | jsonify }},
+    "inLanguage": "zh-TW",
+    "creator": {"@type": "Person", "name": "史旺基 Swanky"},
+    "associatedMedia": [{% for p in book.photos %}
+      {"@type": "ImageObject", "name": {{ p.title | jsonify }}, "caption": {{ p.caption | jsonify }}, "contentUrl": {{ p.image | absolute_url | jsonify }}, "width": {{ p.width }}, "height": {{ p.height }}, "sameAs": {{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+    ],
+    "hasPart": {"@type": "Book", "name": "畫面之外", "numberOfPages": {{ book.pdf_pages }}, "url": {{ book.pdf | absolute_url | jsonify }}, "inLanguage": "zh-TW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"主頁","item":{{ '/' | absolute_url | jsonify }}},
+    {"@type":"ListItem","position":2,"name":"金瓶梅宇宙","item":{{ '/jinpingmei/' | absolute_url | jsonify }}},
+    {"@type":"ListItem","position":3,"name":"寫真館","item":{{ '/jinpingmei/photobook/' | absolute_url | jsonify }}},
+    {"@type":"ListItem","position":4,"name":"畫面之外","item":{{ page.url | absolute_url | jsonify }}}
+  ]}
+  </script>
+  <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+  {% include jinpingmei/lightbox-css.html %}
+  <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260915-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260924-1" rel="stylesheet">
+  <style>
+    .jpm-btf a:focus-visible { outline: 2px solid var(--jpm-gold-bright); outline-offset: 5px; }
+    .jpm-btf .lp-flickr { padding-block: .6rem; color: #604718; }
+    .jpm-btf .lp-flickr:hover { color: #2f2617; }
+    .jpm-btf .lp-print a:focus-visible { outline-color: #604718; }
+    .jpm-btf .lp-chapter { scroll-margin-top: 90px; }
+  </style>
+  {% include jinpingmei/gtag.html %}
+</head>
+<body class="jpm jpm-pb jpm-lp jpm-btf">
+  <a class="jpm-skip" href="#pb-main">跳到主要內容</a>
+
+  <header class="jpm-topbar">
+    <a class="jpm-brand" href="{{ '/jinpingmei/' | relative_url }}"><span class="jpm-seal" aria-hidden="true">金</span><span>金瓶梅宇宙<small>JIN PING MEI UNIVERSE</small></span></a>
+    <nav class="jpm-topnav" aria-label="宇宙導覽">
+      <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+      <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+      <a class="hide-m" href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+      <a class="hide-m" href="{{ '/' | relative_url }}">回主站</a>
+    </nav>
+  </header>
+
+  <main id="pb-main">
+
+    <!-- ── 開卷 ── -->
+    <section class="jpm-section lp-hero">
+      <div class="jpu-hero jpm-shell">
+        <div>
+          <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真集</span></p>
+          <h1 class="act-title reveal">{{ book.title }}<small>{{ book.subtitle }} · {{ book.count }} 張寫真</small></h1>
+          <p class="act-lead reveal">{{ book.statement[0] }}<br>{{ book.disclosure }}</p>
+          <div class="act-cta-row reveal">
+            <a class="act-cta" href="#photos">翻開 {{ book.count }} 張寫真<i aria-hidden="true">→</i></a>
+            <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>{{ book.pdf_pages }} 頁 · {{ pdf_size }}</small></a>
+          </div>
+          <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ '/jinpingmei/characters/lipinger/' | relative_url }}">認識李瓶兒 →</a><a href="{{ '/jinpingmei/characters/panjinlian/' | relative_url }}">認識潘金蓮 →</a><a href="{{ book.flickr_album }}" target="_blank" rel="noopener">在 Flickr 看相簿 ↗</a></p>
+        </div>
+        <figure class="pb-print lp-cover reveal">
+          <img src="{{ cover.preview | relative_url }}" srcset="{{ cover.preview | relative_url }} {{ cover.preview_width }}w, {{ cover.image | relative_url }} {{ cover.width }}w" sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+          <figcaption><span class="fno">封面</span><span class="fcap">{{ cover.title }}</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── 創作理念 ── -->
+    <div class="jpm-shell">
+      <blockquote class="lp-foreword reveal">
+        {%- for para in book.statement offset:1 %}
+        <p>{{ para }}</p>
+        {%- endfor %}
+        <footer>創作理念</footer>
+      </blockquote>
+    </div>
+
+    <!-- ── 目次 ── -->
+    <nav class="jpm-shell lp-toc reveal" aria-label="章節目次">
+      {%- for c in book.chapters %}
+      <a href="#chapter-{{ c.id }}"><b>{{ c.id }}</b>{{ c.title }}</a>
+      {%- endfor %}
+    </nav>
+
+    <!-- ── 五章・三十六幀 ── -->
+    <div id="photos">
+      {%- for c in book.chapters %}
+      {%- assign shots = book.photos | where: "chapter", c.id -%}
+      {%- capture first_no %}{% if shots.first.order < 10 %}0{% endif %}{{ shots.first.order }}{% endcapture -%}
+      {%- capture last_no %}{% if shots.last.order < 10 %}0{% endif %}{{ shots.last.order }}{% endcapture -%}
+      <section class="lp-chapter" id="chapter-{{ c.id }}" aria-labelledby="lp-ch-{{ c.id }}">
+        <div class="jpm-shell">
+          <header class="lp-chapter-head reveal">
+            <h2 id="lp-ch-{{ c.id }}"><span class="lp-ch-no">{{ c.id }}</span>{{ c.title }}</h2>
+            <span class="lp-ch-count">{{ shots.size }} 幀 · No.{{ first_no }}–{{ last_no }}</span>
+          </header>
+          <p class="lp-ch-text reveal">{{ c.copy }}</p>
+          {%- assign pending = false -%}
+          {%- for p in shots -%}
+          {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+          {%- capture fig %}
+            <figure class="pb-print lp-print lp-print--captioned" id="photo-{{ nn }}">
+              <a href="{{ p.image | relative_url }}" class="jpm-zoom" data-gallery="beyond-the-frame" title="No.{{ nn }} {{ p.caption }}{{ ai_tag }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}"><img src="{{ p.preview | relative_url }}" srcset="{{ p.preview | relative_url }} {{ p.preview_width }}w, {{ p.image | relative_url }} {{ p.width }}w" sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 60px), 520px{% else %}(max-width: 720px) calc(100vw - 60px), (max-width: 1200px) calc(100vw - 100px), 1090px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async"></a>
+              <figcaption>
+                <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.caption }}</span>
+                <a class="lp-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>
+              </figcaption>
+            </figure>
+          {%- endcapture -%}
+          {%- if p.height > p.width -%}
+            {%- if pending %}
+            {{ fig }}
+          </div>
+              {%- assign pending = false -%}
+            {%- else -%}
+              {%- assign nxt = shots[forloop.index] -%}
+              {%- assign isduo = false -%}
+              {%- if nxt -%}{%- if nxt.height > nxt.width -%}{%- assign isduo = true -%}{%- endif -%}{%- endif -%}
+              {%- if isduo %}
+          <div class="lp-row lp-row--duo">
+            {{ fig }}
+                {%- assign pending = true -%}
+              {%- else %}
+          <div class="lp-row lp-row--solo">
+            {{ fig }}
+          </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- else %}
+          <div class="lp-row {% if p.height == p.width %}lp-row--solo{% else %}lp-row--wide{% endif %}">
+            {{ fig }}
+          </div>
+          {%- endif -%}
+          {%- endfor %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
+
+    <!-- ── 整本帶走 ── -->
+    <div class="jpm-shell">
+      <aside class="pb-teaser lp-download reveal" aria-label="下載寫真集">
+        <b>整本帶走</b>
+        <p>{{ book.count }} 張寫真裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
+        <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>{{ book.pdf_pages }} 頁 · {{ pdf_size }}</small></a>
+        <p><a href="{{ '/jinpingmei/photobook/' | relative_url }}">回寫真館，看其他角色的寫真 →</a> <a href="{{ book.flickr_album }}" target="_blank" rel="noopener">或到 Flickr 看整本相簿 ↗</a></p>
+      </aside>
+    </div>
+
+    <!-- ── 凡例 ── -->
+    <div class="jpm-shell">
+      <aside class="paiji reveal" aria-labelledby="lp-paiji">
+        <div class="paiji-frame">
+          <p class="paiji-head" id="lp-paiji"><b>凡例</b><small>本輯的誠實標示</small></p>
+          <ul>
+            <li>{{ book.disclosure }}</li>
+            <li>{{ book.setting }}。{{ book.creator }}企劃、統籌、選片與審定。</li>
+            <li>原典含成人內容，建議成年讀者。</li>
+            <li>兩位角色的原著介紹，見角色研究館的<a href="{{ '/jinpingmei/characters/lipinger/' | relative_url }}">李瓶兒</a>與<a href="{{ '/jinpingmei/characters/panjinlian/' | relative_url }}">潘金蓮</a>檔案；其他角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。</li>
+            <li>旗下虛擬人物的作品與合作原則，見<a href="{{ '/photography/models/' | relative_url }}">SWANKY MODELS 虛擬模特兒經紀</a>。</li>
+            <li>每一幀都附 Flickr 連結，可對照原始上傳；本輯以數位形式公開，完整寫真集可免費下載。</li>
+            <li>延伸閱讀：創作方法與想法，見專欄〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉與〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉。</li>
+          </ul>
+          <span class="paiji-seal" aria-hidden="true"><i>寫真集</i></span>
+        </div>
+      </aside>
+      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。圖像：AI 生成；場景為虛構。</p>
+    </div>
+  </main>
+
+  <footer class="jpm-footer">
+    <div class="jpm-shell">
+      <span>金瓶梅宇宙 · Swanky Studio 史旺基工作室</span>
+      <nav aria-label="宇宙導覽">
+        <a href="{{ '/jinpingmei/' | relative_url }}">宇宙總覽</a>
+        <a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>
+        <a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>
+        <a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>
+        <a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>
+        <a href="{{ '/jinpingmei/credits/' | relative_url }}">圖像來源</a>
+        <a href="{{ '/' | relative_url }}">回主站</a>
+      </nav>
+    </div>
+  </footer>
+  {% include jinpingmei/lightbox.html %}
+  <script src="{{ '/assets/js/jinpingmei-universe.js' | relative_url }}?v=20260808-3" defer></script>
+</body>
+</html>
