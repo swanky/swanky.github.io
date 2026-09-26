@@ -9,6 +9,17 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const read = name => readFileSync(join(root, name), 'utf8');
 const photos = JSON.parse(read('_data/flickr_static.json'));
 const paths = JSON.parse(read('_data/flickr_image_paths.json'));
+const fallbacks = JSON.parse(read('assets/data/flickr-fallbacks.json'));
+
+test('Flickr CDN failures resolve to reviewed local copies of every mapped photo', () => {
+  assert.deepEqual(Object.keys(fallbacks).sort(), Object.keys(photos).sort());
+  for (const [id, image] of Object.entries(fallbacks)) {
+    assert.equal(paths[image], id, `Fallback changes photo identity: ${id}`);
+    assert.ok(existsSync(join(root, image)), `Missing fallback: ${image}`);
+  }
+  const book = JSON.parse(read('_data/nft_seven_eight.json'));
+  for (const p of book.photos) assert.equal(fallbacks[p.flickr_id], p.image);
+});
 
 test('Flickr mappings resolve existing assets to uncropped, correctly sized images of the same photo', () => {
   for (const [path, id] of Object.entries(paths)) {
