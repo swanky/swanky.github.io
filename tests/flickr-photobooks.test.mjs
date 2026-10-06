@@ -45,7 +45,8 @@ test('Flickr mappings resolve existing assets to uncropped, correctly sized imag
 
 test('Seven Names preserves the approved release, all 42 photos, seven chapters and the a04 image', () => {
   const source = readFileSync(join(root, '_data/nft_seven_eight.json'));
-  assert.equal(createHash('sha256').update(source).digest('hex'), '00fde96786bdfb49f64e0c9efc051ec020d12ff49fa5544854ed63560f3fb907');
+  // 攝影 repo published-v2（2026-10-06 文字勘誤）：handoffs/nft-seven-eight-2026-09-26/published-v2/website.json
+  assert.equal(createHash('sha256').update(source).digest('hex'), 'bb118b9d41eecd414f0b8cb55f8ab168e426802dba3aa4480e7a981114cb89e3');
   const book = JSON.parse(source);
   assert.equal(book.pdf_pages, 52);
   assert.equal(book.character_count, 7);

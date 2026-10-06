@@ -8,7 +8,7 @@
   "character_count": 7,
   "presentation_count": 8,
   "description": "七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。人物與場景由 AI 生成，可逐張觀看並下載完整寫真集。",
-  "statement": "七個名字，並不只有七種站在世界裡的方法。帽飾需要替門框讓位，瓷紋碰見冰，方塊的手學著製圓；同一個名字，也能以兩種身體並肩走。42 張影像，從空間、碰觸與同行，走到光環也能下班的時刻。",
+  "statement": "七個名字，並不只有七種站在世界裡的方法。帽飾需要替門框讓位，瓷紋碰見冰，方塊的手學著做圓；同一個名字，也能以兩種身體並肩走。42 張影像，從空間、碰觸與同行，走到光環也能下班的時刻。",
   "disclosure": "七位角色以史旺基收藏的 NFT 圖像為身份來源，人物與場景由 AI 生成，非真人實拍。人類呈現為明確成年改編；Meebit 同時保留方塊與成年女性呈現，MAYC 保留猿類呈現。史旺基 Swanky 企劃、選片與審定。個人藝術創作展示，非 NFT 官方故事或合作。",
   "chapters": [
     {
@@ -20,7 +20,7 @@
     {
       "id": "02",
       "title": "觸到邊界的時候",
-      "cast": "Bunny 邦妮 / CloneX #15755",
+      "cast": "Bunny 邦妮／CloneX #15755",
       "copy": "光在瓷紋上停一下。指尖遇見冰，眼睛透過融化的邊緣；最後，身體走過那一層薄薄的牆。"
     },
     {
@@ -32,25 +32,25 @@
     {
       "id": "04",
       "title": "笑容有自己的光",
-      "cast": "Sparky / CloneX #9268",
+      "cast": "Sparky／CloneX #9268",
       "copy": "銀色先藏在笑裡，又散進一張皺起的薄箔。水面把臉分成兩半，風把笑帶走；躺下以後，亮點還在。"
     },
     {
       "id": "05",
       "title": "同一個名字，兩種觸感",
-      "cast": "Meebit #10829 / 方塊與女性擬人呈現",
+      "cast": "Meebit #10829／方塊與女性擬人呈現",
       "copy": "方手留下方印，指尖照顧不圓的邊。相同的名字，學會兩種碰觸；有時一起做一只碗，有時只是靠一下。"
     },
     {
       "id": "06",
       "title": "肩上的同行者",
-      "cast": "MAYC #17854 / 猿類擬真呈現",
+      "cast": "MAYC #17854／猿類擬真呈現",
       "copy": "出門時總有同行者。傘向肩上偏一點，雨還留在窗外；回程的座位，容得下彼此。"
     },
     {
       "id": "07",
       "title": "光環也需要下班",
-      "cast": "CloneX #17474 / 女性呈現",
+      "cast": "CloneX #17474／女性呈現",
       "copy": "光環先像一個宣告，後來只是陪著她。蹲下、坐下，替朋友扶住一場風；修完鐘，夜車讓眼睛慢慢合上。"
     }
   ],
@@ -186,7 +186,7 @@
       "order": 6,
       "id": "bunny-held-diagonal-a01",
       "title": "透明的支點",
-      "caption": "身體把一條斜線交给椅背。",
+      "caption": "身體把一條斜線交給椅背。",
       "chapter": "02",
       "width": 1024,
       "height": 1536,
@@ -226,7 +226,7 @@
       "chapter": "02",
       "width": 1254,
       "height": 1254,
-      "orientation": "portrait",
+      "orientation": "square",
       "characters": [
         "bunny-15755"
       ],
@@ -389,7 +389,7 @@
       "chapter": "04",
       "width": 1254,
       "height": 1254,
-      "orientation": "portrait",
+      "orientation": "square",
       "characters": [
         "clonex-9268"
       ],
@@ -479,7 +479,7 @@
       "chapter": "05",
       "width": 1254,
       "height": 1254,
-      "orientation": "portrait",
+      "orientation": "square",
       "characters": [
         "meebit-10829"
       ],
@@ -533,7 +533,7 @@
       "chapter": "05",
       "width": 1254,
       "height": 1254,
-      "orientation": "portrait",
+      "orientation": "square",
       "characters": [
         "meebit-10829"
       ],
@@ -677,7 +677,7 @@
       "chapter": "06",
       "width": 1254,
       "height": 1254,
-      "orientation": "portrait",
+      "orientation": "square",
       "characters": [
         "mayc-17854"
       ],
@@ -855,5 +855,5 @@
   "cover": "/assets/img/photography/nft-seven-eight/cover.jpg",
   "pdf": "/assets/downloads/nft-seven-eight/Seven-Names-Eight-Presences-42.pdf",
   "flickr_album": "https://www.flickr.com/photos/88607481@N00/albums/72177720335843364/",
-  "permalink": "/photography/nft-seven-eight/"
+  "permalink": "/nft/photobook/seven-names-eight-presences/"
 }
