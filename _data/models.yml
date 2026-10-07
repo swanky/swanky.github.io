@@ -83,6 +83,7 @@ talents:
     digital: true   # 名冊照 /assets/img/photography/models/digitals/swanky-ji.webp（2026-09-25 同棚同光三張之一）
     spread: { book: swanky_ji_open_worlds, kind: json, n: 35, mobile_n: 26 }   # 首頁跨頁：代表作封面（橫幅）；手機改直幅 26「拉開布幕的一角」
     books:
+      - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }
       - { data: swanky_ji_open_worlds, kind: json, url: /photography/swanky-ji-open-worlds/ }
 

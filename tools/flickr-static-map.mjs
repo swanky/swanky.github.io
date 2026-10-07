@@ -25,7 +25,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, '_data/flickr_static.json');
 const refresh = process.argv.includes('--refresh');
 const ids = new Set();
-for (const name of ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'pan_jinlian_she_sees_it_first', 'pan_jinlian_tonight_she_opens', 'beyond_the_frame', 'nft_seven_eight', ...JSON.parse(readFileSync(join(root, '_data/photography_books_2026_10.json'), 'utf8')).map(b => b.data)]) {
+for (const name of ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'swanky_ji_moon_lost_property', 'pan_jinlian_she_sees_it_first', 'pan_jinlian_tonight_she_opens', 'beyond_the_frame', 'nft_seven_eight', ...JSON.parse(readFileSync(join(root, '_data/photography_books_2026_10.json'), 'utf8')).map(b => b.data)]) {
   const file = join(root, '_data', `${name}.json`);
   if (existsSync(file)) for (const p of JSON.parse(readFileSync(file, 'utf8')).photos) ids.add(String(p.flickr_id));
 }

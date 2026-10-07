@@ -1,0 +1,148 @@
+---
+layout: home
+title: 史旺姬《月亮的失物招領》
+seo_title: 史旺姬《月亮的失物招領》｜史旺基原創虛擬人物影像
+description: 史旺姬《月亮的失物招領》：36 幅原創虛擬人物影像，走過遺失物大廳、雨的寄物間與星星的貨運站，在九段夢境裡重新認識失去與保存。
+keywords: 史旺姬,月亮的失物招領,虛擬人物,AI 生成影像,虛擬角色經紀公司,史旺基
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: SWANKY MODELS 虛擬模特兒經紀
+    url: /photography/models/
+  - name: 史旺姬
+    url: /photography/models/talent/swanky-ji/
+  - name: 月亮的失物招領
+    url: /photography/swanky-ji-moon-lost-property/
+use_glightbox: true
+use_photography_author: true
+preconnect_flickr: true
+og_image: /assets/img/photography/swanky-ji-moon-lost-property/cover.jpg
+permalink: /photography/swanky-ji-moon-lost-property/
+---
+{%- comment -%}
+史旺姬《月亮的失物招領》作品頁。全資料驅動：_data/swanky_ji_moon_lost_property.json（移交包照搬，只把 pdf 換成 GitHub Releases 下載網址；圖說／alt／章節文／揭露句皆從資料讀，不改寫）。
+這本的移交資料沒有 statement 欄位，介紹區只用 lead 與 description，不另寫創作理念。
+封面區用移交的第 29 張封面衍生圖（全畫幅加深藍留邊，人物不裁切），點開放大接第 29 張原圖。
+版面沿用 /photography/swanky-ji-everyday-light/：橫幅跨兩欄、直幅兩兩成對、孤直幅置中。
+{%- endcomment -%}
+{% assign book = site.data.swanky_ji_moon_lost_property %}
+{% assign pdf_size = '約 40 MB' %}
+{% assign ai_tag = '（AI 生成，非真人照片）' %}
+{% assign cover = book.photos | where: "order", book.cover_photo | first %}
+{% capture hero_intro %}{{ book.lead }} {{ book.disclosure }}{% endcapture %}
+{% capture pdf_label %}下載完整寫真集（{{ pdf_size }}）{% endcapture %}
+<main id="main" class="photo-author-page photo-author-subpage sjw-page">
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label=pdf_label %}
+  {% include photography/subpage-nav.html %}
+
+  <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
+    <div class="photo-author-shell">
+      <p class="sjw-meta">{{ book.count }} 張原創影像 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
+      <article class="photo-author-series-card sjw-cover">
+        <a href="{% include flickr/url.html id=cover.flickr_id image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjm-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
+          <img src="{{ book.og_image | relative_url }}" srcset="{{ '/assets/img/photography/swanky-ji-moon-lost-property/cover-card.jpg' | relative_url }} 640w, {{ book.og_image | relative_url }} 1600w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="1600" height="900" fetchpriority="high" decoding="async">
+        </a>
+        <div class="photo-author-series-copy">
+          <p class="photo-author-eyebrow">ABOUT · 封面 No.{{ cover.order }}</p>
+          <h3 id="statement-title">{{ book.lead }}</h3>
+          <p>{{ book.description }}</p>
+          <p>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</p>
+          <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">在 Flickr 看完整相簿 ↗</a>
+        </div>
+      </article>
+      <nav class="sjw-toc" aria-label="章節目次">
+        {% for c in book.chapters %}<a href="#chapter-{{ c.number }}"><b>0{{ c.number }}</b>{{ c.title }}</a>{% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  {% for c in book.chapters %}
+  {% assign shots = book.photos | where: "chapter", c.number %}
+  {% capture first_no %}{% if shots.first.order < 10 %}0{% endif %}{{ shots.first.order }}{% endcapture %}
+  {% capture last_no %}{% if shots.last.order < 10 %}0{% endif %}{{ shots.last.order }}{% endcapture %}
+  <section class="photo-author-section sjw-chapter" id="chapter-{{ c.number }}" aria-labelledby="chapter-{{ c.number }}-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">0{{ c.number }} · NINE CHAPTERS</p>
+        <div>
+          <h2 id="chapter-{{ c.number }}-title">{{ c.title }}</h2>
+          <p>{{ c.text | escape | newline_to_br }}</p>
+          <p class="sjw-count">{{ shots.size }} 張 · No.{{ first_no }}–{{ last_no }}</p>
+        </div>
+      </header>
+      <div class="sjw-grid">
+        {%- assign pending = false -%}
+        {%- for p in shots -%}
+        {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+        {%- if p.height > p.width -%}
+          {%- if pending -%}
+            {%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = false -%}
+          {%- else -%}
+            {%- assign nxt = shots[forloop.index] -%}
+            {%- assign cls = 'sjw-figure--solo' -%}
+            {%- if nxt -%}{%- if nxt.height > nxt.width -%}{%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = true -%}{%- endif -%}{%- endif -%}
+          {%- endif -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(50vw - 36px), 648px' -%}
+        {%- else -%}
+          {%- assign cls = 'sjw-figure--wide' -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
+        {%- endif %}
+        <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="sjm-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="sjw-no">No.{{ nn }}</span>
+            <span class="sjw-title">{{ p.title }}</span>
+            <a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a>
+            <p class="sjw-caption">{{ p.caption }}</p>
+          </figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <section class="photo-author-section photo-author-light sjw-closing" id="after" aria-labelledby="after-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ book.model }} × SWANKY</p>
+        <div>
+          <h2 id="after-title">把整本帶回家。</h2>
+          <p>{{ book.count }} 張影像依原作的九章順序排列，可以下載整本慢慢翻，也可以到 Flickr 逐張看。</p>
+        </div>
+      </header>
+      <div class="photo-author-archive-grid">
+        <a href="{{ book.pdf }}" class="photo-author-archive-card" download>
+          <h3>下載完整寫真集</h3>
+          <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
+          <span>下載整本 →</span>
+        </a>
+        <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer">
+          <h3>在 Flickr 看完整相簿</h3>
+          <p>{{ book.flickr_album_title }}。{{ book.count }} 張各自上傳，可逐張檢視。</p>
+          <span>前往 Flickr ↗</span>
+        </a>
+        <a href="{{ '/photography/models/talent/swanky-ji/' | relative_url }}" class="photo-author-archive-card">
+          <h3>SWANKY MODELS｜史旺姬</h3>
+          <p>史旺姬的個人介紹與作品集，收在虛擬模特兒經紀子站；其他模特兒也在那裡。</p>
+          <span>看史旺姬的檔案 →</span>
+        </a>
+      </div>
+      <aside class="sjw-notes" aria-labelledby="sjw-notes-title">
+        <p class="photo-author-eyebrow" id="sjw-notes-title">誠實標示</p>
+        <ul>
+          <li>{{ book.disclosure }}</li>
+          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序與圖說依原作編排。</li>
+          <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</li>
+          <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集共 {{ book.pdf_pages }} 頁，可免費下載。</li>
+        </ul>
+        <p class="sjw-credit">{{ book.creator }} · 2026 · 原創虛擬人物影像 · {{ book.title }}</p>
+      </aside>
+    </div>
+  </section>
+</main>
