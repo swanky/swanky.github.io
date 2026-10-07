@@ -137,7 +137,7 @@ permalink: /jinpingmei/photobook/
           {%- capture alurl %}/jinpingmei/photobook/{{ al.slug }}/{% endcapture -%}
           {%- if al.photos -%}
             {%- comment -%}移交包 JSON schema（photos[]／model／setting／description／cover_photo／pdf 絕對路徑；pdf_size 由 albums 條目提供）。{%- endcomment -%}
-            {%- assign alname = al.model -%}{%- if al.models -%}{%- assign alname = al.models | join: "與" -%}{%- endif -%}{%- assign alsubtitle = al.setting -%}{%- assign allead = al.description -%}
+            {%- assign alname = al.model | default: al.character -%}{%- if al.models -%}{%- assign alname = al.model | default: al.characters | join: "與" -%}{%- endif -%}{%- assign alsubtitle = al.setting | default: al.subtitle -%}{%- assign allead = al.description -%}
             {%- assign covidx = al.cover_photo | minus: 1 -%}{%- assign alcovershot = al.photos[covidx] -%}
             {%- assign alcover = alcovershot.preview -%}
             {%- if alcovershot.height > alcovershot.width -%}{%- assign alcw = 640 -%}{%- assign alch = 960 -%}{%- else -%}{%- assign alcw = 960 -%}{%- assign alch = 640 -%}{%- endif -%}
@@ -158,7 +158,7 @@ permalink: /jinpingmei/photobook/
               <p>{{ allead }}</p>
               <div class="pb-album-link-ctas">
                 <a class="act-cta" href="{{ alurl | relative_url }}">翻開 {{ al.count }} 張寫真<i aria-hidden="true">→</i></a>
-                <a class="pb-cta" href="{{ alpdf | relative_url }}" download>下載完整寫真集（{{ alpdfsize }}）</a>
+                <a class="pb-cta" href="{% include photography/download-url.html path=alpdf %}" download>下載完整寫真集（{{ alpdfsize }}）</a>
               </div>
             </div>
           </aside>

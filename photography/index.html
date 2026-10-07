@@ -179,6 +179,10 @@ og_image: /assets/img/photography/selected/24350775633.jpg
         </div>
       </div>
 
+      <h3>新上架：九段光景，慢慢翻閱。</h3>
+      <nav class="photo-author-agency-nav" aria-label="新上架九冊寫真集">
+        {% for entry in site.data.photography_books_2026_10 %}{% assign new_book = site.data[entry.data] %}<a href="{{ entry.url | relative_url }}">{{ new_book.character }}《{{ new_book.title }}》</a>{% endfor %}
+      </nav>
       <div class="photo-author-section-links">
         <a href="{{ models.home.article.url | relative_url }}" class="photo-author-text-link">{{ models.home.article.label }} →</a>
         <a href="{{ '/jinpingmei/photobook/' | relative_url }}" class="photo-author-text-link">金瓶梅角色寫真館 →</a>

@@ -1,0 +1,94 @@
+---
+layout: home
+---
+{% assign book = site.data[page.book_data] %}
+{% capture download_url %}{% include photography/download-url.html path=book.pdf %}{% endcapture %}
+{% capture start_label %}開始閱讀 {{ book.count }} 張{% endcapture %}
+{% assign cover = book.photos | where: "order", book.cover_photo | first %}
+<main id="main" class="photo-author-page photo-author-subpage sjw-page nse-page">
+  {% include photography/subpage-hero.html eyebrow="角色寫真集 · 2026" title=book.title intro=book.description primary_url="#chapter-1" primary_label=start_label secondary_url=download_url secondary_label="下載完整寫真集" %}
+  <nav class="photo-author-quick-nav" aria-label="作品導覽"><span>NFT 寫真集</span><div>
+    <a href="{{ '/nft/' | relative_url }}">NFT 策展</a>
+    <a href="{{ '/photography/models/work/' | relative_url }}">全部寫真集</a>
+    <a href="{{ '/photography/models/talent/' | append: page.talent_slug | append: '/' | relative_url }}">認識{{ book.character }}</a>
+    <a href="{{ book.flickr_album }}" target="_blank" rel="noopener noreferrer">前往 Flickr 相簿 ↗</a>
+  </div></nav>
+
+  <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
+    <div class="photo-author-shell">
+      <p class="sjw-meta">{{ book.count }} 張影像 · {{ book.chapters.size }} 章 · {{ book.character }} · {{ book.pdf_pages }} 頁完整寫真集</p>
+      <article class="photo-author-series-card sjw-cover">
+        <a href="{% include flickr/url.html id=cover.flickr_id image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="nse-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+        </a>
+        <div class="photo-author-series-copy">
+          <p class="photo-author-eyebrow">STATEMENT · 創作說明</p>
+          <h2 id="statement-title">{{ book.subtitle }}</h2>
+          <p>{{ book.statement | escape | newline_to_br }}</p>
+          <p class="nse-disclosure">{{ book.disclosure }}</p>
+          <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">前往 Flickr 相簿 ↗</a>
+        </div>
+      </article>
+      <nav class="sjw-toc" aria-label="章節目次">
+        {% for c in book.chapters %}<a href="#chapter-{{ c.order }}"><b>{{ c.order }}</b>{{ c.title }}</a>{% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  <div id="photos">
+  {% for c in book.chapters %}
+  {% assign shots = book.photos | where: "chapter", c.title %}
+  {% capture first_no %}{% if shots.first.order < 10 %}0{% endif %}{{ shots.first.order }}{% endcapture %}
+  {% capture last_no %}{% if shots.last.order < 10 %}0{% endif %}{{ shots.last.order }}{% endcapture %}
+  <section class="photo-author-section sjw-chapter" id="chapter-{{ c.order }}" aria-labelledby="chapter-{{ c.order }}-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ c.order }} · {{ book.character }}</p>
+        <div><h2 id="chapter-{{ c.order }}-title">{{ c.title }}</h2><p class="nse-chapter-copy">{{ c.copy | escape | newline_to_br }}</p><p class="sjw-count">{{ shots.size }} 張 · No.{{ first_no }}–{{ last_no }}</p></div>
+      </header>
+      <div class="sjw-grid">
+        {%- assign pending = false -%}
+        {%- for p in shots -%}
+        {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
+        {%- if p.height > p.width -%}
+          {%- if pending -%}
+            {%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = false -%}
+          {%- else -%}
+            {%- assign nxt = shots[forloop.index] -%}{%- assign cls = 'sjw-figure--solo' -%}
+            {%- if nxt and nxt.height > nxt.width -%}{%- assign cls = 'sjw-figure--pair' -%}{%- assign pending = true -%}{%- endif -%}
+          {%- endif -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(50vw - 36px), 648px' -%}
+        {%- elsif p.height == p.width -%}
+          {%- comment -%}正方形不撐滿版心（1320px 高會超過一屏），比照孤直幅置中半寬、不裁切{%- endcomment -%}
+          {%- assign cls = 'sjw-figure--solo' -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(50vw - 36px), 648px' -%}
+        {%- else -%}
+          {%- assign cls = 'sjw-figure--wide' -%}
+          {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
+        {%- endif %}
+        <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}" data-photo-order="{{ p.order }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}（AI 生成影像）" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="sjw-no">No.{{ nn }}</span><span class="sjw-title">{{ p.title }}</span><a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a><p class="sjw-caption">{{ p.caption }}</p></figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+
+  <section class="photo-author-section photo-author-light sjw-closing" aria-labelledby="after-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head"><p class="photo-author-eyebrow">讀完以後</p><div><h2 id="after-title">把這段光景帶走。</h2><p>{{ book.flickr_note }}</p></div></header>
+      <div class="photo-author-archive-grid">
+        <a href="{{ download_url }}" class="photo-author-archive-card" download><h3>下載完整寫真集</h3><p>{{ book.pdf_pages }} 頁、{{ book.count }} 張影像與創作說明，{{ page.pdf_size }}。</p><span>下載整本 →</span></a>
+        <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer"><h3>前往 Flickr 相簿</h3><p>收錄 {{ book.flickr_total_count }} 張作品，包含 {{ book.flickr_extended_count }} 張延伸選片。</p><span>前往 Flickr ↗</span></a>
+        <a href="{{ '/photography/models/talent/' | append: page.talent_slug | append: '/' | relative_url }}" class="photo-author-archive-card"><h3>認識{{ book.character }}</h3><p>看看這位角色的其他作品與介紹。</p><span>看角色介紹 →</span></a>
+      </div>
+      <aside class="sjw-notes" aria-label="影像與角色說明"><p>{{ book.disclosure }}</p><p>場景「{{ book.fictional_location }}」為虛構。本冊為個人藝術創作展示。</p><p class="sjw-credit">史旺基 Swanky · 2026 · {{ book.title }}</p></aside>
+    </div>
+  </section>
+</main>
+{% include photography/book-jsonld.html %}

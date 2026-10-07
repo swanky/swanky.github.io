@@ -91,7 +91,7 @@
         {%- capture bk_strip -%}
           {% for c in bk.chapters %}
             {%- if b.kind == 'json' -%}
-              {%- assign chapter_key = c.number | default: c.id -%}
+              {%- assign chapter_key = c.number | default: c.id | default: c.title -%}
               {%- assign cf_n = nil -%}
               {%- assign cf_shots = bk.photos | where: "chapter", chapter_key -%}
               {%- comment -%}多人合輯只取本人出鏡的第一張；本人沒出現的章節略過{%- endcomment -%}
@@ -114,7 +114,7 @@
         {%- endif %}
         <div class="sm-book__links">
           <a class="sm-btn sm-btn--ghost" href="{{ b.url | relative_url }}">翻閱整本《{{ bk.title }}》</a>
-          {% if bk_pdf %}<a class="sm-textlink" href="{{ bk_pdf | relative_url }}" download>下載完整寫真集{% if bk_pdf_size %}（{{ bk_pdf_size }}）{% endif %}</a>{% endif %}
+          {% if bk_pdf %}<a class="sm-textlink" href="{% include photography/download-url.html path=bk_pdf %}" download>下載完整寫真集{% if bk_pdf_size %}（{{ bk_pdf_size }}）{% endif %}</a>{% endif %}
           {% if bk.flickr_album %}<a class="sm-textlink" href="{{ bk.flickr_album }}" target="_blank" rel="noopener noreferrer">在 Flickr 看相簿 ↗</a>{% endif %}
         </div>
       </article>

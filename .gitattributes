@@ -10,3 +10,14 @@ schema/*.json text eol=lf
 # 核准移交的公開資料保持原始位元組，供接收與部署 SHA-256 核對。
 _data/beyond_the_frame.json -text
 _data/nft_seven_eight.json -text
+
+# 2026-10 九冊核准移交資料：跨平台保留攝影端 SHA。
+_data/li_pinger_before_the_rain.json -text
+_data/pan_jinlian_daylight_on_loan.json -text
+_data/nft_small_freedoms.json -text
+_data/pan_jinlian_one_more_turn.json -text
+_data/meebit_city_out_of_fit.json -text
+_data/li_pinger_above_the_waterline.json -text
+_data/pan_jinlian_unwritten_stage.json -text
+_data/nft_quiet_machines.json -text
+_data/li_pinger_shore_without_a_name.json -text

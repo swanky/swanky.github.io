@@ -102,6 +102,9 @@ talents:
     digital: true
     spread: { book: jinpingmei_photobook_vl20, kind: yml, n: 18, mobile_n: 1 }   # 首頁跨頁：最新一本《瓶中有光》的橫幅（紙牡丹）；手機改直幅封面 01
     books:
+      - { data: li_pinger_shore_without_a_name, kind: json, url: /jinpingmei/photobook/li-pinger-shore-without-a-name/, pdf_size: 約 31 MB }
+      - { data: li_pinger_above_the_waterline, kind: json, url: /jinpingmei/photobook/li-pinger-above-the-waterline/, pdf_size: 約 27 MB }
+      - { data: li_pinger_before_the_rain, kind: json, url: /jinpingmei/photobook/li-pinger-before-the-rain/, pdf_size: 約 29 MB }
       - { data: beyond_the_frame, kind: json, url: /jinpingmei/photobook/beyond-the-frame/, pdf_size: 約 21 MB }
       - { data: jinpingmei_photobook_lp36, kind: yml, url: /jinpingmei/photobook/li-pinger-no-hurry/ }
       - { data: jinpingmei_photobook_vl20, kind: yml, url: /jinpingmei/photobook/li-pinger-vessel-of-light/ }
@@ -122,6 +125,9 @@ talents:
     digital: true
     spread: { book: pan_jinlian_tonight_she_opens, kind: json, n: 1, mobile_n: 2 }   # 首頁跨頁：封面 12 為直幅，改用 01「門外的藍」（橫幅）；手機用 02「一張給你」
     books:
+      - { data: pan_jinlian_unwritten_stage, kind: json, url: /jinpingmei/photobook/pan-jinlian-unwritten-stage/, pdf_size: 約 28 MB }
+      - { data: pan_jinlian_one_more_turn, kind: json, url: /jinpingmei/photobook/pan-jinlian-one-more-turn/, pdf_size: 約 26 MB }
+      - { data: pan_jinlian_daylight_on_loan, kind: json, url: /jinpingmei/photobook/pan-jinlian-daylight-on-loan/, pdf_size: 約 29 MB }
       - { data: beyond_the_frame, kind: json, url: /jinpingmei/photobook/beyond-the-frame/, pdf_size: 約 21 MB }
       - { data: pan_jinlian_tonight_she_opens, kind: json, url: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/, pdf_size: 約 24 MB }
       - { data: pan_jinlian_she_sees_it_first, kind: json, url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/, pdf_size: 約 21 MB }
@@ -188,6 +194,7 @@ talents:
       - { key: photoreal, label: 擬真, file: clonex-15162-photoreal, w: 1024, h: 1536 }
       - { key: cartoon, label: 卡通, file: clonex-15162-cartoon, w: 1024, h: 1536 }
     books:
+      - { data: nft_quiet_machines, kind: json, url: /nft/photobook/quiet-machines/, pdf_size: 約 24 MB }
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }
   - slug: clonex-17474
     links:
@@ -208,6 +215,7 @@ talents:
       - { key: photoreal, label: 擬真, file: clonex-17474-photoreal, w: 1024, h: 1536 }
       - { key: cartoon, label: 卡通, file: clonex-17474-cartoon, w: 1024, h: 1536 }
     books:
+      - { data: nft_small_freedoms, kind: json, url: /nft/photobook/small-freedoms/, pdf_size: 約 26 MB }
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }
   - slug: clonex-17152
     links:
@@ -248,6 +256,7 @@ talents:
     disclosure: "史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     books:
+      - { data: meebit_city_out_of_fit, kind: json, url: /nft/photobook/city-out-of-fit/, pdf_size: 約 23 MB }
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }
   - slug: mayc-17854
     links:

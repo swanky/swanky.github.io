@@ -17,19 +17,19 @@
 ## 攝影寫真 Photography
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
-- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來八本概念寫真集；全部由 AI 生成，並非真人照片。
+- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來十七本概念寫真集；全部由 AI 生成，並非真人照片。
 - [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），以及史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
 - [史旺姬｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/swanky-ji/): 史旺姬｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，兩本寫真集《把光留給日常》《她把風景打開》共 72 張影像。人物與場景皆由 AI 生成，並非真人實拍。
-- [李瓶兒｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/li-pinger/): 李瓶兒｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《不趕時間的你》《瓶中有光》，以及與潘金蓮共同演出的《畫面之外》，另有 8 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
-- [潘金蓮｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/pan-jinlian/): 潘金蓮｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《今晚，由她開場》《她先看見》，以及與李瓶兒共同演出的《畫面之外》，另有 9 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
+- [李瓶兒｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/li-pinger/): 李瓶兒｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《雨停以前》、《水線以上》、《岸還沒有名字》、《不趕時間的你》《瓶中有光》，以及與潘金蓮共同演出的《畫面之外》，另有 8 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
+- [潘金蓮｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/pan-jinlian/): 潘金蓮｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《借來的白晝》、《再轉一圈》、《還沒寫好的舞台》、《今晚，由她開場》《她先看見》，以及與李瓶兒共同演出的《畫面之外》，另有 9 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
 - [Bunny 邦妮｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/bunny-15755/): Bunny 邦妮｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #15755 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
 - [Sparky｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-9268/): Sparky｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #9268 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
-- [CloneX #15162｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-15162/): CloneX #15162｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
-- [CloneX #17474｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-17474/): CloneX #17474｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
+- [CloneX #15162｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-15162/): CloneX #15162｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；收錄《風的練習簿》，並參與合輯《七個名字，八種在場》，為個人藝術創作展示。
+- [CloneX #17474｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-17474/): CloneX #17474｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；收錄《不必有用的午後》，並參與合輯《七個名字，八種在場》，為個人藝術創作展示。
 - [CloneX #17152｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-17152/): CloneX #17152｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #17152 的攝影式改編形象，人物由 AI 生成，並非真人；造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。
-- [Meebit #10829｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/meebit-10829/): Meebit #10829｜SWANKY MODELS 虛擬模特兒：史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
+- [Meebit #10829｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/meebit-10829/): Meebit #10829｜SWANKY MODELS 虛擬模特兒：史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；收錄《城市不合身》，並參與合輯《七個名字，八種在場》，為個人藝術創作展示。
 - [MAYC #17854｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/mayc-17854/): MAYC #17854｜SWANKY MODELS 虛擬模特兒：史旺基持有的 MAYC #17854 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
-- [SWANKY MODELS 作品案例](https://swanky.github.io/photography/models/work/): SWANKY MODELS 作品案例：八本自主企劃的概念寫真集，包含史旺姬、李瓶兒、潘金蓮的作品，以及七位 NFT 角色共同演出的《七個名字，八種在場》。全部影像由 AI 生成，可線上翻閱、下載完整寫真集並對照 Flickr 相簿；個人藝術創作展示不代表全面商用授權。
+- [SWANKY MODELS 作品案例](https://swanky.github.io/photography/models/work/): SWANKY MODELS 作品案例：十七本自主企劃的概念寫真集，包含史旺姬、李瓶兒、潘金蓮的作品，以及七位 NFT 角色共同演出的《七個名字，八種在場》。全部影像由 AI 生成，可線上翻閱、下載完整寫真集並對照 Flickr 相簿；個人藝術創作展示不代表全面商用授權。
 - [SWANKY MODELS 合作洽詢](https://swanky.github.io/photography/models/inquiry/): SWANKY MODELS 合作洽詢：目前為作品與概念階段，尚無商業委託案例。說明虛構角色與真人授權數位分身的合作原則、可以先聊的三件事，以及來信方式；真人模特兒合作另走攝影作品區。
 - [史旺姬《她把風景打開》](https://swanky.github.io/photography/swanky-ji-open-worlds/): 史旺姬《她把風景打開》：36張原創虛擬人物影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
 - [史旺姬《把光留給日常》](https://swanky.github.io/photography/swanky-ji-everyday-light/): 史旺姬《把光留給日常》：36 張原創虛擬人物影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
@@ -40,6 +40,16 @@
 - [作品精選](https://swanky.github.io/photography/gallery/): 跨年度精選作品集
 - [制服．女孩 × 史旺基](https://swanky.github.io/photography/uniform-girl/): 招牌制服攝影系列
 - [歷年記錄](https://swanky.github.io/photography/archive/): 時序歸檔
+
+- [李瓶兒《雨停以前》](https://swanky.github.io/jinpingmei/photobook/li-pinger-before-the-rain/): 李瓶兒《雨停以前》：走過天氣，也走過自己的幾種樣子。共34幅AI生成影像。
+- [潘金蓮《借來的白晝》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-daylight-on-loan/): 潘金蓮《借來的白晝》：一日的偏航共36幅AI生成影像。
+- [CloneX #17474《不必有用的午後》](https://swanky.github.io/nft/photobook/small-freedoms/): CloneX #17474《不必有用的午後》：九次岔路共35幅AI生成影像。
+- [潘金蓮《再轉一圈》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-one-more-turn/): 潘金蓮《再轉一圈》：城市不只一種速度共35幅AI生成影像。
+- [Meebit #10829《城市不合身》](https://swanky.github.io/nft/photobook/city-out-of-fit/): Meebit #10829《城市不合身》：九種尺度共36幅AI生成影像。
+- [李瓶兒《水線以上》](https://swanky.github.io/jinpingmei/photobook/li-pinger-above-the-waterline/): 李瓶兒《水線以上》：把重量交給水共36幅AI生成影像。
+- [潘金蓮《還沒寫好的舞台》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-unwritten-stage/): 潘金蓮《還沒寫好的舞台》：讓場所成為表演共36幅AI生成影像。
+- [CloneX #15162《風的練習簿》](https://swanky.github.io/nft/photobook/quiet-machines/): CloneX #15162《風的練習簿》：九種空氣共36幅AI生成影像。
+- [李瓶兒《岸還沒有名字》](https://swanky.github.io/jinpingmei/photobook/li-pinger-shore-without-a-name/): 李瓶兒《岸還沒有名字》：靠岸以後，才開始認識遠方。共36幅AI生成影像。
 
 ## 技術顧問 Technical Consulting
 

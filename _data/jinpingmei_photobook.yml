@@ -17,6 +17,15 @@ packs:
     name: 潘金蓮
     # 獨立寫真集（移交包 JSON schema；圖檔在 /assets/img/photography/pan-jinlian-she-sees-it-first/，PDF 在 /assets/downloads/）
     albums:
+      - data: pan_jinlian_unwritten_stage
+        kind: json
+        pdf_size: 約 28 MB
+      - data: pan_jinlian_one_more_turn
+        kind: json
+        pdf_size: 約 26 MB
+      - data: pan_jinlian_daylight_on_loan
+        kind: json
+        pdf_size: 約 29 MB
       - data: beyond_the_frame
         kind: json
         pdf_size: 約 21 MB
@@ -78,6 +87,15 @@ packs:
     name: 李瓶兒
     # 獨立寫真集（整本作品，有自己的專輯頁）；data＝_data/ 裡的檔名。寫真館與角色頁會長出入口卡，shots 幀數不計入。
     albums:
+      - data: li_pinger_shore_without_a_name
+        kind: json
+        pdf_size: 約 31 MB
+      - data: li_pinger_above_the_waterline
+        kind: json
+        pdf_size: 約 27 MB
+      - data: li_pinger_before_the_rain
+        kind: json
+        pdf_size: 約 29 MB
       - data: beyond_the_frame
         kind: json
         pdf_size: 約 21 MB

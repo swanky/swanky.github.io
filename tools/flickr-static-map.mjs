@@ -25,7 +25,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, '_data/flickr_static.json');
 const refresh = process.argv.includes('--refresh');
 const ids = new Set();
-for (const name of ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'pan_jinlian_she_sees_it_first', 'pan_jinlian_tonight_she_opens', 'beyond_the_frame', 'nft_seven_eight']) {
+for (const name of ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'pan_jinlian_she_sees_it_first', 'pan_jinlian_tonight_she_opens', 'beyond_the_frame', 'nft_seven_eight', ...JSON.parse(readFileSync(join(root, '_data/photography_books_2026_10.json'), 'utf8')).map(b => b.data)]) {
   const file = join(root, '_data', `${name}.json`);
   if (existsSync(file)) for (const p of JSON.parse(readFileSync(file, 'utf8')).photos) ids.add(String(p.flickr_id));
 }
@@ -105,11 +105,12 @@ if (failures.length) process.exitCode = 1;
 
 // 備援對照：每個 id 取 flickr_image_paths.json 裡最大的本地副本（畫質最接近 Flickr 大圖）；同大小取路徑排序第一個。
 const localCopies = {};
+const previewOnly = new Set(JSON.parse(readFileSync(join(root, '_data/photography_books_2026_10.json'), 'utf8')).flatMap(b => JSON.parse(readFileSync(join(root, '_data', b.data + '.json'), 'utf8')).photos.map(p => p.image)));
 for (const [path, id] of Object.entries(paths)) (localCopies[String(id)] ||= []).push(path);
 const fallbackLines = [];
 const orphans = [];
 for (const id of Object.keys(map).sort()) {
-  const best = (localCopies[id] || []).filter(p => existsSync(join(root, p)))
+  const best = (localCopies[id] || []).filter(p => !previewOnly.has(p) && existsSync(join(root, p)))
     .map(p => [p, statSync(join(root, p)).size])
     .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
   if (best) fallbackLines.push(`  ${JSON.stringify(id)}: ${JSON.stringify(best[0])}`);

@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "slug": "pan-jinlian-one-more-turn",
+  "title": "再轉一圈",
+  "character": "潘金蓮",
+  "subtitle": "城市不只一種速度",
+  "date": "2026-10-07",
+  "date_label": "編輯日期",
+  "description": "潘金蓮《再轉一圈》：城市不只一種速度共35幅AI生成影像。",
+  "statement": "圈外的城市\n圓不只在輪鞋下面。\n它也在窗框、坡道、唱片裡，\n在洗衣機安靜的夜晚裡。\n她穿過城市，換一種衣服，\n也換一種身體的速度。\n滑行、步行，或只是坐著。\n幾個日子的片段，接成一個圓。\n每次轉彎，都把自己帶往別處。",
+  "disclosure": "潘金蓮為明確27歲的成年虛構角色。人物、造型、地點與事件均為AI創作，非真人實拍。史旺基 Swanky 企劃與編選，AI協作生成與編排。",
+  "fictional_location": "虛構城市與海濱",
+  "count": 35,
+  "chapters": [
+    {
+      "order": 1,
+      "title": "輪子還沒出門",
+      "copy": "",
+      "frames": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "order": 2,
+      "title": "圈外的球場",
+      "copy": "",
+      "frames": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "order": 3,
+      "title": "混凝土也會轉彎",
+      "copy": "",
+      "frames": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "order": 4,
+      "title": "地下的另一個圓",
+      "copy": "",
+      "frames": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "order": 5,
+      "title": "夜色裡的一整圈",
+      "copy": "",
+      "frames": [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "order": 6,
+      "title": "洗衣機慢慢轉",
+      "copy": "",
+      "frames": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "order": 7,
+      "title": "唱片借一個圓",
+      "copy": "",
+      "frames": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "order": 8,
+      "title": "風沒有固定軌道",
+      "copy": "",
+      "frames": [
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "order": 9,
+      "title": "階梯把速度收起",
+      "copy": "",
+      "frames": [
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "order": 10,
+      "title": "把圓還給海",
+      "copy": "",
+      "frames": [
+        32,
+        33,
+        34,
+        35
+      ]
+    }
+  ],
+  "cover_photo": 5,
+  "cover": "/assets/img/photography/pan-jinlian-one-more-turn/cover.jpg",
+  "pdf": "/assets/downloads/pan-jinlian-one-more-turn/pan-jinlian-one-more-turn-35.pdf",
+  "photos": [
+    {
+      "order": 1,
+      "title": "還有半杯早晨",
+      "caption": "杯子還暖，輪子可以再等一下。",
+      "chapter": "輪子還沒出門",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/01.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/01-960.webp",
+      "alt": "潘金蓮《再轉一圈》第01幅：還有半杯早晨（AI生成影像）",
+      "flickr_id": "55574370724",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574370724/"
+    },
+    {
+      "order": 2,
+      "title": "把日子伸開",
+      "caption": "先伸開雙臂，再決定今天的方向。",
+      "chapter": "輪子還沒出門",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/02.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/02-960.webp",
+      "alt": "潘金蓮《再轉一圈》第02幅：把日子伸開（AI生成影像）",
+      "flickr_id": "55573172612",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573172612/"
+    },
+    {
+      "order": 3,
+      "title": "鞋帶先醒來",
+      "caption": "鞋帶收緊，早晨才準備出門。",
+      "chapter": "輪子還沒出門",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/03.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/03-960.webp",
+      "alt": "潘金蓮《再轉一圈》第03幅：鞋帶先醒來（AI生成影像）",
+      "flickr_id": "55573172707",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573172707/"
+    },
+    {
+      "order": 4,
+      "title": "讓圓往旁邊走",
+      "caption": "沿著粉色的地面，把身體交給一道弧。",
+      "chapter": "圈外的球場",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/04.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/04-960.webp",
+      "alt": "潘金蓮《再轉一圈》第04幅：讓圓往旁邊走（AI生成影像）",
+      "flickr_id": "55574629705",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574629705/"
+    },
+    {
+      "order": 5,
+      "title": "低下來看",
+      "caption": "蹲低一點，圓就來到手邊。",
+      "chapter": "圈外的球場",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/05.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/05-960.webp",
+      "alt": "潘金蓮《再轉一圈》第05幅：低下來看（AI生成影像）",
+      "flickr_id": "55574318533",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574318533/"
+    },
+    {
+      "order": 6,
+      "title": "笑比速度快",
+      "caption": "笑聲比輪子先轉過來。",
+      "chapter": "圈外的球場",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/06.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/06-960.webp",
+      "alt": "潘金蓮《再轉一圈》第06幅：笑比速度快（AI生成影像）",
+      "flickr_id": "55574629825",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574629825/"
+    },
+    {
+      "order": 7,
+      "title": "圓心留給影子",
+      "caption": "她停住，影子還在圓裡向前。",
+      "chapter": "圈外的球場",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/07.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/07-960.webp",
+      "alt": "潘金蓮《再轉一圈》第07幅：圓心留給影子（AI生成影像）",
+      "flickr_id": "55574210036",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210036/"
+    },
+    {
+      "order": 8,
+      "title": "輪子暫時用手走",
+      "caption": "這一段路，輪子由手帶著走。",
+      "chapter": "混凝土也會轉彎",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/08.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/08-960.webp",
+      "alt": "潘金蓮《再轉一圈》第08幅：輪子暫時用手走（AI生成影像）",
+      "flickr_id": "55574210081",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210081/"
+    },
+    {
+      "order": 9,
+      "title": "聽見空場",
+      "caption": "在空場裡，聽見自己的安靜。",
+      "chapter": "混凝土也會轉彎",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/09.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/09-960.webp",
+      "alt": "潘金蓮《再轉一圈》第09幅：聽見空場（AI生成影像）",
+      "flickr_id": "55574630000",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630000/"
+    },
+    {
+      "order": 10,
+      "title": "轉到下一層",
+      "caption": "混凝土繞得很大，她慢慢走小。",
+      "chapter": "混凝土也會轉彎",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/10.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/10-960.webp",
+      "alt": "潘金蓮《再轉一圈》第10幅：轉到下一層（AI生成影像）",
+      "flickr_id": "55574210521",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210521/"
+    },
+    {
+      "order": 11,
+      "title": "坐過一班車",
+      "caption": "坐下以後，下一班不必立刻到。",
+      "chapter": "地下的另一個圓",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/11.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/11-960.webp",
+      "alt": "潘金蓮《再轉一圈》第11幅：坐過一班車（AI生成影像）",
+      "flickr_id": "55574630350",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630350/"
+    },
+    {
+      "order": 12,
+      "title": "在圓燈下抬眼",
+      "caption": "抬眼，讓一盞暖燈照見自己。",
+      "chapter": "地下的另一個圓",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/12.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/12-960.webp",
+      "alt": "潘金蓮《再轉一圈》第12幅：在圓燈下抬眼（AI生成影像）",
+      "flickr_id": "55574319238",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574319238/"
+    },
+    {
+      "order": 13,
+      "title": "提著上一段速度",
+      "caption": "上一段速度，暫時裝在袋子裡。",
+      "chapter": "地下的另一個圓",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/13.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/13-960.webp",
+      "alt": "潘金蓮《再轉一圈》第13幅：提著上一段速度（AI生成影像）",
+      "flickr_id": "55574371709",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574371709/"
+    },
+    {
+      "order": 14,
+      "title": "等候線之外",
+      "caption": "等待也有它的弧線。",
+      "chapter": "地下的另一個圓",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/14.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/14-960.webp",
+      "alt": "潘金蓮《再轉一圈》第14幅：等候線之外（AI生成影像）",
+      "flickr_id": "55573173637",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173637/"
+    },
+    {
+      "order": 15,
+      "title": "一個人，一整圈",
+      "caption": "場地這麼大，足夠她慢慢經過。",
+      "chapter": "夜色裡的一整圈",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/15.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/15-960.webp",
+      "alt": "潘金蓮《再轉一圈》第15幅：一個人，一整圈（AI生成影像）",
+      "flickr_id": "55574210896",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210896/"
+    },
+    {
+      "order": 16,
+      "title": "傾身入弧",
+      "caption": "身體先斜了一點，夜晚跟著轉。",
+      "chapter": "夜色裡的一整圈",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/16.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/16-960.webp",
+      "alt": "潘金蓮《再轉一圈》第16幅：傾身入弧（AI生成影像）",
+      "flickr_id": "55574630645",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630645/"
+    },
+    {
+      "order": 17,
+      "title": "笑意先到了",
+      "caption": "這一下，連自己也笑了。",
+      "chapter": "夜色裡的一整圈",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/17.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/17-960.webp",
+      "alt": "潘金蓮《再轉一圈》第17幅：笑意先到了（AI生成影像）",
+      "flickr_id": "55574630695",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630695/"
+    },
+    {
+      "order": 18,
+      "title": "只聽輪子",
+      "caption": "沒有別人的節拍，也能滑下去。",
+      "chapter": "夜色裡的一整圈",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/18.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/18-960.webp",
+      "alt": "潘金蓮《再轉一圈》第18幅：只聽輪子（AI生成影像）",
+      "flickr_id": "55573173892",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173892/"
+    },
+    {
+      "order": 19,
+      "title": "把白色接住",
+      "caption": "從一個圓裡，接住一小團白。",
+      "chapter": "洗衣機慢慢轉",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/19.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/19-960.webp",
+      "alt": "潘金蓮《再轉一圈》第19幅：把白色接住（AI生成影像）",
+      "flickr_id": "55574371994",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574371994/"
+    },
+    {
+      "order": 20,
+      "title": "少了一隻襪子",
+      "caption": "少了一隻襪子，多了一聲笑。",
+      "chapter": "洗衣機慢慢轉",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/20.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/20-960.webp",
+      "alt": "潘金蓮《再轉一圈》第20幅：少了一隻襪子（AI生成影像）",
+      "flickr_id": "55574372049",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372049/"
+    },
+    {
+      "order": 21,
+      "title": "夜色在裡面轉",
+      "caption": "街暗了，裡面的光還在慢慢轉。",
+      "chapter": "洗衣機慢慢轉",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/21.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/21-960.webp",
+      "alt": "潘金蓮《再轉一圈》第21幅：夜色在裡面轉（AI生成影像）",
+      "flickr_id": "55574372104",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372104/"
+    },
+    {
+      "order": 22,
+      "title": "黑膠停在胸前",
+      "caption": "一個黑色的圓，還沒有發出聲音。",
+      "chapter": "唱片借一個圓",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/22.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/22-960.webp",
+      "alt": "潘金蓮《再轉一圈》第22幅：黑膠停在胸前（AI生成影像）",
+      "flickr_id": "55574372174",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372174/"
+    },
+    {
+      "order": 23,
+      "title": "把針輕輕放下",
+      "caption": "把手放輕，讓聲音自己開始。",
+      "chapter": "唱片借一個圓",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/23.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/23-960.webp",
+      "alt": "潘金蓮《再轉一圈》第23幅：把針輕輕放下（AI生成影像）",
+      "flickr_id": "55574631045",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574631045/"
+    },
+    {
+      "order": 24,
+      "title": "房間跟著轉",
+      "caption": "只挪動半步，房間就有了節拍。",
+      "chapter": "唱片借一個圓",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/24.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/24-960.webp",
+      "alt": "潘金蓮《再轉一圈》第24幅：房間跟著轉（AI生成影像）",
+      "flickr_id": "55574372279",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372279/"
+    },
+    {
+      "order": 25,
+      "title": "腳先聽見節拍",
+      "caption": "腳尖先替音樂點了頭。",
+      "chapter": "唱片借一個圓",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/25.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/25-960.webp",
+      "alt": "潘金蓮《再轉一圈》第25幅：腳先聽見節拍（AI生成影像）",
+      "flickr_id": "55574320018",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574320018/"
+    },
+    {
+      "order": 26,
+      "title": "先讓外套往前",
+      "caption": "風先把銀色外套翻開。",
+      "chapter": "風沒有固定軌道",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/26.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/26-960.webp",
+      "alt": "潘金蓮《再轉一圈》第26幅：先讓外套往前（AI生成影像）",
+      "flickr_id": "55574211406",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574211406/"
+    },
+    {
+      "order": 27,
+      "title": "風把話吹散",
+      "caption": "沒說完的話，留給風。",
+      "chapter": "風沒有固定軌道",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/27.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/27-960.webp",
+      "alt": "潘金蓮《再轉一圈》第27幅：風把話吹散（AI生成影像）",
+      "flickr_id": "55574372479",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372479/"
+    },
+    {
+      "order": 28,
+      "title": "躺成另一條線",
+      "caption": "躺下來，城市的線條換了方向。",
+      "chapter": "風沒有固定軌道",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/28.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/28-960.webp",
+      "alt": "潘金蓮《再轉一圈》第28幅：躺成另一條線（AI生成影像）",
+      "flickr_id": "55574372569",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372569/"
+    },
+    {
+      "order": 29,
+      "title": "在螺旋裡變小",
+      "caption": "在巨大的圓裡，腳步可以很小。",
+      "chapter": "階梯把速度收起",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/29.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/29-960.webp",
+      "alt": "潘金蓮《再轉一圈》第29幅：在螺旋裡變小（AI生成影像）",
+      "flickr_id": "55573174647",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573174647/"
+    },
+    {
+      "order": 30,
+      "title": "笑停在半層",
+      "caption": "笑停在半層，不急著下樓。",
+      "chapter": "階梯把速度收起",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/30.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/30-960.webp",
+      "alt": "潘金蓮《再轉一圈》第30幅：笑停在半層（AI生成影像）",
+      "flickr_id": "55574372849",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372849/"
+    },
+    {
+      "order": 31,
+      "title": "一段弧線的側面",
+      "caption": "一段弧線，留在安靜的側面。",
+      "chapter": "階梯把速度收起",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/31.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/31-960.webp",
+      "alt": "潘金蓮《再轉一圈》第31幅：一段弧線的側面（AI生成影像）",
+      "flickr_id": "55574320528",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574320528/"
+    },
+    {
+      "order": 32,
+      "title": "輪子休息了",
+      "caption": "輪子休息，腳掌認出木板的溫度。",
+      "chapter": "把圓還給海",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/32.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/32-960.webp",
+      "alt": "潘金蓮《再轉一圈》第32幅：輪子休息了（AI生成影像）",
+      "flickr_id": "55574373079",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574373079/"
+    },
+    {
+      "order": 33,
+      "title": "海風替她說完",
+      "caption": "海風過後，眼睛仍然清亮。",
+      "chapter": "把圓還給海",
+      "width": 1024,
+      "height": 1536,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/33.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/33-960.webp",
+      "alt": "潘金蓮《再轉一圈》第33幅：海風替她說完（AI生成影像）",
+      "flickr_id": "55574320888",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574320888/"
+    },
+    {
+      "order": 34,
+      "title": "把速度放下",
+      "caption": "把速度放下，兩隻鞋並排等著。",
+      "chapter": "把圓還給海",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/34.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/34-960.webp",
+      "alt": "潘金蓮《再轉一圈》第34幅：把速度放下（AI生成影像）",
+      "flickr_id": "55574631925",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574631925/"
+    },
+    {
+      "order": 35,
+      "title": "還有下一圈",
+      "caption": "這一圈先到這裡，海還沒有盡頭。",
+      "chapter": "把圓還給海",
+      "width": 1536,
+      "height": 1024,
+      "image": "/assets/img/photography/pan-jinlian-one-more-turn/35.webp",
+      "preview": "/assets/img/photography/pan-jinlian-one-more-turn/35-960.webp",
+      "alt": "潘金蓮《再轉一圈》第35幅：還有下一圈（AI生成影像）",
+      "flickr_id": "55574212456",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212456/"
+    }
+  ],
+  "pdf_pages": 41,
+  "flickr_album": "https://www.flickr.com/photos/88607481@N00/albums/72177720336024003/",
+  "flickr_album_id": "72177720336024003",
+  "flickr_total_count": 67,
+  "flickr_extended_count": 32,
+  "flickr_note": "Flickr 相簿另收 32 幅延伸選片；本頁與電子寫真集保留 35 幅的閱讀順序。"
+}

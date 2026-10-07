@@ -1,0 +1,2 @@
+{%- assign hosted_download = site.data.photography_downloads[include.path] -%}
+{%- if hosted_download -%}{{ hosted_download }}{%- else -%}{{ include.path | relative_url }}{%- endif -%}
