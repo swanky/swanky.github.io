@@ -28,7 +28,7 @@ permalink: /jinpingmei/photobook/
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20260915-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20260924-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-photobook.css' | relative_url }}?v=20261007-1" rel="stylesheet">
   {% include jinpingmei/gtag.html %}
 </head>
 <body class="jpm jpm-pb">
@@ -71,16 +71,14 @@ permalink: /jinpingmei/photobook/
             <li>陸續進棚</li>
           </ul>
         </div>
-        <aside class="jpu-vquote reveal" aria-label="寫真目次">
-          {%- for p in pb.packs -%}
-          {%- assign shortname = p.name | slice: 1, 2 -%}
-          <span><small>{{ p.shots.size }} 幀</small>{{ shortname }}</span>
-          {%- if p.albums -%}{%- for a in p.albums -%}{%- assign al = site.data[a.data] -%}
-          <span><small>寫真集 {{ al.count }} 張</small>{{ shortname }}</span>
-          {%- endfor -%}{%- endif -%}
-          {%- endfor -%}
-          <footer>寫真目次</footer>
-        </aside>
+        <nav class="pb-directory reveal" aria-labelledby="pb-directory-title">
+          <h2 id="pb-directory-title">從角色開始</h2>
+          <ul>
+            {%- for p in pb.packs %}
+            <li><a href="#pb-{{ p.slug }}">{{ p.name }}<span aria-hidden="true">↘</span></a></li>
+            {%- endfor %}
+          </ul>
+        </nav>
       </div>
     </section>
 
@@ -108,7 +106,7 @@ permalink: /jinpingmei/photobook/
             <div class="pb-head">
               <span class="pb-vol" aria-hidden="true">輯{{ zhv[vi] }}</span>
               <div>
-                <h2 id="pb-{{ p.slug }}">{{ p.name }}</h2>
+                <h2 id="pb-{{ p.slug }}" tabindex="-1">{{ p.name }}</h2>
                 {%- if ch and ch.aliases and ch.aliases != "" %}<p class="pb-alias">{{ ch.aliases }}</p>{% endif %}
               </div>
             </div>

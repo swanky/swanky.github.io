@@ -4,12 +4,16 @@
 
 /* ── 開卷：館名＋寫真目次 ── */
 .pb-hero { padding-bottom: clamp(24px, 4vw, 40px); }
-/* 目次要撐得起門面：與主標同一視覺量級，縱向拉滿右欄（每條＝人名＋幀數）。
-   直排 flex column 的主軸＝水平右→左：max-width 到頂就往下折排，輯數再多也壓不扁左欄。 */
-.pb-hero .jpu-hero { align-items: stretch; }
-.pb-hero .jpu-vquote { justify-content: flex-start; flex-wrap: wrap; max-width: 16em; padding-top: .4em; font-size: clamp(1.25rem, 2.1vw, 1.7rem); gap: clamp(.8em, 1.4vw, 1.3em); color: #e2d8bf; }
-.pb-hero .jpu-vquote span small { display: block; margin-bottom: .55em; font-size: .58em; letter-spacing: .3em; color: var(--jpm-gold); }
-.pb-hero .jpu-vquote footer { margin-top: auto; margin-right: auto; } /* 折排後落款收到左下角，不懸在排中 */
+/* 每位角色只列一次；冊數留在收錄摘要，目錄直接跳到角色相冊。 */
+.pb-hero .jpu-hero { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+.pb-directory { padding-left: 28px; border-left: 1px solid var(--jpm-line); }
+.pb-directory h2 { margin: 0 0 .9rem; font-family: var(--jpm-kai); font-size: .88rem; font-weight: 400; letter-spacing: .24em; color: var(--jpm-gold); }
+.pb-directory ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.3rem; margin: 0; padding: 0; list-style: none; }
+.pb-directory a { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 48px; padding: .5rem 0; border-bottom: 1px solid var(--jpm-line); font-family: var(--jpm-kai); font-size: 1.1rem; letter-spacing: .08em; color: var(--jpm-paper); }
+.pb-directory a span { font-family: var(--jpm-sans); font-size: .75rem; color: var(--jpm-gold); }
+.pb-directory a:hover { border-color: var(--jpm-gold); color: var(--jpm-gold-bright); }
+.pb-directory a:focus-visible { outline: 2px solid var(--jpm-gold-bright); outline-offset: 4px; }
+.pb-head h2 { scroll-margin-top: 100px; }
 .pb-count { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .pb-count li { border: 1px solid var(--jpm-line); padding: .24em .85em; font-family: var(--jpm-kai); font-size: .8rem; letter-spacing: .18em; color: var(--jpm-muted); }
 .pb-count b { color: var(--jpm-gold-bright); font-weight: 700; }
@@ -121,8 +125,17 @@
   .pb-album--multi .pb-meta .pb-quote { grid-column: 2; }
   .pb-album--multi .pb-meta .pb-note { grid-column: 1 / -1; }
 }
+@media (max-width: 900px) {
+  .pb-hero .jpu-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pb-directory { padding: 20px 0 0; border-left: 0; border-top: 1px solid var(--jpm-line); }
+  .pb-directory ul { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .pb-directory ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 720px) {
-  .pb-hero .jpu-hero { min-width: 0; }
   /* 全部輯統一：先認人（題記），再看照片 */
   .pb-album--solo { grid-template-columns: 1fr; gap: 26px; }
   .pb-album--solo .pb-meta { order: 1; }
@@ -138,12 +151,6 @@
   .pb-album--multi .pb-print:nth-child(3n) { transform: rotate(-1.4deg) translateX(-2%); }
   .pb-album--multi .pb-meta { display: flex; flex-direction: column; align-items: flex-start; }
   .pb-head h2 { font-size: 1.7rem; }
-  /* 目次直排在窄幅要縮回單排橫滑，否則多欄目次撐爆版心 */
-  .pb-hero .jpu-vquote { width: 100%; max-width: 100%; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; font-size: .86rem; gap: .55em; padding: 0 0 .4rem; scrollbar-width: thin; scrollbar-color: rgba(201, 164, 97, .4) transparent; }
-  /* 原生亮灰滾動條在墨底上刺眼——收成 4px 金褐細軌，兼作橫滑提示 */
-  .pb-hero .jpu-vquote::-webkit-scrollbar { height: 4px; }
-  .pb-hero .jpu-vquote::-webkit-scrollbar-track { background: transparent; }
-  .pb-hero .jpu-vquote::-webkit-scrollbar-thumb { background: rgba(201, 164, 97, .4); }
 }
 
 @media (prefers-reduced-motion: reduce) {
