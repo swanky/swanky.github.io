@@ -1,11 +1,14 @@
 ---
 layout: home
 title: AI 視覺內容製作
-seo_title: AI 系列生圖與短影音製作｜角色一致性、視覺系統與人工 QA
-description: 為個人品牌、創作者與內容團隊製作可延伸的 AI 圖像系列與短影音。從視覺方向、角色一致性、分鏡與生成，到人工 QA、交付規格與使用邊界。
-keywords: AI生圖服務,AI短影音製作,AI視覺內容,角色一致性,生成式AI,短影音,個人品牌視覺
-og_image: /assets/img/tarot/clonex/major-17.jpg
+seo_title: AI 視覺製作作品集｜原創角色人物影像與系列視覺企劃
+description: 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。
+keywords: AI視覺製作,AI人物影像,角色一致性,系列視覺,概念視覺,史旺姬,史旺基
+og_image: /assets/img/photography/swanky-ji-open-worlds/cover.jpg
 nav_active: technical
+use_ai_visual: true
+use_glightbox: true
+preconnect_flickr: true
 breadcrumbs:
   - name: 主頁
     url: /
@@ -14,37 +17,170 @@ breadcrumbs:
   - name: AI 視覺內容製作
     url: /technical/ai-visual-production/
 ---
-{% capture inquiry_subject %}[AI 視覺內容製作洽詢] 系列生圖／短影音{% endcapture %}
-{% capture inquiry_body %}您好，我想了解 AI 視覺內容製作。
-
-品牌／創作主題：
-想製作的內容（系列圖片／短影音／兩者）：
-預計使用情境與平台：
-已有角色、品牌素材或參考風格：
+{%- comment -%}
+AI 視覺製作作品集（2026-10-07 由原服務頁改造：作品優先、只列作品撐得起的能力）。
+案例文案與選圖在 _data/ai_visual_portfolio.yml（規則寫在該檔頭）；圖片讀各寫真集 JSON，不另存檔、不裁切。
+tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽詢」、不得出現新台幣價目。
+{%- endcomment -%}
+{% assign pf = site.data.ai_visual_portfolio %}
+{% assign ai_tag = '（AI 生成，非真人照片）' %}
+{% capture inquiry_subject %}[AI 視覺製作洽詢]{% endcapture %}
+{% capture inquiry_body %}您好，我想詢問 AI 視覺製作。
+公司／團隊與聯絡人：
+用途與使用平台：
+想做的內容（人物情境影像／系列視覺／其他）：
+大約的數量、尺寸或格式：
+參考風格或既有素材（請提供公開連結）：
 預計時程：
-希望交付的數量或片長（可留白）：
 預算區間（選填）：
-其他補充（選填）：
+第一封信請勿附上未授權素材、帳密、客戶機密或敏感個資。{% endcapture %}
+{% capture inquiry_href %}mailto:{{ site.email }}?subject={{ inquiry_subject | url_encode | replace: '+', '%20' }}&body={{ inquiry_body | url_encode | replace: '+', '%20' }}{% endcapture %}
+{% assign hero_book = site.data[pf.hero.book] %}
+{% assign hero = hero_book.photos | where: "order", pf.hero.n | first %}
+<main id="main" class="technical-page av-page">
 
-第一封 Email 請勿附上未授權素材、帳密、客戶機密或敏感個資；可先提供公開連結。{% endcapture %}
-{% capture inquiry_href %}mailto:swanky.hsiao@gmail.com?subject={{ inquiry_subject | url_encode | replace: '+', '%20' }}&body={{ inquiry_body | url_encode | replace: '+', '%20' }}{% endcapture %}
-<main id="main" class="technical-page">
-{% capture hero_title %}把一次 AI 產圖，變成<em>能延伸、能驗收的視覺內容</em>{% endcapture %}
-{% include technical/hero.html theme="ai" status="依範圍報價 · 系列生圖／短影音" eyebrow="AI Visual Production" title=hero_title lead="適合需要一組一致角色、系列視覺或短影音概念成品的個人品牌、創作者與小型內容團隊。從視覺方向、生成、分鏡到人工 QA，交付的不只是模型吐出的第一版。" image="/assets/img/tarot/clonex/major-17.jpg" alt="Cute Luxe Cyber Tarot 星星牌，展示一致角色與高科技視覺系統" caption="公開個人創作案例｜AI 協作生成、人工美術指導與 QA" contain=true primary_href=inquiry_href primary_label="免費來信洽詢 AI 視覺內容製作" secondary_href="#formats" secondary_label="比較製作方式" %}
+  <section class="av-hero" aria-labelledby="av-hero-title">
+    <div class="av-shell av-hero__grid">
+      <div class="av-hero__copy">
+        <p class="av-eyebrow">AI 視覺製作 · 精選作品集</p>
+        <h1 id="av-hero-title">AI 人物影像<br>與系列視覺製作</h1>
+        <p class="av-hero__lead">為製作公司、設計工作室與品牌團隊，製作 AI 生成的人物情境影像與系列視覺：同一位角色換了場景仍認得出來，一整組圖有主題、有光線、有順序。我用多年人物攝影的判斷，決定她怎麼站、光從哪裡來、哪一張留下。</p>
+        <div class="av-hero__actions">
+          <a class="av-btn" href="#cases">看精選案例</a>
+          <a class="av-btn av-btn--ghost" href="#contact">聯絡合作</a>
+        </div>
+        <p class="av-hero__note">本頁作品皆為自主概念創作，非品牌委託；人物與場景由 AI 生成，並非真人實拍。</p>
+      </div>
+      <figure class="av-hero__media">
+        <a href="{% include flickr/url.html image=hero.image %}" class="portfolio-lightbox" data-gallery="av-hero" title="《{{ hero_book.title }}》No.{{ hero.order }} {{ hero.title }}{{ ai_tag }}">
+          <img {% include flickr/source.html id=hero.flickr_id image=hero.preview sizes="(max-width: 900px) calc(100vw - 32px), 760px" %} alt="{{ hero.alt }}{{ ai_tag }}" width="{{ hero.width }}" height="{{ hero.height }}" fetchpriority="high" decoding="async">
+        </a>
+        <figcaption>《{{ hero_book.title }}》No.{{ hero.order }}〈{{ hero.title }}〉，原創角色史旺姬</figcaption>
+      </figure>
+    </div>
+  </section>
 
-<section class="tech-section"><div class="tech-shell"><header class="tech-section-head"><span class="tech-eyebrow">When It Fits</span><h2>你需要的可能不是更多圖，而是一套不會中途走樣的視覺系統</h2><p>如果每張都像不同品牌、角色每次換臉，或短影音只有漂亮鏡頭卻沒有可用節奏，再便宜的生成也只是增加挑圖與返工。</p></header><div class="tech-deliverable-grid"><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-person-bounding-box"></i></span><div><h3>角色與品牌視覺不一致</h3><p>需要先定義角色母版、色彩、材質、服裝、鏡頭與禁止項目，而不是每張重猜一次。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-collection"></i></span><div><h3>想做系列，不是單張碰碰運氣</h3><p>活動主視覺、社群系列、牌卡、角色企劃或課程素材，都需要命名、尺寸與批次驗收規則。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-camera-reels"></i></span><div><h3>短影音缺分鏡與節奏</h3><p>先拆成可製作的鏡頭、關鍵幀、動作、字幕與聲音需求，再決定哪些用 AI、哪些需要後製。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-shield-check"></i></span><div><h3>不知道成品怎麼驗收</h3><p>角色、數量、手指、文字、品牌識別、授權、裁切與輸出規格，都需要事先定義停止條件。</p></div></article></div></div></section>
+  <section class="av-cases" id="cases" aria-labelledby="av-cases-title">
+    <div class="av-shell">
+      <header class="av-head">
+        <h2 id="av-cases-title">兩組精選案例</h2>
+        <p>兩組都以原創角色史旺姬完成，各 36 張，已公開成完整作品。這裡只放幾張代表畫面，完整內容可以點進去翻閱。</p>
+      </header>
+    </div>
 
-<section class="tech-section tech-section--paper" id="formats"><div class="tech-shell"><header class="tech-section-head"><span class="tech-eyebrow">Ways to Work</span><h2>三種製作方式，依內容目標組合</h2><p>網站不放固定價目表。實際報價取決於視覺探索、角色數量、成品數量、片長、修改輪次、授權與交付規格。</p></header><div class="tech-start-grid"><article class="tech-start-card"><span class="tech-start-no">01 · IMAGE SERIES</span><h3>AI 系列生圖</h3><p>角色母版、視覺 token、系列 prompt、候選生成、人工選圖、瑕疵重生與 web／印刷尺寸交付。</p><span class="tech-start-tag">角色與風格一致</span></article><article class="tech-start-card"><span class="tech-start-no">02 · SHORT VIDEO</span><h3>AI 短影音製作</h3><p>概念、分鏡、關鍵幀、生成片段、剪輯與基本字幕。音樂、配音、真人拍攝與進階特效依需求另列。</p><span class="tech-start-tag">先做小型 pilot</span></article><article class="tech-start-card"><span class="tech-start-no">03 · CAMPAIGN KIT</span><h3>圖像＋短影音內容組</h3><p>先用同一套視覺系統產生主視覺與系列圖，再延伸成一支或多支短影音，避免兩邊各做各的。</p><span class="tech-start-tag">跨格式一致</span></article></div></div></section>
+    {% for c in pf.cases %}
+    {% assign book = site.data[c.book] %}
+    {% assign lead = book.photos | where: "order", c.lead | first %}
+    <article class="av-case" id="{{ c.id }}" aria-labelledby="{{ c.id }}-title">
+      <div class="av-shell">
+        <header class="av-case__head">
+          <p class="av-case__label">{{ c.label }}<span>自主概念創作／非品牌委託</span></p>
+          <h3 id="{{ c.id }}-title">《{{ c.title }}》</h3>
+          <p class="av-case__concept">{{ c.concept }}</p>
+        </header>
 
-<section class="tech-section"><div class="tech-shell"><header class="tech-section-head"><span class="tech-eyebrow">What You Receive</span><h2>交付內容會在報價前寫清楚</h2></header><div class="tech-deliverable-grid"><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-palette"></i></span><div><h3>視覺方向與角色規格</h3><p>角色特徵、色彩、材質、構圖、鏡頭、參考與禁止項目。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-images"></i></span><div><h3>約定數量的正式成品</h3><p>依專案確認圖片數量、影片支數、片長、比例、解析度與檔案格式。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-list-check"></i></span><div><h3>人工 QA 與重生紀錄</h3><p>檢查角色、數量、肢體、文字污染、裁切與關鍵品牌元素；不合格版本不列入正式交付。</p></div></article><article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-file-earmark-zip"></i></span><div><h3>可使用的輸出包</h3><p>依使用情境整理 web、社群、簡報或印刷版本；來源與使用範圍另行約定。</p></div></article></div></div></section>
+        <figure class="av-case__lead">
+          <a href="{% include flickr/url.html image=lead.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ lead.order }} {{ lead.title }}｜{{ lead.caption }}{{ ai_tag }}">
+            <img {% include flickr/source.html id=lead.flickr_id image=lead.preview sizes="(max-width: 1180px) calc(100vw - 32px), 1080px" %} alt="{{ lead.alt }}{{ ai_tag }}" width="{{ lead.width }}" height="{{ lead.height }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>No.{{ lead.order }}〈{{ lead.title }}〉{{ lead.caption }}</figcaption>
+        </figure>
 
-<section class="tech-section tech-section--dark"><div class="tech-shell tech-split"><div class="tech-feature-media"><img src="{{ '/assets/img/tarot/clonex/wands-08.jpg' | relative_url }}" alt="權杖八以兩排各四根呈現精準數量" loading="lazy"></div><div class="tech-feature-copy"><span class="tech-eyebrow">Public Case</span><h2>78 張塔羅牌，漂亮之外還要每張可驗</h2><p>CloneX Cute Luxe Cyber Tarot 以同一角色完成 78 張牌面。權杖八曾出現 5 根與 9 根；錢幣十前三次是 9、11、11 枚，第四次才通過 10 枚。</p><p>這個案例呈現的是大型圖像系列的規格、批次生成、失敗重做與人工驗收，不是客戶成效案例。</p><a class="tech-btn tech-btn--light" href="{{ '/tarot/lab/' | relative_url }}">查看完整 AI Tarot Lab</a></div></div></section>
+        <div class="av-case__body">
+          <dl class="av-facts">
+            <div><dt>創作目標</dt><dd>{{ c.goal }}</dd></div>
+            <div><dt>我的工作</dt><dd>企劃、視覺統籌、選片與審定；人物與場景由 AI 生成。</dd></div>
+            <div><dt>畫面上看得到的設計</dt><dd>{{ c.observe }}</dd></div>
+            <div><dt>最終成果</dt><dd>{{ c.result }}</dd></div>
+            <div><dt>可以延伸討論的合作</dt><dd>{{ c.extend }}<span class="av-facts__aside">以上是可討論的方向，目前沒有已完成的商業案例。</span></dd></div>
+          </dl>
+          <p class="av-case__links">
+            <a href="{{ book.permalink | relative_url }}">翻閱完整 {{ book.count }} 張</a>
+            <a href="{{ book.flickr_album }}" target="_blank" rel="noopener noreferrer">Flickr 公開相簿 ↗</a>
+          </p>
+        </div>
 
-<section class="tech-section"><div class="tech-shell"><header class="tech-section-head"><span class="tech-eyebrow">Fit & Boundary</span><h2>適合與不適合，先說清楚</h2></header><div class="tech-compare-grid"><article class="tech-compare-card tech-compare-card--consulting"><h3>適合</h3><ul class="tech-check-list"><li>有明確品牌、角色或內容主題</li><li>需要一組一致的系列圖像</li><li>想先用小型短影音 pilot 驗證方向</li><li>重視人工判斷、授權與交付規格</li></ul></article><article class="tech-compare-card"><h3>不適合</h3><ul class="tech-x-list"><li>只比最低單張價格</li><li>要求無限修改或沒有驗收標準</li><li>偽造真人、活動、客戶成果或新聞畫面</li><li>未取得角色、Logo、音樂或素材使用權</li><li>需要長期代操整個社群帳號</li></ul></article></div></div></section>
+        {% for row in c.rows %}
+        <div class="av-row-wrap">
+          <p class="av-row__note">{{ c.row_notes[forloop.index0] }}</p>
+          <div class="av-row">
+            {% for n in row %}
+            {% assign p = book.photos | where: "order", n | first %}
+            {% assign ratio = p.width | times: 1.0 | divided_by: p.height %}
+            <figure class="av-fig {% if p.height > p.width %}av-fig--p{% else %}av-fig--l{% endif %}" style="--r: {{ ratio | round: 4 }}">
+              <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ p.order }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
+                <img {% include flickr/source.html id=p.flickr_id image=p.preview sizes="(max-width: 600px) calc(100vw - 32px), 540px" %} alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+              </a>
+              <figcaption>No.{{ p.order }}〈{{ p.title }}〉</figcaption>
+            </figure>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
 
-{% include technical/process.html %}
+  <section class="av-scope" id="scope" aria-labelledby="av-scope-title">
+    <div class="av-shell av-scope__grid">
+      <header class="av-head">
+        <h2 id="av-scope-title">目前可以承接的工作</h2>
+        <p>只列上面作品已經做得到的事。</p>
+      </header>
+      <div>
+        <ul class="av-list">
+          <li><strong>原創角色的人物情境影像</strong><span>同一位角色在不同場景、服裝與光線裡出現，臉與識別記號維持一致。</span></li>
+          <li><strong>系列視覺企劃</strong><span>從主題、配色記號、場景到章節順序，做成一組能連續看下去的圖。</span></li>
+          <li><strong>選片與編排</strong><span>從候選畫面中挑選、排序，整理成作品頁、相簿或可下載的作品冊。</span></li>
+        </ul>
+        <p class="av-scope__more"><strong>可以一起討論：</strong>提案用的概念畫面或分鏡、既有原創角色的延伸系列。這些還沒有完成的案例，會先用小範圍確認方向。</p>
+        <p class="av-scope__more av-scope__more--muted"><strong>目前不先承諾：</strong>精確還原特定商品、衣物版型或品牌標誌；影片中的口型；任何廣告成效或觸及數字；未經本人授權的真人肖像。</p>
+      </div>
+    </div>
+  </section>
 
-<section class="tech-section tech-section--paper"><div class="tech-shell"><header class="tech-section-head"><span class="tech-eyebrow">FAQ</span><h2>合作前常見問題</h2></header><div class="tech-faq"><details><summary>可以只做一張圖或一支影片嗎？</summary><div class="tech-faq-answer"><p>可以洽詢，但若主要價值只是單次生成，通常不會比自助工具划算。我比較適合需要視覺方向、系列一致性、分鏡與 QA 的案子。</p></div></details><details><summary>會公開 prompt 或生成檔案嗎？</summary><div class="tech-faq-answer"><p>交付範圍會在報價時說明。角色母版、正式成品、工作檔、prompt 與原始生成檔是否交付，會依專案需求與授權分開約定。</p></div></details><details><summary>可以用現有 IP、名人或品牌角色嗎？</summary><div class="tech-faq-answer"><p>只有在你能提供合法使用依據時才會承接。第一封 Email 可先附公開授權頁或素材連結，不要寄未授權檔案。</p></div></details><details><summary>短影音包含配音與音樂嗎？</summary><div class="tech-faq-answer"><p>可納入，但需先確認聲音來源、使用權與平台需求。真人配音、商用音樂、進階混音與大量版本會另列範圍。</p></div></details><details><summary>怎麼計價？</summary><div class="tech-faq-answer"><p>依視覺探索、角色與場景數、圖片數量、影片片長、修改輪次、授權與交付規格報價。先免費來信確認是否適合；深入需求分析與具體製作規劃屬付費工作。</p></div></details></div></div></section>
+  <section class="av-process" id="process" aria-labelledby="av-process-title">
+    <div class="av-shell">
+      <header class="av-head">
+        <h2 id="av-process-title">合作流程</h2>
+        <p>網站不放固定價目，依範圍報價。價格、時程、修改方式與使用授權，都在開始製作前個別確認。</p>
+      </header>
+      <ol class="av-steps">
+        <li><h3>了解用途與交付需求</h3><p>用在哪裡、給誰看、需要多少張、什麼尺寸與格式。</p></li>
+        <li><h3>確認範圍、報價與使用方式</h3><p>把製作內容、使用範圍與公開方式寫清楚，再開始。</p></li>
+        <li><h3>製作與確認</h3><p>依確認的方向製作，在約定的時間點一起看、一起調整。</p></li>
+        <li><h3>交付</h3><p>交付約定的成品與檔案格式。</p></li>
+      </ol>
+    </div>
+  </section>
 
-<section class="tech-section tech-section--dark" id="contact"><div class="tech-shell"><header class="tech-section-head tech-section-head--center"><span class="tech-eyebrow">Free Inquiry</span><h2>先告訴我，你想把什麼做成一套</h2><p>簡單說明品牌／主題、使用平台、想做系列圖片或短影音，以及預計時程。我會先確認是否適合，並回覆建議的下一步。</p></header><div class="tech-cta-card tech-cta-card--ai" style="max-width:760px;margin:0 auto;"><h3>免費來信洽詢 AI 視覺內容製作</h3><p>第一封 Email 不需要完整企劃，也不要附未授權素材或敏感資料。深入需求分析、視覺方向與製作規劃屬付費工作。</p><a class="btn-cta" href="{{ inquiry_href }}">用 Email 免費洽詢</a></div></div></section>
+  <section class="tech-section tech-section--paper av-faq" aria-labelledby="av-faq-title">
+    <div class="tech-shell">
+      <header class="tech-section-head"><h2 id="av-faq-title">合作前常見問題</h2></header>
+      <div class="tech-faq">
+        <details><summary>這些作品是品牌委託的嗎？</summary><div class="tech-faq-answer"><p>不是。兩組都是自主概念創作，目前沒有可以公開的品牌委託案例。</p></div></details>
+        <details><summary>可以只做一張圖嗎？</summary><div class="tech-faq-answer"><p>可以洽詢。不過如果只需要單次生成，自己用工具通常更划算；我比較適合需要系列一致、選片與編排的案子。</p></div></details>
+        <details><summary>可以做影片嗎？</summary><div class="tech-faq-answer"><p>可以討論。影片的聲音、音樂與素材權利需要先確認，這一頁目前沒有放影片案例。</p></div></details>
+        <details><summary>製作過程的檔案也會交付嗎？</summary><div class="tech-faq-answer"><p>交付範圍會在報價時說明。正式成品、角色設定與製作過程檔案是否交付，依需求與授權分開約定。</p></div></details>
+        <details><summary>可以用現有角色、名人或品牌圖像嗎？</summary><div class="tech-faq-answer"><p>只有在你能提供合法使用依據時才會承接。第一封信可以先附公開授權頁或素材連結，不要寄未授權的檔案。</p></div></details>
+        <details><summary>怎麼計價？</summary><div class="tech-faq-answer"><p>依角色與場景數量、圖片數量、修改方式、使用範圍與交付規格報價。先免費來信確認是否適合；深入需求分析與具體製作規劃屬付費工作。</p></div></details>
+      </div>
+      <p class="av-more">更多自主實驗：<a href="{{ '/photography/models/' | relative_url }}">SWANKY MODELS 虛擬模特兒作品</a>、<a href="{{ '/tarot/lab/' | relative_url }}">AI 塔羅牌組的製作紀錄</a>。其中部分使用改編或第三方角色，僅作個人創作展示，不列為合作主打。</p>
+    </div>
+  </section>
+
+  <section class="tech-section tech-section--dark av-contact" id="contact" aria-labelledby="av-contact-title">
+    <div class="tech-shell">
+      <header class="tech-section-head tech-section-head--center">
+        <h2 id="av-contact-title">先告訴我用途，再一起看範圍</h2>
+        <p>簡單說明用途、使用平台、想做的內容與預計時程就好，不需要完整企劃。我會先確認是否適合，再回覆建議的下一步。</p>
+      </header>
+      <div class="av-contact__card">
+        <a class="av-btn" href="{{ inquiry_href }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_visual_email',service:'ai_visual_production',cta_position:'contact',from_page:window.location.pathname});}">用 Email 免費洽詢</a>
+        {% include contact-fallback.html service="ai_visual_production" position="contact" %}
+        <p class="av-contact__note">第一封信請勿附上未授權素材、帳密、客戶機密或敏感個資；可以先提供公開連結。</p>
+      </div>
+    </div>
+  </section>
 </main>

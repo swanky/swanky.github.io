@@ -54,6 +54,7 @@
 ## 技術顧問 Technical Consulting
 
 - [技術顧問總覽](https://swanky.github.io/technical/): Java 架構、敏捷教練、區塊鏈 R&D 諮詢服務
+- [AI 視覺內容製作](https://swanky.github.io/technical/ai-visual-production/): 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。
 - [洽詢合作](https://swanky.github.io/contact/): 技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作的單一洽詢入口
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
 - [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
