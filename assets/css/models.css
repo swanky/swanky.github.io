@@ -339,3 +339,14 @@ a.sm-media:hover img { transform: scale(1.015); }
 .sm-bullets { max-width: 52rem; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sm-ink); }
 .sm-bullets li { padding: 18px 0; border-bottom: 1px solid var(--sm-line); color: var(--sm-body); line-height: 1.85; }
 .sm-bullets a { color: var(--sm-ink); text-decoration: none; border-bottom: 1px solid var(--sm-ink); }
+
+/* 同棚合照（_includes/models/group.html）：整張不裁切，高度壓在一屏內，圖說寬度跟著圖走 */
+.sm-group { width: fit-content; max-width: 100%; margin: 0 0 var(--sm-s2); }
+.sm-group img { display: block; width: auto; height: auto; max-width: 100%; max-height: 78vh; }
+.sm-group__cap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; margin-top: 14px; color: var(--sm-muted); font-size: var(--sm-t4); line-height: 1.7; }
+.sm-group__names { color: var(--sm-ink); }
+/* 名單頁合照下面直接接 .sm-section：間距交給合照的下邊距，不再疊上 section 的上內距 */
+.sm-shell:has(> .sm-group) + .sm-section { padding-top: 0; }
+.sm-group__names a { color: var(--sm-ink) !important; font-family: var(--font-display); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.sm-group__names a:hover { color: var(--sm-gold-deep) !important; }
+@media (max-width: 767px) { .sm-group img { max-height: none; } .sm-group__cap { flex-direction: column; gap: 4px; margin-top: 10px; } }

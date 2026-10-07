@@ -11,6 +11,17 @@
 # - 名冊照（digital: true）是 2026-09-25 以角色母版為身份參考、在同一場攝影棚設定下各生成一張的站姿四分之三身像，
 #   本地檔 /assets/img/photography/models/digitals/<slug>.webp，由 _includes/models/digital.html 輸出；spread 是首頁跨頁用的橫幅（既有書圖）。
 
+# 同棚合照：與名冊照同一組攝影棚設定生成的三人團體照（2026-09-25 生成、2026-10-07 上站；原檔與提示詞存於 Dropbox
+# swanky-site-archive/swanky-models-wip-2026-09-25/out/group-b01.png）。檔案在 /assets/img/photography/models/group/，
+# 由 _includes/models/group.html 輸出（名單頁、洽詢頁），整張不裁切；slugs 依畫面由左至右。
+group_photo:
+  file: swanky-models-group
+  width: 1536
+  height: 1024
+  slugs: [li-pinger, swanky-ji, pan-jinlian]
+  alt: 李瓶兒、史旺姬、潘金蓮三人同棚合照：李瓶兒坐在木凳上，史旺姬站在她身後、手搭在她肩上，潘金蓮站在右側
+  note: 與名冊照同一組攝影棚設定生成。三人皆為 AI 生成的虛擬人物，並非真人照片。
+
 brand:
   name: SWANKY MODELS
   tagline: 虛擬模特兒經紀
