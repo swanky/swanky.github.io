@@ -58,18 +58,24 @@
 
 ## 技術顧問 Technical Consulting
 
-- [技術顧問總覽](https://swanky.github.io/technical/): Java 架構、敏捷教練、區塊鏈 R&D 諮詢服務
+- [技術顧問總覽](https://swanky.github.io/technical/): 協助企業把 AI Agent 與 Web3 從趨勢變成能判斷、能驗證、能推進的技術行動。提供 AI Agent 導入評估、小範圍實際試行，以及 Web3 可行性評估、顧問原型與架構審查。
+- [AI Agent 導入顧問](https://swanky.github.io/technical/ai-agent-consulting/): 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。提供導入評估、小範圍實際試行、團隊規範與持續優化；不綁定 Claude Code、Codex 或單一工具。
+- [Web3 技術顧問](https://swanky.github.io/technical/web3-consulting/): 接受廣義 Web3 與區塊鏈應用問題，協助企業從問題界定、技術可行性、架構與風險比較，到範圍明確的顧問原型及架構審查；不承接整包開發、發幣或投資建議。
+- [Agentic Engineering 系列](https://swanky.github.io/technical/agentic-engineering/): 史旺基的 Agentic Engineering 系列文章。從帶團隊導入 AI、ORID 引導法、SDD 規格驅動開發，到 Claude Code 實戰工作流——一套把 AI 當「高級實習生」帶領、用軟體工程紀律交付的完整方法。
 - [AI 視覺內容製作](https://swanky.github.io/technical/ai-visual-production/): 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。
 - [洽詢合作](https://swanky.github.io/contact/): 技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作的單一洽詢入口
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
 - [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
 
-服務範圍：
+服務主軸（AI Agent 導入優先、Web3 技術顧問其次）：
+- AI Agent 導入顧問：導入評估、小範圍實際試行、團隊規範與持續優化
+- Web3 技術顧問：可行性評估、顧問原型與架構審查；不承接整包開發、發幣或投資建議
+
+工程資歷（理解 AI Coding 導入問題的背景，不再作為獨立服務）：
 - 大型雲端 IoT 與工業物聯網系統設計
 - Java 企業級服務架構
 - 敏捷轉型教練（CSM 認證、JCConf 2017–2019 講者）
-- 區塊鏈 R&D 諮詢（任職資策會期間曾擔任數位發展部「區塊鏈創新產業計畫」計畫主持人、TBSI 可信區塊鏈應用基礎建設 SIG 推動者）
-- NFT 發行輔導
+- 區塊鏈 R&D（任職資策會期間曾擔任數位發展部「區塊鏈創新產業計畫」計畫主持人、TBSI 可信區塊鏈應用基礎建設 SIG 推動者）
 
 代表文章：
 
@@ -92,14 +98,14 @@
 
 ## 教育訓練 Education
 
-- [教育訓練總覽](https://swanky.github.io/education/): 從加密貨幣到模特兒培訓、個人小班制或企業內訓
+- [教育訓練總覽](https://swanky.github.io/education/): 史旺基提供 Agentic Engineering、Web3 企業培訓，以及女性模特兒鏡頭表現一對一課程。企業與個人分流，課程成果、狀態與洽詢方式清楚呈現。
 - [模特兒課程](https://swanky.github.io/education/modeling/): 攝影模特兒養成
 - [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
 - [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
 - [企業 Web3 內訓](https://swanky.github.io/education/crypto/enterprise/): 企業版區塊鏈與加密資產課程
-- [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): AI Agent 開發與導入的企業課程
-- [AI Agent × Crypto Research 合作課程](https://swanky.github.io/education/ai-crypto-research/): AI 與加密研究的合作型課程
-- [AI 學習分享](https://swanky.github.io/education/ai/): AI 工具實務應用心得
+- [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): Agentic Engineering 企業培訓試辦方案。從需求拆解、規格、測試到交付，核心方法跨工具，以 Claude Code 為主要示範並補充 Codex 等 coding agent 對照。
+- [AI 研究流程應用模組](https://swanky.github.io/education/agentic-engineering/#ai-research): Agentic Engineering 企業培訓的應用情境模組，以加密市場研究為例，建立研究、交叉查證與風險檢查流程；也接受社群、場地或教育平台合作主辦 60–90 分鐘講座。不構成投資建議。
+- [AI 學習分享](https://swanky.github.io/education/ai/): 史旺基的 AI 學習分享，整理 Agentic Engineering、coding agent、規格、測試、治理與 Claude Code 實戰。這裡是免費內容入口，企業培訓另有獨立商品頁。
 - [AI 入門：四個關鍵詞](https://swanky.github.io/education/ai/learn/ai-basics/): 給非工程背景的免費 AI 入門自學教材。跟著六幕故事搞懂 LLM、Prompt、MCP、Skill 與 Agent，附互動小遊戲、名詞小抄與 9 題自我檢核。
 - [AI 想變聰明：從人教到自己學](https://swanky.github.io/education/ai/learn/ai-basics/history/): 從 1950 年的圖靈測試、會套句型的 ELIZA、越寫越厚的專家系統，到自己學會認貓的機器學習與 AlphaGo 第 37 手，白話看懂 AI 怎麼從「人教規則」走到「自己從資料學」。附小測驗。
 - [LLM：會說話的 AI 誕生了](https://swanky.github.io/education/ai/learn/ai-basics/llm/): 用文字接龍、抽籤與辦公桌的比喻，白話看懂 LLM 怎麼產生回答、為什麼會一本正經地講錯，以及聊太久為什麼要開新對話。附互動小遊戲與小測驗。

@@ -107,6 +107,30 @@ breadcrumbs:
     </div>
   </section>
 
+  {% for app in c.applications %}
+  <section id="{{ app.id }}" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">{{ app.eyebrow }}</span>
+        <h2>{{ app.title }}</h2>
+        <p>{{ app.lead }}</p>
+      </header>
+      <div class="edu-timeline">
+        {% for step in app.steps %}
+        <div class="edu-timeline__item"><span class="edu-timeline__step">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div></div>
+        {% endfor %}
+      </div>
+      <div class="edu-card-grid edu-card-grid--two" style="margin-top:32px">
+        <article class="edu-card edu-card--featured"><h3>{{ app.usable_title }}</h3><ul>{% for item in app.usable %}<li>{{ item }}</li>{% endfor %}</ul></article>
+        <article class="edu-card"><h3>{{ app.not_used_title }}</h3><ul>{% for item in app.not_used %}<li>{{ item }}</li>{% endfor %}</ul></article>
+      </div>
+      <div class="edu-callout" style="margin-top:32px"><strong>風險聲明：</strong>{{ app.risk }}</div>
+      <p style="margin-top:24px">{{ app.cohost_text }}</p>
+      <p><a class="edu-btn" href="{{ app.cohost_href | relative_url }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_crypto_module',service:'ai_crypto_research',cta_position:'ai_research',from_page:window.location.pathname});}">{{ app.cohost_label }}</a></p>
+    </div>
+  </section>
+  {% endfor %}
+
   <section class="edu-section edu-section--dark">
     <div class="edu-container">
       <header class="edu-section-head edu-section-head--center">

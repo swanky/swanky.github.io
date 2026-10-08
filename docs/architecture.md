@@ -26,8 +26,11 @@ default.html  →  head.html + header.html + {{ content }} + footer.html + scrip
 ```
 主頁          /
 攝影寫真      /photography/  → photo-albums/ awards/ personal-works/ archive/ uniform/ models/ (SWANKY MODELS 虛擬模特兒經紀子站：talent/<slug>/ work/ inquiry/；資料源 _data/models.yml，圖片經 _includes/models/photo.html 參照既有寫真集資料)
-技術顧問      /technical/    → articles/ ai-agent-consulting/ (AI Agent 導入顧問 offer page, homepage-funnel CTA target)
-教育訓練      /education/    → modeling/ crypto/ (trading/ defi/ nft/) ai/ claude-code/
+技術顧問      /technical/    → articles/ ai-agent-consulting/ (AI Agent 導入顧問 offer page, homepage-funnel CTA target) web3-consulting/ ai-visual-production/ agentic-engineering/ (Agentic 系列策展頁) rwa/
+教育訓練      /education/    → agentic-engineering/ (AI 企業培訓正式商品頁，含 #ai-research 應用情境模組) ai/ (免費 AI 學習入口) → learn/ai-basics/ (AI 入門自學教材：總覽＋history/ llm/ prompt/ mcp/ skill/ agent/ 六幕)
+                             modeling/ crypto/ (enterprise soochow trading defi nft web3-essentials/)
+                             claude-code/ → 轉址 agentic-engineering/（ADR 0003）；ai-crypto-research/ → 轉址 agentic-engineering/#ai-research（ADR 0005）
+洽詢          /contact/      ← 全站單一洽詢表單；?service=<topic>&from=<page> 預選主題並帶 GA4 來源（option value 是 GA4 連續性鍵，改名只改顯示文字）
 人類圖        /human-design/ ← client-side tool (see Human Design Generator below)
 職場塔羅      /tarot/        ← client-side tool (see Tarot Reflection Tool below); compare.html = 原版偉特對照頁; daily/ = 今日一牌
 自我探索      /explore/      ← 自我探索實驗室 hub（工具館總覽，data 驅動；see Self-Discovery Lab below）
@@ -130,6 +133,12 @@ A client-side tool framed as a **workplace reflection** aid (not fortune-telling
 - **Nav**: 「自我探索」dropdown（`_includes/header.html` 頂部 `explore_navs` 清單控制父層高亮）收 總覽/人類圖/塔羅/奇門策略地圖；行動儀式類（今日一牌等）不進主導航。首頁 services 區下方有 `.explore-home-cta` banner 導入 hub。
 - **Styles**: 共用樣式集中在 `assets/css/style.css` 末尾（「自我探索實驗室」＋「奇門」兩個 section）；daily 頁翻牌 CSS 走頁面 `extra_css`。調色板沿用塔羅頁（金 `#E5A300` / 暖底 `#fffaf0→#fdf3e0`）。
 
-## Education — Claude Code course page (`/education/claude-code/`)
+## Education — AI 路徑（`/education/agentic-engineering/`, `/education/ai/`）
 
-Introductory page only — it presents the offering but does **not** recruit/enrol students. Avoid banned terms (e.g. 橙皮書). Source material lives in a separate repo (see memory `project_claude_code_course_page` for specifics).
+決策紀錄在私有 `docs/adr/`（0001–0005）。
+
+- **Agentic Engineering 企業培訓**（`education/agentic-engineering/index.html`，`layout: home`）：AI 企業培訓唯一的正式商品頁，資料源 `_data/courses/agentic_engineering.yml`（formats / principles / lessons / outcomes / faq / stats / `applications`）。`applications` 是「應用情境模組」清單，每筆渲染成一個 `id={{ app.id }}` 的段落（目前只有 `ai-research`＝AI 研究流程應用模組，由舊 AI × Crypto 合作課併入，ADR 0005）；洽詢連結走 `/contact/?service=…&from=agentic_engineering_page`，點擊送 `contact_cta_click`（`service` 沿用洽詢表單 option value）。共用元件在 `_includes/education/`（hero / cta / instructor）＋ `assets/css/education.css`（`edu-` 前綴）。
+- **轉址頁**：`education/claude-code/`（ADR 0003）與 `education/ai-crypto-research/`（ADR 0005）都是 `layout: null` + `redirect_to` + `sitemap: false`（jekyll-redirect-from；`redirect_to` 經 `absolute_url`，`#fragment` 會保留）。舊網址不刪，保留外部連結與搜尋累積。
+- **免費 AI 學習入口**（`education/ai/index.html`）：文章入口，與付費商品頁分開（ADR 0003）。
+- **AI 自學教材**（`education/ai/learn/<module>/`，目前 `ai-basics`）：資料源 `_data/ai_learn.yml`（`modules[]` → `chapters[]`：slug／act／title／summary／color／status，各章 `further` 延伸學習連結：official／extra／column）。總覽頁 `education/ai/learn/ai-basics/index.html`；六幕章節頁用 `layout: ai-learn-chapter`（front matter `ai_module`、`ai_chapter`；章序、上下章、識別色都由 yml 決定）。元件 `_includes/ai-learn/*`（`illus`＝插畫位／`.webp` 須有 `-768.webp` 小圖，`chref`＝章節互連，`rail`）。樣式 `use_ai_learn: true` 載 `assets/css/ai-learn.css`，`chapter_css: true` 另載 `assets/css/ai-learn/<module>/<chapter>.css`。插畫在 `assets/img/ai-learn/<module>/`。測試 `tests/ai-learn.test.mjs`（yml 結構、章節頁對得到 yml、chref slug、誤會卡指向）。新增單元：yml 加一筆 module＋建對應頁面，並同步 `llms.txt`。
+- `_data/courses/claude_code.yml` 目前無頁面引用（`/education/claude-code/` 轉址後遺留）。
