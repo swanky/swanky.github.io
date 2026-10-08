@@ -35,6 +35,16 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 
 若使用者在當次任務指定其他網站 repo、參考圖或輸出位置，以當次明確指示為準；不得自行「修正」路徑。
 
+### 暫存與清理（每篇都要做，避免硬碟累積）
+
+一篇專欄的 build 輸出約 0.9 GB；過去每篇留下多個版本的 build 目錄，單篇就累積 3–4 GB。規則：
+
+- 本次所有中間產物（build、試稿圖、下載的來源頁、截圖、ledger 草稿）只放在**一個**本次工作目錄 `<agent 暫存根>/<slug>-<YYYYMMDD>/`，不放 repo 內（`.hermes/` 也不要）、不散落到 `cache/`、`tmp/`。
+- build 目錄固定兩個：`build-prod`、`build-review`。「全新 build」的做法是**先刪掉同名目錄再重建**，不要另開 `-v2`、`-v3`。
+- 生圖試稿只留目前候選；被淘汰的版本當下刪除。採用的 master 原圖可保留一份到交付結束。
+- 結束時（不論是第 9 步完成、或停在第 8 步等待 Owner 超過本次對話）都要執行「收尾清理」：刪除 `build-prod`、`build-review`、試稿與下載暫存，只留 ledger、brief 等可續作的文字檔；回報實際刪了哪些目錄與釋放的大小。
+- 只刪本次自己建立的路徑；不刪其他任務、其他 agent 或使用者的檔案，也不刪 repo 內已追蹤的檔案。
+
 詳細成品欄位與回報格式見 `references/delivery-contract.md`。
 
 ## 非協商邊界
@@ -182,7 +192,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 2. 掃描台灣用語、未知 placeholder、假資料、雇主／機密字樣。
 3. 驗 SVG XML、JPEG header／尺寸、所有圖片 natural dimensions 與 alt／caption。
 4. `npm test`、`git diff --check`。
-5. 建立兩個**全新** destination：
+5. 建立兩個**全新** destination（固定放在本次工作目錄的 `build-prod`、`build-review`；重建前先刪同名目錄，不另開版本目錄）：
    - Normal Production Build：草稿 route／marker 不存在，另報告草稿靜態資產是否仍被複製。
    - Review Build（`--unpublished`）：文章、Banner、圖表、站內連結與來源連結都存在。
 6. 啟動只讀 static server；以桌機與真實 390px device metrics 做 browser QA：H1、TLDR、TOC、文章欄寬、圖文節奏、表格、SVG、console、HTTP 200、`scrollWidth <= innerWidth`。
@@ -202,6 +212,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 7. 以 commit SHA 找正確 GitHub Actions run；確認 build 與 deploy 都成功。Pages 瞬態錯誤才可依 repo 規範重跑 failed jobs。
 8. 直接抓正式文章 URL 與關鍵資產：HTTP 200、最新版 marker、圖片非零 bytes、尺寸正確。CI 綠不等於正式站已更新。
 9. 最後確認 local／remote SHA 一致、ahead／behind 為 `0 0`；停止本次啟動的 server／browser，不刪其他人的 preview 或 untracked 檔案。
+10. 執行「暫存與清理」段的收尾清理：刪除本次工作目錄中的 `build-prod`、`build-review`、試稿與下載暫存，回報刪除路徑與釋放大小。
 
 ### 10. 產生桌面社群轉貼短文
 
@@ -233,5 +244,6 @@ X：
 - Owner 已看過最終預覽並明確核准。
 - scoped commit／push、GitHub Pages deploy 與 live page marker 均已驗證。
 - 兩份 UTF-8 BOM 社群 TXT 已寫到桌面並讀回驗證。
+- 本次的 build 目錄、試稿與下載暫存已刪除，並回報釋放的空間。
 
 若任一 Gate 未過，誠實回報「已做到哪裡、哪個證據缺失、下一個可執行修正」，不得以文章檔存在或 CI 綠燈代替完整交付。
