@@ -1,0 +1,57 @@
+# 部署完成後通知 IndexNow（Bing 等搜尋引擎；ChatGPT 搜尋與 Copilot 用 Bing 索引）。
+# GitHub Pages 是「從 master 分支部署」，部署本身不在這個 repo 的 workflow 裡，
+# 所以這裡在 push 後輪詢 Pages build，等「這次的 commit（或更新的 commit）已上線」再送，避免搜尋引擎抓到舊內容。
+# 手動執行（Actions → IndexNow → Run workflow）可選「送出 sitemap 全部網址」。
+name: IndexNow
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: '送出 sitemap 全部網址（首次設定或大改版後）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 等 GitHub Pages 部署這個 commit
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            read -r status commit <<<"$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.status + " " + .commit' 2>/dev/null || echo "unknown none")"
+            if [ "$status" = "built" ] && { [ "$commit" = "$GITHUB_SHA" ] || git merge-base --is-ancestor "$GITHUB_SHA" "$commit" 2>/dev/null; }; then
+              echo "Pages 已部署 $commit"; sleep 60; exit 0
+            fi
+            echo "等待中（$status $commit）"; sleep 20
+          done
+          echo "::warning::20 分鐘內沒等到這個 commit 部署完成，這次不送出。"; exit 1
+
+      - name: 通知 IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all && '1' || '' }}
+        run: node tools/indexnow.mjs
