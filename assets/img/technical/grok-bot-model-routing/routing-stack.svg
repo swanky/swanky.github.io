@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="940" viewBox="0 0 1200 940" role="img" aria-labelledby="title desc"><title id="title">一件工作進來，Grok Bot 決定交給哪個模型</title><desc id="desc">三層結構：分發與信任層接收使用者交辦，編排層的 Grok Bot 依任務選擇後端，模型層包括自家 Grok 模型、Claude Opus 5.5、Midjourney、Suno 與其他 API。貼文未公開任務對應表、生效日、退出機制、資料去向與計費。</desc><defs><marker id="ac" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 1 L9 5 L0 9" fill="none" stroke="#72ddda" stroke-width="1.6"/></marker></defs><rect width="1200" height="940" rx="24" fill="#081725"/><g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+<text x="48" y="62" fill="#f4f5ef" font-size="36" font-weight="700">一件工作進來，Grok Bot 決定交給誰</text>
+<text x="48" y="102" fill="#b6cbd4" font-size="22">貼文只說「哪個最可能給你最好結果」；下方模型分工依各家產品類別推測，不是官方對應表</text>
+<text x="48" y="150" fill="#b6cbd4" font-size="21" font-weight="700">分發與信任層</text>
+<rect x="48" y="164" width="1104" height="96" rx="16" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="76" y="222" fill="#f4f5ef" font-size="26" font-weight="700">你：交辦一件工作</text>
+<text x="1124" y="222" fill="#b6cbd4" font-size="23" text-anchor="end">掌握帳號登入、團隊脈絡、帳單的人在這層</text>
+<line x1="600" y1="262" x2="600" y2="318" stroke="#72ddda" stroke-width="3" marker-end="url(#ac)"/>
+<text x="48" y="318" fill="#b6cbd4" font-size="21" font-weight="700">編排層</text>
+<rect x="48" y="330" width="1104" height="170" rx="16" fill="#1a3346" stroke="#f5cb78" stroke-width="3"/>
+<text x="76" y="384" fill="#f5cb78" font-size="30" font-weight="700">Grok Bot</text>
+<text x="76" y="428" fill="#f4f5ef" font-size="24">記憶、技能、工具權限、核准點</text>
+<text x="76" y="470" fill="#f4f5ef" font-size="24">多個 Bot 共用一台雲端電腦</text>
+<rect x="640" y="356" width="488" height="120" rx="14" fill="#081725" stroke="#72ddda" stroke-width="2"/>
+<text x="664" y="398" fill="#72ddda" font-size="24" font-weight="700">路由判斷（新增）</text>
+<text x="664" y="440" fill="#f4f5ef" font-size="23">這件事交給哪個模型最可能成功？</text>
+<line x1="150" y1="502" x2="150" y2="566" stroke="#72ddda" stroke-width="2.5" marker-end="url(#ac)"/>
+<line x1="375" y1="502" x2="375" y2="566" stroke="#72ddda" stroke-width="2.5" marker-end="url(#ac)"/>
+<line x1="600" y1="502" x2="600" y2="566" stroke="#72ddda" stroke-width="2.5" marker-end="url(#ac)"/>
+<line x1="825" y1="502" x2="825" y2="566" stroke="#72ddda" stroke-width="2.5" marker-end="url(#ac)"/>
+<line x1="1050" y1="502" x2="1050" y2="566" stroke="#72ddda" stroke-width="2.5" marker-end="url(#ac)"/>
+<text x="48" y="560" fill="#b6cbd4" font-size="21" font-weight="700">模型層</text>
+<rect x="48" y="576" width="204" height="130" rx="14" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="150" y="630" fill="#f4f5ef" font-size="24" font-weight="700" text-anchor="middle">Grok 自家</text>
+<text x="150" y="668" fill="#b6cbd4" font-size="21" text-anchor="middle">預設與備援</text>
+<rect x="273" y="576" width="204" height="130" rx="14" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="375" y="630" fill="#f4f5ef" font-size="23" font-weight="700" text-anchor="middle">Opus 5.5</text>
+<text x="375" y="668" fill="#b6cbd4" font-size="21" text-anchor="middle">文字／推理</text>
+<rect x="498" y="576" width="204" height="130" rx="14" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="600" y="630" fill="#f4f5ef" font-size="23" font-weight="700" text-anchor="middle">Midjourney</text>
+<text x="600" y="668" fill="#b6cbd4" font-size="21" text-anchor="middle">圖像</text>
+<rect x="723" y="576" width="204" height="130" rx="14" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="825" y="630" fill="#f4f5ef" font-size="23" font-weight="700" text-anchor="middle">Suno</text>
+<text x="825" y="668" fill="#b6cbd4" font-size="21" text-anchor="middle">音樂</text>
+<rect x="948" y="576" width="204" height="130" rx="14" fill="#132d40" stroke="#345467" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1050" y="630" fill="#f4f5ef" font-size="23" font-weight="700" text-anchor="middle">其他 API</text>
+<text x="1050" y="668" fill="#b6cbd4" font-size="21" text-anchor="middle">未點名</text>
+<rect x="48" y="744" width="1104" height="160" rx="16" fill="#081725" stroke="#ff9a98" stroke-width="2" stroke-dasharray="10 7"/>
+<text x="76" y="792" fill="#ff9a98" font-size="25" font-weight="700">貼文沒說的事</text>
+<text x="76" y="840" fill="#f4f5ef" font-size="23">什麼時候生效？　使用者能不能指定或退出？</text>
+<text x="76" y="882" fill="#f4f5ef" font-size="23">資料送到哪家、留多久？　用量與帳單怎麼算？</text>
+</g></svg>

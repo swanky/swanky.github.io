@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc"><title id="title">模型路由之後的三種走向</title><desc id="desc">路徑 A 編排層贏、模型變零件；路徑 B 模型廠商把編排層收回；路徑 C 依風險分層混合使用。作者判斷企業最可能走 C。這是情境推演，不是預測機率。</desc><rect width="1200" height="820" rx="24" fill="#081725"/><g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+<text x="48" y="62" fill="#f4f5ef" font-size="36" font-weight="700">模型路由之後的三種走向</text>
+<text x="48" y="104" fill="#b6cbd4" font-size="23">作者情境推演，不是機率預測；三條路會在不同產業同時出現</text>
+<g>
+<rect x="48" y="140" width="352" height="560" rx="18" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="76" y="192" fill="#72ddda" font-size="30" font-weight="700">A｜編排層贏</text>
+<text x="76" y="232" fill="#b6cbd4" font-size="23">模型變成可替換零件</text>
+<text x="76" y="296" fill="#b6cbd4" font-size="22">使用者記得的是</text>
+<text x="76" y="330" fill="#f4f5ef" font-size="25">「我的 Bot」</text>
+<text x="76" y="394" fill="#b6cbd4" font-size="22">模型廠商變成</text>
+<text x="76" y="428" fill="#f4f5ef" font-size="25">比價格的供應商</text>
+<text x="76" y="492" fill="#b6cbd4" font-size="22">主要風險</text>
+<text x="76" y="526" fill="#ff9a98" font-size="25">編排者握有跨模型</text>
+<text x="76" y="560" fill="#ff9a98" font-size="25">使用資料</text>
+</g>
+<g>
+<rect x="424" y="140" width="352" height="560" rx="18" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="452" y="192" fill="#b6cbd4" font-size="30" font-weight="700">B｜模型廠收回</text>
+<text x="452" y="232" fill="#b6cbd4" font-size="23">各家做自己的封閉套件</text>
+<text x="452" y="296" fill="#b6cbd4" font-size="22">使用者記得的是</text>
+<text x="452" y="330" fill="#f4f5ef" font-size="25">原本那家模型</text>
+<text x="452" y="394" fill="#b6cbd4" font-size="22">可能的手段</text>
+<text x="452" y="428" fill="#f4f5ef" font-size="25">限制 API 被包進競品</text>
+<text x="452" y="492" fill="#b6cbd4" font-size="22">主要風險</text>
+<text x="452" y="526" fill="#ff9a98" font-size="25">工作流被鎖在單一</text>
+<text x="452" y="560" fill="#ff9a98" font-size="25">供應商裡</text>
+</g>
+<g>
+<rect x="800" y="140" width="352" height="560" rx="18" fill="#1a3346" stroke="#f5cb78" stroke-width="3"/>
+<text x="828" y="192" fill="#f5cb78" font-size="30" font-weight="700">C｜依風險分層</text>
+<text x="828" y="232" fill="#b6cbd4" font-size="23">作者判斷：企業最可能</text>
+<text x="828" y="296" fill="#b6cbd4" font-size="22">低風險、可替換</text>
+<text x="828" y="330" fill="#f4f5ef" font-size="25">交給最划算的外部模型</text>
+<text x="828" y="394" fill="#b6cbd4" font-size="22">個資、合約、未公開程式</text>
+<text x="828" y="428" fill="#f4f5ef" font-size="25">鎖在白名單或自架模型</text>
+<text x="828" y="492" fill="#b6cbd4" font-size="22">主要風險</text>
+<text x="828" y="526" fill="#ff9a98" font-size="25">白名單寫在文件裡，</text>
+<text x="828" y="560" fill="#ff9a98" font-size="25">系統不一定照做</text>
+</g>
+<text x="600" y="766" fill="#72ddda" font-size="26" font-weight="700" text-anchor="middle">真正的分水嶺：使用者看不看得到「是誰在想、資料去了哪」</text>
+</g></svg>

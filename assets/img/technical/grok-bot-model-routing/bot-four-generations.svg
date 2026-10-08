@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc"><title id="title">Bot 的四代演化：交辦的單位越來越大</title><desc id="desc">規則 Bot、對話 Bot、代理實驗到持續在線的數位同事；年代為約略分期且彼此重疊。第四代在 2026 年 10 月開始替使用者挑選後端模型。</desc><rect width="1200" height="800" rx="24" fill="#081725"/><g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+<text x="48" y="62" fill="#f4f5ef" font-size="36" font-weight="700">Bot 的四代演化：交辦的單位越來越大</text>
+<text x="48" y="104" fill="#b6cbd4" font-size="23">約略分期，各代彼此重疊；第四代不是取代前三代，而是疊在上面</text>
+<g>
+<rect x="48" y="140" width="528" height="250" rx="18" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<circle cx="96" cy="190" r="24" fill="#345467"/><text x="96" y="199" fill="#f4f5ef" font-size="26" font-weight="700" text-anchor="middle">1</text>
+<text x="136" y="200" fill="#b6cbd4" font-size="30" font-weight="700">規則 Bot</text><text x="556" y="200" fill="#b6cbd4" font-size="22" text-anchor="end">約 1990s–2015</text>
+<text x="76" y="262" fill="#f4f5ef" font-size="25">觸發詞、排程、簡單狀態機</text>
+<text x="76" y="306" fill="#f4f5ef" font-size="25">例：IRC bot、新聞推播、速報</text>
+<text x="76" y="350" fill="#ff9a98" font-size="25">印象：假帳號、灌水、洗版</text>
+</g>
+<g>
+<rect x="624" y="140" width="528" height="250" rx="18" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<circle cx="672" cy="190" r="24" fill="#345467"/><text x="672" y="199" fill="#f4f5ef" font-size="26" font-weight="700" text-anchor="middle">2</text>
+<text x="712" y="200" fill="#b6cbd4" font-size="30" font-weight="700">對話 Bot</text><text x="1132" y="200" fill="#b6cbd4" font-size="22" text-anchor="end">約 2016–2022</text>
+<text x="652" y="262" fill="#f4f5ef" font-size="25">意圖分類＋填欄位，能辦的事很窄</text>
+<text x="652" y="306" fill="#f4f5ef" font-size="25">例：客服機器人、Siri、Alexa</text>
+<text x="652" y="350" fill="#f4f5ef" font-size="25">2022 年底：會聊天的 AI 爆紅</text>
+</g>
+<g>
+<rect x="48" y="420" width="528" height="250" rx="18" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<circle cx="96" cy="470" r="24" fill="#345467"/><text x="96" y="479" fill="#f4f5ef" font-size="26" font-weight="700" text-anchor="middle">3</text>
+<text x="136" y="480" fill="#72ddda" font-size="30" font-weight="700">代理實驗</text><text x="556" y="480" fill="#b6cbd4" font-size="22" text-anchor="end">約 2023–2025</text>
+<text x="76" y="542" fill="#f4f5ef" font-size="25">給一個目標，自己拆步驟去做</text>
+<text x="76" y="586" fill="#f4f5ef" font-size="25">例：AutoGPT、操作電腦、寫程式</text>
+<text x="76" y="630" fill="#ff9a98" font-size="25">痛點：空轉、帳單暴衝、難稽核</text>
+</g>
+<g>
+<rect x="624" y="420" width="528" height="250" rx="18" fill="#1a3346" stroke="#f5cb78" stroke-width="3"/>
+<circle cx="672" cy="470" r="24" fill="#f5cb78"/><text x="672" y="479" fill="#081725" font-size="26" font-weight="700" text-anchor="middle">4</text>
+<text x="712" y="480" fill="#f5cb78" font-size="30" font-weight="700">數位同事</text><text x="1132" y="480" fill="#b6cbd4" font-size="22" text-anchor="end">2026</text>
+<text x="652" y="542" fill="#f4f5ef" font-size="25">有自己的電腦、記憶、核准點</text>
+<text x="652" y="586" fill="#f4f5ef" font-size="25">例：Grok Bot、Team Bots</text>
+<text x="652" y="630" fill="#f5cb78" font-size="25" font-weight="700">10/7：開始替你挑大腦</text>
+</g>
+<text x="600" y="738" fill="#72ddda" font-size="27" font-weight="700" text-anchor="middle">交辦單位：一條指令 → 一句話 → 一個目標 → 一件工作</text>
+</g></svg>

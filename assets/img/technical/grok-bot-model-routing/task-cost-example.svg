@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc"><title id="title">同一件代理工作，換一個大腦，帳單差多少</title><desc id="desc">作者試算：一件代理任務累計輸入 30 萬 token、輸出 4 萬 token，未計快取與重試。依 2026 年 10 月報導的列表價，Grok 4.7 約 0.84 美元，Claude Opus 5.5 約 2.00 美元，約 2.4 倍；Opus 的輸出 token 只占總量 12%，卻占帳單 40%。</desc><rect width="1200" height="800" rx="24" fill="#081725"/><g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+<text x="48" y="62" fill="#f4f5ef" font-size="36" font-weight="700">同一件代理工作，換一個大腦，帳單差多少</text>
+<text x="48" y="104" fill="#b6cbd4" font-size="22">作者試算｜假設一件任務累計輸入 30 萬、輸出 4 萬 token；未計快取、重試與工具費</text>
+<text x="48" y="178" fill="#b6cbd4" font-size="23">每百萬 token 列表價（輸入／輸出，美元）</text>
+<text x="48" y="222" fill="#f4f5ef" font-size="25">Grok 4.7：2／6（提示 20 萬 token 以下）</text>
+<text x="640" y="222" fill="#f4f5ef" font-size="25">Claude Opus 5.5：4／20</text>
+<line x1="48" y1="256" x2="1152" y2="256" stroke="#345467" stroke-width="2"/>
+<text x="48" y="330" fill="#f4f5ef" font-size="27" font-weight="700">Grok 4.7</text>
+<rect x="260" y="298" width="210" height="48" fill="#72ddda"/>
+<rect x="470" y="298" width="84" height="48" fill="#f5cb78"/>
+<text x="574" y="332" fill="#f4f5ef" font-size="27" font-weight="700">約 0.84 美元</text>
+<text x="48" y="450" fill="#f4f5ef" font-size="27" font-weight="700">Opus 5.5</text>
+<rect x="260" y="418" width="420" height="48" fill="#72ddda"/>
+<rect x="680" y="418" width="280" height="48" fill="#f5cb78"/>
+<text x="980" y="452" fill="#f4f5ef" font-size="27" font-weight="700">約 2.00 美元</text>
+<text x="1152" y="570" fill="#f5cb78" font-size="25" font-weight="700" text-anchor="end">Opus 約為 Grok 的 2.4 倍</text>
+<rect x="260" y="548" width="26" height="26" fill="#72ddda"/><text x="298" y="570" fill="#b6cbd4" font-size="22">輸入費</text>
+<rect x="420" y="548" width="26" height="26" fill="#f5cb78"/><text x="458" y="570" fill="#b6cbd4" font-size="22">輸出費</text>
+<rect x="48" y="610" width="1104" height="150" rx="16" fill="#132d40" stroke="#345467" stroke-width="2"/>
+<text x="76" y="660" fill="#f5cb78" font-size="25" font-weight="700">輸出只占 token 總量 12%，在 Opus 卻占帳單 40%</text>
+<text x="76" y="704" fill="#f4f5ef" font-size="23">代理越常「想很久、寫很長、重試」，價差越會被放大；</text>
+<text x="76" y="740" fill="#f4f5ef" font-size="23">貼文沒說這筆差額由誰吸收。</text>
+</g></svg>
