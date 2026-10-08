@@ -29,7 +29,7 @@ const BOOK = arg('book');
 const EDITION = arg('edition');
 const FROM = Number(arg('from', 1));
 const TO = Number(arg('to'));
-const SRC = arg('src', 'C:/Users/swank/Desktop/classic_chinese_novels_text_only_2026-08-09');
+const SRC = arg('src', 'C:/Users/swank/Desktop/10_研究報告/古典小說/classic_chinese_novels_text_only_2026-08-09');
 if (!BOOK || !EDITION || !TO) {
   console.error('用法：node tools/stage_gutenberg_book.mjs --book <id> --edition <id> --from 1 --to <N> [--src <素材包>]');
   process.exit(1);
