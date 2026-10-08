@@ -27,9 +27,10 @@ function fmValue(fm, key) {
 }
 
 function fmCategories(fm) {
-  const inline = fm.match(/^categories:\s*\[([^\]]*)\]/m);
+  // 用 [ \t]* 不用 \s*：\s 會吃掉換行，把清單寫法（下一行「- x」）誤當成單行值
+  const inline = fm.match(/^categories:[ \t]*\[([^\]]*)\]/m);
   if (inline) return inline[1].split(',').map((s) => s.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
-  const single = fm.match(/^categories:\s*([^\s\[].*)$/m);
+  const single = fm.match(/^categories:[ \t]*([^\s\[].*)$/m);
   if (single) return single[1].trim().split(/\s+/);
   const list = fm.match(/^categories:\s*\r?\n((?:\s*-\s*.+\r?\n?)+)/m);
   if (list) return list[1].split(/\r?\n/).map((l) => l.replace(/^\s*-\s*/, '').trim()).filter(Boolean);
