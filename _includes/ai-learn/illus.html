@@ -1,10 +1,12 @@
 {% comment %}
   插畫位。src 有值＝顯示定稿圖；沒有＝顯示「插畫製作中」佔位（規格代號只放在 data-code，訪客看不到）。
   參數：src, alt, code（規格代號，如 L1）, desc（內部說明，不顯示）, caption, eager（hero 用：true 時優先載入）, width, height
+  慣例：src 是 .webp 時，同目錄必須另有 768px 寬的「-768.webp」小圖（手機與一倍螢幕載入小圖）。
 {% endcomment %}
 {% if include.src %}
+{% assign ext = include.src | slice: -5, 5 %}
 <figure class="ae-illus">
-  <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %}{% if include.eager %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+  <img src="{{ include.src | relative_url }}"{% if ext == '.webp' %} srcset="{{ include.src | replace: '.webp', '-768.webp' | relative_url }} 768w, {{ include.src | relative_url }} 1536w" sizes="(min-width: 992px) 640px, 100vw"{% endif %} alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %}{% if include.eager %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
   {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
 {% else %}
