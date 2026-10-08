@@ -90,7 +90,7 @@ glossary:
   - { term: Jira／Confluence, module: ai-basics, chapter: mcp, text: 給技術背景的讀者：Jira 用來開工作單、追進度；Confluence 用來放團隊共用文件。MCP Server 可以把它們接給 AI。, metaphor: 共用待辦清單、共用筆記本 }
   - { term: Prompt Injection, module: ai-basics, chapter: mcp, text: 外部資料裡藏指令，騙 AI 照做。, metaphor: 夾在文件裡的假便條 }
   - { term: 致命三角, module: ai-basics, chapter: mcp, text: 私人資料、不可信內容、能往外送，三樣不要同時給 AI。, metaphor: 鑰匙、陌生人、開著的門不能湊齊 }
-  - { term: 最小權限, module: ai-basics, chapter: mcp, text: 工具只給必要權限，高影響動作要人確認。, metaphor: 只給實習生需要的鑰匙 }
+  - { term: 最小權限, module: ai-basics, chapter: mcp, text: 工具只給必要權限，高影響動作要人確認。, metaphor: 只給新同事需要的鑰匙 }
   - { term: Skill, star: true, module: ai-basics, chapter: skill, text: 一個資料夾＋SKILL.md，寫下工作怎麼做。, metaphor: 新人工作手冊、交接本 }
   - { term: description, module: ai-basics, chapter: skill, text: SKILL.md 裡告訴 AI「何時該用我」的那段。, metaphor: 手冊目錄上的章名 }
   - { term: Markdown（.md）, module: ai-basics, chapter: skill, text: "用 # 當標題、- 當條列的純文字寫法，SKILL.md 就是這樣寫的，記事本就能開。", metaphor: 用符號標出段落的筆記 }
