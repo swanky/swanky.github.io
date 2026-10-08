@@ -809,3 +809,23 @@ a.ae-chapter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px r
 .ae-question { max-width: 46rem; }
 .ae-lesson .edu-container > .ae-illus { margin: clamp(1.75rem, 3.5vw, 2.5rem) 0 0; }
 .ae-illus img { border-radius: clamp(12px, 1.6vw, 22px); }
+
+/* ===== 15. 延伸學習與團隊入口（2026-10-08） ===== */
+.ae-further__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.ae-further__item { display: flex; flex-direction: column; gap: .45rem; padding: 1.15rem 1.25rem 1.25rem; border-radius: 16px; background: #fff; border: 2px solid var(--ae-line, #d9dde3); color: var(--ae-ink, #10253d); text-decoration: none !important; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.ae-further__item:hover, .ae-further__item:focus-visible { border-color: var(--ae-navy); box-shadow: 6px 6px 0 var(--ae-accent-soft, rgba(229,163,0,.25)); transform: translateY(-2px); }
+.ae-further__badge { align-self: flex-start; font-size: .75rem; font-weight: 700; letter-spacing: .04em; padding: .2rem .65rem; border-radius: 999px; background: #10253d; color: #fff; }
+.ae-further__item[data-kind="column"] .ae-further__badge { background: #fff4d6; color: #6b4a00; }
+.ae-further__item[data-kind="extra"] .ae-further__badge { background: #eef1f5; color: #3a4656; }
+.ae-further__title { font-size: 1.05rem; line-height: 1.5; }
+.ae-further__meta { color: var(--ae-muted, #5b6573); font-size: .85rem; }
+.ae-further__note { color: var(--ae-body, #33404f); line-height: 1.75; font-size: .95rem; }
+.ae-further__item--feature { max-width: 46rem; margin-top: 1.25rem; }
+.ae-teamcta { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+.ae-teamcta__box { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem 2.5rem; align-items: center; padding: clamp(1.5rem, 4vw, 2.5rem); border-radius: 20px; background: #fff8e6; border: 2px solid #e5a300; }
+.ae-teamcta__box h2 { font-size: clamp(1.35rem, 2.6vw, 1.8rem); margin: .4rem 0 .6rem; }
+.ae-teamcta__box p { margin: 0; line-height: 1.8; max-width: 40rem; }
+.ae-teamcta__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+@media (max-width: 767.98px) { .ae-teamcta__box { grid-template-columns: 1fr; } .ae-teamcta__actions .edu-btn { width: 100%; justify-content: center; } }
+.ae-further__title { color: #10253d; }
+.ae-further + .ae-teamcta { padding-top: 0; }

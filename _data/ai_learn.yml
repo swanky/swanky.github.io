@@ -8,6 +8,8 @@ modules:
     title: AI 入門：四個關鍵詞
     subtitle: 從七十多年的 AI 故事，一次搞懂 LLM、Prompt、MCP、Skill 與 Agent
     description: 給非工程背景的 AI 入門自學教材。跟著六幕故事，從 1950 年的圖靈測試一路走到會自己把事做完的 Agent；每幕都有小遊戲、測驗與比喻。
+    # 整門課的延伸學習起點（總覽頁）
+    start_here: { title: "AI Fluency: Framework & Foundations", by: Anthropic, url: "https://anthropic.skilljar.com/ai-fluency-framework-foundations", meta: "免費線上課・英文・有結業證書", note: "Anthropic 官方給新手的 AI 素養課：生成式 AI 是什麼、能力與限制、怎麼有效交辦、怎麼判斷 AI 的輸出。" }
     origin: 整理自史旺基 2026 年 10 月的一場企業內部 AI 入門分享，改寫成可以自己讀、自己練的網頁版。
     # 八個最常見的誤會（總覽頁翻牌卡）：tag＝名詞膠囊、chapter＝決定顏色
     myths:
@@ -28,36 +30,62 @@ modules:
         summary: 圖靈測試、ELIZA、專家系統到 AlphaGo：從「人把規則寫完」到「機器從資料學」。
         color: history
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "The History of Artificial Intelligence", by: "IBM", url: "https://www.ibm.com/think/topics/history-of-artificial-intelligence", meta: "英文長文", note: "從 1950 年圖靈的論文、專家系統、「機器學習」一詞的由來，一路寫到 AlphaGo 與 ChatGPT，適合當年表查。" }
+          - { kind: official, title: "The Thinking Game（完整紀錄片）", by: "Google DeepMind", url: "https://www.youtube.com/watch?v=d95J8yzvjbQ", meta: "影片 84 分鐘・有官方繁中字幕", note: "AlphaGo 團隊的紀錄片，從下棋 AI 一路拍到 AlphaFold；AlphaGo 是其中一段。" }
       - slug: llm
         act: 第二幕
         title: LLM：會說話的 AI 誕生了
         summary: 文字接龍、Token、機率與溫度、三段訓練、AI 的辦公桌，以及為什麼「我確定」不算查證。
         color: llm
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "語言模型為什麼會出現幻覺", by: "OpenAI", url: "https://openai.com/zh-Hant/index/why-language-models-hallucinate/", meta: "官方繁中文章", note: "用「考試亂猜比留白分數高」的比喻，說明 AI 為什麼會一本正經地答錯。" }
+          - { kind: extra, title: "Large Language Models explained briefly", by: "3Blue1Brown（非官方）", url: "https://www.youtube.com/watch?v=LPZh9BOjkQs", meta: "影片 8 分鐘・有中文字幕", note: "公認做得最好的 LLM 動畫入門：預測下一個字、訓練和參數，一次看懂。" }
       - slug: prompt
         act: 第三幕
         title: Prompt：學會跟 AI 說話
         summary: 把 AI 當成第一天上班的新同事：好交辦的六塊積木與八個小技巧。
         color: prompt
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "Prompting", by: "OpenAI", url: "https://learn.chatgpt.com/docs/prompting", meta: "英文文章", note: "把交辦拆成目標、背景、輸出、邊界，再用追問修正，和這一幕的三要素幾乎一樣；後段 Codex 的部分可以跳過。" }
       - slug: mcp
         act: 第四幕
         title: MCP：讓 AI 接上工具
         summary: AI 世界的 USB-C：工具怎麼接、權限怎麼給，以及藏在資料裡的假指令。
         color: mcp
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "理解提示注入：前沿安全挑戰", by: "OpenAI", url: "https://openai.com/zh-Hant/index/prompt-injections/", meta: "官方繁中文章", note: "用「請 AI 回信，卻被惡意郵件騙走資料」的例子，說明假交辦怎麼發生、怎麼防。" }
+          - { kind: official, title: "使用連接器擴展 Claude 的功能", by: "Anthropic（Claude 說明中心）", url: "https://support.claude.com/zh-TW/articles/11176164", meta: "官方繁中說明", note: "實際接上外部服務時，怎麼分開讀和寫的權限、哪些動作要先經過你同意。" }
+          - { kind: column, title: "AI Agent 協作的未來：Google A2A × Anthropic MCP 架構整合解析", by: "史旺基專欄", url: "/technical/ai-agent-a2a-mcp/", meta: "進階，含工程術語", note: "MCP 的部分看前半就好。" }
       - slug: skill
         act: 第五幕
         title: Skill：把經驗寫成一本手冊
         summary: 新人工作手冊：用得上才翻開的漸進式揭露，與 Prompt、MCP 的分工。
         color: skill
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "什麼是技能？", by: "Anthropic（Claude 說明中心）", url: "https://support.claude.com/zh-TW/articles/12512176", meta: "官方繁中說明", note: "官方定義：技能只在用得上時才載入。" }
+          - { kind: column, title: "一鍵把簡報變文件：我寫了一個 Claude Code Skill 自動解讀 PPTX / PDF 每一頁", by: "史旺基專欄", url: "/claude-code/claude-code-s2m-skill/", meta: "進階，含工程術語", note: "一個真實的 Skill 長什麼樣子；看前半「什麼是 Claude Code Skill」就好。" }
+          - { kind: column, title: "Matt Pocock 光頭哥的 Skills 使用教學：模型愈強，工程流程愈重要", by: "史旺基專欄", url: "/technical/matt-pocock-skills-ai-coding-workflow/", meta: "進階，含工程術語", note: "看「Skills 不是 Prompt 收藏」那一節。" }
       - slug: agent
         act: 第六幕
         title: Agent：大腦＋工具＋迴圈
         summary: 想、做、看、判斷的工作迴圈；AI 紅綠燈，以及挑出第一件交給 AI 的工作。
         color: agent
         status: published
+        # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
+        further:
+          - { kind: official, title: "Building effective agents", by: "Anthropic", url: "https://www.anthropic.com/engineering/building-effective-agents", meta: "英文文章", note: "業界最常引用的「流程自動化 vs Agent」定義出處；讀開頭的定義段就好。" }
+          - { kind: column, title: "設計循環，而不只是下提示：Claude Code 官方拆解四種代理人循環", by: "史旺基專欄", url: "/technical/claude-code-designing-loops/", meta: "進階，含工程術語", note: "「循環」怎麼定義、什麼時候停，對照這一幕的想、做、看、判斷。" }
+          - { kind: column, title: "AI 寫程式很便宜，好程式沒有——Simon Willison《Agentic Engineering Patterns》導讀", by: "史旺基專欄", url: "/claude-code/agentic-engineering-patterns-guide/", meta: "進階，含工程術語", note: "看前兩節：「代理，就是在迴圈裡反覆呼叫工具、達成目標的東西」。" }
 
 # 名詞小抄：module＋chapter 決定歸屬與連結；star＝必記關鍵詞
 glossary:

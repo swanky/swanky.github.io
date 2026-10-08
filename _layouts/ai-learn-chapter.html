@@ -29,6 +29,46 @@ layout: home
 
   {{ content }}
 
+  {% if cur.further %}
+  <section class="ae-lesson ae-further" id="further" aria-labelledby="further-title">
+    <div class="edu-container">
+      <div class="ae-lesson__head">
+        <span class="ae-lesson__tag"><i class="bi bi-compass" aria-hidden="true"></i>延伸學習</span>
+        <h2 id="further-title">想再多懂一點：{{ cur.title | split: '：' | first }}</h2>
+      </div>
+      <div class="ae-prose"><p>先把這一幕讀完、小測驗做完，再挑一兩個來看。「官方」是 AI 公司自己出的入門資料；「史旺基專欄」是站上的進階文章，用到比較多工程術語。</p></div>
+      <div class="ae-further__list">
+        {% for f in cur.further %}{% assign head = f.url | slice: 0, 4 %}
+        <a class="ae-further__item" data-kind="{{ f.kind }}" href="{% if head == 'http' %}{{ f.url }}{% else %}{{ f.url | relative_url }}{% endif %}"{% if head == 'http' %} target="_blank" rel="noopener"{% endif %}>
+          <span class="ae-further__badge">{% case f.kind %}{% when 'official' %}官方{% when 'column' %}史旺基專欄{% else %}精選{% endcase %}</span>
+          <b class="ae-further__title">{{ f.title }}</b>
+          <small class="ae-further__meta">{{ f.by }}・{{ f.meta }}</small>
+          <span class="ae-further__note">{{ f.note }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if next_i >= chapters.size %}
+  <section class="ae-teamcta">
+    <div class="edu-container">
+      <div class="ae-teamcta__box">
+        <div>
+          <span class="edu-eyebrow">For Teams</span>
+          <h2>想讓團隊一起建立 AI 的共同語言？</h2>
+          <p>這份教材來自一場企業內部分享。若你想替團隊安排 AI 導入課程，可以先看企業培訓的做法與時數，或直接留下需求。</p>
+        </div>
+        <div class="ae-teamcta__actions">
+          <a class="edu-btn" href="{{ '/education/agentic-engineering/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'ai_learn_chapter',from_page:'{{ page.url }}'});}">查看企業培訓方案</a>
+          <a class="edu-btn edu-btn--ghost" href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&amp;from=ai_learn" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_learn',service:'agentic_engineering_training',cta_position:'ai_learn_chapter',from_page:'{{ page.url }}'});}">直接留下需求</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <section class="ae-wrap">
     <div class="edu-container">
       <span class="edu-eyebrow">Takeaways</span>

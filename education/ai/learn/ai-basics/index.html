@@ -251,10 +251,26 @@ breadcrumbs:
     </div>
   </section>
 
+  <section id="more" class="edu-section edu-section--compact">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Keep Learning</span><h2>讀完六幕，想再往下學？</h2><p>每一幕結尾都整理了「延伸學習」：AI 公司自己出的入門資料，加上站上的進階文章。想一次打好底，先從這門官方免費課開始。</p></header>
+      {% assign sh = mod.start_here %}
+      <a class="ae-further__item ae-further__item--feature" data-kind="official" href="{{ sh.url }}" target="_blank" rel="noopener">
+        <span class="ae-further__badge">官方・整門課的起點</span>
+        <b class="ae-further__title">{{ sh.title }}</b>
+        <small class="ae-further__meta">{{ sh.by }}・{{ sh.meta }}</small>
+        <span class="ae-further__note">{{ sh.note }}</span>
+      </a>
+    </div>
+  </section>
+
   <section class="edu-section edu-section--dark">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">For Teams</span><h2>想讓團隊一起建立 AI 的共同語言？</h2><p>這份教材來自一場企業內部分享。若你想替團隊安排 AI 導入課程，可以先看企業培訓的做法與時數。</p></header>
-      <a class="edu-btn edu-btn--light" href="{{ '/education/agentic-engineering/' | relative_url }}">查看企業培訓方案</a>
+      <div class="edu-hero__actions">
+        <a class="edu-btn edu-btn--light" href="{{ '/education/agentic-engineering/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'ai_learn_hub',from_page:'{{ page.url }}'});}">查看企業培訓方案</a>
+        <a class="edu-btn edu-btn--outline-light" href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&amp;from=ai_learn" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_learn',service:'agentic_engineering_training',cta_position:'ai_learn_hub',from_page:'{{ page.url }}'});}">直接留下需求</a>
+      </div>
     </div>
   </section>
 </main>
