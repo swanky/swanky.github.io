@@ -44,8 +44,8 @@ breadcrumbs:
   <section class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Depth</span><h2>同一條路徑，也可以有不同深度</h2><p>時數不是越長越好。先確認團隊要做決策、建立共同語言，還是真的要進入操作與系統細節。</p></header>
-      <div class="edu-card-grid">
-        {% for format in c.formats %}<article class="edu-card"><div class="edu-badges"><span class="edu-badge">{{ format.duration }}</span><span class="edu-badge edu-badge--muted">{{ format.modules }}</span></div><h3>{{ format.name }}</h3><p>{{ format.text }}</p></article>{% endfor %}
+      <div class="edu-timeline edu-timeline--depth">
+        {% for format in c.formats %}<div class="edu-timeline__item"><span class="edu-timeline__step">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><div><h3>{{ format.name }}</h3><p class="edu-timeline__meta">{{ format.duration }}・{{ format.modules }}</p><p>{{ format.text }}</p></div></div>{% endfor %}
       </div>
     </div>
   </section>

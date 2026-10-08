@@ -1,4 +1,9 @@
-<section class="edu-hero">
+{% comment %}
+  banner=（選用）：文字在上、滿版插畫在下（edu-hero--stacked）。webp 需附同目錄 -768.webp。
+  搭配 banner_alt（須以「AI 生成插畫：」開頭）、banner_width／banner_height、media_label（預設「AI 生成情境示意圖」）。
+  image=（Flickr 照片路徑，左右分欄）與 banner= 擇一使用。
+{% endcomment %}
+<section class="edu-hero{% if include.banner %} edu-hero--stacked{% endif %}">
   <div class="edu-container edu-hero__grid">
     <div class="edu-hero__content">
       {% if include.status %}<span class="edu-hero__status">{{ include.status }}</span>{% endif %}
@@ -13,7 +18,10 @@
       </div>
       {% endif %}
     </div>
-    {% if include.image %}
+    {% if include.banner %}
+    {% assign banner_label = include.media_label | default: 'AI 生成情境示意圖' %}
+    {% include education/illus.html class="edu-illus edu-hero__banner" src=include.banner alt=include.banner_alt width=include.banner_width height=include.banner_height eager=true label=banner_label %}
+    {% elsif include.image %}
     <figure class="edu-hero__media{% if include.contain %} edu-hero__media--contain{% endif %}">
       <div class="edu-hero__visuals">
         <div class="edu-hero__primary">

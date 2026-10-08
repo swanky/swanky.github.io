@@ -18,7 +18,7 @@ breadcrumbs:
 {% assign c = site.data.courses.agentic_engineering %}
 {% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=agentic_engineering_page{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline image="/assets/img/illustrations/claude-code-course.svg" alt="Agentic Engineering 企業培訓：需求、規格、驗證與交付流程示意圖" contain=true primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline banner="/assets/img/education/ai-agent-surgical-team.webp" banner_width="1536" banner_height="864" banner_alt="AI 生成插畫：水手服少女擔任軟體外科手術團隊的主導者，帶領五個 AI Agent，把混亂的網狀溝通整理成星狀協作與鬆耦合模組" primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact">
     <div class="edu-container">
@@ -74,13 +74,13 @@ breadcrumbs:
         <h2>完整九堂，帶走的是交付證據</h2>
         <p>課堂產出不是練完就丟的範例，而是能回到工作繼續使用的規格、測試與 Agent 專案規則。</p>
       </header>
-      <div class="edu-card-grid edu-card-grid--two">
+      <div class="edu-hairline-grid">
         {% for item in c.outcomes %}
-        <article class="edu-card">
-          <i class="{{ item.icon }} edu-card__icon" aria-hidden="true"></i>
+        <div class="edu-hairline-item">
+          <span class="edu-hairline-item__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
-        </article>
+        </div>
         {% endfor %}
       </div>
     </div>

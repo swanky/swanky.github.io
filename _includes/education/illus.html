@@ -1,0 +1,21 @@
+{% comment %}
+  通用插畫位（教育家族共用；ai-learn/illus.html 以 class="ae-illus" 委派到這裡）。
+  src 有值＝顯示定稿圖；沒有＝顯示「插畫製作中」佔位（規格代號只放在 data-code，訪客看不到）。
+  參數：src, alt, code（規格代號）, caption, eager（hero 用：true 時優先載入）, width, height,
+        class（figure 的 class，預設 edu-illus；佔位版自動加上 <class>--pending）, label（疊在圖角的標籤，如「AI 生成情境示意圖」）
+  慣例：src 是 .webp 時，同目錄必須另有 768px 寬的「-768.webp」小圖（手機與一倍螢幕載入小圖）。
+{% endcomment %}
+{% assign illus_class = include.class | default: 'edu-illus' %}
+{% assign illus_base = illus_class | split: ' ' | first %}
+{% if include.src %}
+{% assign ext = include.src | slice: -5, 5 %}
+<figure class="{{ illus_class }}">
+  <img src="{{ include.src | relative_url }}"{% if ext == '.webp' %} srcset="{{ include.src | replace: '.webp', '-768.webp' | relative_url }} 768w, {{ include.src | relative_url }} 1536w" sizes="(min-width: 1160px) 1120px, calc(100vw - 28px)"{% endif %} alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %}{% if include.eager %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+  {% if include.label %}<span class="edu-media-label">{{ include.label }}</span>{% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
+{% else %}
+<figure class="{{ illus_class }} {{ illus_base }}--pending" aria-hidden="true" data-code="{{ include.code }}">
+  <div><b>插畫製作中</b></div>
+</figure>
+{% endif %}

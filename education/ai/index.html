@@ -17,7 +17,7 @@ breadcrumbs:
     url: /education/ai/
 ---
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Free Learning" status="免費自學資源" title="AI 學習分享" lead="我不太想再做一份工具快捷鍵大全。這裡整理的是規格、驗證、治理與交付：工具換了，仍然能留下來的那套方法。" image="/assets/img/illustrations/claude-code-terminal.svg" alt="AI coding agent 終端機工作流示意圖" contain=true primary_href="/technical/agentic-engineering/" primary_label="從 Agentic Engineering 系列開始" secondary_href="#latest" secondary_label="看最新文章" %}
+  {% include education/hero.html eyebrow="Free Learning" status="免費自學資源" title="AI 學習分享" lead="我不太想再做一份工具快捷鍵大全。這裡整理的是規格、驗證、治理與交付：工具換了，仍然能留下來的那套方法。" banner="/assets/img/ai-learn/ai-basics/h1.webp" banner_width="1536" banner_height="1024" banner_alt="AI 生成插畫：科技教室裡，戴白色笑臉大帽的老師一手按著控制台講解，實習生史旺姬伸手碰觸發光的對話框；中央浮著代表 LLM、Prompt、MCP、Skill、Agent 的五個發光物件：藍色光球、青色對話框、綠色連接線、紅色手冊和深藍色循環箭頭" primary_href="/technical/agentic-engineering/" primary_label="從 Agentic Engineering 系列開始" secondary_href="#latest" secondary_label="看最新文章" %}
 
   <section class="edu-section edu-section--compact">
     <div class="edu-container"><div class="edu-callout edu-callout--blue"><strong>免費內容與企業培訓分開。</strong>這一頁讓你先讀我的方法與限制；要替團隊安排 2–3 小時、半天或 9 堂培訓，再前往 Agentic Engineering 商品頁。</div></div>
@@ -26,13 +26,18 @@ breadcrumbs:
   <section id="self-study" class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Start Here</span><h2>完全沒碰過？先從自學教材開始</h2><p>給非工程背景的入門教材：用故事和比喻講清楚 AI 的基本名詞，每一段都有小遊戲和小測驗，可以自己讀、自己練。</p></header>
-      <div class="edu-card-grid edu-card-grid--two">
+      {%- comment -%}每個已上線單元一列大圖橫幅；圖用該單元 hero 插畫的 768 小圖（同一張圖已在本頁 hero，故 alt 留空當裝飾）{%- endcomment -%}
+      <div class="edu-course-rows">
         {% for m in site.data.ai_learn.modules %}{% if m.status == 'published' %}
         {% assign live = m.chapters | where: "status", "published" %}
-        <article class="edu-card">
-          <div class="edu-badges"><span class="edu-badge">免費自學</span><span class="edu-badge edu-badge--muted">已上線 {{ live.size }}／{{ m.chapters.size }} 幕</span></div>
-          <h3>{{ m.title }}</h3><p>{{ m.description }}</p>
-          <a class="edu-card__link" href="{{ m.url | relative_url }}">開始學習 →</a>
+        {% capture m_cover %}/assets/img/ai-learn/{{ m.slug }}/h1-768.webp{% endcapture %}
+        <article class="edu-course-row">
+          <div class="edu-course-row__media"><img src="{{ m_cover | relative_url }}" alt="" width="768" height="512" loading="lazy" decoding="async"><span class="edu-media-label">AI 生成插畫</span></div>
+          <div class="edu-course-row__body">
+            <div class="edu-badges"><span class="edu-badge">免費自學</span><span class="edu-badge edu-badge--muted">已上線 {{ live.size }}／{{ m.chapters.size }} 幕</span></div>
+            <h3>{{ m.title }}</h3><p>{{ m.description }}</p>
+            <a class="edu-btn" href="{{ m.url | relative_url }}">開始學習</a>
+          </div>
         </article>
         {% endif %}{% endfor %}
       </div>

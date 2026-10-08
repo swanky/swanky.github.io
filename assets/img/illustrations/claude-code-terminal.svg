@@ -16,12 +16,12 @@
   <text x="50" y="88" font-family="monospace" font-size="12" fill="#E5A300">$ </text>
   <text x="68" y="88" font-family="monospace" font-size="12" fill="#cdd6f4">claude "幫我重構這段程式碼"</text>
   <!-- Response -->
-  <text x="50" y="110" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 已分析 3 個檔案</text>
-  <text x="50" y="128" font-family="monospace" font-size="11" fill="#89dceb">  重構完成，效能提升 40%</text>
+  <text x="50" y="110" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 先讀懂現有程式碼</text>
+  <text x="50" y="128" font-family="monospace" font-size="11" fill="#89dceb">  提出修改計畫，等你確認</text>
   <!-- Second prompt -->
   <text x="50" y="152" font-family="monospace" font-size="12" fill="#E5A300">$ </text>
   <text x="68" y="152" font-family="monospace" font-size="12" fill="#cdd6f4">claude "寫測試"</text>
-  <text x="50" y="172" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 新增 12 個單元測試</text>
+  <text x="50" y="172" font-family="monospace" font-size="11" fill="#a6e3a1">✓ 測試草稿已產生，請審查</text>
   <!-- Blinking cursor -->
   <rect x="50" y="186" width="8" height="14" fill="#E5A300" opacity="0.8"/>
 </svg>

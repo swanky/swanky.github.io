@@ -1,4 +1,5 @@
-<section class="edu-section edu-section--tint">
+{% comment %}plain=true：前一段已是淡黃底時改白底，避免兩段同色相連{% endcomment %}
+<section class="edu-section{% unless include.plain %} edu-section--tint{% endunless %}">
   <div class="edu-container edu-profile">
     <img src="{{ '/assets/img/About_r.jpg' | relative_url }}" alt="講師史旺基肖像" loading="lazy" decoding="async">
     <div>

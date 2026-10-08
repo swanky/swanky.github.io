@@ -43,9 +43,9 @@ breadcrumbs:
       <header class="edu-section-head"><span class="edu-eyebrow">Enterprise</span><h2>企業培訓：先定義問題，再組合模組</h2><p>不是從零重做一套教材，也不是把所有熱門名詞講一遍。課程從現有模組中依角色、目標與時數組合；價格於需求確認後提供。</p></header>
       <div class="edu-offer-grid">
         <article class="edu-offer edu-offer--agentic">
-          <figure class="edu-offer__media edu-offer__media--contain">
-            <img src="{{ '/assets/img/illustrations/claude-code-course.svg' | relative_url }}" alt="Agentic Engineering 需求到交付流程示意圖" loading="lazy" decoding="async">
-            <span class="edu-media-label">課程流程示意圖</span>
+          <figure class="edu-offer__media">
+            <img src="{{ '/assets/img/education/ai-agent-surgical-team-768.webp' | relative_url }}" alt="AI 生成插畫：水手服少女擔任軟體外科手術團隊的主導者，帶領五個 AI Agent，把混亂的網狀溝通整理成星狀協作與鬆耦合模組" width="768" height="432" loading="lazy" decoding="async">
+            <span class="edu-media-label">AI 生成情境示意圖</span>
           </figure>
           <div class="edu-offer__body">
             <div class="edu-badges"><span class="edu-badge">企業試辦</span><span class="edu-badge edu-badge--blue">2–3 小時／半天／9 堂</span></div>
@@ -87,11 +87,11 @@ breadcrumbs:
         </article>
         <div class="edu-resource-stack">
           <article class="edu-resource-card">
-            <div class="edu-resource-card__media"><img src="{{ '/assets/img/linkedin/claude-code-designing-loops.jpg' | relative_url }}" alt="AI Agent 工作迴圈文章封面" loading="lazy" decoding="async"><span class="edu-media-label">AI 協作生成文章封面</span></div>
+            <figure class="edu-resource-card__figure"><div class="edu-resource-card__media"><img src="{{ '/assets/img/linkedin/claude-code-designing-loops.jpg' | relative_url }}" alt="AI Agent 工作迴圈文章封面" loading="lazy" decoding="async"></div><figcaption>AI 協作生成文章封面</figcaption></figure>
             <div class="edu-resource-card__body"><div class="edu-badges"><span class="edu-badge edu-badge--muted">免費自學</span></div><h3>AI 學習分享</h3><p>Agentic Engineering、coding agent 與實際工作流文章。先讀方法與限制，再決定是否需要培訓。</p><a class="edu-card__link" href="{{ '/education/ai/' | relative_url }}">閱讀 AI 學習內容 →</a></div>
           </article>
           <article class="edu-resource-card">
-            <div class="edu-resource-card__media"><img src="{{ '/assets/img/linkedin/rwa-stablecoin.jpg' | relative_url }}" alt="現實世界資產與穩定幣文章封面" loading="lazy" decoding="async"><span class="edu-media-label">AI 協作生成文章封面</span></div>
+            <figure class="edu-resource-card__figure"><div class="edu-resource-card__media"><img src="{{ '/assets/img/linkedin/rwa-stablecoin.jpg' | relative_url }}" alt="現實世界資產與穩定幣文章封面" loading="lazy" decoding="async"></div><figcaption>AI 協作生成文章封面</figcaption></figure>
             <div class="edu-resource-card__body"><div class="edu-badges"><span class="edu-badge edu-badge--muted">免費自學</span></div><h3>Web3 入門精選</h3><p>用白話拆解 Web3、DeFi、NFT、預言機與 AI × Crypto，重點放結構與風險，不追價格。</p><a class="edu-card__link" href="{{ '/education/crypto/web3-essentials/' | relative_url }}">閱讀 Web3 入門內容 →</a></div>
           </article>
         </div>
@@ -144,7 +144,7 @@ breadcrumbs:
     </div>
   </section>
 
-  {% include education/instructor.html %}
+  {% include education/instructor.html plain=true %}
 
   <section class="edu-section">
     <div class="edu-container">

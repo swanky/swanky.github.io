@@ -169,7 +169,7 @@
 .edu-card__media { position: relative; width: calc(100% + 56px); margin: -28px -28px 24px; }
 .edu-card__media .edu-card__image { width: 100%; max-width: none; height: auto; margin: 0; border-radius: 18px 18px 0 0; aspect-ratio: 3 / 2; object-fit: cover; }
 .edu-resource-stack { display: grid; gap: 18px; }
-.edu-resource-card { display: grid; grid-template-columns: minmax(150px, .72fr) minmax(0, 1.28fr); overflow: hidden; border: 1px solid var(--edu-line); border-radius: var(--r-lg, 18px); background: #fff; box-shadow: var(--shadow-1, 0 10px 32px rgba(52,40,19,.06)); transition: transform var(--dur-2, .32s) var(--ease-out, ease), box-shadow var(--dur-2, .32s) var(--ease-out, ease); }
+.edu-resource-card { display: grid; grid-template-columns: 264px minmax(0, 1fr); overflow: hidden; border: 1px solid var(--edu-line); border-radius: var(--r-lg, 18px); background: #fff; box-shadow: var(--shadow-1, 0 10px 32px rgba(52,40,19,.06)); transition: transform var(--dur-2, .32s) var(--ease-out, ease), box-shadow var(--dur-2, .32s) var(--ease-out, ease); }
 .edu-resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2, 0 10px 32px rgba(52,40,19,.1)); }
 .edu-resource-card__media { position: relative; width: calc(100% - 20px); min-height: 0; margin: 10px; overflow: hidden; align-self: center; aspect-ratio: 16 / 9; border-radius: 10px; background: var(--edu-cream); }
 .edu-resource-card__media img { width: 100%; height: 100%; object-fit: contain; }
@@ -353,3 +353,59 @@
 .edu-article-list a { color: var(--edu-ink); font-weight: 600; text-decoration: none; }
 .edu-article-list a:hover { color: var(--edu-gold-dark); }
 @media (max-width: 575px) { .edu-article-list li { flex-direction: column; gap: 2px; } }
+
+/* ===== 2026-10 hero 滿版插畫（education/hero.html banner=）與通用插畫位（education/illus.html） =====
+   文字在上、插畫在下撐滿內容寬；手機限高 56svh 並裁切，避免一張圖吃掉整個首屏以下。 */
+.edu-illus { position: relative; margin: 0; }
+.edu-illus img { display: block; width: 100%; height: auto; border-radius: clamp(12px, 1.6vw, 22px); box-shadow: var(--edu-shadow); }
+.edu-illus figcaption { margin-top: .6rem; color: var(--edu-muted); font-size: .85rem; }
+.edu-illus--pending { display: grid; aspect-ratio: 3 / 2; place-items: center; border: 2px dashed rgba(229,163,0,.45); border-radius: 18px; color: var(--edu-muted); }
+.edu-hero--stacked .edu-hero__grid { grid-template-columns: minmax(0, 1fr); gap: clamp(1.75rem, 3.5vw, 2.75rem); }
+.edu-hero--stacked .edu-hero__banner { width: 100%; }
+@media (max-width: 767.98px) {
+  .edu-hero--stacked .edu-hero__banner img { max-height: 56svh; object-fit: cover; }
+}
+
+/* /education/ 免費資源卡：縮圖放大到 240px（欄寬 264 扣左右 12px 邊距），「AI 協作生成」標示改成圖下說明，不再疊在小圖上 */
+.edu-resource-card__figure { margin: 12px; align-self: center; }
+.edu-resource-card__figure .edu-resource-card__media { width: 100%; margin: 0; }
+.edu-resource-card__figure figcaption { margin-top: 6px; color: var(--edu-muted); font-size: .72rem; line-height: 1.4; }
+
+/* 卡片頂圖滿版：.education-page img 的 max-width:100%（特異性較高）會把負邊距的頂圖夾窄、往左偏，這裡解除 */
+.education-page .edu-card__image { max-width: none; }
+
+/* /education/ai/ 自學教材：一個單元一列大圖橫幅（取代半寬卡片） */
+.edu-course-rows { display: grid; gap: 24px; }
+.edu-course-row { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); overflow: hidden; border: 1px solid rgba(229,163,0,.48); border-radius: var(--r-lg, 18px); background: linear-gradient(145deg, #fff 0%, var(--c-gold-tint, #fff8e6) 100%); box-shadow: var(--shadow-1, var(--edu-shadow)); }
+.edu-course-row__media { position: relative; margin: 0; }
+.edu-course-row__media img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.edu-course-row__body { display: flex; padding: clamp(24px, 3.5vw, 44px); flex-direction: column; justify-content: center; align-items: flex-start; }
+.edu-course-row__body h3 { margin: 14px 0 10px; color: var(--edu-ink); font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 700; line-height: 1.25; }
+.edu-course-row__body p { margin: 0 0 24px; color: var(--edu-muted); line-height: 1.8; }
+@media (max-width: 767.98px) {
+  .edu-course-row { grid-template-columns: 1fr; }
+  .edu-course-row__body .edu-btn { width: 100%; }
+}
+
+/* 髮絲線欄（AE「帶走什麼」）：比照首頁「合作方式」.icon-box——透明底、上緣 1px 線、Fraunces 斜體金序號，不浮起；
+   用來打斷連續卡片格的節奏 */
+.edu-hairline-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 32px; }
+.edu-hairline-item { padding: 22px 0 6px; border-top: 1px solid var(--c-line-2, rgba(66,52,32,.22)); }
+.edu-hairline-item__num { display: block; margin-bottom: 14px; color: var(--edu-gold); font-family: var(--font-display); font-size: 1.6rem; font-style: italic; font-weight: 500; line-height: 1; }
+.edu-hairline-item h3 { margin: 0 0 8px; color: var(--edu-ink); font-size: 1.12rem; font-weight: 700; line-height: 1.4; }
+.edu-hairline-item p { margin: 0; color: var(--edu-muted); line-height: 1.75; }
+@media (max-width: 991.98px) { .edu-hairline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; } }
+@media (max-width: 575.98px) { .edu-hairline-grid { grid-template-columns: 1fr; gap: 0; } }
+
+/* 編號列（Web3 企業培訓「不同深度」）：沿用 .edu-timeline，序號放大成 Fraunces 斜體金、時數與模組數作一行 meta */
+.edu-timeline--depth { border-top: 1px solid var(--edu-line); }
+.edu-timeline--depth .edu-timeline__step { color: var(--edu-gold); font-family: var(--font-display); font-size: 1.6rem; font-style: italic; font-weight: 500; letter-spacing: 0; line-height: 1.1; }
+.edu-timeline--depth .edu-timeline__item h3 { font-size: 1.3rem; }
+.edu-timeline--depth .edu-timeline__meta { margin: 0 0 6px; color: var(--edu-gold-dark); font-size: .86rem; font-weight: 700; }
+
+/* 模特兒課「三期課程」：真實團體課合照移出手風琴，與歷史課程／問卷並排 */
+.edu-record-split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; align-items: start; }
+.edu-record-photo { margin: 0; }
+.edu-record-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 30%; border-radius: 16px; box-shadow: var(--edu-shadow); }
+.edu-record-photo figcaption { margin-top: 10px; color: var(--edu-muted); font-size: .85rem; line-height: 1.5; }
+@media (max-width: 767.98px) { .edu-record-split { grid-template-columns: 1fr; gap: 22px; } }
