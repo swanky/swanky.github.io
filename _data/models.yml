@@ -122,7 +122,8 @@ talents:
       - { label: 個性, text: 予晴初見時安靜，熟了會主動開玩笑；觀察細，做事有耐心，遇到漂亮的紙張卻很容易改變計畫。 }
       - { label: 日常, text: 包裡有素色信封、鉛筆和折過的紙；會在收據背面試色。挑衣服先看能否蹲下、抬手與工作，再選一個醒目的顏色。 }
       - { label: 心願, text: 她想辦一場每件作品都能被帶走的小展覽，卻有點捨不得任何一張失手但可愛的試印。 }
-    portrait: { book: lin_yuqing_send_today, kind: json, n: 1 }   # 暫用寫真集 No.01〈先坐下來〉直幅；同棚名冊照尚未核准（見 docs/models-roster-todo.md），核准後改 digital: true
+    portrait: { book: lin_yuqing_send_today, kind: json, n: 1 }
+    digital: true   # 名冊照 a03（2026-10-08 同棚生成、站主核准「林予晴新圖ok」；原檔 Dropbox swanky-models-roster-2026-10-08/out/，SHA 3fe83cdb…）
     hero: { book: lin_yuqing_send_today, kind: json, n: 27 }
     spread: { book: lin_yuqing_send_today, kind: json, n: 26, mobile_n: 28 }   # 首頁跨頁：26「展開今天」（海邊展開藍圓印布，全書主題畫面）；手機直幅 28「笑給逆風」
     books:

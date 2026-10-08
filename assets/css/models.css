@@ -263,6 +263,11 @@ a.sm-media:hover img { transform: scale(1.015); }
 .sm-card__meta { margin: 6px 0 0; color: var(--sm-muted); font-size: 0.82rem; }
 .sm-card__intro { margin: 14px 0 12px; color: var(--sm-body); line-height: 1.8; }
 @media (max-width: 1100px) { .sm-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sm-card:nth-child(2n) { border-right: 0; } .sm-card:nth-child(-n+2) { border-bottom: 1px solid var(--sm-line); } }
+/* 名單頁分組標題（2026-10-08：原本未設樣式，大字標題被上一組底線與下一組頂線夾住；改成與首頁分組相同的小標，只留下一組的頂線） */
+.sm-page h2.sm-roster__division { margin: 88px 0 16px; padding: 0; border: 0; color: var(--sm-muted); font-family: var(--font-sans); font-size: var(--sm-t5); font-weight: 400; letter-spacing: 0.04em; line-height: 1.4; }
+.sm-page h2.sm-roster__division:first-child { margin-top: 0; }
+.sm-list .sm-roster { border-bottom: 0; }
+@media (max-width: 767px) { .sm-page h2.sm-roster__division { margin-top: 56px; } }
 @media (max-width: 767px) { .sm-roster, .sm-roster--2 { grid-template-columns: 1fr; } .sm-card { border-right: 0; border-bottom: 1px solid var(--sm-line); } .sm-card:last-child { border-bottom: 0; } }
 
 /* 等高膠卷列（個人頁各章首張）：原比例、手機橫向滑動 */

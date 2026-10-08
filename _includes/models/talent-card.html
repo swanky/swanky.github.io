@@ -14,7 +14,7 @@
   <div class="sm-card__body">
     <p class="sm-eyebrow">{{ tc_t.kind_label }}</p>
     <h{{ tc_h }} class="sm-card__name"><a href="{{ tc_url | relative_url }}">{{ tc_t.name }}</a></h{{ tc_h }}>
-    <p class="sm-card__meta">{% if tc_t.books.size > 0 %}{{ tc_t.books.size }} 本寫真集 · {{ tn_count }} 張{% if tc_pack %} · 角色寫真 {{ tc_pack.shots.size }} 幀{% endif %}{% else %}作品籌備中{% endif %}{% if tc_t.flag %}<span class="sm-card__flag">{{ tc_t.flag }}</span>{% endif %}</p>
+    <p class="sm-card__meta">{% if tc_t.books.size > 0 %}{{ tc_t.books.size }} 本寫真集 · {{ tn_count }} 張{% if tc_pack %} · 角色寫真 {{ tc_pack.shots.size }} 幀{% endif %}{% elsif tc_t.division == 'agent' %}尚無寫真集{% else %}作品籌備中{% endif %}{% if tc_t.flag %}<span class="sm-card__flag">{{ tc_t.flag }}</span>{% endif %}</p>
     <p class="sm-card__intro">{{ tc_intro }}</p>
     <a class="sm-textlink" href="{{ tc_url | relative_url }}">{% if tc_t.books.size > 0 %}個人介紹與作品集{% else %}個人介紹{% endif %}</a>
   </div>
