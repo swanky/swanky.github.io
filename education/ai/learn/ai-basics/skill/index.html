@@ -1,5 +1,7 @@
 ---
 og_image: /assets/img/ai-learn/ai-basics/s1-og.jpg
+og_image_width: 1200
+og_image_height: 630
 layout: ai-learn-chapter
 title: Skill：把經驗寫成一本手冊
 seo_title: Skill 是什麼？寫給 AI 的工作手冊與漸進式揭露｜AI 入門第五幕
@@ -81,7 +83,7 @@ chapter_css: true
       <p>寫一次，每次照做：史旺姬把約會議的規矩，寫成一支叫 <b>schedule-meeting</b> 的 Skill（示意）。</p>
     </div>
     <figure class="ae-dg">
-      <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>手冊 → AI 照手冊做 → 成果每次一樣</figcaption>
+      <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>手冊 → AI 照手冊做 → 成果更一致</figcaption>
       <div class="sk-pipe">
         <div class="sk-box" data-c="skill">
           <span class="sk-box__tab">schedule-meeting</span>
@@ -98,7 +100,7 @@ chapter_css: true
           <span class="sk-box__tab">成果</span>
           <div class="sk-out">
             <span class="sk-out__doc"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><i class="bi bi-check-circle-fill" aria-hidden="true"></i></span>
-            <div><b>會議邀請</b><span>格式每次一樣</span></div>
+            <div><b>會議邀請</b><span>格式照手冊走</span></div>
           </div>
           <p class="sk-box__cap">不用每次重講</p>
         </div>
@@ -247,7 +249,7 @@ chapter_css: true
           <tr><th scope="row">誰來寫</th><td data-c="prompt" data-th="Prompt：交辦">你，每次都寫</td><td data-c="skill" data-th="Skill：手冊">懂流程的人寫一次，大家共用</td><td data-c="mcp" data-th="MCP：USB-C 規格">IT 工程師做 Server（轉接線）</td></tr>
           <tr><th scope="row">放在哪</th><td data-c="prompt" data-th="Prompt：交辦">對話框</td><td data-c="skill" data-th="Skill：手冊">一個資料夾＋SKILL.md</td><td data-c="mcp" data-th="MCP：USB-C 規格">轉接線（MCP Server），裝在你的電腦或放在遠端的伺服器都可以</td></tr>
           <tr><th scope="row">什麼時候上桌</th><td data-c="prompt" data-th="Prompt：交辦">送出那一刻</td><td data-c="skill" data-th="Skill：手冊">名稱＋說明一開始就在桌上；用得上才翻開全文</td><td data-c="mcp" data-th="MCP：USB-C 規格">工具清單一開始就讓 AI 知道；AI 寫工單時才真的執行</td></tr>
-          <tr><th scope="row">佔桌面多少</th><td data-c="prompt" data-th="Prompt：交辦">你打多少就佔多少</td><td data-c="skill" data-th="Skill：手冊">平常只放名稱＋說明（約 100 Token），用到才放全文</td><td data-c="mcp" data-th="MCP：USB-C 規格">工具名稱先上桌，用到才拿完整說明（跟 Skill 一樣省桌面）</td></tr>
+          <tr><th scope="row">佔桌面多少</th><td data-c="prompt" data-th="Prompt：交辦">你打多少就佔多少</td><td data-c="skill" data-th="Skill：手冊">平常只放名稱＋說明（約 100 Token），用到才放全文</td><td data-c="mcp" data-th="MCP：USB-C 規格">多數 App 一開始就放工具清單；工具很多時，有些 App（例如 Claude Code）只先放名稱，用到才拿完整說明</td></tr>
           <tr class="sk-table__miss"><th scope="row">少了會怎樣</th><td data-c="prompt" data-th="Prompt：交辦">AI 不知道你要什麼</td><td data-c="skill" data-th="Skill：手冊">每次都要重講，品質不一</td><td data-c="mcp" data-th="MCP：USB-C 規格">說得再清楚，也碰不到資料</td></tr>
         </tbody>
       </table>
@@ -287,7 +289,7 @@ chapter_css: true
           <ul class="ae-iconlist">
             <li data-c="prompt"><i class="bi bi-search" aria-hidden="true"></i><span>找資訊、讀文件、整理產出（練習題見<a href="{{ mod.url | relative_url }}#practice">單元總覽的「現在換你動手」</a>）</span></li>
             <li data-c="key"><i class="bi bi-lock-fill" aria-hidden="true"></i><span>不貼個資、密碼、還沒公開的數字</span></li>
-            <li data-c="skill"><i class="bi bi-journal-x" aria-hidden="true"></i><span><b>Skill 不在這裡寫：</b>要在 Claude Code 這類會讀 SKILL.md 的工具裡寫和跑；聊天工具先練交辦</span></li>
+            <li data-c="skill"><i class="bi bi-journal-x" aria-hidden="true"></i><span><b>Skill 通常不在這裡寫：</b>多半在 Claude Code 這類會讀 SKILL.md 的工具裡寫和跑；部分聊天 App（例如 Claude 網頁版的付費方案）也能上傳 Skill。這一幕用 Claude Code 示範</span></li>
             <li data-c="prompt"><i class="bi bi-question-circle" aria-hidden="true"></i><span>有疑問就追問「你根據哪一段？」，自己點開原文核對（{% include ai-learn/chref.html module=mod slug="prompt" anchor="demo" label="交辦、追問、改正的完整示範" %}）</span></li>
             <li data-c="tip"><i class="bi bi-pencil-square" aria-hidden="true"></i><span><b>練好的交辦，就是之後寫 Skill 的草稿</b></span></li>
           </ul>

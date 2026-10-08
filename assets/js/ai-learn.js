@@ -121,7 +121,7 @@
   init('[data-ae-tokens]', 'tokens', function (box) {
     var row = box.querySelector('.ae-tokens');
     if (!row) return;
-    var btns = $all('[data-mode]', box);
+    var btns = $all('button[data-mode]', box);
     var sets = {
       chars: (box.getAttribute('data-chars') || '').split('|'),
       tokens: (box.getAttribute('data-tokens') || '').split('|')

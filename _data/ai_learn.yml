@@ -6,7 +6,7 @@
 modules:
   - slug: ai-basics
     title: AI 入門：四個關鍵詞
-    subtitle: 從七十多年的 AI 故事，一次搞懂 LLM、Prompt、MCP、Skill 與 Agent
+    subtitle: 從七十多年的 AI 故事，搞懂 LLM、Prompt、MCP、Skill 四個關鍵詞，再看它們怎麼組成 Agent
     description: 給非工程背景的 AI 入門自學教材。跟著六幕故事，從 1950 年的圖靈測試一路走到會自己把事做完的 Agent；每幕都有小遊戲、測驗與比喻。
     # 整門課的延伸學習起點（總覽頁）
     start_here: { title: "AI Fluency: Framework & Foundations", by: Anthropic, url: "https://anthropic.skilljar.com/ai-fluency-framework-foundations", meta: "免費線上課・英文・有結業證書", note: "Anthropic 官方給新手的 AI 素養課：生成式 AI 是什麼、能力與限制、怎麼有效交辦、怎麼判斷 AI 的輸出。" }
@@ -17,7 +17,7 @@ modules:
       - { tag: LLM, chapter: llm, said: AI 什麼都查得到，而且是最新的, truth: 沒接工具時，它只靠訓練時讀的書，停在知識截止日。要最新或內部資料，要靠 RAG 或 MCP 工具。 }
       - { tag: Prompt, chapter: prompt, said: 要背神奇咒語，寫越長越好, truth: 重點是把任務、背景、限制講清楚，不是字數。跟任務無關的話反而會讓它分心。 }
       - { tag: MCP, chapter: mcp, said: MCP 是一個 AI 產品, truth: MCP 是一套像 USB-C 的接法規格，不是 App。你用的是支援 MCP 的 App，例如 Claude Code。 }
-      - { tag: MCP, chapter: mcp, said: AI 用的每一個工具都是 MCP, truth: MCP 只是「接外部系統」的那套接法。Claude Code 本身就內建讀檔、改檔、執行指令等工具；要碰行事曆、信箱這類外部系統，才需要 MCP。 }
+      - { tag: MCP, chapter: mcp, said: AI 用的每一個工具都是 MCP, truth: MCP 只是「接外部系統」的那套接法。Claude Code 本身就內建讀檔、改檔、執行指令等工具；要碰行事曆、信箱這類外部系統，常見做法是透過 MCP 接上；也有 App 內建或其他接法。 }
       - { tag: Skill, chapter: skill, said: Skill 就是存起來的長 Prompt；寫了它，AI 就被訓練變聰明了, truth: Skill 比一段 Prompt 多三件事，而且不會改到模型本身：① 用得上才載入全文 ② 可以附範本、資料、小程式 ③ 寫一次大家共用。 }
       - { tag: Agent, chapter: agent, said: 交給 Agent 就不用管了, truth: 它會誤解目標，也會被錯誤資料或假交辦帶偏。重要動作要你確認，結果要你驗收。 }
       - { tag: Agent, chapter: agent, said: 會自動跑的東西都叫 Agent, truth: 照固定步驟跑的叫流程自動化（Workflow），中間用了 LLM 也一樣。Agent 是 LLM 每一步自己決定下一步、用哪個工具。 }

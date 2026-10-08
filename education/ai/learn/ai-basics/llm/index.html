@@ -1,5 +1,7 @@
 ---
 og_image: /assets/img/ai-learn/ai-basics/l1-og.jpg
+og_image_width: 1200
+og_image_height: 630
 layout: ai-learn-chapter
 title: LLM：會說話的 AI 誕生了
 seo_title: LLM 是什麼？文字接龍、Token、幻覺與 RAG 白話入門｜AI 入門第二幕
@@ -109,9 +111,9 @@ takeaways:
   <div class="edu-container">
     <div class="ae-lesson__head">
       <span class="ae-lesson__tag"><i class="bi bi-cpu" aria-hidden="true"></i>關鍵詞 1：LLM</span>
-      <h2>LLM：讀過整個網路的「文字接龍高手」</h2>
+      <h2>LLM：讀過海量文字的「文字接龍高手」</h2>
     </div>
-    <div class="ae-prose"><p>上一題的答案：①「光」②「茶」③④ 沒有標準答案——線索越多，答案越集中。LLM 是 Large Language Model，大型語言模型：它從海量文字裡學習，<strong>預測下一小塊文字可能是什麼，再一塊一塊產生回答</strong>。</p></div>
+    <div class="ae-prose"><p>上一題的答案：①「光」②「茶」③④ 沒有標準答案——線索越多，答案越集中。LLM 是 Large Language Model，大型語言模型：它從海量文字裡學習，<strong>預測下一小塊文字可能是什麼，再一塊一塊產生回答</strong>。要把下一塊接得好，它得在訓練中學會文法、常識，甚至推理的模式，所以不只是輸入法的自動選字；但它學到的是「像對的樣子」，不等於每句都查證過。</p></div>
     <figure class="ae-dg">
       <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>LLM ＝ 文字接龍高手</figcaption>
       <div class="ae-chainviz">
@@ -155,7 +157,7 @@ takeaways:
     <div class="ae-grid ae-mt" style="--cols:4">
       <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-puzzle-fill" aria-hidden="true"></i></div><h3>是什麼</h3><p>AI 不是一個字一個字讀，而是把句子切成一塊塊拼圖。常見的詞是一塊，罕見的字可能被切成好幾塊。</p></div>
       <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-cash" aria-hidden="true"></i></div><h3>也是計費的依據</h3><p>像手機的通話秒數：你貼進去的字和 AI 回的字都算 Token，<b style="color:var(--ae-key)">講越多、算越多</b>。實際費用看工具和方案。</p></div>
-      <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div><h3>中文怎麼換算</h3><p>GPT-3 時代每個中文字約 <span class="ae-stat">1.5<small> 個</small></span>；GPT-4o 平均只要 <span class="ae-stat">0.6<small> 個</small></span>：常見的兩三個字會合成一塊。</p></div>
+      <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div><h3>中文怎麼換算</h3><p>GPT-3 時代每個中文字約 <span class="ae-stat">1.5<small> 個</small></span>；GPT-4o 平均只要 <span class="ae-stat">0.6<small> 個</small></span>：常見的兩三個字會合成一塊（實測估計，依文字內容和模型而定）。</p></div>
       <div class="ae-card" data-c="tip"><div class="ae-card__icon">🍓</div><h3>經典笑話</h3><p>先自己數：<b>strawberry</b> 有幾個 r？</p><details class="ae-reveal"><summary>打開答案</summary><div>3 個。AI 看到的是拼圖塊、不是字母，所以數字母常出錯。人覺得簡單的事，不代表 AI 一定不會錯。</div></details></div>
     </div>
     <p class="ae-key"><small>只記一句</small>Token 決定 AI 一次讀得了多少、要付多少錢。</p>
@@ -350,7 +352,7 @@ takeaways:
       <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ae-flip__num">3</span><h3>桌子有限</h3>
           <div class="ae-mini"><i class="bi bi-stack" aria-hidden="true"></i><span class="ae-chip">舊的被擠掉</span><i class="bi bi-arrow-down" style="color:var(--ae-key)" aria-hidden="true"></i></div>
-          <p>桌子＝AI 一次能讀進來的量（見下方 Context window）。再大（約 100 萬 Token）也會滿：舊的被擠掉、中段容易看漏。</p><p class="ae-flip__fix">對策：對話太長就開新的</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
+          <p>桌子＝AI 一次能讀進來的量（見下方 Context window）。再大（約 100 萬 Token）也會滿：舊的被擠掉或被自動摘要（依 App 而定）、中段容易看漏。</p><p class="ae-flip__fix">對策：對話太長就開新的</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：對話太長就開新的</h3><p>先請它整理重點，再換一張乾淨的桌子繼續。下一段就來玩這張桌子。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
     </div>
@@ -400,7 +402,7 @@ takeaways:
           <li>常用的工作規則，寫成手冊（第五幕的 Skill）</li>
         </ol>
       </div>
-      <p class="ae-dg__caption">桌上的東西：滿了，最舊的會被擠掉；就算沒滿，長內容的中段也容易被看漏。開新對話，桌子就清空（除非 App 另外開了「記憶」功能）。</p>
+      <p class="ae-dg__caption">桌上的東西：滿了，最舊的會被擠掉或被自動摘要（依 App 而定）；就算沒滿，長內容的中段也容易被看漏。開新對話，桌子就清空（除非 App 另外開了「記憶」功能）。</p>
     </div>
     <div class="ae-prose ae-mt"><p>你遇過嗎？聊到後來，它忘了「剛剛不是說要一頁以內」？與其一直在原地重複提醒，不如先整理桌面。要記的不是記憶容量的數字，而是：<strong>重要背景，要讓它在當次工作裡清楚看得到。</strong></p></div>
     <p class="ae-key"><small>只記一句</small>AI 本身不帶記憶，每次都重讀整張桌子。管好桌面，回答就穩。</p>

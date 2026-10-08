@@ -1,5 +1,7 @@
 ---
 og_image: /assets/img/ai-learn/ai-basics/m1-og.jpg
+og_image_width: 1200
+og_image_height: 630
 layout: ai-learn-chapter
 title: MCP：讓 AI 接上工具
 seo_title: MCP 是什麼？AI 的 USB-C 與提示注入白話入門｜AI 入門第四幕
@@ -339,7 +341,7 @@ chapter_css: true
     <details class="ae-reveal ae-mt"><summary>給技術背景的讀者：技術補充（不懂可以跳過）</summary><div>
       <ul style="margin:.25rem 0 0;padding-left:1.2rem">
         <li>App 和轉接線之間傳的是 JSON-RPC 2.0：用 <code>tools/list</code> 拿工具清單（問菜單，交給 LLM），LLM 寫好工單後，用 <code>tools/call</code> 送給 Server 執行。</li>
-        <li>本機 Server 走 stdio，由 Host 啟動，App 關了它就跟著結束；遠端 Server 走 Streamable HTTP，是常駐的服務，登入用 OAuth 2.1。</li>
+        <li>本機 Server 走 stdio，由 Host 啟動，App 關了它就跟著結束；遠端 Server 走 Streamable HTTP，是常駐的服務，常見的登入方式是 OAuth。</li>
         <li>Server 能提供三種東西：工具（Tools，能做的事）、資料（Resources，能讀的內容）、範本（Prompts，事先寫好的 Prompt）。</li>
         <li>在 Claude Code 加 Server 用終端機指令 <code>claude mcp add</code>；遠端 Server 第一次要在 <code>/mcp</code> 裡登入。接 Jira、Confluence 的做法完全一樣，換成 mcp-atlassian 這條轉接線即可。</li>
       </ul>
