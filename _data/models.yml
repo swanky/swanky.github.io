@@ -190,6 +190,24 @@ talents:
       - { data: pan_jinlian_tonight_she_opens, kind: json, url: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/, pdf_size: 約 24 MB }
       - { data: pan_jinlian_she_sees_it_first, kind: json, url: /jinpingmei/photobook/pan-jinlian-she-sees-it-first/, pdf_size: 約 21 MB }
 
+  # 江映希：2026-10-08 隨首冊《窗外還亮著》移交首次上站（攝影 repo characters/original/virtual-artist-2026-10-07，站主定名）。
+  # 攝影端角色卡註明人物故事、身高與身形「未定」→ 不寫背景、不列規格；intro／disclosure 只取寫真集移交 JSON 的
+  # disclosure（22 歲原創成年虛構角色）與 description 原句。名冊照未生成，暫用寫真集 No.29（臉部清楚的近景）；首頁跨頁待站主決定。
+  - slug: jiang-yingxi
+    name: 江映希
+    division: photobook
+    kind: original
+    kind_label: 原創虛擬人物
+    debut: 2026
+    intro: 22 歲的原創成年虛構角色。窗外的城市，一盞一盞亮起來；首部寫真集《窗外還亮著》留下八段夜裡的片刻。
+    disclosure: 江映希為22歲原創成年虛構角色。人物、場景與事件由AI創作，非真人實拍；窗外城市為創作場景，不指涉真實拍攝地點。史旺基 Swanky 企劃、視覺統籌、選片與審定，AI協作生成與編排。
+    facts:
+      - { label: 年齡, value: 22 歲 }
+    portrait: { book: jiang_yingxi_window_still_lit, kind: json, n: 29 }
+    hero: { book: jiang_yingxi_window_still_lit, kind: json, n: 36 }
+    books:
+      - { data: jiang_yingxi_window_still_lit, kind: json, url: /photography/jiang-yingxi-window-still-lit/, pdf_size: 約 22 MB }
+
   # ── 角色 IP（2026-09-25 站主指示納入：五位 CloneX、Meebit、MAYC；身份依攝影工作區 approved-cast-r05 的核准呈現，名冊照為同棚生成）──
   # 文案只寫可查證的事實（持有的 token、改編方式、作品籌備中），不編性格與故事；作品進站後在 books 加一行即可。
   - slug: bunny-15755
