@@ -113,6 +113,12 @@
 .ch__title { font-size: 1.6rem; margin: .6rem 0 1.2rem; }
 .ch__fig { margin: 1.5rem 0; }
 .ch__fig img { max-height: 520px; width: auto; }
+/* 多張並列：等高、完整呈現不裁切，窄螢幕自動換行 */
+.ch__figs { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: flex-start; margin: 1.5rem 0; }
+.ch__figs .ch__fig { margin: 0; flex: 0 1 auto; max-width: 100%; }
+.ch__figs .ch__fig img { height: 380px; max-height: none; max-width: 100%; object-fit: contain; }
+.ch__figs .figcap { max-width: 22em; }
+@media (max-width: 600px) { .ch__figs .ch__fig img { height: auto; width: 100%; } }
 .ch__src { font-size: .82rem; color: var(--on-ink-2); }
 .kicks { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1.5rem; margin-top: 2rem; }
 .kick { display: flex; flex-direction: column; }

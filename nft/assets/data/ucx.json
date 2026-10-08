@@ -832,8 +832,19 @@
         "制服一直是同一個題目。變的只是穿制服的身體從肉身換成了化身。"
       ],
       "source": "第二代作品存檔見本站「制服女孩 NFT 系列（2021）」分頁；UCX 2022-12-15 在 CloneX Taiwan 第二次線下聚會正式出道，當時的第一手紀錄見本站技術專欄〈UCX 的誕生〉。模特兒張小筑、插畫 Pixel RuRu 均已取得授權使用。此為紅底正式海報完整原圖，未裁切。",
-      "image": "brand/poster_2022_red.webp",
-      "caption": "2022 年的 UCX 團體海報。底部圓標為當時入鏡的成員編號。"
+      "images": [
+        {
+          "image": "../oursong/web/ruru1-content.jpg",
+          "full": "../oursong/web/large/ruru1-content.jpg",
+          "alt": "像素風插畫：長髮少女坐在長凳上，左側有 SWANKY 字樣",
+          "caption": "第二代：2021 年在 OurSong 上鏈的「加密女孩 NFT」。插畫 Pixel RuRu，已付費取得使用權。"
+        },
+        {
+          "image": "brand/poster_2022_red.webp",
+          "alt": "2022 年 UCX 紅底直式團體海報",
+          "caption": "第三代：2022 年的 UCX 團體海報。底部圓標為當時入鏡的成員編號。"
+        }
+      ]
     },
     {
       "ch": 2,

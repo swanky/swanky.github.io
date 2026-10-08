@@ -332,15 +332,19 @@
 				var h = '<article class="ch rise"><span class="ch__no mono">' + esc(c.ch) + "</span>" +
 					'<h3 class="ch__title">' + esc(c.title) + "</h3>" +
 					'<div class="prose">' + paras(c.body) + "</div>";
-				if (c.image) {
-					var portrait = c.portrait || /_red\.webp$/.test(c.image);
-					h += '<figure class="ch__fig' + (portrait ? " ch__fig--portrait" : "") + '">' +
-						'<a class="glightbox" href="' + esc(asset(c.image)) +
-						'" data-gallery="ucx-story" data-description="' + esc(c.caption || c.title) + '">' +
-						'<img loading="lazy" src="' + esc(asset(c.image)) + '" alt="' + esc(c.title) + '"></a>';
-					if (c.caption) { h += '<figcaption class="figcap">' + esc(c.caption) + "</figcaption>"; }
-					h += "</figure>";
-				}
+				// 單張用 image／caption；多張（如傳承線並列第二代與第三代）用 images: [{ image, full?, caption, alt? }]
+				var figs = c.images || (c.image ? [{ image: c.image, caption: c.caption, portrait: c.portrait }] : []);
+				var figHTML = figs.map(function (f) {
+					var portrait = f.portrait || /_red\.webp$/.test(f.image);
+					var fh = '<figure class="ch__fig' + (portrait ? " ch__fig--portrait" : "") + '">' +
+						'<a class="glightbox" href="' + esc(asset(f.full || f.image)) +
+						'" data-gallery="ucx-story" data-description="' + esc(f.caption || c.title) + '">' +
+						'<img loading="lazy" src="' + esc(asset(f.image)) + '" alt="' + esc(f.alt || c.title) + '"></a>';
+					if (f.caption) { fh += '<figcaption class="figcap">' + esc(f.caption) + "</figcaption>"; }
+					return fh + "</figure>";
+				}).join("");
+				if (figs.length > 1) { figHTML = '<div class="ch__figs">' + figHTML + "</div>"; }
+				h += figHTML;
 				if (c.source) { h += '<p class="ch__src">' + esc(c.source) + "</p>"; }
 				return h + "</article>";
 			}).join("");
