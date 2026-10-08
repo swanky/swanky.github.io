@@ -94,9 +94,23 @@ talents:
     digital: true   # 名冊照 /assets/img/photography/models/digitals/swanky-ji.webp（2026-09-25 同棚同光三張之一）
     spread: { book: swanky_ji_open_worlds, kind: json, n: 35, mobile_n: 26 }   # 首頁跨頁：代表作封面（橫幅）；手機改直幅 26「拉開布幕的一角」
     books:
+      - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }
       - { data: swanky_ji_open_worlds, kind: json, url: /photography/swanky-ji-open-worlds/ }
+
+  - slug: lin-yuqing
+    name: 林予晴
+    division: photobook
+    kind: original
+    kind_label: 原創虛擬人物
+    debut: 2026
+    intro: 23 歲，住在虛構的海港城市「南汐」；自由平面設計師，兼做小量手工版畫與紙品。她把散步時收集的顏色印成卡片，寄給很久沒見的人。
+    disclosure: 林予晴是 23 歲的原創虛構成人角色。人物、場景、旅程與手作情節由 AI 創作，非真人實拍；海邊、市場與工作室不指涉真實拍攝地點。史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    portrait: { book: lin_yuqing_send_today, kind: json, n: 1 }   # 暫用寫真集 No.01〈先坐下來〉直幅；同棚名冊照尚未核准（見 docs/models-roster-todo.md），核准後改 digital: true
+    hero: { book: lin_yuqing_send_today, kind: json, n: 27 }
+    books:
+      - { data: lin_yuqing_send_today, kind: json, url: /photography/lin-yuqing-send-today/, pdf_size: 約 40 MB }
 
   - slug: li-pinger
     name: 李瓶兒
