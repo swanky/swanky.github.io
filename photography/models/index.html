@@ -59,9 +59,9 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
       {%- assign dt = pub | where: "division", d.key -%}
       {%- if dt.size == 0 %}{% continue %}{% endif -%}
       {%- if divisions_used > 1 %}<h2 class="sm-shell sm-board__division{% if d.minor %} sm-board__division--minor{% endif %}">{{ d.label }}</h2>{% endif -%}
-      {%- assign board_cols = d.cols | default: 3 -%}{%- if dt.size < board_cols and d.minor != true %}{% assign board_cols = dt.size %}{% endif -%}
+      {%- assign board_cols = d.cols | default: 3 -%}{%- if dt.size < board_cols and d.minor != true and d.keep_cols != true %}{% assign board_cols = dt.size %}{% endif -%}
     <ol class="sm-shell sm-board sm-board--{{ board_cols }} sm-board--{{ d.key }}" aria-label="{{ d.label }}">
-      {%- if d.key == 'photobook' %}{% assign board_sizes = "(max-width: 767px) 60vw, 34vw" %}{% assign eager = true %}{% else %}{% assign board_sizes = "(max-width: 767px) 24vw, 14vw" %}{% assign eager = false %}{% endif -%}
+      {%- if d.key == 'photobook' %}{% assign board_sizes = "(max-width: 767px) 60vw, 34vw" %}{% assign eager = true %}{% elsif d.minor != true %}{% assign board_sizes = "(max-width: 767px) 60vw, 34vw" %}{% assign eager = false %}{% else %}{% assign board_sizes = "(max-width: 767px) 24vw, 14vw" %}{% assign eager = false %}{% endif -%}
       {% for t in dt %}
         {%- capture turl %}/photography/models/talent/{{ t.slug }}/{% endcapture -%}
       <li>
@@ -95,11 +95,14 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
     </div>
 
     {% if spread_talents.size > 0 %}
+    {%- comment -%}兩兩並排；單數張時第一張（名單順序最前、通常是最新加入者）跨滿整排，避免最後剩半張空一格{%- endcomment -%}
+    {%- assign spread_odd = spread_talents.size | modulo: 2 -%}
     <div class="sm-shell sm-spreads__pair">
       {% for t in spread_talents %}
         {%- assign sp = t.spread -%}{%- assign bk = site.data[sp.book] -%}{%- assign sb = t.books | where: "data", sp.book | first -%}{%- assign bset = bk.setting | default: bk.subtitle -%}
-      <figure class="sm-spread sm-spread--half">
-        {% include models/photo.html book=sp.book kind=sp.kind n=sp.n mobile_n=sp.mobile_n sizes="(max-width: 767px) 100vw, 50vw" href=sb.url %}
+        {%- if forloop.first and spread_odd == 1 %}{% assign sp_wide = true %}{% assign sp_sizes = "100vw" %}{% else %}{% assign sp_wide = false %}{% assign sp_sizes = "(max-width: 767px) 100vw, 50vw" %}{% endif -%}
+      <figure class="sm-spread sm-spread--half{% if sp_wide %} sm-spread--wide{% endif %}">
+        {% include models/photo.html book=sp.book kind=sp.kind n=sp.n mobile_n=sp.mobile_n sizes=sp_sizes href=sb.url %}
         <figcaption class="sm-spread__cap">
           <a class="sm-spread__title" href="{{ sb.url | relative_url }}">《{{ bk.title }}》</a>
           <span class="sm-spread__meta">{{ t.name }}{% if bset %} · {{ bset }}{% endif %} · {{ bk.count }} 張 · {{ bk.chapters.size }} 章</span>

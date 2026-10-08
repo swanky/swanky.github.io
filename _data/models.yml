@@ -79,7 +79,7 @@ inquiry:
 # 名冊分組（首頁與名單頁依人數自動排版；只有一組有人時不顯示分組標籤）。之後加入的角色 IP 用 character。
 divisions:
   - { key: photobook, label: 寫真模特兒, cols: 3 }   # cols＝桌機每列幾位（主力大圖）
-  - { key: agent, label: AI 夥伴, cols: 3 }          # 站主日常使用的 AI 助理形象（2026-10-08 起：小赫）
+  - { key: agent, label: AI 夥伴, cols: 3, keep_cols: true }   # 站主日常使用的 AI 助理形象（2026-10-08 起：小赫）；keep_cols＝人少也維持 3 欄寬，不放大成滿版
   - { key: character, label: 鏈上角色, cols: 7, minor: true }       # 角色 IP 小圖一列六位，像 new faces 板
 
 talents:
