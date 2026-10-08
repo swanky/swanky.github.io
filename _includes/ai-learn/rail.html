@@ -1,0 +1,21 @@
+{% comment %}
+  單元內章節導覽列。參數：module（_data/ai_learn.yml 的 module 物件）, current（目前章節 slug，可省略）
+{% endcomment %}
+{% assign mod = include.module %}
+<nav class="ae-rail" aria-label="{{ mod.title }} 章節">
+  <ol class="edu-container">
+    {% for ch in mod.chapters %}
+    <li>
+      {% if ch.status == 'published' %}
+      <a href="{{ mod.url | append: ch.slug | append: '/' | relative_url }}" data-ae-progress-key="{{ mod.slug }}/{{ ch.slug }}"{% if ch.slug == include.current %} aria-current="page"{% endif %} style="--dot: var(--ae-{{ ch.color }})">
+        <span class="ae-rail__dot">{{ forloop.index }}</span>{{ ch.title | split: '：' | first }}
+      </a>
+      {% else %}
+      <a aria-disabled="true" title="即將推出" style="--dot: #bbb; opacity: .55; cursor: default">
+        <span class="ae-rail__dot">{{ forloop.index }}</span>{{ ch.title | split: '：' | first }}
+      </a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

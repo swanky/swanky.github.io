@@ -1,0 +1,14 @@
+{% comment %}
+  插畫位。src 有值＝顯示定稿圖；沒有＝顯示規格代號佔位框（插畫須經站主確認規格才生圖）。
+  參數：src, alt, code（規格代號，如 L1）, desc（佔位說明）, caption
+{% endcomment %}
+{% if include.src %}
+<figure class="ae-illus">
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}" loading="lazy" decoding="async">
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
+{% else %}
+<figure class="ae-illus ae-illus--pending" aria-hidden="true">
+  <div><b>插畫製作中</b><small style="display:block;opacity:.7">{{ include.code }}・{{ include.desc }}</small></div>
+</figure>
+{% endif %}

@@ -1,0 +1,94 @@
+/* 第一幕專屬元件（由章節頁 extra_css 移出；選擇器皆以 .ae-page[data-act="history"] 開頭） */
+/* 第一幕專用（待收進共用 CSS） */
+.ae-page[data-act="history"] .ae-quizband .ae-numlist li { color: #fff; }
+.ae-page[data-act="history"] .ae-quizband .ae-numlist b { color: var(--ae-tip); }
+/* 時間軸：6 站、三段色（起點／人來教／自己學） */
+.ae-page[data-act="history"] .ae-tl { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.ae-page[data-act="history"] .ae-tl::before { background: linear-gradient(90deg, var(--ae-navy) 0 31%, var(--ae-slate) 35% 64%, var(--ae-history) 69% 100%); }
+.ae-page[data-act="history"] .ae-tl li { min-height: 27rem; }
+.ae-page[data-act="history"] .ae-tl__card { min-height: 11.5rem; }
+.ae-page[data-act="history"] .ae-tl__card h3 a { color: inherit; text-decoration: none; }
+.ae-page[data-act="history"] .ae-tl__card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ae-page[data-act="history"] .ae-tl__tag { display: inline-block; margin-top: .45rem; padding: .1rem .5rem; border-radius: 999px; background: var(--c-soft); color: var(--c-ink); font-size: .74rem; font-weight: 800; }
+/* 規則數量長條、認圖大賽長條：標籤欄放寬 */
+.ae-page[data-act="history"] .ae-bars--wide .ae-bar { grid-template-columns: 5.2rem minmax(0, 1fr) 6.6rem; }
+.ae-page[data-act="history"] .ae-bars--wide .ae-bar__label { font-size: 1.05rem; text-align: left; }
+.ae-page[data-act="history"] .ae-bars--wide .ae-bar__value { font-size: 1rem; }
+.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__fill { background: var(--ae-history); }
+.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__value, .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__label { color: var(--ae-history-ink); }
+.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__fill { background: #b8c4d0; }
+.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__label, .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:first-child .ae-bar__fill { background: #b8c4d0; }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:first-child .ae-bar__value { color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:nth-child(2) .ae-bar__fill { background: var(--ae-key); }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-key); }
+/* 教機器認貓：左右兩個方法 */
+.ae-page[data-act="history"] .ae-cat { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.6fr); gap: 1.1rem; align-items: stretch; }
+.ae-page[data-act="history"] .ae-cat__panel { position: relative; display: flex; flex-direction: column; gap: 1rem; border: 2.5px solid var(--ae-navy); border-radius: 18px; padding: 2.3rem 1.2rem 1.2rem; background: #f4f6f9; }
+.ae-page[data-act="history"] .ae-cat__panel--learn { background: var(--ae-history-soft); }
+.ae-page[data-act="history"] .ae-cat__title { position: absolute; top: -1.1rem; left: 50%; transform: translateX(-50%); padding: .3rem 1.1rem; border-radius: 999px; background: var(--ae-navy); color: #fff; font-weight: 800; font-size: 1rem; white-space: nowrap; }
+.ae-page[data-act="history"] .ae-cat__rule { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; border: 2.5px solid var(--ae-navy); border-radius: 12px; background: #fff; font-weight: 700; color: var(--ae-navy); line-height: 1.5; }
+.ae-page[data-act="history"] .ae-cat__rule .bi { font-size: 1.6rem; color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-cat__x li { font-size: 1.02rem; }
+.ae-page[data-act="history"] .ae-cat__panel .ae-tip { margin-top: auto; }
+.ae-page[data-act="history"] .ae-cat__turn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .35rem; }
+.ae-page[data-act="history"] .ae-cat__turn span { padding: .3rem .85rem; border-radius: 999px; background: var(--ae-history); color: #3d2a00; font-weight: 800; white-space: nowrap; }
+.ae-page[data-act="history"] .ae-cat__turn .bi { font-size: 2rem; color: var(--ae-navy); line-height: 1; }
+.ae-page[data-act="history"] .ae-cat__score { padding: 1rem 1.1rem; border: 2.5px solid var(--ae-navy); border-radius: 14px; background: #fff; }
+.ae-page[data-act="history"] .ae-cat__score-head { display: flex; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; margin-bottom: .75rem; font-weight: 800; color: var(--ae-navy); }
+.ae-page[data-act="history"] .ae-cat__score-head small { font-weight: 600; color: var(--ae-muted); font-size: .85rem; }
+.ae-page[data-act="history"] .ae-layers { display: flex; align-items: center; justify-content: center; gap: .1rem; flex-wrap: nowrap; white-space: nowrap; font-size: .8rem !important; letter-spacing: -.02em; font-weight: 800; color: var(--ae-navy); }
+.ae-page[data-act="history"] .ae-layers i { font-size: .72rem; }
+.ae-page[data-act="history"] .ae-node__badge { position: absolute; top: -.85rem; left: 50%; transform: translateX(-50%); padding: .15rem .7rem; border-radius: 999px; background: var(--ae-history); color: #3d2a00 !important; font-size: .78rem !important; font-weight: 800; white-space: nowrap; }
+/* 深藍 vs AlphaGo：可能的下法格子 */
+.ae-page[data-act="history"] .ae-board { display: grid; grid-template-columns: repeat(6, 1fr); gap: .35rem; width: 10.5rem; max-width: 100%; margin: .4rem auto .8rem; padding: .55rem; border-radius: 12px; background: #eef2f6; border: 2px solid var(--ae-navy); }
+.ae-page[data-act="history"] .ae-board i { display: block; aspect-ratio: 1; border-radius: 50%; background: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-board--pick i { background: #d3dbe4; }
+.ae-page[data-act="history"] .ae-board--pick i.is-hot { background: var(--ae-history); box-shadow: 0 0 0 2px var(--ae-navy); }
+.ae-page[data-act="history"] .ae-board__cap { display: block; text-align: center; font-size: .85rem; font-weight: 800; color: var(--c-ink); margin-bottom: .6rem; }
+/* 第 37 手 */
+.ae-page[data-act="history"] .ae-move37 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: center; }
+.ae-page[data-act="history"] .ae-move37__big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 9.5rem; height: 9.5rem; border-radius: 50%; background: var(--ae-navy); color: #fff; border: 5px solid var(--ae-history); text-align: center; }
+.ae-page[data-act="history"] .ae-move37__big b { font-size: 1.9rem; line-height: 1.1; color: var(--ae-tip); }
+.ae-page[data-act="history"] .ae-move37__big small { font-size: .78rem; font-weight: 700; opacity: .85; }
+/* AI 家族：同心圓 */
+.ae-page[data-act="history"] .ae-rings { position: relative; width: min(100%, 25rem); aspect-ratio: 1; margin: 0 auto; }
+.ae-page[data-act="history"] .ae-rings__ring { position: absolute; left: 50%; top: 50%; width: var(--s); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; border: 2.5px solid var(--ae-navy); background: var(--bg); }
+.ae-page[data-act="history"] .ae-rings__ring > span { position: absolute; left: 0; right: 0; top: var(--t); transform: translateY(-50%); line-height: 1.2; text-align: center; font-weight: 800; font-size: clamp(.82rem, 2.6vw, 1.02rem); color: var(--ae-navy); white-space: nowrap; }
+.ae-page[data-act="history"] .ae-rings__ring--core > span { top: 50%; transform: translateY(-50%); color: #fff; font-size: clamp(1.1rem, 4vw, 1.5rem); }
+.ae-page[data-act="history"] .ae-famlist { position: relative; list-style: none; margin: 0; padding: 0 0 0 1.6rem; display: grid; gap: .95rem; }
+.ae-page[data-act="history"] .ae-famlist::before { content: ""; position: absolute; left: .35rem; top: .9rem; bottom: .9rem; border-left: 2px dashed #8a99ab; }
+.ae-page[data-act="history"] .ae-famlist::after { content: "\F128"; font-family: "bootstrap-icons"; position: absolute; left: -.05rem; bottom: -.1rem; color: #8a99ab; font-size: 1rem; }
+.ae-page[data-act="history"] .ae-famlist li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1rem; align-items: center; }
+.ae-page[data-act="history"] .ae-famlist__pill { display: block; text-align: center; padding: .45rem .5rem; border: 2.5px solid var(--ae-navy); border-radius: 999px; background: var(--bg); font-weight: 800; color: var(--ae-navy); }
+.ae-page[data-act="history"] .ae-famlist__pill--core { color: #fff; }
+.ae-page[data-act="history"] .ae-famlist b { display: block; color: var(--ae-navy); font-size: 1.04rem; line-height: 1.45; }
+.ae-page[data-act="history"] .ae-famlist small { display: block; color: var(--ae-muted); font-size: .9rem; line-height: 1.6; }
+.ae-page[data-act="history"] .ae-famlist li:last-child b { color: var(--ae-llm-ink); }
+.ae-page[data-act="history"] .ae-key a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.ae-page[data-act="history"] .ae-sort__choices .ae-btn { padding: .3rem .6rem; font-size: .84rem; }
+@media (max-width: 991px) {
+  .ae-page[data-act="history"] .ae-tl { grid-template-columns: 1fr; }
+  .ae-page[data-act="history"] .ae-tl::before { background: linear-gradient(180deg, var(--ae-navy) 0 31%, var(--ae-slate) 35% 64%, var(--ae-history) 69% 100%); }
+  .ae-page[data-act="history"] .ae-tl li { min-height: 0; }
+  .ae-page[data-act="history"] .ae-tl__card { min-height: 0; }
+  .ae-page[data-act="history"] .ae-cat { grid-template-columns: 1fr; gap: 1.6rem; }
+  .ae-page[data-act="history"] .ae-cat__turn { flex-direction: row; }
+  .ae-page[data-act="history"] .ae-cat__turn .bi { transform: rotate(90deg); }
+  .ae-page[data-act="history"] .ae-sort__items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .ae-page[data-act="history"] .ae-sort__items { grid-template-columns: 1fr; }
+  .ae-page[data-act="history"] .ae-move37 { grid-template-columns: 1fr; justify-items: center; }
+  .ae-page[data-act="history"] .ae-famlist li { grid-template-columns: 6.8rem minmax(0, 1fr); gap: .7rem; }
+  .ae-page[data-act="history"] .ae-famlist__pill { font-size: .88rem; }
+  .ae-page[data-act="history"] .ae-bars--wide .ae-bar { grid-template-columns: 4.3rem minmax(0, 1fr) 5.4rem; gap: .5rem; }
+  .ae-page[data-act="history"] .ae-bars--wide .ae-bar__label { font-size: .92rem; }
+  .ae-page[data-act="history"] .ae-bars--wide .ae-bar__value { font-size: .88rem; }
+  .ae-page[data-act="history"] .ae-cat__title { font-size: .92rem; }
+  /* 直排時「深度學習」標籤改放卡內，避免壓到上方的 ↓ 箭頭 */
+  .ae-page[data-act="history"] .ae-cat .ae-node__badge { position: static; transform: none; margin: 0 auto 6px; }
+  /* 認圖錯誤率：名稱放長條上方，長條拿到整列寬度 */
+  .ae-page[data-act="history"] .ae-cat__score .ae-bars--wide .ae-bar { grid-template-columns: minmax(0, 1fr) auto; row-gap: .2rem; }
+  .ae-page[data-act="history"] .ae-cat__score .ae-bars--wide .ae-bar__label { grid-column: 1 / -1; }
+}

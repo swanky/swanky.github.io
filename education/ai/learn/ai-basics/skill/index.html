@@ -1,0 +1,470 @@
+---
+layout: ai-learn-chapter
+title: Skill：把經驗寫成一本手冊
+seo_title: Skill 是什麼？寫給 AI 的新人工作手冊、漸進式揭露與選題三問｜AI 入門第五幕
+description: 用「新人工作手冊」的比喻，白話看懂 Skill 是什麼、AI 為什麼用得上才翻開、它和 Prompt、MCP 怎麼分工，以及哪件工作最值得先寫成手冊。附互動練習與小測驗。
+keywords: Skill是什麼,Agent Skills,SKILL.md,漸進式揭露,description,Claude Code,CLAUDE.md,Prompt,MCP,AI入門,史旺基
+permalink: /education/ai/learn/ai-basics/skill/
+nav_active: education
+use_ai_learn: true
+ai_module: ai-basics
+ai_chapter: skill
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: AI 入門：四個關鍵詞
+    url: /education/ai/learn/ai-basics/
+  - name: Skill：把經驗寫成一本手冊
+    url: /education/ai/learn/ai-basics/skill/
+lead: 上一幕，MCP 讓 AI 拿得到資料、碰得到系統，但「這件事該怎麼做」還是得每次重講。這一幕，把做法寫一次，變成一本 AI 用得上就翻開的手冊。
+question: 同一件事每週都要做，難道每次都要把 Prompt 重新交代一遍？
+hero_illus:
+  code: S1
+  desc: 第五幕開場：紅色工作手冊，用得上才翻開那一章
+outro: 第五幕到這裡：交辦（Prompt）、工具（MCP）、手冊（Skill）都到齊了。下一幕把大腦和工具放進一個會反覆推進的迴圈，再配上交辦和手冊，變成會自己把事做完的同事——Agent。
+takeaways:
+  - Skill＝一個資料夾＋一份 SKILL.md：把重複的做法寫一次，之後每次照做。它不是在訓練 AI，拿掉手冊，AI 就不會。
+  - AI 平常只看每支 Skill 的名稱和說明，用得上才翻開全文。說明（description）寫不清楚，手冊再好也不會被打開。
+  - Prompt 說這次做什麼，Skill 教這類事怎麼做，MCP 讓 AI 做得到。
+  - 第一支 Skill 挑常做、花時間、步驟講得出來的工作；要人際判斷、涉及個資或法律責任的，先不要。
+chapter_css: true
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section id="repeat" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-arrow-repeat" aria-hidden="true"></i>先從一個煩惱開始</span>
+      <h2>同樣的三條規矩，每次都要重講一遍</h2>
+    </div>
+    <div class="ae-prose"><p>史旺姬常請 AI 幫忙約會議。每一次，她都要重新交代同樣的三件事：避開午休、會議標題照指定格式、寄出前先給她看。這次說完，下次換一件事、換一位同事，又要從頭說一遍。</p></div>
+    <figure class="ae-dg" style="margin-top:1.25rem">
+      <figcaption class="ae-dg__title"><i class="bi bi-chat-dots" aria-hidden="true"></i>史旺姬的交辦紀錄（示意）</figcaption>
+      <div class="sk-repeat">
+        <div class="sk-week"><span class="sk-week__when">第 1 次</span><p class="sk-week__ask" style="margin:0">幫我約阿哲和 Amy，下週三討論活動企劃。</p><ul class="sk-week__rules"><li>① 避開午休</li><li>② 標題照格式</li><li>③ 寄出前先給我看</li></ul></div>
+        <div class="sk-week"><span class="sk-week__when">第 2 次</span><p class="sk-week__ask" style="margin:0">幫我約小芳，週五對一下報價。</p><ul class="sk-week__rules"><li>① 避開午休</li><li>② 標題照格式</li><li>③ 寄出前先給我看</li></ul><span class="sk-week__again">↻ 又講了一次</span></div>
+        <div class="sk-week"><span class="sk-week__when">第 3 次</span><p class="sk-week__ask" style="margin:0">幫我約王先生，下個月初開檢討會。</p><ul class="sk-week__rules"><li>① 避開午休</li><li>② 標題照格式</li><li>③ 寄出前先給我看</li></ul><span class="sk-week__again">↻ 再講一次……</span></div>
+        <div class="sk-repeat__arrow" aria-hidden="true"><i class="bi bi-arrow-right-circle-fill"></i></div>
+        <div class="sk-binder">
+          <h3><i class="bi bi-journal-text" aria-hidden="true"></i>寫成一本手冊</h3>
+          <ol><li>避開午休</li><li>標題照格式</li><li>寄出前先給我看</li></ol>
+          <p>寫一次，之後只要說「這次約誰、談什麼」。</p>
+        </div>
+      </div>
+      <p class="ae-dg__caption">每次不一樣的只有「約誰、談什麼」；一直重複的，是做法和注意事項。</p>
+    </figure>
+    <div class="ae-grid ae-mt" style="--cols:2;align-items:stretch">
+      <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div><h3>先想 5 秒</h3><p>你有沒有哪件事，每週都要重新交代一次？不是工作內容每次一模一樣，而是<b>基本流程和注意事項</b>一直重複。</p></div>
+      <div class="ae-card" data-c="skill"><div class="ae-card__icon"><i class="bi bi-journal-bookmark" aria-hidden="true"></i></div><h3>這一幕要回答</h3><p>既然重複，能不能把做法寫一次，整理成一本用得上就翻開的手冊，讓其他人也能沿用？這本寫給 AI 的手冊，就叫 <span class="ae-term-pill" data-c="skill">Skill</span>。</p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>每次不一樣的寫在交辦裡；一直重複的做法，值得寫成一本手冊。</p>
+  </div>
+</section>
+
+<section id="skill" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-journal-text" aria-hidden="true"></i>關鍵詞 4：Skill</span>
+      <h2>Skill：寫給 AI 的「新人工作手冊」</h2>
+    </div>
+    <div class="ae-prose">
+      <p>Skill 可以先用一句話理解：<strong>寫給 AI 的標準作業流程</strong>。它通常是一個資料夾，裡面有一份 SKILL.md，寫下這類工作應該怎麼做，也可以放範本或其他附件。</p>
+      <p>寫一次，每次照做：史旺姬把約會議的規矩，寫成一支叫 <b>schedule-meeting</b> 的 Skill（示意）。</p>
+    </div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>手冊 → AI 照手冊做 → 成果每次一樣</figcaption>
+      <div class="sk-pipe">
+        <div class="sk-box" data-c="skill">
+          <span class="sk-box__tab">schedule-meeting</span>
+          <div class="sk-docs">
+            <span class="sk-doc"><i class="bi bi-file-earmark-text" aria-hidden="true"></i>SKILL.md</span>
+            <span class="sk-doc"><i class="bi bi-files" aria-hidden="true"></i>範本</span>
+          </div>
+          <p class="sk-box__cap">一個資料夾</p>
+        </div>
+        <div class="sk-link" aria-hidden="true"><b>需要時翻開</b><i class="bi bi-arrow-right"></i></div>
+        <div class="sk-ai"><span class="sk-ai__circle">AI</span>照手冊做</div>
+        <div class="sk-link" aria-hidden="true"><b>產出</b><i class="bi bi-arrow-right"></i></div>
+        <div class="sk-box" data-c="llm" style="--c:var(--ae-navy);--c-soft:var(--ae-llm-soft)">
+          <span class="sk-box__tab">成果</span>
+          <div class="sk-out">
+            <span class="sk-out__doc"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><i class="bi bi-check-circle-fill" aria-hidden="true"></i></span>
+            <div><b>會議邀請</b><span>格式每次一樣</span></div>
+          </div>
+          <p class="sk-box__cap">不用每次重講</p>
+        </div>
+      </div>
+    </figure>
+    <div class="ae-grid ae-grid--start ae-mt" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-journal-check" aria-hidden="true"></i>schedule-meeting 手冊裡寫什麼（示意規則）</div>
+        <ol class="ae-numlist">
+          <li>避開 12:00～13:30 的午休時間</li>
+          <li>沒特別說，會議預設一小時</li>
+          <li>會議標題照指定格式</li>
+          <li>發出邀請前，先給使用者確認</li>
+        </ol>
+        <p style="margin:1rem 0 0">下次只要提出這一次的需求——找哪幾個人、談什麼主題——AI 讀到這本手冊，就有一套可以照著走的方法。懂流程的人寫一次，其他人也能共用，不用每個人重新摸索。</p>
+      </div>
+      <div style="display:grid;gap:1.6rem;padding-top:1rem">
+        <div class="sk-box sk-box--dashed" data-c="navy">
+          <span class="sk-box__tab"><i class="bi bi-clock-history" aria-hidden="true"></i>它從哪裡來</span>
+          <div class="sk-tl2">
+            <div><time datetime="2025-10-16">2025/10/16</time><i class="sk-dot"></i><b>Anthropic 推出</b><small>做 Claude 的那家 AI 業者</small></div>
+            <div><time datetime="2025-12-18">2025/12/18</time><i class="sk-dot"></i><b>開放成共同標準</b><small>各家陸續支援</small></div>
+          </div>
+        </div>
+        <div class="sk-box sk-box--tip" data-c="tip">
+          <span class="sk-box__tab" style="background:var(--ae-navy)"><i class="bi bi-exclamation-circle" aria-hidden="true"></i>常見誤會</span>
+          <div class="sk-myth">
+            <span class="sk-nope">訓練</span>
+            <div><h3>寫 Skill 不是在訓練 AI</h3><p>模型的參數沒有因為你寫了一份手冊而改變。做法是需要時把手冊內容交給它，讓它照著做；<b>拿掉手冊，它就不會</b>。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ae-prose ae-mt"><p>Anthropic 也公開了一批範例手冊，例如處理 PDF、Excel、Word、簡報檔的 Skill，以及幫你建立 Skill 的 skill-creator（後面「怎麼叫出 Skill」會再看到）。手冊不只能用在排會議：它的價值，是把你原本就會的工作方法，變成別人和 AI 都讀得懂、能重複使用的說明。</p></div>
+    <p class="ae-key"><small>只記一句</small>Skill 讓 AI 從「聰明的新人」，變成「懂你們做法的同事」。</p>
+    <p class="ae-source">出處：Anthropic〈Agent Skills〉（2025-10-16 發布，2025-12-18 更新）；Anthropic 公開範例 Skill：github.com/anthropics/skills（2026-10-06 查閱）。schedule-meeting 與其規則為本教材虛構示意。</p>
+  </div>
+</section>
+
+<section id="skillmd" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-file-earmark-text" aria-hidden="true"></i>實物長這樣（示意）</span>
+      <h2>一份 SKILL.md 的長相：寫給 AI 的 SOP（標準作業流程）</h2>
+    </div>
+    <div class="ae-prose"><p>換史旺姬的第二支示意 Skill：<b>meeting-notes</b>，把會議逐字稿整理成紀錄；上面的 schedule-meeting 格式完全相同。看起來像程式碼，先別緊張——這其實是一份<strong>有結構的工作說明</strong>，對照四個標號一段一段看。</p></div>
+    <div class="ae-grid ae-grid--start ae-mt sk-mdgrid" style="--cols:2">
+      <figure class="sk-code" style="margin:0" aria-label="meeting-notes 的 SKILL.md 內容（示意）">
+        <div class="sk-code__bar"><i class="bi bi-folder-fill" aria-hidden="true"></i>meeting-notes/SKILL.md</div>
+        <div class="sk-code__body">
+          <div class="sk-ln sk-ln--dim"><span></span><code>---</code></div>
+          <div class="sk-ln"><span class="sk-ln__mk">1</span><code>name: meeting-notes</code></div>
+          <div class="sk-ln sk-ln--key"><span class="sk-ln__mk">2</span><code>description: 把會議逐字稿整理成給主管看的
+  摘要、決議與待辦表格。使用者提到
+  「會議紀錄」「整理逐字稿」時使用。</code></div>
+          <div class="sk-ln sk-ln--dim"><span></span><code>---</code></div>
+          <div class="sk-ln sk-ln--head"><span></span><code># 會議紀錄整理</code></div>
+          <div class="sk-ln sk-ln--head"><span class="sk-ln__mk">3</span><code>## 步驟</code></div>
+          <div class="sk-ln"><span></span><code>1. 先寫三行摘要（給沒參加的主管）</code></div>
+          <div class="sk-ln"><span></span><code>2. 列出所有「決議」</code></div>
+          <div class="sk-ln"><span></span><code>3. 待辦做成表格：事項／負責人／期限</code></div>
+          <div class="sk-ln sk-ln--gap"><span></span><code></code></div>
+          <div class="sk-ln sk-ln--head"><span></span><code>## 規則</code></div>
+          <div class="sk-ln"><span></span><code>- 沒提到期限 → 寫「待確認」，不要猜</code></div>
+          <div class="sk-ln"><span></span><code>- 人名照原文，不要自己補全名</code></div>
+          <div class="sk-ln sk-ln--head"><span class="sk-ln__mk">4</span><code>## 範本</code></div>
+          <div class="sk-ln"><span></span><code>請參考 template.md 的格式</code></div>
+        </div>
+      </figure>
+      <div class="sk-notes">
+        <div class="sk-note"><h3><span>1</span>名稱（name）</h3><p>這支 Skill 叫什麼，用英文小寫和連字號。最上面兩條 <code>---</code> 夾住的是「封面資料」：名稱＋說明。</p></div>
+        <div class="sk-note sk-note--star"><h3><span>2</span>說明（description）</h3><p><strong>最重要的一段</strong>：AI 靠這段判斷「什麼時候該用我」。要寫清楚用途，和使用者會講的關鍵字。</p></div>
+        <div class="sk-note"><h3><span>3</span>步驟與規則</h3><p>就是 SOP 本體：照順序做什麼、遇到例外怎麼辦。像「沒提到期限就寫待確認、不要猜」這種規則，正是讓成果符合你做法的關鍵。</p></div>
+        <div class="sk-note"><h3><span>4</span>範本與附件</h3><p>範本、參考資料、小程式，放在同一個資料夾，需要時才讀。</p></div>
+      </div>
+    </div>
+    <ul class="ae-iconlist ae-mt">
+      <li data-c="skill"><i class="bi bi-hash" aria-hidden="true"></i><span><b>這種寫法叫 Markdown（.md）。</b>用 <code>#</code> 當標題、<code>-</code> 當條列的純文字寫法，記事本就能寫、就能打開，不用會寫程式。</span></li>
+      <li data-c="key"><i class="bi bi-bullseye" aria-hidden="true"></i><span><b>如果這份只能記一個地方，記 ② 說明。</b>正文再完整，也要先讓 AI 在對的時機想到打開它。下一段就說為什麼。</span></li>
+    </ul>
+    <p class="ae-key"><small>只記一句</small>會寫 SOP，就會寫 Skill。</p>
+    <p class="ae-source">示意：meeting-notes 為本教材虛構的示意 Skill；SKILL.md 格式依 Claude Code Docs〈Extend Claude with skills〉。</p>
+  </div>
+</section>
+
+<section id="layers" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-layers" aria-hidden="true"></i>Skill 最聰明的設計</span>
+      <h2>手冊一層一層翻（正式名稱：漸進式揭露）</h2>
+    </div>
+    <div class="ae-prose"><p>AI 不是一開始就把每一本手冊全文讀完。名字聽起來抽象，其實就是：<strong>不要一開始把所有內容全部攤出來，需要到哪一層，再讀到哪一層。</strong>就像先看手冊目錄，再翻到用得上的那一章。</p></div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-layers" aria-hidden="true"></i>三層手冊：用到哪一層，才拿哪一層上桌</figcaption>
+      <div class="sk-pd">
+        <div class="sk-layer sk-layer--1" style="grid-column:1;grid-row:1"><span class="ae-num">1</span><b>目錄：名稱＋說明</b><span>每支約 100 Token</span></div>
+        <div class="sk-link" style="grid-column:2;grid-row:1" aria-hidden="true"><b>一開始就放</b><i class="bi bi-arrow-right"></i></div>
+        <div class="sk-layer sk-layer--2" style="grid-column:1;grid-row:2"><span class="ae-num">2</span><b>SKILL.md 全文</b><span>判斷用得上才讀</span></div>
+        <div class="sk-link" style="grid-column:2;grid-row:2" aria-hidden="true"><b>用得上才翻</b><i class="bi bi-arrow-right"></i></div>
+        <div class="sk-layer" style="grid-column:1;grid-row:3"><span class="ae-num">3</span><b>附件：範本・資料・程式</b><span>需要時才讀</span></div>
+        <div class="sk-link" style="grid-column:2;grid-row:3" aria-hidden="true"><b>需要時才拿</b><i class="bi bi-arrow-right"></i></div>
+        <div class="sk-pd__desk" aria-hidden="true"><span>桌子：Context window 有限</span></div>
+        <div class="sk-zone sk-zone--1">
+          <div class="sk-chips"><span class="sk-chip">schedule-meeting</span><span class="sk-chip">meeting-notes</span><span class="sk-chip">pdf</span><span class="sk-chip">xlsx</span></div>
+          <small>每支 Skill 只佔一行目錄（前兩支是示意）；pdf、xlsx 是官方 Skill，處理 PDF 和 Excel</small>
+        </div>
+        <div class="sk-zone sk-zone--2">
+          <div class="sk-zone__row"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><div><b>schedule-meeting</b><span>這次要約會議：只翻開這一本</span></div></div>
+        </div>
+        <div class="sk-zone sk-zone--3">
+          <div class="sk-zone__row"><span class="sk-gear"><i class="bi bi-gear" aria-hidden="true"></i>程式</span><i class="bi bi-arrow-right" style="font-size:1.4rem;color:var(--ae-navy)" aria-hidden="true"></i><span class="sk-result">結果</span><div><b style="font-size:.95rem">只有結果上桌</b><span>程式碼本身不上桌</span></div></div>
+        </div>
+        <p class="sk-pd__foot">越往下，越晚才拿出來</p>
+      </div>
+    </figure>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card" data-c="skill"><div class="ae-card__icon"><i class="bi bi-list-ul" aria-hidden="true"></i></div><h3>第 1 層：先放目錄</h3><p>每支 Skill 的名稱和說明，像手冊目錄上的一行：這本是排會議、那本是整理會議紀錄。「約 100 Token」只是說目錄很精簡，不是固定配額。</p></div>
+      <div class="ae-card" data-c="skill"><div class="ae-card__icon"><i class="bi bi-book-half" aria-hidden="true"></i></div><h3>第 2 層：用得上才翻開</h3><p>AI 判斷這一次用得上，才打開那份 SKILL.md 全文，讀完整的步驟和規則。不是每次一進來就先把幾十本手冊讀完。</p></div>
+      <div class="ae-card" data-c="skill"><div class="ae-card__icon"><i class="bi bi-paperclip" aria-hidden="true"></i></div><h3>第 3 層：需要才拿附件</h3><p>做到一半需要範本或參考資料，再去拿。如果附的是小程式，通常是執行後把<b>結果</b>交回來，不必把整份程式碼當成閱讀材料。</p></div>
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:2">
+      <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>如果所有手冊一開始全文上桌</h3><p>佔掉大半張桌子，重要的內容反而更難被注意到。還記得 {% include ai-learn/chref.html module=mod slug="llm" anchor="context" label="第二幕的辦公桌" %}嗎？桌面就這麼大。</p></div></div>
+      <div class="ae-yn" data-c="skill" style="--c:var(--ae-ok);--c-ink:var(--ae-ok);--c-soft:var(--ae-ok-soft)"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>只放目錄，用到才翻</h3><p>桌面留給這次真正要用的內容。也因為這樣，<b>目錄上那一行（description）</b>寫不清楚用途和使用情境，AI 可能根本想不到該翻這本。</p></div></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>桌子有限，只先放目錄；「說明」寫不清楚，AI 就不會想到翻開。</p>
+    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Anthropic Engineering〈Equipping agents for the real world with Agent Skills〉；Claude Code Docs〈Extend Claude with skills〉。schedule-meeting、meeting-notes 為示意 Skill，pdf、xlsx 為 Anthropic 官方 Skill。</p>
+  </div>
+</section>
+
+<section id="compare" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-table" aria-hidden="true"></i>最容易搞混的一組</span>
+      <h2>Prompt、Skill、MCP 一張表分清楚</h2>
+    </div>
+    <div class="ae-prose"><p>這三個詞最容易混在一起，所以不要各講一套例子，全部用「排會議」來看。</p></div>
+    <div class="ae-mt" style="overflow-x:auto">
+      <table class="sk-table">
+        <caption class="visually-hidden">Prompt、Skill、MCP 對照表</caption>
+        <thead>
+          <tr><th scope="col" style="background:#173b5e"><span class="visually-hidden">比較項目</span></th><th scope="col" data-c="prompt">Prompt：交辦</th><th scope="col" data-c="skill">Skill：手冊</th><th scope="col" data-c="mcp">MCP：USB-C 規格</th></tr>
+        </thead>
+        <tbody>
+          <tr class="sk-table__ex"><th scope="row">📍 排會議（示意）</th><td data-c="prompt" data-th="Prompt：交辦">「幫我約下週三下午，我、阿哲、Amy 都有空的一小時」</td><td data-c="skill" data-th="Skill：手冊">schedule-meeting（排會議手冊）</td><td data-c="mcp" data-th="MCP：USB-C 規格">行事曆 Server 的「查空檔」「建立邀請」工具（示意）</td></tr>
+          <tr><th scope="row">給 AI 什麼</th><td data-c="prompt" data-th="Prompt：交辦">這一次要做什麼</td><td data-c="skill" data-th="Skill：手冊">這類事「怎麼做」</td><td data-c="mcp" data-th="MCP：USB-C 規格">「做得到」的能力和資料</td></tr>
+          <tr><th scope="row">誰來寫</th><td data-c="prompt" data-th="Prompt：交辦">你，每次都寫</td><td data-c="skill" data-th="Skill：手冊">懂流程的人寫一次，大家共用</td><td data-c="mcp" data-th="MCP：USB-C 規格">IT 工程師做 Server（轉接線）</td></tr>
+          <tr><th scope="row">放在哪</th><td data-c="prompt" data-th="Prompt：交辦">對話框</td><td data-c="skill" data-th="Skill：手冊">一個資料夾＋SKILL.md</td><td data-c="mcp" data-th="MCP：USB-C 規格">轉接線（MCP Server），裝在你的電腦或放在遠端的伺服器都可以</td></tr>
+          <tr><th scope="row">什麼時候上桌</th><td data-c="prompt" data-th="Prompt：交辦">送出那一刻</td><td data-c="skill" data-th="Skill：手冊">名稱＋說明一開始就在桌上；用得上才翻開全文</td><td data-c="mcp" data-th="MCP：USB-C 規格">工具清單一開始就讓 AI 知道；AI 寫工單時才真的執行</td></tr>
+          <tr><th scope="row">佔桌面多少</th><td data-c="prompt" data-th="Prompt：交辦">你打多少就佔多少</td><td data-c="skill" data-th="Skill：手冊">平常只放名稱＋說明（約 100 Token），用到才放全文</td><td data-c="mcp" data-th="MCP：USB-C 規格">工具名稱先上桌，用到才拿完整說明（跟 Skill 一樣省桌面）</td></tr>
+          <tr class="sk-table__miss"><th scope="row">少了會怎樣</th><td data-c="prompt" data-th="Prompt：交辦">AI 不知道你要什麼</td><td data-c="skill" data-th="Skill：手冊">每次都要重講，品質不一</td><td data-c="mcp" data-th="MCP：USB-C 規格">說得再清楚，也碰不到資料</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></div><h3>Prompt 說「做什麼」</h3><p>這一次的對象、時間和目標。缺了它，AI 不知道你這次要什麼。</p></div>
+      <div class="ae-card" data-c="skill"><div class="ae-card__icon"><i class="bi bi-journal-text" aria-hidden="true"></i></div><h3>Skill 教「怎麼做」</h3><p>避開午休、標題格式、發出前先確認。今天換了會議主題，這些做法照樣沿用。</p></div>
+      <div class="ae-card" data-c="mcp"><div class="ae-card__icon"><i class="bi bi-plug-fill" aria-hidden="true"></i></div><h3>MCP 讓 AI「做得到」</h3><p>透過行事曆的工具，AI 才能真的查到空檔、把邀請送進系統。沒有工具，說得再清楚也不能憑空操作。</p></div>
+    </div>
+    <div class="ae-widget" data-ae-sort>
+      <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
+      <h3>下面這些，屬於 Prompt、Skill，還是 MCP？</h3>
+      <div class="ae-sort__items">
+        <div class="ae-sort__item" data-answer="prompt"><strong>「幫我約小芳，週五對一下報價」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button></div><p class="ae-sort__feedback" hidden><b></b> 這是這一次的交辦：約誰、什麼時候、談什麼，每次都不一樣。</p></div>
+        <div class="ae-sort__item" data-answer="skill"><strong>「沒提到期限，就寫『待確認』，不要猜」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button></div><p class="ae-sort__feedback" hidden><b></b> 這是 meeting-notes 手冊裡的規則：每次整理紀錄都適用，寫一次就好。</p></div>
+        <div class="ae-sort__item" data-answer="mcp"><strong>讓 AI 能查到三個人的行事曆空檔</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button></div><p class="ae-sort__feedback" hidden><b></b> 這是「做得到」的能力，要靠行事曆的工具接上系統。</p></div>
+        <div class="ae-sort__item" data-answer="skill"><strong>「會議預設一小時，避開午休」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button></div><p class="ae-sort__feedback" hidden><b></b> 每次約會議都一樣的做法，正是 schedule-meeting 手冊的內容。</p></div>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>Prompt 說做什麼，Skill 教怎麼做，MCP 讓 AI 做得到。</p>
+    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Claude Code Docs〈Connect Claude Code to tools via MCP〉（tool search）。schedule-meeting 與行事曆 Server 為示意。</p>
+  </div>
+</section>
+
+<section id="where" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>看懂手冊之後：它在哪裡跑？</span>
+      <h2>先練交辦，再用 Claude Code 寫 Skill、跑 Skill</h2>
+    </div>
+    <div class="ae-prose"><p>用一般的聊天工具就好，還是要裝另一套軟體？答案是兩段走：<strong>先在聊天工具把交辦練熟，再到會讀 SKILL.md 的工具裡寫手冊、用手冊</strong>。你可以在自己的電腦上試，不需要為了理解這一幕，先把所有環境都裝好。</p></div>
+    <div class="sk-two ae-mt">
+      <div class="sk-panel" data-c="prompt">
+        <div class="sk-panel__head"><i class="bi bi-globe" aria-hidden="true"></i>AI 聊天工具：先從這裡練交辦</div>
+        <div class="sk-panel__body">
+          <p class="sk-panel__lead">用你有權限使用的 AI 聊天工具，<br>先練好交辦（Prompt）和檢查結果</p>
+          <ul class="ae-iconlist">
+            <li data-c="prompt"><i class="bi bi-search" aria-hidden="true"></i><span>找資訊、讀文件、整理產出（練習題見<a href="{{ mod.url | relative_url }}#practice">單元總覽的「現在換你動手」</a>）</span></li>
+            <li data-c="key"><i class="bi bi-lock-fill" aria-hidden="true"></i><span>不貼個資、密碼、還沒公開的數字</span></li>
+            <li data-c="skill"><i class="bi bi-journal-x" aria-hidden="true"></i><span><b>Skill 不在這裡寫：</b>要在 Claude Code 這類會讀 SKILL.md 的工具裡寫和跑；聊天工具先練交辦</span></li>
+            <li data-c="prompt"><i class="bi bi-question-circle" aria-hidden="true"></i><span>有疑問就追問「你根據哪一段？」，自己點開原文核對（{% include ai-learn/chref.html module=mod slug="prompt" label="交辦、追問、改正的完整示範" %}）</span></li>
+            <li data-c="tip"><i class="bi bi-pencil-square" aria-hidden="true"></i><span><b>練好的交辦，就是之後寫 Skill 的草稿</b></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sk-two__arrow" aria-hidden="true"><i class="bi bi-caret-right-fill"></i></div>
+      <div class="sk-panel" data-c="skill">
+        <div class="sk-panel__head"><i class="bi bi-tools" aria-hidden="true"></i>Claude Code：用來寫 Skill、跑 Skill</div>
+        <div class="sk-panel__body">
+          <p class="sk-panel__lead">Anthropic 出的 AI 助理程式，不用會寫程式；<br>會讀你資料夾裡的 SKILL.md 照著做</p>
+          <ul class="ae-iconlist">
+            <li data-c="skill"><i class="bi bi-laptop" aria-hidden="true"></i><span><b>長什麼樣：</b>終端機（黑底打字的視窗）、VS Code（工程師常用的程式編輯器）、桌面 App 都能用，一樣是打字對話</span></li>
+            <li data-c="skill"><i class="bi bi-folder2-open" aria-hidden="true"></i><span><b>Skill 放哪：</b>固定的 skills 資料夾，每支一個子資料夾，打「/名稱」就能叫出來</span></li>
+            <li data-c="slate"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i><span><b>另有 CLAUDE.md（配角，聽過就好）：</b>每次開工都先讀的固定規矩，像辦公室公告欄；Skill 則是用得上才翻的工作手冊</span></li>
+            <li data-c="tip"><i class="bi bi-shield-check" aria-hidden="true"></i><span><b>安裝：</b>照 Claude Code 官方說明進行；不要隨意安裝來源不明的外掛</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:2">
+      <div class="ae-card" data-c="slate"><div class="sk-board"><span class="sk-board__icon"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i></span><div><h3>CLAUDE.md＝辦公室公告欄</h3><p>每次開工都會先讀一遍的固定規矩，不管今天做什麼事都適用。</p></div></div></div>
+      <div class="ae-card" data-c="skill"><div class="sk-board"><span class="sk-board__icon"><i class="bi bi-journal-text" aria-hidden="true"></i></span><div><h3>Skill＝特定工作的手冊</h3><p>遇到那一類工作才翻開。平常只在目錄上佔一行。</p></div></div></div>
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:2">
+      <div class="ae-yn" data-c="prompt"><i class="bi bi-pencil-square" aria-hidden="true"></i><div><h3>「寫」手冊：記事本就可以</h3><p>SKILL.md 是純文字，任何文字編輯器都能寫。</p></div></div>
+      <div class="ae-yn" data-c="skill"><i class="bi bi-play-circle-fill" aria-hidden="true"></i><div><h3>「跑」手冊：要支援它的工具</h3><p>讓工具認得、載入、測試那支 Skill，需要像 Claude Code 這樣的執行環境。</p></div></div>
+    </div>
+    <details class="ae-reveal" style="margin-top:1.25rem">
+      <summary>給想自己動手的人：skills 資料夾在哪裡？</summary>
+      <div>Claude Code 會在兩個地方找 Skill：<b>個人層</b> <code>~/.claude/skills/</code>（<code>~</code> 是你的使用者資料夾，所有專案都用得到），以及<b>專案層</b> <code>.claude/skills/</code>（只在那個專案資料夾裡有效）。每支 Skill 一個子資料夾，裡面放 SKILL.md。現在不用背，要動手時再回來看。</div>
+    </details>
+    <p class="ae-key"><small>只記一句</small>先練好交辦與檢查結果，再到 Claude Code 寫 Skill、跑 Skill。</p>
+    <p class="ae-source">出處：Claude Code Docs〈Overview〉；Claude Code Docs〈Extend Claude with skills〉（個人層 ~/.claude/skills/；專案層 .claude/skills/）。</p>
+  </div>
+</section>
+
+<section id="use" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-terminal" aria-hidden="true"></i>實作環境：怎麼叫出 Skill</span>
+      <h2>在 Claude Code 怎麼用 Skill：直接說需求，它會自己挑</h2>
+    </div>
+    <div class="ae-prose"><p>下面是 Claude Code 裝好之後，在它的對話框裡可以打的話。要注意：meeting-notes 是<a href="#skillmd">前面那份示意 Skill</a>，要先放進固定的 skills 資料夾，才叫得出來——名稱不是你打了就會憑空出現。</p></div>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card sk-way" data-c="skill"><span class="sk-way__tag">① 最常用</span><h3>自己挑</h3><div class="sk-cmd"><span>把這份逐字稿整理成會議紀錄。</span></div><p>直接說需求。環境裡有合適的 Skill，而且說明對得上，它就自己翻開 meeting-notes。</p></div>
+      <div class="ae-card sk-way" data-c="skill"><span class="sk-way__tag">② 指定用哪本</span><h3>直接點名</h3><div class="sk-cmd"><span><code>/meeting-notes</code> 整理這份逐字稿</span></div><p>用斜線加名稱。你知道要用哪支手冊，或它沒自己選對時，很方便。</p></div>
+      <div class="ae-card sk-way" data-c="slate"><span class="sk-way__tag">③ 不確定有哪些</span><h3>看清單</h3><div class="sk-cmd"><span><code>/skills</code></span></div><p>打 /skills 開選單；或直接問「你有哪些 Skill？」</p></div>
+    </div>
+    <div class="ae-grid ae-grid--start ae-mt" style="--cols:2">
+      <div class="ae-card sk-way" data-c="tip">
+        <span class="sk-way__tag">官方範例</span>
+        <h3>pdf、xlsx、docx、pptx</h3>
+        <div class="sk-files" aria-label="四種官方範例 Skill">
+          <span><i class="bi bi-file-earmark-text" style="color:#d9543f" aria-hidden="true"></i>pdf<small>PDF</small></span>
+          <span><i class="bi bi-file-earmark-excel" style="color:#2e8a5f" aria-hidden="true"></i>xlsx<small>Excel</small></span>
+          <span><i class="bi bi-file-earmark-word" style="color:#2878d0" aria-hidden="true"></i>docx<small>Word</small></span>
+          <span><i class="bi bi-file-earmark-ppt" style="color:#c4462f" aria-hidden="true"></i>pptx<small>PowerPoint</small></span>
+        </div>
+        <div class="sk-cmd"><span>把這份 PDF 的表格抓出來</span></div>
+        <div class="sk-cmd"><span>在這份 Excel 加一欄小計</span></div>
+        <div class="sk-cmd"><span>把大綱做成 5 頁簡報</span></div>
+        <p>怎麼開啟，依 Claude Code 官方說明。</p>
+      </div>
+      <div style="display:grid;gap:1rem">
+        <div class="ae-card sk-way" data-c="tip">
+          <span class="sk-way__tag">官方範例</span>
+          <h3>skill-creator：幫你做 Skill 的 Skill</h3>
+          <div class="sk-cmd"><span>幫我把約會議的規矩做成一支 Skill。</span></div>
+          <p>不用從空白頁開始寫，先讓它幫你打草稿，再自己改。</p>
+        </div>
+        <div class="ae-card sk-way" data-c="key">
+          <span class="sk-way__tag">做完追問</span>
+          <h3>「你剛剛用了哪支 Skill？」</h3>
+          <div class="sk-cmd"><span>你剛剛用了哪支 Skill？</span></div>
+          <p>這只是確認的線索之一，不能只靠它自己說。<b>有沒有真的照格式、有沒有把不知道的期限寫成「待確認」，還是要對照成果看。</b></p>
+        </div>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>最常用的是直接說需求；它沒挑對，就打「/名稱」點名。</p>
+    <p class="ae-source">出處：Claude Code Docs〈Extend Claude with skills〉（code.claude.com/docs/en/skills；以 claude.ai 帳號登入時 pdf、xlsx 等官方 Skill 會自動同步，2026-10-06 查閱）；github.com/anthropics/skills（2026-10-06 查閱）；Claude Docs〈Agent Skills overview〉。</p>
+  </div>
+</section>
+
+<section id="pick" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-trophy" aria-hidden="true"></i>選題指南</span>
+      <h2>什麼工作最值得先交給 AI？用三個問題打分數</h2>
+    </div>
+    <div class="ae-prose"><p>會叫用之後，先別急著做很多支。三個問題各打 1～5 分，再把三個分數相乘。<strong>分數高的，之後也最適合寫成 Skill。</strong></p></div>
+    <div class="sk-q4 ae-mt">
+      <div class="ae-card" data-c="skill"><h3><i class="bi bi-arrow-repeat" aria-hidden="true"></i>頻率高嗎？</h3><p>越常做，越值得寫。每天、每週都做的，比一年一次的更值得先整理。</p>
+        <ol class="sk-scale" aria-label="頻率評分"><li><b>5</b>每天</li><li><b>4</b>每週</li><li><b>3</b>每月</li><li><b>2</b>每季</li><li><b>1</b>每年</li></ol></div>
+      <div class="ae-card" data-c="skill"><h3><i class="bi bi-stopwatch" aria-hidden="true"></i>花時間嗎？</h3><p>每次越花時間，省下來越有感。大量時間花在整理、比對、排版的，最容易感受到差異。</p>
+        <ol class="sk-scale" aria-label="耗時評分"><li><b>5</b>2 小時以上</li><li><b>4</b>1～2 小時</li><li><b>3</b>30～60 分</li><li><b>2</b>10～30 分</li><li><b>1</b>10 分內</li></ol></div>
+      <div class="ae-card" data-c="skill"><h3><i class="bi bi-rulers" aria-hidden="true"></i>規則明確嗎？</h3><p>步驟講得出來，AI 才照得到。能列成清單、對錯說得出來的，最適合先練。</p>
+        <ol class="sk-scale" aria-label="規則明確評分"><li><b>5</b>能列成清單</li><li><b>4</b>大多能</li><li><b>3</b>一半靠人</li><li><b>2</b>大多靠人</li><li><b>1</b>每次都靠人</li></ol></div>
+      <div class="ae-card" data-c="navy"><h3 style="color:var(--ae-key)"><i class="bi bi-slash-circle" aria-hidden="true"></i>不適合寫的</h3><p>每次都不一樣、要人際判斷，或涉及機密個資、法律責任。</p>
+        <ul class="sk-scale sk-scale--no" aria-label="不適合的例子"><li class="sk-scale__label">例如</li><li>面談回饋</li><li>客訴賠償金額</li><li>含個資名單的整理</li></ul></div>
+    </div>
+    <div class="sk-formula" role="note" aria-label="計分方式">
+      <span><i class="bi bi-arrow-repeat" aria-hidden="true"></i>頻率</span><em>×</em><span><i class="bi bi-stopwatch" aria-hidden="true"></i>耗時</span><em>×</em><span><i class="bi bi-rulers" aria-hidden="true"></i>規則明確</span><em>＝</em><span class="sk-formula__max">最高 125 分</span><span class="sk-formula__rule">而且「規則明確」至少 3 分</span>
+    </div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i>打分示範（工作與分數都是虛構示範）</figcaption>
+      <div class="sk-score">
+        <div class="sk-score__row sk-score__row--head" aria-hidden="true"><span>每週重複的工作</span><span>頻率</span><span>耗時</span><span>規則</span><span style="text-align:left">相乘</span></div>
+        <div class="sk-score__row sk-score__row--top"><span class="sk-score__name">整理每週會議紀錄</span><span class="sk-score__n" aria-label="頻率 4">4</span><span class="sk-score__n" aria-label="耗時 4">4</span><span class="sk-score__n" aria-label="規則 4">4</span><span class="sk-score__bar"><i style="--w:calc(64% * .85)"></i>64</span></div>
+        <div class="sk-score__row"><span class="sk-score__name">回覆客戶常見問題</span><span class="sk-score__n" aria-label="頻率 5">5</span><span class="sk-score__n" aria-label="耗時 2">2</span><span class="sk-score__n" aria-label="規則 5">5</span><span class="sk-score__bar"><i style="--w:calc(50% * .85)"></i>50</span></div>
+        <div class="sk-score__row"><span class="sk-score__name">彙整週報給主管</span><span class="sk-score__n" aria-label="頻率 4">4</span><span class="sk-score__n" aria-label="耗時 3">3</span><span class="sk-score__n" aria-label="規則 4">4</span><span class="sk-score__bar"><i style="--w:calc(48% * .85)"></i>48</span></div>
+        <div class="sk-score__row sk-score__row--out"><span class="sk-score__name">處理客訴協調</span><span class="sk-score__n" aria-label="頻率 4">4</span><span class="sk-score__n" aria-label="耗時 4">4</span><span class="sk-score__n sk-score__n--low" aria-label="規則 1">1</span><span class="sk-score__bar"><i style="--w:calc(16% * .85)"></i>16</span><p class="sk-score__why">常發生也很花時間，但規則只有 1 分：需要大量人際判斷，不適合當第一題。</p></div>
+        <div class="sk-score__row sk-score__row--out"><span class="sk-score__name">年度預算編列</span><span class="sk-score__n" aria-label="頻率 1">1</span><span class="sk-score__n" aria-label="耗時 5">5</span><span class="sk-score__n" aria-label="規則 3">3</span><span class="sk-score__bar"><i style="--w:calc(15% * .85)"></i>15</span><p class="sk-score__why" style="color:var(--ae-slate)">很花時間，但一年才一次。不是不重要，而是第一支 Skill 先挑更常出現的。</p></div>
+      </div>
+      <p class="ae-dg__caption">分數只是幫你排序，不是保證能省多少錢或多少時間。選好後，記下你現在手動做一次要幾分鐘，之後才有真正能比較的基準。</p>
+    </figure>
+    <div class="ae-widget" data-ae-sort>
+      <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
+      <h3>這些工作，適合拿來寫第一支 Skill 嗎？</h3>
+      <div class="ae-sort__items">
+        <div class="ae-sort__item" data-answer="yes"><strong>整理每週會議紀錄</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="yes">適合</button><button type="button" class="ae-btn" data-pick="no">先不要</button></div><p class="ae-sort__feedback" hidden><b></b> 每週都做、步驟講得出來（摘要、決議、待辦表），就是 meeting-notes 那種手冊。</p></div>
+        <div class="ae-sort__item" data-answer="no"><strong>面談回饋</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="yes">適合</button><button type="button" class="ae-btn" data-pick="no">先不要</button></div><p class="ae-sort__feedback" hidden><b></b> 每次情況都不同，又要人際判斷，規則很難寫清楚。</p></div>
+        <div class="ae-sort__item" data-answer="yes"><strong>彙整週報給主管</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="yes">適合</button><button type="button" class="ae-btn" data-pick="no">先不要</button></div><p class="ae-sort__feedback" hidden><b></b> 頻率固定、格式固定，很適合寫成手冊。</p></div>
+        <div class="ae-sort__item" data-answer="no"><strong>含個資名單的整理</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="yes">適合</button><button type="button" class="ae-btn" data-pick="no">先不要</button></div><p class="ae-sort__feedback" hidden><b></b> 就算很花時間，也不要因此跳過資料安全和責任問題。</p></div>
+      </div>
+    </div>
+    <p class="ae-tip"><b>現在就試：</b>拿張紙（或打開記事本），寫下一件你每週重複做的事，三個問題各打 1～5 分。三項相乘最高、而且規則明確至少 3 分的，就是你的第一個題目。想要更多練習，到<a href="{{ mod.url | relative_url }}#practice">單元總覽的「現在換你動手」</a>。</p>
+    <p class="ae-key"><small>只記一句</small>先挑常做、花時間、步驟講得出來的工作；要人際判斷或碰到個資的，先不要。</p>
+  </div>
+</section>
+
+<section class="ae-quizband">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="C">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 7／10：寫好的 Skill 為什麼沒被用到？</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>15 秒</span></div>
+      <p class="ae-quiz__q">史旺姬寫了第三支 Skill「整理週報」（weekly-report），步驟寫得很完整。她對 AI 說「幫我整理這週的週報」，AI 卻沒用這支 Skill。最可能的原因是？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>步驟寫得太長太細，AI 擔心讀不完，就改用自己的方式整理</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>還沒接上 MCP，AI 讀不到週報的原始資料，所以不會打開這支 Skill</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>說明（description）沒寫到「整理週報」這類字</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>AI 開工時會先讀完每支 Skill 的全文，太多支互相干擾，所以挑錯了</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 C。因為<b>漸進式揭露</b>，AI 平常只看得到每支 Skill 的名稱和說明，靠說明判斷要不要打開全文。說明沒寫到使用者會講的字，步驟寫得再好也不會被打開。
+        <ul class="ae-quiz__why">
+          <li><b>A 步驟太長</b>：AI 決定要不要打開之前，根本還沒讀到步驟，步驟長短不會影響它選不選。</li>
+          <li><b>B 沒接 MCP</b>：Skill 是工作說明，不一定要配 MCP 工具；整理你貼上的內容，不用接工具。</li>
+          <li><b>D 先讀完全文</b>：正好相反，開工時只放名稱和說明，不會先讀全文。</li>
+        </ul>
+        <p style="margin:.5rem 0 0">👉 第五幕走完了：大腦、交辦、工具、手冊都到齊。下一幕把大腦和工具放進迴圈，再配上交辦和手冊，變成會自己做事的同事。</p>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>C，說明（description）是手冊的入口：沒寫到「整理週報」這類字，AI 就想不到要打開它。</div></details>
+      <p class="ae-quiz__hint">先把「手冊內容好不好」和「AI 有沒有想到打開這本手冊」分成兩件事，再選答案。答錯的話，回到上面的<a href="#layers" style="color:#fff">「手冊一層一層翻」</a>重看。</p>
+    </div>
+  </div>
+</section>
+
+<section id="trigger" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-signpost-split" aria-hidden="true"></i>Skill 沒被用上？</span>
+      <h2>說明（description）是入口：先讓 AI 想得到它</h2>
+    </div>
+    <div class="sk-def" data-c="skill">
+      <div class="sk-def__ratio" aria-hidden="true"><span>AI 真的打開手冊</span><i></i><span>本來就該用這本手冊的需求</span></div>
+      <div><h3>觸發率</h3><p>在本來應該用到某支 Skill 的需求裡，AI 有多少次真的想到要打開它。就像新人遇到該翻手冊的狀況時，有沒有想到去翻。觸發率低，問題通常不在手冊內容，而在目錄上那一行。</p></div>
+    </div>
+    <div class="sk-desc ae-mt">
+      <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>說明太短：AI 對不上</h3><p>使用者說「幫我整理這週的週報」，說明裡卻沒有任何一個對得上的字。</p><code>name: weekly-report
+description: 週報。</code></div></div>
+      <div class="ae-yn" data-c="mcp"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>寫清楚用途＋使用者會講的字</h3><p>照 meeting-notes 的寫法：先說它做什麼，再說什麼情況該用。</p><code>name: weekly-report
+description: 把這週的工作紀錄整理成給主管看的
+  週報。使用者提到<mark>「週報」「整理這週的進度」</mark>
+  時使用。</code></div></div>
+    </div>
+    <p class="ae-dg__caption" style="margin-top:.6rem">兩段 description 都是示意寫法。</p>
+    <ol class="ae-numlist ae-numlist--row ae-mt">
+      <li>寫清楚這支 Skill 做什麼（用途）。</li>
+      <li>寫進使用者實際會講的字（什麼時候用）。</li>
+      <li>用的時候追問「用了哪支 Skill」，再對照成果確認。</li>
+    </ol>
+    <p class="ae-key"><small>只記一句</small>手冊正文要寫好，目錄上的那一行也要寫清楚。</p>
+    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Claude Code Docs〈Extend Claude with skills〉。weekly-report 為本教材虛構的示意 Skill。</p>
+  </div>
+</section>

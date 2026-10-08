@@ -1,0 +1,94 @@
+# AI 自學教材資料源（/education/ai/learn/）
+# 一個 module＝一場分享整理成的單元；之後新增單元時，在 modules 加一筆、建對應頁面即可。
+# status：published（已上線，可連結）／soon（規劃中，只顯示不連結）
+# color：章節識別色 key，對應 assets/css/ai-learn.css 的 [data-act]（history/llm/prompt/mcp/skill/agent）
+
+modules:
+  - slug: ai-basics
+    title: AI 入門：四個關鍵詞
+    subtitle: 從七十多年的 AI 故事，一次搞懂 LLM、Prompt、MCP、Skill 與 Agent
+    description: 給非工程背景的 AI 入門自學教材。跟著六幕故事，從 1950 年的圖靈測試一路走到會自己把事做完的 Agent；每幕都有小遊戲、測驗與比喻。
+    origin: 整理自史旺基 2026 年 10 月的一場企業內部 AI 入門分享，改寫成可以自己讀、自己練的網頁版。
+    url: /education/ai/learn/ai-basics/
+    status: published
+    chapters:
+      - slug: history
+        act: 第一幕
+        title: AI 想變聰明：從人教到自己學
+        summary: 圖靈測試、ELIZA、專家系統到 AlphaGo：從「人把規則寫完」到「機器從資料學」。
+        color: history
+        status: published
+      - slug: llm
+        act: 第二幕
+        title: LLM：會說話的 AI 誕生了
+        summary: 文字接龍、Token、機率與溫度、三段訓練、AI 的辦公桌，以及為什麼「我確定」不算查證。
+        color: llm
+        status: published
+      - slug: prompt
+        act: 第三幕
+        title: Prompt：學會跟 AI 說話
+        summary: 把 AI 當成第一天上班的新同事：好交辦的六塊積木與八個小技巧。
+        color: prompt
+        status: published
+      - slug: mcp
+        act: 第四幕
+        title: MCP：讓 AI 接上工具
+        summary: AI 世界的 USB-C：工具怎麼接、權限怎麼給，以及藏在資料裡的假指令。
+        color: mcp
+        status: published
+      - slug: skill
+        act: 第五幕
+        title: Skill：把經驗寫成一本手冊
+        summary: 新人工作手冊：用得上才翻開的漸進式揭露，與 Prompt、MCP 的分工。
+        color: skill
+        status: published
+      - slug: agent
+        act: 第六幕
+        title: Agent：大腦＋工具＋迴圈
+        summary: 想、做、看、判斷的工作迴圈；AI 紅綠燈，以及挑出第一件交給 AI 的工作。
+        color: agent
+        status: published
+
+# 名詞小抄：module＋chapter 決定歸屬與連結；star＝必記關鍵詞
+glossary:
+  - { term: AI（人工智慧）, module: ai-basics, chapter: history, text: 讓機器做出需要人類智慧的事；1955 年達特茅斯計畫書第一次用這個詞，寫規則、自己學都算。, metaphor: AI 家族最外圈 }
+  - { term: 圖靈測試, module: ai-basics, chapter: history, text: 隔著文字聊天，猜不出哪個是機器，就算機器過關。, metaphor: 隔著布簾猜誰是真人 }
+  - { term: 專家系統, module: ai-basics, chapter: history, text: 把專家的經驗寫成一條條「如果…就…」規則交給電腦。, metaphor: 越寫越厚的規則手冊 }
+  - { term: AI 寒冬, module: ai-basics, chapter: history, text: AI 經費和熱度大退潮的時期：1973 年 Lighthill 報告後一次、1980 年代末專家系統退燒又一次。, metaphor: 景氣寒冬 }
+  - { term: 機器學習, module: ai-basics, chapter: history, text: 不寫規則，讓電腦從大量資料自己找出規律。, metaphor: 看一堆貓照片，自己學會認貓 }
+  - { term: 深度學習, module: ai-basics, chapter: history, text: 一層層找特徵（人工神經網路）：先看線條、再看耳朵、最後認出貓臉；2012 年起爆紅。, metaphor: 一層層找特徵 }
+  - { term: 生成式 AI／多模態, module: ai-basics, chapter: history, text: 會產生新內容（文字、圖片）的 AI，LLM 是負責文字的那一種；多模態＝同一個模型能讀文字、看圖、聽聲音。, metaphor: AI 家族最新的一圈 }
+  - { term: ELIZA 效應, module: ai-basics, chapter: history, text: 把「講得像懂」當成「真的懂」。, metaphor: 被流暢的話術說服 }
+  - { term: Transformer, module: ai-basics, chapter: llm, text: 2017 年的模型架構，能平行訓練才放得大；GPT 的 T。, metaphor: 會回頭看前文的閱讀法 }
+  - { term: LLM, star: true, module: ai-basics, chapter: llm, text: 讀過海量文字，一塊一塊（Token）猜出回答。, metaphor: 超強文字接龍高手 }
+  - { term: 參數, module: ai-basics, chapter: llm, text: 模型裡被訓練出來的數字。, metaphor: 混音台上的小旋鈕 }
+  - { term: Token, module: ai-basics, chapter: llm, text: AI 讀字的單位，也是計費單位。, metaphor: 拼圖塊、通話秒數 }
+  - { term: 三段訓練, module: ai-basics, chapter: llm, text: 預訓練 → 指令微調 → 人類回饋（RLHF）：人排名次，用排名訓練出打分的 AI 裁判，模型再照裁判的分數反覆練。, metaphor: 先自學、再上課、再被批改 }
+  - { term: 推理模型, module: ai-basics, chapter: llm, text: 回答前先寫一段思考草稿再作答。, metaphor: 考試先打草稿 }
+  - { term: Temperature, module: ai-basics, chapter: llm, text: 控制回答穩定或多變的設定（不是模型裡的參數）。, metaphor: 抽籤時籤筒搖多大力 }
+  - { term: 引擎與 App, module: ai-basics, chapter: llm, text: LLM 是引擎；ChatGPT、Gemini 是 App。, metaphor: 引擎≠車 }
+  - { term: 幻覺, module: ai-basics, chapter: llm, text: 很有自信地講出錯誤或不存在的內容。, metaphor: 一本正經胡說八道 }
+  - { term: 知識截止日, module: ai-basics, chapter: llm, text: 訓練資料停在哪天，知識就停在哪天。, metaphor: 出國一年沒上網的人 }
+  - { term: Context window, module: ai-basics, chapter: llm, text: AI 一次能讀進來的量。, metaphor: 辦公桌的大小 }
+  - { term: RAG, module: ai-basics, chapter: llm, text: 先找出相關段落（用意思或關鍵字找），再根據段落回答。, metaphor: 開卷考 }
+  - { term: Prompt, star: true, module: ai-basics, chapter: prompt, text: 你這一次交代 AI 的話。, metaphor: 交辦新同事、點餐 }
+  - { term: 6 塊積木, module: ai-basics, chapter: prompt, text: 角色、任務、背景、限制、格式、範例；先放任務＋背景＋限制，不對再補。, metaphor: 點餐：說清楚要什麼、不要什麼 }
+  - { term: System prompt, module: ai-basics, chapter: prompt, text: App 事先寫給 AI 的固定規則。, metaphor: 公司的員工守則 }
+  - { term: Tool use, module: ai-basics, chapter: mcp, text: AI 寫工單、程式去執行；工具可能是內建的，也可能是 MCP 接上的。, metaphor: 服務生寫點單、廚房做菜 }
+  - { term: MCP, star: true, module: ai-basics, chapter: mcp, text: AI 連接工具和資料的共同標準（三個角色：Host、Client、Server）。, metaphor: USB-C 規格 }
+  - { term: MCP Server, module: ai-basics, chapter: mcp, text: 接上一個系統的轉接線，提供一組工具（例：行事曆 Server 的查空檔）。, metaphor: USB-C 轉接線 }
+  - { term: Jira／Confluence, module: ai-basics, chapter: mcp, text: 給 IT 同事：Jira 用來開工作單、追進度；Confluence 用來放團隊共用文件。MCP Server 可以把它們接給 AI。, metaphor: 共用待辦清單、共用筆記本 }
+  - { term: Prompt Injection, module: ai-basics, chapter: mcp, text: 外部資料裡藏指令，騙 AI 照做。, metaphor: 夾在公文裡的假簽條 }
+  - { term: 致命三角, module: ai-basics, chapter: mcp, text: 私人資料、不可信內容、能往外送，三樣不要同時給 AI。, metaphor: 鑰匙、陌生人、開著的門不能湊齊 }
+  - { term: 最小權限, module: ai-basics, chapter: mcp, text: 工具只給必要權限，高影響動作要人確認。, metaphor: 只給實習生需要的鑰匙 }
+  - { term: Skill, star: true, module: ai-basics, chapter: skill, text: 一個資料夾＋SKILL.md，寫下工作怎麼做。, metaphor: 新人工作手冊、交接本 }
+  - { term: description, module: ai-basics, chapter: skill, text: SKILL.md 裡告訴 AI「何時該用我」的那段。, metaphor: 手冊目錄上的章名 }
+  - { term: Markdown（.md）, module: ai-basics, chapter: skill, text: "用 # 當標題、- 當條列的純文字寫法，SKILL.md 就是這樣寫的，記事本就能開。", metaphor: 用符號標出段落的筆記 }
+  - { term: CLAUDE.md, module: ai-basics, chapter: skill, text: Claude Code 每次開工都先讀的固定規矩；Skill 則是用得上才翻開全文。, metaphor: 辦公室公告欄 vs. 工作手冊 }
+  - { term: 漸進式揭露, module: ai-basics, chapter: skill, text: 先看名稱說明，用得上才讀全文。, metaphor: 先看手冊目錄再翻到那一章 }
+  - { term: 觸發率, module: ai-basics, chapter: skill, text: 該用某支 Skill 時，AI 真的想到要用它的比例。, metaphor: 新人有沒有想到翻開那本手冊 }
+  - { term: Claude Code, module: ai-basics, chapter: skill, text: Anthropic 的 AI 助理程式（終端機、VS Code 或桌面 App）；打 /mcp 看接了哪些 Server、/skills 看 Skill 清單。, metaphor: 你的練習工作台 }
+  - { term: Plan 模式, module: ai-basics, chapter: agent, text: Claude Code 只讀資料、先交計畫、不改檔案的模式，看過再讓它動手。, metaphor: 先看施工圖再動工 }
+  - { term: Chatbot, module: ai-basics, chapter: agent, text: 你問一句、它答一句的聊天程式。, metaphor: 客服電話 }
+  - { term: Workflow, module: ai-basics, chapter: agent, text: 照事先寫好的路徑跑；中間可以有 LLM，但下一步不由它決定。, metaphor: 工廠生產線：每站固定做同一件事 }
+  - { term: Agent／Agentic, star: true, module: ai-basics, chapter: agent, text: LLM 在迴圈裡用工具，直到完成目標（迴圈由 App 轉）。, metaphor: 會自己把事做完的同事 }

@@ -100,6 +100,13 @@
 - [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): AI Agent 開發與導入的企業課程
 - [AI Agent × Crypto Research 合作課程](https://swanky.github.io/education/ai-crypto-research/): AI 與加密研究的合作型課程
 - [AI 學習分享](https://swanky.github.io/education/ai/): AI 工具實務應用心得
+- [AI 入門：四個關鍵詞](https://swanky.github.io/education/ai/learn/ai-basics/): 給非工程背景的免費 AI 入門自學教材。跟著六幕故事搞懂 LLM、Prompt、MCP、Skill 與 Agent，附互動小遊戲、名詞小抄與 9 題自我檢核。
+- [AI 想變聰明：從人教到自己學](https://swanky.github.io/education/ai/learn/ai-basics/history/): 從 1950 年的圖靈測試、會套句型的 ELIZA、越寫越厚的專家系統，到自己學會認貓的機器學習與 AlphaGo 第 37 手，白話看懂 AI 怎麼從「人教規則」走到「自己從資料學」。附小測驗。
+- [LLM：會說話的 AI 誕生了](https://swanky.github.io/education/ai/learn/ai-basics/llm/): 用文字接龍、抽籤與辦公桌的比喻，白話看懂 LLM 怎麼產生回答、為什麼會一本正經地講錯，以及聊太久為什麼要開新對話。附互動小遊戲與小測驗。
+- [Prompt：學會跟 AI 說話](https://swanky.github.io/education/ai/learn/ai-basics/prompt/): 把 AI 當成聰明、但第一天上班的新同事：用六塊積木（角色、任務、背景、限制、格式、範例）把話交代清楚，再學八個追問技巧與資料能不能貼。附改寫練習、完整示範與小測驗。
+- [MCP：讓 AI 接上工具](https://swanky.github.io/education/ai/learn/ai-basics/mcp/): 用服務生寫點單和 USB-C 轉接線的比喻，白話看懂 AI 怎麼使用工具、MCP 的三個角色、接上行事曆和信箱後權限怎麼給，以及藏在資料裡的假交辦。附互動練習與小測驗。
+- [Skill：把經驗寫成一本手冊](https://swanky.github.io/education/ai/learn/ai-basics/skill/): 用「新人工作手冊」的比喻，白話看懂 Skill 是什麼、AI 為什麼用得上才翻開、它和 Prompt、MCP 怎麼分工，以及哪件工作最值得先寫成手冊。附互動練習與小測驗。
+- [Agent：大腦＋工具＋迴圈](https://swanky.github.io/education/ai/learn/ai-basics/agent/): 用排會議的例子，白話看懂 AI Agent 怎麼想、做、看、判斷，自己把事做完；分清聊天機器人、Workflow 與 Agent，用 AI 紅綠燈決定哪一步要人確認，再挑出第一件交給 AI 的工作。
 
 ## 古典小說數位化 Classical Literature
 

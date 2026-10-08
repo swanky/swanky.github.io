@@ -1,0 +1,4 @@
+{% comment %}
+  連到單元內某一幕（可帶段落錨點）；該幕還沒上線就顯示「第 N 幕・即將推出」。
+  參數：module（module 物件）, slug（章節 slug）, anchor（可省略，不含 #）, label（可省略，預設＝幕名）
+{% endcomment %}{% assign _ch = include.module.chapters | where: "slug", include.slug | first %}{% assign _label = include.label | default: _ch.title %}{% if _ch.status == 'published' %}<a href="{{ include.module.url | append: _ch.slug | append: '/' | relative_url }}{% if include.anchor %}#{{ include.anchor }}{% endif %}" data-c="{{ _ch.color }}">{{ _label }}</a>{% else %}<span data-c="{{ _ch.color }}" title="即將推出">{{ _label }}・{{ _ch.act }}即將推出</span>{% endif %}

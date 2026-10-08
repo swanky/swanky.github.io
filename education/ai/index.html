@@ -23,6 +23,22 @@ breadcrumbs:
     <div class="edu-container"><div class="edu-callout edu-callout--blue"><strong>免費內容與企業培訓分開。</strong>這一頁讓你先讀我的方法與限制；要替團隊安排 2–3 小時、半天或 9 堂培訓，再前往 Agentic Engineering 商品頁。</div></div>
   </section>
 
+  <section id="self-study" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Start Here</span><h2>完全沒碰過？先從自學教材開始</h2><p>給非工程背景的入門教材：用故事和比喻講清楚 AI 的基本名詞，每一段都有小遊戲和小測驗，可以自己讀、自己練。</p></header>
+      <div class="edu-card-grid edu-card-grid--two">
+        {% for m in site.data.ai_learn.modules %}{% if m.status == 'published' %}
+        {% assign live = m.chapters | where: "status", "published" %}
+        <article class="edu-card">
+          <div class="edu-badges"><span class="edu-badge">免費自學</span><span class="edu-badge edu-badge--muted">已上線 {{ live.size }}／{{ m.chapters.size }} 幕</span></div>
+          <h3>{{ m.title }}</h3><p>{{ m.description }}</p>
+          <a class="edu-card__link" href="{{ m.url | relative_url }}">開始學習 →</a>
+        </article>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="edu-section edu-section--tint">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Learning Map</span><h2>先看結構，再追工具</h2><p>文章分成三層：心智模型、工程方法、實戰工作流。Claude Code 是重要案例，但不是全部。</p></header>

@@ -1,0 +1,382 @@
+---
+layout: ai-learn-chapter
+title: AI 想變聰明：從人教到自己學
+seo_title: AI 的歷史白話入門：圖靈測試、ELIZA、專家系統到 AlphaGo｜AI 入門第一幕
+description: 從 1950 年的圖靈測試、會套句型的 ELIZA、越寫越厚的專家系統，到自己學會認貓的機器學習與 AlphaGo 第 37 手，白話看懂 AI 怎麼從「人教規則」走到「自己從資料學」。附小測驗。
+keywords: AI歷史,圖靈測試,ELIZA效應,專家系統,AI寒冬,機器學習,深度學習,AlphaGo,生成式AI,AI入門,史旺基
+permalink: /education/ai/learn/ai-basics/history/
+nav_active: education
+use_ai_learn: true
+ai_module: ai-basics
+ai_chapter: history
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: AI 入門：四個關鍵詞
+    url: /education/ai/learn/ai-basics/
+  - name: AI 想變聰明：從人教到自己學
+    url: /education/ai/learn/ai-basics/history/
+lead: 在會說話的 AI 出現以前，人類已經花了幾十年，試過好幾種「教」機器變聰明的方法。這一幕快速走過 1950 到 2016 年，看三種很不一樣的做法——記住最後那個轉彎就好。
+question: 在會說話的 AI 出現之前，人類是怎麼「教」機器變聰明的？
+hero_illus:
+  code: A1
+  desc: 1950 圖靈測試：裁判隔著布簾只用文字聊天，猜哪一個是機器
+outro: 第一幕到這裡：機器學會從資料自己找規律，但那時的 AI 只會下棋這類單一件事。下一幕，人們把資料換成「語言」——而我們的工作，很多正是靠文字交代、理解和完成的。
+takeaways:
+  - 教機器有三種做法：套句型裝懂（ELIZA）、人來寫規則（專家系統）、讓機器從資料自己學（機器學習）。
+  - 講得像懂 ≠ 真的懂。回答自然、有禮貌、很有自信，不代表內容可靠。
+  - 例外永遠寫不完；AI 歷史最重要的轉彎，是從「人教規則」變成「機器從資料學」。AlphaGo 也不只是算得快，而是先學出「哪幾步值得算」。
+  - AI ⊃ 機器學習 ⊃ 深度學習 ⊃ 生成式 AI ⊃ LLM：LLM 是以語言為核心的那一類，不是所有 AI 的總稱。
+chapter_css: true
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section class="ae-quizband">
+  <div class="edu-container">
+    <div class="ae-quiz">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-lightbulb" aria-hidden="true"></i>先猜 5 秒</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>5 秒</span></div>
+      <p class="ae-quiz__q">在會說話的 AI 出現以前，你覺得「教機器變聰明」有哪幾種教法？</p>
+      <details class="ae-reveal">
+        <summary>想好了，看這一幕的三種做法</summary>
+        <div>
+          <p style="margin:0 0 .9rem">這一幕快速走過 1950 到 2016 年，會看到三種很不一樣的做法：</p>
+          <ol class="ae-numlist">
+            <li><span><b>ELIZA：套句型裝懂。</b>抓關鍵字、套固定句型，讓它看起來能聊天。</span></li>
+            <li><span><b>專家系統：人來寫規則。</b>請專家把經驗寫成規則，交給電腦照表做。</span></li>
+            <li><span><b>機器學習：機器自己從資料學。</b>不再把規則全部寫完，而是給大量資料，讓機器自己找出規律。</span></li>
+          </ol>
+          <p style="margin:.9rem 0 0">記住最後那個轉彎就好：從「人把規則教完」，變成「機器從資料裡學」——這也是下一幕理解 LLM 的起點。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="overview" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-clock-history" aria-hidden="true"></i>六個年份，一張圖</span>
+      <h2>從「人把規則教完」，到「機器從資料學」</h2>
+    </div>
+    <div class="ae-prose"><p>先看全貌：前半段，人類想辦法把聰明「寫進去」；後半段，改成讓機器自己從資料裡「學出來」。點年份下的標題，可以直接跳到那個故事。</p></div>
+    <ol class="ae-tl">
+      <li data-c="navy"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">1950</span><h3><a href="#turing">🎮 圖靈測試</a></h3><p>「機器能思考嗎？」被換成一個隔著文字猜誰是機器的遊戲。</p></div></li>
+      <li data-c="navy"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">1956</span><h3><a href="#turing">🏷️ 達特茅斯</a></h3><p>前一年的計畫書寫下「人工智慧」這個名字，隔年夏天開研討會。</p></div></li>
+      <li data-c="slate"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">1966</span><h3><a href="#eliza">💬 ELIZA</a></h3><p>找關鍵字、套句型，看起來像在聊天。</p><span class="ae-tl__tag">① 套句型</span></div></li>
+      <li data-c="slate"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">1980s</span><h3><a href="#expert">📚 專家系統</a></h3><p>把專家的經驗寫成「如果…就…」規則，越寫越厚。</p><span class="ae-tl__tag">② 人寫規則</span></div></li>
+      <li data-c="history"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2012</span><h3><a href="#cat">🐱 認貓大賽</a></h3><p>給 120 萬張標好答案的照片，讓機器自己學會認圖。</p><span class="ae-tl__tag">③ 從資料學</span></div></li>
+      <li data-c="history"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2016</span><h3><a href="#alphago">⚫ AlphaGo</a></h3><p>從棋譜和自己跟自己下棋學，第 37 手連高手都沒想到。</p><span class="ae-tl__tag">③ 從資料學</span></div></li>
+    </ol>
+    <div class="ae-tl__legend"><span data-c="navy">起點：問題與名字</span><span data-c="slate">人來教：套句型、寫規則</span><span data-c="history">機器自己學：從資料找規律</span></div>
+    <p class="ae-key"><small>只記一句</small>這一幕只要記住最後那個轉彎：從「人把規則教完」，變成「機器從資料裡學」。</p>
+  </div>
+</section>
+
+<section id="turing" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-flag-fill" aria-hidden="true"></i>故事 1：問題的起點</span>
+      <h2>1950 年：「機器能思考嗎？」</h2>
+    </div>
+    <div class="ae-prose"><p>英國數學家<strong>圖靈</strong>提出這個問題，但他覺得光爭論「什麼叫思考」太模糊，很難得到清楚的答案，於是把它換成一個遊戲。這就是後來大家常聽到的<strong>圖靈測試</strong>。</p></div>
+    <figure class="ae-dg" style="margin-top:0">
+      <figcaption class="ae-dg__title"><i class="bi bi-controller" aria-hidden="true"></i>圖靈測試：隔著布簾，只用文字猜誰是機器</figcaption>
+      <div class="ae-flow-row">
+        <div class="ae-node" data-c="history"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-person-fill" aria-hidden="true"></i></span><b>裁判</b><span>看不到對方，只能根據回答來猜</span></div>
+        <div class="ae-node ae-node--plain" data-c="navy"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-keyboard" aria-hidden="true"></i></span><b>只用文字聊天</b><span>同時跟兩個對象打字對話</span></div>
+        <div class="ae-node ae-node--dashed" data-c="slate"><span class="ae-num">3</span><b>布簾後面</b><div class="ae-mini" style="min-height:0;margin:.2rem 0;background:#fff"><span class="ae-chip ae-chip--next">A ？</span><span class="ae-chip ae-chip--next">B ？</span></div><span>一個是人、一台是機器</span></div>
+      </div>
+      <div class="ae-grid ae-mt" style="--cols:2">
+        <div class="ae-yn" data-c="slate"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>猜得出哪個是機器</h3><p>機器還沒過關。</p></div></div>
+        <div class="ae-yn" data-c="history"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>裁判猜不出來</h3><p>就算機器過關：它的表現已經讓人分不出來。</p></div></div>
+      </div>
+    </figure>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card" data-c="history"><div class="ae-card__icon"><i class="bi bi-file-earmark-text" aria-hidden="true"></i></div><h3>1955 年：提案</h3><p>四位學者提出計畫書，開頭就寫下 <b>Artificial Intelligence（人工智慧）</b>，這個名字從此誕生。</p></div>
+      <div class="ae-card" data-c="history"><div class="ae-card__icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div><h3>1956 年：研討會</h3><p>計畫書提議隔年夏天，在美國達特茅斯學院開研討會。要分清楚：<b>1955 是提案，1956 是研討會</b>。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-hourglass-split" aria-hidden="true"></i></div><h3>當時好樂觀</h3><p>他們以為 <span class="ae-stat" style="font-size:1.35rem">10<small> 個人</small></span>、<span class="ae-stat" style="font-size:1.35rem">2<small> 個月</small></span> 就能有重大突破。</p><p>結果這題做了 <span class="ae-stat">70<small> 年</small></span>，到今天還在繼續。</p></div>
+    </div>
+    <div class="ae-prose ae-mt"><p>這一段不用記一串人名，先記住：<strong>人類很早就想知道，機器能不能表現得像有智慧</strong>。有了這個問題，接著真的有人做出能跟人聊天的程式。</p></div>
+    <p class="ae-key"><small>只記一句</small>圖靈測試看的是「表現」：隔著文字分不出來，就算過關。</p>
+    <p class="ae-source">出處：Turing (1950) Mind 59(236)；McCarthy et al. (1955) 達特茅斯計畫書。</p>
+  </div>
+</section>
+
+<section id="eliza" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-chat-dots" aria-hidden="true"></i>故事 2：1966 年的聊天機器人</span>
+      <h2>ELIZA：只會把你的話換句話問回來，人卻當真了</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-dg" data-ae-chat style="margin:0">
+        <p class="ae-dg__title"><i class="bi bi-chat-square-text" aria-hidden="true"></i>ELIZA 的對話（依 1966 年論文範例改寫）</p>
+        <div class="ae-chat">
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="你"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">男人都一樣。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="ELIZA"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">怎麼說呢？</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="你"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">是我男朋友叫我來的。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="ELIZA"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">你男朋友叫你來的？</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="你"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">他說我常常很沮喪。</div></div>
+        </div>
+        <div class="ae-steps-controls"><button type="button" class="ae-btn ae-btn--primary" data-chat-next>看下一句 →</button></div>
+        <div class="ae-verdict" data-chat-after><strong>🙋 換你猜：</strong>ELIZA 下一句會回什麼？先在心裡想好一句，再打開下面的「揭曉」。</div>
+      </div>
+      <ul class="ae-iconlist">
+        <li data-c="slate"><i class="bi bi-search" aria-hidden="true"></i><span><b>它其實在做什麼？</b>美國麻省理工學院（MIT）的 Weizenbaum 寫的小程式，只會找<b>關鍵字</b>、套句型，把你的話換句話問回來。完全不懂意思。</span></li>
+        <li data-c="key"><i class="bi bi-emoji-dizzy" aria-hidden="true"></i><span><b>但人當真了。</b>作者的祕書明知它只是程式，聊沒幾句就請作者<b>離開房間</b>，好讓她單獨跟它聊。</span></li>
+        <li data-c="history"><i class="bi bi-lightbulb" aria-hidden="true"></i><span><b>ELIZA 效應：</b>人很容易把「講得像懂」當成「真的懂」。這個提醒到今天還有用。</span></li>
+        <li data-c="llm"><i class="bi bi-chat-dots" aria-hidden="true"></i><span><b>不是說今天的 AI 跟 ELIZA 一樣。</b>而是提醒：對方回答得自然、有禮貌、很有自信，不代表內容就可靠。</span></li>
+      </ul>
+    </div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-hand-index" aria-hidden="true"></i>揭曉（先猜完再打開）</figcaption>
+      <details class="ae-reveal" style="margin-top:0">
+        <summary>我猜好了，看 ELIZA 怎麼回</summary>
+        <div>
+          <p style="margin:0 0 1.5rem">ELIZA 回：「<b>聽到你很沮喪，我很遺憾。</b>」看起來有接住你的情緒，但它只是把關鍵字「沮喪」放回固定句型：</p>
+          <div class="ae-flow-row ae-flow-row--tight">
+            <div class="ae-node ae-node--plain" data-c="navy"><span class="ae-node__icon"><i class="bi bi-person-fill" aria-hidden="true"></i></span><b>你說</b><span>「他說我常常很<b>沮喪</b>。」</span></div>
+            <div class="ae-node" data-c="slate"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-search" aria-hidden="true"></i></span><b>找關鍵字</b><span>抓到「沮喪」</span></div>
+            <div class="ae-node" data-c="slate"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-card-text" aria-hidden="true"></i></span><b>套固定句型</b><span>「聽到你很＿＿，我很遺憾。」</span></div>
+            <div class="ae-node" data-c="key"><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-cpu" aria-hidden="true"></i></span><b>ELIZA 回</b><span>「聽到你很沮喪，我很遺憾。」</span></div>
+          </div>
+          <p class="ae-dg__caption">整個過程沒有「理解」：換成任何一句含「沮喪」的話，它都會這樣回。</p>
+        </div>
+      </details>
+    </figure>
+    <p class="ae-key"><small>只記一句</small>講得像懂 ≠ 真的懂。後面會講到 AI 的「幻覺」：很有自信地講出錯誤或不存在的內容，就是同一個陷阱（見{% include ai-learn/chref.html module=mod slug="llm" anchor="tempers" label="第二幕：LLM 的三個脾氣" %}）。</p>
+    <p class="ae-source">出處：Weizenbaum (1966), CACM 9(1)；Weizenbaum (1976)《Computer Power and Human Reason》。</p>
+  </div>
+</section>
+
+<section id="expert" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-journal-text" aria-hidden="true"></i>故事 3：方法一，人來寫規則</span>
+      <h2>1980 年代，專家系統：<br>把經驗寫成「如果…就…」規則</h2>
+    </div>
+    <div class="ae-grid" style="--cols:2;align-items:center">
+      <div>
+        <div class="ae-prose"><p>如果套句型不夠，能不能把專家的判斷寫進去？想法很直覺：專家怎麼判斷，就寫成「<strong>如果</strong>遇到這個條件，<strong>就</strong>做那個動作」的規則，交給電腦照表做。這就是<strong>專家系統</strong>。</p></div>
+        <figure class="ae-dg" style="margin-top:.5rem">
+          <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>專家系統怎麼運作</figcaption>
+          <div class="ae-flow-row ae-flow-row--tight">
+            <div class="ae-node" data-c="slate"><span class="ae-node__icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span><b>專家的經驗</b></div>
+            <div class="ae-node" data-c="slate"><span class="ae-node__icon"><i class="bi bi-journal-text" aria-hidden="true"></i></span><b>寫成規則</b><span>如果…就…</span></div>
+            <div class="ae-node ae-node--plain" data-c="navy"><span class="ae-node__icon ae-node__icon--solid" style="--c:var(--ae-navy)"><i class="bi bi-cpu" aria-hidden="true"></i></span><b>電腦照表做</b></div>
+          </div>
+        </figure>
+      </div>
+      {% include ai-learn/illus.html code="A2" desc="越疊越高的規則手冊：例外永遠寫不完" %}
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:2">
+      <div class="ae-yn" data-c="history"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>真的有用：XCON</h3><p>當時的電腦大廠 DEC 用專家系統 XCON 檢查客戶訂的電腦零件有沒有配錯（像幫你檢查組電腦的零件清單），據稱每年省下約 <span class="ae-stat" style="font-size:1.3rem">2,500<small> 萬美元</small></span>。</p></div></div>
+      <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>但例外永遠寫不完</h3><p>世界太複雜。規則越寫越多，改一條會牽動一堆，最後要專門團隊一直維護。方法有用，但把所有例外寫完，成本越來越高。</p></div></div>
+    </div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-stack" aria-hidden="true"></i>XCON 的規則，越疊越高</figcaption>
+      <div class="ae-bars ae-bars--wide ae-bars--grow">
+        <div class="ae-bar"><span class="ae-bar__label">1980 年</span><span class="ae-bar__track"><span class="ae-bar__fill" style="--w:7.5%"></span></span><span class="ae-bar__value">約 750 條</span></div>
+        <div class="ae-bar"><span class="ae-bar__label">1989 年</span><span class="ae-bar__track"><span class="ae-bar__fill" style="--w:100%"></span></span><span class="ae-bar__value">1 萬條以上</span></div>
+      </div>
+      <p class="ae-dg__caption">不到十年，規則多了十幾倍。每多一個例外，就要多補一條規則。</p>
+    </figure>
+    <div class="ae-widget">
+      <div class="ae-widget__label"><i class="bi bi-snow" aria-hidden="true"></i>AI 冷過不只一次：「寒冬」是經費和熱度大退潮的時期</div>
+      <div class="ae-flow-row ae-flow-row--tight">
+        <div class="ae-node" data-c="navy"><span class="ae-node__icon"><i class="bi bi-snow" aria-hidden="true"></i></span><b>1973 年</b><span>英國 Lighthill 報告後經費大砍，第一次寒冬</span></div>
+        <div class="ae-node" data-c="tip"><span class="ae-node__icon"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></span><b>1980 年代</b><span>專家系統熱潮</span></div>
+        <div class="ae-node" data-c="navy"><span class="ae-node__icon"><i class="bi bi-snow" aria-hidden="true"></i></span><b>1980 年代末</b><span>專家系統熱潮退燒，又冷了一次</span></div>
+      </div>
+    </div>
+    <p class="ae-tip"><b>想一想：</b>你的工作上，有沒有一份越寫越厚、每次修改都很小心的規則文件？專家系統遇到的，就是類似的難題。</p>
+    <p class="ae-key"><small>只記一句</small>當「人把規則全部寫完」越來越困難，研究方向就需要轉彎。</p>
+    <p class="ae-source">出處：Polit, “R1 and Beyond”, AI Magazine（1980 年約 750 條）；Barker &amp; O'Connor (1989) CACM 32(3)（1 萬條以上）；Wikipedia「Xcon」；Lighthill Report (1973)；Wikipedia「AI winter」。</p>
+  </div>
+</section>
+
+<section id="cat" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-signpost-split" aria-hidden="true"></i>關鍵轉折</span>
+      <h2>教機器認貓：人寫規則 vs. 讓它自己學</h2>
+    </div>
+    <div class="ae-prose"><p>規則如果永遠寫不完，是不是可以改成讓機器看例子、自己學？拿「認貓」來看這個轉彎。</p></div>
+    <figure class="ae-dg" style="margin-top:.5rem;padding-top:clamp(2rem,4vw,2.75rem)">
+      <div class="ae-cat">
+        <div class="ae-cat__panel">
+          <span class="ae-cat__title">方法一：人寫規則</span>
+          <div class="ae-cat__rule"><i class="bi bi-rulers" aria-hidden="true"></i><span>尖耳朵＋鬍鬚＋四隻腳 ＝ <b>貓</b></span></div>
+          <ul class="ae-xlist ae-cat__x"><li>折耳貓？</li><li>只拍到背影？</li><li>玩偶貓？</li></ul>
+          <div class="ae-tip ae-tip--warn"><i class="bi bi-stack" aria-hidden="true"></i><span><b>例外一直冒出來</b><br>規則寫不完：每多一個例外，就要多補一條規則。</span></div>
+        </div>
+        <div class="ae-cat__turn"><span>2012 轉彎</span><i class="bi bi-arrow-right" aria-hidden="true"></i></div>
+        <div class="ae-cat__panel ae-cat__panel--learn">
+          <span class="ae-cat__title">方法二：機器自己學</span>
+          <div class="ae-flow-row ae-flow-row--tight" style="margin-top:.4rem">
+            <div class="ae-node ae-node--plain" data-c="history"><span class="ae-node__icon"><i class="bi bi-images" aria-hidden="true"></i></span><b>120 萬張照片</b><span>都標好答案</span></div>
+            <div class="ae-node ae-node--plain" data-c="history"><span class="ae-node__badge">深度學習</span><span class="ae-node__icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><b>一層層找特徵</b><span class="ae-layers">線條<i class="bi bi-arrow-right" aria-hidden="true"></i>耳朵<i class="bi bi-arrow-right" aria-hidden="true"></i>貓臉</span></div>
+            <div class="ae-node ae-node--plain" data-c="history"><span class="ae-node__icon ae-node__icon--solid" style="--c:var(--ae-ok)"><i class="bi bi-check2" aria-hidden="true" style="color:#fff"></i></span><b>貓！</b><span>自己認出來</span></div>
+          </div>
+          <div class="ae-cat__score">
+            <div class="ae-cat__score-head"><span>2012 認圖大賽：錯誤率</span><small>猜 5 次都沒中才算錯</small></div>
+            <div class="ae-bars ae-bars--wide ae-bars--cmp">
+              <div class="ae-bar"><span class="ae-bar__label">AlexNet</span><span class="ae-bar__track"><span class="ae-bar__fill" style="--w:58.4%"></span></span><span class="ae-bar__value">15.3%</span></div>
+              <div class="ae-bar"><span class="ae-bar__label">第二名</span><span class="ae-bar__track"><span class="ae-bar__fill" style="--w:100%"></span></span><span class="ae-bar__value">26.2%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card" data-c="slate"><div class="ae-card__icon"><i class="bi bi-rulers" aria-hidden="true"></i></div><h3>左邊：人寫規則</h3><p>有尖耳朵、有鬍鬚、四隻腳，所以是貓。聽起來合理，但折耳貓、背影、玩偶貓都會讓規則失靈，只好一直補。</p></div>
+      <div class="ae-card" data-c="history"><div class="ae-card__icon"><i class="bi bi-images" aria-hidden="true"></i></div><h3>右邊：機器學習</h3><p>不先把貓的長相寫清楚，而是給機器大量<b>已經標好答案</b>的照片，讓它自己找出照片和答案之間的規律。</p></div>
+      <div class="ae-card" data-c="history"><div class="ae-card__icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div><h3>深度學習</h3><p>很多層的「人工神經網路」（模仿腦細胞連結方式的計算方法），一層一層找特徵：先看線條、局部形狀，最後認出比較完整的貓臉。</p></div>
+    </div>
+    <div class="ae-prose ae-mt"><p>2012 年那場認圖大賽，讓模型對每張照片提出 5 個猜測，5 個都沒猜中才算錯。AlexNet 的錯誤率是 15.3%，同一屆第二名是 26.2%。<strong>這是兩個參賽結果的比較，不是同一個系統改版前後的數字。</strong>不用背錯誤率，記住下面這句就好——接下來的語言模型，也是沿著「從資料學習」這個方向發展。</p></div>
+    <p class="ae-key"><small>只記一句</small>從「人教規則」變成「機器從資料學」：這是 AI 歷史最重要的轉彎。</p>
+    <p class="ae-source">出處：ILSVRC-2012 官方成績（猜 5 次的錯誤率）；Krizhevsky, Sutskever &amp; Hinton (2012)。</p>
+  </div>
+</section>
+
+<section id="alphago" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-trophy" aria-hidden="true"></i>故事 4：自己學到比老師還強</span>
+      <h2>2016 年 AlphaGo 第 37 手：萬分之一的一步</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-prose">
+        <p>學會從資料找規律以後，機器甚至開始做出超出老師習慣的選擇。Google DeepMind 的 <strong>AlphaGo</strong> 在首爾以 <span class="ae-stat" style="font-size:1.5rem">4 比 1</span> 擊敗頂尖棋士李世乭。</p>
+        <p>它厲害的地方不只是算得快，而是<strong>學會哪些下法比較值得進一步計算</strong>：不是把每條路都同樣認真走一遍，而是先選出比較有希望的方向，再往下看。</p>
+      </div>
+      {% include ai-learn/illus.html code="A3" desc="AlphaGo 第 37 手：一步連人類高手都沒想到的棋" %}
+    </div>
+    <figure class="ae-dg">
+      <figcaption class="ae-dg__title"><i class="bi bi-grid-3x3" aria-hidden="true"></i>拿來比較：同樣會計算，差在「先學出哪幾步值得算」</figcaption>
+      <div class="ae-grid" style="--cols:2">
+        <div class="ae-card" data-c="slate">
+          <div class="ae-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div>
+          <h3>1997 年 IBM 深藍（西洋棋）</h3>
+          <div class="ae-board" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="ae-board__cap">示意：大量下法都算一遍</span>
+          <p>贏了西洋棋世界冠軍，靠每秒算 <b>2 億個棋局</b>的「暴力計算」，加上<b>人寫的評分規則</b>。但圍棋的變化多到算不完。</p>
+        </div>
+        <div class="ae-card" data-c="history">
+          <div class="ae-card__icon"><i class="bi bi-bullseye" aria-hidden="true"></i></div>
+          <h3>2016 年 AlphaGo（圍棋）</h3>
+          <div class="ae-board ae-board--pick" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="is-hot"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="is-hot"></i><i></i><i></i><i></i><i></i><i class="is-hot"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="ae-board__cap">示意：只試走看起來最有希望的幾步</span>
+          <p>像高手一樣，只在腦中試走幾步「看起來最有希望」的棋，不是每一步都算。而「哪幾步有希望」，是它自己學出來的。</p>
+        </div>
+      </div>
+    </figure>
+    <div class="ae-widget">
+      <div class="ae-widget__label"><i class="bi bi-book" aria-hidden="true"></i>AlphaGo 怎麼學？</div>
+      <div class="ae-flow-row ae-flow-row--tight" style="margin-top:1.4rem">
+        <div class="ae-node" data-c="history"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-journals" aria-hidden="true"></i></span><b>先看人類棋譜</b><span>看大量高手棋譜，學「人通常怎麼下」</span></div>
+        <div class="ae-node" data-c="history"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><b>自己跟自己下</b><span>下大量對局，從輸贏中調整</span></div>
+        <div class="ae-node" data-c="key"><span class="ae-num">3</span><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-bullseye" aria-hidden="true"></i></span><b>真正下棋時</b><span>只試走幾步看起來最有希望的棋</span></div>
+      </div>
+    </div>
+    <div class="ae-widget">
+      <div class="ae-widget__label"><i class="bi bi-star-fill" aria-hidden="true"></i>最有名的一步：第二局第 37 手</div>
+      <div class="ae-move37">
+        <div class="ae-move37__big"><small>人類高手會這樣下</small><b>萬分之一</b><small>（AlphaGo 自己估計）</small></div>
+        <div>
+          <p style="margin:0 0 .6rem;line-height:1.85;color:var(--ae-body)">AlphaGo 自己估計，人類高手會下這一步的機率只有萬分之一，但它還是下了，後來公認是妙手。</p>
+          <div class="ae-tip ae-tip--warn" style="margin-top:0"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><span><b>最容易講錯的地方：</b>萬分之一不是這一步的「勝率」，而是「人類高手會不會這樣下」的估計。它不是故意選一步幾乎會輸的棋，而是做了人類很少會選的判斷。</span></div>
+        </div>
+      </div>
+      <div class="ae-quiz ae-quiz--light ae-mt" data-ae-quiz="B">
+        <div class="ae-quiz__top" style="margin-bottom:.6rem"><span class="ae-quiz__badge"><i class="bi bi-question-circle" aria-hidden="true"></i>想一想</span></div>
+        <p class="ae-quiz__q" style="font-size:1.12rem;margin-bottom:1rem">朋友說：「第 37 手的勝率只有萬分之一，AlphaGo 還敢下！」這句話對嗎？</p>
+        <ul class="ae-quiz__opts ae-quiz__opts--two">
+          <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>對，萬分之一就是這一步會贏的機率</span></button></li>
+          <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>不對，萬分之一是「人類高手會下這一步」的機率</span></button></li>
+        </ul>
+        <div class="ae-quiz__result" tabindex="-1" hidden style="border:2px solid var(--ae-navy)">
+          <strong data-ae-verdict></strong> 萬分之一說的是「這一步有多不像人類會下的棋」，不是勝率。AlphaGo 選它，是因為它學出來的判斷認為這步值得下。
+          <br><button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+        </div>
+        <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>B，萬分之一是「人類高手會下這一步」的機率，不是勝率。</div></details>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>但那時的 AI 只會一件事：下棋。下一步，人們想讓它學會「語言」。</p>
+    <p class="ae-source">出處：DeepMind AlphaGo 官方頁；IBM History: Deep Blue；Silver et al. (2016) Nature 529:484。</p>
+  </div>
+</section>
+
+<section id="family" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-layers" aria-hidden="true"></i>整理一下：名詞的家族關係</span>
+      <h2>AI、機器學習、深度學習、LLM：一圈包一圈</h2>
+    </div>
+    <div class="ae-prose"><p>往語言前進之前，先把前面出現的名詞排一排。這張入門圖用一圈包一圈的方式定位：越往內，範圍越小、越專門。</p></div>
+    <figure class="ae-dg" style="margin-top:.5rem">
+      <div class="ae-grid" style="--cols:2;align-items:center;gap:2rem">
+        <div class="ae-rings" role="img" aria-label="同心圓：AI 包住機器學習，機器學習包住深度學習，深度學習包住生成式 AI，最裡面是 LLM">
+          <div class="ae-rings__ring" style="--s:100%;--bg:#eef2f6;--t:4.75%"><span>AI</span></div>
+          <div class="ae-rings__ring" style="--s:81%;--bg:#dfe7f0;--t:5.86%"><span>機器學習</span></div>
+          <div class="ae-rings__ring" style="--s:62%;--bg:#cbd8e6;--t:7.66%"><span>深度學習</span></div>
+          <div class="ae-rings__ring" style="--s:43%;--bg:#aec3db;--t:10.47%"><span>生成式 AI</span></div>
+          <div class="ae-rings__ring ae-rings__ring--core" style="--s:25%;--bg:var(--ae-llm)"><span>LLM</span></div>
+        </div>
+        <ol class="ae-famlist">
+          <li><span class="ae-famlist__pill" style="--bg:#eef2f6">AI 人工智慧</span><div><b>方法不限</b><small>讓機器做需要智慧的事；人寫規則也算。例：圖靈、ELIZA、專家系統</small></div></li>
+          <li><span class="ae-famlist__pill" style="--bg:#dfe7f0">機器學習</span><div><b>從資料自己學</b><small>例：認貓、AlphaGo</small></div></li>
+          <li><span class="ae-famlist__pill" style="--bg:#cbd8e6">深度學習</span><div><b>一層層找特徵：線條→耳朵→貓臉</b><small>用多層的人工神經網路；2012 年 AlexNet 起爆紅</small></div></li>
+          <li><span class="ae-famlist__pill" style="--bg:#aec3db">生成式 AI</span><div><b>產生新內容</b><small>文字、圖片、聲音、影片</small></div></li>
+          <li><span class="ae-famlist__pill ae-famlist__pill--core" style="--bg:var(--ae-llm)">LLM</span><div><b>核心是語言</b><small>ChatGPT、Gemini、Claude 背後的大型語言模型；新一代還會看圖、聽聲音（多模態，例：GPT-4o）</small></div></li>
+        </ol>
+      </div>
+      <div class="ae-tip ae-tip--warn" style="margin-top:1.5rem"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><span><b>畫圖、做影片的 AI，也都叫 LLM 嗎？</b>不是。它們也在生成式 AI 圈裡，但多半不是 LLM，例如 Stable Diffusion 屬於另一類「擴散模型」（從一片雜訊中一步步還原出圖片）。不過有些模型會把文字、影像和聲音整合在一起，也就是「多模態」。</span></div>
+    </figure>
+    <div class="ae-widget" data-ae-sort>
+      <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
+      <h3>它屬於哪一圈？選「最裡面、最貼切」的那一圈</h3>
+      <div class="ae-sort__items">
+        <div class="ae-sort__item" data-answer="ai"><strong>ELIZA</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="ai">AI</button><button type="button" class="ae-btn" data-pick="ml">機器學習</button><button type="button" class="ae-btn" data-pick="dl">深度學習</button><button type="button" class="ae-btn" data-pick="gen">生成式 AI</button><button type="button" class="ae-btn" data-pick="llm">LLM</button></div><p class="ae-sort__feedback" hidden><b></b> ELIZA 靠找關鍵字、套句型，規律不是從資料學來的，所以只在最外圈 AI。</p></div>
+        <div class="ae-sort__item" data-answer="dl"><strong>AlexNet 認貓</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="ai">AI</button><button type="button" class="ae-btn" data-pick="ml">機器學習</button><button type="button" class="ae-btn" data-pick="dl">深度學習</button><button type="button" class="ae-btn" data-pick="gen">生成式 AI</button><button type="button" class="ae-btn" data-pick="llm">LLM</button></div><p class="ae-sort__feedback" hidden><b></b> 多層神經網路一層層找特徵，是深度學習；它負責「認出」貓，不產生新內容。</p></div>
+        <div class="ae-sort__item" data-answer="gen"><strong>Stable Diffusion</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="ai">AI</button><button type="button" class="ae-btn" data-pick="ml">機器學習</button><button type="button" class="ae-btn" data-pick="dl">深度學習</button><button type="button" class="ae-btn" data-pick="gen">生成式 AI</button><button type="button" class="ae-btn" data-pick="llm">LLM</button></div><p class="ae-sort__feedback" hidden><b></b> 會畫出新圖片，屬於生成式 AI；但它是擴散模型，不是 LLM。</p></div>
+        <div class="ae-sort__item" data-answer="llm"><strong>GPT-4o</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="ai">AI</button><button type="button" class="ae-btn" data-pick="ml">機器學習</button><button type="button" class="ae-btn" data-pick="dl">深度學習</button><button type="button" class="ae-btn" data-pick="gen">生成式 AI</button><button type="button" class="ae-btn" data-pick="llm">LLM</button></div><p class="ae-sort__feedback" hidden><b></b> 核心是語言的大型語言模型，也會看圖、聽聲音（多模態）。</p></div>
+      </div>
+    </div>
+    <div class="ae-prose ae-mt"><p>不用把每一圈的邊界背得很死。先把一句話講清楚就好：</p></div>
+    <p class="ae-key" style="margin-top:.5rem"><small>只記一句</small>LLM 是生成式 AI 裡以「語言」為核心的那一類，不是所有 AI 的總稱。</p>
+    <p class="ae-source">出處：Rombach et al. (2022) arXiv 2112.10752（Stable Diffusion）；OpenAI「Hello GPT-4o」(2024-05-13)。</p>
+  </div>
+</section>
+
+<section id="quiz1" class="ae-quizband">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="D">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 1／10：第一幕</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>10 秒</span></div>
+      <p class="ae-quiz__q">下面哪一個，是「機器學習」的做法？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>工程師寫好 1 萬條「如果…就…」的規則</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>讓電腦找關鍵字，把你的話換句話問回來</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>用超快的電腦，把每一種下法都算一遍，挑出最好的那一步</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>給電腦看大量標好答案的照片，讓它自己找規律</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 機器學習的關鍵是<strong>不寫規則，從大量資料中自己學出規律</strong>。今天的 LLM 也是這樣學會語言的。判斷的關鍵，是「規律從哪裡來」。
+        <ul class="ae-quiz__why">
+          <li><b>A 是專家系統</b>：規則由人先寫好。</li>
+          <li><b>B 是 1966 年的 ELIZA</b>：找關鍵字、套句型。</li>
+          <li><b>C 是 1997 年深藍的做法</b>：暴力計算，算得快不代表學到規律（見上面的 <a href="#alphago">AlphaGo 第 37 手</a>）。</li>
+        </ul>
+        <p style="margin:.5rem 0 0">這也不是說會學習的系統就不計算：AlphaGo 一樣會計算，差別是它先從棋譜和自己跟自己下棋，學出「哪幾步值得算」。不要把「計算」和「學習」當成只能二選一。</p>
+        <p style="margin:.5rem 0 0">👉 第一幕走完了：機器學會從資料自己學，但那時只會下棋這類單一件事。下一幕，它開始學「語言」。</p>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>D，給電腦看大量標好答案的照片，讓它自己找規律。A 是專家系統、B 是 ELIZA、C 是深藍的暴力計算。</div></details>
+      <p class="ae-quiz__hint">自學計分：先選定再看解答；答錯的話，回到上面的 <a href="#cat" style="color:var(--ae-tip)">「教機器認貓」</a> 重看左右對照。</p>
+    </div>
+  </div>
+</section>

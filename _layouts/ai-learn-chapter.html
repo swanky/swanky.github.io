@@ -1,0 +1,56 @@
+---
+layout: home
+---
+{% comment %}
+  AI 自學教材章節版型。front matter：
+  ai_module（單元 slug）, ai_chapter（章節 slug）, lead, question,
+  hero_illus（{src, alt, code, desc}）, takeaways（章末重點陣列）
+  章節順序、標題、識別色、上下章連結都從 _data/ai_learn.yml 取。
+{% endcomment %}
+{% assign mod = site.data.ai_learn.modules | where: "slug", page.ai_module | first %}
+{% assign chapters = mod.chapters %}
+{% for ch in chapters %}{% if ch.slug == page.ai_chapter %}{% assign cur = ch %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
+{% assign prev_i = idx | minus: 1 %}
+{% assign next_i = idx | plus: 1 %}
+<main id="main" class="education-page ae-page" data-act="{{ cur.color }}">
+  <header class="ae-hero">
+    <div class="edu-container ae-hero__grid">
+      <div>
+        <div class="ae-hero__badges"><span class="ae-hero__act">{{ cur.act }}｜{{ cur.title | split: '：' | first }}</span><span class="ae-hero__module">{{ mod.title }}</span></div>
+        <h1>{{ cur.title }}</h1>
+        <p class="ae-hero__lead">{{ page.lead }}</p>
+        {% if page.question %}<div class="ae-question"><strong><i class="bi bi-question-circle" aria-hidden="true"></i>這一幕要回答</strong><p>{{ page.question }}</p></div>{% endif %}
+      </div>
+      {% include ai-learn/illus.html src=page.hero_illus.src alt=page.hero_illus.alt code=page.hero_illus.code desc=page.hero_illus.desc %}
+    </div>
+  </header>
+
+  {% include ai-learn/rail.html module=mod current=cur.slug %}
+
+  {{ content }}
+
+  <section class="ae-wrap">
+    <div class="edu-container">
+      <span class="edu-eyebrow">Takeaways</span>
+      <h2>{{ cur.act }}，帶走這幾句</h2>
+      {% if page.outro %}<p class="ae-wrap__outro">{{ page.outro }}</p>{% endif %}
+      <ul class="ae-wrap__list">
+        {% for t in page.takeaways %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+      <div class="ae-wrap__actions">
+        <button type="button" class="ae-btn ae-done-btn" data-ae-done="{{ mod.slug }}/{{ cur.slug }}">標記這一幕讀完了</button>
+        <a class="edu-btn edu-btn--outline-light" href="{{ mod.url | relative_url }}#self-check">做 9 題自我檢核</a>
+      </div>
+      <nav class="ae-pager" aria-label="上一幕與下一幕">
+        {% if idx > 0 %}{% assign p = chapters[prev_i] %}
+          {% if p.status == 'published' %}<a href="{{ mod.url | append: p.slug | append: '/' | relative_url }}"><small>← 上一幕｜{{ p.act }}</small>{{ p.title }}</a>
+          {% else %}<span class="is-soon"><small>← 上一幕｜{{ p.act }}・即將推出</small>{{ p.title }}</span>{% endif %}
+        {% else %}<a href="{{ mod.url | relative_url }}"><small>← 單元總覽</small>{{ mod.title }}</a>{% endif %}
+        {% if next_i < chapters.size %}{% assign n = chapters[next_i] %}
+          {% if n.status == 'published' %}<a href="{{ mod.url | append: n.slug | append: '/' | relative_url }}"><small>下一幕｜{{ n.act }} →</small>{{ n.title }}</a>
+          {% else %}<span class="is-soon"><small>下一幕｜{{ n.act }}・即將推出</small>{{ n.title }}</span>{% endif %}
+        {% else %}<a href="{{ mod.url | relative_url }}#self-check"><small>學完了 →</small>9 題自我檢核</a>{% endif %}
+      </nav>
+    </div>
+  </section>
+</main>

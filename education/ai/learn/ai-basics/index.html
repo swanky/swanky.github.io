@@ -1,0 +1,278 @@
+---
+layout: home
+title: AI 入門：四個關鍵詞
+seo_title: AI 入門自學教材｜一次搞懂 LLM、Prompt、MCP、Skill 與 Agent
+description: 給非工程背景的免費 AI 入門自學教材。跟著六幕故事搞懂 LLM、Prompt、MCP、Skill 與 Agent，附互動小遊戲、名詞小抄與 9 題自我檢核。
+keywords: AI入門,LLM是什麼,Prompt,MCP是什麼,Skill是什麼,AI Agent,AI名詞,生成式AI教學,史旺基
+permalink: /education/ai/learn/ai-basics/
+nav_active: education
+use_ai_learn: true
+course_name: AI 入門：四個關鍵詞（免費自學教材）
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: AI 入門：四個關鍵詞
+    url: /education/ai/learn/ai-basics/
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+{% capture progress_keys %}{% for ch in mod.chapters %}{% if ch.status == 'published' %}{{ mod.slug }}/{{ ch.slug }},{% endif %}{% endfor %}{% endcapture %}
+<main id="main" class="education-page ae-page">
+  <section class="edu-hero">
+    <div class="edu-container edu-hero__grid">
+      <div class="edu-hero__content">
+        <span class="edu-hero__status">免費自學教材</span>
+        <span class="edu-eyebrow">AI Basics</span>
+        <h1>{{ mod.title }}</h1>
+        <p class="edu-hero__lead">{{ mod.subtitle }}。不用背名詞，跟著六幕故事走：每一幕先遇到一個問題，再由一個新名詞接住。</p>
+        <div class="ae-legend" style="margin:1.25rem 0 0" aria-label="顏色就是名詞">
+          <span data-c="llm">LLM</span><span data-c="prompt">Prompt</span><span data-c="mcp">MCP</span><span data-c="skill">Skill</span><span data-c="agent">Agent</span>
+        </div>
+        <div class="ae-progress" data-ae-progress-bar="{{ progress_keys }}"><span class="ae-progress__track"><span class="ae-progress__fill"></span></span><span class="ae-progress__text">已讀完 0 幕</span></div>
+        <div class="edu-hero__actions">
+          <a class="edu-btn" href="#map">先看一張圖</a>
+          <a class="edu-btn edu-btn--ghost" href="#chapters">直接選一幕開始</a>
+        </div>
+      </div>
+      {% include ai-learn/illus.html code="H1" desc="教材主視覺：老師與史旺姬，和四個關鍵詞＋Agent" %}
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--compact">
+    <div class="edu-container">
+      <div class="edu-callout edu-callout--blue"><strong>這份教材怎麼來的？</strong>{{ mod.origin }}教材設計成非工程背景也聽得懂，所以通篇用比喻和生活例子，不需要任何程式基礎。</div>
+    </div>
+  </section>
+
+  <section id="map" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">The Map</span><h2>四個關鍵詞＋Agent，一張圖</h2><p>AI 助理怎麼幫你做事？LLM 是大腦，其他角色決定它「做什麼、怎麼做、拿得到什麼」。點圖上任一個角色，看它負責什麼。</p></header>
+      <figure class="ae-dg" data-ae-map style="margin-top:0">
+        <div class="ae-bigmap">
+          <div class="ae-bigmap__you"><i class="bi bi-person-fill" aria-hidden="true"></i>你</div>
+          <button type="button" class="ae-role ae-bigmap__link" data-c="prompt" aria-pressed="false" data-tpl="ae-role-prompt"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i><b>Prompt</b><span>這一次的交辦</span></button>
+          <div class="ae-agentbox ae-bigmap__link">
+            <span class="ae-agentbox__title">Agent：會把事做完的同事</span>
+            <button type="button" class="ae-role" data-c="llm" aria-pressed="false" data-tpl="ae-role-llm"><i class="bi bi-cpu" aria-hidden="true"></i><b>LLM：大腦</b><span>讀懂你的話、寫出回答</span></button>
+            <span class="ae-agentbox__links" aria-hidden="true"><span>↙ 需要時翻開手冊</span><span>↘ 一圈一圈做到完</span></span>
+            <button type="button" class="ae-role" data-c="skill" aria-pressed="false" data-tpl="ae-role-skill"><i class="bi bi-journal-text" aria-hidden="true"></i><b>Skill：手冊</b><span>需要時才翻開</span></button>
+            <button type="button" class="ae-role" data-c="agent" aria-pressed="false" data-tpl="ae-role-agent"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><b>迴圈</b><span>想一步、做一步，轉到做完為止</span></button>
+          </div>
+          <button type="button" class="ae-role ae-bigmap__link" data-c="mcp" aria-pressed="false" data-tpl="ae-role-mcp"><i class="bi bi-plug-fill" aria-hidden="true"></i><b>MCP</b><span>USB-C 規格</span></button>
+          <div class="ae-systems ae-bigmap__link" aria-label="MCP 接上的系統">
+            <span><i class="bi bi-envelope" aria-hidden="true"></i>信箱</span>
+            <span><i class="bi bi-hdd-stack" aria-hidden="true"></i>資料庫</span>
+            <span><i class="bi bi-window" aria-hidden="true"></i>系統</span>
+          </div>
+          <div class="ae-bigmap__return" aria-hidden="true"><span>做完回報</span></div>
+        </div>
+        <div class="ae-map__detail" aria-live="polite"><strong>「迴圈」不是新名詞</strong>，是 Agent 一圈一圈做事的方式：想下一步、用工具去做、看結果，再決定要不要繼續。點上面任一個角色看細節。</div>
+        <template id="ae-role-llm"><strong style="color:var(--ae-llm-ink)">LLM｜大腦</strong>　負責讀懂你的話、寫出回答。它讀過海量文字，一塊一塊猜出下一塊——是在「接話」，不是在「查資料」。（第二幕）</template>
+        <template id="ae-role-prompt"><strong style="color:var(--ae-prompt-ink)">Prompt｜交辦</strong>　你這一次對 AI 說的話。像交辦給第一天上班的新同事：任務、背景、限制講清楚，它才做得對。（第三幕）</template>
+        <template id="ae-role-mcp"><strong style="color:var(--ae-mcp-ink)">MCP｜接法</strong>　大腦再聰明，也拿不到你的行事曆、信箱或資料庫。MCP 是讓 AI 接上工具和資料的共同規格，可以先記成 AI 世界的 USB-C。（第四幕）</template>
+        <template id="ae-role-skill"><strong style="color:var(--ae-skill-ink)">Skill｜手冊</strong>　告訴 AI「碰到這類事，照什麼步驟做、有哪些規矩」。不是每次都攤開全部，用得上才翻開那一章。（第五幕）</template>
+        <template id="ae-role-agent"><strong style="color:var(--ae-agent-ink)">Agent｜會把事做完的同事</strong>　Agent 不是第五個零件：大腦＋工具＋迴圈就是 Agent。它會想下一步、用工具去做、看結果，再決定要不要繼續；Prompt 和 Skill 讓它做得對。（第六幕）</template>
+      </figure>
+      <p class="ae-key"><small>只記一句</small>LLM 是大腦，其他角色決定它「做什麼、怎麼做、拿得到什麼」。</p>
+    </div>
+  </section>
+
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">How to Read</span><h2>這份教材怎麼看：不用背，跟著故事走</h2><p>不是英文縮寫大考。希望讀完能回答三個工作上的問題：什麼事可以交給 AI？怎麼交代它才做得對？做到哪一步一定要停下來給我確認？</p></header>
+      <div class="ae-grid" style="--cols:4">
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-compass" aria-hidden="true"></i></div><h3>一個故事、六幕</h3><p>從 1950 年講到今天：歷史、LLM、Prompt、MCP、Skill、Agent。每一幕先遇到一個問題，再由一個新名詞解決。第三幕起，史旺姬會帶著工作上場。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-palette" aria-hidden="true"></i></div><h3>顏色就是名詞</h3><p>LLM 藍、Prompt 青、MCP 綠、Skill 紅、Agent 深藍。看到顏色就知道在講誰；每段最後的紅色重點帶，是只記一句時要帶走的話。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-controller" aria-hidden="true"></i></div><h3>邊看邊動手</h3><p>每幕都有小測驗：先選，再看解答，答錯就回到那一段重讀。另外還有接龍、抽籤、辦公桌模擬、翻牌與分類小遊戲。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-journal-text" aria-hidden="true"></i></div><h3>小抄＋練習</h3><p>學完看下面的名詞小抄（可以搜尋）、做三題實作練習，最後用 9 題自我檢核確認自己真的會了。</p></div>
+      </div>
+      <div class="ae-mt">
+        <p style="font-weight:800;color:var(--ae-navy);margin:0 0 .7rem">學完之後，你能做到這五件事：</p>
+        <ol class="ae-goals">
+          <li><b>1</b>講得出四個關鍵詞＋Agent</li>
+          <li><b>2</b>知道 AI 能接手哪些工作</li>
+          <li><b>3</b>會檢查 AI 的結果</li>
+          <li><b>4</b>挑出一件想交給 AI 的工作</li>
+          <li><b>5</b>知道哪一步要人確認</li>
+        </ol>
+      </div>
+      <p class="ae-origin ae-mt">閱讀進度、勾選紀錄只存在你這台裝置的瀏覽器裡。</p>
+    </div>
+  </section>
+
+  <section id="chapters" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Six Acts</span><h2>一個故事，六幕</h2><p>從 1950 年講到今天。第三幕起，史旺姬會帶著一件件工作上場，跟著她一起練習交辦。</p></header>
+      <ol class="ae-chapters">
+        {% for ch in mod.chapters %}
+        <li>
+          {% if ch.status == 'published' %}
+          <a class="ae-chapter-card" href="{{ mod.url | append: ch.slug | append: '/' | relative_url }}" data-c="{{ ch.color }}" data-ae-progress-key="{{ mod.slug }}/{{ ch.slug }}">
+            <span class="ae-chapter-card__act">{{ ch.act }}</span><h3>{{ ch.title }}</h3><p>{{ ch.summary }}</p><span class="ae-chapter-card__status">開始閱讀 →</span>
+          </a>
+          {% else %}
+          <div class="ae-chapter-card is-soon" data-c="{{ ch.color }}">
+            <span class="ae-chapter-card__act">{{ ch.act }}</span><h3>{{ ch.title }}</h3><p>{{ ch.summary }}</p><span class="ae-chapter-card__status">即將推出</span>
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="myths" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Myths</span><h2>八個最常見的誤會：你以為 vs. 其實是</h2><p>先看正面那句「你以為」，自己說說錯在哪，再點一下翻到背面對答案。提示：八句全都是誤會。遇到 AI 表現怪怪的，先想想是不是踩到其中一個。</p></header>
+      <div class="ae-myths-tools"><button type="button" class="ae-btn" data-ae-flip-all="#myths" aria-pressed="false">全部翻開對答案</button></div>
+      <div class="ae-myths">
+        {% assign myths = "LLM|AI 會記得我上次講過的話|模型本身不記得；是 App 每次把整段對話重送給它。開新對話就從零開始。|llm;LLM|AI 什麼都查得到，而且是最新的|沒接工具時，它只靠訓練時讀的書，停在知識截止日。要最新或內部資料，要靠 RAG 或 MCP 工具。|llm;Prompt|要背神奇咒語，寫越長越好|重點是把任務、背景、限制講清楚，不是字數。跟任務無關的話反而會讓它分心。|prompt;MCP|MCP 是一個 AI 產品|MCP 是一套像 USB-C 的接法規格，不是 App。你用的是支援 MCP 的 App，例如 Claude Code。|mcp;MCP|AI 用的每一個工具都是 MCP|MCP 只是「接外部系統」的那套接法。Claude Code 本身就內建讀檔、改檔、執行指令等工具；要碰行事曆、信箱這類外部系統，才需要 MCP。|mcp;Skill|Skill 就是存起來的長 Prompt；寫了它，AI 就被訓練變聰明了|Skill 比一段 Prompt 多三件事，而且不會改到模型本身：① 用得上才載入全文 ② 可以附範本、資料、小程式 ③ 寫一次大家共用。|skill;Agent|交給 Agent 就不用管了|它會誤解目標，也會被錯誤資料或假交辦帶偏。重要動作要你確認，結果要你驗收。|agent;Agent|會自動跑的東西都叫 Agent|照固定步驟跑的叫流程自動化（Workflow），中間用了 LLM 也一樣。Agent 是 LLM 每一步自己決定下一步、用哪個工具。|agent" | split: ";" %}
+        {% for m in myths %}{% assign parts = m | split: "|" %}
+        <div class="ae-flip" role="button" tabindex="0" aria-pressed="false" data-c="{{ parts[3] }}"><div class="ae-flip__inner">
+          <div class="ae-flip__face"><span class="ae-myth__tag">{{ parts[0] }}</span><span class="ae-myth__said">你以為</span><h3>「{{ parts[1] }}」</h3><p class="ae-flip__hint">錯在哪？點我翻面 ↻</p></div>
+          <div class="ae-flip__face ae-flip__face--back"><span class="ae-myth__tag">{{ parts[0] }}</span><p class="ae-myth__was">你以為：「{{ parts[1] }}」</p><h3>其實是</h3><p>{{ parts[2] }}</p></div>
+        </div></div>
+        {% endfor %}
+      </div>
+      <p class="ae-source">出處：Anthropic〈Building effective agents〉(2024-12-19)；Claude Docs〈Agent Skills overview〉；Claude Code Docs〈Overview〉。</p>
+    </div>
+  </section>
+
+  <section id="glossary" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Cheat Sheet</span><h2>名詞小抄：一句話＋一個比喻</h2><p>⭐＝必記的四個關鍵詞＋Agent；其他是配角，聽過、知道回哪裡查就好。可以搜尋，也可以只看某一幕。</p></header>
+      <div data-ae-gloss>
+        <div class="ae-gloss__tools">
+          <input type="search" class="ae-gloss__search" placeholder="搜尋名詞或比喻，例如：幻覺、USB-C" aria-label="搜尋名詞">
+          <button type="button" class="ae-gloss__filter" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="ae-gloss__filter" data-filter="star" aria-pressed="false" data-c="tip">⭐ 必記</button>
+          {% for ch in mod.chapters %}<button type="button" class="ae-gloss__filter" data-filter="{{ ch.slug }}" aria-pressed="false" data-c="{{ ch.color }}">{{ ch.title | split: '：' | first }}</button>{% endfor %}
+          <span class="ae-gloss__count" aria-live="polite"></span>
+        </div>
+        <div class="ae-gloss__list">
+          {% assign terms = site.data.ai_learn.glossary | where: "module", mod.slug %}
+          {% for g in terms %}{% assign gch = mod.chapters | where: "slug", g.chapter | first %}
+          <article class="ae-term" data-chapter="{{ g.chapter }}"{% if g.star %} data-star{% endif %} data-c="{{ gch.color }}">
+            <h3>{% if g.star %}<span class="star">⭐</span> {% endif %}{{ g.term }}</h3>
+            <p>{{ g.text }}</p>
+            <p class="ae-term__metaphor">{{ g.metaphor }}</p>
+            {% if gch.status == 'published' %}<p class="ae-term__link"><a href="{{ mod.url | append: gch.slug | append: '/' | relative_url }}">在{{ gch.act }}讀更多 →</a></p>{% else %}<p class="ae-term__soon">{{ gch.act }}・即將推出</p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Your Turn</span><h2>現在換你動手：用 AI 聊天工具練習三題</h2><p>新手先做 ①③，想挑戰再做 ②；每題約 10 分鐘。做完記得檢查結果。</p></header>
+      <p class="ae-tip ae-tip--warn" style="margin:0 0 1.25rem"><i class="bi bi-shield-check" aria-hidden="true"></i><span><b>先守住一條線：</b>只用你有權限使用的 AI 工具和測試資料，不貼個資、密碼、還沒公開的數字。</span></p>
+      <div class="ae-practice">
+        <div class="ae-card" data-c="llm">
+          <div class="ae-card__icon"><i class="bi bi-search" aria-hidden="true"></i></div>
+          <span class="ae-level">入門</span>
+          <h3>① 找資訊</h3>
+          <p>問它：「MCP 是哪一年、由哪家公司發表的？請附上原始出處連結。」</p>
+          <p class="ae-pass"><i class="bi bi-check2" aria-hidden="true"></i><span>檢查：有附出處嗎？點得開嗎？追問「請貼出你引用的那一段原文」。</span></p>
+          <details class="ae-reveal"><summary>怎樣算合格</summary><div>連結點得開，內容和回答一致（可以對照第四幕）。進階：再問「USB-C 比喻是誰提的？」看它會不會亂編。</div></details>
+        </div>
+        <div class="ae-card ae-card--challenge" data-c="tip">
+          <div class="ae-card__icon"><i class="bi bi-envelope" aria-hidden="true"></i></div>
+          <span class="ae-level ae-level--hard">挑戰</span>
+          <h3>② 讀文件</h3>
+          <p>把這段虛構公告貼給它，問：「列出文中的日期、負責單位、待辦。」</p>
+          <p class="ae-quote">各位同仁好：新版請假系統 11/2（一）上線，舊系統 10/30（五）17:00 關閉。請各課課長於 10/23（五）前確認代理人設定，操作問題請洽資訊服務台。人資處</p>
+          <details class="ae-reveal"><summary>怎樣算合格</summary><div>沒漏、沒多編：3 個日期（11/2、10/30 17:00、10/23）、3 個單位（人資處、各課課長、資訊服務台）都和原文一致。</div></details>
+        </div>
+        <div class="ae-card" data-c="mcp">
+          <div class="ae-card__icon"><i class="bi bi-card-checklist" aria-hidden="true"></i></div>
+          <span class="ae-level">入門</span>
+          <h3>③ 整理產出</h3>
+          <p>把這段虛構筆記貼給它，整理成表格（事項／負責人／期限），沒寫到的填「待確認」：</p>
+          <p class="ae-quote">小芳說新版請假頁面下週三上線；阿哲週五前把測試報告寄給小芳；客服 FAQ 要改版，負責人還沒定。</p>
+          <details class="ae-reveal"><summary>怎樣算合格</summary><div>阿哲／週五寄測試報告；FAQ 改版的負責人、期限都寫「待確認」。請假頁面的負責人寫小芳或待確認都算對，說得出理由就好。</div></details>
+        </div>
+      </div>
+      <p style="font-weight:800;color:var(--ae-navy);margin:1.5rem 0 0">做完用這 5 格記下一個例子：</p>
+      <div class="ae-record"><span><b>1</b>我問了什麼</span><span><b>2</b>它回了什麼</span><span><b>3</b>哪裡有幫助、哪裡不如預期</span><span><b>4</b>我怎麼發現</span><span><b>5</b>哪一步要人確認</span></div>
+    </div>
+  </section>
+
+  <section id="self-check" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Self Check</span><h2>自我檢核：我真的會了嗎？</h2><p>不看教材，你能做到這 9 件事嗎？做得到就打勾；不確定就打開參考答案對照，意思對就算過，不用一字不差。說不出來，就回到旁邊標的那一幕重讀。</p></header>
+      <div data-ae-check="ai-basics">
+      <ol class="ae-check">
+        <li><label><input type="checkbox"><span>🧠 用一句話跟家人解釋 LLM 在做什麼，再說出聊太久為什麼要開新對話。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="llm" anchor="llm" label="LLM" %}、{% include ai-learn/chref.html module=mod slug="llm" anchor="context" label="Context window" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>LLM 讀過大量文字，看前面的字，一塊一塊（Token）猜出最可能的下一塊，是在「接話」不是「查資料」。模型本身不記得對話，App 每次把整段重送；聊太久桌子會滿、舊內容會被擠掉或摘要，所以要先請它摘要結論，再開新對話繼續。</div></details></li>
+        <li><label><input type="checkbox"><span>🤥 說出 AI 為什麼會有幻覺，以及一個自己查證的方法。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="llm" anchor="tempers" label="三個脾氣" %}、{% include ai-learn/chref.html module=mod slug="llm" anchor="lawyer" label="律師假判例" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>它挑最順的字，不是最對的字，不會自己查證；線索不夠或超過知識截止日時，就會很有自信地編。查證：自己點開原始出處，核對數字、人名、日期；問它「你確定嗎」不算查證。</div></details></li>
+        <li><label><input type="checkbox"><span>💬 把一句模糊的交辦，補上任務、背景、限制三塊。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="prompt" anchor="blocks" label="好 Prompt 的積木" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例（虛構示範）：「幫我寫會議通知」→「幫我寫一封會議通知（任務）。對象是部門同仁，會議是下週三下午的季度檢討（背景）。150 字內，不要自己加議程（限制）。」</div></details></li>
+        <li><label><input type="checkbox"><span>🔌 說出 MCP 和 Skill 的差別：一個讓 AI「做得到」，一個教它「怎麼做」；再說出 Skill 的說明文字為什麼決定它會不會被用到。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="skill" anchor="compare" label="Prompt／Skill／MCP 對照" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>MCP 讓 AI 接上系統、拿得到資料、動得了手（做得到）；Skill 是寫好的工作手冊，告訴它步驟和規則（怎麼做）。AI 平常只看得到每支 Skill 的名稱和說明（description），說明沒寫到你平常會講的字，步驟寫得再好也不會被打開。</div></details></li>
+        <li><label><input type="checkbox"><span>🏃 說出 Agent 比聊天機器人、Workflow 多了什麼。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="agent" anchor="loop" label="Agent 的工作迴圈" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>多了工具和迴圈，會自己拆步驟、用工具、看結果，直到完成。聊天機器人只回你一句話；Workflow 的下一步由程式事先排好，每次都一樣；Agent 的下一步由 LLM 自己決定。</div></details></li>
+        <li><label><input type="checkbox"><span>✋ 舉出 2 個「AI 做完一定要人確認」的動作。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="mcp" anchor="permission" label="最小權限" %}、{% include ai-learn/chref.html module=mod slug="agent" anchor="traffic" label="AI 紅綠燈" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>任選兩個：寄信或轉寄給外部、寄出會議邀請、送出申請單、刪除或修改資料、對客戶承諾金額或時程、付款。</div></details></li>
+        <li><label><input type="checkbox"><span>🧰 說出 MCP 能幫 AI 接上的 3 類系統，以及為什麼工具最好用你的身分去查。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="mcp" anchor="server" label="MCP Server" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>任選 3 類：查行事曆空檔、查信與擬草稿、讀寫資料夾裡的檔案、查內部規章。工具若設計成用你的身分去查，你看不到的它也看不到，AI 就不會因此看到比你更多的東西。</div></details></li>
+        <li><label><input type="checkbox"><span>🪤 說出什麼是提示注入，以及 AI 要寄出、轉寄前你該做什麼。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="mcp" anchor="injection" label="提示注入與致命三角" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>外部資料（信件、網頁）裡藏著寫給 AI 的指令，騙它照做。目前沒有百分之百的防護方法，所以寄出、轉寄前一定自己看收件人和內容；看到「AI 請……」這類句子要提高警覺。</div></details></li>
+        <li><label><input type="checkbox"><span>📏 挑一件每週重複的工作，用頻率、耗時、規則明確各打 1 到 5 分再相乘，說出它適不適合交給 AI。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="agent" anchor="pick" label="選題三問" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例：整理每週會議紀錄＝頻率 4 × 耗時 4 × 規則明確 4＝64 分，適合。規則明確低於 3 分，代表多半要人判斷，先別挑。</div></details></li>
+      </ol>
+      <div class="ae-check__score" aria-live="polite">0／9 題</div>
+      </div>
+      <div class="ae-stuck">
+        <h3><i class="bi bi-signpost-split" aria-hidden="true"></i> 卡關時翻這裡</h3>
+        <div class="ae-stuck__list">
+          <a href="#chapters">先算 10 題小測驗答對幾題</a>
+          {% include ai-learn/chref.html module=mod slug="prompt" anchor="stuck-paste" label="資料能不能貼？" %}
+          {% include ai-learn/chref.html module=mod slug="llm" anchor="temperature" label="答案每次都不一樣？" %}
+          {% include ai-learn/chref.html module=mod slug="llm" anchor="context" label="聊久了它變笨？" %}
+          {% include ai-learn/chref.html module=mod slug="skill" anchor="trigger" label="Skill 沒被用上？" %}
+          {% include ai-learn/chref.html module=mod slug="mcp" anchor="server" label="AI 查不到系統？" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Keep Learning</span><h2>延伸學習：4 支中文入門影片＋下一步</h2><p>先看這 4 支影片（合計約 36 分鐘），建議順序 LLM → Prompt → MCP → Skill；看完每支，回到對應的那一幕讀一次，再翻名詞小抄。影片由各創作者製作，連到 YouTube 觀看。</p></header>
+      <div class="ae-grid" style="--cols:2">
+        <a class="ae-card ae-card--link" data-c="llm" href="https://www.youtube.com/watch?v=ERr6J1bDXUI" target="_blank" rel="noopener"><div class="ae-card__icon"><i class="bi bi-play-btn-fill" aria-hidden="true"></i></div><h3>什麼是大型語言模型？LLM 是什麼？</h3><p>今天比昨天厲害｜全片約 4 分半（影片較早，產品例子可能過時）。對應第二幕。</p></a>
+        <a class="ae-card ae-card--link" data-c="prompt" href="https://www.youtube.com/watch?v=WB9GHF1mD7U" target="_blank" rel="noopener"><div class="ae-card__icon"><i class="bi bi-play-btn-fill" aria-hidden="true"></i></div><h3>提示詞是什麼？和 AI 溝通的神奇語言？</h3><p>Doris A-Liao｜全片約 27 分，四支裡最長，可以分兩次看。對應第三幕。</p></a>
+        <a class="ae-card ae-card--link" data-c="mcp" href="https://youtu.be/MwHuCtkzvdo" target="_blank" rel="noopener"><div class="ae-card__icon"><i class="bi bi-play-btn-fill" aria-hidden="true"></i></div><h3>什麼是 MCP？3 個 n8n AI Agent 情境解析</h3><p>Alex Hsieh 相談室｜先看 0:00～1:52「兩分鐘快速入門」；想多懂再看 12:18～19:34。後段 n8n（一套拉方塊做自動化的工具）實作可以跳過。對應第四幕。</p></a>
+        <a class="ae-card ae-card--link" data-c="skill" href="https://www.youtube.com/watch?v=YoD4lsBuPes&amp;t=274s" target="_blank" rel="noopener"><div class="ae-card__icon"><i class="bi bi-play-btn-fill" aria-hidden="true"></i></div><h3>AI Agent 時代第一件要學的事：Skill 入門</h3><p>Hei_Ai 成長日記｜看 4:34～6:55（約 2 分 21 秒）。對應第五幕。</p></a>
+      </div>
+      <div class="ae-grid ae-mt" style="--cols:3">
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-flag" aria-hidden="true"></i></div><h3>入門（約 1 小時）</h3><p>看上面 4 支影片 → 讀名詞小抄 → 做 9 題自我檢核。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-book" aria-hidden="true"></i></div><h3>進階（英文，可用瀏覽器翻譯）</h3><p><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic：Prompting best practices</a>（對照第三幕）<br><a href="https://claude.com/resources/articles/skills" target="_blank" rel="noopener">Introducing Agent Skills</a>（對照第五幕）</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></div><h3>想先動手跑（選讀）</h3><p><a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener">What is the Model Context Protocol (MCP)?</a><br><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs：Extend Claude with skills</a><br><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Anthropic：Building effective agents</a></p></div>
+      </div>
+      <p class="ae-source">影片片長與段落依 2026 年 10 月各影片頁面整理。</p>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--dark">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">For Teams</span><h2>想讓團隊一起建立 AI 的共同語言？</h2><p>這份教材來自一場企業內部分享。若你想替團隊安排 AI 導入課程，可以先看企業培訓的做法與時數。</p></header>
+      <a class="edu-btn edu-btn--light" href="{{ '/education/agentic-engineering/' | relative_url }}">查看企業培訓方案</a>
+    </div>
+  </section>
+</main>
