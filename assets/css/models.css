@@ -293,6 +293,10 @@ a.sm-media:hover img { transform: scale(1.015); }
 .sm-facts dt { margin: 0; padding-top: 3px; color: var(--sm-muted); font-size: 0.78rem; letter-spacing: 0.04em; }
 .sm-facts dd { margin: 0; color: var(--sm-ink); line-height: 1.6; }
 .sm-facts dd a { color: var(--sm-ink); text-decoration: none; border-bottom: 1px solid var(--sm-ink); }
+.sm-traits { margin: 0; padding: 0; }
+.sm-traits div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--sm-line); }
+.sm-traits dt { margin: 0; padding-top: 3px; color: var(--sm-muted); font-size: 0.78rem; letter-spacing: 0.04em; }
+.sm-traits dd { margin: 0; color: var(--sm-body); line-height: 1.8; }
 .sm-profile .sm-actions { margin-top: 30px; }
 @media (max-width: 991px) { .sm-profile__grid { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: var(--sm-s1); } }
 @media (max-width: 767px) { .sm-profile__grid { grid-template-columns: 1fr; } .sm-profile__portrait { max-width: 420px; } .sm-facts { grid-template-columns: 1fr; } }

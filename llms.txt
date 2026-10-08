@@ -17,10 +17,11 @@
 ## 攝影寫真 Photography
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
-- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、林予晴、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十本概念寫真集；全部由 AI 生成，並非真人照片。
-- [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬與林予晴（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），以及史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
+- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、林予晴、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十本概念寫真集，另有史旺基的 AI 助理形象小赫；全部由 AI 生成，並非真人照片。
+- [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬與林予晴（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
 - [史旺姬｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/swanky-ji/): 史旺姬｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，四本寫真集《藍色停留的那一小時》《月亮的失物招領》《把光留給日常》《她把風景打開》共 144 張影像。人物與場景皆由 AI 生成，並非真人實拍。
 - [林予晴｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/lin-yuqing/): 林予晴｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，23 歲、住在虛構的海港城市「南汐」的自由平面設計師；寫真集《把今天寄出去》共 36 張影像。人物與場景皆由 AI 生成，並非真人實拍。
+- [小赫｜SWANKY MODELS](https://swanky.github.io/photography/models/talent/xiao-he/): 小赫｜SWANKY MODELS：史旺基日常工作用的 AI 助理（Hermes Agent）形象。人物由 AI 生成，並非真人照片；目前尚無寫真集作品。
 - [李瓶兒｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/li-pinger/): 李瓶兒｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《雨停以前》、《水線以上》、《岸還沒有名字》、《不趕時間的你》《瓶中有光》，以及與潘金蓮共同演出的《畫面之外》，另有 8 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
 - [潘金蓮｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/pan-jinlian/): 潘金蓮｜SWANKY MODELS 虛擬模特兒：《金瓶梅》角色的現代改編形象，收錄《借來的白晝》、《再轉一圈》、《還沒寫好的舞台》、《今晚，由她開場》《她先看見》，以及與李瓶兒共同演出的《畫面之外》，另有 9 幀角色寫真。AI 生成的虛構成年角色，並非真人照片。
 - [Bunny 邦妮｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/bunny-15755/): Bunny 邦妮｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #15755 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。

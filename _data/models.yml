@@ -4,6 +4,7 @@
 # - 旗下人物皆為 AI 生成的虛擬人物，不是真人；模板會替每張圖的 alt 補「（AI 生成，非真人照片）」並掛徽章。
 # - 介紹文字一律沿用作品資料既有文案（JSON 的 description／disclosure、yml 的 lead／note／quote），
 #   不另創背景設定，也不編身高、三圍等經紀卡規格——資料裡沒有的欄位就不出現。
+#   例外：攝影 repo 已核准的角色設定可逐字放進 quote／facts／traits；站主明確指定的設定值（如林予晴身高、三圍）要在註解寫明來源與日期。
 # - 作品全是自主企劃的概念作品，不得寫成商業委託實績；不寫價格，不寫服務承諾。
 # - 新人物＝加一個 talent＋建 photography/models/talent/<slug>/index.html（只有 front matter＋include）；
 #   新作品＝在該 talent 的 books 加一行（data＝_data 檔名；kind＝json（移交包 photos[]）或 yml（寫真館 chapters[].shots[]））。
@@ -78,6 +79,7 @@ inquiry:
 # 名冊分組（首頁與名單頁依人數自動排版；只有一組有人時不顯示分組標籤）。之後加入的角色 IP 用 character。
 divisions:
   - { key: photobook, label: 寫真模特兒, cols: 3 }   # cols＝桌機每列幾位（主力大圖）
+  - { key: agent, label: AI 夥伴, cols: 3 }          # 站主日常使用的 AI 助理形象（2026-10-08 起：小赫）
   - { key: character, label: 鏈上角色, cols: 7, minor: true }       # 角色 IP 小圖一列六位，像 new faces 板
 
 talents:
@@ -107,10 +109,39 @@ talents:
     debut: 2026
     intro: 23 歲，住在虛構的海港城市「南汐」；自由平面設計師，兼做小量手工版畫與紙品。她把散步時收集的顏色印成卡片，寄給很久沒見的人。
     disclosure: 林予晴是 23 歲的原創虛構成人角色。人物、場景、旅程與手作情節由 AI 創作，非真人實拍；海邊、市場與工作室不指涉真實拍攝地點。史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    # 設定：quote／traits 與 facts 前三列逐字取自攝影 repo 已核准的 character-profile-v1.md／character-card-v2.json；
+    # 身高與三圍原檔明寫「未定」，2026-10-08 站主指示「依據建議補上」——是角色設定值，不是量測。
+    quote: 有一點歪，才知道是我做的。
+    facts:
+      - { label: 年齡, value: 23 歲 }
+      - { label: 居住地, value: 南汐（虛構海港城市） }
+      - { label: 職業, value: 自由平面設計師、手工版畫與紙品創作者 }
+      - { label: 身高, value: 162 公分 }
+      - { label: 三圍, value: 80／60／86 公分 }
+    traits:
+      - { label: 個性, text: 予晴初見時安靜，熟了會主動開玩笑；觀察細，做事有耐心，遇到漂亮的紙張卻很容易改變計畫。 }
+      - { label: 日常, text: 包裡有素色信封、鉛筆和折過的紙；會在收據背面試色。挑衣服先看能否蹲下、抬手與工作，再選一個醒目的顏色。 }
+      - { label: 心願, text: 她想辦一場每件作品都能被帶走的小展覽，卻有點捨不得任何一張失手但可愛的試印。 }
     portrait: { book: lin_yuqing_send_today, kind: json, n: 1 }   # 暫用寫真集 No.01〈先坐下來〉直幅；同棚名冊照尚未核准（見 docs/models-roster-todo.md），核准後改 digital: true
     hero: { book: lin_yuqing_send_today, kind: json, n: 27 }
+    spread: { book: lin_yuqing_send_today, kind: json, n: 26, mobile_n: 28 }   # 首頁跨頁：26「展開今天」（海邊展開藍圓印布，全書主題畫面）；手機直幅 28「笑給逆風」
     books:
       - { data: lin_yuqing_send_today, kind: json, url: /photography/lin-yuqing-send-today/, pdf_size: 約 40 MB }
+
+  # 小赫：站主的 Hermes Agent 形象（攝影 repo characters/agents/xiao-he，外貌 v3 參考包 2026-09-26 站主核准）。
+  # intro 只用站主原話「這是我的 Hermes Agent 的形象，她叫做小赫」，不另編背景；精確年齡、身高未設定。
+  # 名冊照 2026-10-08 以 v3 參考包（XH01／XH06／XH07）為身份依據、同棚設定生成 a01（原檔與提示詞存 Dropbox
+  # swanky-site-archive/swanky-models-roster-2026-10-08/，SHA 5da9cb7c…）；站主 2026-10-08 指示「先幫我加進去」。
+  - slug: xiao-he
+    name: 小赫
+    division: agent
+    kind: original
+    kind_label: AI 助理形象
+    debut: 2026
+    intro: 史旺基日常工作用的 AI 助理（Hermes Agent），這是她的樣子，名字叫小赫。
+    disclosure: 小赫是 AI 助理的虛構形象，明確成年；人物由 AI 生成，並非真人照片。史旺基 Swanky 企劃與審定。
+    digital: true
+    books: []
 
   - slug: li-pinger
     name: 李瓶兒
