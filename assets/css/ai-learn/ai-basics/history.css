@@ -9,7 +9,7 @@
 .ae-page[data-act="history"] .ae-tl__card { min-height: 11.5rem; }
 .ae-page[data-act="history"] .ae-tl__card h3 a { color: inherit; text-decoration: none; }
 .ae-page[data-act="history"] .ae-tl__card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.ae-page[data-act="history"] .ae-tl__tag { display: inline-block; margin-top: .45rem; padding: .1rem .5rem; border-radius: 999px; background: var(--c-soft); color: var(--c-ink); font-size: .74rem; font-weight: 800; }
+.ae-page[data-act="history"] .ae-tl__tag { display: inline-block; margin-top: .45rem; padding: .1rem .5rem; border-radius: 999px; background: var(--c-soft); color: var(--c-ink); font-size: .8rem; font-weight: 800; }
 /* 規則數量長條、認圖大賽長條：標籤欄放寬 */
 .ae-page[data-act="history"] .ae-bars--wide .ae-bar { grid-template-columns: 5.2rem minmax(0, 1fr) 6.6rem; }
 .ae-page[data-act="history"] .ae-bars--wide .ae-bar__label { font-size: 1.05rem; text-align: left; }
@@ -17,18 +17,18 @@
 .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__fill { background: var(--ae-history); }
 .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__value, .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:first-child .ae-bar__label { color: var(--ae-history-ink); }
 .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__fill { background: #b8c4d0; }
-.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__label, .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__label, .ae-page[data-act="history"] .ae-bars--cmp .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-slate-ink); }
 .ae-page[data-act="history"] .ae-bars--grow .ae-bar:first-child .ae-bar__fill { background: #b8c4d0; }
-.ae-page[data-act="history"] .ae-bars--grow .ae-bar:first-child .ae-bar__value { color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:first-child .ae-bar__value { color: var(--ae-slate-ink); }
 .ae-page[data-act="history"] .ae-bars--grow .ae-bar:nth-child(2) .ae-bar__fill { background: var(--ae-key); }
-.ae-page[data-act="history"] .ae-bars--grow .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-key); }
+.ae-page[data-act="history"] .ae-bars--grow .ae-bar:nth-child(2) .ae-bar__value { color: var(--ae-key-ink); }
 /* 教機器認貓：左右兩個方法 */
 .ae-page[data-act="history"] .ae-cat { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.6fr); gap: 1.1rem; align-items: stretch; }
 .ae-page[data-act="history"] .ae-cat__panel { position: relative; display: flex; flex-direction: column; gap: 1rem; border: 2.5px solid var(--ae-navy); border-radius: 18px; padding: 2.3rem 1.2rem 1.2rem; background: #f4f6f9; }
 .ae-page[data-act="history"] .ae-cat__panel--learn { background: var(--ae-history-soft); }
 .ae-page[data-act="history"] .ae-cat__title { position: absolute; top: -1.1rem; left: 50%; transform: translateX(-50%); padding: .3rem 1.1rem; border-radius: 999px; background: var(--ae-navy); color: #fff; font-weight: 800; font-size: 1rem; white-space: nowrap; }
 .ae-page[data-act="history"] .ae-cat__rule { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; border: 2.5px solid var(--ae-navy); border-radius: 12px; background: #fff; font-weight: 700; color: var(--ae-navy); line-height: 1.5; }
-.ae-page[data-act="history"] .ae-cat__rule .bi { font-size: 1.6rem; color: var(--ae-slate); }
+.ae-page[data-act="history"] .ae-cat__rule .bi { font-size: 1.6rem; color: var(--ae-slate-ink); }
 .ae-page[data-act="history"] .ae-cat__x li { font-size: 1.02rem; }
 .ae-page[data-act="history"] .ae-cat__panel .ae-tip { margin-top: auto; }
 .ae-page[data-act="history"] .ae-cat__turn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .35rem; }
@@ -38,8 +38,8 @@
 .ae-page[data-act="history"] .ae-cat__score-head { display: flex; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; margin-bottom: .75rem; font-weight: 800; color: var(--ae-navy); }
 .ae-page[data-act="history"] .ae-cat__score-head small { font-weight: 600; color: var(--ae-muted); font-size: .85rem; }
 .ae-page[data-act="history"] .ae-layers { display: flex; align-items: center; justify-content: center; gap: .1rem; flex-wrap: nowrap; white-space: nowrap; font-size: .8rem !important; letter-spacing: -.02em; font-weight: 800; color: var(--ae-navy); }
-.ae-page[data-act="history"] .ae-layers i { font-size: .72rem; }
-.ae-page[data-act="history"] .ae-node__badge { position: absolute; top: -.85rem; left: 50%; transform: translateX(-50%); padding: .15rem .7rem; border-radius: 999px; background: var(--ae-history); color: #3d2a00 !important; font-size: .78rem !important; font-weight: 800; white-space: nowrap; }
+.ae-page[data-act="history"] .ae-layers i { font-size: .8rem; }
+.ae-page[data-act="history"] .ae-node__badge { position: absolute; top: -.85rem; left: 50%; transform: translateX(-50%); padding: .15rem .7rem; border-radius: 999px; background: var(--ae-history); color: #3d2a00 !important; font-size: .8rem !important; font-weight: 800; white-space: nowrap; }
 /* 深藍 vs AlphaGo：可能的下法格子 */
 .ae-page[data-act="history"] .ae-board { display: grid; grid-template-columns: repeat(6, 1fr); gap: .35rem; width: 10.5rem; max-width: 100%; margin: .4rem auto .8rem; padding: .55rem; border-radius: 12px; background: #eef2f6; border: 2px solid var(--ae-navy); }
 .ae-page[data-act="history"] .ae-board i { display: block; aspect-ratio: 1; border-radius: 50%; background: var(--ae-slate); }
@@ -50,7 +50,7 @@
 .ae-page[data-act="history"] .ae-move37 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: center; }
 .ae-page[data-act="history"] .ae-move37__big { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 9.5rem; height: 9.5rem; border-radius: 50%; background: var(--ae-navy); color: #fff; border: 5px solid var(--ae-history); text-align: center; }
 .ae-page[data-act="history"] .ae-move37__big b { font-size: 1.9rem; line-height: 1.1; color: var(--ae-tip); }
-.ae-page[data-act="history"] .ae-move37__big small { font-size: .78rem; font-weight: 700; opacity: .85; }
+.ae-page[data-act="history"] .ae-move37__big small { font-size: .8rem; font-weight: 700; opacity: .85; }
 /* AI 家族：同心圓 */
 .ae-page[data-act="history"] .ae-rings { position: relative; width: min(100%, 25rem); aspect-ratio: 1; margin: 0 auto; }
 .ae-page[data-act="history"] .ae-rings__ring { position: absolute; left: 50%; top: 50%; width: var(--s); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; border: 2.5px solid var(--ae-navy); background: var(--bg); }

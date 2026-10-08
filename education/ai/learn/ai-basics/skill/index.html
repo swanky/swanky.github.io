@@ -136,7 +136,7 @@ chapter_css: true
     </div>
     <div class="ae-prose ae-mt"><p>Anthropic 也公開了一批範例手冊，例如處理 PDF、Excel、Word、簡報檔的 Skill，以及幫你建立 Skill 的 skill-creator（後面「怎麼叫出 Skill」會再看到）。手冊不只能用在排會議：它的價值，是把你原本就會的工作方法，變成別人和 AI 都讀得懂、能重複使用的說明。</p></div>
     <p class="ae-key"><small>只記一句</small>Skill 讓 AI 從「聰明的新人」，變成「懂你們做法的同事」。</p>
-    <p class="ae-source">出處：Anthropic〈Agent Skills〉（2025-10-16 發布，2025-12-18 更新）；Anthropic 公開範例 Skill：github.com/anthropics/skills（2026-10-06 查閱）。schedule-meeting 與其規則為本教材虛構示意。</p>
+    <p class="ae-source">出處：Anthropic〈Agent Skills〉（2025-10-16 發布，2025-12-18 更新）；Anthropic 公開範例 Skill：<a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">github.com/anthropics/skills</a>（2026-10-06 查閱）。schedule-meeting 與其規則為本教材虛構示意。</p>
   </div>
 </section>
 
@@ -182,7 +182,7 @@ chapter_css: true
       <li data-c="key"><i class="bi bi-bullseye" aria-hidden="true"></i><span><b>如果這份只能記一個地方，記 ② 說明。</b>正文再完整，也要先讓 AI 在對的時機想到打開它。下一段就說為什麼。</span></li>
     </ul>
     <p class="ae-key"><small>只記一句</small>會寫 SOP，就會寫 Skill。</p>
-    <p class="ae-source">示意：meeting-notes 為本教材虛構的示意 Skill；SKILL.md 格式依 Claude Code Docs〈Extend Claude with skills〉。</p>
+    <p class="ae-source">示意：meeting-notes 為本教材虛構的示意 Skill；SKILL.md 格式依 <a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs〈Extend Claude with skills〉</a>。</p>
   </div>
 </section>
 
@@ -223,10 +223,10 @@ chapter_css: true
     </div>
     <div class="ae-grid ae-mt" style="--cols:2">
       <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>如果所有手冊一開始全文上桌</h3><p>佔掉大半張桌子，重要的內容反而更難被注意到。還記得 {% include ai-learn/chref.html module=mod slug="llm" anchor="context" label="第二幕的辦公桌" %}嗎？桌面就這麼大。</p></div></div>
-      <div class="ae-yn" data-c="skill" style="--c:var(--ae-ok);--c-ink:var(--ae-ok);--c-soft:var(--ae-ok-soft)"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>只放目錄，用到才翻</h3><p>桌面留給這次真正要用的內容。也因為這樣，<b>目錄上那一行（description）</b>寫不清楚用途和使用情境，AI 可能根本想不到該翻這本。</p></div></div>
+      <div class="ae-yn" data-c="skill" style="--c:var(--ae-ok);--c-ink:var(--ae-ok-ink);--c-soft:var(--ae-ok-soft)"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>只放目錄，用到才翻</h3><p>桌面留給這次真正要用的內容。也因為這樣，<b>目錄上那一行（description）</b>寫不清楚用途和使用情境，AI 可能根本想不到該翻這本。</p></div></div>
     </div>
     <p class="ae-key"><small>只記一句</small>桌子有限，只先放目錄；「說明」寫不清楚，AI 就不會想到翻開。</p>
-    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Anthropic Engineering〈Equipping agents for the real world with Agent Skills〉；Claude Code Docs〈Extend Claude with skills〉。schedule-meeting、meeting-notes 為示意 Skill，pdf、xlsx 為 Anthropic 官方 Skill。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Claude Docs〈Agent Skills overview〉</a>；<a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">Anthropic Engineering〈Equipping agents for the real world with Agent Skills〉</a>；<a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs〈Extend Claude with skills〉</a>。schedule-meeting、meeting-notes 為示意 Skill，pdf、xlsx 為 Anthropic 官方 Skill。</p>
   </div>
 </section>
 
@@ -270,7 +270,7 @@ chapter_css: true
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>Prompt 說做什麼，Skill 教怎麼做，MCP 讓 AI 做得到。</p>
-    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Claude Code Docs〈Connect Claude Code to tools via MCP〉（tool search）。schedule-meeting 與行事曆 Server 為示意。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Claude Docs〈Agent Skills overview〉</a>；<a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Claude Code Docs〈Connect Claude Code to tools via MCP〉</a>（tool search）。schedule-meeting 與行事曆 Server 為示意。</p>
   </div>
 </section>
 
@@ -321,7 +321,7 @@ chapter_css: true
       <div>Claude Code 會在兩個地方找 Skill：<b>個人層</b> <code>~/.claude/skills/</code>（<code>~</code> 是你的使用者資料夾，所有專案都用得到），以及<b>專案層</b> <code>.claude/skills/</code>（只在那個專案資料夾裡有效）。每支 Skill 一個子資料夾，裡面放 SKILL.md。現在不用背，要動手時再回來看。</div>
     </details>
     <p class="ae-key"><small>只記一句</small>先練好交辦與檢查結果，再到 Claude Code 寫 Skill、跑 Skill。</p>
-    <p class="ae-source">出處：Claude Code Docs〈Overview〉；Claude Code Docs〈Extend Claude with skills〉（個人層 ~/.claude/skills/；專案層 .claude/skills/）。</p>
+    <p class="ae-source">出處：<a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Claude Code Docs〈Overview〉</a>；<a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs〈Extend Claude with skills〉</a>（個人層 ~/.claude/skills/；專案層 .claude/skills/）。</p>
   </div>
 </section>
 
@@ -343,7 +343,7 @@ chapter_css: true
         <h3>pdf、xlsx、docx、pptx</h3>
         <div class="sk-files" role="img" aria-label="四種官方範例 Skill：pdf、xlsx、docx、pptx">
           <span><i class="bi bi-file-earmark-text" style="color:#d9543f" aria-hidden="true"></i>pdf<small>PDF</small></span>
-          <span><i class="bi bi-file-earmark-excel" style="color:#2e8a5f" aria-hidden="true"></i>xlsx<small>Excel</small></span>
+          <span><i class="bi bi-file-earmark-excel" style="color:#1f6f49" aria-hidden="true"></i>xlsx<small>Excel</small></span>
           <span><i class="bi bi-file-earmark-word" style="color:#2878d0" aria-hidden="true"></i>docx<small>Word</small></span>
           <span><i class="bi bi-file-earmark-ppt" style="color:#c4462f" aria-hidden="true"></i>pptx<small>PowerPoint</small></span>
         </div>
@@ -368,7 +368,7 @@ chapter_css: true
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>最常用的是直接說需求；它沒挑對，就打「/名稱」點名。</p>
-    <p class="ae-source">出處：Claude Code Docs〈Extend Claude with skills〉（code.claude.com/docs/en/skills；以 claude.ai 帳號登入時 pdf、xlsx 等官方 Skill 會自動同步，2026-10-06 查閱）；github.com/anthropics/skills（2026-10-06 查閱）；Claude Docs〈Agent Skills overview〉。</p>
+    <p class="ae-source">出處：<a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs〈Extend Claude with skills〉</a>（code.claude.com/docs/en/skills；以 claude.ai 帳號登入時 pdf、xlsx 等官方 Skill 會自動同步，2026-10-06 查閱）；<a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">github.com/anthropics/skills</a>（2026-10-06 查閱）；<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Claude Docs〈Agent Skills overview〉</a>。</p>
   </div>
 </section>
 
@@ -444,6 +444,6 @@ description: 把這週的工作紀錄整理成給主管看的
       <li>用的時候追問「用了哪支 Skill」，再對照成果確認。</li>
     </ol>
     <p class="ae-key"><small>只記一句</small>手冊正文要寫好，目錄上的那一行也要寫清楚。</p>
-    <p class="ae-source">出處：Claude Docs〈Agent Skills overview〉；Claude Code Docs〈Extend Claude with skills〉。weekly-report 為本教材虛構的示意 Skill。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Claude Docs〈Agent Skills overview〉</a>；<a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Claude Code Docs〈Extend Claude with skills〉</a>。weekly-report 為本教材虛構的示意 Skill。</p>
   </div>
 </section>

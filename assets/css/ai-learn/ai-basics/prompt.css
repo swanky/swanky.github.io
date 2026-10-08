@@ -10,13 +10,13 @@
 .ae-page[data-act="prompt"] .ae-recv__part--sys { border: 2.5px dashed var(--ae-slate); background: #f4f6f9; }
 .ae-page[data-act="prompt"] .ae-recv__part--you { border: 2.5px solid var(--ae-prompt); }
 .ae-page[data-act="prompt"] .ae-recv__head { display: flex; align-items: center; gap: .75rem; }
-.ae-page[data-act="prompt"] .ae-recv__head > .bi { font-size: 2.1rem; line-height: 1; color: var(--ae-slate); }
+.ae-page[data-act="prompt"] .ae-recv__head > .bi { font-size: 2.1rem; line-height: 1; color: var(--ae-slate-ink); }
 .ae-page[data-act="prompt"] .ae-recv__part--you .ae-recv__head > .bi { color: var(--ae-prompt-ink); }
 .ae-page[data-act="prompt"] .ae-recv__head b { display: block; font-size: 1.12rem; color: var(--ae-navy); }
-.ae-page[data-act="prompt"] .ae-recv__head small { display: block; font-size: .86rem; font-weight: 600; color: var(--ae-slate); }
+.ae-page[data-act="prompt"] .ae-recv__head small { display: block; font-size: .86rem; font-weight: 600; color: var(--ae-slate-ink); }
 .ae-page[data-act="prompt"] .ae-recv__chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .75rem; }
 .ae-page[data-act="prompt"] .ae-recv__chips span { padding: .25rem .85rem; border-radius: 999px; border: 2px solid var(--ae-navy); background: #fff; font-weight: 700; font-size: .93rem; color: var(--ae-navy); }
-.ae-page[data-act="prompt"] .ae-recv__chips span.is-later { border-style: dashed; color: var(--ae-slate); }
+.ae-page[data-act="prompt"] .ae-recv__chips span.is-later { border-style: dashed; color: var(--ae-slate-ink); }
 .ae-page[data-act="prompt"] .ae-recv__part--you .ae-recv__chips span { border-color: var(--ae-prompt); background: var(--ae-prompt-soft); color: var(--ae-prompt-ink); }
 .ae-page[data-act="prompt"] .ae-recv__plus { justify-self: center; width: 2.3rem; height: 2.3rem; border-radius: 50%; display: grid; place-items: center; background: var(--ae-navy); color: #fff; font-size: 1.4rem; margin: .1rem 0; }
 .ae-page[data-act="prompt"] .ae-recv > .bi-arrow-right, .ae-page[data-act="prompt"] .ae-assemble > .bi-arrow-right { font-size: 1.7rem; color: var(--ae-navy); }
@@ -38,7 +38,7 @@
 .ae-page[data-act="prompt"] .ae-block { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: .35rem; min-height: 12rem; padding: 1.7rem .7rem 1rem; border: 2.5px solid var(--ae-navy); border-radius: 16px; background: #eef4fb; }
 .ae-page[data-act="prompt"] .ae-block--core { background: #fff; }
 .ae-page[data-act="prompt"] .ae-block__tag { position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); padding: .22rem 1rem; border-radius: 999px; background: var(--ae-navy); color: #fff; font-weight: 800; font-size: 1rem; white-space: nowrap; }
-.ae-page[data-act="prompt"] .ae-block__n { position: absolute; top: -1.05rem; right: -.55rem; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; background: var(--ae-key); color: #fff; font-weight: 800; font-size: .95rem; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+.ae-page[data-act="prompt"] .ae-block__n { position: absolute; top: -1.05rem; right: -.55rem; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; background: var(--ae-key-ink); color: #fff; font-weight: 800; font-size: .95rem; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
 .ae-page[data-act="prompt"] .ae-block > .bi { font-size: 2.5rem; line-height: 1; color: var(--ae-prompt-ink); margin: .5rem 0 .4rem; }
 .ae-page[data-act="prompt"] .ae-block p { margin: 0; font-size: .92rem; line-height: 1.5; color: var(--ae-body); }
 .ae-page[data-act="prompt"] .ae-block b { display: block; margin-top: .3rem; font-size: 1rem; line-height: 1.4; color: var(--ae-prompt-ink); }
@@ -49,7 +49,7 @@
 .ae-page[data-act="prompt"] .ae-pbar__cells i.is-core { background: var(--ae-tip-soft); }
 /* 箭頭一律落在 4.6rem 圖示的中線上；「交給 AI」標籤掛在箭頭正上方 */
 .ae-page[data-act="prompt"] .ae-handoff { position: relative; display: grid; place-items: center; height: 4.6rem; min-width: 4.8rem; }
-.ae-page[data-act="prompt"] .ae-handoff small { position: absolute; left: 50%; bottom: calc(50% + 1.05rem); transform: translateX(-50%); padding: .1rem .7rem; border-radius: 999px; background: var(--ae-llm); color: #fff; font-weight: 800; font-size: .82rem; white-space: nowrap; }
+.ae-page[data-act="prompt"] .ae-handoff small { position: absolute; left: 50%; bottom: calc(50% + 1.05rem); transform: translateX(-50%); padding: .1rem .7rem; border-radius: 999px; background: var(--ae-llm-ink); color: #fff; font-weight: 800; font-size: .82rem; white-space: nowrap; }
 .ae-page[data-act="prompt"] .ae-handoff .bi { font-size: 1.7rem; color: var(--ae-navy); line-height: 1; }
 /* 回圈：結果 → 虛線繞回「你的 Prompt」 */
 .ae-page[data-act="prompt"] .ae-retry { display: contents; }
@@ -58,17 +58,17 @@
 .ae-page[data-act="prompt"] .ae-retry__leg--start::before { content: ""; position: absolute; left: calc(-7px - 1.25px); top: -11px; border-left: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 12px solid var(--ae-key); }
 .ae-page[data-act="prompt"] .ae-retry__leg--end { grid-column: 5; justify-self: start; border-right-width: 2.5px; border-bottom-right-radius: 16px; }
 .ae-page[data-act="prompt"] .ae-retry__mid { grid-column: 2 / 5; position: relative; height: 2.3rem; margin: -.25rem -1.2rem 0; border-bottom: 2.5px dashed var(--ae-key); }
-.ae-page[data-act="prompt"] .ae-retry__pill { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%); display: inline-flex; align-items: center; gap: .45rem; padding: .35rem 1.1rem; border-radius: 999px; border: 2.5px dashed var(--ae-key); background: var(--ae-key-soft); color: var(--ae-key); font-weight: 800; white-space: nowrap; }
+.ae-page[data-act="prompt"] .ae-retry__pill { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%); display: inline-flex; align-items: center; gap: .45rem; padding: .35rem 1.1rem; border-radius: 999px; border: 2.5px dashed var(--ae-key); background: var(--ae-key-soft); color: var(--ae-key-ink); font-weight: 800; white-space: nowrap; }
 /* 組起來的 Prompt：每一段標出是哪塊積木 */
 .ae-page[data-act="prompt"] .ae-segtext { margin: 0; font-size: 1.06rem; line-height: 2.35; color: var(--ae-ink); }
 .ae-page[data-act="prompt"] .ae-seg { padding: .12rem .3rem; border-radius: 6px; background: var(--c-soft); box-shadow: inset 0 -3px 0 var(--c); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-.ae-page[data-act="prompt"] .ae-seg small { display: inline-block; margin-right: .3rem; padding: 0 .45rem; border-radius: 999px; background: var(--c-ink); color: #fff; font-size: .72rem; font-weight: 800; line-height: 1.65; vertical-align: .12em; }
+.ae-page[data-act="prompt"] .ae-seg small { display: inline-block; margin-right: .3rem; padding: 0 .45rem; border-radius: 999px; background: var(--c-ink); color: #fff; font-size: .8rem; font-weight: 800; line-height: 1.65; vertical-align: .12em; }
 .ae-page[data-act="prompt"] .ae-seglegend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .75rem; font-size: .86rem; font-weight: 700; color: var(--ae-muted); }
 .ae-page[data-act="prompt"] .ae-seglegend span { display: inline-flex; align-items: center; gap: .4rem; }
 .ae-page[data-act="prompt"] .ae-seglegend span::before { content: ""; width: 1rem; height: .8rem; border-radius: 3px; background: var(--c-soft); box-shadow: inset 0 -3px 0 var(--c); }
 /* 八招 */
 .ae-page[data-act="prompt"] .ae-rowlabel { display: flex; align-items: center; gap: .5rem; margin: 2rem 0 .9rem; font-size: 1.05rem; font-weight: 800; color: var(--c-ink); }
-.ae-page[data-act="prompt"] .ae-rowlabel .bi { width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; background: var(--c); color: #fff; font-size: 1rem; }
+.ae-page[data-act="prompt"] .ae-rowlabel .bi { width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; background: var(--c-ink); color: #fff; font-size: 1rem; }
 .ae-page[data-act="prompt"] .ae-tips8 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .ae-page[data-act="prompt"] .ae-tips8 .ae-card { display: flex; flex-direction: column; gap: .55rem; }
 .ae-page[data-act="prompt"] .ae-tips8 .ae-card__icon { margin-bottom: .1rem; }
@@ -87,7 +87,7 @@
 .ae-page[data-act="prompt"] .ae-pane__quote { margin: 0; padding: 1.5rem 1rem; border-radius: 12px; background: var(--c-soft); text-align: center; font-size: 1.2rem; font-weight: 800; color: var(--ae-navy); line-height: 1.7; }
 .ae-page[data-act="prompt"] .ae-qlist { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
 .ae-page[data-act="prompt"] .ae-qlist li { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .5rem; font-size: 1.12rem; line-height: 1.6; color: var(--ae-ink); }
-.ae-page[data-act="prompt"] .ae-qlist li::before { content: "\F504"; font-family: "bootstrap-icons"; color: var(--ae-key); font-size: 1.15rem; }
+.ae-page[data-act="prompt"] .ae-qlist li::before { content: "\F504"; font-family: "bootstrap-icons"; color: var(--ae-key-ink); font-size: 1.15rem; }
 .ae-page[data-act="prompt"] .ae-qlist li.is-think { font-weight: 800; }
 .ae-page[data-act="prompt"] .ae-qlist li.is-think::before { content: "🤔"; font-family: inherit; }
 .ae-page[data-act="prompt"] .ae-template { margin: 0; padding: 1.1rem 1rem; border-radius: 12px; background: var(--c-soft); text-align: center; font-weight: 800; color: var(--ae-navy); line-height: 2.1; font-size: 1.05rem; }
@@ -96,23 +96,23 @@
 .ae-page[data-act="prompt"] .ae-draft:focus { outline: 3px solid color-mix(in srgb, var(--ae-prompt) 45%, transparent); outline-offset: 2px; }
 .ae-page[data-act="prompt"] .ae-pane .ae-check { grid-template-columns: 1fr; gap: .5rem; }
 .ae-page[data-act="prompt"] .ae-pane .ae-check li { padding: .65rem .85rem; }
-.ae-page[data-act="prompt"] .ae-pane .ae-check b { color: var(--ae-key); }
+.ae-page[data-act="prompt"] .ae-pane .ae-check b { color: var(--ae-key-ink); }
 .ae-page[data-act="prompt"] .ae-pane .ae-tip { margin: 0; }
 /* 五個步驟 */
 .ae-page[data-act="prompt"] .ae-steps5 .ae-node { justify-content: flex-start; padding-top: 1.2rem; }
 .ae-page[data-act="prompt"] .ae-steps5 .ae-node > span:not(.ae-num):not(.ae-node__icon) { text-align: left; }
 .ae-page[data-act="prompt"] .ae-steps5 .ae-node--hl { box-shadow: 0 0 0 4px var(--ae-key-soft), 0 0 0 6px var(--ae-key); }
 .ae-page[data-act="prompt"] .ae-eg { display: block; margin-top: auto; padding: .5rem .65rem; border-radius: 10px; background: #fff; border: 1.5px dashed #b8c4d0; font-size: .84rem !important; line-height: 1.6; text-align: left; color: var(--ae-body) !important; }
-.ae-page[data-act="prompt"] .ae-eg::before { content: "\F3E7"; font-family: "bootstrap-icons"; margin-right: .3rem; color: var(--ae-key); }
-.ae-page[data-act="prompt"] .ae-eg b { font-size: inherit; color: var(--ae-key); }
-.ae-page[data-act="prompt"] .ae-oklist li::before { content: "\F26A"; color: var(--ae-ok); }
+.ae-page[data-act="prompt"] .ae-eg::before { content: "\F3E7"; font-family: "bootstrap-icons"; margin-right: .3rem; color: var(--ae-key-ink); }
+.ae-page[data-act="prompt"] .ae-eg b { font-size: inherit; color: var(--ae-key-ink); }
+.ae-page[data-act="prompt"] .ae-oklist li::before { content: "\F26A"; color: var(--ae-ok-ink); }
 .ae-page[data-act="prompt"] .ae-yn .ae-xlist { margin-top: .5rem; }
 /* 示範：結果表 */
 .ae-page[data-act="prompt"] .ae-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: .75rem; border-radius: 12px; overflow: hidden; font-size: .95rem; }
 .ae-page[data-act="prompt"] .ae-table th { padding: .55rem .7rem; background: rgba(255,255,255,.14); color: #fff; text-align: left; font-weight: 800; }
 .ae-page[data-act="prompt"] .ae-table td { padding: .55rem .7rem; background: #fff; color: var(--ae-navy); font-weight: 700; border-top: 1px solid var(--ae-line); }
-.ae-page[data-act="prompt"] .ae-table del { color: var(--ae-key); text-decoration-thickness: 2px; margin-right: .35rem; }
-.ae-page[data-act="prompt"] .ae-table ins { text-decoration: none; color: var(--ae-ok); font-weight: 800; }
+.ae-page[data-act="prompt"] .ae-table del { color: var(--ae-key-ink); text-decoration-thickness: 2px; margin-right: .35rem; }
+.ae-page[data-act="prompt"] .ae-table ins { text-decoration: none; color: var(--ae-ok-ink); font-weight: 800; }
 .ae-page[data-act="prompt"] .ae-flowkey { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .5rem; }
 .ae-page[data-act="prompt"] .ae-flowkey span { padding: .1rem .6rem; border-radius: 8px; background: #fff; border: 2px solid var(--ae-key); }
 .ae-page[data-act="prompt"] .ae-flowkey em { font-style: normal; display: inline-flex; align-items: center; gap: .5rem; white-space: nowrap; }

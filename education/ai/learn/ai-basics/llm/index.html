@@ -76,7 +76,7 @@ takeaways:
     </ol>
     <div class="ae-tl__legend"><span data-c="llm">研究期：越做越大</span><span data-c="key">爆紅期：教會它當助理之後</span></div>
     <p class="ae-key"><small>只記一句</small>LLM 不是一夕爆紅：先把同一個方法越做越大，再「教它當助理」，某一天突然變得很好用。</p>
-    <p class="ae-source">「5 天破百萬」和「2 個月一億人」是不同時間、不同統計方式的數字，不要混成同一件事。出處：Vaswani et al. (2017) arXiv 1706.03762；Brown et al. (2020) arXiv 2005.14165；OpenAI (2019-02-14) GPT-2 公告；Sam Altman X 貼文 (2022-12-05)；Reuters 引述 UBS (2023-02-01)。</p>
+    <p class="ae-source">「5 天破百萬」和「2 個月一億人」是不同時間、不同統計方式的數字，不要混成同一件事。出處：<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al. (2017) arXiv 1706.03762</a>；<a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Brown et al. (2020) arXiv 2005.14165</a>；OpenAI (2019-02-14) GPT-2 公告；Sam Altman X 貼文 (2022-12-05)；Reuters 引述 UBS (2023-02-01)。</p>
   </div>
 </section>
 
@@ -135,7 +135,7 @@ takeaways:
       <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>別把它當百科全書</h3><p>重要數字、規定、法律判例，要自己對照出處。回答完整，不代表每一句都查過。</p></div></div>
     </div>
     <p class="ae-key"><small>只記一句</small>LLM 不是在「查答案」，是在「接話」：照機率一塊一塊（Token）抽出下一塊，機率越高越常被抽中。</p>
-    <p class="ae-source">出處：OpenAI (2019) GPT-2 分階段釋出；Brown et al. (2020) arXiv 2005.14165。</p>
+    <p class="ae-source">出處：OpenAI (2019) GPT-2 分階段釋出；<a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Brown et al. (2020) arXiv 2005.14165</a>。</p>
   </div>
 </section>
 
@@ -156,12 +156,12 @@ takeaways:
     </div>
     <div class="ae-grid ae-mt" style="--cols:4">
       <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-puzzle-fill" aria-hidden="true"></i></div><h3>是什麼</h3><p>AI 不是一個字一個字讀，而是把句子切成一塊塊拼圖。常見的詞是一塊，罕見的字可能被切成好幾塊。</p></div>
-      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-cash" aria-hidden="true"></i></div><h3>也是計費的依據</h3><p>像手機的通話秒數：你貼進去的字和 AI 回的字都算 Token，<b style="color:var(--ae-key)">講越多、算越多</b>。實際費用看工具和方案。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-cash" aria-hidden="true"></i></div><h3>也是計費的依據</h3><p>像手機的通話秒數：你貼進去的字和 AI 回的字都算 Token，<b style="color:var(--ae-key-ink)">講越多、算越多</b>。實際費用看工具和方案。</p></div>
       <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div><h3>中文怎麼換算</h3><p>GPT-3 時代每個中文字約 <span class="ae-stat">1.5<small> 個</small></span>；GPT-4o 平均只要 <span class="ae-stat">0.6<small> 個</small></span>：常見的兩三個字會合成一塊（實測估計，依文字內容和模型而定）。</p></div>
       <div class="ae-card" data-c="tip"><div class="ae-card__icon">🍓</div><h3>經典笑話</h3><p>先自己數：<b>strawberry</b> 有幾個 r？</p><details class="ae-reveal"><summary>打開答案</summary><div>3 個。AI 看到的是拼圖塊、不是字母，所以數字母常出錯。人覺得簡單的事，不代表 AI 一定不會錯。</div></details></div>
     </div>
     <p class="ae-key"><small>只記一句</small>Token 決定 AI 一次讀得了多少、要付多少錢。</p>
-    <p class="ae-source">出處：OpenAI Help Center〈What are tokens〉；markhuang.ai 中文 Token 實測。</p>
+    <p class="ae-source">出處：<a href="https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens" target="_blank" rel="noopener">OpenAI Help Center〈What are tokens〉</a>；markhuang.ai 中文 Token 實測。</p>
   </div>
 </section>
 
@@ -188,7 +188,7 @@ takeaways:
     </div>
     <div class="ae-prose ae-mt"><p>重點是第 4 步底下那條回頭箭頭：它不是把一張完整的答案卡一次抽出來，而是帶著剛多出來的內容，回到第 2 步繼續預測。</p></div>
     <p class="ae-key"><small>只記一句</small>流暢的回答，是幾百次「猜下一個 Token」累積出來的。</p>
-    <p class="ae-source">出處：Vaswani et al. (2017) arXiv 1706.03762；OpenAI tiktoken（cl100k_base 約 10 萬、o200k_base 約 20 萬個 Token）。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al. (2017) arXiv 1706.03762</a>；OpenAI tiktoken（cl100k_base 約 10 萬、o200k_base 約 20 萬個 Token）。</p>
   </div>
 </section>
 
@@ -286,7 +286,7 @@ takeaways:
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>ChatGPT 會聊天，不只因為「大」，也因為被「教過怎麼當助理」。</p>
-    <p class="ae-source">出處：Ouyang et al. (2022) arXiv 2203.02155；Bai et al. (2022) Constitutional AI, arXiv 2212.08073；OpenAI〈Introducing ChatGPT〉；OpenAI o1 System Card (2024-09-12)。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener">Ouyang et al. (2022) arXiv 2203.02155</a>；<a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener">Bai et al. (2022) Constitutional AI, arXiv 2212.08073</a>；OpenAI〈Introducing ChatGPT〉；OpenAI o1 System Card (2024-09-12)。</p>
   </div>
 </section>
 
@@ -339,7 +339,7 @@ takeaways:
     <div class="ae-traits">
       <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ae-flip__num">1</span><h3>幻覺：講得很順，不一定對</h3>
-          <div class="ae-mini"><span class="ae-chip">很有把握的回答……</span><i class="bi bi-x-circle-fill" style="color:var(--ae-key)" aria-hidden="true"></i><b style="color:var(--ae-key)">不一定對</b></div>
+          <div class="ae-mini"><span class="ae-chip">很有把握的回答……</span><i class="bi bi-x-circle-fill" style="color:var(--ae-key)" aria-hidden="true"></i><b style="color:var(--ae-key-ink)">不一定對</b></div>
           <p>它挑的是「最順」的字，不是「最對」的字，可能把不存在的內容講得很有把握。</p><p class="ae-flip__fix">對策：重要的事自己查證</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：重要的事自己查證</h3><p>請它附來源，也可以明講「不確定就說不知道」；但最後還是要自己看原始資料。</p><p class="ae-tip">再問一次「你確定嗎」不算查證。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
@@ -357,7 +357,7 @@ takeaways:
       </div></div>
     </div>
     <p class="ae-key"><small>只記一句</small>三個脾氣，三個對策：查證、補新資訊、重開對話。</p>
-    <p class="ae-source">出處：Kalai et al. (2025) arXiv 2509.04664；Gemini 1.5 Pro 公告 (2024-02-15)；Liu et al. (2023) arXiv 2307.03172；Cambridge Dictionary (2023-11)。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Kalai et al. (2025) arXiv 2509.04664</a>；Gemini 1.5 Pro 公告 (2024-02-15)；<a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Liu et al. (2023) arXiv 2307.03172</a>；Cambridge Dictionary (2023-11)。</p>
   </div>
 </section>
 
@@ -406,7 +406,7 @@ takeaways:
     </div>
     <div class="ae-prose ae-mt"><p>你遇過嗎？聊到後來，它忘了「剛剛不是說要一頁以內」？與其一直在原地重複提醒，不如先整理桌面。要記的不是記憶容量的數字，而是：<strong>重要背景，要讓它在當次工作裡清楚看得到。</strong></p></div>
     <p class="ae-key"><small>只記一句</small>AI 本身不帶記憶，每次都重讀整張桌子。管好桌面，回答就穩。</p>
-    <p class="ae-source">出處：Liu et al. (2023) Lost in the Middle, arXiv 2307.03172。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Liu et al. (2023) Lost in the Middle, arXiv 2307.03172</a>。</p>
   </div>
 </section>
 
@@ -471,7 +471,7 @@ takeaways:
       <p style="margin:1rem 0 0;color:var(--ae-body)">問另一個 AI，或再問同一個 AI 一次，都不能代替你自己看原文。</p>
     </div>
     <p class="ae-key"><small>只記一句</small>AI 說「我確定」不代表它是對的。越重要的事，越要自己查證。</p>
-    <p class="ae-source">出處：Mata v. Avianca, Inc., S.D.N.Y. (2023-06-22)。</p>
+    <p class="ae-source">出處：<a href="https://www.abajournal.com/web/article/lawyers-who-doubled-down-and-defended-chatgpts-fake-cases-must-pay-5k-judge-says" target="_blank" rel="noopener">Mata v. Avianca, Inc., S.D.N.Y. (2023-06-22)</a>。</p>
   </div>
 </section>
 
@@ -507,7 +507,7 @@ takeaways:
       <p>RAG 能減少幻覺，但不保證每次都對。它附上出處，正是為了讓你方便核對，而不是看到引用就直接放心。</p>
     </div>
     <p class="ae-key"><small>只記一句</small>RAG＝先查資料、再回答：減少幻覺，也讓 AI 能用上內部資料。</p>
-    <p class="ae-source">出處：Lewis et al. (2020) arXiv 2005.11401。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Lewis et al. (2020) arXiv 2005.11401</a>。</p>
   </div>
 </section>
 

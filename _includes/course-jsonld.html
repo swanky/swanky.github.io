@@ -11,6 +11,24 @@
     "alternateName": ["Swanky Hsiao", "蕭宇程"],
     "url": "https://swanky.github.io"
   },
+{%- if page.course_free %}
+  "inLanguage": "zh-TW",
+  "isAccessibleForFree": true,
+  "offers": {"@type": "Offer", "price": 0, "priceCurrency": "TWD", "category": "Free", "availability": "https://schema.org/InStock"},
+  "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online", "courseWorkload": {{ page.course_workload | default: "PT2H" | jsonify }}},
+{%- if page.og_image %}
+  "image": {{ page.og_image | absolute_url | jsonify }},
+{%- endif %}
+{%- if page.course_module %}
+{%- assign cm = site.data.ai_learn.modules | where: "slug", page.course_module | first %}
+  "hasPart": [
+{%- assign cm_parts = cm.chapters | where: "status", "published" %}
+{%- for ch in cm_parts %}
+    {"@type": "LearningResource", "name": {{ ch.title | jsonify }}, "description": {{ ch.summary | jsonify }}, "url": {{ cm.url | append: ch.slug | append: '/' | absolute_url | jsonify }}, "inLanguage": "zh-TW", "isAccessibleForFree": true}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+  ],
+{%- endif %}
+{%- endif %}
   "url": "{{ page.url | absolute_url }}"
 }
 </script>

@@ -468,6 +468,66 @@
     });
   });
 
+  /* ---------- 本幕目錄：長頁用，捲過首屏才出現，點開可跳到各段 ---------- */
+  init('[data-ae-toc]', 'toc', function (box) {
+    var btn = box.querySelector('.ae-toc__btn');
+    var panel = box.querySelector('.ae-toc__panel');
+    var list = panel.querySelector('ol');
+    var quizN = 0;
+    var items = [];
+    $all('main > section').forEach(function (sec) {
+      var label = '';
+      if (sec.classList.contains('ae-lesson')) {
+        var h = sec.querySelector('h2');
+        if (!h || sec.classList.contains('ae-further')) { if (sec.id !== 'further') return; }
+        label = sec.id === 'further' ? '延伸學習' : h.textContent.replace(/\s+/g, ' ').trim();
+      } else if (sec.classList.contains('ae-quizband')) { quizN += 1; label = '小測驗 ' + quizN; }
+      else if (sec.classList.contains('ae-wrap')) { label = '帶走這幾句、前往下一幕'; }
+      else return;
+      if (!sec.id) sec.id = 'ae-sec-' + (items.length + 1);
+      items.push({ id: sec.id, label: label });
+    });
+    if (items.length < 3) return;
+    items.forEach(function (it) {
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = '#' + it.id; a.className = 'ae-toc__link'; a.textContent = it.label;
+      li.appendChild(a); list.appendChild(li);
+    });
+    var calm = function () { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; };
+    function setOpen(open) {
+      panel.hidden = !open;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function () { setOpen(panel.hidden); });
+    panel.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      e.preventDefault();
+      var t = document.getElementById(a.getAttribute('href').slice(1));
+      setOpen(false);
+      if (t) {
+        t.scrollIntoView({ behavior: calm() ? 'auto' : 'smooth', block: 'start' });
+        if (history.replaceState) history.replaceState(null, '', '#' + t.id);
+      }
+      btn.focus({ preventScroll: true });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !panel.hidden) { setOpen(false); btn.focus(); }
+    });
+    document.addEventListener('click', function (e) { if (!panel.hidden && !box.contains(e.target)) setOpen(false); });
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var show = (window.pageYOffset || document.documentElement.scrollTop) > window.innerHeight * 0.9;
+      if (box.hidden === show) box.hidden = !show;
+      if (!show && !panel.hidden) setOpen(false);
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  });
+
   /* ---------- 名詞小抄：搜尋與篩選 ---------- */
   init('[data-ae-gloss]', 'gloss', function (box) {
     var input = box.querySelector('.ae-gloss__search');
@@ -484,7 +544,7 @@
         t.hidden = !(okFilter && okText);
         if (!t.hidden) shown++;
       });
-      if (count) count.textContent = '顯示 ' + shown + ' 個名詞';
+      if (count) count.textContent = '顯示 ' + shown + ' 個名詞' + (shown === 0 ? '。找不到？試試英文縮寫或換個說法' : '');
     }
     if (input) input.addEventListener('input', apply);
     filters.forEach(function (f) {
