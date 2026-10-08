@@ -1,0 +1,80 @@
+{%- comment -%}
+系列導覽框（article layout 於文末、延伸閱讀之前引入）
+1. Agentic Engineering 系列：名單唯一來源是 /technical/agentic-engineering/ 頁的 front matter agentic_groups
+   （值是文章網址最後一段的 slug）；本篇在名單內才顯示「第 n／總數 篇」與系列內上一篇／下一篇。
+   編號跨分組連號，與系列頁卡片上的數字一致。
+2. front matter ai_learn: "<單元 slug>/<章節 slug>"（例：ai-basics/mcp）→ 加一行連到 AI 入門教材對應章節；
+   標題與網址取自 _data/ai_learn.yml，章節未上線（status 不是 published）就不顯示。
+{%- endcomment -%}
+{%- assign sn_slug = page.url | split: '/' | last -%}
+{%- assign sn_index = 0 -%}
+{%- assign sn_total = 0 -%}
+{%- assign sn_group = '' -%}
+{%- assign sn_prev = '' -%}
+{%- assign sn_next = '' -%}
+{%- assign sn_last_seen = '' -%}
+{%- assign sn_hub = site.pages | where: "url", "/technical/agentic-engineering/" | first -%}
+{%- if sn_hub and sn_hub.agentic_groups -%}
+  {%- for group in sn_hub.agentic_groups -%}
+    {%- for slug in group.posts -%}
+      {%- assign sn_total = sn_total | plus: 1 -%}
+      {%- if sn_index > 0 and sn_next == '' -%}{%- assign sn_next = slug -%}{%- endif -%}
+      {%- if slug == sn_slug -%}
+        {%- assign sn_index = sn_total -%}
+        {%- assign sn_group = group.heading | split: ' — ' | first -%}
+        {%- assign sn_prev = sn_last_seen -%}
+      {%- endif -%}
+      {%- assign sn_last_seen = slug -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- assign sn_chapter = nil -%}
+{%- if page.ai_learn -%}
+  {%- assign sn_parts = page.ai_learn | split: '/' -%}
+  {%- if sn_parts.size == 2 -%}
+    {%- assign sn_module = site.data.ai_learn.modules | where: "slug", sn_parts[0] | first -%}
+    {%- if sn_module -%}
+      {%- assign sn_ch = sn_module.chapters | where: "slug", sn_parts[1] | first -%}
+      {%- if sn_ch and sn_ch.status == 'published' -%}{%- assign sn_chapter = sn_ch -%}{%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if sn_index > 0 or sn_chapter -%}
+<aside class="series-nav" aria-label="系列導覽">
+  {%- if sn_index > 0 %}
+  <p class="series-nav-meta"><a href="{{ '/technical/agentic-engineering/' | relative_url }}">Agentic Engineering 系列</a>｜{{ sn_group }}・第 {{ sn_index }}／{{ sn_total }} 篇</p>
+  {%- assign sn_prev_post = nil -%}
+  {%- assign sn_next_post = nil -%}
+  {%- if sn_prev != '' -%}
+    {%- assign sn_needle = '/' | append: sn_prev | append: '/' -%}
+    {%- assign sn_prev_post = site.posts | where_exp: "p", "p.url contains sn_needle" | first -%}
+  {%- endif -%}
+  {%- if sn_next != '' -%}
+    {%- assign sn_needle = '/' | append: sn_next | append: '/' -%}
+    {%- assign sn_next_post = site.posts | where_exp: "p", "p.url contains sn_needle" | first -%}
+  {%- endif -%}
+  {%- if sn_prev_post or sn_next_post %}
+  <div class="series-nav-links">
+    {%- if sn_prev_post %}
+    <a class="series-nav-link series-nav-prev" href="{{ sn_prev_post.url | relative_url }}">
+      <span class="series-nav-label">&larr; 系列上一篇</span>
+      <span class="series-nav-title">{{ sn_prev_post.title }}</span>
+    </a>
+    {%- endif -%}
+    {%- if sn_next_post %}
+    <a class="series-nav-link series-nav-next" href="{{ sn_next_post.url | relative_url }}">
+      <span class="series-nav-label">系列下一篇 &rarr;</span>
+      <span class="series-nav-title">{{ sn_next_post.title }}</span>
+    </a>
+    {%- endif %}
+  </div>
+  {%- endif %}
+  <a class="series-nav-all" href="{{ '/technical/agentic-engineering/' | relative_url }}">看整個系列 &rarr;</a>
+  {%- endif -%}
+  {%- if sn_chapter %}
+  <p class="series-nav-learn">看不懂名詞？先讀 AI 入門〈<a href="{{ sn_module.url | append: sn_chapter.slug | append: '/' | relative_url }}">{{ sn_chapter.title }}</a>〉</p>
+  {%- endif %}
+</aside>
+{%- endif -%}

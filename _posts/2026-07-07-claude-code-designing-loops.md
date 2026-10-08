@@ -4,6 +4,7 @@ seo_title: "Designing Loops 是什麼？Claude Code 官方的四種代理人循�
 date: 2026-07-07
 categories: [technical]
 tags: [claude-code]
+ai_learn: ai-basics/agent
 layout: article
 cover_image: /assets/img/linkedin/claude-code-designing-loops.jpg
 hero_image: true

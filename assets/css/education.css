@@ -343,3 +343,13 @@
 
 /* 2026-09-11 首屏講師信任線（企業內訓：先知道講師是誰） */
 .edu-hero__trust { max-width: 720px; margin: 14px 0 0; color: var(--c-muted, #5f5b53); font-size: .95rem; line-height: 1.7; }
+
+/* /education/ai/ 文章清單：前 12 篇卡片之後的「看全部」精簡清單 */
+.edu-all-articles { margin-top: 24px; }
+.edu-article-list { margin: 0; padding: 0; list-style: none; }
+.edu-article-list li { display: flex; gap: 14px; padding: 10px 0; border-top: 1px solid var(--edu-line); line-height: 1.6; }
+.edu-article-list li:first-child { border-top: 0; }
+.edu-article-list__date { flex: 0 0 auto; color: var(--edu-muted); font-size: .86rem; font-variant-numeric: tabular-nums; padding-top: 1px; }
+.edu-article-list a { color: var(--edu-ink); font-weight: 600; text-decoration: none; }
+.edu-article-list a:hover { color: var(--edu-gold-dark); }
+@media (max-width: 575px) { .edu-article-list li { flex-direction: column; gap: 2px; } }

@@ -4,6 +4,7 @@ seo_title: "Claude Code Skill 教學：自動把 PPTX／PDF 簡報轉文件"
 date: 2026-03-29
 categories: [claude-code]
 tags: [claude-code]
+ai_learn: ai-basics/skill
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/claude-code-s2m-skill.svg

@@ -1,4 +1,4 @@
-<!-- 延伸閱讀：front matter 可指定 related_posts；未指定時同分類取最新 3 篇 -->
+<!-- 延伸閱讀：front matter 可指定 related_posts；未指定時先取「有共同標籤」的最新 3 篇（跨分類），不足再用同分類最新文章補滿 -->
 {% if page.categories.size > 0 %}
   {% assign cur_url = page.url %}
   {% assign related = '' | split: '' %}
@@ -9,9 +9,35 @@
     {% endfor %}
     {% assign related = related | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
   {% else %}
-    {% assign primary_cat = page.categories | first %}
-    {% assign pool = site.categories[primary_cat] %}
-    {% assign related = pool | where_exp: "item", "item.url != cur_url" | slice: 0, 3 %}
+    {%- comment -%}
+    site.posts 已是新到舊；掃到 3 篇就停。picked 以「|網址|」記錄已選文章，避免同分類補位時重複。
+    {%- endcomment -%}
+    {% assign picked = '|' %}
+    {% if page.tags.size > 0 %}
+      {% for post in site.posts %}
+        {% if post.url == cur_url %}{% continue %}{% endif %}
+        {% assign shares_tag = false %}
+        {% for tag in page.tags %}
+          {% if post.tags contains tag %}{% assign shares_tag = true %}{% break %}{% endif %}
+        {% endfor %}
+        {% if shares_tag %}
+          {% assign related = related | push: post %}
+          {% assign picked = picked | append: post.url | append: '|' %}
+          {% if related.size >= 3 %}{% break %}{% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if related.size < 3 %}
+      {% assign primary_cat = page.categories | first %}
+      {% assign pool = site.categories[primary_cat] %}
+      {% for post in pool %}
+        {% if related.size >= 3 %}{% break %}{% endif %}
+        {% assign picked_key = '|' | append: post.url | append: '|' %}
+        {% if post.url == cur_url or picked contains picked_key %}{% continue %}{% endif %}
+        {% assign related = related | push: post %}
+        {% assign picked = picked | append: post.url | append: '|' %}
+      {% endfor %}
+    {% endif %}
   {% endif %}
   {% if related.size > 0 %}
   <div class="related-posts">

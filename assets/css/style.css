@@ -4497,6 +4497,105 @@ section.testimonials {
   line-height: 1.4;
 }
 
+/* --- Series nav（文末系列導覽框：Agentic 系列上一篇／下一篇＋AI 入門教材入口；_includes/series-nav.html）--- */
+.series-nav {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding: 20px 22px;
+  background: #faf9f7;
+  border: 1px solid #ede9e3;
+  border-left: 4px solid #E5A300;
+  font-family: var(--font-sans);
+}
+
+.series-nav-meta {
+  margin: 0 0 14px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #8B5E00;
+  line-height: 1.5;
+}
+
+.series-nav-meta a,
+.series-nav-all,
+.series-nav-learn a {
+  color: #8B5E00;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.series-nav-meta a:hover,
+.series-nav-all:hover,
+.series-nav-learn a:hover {
+  color: #E5A300;
+}
+
+.series-nav-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.series-nav-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #ede9e3;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.series-nav-link:hover {
+  border-color: #E5A300;
+}
+
+.series-nav-next {
+  text-align: right;
+}
+
+.series-nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #8B5E00;
+}
+
+.series-nav-title {
+  font-size: var(--text-sm);
+  color: #2d2926;
+  line-height: 1.4;
+}
+
+.series-nav-all {
+  font-size: var(--text-sm);
+}
+
+.series-nav-learn {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: #4d4742;
+}
+
+.series-nav-all + .series-nav-learn {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #ede9e3;
+}
+
+@media (max-width: 767px) {
+  .series-nav-links {
+    flex-direction: column;
+  }
+
+  .series-nav-next {
+    text-align: left;
+  }
+}
+
 /* --- Series group titles + step badges (shared: agentic-engineering, rwa) --- */
 .series-group-title {
   max-width: 820px;
@@ -6569,6 +6668,7 @@ section.testimonials { background: var(--c-cream); }
 .article-cta,
 .article-cta-mid,
 .post-nav-link,
+.series-nav,
 .article-tldr,
 .article-toc {
   border-radius: var(--r-lg);

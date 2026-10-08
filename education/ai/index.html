@@ -53,8 +53,21 @@ breadcrumbs:
   <section id="latest" class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Latest</span><h2>近期 AI 實戰文章</h2><p>先讀一篇真的遇過的問題，再決定要不要接受工具商替你定義工作方式。想看 AI Agent、Web3 與 RWA 的深度文章，另有 <a href="{{ '/technical/articles/' | relative_url }}">技術專欄</a>。</p></header>
+      {%- comment -%}
+      收錄規則：分類是 claude-code，或標籤含 claude-code／ai-agent／agentic-engineering（新的 AI 文一律用 technical 分類，靠標籤進來）。
+      site.posts 已是新到舊、每篇只走一次，所以不會重複。
+      排除 cta_context 為 ai-visual（AI 影像創作，如角色設計、舞蹈影片實驗）或 web3（NFT、鏈上錢包）的文章：讀者是另一群人，各有自己的專區入口。
+      前 12 篇用卡片，其餘收在下方「看全部」清單裡（技術專欄列表只收 technical 分類，不能把讀者導過去找 claude-code 分類的舊文）。
+      {%- endcomment -%}
+      {% assign ai_articles = '' | split: '' %}
+      {% for post in site.posts %}
+        {% if post.cta_context == 'ai-visual' or post.cta_context == 'web3' %}{% continue %}{% endif %}
+        {% if post.categories contains 'claude-code' or post.tags contains 'claude-code' or post.tags contains 'ai-agent' or post.tags contains 'agentic-engineering' %}
+          {% assign ai_articles = ai_articles | push: post %}
+        {% endif %}
+      {% endfor %}
+      {% assign sorted_articles = ai_articles | slice: 0, 12 %}
       <div class="edu-card-grid">
-        {% assign sorted_articles = site.categories['claude-code'] | sort: "date" | reverse %}
         {% for article in sorted_articles %}
         <article class="edu-card">
           {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
@@ -65,6 +78,18 @@ breadcrumbs:
         </article>
         {% endfor %}
       </div>
+      {% if ai_articles.size > 12 %}
+      <details class="edu-details edu-all-articles">
+        <summary>看全部 AI 文章（另有 {{ ai_articles.size | minus: 12 }} 篇較早的文章）</summary>
+        <div class="edu-details__body">
+          <ul class="edu-article-list">
+            {% for article in ai_articles offset: 12 %}
+            <li><span class="edu-article-list__date">{{ article.date | date: "%Y-%m-%d" }}</span><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </details>
+      {% endif %}
     </div>
   </section>
 

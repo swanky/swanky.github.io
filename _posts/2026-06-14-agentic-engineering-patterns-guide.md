@@ -4,6 +4,7 @@ seo_title: "Agentic Engineering Patterns 導讀｜Simon Willison 的 AI 開發�
 date: 2026-06-14
 categories: [claude-code]
 tags: [claude-code]
+ai_learn: ai-basics/agent
 layout: article
 nav_active: education
 cover_image: /assets/img/linkedin/agentic-engineering-patterns-guide.svg

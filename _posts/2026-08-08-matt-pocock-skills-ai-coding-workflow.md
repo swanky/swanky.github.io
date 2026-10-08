@@ -5,6 +5,7 @@ date: 2026-08-08
 published: true
 categories: [technical]
 tags: [ai-agent, ai-coding, agent-skills, matt-pocock, claude-code, codex, software-engineering]
+ai_learn: ai-basics/skill
 layout: article
 cover_image: /assets/img/linkedin/matt-pocock-skills-ai-coding-workflow.jpg
 cover_alt: "水手服少女把需求追問、工作說明、任務拆分與檢查串成一條 AI 協作流程"
