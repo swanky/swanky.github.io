@@ -1,8 +1,8 @@
 ---
 layout: ai-learn-chapter
 title: Prompt：學會跟 AI 說話
-seo_title: Prompt 怎麼寫？六塊積木與八個追問技巧白話入門｜AI 入門第三幕
-description: 把 AI 當成聰明、但第一天上班的新同事：用六塊積木（角色、任務、背景、限制、格式、範例）把話交代清楚，再學八個追問技巧與資料能不能貼。附改寫練習、完整示範與小測驗。
+seo_title: Prompt 怎麼寫？六塊積木與八個小技巧白話入門｜AI 入門第三幕
+description: 把 AI 當成聰明、但第一天上班的新同事：用六塊積木把話交代清楚，再學八個小技巧與資料能不能貼。附改寫練習、完整示範與小測驗。
 keywords: Prompt是什麼,提示詞,Prompt怎麼寫,System prompt,系統提示詞,AI入門,史旺基
 permalink: /education/ai/learn/ai-basics/prompt/
 nav_active: education
@@ -45,13 +45,14 @@ chapter_css: true
     <div class="ae-prose">
       <p>同一個 AI，為什麼有人覺得很好用，有人卻覺得它老是做錯？其中一個要檢查的地方，就是我們把事情交代到什麼程度。</p>
       <p>上一幕說過，LLM 是看著前文、猜出後面的回答。<strong>前文是誰給的？就是你。</strong>你這一次給它的任務、背景和要求，就叫 Prompt（提示詞）。</p>
+      <p>先看一個例子：史旺姬（史旺基的原創虛擬角色，在這份教材裡當學習者）請 AI 寫一封給客戶的道歉信。</p>
     </div>
     <div class="ae-grid ae-mt" style="--cols:2;align-items:center">
       <div class="ae-dg" data-ae-chat style="margin:0">
         <p class="ae-dg__title"><i class="bi bi-envelope" aria-hidden="true"></i>史旺姬請 AI 寫一封客戶道歉信</p>
         <div class="ae-chat">
-          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="史旺姬"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">幫我寫一封給客戶的道歉信。</div></div>
-          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="AI"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">親愛的客戶您好：造成您的不便，我們深感抱歉……為表歉意，<mark>每位客戶補償 500 元</mark>……</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">史旺姬：</span>幫我寫一封給客戶的道歉信。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">AI：</span>親愛的客戶您好：造成您的不便，我們深感抱歉……為表歉意，<mark>每位客戶補償 500 元</mark>……</div></div>
         </div>
         <div class="ae-steps-controls"><button type="button" class="ae-btn ae-btn--primary" data-chat-next>看 AI 寫了什麼 →</button></div>
         <div class="ae-verdict" data-chat-after><strong>😱 主管嚇一跳：</strong>根本沒有人核可過「補償 500 元」這個承諾，這封信不能直接寄。AI 究竟少拿到哪一塊交辦資訊？這一幕一路拆給你看，答案在最後的小測驗。</div>
@@ -61,8 +62,8 @@ chapter_css: true
         <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-briefcase" aria-hidden="true"></i></div><h3>同一年　開高薪徵 Prompt 工程師</h3><p>做出 Claude 的 Anthropic 還開高薪徵 Prompt 工程師。會交代，成了一門專業。</p></div>
       </div>
     </div>
-    <p class="ae-key"><small>只記一句</small>前文是誰給的？就是你。你給 AI 的前文，就叫 Prompt。</p>
-    <p class="ae-source">史旺姬的道歉信為虛構情境。出處：Karpathy X 貼文 (2023-01-24)；Fortune (2023-03-09)。</p>
+    <p class="ae-key"><small>只記一句</small>你給 AI 的前文，就叫 Prompt。</p>
+    <p class="ae-source">道歉信為虛構示範。出處：Karpathy X 貼文 (2023-01-24)；Fortune (2023-03-09)。</p>
   </div>
 </section>
 
@@ -75,7 +76,7 @@ chapter_css: true
     <div class="ae-grid ae-grid--start" style="--cols:2">
       <div class="ae-prose">
         <p>Prompt 聽起來很技術，其實可以先理解成：<strong>這一次，你怎麼交代工作</strong>。</p>
-        <p>想像身邊來了一位很聰明的新同事：會讀、會寫，也懂很多事，但今天是第一天上班。這時候如果你只說「幫我寫一封信」，他當然要猜很多東西。AI 也一樣。</p>
+        <p>想像身邊來了一位很聰明的新同事：會讀、會寫，也懂很多事，但這是他第一天上班。這時候如果你只說「幫我寫一封信」，他當然要猜很多東西。AI 也一樣。</p>
       </div>
       <div class="ae-widget ae-widget--flat">
         <div class="ae-widget__label"><i class="bi bi-person-plus" aria-hidden="true"></i>第一天上班的新同事，還不知道……</div>
@@ -95,7 +96,7 @@ chapter_css: true
             <div class="ae-recv__head"><i class="bi bi-eye-slash" aria-hidden="true"></i><div><b>系統提示詞（System prompt）</b><small>App 預先寫好・你看不到</small></div></div>
             <div class="ae-recv__chips"><span>身分</span><span>規則</span><span class="is-later">工具</span><span class="is-later">Skill 目錄</span></div>
           </div>
-          <span class="ae-recv__plus" aria-label="加上"><i class="bi bi-plus" aria-hidden="true"></i></span>
+          <span class="ae-recv__plus" role="img" aria-label="加上"><i class="bi bi-plus" aria-hidden="true"></i></span>
           <div class="ae-recv__part ae-recv__part--you">
             <div class="ae-recv__head"><i class="bi bi-chat-left-dots" aria-hidden="true"></i><div><b>你的 Prompt</b><small>你這一次對 AI 說的話</small></div></div>
             <div class="ae-recv__chips"><span>做什麼</span><span>給誰看</span><span>限制</span><span>格式</span></div>
@@ -105,7 +106,7 @@ chapter_css: true
         <div class="ae-io ae-io--llm"><i class="bi bi-cpu" aria-hidden="true"></i><b>LLM</b></div>
         <i class="bi bi-arrow-right" aria-hidden="true"></i>
         <div class="ae-io ae-io--doc"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><span>回答</span></div>
-        <p class="ae-recv__note">虛線的「工具」「Skill 目錄」先聽過就好：它們分別是後面兩幕的主角：{% include ai-learn/chref.html module=mod slug="mcp" %}、{% include ai-learn/chref.html module=mod slug="skill" %}。</p>
+        <p class="ae-recv__note">虛線的「工具」「Skill 目錄」先聽過就好，它們分別是後面兩幕的主角（{% include ai-learn/chref.html module=mod slug="mcp" %}、{% include ai-learn/chref.html module=mod slug="skill" %}）。</p>
       </div>
       <div class="ae-golden">
         <span class="ae-golden__title">黃金測試：把 Prompt 拿給不知道背景的同事看；他看不懂，AI 也看不懂，就回頭補背景。</span>
@@ -196,10 +197,10 @@ chapter_css: true
       <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
       <h3>這幾句追問，說得夠清楚嗎？</h3>
       <div class="ae-sort__items">
-        <div class="ae-sort__item" data-answer="vague"><strong>「再好一點。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear">說清楚了</button><button type="button" class="ae-btn" data-pick="vague">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 哪裡不好？好成什麼樣？它不知道，只能整篇重猜一次。</p></div>
-        <div class="ae-sort__item" data-answer="clear"><strong>「第 2 段太長，濃縮成 3 行；其他不要動。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear">說清楚了</button><button type="button" class="ae-btn" data-pick="vague">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 改哪裡、改成什麼、哪裡要留著，三件事都說了。</p></div>
-        <div class="ae-sort__item" data-answer="vague"><strong>「怪怪的，重寫。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear">說清楚了</button><button type="button" class="ae-btn" data-pick="vague">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 哪裡怪沒說，重寫出來很可能換個地方怪。</p></div>
-        <div class="ae-sort__item" data-answer="clear"><strong>「讀的人是不懂技術的主管，把專有名詞換成白話。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear">說清楚了</button><button type="button" class="ae-btn" data-pick="vague">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 補上了讀者是誰，也說了要怎麼改。</p></div>
+        <div class="ae-sort__item" data-answer="vague"><strong>「再好一點。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear" aria-pressed="false">說清楚了</button><button type="button" class="ae-btn" data-pick="vague" aria-pressed="false">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 哪裡不好？好成什麼樣？它不知道，只能整篇重猜一次。</p></div>
+        <div class="ae-sort__item" data-answer="clear"><strong>「第 2 段太長，濃縮成 3 行；其他不要動。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear" aria-pressed="false">說清楚了</button><button type="button" class="ae-btn" data-pick="vague" aria-pressed="false">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 改哪裡、改成什麼、哪裡要留著，三件事都說了。</p></div>
+        <div class="ae-sort__item" data-answer="vague"><strong>「怪怪的，重寫。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear" aria-pressed="false">說清楚了</button><button type="button" class="ae-btn" data-pick="vague" aria-pressed="false">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 哪裡怪沒說，重寫出來很可能換個地方怪。</p></div>
+        <div class="ae-sort__item" data-answer="clear"><strong>「讀的人是不懂技術的主管，把專有名詞換成白話。」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="clear" aria-pressed="false">說清楚了</button><button type="button" class="ae-btn" data-pick="vague" aria-pressed="false">太模糊</button></div><p class="ae-sort__feedback" hidden><b></b> 補上了讀者是誰，也說了要怎麼改。</p></div>
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>追問時說「哪裡不好、要改成什麼」，不要只說「再好一點」。</p>
@@ -235,7 +236,7 @@ chapter_css: true
             <li data-c="prompt"><i class="bi bi-pencil-square" aria-hidden="true"></i><span>寫在紙上、下面的草稿區，或直接打進你有權限使用的 AI 聊天工具。</span></li>
             <li data-c="key"><i class="bi bi-check2-square" aria-hidden="true"></i><span>至少補上<b>任務＋背景＋限制</b>三塊；角色、格式、範例看需要。</span></li>
             <li data-c="tip"><i class="bi bi-stopwatch" aria-hidden="true"></i><span>給自己 60 秒。</span></li>
-            <li data-c="prompt"><i class="bi bi-arrow-left-right" aria-hidden="true"></i><span>寫完找個人交換：對方只看你的句子，能直接把信寫出來嗎？他還想問你的那件事，很可能就是你少放的積木。</span></li>
+            <li data-c="prompt"><i class="bi bi-arrow-left-right" aria-hidden="true"></i><span>寫完假裝自己是第一天上班的新同事，讀一遍自己寫的：只看這幾句，能直接把信寫出來嗎？還想問的那件事，很可能就是你少放的積木。</span></li>
           </ul>
         </div>
       </div>
@@ -260,7 +261,7 @@ chapter_css: true
       <div class="ae-pane" data-c="prompt">
         <div class="ae-pane__head"><i class="bi bi-journal-text" aria-hidden="true"></i>參考寫法（人數與日期為虛構示範）</div>
         <div class="ae-pane__body">
-          <p class="ae-segtext">「<span class="ae-seg" data-c="slate"><small>角色</small>你是團隊的行政窗口。</span><span class="ae-seg" data-c="tip"><small>任務</small>請寫一封 Email，提醒同仁繳交教育訓練的報名表。</span><span class="ae-seg" data-c="tip"><small>背景</small>還有 8 位同仁沒交，10/13（二）下班前截止。</span><span class="ae-seg" data-c="tip"><small>限制</small>150 字內、語氣友善、不要點名。</span><span class="ae-seg" data-c="slate"><small>格式</small>主旨一行＋內文三段（提醒、截止日與連結、聯絡人）。</span>」</p>
+          <p class="ae-segtext">「<span class="ae-seg" data-c="slate"><small>角色</small>你是團隊的行政窗口。</span><span class="ae-seg" data-c="tip"><small>任務</small>請寫一封 email，提醒同事繳交教育訓練的報名表。</span><span class="ae-seg" data-c="tip"><small>背景</small>還有 8 位同事沒交，10/13（二）下班前截止。</span><span class="ae-seg" data-c="tip"><small>限制</small>150 字內、語氣友善、不要點名。</span><span class="ae-seg" data-c="slate"><small>格式</small>主旨一行＋內文三段（提醒、截止日與連結、聯絡人）。</span>」</p>
           <p class="ae-segtext"><span class="ae-seg" data-c="slate"><small>範例・加分</small>「附上之前團隊活動的提醒信，照它的語氣寫。」</span></p>
           <div class="ae-seglegend"><span data-c="tip">先放的 3 塊</span><span data-c="slate">加分的塊</span></div>
           <p class="ae-tip" style="margin-top:.25rem"><b>三格都有，就夠了：</b>你已經把最容易讓對方猜錯的資訊補上了。之後可以在你有權限使用的 AI 工具裡，實際比較原句和你的版本，看看成果差在哪裡。</p>
@@ -277,11 +278,12 @@ chapter_css: true
             <li><label><input type="checkbox"><span><b>格式</b>：有寫主旨、分幾段嗎？</span></label></li>
             <li><label><input type="checkbox"><span><b>範例</b>（加分）：有附一封可以照著寫的舊信嗎？</span></label></li>
           </ul>
-          <p class="ae-tip"><b>🏅 有勾到「任務＋背景＋限制」這三格：</b>你已經會寫 Prompt 了，角色、格式、範例是加分。今天不需要六格全滿才算會。</p>
+          <p class="ae-tip"><b>🏅 有勾到「任務＋背景＋限制」這三格：</b>你已經會寫 Prompt 了，角色、格式、範例是加分。不需要六格全滿才算會。</p>
         </div>
       </div>
     </div>
-    <p class="ae-key"><small>只記一句</small>送出前再確認一次：沒有貼個資、密碼、未公開的數字。Prompt 寫得清楚，和資料能不能貼，是兩個都要做的檢查（見下一段 <a href="#paste" style="color:inherit">資料能不能貼</a>）。</p>
+    <p class="ae-tip"><b>兩個都要做的檢查：</b>Prompt 寫得清楚，和資料能不能貼（見下一段 <a href="#paste">資料能不能貼</a>）。</p>
+    <p class="ae-key"><small>只記一句</small>送出前再確認一次：沒有貼個資、密碼、未公開的數字。</p>
   </div>
 </section>
 
@@ -295,7 +297,7 @@ chapter_css: true
     <div class="ae-dg">
       <p class="ae-dg__title"><i class="bi bi-signpost-split" aria-hidden="true"></i>五個步驟（例子全部虛構）</p>
       <div class="ae-flow-row ae-flow-row--tight ae-steps5">
-        <div class="ae-node" data-c="prompt"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-globe" aria-hidden="true"></i></span><b>打開工具</b><span>用你有權限使用的 AI 聊天工具，照單位規定的方式登入。不確定哪些能用，先問清楚，別自己假設個人帳號可以處理工作資料。</span><span class="ae-eg"><b>例：</b>今天要整理這週的報價資料</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-globe" aria-hidden="true"></i></span><b>打開工具</b><span>用你有權限使用的 AI 聊天工具，照公司規定的方式登入。不確定哪些能用，先問清楚，別自己假設個人帳號可以處理工作資料。</span><span class="ae-eg"><b>例：</b>要整理這週的報價資料</span></div>
         <div class="ae-node ae-node--hl" data-c="key"><span class="ae-num">2</span><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-key-fill" aria-hidden="true"></i></span><b>先看能不能貼</b><span>有個資、密碼、未公開數字的資料不要貼；練習時用測試資料或虛構內容。</span><span class="ae-eg"><b>例：</b>先把廠商名稱和金額換成虛構的</span></div>
         <div class="ae-node" data-c="prompt"><span class="ae-num">3</span><span class="ae-node__icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span><b>一件事一個對話</b><span>換主題就開新對話，避免前面的內容干擾（就是第二幕的辦公桌）。</span><span class="ae-eg"><b>例：</b>開一個新對話，專門處理報價</span></div>
         <div class="ae-node" data-c="prompt"><span class="ae-num">4</span><span class="ae-node__icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><b>說清楚需求</b><span>用 6 塊積木說需求，把內容貼進對話。</span><span class="ae-eg"><b>例：</b>「把三段報價整理成表格：廠商、金額、我們最晚哪天要回覆廠商；沒寫的填『待確認』。」</span></div>
@@ -307,7 +309,7 @@ chapter_css: true
       <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>這些不要直接貼</h3><ul class="ae-xlist"><li>客戶或同事的個人資料</li><li>帳號密碼</li><li>還沒公開的業務數字</li></ul></div></div>
       <div class="ae-yn" data-c="prompt"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>練習時這樣做</h3><ul class="ae-xlist ae-oklist"><li>用測試資料，或換成虛構的名稱和數字</li><li>只用你有權限使用的 AI 工具</li><li>不確定能不能用、能不能貼，先問清楚再動手</li></ul></div></div>
     </div>
-    <p class="ae-tip"><b>💬 不知道問什麼？</b>先試「幫我寫一封 email」、「把這段會議筆記摘要成三點」。結果不理想，就照上面的 <a href="#tips">8 招</a>追問。</p>
+    <p class="ae-tip"><b>💬 不知道問什麼？</b>先試「把這段會議筆記摘要成三點，給沒參加的主管看」。結果不理想，就照上面的 <a href="#tips">8 招</a>追問。</p>
     <p class="ae-key"><small>只記一句</small>AI 只看得到你貼給它、或它被授權接上的資料；交出去之前，你負責把關。</p>
   </div>
 </section>
@@ -323,10 +325,10 @@ chapter_css: true
       <div class="ae-dg" data-ae-chat style="margin:0">
         <p class="ae-dg__title"><i class="bi bi-chat-dots" aria-hidden="true"></i>AI 聊天工具（虛構示範）</p>
         <div class="ae-chat">
-          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="你"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">把下面三段報價整理成表格：廠商、金額、我們最晚哪天要回覆廠商；沒寫的填「待確認」。<br>A 廠商：雲端備份方案，每月 12,000 元，請於 10/15 前回覆。<br>B 廠商：同方案每月 10,500 元，含首年免費建置。<br>C 廠商：每月 11,800 元，報價有效 30 天。</div></div>
-          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="AI"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">已整理：A 12,000 元、10/15；B 10,500 元、待確認；C 11,800 元、<mark>30 天內</mark>。</div></div>
-          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="你"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">C 的回覆期限，你根據哪一句判斷是 30 天內？請貼原文。</div></div>
-          <div class="ae-chat__msg ae-chat__msg--ai ae-chat__msg--fix"><span class="ae-chat__who" aria-label="AI"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">原文是「報價有效 30 天」。這是報價的有效期限，不是我方要回覆的期限，應該填「待確認」。已更正。</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">你：</span>把下面三段報價整理成表格：廠商、金額、我們最晚哪天要回覆廠商；沒寫的填「待確認」。<br>A 廠商：雲端備份方案，每月 12,000 元，請於 10/15 前回覆。<br>B 廠商：同方案每月 10,500 元，含首年免費建置。<br>C 廠商：每月 11,800 元，報價有效 30 天。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">AI：</span>已整理：A 12,000 元、10/15；B 10,500 元、待確認；C 11,800 元、<mark>30 天內</mark>。</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">你：</span>C 的回覆期限，你根據哪一句判斷是 30 天內？請貼原文。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai ae-chat__msg--fix"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">AI：</span>原文是「報價有效 30 天」。這是報價的有效期限，不是我方要回覆的期限，應該填「待確認」。已更正。</div></div>
         </div>
         <div class="ae-steps-controls"><button type="button" class="ae-btn ae-btn--primary" data-chat-next>看下一句 →</button></div>
         <div class="ae-verdict" data-chat-after><strong>✅ 正確答案（練完自己對）</strong>
@@ -365,7 +367,7 @@ chapter_css: true
 <section class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="D">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 4／10：道歉信為什麼自己加了補償？</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>15 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 4／10：道歉信為什麼自己加了補償？</span></div>
       <p class="ae-quiz__q">史旺姬請 AI 寫客戶道歉信，它自己加了一句「每位客戶補償 500 元」，主管嚇壞了——這個承諾根本沒有核可。下次 Prompt 最該補哪一塊積木？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>角色：「你是謹慎的客服主管，凡事照規定，不亂開支票」</span></button></li>
@@ -381,7 +383,6 @@ chapter_css: true
           <li><b>C 格式</b>：只管了第三段，其他段落照樣可能冒出補償金額。</li>
         </ul>
         <p style="margin:.5rem 0 0">其他積木不是沒用，而是遇到<strong>不能碰的內容，要用限制明講</strong>，別只靠口吻或範例讓它自己體會。答錯的話，回到上面的 <a href="#blocks">6 塊積木</a>再看一次。</p>
-        <p style="margin:.5rem 0 0">👉 第三幕走完了：話說清楚了，但 AI 還是只能回一段文字，碰不到行事曆和信箱。下一幕給它手腳。</p>
         <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
       </div>
       <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>D，要它不做什麼，就用限制明講。</div></details>

@@ -115,36 +115,6 @@
 .ae-page[data-act="skill"] .sk-files { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; margin: .4rem 0 .2rem; }
 .ae-page[data-act="skill"] .sk-files span { display: flex; flex-direction: column; align-items: center; gap: .2rem; padding: .55rem .3rem; border: 2px solid var(--ae-navy); border-radius: 12px; background: #fff; font-weight: 800; color: var(--ae-navy); font-size: .85rem; text-align: center; }
 .ae-page[data-act="skill"] .sk-files .bi { font-size: 1.6rem; line-height: 1; }
-.ae-page[data-act="skill"] .sk-q4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-.ae-page[data-act="skill"] .sk-q4 .ae-card { display: flex; flex-direction: column; gap: .6rem; }
-.ae-page[data-act="skill"] .sk-q4 .ae-card h3 { color: var(--c-ink); font-size: 1.2rem; display: flex; align-items: center; gap: .5rem; margin: .3rem 0 0; }
-.ae-page[data-act="skill"] .sk-q4 .ae-card h3 .bi { font-size: 1.5rem; }
-.ae-page[data-act="skill"] .sk-scale { list-style: none; margin: auto 0 0; padding: .7rem .8rem; border-radius: 14px; background: var(--ae-skill-soft); display: grid; gap: .45rem; }
-.ae-page[data-act="skill"] .sk-scale li { display: grid; grid-template-columns: 1.75rem minmax(0, 1fr); gap: .6rem; align-items: center; font-weight: 700; color: var(--ae-navy); }
-.ae-page[data-act="skill"] .sk-scale b { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center; background: var(--ae-key); color: #fff; font-size: .88rem; }
-.ae-page[data-act="skill"] .sk-scale--no { background: var(--ae-llm-soft); }
-.ae-page[data-act="skill"] .sk-scale--no li { grid-template-columns: 1rem minmax(0, 1fr); }
-.ae-page[data-act="skill"] .sk-scale--no li::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--ae-navy); justify-self: center; }
-.ae-page[data-act="skill"] .sk-scale--no li.sk-scale__label { display: block; font-weight: 800; color: var(--ae-navy); }
-.ae-page[data-act="skill"] .sk-scale--no li.sk-scale__label::before { display: none; }
-.ae-page[data-act="skill"] .sk-formula { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem .8rem; margin-top: 1.5rem; padding: 1rem 1.2rem; border-radius: 16px; background: #fff; border: 2px solid var(--ae-navy); font-weight: 800; color: var(--ae-navy); font-size: 1.08rem; }
-.ae-page[data-act="skill"] .sk-formula span { display: inline-flex; align-items: center; gap: .35rem; padding: .3rem .8rem; border-radius: 999px; background: var(--ae-skill-soft); }
-.ae-page[data-act="skill"] .sk-formula em { font-style: normal; color: var(--ae-key); font-size: 1.3rem; }
-.ae-page[data-act="skill"] .sk-formula .sk-formula__max { background: var(--ae-navy); color: #fff; }
-.ae-page[data-act="skill"] .sk-formula .sk-formula__rule { background: var(--ae-tip-soft); border: 2px dashed var(--ae-tip); }
-.ae-page[data-act="skill"] .sk-score { display: grid; gap: .55rem; }
-.ae-page[data-act="skill"] .sk-score__row { display: grid; grid-template-columns: minmax(8rem, 11rem) repeat(3, 2.4rem) minmax(0, 1fr); gap: .5rem; align-items: center; }
-.ae-page[data-act="skill"] .sk-score__row--head { font-size: .78rem; font-weight: 800; color: var(--ae-slate); text-align: center; }
-.ae-page[data-act="skill"] .sk-score__row--head span:first-child { text-align: left; }
-.ae-page[data-act="skill"] .sk-score__name { font-weight: 800; color: var(--ae-navy); }
-.ae-page[data-act="skill"] .sk-score__n { height: 2.2rem; border-radius: 8px; display: grid; place-items: center; background: #eef2f6; font-weight: 800; color: var(--ae-navy); }
-.ae-page[data-act="skill"] .sk-score__n--low { background: var(--ae-key); color: #fff; }
-.ae-page[data-act="skill"] .sk-score__bar { display: flex; align-items: center; gap: .5rem; font-weight: 800; color: var(--ae-navy); font-variant-numeric: tabular-nums; }
-.ae-page[data-act="skill"] .sk-score__bar i { display: block; height: 1.3rem; width: var(--w); border-radius: 6px; background: #b8c4d0; }
-.ae-page[data-act="skill"] .sk-score__row--top .sk-score__bar i { background: var(--ae-skill); }
-.ae-page[data-act="skill"] .sk-score__row--top .sk-score__name::after { content: " ⭐"; }
-.ae-page[data-act="skill"] .sk-score__row--out .sk-score__name { color: var(--ae-slate); }
-.ae-page[data-act="skill"] .sk-score__why { grid-column: 1 / -1; margin: -.2rem 0 .2rem; font-size: .84rem; font-weight: 700; color: var(--ae-key); }
 .ae-page[data-act="skill"] .sk-desc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .ae-page[data-act="skill"] .sk-desc .ae-yn code { display: block; margin-top: .6rem; padding: .7rem .85rem; border-radius: 10px; background: var(--ae-navy); color: #f3f6fa; font-size: .9rem; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
 .ae-page[data-act="skill"] .sk-desc .ae-yn code mark { background: rgba(242, 181, 68, .3); color: #ffd98a; padding: 0 .15rem; border-radius: 4px; }
@@ -158,7 +128,6 @@
   .ae-page[data-act="skill"] .sk-repeat { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ae-page[data-act="skill"] .sk-repeat__arrow { grid-column: 1 / -1; transform: rotate(90deg); height: 2.4rem; }
   .ae-page[data-act="skill"] .sk-binder { grid-column: 1 / -1; }
-  .ae-page[data-act="skill"] .sk-q4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ae-page[data-act="skill"] .sk-pipe { grid-template-columns: 1fr; gap: .6rem; }
   .ae-page[data-act="skill"] .sk-link { flex-direction: row; justify-content: center; }
   .ae-page[data-act="skill"] .sk-link .bi { transform: rotate(90deg); }
@@ -180,7 +149,7 @@
   .ae-page[data-act="skill"] .sk-two__arrow { transform: rotate(90deg); height: 2.6rem; }
 }
 @media (max-width: 767px) {
-  .ae-page[data-act="skill"] .sk-repeat, .ae-page[data-act="skill"] .sk-q4, .ae-page[data-act="skill"] .sk-desc, .ae-page[data-act="skill"] .sk-mdgrid { grid-template-columns: 1fr; }
+  .ae-page[data-act="skill"] .sk-repeat, .ae-page[data-act="skill"] .sk-desc, .ae-page[data-act="skill"] .sk-mdgrid { grid-template-columns: 1fr; }
   .ae-page[data-act="skill"] .sk-files { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ae-page[data-act="skill"] .sk-table, .ae-page[data-act="skill"] .sk-table tbody, .ae-page[data-act="skill"] .sk-table tr, .ae-page[data-act="skill"] .sk-table th, .ae-page[data-act="skill"] .sk-table td { display: block; width: auto; }
   .ae-page[data-act="skill"] .sk-table { border: 0; background: transparent; border-radius: 0; overflow: visible; }
@@ -190,9 +159,6 @@
   .ae-page[data-act="skill"] .sk-table td, .ae-page[data-act="skill"] .sk-table td + td { border-left: 0; background: #fff !important; }
   .ae-page[data-act="skill"] .sk-table td::before { content: attr(data-th); display: inline-block; margin: 0 .5rem .25rem 0; padding: .05rem .55rem; border-radius: 999px; background: var(--c-soft, #eef2f6); color: var(--c-ink, var(--ae-navy)); font-size: .8rem; font-weight: 800; }
   .ae-page[data-act="skill"] .sk-table__cmd { white-space: normal; }
-  .ae-page[data-act="skill"] .sk-score__row { grid-template-columns: repeat(3, 2.2rem) minmax(0, 1fr); }
-  .ae-page[data-act="skill"] .sk-score__name { grid-column: 1 / -1; margin-top: .3rem; }
-  .ae-page[data-act="skill"] .sk-score__row--head span:first-child { display: none; }
   .ae-page[data-act="skill"] .sk-myth, .ae-page[data-act="skill"] .sk-def { grid-template-columns: 1fr; justify-items: start; }
   .ae-page[data-act="skill"] .sk-code__body { font-size: .86rem; }
   .ae-page[data-act="skill"] .sk-ln { grid-template-columns: 2rem minmax(0, 1fr); }

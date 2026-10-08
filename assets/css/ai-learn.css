@@ -13,9 +13,9 @@
   --ae-llm: #2878d0;     --ae-llm-ink: #1d5fa8;     --ae-llm-soft: #eaf1fa;
   --ae-prompt: #00afc7;  --ae-prompt-ink: #00798a;  --ae-prompt-soft: #e6f7fa;
   --ae-mcp: #53a88b;     --ae-mcp-ink: #2f7a5f;     --ae-mcp-soft: #eaf5f0;
-  --ae-skill: #f26d5b;   --ae-skill-ink: #c4462f;   --ae-skill-soft: #fcece8;
+  --ae-skill: #f26d5b;   --ae-skill-ink: #b5402d;   --ae-skill-soft: #fcece8;
   --ae-agent: #173b5e;   --ae-agent-ink: #10253d;   --ae-agent-soft: #e8edf4;
-  --ae-key: #d9543f; --ae-key-soft: #fcece8;
+  --ae-key: #d9543f; --ae-key-ink: #b5402d; --ae-key-soft: #fcece8;
   --ae-tip: #f2b544; --ae-tip-soft: #fff5df;
   --ae-ok: #2e8a5f; --ae-ok-soft: #e7f5ee;
   /* 目前這一幕（預設＝品牌金） */
@@ -42,7 +42,7 @@
 [data-c="mcp"]     { --c: var(--ae-mcp);     --c-ink: var(--ae-mcp-ink);     --c-soft: var(--ae-mcp-soft); }
 [data-c="skill"]   { --c: var(--ae-skill);   --c-ink: var(--ae-skill-ink);   --c-soft: var(--ae-skill-soft); }
 [data-c="agent"]   { --c: var(--ae-agent);   --c-ink: var(--ae-agent-ink);   --c-soft: var(--ae-agent-soft); }
-[data-c="key"]     { --c: var(--ae-key);     --c-ink: var(--ae-key);         --c-soft: var(--ae-key-soft); }
+[data-c="key"]     { --c: var(--ae-key);     --c-ink: var(--ae-key-ink);         --c-soft: var(--ae-key-soft); }
 [data-c="tip"]     { --c: var(--ae-tip);     --c-ink: var(--ae-history-ink); --c-soft: var(--ae-tip-soft); }
 [data-c="navy"]    { --c: var(--ae-navy);    --c-ink: var(--ae-navy);        --c-soft: #eef2f6; }
 [data-c="slate"]   { --c: var(--ae-slate);   --c-ink: #4b5a6a;               --c-soft: #eef2f6; }
@@ -293,7 +293,7 @@
 .ae-step + .ae-step::before { content: "\F138"; font-family: "bootstrap-icons"; position: absolute; left: -1.7rem; top: 50%; transform: translateY(-50%); font-size: 1.35rem; color: var(--ae-navy); }
 .ae-step.is-active { opacity: 1; background: var(--ae-llm-soft); transform: translateY(-4px); box-shadow: 0 12px 26px rgba(40, 120, 208, 0.18); }
 .ae-step.is-seen { opacity: 1; }
-.ae-step h4 { font-size: 1.08rem; font-weight: 800; margin: .35rem 0 .3rem; color: var(--ae-navy); }
+.ae-step :is(h3, h4) { font-size: 1.08rem; font-weight: 800; margin: .35rem 0 .3rem; color: var(--ae-navy); }
 .ae-step p { font-size: .9rem; line-height: 1.65; margin: 0; color: var(--ae-body); }
 .ae-steps-controls { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
 .ae-steps-status { font-size: .95rem; font-weight: 700; color: var(--ae-navy); }
@@ -330,7 +330,7 @@
 .ae-tabs [role="tab"][aria-selected="true"] .bi { color: #fff; }
 .ae-tabs [role="tabpanel"] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: center; border-radius: 16px; background: var(--ae-llm-soft); padding: 1.4rem; line-height: 1.85; }
 .ae-tabs [role="tabpanel"][hidden] { display: none; }
-.ae-tabs [role="tabpanel"] h4 { margin: 0 0 .5rem; font-size: 1.15rem; font-weight: 800; color: var(--ae-navy); }
+.ae-tabs [data-ae-panel] :is(h3, h4), .ae-tabs [role="tabpanel"] :is(h3, h4) { margin: 0 0 .5rem; font-size: 1.15rem; font-weight: 800; color: var(--ae-navy); }
 .ae-tabs [role="tabpanel"] p { margin: 0 0 .5rem; color: var(--ae-body); }
 .ae-tabs [role="tabpanel"] .ae-mini { background: #fff; min-height: 7rem; }
 
@@ -759,3 +759,43 @@ a.ae-chapter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px r
   .ae-agentbox { margin-top: .9rem; }
   .ae-bigmap > .ae-agentbox.ae-bigmap__link::before { top: -3.4rem; }
 }
+
+/* ===== 13. 可及性與無 JS 備援（2026-10-08 嚴格審查） ===== */
+/* 徽章／標籤：各幕底色＋保證對比的字色（白字只配深底） */
+.ae-page { --ae-badge-bg: #e5a300; --ae-badge-fg: #111; }
+.ae-page[data-act="history"] { --ae-badge-bg: var(--ae-history); --ae-badge-fg: #3d2a00; }
+.ae-page[data-act="llm"]     { --ae-badge-bg: var(--ae-llm-ink); --ae-badge-fg: #fff; }
+.ae-page[data-act="prompt"]  { --ae-badge-bg: var(--ae-prompt); --ae-badge-fg: var(--ae-navy); }
+.ae-page[data-act="mcp"]     { --ae-badge-bg: var(--ae-mcp); --ae-badge-fg: var(--ae-navy); }
+.ae-page[data-act="skill"]   { --ae-badge-bg: var(--ae-skill); --ae-badge-fg: var(--ae-navy); }
+.ae-page[data-act="agent"]   { --ae-badge-bg: var(--ae-agent); --ae-badge-fg: #fff; }
+.ae-hero__act, .ae-lesson__tag:not(.ae-lesson__tag--side), .ae-page .ae-rail a.ae-rail__link[aria-current="page"] { background: var(--ae-badge-bg); color: var(--ae-badge-fg); }
+.ae-page .ae-rail a.ae-rail__link[aria-current="page"] .ae-rail__dot { background: var(--ae-badge-fg); color: var(--ae-badge-bg); }
+.ae-lesson__tag--side { color: #4b5a6a; }
+/* 白字配珊瑚底的小徽章改用加深的重點色 */
+.ae-quiz__badge, .ae-num, .ae-numlist li::before, .ae-goals li b, .ae-quiz__letter { background: var(--ae-key-ink); }
+.ae-node .ae-num { color: #fff; }
+.ae-key, .ae-key small, .ae-myth__said, .ae-loopback span, .ae-cutoff__flag, .ae-stat, .ae-sizecmp__vs { color: var(--ae-key-ink); }
+.ae-key { border-left-color: var(--ae-key-ink); }
+.ae-level { color: #256f4c; }
+.ae-tabs [role="tab"][aria-selected="true"], .ae-tabs--wide [data-ae-tab] { background: var(--ae-llm-ink); border-color: var(--ae-llm-ink); }
+.ae-mini .ae-chip--blue, .ae-token { background: var(--ae-llm-ink); border-color: var(--ae-navy); }
+.ae-gloss__filter[aria-pressed="true"] { background: var(--c-ink, var(--ae-navy)); border-color: var(--c-ink, var(--ae-navy)); color: #fff; }
+/* 焦點框：深藍實線，所有背景上都看得到 */
+.ae-page :is(button, a, input, summary, [tabindex]):focus-visible { outline: 3px solid var(--ae-navy); outline-offset: 2px; }
+.ae-page :is(.ae-quizband, .ae-wrap, .ae-flip__face--back) :is(button, a, summary, input, [tabindex]):focus-visible { outline-color: var(--ae-tip); }
+/* 章節列連結不吃內文連結樣式 */
+.ae-rail a.ae-rail__link { text-decoration: none; font-weight: inherit; }
+.ae-rail a.ae-rail__link[aria-current="page"] { font-weight: 700; }
+/* 翻牌卡：JS 補上的翻面按鈕 */
+.ae-flip__toggle { margin-top: auto; align-self: flex-start; padding: .35rem .75rem; border-radius: 10px; border: 1.5px solid currentColor; background: transparent; font: inherit; font-size: .85rem; font-weight: 700; color: var(--ae-navy); cursor: pointer; }
+.ae-flip__face--back .ae-flip__toggle { color: #fff; }
+.ae-flip__toggle:hover { background: rgba(16, 37, 61, .08); }
+.ae-flip__face--back .ae-flip__toggle:hover { background: rgba(255, 255, 255, .12); }
+
+/* 沒有 JS：藏起按了沒反應的控制項、攤開答案與分頁 */
+.ae-page:not(.ae-js) :is([data-sample], [data-sample-clear], [data-add], [data-summarize], [data-clear], [data-step], [data-mode], [data-chat-next], [data-ae-flip-all], [data-ae-done], [data-ae-quiz-reset], .ae-sort__choices, .ae-progress, .ae-check__score, .ae-desk__meter, .ae-gloss__tools, .ae-range, .ae-range-labels) { display: none !important; }
+.ae-page:not(.ae-js) .ae-sort__feedback[hidden], .ae-page:not(.ae-js) [role="tabpanel"][hidden], .ae-page:not(.ae-js) .ae-quiz__result[hidden] { display: block !important; }
+.ae-page:not(.ae-js) .ae-flip__inner { display: block; transform: none !important; }
+.ae-page:not(.ae-js) .ae-flip__face { position: relative; transform: none; backface-visibility: visible; margin-bottom: .75rem; }
+.ae-page:not(.ae-js) .ae-flip__hint { display: none; }

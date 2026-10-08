@@ -36,7 +36,7 @@ takeaways:
 <section class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="B">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-lightbulb" aria-hidden="true"></i>先猜 5 秒</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>5 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-lightbulb" aria-hidden="true"></i>先猜猜看</span></div>
       <p class="ae-quiz__q">你在聊天視窗打一個問題，收到一段很完整的回答。你覺得 ChatGPT 是在做哪一件事？</p>
       <ul class="ae-quiz__opts ae-quiz__opts--two">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>查資料：在資料庫裡找到那一段原文，再拿出來給我</span></button></li>
@@ -79,11 +79,11 @@ takeaways:
       <span class="ae-lesson__tag"><i class="bi bi-controller" aria-hidden="true"></i>先玩一個遊戲</span>
       <h2>你也是 LLM：看到前面，馬上猜得出下一個字</h2>
     </div>
-    <div class="ae-prose"><p>不用開任何工具。先在心裡把這四題接完，再一題一題打開答案；可以順便問問身邊的人，看大家接的是不是一樣。<strong>你剛剛做的事，就是 LLM 在做的事。</strong></p></div>
+    <div class="ae-prose"><p>不用開任何工具。先在心裡把這四題接完，再一題一題打開答案；也可以想想別人會不會接得一樣。<strong>你剛剛做的事，就是 LLM 在做的事。</strong></p></div>
     <div class="ae-chain ae-mt">
       <div class="ae-chain__card"><span class="ae-chain__emoji">🌙</span><span class="ae-chain__prompt">床前明月<span class="ae-chain__box">＿</span></span><span class="ae-chain__cue">🙈 先在心裡說出來</span><details class="ae-reveal"><summary>揭曉</summary><div>「光」。幾乎每個人都接得一樣。</div></details></div>
       <div class="ae-chain__card"><span class="ae-chain__emoji">🧋</span><span class="ae-chain__prompt">珍珠奶<span class="ae-chain__box">＿</span></span><span class="ae-chain__cue">🙈 先在心裡說出來</span><details class="ae-reveal"><summary>揭曉</summary><div>「茶」。線索很明確，答案很集中。</div></details></div>
-      <div class="ae-chain__card"><span class="ae-chain__emoji">🍜</span><span class="ae-chain__prompt">下班想吃<span class="ae-chain__box">＿</span></span><span class="ae-chain__cue">👀 跟身邊的人比一比</span><details class="ae-reveal"><summary>揭曉</summary><div>沒有標準答案。拉麵、火鍋、滷肉飯……每個人接的都合理，但都不一樣。</div></details></div>
+      <div class="ae-chain__card"><span class="ae-chain__emoji">🍜</span><span class="ae-chain__prompt">下班想吃<span class="ae-chain__box">＿</span></span><span class="ae-chain__cue">👀 想想別人會怎麼接</span><details class="ae-reveal"><summary>揭曉</summary><div>沒有標準答案。拉麵、火鍋、滷肉飯……每個人接的都合理，但都不一樣。</div></details></div>
       <div class="ae-chain__card"><span class="ae-chain__emoji">🤔</span><span class="ae-chain__prompt">我昨天夢到<span class="ae-chain__box">＿</span></span><span class="ae-chain__cue">🤷 寫得出來嗎？</span><details class="ae-reveal"><summary>揭曉</summary><div>你當然可以接出一句話，但你不知道我真正夢到了什麼。接得出來，不代表知道真相。</div></details></div>
     </div>
     <div class="ae-grid ae-mt" style="--cols:2;align-items:center">
@@ -110,11 +110,11 @@ takeaways:
     <figure class="ae-dg">
       <figcaption class="ae-dg__title"><i class="bi bi-diagram-3" aria-hidden="true"></i>LLM ＝ 文字接龍高手</figcaption>
       <div class="ae-chainviz">
-        <div class="ae-tiles" aria-label="前文：床前明月"><span class="ae-tile">床</span><span class="ae-tile">前</span><span class="ae-tile">明</span><span class="ae-tile">月</span></div>
+        <div class="ae-tiles" role="img" aria-label="前文：床前明月"><span class="ae-tile">床</span><span class="ae-tile">前</span><span class="ae-tile">明</span><span class="ae-tile">月</span></div>
         <i class="bi bi-arrow-right" aria-hidden="true"></i>
         <div class="ae-brain">LLM<small>猜下一塊</small></div>
         <i class="bi bi-arrow-right" aria-hidden="true"></i>
-        <span class="ae-tile ae-tile--next" aria-label="下一塊：光">光</span>
+        <span class="ae-tile ae-tile--next" role="img" aria-label="下一塊：光">光</span>
         <div class="ae-chainviz__note"><span>一格＝一塊 Token（示意）；常見的詞會合成一塊（見下方 Token）</span><span>照機率抽出下一塊：越可能，越常抽中</span></div>
       </div>
     </figure>
@@ -136,7 +136,7 @@ takeaways:
   <div class="edu-container">
     <div class="ae-lesson__head">
       <span class="ae-lesson__tag ae-lesson__tag--side"><i class="bi bi-puzzle" aria-hidden="true"></i>配角名詞・聽過就好</span>
-      <h2>Token：AI 讀字的「拼圖塊」，也是計費單位</h2>
+      <h2>Token：AI 讀字的「拼圖塊」，也是計費的依據</h2>
     </div>
     <div class="ae-widget" data-ae-tokens data-chars="今|天|天|氣|真|好" data-tokens="今天|天氣|真|好" style="margin-top:0">
       <div class="ae-widget__label"><i class="bi bi-hand-index" aria-hidden="true"></i>切換看看：同一句話，人和 AI 看到的不一樣</div>
@@ -149,7 +149,7 @@ takeaways:
     </div>
     <div class="ae-grid ae-mt" style="--cols:4">
       <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-puzzle-fill" aria-hidden="true"></i></div><h3>是什麼</h3><p>AI 不是一個字一個字讀，而是把句子切成一塊塊拼圖。常見的詞是一塊，罕見的字可能被切成好幾塊。</p></div>
-      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-cash" aria-hidden="true"></i></div><h3>也是計費單位</h3><p>像手機的通話秒數：你貼進去的字和 AI 回的字都算 Token，<b style="color:var(--ae-key)">講越多、算越多</b>。實際費用看工具和方案。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-cash" aria-hidden="true"></i></div><h3>也是計費的依據</h3><p>像手機的通話秒數：你貼進去的字和 AI 回的字都算 Token，<b style="color:var(--ae-key)">講越多、算越多</b>。實際費用看工具和方案。</p></div>
       <div class="ae-card" data-c="llm"><div class="ae-card__icon"><i class="bi bi-calculator" aria-hidden="true"></i></div><h3>中文怎麼換算</h3><p>GPT-3 時代每個中文字約 <span class="ae-stat">1.5<small> 個</small></span>；GPT-4o 平均只要 <span class="ae-stat">0.6<small> 個</small></span>：常見的兩三個字會合成一塊。</p></div>
       <div class="ae-card" data-c="tip"><div class="ae-card__icon">🍓</div><h3>經典笑話</h3><p>先自己數：<b>strawberry</b> 有幾個 r？</p><details class="ae-reveal"><summary>打開答案</summary><div>3 個。AI 看到的是拼圖塊、不是字母，所以數字母常出錯。人覺得簡單的事，不代表 AI 一定不會錯。</div></details></div>
     </div>
@@ -167,10 +167,10 @@ takeaways:
     <div class="ae-dg" data-ae-steps>
       <p class="ae-dg__title"><i class="bi bi-play-circle" aria-hidden="true"></i>按「下一步」一步一步播放</p>
       <div class="ae-steps">
-        <div class="ae-step" data-status="第 1 步：把你的話切成拼圖塊，每塊換成一串數字。"><span class="ae-num">1</span><h4>切成 Token</h4><div class="ae-mini"><span class="ae-chip">今天天氣</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ae-chip ae-chip--blue">今天</span><span class="ae-chip ae-chip--blue">天氣</span></div><p>每塊換成一串數字，模型才算得動。</p></div>
-        <div class="ae-step" data-status="第 2 步：回頭看前文，找出誰跟誰有關——原來在說天氣。"><span class="ae-num">2</span><h4>回頭看前文</h4><div class="ae-mini"><i class="bi bi-eye" aria-hidden="true"></i><span class="ae-chip">今天</span><span class="ae-chip">天氣</span><span class="ae-chip ae-chip--next">真＿</span></div><p>找出誰跟誰有關 → 在說天氣。</p></div>
-        <div class="ae-step" data-status="第 3 步：從認得的十幾萬塊裡，算出每一塊接在後面的機率。"><span class="ae-num">3</span><h4>猜下一塊</h4><div class="ae-mini"><div class="ae-mini__bars" aria-hidden="true"><i style="width:100%"></i><i style="width:55%"></i><i style="width:30%"></i></div><span class="ae-chip">好</span><span class="ae-chip">熱</span><span class="ae-chip">冷</span></div><p>從認得的十幾萬塊裡挑；機率高的比較常抽中。</p></div>
-        <div class="ae-step" data-status="第 4 步：把抽中的那塊接上去，然後回到第 2 步，帶著新內容再猜下一塊。"><span class="ae-num">4</span><h4>接上去</h4><div class="ae-mini"><span class="ae-chip">今天天氣真</span><b>＋</b><span class="ae-chip ae-chip--blue">好</span></div><p>新接上的直接加在後面，再回到第 2 步。</p></div>
+        <div class="ae-step" data-status="第 1 步：把你的話切成拼圖塊，每塊換成一串數字。"><span class="ae-num">1</span><h3>切成 Token</h3><div class="ae-mini"><span class="ae-chip">今天天氣</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ae-chip ae-chip--blue">今天</span><span class="ae-chip ae-chip--blue">天氣</span></div><p>每塊換成一串數字，模型才算得動。</p></div>
+        <div class="ae-step" data-status="第 2 步：回頭看前文，找出誰跟誰有關——原來在說天氣。"><span class="ae-num">2</span><h3>回頭看前文</h3><div class="ae-mini"><i class="bi bi-eye" aria-hidden="true"></i><span class="ae-chip">今天</span><span class="ae-chip">天氣</span><span class="ae-chip ae-chip--next">真＿</span></div><p>找出誰跟誰有關 → 在說天氣。</p></div>
+        <div class="ae-step" data-status="第 3 步：從認得的十幾萬塊裡，算出每一塊接在後面的機率。"><span class="ae-num">3</span><h3>猜下一塊</h3><div class="ae-mini"><div class="ae-mini__bars" aria-hidden="true"><i style="width:100%"></i><i style="width:55%"></i><i style="width:30%"></i></div><span class="ae-chip">好</span><span class="ae-chip">熱</span><span class="ae-chip">冷</span></div><p>從認得的十幾萬塊裡挑；機率高的比較常抽中。</p></div>
+        <div class="ae-step" data-status="第 4 步：把抽中的那塊接上去，然後回到第 2 步，帶著新內容再猜下一塊。"><span class="ae-num">4</span><h3>接上去</h3><div class="ae-mini"><span class="ae-chip">今天天氣真</span><b>＋</b><span class="ae-chip ae-chip--blue">好</span></div><p>新接上的直接加在後面，再回到第 2 步。</p></div>
       </div>
       <div class="ae-loopback" aria-hidden="true"><span>回到第 2 步，重複到答完</span></div>
       <div class="ae-steps-controls">
@@ -202,7 +202,7 @@ takeaways:
           <label for="ae-temp" style="font-weight:800;color:var(--ae-navy)"><i class="bi bi-thermometer-half" aria-hidden="true"></i> 籤筒搖多大力（Temperature 溫度）</label>
           <input id="ae-temp" class="ae-range" type="range" min="0.2" max="2" step="0.1" value="1">
           <div class="ae-range-labels"><span>低溫・穩定</span><span>高溫・多變</span></div>
-          <p data-temp-label style="margin:.5rem 0 1rem;color:var(--ae-llm-ink);font-weight:800" aria-live="polite"></p>
+          <p data-temp-label style="margin:.5rem 0 1rem;color:var(--ae-llm-ink);font-weight:800"></p>
           <div class="ae-steps-controls" style="margin-top:0">
             <button type="button" class="ae-btn ae-btn--primary" data-sample><i class="bi bi-dice-5" aria-hidden="true"></i> 抽一次</button>
             <button type="button" class="ae-btn" data-sample-clear>清空</button>
@@ -238,7 +238,7 @@ takeaways:
       </div>
       <div role="tabpanel" id="ae-panel-1" aria-labelledby="ae-tab-1">
         <div>
-          <h4>先自學：讀海量文字，練習猜下一塊</h4>
+          <h3>先自學：讀海量文字，練習猜下一塊</h3>
           <p>學到了語言和很多模式。但光會接下去寫，還不會當助理：你問一個問題，它可能只是把那段文字繼續寫下去。</p>
           <p class="ae-tip"><b>學會：</b>接龍（不一定回答你）</p>
         </div>
@@ -246,7 +246,7 @@ takeaways:
       </div>
       <div role="tabpanel" id="ae-panel-2" aria-labelledby="ae-tab-2" hidden>
         <div>
-          <h4>再上課：看大量「問題 → 好回答」的示範</h4>
+          <h3>再上課：看大量「問題 → 好回答」的示範</h3>
           <p>像老師示範：你說「翻成英文」，它學會提供翻譯，而不是接著再出一個題目。</p>
           <p class="ae-tip"><b>學會：</b>問什麼，答什麼</p>
         </div>
@@ -254,9 +254,10 @@ takeaways:
       </div>
       <div role="tabpanel" id="ae-panel-3" aria-labelledby="ae-tab-3" hidden>
         <div>
-          <h4>再被批改：人類回饋</h4>
+          <h3>再被批改：人類回饋</h3>
           <p>三個小步驟：① 請人替不同回答排名次；② 用排名訓練出會打分的「AI 裁判」；③ 模型照裁判的分數反覆練習（強化學習）。</p>
           <p class="ae-tip"><b>學會：</b>有禮貌、會拒絕危險要求</p>
+          <p>也有些回饋改由 AI 依一份原則清單來給。</p>
         </div>
         <div class="ae-mini"><i class="bi bi-list-ol" aria-hidden="true"></i><span class="ae-chip">人排名次</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ae-chip ae-chip--blue">AI 裁判</span><i class="bi bi-arrow-right" aria-hidden="true"></i><span class="ae-chip">± 反覆練</span></div>
       </div>
@@ -275,7 +276,6 @@ takeaways:
         <div class="ae-card__icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
         <h3>後來……2024/9 推理模型（聽過就好）</h3>
         <p>回答前先打一段草稿，再作答，所以比較慢、也比較貴：<b>想得越久，用的 Token 越多</b>。</p>
-        <p>也有些回饋改由 AI 依一份原則清單來給。</p>
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>ChatGPT 會聊天，不只因為「大」，也因為被「教過怎麼當助理」。</p>
@@ -304,7 +304,7 @@ takeaways:
         <div class="ae-stack3__arrow"><i class="bi bi-arrow-up" aria-hidden="true"></i> 訓練</div>
         <div class="ae-stack3__label" data-c="tip"><i class="bi bi-book-half" aria-hidden="true"></i><span>訓練資料（書）<small>出廠前讀完</small></span></div>
         <div class="ae-stack3__cell ae-stack3__cell--wide">📚 書籍・網頁・程式碼</div>
-        <div class="ae-cutoff" aria-label="知識截止日：讀到某一天為止，之後不知道"><span class="ae-cutoff__l">讀過的</span><span class="ae-cutoff__flag"><i class="bi bi-flag-fill" aria-hidden="true"></i>知識截止日</span><span class="ae-cutoff__r">？之後不知道</span></div>
+        <div class="ae-cutoff" role="img" aria-label="知識截止日：讀到某一天為止，之後不知道"><span class="ae-cutoff__l">讀過的</span><span class="ae-cutoff__flag"><i class="bi bi-flag-fill" aria-hidden="true"></i>知識截止日</span><span class="ae-cutoff__r">？之後不知道</span></div>
       </div>
     </figure>
     <div class="ae-prose ae-mt"><p>問「哪個 AI 比較好」時，先問清楚是在比引擎，還是在比整台車——就像比引擎馬力，和比車上有沒有導航、後車廂多大，不是同一件事。也因為引擎讀的書停在某一天，<strong>模型學過的知識</strong>和 <strong>App 能不能另外上網查新資料</strong>，要分開看。</p></div>
@@ -312,10 +312,10 @@ takeaways:
       <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
       <h3>這些名字，是車（App）還是引擎（模型）？</h3>
       <div class="ae-sort__items">
-        <div class="ae-sort__item" data-answer="app"><strong>ChatGPT</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app">車</button><button type="button" class="ae-btn" data-pick="model">引擎</button><button type="button" class="ae-btn" data-pick="both">都是</button></div><p class="ae-sort__feedback" hidden><b></b> ChatGPT 是 App，裡面裝的引擎是 GPT 模型家族。</p></div>
-        <div class="ae-sort__item" data-answer="model"><strong>GPT</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app">車</button><button type="button" class="ae-btn" data-pick="model">引擎</button><button type="button" class="ae-btn" data-pick="both">都是</button></div><p class="ae-sort__feedback" hidden><b></b> GPT 是 OpenAI 的模型家族，也就是引擎。</p></div>
-        <div class="ae-sort__item" data-answer="both"><strong>Gemini</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app">車</button><button type="button" class="ae-btn" data-pick="model">引擎</button><button type="button" class="ae-btn" data-pick="both">都是</button></div><p class="ae-sort__feedback" hidden><b></b> 最容易混淆的一個：Google 的 App 和模型都叫 Gemini。</p></div>
-        <div class="ae-sort__item" data-answer="app"><strong>Claude Code</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app">車</button><button type="button" class="ae-btn" data-pick="model">引擎</button><button type="button" class="ae-btn" data-pick="both">都是</button></div><p class="ae-sort__feedback" hidden><b></b> Claude Code 是會動手做事的 AI 助理程式，和聊天 App 一樣裝 Claude 引擎。</p></div>
+        <div class="ae-sort__item" data-answer="app"><strong>ChatGPT</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app" aria-pressed="false">車</button><button type="button" class="ae-btn" data-pick="model" aria-pressed="false">引擎</button><button type="button" class="ae-btn" data-pick="both" aria-pressed="false">都是</button></div><p class="ae-sort__feedback" hidden><b></b> ChatGPT 是 App，裡面裝的引擎是 GPT 模型家族。</p></div>
+        <div class="ae-sort__item" data-answer="model"><strong>GPT</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app" aria-pressed="false">車</button><button type="button" class="ae-btn" data-pick="model" aria-pressed="false">引擎</button><button type="button" class="ae-btn" data-pick="both" aria-pressed="false">都是</button></div><p class="ae-sort__feedback" hidden><b></b> GPT 是 OpenAI 的模型家族，也就是引擎。</p></div>
+        <div class="ae-sort__item" data-answer="both"><strong>Gemini</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app" aria-pressed="false">車</button><button type="button" class="ae-btn" data-pick="model" aria-pressed="false">引擎</button><button type="button" class="ae-btn" data-pick="both" aria-pressed="false">都是</button></div><p class="ae-sort__feedback" hidden><b></b> 最容易混淆的一個：Google 的 App 和模型都叫 Gemini。</p></div>
+        <div class="ae-sort__item" data-answer="app"><strong>Claude Code</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="app" aria-pressed="false">車</button><button type="button" class="ae-btn" data-pick="model" aria-pressed="false">引擎</button><button type="button" class="ae-btn" data-pick="both" aria-pressed="false">都是</button></div><p class="ae-sort__feedback" hidden><b></b> Claude Code 是會動手做事的 AI 助理程式，和聊天 App 一樣裝 Claude 引擎。</p></div>
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>問「哪個 AI 比較好」時，先分清楚是在比車（App）還是比引擎（模型）。</p>
@@ -330,19 +330,19 @@ takeaways:
     </div>
     <p class="ae-hint"><i class="bi bi-hand-index" aria-hidden="true"></i>點一下卡片，翻到背面看具體怎麼做。</p>
     <div class="ae-traits">
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ae-flip__num">1</span><h3>幻覺：講得很順，不一定對</h3>
           <div class="ae-mini"><span class="ae-chip">很有把握的回答……</span><i class="bi bi-x-circle-fill" style="color:var(--ae-key)" aria-hidden="true"></i><b style="color:var(--ae-key)">不一定對</b></div>
           <p>它挑的是「最順」的字，不是「最對」的字，可能把不存在的內容講得很有把握。</p><p class="ae-flip__fix">對策：重要的事自己查證</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：重要的事自己查證</h3><p>請它附來源，也可以明講「不確定就說不知道」；但最後還是要自己看原始資料。</p><p class="ae-tip">再問一次「你確定嗎」不算查證。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ae-flip__num">2</span><h3>知識截止日</h3>
           <div class="ae-mini"><span class="ae-chip ae-chip--blue">學過的</span><i class="bi bi-flag-fill" style="color:var(--ae-key)" aria-hidden="true"></i><span class="ae-chip ae-chip--next">？ ？</span></div>
           <p>像出國一年沒上網的人：不是沒知識，而是回來還以為最紅的是去年那首歌。最新規定、當天的資訊，它可能不知道。</p><p class="ae-flip__fix">對策：新資訊自己貼，或叫它先查</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：新資訊自己貼，或叫它先查</h3><p>把最新資料貼給它；如果你用的工具能上網或查資料，請它先查再答。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ae-flip__num">3</span><h3>桌子有限</h3>
           <div class="ae-mini"><i class="bi bi-stack" aria-hidden="true"></i><span class="ae-chip">舊的被擠掉</span><i class="bi bi-arrow-down" style="color:var(--ae-key)" aria-hidden="true"></i></div>
           <p>桌子＝AI 一次能讀進來的量（見下方 Context window）。再大（約 100 萬 Token）也會滿：舊的被擠掉、中段容易看漏。</p><p class="ae-flip__fix">對策：對話太長就開新的</p><p class="ae-flip__hint">點我看怎麼做 ↻</p></div>
@@ -395,7 +395,7 @@ takeaways:
           <li>常用的工作規則，寫成手冊（第五幕的 Skill）</li>
         </ol>
       </div>
-      <p class="ae-dg__caption">桌上的東西：滿了，最舊的會被擠掉；就算沒滿，長內容的中段也容易被看漏。開新對話，桌子就清空。</p>
+      <p class="ae-dg__caption">桌上的東西：滿了，最舊的會被擠掉；就算沒滿，長內容的中段也容易被看漏。開新對話，桌子就清空（除非 App 另外開了「記憶」功能）。</p>
     </div>
     <div class="ae-prose ae-mt"><p>你遇過嗎？聊到後來，它忘了「剛剛不是說要一頁以內」？與其一直在原地重複提醒，不如先整理桌面。要記的不是記憶容量的數字，而是：<strong>重要背景，要讓它在當次工作裡清楚看得到。</strong></p></div>
     <p class="ae-key"><small>只記一句</small>AI 本身不帶記憶，每次都重讀整張桌子。管好桌面，回答就穩。</p>
@@ -406,7 +406,7 @@ takeaways:
 <section class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="C">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 2／10：LLM 的桌子</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>15 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 2／10：LLM 的桌子</span></div>
       <p class="ae-quiz__q">你跟 AI 討論活動企劃聊了兩小時，它開始忘記你一開始說的「全文不超過 1 頁」。最好的做法是？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>換一個更新、更聰明的模型，它就不會忘了</span></button></li>
@@ -415,7 +415,7 @@ takeaways:
         <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>把整份企劃書和兩小時的對話全部再貼一次，讓它重讀</span></button></li>
       </ul>
       <div class="ae-quiz__result" tabindex="-1" hidden>
-        <strong data-ae-verdict></strong> 答案是 C：先摘要，再開新對話。重點不是把兩小時全部丟掉，而是把結論和必要要求整理出來，帶到乾淨的桌子上繼續。
+        <strong data-ae-verdict></strong> 先摘要，再開新對話。重點不是把兩小時全部丟掉，而是把結論和必要要求整理出來，帶到乾淨的桌子上繼續。
         <ul class="ae-quiz__why">
           <li><b>B 再提醒一次</b>：可能暫時有用，但對話還是很長、桌面還是很擠，像吃止痛藥。</li>
           <li><b>A 換模型</b>：新模型的桌子一樣有大小限制。</li>
@@ -440,10 +440,10 @@ takeaways:
       <div class="ae-dg" data-ae-chat style="margin:0">
         <p class="ae-dg__title"><i class="bi bi-chat-dots" aria-hidden="true"></i>情境重現（依法院文件改寫）</p>
         <div class="ae-chat">
-          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="律師"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">幫我找航空公司乘客受傷求償的判例。</div></div>
-          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="AI"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">可參考 Varghese v. China Southern Airlines 等案例……（看起來非常專業）</div></div>
-          <div class="ae-chat__msg"><span class="ae-chat__who" aria-label="律師"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble">這些案子是真的嗎？</div></div>
-          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-label="AI"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble">是的，這些案例確實存在，可以在法律資料庫查到。</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">律師：</span>幫我找航空公司乘客受傷求償的判例。</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">AI：</span>可參考 Varghese v. China Southern Airlines 等案例……（看起來非常專業）</div></div>
+          <div class="ae-chat__msg"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-person-fill" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">律師：</span>這些案子是真的嗎？</div></div>
+          <div class="ae-chat__msg ae-chat__msg--ai"><span class="ae-chat__who" aria-hidden="true"><i class="bi bi-cpu" aria-hidden="true"></i></span><div class="ae-chat__bubble"><span class="visually-hidden">AI：</span>是的，這些案例確實存在，可以在法律資料庫查到。</div></div>
         </div>
         <div class="ae-steps-controls"><button type="button" class="ae-btn ae-btn--primary" data-chat-next>看下一句 →</button></div>
         <div class="ae-verdict" data-chat-after><strong>⚖️ 後來呢？</strong>這場官司叫 Mata v. Avianca（真的案子），但律師交出去的 Varghese 等 6 個判例，全是 ChatGPT 編的。法官判兩位律師與事務所罰款 <span class="ae-money">5,000 美元</span>。</div>
@@ -479,7 +479,7 @@ takeaways:
         <div class="ae-rag__closed">
           <h3><i class="bi bi-book" aria-hidden="true"></i>閉卷考：只憑記憶</h3>
           <div class="ae-mini" style="background:#fff"><i class="bi bi-cpu" aria-hidden="true"></i><span class="ae-chip ae-chip--next">答案？</span></div>
-          <ul class="ae-xlist"><li>截止日後的事不知道</li><li>不懂你們單位的內部規章</li><li>想不起來就亂編</li></ul>
+          <ul class="ae-xlist"><li>截止日後的事不知道</li><li>不懂你們公司的內部規章</li><li>想不起來就亂編</li></ul>
           <p class="ae-dg__caption">像沒帶課本就上台報告。</p>
         </div>
         <div class="ae-rag__open">
@@ -507,7 +507,7 @@ takeaways:
 <section class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="A">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 3／10：AI 說「依據差旅辦法第 5 條」</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>20 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 3／10：AI 說「依據差旅辦法第 5 條」</span></div>
       <p class="ae-quiz__q">同事問 AI 助理出差規定，它答得很順，還說「依據差旅辦法第 5 條」。下一步最該做什麼？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>請它附上原文連結，自己點開核對，對得上才照做</span></button></li>
@@ -516,7 +516,7 @@ takeaways:
         <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>換另一個 AI 再問一次，兩邊答案一樣就照做</span></button></li>
       </ul>
       <div class="ae-quiz__result" tabindex="-1" hidden>
-        <strong data-ae-verdict></strong> 答案是 A。真正有查證的動作，是自己打開原文，看第 5 條到底寫什麼、跟 AI 的回答是不是同一件事。
+        <strong data-ae-verdict></strong> 真正有查證的動作，是自己打開原文，看第 5 條到底寫什麼、跟 AI 的回答是不是同一件事。
         <ul class="ae-quiz__why">
           <li><b>B 問「你確定嗎」</b>：律師案已經示範過，AI 可以對錯誤內容再說一次「是，我確定」。</li>
           <li><b>C 有條號就相信</b>：把專業的外觀當成證據。條號寫得出來，不代表它存在，也不代表適用你的情況。</li>

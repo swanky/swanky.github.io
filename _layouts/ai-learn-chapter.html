@@ -21,7 +21,7 @@ layout: home
         <p class="ae-hero__lead">{{ page.lead }}</p>
         {% if page.question %}<div class="ae-question"><strong><i class="bi bi-question-circle" aria-hidden="true"></i>這一幕要回答</strong><p>{{ page.question }}</p></div>{% endif %}
       </div>
-      {% include ai-learn/illus.html src=page.hero_illus.src alt=page.hero_illus.alt code=page.hero_illus.code desc=page.hero_illus.desc %}
+      {% include ai-learn/illus.html src=page.hero_illus.src alt=page.hero_illus.alt code=page.hero_illus.code desc=page.hero_illus.desc width=page.hero_illus.width height=page.hero_illus.height eager=true %}
     </div>
   </header>
 
@@ -39,7 +39,7 @@ layout: home
       </ul>
       <div class="ae-wrap__actions">
         <button type="button" class="ae-btn ae-done-btn" data-ae-done="{{ mod.slug }}/{{ cur.slug }}">標記這一幕讀完了</button>
-        <a class="edu-btn edu-btn--outline-light" href="{{ mod.url | relative_url }}#self-check">做 9 題自我檢核</a>
+        <a class="edu-btn edu-btn--outline-light" href="{{ mod.url | relative_url }}#self-check">做自我檢核</a>
       </div>
       <nav class="ae-pager" aria-label="上一幕與下一幕">
         {% if idx > 0 %}{% assign p = chapters[prev_i] %}
@@ -49,7 +49,7 @@ layout: home
         {% if next_i < chapters.size %}{% assign n = chapters[next_i] %}
           {% if n.status == 'published' %}<a href="{{ mod.url | append: n.slug | append: '/' | relative_url }}"><small>下一幕｜{{ n.act }} →</small>{{ n.title }}</a>
           {% else %}<span class="is-soon"><small>下一幕｜{{ n.act }}・即將推出</small>{{ n.title }}</span>{% endif %}
-        {% else %}<a href="{{ mod.url | relative_url }}#self-check"><small>學完了 →</small>9 題自我檢核</a>{% endif %}
+        {% else %}<a href="{{ mod.url | relative_url }}#self-check"><small>學完了 →</small>回單元總覽做自我檢核</a>{% endif %}
       </nav>
     </div>
   </section>

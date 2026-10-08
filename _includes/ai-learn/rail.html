@@ -7,13 +7,13 @@
     {% for ch in mod.chapters %}
     <li>
       {% if ch.status == 'published' %}
-      <a href="{{ mod.url | append: ch.slug | append: '/' | relative_url }}" data-ae-progress-key="{{ mod.slug }}/{{ ch.slug }}"{% if ch.slug == include.current %} aria-current="page"{% endif %} style="--dot: var(--ae-{{ ch.color }})">
-        <span class="ae-rail__dot">{{ forloop.index }}</span>{{ ch.title | split: '：' | first }}
+      <a class="ae-rail__link" href="{{ mod.url | append: ch.slug | append: '/' | relative_url }}" data-ae-progress-key="{{ mod.slug }}/{{ ch.slug }}"{% if ch.slug == include.current %} aria-current="page"{% endif %} style="--dot: var(--ae-{{ ch.color }})">
+        <span class="ae-rail__dot" aria-hidden="true">{{ forloop.index }}</span><span class="visually-hidden">{{ ch.act }}：</span>{{ ch.title | split: '：' | first }}<span class="ae-sr-done visually-hidden"></span>
       </a>
       {% else %}
-      <a aria-disabled="true" title="即將推出" style="--dot: #bbb; opacity: .55; cursor: default">
-        <span class="ae-rail__dot">{{ forloop.index }}</span>{{ ch.title | split: '：' | first }}
-      </a>
+      <span class="ae-rail__link" title="即將推出" style="--dot: #bbb; opacity: .55; cursor: default; display: flex; align-items: center; gap: .5rem; padding: .5rem .9rem; font-size: .9rem; color: var(--ae-muted); white-space: nowrap">
+        <span class="ae-rail__dot" aria-hidden="true">{{ forloop.index }}</span><span class="visually-hidden">{{ ch.act }}：</span>{{ ch.title | split: '：' | first }}（即將推出）
+      </span>
       {% endif %}
     </li>
     {% endfor %}

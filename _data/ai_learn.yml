@@ -9,6 +9,16 @@ modules:
     subtitle: 從七十多年的 AI 故事，一次搞懂 LLM、Prompt、MCP、Skill 與 Agent
     description: 給非工程背景的 AI 入門自學教材。跟著六幕故事，從 1950 年的圖靈測試一路走到會自己把事做完的 Agent；每幕都有小遊戲、測驗與比喻。
     origin: 整理自史旺基 2026 年 10 月的一場企業內部 AI 入門分享，改寫成可以自己讀、自己練的網頁版。
+    # 八個最常見的誤會（總覽頁翻牌卡）：tag＝名詞膠囊、chapter＝決定顏色
+    myths:
+      - { tag: LLM, chapter: llm, said: AI 會記得我上次講過的話, truth: 模型本身不記得；是 App 每次把整段對話重送給它。開新對話就從零開始（除非 App 另外開了「記憶」功能）。 }
+      - { tag: LLM, chapter: llm, said: AI 什麼都查得到，而且是最新的, truth: 沒接工具時，它只靠訓練時讀的書，停在知識截止日。要最新或內部資料，要靠 RAG 或 MCP 工具。 }
+      - { tag: Prompt, chapter: prompt, said: 要背神奇咒語，寫越長越好, truth: 重點是把任務、背景、限制講清楚，不是字數。跟任務無關的話反而會讓它分心。 }
+      - { tag: MCP, chapter: mcp, said: MCP 是一個 AI 產品, truth: MCP 是一套像 USB-C 的接法規格，不是 App。你用的是支援 MCP 的 App，例如 Claude Code。 }
+      - { tag: MCP, chapter: mcp, said: AI 用的每一個工具都是 MCP, truth: MCP 只是「接外部系統」的那套接法。Claude Code 本身就內建讀檔、改檔、執行指令等工具；要碰行事曆、信箱這類外部系統，才需要 MCP。 }
+      - { tag: Skill, chapter: skill, said: Skill 就是存起來的長 Prompt；寫了它，AI 就被訓練變聰明了, truth: Skill 比一段 Prompt 多三件事，而且不會改到模型本身：① 用得上才載入全文 ② 可以附範本、資料、小程式 ③ 寫一次大家共用。 }
+      - { tag: Agent, chapter: agent, said: 交給 Agent 就不用管了, truth: 它會誤解目標，也會被錯誤資料或假交辦帶偏。重要動作要你確認，結果要你驗收。 }
+      - { tag: Agent, chapter: agent, said: 會自動跑的東西都叫 Agent, truth: 照固定步驟跑的叫流程自動化（Workflow），中間用了 LLM 也一樣。Agent 是 LLM 每一步自己決定下一步、用哪個工具。 }
     url: /education/ai/learn/ai-basics/
     status: published
     chapters:
@@ -77,8 +87,8 @@ glossary:
   - { term: Tool use, module: ai-basics, chapter: mcp, text: AI 寫工單、程式去執行；工具可能是內建的，也可能是 MCP 接上的。, metaphor: 服務生寫點單、廚房做菜 }
   - { term: MCP, star: true, module: ai-basics, chapter: mcp, text: AI 連接工具和資料的共同標準（三個角色：Host、Client、Server）。, metaphor: USB-C 規格 }
   - { term: MCP Server, module: ai-basics, chapter: mcp, text: 接上一個系統的轉接線，提供一組工具（例：行事曆 Server 的查空檔）。, metaphor: USB-C 轉接線 }
-  - { term: Jira／Confluence, module: ai-basics, chapter: mcp, text: 給 IT 同事：Jira 用來開工作單、追進度；Confluence 用來放團隊共用文件。MCP Server 可以把它們接給 AI。, metaphor: 共用待辦清單、共用筆記本 }
-  - { term: Prompt Injection, module: ai-basics, chapter: mcp, text: 外部資料裡藏指令，騙 AI 照做。, metaphor: 夾在公文裡的假簽條 }
+  - { term: Jira／Confluence, module: ai-basics, chapter: mcp, text: 給技術背景的讀者：Jira 用來開工作單、追進度；Confluence 用來放團隊共用文件。MCP Server 可以把它們接給 AI。, metaphor: 共用待辦清單、共用筆記本 }
+  - { term: Prompt Injection, module: ai-basics, chapter: mcp, text: 外部資料裡藏指令，騙 AI 照做。, metaphor: 夾在文件裡的假便條 }
   - { term: 致命三角, module: ai-basics, chapter: mcp, text: 私人資料、不可信內容、能往外送，三樣不要同時給 AI。, metaphor: 鑰匙、陌生人、開著的門不能湊齊 }
   - { term: 最小權限, module: ai-basics, chapter: mcp, text: 工具只給必要權限，高影響動作要人確認。, metaphor: 只給實習生需要的鑰匙 }
   - { term: Skill, star: true, module: ai-basics, chapter: skill, text: 一個資料夾＋SKILL.md，寫下工作怎麼做。, metaphor: 新人工作手冊、交接本 }

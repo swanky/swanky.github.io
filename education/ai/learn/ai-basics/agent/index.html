@@ -1,8 +1,8 @@
 ---
 layout: ai-learn-chapter
 title: Agent：大腦＋工具＋迴圈
-seo_title: AI Agent 是什麼？工作迴圈、AI 紅綠燈與選題三問白話入門｜AI 入門第六幕
-description: 用排會議的例子，白話看懂 AI Agent 怎麼想、做、看、判斷，自己把事做完；分清聊天機器人、Workflow 與 Agent，用 AI 紅綠燈決定哪一步要人確認，再挑出第一件交給 AI 的工作。
+seo_title: AI Agent 是什麼？工作迴圈與 AI 紅綠燈白話入門｜AI 入門第六幕
+description: 用排會議的例子，白話看懂 AI Agent 怎麼想、做、看、判斷，自己把事做完；分清聊天機器人與 Workflow，用 AI 紅綠燈決定哪一步要人確認。
 keywords: AI Agent是什麼,Agentic AI,AI代理人,Workflow,聊天機器人,AI紅綠燈,Plan模式,AI入門,史旺基
 permalink: /education/ai/learn/ai-basics/agent/
 nav_active: education
@@ -39,7 +39,7 @@ chapter_css: true
 <section id="warmup" class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-lightbulb" aria-hidden="true"></i>先想 5 秒</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>5 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-lightbulb" aria-hidden="true"></i>先想一想</span></div>
       <p class="ae-quiz__q">如果 AI 會自己查、自己填、自己送，你最想把哪一件事丟給它？</p>
       <p style="margin:0;max-width:48rem;color:rgba(255,255,255,.85);line-height:1.85">這題沒有標準答案。先在心裡（或紙上）記下一件事。這一幕最後，會用三個問題替它打分數，看它適不適合當你第一件交給 AI 的工作：<a href="#pick">選題三問</a>。</p>
     </div>
@@ -60,7 +60,7 @@ chapter_css: true
     </div>
     <div class="ag-def">
       <p class="ag-def__quote"><small>本教材採用的定義</small>「LLM 在迴圈裡使用工具，直到達成目標。」</p>
-      <div class="ag-eq" aria-label="大腦加工具加迴圈等於 Agent">
+      <div class="ag-eq" role="img" aria-label="大腦加工具加迴圈等於 Agent">
         <span data-c="llm"><i class="bi bi-cpu" aria-hidden="true"></i>大腦（LLM）</span><b>＋</b>
         <span data-c="mcp"><i class="bi bi-plug-fill" aria-hidden="true"></i>工具（例如透過 MCP 接上的）</span><b>＋</b>
         <span data-c="agent"><i class="bi bi-arrow-repeat" aria-hidden="true"></i>迴圈</span><b>＝</b>
@@ -165,7 +165,7 @@ chapter_css: true
 <section id="quiz-agent" class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="B">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 8／10：第六幕壓軸，哪個才是 Agent？</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>20 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 8／10：哪個才是 Agent？</span></div>
       <p class="ae-quiz__q">下面四個都是「自動」的，哪一個才算 Agent？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>每天早上 8 點，系統自動檢查昨天有沒有新報表；有就請 AI 寫一段摘要，寄給 20 位主管</span></button></li>
@@ -174,7 +174,7 @@ chapter_css: true
         <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>客服聊天機器人：拿你的問題去知識庫搜一次，再把找到的段落交給 AI 寫成一段說明</span></button></li>
       </ul>
       <div class="ae-quiz__result" tabindex="-1" hidden>
-        <strong data-ae-verdict></strong> 答案是 B：只有 B 是 LLM <b style="color:var(--ae-key)">看了結果，自己決定下一步要查什麼、查幾次</b>，直到完成目標。
+        <strong data-ae-verdict></strong> 只有 B 是 LLM <b style="color:var(--ae-key)">看了結果，自己決定下一步要查什麼、查幾次</b>，直到完成目標。
         <ul class="ae-quiz__why">
           <li><b>A</b>：流程自動化加上一步 AI。「有沒有新報表」這個判斷條件和後面的順序，都是程式事先寫好的。</li>
           <li><b>C</b>：每一步都用 AI，看起來更先進，但順序事先排好、每次都一樣，Anthropic 叫它 Workflow。有人把關是很重要的安全設計，但不是判斷「是不是 Agent」的條件。</li>
@@ -208,15 +208,16 @@ chapter_css: true
         <div class="ag-seq__body">
           <div class="ae-chat__msg"><span class="ag-who">你 → LLM</span><span class="ag-msg ag-msg--r" style="grid-column:2/4"><span class="ag-chip" data-c="prompt">「約下週三下午的 Q4 預算會」</span></span></div>
           <div class="ae-chat__msg"><span class="ag-who">LLM → Skill 手冊</span><span class="ag-msg ag-msg--r" style="grid-column:4/8"><span class="ag-chip" data-c="skill"><b>0</b>載入排會議手冊</span></span></div>
-          <div class="ae-chat__msg"><span class="ag-who">LLM → 行事曆 Server</span><span class="ag-msg ag-msg--r" style="grid-column:4/6"><span class="ag-chip" data-c="llm"><b>1</b>查三人行事曆</span></span><span class="ag-note" style="grid-column:6/9">← 回傳：三人的忙碌時段</span></div>
+          <div class="ae-chat__msg"><span class="ag-who">LLM 寫單 → App → 行事曆 Server</span><span class="ag-msg ag-msg--r" style="grid-column:4/6"><span class="ag-chip" data-c="llm"><b>1</b>查三人行事曆</span></span><span class="ag-note" style="grid-column:6/9">← 回傳：三人的忙碌時段</span></div>
           <div class="ae-chat__msg"><span class="ag-who">LLM 自己想</span><span class="ag-msg ag-msg--self" style="grid-column:4/7"><span class="ag-chip" data-c="llm"><b>2</b>找空檔、避開午休</span></span></div>
           <div class="ae-chat__msg"><span class="ag-who">LLM 自己想</span><span class="ag-msg ag-msg--self" style="grid-column:4/7"><span class="ag-chip" data-c="llm"><b>3</b>擬會議邀請</span></span></div>
           <div class="ae-chat__msg ag-stop"><span class="ag-who">LLM → 你</span><span class="ag-msg ag-msg--l ag-msg--dash" style="grid-column:2/4"><span class="ag-chip" data-c="key"><b>4</b>先列給你確認</span></span><span class="ag-note" style="grid-column:4/7"><i class="bi bi-pause-circle-fill" aria-hidden="true"></i> 先停下來，等你</span></div>
           <div class="ae-chat__msg"><span class="ag-who">你 → LLM</span><span class="ag-msg ag-msg--r" style="grid-column:2/4"><span class="ag-chip" data-c="navy">你確認</span></span></div>
-          <div class="ae-chat__msg"><span class="ag-who">LLM → 行事曆 Server</span><span class="ag-msg ag-msg--r" style="grid-column:4/6"><span class="ag-chip" data-c="llm"><b>5</b>建立邀請並寄出</span></span></div>
+          <div class="ae-chat__msg"><span class="ag-who">LLM 寫單 → App → 行事曆 Server</span><span class="ag-msg ag-msg--r" style="grid-column:4/6"><span class="ag-chip" data-c="llm"><b>5</b>建立邀請並寄出</span></span></div>
           <div class="ae-chat__msg"><span class="ag-who">LLM → 你</span><span class="ag-msg ag-msg--l ag-msg--dash" style="grid-column:2/4"><span class="ag-chip" data-c="llm">回報完成</span></span></div>
         </div>
       </div>
+      <p class="ae-dg__caption">箭頭是簡化畫法：LLM 只寫工單，實際去查行事曆、建立邀請的是 App（第四幕的「AI 只寫單，程式去跑」）。</p>
       <div class="ae-steps-controls"><button type="button" class="ae-btn ae-btn--primary" data-chat-next>看下一步 →</button></div>
       <div class="ae-verdict" data-chat-after><strong>✅ 做完了。</strong>史旺姬只說了一次話，它轉了好幾圈：載入手冊、查行事曆、找空檔、擬邀請；到了「寄出」這種會改變真實世界的動作，<strong>先停下來等她確認</strong>，確認後才繼續。</div>
       <div class="ag-count">
@@ -284,25 +285,25 @@ chapter_css: true
       <button type="button" class="ae-btn" data-ae-flip-all="#risks" aria-pressed="false">全部翻開看對策</button>
     </div>
     <div class="ag-risks">
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ag-risk__icon" aria-hidden="true">🎯</span><h3>會錯意</h3><p>你說「清掉舊信」，它可能理解成「刪除」而不是「封存」，一次清掉上百封。</p><p class="ae-flip__hint">怎麼防？點我翻面 ↻</p></div>
-        <div class="ae-flip__face ae-flip__face--back"><h3>對策：講清楚目標和範圍</h3><p>不放心時，先切到 Plan 模式（只讀資料、先交計畫、不改檔案），看過計畫再讓它動手。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
+        <div class="ae-flip__face ae-flip__face--back"><h3>對策：講清楚目標和範圍</h3><p>不放心時，先切到 Plan 模式（只看、不動手、先交計畫），看過計畫再讓它動手。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ag-risk__icon" aria-hidden="true">🕳️</span><h3>被假交辦帶走</h3><p>信件或網頁裡藏著寫給 AI 的指令（提示注入），它可能當真，照著把資料寄出去。</p><p class="ae-flip__hint">怎麼防？點我翻面 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：寄出前自己看</h3><p>寄出、轉寄前，一定自己看收件人和內容。要它讀外部內容的工作，不要同時給它寄信的權限。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ag-risk__icon" aria-hidden="true">🧱</span><h3>一步錯，步步錯</h3><p>迴圈第一步查錯資料（例如抓錯月份），後面每一步都蓋在錯誤上，越做越偏，最後版面再漂亮也是錯的。</p><p class="ae-flip__hint">怎麼防？點我翻面 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：檢查中間結果</h3><p>步驟越多，越要設中間檢查點。第一步先自己對過，再讓它往下做；不要只在最後看成品。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ag-risk__icon" aria-hidden="true">🔓</span><h3>權限給太大</h3><p>能刪、能寄、能付款的工具越多，出錯的代價越大；一句話就可能動到整個專案的資料。</p><p class="ae-flip__hint">怎麼防？點我翻面 ↻</p></div>
         <div class="ae-flip__face ae-flip__face--back"><h3>對策：只給需要的工具</h3><p>寫在 Prompt 或手冊裡的規矩，是告訴它「應該怎麼做」，擋不住它真的去做；<b style="color:var(--ae-tip)">真正的鎖是權限設定</b>。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
-      <div class="ae-flip" role="button" tabindex="0" aria-pressed="false"><div class="ae-flip__inner">
+      <div class="ae-flip"><div class="ae-flip__inner">
         <div class="ae-flip__face"><span class="ag-risk__icon" aria-hidden="true">📦</span><h3>亂裝外掛</h3><p>網路上下載的 Skill 或 MCP Server 本身就是程式，可能藏著跟說明不符的動作，例如偷偷把資料傳出去。</p><p class="ae-flip__hint">怎麼防？點我翻面 ↻</p></div>
-        <div class="ae-flip__face ae-flip__face--back"><h3>對策：只裝可信來源</h3><p>只裝自己寫的、官方的，或單位審核過的；裝之前請 IT 看。像安裝軟體一樣看待它，不是名字好用就直接裝。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
+        <div class="ae-flip__face ae-flip__face--back"><h3>對策：只裝可信來源</h3><p>只裝自己寫的、官方的，或公司審核過的；裝之前請 IT 看。像安裝軟體一樣看待它，不是名字好用就直接裝。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
       </div></div>
     </div>
     <p class="ae-hint ae-mt" style="display:block">想複習提示注入和權限：{% include ai-learn/chref.html module=mod slug="mcp" anchor="injection" label="提示注入與致命三角" %}、{% include ai-learn/chref.html module=mod slug="mcp" anchor="permission" label="最小權限" %}。</p>
@@ -370,12 +371,12 @@ chapter_css: true
       <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>分分看</div>
       <h3>這件事是綠燈、黃燈，還是紅燈？</h3>
       <div class="ae-sort__items">
-        <div class="ae-sort__item" data-answer="g"><strong>把一段會議筆記整理成待辦表格</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 綠燈：做錯能重來，你看過再用。表格裡的日期和負責人，記得順手對一下原文。</p></div>
-        <div class="ae-sort__item" data-answer="r"><strong>讓 AI 直接把回覆寄給客戶</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 紅燈：寄出去就收不回來，由人看過、按確認。</p></div>
-        <div class="ae-sort__item" data-answer="y"><strong>AI 說「依規定第 5 條，可以退款」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 黃燈：規章條號要點開原文核對；它說「確定」不算數。</p></div>
-        <div class="ae-sort__item" data-answer="g"><strong>把一封信改得更客氣一點</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 綠燈：改語氣是它的強項，改完你看過再用。</p></div>
-        <div class="ae-sort__item" data-answer="y"><strong>報告裡 AI 幫你填上的營收數字</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 黃燈：數字要拿來當真，就回到原始資料一筆一筆對。</p></div>
-        <div class="ae-sort__item" data-answer="r"><strong>把含客戶個資的名單貼給 AI 整理</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g">🟢 綠</button><button type="button" class="ae-btn" data-pick="y">🟡 黃</button><button type="button" class="ae-btn" data-pick="r">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 紅燈：個資、密碼、未公開數字，一開始就不貼進去。</p></div>
+        <div class="ae-sort__item" data-answer="g"><strong>把一段會議筆記整理成待辦表格</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 綠燈：做錯能重來，你看過再用。表格裡的日期和負責人，記得順手對一下原文。</p></div>
+        <div class="ae-sort__item" data-answer="r"><strong>讓 AI 直接把回覆寄給客戶</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 紅燈：寄出去就收不回來，由人看過、按確認。</p></div>
+        <div class="ae-sort__item" data-answer="y"><strong>AI 說「依規定第 5 條，可以退款」</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 黃燈：規章條號要點開原文核對；它說「確定」不算數。</p></div>
+        <div class="ae-sort__item" data-answer="g"><strong>把一封信改得更客氣一點</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 綠燈：改語氣是它的強項，改完你看過再用。</p></div>
+        <div class="ae-sort__item" data-answer="y"><strong>報告裡 AI 幫你填上的營收數字</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 黃燈：數字要拿來當真，就回到原始資料一筆一筆對。</p></div>
+        <div class="ae-sort__item" data-answer="r"><strong>把含客戶個資的名單貼給 AI 整理</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="g" aria-pressed="false">🟢 綠</button><button type="button" class="ae-btn" data-pick="y" aria-pressed="false">🟡 黃</button><button type="button" class="ae-btn" data-pick="r" aria-pressed="false">🔴 紅</button></div><p class="ae-sort__feedback" hidden><b></b> 紅燈：個資、密碼、未公開數字，一開始就不貼進去。</p></div>
       </div>
     </div>
     <p class="ae-key"><small>只記一句</small>做錯能重來的放心交；要當真的先查證；收不回來的一定由人按確認。</p>
@@ -385,8 +386,8 @@ chapter_css: true
 <section id="confirm" class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="A">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 9／10：哪一步一定要先問你？</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>20 秒</span></div>
-      <p class="ae-quiz__q">你請 AI 助理 Agent「整理這週的客訴信，幫每位客戶擬好回覆」。下面四步，哪一步它不該自己做、一定要先問你？</p>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 9／10：哪一步一定要先問你？</span></div>
+      <p class="ae-quiz__q">你請 AI 助理「整理這週的客訴信，幫每位客戶擬好回覆」。下面四步，哪一步它不該自己做、一定要先問你？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>先寄「已收到」確認信給每位客戶，讓他們安心</span></button></li>
         <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>搜尋這週主旨有「客訴」的信，列成清單</span></button></li>
@@ -394,13 +395,13 @@ chapter_css: true
         <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>把每封回覆草稿存進你的信箱草稿匣，主旨標上客戶名稱</span></button></li>
       </ul>
       <div class="ae-quiz__result" tabindex="-1" hidden>
-        <strong data-ae-verdict></strong> 答案是 A。就算只是「已收到」四個字，寄給客戶就是代表你（和你的單位）對外說「我們會處理」，而且收不回來；何況你只叫它整理、擬好，沒叫它寄。
+        <strong data-ae-verdict></strong> 就算只是「已收到」四個字，寄給客戶就是代表你（和你的公司）對外說「我們會處理」，而且收不回來；何況你只叫它整理、擬好，沒叫它寄。
         <ul class="ae-quiz__why">
           <li><b>B 查資料、列清單</b>：沒有對外送出，做錯了還能改，可以讓它先做。</li>
           <li><b>C 查規定、寫草稿</b>：也可以讓它先做；但退款規定屬於<a href="#traffic">紅綠燈的黃燈</a>，檢查草稿時要點開規定原文，看是不是適用、有沒有被讀錯。</li>
           <li><b>D 存草稿</b>：草稿留在你自己的信箱，你看過才會寄出。</li>
         </ul>
-        <p style="margin:.5rem 0 0"><b>判斷原則：</b>會改變真實世界、做了收不回來，或代表你和單位對外說話的動作，就要人按確認。內容對不對、動作有沒有被授權，是兩種把關。史旺姬的會議邀請也一樣：Agent 把邀請擬好，她看過、按下確認，它才寄出。</p>
+        <p style="margin:.5rem 0 0"><b>判斷原則：</b>會改變真實世界、做了收不回來，或代表你和公司對外說話的動作，就要人按確認。內容對不對、動作有沒有被授權，是兩種把關。史旺姬的會議邀請也一樣：Agent 把邀請擬好，她看過、按下確認，它才寄出。</p>
         <p style="margin:.5rem 0 0">👉 六幕走完了，接下來用兩個複習遊戲驗收；答完，再到單元總覽翻名詞小抄。</p>
         <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
       </div>
@@ -426,7 +427,7 @@ chapter_css: true
 <section id="spot" class="ae-quizband">
   <div class="edu-container">
     <div class="ae-quiz" data-ae-quiz="B">
-      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-search" aria-hidden="true"></i>小測驗 10／10：複習遊戲 1／2：抓出 AI 的幻覺</span><span class="ae-quiz__timer"><i class="bi bi-stopwatch" aria-hidden="true"></i>30 秒</span></div>
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-search" aria-hidden="true"></i>小測驗 10／10（複習 1／2）：抓出 AI 的幻覺</span></div>
       <p class="ae-quiz__q">你請 AI 整理「AI 小歷史」，它回了下面四句。哪一句是一本正經的胡說八道？</p>
       <ul class="ae-quiz__opts">
         <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>RAG 的意思是先查資料、再根據查到的段落回答，可以減少幻覺</span></button></li>
@@ -435,7 +436,7 @@ chapter_css: true
         <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>MCP 是 Anthropic 在 2024 年 11 月發表、讓 AI 接上工具的連接標準</span></button></li>
       </ul>
       <div class="ae-quiz__result" tabindex="-1" hidden>
-        <strong data-ae-verdict></strong> 答案是 B：ChatGPT 是 <b>5 天</b>突破 100 萬用戶（2022/12/5 由 OpenAI 執行長公布），不是 2 天。上線日期沒改、產品名稱也對，只偷換了一個數字。
+        <strong data-ae-verdict></strong> ChatGPT 是 <b>5 天</b>突破 100 萬用戶（2022/12/5 由 OpenAI 執行長公布），不是 2 天。上線日期沒改、產品名稱也對，只偷換了一個數字。
         <ul class="ae-quiz__why">
           <li><b>A 對</b>：RAG 就是先查資料、再回答（{% include ai-learn/chref.html module=mod slug="llm" anchor="rag" label="第二幕 RAG" %}）。</li>
           <li><b>C 對</b>：AlphaGo 2016 年以 4 比 1 勝李世乭（{% include ai-learn/chref.html module=mod slug="history" label="第一幕" %}）。</li>
@@ -456,8 +457,8 @@ chapter_css: true
       <span class="ae-lesson__tag"><i class="bi bi-puzzle" aria-hidden="true"></i>複習遊戲 2／2：配對題</span>
       <h2>這 5 個工作煩惱，各該用哪個名詞解決？</h2>
     </div>
-    <div class="ae-prose"><p>桌上有 6 張名詞卡，其中 <strong>1 張用不到</strong>，其餘各解一個最直接的煩惱。真實工作裡這些名詞常常一起出現，但這題先挑「最直接」解決那個煩惱的一個。</p></div>
-    <div class="ag-cards6" aria-label="6 張名詞卡">
+    <div class="ae-prose"><p>桌上有 6 張名詞卡，其中 <strong>1 張用不到</strong>，其餘各解一個最直接的煩惱。真實工作裡這些名詞常常一起出現，但這題先挑「最直接」解決那個煩惱的一個。答對 4 題以上就很好。</p></div>
+    <div class="ag-cards6" role="img" aria-label="6 張名詞卡：LLM（換更強的模型）、Prompt、Skill、MCP、RAG、Agent">
       <span data-c="llm"><i class="bi bi-cpu" aria-hidden="true"></i>LLM（換更強的模型）</span>
       <span data-c="prompt"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i>Prompt</span>
       <span data-c="skill"><i class="bi bi-journal-text" aria-hidden="true"></i>Skill</span>
@@ -468,11 +469,11 @@ chapter_css: true
     <div class="ae-widget ag-match" data-ae-sort>
       <div class="ae-widget__label"><i class="bi bi-controller" aria-hidden="true"></i>每題點一個名詞，馬上對答案</div>
       <div class="ae-sort__items">
-        <div class="ae-sort__item" data-answer="skill"><span class="ag-match__no">1</span><strong>每次請 AI 約會議，都要重新交代一次「避開午休、標題格式」，好累</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm">LLM</button><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button><button type="button" class="ae-btn" data-pick="rag">RAG</button><button type="button" class="ae-btn" data-pick="agent">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Skill：重複的交代寫成手冊，之後每次照做，不用全部重講。</p></div>
-        <div class="ae-sort__item" data-answer="prompt"><span class="ag-match__no">2</span><strong>AI 寫的信太長，又自己亂加承諾</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm">LLM</button><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button><button type="button" class="ae-btn" data-pick="rag">RAG</button><button type="button" class="ae-btn" data-pick="agent">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Prompt：補上「限制」積木，例如字數、不承諾金額。</p></div>
-        <div class="ae-sort__item" data-answer="mcp"><span class="ag-match__no">3</span><strong>AI 只會回「請到行事曆建立」，沒辦法真的把會議邀請建進行事曆</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm">LLM</button><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button><button type="button" class="ae-btn" data-pick="rag">RAG</button><button type="button" class="ae-btn" data-pick="agent">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 MCP：要動到真的系統，需要接上工具（例：行事曆 Server 的建立邀請工具，示意）。Skill 只能教它邀請要寫哪些欄位，真正把邀請送進系統的是 MCP 工具。</p></div>
-        <div class="ae-sort__item" data-answer="rag"><span class="ag-match__no">4</span><strong>問 AI 上週單位剛發布的新規定，它答不出來</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm">LLM</button><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button><button type="button" class="ae-btn" data-pick="rag">RAG</button><button type="button" class="ae-btn" data-pick="agent">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 RAG：新規定在知識截止日之後，要讓它先查內部文件再回答。選 MCP 也對一半：查文件這一步可以透過 MCP 工具；「先查資料再回答」這個做法的名字叫 RAG。</p></div>
-        <div class="ae-sort__item" data-answer="agent"><span class="ag-match__no">5</span><strong>希望 AI 自己查三人行事曆、找空檔、擬好邀請，只讓我按確認</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm">LLM</button><button type="button" class="ae-btn" data-pick="prompt">Prompt</button><button type="button" class="ae-btn" data-pick="skill">Skill</button><button type="button" class="ae-btn" data-pick="mcp">MCP</button><button type="button" class="ae-btn" data-pick="rag">RAG</button><button type="button" class="ae-btn" data-pick="agent">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Agent：自己拆步驟、用工具、做到完成，重要動作請你確認。</p></div>
+        <div class="ae-sort__item" data-answer="skill"><span class="ag-match__no">1</span><strong>每次請 AI 約會議，都要重新交代一次「避開午休、標題格式」，好累</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm" aria-pressed="false">LLM</button><button type="button" class="ae-btn" data-pick="prompt" aria-pressed="false">Prompt</button><button type="button" class="ae-btn" data-pick="skill" aria-pressed="false">Skill</button><button type="button" class="ae-btn" data-pick="mcp" aria-pressed="false">MCP</button><button type="button" class="ae-btn" data-pick="rag" aria-pressed="false">RAG</button><button type="button" class="ae-btn" data-pick="agent" aria-pressed="false">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Skill：重複的交代寫成手冊，之後每次照做，不用全部重講。</p></div>
+        <div class="ae-sort__item" data-answer="prompt"><span class="ag-match__no">2</span><strong>AI 寫的信太長，又自己亂加承諾</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm" aria-pressed="false">LLM</button><button type="button" class="ae-btn" data-pick="prompt" aria-pressed="false">Prompt</button><button type="button" class="ae-btn" data-pick="skill" aria-pressed="false">Skill</button><button type="button" class="ae-btn" data-pick="mcp" aria-pressed="false">MCP</button><button type="button" class="ae-btn" data-pick="rag" aria-pressed="false">RAG</button><button type="button" class="ae-btn" data-pick="agent" aria-pressed="false">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Prompt：補上「限制」積木，例如字數、不承諾金額。</p></div>
+        <div class="ae-sort__item" data-answer="mcp"><span class="ag-match__no">3</span><strong>AI 只會回「請到行事曆建立」，沒辦法真的把會議邀請建進行事曆</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm" aria-pressed="false">LLM</button><button type="button" class="ae-btn" data-pick="prompt" aria-pressed="false">Prompt</button><button type="button" class="ae-btn" data-pick="skill" aria-pressed="false">Skill</button><button type="button" class="ae-btn" data-pick="mcp" aria-pressed="false">MCP</button><button type="button" class="ae-btn" data-pick="rag" aria-pressed="false">RAG</button><button type="button" class="ae-btn" data-pick="agent" aria-pressed="false">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 MCP：要動到真的系統，需要接上工具（例：行事曆 Server 的建立邀請工具，示意）。Skill 只能教它邀請要寫哪些欄位，真正把邀請送進系統的是 MCP 工具。</p></div>
+        <div class="ae-sort__item" data-answer="rag"><span class="ag-match__no">4</span><strong>問 AI 上週公司剛發布的新規定，它答不出來</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm" aria-pressed="false">LLM</button><button type="button" class="ae-btn" data-pick="prompt" aria-pressed="false">Prompt</button><button type="button" class="ae-btn" data-pick="skill" aria-pressed="false">Skill</button><button type="button" class="ae-btn" data-pick="mcp" aria-pressed="false">MCP</button><button type="button" class="ae-btn" data-pick="rag" aria-pressed="false">RAG</button><button type="button" class="ae-btn" data-pick="agent" aria-pressed="false">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 RAG：新規定在知識截止日之後，要讓它先查內部文件再回答。選 MCP 也對一半：查文件這一步可以透過 MCP 工具；「先查資料再回答」這個做法的名字叫 RAG。</p></div>
+        <div class="ae-sort__item" data-answer="agent"><span class="ag-match__no">5</span><strong>希望 AI 自己查三人行事曆、找空檔、擬好邀請，只讓我按確認</strong><div class="ae-sort__choices"><button type="button" class="ae-btn" data-pick="llm" aria-pressed="false">LLM</button><button type="button" class="ae-btn" data-pick="prompt" aria-pressed="false">Prompt</button><button type="button" class="ae-btn" data-pick="skill" aria-pressed="false">Skill</button><button type="button" class="ae-btn" data-pick="mcp" aria-pressed="false">MCP</button><button type="button" class="ae-btn" data-pick="rag" aria-pressed="false">RAG</button><button type="button" class="ae-btn" data-pick="agent" aria-pressed="false">Agent</button></div><p class="ae-sort__feedback" hidden><b></b> 答案是 Agent：自己拆步驟、用工具、做到完成，重要動作請你確認。</p></div>
       </div>
     </div>
     <details class="ae-reveal ae-mt" style="background:#fff;border:2px solid var(--ae-navy)">
@@ -500,7 +501,7 @@ chapter_css: true
         <div class="ae-node" data-c="skill"><span class="ae-node__icon"><i class="bi bi-journal-text" aria-hidden="true"></i></span><b>沒有固定做法？</b><span>→ 寫成 Skill</span></div>
       </div>
     </figure>
-    <p class="ae-key"><small>只記一句</small>答對 4 題以上就很好。實務上名詞常常一起出現：Skill 教做法、MCP 去執行、RAG 負責查資料。</p>
+    <p class="ae-key"><small>只記一句</small>實務上名詞常常一起出現：Skill 教做法、MCP 去執行、RAG 負責查資料。</p>
   </div>
 </section>
 
@@ -524,11 +525,11 @@ chapter_css: true
     <p class="ae-tip">不要因為某件事很花時間，就跳過資料安全和責任問題。最高 125 分只是幫你排序，<b>不是保證能省多少錢或多少時間</b>。</p>
     <figure class="ae-dg">
       <figcaption class="ae-dg__title"><i class="bi bi-table" aria-hidden="true"></i>打分示範：三項相乘，挑出第一個題目（工作與分數為虛構示範）</figcaption>
-      <div class="ag-mult" aria-label="4 乘 4 乘 4 等於 64">
+      <div class="ag-mult" role="img" aria-label="4 乘 4 乘 4 等於 64">
         <span><small>頻率</small>4</span>×<span><small>耗時</small>4</span>×<span><small>規則明確</small>4</span>＝<span class="is-res"><small>整理每週會議紀錄</small>64 ⭐</span>
       </div>
       <table class="ag-table ae-mt">
-        <thead><tr><th class="ag-l">每週重複的工作</th><th>頻率</th><th>耗時</th><th>規則明確</th><th>相乘</th></tr></thead>
+        <thead><tr><th class="ag-l">候選工作</th><th>頻率</th><th>耗時</th><th>規則明確</th><th>相乘</th></tr></thead>
         <tbody>
           <tr class="is-top"><td class="ag-l">整理每週會議紀錄</td><td>4</td><td>4</td><td>4</td><td class="ag-prod">64 ⭐</td></tr>
           <tr><td class="ag-l">回覆客戶常見問題</td><td>5</td><td>2</td><td>5</td><td class="ag-prod">50</td></tr>
@@ -545,12 +546,12 @@ chapter_css: true
     <div class="ae-widget">
       <div class="ae-widget__label"><i class="bi bi-pencil-square" aria-hidden="true"></i>現在就換你</div>
       <ol class="ae-numlist ae-numlist--row">
-        <li>寫下一件你每週重複做的工作（開頭「先想 5 秒」那件也可以）。</li>
+        <li>寫下一件你每週重複做的工作（開頭「先想一想」那件也可以）。</li>
         <li>頻率、耗時、規則明確各打 1～5 分，三項相乘；挑分數最高、而且規則至少 3 分的那一件。</li>
         <li>下次做它時用手機計時，記下手動做一次要幾分鐘，之後才有用 AI 前後的比較基準。</li>
       </ol>
     </div>
-    <p class="ae-key"><small>只記一句</small>三項相乘，最高 125 分；挑分數最高、而且規則至少 3 分的那一件，記下你現在手動做一次要幾分鐘。</p>
+    <p class="ae-key"><small>只記一句</small>挑三項相乘最高、而且規則至少 3 分的那一件，記下手動做一次要幾分鐘。</p>
   </div>
 </section>
 
@@ -563,7 +564,7 @@ chapter_css: true
     <div class="ae-prose"><p>名詞要真的用過一次，才會變成自己的。做完一項就打個勾（勾選只是讓你自己看進度，不會存起來）。只用你有權限使用的 AI 工具，不放個資、客戶資料等真實內容。</p></div>
     <ol class="ae-check ag-tasks">
       <li><label><input type="checkbox"><span>① 用「6 塊積木」改寫一句你最近問 AI 的話，比較改寫前後的回答差在哪。不是看改寫後的 Prompt 比較長，而是成果有沒有更接近需求。</span></label>
-        <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="prompt" anchor="blocks" label="好 Prompt 的積木" %}、{% include ai-learn/chref.html module=mod slug="prompt" label="第三幕的打分方式" %}</p></li>
+        <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="prompt" anchor="blocks" label="好 Prompt 的積木" %}、{% include ai-learn/chref.html module=mod slug="prompt" anchor="answer" label="第三幕的打分方式" %}</p></li>
       <li><label><input type="checkbox"><span>② 在你有權限使用的 AI 工具裡，問一個需要出處的問題，再追問「你根據哪份資料？請貼原文」，然後自己點開原文對照。</span></label>
         <details class="ae-reveal"><summary>記錄範例</summary><div><ul><li>問：「MCP 是哪年誰發表的？」</li><li>它答：2024 年、Anthropic，附連結</li><li>點開原文：對得上</li></ul>記下它答什麼、連結點不點得開、原文是不是真的支持答案；它說「確定」不算數。</div></details>
         <p class="ae-check__back">回去看 → <a href="{{ mod.url | relative_url }}#practice">總覽頁練習 ①</a>、{% include ai-learn/chref.html module=mod slug="llm" anchor="lawyer" label="律師假判例" %}</p></li>
@@ -573,13 +574,13 @@ chapter_css: true
         <details class="ae-reveal"><summary>虛構示範</summary><div><ul><li>我問了什麼：某條規定的條號</li><li>它回了什麼：一個不存在的條號</li><li>哪裡有幫助、哪裡不如預期：格式整理得好，但條號錯</li><li>我怎麼發現：點開原文才發現</li><li>哪一步要人確認：發出前要人核對條號</li></ul></div></details>
         <p class="ae-check__back">回去看 → <a href="{{ mod.url | relative_url }}#practice">總覽頁的 5 格紀錄</a></p></li>
       <li><label><input type="checkbox"><span>⑤ 確認你手邊有一個能用的 AI 工具：登入後送出「你好，請用一句話介紹你自己」，看到它回覆就算完成。</span></label>
-        <p class="ae-check__back"><span>如果是工作上要用，先確認你的單位允許使用哪些工具。</span></p></li>
+        <p class="ae-check__back"><span>如果是工作上要用，先確認你的公司或團隊允許使用哪些工具。</span></p></li>
     </ol>
     <figure class="ae-dg">
       <figcaption class="ae-dg__title"><i class="bi bi-calendar-week" aria-hidden="true"></i>建議節奏</figcaption>
       <div class="ae-flow-row ae-flow-row--tight">
         <div class="ae-node ae-node--plain" data-c="key"><span class="ae-node__icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><b>讀完當天</b><span>做 <a href="{{ mod.url | relative_url }}#self-check">9 題自我檢核</a></span></div>
-        <div class="ae-node ae-node--plain" data-c="key"><span class="ae-node__icon"><i class="bi bi-play-btn" aria-hidden="true"></i></span><b>第 1 週</b><span>看下面 4 支影片，做 ①②⑤</span></div>
+        <div class="ae-node ae-node--plain" data-c="key"><span class="ae-node__icon"><i class="bi bi-play-btn" aria-hidden="true"></i></span><b>第 1 週</b><span>看<a href="{{ mod.url | relative_url }}#more">單元總覽的 4 支影片</a>，做 ①②⑤</span></div>
         <div class="ae-node ae-node--plain" data-c="key"><span class="ae-node__icon"><i class="bi bi-stopwatch" aria-hidden="true"></i></span><b>第 2 週</b><span>做 ③④</span></div>
       </div>
     </figure>
