@@ -26,13 +26,12 @@ breadcrumbs:
   <section id="self-study" class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">Start Here</span><h2>完全沒碰過？先從自學教材開始</h2><p>給非工程背景的入門教材：用故事和比喻講清楚 AI 的基本名詞，每一段都有小遊戲和小測驗，可以自己讀、自己練。</p></header>
-      {%- comment -%}每個已上線單元一列大圖橫幅；圖用該單元 hero 插畫的 768 小圖（同一張圖已在本頁 hero，故 alt 留空當裝飾）{%- endcomment -%}
+      {%- comment -%}每個已上線單元一列大圖橫幅；左側用六幕開場插畫的小圖拼排，代表「六幕」，避免重複頁首 hero 那張圖（拼圖為裝飾，alt 留空）{%- endcomment -%}
       <div class="edu-course-rows">
         {% for m in site.data.ai_learn.modules %}{% if m.status == 'published' %}
         {% assign live = m.chapters | where: "status", "published" %}
-        {% capture m_cover %}/assets/img/ai-learn/{{ m.slug }}/h1-768.webp{% endcapture %}
         <article class="edu-course-row">
-          <div class="edu-course-row__media"><img src="{{ m_cover | relative_url }}" alt="" width="768" height="512" loading="lazy" decoding="async"><span class="edu-media-label">AI 生成插畫</span></div>
+          <div class="edu-course-row__media edu-course-row__media--mosaic">{% assign acts = "a1,l1,p1,m1,s1,g1" | split: "," %}{% for k in acts %}{% capture m_cover %}/assets/img/ai-learn/{{ m.slug }}/{{ k }}-768.webp{% endcapture %}<img src="{{ m_cover | relative_url }}" alt="" width="768" height="512" loading="lazy" decoding="async">{% endfor %}<span class="edu-media-label">AI 生成插畫</span></div>
           <div class="edu-course-row__body">
             <div class="edu-badges"><span class="edu-badge">免費自學</span><span class="edu-badge edu-badge--muted">已上線 {{ live.size }}／{{ m.chapters.size }} 幕</span></div>
             <h3>{{ m.title }}</h3><p>{{ m.description }}</p>

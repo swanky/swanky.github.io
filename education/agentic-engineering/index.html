@@ -18,7 +18,7 @@ breadcrumbs:
 {% assign c = site.data.courses.agentic_engineering %}
 {% capture inquiry_href %}{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=agentic_engineering_page{% endcapture %}
 <main id="main" class="education-page">
-  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline banner="/assets/img/education/ai-agent-surgical-team.webp" banner_width="1536" banner_height="864" banner_alt="AI 生成插畫：水手服少女擔任軟體外科手術團隊的主導者，帶領五個 AI Agent，把混亂的網狀溝通整理成星狀協作與鬆耦合模組" primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
+  {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline banner="/assets/img/education/ae-delivery-pipeline.webp" banner_width="1536" banner_height="1024" banner_alt="AI 生成插畫：科技大廳裡一條發光的交付流水線穿過九道關卡，前三道亮綠燈、第四道正在掃描；史旺姬在第四道關卡旁拿平板對照規格按下通過，戴笑臉大帽的老師在終點舉著金色確認章，小機器人沿線搬運規格卡、積木與打勾的測試徽章" primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
   <section class="edu-section edu-section--compact">
     <div class="edu-container">
@@ -94,7 +94,7 @@ breadcrumbs:
         <p>Claude Code 是主要示範環境；課程會說清楚哪些是工程方法，哪些只是工具實作。</p>
       </header>
       <p class="edu-table-hint">手機可左右滑動查看完整表格。</p>
-      <div class="edu-table-wrap">
+      <div class="edu-table-wrap" tabindex="0" role="region" aria-label="課程單元對照表，可左右捲動">
         <table class="edu-table">
           <thead><tr><th>#</th><th>主題</th><th>階段</th><th>實作</th><th>帶走</th></tr></thead>
           <tbody>
