@@ -192,7 +192,7 @@ talents:
 
   # 江映希：2026-10-08 隨首冊《窗外還亮著》移交首次上站（攝影 repo characters/original/virtual-artist-2026-10-07，站主定名）。
   # 攝影端角色卡註明人物故事、身高與身形「未定」→ 不寫背景、不列規格；intro／disclosure 只取寫真集移交 JSON 的
-  # disclosure（22 歲原創成年虛構角色）與 description 原句。名冊照未生成，暫用寫真集 No.29（臉部清楚的近景）；首頁跨頁待站主決定。
+  # disclosure（22 歲原創成年虛構角色）與 description 原句。名冊照 2026-10-09 起改用同棚生成的 digitals/jiang-yingxi.webp（portrait 保留 No.29 作寫真集內備援）；首頁跨頁 2026-10-09 補上 No.36。
   - slug: jiang-yingxi
     name: 江映希
     division: photobook
@@ -204,7 +204,9 @@ talents:
     facts:
       - { label: 年齡, value: 22 歲 }
     portrait: { book: jiang_yingxi_window_still_lit, kind: json, n: 29 }
+    digital: true   # 名冊照 digitals/jiang-yingxi.webp（2026-10-09 攝影端同棚生成 a01、QA 通過；原檔 C:/swanky_photography/projects/yingxi-window-still-lit-2026-10-08/roster-portrait-v1/out/jiang-yingxi-a01.png，SHA-256 df87d294f3d333d7d7a2801e077f9e7cbaa78e52b0b22e11d3a7ff4217ff9496；提示詞 prompts/jiang-yingxi-a01.prompt.txt、收據 receipt.json 同目錄）
     hero: { book: jiang_yingxi_window_still_lit, kind: json, n: 36 }
+    spread: { book: jiang_yingxi_window_still_lit, kind: json, n: 36 }   # 首頁跨頁：36「窗外還亮著」（與書名同題；方形整張不裁切，坐在窗邊望向遠城燈火，最能代表全書）
     books:
       - { data: jiang_yingxi_window_still_lit, kind: json, url: /photography/jiang-yingxi-window-still-lit/, pdf_size: 約 22 MB }
 

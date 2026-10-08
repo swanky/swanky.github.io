@@ -167,6 +167,11 @@ a.sm-media:hover img { transform: scale(1.015); }
 .sm-spreads__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; margin-top: var(--sm-s1); }
 .sm-spreads__pair .sm-spread--wide { grid-column: 1 / -1; }
 @media (min-width: 768px) { .sm-spreads__pair .sm-spread--wide { margin-bottom: var(--sm-s1); } }
+/* 寫真集照片不裁切：方形書圖（如《窗外還亮著》）在兩欄格裡比照鄰格的 3:2 橫幅高度，整張置中、左右留框色，免得同一排一高一矮 */
+@media (min-width: 768px) {
+  .sm-spreads__pair .sm-spread--half .sm-media--square { aspect-ratio: 3 / 2; }
+  .sm-spreads__pair .sm-spread--half .sm-media--square img { width: auto; height: 100%; margin-inline: auto; }
+}
 .sm-spread__cap { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
 .sm-spread__title { display: block; min-width: 0; color: var(--sm-ink) !important; font-family: var(--font-display); font-size: var(--sm-t2); text-indent: -0.5em; hanging-punctuation: first; font-weight: 500; letter-spacing: -0.015em; line-height: 1.25; text-decoration: none !important; transition: color var(--dur-2, 0.25s) ease; }
 .sm-spread__title:hover { text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 6px; }
