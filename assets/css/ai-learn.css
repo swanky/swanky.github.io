@@ -799,3 +799,13 @@ a.ae-chapter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px r
 .ae-page:not(.ae-js) .ae-flip__inner { display: block; transform: none !important; }
 .ae-page:not(.ae-js) .ae-flip__face { position: relative; transform: none; backface-visibility: visible; margin-bottom: .75rem; }
 .ae-page:not(.ae-js) .ae-flip__hint { display: none; }
+
+/* ===== 14. 插畫滿版（2026-10-08 站主：插畫放到整頁寬度） ===== */
+/* hero：文字在上、插畫在下滿版；內文插畫獨立一列、撐滿內容寬度 */
+.ae-hero__grid,
+.ae-page .edu-hero__grid { grid-template-columns: minmax(0, 1fr); gap: clamp(1.75rem, 3.5vw, 2.75rem); }
+.ae-hero__grid > .ae-illus,
+.ae-page .edu-hero__grid > .ae-illus { width: 100%; }
+.ae-question { max-width: 46rem; }
+.ae-lesson .edu-container > .ae-illus { margin: clamp(1.75rem, 3.5vw, 2.5rem) 0 0; }
+.ae-illus img { border-radius: clamp(12px, 1.6vw, 22px); }

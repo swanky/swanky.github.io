@@ -6,7 +6,7 @@
 {% if include.src %}
 {% assign ext = include.src | slice: -5, 5 %}
 <figure class="ae-illus">
-  <img src="{{ include.src | relative_url }}"{% if ext == '.webp' %} srcset="{{ include.src | replace: '.webp', '-768.webp' | relative_url }} 768w, {{ include.src | relative_url }} 1536w" sizes="(min-width: 992px) 640px, 100vw"{% endif %} alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %}{% if include.eager %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+  <img src="{{ include.src | relative_url }}"{% if ext == '.webp' %} srcset="{{ include.src | replace: '.webp', '-768.webp' | relative_url }} 768w, {{ include.src | relative_url }} 1536w" sizes="(min-width: 1160px) 1120px, calc(100vw - 28px)"{% endif %} alt="{{ include.alt }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %}{% if include.eager %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
   {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
 {% else %}
