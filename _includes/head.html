@@ -9,7 +9,17 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-SB1R6G61LY');
+  // 只有正式網域才 config（沒 config 就不送任何資料）：本機建置與 QA 不再混進正式報表。
+  // gtag.js 標籤本身照常載入——Search Console 的擁有權驗證可能依賴它，別移除或改成動態插入。
+  // 本機要驗事件 payload：網址加 ?ga_test=1（本分頁有效），且驗證時一律攔截 google-analytics 請求不放行。
+  (function () {
+    var test = false;
+    try {
+      if (/[?&]ga_test=1/.test(location.search)) sessionStorage.setItem('ga_test', '1');
+      test = sessionStorage.getItem('ga_test') === '1';
+    } catch (e) {}
+    if (location.hostname === 'swanky.github.io' || test) gtag('config', 'G-SB1R6G61LY');
+  })();
 </script>
 
 {% assign seo_title = page.seo_title | default: page.title %}

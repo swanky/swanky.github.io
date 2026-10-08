@@ -1,6 +1,6 @@
 ---
 title: "Fable 田野指南：當地圖展開，你要學會的不只是下 prompt"
-seo_title: "Fable 是什麼？Anthropic〈Field Guide to Fable〉演講四大重點與實戰方法"
+seo_title: "Fable AI 是什麼？Anthropic〈Field Guide to Fable〉演講重點與實戰方法"
 date: 2026-07-08
 categories: [technical]
 tags: [claude-code]
