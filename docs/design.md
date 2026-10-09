@@ -49,10 +49,7 @@
 
 ## Content & Tone Guidelines
 
-- **Language**: All website copy, blog posts, and text content MUST be written in Traditional Chinese (zh-TW).
-- **Domain Focus**: Content primarily revolves around professional photography, Web3 ecosystem development, and tech management insights.
-- **Tone**: Maintain a professional, experienced, yet passionate tone suitable for a studio portfolio and a technical leader.
-- **SEO & Accessibility**: Always ensure new images (especially photography works) have descriptive `alt` attributes for SEO and accessibility.
+已移到 `docs/brand-book.md`（2026-10-09 站主核定為全站標準）：語氣、受眾、各類頁面及格線都以品牌手冊為準。本檔只管視覺系統。
 
 ## Design Context
 
