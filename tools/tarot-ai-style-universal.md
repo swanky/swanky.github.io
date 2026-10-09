@@ -66,6 +66,8 @@ red, forest green, cream). Reminiscent of a modern illustrated witch-tarot deck.
 
 這套牌的識別特徵＝**同一個角色演繹全 78 張**。用一段英文寫死臉孔與服裝關鍵特徵。
 
+> **2026-10-09 站主裁定：品牌角色是成年人。** 下方是原牌組當時的提示詞原文，保留作歷史紀錄；之後任何新生成，第一行一律改用：`one wholesome adult Taiwanese young woman (clearly over 18), gentle and bright expression —`，外觀描述其餘不變，也不得使用 high-school、teen 等暗示未成年的字眼。
+
 **原牌組實際用的角色（v3 Part B 原文，當基準範例）：**
 
 ```

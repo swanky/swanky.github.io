@@ -90,7 +90,7 @@ talents:
     kind_label: 原創虛擬人物
     debut: 2026
     intro: 史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。
-    disclosure: 史旺姬為史旺基的原創虛擬人物。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    disclosure: 史旺姬為史旺基的原創成年虛擬人物。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
     portrait: { book: swanky_ji_everyday_light, kind: json, n: 12 }
     hero: { book: swanky_ji_open_worlds, kind: json, n: 35 }
     digital: true   # 名冊照 /assets/img/photography/models/digitals/swanky-ji.webp（2026-09-25 同棚同光三張之一）
