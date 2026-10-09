@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">我的帳本：前後實付約 US$125</title>
+  <desc id="d">供應商回報的實付金額：賽前彩排 64.11 美元，內容是小型試跑、模型比較、30 秒概念預告、三首 AI 配樂、兩支雙風格短片；正式比賽 60.82 美元，現場限時賽，最後入圍決賽八強。合計 124.93 美元。沒算進去的有：圖片生成用既有訂閱額度、剪接混音與品質檢查在自己電腦上完成、我的時間與設備。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="660" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">我的帳本：前後實付約 US$125</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">都是供應商回報的實付金額，不是估價</text>
+  <text x="48" y="228" font-size="30" font-weight="700" fill="#1F2937">賽前彩排</text>
+  <rect x="230" y="186" width="551.346" height="60" rx="12" fill="#2C5B8F"/>
+  <text x="795.346" y="228" font-size="28" font-weight="700" fill="#2C5B8F">US$64.11</text>
+  <text x="230" y="284" font-size="22" fill="#4B5563">小型試跑、模型比較、預告、配樂、雙風格短片</text>
+  <text x="48" y="378" font-size="30" font-weight="700" fill="#1F2937">正式比賽</text>
+  <rect x="230" y="336" width="523.052" height="60" rx="12" fill="#B45309"/>
+  <text x="767.052" y="378" font-size="28" font-weight="700" fill="#B45309">US$60.82</text>
+  <text x="230" y="434" font-size="22" fill="#4B5563">現場限時賽，最後入圍決賽八強</text>
+  <rect x="1000" y="168" width="152" height="280" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <ellipse cx="1076" cy="262" rx="34" ry="11" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <ellipse cx="1076" cy="249" rx="34" ry="11" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <ellipse cx="1076" cy="236" rx="34" ry="11" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <ellipse cx="1076" cy="223" rx="34" ry="11" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <text x="1076" y="316" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">合計約</text>
+  <text x="1076" y="362" font-size="34" font-weight="700" text-anchor="middle" fill="#8A5D00">US$125</text>
+  <text x="1076" y="404" font-size="22" text-anchor="middle" fill="#4B5563">(124.93)</text>
+  <rect x="48" y="486" width="1104" height="140" rx="22" fill="#F8FAFC" stroke="#64748B" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="80" y="532" font-size="26" font-weight="700" fill="#64748B">沒算進這個數字的</text>
+  <rect x="80.0" y="565.0" width="226.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="193.0" y="591.92" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">圖片：既有訂閱額度</text>
+  <rect x="318.0" y="565.0" width="358.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="497.0" y="591.92" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">剪接、混音、品質檢查：自己電腦</text>
+  <rect x="688.0" y="565.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="746.0" y="591.92" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">我的時間</text>
+  <rect x="816.0" y="565.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="852.0" y="591.92" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">設備</text>
+</svg>

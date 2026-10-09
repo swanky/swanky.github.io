@@ -98,15 +98,16 @@
 {% if page.preconnect_flickr or page.nav_active == 'photography' %}<link rel="preconnect" href="https://live.staticflickr.com">{% endif %}
 
 <!-- Template Main CSS File -->
-<link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/css/style.css' | relative_url }}?v=20261009-1" rel="stylesheet">
 <link href="{{ '/assets/css/site-overview.css' | relative_url }}?v=20260813-1" rel="stylesheet">
-{% if page.nav_active == 'education' %}<link href="{{ '/assets/css/education.css' | relative_url }}" rel="stylesheet">{% endif %}
-{% if page.nav_active == 'technical' %}<link href="{{ '/assets/css/technical.css' | relative_url }}" rel="stylesheet">{% endif %}
-{% if page.use_photography_author %}<link href="{{ '/assets/css/photography.css' | relative_url }}?v=20261008-1" rel="stylesheet">{% endif %}
+{% if page.nav_active == 'education' %}<link href="{{ '/assets/css/education.css' | relative_url }}?v=20261009-1" rel="stylesheet">{% endif %}
+{% if page.nav_active == 'technical' %}<link href="{{ '/assets/css/technical.css' | relative_url }}?v=20261009-3" rel="stylesheet">{% endif %}
+{% if page.use_photography_author %}<link href="{{ '/assets/css/photography.css' | relative_url }}?v=20261009-1" rel="stylesheet">{% endif %}
+{% if page.use_photo_learn %}<link href="{{ '/assets/css/photo-learn.css' | relative_url }}?v=20261010-1" rel="stylesheet">{% endif %}
 {% if page.use_ai_visual %}<link href="{{ '/assets/css/ai-visual.css' | relative_url }}?v=20261007-1" rel="stylesheet">{% endif %}
 {% if page.use_models %}<link href="{{ '/assets/css/models.css' | relative_url }}?v=20261009-1" rel="stylesheet">{% endif %}
 {% if page.use_tarot_lab %}<link href="{{ '/assets/css/tarot-lab.css' | relative_url }}?v=20260714-4" rel="stylesheet">{% endif %}
-{% if page.use_ai_learn %}<link href="{{ '/assets/css/ai-learn.css' | relative_url }}?v=20261008-13" rel="stylesheet">{% endif %}
+{% if page.use_ai_learn or page.learn_kit %}<link href="{{ '/assets/css/ai-learn.css' | relative_url }}?v=20261008-13" rel="stylesheet">{% endif %}{% if page.learn_kit %}<link href="{{ '/assets/css/learn-kit.css' | relative_url }}?v=20261009-3" rel="stylesheet">{% endif %}
 {% if page.chapter_css %}<link href="{{ '/assets/css/ai-learn/' | append: page.ai_module | append: '/' | append: page.ai_chapter | append: '.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}" rel="stylesheet">{% endif %}
 {% if page.use_tools_css %}<link href="{{ '/assets/css/tools.css' | relative_url }}" rel="stylesheet">{% endif %}
 

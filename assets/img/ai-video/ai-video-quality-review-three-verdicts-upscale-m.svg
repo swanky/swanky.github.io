@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1490" width="600" height="1490" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">要不要畫質放大？過五道關卡</title>
+  <desc id="d">由上往下問五個問題，答是就照箭頭做、停在那裡：核心缺陷先回頭修；尺寸夠就跳過；動畫風偏軟才小段比較、先試 2 倍；擬真人物不用動畫專用模型；不划算就跳過。放大後要重新驗收。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1490" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">要不要畫質放大？</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">過五道關卡</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">由上往下問，答「是」就照箭頭做、</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">停在那裡</text>
+  <rect x="40" y="230" width="520" height="92" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="76" cy="276" r="22" fill="#B45309"/>
+  <text x="76" y="285.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="112" y="272" font-size="28" font-weight="700" fill="#B45309">素材有核心缺陷？</text>
+  <text x="112" y="306" font-size="22" fill="#4B5563">多一根手指、臉逐秒換樣</text>
+  <path d="M150,324 L150,364 L182,364" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="140" y="354" font-size="22" font-weight="700" text-anchor="end" fill="#0E7568">是</text>
+  <rect x="190" y="334" width="370" height="76" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="210" y="366" font-size="26" font-weight="700" fill="#B91C1C">回頭修或重新生成</text>
+  <text x="210" y="398" font-size="22" fill="#4B5563">放大只會讓錯更清楚</text>
+  <line x1="76" y1="324" x2="76" y2="456" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="90" y="430" font-size="22" font-weight="700" fill="#B91C1C">否</text>
+  <rect x="40" y="458" width="520" height="92" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="76" cy="504" r="22" fill="#B45309"/>
+  <text x="76" y="513.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="112" y="514" font-size="28" font-weight="700" fill="#B45309">尺寸夠，看起來也清楚？</text>
+  <path d="M150,552 L150,592 L182,592" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="140" y="582" font-size="22" font-weight="700" text-anchor="end" fill="#0E7568">是</text>
+  <rect x="190" y="562" width="370" height="76" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="210" y="594" font-size="26" font-weight="700" fill="#64748B">跳過</text>
+  <text x="210" y="626" font-size="22" fill="#4B5563">再放大只多出假細節</text>
+  <line x1="76" y1="552" x2="76" y2="684" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="90" y="658" font-size="22" font-weight="700" fill="#B91C1C">否</text>
+  <rect x="40" y="686" width="520" height="92" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="76" cy="732" r="22" fill="#B45309"/>
+  <text x="76" y="741.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="112" y="728" font-size="28" font-weight="700" fill="#B45309">動畫風、結構對但偏軟？</text>
+  <text x="112" y="762" font-size="22" fill="#4B5563">只有這一關值得試</text>
+  <path d="M150,780 L150,820 L182,820" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="140" y="810" font-size="22" font-weight="700" text-anchor="end" fill="#0E7568">是</text>
+  <rect x="190" y="790" width="370" height="76" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="210" y="822" font-size="26" font-weight="700" fill="#8A5D00">小段比較，先試 2 倍</text>
+  <text x="210" y="854" font-size="22" fill="#4B5563">不直接跳 4 倍</text>
+  <line x1="76" y1="780" x2="76" y2="912" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="90" y="886" font-size="22" font-weight="700" fill="#B91C1C">否</text>
+  <rect x="40" y="914" width="520" height="92" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="76" cy="960" r="22" fill="#B45309"/>
+  <text x="76" y="969.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="112" y="956" font-size="28" font-weight="700" fill="#B45309">是擬真人物？</text>
+  <text x="112" y="990" font-size="22" fill="#4B5563">要保住角色長相</text>
+  <path d="M150,1008 L150,1048 L182,1048" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="140" y="1038" font-size="22" font-weight="700" text-anchor="end" fill="#0E7568">是</text>
+  <rect x="190" y="1018" width="370" height="76" rx="18" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="210" y="1050" font-size="26" font-weight="700" fill="#B45309">不用動畫專用模型</text>
+  <text x="210" y="1082" font-size="22" fill="#4B5563">不用會自己補細節的修復</text>
+  <line x1="76" y1="1008" x2="76" y2="1140" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="90" y="1114" font-size="22" font-weight="700" fill="#B91C1C">否</text>
+  <rect x="40" y="1142" width="520" height="92" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="76" cy="1188" r="22" fill="#B45309"/>
+  <text x="76" y="1197.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <text x="112" y="1198" font-size="28" font-weight="700" fill="#B45309">環境或成本不划算？</text>
+  <path d="M150,1236 L150,1276 L182,1276" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="140" y="1266" font-size="22" font-weight="700" text-anchor="end" fill="#0E7568">是</text>
+  <rect x="190" y="1246" width="370" height="76" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="210" y="1278" font-size="26" font-weight="700" fill="#64748B">跳過</text>
+  <text x="210" y="1310" font-size="22" fill="#4B5563">不為了用模型而用</text>
+  <rect x="40" y="1366" width="520" height="96" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1405.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">放大後的版本，</text>
+  <text x="300.0" y="1442.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">要重新走一次驗收</tspan></text>
+</svg>

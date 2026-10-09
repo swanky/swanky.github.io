@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">「我有點看不懂」之後</title>
+  <desc id="d">第八集的改版過程。第一版約 4 分鐘，技術檢查全部通過，但很多畫面沒有旁白、字幕沒標誰在說話，審核意見是「我有點看不懂」。AI 助手第一次補的旁白寫成一份解說稿，像在上課，沒有送出；補上方向「跟前幾集同一種語氣」後，第二版變成 6 分 14 秒、14 段故事旁白、字幕標出說話者、依配音長度重排畫面，並拿掉全部配樂。自動檢查只能確認東西都在，看不看得懂要人來看。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="1200" height="750" fill="#FFFFFF"/>
+  <text x="48" y="76" font-size="48" font-weight="700" fill="#1F2937">「我有點看不懂」之後</text>
+  <text x="48" y="122" font-size="26" fill="#4B5563">第八集：技術檢查全過的第一版，觀眾還是看不懂</text>
+  <rect x="48" y="160" width="328" height="450" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(212 236) scale(0.95)"><circle r="40" fill="#FFFFFF" stroke="#64748B" stroke-width="5"/><text x="0" y="20" font-size="56" font-weight="700" text-anchor="middle" fill="#64748B">?</text></g>
+  <text x="212" y="332" font-size="34" font-weight="700" text-anchor="middle" fill="#64748B">第一版</text>
+  <text x="212" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">約 4 分鐘</text>
+  <text x="212" y="418" font-size="26" text-anchor="middle" fill="#4B5563">很多畫面沒有旁白</text>
+  <text x="212" y="456" font-size="26" text-anchor="middle" fill="#4B5563">字幕沒標誰在說</text>
+  <line x1="382" y1="236" x2="430" y2="236" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="436" y="160" width="328" height="450" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <g transform="translate(600 236) scale(0.95)"><path d="M-34,-46 h46 l22,22 v70 h-68 z" fill="#FFFFFF" stroke="#B45309" stroke-width="5" stroke-linejoin="round"/><polyline points="12,-46 12,-24 34,-24" fill="none" stroke="#B45309" stroke-width="5" stroke-linejoin="round"/><line x1="-22" y1="-18" x2="22" y2="-18" stroke="#B45309" stroke-width="4" stroke-linecap="round"/><line x1="-22" y1="-2" x2="22" y2="-2" stroke="#B45309" stroke-width="4" stroke-linecap="round"/><line x1="-22" y1="14" x2="22" y2="14" stroke="#B45309" stroke-width="4" stroke-linecap="round"/></g>
+  <text x="600" y="332" font-size="34" font-weight="700" text-anchor="middle" fill="#B45309">AI 補的初稿</text>
+  <text x="600" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">寫成一份解說稿</text>
+  <text x="600" y="418" font-size="26" text-anchor="middle" fill="#4B5563">像在上課</text>
+  <g transform="translate(548 482) scale(1)"><circle r="20" fill="#B91C1C"/><g transform="scale(0.45)"><line x1="-26" y1="-26" x2="26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/><line x1="26" y1="-26" x2="-26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/></g></g>
+  <text x="576" y="490" font-size="24" font-weight="700" fill="#B91C1C">沒有送出</text>
+  <rect x="456" y="556" width="288" height="40" rx="20" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="584" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">起因：「我有點看不懂」</text>
+  <line x1="770" y1="236" x2="818" y2="236" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="824" y="160" width="328" height="450" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(988 236) scale(0.95)"><circle cx="0" cy="-12" r="30" fill="#FFF8E7" stroke="#0E7568" stroke-width="5"/><rect x="-14" y="18" width="28" height="22" rx="4" fill="#0E7568"/><line x1="-46" y1="-40" x2="-38" y2="-34" stroke="#0E7568" stroke-width="5" stroke-linecap="round"/><line x1="46" y1="-40" x2="38" y2="-34" stroke="#0E7568" stroke-width="5" stroke-linecap="round"/><line x1="0" y1="-56" x2="0" y2="-48" stroke="#0E7568" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="988" y="332" font-size="34" font-weight="700" text-anchor="middle" fill="#0E7568">第二版</text>
+  <text x="988" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">6 分 14 秒</text>
+  <text x="988" y="418" font-size="26" text-anchor="middle" fill="#4B5563">14 段故事旁白</text>
+  <text x="988" y="456" font-size="26" text-anchor="middle" fill="#4B5563">字幕標出說話者</text>
+  <text x="988" y="494" font-size="26" text-anchor="middle" fill="#4B5563">依配音長度重排</text>
+  <text x="988" y="532" font-size="26" text-anchor="middle" fill="#4B5563">拿掉全部配樂</text>
+  <rect x="844" y="556" width="288" height="40" rx="20" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <text x="988" y="584" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">方向：跟前幾集同語氣</text>
+  <rect x="48" y="640" width="1104" height="76" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="688" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">自動檢查只確認「東西都在」，<tspan fill="#8A5D00">看不看得懂要人來看</tspan></text>
+</svg>

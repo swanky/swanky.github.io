@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">比單價，不如比每可用秒成本</title>
+  <desc id="d">每可用秒成本等於所有嘗試的實付，包含成功、失敗與淘汰的版本，除以最後真正剪進成片的秒數。失敗與淘汰照樣算進分子，不然低成功率的模型會被美化；只能當方向參考的片段永遠不算可用秒數；有條件可用的片段，要等修好、真的用上才算。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">比單價，不如比每可用秒成本</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">失敗和淘汰的錢也算進去，只除以真正剪進成片的秒數</text>
+  <text x="190" y="360" font-size="40" font-weight="700" text-anchor="middle" fill="#1F2937">每可用秒</text>
+  <text x="190" y="412" font-size="40" font-weight="700" text-anchor="middle" fill="#1F2937">成本 ＝</text>
+  <rect x="96" y="428" width="188" height="8" rx="4" fill="#E5A300"/>
+  <text x="400" y="206" font-size="28" font-weight="700" fill="#1F2937">所有嘗試的實付（長度只是示意）</text>
+  <rect x="400" y="230" width="374" height="72" rx="12" fill="#0E7568"/>
+  <text x="587.0" y="276" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">成功</text>
+  <rect x="780" y="230" width="214" height="72" rx="12" fill="#B91C1C"/>
+  <text x="887.0" y="276" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">失敗</text>
+  <rect x="1000" y="230" width="146" height="72" rx="12" fill="#64748B"/>
+  <text x="1073.0" y="276" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">淘汰</text>
+  <rect x="400" y="340" width="752" height="8" rx="4" fill="#1F2937"/>
+  <text x="400" y="400" font-size="28" font-weight="700" fill="#1F2937">最後真正剪進成片的秒數</text>
+  <rect x="400" y="424" width="374" height="84" rx="8" fill="#0E7568"/>
+  <rect x="410" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="410" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="436" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="436" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="462" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="462" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="488" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="488" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="514" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="514" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="540" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="540" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="566" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="566" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="592" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="592" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="618" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="618" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="644" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="644" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="670" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="670" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="696" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="696" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="722" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="722" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="748" y="432" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="748" y="491" width="12" height="9" rx="2" fill="#FFFFFF"/>
+  <text x="587" y="478" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">只算這一段</text>
+  <rect x="48" y="552" width="340" height="180" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="78" y="602" font-size="30" font-weight="700" fill="#B91C1C">失敗也算進分子</text>
+  <text x="78" y="646" font-size="24" fill="#4B5563">不然低成功率的模型</text>
+  <text x="78" y="682" font-size="24" fill="#4B5563">會被美化</text>
+  <rect x="430" y="552" width="340" height="180" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="460" y="602" font-size="30" font-weight="700" fill="#64748B">方向參考</text>
+  <text x="460" y="646" font-size="24" fill="#4B5563">只能當方向參考的片段，</text>
+  <text x="460" y="682" font-size="24" fill="#4B5563">永遠不算可用秒數</text>
+  <rect x="812" y="552" width="340" height="180" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="842" y="602" font-size="30" font-weight="700" fill="#B45309">有條件可用</text>
+  <text x="842" y="646" font-size="24" fill="#4B5563">要等修好、真的用上，</text>
+  <text x="842" y="682" font-size="24" fill="#4B5563">才算可用秒數</text>
+</svg>

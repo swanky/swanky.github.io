@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 816" width="1200" height="816" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">每一鏡，只給三種結論</title>
+  <desc id="d">看片前先寫好檢查清單並標出核心項。第一問：核心項全都成立嗎？否，就是僅概念參考。是，再問次要項也全都成立嗎？是，就是通過、正式選片。否，再問寫得出剪輯怎麼避開嗎？寫得出來是有條件通過，寫不出來是僅概念參考。拿不準就往保守降級，兩人看法不同就不進成片。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="816" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">每一鏡，只給三種結論</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">看片前寫好清單、標出核心項，看完再逐條判</text>
+  <rect x="48" y="168" width="340" height="110" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="90" cy="223" r="24" fill="#B45309"/>
+  <text x="90" y="233.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="252" y="218" font-size="30" font-weight="700" text-anchor="middle" fill="#B45309">核心項全成立？</text>
+  <text x="248" y="256" font-size="22" text-anchor="middle" fill="#4B5563">主動作＋角色身分</text>
+  <rect x="48" y="330" width="340" height="110" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="90" cy="385" r="24" fill="#B45309"/>
+  <text x="90" y="395.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="252" y="380" font-size="30" font-weight="700" text-anchor="middle" fill="#B45309">次要項也全成立？</text>
+  <text x="248" y="418" font-size="22" text-anchor="middle" fill="#4B5563">清單上其餘每一條</text>
+  <rect x="470" y="330" width="340" height="110" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="512" cy="385" r="24" fill="#B45309"/>
+  <text x="512" y="395.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="674" y="380" font-size="30" font-weight="700" text-anchor="middle" fill="#B45309">寫得出怎麼避開？</text>
+  <text x="670" y="418" font-size="22" text-anchor="middle" fill="#4B5563">剪掉、裁切、調色</text>
+  <line x1="218" y1="278" x2="218" y2="326" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="234" y="310" font-size="24" font-weight="700" fill="#0E7568">是</text>
+  <line x1="218" y1="440" x2="218" y2="486" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="234" y="472" font-size="24" font-weight="700" fill="#0E7568">是</text>
+  <line x1="388" y1="385" x2="466" y2="385" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="427" y="372" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">否</text>
+  <line x1="640" y1="440" x2="640" y2="486" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="656" y="472" font-size="24" font-weight="700" fill="#0E7568">是</text>
+  <line x1="810" y1="385" x2="866" y2="385" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="838" y="372" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">否</text>
+  <line x1="388" y1="223" x2="866" y2="223" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="420" y="210" font-size="24" font-weight="700" fill="#B91C1C">否</text>
+  <text x="628" y="262" font-size="22" text-anchor="middle" fill="#64748B">主動作沒發生、角色不像本人</text>
+  <rect x="48" y="490" width="340" height="190" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(118 585) scale(0.72)"><rect x="-54" y="-48" width="108" height="96" rx="8" fill="#0E7568"/><rect x="-44" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-44" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-4" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-4" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="16" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="16" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="36" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="36" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-38" y="-24" width="76" height="48" rx="4" fill="#FFFFFF"/><path d="M-8,-14 L14,0 L-8,14 z" fill="#0E7568"/></g>
+  <text x="178" y="562" font-size="34" font-weight="700" fill="#0E7568">通過</text>
+  <text x="178" y="604" font-size="24" fill="#4B5563">正式選片，</text>
+  <text x="178" y="640" font-size="24" fill="#4B5563">進成片</text>
+  <rect x="470" y="490" width="340" height="190" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <g transform="translate(540 585) scale(0.72)"><circle cx="-24" cy="28" r="16" fill="none" stroke="#B45309" stroke-width="6"/><circle cx="24" cy="28" r="16" fill="none" stroke="#B45309" stroke-width="6"/><path d="M-14,16 L26,-46 M14,16 L-26,-46" stroke="#B45309" stroke-width="7" stroke-linecap="round"/></g>
+  <text x="600" y="562" font-size="34" font-weight="700" fill="#B45309">有條件通過</text>
+  <text x="600" y="604" font-size="24" fill="#4B5563">也進成片，但要</text>
+  <text x="600" y="640" font-size="24" fill="#4B5563">寫明剪輯怎麼避</text>
+  <rect x="870" y="168" width="282" height="512" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(1011 290) scale(0.95)"><circle cy="-10" r="34" fill="#FFFFFF" stroke="#64748B" stroke-width="5"/><rect x="-16" y="26" width="32" height="12" rx="3" fill="#64748B"/><rect x="-12" y="42" width="24" height="9" rx="3" fill="#64748B"/><path d="M-10,-6 L0,8 L10,-6" fill="none" stroke="#64748B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="1011" y="400" font-size="34" font-weight="700" text-anchor="middle" fill="#64748B">僅概念參考</text>
+  <text x="1011" y="446" font-size="24" text-anchor="middle" fill="#4B5563">不進成片，</text>
+  <text x="1011" y="480" font-size="24" text-anchor="middle" fill="#4B5563">只留作方向參考</text>
+  <line x1="910" y1="520" x2="1112" y2="520" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+  <text x="1011" y="566" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">下一步：</text>
+  <text x="1011" y="602" font-size="24" text-anchor="middle" fill="#4B5563">先查錯在首幀，</text>
+  <text x="1011" y="636" font-size="24" text-anchor="middle" fill="#4B5563">還是錯在動作</text>
+  <rect x="48" y="712" width="1104" height="80" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="762.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">拿不準？<tspan fill="#8A5D00">往保守降級</tspan>，兩人看法不同就不進成片</text>
+</svg>

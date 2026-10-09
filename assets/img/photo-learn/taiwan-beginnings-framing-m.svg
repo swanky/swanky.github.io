@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1500" width="600" height="1500" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">三種把人放進畫面的方法</title>
+<desc id="d">示意圖，三格構圖草圖，不是任何一張原作。第一格「隔著門框看」：四周是深色門框，框裡遠處站著幾個小小的人。第二格「讓人擦身而過」：幾個人從左往右走，最右邊一個人只進來半個身子，背後有一塊寫字的招牌。第三格「大色塊裡一個小人」：上面一整片天空，下面一條土地，地平線上只有一個很小的人。</desc>
+<rect width="600" height="1500" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="38" font-weight="700" fill="#1F2937">三種把人放進畫面的方法</text>
+<text x="40" y="112" font-size="24" fill="#4B5563">構圖草圖・示意，不是原作</text>
+
+<!-- 1 -->
+<rect x="40" y="140" width="300" height="225" fill="#EDE7DD"/>
+<path d="M40,140 H340 V365 H40 Z M82,178 V365 H298 V178 Z" fill="#374151" fill-rule="evenodd"/>
+<g fill="#1F2937">
+  <circle cx="156" cy="300" r="8"/><rect x="149" y="309" width="14" height="34" rx="5"/>
+  <circle cx="186" cy="296" r="8"/><rect x="179" y="305" width="14" height="38" rx="5"/>
+  <circle cx="228" cy="302" r="7"/><rect x="222" y="310" width="12" height="32" rx="5"/>
+</g>
+<text x="360" y="186" font-size="28" font-weight="700" fill="#1F2937">隔著門框看</text>
+<text x="360" y="222" font-size="21" fill="#4B5563">前景的框，替你</text>
+<text x="360" y="250" font-size="21" fill="#4B5563">決定從哪裡看</text>
+<text x="360" y="300" font-size="19" fill="#B45309">對照：鄧南光</text>
+<text x="360" y="326" font-size="19" fill="#B45309">〈北埔街風情〉</text>
+
+<!-- 2 -->
+<rect x="40" y="420" width="300" height="225" fill="#F3F4F6"/>
+<rect x="62" y="436" width="132" height="50" rx="6" fill="#FFFFFF" stroke="#4B5563" stroke-width="3"/>
+<text x="128" y="469" font-size="22" font-weight="700" text-anchor="middle" fill="#1F2937">招牌文字</text>
+<line x1="40" y1="625" x2="340" y2="625" stroke="#9CA3AF" stroke-width="3"/>
+<g fill="#1F2937">
+  <circle cx="92" cy="530" r="13"/><rect x="80" y="544" width="24" height="80" rx="9"/>
+  <circle cx="156" cy="526" r="13"/><rect x="144" y="540" width="24" height="84" rx="9"/>
+  <circle cx="220" cy="532" r="13"/><rect x="208" y="546" width="24" height="78" rx="9"/>
+  <circle cx="342" cy="528" r="13"/><rect x="330" y="542" width="24" height="82" rx="9"/>
+</g>
+<rect x="341" y="420" width="16" height="225" fill="#FFFFFF"/>
+<line x1="80" y1="506" x2="290" y2="506" stroke="#B45309" stroke-width="4" stroke-dasharray="12 10"/>
+<path d="M290,498 L306,506 L290,514 z" fill="#B45309"/>
+<text x="360" y="466" font-size="28" font-weight="700" fill="#1F2937">讓人擦身</text>
+<text x="360" y="500" font-size="28" font-weight="700" fill="#1F2937">而過</text>
+<text x="360" y="536" font-size="21" fill="#4B5563">背後的字說出</text>
+<text x="360" y="564" font-size="21" fill="#4B5563">時代和地點</text>
+<text x="360" y="606" font-size="19" fill="#B45309">對照：張才〈三洋</text>
+<text x="360" y="632" font-size="19" fill="#B45309">婦人與中國男人〉</text>
+
+<!-- 3 -->
+<rect x="40" y="700" width="300" height="165" fill="#BFE3DC"/>
+<rect x="40" y="865" width="300" height="60" fill="#D9C38F"/>
+<circle cx="214" cy="852" r="5" fill="#1F2937"/><rect x="210" y="856" width="9" height="11" rx="3" fill="#1F2937"/>
+<circle cx="214" cy="852" r="20" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="190" y="770" font-size="22" text-anchor="middle" fill="#1F2937">一整片天</text>
+<text x="190" y="904" font-size="21" text-anchor="middle" fill="#1F2937">一條地</text>
+<text x="360" y="746" font-size="28" font-weight="700" fill="#1F2937">大色塊裡</text>
+<text x="360" y="780" font-size="28" font-weight="700" fill="#1F2937">一個小人</text>
+<text x="360" y="816" font-size="21" fill="#4B5563">先收成幾塊顏色，</text>
+<text x="360" y="844" font-size="21" fill="#4B5563">再等人走進來</text>
+<text x="360" y="886" font-size="19" fill="#B45309">對照：柯錫杰</text>
+<text x="360" y="912" font-size="19" fill="#B45309">〈行，突尼西亞〉</text>
+
+<rect x="40" y="980" width="520" height="150" rx="16" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="1028" font-size="23" fill="#374151">三種做法，</text>
+<text x="64" y="1064" font-size="23" fill="#374151">都在問同一件事：</text>
+<text x="64" y="1100" font-size="23" font-weight="700" fill="#1F2937">人和身邊的世界，各佔多少畫面？</text>
+
+<text x="40" y="1190" font-size="26" font-weight="700" fill="#1F2937">下次出門拍人，三選一試試：</text>
+<g font-size="22" fill="#374151">
+  <text x="40" y="1240">・找一個門、窗或騎樓柱子當前景的框</text>
+  <text x="40" y="1286">・站在人流旁邊，等人從畫面邊緣走進來</text>
+  <text x="40" y="1332">・先找一面乾淨的牆或一片天，再請人入鏡</text>
+</g>
+<text x="40" y="1420" font-size="20" fill="#6B7280">三格都是我畫的構圖示意，</text>
+<text x="40" y="1450" font-size="20" fill="#6B7280">原作請到國家攝影文化中心的藏品頁看。</text>
+</svg>

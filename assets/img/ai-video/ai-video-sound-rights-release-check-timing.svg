@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">旁白先量長度，再放進鏡頭</title>
+  <desc id="d">一顆鏡頭的長度像一個框，旁白先生成、量出實際長度，放進框裡，前後各留約 0.3 秒。放不進去時有兩條路：把旁白加速超過約 1.2 倍不行，講太快會失去信任；改寫句子讓它變短才對。原則是先量再排，不從字數估秒數。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+  <text x="48" y="76" font-size="48" font-weight="700" fill="#1F2937">旁白先量長度，再放進鏡頭</text>
+  <text x="48" y="122" font-size="26" fill="#4B5563">放不進去就改寫句子，不偷偷加速</text>
+  <text x="48" y="186" font-size="26" font-weight="700" fill="#1F2937">放得進去：前後各留約 0.3 秒</text>
+  <g transform="translate(82 300) scale(0.62)"><path d="M-44,-34 h88 a10,10 0 0 1 10,10 v44 a10,10 0 0 1 -10,10 h-52 l-20,18 v-18 h-16 a10,10 0 0 1 -10,-10 v-44 a10,10 0 0 1 10,-10 z" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/><line x1="-28" y1="-12" x2="28" y2="-12" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/><line x1="-28" y1="8" x2="12" y2="8" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/></g>
+  <rect x="150" y="208" width="960" height="66" rx="8" fill="#1F2937"/>
+  <rect x="166" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="166" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="206" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="206" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="246" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="246" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="286" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="286" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="326" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="326" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="366" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="366" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="406" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="406" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="446" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="446" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="486" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="486" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="526" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="526" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="566" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="566" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="606" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="606" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="646" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="646" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="686" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="686" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="726" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="726" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="766" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="766" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="806" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="806" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="846" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="846" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="886" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="886" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="926" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="926" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="966" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="966" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1006" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1006" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1046" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1046" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1086" y="214" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <rect x="1086" y="259" width="18" height="9" rx="2" fill="#FFFFFF"/>
+  <text x="630.0" y="251" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">一顆鏡頭的長度</text>
+  <rect x="150" y="286" width="110" height="60" rx="10" fill="#FFF8E7" stroke="#E5A300" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="1000" y="286" width="110" height="60" rx="10" fill="#FFF8E7" stroke="#E5A300" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="266" y="286" width="728" height="60" rx="10" fill="#2C5B8F"/>
+  <g transform="translate(350 316) scale(1)"><polyline points="-60.0,0.0 -57.0,2.2 -54.0,4.5 -51.0,6.2 -48.0,6.6 -45.0,5.4 -42.0,2.6 -39.0,-1.4 -36.0,-5.7 -33.0,-9.3 -30.0,-11.1 -27.0,-10.5 -24.0,-7.3 -21.0,-2.1 -18.0,4.3 -15.0,10.3 -12.0,14.5 -9.0,15.7 -6.0,13.4 -3.0,7.9 0.0,0.0 3.0,-7.9 6.0,-13.4 9.0,-15.7 12.0,-14.5 15.0,-10.3 18.0,-4.3 21.0,2.1 24.0,7.3 27.0,10.5 30.0,11.1 33.0,9.3 36.0,5.7 39.0,1.4 42.0,-2.6 45.0,-5.4 48.0,-6.6 51.0,-6.2 54.0,-4.5 57.0,-2.2 60.0,-0.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="670.0" y="326" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">旁白一句（先生成、量好長度）</text>
+  <text x="205.0" y="382" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">留 0.3 秒</text>
+  <text x="1055.0" y="382" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">留 0.3 秒</text>
+  <text x="48" y="446" font-size="26" font-weight="700" fill="#1F2937">放不進去：兩條路</text>
+  <rect x="48" y="468" width="528" height="180" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <g transform="translate(140 558) scale(1)"><path d="M-46,-30 L-6,0 L-46,30 z" fill="#B91C1C"/><path d="M-4,-30 L36,0 L-4,30 z" fill="#B91C1C"/><line x1="42" y1="-30" x2="42" y2="30" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <g transform="translate(546 500) scale(1)"><circle r="24" fill="#B91C1C"/><g transform="scale(0.55)"><line x1="-26" y1="-26" x2="26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/><line x1="26" y1="-26" x2="-26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/></g></g>
+  <text x="228" y="528" font-size="34" font-weight="700" fill="#B91C1C">加速超過約 1.2 倍</text>
+  <text x="228" y="578" font-size="26" fill="#4B5563">講太快的旁白，</text>
+  <text x="228" y="616" font-size="26" fill="#4B5563">失去的信任更多</text>
+  <rect x="624" y="468" width="528" height="180" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(716 558) scale(1)"><g transform="rotate(-40)"><rect x="-46" y="-12" width="76" height="24" rx="3" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M30,-12 L52,0 L30,12 z" fill="#0E7568"/><line x1="-30" y1="-12" x2="-30" y2="12" stroke="#0E7568" stroke-width="5"/></g></g>
+  <g transform="translate(1122 500) scale(1)"><circle r="24" fill="#0E7568"/><g transform="scale(0.55)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="804" y="528" font-size="34" font-weight="700" fill="#0E7568">改寫句子</text>
+  <text x="804" y="578" font-size="26" fill="#4B5563">改短一點，</text>
+  <text x="804" y="616" font-size="26" fill="#4B5563">剛好放進鏡頭裡</text>
+  <rect x="48" y="676" width="1104" height="76" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="725" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">先量，再排：<tspan fill="#8A5D00">不從字數估秒數</tspan></text>
+</svg>

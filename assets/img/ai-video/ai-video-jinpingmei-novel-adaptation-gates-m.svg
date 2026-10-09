@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1486" width="600" height="1486" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">十道關卡：前一關沒過，不進下一關</title>
+  <desc id="d">十道關卡依序是：取材範圍、事件對照、劇本、聲音、分鏡畫面、全部圖片、粗剪、最終檢查、核准上片、覆盤。聲音比分鏡先鎖定。紅色虛線示意粗剪發現台詞錯時，退回劇本關，後面已通過的全部重審。兩條規則：改哪裡，就回到最早受影響的那一關；機器檢查通過不等於人工核准，臉、表演、讀音要有人看過聽過。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1486" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">十道關卡：</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">前一關沒過不進下一關</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">聲音比分鏡先鎖定</text>
+  <rect x="70" y="210" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="253" font-size="22" font-weight="700" fill="#64748B">第 1 關</text>
+  <text x="200" y="254" font-size="28" font-weight="700" fill="#1F2937">取材範圍</text>
+  <line x1="220" y1="278" x2="220" y2="296" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="300" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="343" font-size="22" font-weight="700" fill="#64748B">第 2 關</text>
+  <text x="200" y="344" font-size="28" font-weight="700" fill="#1F2937">事件對照</text>
+  <line x1="220" y1="368" x2="220" y2="386" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="390" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="433" font-size="22" font-weight="700" fill="#64748B">第 3 關</text>
+  <text x="200" y="434" font-size="28" font-weight="700" fill="#1F2937">劇本</text>
+  <line x1="220" y1="458" x2="220" y2="476" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="480" width="290" height="66" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="96" y="523" font-size="22" font-weight="700" fill="#8A5D00">第 4 關</text>
+  <text x="200" y="524" font-size="28" font-weight="700" fill="#8A5D00">聲音</text>
+  <line x1="220" y1="548" x2="220" y2="566" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="570" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="613" font-size="22" font-weight="700" fill="#64748B">第 5 關</text>
+  <text x="200" y="614" font-size="28" font-weight="700" fill="#1F2937">分鏡畫面</text>
+  <line x1="220" y1="638" x2="220" y2="656" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="660" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="703" font-size="22" font-weight="700" fill="#64748B">第 6 關</text>
+  <text x="200" y="704" font-size="28" font-weight="700" fill="#1F2937">全部圖片</text>
+  <line x1="220" y1="728" x2="220" y2="746" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="750" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="793" font-size="22" font-weight="700" fill="#64748B">第 7 關</text>
+  <text x="200" y="794" font-size="28" font-weight="700" fill="#1F2937">粗剪</text>
+  <line x1="220" y1="818" x2="220" y2="836" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="840" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="883" font-size="22" font-weight="700" fill="#64748B">第 8 關</text>
+  <text x="200" y="884" font-size="28" font-weight="700" fill="#1F2937">最終檢查</text>
+  <line x1="220" y1="908" x2="220" y2="926" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="930" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="973" font-size="22" font-weight="700" fill="#64748B">第 9 關</text>
+  <text x="200" y="974" font-size="28" font-weight="700" fill="#1F2937">核准上片</text>
+  <line x1="220" y1="998" x2="220" y2="1016" stroke="#374151" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="70" y="1020" width="290" height="66" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="96" y="1063" font-size="22" font-weight="700" fill="#64748B">第 10 關</text>
+  <text x="200" y="1064" font-size="28" font-weight="700" fill="#1F2937">覆盤</text>
+  <rect x="420.0" y="493.0" width="152.0" height="40" rx="20.0" fill="#E5A300"/>
+  <text x="496" y="521" font-size="22" font-weight="700" text-anchor="middle" fill="#1F2937">比分鏡先鎖定</text>
+  <path d="M366,783 H396 V423 H370" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 7" marker-end="url(#arr-red)"/>
+  <text x="420" y="643.0" font-size="22" font-weight="700" fill="#B91C1C">台詞錯了</text>
+  <text x="420" y="673.0" font-size="22" font-weight="700" fill="#B91C1C">→ 回劇本</text>
+  <rect x="40" y="1126" width="520" height="150" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="70" y="1174" font-size="30" font-weight="700" fill="#B45309">退回規則</text>
+  <text x="70" y="1218" font-size="26" fill="#1F2937">改哪裡，就回到</text>
+  <text x="70" y="1254" font-size="26" fill="#1F2937">最早受影響的那一關</text>
+  <rect x="40" y="1296" width="520" height="150" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="70" y="1344" font-size="30" font-weight="700" fill="#2C5B8F">核准規則</text>
+  <text x="70" y="1388" font-size="26" fill="#1F2937">機器檢查通過，</text>
+  <text x="70" y="1424" font-size="26" fill="#1F2937">不等於人工核准</text>
+</svg>

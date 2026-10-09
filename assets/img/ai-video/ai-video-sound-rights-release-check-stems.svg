@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 796" width="1200" height="796" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">人聲一出現，音樂就讓位</title>
+  <desc id="d">六條音軌分開：旁白、對白、環境音、擬音、音樂、轉場音效。旁白出現的那一段，音樂的音量漸變降低約 6 dB、環境音降低約 3 dB，說完再慢慢回升；擬音那條不動，推動劇情的聲音不跟著被壓小。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="1200" height="796" fill="#FFFFFF"/>
+  <text x="48" y="76" font-size="48" font-weight="700" fill="#1F2937">人聲一出現，音樂就讓位</text>
+  <text x="48" y="122" font-size="26" fill="#4B5563">六條音軌分開調；讓位要漸變，說完再慢慢回來</text>
+  <rect x="560" y="166" width="300" height="450" rx="12" fill="#FFF8E7" stroke="#E5A300" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="710.0" y="192" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">旁白說話中</text>
+  <text x="48" y="244.0" font-size="26" font-weight="700" fill="#2C5B8F">旁白</text>
+  <rect x="210" y="206" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="566" y="214" width="288" height="40" rx="8" fill="#2C5B8F"/>
+  <g transform="translate(710.0 234.0) scale(0.9)"><polyline points="-90.0,0.0 -85.5,2.2 -81.0,4.5 -76.5,6.2 -72.0,6.6 -67.5,5.4 -63.0,2.6 -58.5,-1.4 -54.0,-5.7 -49.5,-9.3 -45.0,-11.1 -40.5,-10.5 -36.0,-7.3 -31.5,-2.1 -27.0,4.3 -22.5,10.3 -18.0,14.5 -13.5,15.7 -9.0,13.4 -4.5,7.9 0.0,0.0 4.5,-7.9 9.0,-13.4 13.5,-15.7 18.0,-14.5 22.5,-10.3 27.0,-4.3 31.5,2.1 36.0,7.3 40.5,10.5 45.0,11.1 49.5,9.3 54.0,5.7 58.5,1.4 63.0,-2.6 67.5,-5.4 72.0,-6.6 76.5,-6.2 81.0,-4.5 85.5,-2.2 90.0,-0.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="48" y="314.0" font-size="26" font-weight="700" fill="#2C5B8F">對白</text>
+  <rect x="210" y="276" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="240" y="288" width="162.5" height="32" rx="8" fill="#9DB6D3"/>
+  <rect x="910" y="288" width="110.60000000000002" height="32" rx="8" fill="#9DB6D3"/>
+  <text x="48" y="384.0" font-size="26" font-weight="700" fill="#0E7568">環境音</text>
+  <rect x="210" y="346" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <path d="M220,358 H520 L566,370 H854 L900,358 H1142" fill="none" stroke="#0E7568" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710.0" y="362" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">−3 dB</text>
+  <text x="48" y="454.0" font-size="26" font-weight="700" fill="#B45309">擬音</text>
+  <rect x="210" y="416" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="220" y1="444.0" x2="1068" y2="444.0" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+  <rect x="260" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="330" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="400" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="470" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="540" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="610" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="680" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="750" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="820" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="890" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="960" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="1030" y="430.0" width="10" height="28" rx="3" fill="#B45309"/>
+  <rect x="1078" y="426.0" width="62" height="36" fill="#F8FAFC"/>
+  <text x="1136" y="452.0" font-size="22" font-weight="700" text-anchor="end" fill="#B45309">不動</text>
+  <text x="48" y="524.0" font-size="26" font-weight="700" fill="#8A5D00">音樂</text>
+  <rect x="210" y="486" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <path d="M220,498 H520 L566,534 H854 L900,498 H1142" fill="none" stroke="#E5A300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710.0" y="524" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">−6 dB</text>
+  <text x="48" y="594.0" font-size="26" font-weight="700" fill="#64748B">轉場音效</text>
+  <rect x="210" y="556" width="942" height="56" rx="10" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="230" y="568" width="50" height="32" rx="8" fill="#94A3B8"/>
+  <rect x="1082" y="568" width="50" height="32" rx="8" fill="#94A3B8"/>
+  <text x="600" y="664" font-size="24" text-anchor="middle" fill="#4B5563">漸變：提前一點降、說完再慢慢回來，不要一格一格硬切</text>
+  <rect x="48" y="690" width="1104" height="76" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="739" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">推動劇情的聲音（門鎖、鑰匙）<tspan fill="#8A5D00">不跟著壓小</tspan></text>
+</svg>

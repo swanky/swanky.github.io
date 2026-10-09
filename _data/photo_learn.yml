@@ -1,0 +1,261 @@
+# 攝影研究專區（/photography/learn/）的名稱、入口與單元地圖。
+# 專區名稱與副標只在這裡改；另外兩頁 front matter 的 title／seo_title／breadcrumbs 也寫了名稱（Jekyll 不能在 front matter 讀資料），
+# 改名時一併 grep「看懂寫真」。
+# 章節狀態（只有 published／review 會被任何版型讀到；其他狀態沒有渲染路徑，頁面上完全看不到，也不寫「整理中」）：
+#   published＝已發表（要有 url）；review＝站主審閱中（要有 url，只在非正式環境顯示）；
+#   soon／verify／其他＝內部路線圖，公開頁一律不輸出。沒有可見章的單元整個不渲染；上一章／下一章只在可見章之間找。
+#   圖鑑入口：photographers_status／models_status 設 published 才會在正式站首頁列出（沒設＝只在非正式環境顯示預覽連結）。
+#   版型判斷統一用 _includes/photography/learn-visible.html。
+# 單元 slug 決定章節網址：/photography/learn/<單元 slug>/<章節 slug>/。章節頁版型 _layouts/photo-learn-chapter.html 用 url 對回這裡找上一章／下一章。
+# 章節題目只用 2026-10-09 素材盤點中 A／B 級可做的題目（另加兩篇已寫好、待補查證的舊稿）。
+# 專區首頁（photography/learn/index.html，2026-10-09 策展改版，review §3.4）讀這些欄位：
+#   doors[].picks：入口下直接列的章（章 url 清單，2～4 篇；只渲染看得到的），卡圖用該章的 card。
+#   chapters[].card：首頁卡圖，只能用該章的示意圖或站主作品，不用他人作品。
+#   chapters[].added／art_notes.notes[].added：加入日期（首頁「最新加入」取日期最新的 3 篇；同一天的，排在本檔後面的算較晚加入）。
+#     新增一章時把 added 填當天日期；不要為了排序捏造不同日期。
+#   shelves：首頁書架的分架順序（單元 id）；書架只列看得到的章，沒有可見章的單元不出現。
+
+photographers_status: published
+models_status: published
+launched: true    # 導覽列等全站入口的開關：false 時正式站不顯示「看懂寫真」連結（本機預覽照常顯示）；2026-10-10 上線
+name: 看懂寫真
+subtitle: 史旺基的攝影學習筆記
+url: /photography/learn/
+photographers_url: /photography/learn/photographers/   # 2026-10-09 起暫不上線（published: false），首頁不連結
+models_url: /photography/learn/models/               # 2026-10-09 圖鑑格式樣本，published: false，首頁不連結
+
+# 三個入口：依讀者身分進門
+doors:
+  - id: feel
+    ask: 我想拍出某種感覺
+    who: 喜歡人像與寫真、想拍出某種氛圍的人；也適合用 AI 做影像、想補攝影語彙的人。
+    units: [u2, u1]
+    picks:
+      - /photography/learn/style/jeanloup-sieff/
+      - /photography/learn/style/herb-ritts/
+      - /photography/learn/style/deborah-turbeville/
+  - id: read
+    ask: 我想看懂一本寫真集、一場展覽
+    who: 逛展覽、收寫真集、寫報告，或想自己做一本寫真集的人。
+    units: [u4, u1, u5]
+    picks:
+      - /photography/learn/photobook/utatane/
+      - /photography/learn/photobook/the-americans/
+      - /photography/learn/asia/taiwan-beginnings/
+  - id: model
+    ask: 我是模特兒，或想被拍
+    who: 想知道好的合作怎麼發生、拍攝前怎麼和攝影師溝通想要的感覺。
+    units: [u3]
+    picks:
+      - /photography/learn/collaboration/penn-fonssagrives/
+      - /photography/learn/collaboration/avedon-dovima/
+      - /photography/learn/collaboration/ko-si-chi-fan-chieh-hsi/
+
+# 首頁書架的分架順序（主打的拆解與合作在前，攝影史與研究方法在後）
+shelves: [u2, u3, u4, u5, u1, u6]
+
+units:
+  - id: u1
+    slug: history
+    code: U1
+    title: 一張圖看懂攝影史
+    gain: 把日本、歐美、台灣與東亞的攝影放上同一條時間線，知道每個時期的攝影師在追問什麼。
+    chapters:
+      - title: 日本與歐美時尚攝影對照年表
+        slug: japan-west-timeline
+        status: published
+        url: /photography/learn/history/japan-west-timeline/
+        card: /assets/img/photo-learn/japan-west-timeline-axes.svg
+        added: 2026-10-09
+      - title: 時尚攝影怎麼走向「真實」：1990 年代到今天
+        slug: toward-real
+        status: published
+        url: /photography/learn/history/toward-real/
+        card: /assets/img/photo-learn/toward-real-setup.svg
+        added: 2026-10-09
+      - title: 日本攝影史一頁看懂：從 VIVO 到日常寫真，拍的人怎麼走進照片
+        slug: japan-photography-history
+        status: published
+        url: /photography/learn/history/japan-photography-history/
+        card: /assets/img/photo-learn/japan-photography-history-periods.svg
+        added: 2026-10-09
+  - id: u2
+    slug: style
+    code: U2
+    title: 風格拆解
+    flagship: true
+    gain: 說得出一位攝影師的照片好在哪，知道哪些拍法能借、哪些不能抄，也能把那種感覺換成文字描述。
+    chapters:
+      - title: Deborah Turbeville：拍得霧一點、舊一點，照片就有了故事
+        slug: deborah-turbeville
+        status: published
+        url: /photography/learn/style/deborah-turbeville/
+        card: /assets/img/photo-learn/deborah-turbeville-two-stages.svg
+        added: 2026-10-09
+      - title: Herb Ritts：走到太陽底下，讓影子替你畫線條
+        slug: herb-ritts
+        status: published
+        url: /photography/learn/style/herb-ritts/
+        card: /assets/img/photo-learn/herb-ritts-light.svg
+        added: 2026-10-09
+      - title: Jeanloup Sieff：靠近一點，人像就不一樣
+        slug: jeanloup-sieff
+        status: published
+        url: /photography/learn/style/jeanloup-sieff/
+        card: /assets/img/photo-learn/jeanloup-sieff-distance.svg
+        added: 2026-10-09
+      - title: Viviane Sassen：影子和顏色，也能是照片的主角
+        slug: viviane-sassen
+        status: published
+        url: /photography/learn/style/viviane-sassen/
+        card: /assets/img/photo-learn/viviane-sassen-shadow.svg
+        added: 2026-10-09
+      - title: 讓人感覺你就在那裡：荒木經惟、佐內正史、川島小鳥的「在場」
+        slug: presence
+        status: published
+        url: /photography/learn/style/presence/
+        card: /assets/img/photo-learn/presence-three-ways.svg
+        added: 2026-10-09
+  - id: u3
+    slug: collaboration
+    code: U3
+    title: 攝影師與模特兒
+    gain: 知道一段好的合作是怎麼發生的，也知道拍攝前可以怎麼溝通想要的感覺。
+    chapters:
+      - title: Irving Penn 與 Lisa Fonssagrives：模特兒也是作者
+        slug: penn-fonssagrives
+        status: published
+        url: /photography/learn/collaboration/penn-fonssagrives/
+        card: /assets/img/photo-learn/penn-fonssagrives-setup.svg
+        added: 2026-10-09
+      - title: Helmut Newton 與 June Newton：兩位攝影師，鏡頭互相對著
+        slug: newton-june
+        status: published
+        url: /photography/learn/collaboration/newton-june/
+        card: /assets/img/photo-learn/newton-june-two-cameras.svg
+        added: 2026-10-09
+      - title: 柯錫杰與樊潔兮：攝影家和舞蹈家，怎麼一起拍下「一跳」
+        slug: ko-si-chi-fan-chieh-hsi
+        status: published
+        url: /photography/learn/collaboration/ko-si-chi-fan-chieh-hsi/
+        card: /assets/img/photo-learn/ko-si-chi-fan-chieh-hsi-jump.svg
+        added: 2026-10-09
+      - title: 細江英公與土方巽：把一座村子當成舞台
+        slug: hosoe-hijikata
+        status: published
+        url: /photography/learn/collaboration/hosoe-hijikata/
+        card: /assets/img/photo-learn/hosoe-hijikata-stage.svg
+        added: 2026-10-09
+      - title: Richard Avedon 與 Dovima：讓姿勢接住整個場景
+        slug: avedon-dovima
+        status: published
+        url: /photography/learn/collaboration/avedon-dovima/
+        card: /assets/img/photo-learn/avedon-dovima-shapes.svg
+        added: 2026-10-09
+      - title: Tim Walker 與 Tilda Swinton：先給角色一個世界
+        slug: walker-swinton
+        status: published
+        url: /photography/learn/collaboration/walker-swinton/
+        card: /assets/img/photo-learn/walker-swinton-layers.svg
+        added: 2026-10-09
+  - id: u4
+    slug: photobook
+    code: U4
+    title: 寫真集怎麼讀
+    gain: 翻開一本寫真集，看得出它怎麼編排、怎麼用字，不同版本又差在哪裡。
+    chapters:
+      - title: 《The Americans》：法文版與美國版差在哪
+        slug: the-americans
+        status: published
+        url: /photography/learn/photobook/the-americans/
+        card: /assets/img/photo-learn/the-americans-spread.svg
+        added: 2026-10-09
+      - title: 川內倫子《うたたね》：幾乎不說話的寫真集，怎麼讀
+        slug: utatane
+        status: published
+        url: /photography/learn/photobook/utatane/
+        card: /assets/img/photo-learn/utatane-spread.svg
+        added: 2026-10-09
+      - title: 森山大道《写真よさようなら》：看不清的照片，和退到書末的字
+        slug: shashin-yo-sayonara
+        status: published
+        url: /photography/learn/photobook/shashin-yo-sayonara/
+        card: /assets/img/photo-learn/shashin-yo-sayonara-map.svg
+        added: 2026-10-09
+      - title: 自己印、自己賣：《The Afronauts》與《Sleeping by the Mississippi》
+        slug: self-published
+        status: published
+        url: /photography/learn/photobook/self-published/
+        card: /assets/img/photo-learn/self-published-paths.svg
+        added: 2026-10-09
+  - id: u5
+    slug: asia
+    code: U5
+    title: 台灣與東亞
+    gain: 認識台灣與東亞攝影的起點，把身邊的攝影史放回同一張地圖。
+    chapters:
+      - title: 台灣攝影的起點：鄧南光、張才、柯錫杰
+        slug: taiwan-beginnings
+        status: published
+        url: /photography/learn/asia/taiwan-beginnings/
+        card: /assets/img/photo-learn/taiwan-beginnings-framing.svg
+        added: 2026-10-09
+      - title: 何藩：等一道光，把香港街頭變成舞台
+        slug: fan-ho
+        status: published
+        url: /photography/learn/asia/fan-ho/
+        card: /assets/img/photo-learn/fan-ho-light.svg
+        added: 2026-10-09
+      - title: 榮榮與映里：兩個人互拍，把日子拍成作品
+        slug: rongrong-inri
+        status: published
+        url: /photography/learn/asia/rongrong-inri/
+        card: /assets/img/photo-learn/rongrong-inri-distance.svg
+        added: 2026-10-09
+      - title: 김중만（Kim Jungman）：從時尚攝影棚，走到巷子裡那排樹
+        slug: kim-jungman
+        status: published
+        url: /photography/learn/asia/kim-jungman/
+        card: /assets/img/photo-learn/kim-jungman-alley.svg
+        added: 2026-10-09
+  - id: u6
+    slug: method
+    code: U6
+    title: 我怎麼研究
+    gain: 自己讀一位攝影師時，知道去哪裡找可靠的資料，也分得出哪些是事實、哪些是推論。
+    chapters:
+      - title: 只用美術館與官方資料寫攝影史：我的查證方法
+        slug: how-i-verify
+        status: published
+        url: /photography/learn/method/how-i-verify/
+        card: /assets/img/photo-learn/how-i-verify-layers.svg
+        added: 2026-10-09
+      - title: 怎麼讀一位攝影師
+        slug: how-to-read-a-photographer
+        status: published
+        url: /photography/learn/method/how-to-read-a-photographer/
+        card: /assets/img/photo-learn/how-to-read-steps.svg
+        added: 2026-10-09
+
+# 藝術筆記：不限攝影，站主喜歡的藝術家，一次讀一件作品（2026-10-09 起）。
+# 專區首頁 #art-notes 區塊用；status 規則同上。作品圖要不要放，每篇都要站主個別確認（Kitty 已確認）。
+art_notes:
+  title: 藝術筆記
+  gain: 一次只讀一件作品：作品資料、局部、構圖與創作背景，事實和我的讀法分開寫。
+  notes:
+    - title: 奈良美智《Harmless Kitty》：無害，但不必乖巧
+      status: published
+      url: /photography/learn/art/harmless-kitty/
+      added: 2026-10-09
+      # 首頁藝術筆記大卡的圖：作品圖每篇都要站主個別確認才放（Kitty 已確認，評論引用小圖）
+      img: /assets/img/art-notes/harmless-kitty/harmless-kitty.jpg
+      img_w: 600
+      img_h: 645
+      img_alt: 奈良美智《Harmless Kitty》：米白色背景前，穿深色貓裝、戴尖耳頭套的孩子側身坐在白色鴨子造型的座具上，綠色眼睛半垂著斜斜望向看畫的人。
+      credit: 奈良美智《Harmless Kitty》，1994，東京國立近代美術館藏。© Yoshitomo Nara。評論引用。
+    - title: 村上隆
+      status: soon
+    - title: 草間彌生
+      status: soon
+    - title: Joan Cornellà：我收藏的公仔
+      status: soon

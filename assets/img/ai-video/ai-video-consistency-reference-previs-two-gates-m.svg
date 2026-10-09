@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1318" width="600" height="1318" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">量產之前，先過兩關定裝</title>
+  <desc id="d">角色定裝圖、風格定調圖兩關都核准、綁定版本，才量產；先做三張試點。任何外觀改動都讓舊核准失效、要重審。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1318" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">量產之前，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">先過兩關定裝</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">兩張圖都核准了，才開始大量生成</text>
+  <rect x="40" y="196" width="520" height="164" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="72" cy="228" r="20" fill="#2C5B8F"/>
+  <text x="72" y="236.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <g transform="translate(150 284) scale(0.75)"><rect x="-60" y="-50" width="60" height="100" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><circle cx="-30" cy="-26" r="11" fill="#2C5B8F"/><rect x="-42" y="-12" width="24" height="38" rx="8" fill="#2C5B8F"/><rect x="-40" y="26" width="7" height="18" fill="#2C5B8F"/><rect x="-27" y="26" width="7" height="18" fill="#2C5B8F"/><rect x="8" y="-50" width="56" height="56" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><circle cx="36" cy="-24" r="16" fill="#2C5B8F"/><path d="M14,6 C18,-8 54,-8 58,6 z" fill="#2C5B8F"/></g>
+  <text x="250" y="252" font-size="30" font-weight="700" fill="#2C5B8F">角色定裝圖</text>
+  <text x="250" y="296" font-size="24" fill="#4B5563">全身正面＋臉部近照，</text>
+  <text x="250" y="332" font-size="24" fill="#4B5563">中性背景、沒有文字</text>
+  <line x1="300" y1="362" x2="300" y2="390" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="394" width="520" height="164" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="72" cy="426" r="20" fill="#2C5B8F"/>
+  <text x="72" y="434.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <g transform="translate(150 482) scale(0.75)"><rect x="-62" y="-46" width="124" height="92" rx="8" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><circle cx="34" cy="-22" r="11" fill="#2C5B8F" opacity="0.5"/><path d="M-58,40 L-22,-6 L4,24 L22,6 L58,40 z" fill="#2C5B8F" opacity="0.35"/><circle cx="-6" cy="4" r="8" fill="#2C5B8F"/><rect x="-12" y="12" width="12" height="22" rx="4" fill="#2C5B8F"/></g>
+  <text x="250" y="450" font-size="30" font-weight="700" fill="#2C5B8F">風格定調圖</text>
+  <text x="250" y="494" font-size="24" fill="#4B5563">一張完整場景，</text>
+  <text x="250" y="530" font-size="24" fill="#4B5563">色調、光線能重複</text>
+  <line x1="300" y1="560" x2="300" y2="588" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="592" width="520" height="164" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <circle cx="72" cy="624" r="20" fill="#E5A300"/>
+  <text x="72" y="632.64" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">3</text>
+  <g transform="translate(150 680) scale(0.75)"><rect x="-14" y="-50" width="28" height="34" rx="8" fill="#E5A300"/><rect x="-40" y="-18" width="80" height="22" rx="6" fill="#E5A300"/><rect x="-48" y="10" width="96" height="10" rx="3" fill="#E5A300" opacity="0.45"/><path d="M-24,36 L-6,50 L26,26" fill="none" stroke="#E5A300" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="250" y="648" font-size="30" font-weight="700" fill="#8A5D00">核准，綁版本　v1</text>
+  <text x="250" y="692" font-size="24" fill="#4B5563">核准的是</text>
+  <text x="250" y="728" font-size="24" fill="#4B5563">「這一版」</text>
+  <line x1="300" y1="758" x2="300" y2="786" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="790" width="520" height="164" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="72" cy="822" r="20" fill="#0E7568"/>
+  <text x="72" y="830.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <g transform="translate(150 878) scale(0.75)"><rect x="-54" y="-48" width="108" height="96" rx="8" fill="#0E7568"/><rect x="-44" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-44" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-4" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-4" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="16" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="16" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="36" y="-40" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="36" y="32" width="10" height="8" rx="2" fill="#FFFFFF"/><rect x="-38" y="-24" width="76" height="48" rx="4" fill="#FFFFFF"/><path d="M-8,-14 L14,0 L-8,14 z" fill="#0E7568"/></g>
+  <text x="250" y="846" font-size="30" font-weight="700" fill="#0E7568">量產</text>
+  <text x="250" y="890" font-size="24" fill="#4B5563">先做三張試點，</text>
+  <text x="250" y="926" font-size="24" fill="#4B5563">沒問題才放量</text>
+  <rect x="40" y="994" width="520" height="130" rx="22" fill="#FDECEC" stroke="#B91C1C" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="70" y="1044" font-size="26" font-weight="700" fill="#B91C1C">臉、髮型、服裝或固定道具一改，</text>
+  <text x="70" y="1086" font-size="26" font-weight="700" fill="#B91C1C">舊核准失效，存成新版本重審</text>
+  <text x="300" y="1168" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">第一次審 54 張，49 張直接通過</text>
+  <rect x="40" y="1198" width="520" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1239.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">能用一張核准參考圖，</text>
+  <text x="300.0" y="1276.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">就不要用五張</tspan></text>
+</svg>

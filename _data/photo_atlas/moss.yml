@@ -1,0 +1,128 @@
+id: moss
+status: published
+name: Kate Moss
+life: 1974 年生
+place: 英國倫敦
+theme: 一個名字，和一場還在被重新討論的拍攝
+view: 她十幾歲就入行，同一張臉在 Corinne Day、Glen Luchford、Juergen Teller、Mario Testino、Chris Levine 面前，從街頭的隨手一拍到全息光影，樣子差很多。她也是少數多年後公開說出拍攝經驗的模特兒。看她，除了看照片，也要看一個被拍的人，事後怎麼說那些照片。
+bio: |
+  <p>1974 年生。<sup><a href="#src-moss">出處：英國國家肖像館</a></sup>攝影師 Corinne Day 的遺產管理單位寫，Day 第一次發表的作品，就是 1990 年替《The Face》拍 Kate Moss 的專題〈3rd Summer of Love〉。Moss 在 2024 年的訪談裡說，拍那組照片時她 15 歲，還在上學。<sup><a href="#src-moss">出處：Corinne Day 官方網站、The Independent（AOL 轉載）</a></sup>她後來談的就是這次 1990 年《The Face》的拍攝：2022 年的訪談裡，她說那次經驗讓她覺得脆弱又害怕、「哭了很多」，又說 Day 是她最好的朋友、她真的很愛她，但也是一個很難共事的人。<sup><a href="#src-moss">出處：Stylist</a></sup>這一組是她未成年時拍的，本站不放圖，也不描述畫面。</p>
+  <p>1993 年，Day 替英國版《Vogue》拍 Moss 的三月號封面與主專題；同年稍晚，又在 Moss 西倫敦的公寓拍了一組內衣專題。Day 的官方網站寫，這組照片刊出後引發媒體風波，當時的報導說它「醜陋又剝削」，還給它貼上「兒童色情」和「heroin chic」（海洛因時尚）的標籤。<sup><a href="#src-moss">出處：Corinne Day 官方網站</a></sup>2022 年，Moss 回應這組照片被批評美化消瘦和毒品時說：「我想我成了很多人問題的代罪羔羊。我從來沒有厭食，我從來沒碰過海洛因。」<sup><a href="#src-moss">出處：PAPER</a></sup></p>
+  <p>英國國家肖像館收了 Mario Testino 拍她的作品，館方說兩人從 1990 年代初在巴黎開始合作。Moss 自己這樣形容：「他不會把我困在一種固定的樣子裡，我們一起找出那張照片。」<sup><a href="#src-moss">出處：英國國家肖像館</a></sup></p>
+works_intro: 本頁有圖的作品拍於 1994–2013 年。照年代排，七件：五位攝影師的作品，加上一張雜誌封面。有小圖的五件都是她成年後、沒有裸露的作品；1993 年 Day 那件和 Testino 那件只放館藏連結。
+works:
+  - title: Kate Moss, Under Exposure, 1993
+    zh: Corinne Day 攝，〈Under Exposure〉
+    year: 1993 年，刊於英國版《Vogue》6 月號
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O83172/
+    look: 這就是上面說的那組 1993 年內衣專題裡的一張。V&amp;A 的編目只寫了拍攝地點的白牆和一串彩色小燈，沒有寫爭議；本站不放這張的圖，想看可以點過去。
+  - title: Kate Moss
+    zh: Glen Luchford 攝
+    year: 1994 年拍，2017 年印
+    where: 美國 Getty 美術館
+    url: https://www.getty.edu/art/collection/object/109NP1
+    img: /assets/img/photo-learn/works/atlas-moss/02-luchford-kate-moss-1994.jpg
+    img_w: 600
+    img_h: 498
+    credit: "攝影：Glen Luchford｜© Glen Luchford"
+    look: 館方描述：她對著鏡頭舉起拳頭、頭往左歪，身後是熱鬧的街道（館方的語音導覽標題是紐約時代廣場）。不是擺好的姿勢，是在街上動起來的那一秒。
+  - title: "ID magazine: The US issue, August 1994"
+    zh: 《i-D》1994 年 8 月號封面海報
+    year: "1994"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O131096/
+    img: /assets/img/photo-learn/works/atlas-moss/03-id-magazine-1994.jpg
+    img_w: 452
+    img_h: 600
+    credit: "攝影：館頁未列攝影者｜© Victoria and Albert Museum, London"
+    look: V&amp;A 編目寫封面人物是 Kate Moss 和 Naomi Campbell。兩個人並肩、穿細肩帶洋裝，背景是拉長的燈光；館方沒有寫攝影師是誰。
+  - title: A Close Fit, Kate Moss
+    zh: Glen Luchford 攝，〈A Close Fit〉
+    year: 1995 年拍，2017 年印
+    where: 美國 Getty 美術館
+    url: https://www.getty.edu/art/collection/object/109NVE
+    img: /assets/img/photo-learn/works/atlas-moss/04-luchford-a-close-fit.jpg
+    img_w: 498
+    img_h: 600
+    credit: "攝影：Glen Luchford｜© Glen Luchford"
+    look: 館方描述：她屈著膝躺在鋪地毯的地板上，看向旁邊的窗，附近一台電視亮得刺眼。窗外是城市的夜景和霓虹招牌，人只占畫面一角。
+  - title: Kate Moss with croissant and fag, 1995
+    zh: Juergen Teller 攝，〈拿著可頌和香菸的 Kate Moss〉
+    year: 1995 年，刊於《i-D》
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O221476/
+    img: /assets/img/photo-learn/works/atlas-moss/05-teller-croissant.jpg
+    img_w: 404
+    img_h: 600
+    credit: "攝影：Juergen Teller｜© Victoria and Albert Museum, London"
+    look: 標題寫的是她，畫面裡卻只有一條手臂、一個可頌和一根菸。V&amp;A 1997 年的「當代時尚攝影」展就展過這張：連臉都不拍，也能是一張模特兒的照片。
+  - title: Kate Moss
+    zh: Mario Testino 攝
+    year: 1996 年
+    where: 英國國家肖像館
+    url: https://www.npg.org.uk/collections/search/portrait/mw72308/Kate-Moss
+    look: 館方說這張拍於洛杉磯，並引了 Moss 談 Testino 的話：兩人一起長大，彼此信任，「我們一起找出那張照片」。國家肖像館說明作品權利不屬館方，這裡只放連結。
+  - title: She's Light (Kate Moss)
+    zh: Chris Levine 攝，〈她是光〉
+    year: "2013"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O1460229/
+    img: /assets/img/photo-learn/works/atlas-moss/06-levine-shes-light.jpg
+    img_w: 439
+    img_h: 600
+    credit: "攝影：Chris Levine｜© Victoria and Albert Museum, London"
+    look: 館方描述：一張光柵立體照片，她閉著眼、塗著亮紅色口紅、戴一條銀項鍊。V&amp;A 說 Levine 的作品常從冥想和靜止出發；和 1994 年街上舉拳的那張比，這張是完全靜下來的她。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的《For Your Safety》系列裡，Colorist 那張也看得到類似的做法：她戴著白色安全帽、穿白色 T 恤，正含著薩克斯風吹奏，兩頰鼓起、眼睛睜得很大；背景是斑駁的水泥牆和一整片綠色植物。不是擺好的表情，是她正在做一件事的時候停下來的那一秒。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-moss-own" data-type="image" href="/assets/img/sec/005_Colorist_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-005_Colorist_1-960.jpg" alt="For Your Safety — Colorist 人像攝影" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列：Colorist。點圖放大。</figcaption>
+  </figure>
+take:
+  - 年齡和意願，拍之前就要確認。Moss 說自己 15 歲拍 1990 年那組照片時覺得脆弱又害怕、哭了很多；被拍的人說不想，就是不要，對象未成年時，更要有大人把關。這是攝影師的責任，不是模特兒的。
+  - 信任會留在照片裡。她形容和 Testino 合作是「我們一起找出那張照片」；拍前多花時間讓對方知道你要什麼、也聽對方想怎麼被拍，比現場不斷下指令有用。
+  - 讓模特兒在真的地方動起來。Luchford 讓她在時代廣場的人潮裡舉拳、在旅館地板上躺著看窗外；與其在棚內擺姿勢，不如給一個真實的場景，抓她動起來的那一秒。
+related:
+  - unit: u1
+    title: 時尚攝影怎麼走向「真實」：1990 年代到今天
+  - label: 上一位：Lisa Fonssagrives
+    url: "#fonssagrives"
+    note: 另一個年代的「超模」
+sources:
+  - title: Kate Moss（P1020，Mario Testino 攝）
+    by: National Portrait Gallery, London（英國國家肖像館）
+    url: https://www.npg.org.uk/collections/search/portrait/mw72308/Kate-Moss
+    note: 「Kate Moss (1974-)」；Testino 從 1990 年代初在巴黎和她合作；Moss 談合作的引句；館方說明作品權利不屬館方，只當事實來源
+  - title: Corinne Day（官方網站首頁）
+    by: The Corinne Day Estate（Corinne Day 遺產管理單位）
+    url: https://www.corinneday.com/home/
+    note: 第一次發表的作品是 1990 年《The Face》的 Kate Moss 專題；1993 年《Vogue》三月號；西倫敦公寓的內衣專題與媒體評語
+  - title: Kate Moss reveals she 'cried a lot' after posing topless in famous Nineties shoot
+    by: The Independent（AOL 轉載）
+    url: https://www.aol.com/kate-moss-reveals-she-cried-101208909.html
+    note: 2024 年 Fashion Neurosis 訪談（談 1990 年《The Face》）：「I was 15 and I was topless in a magazine and I was still at school」
+  - title: Kate Moss says she felt "vulnerable and scared" as a young model
+    by: Stylist
+    url: https://www.stylist.co.uk/entertainment/celebrity/kate-moss-desert-island-discs/687071
+    note: 2022 年訪談談的是 1990 年《The Face》那次拍攝：脆弱又害怕、哭了很多；Day 是她最好的朋友但很難共事
+  - title: Kate Moss Opens Up About Traumatic Shoot Experiences
+    by: PAPER
+    url: https://www.papermag.com/kate-moss-interview
+    note: 2022 年：代罪羔羊、從不厭食、從沒碰過海洛因
+  - title: Kate Moss, Under Exposure, 1993
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O83172/
+    note: 1993 年 6 月號英國版《Vogue》〈Under-exposure〉；Copyright Corinne Day, courtesy Gimpel Fils
+  - title: Kate Moss / A Close Fit, Kate Moss
+    by: The J. Paul Getty Museum（Getty 美術館）
+    url: https://www.getty.edu/art/collection/object/109NP1
+    note: Luchford 兩件（另一件 https://www.getty.edu/art/collection/object/109NVE）的年份與館方描述
+  - title: She's Light (Kate Moss)
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O1460229/
+    note: 光柵立體照片、館方描述、Levine 的創作取向
+

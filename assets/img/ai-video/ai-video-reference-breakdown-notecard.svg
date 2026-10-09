@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">參考案例筆記卡：只寫四件事</title>
+<desc id="d">一張參考案例筆記卡的範本，以虛構的示意範例填寫，不是真實案例。範例是一支宣稱「一句提示詞生成 30 秒」的城市雨夜短片。第一欄為什麼值得看：雨夜反光的光影很穩。第二欄可以學什麼：先固定參考圖，再寫燈光。第三欄哪裡不能信（紅色強調）：沒附提示詞，看起來是多段剪接。第四欄適不適合我的案子：我的案子要長鏡頭，風險高。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker></defs>
+<rect width="1200" height="740" fill="#FFFFFF"/>
+<text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">參考案例筆記卡：只寫四件事</text><text x="48" y="126" font-size="26" fill="#4B5563">下面用一個虛構的例子示範怎麼填，第三欄最重要</text>
+<rect x="48" y="160" width="1104" height="440" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+<rect x="48" y="160" width="1104" height="70" rx="18" fill="#F1F5F9"/><rect x="48" y="210" width="1104" height="20" fill="#F1F5F9"/>
+<text x="80" y="206" font-size="26" font-weight="700" fill="#1F2937">案例：城市雨夜短片，宣稱「一句提示詞生成 30 秒」</text>
+<g transform="translate(1030,196) rotate(-6)"><rect x="-90" y="-24" width="180" height="48" rx="8" fill="#FFFFFF" stroke="#B91C1C" stroke-width="3" stroke-dasharray="8 5"/><text x="0" y="9" text-anchor="middle" font-size="24" font-weight="700" fill="#B91C1C">示意，非實例</text></g>
+<circle cx="102" cy="284" r="22" fill="#2C5B8F"/><text x="102" y="293" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">1</text>
+<text x="140" y="294" font-size="30" font-weight="700" fill="#2C5B8F">為什麼值得看</text>
+<line x1="400" y1="258" x2="400" y2="314" stroke="#CBD5E1" stroke-width="2"/>
+<text x="428" y="294" font-size="28" fill="#4B5563">雨夜反光的光影很穩</text>
+<line x1="80" y1="328" x2="1120" y2="328" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="102" cy="370" r="22" fill="#0E7568"/><text x="102" y="379" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">2</text>
+<text x="140" y="380" font-size="30" font-weight="700" fill="#0E7568">可以學什麼</text>
+<line x1="400" y1="344" x2="400" y2="400" stroke="#CBD5E1" stroke-width="2"/>
+<text x="428" y="380" font-size="28" fill="#4B5563">先固定參考圖，再寫燈光</text>
+<rect x="66" y="416" width="1068" height="80" rx="14" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<circle cx="102" cy="456" r="22" fill="#B91C1C"/><text x="102" y="465" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">3</text>
+<text x="140" y="466" font-size="30" font-weight="700" fill="#B91C1C">哪裡不能信</text>
+<line x1="400" y1="430" x2="400" y2="486" stroke="#CBD5E1" stroke-width="2"/>
+<text x="428" y="466" font-size="28" font-weight="700" fill="#1F2937">沒附提示詞；看起來是多段剪接</text>
+<circle cx="102" cy="542" r="22" fill="#B45309"/><text x="102" y="551" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">4</text>
+<text x="140" y="552" font-size="30" font-weight="700" fill="#B45309">適不適合我</text>
+<line x1="400" y1="516" x2="400" y2="572" stroke="#CBD5E1" stroke-width="2"/>
+<text x="428" y="552" font-size="28" fill="#4B5563">我的案子要長鏡頭，風險高</text>
+<g transform="translate(1066,430) scale(0.85)"><circle cx="-8" cy="-8" r="28" fill="#FFFFFF" stroke="#B91C1C" stroke-width="6"/><line x1="12" y1="12" x2="38" y2="38" stroke="#B91C1C" stroke-width="10" stroke-linecap="round"/></g>
+<rect x="48" y="628" width="1104" height="80" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="600.0" y="679" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#1F2937">最有用的是第三欄：</tspan><tspan fill="#8A5D00">先寫下哪裡不能信</tspan></text>
+</svg>

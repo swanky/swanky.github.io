@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1280" width="600" height="1280" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">AI 負責做，人負責說「可以」</title>
+  <desc id="d">AI 助手主動做完：寫報價單與提示詞草稿、已授權範圍內生圖修圖、送出後查進度與下載、掃製作紀錄對帳、剪接量測抽格檢查、整理上傳包，並交出證據。只有人能蓋章說：權利已確認、預算已核准、鏡頭已通過、成片可以上傳。付費生成、公開發布或上傳、刪除或覆寫檔案、更動預算上限，每一次都要人明確核准。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1280" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">AI 負責做，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">人負責說「可以」</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">AI 做完交證據，人蓋章</text>
+  <rect x="40" y="200" width="520" height="402" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <g transform="translate(86 246) scale(0.5)"><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(0)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(45)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(90)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(135)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(180)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(225)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(270)"/><rect x="-9" y="-50" width="18" height="20" rx="3" fill="#2C5B8F" transform="rotate(315)"/><circle r="36" fill="#2C5B8F"/><circle r="14" fill="#FFFFFF"/></g>
+  <text x="130" y="258" font-size="32" font-weight="700" fill="#2C5B8F">AI 助手主動做完</text>
+  <g transform="translate(80 299) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="308" font-size="26" fill="#1F2937">寫報價單與提示詞草稿</text>
+  <g transform="translate(80 339) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="348" font-size="26" fill="#1F2937">已授權範圍內生圖修圖</text>
+  <g transform="translate(80 379) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="388" font-size="26" fill="#1F2937">送出後查進度、下載</text>
+  <g transform="translate(80 419) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="428" font-size="26" fill="#1F2937">掃製作紀錄、對帳</text>
+  <g transform="translate(80 459) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="468" font-size="26" fill="#1F2937">剪接、量測、抽格檢查</text>
+  <g transform="translate(80 499) scale(0.32)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#2C5B8F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="508" font-size="26" fill="#1F2937">整理上傳包</text>
+  <rect x="234.0" y="536.0" width="132.0" height="40" rx="20.0" fill="#2C5B8F"/>
+  <text x="300" y="564" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">交出證據</text>
+  <line x1="300" y1="616" x2="300" y2="650" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="40" y="662" width="520" height="348" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <g transform="translate(90 712) scale(0.55)"><rect x="-12" y="-52" width="24" height="34" rx="10" fill="#8A5D00"/><rect x="-34" y="-20" width="68" height="18" rx="5" fill="#8A5D00"/><rect x="-44" y="18" width="88" height="34" rx="6" fill="none" stroke="#8A5D00" stroke-width="5"/></g>
+  <text x="136" y="724" font-size="32" font-weight="700" fill="#8A5D00">只有人能說「可以」</text>
+  <rect x="80" y="758" width="440" height="50" rx="25" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <g transform="translate(108 783) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="136" y="792" font-size="28" font-weight="700" fill="#1F2937">權利已確認</text>
+  <rect x="80" y="820" width="440" height="50" rx="25" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <g transform="translate(108 845) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="136" y="854" font-size="28" font-weight="700" fill="#1F2937">預算已核准</text>
+  <rect x="80" y="882" width="440" height="50" rx="25" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <g transform="translate(108 907) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="136" y="916" font-size="28" font-weight="700" fill="#1F2937">鏡頭已通過</text>
+  <rect x="80" y="944" width="440" height="50" rx="25" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <g transform="translate(108 969) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="136" y="978" font-size="28" font-weight="700" fill="#1F2937">成片可以上傳</text>
+  <rect x="40" y="1030" width="520" height="220" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="70" y="1080" font-size="28" font-weight="700" fill="#B45309">每一次都要人明確核准：</text>
+  <rect x="110.0" y="1115.0" width="124.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="172" y="1145" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">付費生成</text>
+  <rect x="330.0" y="1115.0" width="196.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="428" y="1145" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">公開發布或上傳</text>
+  <rect x="74.0" y="1179.0" width="196.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="172" y="1209" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">刪除或覆寫檔案</text>
+  <rect x="342.0" y="1179.0" width="172.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="428" y="1209" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">更動預算上限</text>
+</svg>

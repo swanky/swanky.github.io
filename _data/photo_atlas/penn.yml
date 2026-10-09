@@ -1,0 +1,165 @@
+id: penn
+status: published
+name: Irving Penn
+life: 1917–2009
+place: 美國紐約
+theme: 把背景收到最少，讓人和東西自己說話
+view: 他拍時尚、拍名人，也拍菸屁股、櫻桃和口紅，用的幾乎是同一套方法：一個牆角或一塊素布，畫面裡只留必要的東西。看他，學的是「拿掉」：背景拿掉之後還站得住的照片，才是真的構圖好。
+bio: |
+  <p>1917 年生於美國新澤西州 Plainfield。年輕時在費城念設計，老師是《Harper's Bazaar》的藝術總監 Alexey Brodovitch，他也當過老師的助理；1941 到 1942 年，他一路經過美國南方到墨西哥，花了一年專心畫畫。<sup><a href="#src-penn">出處：Penn 基金會、芝加哥藝術博物館</a></sup></p>
+  <p>1943 年進《Vogue》，藝術總監 Alexander Liberman 鼓勵他拍第一張彩色照片，是一張靜物，後來成了 10 月 1 日那一期的封面；他把這一期當成自己職業攝影的起點。1950 年他到巴黎拍高級訂製服，攝影棚只用自然光，背景是一塊撿來的舊劇場布幕；同一年秋天，他和模特兒 Lisa Fonssagrives 結婚。<sup><a href="#src-penn">出處：Penn 基金會、芝加哥藝術博物館</a></sup>Nelson-Atkins 美術館說，他替《Vogue》拍的簡潔時尚照，在 1950 年代徹底改變了時尚攝影。<sup><a href="#src-penn">出處：Nelson-Atkins 美術館</a></sup></p>
+  <p>1952 年起他也接廣告；1960 年代開始研究鉑鈀印相（一種用鉑和鈀金屬調成藥液、手工塗在紙上的老式印法，黑白層次特別細），後來用這種印法拍香菸、街上撿來的東西。1967 年他做了一座可以帶著走的帳篷攝影棚，先後帶到達荷美（今貝南）、尼泊爾、喀麥隆、新幾內亞和摩洛哥拍人。1986 年起和設計師三宅一生合作。1995 年他把大部分檔案捐給芝加哥藝術博物館；2009 年在紐約家中過世，享年 92 歲。<sup><a href="#src-penn">出處：Penn 基金會、芝加哥藝術博物館</a></sup></p>
+works_intro: 九件都來自美術館的館藏頁，依年代排：先看他怎麼用一個牆角拍人，再看時尚照、帶著帳篷攝影棚出門拍的人像，最後是靜物和廣告。Penn 基金會要求他的作品完整呈現，所以這裡的小圖都是整張原作縮小，沒有裁切、也沒有疊字。
+works:
+  - title: Truman Capote, New York
+    year: 1948 年 3 月 5 日
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144792
+    img: /assets/img/photo-learn/works/atlas-penn/01-truman-capote.jpg
+    img_w: 405
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 他跪在一張舊木椅上，身體縮進兩面牆夾出的窄角，大衣領子拉得很高。背景只剩兩面牆和地板，人怎麼縮、怎麼靠，就是這張照片要說的全部。
+  - title: Marcel Duchamp, New York
+    year: 1948 年 4 月 30 日
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144796
+    img: /assets/img/photo-learn/works/atlas-penn/02-marcel-duchamp.jpg
+    img_w: 462
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 一樣是窄窄的牆角，換一個人，站法就完全不同：他叼著菸斗、一腳往前，輕鬆地靠在牆上。把這張和上一張並排看，同一個空間就替兩種個性說了話。
+  - title: Black & White Vogue Cover (Jean Patchett), New York
+    zh: 黑與白的《Vogue》封面（模特兒 Jean Patchett）
+    year: "1950"
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144829
+    img: /assets/img/photo-learn/works/atlas-penn/03-black-and-white-vogue-cover.jpg
+    img_w: 505
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright Condé Nast Publications, Inc."
+    look: 寬帽沿、臉上的網紗、黑外套和白領巾，整張幾乎只剩黑和白，像一枚印章。看他怎麼讓衣服的外形自己構圖：帽沿是一條橫線，外套撐成一個大三角。
+  - title: Woman in Moroccan Palace, Marrakech
+    zh: 摩洛哥宮殿裡的女人，馬拉喀什
+    year: 1951 年拍攝，1983 年沖印
+    where: Nelson-Atkins 美術館
+    url: https://art.nelson-atkins.org/objects/47144/woman-in-moroccan-palace-marrakech
+    img: /assets/img/photo-learn/works/atlas-penn/04-woman-in-moroccan-palace.jpg
+    img_w: 500
+    img_h: 504
+    credit: "攝影：Irving Penn｜© The Irving Penn Foundation / Matthew Krejcarek"
+    look: 一位模特兒裹著寬大的斗篷坐在地上，旁邊是茶壺和茶杯，身後是宮殿的雕花牆。館方說明指出，他用皮膚、衣料和建築之間的明暗與質感對比撐起畫面；這一次背景沒有拿掉，而是變成一層質地。
+  - title: Man in White, Woman in Black, Morocco
+    zh: 白衣男子與黑衣女子，摩洛哥
+    year: 1971 年拍攝，1977 年沖印
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144874
+    img: /assets/img/photo-learn/works/atlas-penn/05-man-in-white-woman-in-black.jpg
+    img_w: 539
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 一白一黑兩個人，在同一塊素色背景前一站一坐。1971 年 5 月他帶著帳篷攝影棚到摩洛哥，下面影音區第二支就是那一趟的工作影片：走到哪裡，他都先把背景收成同一塊布。
+  - title: Cigarette No. 17, New York
+    zh: 香菸 17 號
+    year: 1972 年拍攝，1974 年沖印
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/157089
+    img: /assets/img/photo-learn/works/atlas-penn/06-cigarette-no-17.jpg
+    img_w: 462
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 兩截菸屁股被放大到像兩根柱子，燒焦的紙、菸灰和皺褶都看得一清二楚。Penn 基金會的年表說，這組《Cigarettes》是為鉑鈀印相構想的，1975 年在紐約現代藝術博物館展出；右下角的 TRIAL PRINT 是印在這張試印上的字。
+  - title: The Spilled Cream
+    zh: 打翻的鮮奶油
+    year: "1980"
+    where: Nelson-Atkins 美術館
+    url: https://art.nelson-atkins.org/objects/53390/the-spilled-cream
+    img: /assets/img/photo-learn/works/atlas-penn/07-the-spilled-cream.jpg
+    img_w: 500
+    img_h: 295
+    credit: "攝影：Irving Penn｜© The Irving Penn Foundation / Matthew Krejcarek"
+    look: 倒下的白瓷壺、碎成幾片的盤子，和一把滾出來的櫻桃。一個打翻的小意外，被他拍得像一張古典靜物畫；看白瓷、黑櫻桃和碎片怎麼排成一條斜線。
+  - title: Mouth (for L'Oréal), New York
+    zh: 嘴（替 L'Oréal 拍）
+    year: 1986 年拍攝，1992 年沖印
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144849
+    img: /assets/img/photo-learn/works/atlas-penn/08-mouth-for-loreal.jpg
+    img_w: 590
+    img_h: 600
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 一張嘴塗滿好幾種口紅顏色，畫面只拍到鼻子以下。館方說，這是替 L'Oréal 拍的廣告，把嘴唇比成畫家的調色盤；廣告照也可以只拍一個局部，讓產品自己講話。
+  - title: "Issey Miyake Fashion: Face Covered with Hair (A), New York"
+    zh: 三宅一生時裝：頭髮蓋住的臉
+    year: 1991 年 5 月
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/144850
+    img: /assets/img/photo-learn/works/atlas-penn/09-issey-miyake-face-covered-with-hair.jpg
+    img_w: 600
+    img_h: 596
+    credit: "攝影：Irving Penn｜Copyright The Irving Penn Foundation"
+    look: 一整片直髮把臉蓋住，只隱約透出鼻子和嘴，背後是一片白。他從 1986 年起和三宅一生合作；這張連臉都藏起來，讓人只看到造型的形狀。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的〈保護與脆弱〉裡也看得到類似的做法：背景只有一片白色窗簾，她正面看著鏡頭，頭戴白色安全帽，戴著白手套、抱著一大束乾燥花。畫面裡沒有別的東西，安全帽、手套和乾掉的花，就是這張照片全部的線索。</p>
+  <figure class="pl-own pl-own--square">
+    <a class="portfolio-lightbox" data-gallery="atlas-penn-own" data-type="image" href="/assets/img/sec/001_Zoey_1.jpg"><img src="/assets/img/sec/001_Zoey_1.jpg" width="1024" height="1024" alt="Zoey 戴安全帽手持乾燥花的概念人像" loading="lazy" decoding="async"></a>
+    <figcaption>史旺基作品〈保護與脆弱〉，《For Your Safety》系列。點圖放大。</figcaption>
+  </figure>
+videos:
+  - id: uTJ56V8gDc8
+    title: "Centennial: Irving Penn, American Photographer | Met Exhibitions"
+    channel: The Met
+    channel_url: https://www.youtube.com/@metmuseum
+    length: 1 分 49 秒
+    lang: 英語（有英文字幕）
+    note: 大都會藝術博物館官方頻道。2017 年百年回顧展的預告，由兩位策展人介紹他，適合當入門。
+  - id: ZWRcaz-fpjk
+    title: Irving Penn on Location in Morocco, 1971
+    channel: The Met
+    channel_url: https://www.youtube.com/@metmuseum
+    length: 3 分 13 秒
+    lang: 無字幕
+    note: 大都會藝術博物館官方頻道。Lisa Fonssagrives-Penn 1971 年用 8 釐米攝影機拍下他在摩洛哥用帳篷攝影棚工作的樣子，可以對照上面那張〈Man in White, Woman in Black〉。
+  - id: CYC0saUrhG8
+    title: "\"Irving Penn: Centennial\"—Curatorial Selection Process"
+    channel: The Met
+    channel_url: https://www.youtube.com/@metmuseum
+    length: 2 分 26 秒
+    lang: 英語（有英文字幕）
+    note: 大都會藝術博物館官方頻道。2015 年兩位策展人在 Penn 基金會挑選展品的過程，看得到原作印相的實際樣子。
+take:
+  - 先把背景收到最少。一個牆角、一塊素布就夠了；背景越少，對方怎麼站、手放哪裡就越重要，所以拍前要先想好請對方做什麼動作。
+  - 換人不換景。Capote 和 Duchamp 用的是同一種窄牆角，看起來卻完全是兩個人；固定一個簡單的場景、連續拍好幾個人，最能拍出每個人自己的樣子。
+  - 東西也能當主角。菸屁股、櫻桃、口紅都被他拍得像人像；拍寫真時，可以留一張只拍對方的隨身物件，讓它替人說話。
+related:
+  - unit: u3
+    title: Irving Penn 與 Lisa Fonssagrives：模特兒也是作者
+  - label: 對照：Richard Avedon
+    url: "#avedon"
+    note: 同一本圖鑑，同樣常用素白背景
+sources:
+  - title: Chronology（Irving Penn 年表）
+    by: The Irving Penn Foundation（Penn 基金會）
+    url: https://irvingpenn.org/chronology
+    note: 出生、費城求學與 Brodovitch、墨西哥一年、1943 年《Vogue》與第一張彩色封面、1952 年接廣告、鉑鈀印相、1967 年帳篷攝影棚與行程、《Cigarettes》與 1975 年 MoMA、1986 年三宅一生、1995 年捐檔案、過世
+  - title: Irving Penn（藝術家介紹）
+    by: The Art Institute of Chicago（芝加哥藝術博物館）
+    url: https://www.artic.edu/artists/36169/irving-penn
+    note: 1950 年巴黎自然光攝影棚與舊劇場布幕、1950 年秋與 Lisa Fonssagrives 結婚、1995 年檔案捐贈
+  - title: Woman in Moroccan Palace, Marrakech（展籤）
+    by: The Nelson-Atkins Museum of Art（Nelson-Atkins 美術館）
+    url: https://art.nelson-atkins.org/objects/47144/woman-in-moroccan-palace-marrakech
+    note: 簡潔的《Vogue》時尚照在 1950 年代改變時尚攝影；皮膚、衣料與建築的明暗質感對比
+  - title: Mouth (for L'Oréal), New York
+    by: The Art Institute of Chicago（芝加哥藝術博物館）
+    url: https://www.artic.edu/artworks/144849
+    note: L'Oréal 廣告，把嘴唇比成畫家的調色盤
+  - title: Permissions（授權規定）
+    by: The Irving Penn Foundation（Penn 基金會）
+    url: https://www.irvingpenn.org/permissions
+    note: 作品須完整呈現、不裁切、不疊字
+  - title: Irving Penn on Location in Morocco, 1971（影片說明）
+    by: The Met（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=ZWRcaz-fpjk
+    note: 1971 年由 Lisa Fonssagrives-Penn 用 8 釐米拍攝，記錄他在摩洛哥用帳篷攝影棚工作

@@ -5,6 +5,8 @@
     <a href="{{ '/photography/gallery/' | relative_url }}"{% if page.url == '/photography/gallery/' %} class="is-active" aria-current="page"{% endif %}>作品與系列</a>
     <a href="{{ '/photography/personal-works/' | relative_url }}"{% if page.url == '/photography/personal-works/' %} class="is-active" aria-current="page"{% endif %}>人物作品</a>
     <a href="{{ '/photography/models/' | relative_url }}"{% if page.url contains '/photography/models/' %} class="is-active"{% endif %}>虛擬模特兒</a>
+    <a href="{{ '/photography/notes/' | relative_url }}"{% if page.url == '/photography/notes/' %} class="is-active" aria-current="page"{% endif %}>創作筆記</a>
+    {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}<a href="{{ '/photography/learn/' | relative_url }}"{% if page.url contains '/photography/learn/' %} class="is-active"{% endif %}>看懂寫真</a>{% endif %}
     <a href="{{ '/photography/commercial-works/' | relative_url }}"{% if page.url == '/photography/commercial-works/' %} class="is-active" aria-current="page"{% endif %}>委託與活動</a>
     <a href="{{ '/photography/photo-albums/' | relative_url }}"{% if page.url == '/photography/photo-albums/' %} class="is-active" aria-current="page"{% endif %}>攝影出版</a>
     <a href="{{ '/photography/awards/' | relative_url }}"{% if page.url == '/photography/awards/' %} class="is-active" aria-current="page"{% endif %}>國際獎項</a>

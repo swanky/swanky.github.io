@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">兩本書從自己做到經典的路</title>
+<desc id="d">示意圖，依館方、出版社與媒體來源整理。上排是《The Afronauts》：2012 年自費出版，英國攝影雜誌 BJP 報導初印 1,000 本；在 Arles 被收藏家買下、口碑擴散；Foam 說兩個月內售罄、BJP 說一年內；入圍 Paris Photo–Aperture 首本攝影書獎與 Deutsche Börse 攝影獎；2017 年第二版限量 1,500 本。下排是《Sleeping by the Mississippi》：2003 年春自己用印表機做了 50 本噴墨書送人；請老師 Joel Sternfeld 引介給 Steidl；2004 年 Steidl 出版、賣過三刷；後來 MACK 照原樣再版，加兩張照片。底部重點：先讓書被拿在手上，再談印量。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="78" font-size="46" font-weight="700" fill="#1F2937">兩本書，從自己做到經典的路</text>
+<text x="48" y="122" font-size="26" fill="#4B5563">示意，依館方、出版社與媒體來源整理；數字旁標出處</text>
+
+<!-- Afronauts row -->
+<text x="48" y="188" font-size="30" font-weight="700" fill="#8A5D00">《The Afronauts》</text>
+<g font-size="24" fill="#374151" text-anchor="middle">
+<rect x="48" y="206" width="250" height="150" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="173" y="252" font-weight="700" font-size="28" fill="#1F2937">2012 自費</text>
+<text x="173" y="292">初印 1,000 本</text>
+<text x="173" y="326" font-size="20" fill="#6B7280">（BJP 報導）</text>
+<rect x="340" y="206" width="250" height="150" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="465" y="252" font-weight="700" font-size="28" fill="#1F2937">被看見</text>
+<text x="465" y="292">Arles 收藏家</text>
+<text x="465" y="326">一次買五本</text>
+<rect x="632" y="206" width="250" height="150" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="757" y="252" font-weight="700" font-size="28" fill="#1F2937">賣完</text>
+<text x="757" y="292">兩個月（Foam）</text>
+<text x="757" y="326">一年（BJP）</text>
+<rect x="924" y="206" width="228" height="150" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="1038" y="248" font-weight="700" font-size="28" fill="#1F2937">第二版</text>
+<text x="1038" y="284">2017 年</text>
+<text x="1038" y="316">限量 1,500 本</text>
+<text x="1038" y="342" font-size="20" fill="#6B7280">（出版方頁）</text>
+</g>
+<g fill="#E5A300"><path d="M302 281 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/><path d="M594 281 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/><path d="M886 281 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/></g>
+
+<!-- Soth row -->
+<text x="48" y="420" font-size="30" font-weight="700" fill="#334155">《Sleeping by the Mississippi》</text>
+<g font-size="24" fill="#374151" text-anchor="middle">
+<rect x="48" y="438" width="250" height="150" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="173" y="484" font-weight="700" font-size="28" fill="#1F2937">2003 春</text>
+<text x="173" y="524">印表機做 50 本</text>
+<text x="173" y="558">噴墨書送人</text>
+<rect x="340" y="438" width="250" height="150" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="465" y="484" font-weight="700" font-size="28" fill="#1F2937">找出版社</text>
+<text x="465" y="524">請老師引介</text>
+<text x="465" y="558">給 Steidl</text>
+<rect x="632" y="438" width="250" height="150" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="757" y="484" font-weight="700" font-size="28" fill="#1F2937">2004 出版</text>
+<text x="757" y="524">Steidl 初版</text>
+<text x="757" y="558">賣過三刷</text>
+<rect x="924" y="438" width="228" height="150" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="1038" y="484" font-weight="700" font-size="28" fill="#1F2937">再版</text>
+<text x="1038" y="524">MACK 照原樣</text>
+<text x="1038" y="558">再加兩張</text>
+</g>
+<g fill="#64748B"><path d="M302 513 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/><path d="M594 513 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/><path d="M886 513 l30 0 l0 -12 l20 16 l-20 16 l0 -12 l-30 0z"/></g>
+
+<rect x="48" y="618" width="1104" height="70" rx="16" fill="#1F2937"/>
+<text x="600" y="663" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">共同點：先讓書被拿在手上，出版社和再版都是之後的事</text>
+</svg>

@@ -1,0 +1,131 @@
+id: walker
+name: Tim Walker
+zh: 蒂姆．沃克
+zh_note: 中文譯名依奇美博物館展覽
+life: 1970 年生
+place: 英國
+theme: 先蓋一個世界，再請人住進去
+view: 他的照片常常是先搭好一整個場景，再請模特兒走進去「住」。看他，學的是場景、服裝、光怎麼一起替人物說故事；也看得到一張時尚照背後，布景師、造型師、髮妝和模特兒是怎麼一起工作的。
+bio: |
+  <p>1970 年生於英國，小時候就開始拍照。他先在倫敦 Condé Nast 圖書館的 Cecil Beaton 檔案室工作了一年，之後到 Exeter 的藝術學院念攝影，1994 年畢業。<sup><a href="#src-walker">出處：Getty 美術館</a></sup></p>
+  <p>畢業後先在倫敦當自由攝影助理，再到紐約跟著 Richard Avedon 工作；二十五歲替英國版《Vogue》拍了第一個專題，之後一直替雜誌拍照。<sup><a href="#src-walker">出處：Getty 美術館</a></sup>V&amp;A 形容他的風格華麗、奇幻，常引用早期的時尚攝影、繪畫和有名的童話故事。<sup><a href="#src-walker">出處：V&amp;A</a></sup></p>
+  <p>2019 年，倫敦 V&amp;A 博物館為他辦了大展《Tim Walker: Wonderful Things》，展出十組從館藏得到靈感的新作；2021 年這個展覽來到台南的奇美博物館，是亞洲第一站。<sup><a href="#src-walker">出處：V&amp;A、奇美博物館</a></sup></p>
+works_intro: 前兩件是 V&amp;A 的館藏頁；後面三件是 Getty 美術館的展覽頁：展覽頁把十組作品放在同一頁，連結會直接捲到那一組，上面有照片和他自己寫的說明。這裡只挑三組畫面最清楚的，其餘幾組請到展覽頁自己看。他自己的說明很值得讀：每一組都從一件老東西開始。
+works:
+  - title: Eglingham Hall（〈Horse in House〉系列）
+    zh: 英格蘭北部的 Eglingham Hall
+    year: 1998 年，刊於義大利版《Vogue》11 月號
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O209649/
+    img: /assets/img/photo-learn/works/photographers-walker/01-eglingham-hall.jpg
+    img_w: 450
+    img_h: 600
+    credit: "攝影：Tim Walker｜© Victoria and Albert Museum, London"
+    look: 一座打開的白色衣櫃，塞滿花色洋裝和戲服，畫面裡一個人都沒有。衣服和房間自己就在說故事，這是他後來搭景的起點。
+  - title: 《Vogue》系列之一
+    zh: V&amp;A 館藏 E.1140-2008
+    year: "2004"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O240238/
+    img: /assets/img/photo-learn/works/photographers-walker/02-vogue-series.jpg
+    img_w: 600
+    img_h: 450
+    credit: "攝影：Tim Walker｜© Victoria and Albert Museum, London"
+    look: 一台比人還大的相機擺在房間裡，模特兒站在旁邊。館方引他的話：靈感來自一張 1924 年的時裝插畫，畫裡雜誌上的模特兒好像要從紙上爬出來。
+  - title: Pen and Ink
+    zh: 鋼筆與墨水
+    year: 2017 年，倫敦
+    where: Getty 美術館展覽頁（〈Pen and Ink〉那一組）
+    url: https://www.getty.edu/art/exhibitions/walker/explore.html#:~:text=Pen%20and%20Ink
+    img: /assets/img/photo-learn/works/photographers-walker/03-pen-and-ink.jpg
+    img_w: 494
+    img_h: 600
+    credit: 攝影：Tim Walker｜© Tim Walker Studio
+    look: 靈感是 Aubrey Beardsley 的黑白插畫。白底上，黑色的線條像剪紙一樣繞著模特兒；他說是用懸吊的鐵絲和珠子「在空中畫畫」。
+  - title: Why Not Be Oneself?
+    zh: 何不做自己？
+    year: 2018 年，英國 Renishaw Hall
+    where: Getty 美術館展覽頁（〈Why Not Be Oneself?〉那一組）
+    url: https://www.getty.edu/art/exhibitions/walker/explore.html#:~:text=Why%20Not%20Be%20Oneself%3F
+    img: /assets/img/photo-learn/works/photographers-walker/05-why-not-be-oneself.jpg
+    img_w: 450
+    img_h: 600
+    credit: 攝影：Tim Walker｜© Tim Walker Studio
+    look: 演員 Tilda Swinton 扮演詩人 Edith Sitwell，在 Sitwell 家族的老宅裡拍。看大帽子、戒指和伸向鏡頭的手。他說：美不只屬於年輕人。
+  - title: Cloud 9
+    zh: 九霄雲外
+    year: 2018 年，英國 Worcestershire
+    where: Getty 美術館展覽頁（〈Cloud 9〉那一組）
+    url: https://www.getty.edu/art/exhibitions/walker/explore.html#:~:text=Cloud%209
+    img: /assets/img/photo-learn/works/photographers-walker/10-cloud-9.jpg
+    img_w: 449
+    img_h: 600
+    credit: 攝影：Tim Walker｜© Tim Walker Studio
+    look: 靈感是 V&amp;A 收藏的南亞細密畫。一群人在飛燕草花田裡，旁邊站著一隻綠色的大象道具；他說那天剛好熱浪，光很強，很像在印度。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的 Zamy 裡也看得到類似的做法：戴著白色安全帽、穿白襯衫的女孩坐在木桌前，桌上擺著一隻大大的綠色獨眼怪公仔和幾隻小公仔，背後是樹和步道。人和公仔坐在同一個小小的世界裡，每一樣東西都在說同一個故事。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-walker-own" data-type="image" href="/assets/img/sec/030_Zamy_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-030_Zamy_1-960.jpg" alt="戴白色安全帽的女孩坐在木桌前，桌上擺著綠色大眼怪公仔，背後是樹和步道" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列。點圖放大。</figcaption>
+  </figure>
+  <p>拿它和 Walker 比，規模差很多，我只有一張桌子；共同點是：<strong>場景不必大，但裡面每樣東西都要屬於同一個故事。</strong></p>
+videos:
+  - id: fCIFPXndwYY
+    title: 奇美博物館特展《蒂姆．沃克：美妙事物》線上導覽
+    channel: 奇美博物館 CHIMEI Museum
+    channel_url: https://www.youtube.com/@ChimeiMuseum-tw
+    length: 40 分 44 秒
+    lang: 國語
+    note: 奇美博物館官方頻道。2021 年亞洲首站的線上導覽，國語講解，最適合先看。
+  - id: W5lzpHgF1ac
+    title: "Working with Tim Walker: models"
+    channel: Victoria and Albert Museum
+    channel_url: https://www.youtube.com/@vamuseum
+    length: 2 分 47 秒
+    lang: 英語（有英文字幕）
+    note: V&amp;A 官方頻道。講他怎麼和模特兒合作：先用分鏡（把每個畫面先畫成草圖的拍攝腳本）和情緒板（把參考圖拼在一起的靈感板）分享參考，再讓模特兒在拍攝中加入自己的想法。
+  - id: TYvjjZFpXcA
+    title: The Making of Out of the Woods
+    channel: Getty Museum
+    channel_url: https://www.youtube.com/@gettymuseum
+    length: 4 分 26 秒
+    lang: 英語（有英文、西班牙文字幕）
+    note: Getty 美術館官方頻道。拍下第十組作品的工作過程，可以看到搭景有多大。
+take:
+  - 從一件東西開始想。V&amp;A 那十組，每一組都從一件館藏出發：鼻煙盒變成龍、刺繡木盒變成祕密花園。拍之前先找一件讓你有感覺的東西，再讓場景、服裝和光往它靠。
+  - 把參考資料先給模特兒看。他用分鏡（草圖腳本）和情緒板（參考圖拼貼的靈感板）讓模特兒知道要「住進」什麼樣的世界；你也可以把三五張參考圖先傳給對方，現場就不用從零解釋。
+  - 場景不必大，但要完整。衣櫃、包裝箱、白色箱型空間都不大，可是畫面裡每一樣東西都屬於同一個故事；寧可小而完整，不要大而零散。
+related:
+  - unit: u3
+    title: Tim Walker 與 Tilda Swinton：先給角色一個世界
+  - label: 上一位：Richard Avedon
+    url: "#avedon"
+    note: 他在紐約跟過的攝影師
+sources:
+  - title: "Tim Walker: Wonderful Things（作品與自述）"
+    by: The J. Paul Getty Museum（Getty 美術館）
+    url: https://www.getty.edu/art/exhibitions/walker/explore.html
+    note: 出生年、Cecil Beaton 檔案室、Exeter 藝術學院、Avedon、第一個《Vogue》專題；展覽頁上各組作品的年份、地點、模特兒與他自己的說明
+  - title: Eglingham Hall
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O209649/
+    note: 〈Horse in House〉系列、1998 年義大利版《Vogue》；風格華麗奇幻、常引用早期時尚攝影、繪畫與童書
+  - title: Photograph（E.1140-2008）
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O240238/
+    note: 2008 年攝影師捐贈的六張《Vogue》照片之一；1924 年時裝插畫的靈感
+  - title: "Tim Walker: Wonderful Things（展覽頁）"
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://www.vam.ac.uk/exhibitions/tim-walker
+    note: 展期 2019 年 9 月 21 日到 2020 年 3 月 22 日；十組受館藏啟發的新作
+  - title: 奇美博物館特展《蒂姆．沃克：美妙事物》線上導覽（影片說明）
+    by: 奇美博物館（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=fCIFPXndwYY
+    note: 2019 年倫敦首展、2021 年在奇美博物館登場，是亞洲首站
+  - title: "Working with Tim Walker: models（影片說明）"
+    by: Victoria and Albert Museum（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=W5lzpHgF1ac
+    note: 用分鏡與情緒板溝通，讓模特兒在拍攝中加入想法

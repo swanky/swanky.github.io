@@ -1,0 +1,128 @@
+id: dovima
+name: Dovima
+life: 1990 年逝世（享年 63 歲）
+place: 美國紐約（生於皇后區）
+theme: 一個人，四位攝影師的四種樣子
+view: 同一位模特兒，在 Irving Penn、Lillian Bassman、Richard Avedon、William Helburn 的鏡頭前，是完全不同的樣子：帽子、暗房裡的影子、馬戲團、高架鐵路下。看她，學的是模特兒怎麼把自己的線條，帶進每一位攝影師的畫面。
+bio: |
+  <p>本名 Dorothy Virginia Margaret Juba，工作時用「Dovima」這個名字。<sup><a href="#src-dovima">出處：芝加哥藝術博物館</a></sup>大都會藝術博物館的說明寫：她替 Irving Penn 拍過，也幾乎替那個年代的每一位攝影師拍過。<sup><a href="#src-dovima">出處：大都會藝術博物館</a></sup></p>
+  <p>1955 年 8 月，Richard Avedon 在巴黎的攝影棚和好幾個外景地替她拍照，刊在《Harper's Bazaar》9 月號一個 14 頁的巴黎時裝專題裡；和大象合照的那張，就拍於巴黎的冬季馬戲團。<sup><a href="#src-dovima">出處：芝加哥藝術博物館</a></sup></p>
+  <p class="atlas-note">生年沒有機構來源：《紐約時報》訃聞只寫她 1990 年逝世、享年 63 歲，這裡照實不填。</p>
+works_intro: 本頁作品拍於 1949–1955 年。照年代排，一共六件、四位攝影師，都連到美術館的館藏頁，點過去看原作。
+works:
+  - title: Spanish Hat by Tatiana du Plessix (Dovima), New York
+    zh: Irving Penn 攝，西班牙帽
+    year: 1949 年 12 月 22 日
+    where: 美國大都會藝術博物館
+    url: https://www.metmuseum.org/art/collection/search/714782
+    look: 先看標題：帽子設計師的名字寫在前面，模特兒的名字放在括號裡。大都會說，這頂帽子出自 Saks Fifth Avenue 的帽飾設計師 Tatiana du Plessix。時尚照的主角是誰，標題已經說了。
+  - title: Model (Dovima) wearing pink pants and blue shirt with polka dots
+    zh: Irving Penn 攝，穿粉紅褲和點點藍襯衫的 Dovima
+    year: "1949"
+    where: 芝加哥藝術博物館 Irving Penn 檔案
+    url: https://archive.artic.edu/irvingpennarchives/194810
+    look: 標題寫的是粉紅和藍色，館方紀錄卻是一張黑白的測試印樣，給《Vogue》的工作用。這讓我們看到發表之前的一步：拍完先印一張來檢查。
+  - title: Dovima
+    zh: Lillian Bassman 攝
+    year: "1954"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O1811841/
+    img: /assets/img/photo-learn/works/models-dovima/03-dovima-bassman.jpg
+    img_w: 600
+    img_h: 474
+    credit: "攝影：Lillian Bassman｜© Victoria and Albert Museum, London"
+    look: 暗色調裡，兩位穿黑色禮服的女子和一位男士從陰影中浮出來。V&amp;A 說 Bassman 學過織品設計和時裝插畫，作品常強調大膽的輪廓，也會在暗房裡用刷、漂白等方法處理影像。
+  - title: Dovima with Elephants, Evening Dress by Dior, Cirque d'Hiver, Paris
+    zh: Richard Avedon 攝，Dovima 與大象
+    year: 1955 年 8 月，巴黎
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/221681/dovima-with-elephants-evening-dress-by-dior-cirque-d-hiver-paris
+    img: /assets/img/photo-learn/works/models-dovima/04-dovima-with-elephants.jpg
+    img_w: 481
+    img_h: 600
+    credit: "攝影：Richard Avedon｜Copyright © The Richard Avedon Foundation"
+    look: 館方說她看起來從容、無懼，身體的曲線呼應兩旁大象龐大的輪廓。Avedon 回憶，他先在天窗下看到那些大象，才去找合適的衣服。
+  - title: Dovima, evening dress by Balenciaga, Paris
+    zh: Richard Avedon 攝，穿 Balenciaga 晚禮服的 Dovima
+    year: 1955 年 8 月，巴黎
+    where: Getty 美術館
+    url: https://www.getty.edu/art/collection/object/1049CP
+    img: /assets/img/photo-learn/works/models-dovima/05-dovima-balenciaga-paris.jpg
+    img_w: 480
+    img_h: 600
+    credit: "攝影：Richard Avedon｜Copyright © The Richard Avedon Foundation"
+    look: 巴黎街角的咖啡館外，一男一女穿著晚禮服。她穿著蓬裙往後傾，像舞步裡的一拍；和大象那張同一個月拍，卻是完全不同的情緒。
+  - title: Dovima under the El
+    zh: William Helburn 攝，高架鐵路下的 Dovima
+    year: 1955 年拍攝，2012 年印製
+    where: Getty 美術館
+    url: https://www.getty.edu/art/collection/object/1P5Q1Y
+    img: /assets/img/photo-learn/works/models-dovima/06-dovima-under-the-el.jpg
+    img_w: 472
+    img_h: 600
+    credit: "攝影：William Helburn｜© William Helburn LLC"
+    look: Getty 的說明：她穿綠色短袖洋裝，站在芝加哥的高架鐵路下直視鏡頭，鐵架裡塞滿一匹匹布料，腳邊也堆著布；背景左邊，一位警察雙手叉腰看著。
+works_after: |
+  <p class="atlas-note">大象那張，紐約現代藝術博物館（<a href="https://www.moma.org/collection/works/46095" target="_blank" rel="noopener">館藏頁</a>，1958–59 年就在館內展出過）、大都會藝術博物館（<a href="https://www.metmuseum.org/art/collection/search/262997" target="_blank" rel="noopener">館藏頁</a>）和英國 V&amp;A 博物館（<a href="https://collections.vam.ac.uk/item/O82832/" target="_blank" rel="noopener">館藏頁</a>）也各收了一張印相。同一張照片，不同館、不同年份印出來的版本。</p>
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的 Karen 裡也看得到類似的做法：她戴著白色安全帽、穿白襯衫，身體靠向一根黃色鋼管欄杆，一手托著下巴，欄杆的斜線和她歪過去的身體連成同一個方向，背後是高架橋下的綠地。她不是站在欄杆旁邊，而是讓身體順著欄杆走。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-dovima-own" data-type="image" href="/assets/img/sec/027_Karen_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-027_Karen_1-960.jpg" alt="戴白色安全帽的女孩靠在黃色鋼管欄杆上，一手托腮，身體順著欄杆的斜線歪過去" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列。點圖放大。</figcaption>
+  </figure>
+  <p>拿它和 Dovima 比：她讓身體去呼應兩頭大象的輪廓，我這張是呼應一根欄杆；共同點是：<strong>先找到場景裡的線條，再讓姿勢去對它。</strong></p>
+videos:
+  - id: opiljrNHJtg
+    link_only: true
+    title: "Making an Icon: Richard Avedon's Dovima with Elephants - Lisa Volpe"
+    channel: MFAH Docent
+    length: 43 分 51 秒
+    lang: 英語
+    note: 只談大象那一張的完整演講。這個頻道沒有寫明是不是美術館的正式頻道，所以這裡只放連結，不嵌入
+take:
+  - 先讀懂這位攝影師要的線條。同一個人，在 Penn 的帽子特寫、Bassman 的暗房影子、Avedon 的馬戲團裡，是完全不同的樣子；拍攝前先看對方平常的作品，比準備一套萬用姿勢有用。
+  - 讓身體去呼應場景裡的形狀。館方說她的曲線呼應大象的輪廓；拍之前先在場景裡找一個形狀（拱門、欄杆、樹枝、布料的皺褶），讓姿勢去對它。
+  - 讓模特兒把角色演出來。館方說她面對大象時看起來從容、無懼；拍前把衣服和場景的故事先告訴對方，她的神情就有依據，不必硬擺表情。
+related:
+  - label: 攝影師圖鑑：Richard Avedon
+    url: /photography/learn/photographers/#avedon
+    note: 拍下大象那張的攝影師
+  - unit: u3
+    title: Richard Avedon 與 Dovima：讓姿勢接住整個場景
+  - unit: u3
+    title: Irving Penn 與 Lisa Fonssagrives：模特兒也是作者
+sources:
+  - title: Dovima with Elephants, Evening Dress by Dior, Cirque d'Hiver, Paris
+    by: The Art Institute of Chicago（芝加哥藝術博物館）
+    url: https://www.artic.edu/artworks/221681/dovima-with-elephants-evening-dress-by-dior-cirque-d-hiver-paris
+    note: 本名、1955 年 9 月號 14 頁專題、攝影棚與巴黎外景、Avedon 的回憶、曲線呼應大象輪廓
+  - title: Spanish Hat by Tatiana du Plessix (Dovima), New York
+    by: The Metropolitan Museum of Art（美國大都會藝術博物館）
+    url: https://www.metmuseum.org/art/collection/search/714782
+    note: 帽飾設計師 Tatiana du Plessix；Dovima 替 Penn 和那個年代幾乎每一位攝影師拍過
+  - title: Dovima（Lillian Bassman）
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O1811841/
+    note: Bassman 的背景與暗房做法
+  - title: Model (Dovima) wearing pink pants and blue shirt with polka dots
+    by: The Art Institute of Chicago（芝加哥藝術博物館 Irving Penn 檔案）
+    url: https://archive.artic.edu/irvingpennarchives/194810
+    note: 1949 年替《Vogue》拍的黑白測試印樣
+  - title: Dovima under the El
+    by: The J. Paul Getty Museum（Getty 美術館）
+    url: https://www.getty.edu/art/collection/object/1P5Q1Y
+    note: 作品描述、1955 年拍攝、2012 年印製
+  - title: Dovima, evening dress by Balenciaga, Paris
+    by: The J. Paul Getty Museum（Getty 美術館）
+    url: https://www.getty.edu/art/collection/object/1049CP
+    note: 1955 年 8 月、巴黎街角咖啡館外的一男一女
+  - title: Dovima with Elephants（MoMA 館藏）
+    by: The Museum of Modern Art（紐約現代藝術博物館）
+    url: https://www.moma.org/collection/works/46095
+    note: 1958 年 11 月到 1959 年 1 月在「Photographs from the Museum Collection」展出
+  - title: Dovima, a Regal Model of the 50's, Is Dead at 63
+    by: The New York Times（《紐約時報》，Bernadine Morris，1990-05-05）
+    url: https://www.nytimes.com/1990/05/05/obituaries/dovima-a-regal-model-of-the-50-s-is-dead-at-63.html
+    note: 1990 年逝世、享年 63 歲；生於紐約皇后區（Jackson Heights）

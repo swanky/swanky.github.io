@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1120" width="600" height="1120" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">把一座村子當舞台：三方各站哪裡</title>
+<desc id="d">示意圖，不是原作的實際配置。由上往下看一片田地：中間是舞者，周圍有幾位村民，攝影師站在較遠的田埂上，用比較寬的視角把人和地方一起框進來。下方三張卡片分別寫攝影師、舞者、現場各自帶來什麼，最後提醒拍到路人要先取得同意。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1120" fill="#FFFFFF"/>
+<text x="28" y="60" font-size="38" font-weight="700" fill="#1F2937">把一座村子當舞台：</text>
+<text x="28" y="106" font-size="38" font-weight="700" fill="#1F2937">三方各站哪裡</text>
+<text x="28" y="146" font-size="23" fill="#4B5563">由上往下看（示意，不是原作的位置）</text>
+
+<rect x="28" y="172" width="544" height="400" rx="18" fill="#F3F7EE" stroke="#7C8B5B" stroke-width="3"/>
+<g stroke="#B9C6A0" stroke-width="2">
+<line x1="52" y1="210" x2="548" y2="210"/><line x1="52" y1="250" x2="548" y2="250"/><line x1="52" y1="290" x2="548" y2="290"/>
+<line x1="52" y1="330" x2="548" y2="330"/><line x1="52" y1="370" x2="548" y2="370"/><line x1="52" y1="410" x2="548" y2="410"/><line x1="52" y1="450" x2="548" y2="450"/>
+</g>
+<text x="50" y="200" font-size="20" fill="#5B6B3A">田地</text>
+<rect x="28" y="482" width="544" height="90" fill="#E7DCC8" stroke="#A08A64" stroke-width="2"/>
+<text x="50" y="562" font-size="20" fill="#7A6640">田埂</text>
+<path d="M300,520 L80,222 L520,222 Z" fill="#2C5B8F" fill-opacity="0.07" stroke="#2C5B8F" stroke-width="2" stroke-dasharray="8 6"/>
+<circle cx="300" cy="320" r="30" fill="#B45309"/>
+<text x="300" y="329" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">舞</text>
+<path d="M336,296 C370,280 388,296 402,274" fill="none" stroke="#B45309" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M264,296 C232,276 214,292 200,270" fill="none" stroke="#B45309" stroke-width="3" marker-end="url(#arr)"/>
+<g fill="#64748B"><circle cx="150" cy="400" r="18"/><circle cx="196" cy="430" r="18"/><circle cx="440" cy="396" r="18"/><circle cx="470" cy="290" r="18"/><circle cx="120" cy="290" r="18"/></g>
+<text x="172" y="468" text-anchor="middle" font-size="20" fill="#475569">村民</text>
+<text x="452" y="440" text-anchor="middle" font-size="20" fill="#475569">村民</text>
+<rect x="274" y="508" width="52" height="38" rx="8" fill="#2C5B8F"/>
+<circle cx="300" cy="527" r="10" fill="#FFFFFF"/>
+<text x="340" y="535" font-size="21" font-weight="700" fill="#2C5B8F">攝影師</text>
+
+<rect x="28" y="596" width="544" height="120" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="50" y="636" font-size="27" font-weight="700" fill="#2C5B8F">攝影師帶來</text>
+<text x="50" y="672" font-size="22" fill="#1F2937">選哪裡拍、怎麼框、什麼時候按</text>
+<text x="50" y="702" font-size="22" fill="#1F2937">把人和地方放進同一張</text>
+
+<rect x="28" y="732" width="544" height="120" rx="16" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+<text x="50" y="772" font-size="27" font-weight="700" fill="#B45309">舞者帶來</text>
+<text x="50" y="808" font-size="22" fill="#1F2937">一個角色，和隨地即興的身體</text>
+<text x="50" y="838" font-size="22" fill="#1F2937">不等指令，自己先動</text>
+
+<rect x="28" y="868" width="544" height="120" rx="16" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+<text x="50" y="908" font-size="27" font-weight="700" fill="#475569">現場帶來</text>
+<text x="50" y="944" font-size="22" fill="#1F2937">真的田、真的房子、旁人真實的反應</text>
+<text x="50" y="974" font-size="20" fill="#64748B">這一塊沒辦法事先排練</text>
+
+<rect x="28" y="1008" width="544" height="88" rx="12" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+<text x="50" y="1044" font-size="22" fill="#7F1D1D">今天的提醒：在公共場所拍到路人，</text>
+<text x="50" y="1076" font-size="22" fill="#7F1D1D">要先說明、先取得同意。</text>
+</svg>

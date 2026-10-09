@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 710" width="1200" height="710" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">旗子插在花錢和發布之前</title>
+  <desc id="d">影片產線：劇本、時間、關鍵畫面、預算、生成、審片、發布。劇本到預算還沒花錢，生成開始花錢，發布是對外公開。五道人工關卡用金色旗子標在花錢與發布之前：時間先定長度、關鍵畫面要人核准、預算列報價與上限、生成只送可以公開的素材、發布另外核准。已授權的不重問，沒授權的動作一定停得下來。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="1200" height="710" fill="#FFFFFF"/>
+  <text x="48" y="76" font-size="48" font-weight="700" fill="#1F2937">旗子插在花錢和發布之前</text>
+  <text x="48" y="122" font-size="26" fill="#4B5563">八道人工關卡裡，最值得先設的五道</text>
+  <rect x="54.0" y="166" width="618.8571428571429" height="330" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="363.42857142857144" y="204" font-size="24" font-weight="700" text-anchor="middle" fill="#0E7568">還沒花錢</text>
+  <rect x="684.8571428571429" y="166" width="303.42857142857156" height="330" rx="18" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="836.5714285714287" y="204" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">開始花錢</text>
+  <rect x="1000.2857142857142" y="166" width="145.71428571428578" height="330" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+  <text x="1073.142857142857" y="204" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">對外公開</text>
+  <rect x="62.85714285714286" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+  <text x="126.85714285714286" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">劇本</text>
+  <line x1="192.85714285714286" y1="370" x2="216.57142857142856" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="220.57142857142856" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <text x="284.57142857142856" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">時間</text>
+  <line x1="350.57142857142856" y1="370" x2="374.28571428571433" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <g transform="translate(280.57142857142856 270) scale(0.9)"><line x1="-20" y1="-46" x2="-20" y2="46" stroke="#374151" stroke-width="6" stroke-linecap="round"/><path d="M-18,-44 L34,-30 L-18,-14 z" fill="#E5A300"/></g>
+  <text x="284.57142857142856" y="454" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">先定長度</text>
+  <rect x="378.28571428571433" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <text x="442.28571428571433" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">關鍵畫面</text>
+  <line x1="508.28571428571433" y1="370" x2="532.0" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <g transform="translate(438.28571428571433 270) scale(0.9)"><line x1="-20" y1="-46" x2="-20" y2="46" stroke="#374151" stroke-width="6" stroke-linecap="round"/><path d="M-18,-44 L34,-30 L-18,-14 z" fill="#E5A300"/></g>
+  <text x="442.28571428571433" y="454" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">人核准畫面</text>
+  <rect x="536.0" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <text x="600.0" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">預算</text>
+  <line x1="666.0" y1="370" x2="689.7142857142858" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <g transform="translate(596.0 270) scale(0.9)"><line x1="-20" y1="-46" x2="-20" y2="46" stroke="#374151" stroke-width="6" stroke-linecap="round"/><path d="M-18,-44 L34,-30 L-18,-14 z" fill="#E5A300"/></g>
+  <text x="600.0" y="454" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">報價與上限</text>
+  <rect x="693.7142857142858" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <text x="757.7142857142858" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">生成</text>
+  <line x1="823.7142857142858" y1="370" x2="847.4285714285716" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <g transform="translate(753.7142857142858 270) scale(0.9)"><line x1="-20" y1="-46" x2="-20" y2="46" stroke="#374151" stroke-width="6" stroke-linecap="round"/><path d="M-18,-44 L34,-30 L-18,-14 z" fill="#E5A300"/></g>
+  <text x="757.7142857142858" y="454" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">只送可公開</text>
+  <rect x="851.4285714285716" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+  <text x="915.4285714285716" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">審片</text>
+  <line x1="981.4285714285716" y1="370" x2="1005.1428571428571" y2="370" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="1009.1428571428571" y="330" width="128" height="80" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <text x="1073.142857142857" y="380" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">發布</text>
+  <g transform="translate(1069.142857142857 270) scale(0.9)"><line x1="-20" y1="-46" x2="-20" y2="46" stroke="#374151" stroke-width="6" stroke-linecap="round"/><path d="M-18,-44 L34,-30 L-18,-14 z" fill="#E5A300"/></g>
+  <text x="1073.142857142857" y="454" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">另外核准</text>
+  <g transform="translate(757.7142857142858 540) scale(0.5)"><circle r="40" fill="#FFF8E7" stroke="#E5A300" stroke-width="7"/><text x="0" y="16" font-size="46" font-weight="700" text-anchor="middle" fill="#8A5D00">$</text></g>
+  <text x="787.7142857142858" y="550" font-size="24" fill="#4B5563">從這裡開始每一次都要付錢</text>
+  <rect x="48" y="600" width="1104" height="76" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="648" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">已授權的不重問；<tspan fill="#8A5D00">沒授權的動作，一定停得下來</tspan></text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1250" width="600" height="1250" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">素色布幕前的一種拍法</title>
+<desc id="d">示意圖，由上往下看，不是 Penn 當年的實際布光。一塊素色布幕；人物站在布幕前一到兩公尺；大而柔的光從側前方照來；相機在正前方稍遠處。下方三個提醒：布幕邊緣留在畫面裡也沒關係、留一點地板、先讓姿勢試三個版本。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="600" height="1250" fill="#FFFFFF"/>
+
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">素色布幕前的一種拍法</text>
+<text x="40" y="114" font-size="24" fill="#4B5563">由上往下看・示意，不是原作的布光</text>
+<rect x="40" y="140" width="520" height="560" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<path d="M110,196 Q300,170 490,196" fill="none" stroke="#8A6F4D" stroke-width="16" stroke-linecap="round"/>
+<text x="300" y="238" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">素色布幕</text>
+<text x="300" y="270" font-size="24" text-anchor="middle" fill="#4B5563">舊布、素牆都可以</text>
+<ellipse cx="300" cy="400" rx="50.6" ry="22.0" fill="#1F2937" opacity=".85"/><circle cx="300" cy="400" r="18.700000000000003" fill="#FFFFFF" stroke="#1F2937" stroke-width="4"/>
+<text x="364" y="394" font-size="28" font-weight="700" fill="#1F2937">人物</text>
+<text x="364" y="426" font-size="22" fill="#4B5563">離布幕 1–2 公尺</text>
+<line x1="236" y1="286" x2="236" y2="372" stroke="#374151" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<g transform="translate(118 480) rotate(-35)"><rect x="-62" y="-26" width="124" height="52" rx="12" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/></g>
+<line x1="166" y1="424" x2="240" y2="400.4" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<line x1="166" y1="448" x2="240" y2="410.0" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<line x1="166" y1="472" x2="240" y2="419.6" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<text x="64" y="580" font-size="28" font-weight="700" fill="#8A5D00">大而柔的光</text>
+<text x="64" y="612" font-size="22" fill="#4B5563">從側前方</text>
+<g transform="translate(300 632) rotate(0) scale(0.9)"><rect x="-40" y="-26" width="80" height="52" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><rect x="-16" y="-38" width="32" height="14" rx="3" fill="#374151"/><circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="0" cy="0" r="6" fill="#374151"/></g>
+<line x1="300" y1="596" x2="300" y2="450" stroke="#374151" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="356" y="624" font-size="28" font-weight="700" fill="#1F2937">相機</text>
+<text x="356" y="656" font-size="22" fill="#4B5563">正前方</text>
+<rect x="40" y="726" width="520" height="122" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="84" cy="766" r="22" fill="#2C5B8F"/><text x="84" y="775.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="120" y="776" font-size="30" font-weight="700" fill="#2C5B8F">布幕邊緣</text>
+<text x="120" y="818" font-size="26" fill="#4B5563">留在畫面裡也沒關係</text>
+<rect x="40" y="866" width="520" height="122" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="84" cy="906" r="22" fill="#0E7568"/><text x="84" y="915.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="120" y="916" font-size="30" font-weight="700" fill="#0E7568">留一點地板</text>
+<text x="120" y="958" font-size="26" fill="#4B5563">人才站得住，不會飄</text>
+<rect x="40" y="1006" width="520" height="122" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="84" cy="1046" r="22" fill="#E5A300"/><text x="84" y="1055.36" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">3</text>
+<text x="120" y="1056" font-size="30" font-weight="700" fill="#8A5D00">姿勢試三版</text>
+<text x="120" y="1098" font-size="26" fill="#4B5563">背景不動，只換姿勢</text>
+<rect x="40" y="1150" width="520" height="80" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300" y="1182" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">背景只留一塊布，</text>
+<text x="300" y="1216" font-size="26" font-weight="700" text-anchor="middle" fill="#8A5D00">剩下的交給光和姿勢</text>
+</svg>

@@ -1,0 +1,40 @@
+{%- comment -%}
+  看懂寫真章節的「作品導覽」：每件連到美術館館藏頁或官方作品頁，讓讀者點過去看原作；
+  可選附一張「評論引用小圖」（規則：docs/photography-study-zone-review-2026-10.md §2.2）。
+  用法：{% include photography/learn-works.html works=page.works %}
+  works[]（可加 alt：書影等「不是館藏」的圖用它覆寫預設的「作品名（年份，館名館藏）」）：
+    title（原文作品名）、zh（中文說明，可省）、year、where（館名）、
+    url（該作品的頁面，不是首頁；要親自打開驗證過）、look（看點一兩句）
+    img（可省）：小圖路徑，assets/img/photo-learn/works/<頁 slug>/<nn>-<作品 slug>.jpg，檔案長邊 ≤600px
+    img_w、img_h：小圖實際像素（有 img 時要填，避免版面跳動）
+    credit：有 img 時必填，照館藏頁的 © 寫法
+  有 img：圖左文右（手機上下），圖顯示寬 ≤320px，lazy，頁面有 use_glightbox 時點圖放大；圖下小字是 credit。
+  沒有 img：維持純文字列。tests/photo-learn-images.test.mjs 會檢查 credit、url、檔案尺寸。
+{%- endcomment -%}
+<ol class="pl-works">
+  {%- for w in include.works %}
+  {%- assign nn = forloop.index | prepend: '0' | slice: -2, 2 %}
+  <li class="pl-work{% if w.img %} has-img{% endif %}">
+    <span class="pl-work-num" aria-hidden="true">{{ nn }}</span>
+    {%- if w.img %}
+    {%- if w.alt %}{%- assign w_alt = w.alt -%}{%- else -%}{%- capture w_alt %}{{ w.title }}（{{ w.year }}，{{ w.where }}館藏）{% endcapture %}{%- endif %}
+    {%- capture w_cap %}{{ w.title }}，{{ w.year }}，{{ w.where }}。{{ w.credit }}{% endcapture %}
+    <figure class="pl-work-fig">
+      {%- if page.use_glightbox %}
+      <a class="portfolio-lightbox" data-gallery="pl-works" data-type="image" href="{{ w.img | relative_url }}" data-description="{{ w_cap | escape }}" aria-label="放大看：{{ w.title | escape }}">
+        <img src="{{ w.img | relative_url }}" width="{{ w.img_w }}" height="{{ w.img_h }}" alt="{{ w_alt | escape }}"{% if w.img_w and w.img_w < 320 %} style="max-width: {{ w.img_w }}px"{% endif %} loading="lazy" decoding="async">
+      </a>
+      {%- else %}
+      <img src="{{ w.img | relative_url }}" width="{{ w.img_w }}" height="{{ w.img_h }}" alt="{{ w_alt | escape }}"{% if w.img_w and w.img_w < 320 %} style="max-width: {{ w.img_w }}px"{% endif %} loading="lazy" decoding="async">
+      {%- endif %}
+      <figcaption>{{ w.credit }}</figcaption>
+    </figure>
+    {%- endif %}
+    <div class="pl-work-body">
+      <h3 class="pl-work-title">{{ w.title }}<small>{% if w.zh %}{{ w.zh }}・{% endif %}{{ w.year }}</small></h3>
+      <p class="pl-work-look">{{ w.look }}</p>
+      <a class="pl-work-link" href="{{ w.url }}" target="_blank" rel="noopener">到{{ w.where }}看原作<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden">（另開新頁）</span></a>
+    </div>
+  </li>
+  {%- endfor %}
+</ol>

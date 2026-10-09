@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1190" width="600" height="1190" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">角色的臉，只從一個地方來</title>
+  <desc id="d">中間是一張作者核准過的全身定裝照，是角色臉和身形的唯一來源；之後生成的每一張都回來對照它。左邊四種來源不拿來蓋臉：真人照片、別的角色、網路上的圖、之前失敗的圖。只要臉有一部分借自真人照片，就可能像某個真人。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="600" height="1190" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#2B2622">角色的臉，</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#2B2622">只從一個地方來</text>
+  <text x="40" y="164" font-size="24" fill="#6B5E52">每一張圖，都回去對照這張定裝照</text>
+  <text x="40" y="226" font-size="28" font-weight="700" fill="#B91C1C">不拿來蓋臉</text>
+  <rect x="40" y="248" width="250" height="64" rx="32" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="74" cy="280" r="17" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M66.86,272.86 L81.14,287.14 M81.14,272.86 L66.86,287.14" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="102" y="290" font-size="26" font-weight="700" fill="#5C5248">真人照片</text>
+  <rect x="310" y="248" width="250" height="64" rx="32" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="344" cy="280" r="17" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M336.86,272.86 L351.14,287.14 M351.14,272.86 L336.86,287.14" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="372" y="290" font-size="26" font-weight="700" fill="#5C5248">別的角色</text>
+  <rect x="40" y="328" width="250" height="64" rx="32" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="74" cy="360" r="17" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M66.86,352.86 L81.14,367.14 M81.14,352.86 L66.86,367.14" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="102" y="370" font-size="26" font-weight="700" fill="#5C5248">網路上的圖</text>
+  <rect x="310" y="328" width="250" height="64" rx="32" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="344" cy="360" r="17" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M336.86,352.86 L351.14,367.14 M351.14,352.86 L336.86,367.14" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="372" y="370" font-size="26" font-weight="700" fill="#5C5248">之前失敗的圖</text>
+  <line x1="300" y1="406" x2="300" y2="452" stroke="#A8998A" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" marker-end="url(#arr)"/>
+  <circle cx="300" cy="428" r="15" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M293.7,421.7 L306.3,434.3 M306.3,421.7 L293.7,434.3" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="40" y="466" width="520" height="290" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <rect x="76" y="498" width="135" height="176.4" rx="8" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+  <g transform="translate(143.5,517.8) scale(0.9)" fill="#8A7F72"><circle cx="0" cy="16" r="16"/><path d="M-24,40 Q-24,34 -18,34 L18,34 Q24,34 24,40 L28,98 L16,98 L14,62 L12,98 L-12,98 L-14,62 L-16,98 L-28,98 Z"/><rect x="-12" y="96" width="10" height="56" rx="4"/><rect x="2" y="96" width="10" height="56" rx="4"/></g>
+  <circle cx="211" cy="498" r="19.8" fill="#E5A300"/>
+  <path d="M203.08,498 L209.02,504.93 L219.91,491.07" fill="none" stroke="#2B2622" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="262" y="568" font-size="34" font-weight="700" fill="#8A5D00">核准過的</text>
+  <text x="262" y="612" font-size="34" font-weight="700" fill="#8A5D00">定裝照</text>
+  <text x="262" y="664" font-size="26" fill="#5C5248">臉和身形的</text>
+  <text x="262" y="700" font-size="26" fill="#5C5248">唯一來源</text>
+  <rect x="40" y="830" width="160" height="150" rx="20" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <rect x="85" y="846" width="70" height="70" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <g transform="translate(120,896) scale(0.62)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <text x="120" y="958" font-size="24" font-weight="700" fill="#5C5248" text-anchor="middle">第 1 張</text>
+  <line x1="120" y1="824" x2="120" y2="766" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <rect x="220" y="830" width="160" height="150" rx="20" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <rect x="265" y="846" width="70" height="70" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <g transform="translate(300,896) scale(0.62)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <text x="300" y="958" font-size="24" font-weight="700" fill="#5C5248" text-anchor="middle">第 2 張</text>
+  <line x1="300" y1="824" x2="300" y2="766" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <rect x="400" y="830" width="160" height="150" rx="20" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <rect x="445" y="846" width="70" height="70" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <g transform="translate(480,896) scale(0.62)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <text x="480" y="958" font-size="24" font-weight="700" fill="#5C5248" text-anchor="middle">第 3 張…</text>
+  <line x1="480" y1="824" x2="480" y2="766" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <text x="300" y="1022" font-size="28" font-weight="700" fill="#2B2622" text-anchor="middle">每一張都回來對照</text>
+  <rect x="40" y="1046" width="520" height="124" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="1097.08" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">只要臉有一部分借自真人照片，</tspan></text>
+  <text x="300" y="1139.08" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">就可能像某個真人</tspan></text>
+</svg>

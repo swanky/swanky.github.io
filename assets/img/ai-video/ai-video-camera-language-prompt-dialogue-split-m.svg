@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1240" width="600" height="1240" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">兩人對話：塞一句，還是拆三格？</title>
+  <desc id="d">左邊把過肩、反打、反應寫進同一句指令，一次生成，常得到一個鏡頭裡偷切角度、人物瞬移。右邊在分鏡階段拆成三格：A 過肩、B 過肩、反應鏡頭，分別生成，再交給剪接接起來。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="600" height="1240" fill="#FFFFFF"/>
+  <text x="40" y="66" font-size="40" font-weight="700" fill="#1F2937">兩人對話：</text>
+  <text x="40" y="118" font-size="40" font-weight="700" fill="#1F2937">塞一句，還是拆三格？</text>
+  <text x="40" y="162" font-size="24" fill="#4B5563">過肩、反打要在分鏡階段拆開</text>
+  <rect x="40" y="196" width="520" height="400" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <g transform="translate(80,240) scale(0.5)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <text x="112" y="252" font-size="34" font-weight="700" fill="#B91C1C">塞進一句指令</text>
+  <rect x="70" y="280" width="460" height="52" rx="12" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+  <text x="300" y="315" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2937">過肩＋反打＋反應，一次生成</text>
+  <clipPath id="c1"><rect x="70" y="350" width="460" height="160" rx="8"/></clipPath>
+  <g clip-path="url(#c1)"><rect x="70" y="350" width="460" height="160" fill="#F1F5F9"/><circle cx="180.4" cy="405.12" r="11.52" fill="#2C5B8F"/><rect x="160.24" y="419.52" width="40.32" height="50.4" rx="12.96" fill="#2C5B8F"/><rect x="164.56" y="459.84" width="12.96" height="56.16" rx="4.32" fill="#2C5B8F"/><rect x="183.28" y="459.84" width="12.96" height="56.16" rx="4.32" fill="#2C5B8F"/><circle cx="419.6" cy="405.12" r="11.52" fill="#64748B"/><rect x="399.44" y="419.52" width="40.32" height="50.4" rx="12.96" fill="#64748B"/><rect x="403.76" y="459.84" width="12.96" height="56.16" rx="4.32" fill="#64748B"/><rect x="422.48" y="459.84" width="12.96" height="56.16" rx="4.32" fill="#64748B"/><circle cx="300" cy="405.12" r="11.52" fill="none" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 5"/><rect x="279.84" y="419.52" width="40.32" height="50.4" rx="12.96" fill="none" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 5"/><rect x="284.16" y="459.84" width="12.96" height="56.16" rx="4.32" fill="none" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 5"/><rect x="302.88" y="459.84" width="12.96" height="56.16" rx="4.32" fill="none" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 5"/></g>
+  <rect x="70" y="350" width="460" height="160" rx="8" fill="none" stroke="#64748B" stroke-width="3"/>
+  <path d="M 172 386 Q 214 352 244 378" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" marker-end="url(#arrR)"/>
+  <text x="300" y="548" text-anchor="middle" font-size="28" font-weight="700" fill="#B91C1C">鏡頭裡偷切、人物瞬移</text>
+  <circle cx="300" cy="621" r="30" fill="#1F2937" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="300" y="630" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">VS</text>
+  <rect x="40" y="646" width="520" height="440" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(80,690) scale(0.5)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="112" y="702" font-size="34" font-weight="700" fill="#0E7568">拆成三格，再剪接</text>
+  <clipPath id="c2"><rect x="62" y="736" width="148" height="100" rx="8"/></clipPath>
+  <g clip-path="url(#c2)"><rect x="62" y="736" width="148" height="100" fill="#F1F5F9"/><circle cx="159.68" cy="765.92" r="9.92" fill="#64748B"/><rect x="142.32" y="778.32" width="34.72" height="43.4" rx="11.16" fill="#64748B"/><rect x="146.04" y="813.04" width="11.16" height="48.36" rx="3.72" fill="#64748B"/><rect x="162.16" y="813.04" width="11.16" height="48.36" rx="3.72" fill="#64748B"/><circle cx="79.76" cy="778" r="30" fill="#2C5B8F"/><rect x="19.76" y="802" width="130" height="100" rx="30" fill="#2C5B8F"/></g>
+  <rect x="62" y="736" width="148" height="100" rx="8" fill="none" stroke="#64748B" stroke-width="3"/>
+  <text x="136" y="872" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">A 過肩</text>
+  <line x1="136" y1="886" x2="136" y2="918" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+  <clipPath id="c3"><rect x="226" y="736" width="148" height="100" rx="8"/></clipPath>
+  <g clip-path="url(#c3)"><rect x="226" y="736" width="148" height="100" fill="#F1F5F9"/><circle cx="323.68" cy="765.92" r="9.92" fill="#2C5B8F"/><rect x="306.32" y="778.32" width="34.72" height="43.4" rx="11.16" fill="#2C5B8F"/><rect x="310.04" y="813.04" width="11.16" height="48.36" rx="3.72" fill="#2C5B8F"/><rect x="326.16" y="813.04" width="11.16" height="48.36" rx="3.72" fill="#2C5B8F"/><circle cx="243.76" cy="778" r="30" fill="#64748B"/><rect x="183.76" y="802" width="130" height="100" rx="30" fill="#64748B"/></g>
+  <rect x="226" y="736" width="148" height="100" rx="8" fill="none" stroke="#64748B" stroke-width="3"/>
+  <text x="300" y="872" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">B 過肩</text>
+  <line x1="300" y1="886" x2="300" y2="918" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+  <clipPath id="c4"><rect x="390" y="736" width="148" height="100" rx="8"/></clipPath>
+  <g clip-path="url(#c4)"><rect x="390" y="736" width="148" height="100" fill="#F1F5F9"/><circle cx="464" cy="764" r="16" fill="#0E7568"/><rect x="436" y="784" width="56" height="70" rx="18" fill="#0E7568"/><rect x="442" y="840" width="18" height="78" rx="6" fill="#0E7568"/><rect x="468" y="840" width="18" height="78" rx="6" fill="#0E7568"/></g>
+  <rect x="390" y="736" width="148" height="100" rx="8" fill="none" stroke="#64748B" stroke-width="3"/>
+  <text x="464" y="872" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">反應鏡頭</text>
+  <line x1="464" y1="886" x2="464" y2="918" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+  <rect x="62" y="928" width="476" height="60" rx="10" fill="#0E7568"/>
+  <rect x="76" y="938" width="140" height="40" rx="6" fill="#FFFFFF"/>
+  <text x="146" y="967" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">A</text>
+  <rect x="228" y="938" width="140" height="40" rx="6" fill="#FFFFFF"/>
+  <text x="298" y="967" text-anchor="middle" font-size="24" font-weight="700" fill="#64748B">B</text>
+  <rect x="380" y="938" width="140" height="40" rx="6" fill="#FFFFFF"/>
+  <text x="450" y="967" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">反應</text>
+  <text x="300" y="1038" text-anchor="middle" font-size="26" font-weight="700" fill="#0E7568">交給剪接：A → B → 反應</text>
+  <rect x="40" y="1110" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="72" y="1155.48" font-size="28" font-weight="700" fill="#1F2937">對話在分鏡階段</text>
+  <text x="72" y="1194.68" font-size="28" font-weight="700" fill="#1F2937"><tspan fill="#8A5D00">拆成獨立鏡頭</tspan>再剪</text>
+</svg>

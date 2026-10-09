@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1164" width="600" height="1164" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">接點跳一下？從最便宜的修起</title>
+<desc id="d">五種修法排成一座階梯，越往上越貴。第一階：聲音先接，讓前後兩段的聲音交疊淡入淡出；第二階：同場景用很短的溶接，換場景用極短的黑閃或白閃；第三階：以一段為基準，統一色溫與亮度；第四階：把接點移到動作中間；第五階：補生成過場鏡頭，要花錢所以放最後。前四階不花生成費。旁邊提醒：修完也要量，聲音交疊曾讓某一段的聲音在每個接點都比畫面早了約 0.2 秒。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker></defs>
+<rect width="600" height="1164" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="42" font-weight="700" fill="#1F2937">接點跳一下？</text>
+<text x="40" y="114" font-size="24" fill="#4B5563">五種修法，越往上越貴，從下面修起</text>
+<line x1="26" y1="804" x2="26" y2="160" stroke="#B45309" stroke-width="4" marker-end="url(#arr)"/>
+<rect x="48" y="150" width="512" height="120" rx="18" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+<circle cx="84" cy="188" r="22" fill="#B45309"/><text x="84" y="197" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">5</text>
+<text x="120" y="200" font-size="32" font-weight="700" fill="#B45309">補生成過場</text>
+<text x="66" y="246" font-size="24" fill="#4B5563">最後才補，因為要花錢</text>
+<rect x="430" y="173" width="80" height="34" rx="17" fill="#B45309"/><text x="470" y="197" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">要花錢</text>
+<rect x="48" y="286" width="512" height="120" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="84" cy="324" r="22" fill="#2C5B8F"/><text x="84" y="333" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">4</text>
+<text x="120" y="336" font-size="32" font-weight="700" fill="#2C5B8F">移接點</text>
+<text x="66" y="382" font-size="24" fill="#4B5563">接點放到動作中間</text>
+<rect x="410" y="309" width="120" height="34" rx="17" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/><text x="470" y="333" text-anchor="middle" font-size="20" font-weight="700" fill="#0E7568">不花生成費</text>
+<rect x="48" y="422" width="512" height="120" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="84" cy="460" r="22" fill="#2C5B8F"/><text x="84" y="469" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">3</text>
+<text x="120" y="472" font-size="32" font-weight="700" fill="#2C5B8F">統一色調</text>
+<text x="66" y="518" font-size="24" fill="#4B5563">以一段為基準對齊色溫亮度</text>
+<rect x="410" y="445" width="120" height="34" rx="17" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/><text x="470" y="469" text-anchor="middle" font-size="20" font-weight="700" fill="#0E7568">不花生成費</text>
+<rect x="48" y="558" width="512" height="120" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="84" cy="596" r="22" fill="#2C5B8F"/><text x="84" y="605" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">2</text>
+<text x="120" y="608" font-size="32" font-weight="700" fill="#2C5B8F">短溶接</text>
+<text x="66" y="654" font-size="24" fill="#4B5563">同場景溶接，換場景黑白閃</text>
+<rect x="410" y="581" width="120" height="34" rx="17" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/><text x="470" y="605" text-anchor="middle" font-size="20" font-weight="700" fill="#0E7568">不花生成費</text>
+<rect x="48" y="694" width="512" height="120" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="84" cy="732" r="22" fill="#E5A300"/><text x="84" y="741" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">1</text>
+<text x="120" y="744" font-size="32" font-weight="700" fill="#8A5D00">聲音先接</text>
+<text x="66" y="790" font-size="24" fill="#4B5563">聲音交疊、淡入淡出</text>
+<rect x="410" y="717" width="120" height="34" rx="17" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/><text x="470" y="741" text-anchor="middle" font-size="20" font-weight="700" fill="#0E7568">不花生成費</text>
+<rect x="40" y="838" width="520" height="150" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<text x="64" y="884" font-size="30" font-weight="700" fill="#B91C1C">修完也要量</text>
+<text x="64" y="926" font-size="24" fill="#4B5563">聲音交疊後，某一段的聲音</text>
+<text x="64" y="962" font-size="24" font-weight="700" fill="#1F2937">比畫面早了約 0.2 秒</text>
+<g transform="translate(494,914) scale(0.75)"><circle cx="0" cy="6" r="36" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><rect x="-8" y="-44" width="16" height="12" rx="3" fill="#B91C1C"/><line x1="0" y1="6" x2="0" y2="-18" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/><line x1="0" y1="6" x2="16" y2="16" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/></g>
+<rect x="40" y="1012" width="520" height="116" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="300.0" y="1062" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#1F2937">先修便宜的：</tspan></text><text x="300.0" y="1097" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">前四招不花生成費，補生成放最後</tspan></text>
+</svg>

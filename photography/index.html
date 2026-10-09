@@ -46,6 +46,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
     <div>
       <a href="{{ '/photography/gallery/' | relative_url }}">作品與系列</a>
       <a href="{{ '/photography/models/' | relative_url }}">虛擬模特兒</a>
+      {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}<a href="{{ site.data.photo_learn.url | relative_url }}">{{ site.data.photo_learn.name }}・攝影學習筆記</a>{% endif %}
       {% for item in photography.archive_links %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endfor %}

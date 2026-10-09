@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">一本 308 頁的書，字放在哪裡</title>
+<desc id="d">示意圖。上方一條長條代表 1972 年初版的 308 頁：第 1 到 276 頁以照片為主，第 277 到 308 頁是森山大道和中平卓馬的對談，共 32 頁。長條比例照頁數畫，照片頁內部怎麼分布，書目沒有細分。下方四列是四個版本：1972 写真評論社初版 308 頁有對談；2006 年パワーショベル新版不印頁碼，辭典記載沒收對談；2019 年月曜社集成版 328 頁；2023 年普及版 316 頁、照片 145 張、對談全文收錄。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="46" font-weight="700" fill="#1F2937">一本 308 頁的書，字放在哪裡</text>
+<text x="48" y="126" font-size="25" fill="#4B5563">1972 年初版，長條比例照頁數畫（照片頁內部怎麼排，書目沒有細分）</text>
+
+<!-- 308 頁長條：1104px / 308 頁 ≈ 3.584 px/頁；276 頁 = 989px -->
+<rect x="48" y="160" width="989" height="96" fill="#1F2937"/>
+<rect x="1037" y="160" width="115" height="96" fill="#F59E0B"/>
+<rect x="48" y="160" width="1104" height="96" fill="none" stroke="#111827" stroke-width="3"/>
+<text x="542" y="218" text-anchor="middle" font-size="30" font-weight="700" fill="#FFFFFF">p.1–276　以照片為主</text>
+<text x="1094" y="203" text-anchor="middle" font-size="19" font-weight="700" fill="#1F2937">p.277–308</text>
+<text x="1094" y="235" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2937">對談</text>
+<text x="48" y="292" font-size="22" fill="#4B5563">照片一路連下去，字幾乎全部退到最後 32 頁：森山大道和中平卓馬的對談。</text>
+
+<!-- 版本 -->
+<text x="48" y="352" font-size="30" font-weight="700" fill="#1F2937">同一本書，四個版本</text>
+<g font-size="23">
+<rect x="48" y="372" width="1104" height="66" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="72" y="414" font-weight="700" fill="#1F2937">1972</text><text x="170" y="414" fill="#1F2937">写真評論社初版</text><text x="470" y="414" fill="#475569">308 頁、23 公分</text><text x="820" y="414" fill="#B45309" font-weight="700">書末有對談</text>
+<rect x="48" y="450" width="1104" height="66" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="72" y="492" font-weight="700" fill="#1F2937">2006</text><text x="170" y="492" fill="#1F2937">パワーショベル新版</text><text x="470" y="492" fill="#475569">不印頁碼、29 公分</text><text x="820" y="492" fill="#64748B">辭典記載：沒收對談</text>
+<rect x="48" y="528" width="1104" height="66" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="72" y="570" font-weight="700" fill="#1F2937">2019</text><text x="170" y="570" fill="#1F2937">月曜社「集成」第 3 卷</text><text x="470" y="570" fill="#475569">328 頁、照初版圖像尺寸重印</text><text x="820" y="570" fill="#64748B">已售完</text>
+<rect x="48" y="606" width="1104" height="66" rx="12" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+<text x="72" y="648" font-weight="700" fill="#1F2937">2023</text><text x="170" y="648" fill="#1F2937">月曜社普及版</text><text x="470" y="648" fill="#475569">316 頁、照片 145 張</text><text x="820" y="648" fill="#B45309" font-weight="700">對談全文收錄</text>
+</g>
+<text x="48" y="704" font-size="19" fill="#64748B">資料：國立國會圖書館、月曜社書目頁；2006 年版是否收對談依 artscape 辭典。</text>
+</svg>

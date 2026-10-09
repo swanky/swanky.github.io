@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">考題要挑會失敗的鏡頭</title>
+  <desc id="d">考題難度從簡單到難：角色原地微笑、頭髮被風吹，幾乎每個模型都漂亮，比不出差異；衝刺、滑鏟穿過紅色雷射、攝影機在前方後退跟拍，同時考動作、物理、角色、運鏡四件事，才分得出高下。換成你的題目：商品片看標示有沒有變形、口播看臉有沒有走樣、對話看視線接不接得上。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="660" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">考題要挑會失敗的鏡頭</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">簡單題人人都會；挑你最怕失敗、失敗代價最大的那一鏡</text>
+  <linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#0E7568"/><stop offset="0.5" stop-color="#B45309"/><stop offset="1" stop-color="#B91C1C"/></linearGradient>
+  <rect x="48" y="168" width="1104" height="26" rx="13" fill="url(#gr)"/>
+  <text x="48" y="226" font-size="24" font-weight="700" fill="#0E7568">簡單</text>
+  <text x="1152" y="226" text-anchor="end" font-size="24" font-weight="700" fill="#B91C1C">難</text>
+  <rect x="48" y="248" width="380" height="300" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(140,380) scale(0.85)"><circle cx="0" cy="-70.6" r="14.4" fill="#64748B"/><rect x="-25.2" y="-52.6" width="50.4" height="63" rx="16.2" fill="#64748B"/><rect x="-19.8" y="-2.2" width="16.2" height="70.2" rx="5.4" fill="#64748B"/><rect x="3.6" y="-2.2" width="16.2" height="70.2" rx="5.4" fill="#64748B"/><path d="M24,-80 q20,-6 36,4 M24,-68 q22,-4 40,8 M24,-56 q18,0 32,10" fill="none" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/></g>
+  <text x="212" y="330" font-size="28" font-weight="700" fill="#1F2937">原地微笑、</text>
+  <text x="212" y="370" font-size="28" font-weight="700" fill="#1F2937">頭髮被風吹</text>
+  <text x="212" y="420" font-size="24" fill="#4B5563">幾乎每個</text>
+  <text x="212" y="452" font-size="24" fill="#4B5563">模型都漂亮</text>
+  <rect x="159.7" y="490" width="156.6" height="40" rx="20.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="238" y="517.92" text-anchor="middle" font-size="22" font-weight="700" fill="#64748B">比不出差異</text>
+  <rect x="468" y="248" width="684" height="300" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <g transform="translate(600,400) scale(0.85)"><path d="M-120,-10 L120,-10" stroke="#B91C1C" stroke-width="6" stroke-linecap="round"/><circle cx="-120" cy="-10" r="8" fill="#B91C1C"/><circle cx="120" cy="-10" r="8" fill="#B91C1C"/><g transform="translate(0,26) rotate(-74)"><circle cx="0" cy="-75.08" r="9.92" fill="#2C5B8F"/><rect x="-17.36" y="-62.68" width="34.72" height="43.4" rx="11.16" fill="#2C5B8F"/><rect x="-13.64" y="-27.96" width="11.16" height="48.36" rx="3.72" fill="#2C5B8F"/><rect x="2.48" y="-27.96" width="11.16" height="48.36" rx="3.72" fill="#2C5B8F"/></g><path d="M-120,32 L-80,32 M-130,46 L-90,46 M-118,60 L-84,60" stroke="#94A3B8" stroke-width="5" stroke-linecap="round"/><path d="M-130,74 L130,74" stroke="#64748B" stroke-width="4"/></g>
+  <g transform="translate(680,300) scale(-0.5,0.5)"><rect x="-46" y="-28" width="76" height="56" rx="10" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5"/><circle cx="-8" cy="0" r="15" fill="none" stroke="#2C5B8F" stroke-width="5"/><path d="M30,-14 L52,-26 L52,26 L30,14 z" fill="#2C5B8F"/><rect x="-36" y="-40" width="26" height="12" rx="3" fill="#2C5B8F"/></g>
+  <line x1="712" y1="300" x2="766" y2="300" stroke="#2C5B8F" stroke-width="4" marker-end="url(#arrB)"/>
+  <text x="784" y="300" font-size="28" font-weight="700" fill="#8A5D00">衝刺、滑鏟過雷射，</text>
+  <text x="784" y="338" font-size="28" font-weight="700" fill="#8A5D00">攝影機後退跟拍</text>
+  <text x="784" y="390" font-size="24" font-weight="700" fill="#4B5563">同時考四件事：</text>
+  <rect x="784" y="410" width="78.88" height="44" rx="22.0" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="823.44" y="440.64" text-anchor="middle" font-size="24" font-weight="700" fill="#8A5D00">動作</text>
+  <rect x="872.88" y="410" width="78.88" height="44" rx="22.0" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="912.32" y="440.64" text-anchor="middle" font-size="24" font-weight="700" fill="#8A5D00">物理</text>
+  <rect x="961.76" y="410" width="78.88" height="44" rx="22.0" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="1001.2" y="440.64" text-anchor="middle" font-size="24" font-weight="700" fill="#8A5D00">角色</text>
+  <rect x="1050.64" y="410" width="78.88" height="44" rx="22.0" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="1090.08" y="440.64" text-anchor="middle" font-size="24" font-weight="700" fill="#8A5D00">運鏡</text>
+  <rect x="791.7" y="484" width="156.6" height="40" rx="20.0" fill="#E5A300" stroke="#E5A300" stroke-width="2"/>
+  <text x="870" y="511.92" text-anchor="middle" font-size="22" font-weight="700" fill="#1F2937">分得出高下</text>
+  <line x1="436" y1="398" x2="462" y2="398" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+  <text x="48" y="610" font-size="26" font-weight="700" fill="#1F2937">換成你的題目：</text>
+  <rect x="238" y="579" width="284.52" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="380.26" y="608.92" text-anchor="middle" font-size="22" font-weight="700" fill="#2C5B8F">商品片：標示有沒有變形</text>
+  <rect x="532.52" y="579" width="237.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="651.46" y="608.92" text-anchor="middle" font-size="22" font-weight="700" fill="#2C5B8F">口播：臉有沒有走樣</text>
+  <rect x="780.4" y="579" width="261.2" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="911" y="608.92" text-anchor="middle" font-size="22" font-weight="700" fill="#2C5B8F">對話：視線接不接得上</text>
+</svg>

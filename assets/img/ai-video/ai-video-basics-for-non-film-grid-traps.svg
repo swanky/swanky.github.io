@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">九宮格分鏡的三個陷阱</title>
+  <desc id="d">讓 AI 一次生一張 3×3 九宮格分鏡，適合快速檢查景別是否單調，但有三個陷阱：切開後每格解析度很低，要重做單鏡參考；九格一起生會互相污染，服裝和人數可能悄悄改變；九格圖不是九支影片，不能整張丟給影片模型。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">九宮格分鏡的三個陷阱</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">拿來檢查景別單不單調很好用，但不能直接拿去生影片</text>
+  <clipPath id="c1"><rect x="48" y="190" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c1)"><rect x="48" y="190" width="112" height="76" fill="#F1F5F9"/><circle cx="104" cy="243.65" r="4" fill="#2C5B8F"/><rect x="97" y="248.65" width="14" height="17.5" rx="4.5" fill="#2C5B8F"/><rect x="98.5" y="262.65" width="4.5" height="19.5" rx="1.5" fill="#2C5B8F"/><rect x="105" y="262.65" width="4.5" height="19.5" rx="1.5" fill="#2C5B8F"/></g>
+  <rect x="48" y="190" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c2"><rect x="168" y="190" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c2)"><rect x="168" y="190" width="112" height="76" fill="#F1F5F9"/><circle cx="224" cy="230.24" r="6.4" fill="#2C5B8F"/><rect x="212.8" y="238.24" width="22.4" height="28" rx="7.2" fill="#2C5B8F"/><rect x="215.2" y="260.64" width="7.2" height="31.2" rx="2.4" fill="#2C5B8F"/><rect x="225.6" y="260.64" width="7.2" height="31.2" rx="2.4" fill="#2C5B8F"/></g>
+  <rect x="168" y="190" width="112" height="76" rx="6" fill="none" stroke="#B45309" stroke-width="5"/>
+  <clipPath id="c3"><rect x="288" y="190" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c3)"><rect x="288" y="190" width="112" height="76" fill="#F1F5F9"/><circle cx="344" cy="221.3" r="8" fill="#2C5B8F"/><rect x="330" y="231.3" width="28" height="35" rx="9" fill="#2C5B8F"/><rect x="333" y="259.3" width="9" height="39" rx="3" fill="#2C5B8F"/><rect x="346" y="259.3" width="9" height="39" rx="3" fill="#2C5B8F"/></g>
+  <rect x="288" y="190" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c4"><rect x="48" y="274" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c4)"><rect x="48" y="274" width="112" height="76" fill="#F1F5F9"/><circle cx="104" cy="323.18" r="4.8" fill="#2C5B8F"/><rect x="95.6" y="329.18" width="16.8" height="21" rx="5.4" fill="#2C5B8F"/><rect x="97.4" y="345.98" width="5.4" height="23.4" rx="1.8" fill="#2C5B8F"/><rect x="105.2" y="345.98" width="5.4" height="23.4" rx="1.8" fill="#2C5B8F"/></g>
+  <rect x="48" y="274" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c5"><rect x="168" y="274" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c5)"><rect x="168" y="274" width="112" height="76" fill="#F1F5F9"/><circle cx="224" cy="309.77" r="7.2" fill="#2C5B8F"/><rect x="211.4" y="318.77" width="25.2" height="31.5" rx="8.1" fill="#2C5B8F"/><rect x="214.1" y="343.97" width="8.1" height="35.1" rx="2.7" fill="#2C5B8F"/><rect x="225.8" y="343.97" width="8.1" height="35.1" rx="2.7" fill="#2C5B8F"/></g>
+  <rect x="168" y="274" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c6"><rect x="288" y="274" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c6)"><rect x="288" y="274" width="112" height="76" fill="#F1F5F9"/><circle cx="344" cy="324.968" r="4.48" fill="#B91C1C"/><rect x="336.16" y="330.568" width="15.68" height="19.6" rx="5.04" fill="#B91C1C"/><rect x="337.84" y="346.248" width="5.04" height="21.84" rx="1.68" fill="#B91C1C"/><rect x="345.12" y="346.248" width="5.04" height="21.84" rx="1.68" fill="#B91C1C"/></g>
+  <rect x="288" y="274" width="112" height="76" rx="6" fill="none" stroke="#B91C1C" stroke-width="5"/>
+  <clipPath id="c7"><rect x="48" y="358" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c7)"><rect x="48" y="358" width="112" height="76" fill="#F1F5F9"/><circle cx="104" cy="396.452" r="6.72" fill="#2C5B8F"/><rect x="92.24" y="404.852" width="23.52" height="29.4" rx="7.56" fill="#2C5B8F"/><rect x="94.76" y="428.372" width="7.56" height="32.76" rx="2.52" fill="#2C5B8F"/><rect x="105.68" y="428.372" width="7.56" height="32.76" rx="2.52" fill="#2C5B8F"/></g>
+  <rect x="48" y="358" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c8"><rect x="168" y="358" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c8)"><rect x="168" y="358" width="112" height="76" fill="#F1F5F9"/><circle cx="224" cy="402.71" r="5.6" fill="#2C5B8F"/><rect x="214.2" y="409.71" width="19.6" height="24.5" rx="6.3" fill="#2C5B8F"/><rect x="216.3" y="429.31" width="6.3" height="27.3" rx="2.1" fill="#2C5B8F"/><rect x="225.4" y="429.31" width="6.3" height="27.3" rx="2.1" fill="#2C5B8F"/></g>
+  <rect x="168" y="358" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <clipPath id="c9"><rect x="288" y="358" width="112" height="76" rx="6"/></clipPath>
+  <g clip-path="url(#c9)"><rect x="288" y="358" width="112" height="76" fill="#F1F5F9"/><circle cx="344" cy="391.088" r="7.68" fill="#2C5B8F"/><rect x="330.56" y="400.688" width="26.88" height="33.6" rx="8.64" fill="#2C5B8F"/><rect x="333.44" y="427.568" width="8.64" height="37.44" rx="2.88" fill="#2C5B8F"/><rect x="345.92" y="427.568" width="8.64" height="37.44" rx="2.88" fill="#2C5B8F"/></g>
+  <rect x="288" y="358" width="112" height="76" rx="6" fill="none" stroke="#64748B" stroke-width="2"/>
+  <text x="220" y="460" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">一張 3×3 九宮格</text>
+  <text x="220" y="496" text-anchor="middle" font-size="22" fill="#4B5563">（示意）</text>
+  <rect x="450" y="170" width="702" height="124" rx="20" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="486" cy="206" r="20" fill="#B45309"/>
+  <text x="486" y="214.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">1</text>
+  <g transform="translate(570,236) scale(0.9)"><rect x="-46" y="-34" width="92" height="68" rx="6" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="-40" y="-28" width="18" height="17" fill="#2C5B8F"/><rect x="-40" y="-9" width="18" height="17" fill="#CBD5E1"/><rect x="-40" y="10" width="18" height="17" fill="#2C5B8F"/><rect x="-20" y="-28" width="18" height="17" fill="#94A3B8"/><rect x="-20" y="-9" width="18" height="17" fill="#64748B"/><rect x="-20" y="10" width="18" height="17" fill="#94A3B8"/><rect x="0" y="-28" width="18" height="17" fill="#CBD5E1"/><rect x="0" y="-9" width="18" height="17" fill="#2C5B8F"/><rect x="0" y="10" width="18" height="17" fill="#CBD5E1"/><rect x="20" y="-28" width="18" height="17" fill="#64748B"/><rect x="20" y="-9" width="18" height="17" fill="#94A3B8"/><rect x="20" y="10" width="18" height="17" fill="#64748B"/><g transform="translate(30,22) scale(0.6)"><circle cx="-8" cy="-8" r="30" fill="none" stroke="#B45309" stroke-width="7"/><path d="M14,14 L40,40" stroke="#B45309" stroke-width="10" stroke-linecap="round"/></g></g>
+  <text x="660" y="224" font-size="30" font-weight="700" fill="#B45309">切開後解析度很低</text>
+  <text x="660" y="264" font-size="26" fill="#4B5563">每一格要重做單鏡參考</text>
+  <rect x="450" y="310" width="702" height="124" rx="20" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <circle cx="486" cy="346" r="20" fill="#B91C1C"/>
+  <text x="486" y="354.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">2</text>
+  <g transform="translate(570,376) scale(0.9)"><circle cx="-26" cy="-40.72" r="9.28" fill="#2C5B8F"/><rect x="-42.24" y="-29.12" width="32.48" height="40.6" rx="10.44" fill="#2C5B8F"/><rect x="-38.76" y="3.36" width="10.44" height="45.24" rx="3.48" fill="#2C5B8F"/><rect x="-23.68" y="3.36" width="10.44" height="45.24" rx="3.48" fill="#2C5B8F"/><circle cx="26" cy="-40.72" r="9.28" fill="#B91C1C"/><rect x="9.76" y="-29.12" width="32.48" height="40.6" rx="10.44" fill="#B91C1C"/><rect x="13.24" y="3.36" width="10.44" height="45.24" rx="3.48" fill="#B91C1C"/><rect x="28.32" y="3.36" width="10.44" height="45.24" rx="3.48" fill="#B91C1C"/></g>
+  <text x="660" y="364" font-size="30" font-weight="700" fill="#B91C1C">九格一起生，會互相污染</text>
+  <text x="660" y="404" font-size="26" fill="#4B5563">服裝和人數可能悄悄改變</text>
+  <rect x="450" y="450" width="702" height="124" rx="20" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <circle cx="486" cy="486" r="20" fill="#B91C1C"/>
+  <text x="486" y="494.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">3</text>
+  <g transform="translate(570,516) scale(0.9)"><g transform="translate(-44,0)"><rect x="-24" y="-24" width="14" height="14" fill="#64748B"/><rect x="-8" y="-24" width="14" height="14" fill="#64748B"/><rect x="8" y="-24" width="14" height="14" fill="#64748B"/><rect x="-24" y="-8" width="14" height="14" fill="#64748B"/><rect x="-8" y="-8" width="14" height="14" fill="#64748B"/><rect x="8" y="-8" width="14" height="14" fill="#64748B"/><rect x="-24" y="8" width="14" height="14" fill="#64748B"/><rect x="-8" y="8" width="14" height="14" fill="#64748B"/><rect x="8" y="8" width="14" height="14" fill="#64748B"/></g><path d="M-10,0 L10,0" stroke="#374151" stroke-width="4"/><path d="M8,-7 L18,0 L8,7 z" fill="#374151"/><g transform="translate(52,0) scale(0.6)"><rect x="-50" y="-38" width="100" height="76" rx="6" fill="#64748B"/><rect x="-40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-34" y="-18" width="68" height="36" rx="3" fill="#FFFFFF"/><path d="M-8,-11 L12,0 L-8,11 z" fill="#64748B"/></g><g transform="translate(68,22) scale(0.42)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g></g>
+  <text x="660" y="504" font-size="30" font-weight="700" fill="#B91C1C">九格圖不是九支影片</text>
+  <text x="660" y="544" font-size="26" fill="#4B5563">不能整張丟給影片模型</text>
+  <line x1="282" y1="228" x2="450" y2="232" stroke="#B45309" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <line x1="402" y1="312" x2="450" y2="372" stroke="#B91C1C" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <line x1="400" y1="410" x2="450" y2="512" stroke="#B91C1C" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="48" y="600" width="1104" height="76" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="80" y="648.08" font-size="28" font-weight="700" fill="#1F2937">九宮格用來<tspan fill="#8A5D00">檢查景別</tspan>，生成要回到一格一格的單鏡</text>
+</svg>

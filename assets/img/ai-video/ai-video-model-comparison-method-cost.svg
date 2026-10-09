@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">單價便宜，不等於划算</title>
+  <desc id="d">同一個 5 秒 720p 動作鏡，2026 年 8 月實付。只看每秒生成費，Grok 每秒 0.142 美元，比 Seedance 2.5 換算的每秒 0.233 美元便宜。改看每秒可用畫面成本：Seedance 2.5 五秒都能用，每秒約 0.233 美元；Grok 花了 0.71 美元，一秒都不能用，這類鏡頭它的划算程度等於零。只看單價，你會選錯。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">單價便宜，不等於划算</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">同一個 5 秒 720p 動作鏡，2026 年 8 月實付</text>
+  <rect x="48" y="168" width="520" height="420" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(108,218) scale(0.62)"><path d="M-44,-24 L20,-24 L46,0 L20,24 L-44,24 z" fill="#FFFFFF" stroke="#64748B" stroke-width="5" stroke-linejoin="round"/><circle cx="22" cy="0" r="6" fill="#64748B"/><path d="M-30,-6 L4,-6 M-30,8 L-6,8" stroke="#64748B" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="152" y="228" font-size="34" font-weight="700" fill="#1F2937">只看單價</text>
+  <text x="78" y="276" font-size="24" fill="#4B5563">每秒生成費（美元）</text>
+  <text x="78" y="322" font-size="26" font-weight="700" fill="#1F2937">Grok</text>
+  <text x="538" y="322" text-anchor="end" font-size="22" fill="#4B5563">公告價，實付一致</text>
+  <rect x="78" y="338" width="181.76" height="40" rx="8" fill="#0E7568"/>
+  <text x="269.76" y="368" font-size="26" font-weight="700" fill="#1F2937">0.142</text>
+  <text x="78" y="434" font-size="26" font-weight="700" fill="#1F2937">Seedance 2.5</text>
+  <text x="538" y="434" text-anchor="end" font-size="22" fill="#4B5563">依實付 1.165 換算</text>
+  <rect x="78" y="450" width="298.24" height="40" rx="8" fill="#64748B"/>
+  <text x="386.24" y="480" font-size="26" font-weight="700" fill="#1F2937">0.233</text>
+  <text x="78" y="558" font-size="26" font-weight="700" fill="#4B5563">看起來：<tspan fill="#0E7568">Grok 便宜約 39%</tspan></text>
+  <rect x="632" y="168" width="520" height="420" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="662" y="228" font-size="34" font-weight="700" fill="#8A5D00">每秒可用畫面成本</text>
+  <text x="662" y="276" font-size="24" fill="#4B5563">花掉的錢 ÷ 能放進成片的秒數</text>
+  <text x="662" y="322" font-size="26" font-weight="700" fill="#1F2937">Seedance 2.5</text>
+  <rect x="878" y="284" width="256" height="50" rx="6" fill="#1F2937"/>
+  <rect x="884" y="292" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(906,309) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="934" y="292" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(956,309) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="984" y="292" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1006,309) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="1034" y="292" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1056,309) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="1084" y="292" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1106,309) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="662" y="338" width="298.24" height="40" rx="8" fill="#0E7568"/>
+  <text x="970.24" y="368" font-size="26" font-weight="700" fill="#1F2937">約 0.233</text>
+  <text x="662" y="434" font-size="26" font-weight="700" fill="#1F2937">Grok</text>
+  <rect x="878" y="396" width="256" height="50" rx="6" fill="#1F2937"/>
+  <rect x="884" y="404" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(906,421) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="934" y="404" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(956,421) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="984" y="404" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1006,421) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="1034" y="404" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1056,421) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="1084" y="404" width="44" height="34" rx="4" fill="#FFFFFF"/>
+  <g transform="translate(1106,421) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><path d="M-15.2,-15.2 L15.2,15.2 M15.2,-15.2 L-15.2,15.2" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="662" y="450" width="460" height="40" rx="8" fill="#FDECEC" stroke="#B91C1C" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="892" y="480" text-anchor="middle" font-size="24" font-weight="700" fill="#B91C1C">花 0.71 美元，一秒都不能用</text>
+  <text x="662" y="558" font-size="26" font-weight="700" fill="#4B5563">實際上：<tspan fill="#8A5D00">這一鏡要選 Seedance 2.5</tspan></text>
+  <circle cx="600" cy="378" r="26" fill="#E5A300"/>
+  <path d="M588,378 L610,378 M602,368 L614,378 L602,388" stroke="#1F2937" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="48" y="612" width="1104" height="86" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="80" y="665.8" font-size="30" font-weight="700" fill="#1F2937">只看單價，<tspan fill="#8A5D00">你會選錯</tspan>：要算每秒可用畫面的成本</text>
+</svg>

@@ -1,0 +1,207 @@
+---
+layout: home
+title: AI 影片白話術語表
+description: 給不是影視、也不是工程背景的人：AI 影片製作常見的運鏡、景別、生成、剪輯與看片驗收用語，每個詞一句白話解釋，可即時搜尋、按類別篩選。
+keywords: AI影片術語,運鏡,景別,分鏡,圖生影片,首尾幀,影片驗收,剪輯,白話解釋,史旺基,Swanky
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 技術顧問
+    url: /technical/
+  - name: AI 影片製作筆記
+    url: /technical/ai-video/
+  - name: 術語表
+    url: /technical/ai-video/glossary/
+# 分組開頭的示意圖：重用〈鏡頭語言〉一文的圖解（不另畫新圖）；手機載入 -m 直式版。
+section_figs:
+  - id: shot-size
+    src: /assets/img/ai-video/ai-video-camera-language-prompt-shot-sizes.svg
+    src_m: /assets/img/ai-video/ai-video-camera-language-prompt-shot-sizes-m.svg
+    width: 1200
+    height: 700
+    alt: 同一個人的四種景別：建立鏡頭用寬景交代地點、中景腰部以上、中近景胸口以上、特寫最吃臉部一致性；攝影機離人越近，景別越緊。
+  - id: camera-move
+    src: /assets/img/ai-video/ai-video-camera-language-prompt-dolly-vs-zoom.svg
+    src_m: /assets/img/ai-video/ai-video-camera-language-prompt-dolly-vs-zoom-m.svg
+    width: 1200
+    height: 720
+    alt: 推軌與變焦對照：推軌是攝影機整台往前移，前景跑得比背景快；變焦是攝影機不動、整張畫面均勻放大。
+---
+{%- comment -%}
+  資料來源：_data/ai_video_glossary.yml（sections → terms：t 術語／en 原文／d 白話）。
+  搜尋與篩選是漸進增強：沒有 JavaScript 時整頁照常列出全部術語，搜尋列保持隱藏。
+  手機（≤767px）依類別折疊：預設只展開第一組；搜尋或按類別篩選時，自動展開有命中的組。桌機一律全部展開。
+{%- endcomment -%}
+{% assign avg = site.data.ai_video_glossary.sections %}
+{% assign avg_total = 0 %}
+{% assign lang_post = site.posts | where_exp: "p", "p.url contains '/ai-video-camera-language-prompt/'" | first %}
+{% for sec in avg %}{% assign avg_total = avg_total | plus: sec.terms.size %}{% endfor %}
+
+  <main id="main">
+
+    <section class="tech-listing-band avg-hero">
+      <div class="container">
+        <a class="avg-back" href="{{ '/technical/ai-video/' | relative_url }}"><i class="bi bi-arrow-left" aria-hidden="true"></i> AI 影片製作筆記</a>
+        <span class="tlb-eyebrow">AI Video Glossary</span>
+        <h1>AI 影片白話術語表</h1>
+        <p>運鏡、景別、生成、剪輯與看片驗收，共 {{ avg_total }} 個常見用語。第一次遇到的名詞，先看一句白話，再決定要不要深究。</p>
+      </div>
+    </section>
+
+    <section class="avg-page">
+      <div class="container">
+
+        <div class="avg-tools" data-avg-tools hidden>
+          <label class="avg-search-label" for="avg-q">找一個詞</label>
+          <div class="avg-search-row">
+            <input id="avg-q" class="avg-search" type="search" data-avg-search placeholder="輸入詞或解釋裡的字，例如：首幀、運鏡、對嘴" autocomplete="off">
+            <span class="avg-count" data-avg-count aria-live="polite">共 {{ avg_total }} 條</span>
+          </div>
+          <div class="avg-filters" role="group" aria-label="按類別篩選">
+            <button type="button" class="avg-filter" data-avg-filter="all" aria-pressed="true">全部</button>
+            {% for sec in avg %}<button type="button" class="avg-filter" data-avg-filter="{{ sec.id }}" aria-pressed="false">{{ sec.name }}</button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <nav class="avg-toc" aria-label="術語表目錄" data-avg-toc>
+          {% for sec in avg %}<a href="#avg-{{ sec.id }}">{{ sec.name }}<small>{{ sec.terms.size }}</small></a>
+          {% endfor %}
+        </nav>
+
+        {% for sec in avg %}
+        <section class="avg-group" id="avg-{{ sec.id }}" data-avg-group="{{ sec.id }}">
+          <header class="avg-group-head">
+            <span class="avg-group-count">{{ sec.terms.size }} 個用語</span>
+            <h2 data-avg-name>{{ sec.name }}</h2>
+            <p>{{ sec.note }}</p>
+          </header>
+          <div class="avg-body" id="avg-body-{{ sec.id }}">
+          {% assign fig = page.section_figs | where: "id", sec.id | first %}
+          {% if fig %}
+          <figure class="avg-fig">
+            {% if lang_post %}<a href="{{ lang_post.url | relative_url }}">{% endif %}
+            <picture>
+              <source media="(max-width: 767px)" srcset="{{ fig.src_m | relative_url }}">
+              <img src="{{ fig.src | relative_url }}" width="{{ fig.width }}" height="{{ fig.height }}" alt="{{ fig.alt }}" decoding="async">
+            </picture>
+            {% if lang_post %}</a>{% endif %}
+            <figcaption>出自{% if lang_post %}<a href="{{ lang_post.url | relative_url }}">〈鏡頭語言〉</a>{% else %}〈鏡頭語言〉{% endif %}一文</figcaption>
+          </figure>
+          {% endif %}
+          <dl class="avg-list">
+            {% for term in sec.terms %}
+            <div class="avg-item" data-avg-item>
+              <dt>{{ term.t }}{% if term.en %}<span lang="en">{{ term.en }}</span>{% endif %}</dt>
+              <dd>{{ term.d }}</dd>
+            </div>
+            {% endfor %}
+          </dl>
+          </div>
+        </section>
+        {% endfor %}
+
+        <p class="avg-empty" data-avg-empty hidden>找不到符合的詞。換個說法，或清空搜尋看全部。</p>
+
+        <div class="avg-footnote">
+          <p>這份術語表是我做 AI 影片時整理的白話對照，原本是給團隊裡沒有影視背景的夥伴看的。牽涉價格與特定模型能力的說法會隨時間改變，這裡刻意不寫數字。</p>
+          <p class="ai-video-further-link">看完名詞，回到 <a href="{{ '/technical/ai-video/' | relative_url }}">AI 影片製作筆記</a> 看實際怎麼用。</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "AI 影片白話術語表",
+    "inLanguage": "zh-TW",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "description": {{ page.description | jsonify }}
+  }
+  </script>
+
+  <script>
+  (function () {
+    var tools = document.querySelector('[data-avg-tools]');
+    var input = document.querySelector('[data-avg-search]');
+    if (!tools || !input) return;
+    var count = document.querySelector('[data-avg-count]');
+    var empty = document.querySelector('[data-avg-empty]');
+    var toc = document.querySelector('[data-avg-toc]');
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-avg-filter]'));
+    var groups = Array.prototype.slice.call(document.querySelectorAll('[data-avg-group]')).map(function (g) {
+      return {
+        el: g,
+        id: g.getAttribute('data-avg-group'),
+        items: Array.prototype.slice.call(g.querySelectorAll('[data-avg-item]')).map(function (it) {
+          return { el: it, t: it.textContent.toLowerCase() };
+        })
+      };
+    });
+    // 手機折疊：把每組標題換成可點的按鈕（沒有 JavaScript 時不折疊）
+    var mq = window.matchMedia('(max-width: 767px)');
+    groups.forEach(function (g, i) {
+      var h2 = g.el.querySelector('[data-avg-name]');
+      var body = g.el.querySelector('.avg-body');
+      g.userOpen = i === 0;
+      if (!h2 || !body) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'avg-fold';
+      btn.setAttribute('aria-controls', body.id);
+      btn.innerHTML = '<span></span><i class="bi bi-chevron-down" aria-hidden="true"></i>';
+      btn.firstChild.textContent = h2.textContent;
+      h2.textContent = '';
+      h2.appendChild(btn);
+      g.btn = btn;
+      btn.addEventListener('click', function () {
+        if (!mq.matches) return;
+        g.userOpen = g.el.classList.contains('is-collapsed');
+        render();
+      });
+    });
+    var total = groups.reduce(function (n, g) { return n + g.items.length; }, 0);
+    var active = 'all';
+
+    function render() {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      groups.forEach(function (g) {
+        var inScope = active === 'all' || active === g.id;
+        var groupShown = 0;
+        g.items.forEach(function (it) {
+          var ok = inScope && (!q || it.t.indexOf(q) > -1);
+          it.el.hidden = !ok;
+          if (ok) groupShown += 1;
+        });
+        g.el.hidden = groupShown === 0;
+        shown += groupShown;
+        // 搜尋或篩選中：有命中的組一律展開；否則照讀者自己點開／收起的狀態
+        var open = !mq.matches || q || active !== 'all' ? true : g.userOpen;
+        g.el.classList.toggle('is-collapsed', !open);
+        if (g.btn) g.btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      var filtered = q || active !== 'all';
+      if (count) count.textContent = filtered ? '找到 ' + shown + ' 條' : '共 ' + total + ' 條';
+      if (empty) empty.hidden = shown > 0;
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        active = b.getAttribute('data-avg-filter');
+        buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        render();
+      });
+    });
+    input.addEventListener('input', render);
+    if (mq.addEventListener) mq.addEventListener('change', render);
+    tools.hidden = false;
+    render();
+    if (toc) toc.hidden = true; // 有篩選鈕就不需要目錄（沒有 JavaScript 時目錄照常顯示）
+  })();
+  </script>

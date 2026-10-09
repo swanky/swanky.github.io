@@ -66,6 +66,41 @@ test('Agentic 系列名單的每個 slug 都對得到一篇文章，且不重複
   }
 });
 
+// AI 影片製作筆記系列頁的 series_groups／further_reading 清單（縮排同上）
+function aiVideoLists() {
+  const fm = frontMatter(read('technical/ai-video/index.html'));
+  const groups = (fm.split(/^series_groups:\s*$/m)[1] ?? '').split(/^further_reading:\s*$/m)[0];
+  const further = fm.split(/^further_reading:\s*$/m)[1] ?? '';
+  return {
+    series: [...groups.matchAll(/^      - (\S+)\s*$/gm)].map((m) => m[1]),
+    further: [...further.matchAll(/^  - (\S+)\s*$/gm)].map((m) => m[1]),
+  };
+}
+
+test('系列導覽也讀 AI 影片製作筆記系列頁的 series_groups，且只計入已發表文章', () => {
+  const nav = read('_includes/series-nav.html');
+  assert.match(nav, /site\.pages \| where: "url", "\/technical\/ai-video\/"/);
+  assert.match(nav, /series_groups/);
+  assert.match(nav, /sn_post_urls contains sn_needle/, '系列編號應只計入 site.posts 找得到的文章');
+});
+
+test('AI 影片系列名單不重複；延伸閱讀不與系列重疊且每篇都對得到文章', () => {
+  const { series, further } = aiVideoLists();
+  assert.ok(series.length > 0, '讀不到 series_groups 的文章清單');
+  assert.equal(new Set(series).size, series.length, 'series_groups 有重複的 slug（系列編號會錯）');
+  // 每個 slug 都要對到一篇 _posts 檔（可以是 published: false 的草稿，頁面與導覽框會自動略過未發表的）
+  for (const slug of series) {
+    const hits = postFiles.filter((file) => file.replace(/\.(md|html)$/, '').endsWith(`-${slug}`));
+    assert.equal(hits.length, 1, `系列名單的 ${slug} 對到 ${hits.length} 篇文章`);
+  }
+  assert.ok(further.length > 0, '讀不到 further_reading 清單');
+  for (const slug of further) {
+    assert.ok(!series.includes(slug), `${slug} 同時在系列與延伸閱讀`);
+    const hits = postFiles.filter((file) => file.replace(/\.(md|html)$/, '').endsWith(`-${slug}`));
+    assert.equal(hits.length, 1, `延伸閱讀的 ${slug} 對到 ${hits.length} 篇文章`);
+  }
+});
+
 test('文章的 ai_learn 都指到 AI 入門教材裡存在的單元與章節', () => {
   const modules = loadModules();
   let count = 0;

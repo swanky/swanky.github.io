@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">一道光、一點煙、相機放低：把街市變成舞台</title>
+<desc id="d">示意圖，側面看一座有屋頂開口的街市樓梯，不是任何一張原作。光從屋頂開口斜斜照進來；空氣裡的煙或塵讓光變成看得見的光柱；人走上樓梯，剛好站進光裡，周圍大片壓暗；相機放在低處往上拍。右側四點說明：一，等光從開口斜進來；二，有煙有塵，光才看得見；三，人只要小小一個，站進光裡就夠；四，相機放低，樓梯和屋頂成了舞台布景。依 M+ 館藏頁對《迷離世界》的說明（低角度、開頂建築的光影）與家屬官網的自述（背光、煙霧與光線）整理。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="78" font-size="44" font-weight="700" fill="#1F2937">一道光、一點煙、相機放低</text>
+<text x="48" y="120" font-size="26" fill="#4B5563">側面示意，不是任何一張原作</text>
+
+<!-- building section -->
+<rect x="48" y="150" width="660" height="520" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="3"/>
+<rect x="48" y="150" width="660" height="46" fill="#334155"/>
+<rect x="250" y="150" width="150" height="46" fill="#FFFFFF" stroke="#334155" stroke-width="3"/>
+<text x="325" y="182" text-anchor="middle" font-size="22" fill="#1F2937">開口</text>
+<!-- light beam -->
+<polygon points="250,196 400,196 600,560 430,560" fill="#FDE68A" opacity="0.85"/>
+<g fill="#FFFFFF" opacity="0.9">
+<circle cx="380" cy="300" r="14"/><circle cx="420" cy="350" r="10"/><circle cx="460" cy="420" r="16"/><circle cx="350" cy="260" r="9"/><circle cx="440" cy="500" r="9"/>
+</g>
+<!-- dark areas -->
+<rect x="48" y="196" width="150" height="474" fill="#475569" opacity="0.55"/>
+<!-- stairs -->
+<g fill="#94A3B8" stroke="#64748B" stroke-width="2">
+<rect x="380" y="600" width="328" height="70"/>
+<rect x="440" y="560" width="268" height="40"/>
+<rect x="500" y="520" width="208" height="40"/>
+<rect x="560" y="480" width="148" height="40"/>
+<rect x="620" y="440" width="88" height="40"/>
+</g>
+<!-- figure -->
+<g fill="#1F2937">
+<circle cx="512" cy="470" r="13"/>
+<rect x="502" y="484" width="20" height="36" rx="6"/>
+</g>
+<!-- camera -->
+<g>
+<rect x="150" y="620" width="58" height="36" rx="6" fill="#1F2937"/>
+<circle cx="214" cy="638" r="12" fill="#1F2937"/>
+<line x1="226" y1="634" x2="490" y2="490" stroke="#B91C1C" stroke-width="4" stroke-dasharray="12 10"/>
+</g>
+<g font-size="22" font-weight="700">
+<circle cx="425" cy="230" r="20" fill="#B91C1C"/><text x="425" y="238" text-anchor="middle" fill="#FFFFFF">1</text>
+<circle cx="450" cy="292" r="20" fill="#B91C1C"/><text x="450" y="300" text-anchor="middle" fill="#FFFFFF">2</text>
+<circle cx="555" cy="455" r="20" fill="#B91C1C"/><text x="555" y="463" text-anchor="middle" fill="#FFFFFF">3</text>
+<circle cx="179" cy="598" r="20" fill="#B91C1C"/><text x="179" y="606" text-anchor="middle" fill="#FFFFFF">4</text>
+</g>
+
+<!-- notes -->
+<g font-size="26" fill="#374151">
+<text x="744" y="196" font-weight="700" fill="#1F2937">1　等光從開口斜進來</text>
+<text x="784" y="232" font-size="22" fill="#6B7280">他說：要等對的光</text>
+<text x="744" y="300" font-weight="700" fill="#1F2937">2　有煙有塵，光才看得見</text>
+<text x="784" y="336" font-size="22" fill="#6B7280">光變成一道一道的光柱</text>
+<text x="744" y="404" font-weight="700" fill="#1F2937">3　人小小一個就夠</text>
+<text x="784" y="440" font-size="22" fill="#6B7280">站進光裡，四周壓暗</text>
+<text x="744" y="508" font-weight="700" fill="#1F2937">4　相機放低往上拍</text>
+<text x="784" y="544" font-size="22" fill="#6B7280">樓梯和屋頂成了布景</text>
+</g>
+<rect x="744" y="590" width="408" height="80" rx="14" fill="#1F2937"/>
+<text x="948" y="640" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">先找光，再等人走進去</text>
+</svg>

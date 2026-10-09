@@ -1,0 +1,182 @@
+id: araki
+status: published
+name: Nobuyoshi Araki
+zh: 荒木經惟
+zh_note: 名字照日文漢字（日文寫作荒木経惟）
+life: 1940–
+place: 日本
+theme: 把自己的生活拍成日記
+view: 他說是妻子陽子讓他成為攝影家，從新婚旅行一路拍到她過世，把私生活整個變成作品。這種拍法的力量和問題在同一個地方：鏡頭前的人，有沒有說話的份。所以這一位要同時看兩件事：他的照片，以及 2018 年模特兒 KaoRi 的公開陳述。
+bio: |
+  <p>1940 年生。<sup><a href="#src-araki">出處：蓬皮杜中心</a></sup>東京都寫真美術館把他列為重點收藏的攝影家，說他從 1960 年代開始活動，出版過超過 500 本寫真集。<sup><a href="#src-araki">出處：東京都寫真美術館</a></sup></p>
+  <p>他自己說「是陽子讓我成為攝影家」。1971 年，他把和陽子的婚禮，以及京都、柳川的新婚旅行，做成寫真集《センチメンタルな旅》，自費只印 1,000 本，書裡夾著一篇〈私写真家宣言〉。陽子在 1990 年 1 月 27 日因病過世，42 歲；隔年他出版《センチメンタルな旅・冬の旅》，後半是一路記錄到她過世的寫真日記。之後他寫過：「妻子走了，我只拍天空。」（原文：妻が逝って、私は、空ばかり写していた）<sup><a href="#src-araki">出處：東京都寫真美術館</a></sup></p>
+  <p><strong>2018 年的爭議。</strong>2018 年 4 月 1 日，從 2001 年起當了他約 15 年模特兒的舞者 KaoRi 在網路平台 note 發表長文，寫到兩人所有拍攝都沒有同意書、她為他的作品所做的表演都沒有報酬、曾被迫拍裸體，並說不希望再有模特兒「戴著藝術的面具」默默承受這些。<sup><a href="#src-araki">出處：美術手帖</a></sup>她寫道「他把我當成物件」；荒木多次拒絕評論。<sup><a href="#src-araki">出處：紐約時報</a></sup>據 KaoRi 說，4 月 10 日她打電話給荒木，他讀過文章但沒有道歉；她也表明，不希望荒木被單方面抨擊。<sup><a href="#src-araki">出處：BuzzFeed Japan</a></sup>當時在紐約展出他作品的 Museum of Sex，策展人說會把 KaoRi 的意見放進展覽的活動資料；同年 12 月，柏林 C/O Berlin 的荒木個展遭到抗議，首席策展人回應 KaoRi 的照片不會展出。<sup><a href="#src-araki">出處：紐約時報、ArtAsiaPacific</a></sup>在我查到的可靠來源裡，沒有相關訴訟、官方調查結論，也沒有荒木公開道歉的紀錄。</p>
+works_intro: 荒木有大量裸體和緊縛的作品，本站一律不放圖。下面只挑沒有這類內容的作品，依年代排：先是 1971 年的新婚旅行，再到陽子過世前後，最後是 1990 年代的彩色街拍。東京都寫真美術館的館藏只供線上瀏覽，那兩件只放連結。
+works:
+  - title: センチメンタルな旅（Sentimental Journey）
+    zh: 寫真集《センチメンタルな旅》本身
+    year: 1971 年出版
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/434409
+    img: /assets/img/photo-learn/works/atlas-araki/01-sentimental-journey-book.jpg
+    img_w: 600
+    img_h: 596
+    credit: "攝影：Nobuyoshi Araki｜© 2026 Nobuyoshi Araki"
+    look: 米白色的封面，手寫書名在最上面，正中橫著貼了一張婚禮照：一對新人站在房間正中。右下角還寫著「1000 部限定」，這本書從一開始就是做給少數人的私人紀錄。
+  - title: Untitled from "Sentimental Journey, Winter Journey"
+    zh: 《センチメンタルな旅》，船上
+    year: "1971"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/128436
+    img: /assets/img/photo-learn/works/atlas-araki/02-sentimental-journey-boat.jpg
+    img_w: 600
+    img_h: 395
+    credit: "攝影：Nobuyoshi Araki｜© 2026 Nobuyoshi Araki"
+    look: 從上往下拍一艘小船，穿格紋洋裝的女子側身蜷著，睡在船底的草蓆上，兩邊是發亮的水面。拍的人站得很近，近到只有旅伴才拍得到。
+  - title: Untitled from "Sentimental Journey, Winter Journey"
+    zh: 《センチメンタルな旅》，火車上
+    year: "1971"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/128437
+    img: /assets/img/photo-learn/works/atlas-araki/03-sentimental-journey-train.jpg
+    img_w: 600
+    img_h: 397
+    credit: "攝影：Nobuyoshi Araki｜© 2026 Nobuyoshi Araki"
+    look: 穿點點洋裝的女子靠在火車座椅上，眼睛斜斜看向窗外，窗台上放著一個手提包。不是擺好的姿勢，是旅途中一個發呆的片刻。
+  - title: Untitled from "My Love, Yoko"
+    zh: 《わが愛・陽子》系列
+    year: "1976"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/128439
+    img: /assets/img/photo-learn/works/atlas-araki/04-my-love-yoko.jpg
+    img_w: 396
+    img_h: 600
+    credit: "攝影：Nobuyoshi Araki｜© 2026 Nobuyoshi Araki"
+    look: 她穿一身黑，雙手插在口袋裡，站在一條走廊和房間的交界，直直看著鏡頭。和船上那張比，這次她沒有睡著，而是回看拍的人。
+  - title: Untitled from "Nostalgic Night"
+    zh: 《Nostalgic Night》系列（照 MoMA 館藏題名）
+    year: "1984"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/128440
+    img: /assets/img/photo-learn/works/atlas-araki/05-nostalgic-night-wedding.jpg
+    img_w: 396
+    img_h: 600
+    credit: "攝影：Nobuyoshi Araki｜© 2026 Nobuyoshi Araki"
+    look: 一對新人站在空蕩房間的正中央，四周是窗簾、花紋地毯和一張椅子，兩人都正面看著鏡頭。把它和第一件的書封並排看，畫面看起來是同一張，只是封面上橫著擺；十幾年後，同一張照片又被放進另一個系列。
+  - title: 冬の旅（Winter Journey）
+    zh: 《冬の旅》，雪中的陽台
+    year: 1989–1990
+    where: 東京都寫真美術館（館藏只供線上瀏覽，不放圖）
+    url: https://collection.topmuseum.jp/Publish/detailPage/22715/
+    look: 雪下滿了陽台和遠處的屋頂，一隻貓站在雪地裡。這個系列一路記錄到陽子過世，這一張裡卻沒有人，只有雪、陽台和一隻貓。
+  - title: 冬の旅（Winter Journey）
+    zh: 《冬の旅》，天空
+    year: 1989–1990
+    where: 東京都寫真美術館（館藏只供線上瀏覽，不放圖）
+    url: https://collection.topmuseum.jp/Publish/detailPage/48371/
+    look: 一道飛機雲斜斜劃過天空，下面只露出一點樹梢和電線。對照他那句「妻子走了，我只拍天空」，這張天空就不只是天空。
+  - title: Untitled
+    zh: 無題（綠色公共電話）
+    year: "1997"
+    where: 休士頓美術館（MFAH）
+    url: https://emuseum.mfah.org/objects/60875/untitled
+    img: /assets/img/photo-learn/works/atlas-araki/06-untitled-telephone.jpg
+    img_w: 600
+    img_h: 401
+    credit: "攝影：Nobuyoshi Araki｜館頁未列版權欄"
+    look: 一台螢光綠的公共電話塞滿畫面，閃光燈把顏色打得很亮，旁邊還夾著一張小卡。沒有人，但這種東西一看就知道是哪個城市、哪個年代。
+  - title: Untitled
+    zh: 無題（白貓擺飾）
+    year: "1997"
+    where: 休士頓美術館（MFAH）
+    url: https://emuseum.mfah.org/objects/60873/untitled
+    img: /assets/img/photo-learn/works/atlas-araki/07-untitled-cat-figurine.jpg
+    img_w: 600
+    img_h: 397
+    credit: "攝影：Nobuyoshi Araki｜館頁未列版權欄"
+    look: 一隻藍眼睛的白貓擺飾躺在地上，四周是枯枝和泥土，閃光燈讓它亮得有點突兀。撿到什麼就拍什麼，這也是他拍「日記」的方式。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的 Victoria 裡也看得到類似的做法：她坐在窗邊的木桌前翻著一本漫畫，桌上還攤著一整疊同一套的漫畫，旁邊是一個馬克杯，身後的白窗簾透著光。人身邊的東西都留在畫面裡，像某個平常下午的桌面。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-araki-own" data-type="image" href="/assets/img/sec/025_Victoria_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-025_Victoria_1-960.jpg" alt="For Your Safety — Victoria 人像攝影" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列（Victoria）。點圖放大。</figcaption>
+  </figure>
+  <p>拿它和荒木那台綠色公共電話比，差別也很清楚：他的照片裡有時連人都沒有，只剩物件；這張人還在，但有一半的故事是桌上的東西在說。共同點是：<strong>身邊的物件會替人說話。</strong></p>
+videos:
+  - id: BSPW4ZgE__4
+    link_only: true
+    title: "Nobuyoshi Araki: Journey through life and death"
+    channel: San Francisco Museum of Modern Art
+    channel_url: https://www.youtube.com/@sfmoma
+    length: 4 分 27 秒
+    lang: 英語
+    note: 舊金山現代藝術博物館官方頻道。荒木談《センチメンタルな旅・冬の旅》和 1971 年的新婚旅行，為什麼這本書對他特別重要。影片會出現他的作品，可能包含裸體，點連結到 YouTube 看
+  - id: DORNhJD4onU
+    link_only: true
+    title: Nobuyoshi Araki’s “more is more” approach to photography
+    channel: San Francisco Museum of Modern Art
+    channel_url: https://www.youtube.com/@sfmoma
+    length: 3 分 37 秒
+    lang: 英語
+    note: 同一個頻道。他說自己不追求完美，看到什麼吸引他就拍，連雜訊和缺點一起收下。影片會出現他的作品，可能包含裸體，點連結到 YouTube 看
+  - id: eoKJwqsfyl0
+    link_only: true
+    title: 村上隆が語る!「スーパーフラット・コレクション」：7．荒木経惟
+    channel: 横浜美術館 | Yokohama museum of Art
+    channel_url: https://www.youtube.com/@yokohamamuseumofart9085
+    length: 4 分 44 秒
+    lang: 日語
+    note: 橫濱美術館官方頻道，2016 年村上隆收藏展的系列影片，由收藏者村上隆介紹他收的荒木作品。點連結到 YouTube 看
+take:
+  - 拍身邊的人，要拍一段時間，不是一張照片。同一個人的婚禮、旅行、發呆、告別連起來，才是故事；想拍家人或伴侶，可以先決定要跟拍多久。
+  - 人不在畫面裡的時候，物件和天空也能替人說話。公共電話、路邊的擺飾、一片天空，都是「我在這裡生活過」的證據。
+  - 越親近的拍攝，越要先講清楚。拍什麼、照片會用在哪裡、對方能不能說不，都要事先談好、留下文字；KaoRi 的陳述提醒我們，熟不是不簽同意書的理由。
+related:
+  - unit: u2
+    title: 讓人感覺你就在那裡：荒木經惟、佐內正史、川島小鳥的「在場」
+  - unit: u1
+    title: 日本攝影史一頁看懂：從 VIVO 到日常寫真，拍的人怎麼走進照片
+sources:
+  - title: Sans titre（AM 1998-158）
+    by: Centre Pompidou（蓬皮杜中心）
+    url: https://www.centrepompidou.fr/en/ressources/oeuvre/cbqyyAp
+    note: 生年 1940
+  - title: 荒木経惟 センチメンタルな旅 1971－2017－（新聞稿，2017）
+    by: 東京都写真美術館
+    url: https://topmuseum.jp/upload/2/2866/press_release_araki_20170613.pdf
+    note: 重點收藏作家、1960 年代開始活動、超過 500 本寫真集、「陽子によって写真家になった」、《センチメンタルな旅》1,000 部與〈私写真家宣言〉、陽子 1990 年 1 月 27 日過世、《冬の旅》與「空ばかり写していた」
+  - title: センチメンタルな旅、Untitled 等五件（作品頁）
+    by: The Museum of Modern Art（紐約現代藝術博物館）
+    url: https://www.moma.org/collection/works/434409
+    note: 作品年份、© 2026 Nobuyoshi Araki；其餘四件見作品導覽連結
+  - title: Untitled（2002.566、2002.564，作品頁）
+    by: The Museum of Fine Arts, Houston（休士頓美術館）
+    url: https://emuseum.mfah.org/objects/60875/untitled
+    note: 作品年份、館藏來源
+  - title: 収蔵品検索：荒木経惟〈冬の旅〉
+    by: 東京都写真美術館
+    url: https://collection.topmuseum.jp/Publish/detailPage/22715/
+    note: 《冬の旅》作品的年份與館藏資料
+  - title: 荒木経惟、長年のミューズからの「#MeToo」（2018 年 4 月 7 日）
+    by: 美術手帖
+    url: https://bijutsutecho.com/magazine/news/headline/13788
+    note: KaoRi 2018 年 4 月 1 日在 note 發文、2001 年起約 15 年、沒有同意書、無報酬、被迫裸體拍攝、「芸術という仮面」
+  - title: When an Erotic Photographer’s Longtime Muse Becomes His Critic（Motoko Rich，2018 年 5 月 5 日）
+    by: The New York Times（WRAL 授權轉載頁）
+    url: https://www.wral.com/archive/17533498/
+    note: 「He treated me like an object」、荒木拒絕評論、Museum of Sex 策展人的回應
+  - title: アラーキーの「ミューズ」と呼ばれた私のこれから（2018 年 4 月 12 日）
+    by: BuzzFeed Japan
+    url: https://www.buzzfeed.com/jp/akikokobayashi/kaori
+    note: 4 月 10 日的電話、沒有道歉、KaoRi 不希望荒木被單方面抨擊
+  - title: "Women’s Rights Group Leads #MeToo Protest Against Nobuyoshi Araki（2018 年 12 月 14 日）"
+    by: ArtAsiaPacific
+    url: https://artasiapacific.com/news/women-s-rights-group-leads-metoo-protest-against-nobuyoshi-araki
+    note: C/O Berlin 個展遭抗議、首席策展人說 KaoRi 的照片不會展出
+  - title: "Nobuyoshi Araki: Journey through life and death（影片說明）"
+    by: San Francisco Museum of Modern Art（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=BSPW4ZgE__4
+    note: 談《センチメンタルな旅・冬の旅》與 1971 年的新婚旅行

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 918" width="600" height="918" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">排行榜只能幫你縮名單</title>
+  <desc id="d">選模型的漏斗：最上層是排行榜，反映大量通用題目的平均偏好；第二層查規格，把平台上 24 個影片模型刷到 4 個；第三層用同一份考題對打，4 個只有 1 個通過；最後寫成哪類鏡頭交給誰的分工表。這是 2026 年 8 月的實測，排名請當歷史紀錄。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="600" height="918" fill="#FFFFFF"/>
+  <text x="40" y="66" font-size="40" font-weight="700" fill="#1F2937">排行榜只能</text>
+  <text x="40" y="118" font-size="40" font-weight="700" fill="#1F2937">幫你縮名單</text>
+  <text x="40" y="162" font-size="24" fill="#4B5563">2026 年 8 月的選模型過程</text>
+  <path d="M40,200 L560,200 L525,332 L75,332 z" fill="#F1F5F9" stroke="#64748B" stroke-width="3" stroke-linejoin="round"/>
+  <text x="300" y="250" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">排行榜</text>
+  <text x="300" y="292" text-anchor="middle" font-size="24" fill="#4B5563">大量通用題目</text>
+  <text x="300" y="322" text-anchor="middle" font-size="24" fill="#4B5563">的平均偏好</text>
+  <path d="M75,344 L525,344 L490,476 L110,476 z" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3" stroke-linejoin="round"/>
+  <text x="300" y="394" text-anchor="middle" font-size="32" font-weight="700" fill="#2C5B8F">查規格</text>
+  <text x="300" y="438" text-anchor="middle" font-size="26" font-weight="700" fill="#4B5563">24 個 → 4 個</text>
+  <path d="M110,488 L490,488 L455,620 L145,620 z" fill="#FDF3E7" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+  <text x="300" y="538" text-anchor="middle" font-size="32" font-weight="700" fill="#B45309">考題對打</text>
+  <text x="300" y="582" text-anchor="middle" font-size="26" font-weight="700" fill="#4B5563">4 個 → 1 個通過</text>
+  <path d="M145,632 L455,632 L420,764 L180,764 z" fill="#FFF8E7" stroke="#E5A300" stroke-width="5" stroke-linejoin="round"/>
+  <text x="300" y="682" text-anchor="middle" font-size="32" font-weight="700" fill="#8A5D00">分工表</text>
+  <text x="300" y="726" text-anchor="middle" font-size="26" fill="#1F2937">哪類鏡頭交給誰</text>
+  <rect x="40" y="782" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="72" y="827.48" font-size="28" font-weight="700" fill="#1F2937">排行榜縮名單，</text>
+  <text x="72" y="866.68" font-size="28" font-weight="700" fill="#1F2937"><tspan fill="#8A5D00">你的考題</tspan>才決定誰適合你</text>
+</svg>

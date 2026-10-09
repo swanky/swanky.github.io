@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1350" width="600" height="1350" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">開工第一張紙：取材清單</title>
+  <desc id="d">以第八集〈紅妝鬥氣〉為例的取材清單，分三欄：取材章回鎖在第四十回與第四十一回；列出這兩回的六個關鍵事件，由我逐一核對；敏感內容怎麼拍：扮成丫鬟的段落維持成年的臉與身形，丫鬟受罰不拍身體接觸、改用偏頭、茶盤落地與旁人反應，兩人受辱與受害都清楚呈現、不能互相抵銷。先寫好這張紙，防止 AI 補上原文沒有的情節，也防止生圖時才發現不該這樣拍。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1350" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">開工第一張紙：</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">取材清單</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">以第八集〈紅妝鬥氣〉為例</text>
+  <rect x="40" y="206" width="520" height="150" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="68" y="252" font-size="28" font-weight="700" fill="#2C5B8F">1｜取材章回</text>
+  <g transform="translate(112 310) scale(0.55)"><path d="M0,-30 C-16,-42 -36,-42 -50,-36 V40 C-36,34 -16,34 0,46 C16,34 36,34 50,40 V-36 C36,-42 16,-42 0,-30 z" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/><line x1="0" y1="-30" x2="0" y2="46" stroke="#2C5B8F" stroke-width="5"/></g>
+  <text x="170" y="306" font-size="28" font-weight="700" fill="#1F2937">第四十回、第四十一回</text>
+  <text x="170" y="342" font-size="24" fill="#4B5563">只取這兩回</text>
+  <rect x="40" y="376" width="520" height="380" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="68" y="422" font-size="28" font-weight="700" fill="#2C5B8F">2｜關鍵事件</text>
+  <circle cx="86" cy="468" r="16" fill="#2C5B8F"/>
+  <text x="86" y="475" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <line x1="114" y1="476" x2="540" y2="476" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="86" cy="510" r="16" fill="#2C5B8F"/>
+  <text x="86" y="517" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <line x1="114" y1="518" x2="540" y2="518" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="86" cy="552" r="16" fill="#2C5B8F"/>
+  <text x="86" y="559" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <line x1="114" y1="560" x2="540" y2="560" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="86" cy="594" r="16" fill="#2C5B8F"/>
+  <text x="86" y="601" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <line x1="114" y1="602" x2="540" y2="602" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="86" cy="636" r="16" fill="#2C5B8F"/>
+  <text x="86" y="643" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <line x1="114" y1="644" x2="540" y2="644" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="86" cy="678" r="16" fill="#2C5B8F"/>
+  <text x="86" y="685" font-size="20" font-weight="700" text-anchor="middle" fill="#FFFFFF">6</text>
+  <line x1="114" y1="686" x2="540" y2="686" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(88 720) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="114" y="728" font-size="24" font-weight="700" fill="#0E7568">六個事件，由我逐一核對</text>
+  <rect x="40" y="776" width="520" height="372" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="68" y="822" font-size="28" font-weight="700" fill="#B45309">3｜敏感內容怎麼拍</text>
+  <text x="68" y="868" font-size="24" font-weight="700" fill="#1F2937">扮成丫鬟的段落：</text>
+  <text x="68" y="906" font-size="24" fill="#4B5563">維持成年的臉與身形</text>
+  <text x="68" y="972" font-size="24" font-weight="700" fill="#1F2937">丫鬟受罰：不拍身體接觸，</text>
+  <text x="68" y="1010" font-size="24" fill="#4B5563">改用偏頭、茶盤落地、旁人反應</text>
+  <text x="68" y="1076" font-size="24" font-weight="700" fill="#1F2937">兩人受辱、受害都清楚呈現，</text>
+  <text x="68" y="1114" font-size="24" fill="#4B5563">不能互相抵銷</text>
+  <rect x="40" y="1170" width="520" height="150" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1215" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">先寫好：防 AI 補寫</text>
+  <text x="300.0" y="1255" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">原文沒有的情節，</text>
+  <text x="300.0" y="1295" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">也防拍了才發現不該拍</tspan></text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" width="1200" height="790" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">一格分鏡，回答七件事</title>
+  <desc id="d">一格分鏡的解剖圖（示意，非實際委託）：中間是示意畫面，四周標出七件事：第 3 鏡、成片用 4 秒、中近景平視、她放下手機並抬眼、攝影機固定、觀眾聽到雨聲和手機落桌、用途是讓觀眾知道她做了決定。用 AI 生成時再加參考圖、一致性規則、製作方式、驗收條件與備案；驗收條件在生成之前就寫好。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="790" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">一格分鏡，回答七件事</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">示意寫法，非實際委託；用 AI 生成，再多加五欄</text>
+  <clipPath id="c1"><rect x="420" y="186" width="360" height="300" rx="12"/></clipPath>
+  <g clip-path="url(#c1)"><rect x="420" y="186" width="360" height="300" fill="#F1F5F9"/><rect x="643.2" y="204" width="108" height="126" rx="6" fill="#CBD5E1"/><path d="M654,216 l-6,18 M658,248 l-6,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M673.8,216 l-6,18 M677.8,248 l-6,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M693.6,216 l-6,18 M697.6,248 l-6,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M713.4,216 l-6,18 M717.4,248 l-6,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M733.2,216 l-6,18 M737.2,248 l-6,18" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><circle cx="549.6" cy="273.714" r="45.7143" fill="#2C5B8F"/><rect x="469.6" y="330.857" width="160" height="200" rx="51.4286" fill="#2C5B8F"/><rect x="486.743" y="490.857" width="51.4286" height="222.857" rx="17.1429" fill="#2C5B8F"/><rect x="561.029" y="490.857" width="51.4286" height="222.857" rx="17.1429" fill="#2C5B8F"/><path d="M635.314,273.714 l57.6,0" stroke="#B45309" stroke-width="4" stroke-dasharray="8 6"/><path d="M692.914,264.714 l14,9 l-14,9 z" fill="#B45309"/><rect x="420" y="426" width="360" height="60" fill="#94A3B8"/><rect x="663.886" y="418" width="43.2" height="10" rx="3" fill="#1F2937"/></g>
+  <rect x="420" y="186" width="360" height="300" rx="12" fill="none" stroke="#64748B" stroke-width="3"/>
+  <rect x="434" y="200" width="76" height="34" rx="17" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="472" y="224" text-anchor="middle" font-size="22" font-weight="700" fill="#4B5563">示意</text>
+  <rect x="48" y="168" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="80" cy="208" r="20" fill="#2C5B8F"/>
+  <text x="80" y="216.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="112" y="201" font-size="24" font-weight="700" fill="#2C5B8F">第幾鏡</text>
+  <text x="112" y="234" font-size="26" font-weight="700" fill="#1F2937">第 3 鏡</text>
+  <line x1="388" y1="208" x2="414" y2="208" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="48" y="260" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="80" cy="300" r="20" fill="#2C5B8F"/>
+  <text x="80" y="308.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="112" y="293" font-size="24" font-weight="700" fill="#2C5B8F">在成片用幾秒</text>
+  <text x="112" y="326" font-size="26" font-weight="700" fill="#1F2937">4 秒</text>
+  <line x1="388" y1="300" x2="414" y2="300" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="48" y="352" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="80" cy="392" r="20" fill="#2C5B8F"/>
+  <text x="80" y="400.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="112" y="385" font-size="24" font-weight="700" fill="#2C5B8F">景別與鏡位</text>
+  <text x="112" y="418" font-size="26" font-weight="700" fill="#1F2937">中近景，平視</text>
+  <line x1="388" y1="392" x2="414" y2="392" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="48" y="444" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="80" cy="484" r="20" fill="#2C5B8F"/>
+  <text x="80" y="492.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="112" y="477" font-size="24" font-weight="700" fill="#2C5B8F">主體在做什麼</text>
+  <text x="112" y="510" font-size="26" font-weight="700" fill="#1F2937">放下手機、抬眼</text>
+  <line x1="388" y1="484" x2="414" y2="466" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="812" y="168" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="844" cy="208" r="20" fill="#2C5B8F"/>
+  <text x="844" y="216.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="876" y="201" font-size="24" font-weight="700" fill="#2C5B8F">攝影機在做什麼</text>
+  <text x="876" y="234" font-size="26" font-weight="700" fill="#1F2937">固定</text>
+  <line x1="812" y1="208" x2="786" y2="208" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="812" y="260" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="844" cy="300" r="20" fill="#2C5B8F"/>
+  <text x="844" y="308.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">6</text>
+  <text x="876" y="293" font-size="24" font-weight="700" fill="#2C5B8F">觀眾聽到什麼</text>
+  <text x="876" y="326" font-size="26" font-weight="700" fill="#1F2937">雨聲、手機落桌</text>
+  <line x1="812" y1="300" x2="786" y2="300" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="812" y="352" width="340" height="80" rx="16" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <circle cx="844" cy="392" r="20" fill="#2C5B8F"/>
+  <text x="844" y="400.64" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">7</text>
+  <text x="876" y="385" font-size="24" font-weight="700" fill="#2C5B8F">這一鏡的用途</text>
+  <text x="876" y="418" font-size="26" font-weight="700" fill="#1F2937">讓觀眾知道她做了決定</text>
+  <line x1="812" y1="392" x2="786" y2="392" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+  <rect x="812" y="444" width="340" height="80" rx="16" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="982" y="478" text-anchor="middle" font-size="24" font-weight="700" fill="#4B5563">用途就是在問：</text>
+  <text x="982" y="508" text-anchor="middle" font-size="24" font-weight="700" fill="#4B5563">少了它，故事缺什麼？</text>
+  <text x="48" y="600" font-size="26" font-weight="700" fill="#1F2937">用 AI 生成，再加：</text>
+  <rect x="290" y="566" width="118.68" height="50" rx="25.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="349.34" y="600.36" text-anchor="middle" font-size="26" font-weight="700" fill="#B45309">參考圖</text>
+  <rect x="420.68" y="566" width="173.8" height="50" rx="25.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="507.58" y="600.36" text-anchor="middle" font-size="26" font-weight="700" fill="#B45309">一致性規則</text>
+  <rect x="606.48" y="566" width="146.24" height="50" rx="25.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="679.6" y="600.36" text-anchor="middle" font-size="26" font-weight="700" fill="#B45309">製作方式</text>
+  <rect x="764.72" y="566" width="146.24" height="50" rx="25.0" fill="#E5A300" stroke="#E5A300" stroke-width="2"/>
+  <text x="837.84" y="600.36" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">驗收條件</text>
+  <rect x="922.96" y="566" width="91.12" height="50" rx="25.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="968.52" y="600.36" text-anchor="middle" font-size="26" font-weight="700" fill="#B45309">備案</text>
+  <rect x="48" y="660" width="1104" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="80" y="720.8" font-size="30" font-weight="700" fill="#1F2937"><tspan fill="#8A5D00">驗收條件</tspan>在生成之前就寫好，看片時逐條對</text>
+</svg>

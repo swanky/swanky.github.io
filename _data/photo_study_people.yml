@@ -1,0 +1,1006 @@
+# 攝影師圖鑑（/photography/learn/photographers/）資料檔
+#
+# 來源：攝影 repo research/photography-history/ 的人物、經典合作、寫真集研究檔，
+# 依 2026-10-09 素材盤點（session scratchpad photo-zone-inventory.md）收錄所有非 X 級條目。
+# 規矩：
+# - 只放機構事實（姓名、生卒年或年代、國籍或地區、流派或時期、連結），不寫評述句。
+# - 檔案沒記的寫「待考」或「未記」，不憑記憶補；歐美人物的研究檔沒有國籍欄，一律「未記」。
+# - era：篩選用的數字。人物＝出生年，經典合作＝開始年，寫真集＝出版年；待考的不填（歸入「年代待考」）。
+# - grade：盤點等級 A／B／C，只供日後判斷要不要做深度頁；前端只在 deep_url 存在時顯示「拆解」標記。
+# - link：只放盤點表記載、且 2026-10-09 用 curl 檢查可開啟的網址；link_kind 分「官方網站」與「機構頁面」。
+# 排除：任航（X，首批不放）；青山裕企 × 長期被攝者（站主確認前不上）；
+#       Peter Lindbergh × 英國《Vogue》1990 年 1 月號封面（關鍵事實尚無機構來源）。
+
+people:
+  # ── 日本 ──────────────────────────────
+  - name_zh: 佐藤明
+    name_orig: Akira Satō
+    years: 1930–2002
+    era: 1930
+    nationality: 日本
+    region: 日本
+    school: VIVO
+    grade: C
+  - name_zh: 森山大道
+    name_orig: Daido Moriyama
+    years: 1938 年生
+    era: 1938
+    nationality: 日本
+    region: 日本
+    school: Provoke
+    grade: C
+    link: https://www.moriyamadaido.com/en/biography/
+    link_kind: 官方網站
+  - name_zh: 細江英公
+    name_orig: Eikoh Hosoe
+    years: 1933–2024
+    era: 1933
+    nationality: 日本
+    region: 日本
+    school: VIVO
+    grade: C
+  - name_zh: 濱田英明
+    name_orig: Hamada Hideaki
+    years: 1977 年生
+    era: 1977
+    nationality: 日本
+    region: 日本
+    school: 2000 年代日常光
+    grade: C
+    link: https://hideakihamada.com/about
+    link_kind: 官方網站
+  - name_zh: HIROMIX
+    name_orig: Hiromix（Toshikawa Hiromi）
+    years: 1976 年生
+    era: 1976
+    nationality: 日本
+    region: 日本
+    school: 1990 年代女孩寫真
+    grade: C
+  - name_zh: 杉本博司
+    name_orig: Hiroshi Sugimoto
+    years: 1948 年生
+    era: 1948
+    nationality: 日本
+    region: 日本
+    school: 1980 年代
+    grade: C
+    link: https://www.sugimotohiroshi.com/seascapes-1
+    link_kind: 官方網站
+  - name_zh: 木村伊兵衛
+    name_orig: Ihei Kimura
+    years: 1901–1974
+    era: 1901
+    nationality: 日本
+    region: 日本
+    school: 新興寫真、戰後寫實
+    grade: C
+  - name_zh: 奈良原一高
+    name_orig: Ikkō Narahara
+    years: 1931–2020
+    era: 1931
+    nationality: 日本
+    region: 日本
+    school: VIVO
+    grade: C
+  - name_zh: 須田一政
+    name_orig: Issei Suda
+    years: 1940–2019
+    era: 1940
+    nationality: 日本
+    region: 日本
+    school: コンポラ寫真
+    grade: C
+  - name_zh: 中山岩太
+    name_orig: Iwata Nakayama
+    years: 1895–1949
+    era: 1895
+    nationality: 日本
+    region: 日本
+    school: 新興寫真
+    grade: C
+  - name_zh: 梅佳代
+    name_orig: Kayo Ume
+    years: 1981 年生
+    era: 1981
+    nationality: 日本
+    region: 日本
+    school: 2000 年代日常光
+    grade: C
+  - name_zh: 操上和美
+    name_orig: Kazumi Kurigami
+    years: 1936 年生
+    era: 1936
+    nationality: 日本
+    region: 日本
+    school: 廣告與時尚
+    grade: C
+  - name_zh: 土門拳
+    name_orig: Ken Domon
+    years: 1909–1990
+    era: 1909
+    nationality: 日本
+    region: 日本
+    school: 戰後寫實
+    grade: C
+  - name_zh: 川田喜久治
+    name_orig: Kikuji Kawada
+    years: 1933 年生
+    era: 1933
+    nationality: 日本
+    region: 日本
+    school: VIVO
+    grade: C
+  - name_zh: 篠山紀信
+    name_orig: Kishin Shinoyama
+    years: 1940–2024
+    era: 1940
+    nationality: 日本
+    region: 日本
+    school: 1980 年代
+    grade: C
+  - name_zh: 川島小鳥
+    name_orig: Kotori Kawashima
+    years: 1980 年生
+    era: 1980
+    nationality: 日本
+    region: 日本
+    school: 2000 年代日常光
+    grade: C
+    link: https://kawashimakotori.com/2458/
+    link_kind: 官方網站
+  - name_zh: 佐內正史
+    name_orig: Masafumi Sanai
+    years: 1968 年生
+    era: 1968
+    nationality: 日本
+    region: 日本
+    school: 私寫真
+    grade: C
+    link: https://www.sanaimasafumi.jp/
+    link_kind: 官方網站
+  - name_zh: 深瀨昌久
+    name_orig: Masahisa Fukase
+    years: 1934–2012
+    era: 1934
+    nationality: 日本
+    region: 日本
+    school: 私寫真
+    grade: C
+    link: https://masahisafukase.com/biography/
+    link_kind: 官方網站
+  - name_zh: 鋤田正義
+    name_orig: Masayoshi Sukita
+    years: 1938 年生
+    era: 1938
+    nationality: 日本
+    region: 日本
+    school: 廣告與時尚
+    grade: A
+  - name_zh: 蜷川實花
+    name_orig: Mika Ninagawa
+    years: 1972 年生
+    era: 1972
+    nationality: 日本
+    region: 日本
+    school: 1990 年代女孩寫真
+    grade: C
+    link: https://mikaninagawa.com/biography/
+    link_kind: 官方網站
+  - name_zh: 石內都
+    name_orig: Miyako Ishiuchi
+    years: 1947 年生
+    era: 1947
+    nationality: 日本
+    region: 日本
+    school: 私寫真
+    grade: C
+  - name_zh: 荒木經惟
+    name_orig: Nobuyoshi Araki
+    years: 1940 年生
+    era: 1940
+    nationality: 日本
+    region: 日本
+    school: 私寫真
+    grade: C
+  - name_zh: 川內倫子
+    name_orig: Rinko Kawauchi
+    years: 1972 年生
+    era: 1972
+    nationality: 日本
+    region: 日本
+    school: 2000 年代日常光
+    grade: C
+    link: https://rinkokawauchi.com/en/biography/
+    link_kind: 官方網站
+  - name_zh: 牛腸茂雄
+    name_orig: Shigeo Gocho
+    years: 1946–1983
+    era: 1946
+    nationality: 日本
+    region: 日本
+    school: コンポラ寫真
+    grade: C
+  - name_zh: 植田正治
+    name_orig: Shoji Ueda
+    years: 1913–2000
+    era: 1913
+    nationality: 日本
+    region: 日本
+    school: 新興寫真
+    grade: C
+  - name_zh: 東松照明
+    name_orig: Shomei Tomatsu
+    years: 1930–2012
+    era: 1930
+    nationality: 日本
+    region: 日本
+    school: VIVO
+    grade: C
+  - name_zh: ホンマタカシ
+    name_orig: Takashi Homma
+    years: 1962 年生
+    era: 1962
+    nationality: 日本
+    region: 日本
+    school: 2000 年代日常光、郊外風景
+    grade: C
+  - name_zh: 中平卓馬
+    name_orig: Takuma Nakahira
+    years: 1938–2015
+    era: 1938
+    nationality: 日本
+    region: 日本
+    school: Provoke
+    grade: C
+  - name_zh: 野島康三
+    name_orig: Yasuzo Nojima
+    years: 1889–1964
+    era: 1889
+    nationality: 日本
+    region: 日本
+    school: 新興寫真
+    grade: C
+  - name_zh: 上田義彥
+    name_orig: Yoshihiko Ueda
+    years: 1957 年生
+    era: 1957
+    nationality: 日本
+    region: 日本
+    school: 廣告與時尚
+    grade: C
+    link: https://www.yoshihikoueda.com/i/biography/
+    link_kind: 官方網站
+  - name_zh: 青山裕企
+    name_orig: Yuki Aoyama
+    years: 待考
+    nationality: 日本
+    region: 日本
+    school: 2000 年代至今
+    grade: C
+    link: https://yukiao.jp/books/20260919/11173
+    link_kind: 官方網站
+  - name_zh: 長島有里枝
+    name_orig: Yurie Nagashima
+    years: 1973 年生
+    era: 1973
+    nationality: 日本
+    region: 日本
+    school: 1990 年代女孩寫真
+    grade: C
+    link: https://yurienagashima.com/biography
+    link_kind: 官方網站
+  - name_zh: 高梨豐
+    name_orig: Yutaka Takanashi
+    years: 1935 年生
+    era: 1935
+    nationality: 日本
+    region: 日本
+    school: Provoke
+    grade: C
+
+  # ── 歐美（研究檔沒有國籍欄，一律「未記」；中文譯名檔案沒記，不自行翻譯）──
+  - name_orig: Adolph de Meyer
+    years: 1868–1946
+    era: 1868
+    nationality: 未記
+    region: 歐美
+    school: 畫意到現代主義
+    grade: C
+  - name_orig: Annie Leibovitz
+    years: 待考
+    nationality: 未記
+    region: 歐美
+    school: 1970 年代至今
+    grade: C
+  - name_orig: Arthur Elgort
+    years: 1940 年生
+    era: 1940
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+    link: https://arthurelgort.com/biography
+    link_kind: 官方網站
+  - name_orig: Bruce Weber
+    years: 1946 年生
+    era: 1946
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: A
+  - name_orig: Cecil Beaton
+    years: 待考
+    nationality: 未記
+    region: 歐美
+    school: 1920–1970 年代
+    grade: C
+  - name_orig: Corinne Day
+    years: 1962–2010
+    era: 1962
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代
+    grade: C
+    link: https://www.corinneday.com/exhibitions/
+    link_kind: 官方網站
+  - name_orig: David Bailey
+    years: 1938 年生
+    era: 1938
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+  - name_orig: David LaChapelle
+    years: 待考
+    nationality: 未記
+    region: 歐美
+    school: 2000 年代搭景與數位
+    grade: C
+    link: https://www.davidlachapelle.com/last-supper
+    link_kind: 官方網站
+  - name_orig: David Sims
+    years: 1966 年生
+    era: 1966
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代、2000 年代
+    grade: C
+    link: https://www.davidsims.com/
+    link_kind: 官方網站
+  - name_orig: Deborah Turbeville
+    years: 1932–2013
+    era: 1932
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: A
+    link: https://www.muuscollection.com/artists/deborah-turbeville
+    link_kind: 機構頁面
+  - name_orig: Edward Steichen
+    years: 1879–1973
+    era: 1879
+    nationality: 未記
+    region: 歐美
+    school: 畫意到現代主義
+    grade: C
+  - name_orig: Ellen von Unwerth
+    years: 1954 年生
+    era: 1954
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代至今
+    grade: C
+  - name_orig: Erwin Blumenfeld
+    years: 1897–1969
+    era: 1897
+    nationality: 未記
+    region: 歐美
+    school: 1940–1950 年代紐約棚拍
+    grade: C
+    link: https://erwinblumenfeld.com/biography/
+    link_kind: 官方網站
+  - name_orig: Frank Horvat
+    years: 1928–2020
+    era: 1928
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+    link: https://www.studiofrankhorvat.com/frankhorvat
+    link_kind: 官方網站
+  - name_orig: George Hoyningen-Huene
+    years: 1900–1968
+    era: 1900
+    nationality: 未記
+    region: 歐美
+    school: 巴黎棚拍
+    grade: C
+  - name_orig: Guy Bourdin
+    years: 1928–1991
+    era: 1928
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+    link: https://www.guybourdin.org/artworks
+    link_kind: 官方網站
+  - name_orig: Harley Weir
+    years: 1988 年生
+    era: 1988
+    nationality: 未記
+    region: 歐美
+    school: 2010 年代至今
+    grade: A
+  - name_orig: Helmut Newton
+    years: 1920–2004
+    era: 1920
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+    link: https://newton-foundation.org/en/helmut-newton/
+    link_kind: 官方網站
+  - name_orig: Herb Ritts
+    years: 1952–2002
+    era: 1952
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: A
+  - name_orig: Horst P. Horst
+    years: 1906–1999
+    era: 1906
+    nationality: 未記
+    region: 歐美
+    school: 巴黎棚拍
+    grade: C
+  - name_orig: Irving Penn
+    years: 1917–2009
+    era: 1917
+    nationality: 未記
+    region: 歐美
+    school: 1940–1950 年代紐約棚拍
+    grade: C
+    link: https://www.irvingpenn.org/biography
+    link_kind: 官方網站
+  - name_orig: Jamie Hawkesworth
+    years: 1987 年生
+    era: 1987
+    nationality: 未記
+    region: 歐美
+    school: 2010 年代至今
+    grade: C
+  - name_orig: Jeanloup Sieff
+    years: 1933–2000
+    era: 1933
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: A
+    link: https://jeanloupsieff.com/parcours.php
+    link_kind: 官方網站
+  - name_orig: Juergen Teller
+    years: 1964 年生
+    era: 1964
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代、2000 年代
+    grade: A
+  - name_orig: Lillian Bassman
+    years: 1917–2012
+    era: 1917
+    nationality: 未記
+    region: 歐美
+    school: 1940–1950 年代紐約棚拍
+    grade: C
+  - name_orig: Louise Dahl-Wolfe
+    years: 1895–1989
+    era: 1895
+    nationality: 未記
+    region: 歐美
+    school: 1940–1950 年代紐約棚拍
+    grade: C
+  - name_orig: Mario Testino
+    years: 待考
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代至今
+    grade: C
+    link: https://mariotestino.com/exhibitions/british-royal-portraits
+    link_kind: 官方網站
+  - name_orig: Martin Munkácsi
+    years: 1896–1963
+    era: 1896
+    nationality: 未記
+    region: 歐美
+    school: 巴黎棚拍
+    grade: C
+  - name_orig: Miles Aldridge
+    years: 待考
+    nationality: 未記
+    region: 歐美
+    school: 2000 年代搭景與數位
+    grade: C
+    link: https://milesaldridge.com/about/
+    link_kind: 官方網站
+  - name_orig: Nick Knight
+    years: 1958 年生
+    era: 1958
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代至今
+    grade: C
+    link: https://www.nickknight.com/about
+    link_kind: 官方網站
+  - name_orig: Paolo Roversi
+    years: 1947 年生
+    era: 1947
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代至今
+    grade: C
+  - name_orig: Peter Lindbergh
+    years: 1944–2019
+    era: 1944
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+  - name_orig: Richard Avedon
+    years: 1923–2004
+    era: 1923
+    nationality: 未記
+    region: 歐美
+    school: 1940–1950 年代紐約棚拍
+    grade: C
+    link: https://www.avedonfoundation.org/
+    link_kind: 官方網站
+  - name_orig: Sarah Moon
+    years: 1941 年生
+    era: 1941
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+  - name_orig: Steven Meisel
+    years: 1954 年生
+    era: 1954
+    nationality: 未記
+    region: 歐美
+    school: 1990 年代至今
+    grade: C
+  - name_orig: Tim Walker
+    years: 1970 年生
+    era: 1970
+    nationality: 未記
+    region: 歐美
+    school: 2000 年代
+    grade: C
+    link: https://www.timwalkerphotography.com
+    link_kind: 官方網站
+  - name_orig: Tyler Mitchell
+    years: 1995 年生
+    era: 1995
+    nationality: 未記
+    region: 歐美
+    school: 2010 年代至今
+    grade: C
+  - name_orig: Viviane Sassen
+    years: 1972 年生
+    era: 1972
+    nationality: 未記
+    region: 歐美
+    school: 2000 年代、2010 年代至今
+    grade: A
+  - name_orig: William Klein
+    years: 1926–2022
+    era: 1926
+    nationality: 未記
+    region: 歐美
+    school: 1960–1980 年代
+    grade: C
+
+  # ── 台灣 ──────────────────────────────
+  - name_zh: 張照堂
+    name_orig: Chang Chao-tang
+    years: 1943–2024
+    era: 1943
+    nationality: 台灣
+    region: 台灣
+    school: 現代主義、紀實
+    grade: A
+    link: "https://www.ncafroc.org.tw/artsaward/winnerDetail@1209"
+    link_kind: 機構頁面
+  - name_zh: 張才
+    name_orig: Chang Tsai
+    years: 1916–1994
+    era: 1916
+    nationality: 台灣
+    region: 台灣
+    school: 戰後寫實
+    grade: A
+    link: "https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210004"
+    link_kind: 機構頁面
+  - name_zh: 鄧南光
+    name_orig: Deng Nan-guang
+    years: 1907–1971
+    era: 1907
+    nationality: 台灣
+    region: 台灣
+    school: 日治寫真館、戰後寫實
+    grade: A
+    link: "https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210004"
+    link_kind: 機構頁面
+  - name_zh: 關曉榮
+    name_orig: Guan Xiao-Rong
+    years: 1949 年生
+    era: 1949
+    nationality: 台灣
+    region: 台灣
+    school: 紀實
+    grade: A
+    link: "https://ncpi.ntmofa.gov.tw/News_Publish_Content_ncpi.aspx?n=7874&s=204596"
+    link_kind: 機構頁面
+  - name_zh: 何經泰
+    name_orig: Ho Ching-tai
+    years: 1958 年生
+    era: 1958
+    nationality: 台灣
+    region: 台灣
+    school: 紀實、當代人像
+    grade: B
+    link: "https://ncpi.ntmofa.gov.tw/News_Publish_Content_ncpi.aspx?n=7874&s=204620"
+    link_kind: 機構頁面
+  - name_zh: 謝春德
+    name_orig: Hsieh Chun-te
+    years: 1949 年生
+    era: 1949
+    nationality: 台灣
+    region: 台灣
+    school: 現代主義
+    grade: A
+    link: "https://collections.culture.tw/ncop_collectionsweb/collection.aspx?GID=MZM7MAMBMNMAMRMLME"
+    link_kind: 機構頁面
+  - name_zh: 阮義忠
+    name_orig: Juan I-jong
+    years: 1950 年生
+    era: 1950
+    nationality: 台灣
+    region: 台灣
+    school: 紀實
+    grade: A
+    link: "https://collections.culture.tw/ncop_collectionsweb/collection.aspx?GID=MGMCMWMZMCMAMRMLME"
+    link_kind: 機構頁面
+  - name_zh: 柯錫杰
+    name_orig: Ko Si-chi
+    years: 1929–2020
+    era: 1929
+    nationality: 台灣
+    region: 台灣
+    school: 現代主義
+    grade: A
+    link: "https://www.ncafroc.org.tw/artsaward/winnerDetail@1249"
+    link_kind: 機構頁面
+  - name_zh: 郎靜山
+    name_orig: Long Chin-san（亦作 Lang Jingshan）
+    years: 1892–1995
+    era: 1892
+    nationality: 台灣
+    region: 台灣
+    school: 沙龍畫意
+    grade: A
+    link: "https://longchinsanfoundation.com/%e7%b0%a1%e7%95%a5%e5%b9%b4%e8%ad%9c/"
+    link_kind: 官方網站
+  - name_zh: 李鳴鵰
+    name_orig: Lee Ming-tiao
+    years: 1922–2013
+    era: 1922
+    nationality: 台灣
+    region: 台灣
+    school: 戰後寫實
+    grade: A
+    link: "https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210004"
+    link_kind: 機構頁面
+  - name_zh: 彭瑞麟
+    name_orig: Peng Ruey-lin
+    years: 約 1904 年生（推定）；卒年待考
+    era: 1904
+    nationality: 台灣
+    region: 台灣
+    school: 日治寫真館
+    grade: B
+    link: "https://ncpi.ntmofa.gov.tw/News_Publish_Content_ncpi.aspx?n=7874&s=204609"
+    link_kind: 機構頁面
+  - name_zh: 郭英聲
+    name_orig: Quo Ying-sheng
+    years: 1950 年生
+    era: 1950
+    nationality: 台灣
+    region: 台灣
+    school: 現代主義、當代人像
+    grade: A
+    link: "https://ncpi.ntmofa.gov.tw/News_Publish_Content_ncpi.aspx?n=7874&s=204602"
+    link_kind: 機構頁面
+
+  # ── 東亞 ──────────────────────────────
+  - name_zh: 陳漫
+    name_orig: Chen Man
+    years: 1980 年生
+    era: 1980
+    nationality: 中國
+    region: 東亞
+    school: 2003 年至今
+    grade: B
+    link: https://stockholm.fotografiska.com/exhibitions/chen-man
+    link_kind: 機構頁面
+  - name_zh: 何藩
+    name_orig: Fan Ho（亦作 Ho Fan）
+    years: 1931–2016（生年另有 1932、1937 兩說）
+    era: 1931
+    nationality: 香港
+    region: 東亞
+    school: 1950–1960 年代攝影
+    grade: A
+    link: https://www.mplus.org.hk/en/collection/objects/smoky-world-201533
+    link_kind: 機構頁面
+  - name_zh: 김중만
+    name_orig: Kim Jungman（亦作 Kim Jung-man）
+    years: 1954–2022
+    era: 1954
+    nationality: 韓國
+    region: 東亞
+    school: 1975–2022
+    grade: A
+    link: https://mediahub.seoul.go.kr/archives/186624
+    link_kind: 機構頁面
+  - name_zh: 劉錚
+    name_orig: Liu Zheng
+    years: 1969 年生
+    era: 1969
+    nationality: 中國
+    region: 東亞
+    school: 1991 年至今
+    grade: A
+    link: https://www.mplus.org.hk/en/collection/makers/liu-zheng/
+    link_kind: 機構頁面
+  - name_zh: 榮榮與映里
+    name_orig: RongRong & inri
+    years: 榮榮 1968 年生；映里 1973 年生
+    era: 1968
+    nationality: 中國
+    region: 東亞
+    school: 1993 年至今（雙人合作 2000 年起）
+    grade: A
+    link: https://www.rongin.com/profile.html
+    link_kind: 官方網站
+  - name_zh: 夏永康
+    name_orig: Wing Shya
+    years: 1964 年生
+    era: 1964
+    nationality: 香港
+    region: 東亞
+    school: 1990 年代至今
+    grade: A
+    link: https://www.wingshya.com/profile
+    link_kind: 官方網站
+  - name_zh: 육명심
+    name_orig: Yook Myungsim（亦作 Yook Myung-shim）
+    years: 1933–2025
+    era: 1933
+    nationality: 韓國
+    region: 東亞
+    school: 1960–2010 年代
+    grade: A
+    link: "https://museumhanmi.or.kr/post_exhibition/%e3%80%8a%ec%9c%a1%eb%aa%85%ec%8b%ac%ed%95%9c%ec%a0%95%ec%8b%9d%eb%b0%95%ec%98%81%ec%88%99%e3%80%8b/"
+    link_kind: 機構頁面
+
+# 經典合作：period 是合作或可查證發表的期間
+collabs:
+  - name_zh: 細江英公 × 土方巽
+    name_orig: Eikoh Hosoe × Tatsumi Hijikata
+    period: 1965 年拍攝《鎌鼬》，1969 年成書
+    era: 1965
+    region: 日本
+    grade: A
+    link: https://en.seigensha.com/books/978-4-86152-208-6/
+    link_kind: 機構頁面
+  - name_zh: 篠山紀信 × 坂東玉三郎（五代目）
+    name_orig: Kishin Shinoyama × Bandō Tamasaburō V
+    period: 1972 年首部合作寫真集，2007 年兩卷本
+    era: 1972
+    region: 日本
+    grade: A
+    link: https://ndlsearch.ndl.go.jp/books/R100000002-I000008527555
+    link_kind: 機構頁面
+  - name_zh: 篠山紀信 × 山口百惠
+    name_orig: Kishin Shinoyama × Momoe Yamaguchi
+    period: 1974 年起，1980 年寫真集《百恵》
+    era: 1974
+    region: 日本
+    grade: A
+    link: https://ndlsearch.ndl.go.jp/books/R100000002-I000001491048
+    link_kind: 機構頁面
+  - name_zh: 深瀨昌久 × 洋子
+    name_orig: Masahisa Fukase × Yōko
+    period: 可查證的發表為 1974–1978 年
+    era: 1974
+    region: 日本
+    grade: B
+    link: https://masahisafukase.com/yohko-1978/
+    link_kind: 官方網站
+  - name_zh: 荒木經惟 × 荒木陽子
+    name_orig: Nobuyoshi Araki × Yōko Araki
+    period: 1960 年代末相識，至 1990 年陽子過世
+    era: 1960
+    region: 日本
+    grade: A
+    link: https://topmuseum.jp/upload/2/2866/press_release_araki_20170613.pdf
+    link_kind: 機構頁面
+  - name_zh: 川島小鳥 ×《未来ちゃん》
+    name_orig: Kotori Kawashima × Mirai-chan
+    period: 2010 年首展，2011 年寫真集
+    era: 2010
+    region: 日本
+    grade: A
+    link: https://kawashimakotori.com/about/
+    link_kind: 官方網站
+  - name_zh: 柯錫杰 × 樊潔兮
+    name_orig: Ko Si-chi × Fan Chieh-hsi
+    period: 1982 年相識，至 2020 年柯錫杰過世
+    era: 1982
+    region: 台灣
+    grade: A
+    link: https://par.npac-ntch.org/tw/article/doc/D99EPH3NAO
+    link_kind: 機構頁面
+  - name_orig: Helmut Newton × June Newton（Alice Springs）
+    period: 1947 年相識、1948 年結婚，至 2004 年 Helmut 過世
+    era: 1947
+    region: 歐美
+    grade: A
+    link: https://newton-foundation.org/en/alice-springs/
+    link_kind: 官方網站
+  - name_orig: Irving Penn × Lisa Fonssagrives
+    period: 1950 年代為主要合作期
+    era: 1950
+    region: 歐美
+    grade: A
+    link: https://irvingpenn.org/chronology
+    link_kind: 官方網站
+  - name_orig: Richard Avedon × Dovima
+    period: 至遲 1950 年起，以 1950 年代為主
+    era: 1950
+    region: 歐美
+    grade: A
+    link: https://art.nelson-atkins.org/objects/48816/dovima-with-elephants-evening-dress-by-dior-cirque-dhiver
+    link_kind: 機構頁面
+  - name_orig: David Bailey × Jean Shrimpton
+    period: 1961–1964 年
+    era: 1961
+    region: 歐美
+    grade: A
+    link: https://collections.vam.ac.uk/item/O92748/david-baileys-box-of-pin-photograph-bailey-david/
+    link_kind: 機構頁面
+  - name_orig: Herb Ritts × Madonna
+    period: 可查證的作品集中在 1986–1990 年
+    era: 1986
+    region: 歐美
+    grade: B
+    link: https://www.mfa.org/news/herb-ritts
+    link_kind: 機構頁面
+  - name_orig: Corinne Day × Kate Moss
+    period: 約 1989／1990–1993 年
+    era: 1989
+    region: 歐美
+    grade: A
+    link: https://www.corinneday.com/autobiography/
+    link_kind: 官方網站
+  - name_orig: Tim Walker × Tilda Swinton
+    period: 2011 年至今
+    era: 2011
+    region: 歐美
+    grade: A
+    link: https://www.timwalkerphotography.com/biography
+    link_kind: 官方網站
+
+# 寫真集：year 是初版年；publisher 照研究檔記載，推定的標「推定」
+books:
+  - title: Les Américains／The Americans
+    author: Robert Frank
+    year: 1958
+    era: 1958
+    publisher: Robert Delpire éditeur（巴黎）
+    region: 歐美
+    grade: A
+    link: https://www.metmuseum.org/zh/press-releases/robert-franks-groundbreaking-photographs-featured-in-major-exhibition-marking-50th-anniversary-of-his-book-ithe-americansi-2009-exhibitions
+    link_kind: 機構頁面
+  - title: センチメンタルな旅
+    author: 荒木經惟
+    year: 1971
+    era: 1971
+    publisher: 自費出版（東京）
+    region: 日本
+    grade: A
+    link: https://www.kawade.co.jp/np/isbn/9784309277004/
+    link_kind: 機構頁面
+  - title: 写真よさようなら
+    author: 森山大道
+    year: 1972
+    era: 1972
+    publisher: 写真評論社（東京）
+    region: 日本
+    grade: A
+    link: https://ndlsearch.ndl.go.jp/books/R100000002-I000001277050
+    link_kind: 機構頁面
+  - title: In the American West
+    author: Richard Avedon
+    year: 1985
+    era: 1985
+    publisher: Harry N. Abrams（推定）
+    region: 歐美
+    grade: A
+    link: https://www.cartermuseum.org/carter-collection/collection-group/american-west
+    link_kind: 機構頁面
+  - title: The Ballad of Sexual Dependency
+    author: Nan Goldin
+    year: 1986
+    era: 1986
+    publisher: Aperture（紐約）
+    region: 歐美
+    grade: A
+    link: https://aperture.org/interviews/inside-story-of-how-nan-goldin-edited-the-ballad/
+    link_kind: 機構頁面
+  - title: 人與土地
+    author: 阮義忠
+    year: 1987
+    era: 1987
+    publisher: 初版出版社待考
+    region: 台灣
+    grade: B
+    link: https://ndlsearch.ndl.go.jp/books/R100000002-I034797080
+    link_kind: 機構頁面
+  - title: Santa Fe
+    author: 篠山紀信
+    year: 1991
+    era: 1991
+    publisher: 朝日出版社（東京）
+    region: 日本
+    grade: A
+    link: https://ndlsearch.ndl.go.jp/books/R100000002-I000002153550
+    link_kind: 機構頁面
+  - title: うたたね
+    author: 川內倫子
+    year: 2001
+    era: 2001
+    publisher: リトルモア（Little More，東京）
+    region: 日本
+    grade: A
+    link: https://littlemore.co.jp/isbn9784898150528
+    link_kind: 機構頁面
+  - title: Sleeping by the Mississippi
+    author: Alec Soth
+    year: 2004
+    era: 2004
+    publisher: Steidl（Göttingen）
+    region: 歐美
+    grade: A
+    link: https://new.artsmia.org/press/alec-soth-sleeping-by-the-mississippi/
+    link_kind: 機構頁面
+  - title: 未来ちゃん
+    author: 川島小鳥
+    year: 2011
+    era: 2011
+    publisher: ナナロク社（東京）
+    region: 日本
+    grade: A
+    link: https://kawashimakotori.com/850/
+    link_kind: 官方網站
+  - title: The Afronauts
+    author: Cristina de Middel
+    year: 2012
+    era: 2012
+    publisher: 自費出版
+    region: 歐美
+    grade: A
+    link: https://lademiddel.com/books/the-afronauts/
+    link_kind: 官方網站

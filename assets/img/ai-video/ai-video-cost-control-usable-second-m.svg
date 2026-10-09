@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1094" width="600" height="1094" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">比單價，不如比每可用秒成本</title>
+  <desc id="d">每可用秒成本等於所有嘗試的實付（成功、失敗、淘汰都算），除以最後真正剪進成片的秒數。方向參考永遠不算可用秒數；有條件可用的要修好用上才算。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1094" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">比單價，不如比</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">每可用秒成本</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">失敗和淘汰的錢也算進去，</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">只除以真正剪進成片的秒數</text>
+  <text x="40" y="290" font-size="34" font-weight="700" fill="#1F2937">每可用秒成本 ＝</text>
+  <text x="40" y="350" font-size="24" font-weight="700" fill="#1F2937">所有嘗試的實付（長度示意）</text>
+  <rect x="40" y="368" width="244" height="64" rx="12" fill="#0E7568"/>
+  <text x="162.0" y="410" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">成功</text>
+  <rect x="290" y="368" width="144" height="64" rx="12" fill="#B91C1C"/>
+  <text x="362.0" y="410" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">失敗</text>
+  <rect x="440" y="368" width="114" height="64" rx="12" fill="#64748B"/>
+  <text x="497.0" y="410" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">淘汰</text>
+  <rect x="40" y="452" width="520" height="8" rx="4" fill="#1F2937"/>
+  <text x="40" y="504" font-size="24" font-weight="700" fill="#1F2937">最後真正剪進成片的秒數</text>
+  <rect x="40" y="522" width="250" height="76" rx="8" fill="#0E7568"/>
+  <rect x="50" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="50" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="74" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="74" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="98" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="98" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="122" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="122" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="146" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="146" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="170" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="170" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="194" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="194" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="218" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="218" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="242" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="242" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="266" y="529" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="266" y="583" width="11" height="8" rx="2" fill="#FFFFFF"/>
+  <text x="165" y="568" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">只算這一段</text>
+  <rect x="40" y="640" width="520" height="128" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="70" y="690" font-size="30" font-weight="700" fill="#B91C1C">失敗也算進分子</text>
+  <text x="70" y="734" font-size="24" fill="#4B5563">不然低成功率的模型會被美化</text>
+  <rect x="40" y="790" width="520" height="128" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="70" y="840" font-size="30" font-weight="700" fill="#64748B">方向參考</text>
+  <text x="70" y="884" font-size="24" fill="#4B5563">只能當方向參考的片段，永遠不算</text>
+  <rect x="40" y="940" width="520" height="128" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="70" y="990" font-size="30" font-weight="700" fill="#B45309">有條件可用</text>
+  <text x="70" y="1034" font-size="24" fill="#4B5563">要等修好、真的用上，才算</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1462" width="600" height="1462" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">鏡頭語言速查卡</title>
+  <desc id="d">三層速查。第一層寫進指令：建立鏡頭、中景、中近景、特寫、推近、拉遠、推軌、跟拍、環繞、移焦、動機光、畫面內光源、低調光、框中框，一鏡只給一個主要運鏡。第二層寫進分鏡表：過肩、反應鏡頭、交叉剪輯、蒙太奇、慢動作、一鏡到底、溶接、淡入淡出，不塞進一次生成。第三層寫進全片風格：黑色電影、武俠、倒敘、伏筆、懸念結尾、調色、去飽和、底片顆粒，定一次每一鏡沿用。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="600" height="1462" fill="#FFFFFF"/>
+  <text x="40" y="66" font-size="40" font-weight="700" fill="#1F2937">鏡頭語言速查卡</text>
+  <text x="40" y="110" font-size="24" fill="#4B5563">寫指令前對一下：這個詞該放哪裡？</text>
+  <rect x="40" y="160" width="520" height="404" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="74" cy="196" r="22" fill="#2C5B8F"/>
+  <text x="74" y="205.36" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="108" y="206" font-size="34" font-weight="700" fill="#2C5B8F">第一層</text>
+  <g transform="translate(470,212) scale(0.6)"><rect x="-50" y="-36" width="100" height="72" rx="10" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5"/><path d="M-34,-14 L18,-14 M-34,2 L30,2 M-34,18 L4,18" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/><rect x="12" y="8" width="5" height="20" fill="#2C5B8F"/></g>
+  <text x="108" y="248" font-size="26" font-weight="700" fill="#2C5B8F">→ 寫進指令</text>
+  <rect x="64" y="274" width="137.76" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="132.88" y="304.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">建立鏡頭</text>
+  <rect x="211.76" y="274" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="255.2" y="304.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">中景</text>
+  <rect x="308.64" y="274" width="112.32" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="364.8" y="304.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">中近景</text>
+  <rect x="430.96" y="274" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="474.4" y="304.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">特寫</text>
+  <rect x="64" y="330" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="107.44" y="360.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">推近</text>
+  <rect x="160.88" y="330" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="204.32" y="360.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">拉遠</text>
+  <rect x="257.76" y="330" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="301.2" y="360.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">推軌</text>
+  <rect x="354.64" y="330" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="398.08" y="360.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">跟拍</text>
+  <rect x="64" y="386" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="107.44" y="416.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">環繞</text>
+  <rect x="160.88" y="386" width="86.88" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="204.32" y="416.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">移焦</text>
+  <rect x="257.76" y="386" width="112.32" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="313.92" y="416.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">動機光</text>
+  <rect x="64" y="442" width="163.2" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="145.6" y="472.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">畫面內光源</text>
+  <rect x="237.2" y="442" width="112.32" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="293.36" y="472.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">低調光</text>
+  <rect x="359.52" y="442" width="112.32" height="44" rx="22.0" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="415.68" y="472.64" text-anchor="middle" font-size="24" font-weight="700" fill="#2C5B8F">框中框</text>
+  <text x="64" y="534" font-size="26" font-weight="700" fill="#1F2937"><tspan fill="#2C5B8F">✓ </tspan>一鏡只給一個主要運鏡</text>
+  <rect x="40" y="588" width="520" height="348" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="74" cy="624" r="22" fill="#B45309"/>
+  <text x="74" y="633.36" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="108" y="634" font-size="34" font-weight="700" fill="#B45309">第二層</text>
+  <g transform="translate(470,640) scale(0.6)"><rect x="-54" y="-38" width="108" height="76" rx="10" fill="#FDF3E7" stroke="#B45309" stroke-width="5"/><rect x="-46" y="-30" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="-46" y="2" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="-14" y="-30" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="-14" y="2" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="18" y="-30" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/><rect x="18" y="2" width="26" height="26" rx="4" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/></g>
+  <text x="108" y="676" font-size="26" font-weight="700" fill="#B45309">→ 寫進分鏡表</text>
+  <rect x="64" y="702" width="86.88" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="107.44" y="732.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">過肩</text>
+  <rect x="160.88" y="702" width="137.76" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="229.76" y="732.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">反應鏡頭</text>
+  <rect x="308.64" y="702" width="137.76" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="377.52" y="732.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">交叉剪輯</text>
+  <rect x="64" y="758" width="112.32" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="120.16" y="788.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">蒙太奇</text>
+  <rect x="186.32" y="758" width="112.32" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="242.48" y="788.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">慢動作</text>
+  <rect x="308.64" y="758" width="137.76" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="377.52" y="788.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">一鏡到底</text>
+  <rect x="64" y="814" width="86.88" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="107.44" y="844.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">溶接</text>
+  <rect x="160.88" y="814" width="137.76" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="229.76" y="844.64" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">淡入淡出</text>
+  <text x="64" y="906" font-size="26" font-weight="700" fill="#1F2937"><tspan fill="#B45309">✓ </tspan>不塞進一次生成，拆鏡或交給剪輯</text>
+  <rect x="40" y="960" width="520" height="348" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="74" cy="996" r="22" fill="#0E7568"/>
+  <text x="74" y="1005.36" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="108" y="1006" font-size="34" font-weight="700" fill="#0E7568">第三層</text>
+  <g transform="translate(470,1012) scale(0.6)"><rect x="-54" y="-36" width="108" height="72" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><rect x="-42" y="-22" width="18" height="44" rx="4" fill="#1F2937"/><rect x="-20" y="-22" width="18" height="44" rx="4" fill="#475569"/><rect x="2" y="-22" width="18" height="44" rx="4" fill="#94A3B8"/><rect x="24" y="-22" width="18" height="44" rx="4" fill="#E5A300"/></g>
+  <text x="108" y="1048" font-size="26" font-weight="700" fill="#0E7568">→ 寫進全片風格</text>
+  <rect x="64" y="1074" width="137.76" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="132.88" y="1104.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">黑色電影</text>
+  <rect x="211.76" y="1074" width="86.88" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="255.2" y="1104.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">武俠</text>
+  <rect x="308.64" y="1074" width="86.88" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="352.08" y="1104.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">倒敘</text>
+  <rect x="405.52" y="1074" width="86.88" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="448.96" y="1104.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">伏筆</text>
+  <rect x="64" y="1130" width="137.76" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="132.88" y="1160.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">懸念結尾</text>
+  <rect x="211.76" y="1130" width="86.88" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="255.2" y="1160.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">調色</text>
+  <rect x="308.64" y="1130" width="112.32" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="364.8" y="1160.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">去飽和</text>
+  <rect x="64" y="1186" width="137.76" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="132.88" y="1216.64" text-anchor="middle" font-size="24" font-weight="700" fill="#0E7568">底片顆粒</text>
+  <text x="64" y="1278" font-size="26" font-weight="700" fill="#1F2937"><tspan fill="#0E7568">✓ </tspan>定一次，每一鏡沿用</text>
+  <rect x="40" y="1332" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="72" y="1377.48" font-size="28" font-weight="700" fill="#1F2937">送出前，對實際指令</text>
+  <text x="72" y="1416.68" font-size="28" font-weight="700" fill="#1F2937"><tspan fill="#8A5D00">跑一次五項自查</tspan></text>
+</svg>

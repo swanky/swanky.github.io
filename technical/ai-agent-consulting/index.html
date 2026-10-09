@@ -3,10 +3,12 @@ layout: home
 title: AI Agent 導入顧問
 seo_title: AI Agent 導入顧問｜從評估、小範圍試行到團隊規範
 permalink: /technical/ai-agent-consulting/
-description: 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。提供導入評估、小範圍實際試行、團隊規範與持續優化；不綁定 Claude Code、Codex 或單一工具。
+description: 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。可從 2–3 小時導入工作坊開始，再進入導入評估、小範圍實際試行與團隊規範；不綁定 Claude Code、Codex 或單一工具。
 keywords: AI Agent導入顧問,Agentic Engineering,AI Coding,Claude Code,Codex,企業AI導入,軟體工程流程,史旺基
 og_image: /assets/img/technical/ai-agent-consulting-hero.jpg
 nav_active: technical
+extra_head: |
+  <link href="/assets/css/enterprise.css?v=20261009-2" rel="stylesheet">
 extra_css: |
   /* 首屏圖為 3:2 構圖；手機直式圖框（358×385）會裁掉左右近四成，改 4:3 讓主體完整入鏡 */
   @media (max-width: 767px) {
@@ -32,11 +34,14 @@ breadcrumbs:
   image="/assets/img/technical/ai-agent-consulting-hero.jpg"
   alt="水手服少女在明亮辦公室向團隊介紹牆面螢幕上的 AI 代理協作流程與驗證通過標記，AI 生成情境示意圖"
   caption="AI 生成情境示意圖｜AI Coding 導入與工作流程設計"
-  primary_href="#contact"
-  primary_service="ai_agent_consulting"
-  primary_label="免費來信洽詢 AI 導入"
+  primary_href="#workshop"
+  primary_service="agentic_engineering_training"
+  primary_label="從 2–3 小時工作坊開始"
   secondary_href="#starting-points"
   secondary_label="查看合作方式"
+  tertiary_href="#contact"
+  tertiary_service="ai_agent_consulting"
+  tertiary_label="免費來信洽詢"
 %}
 
 <section class="tech-section">
@@ -55,12 +60,18 @@ breadcrumbs:
   </div>
 </section>
 
+<section class="tech-section tech-section--blue" id="workshop">
+  {% capture ws_lead %}還沒想清楚要從哪裡開始，也不用先談一整套顧問合作。先用一場工作坊，讓主管、產品經理和工程師用同一套語言討論 AI Agent，再一起挑出最值得先試的工作流程。{% endcapture %}
+  {% capture ws_next %}工作坊結束後，若要針對組織做出導入決策，再從下面三種合作方式選；只想先學方法，也可以接半天的完整流程實作課或 9 堂完整培訓。<a class="tech-text-link" href="{{ '/enterprise/' | relative_url }}">要轉寄給主管或同事？用這一頁 <i class="bi bi-arrow-right" aria-hidden="true"></i></a>{% endcapture %}
+  {% include technical/workshop-offer.html from="consulting_workshop" cta_type="ai_agent_consulting_page" lead=ws_lead next=ws_next %}
+</section>
+
 <section class="tech-section tech-section--paper" id="starting-points">
   <div class="tech-shell">
     <header class="tech-section-head">
       <span class="tech-eyebrow">Ways to Work</span>
-      <h2>三種合作方式，依你的現況選擇</h2>
-      <p>你不需要先決定要買哪一項。可以先免費來信說明現況；實際範圍與費用會在需求分析後確認。</p>
+      <h2>要做導入決策時，三種合作方式依現況選擇</h2>
+      <p>已經清楚要解決什麼，可以跳過工作坊直接從這裡開始。你不需要先決定要買哪一項，先免費來信說明現況；實際範圍與費用會在需求分析後確認。</p>
     </header>
     <div class="tech-start-grid">
       <article class="tech-start-card"><span class="tech-start-no">01 · ASSESS</span><h3>AI 導入評估</h3><p>盤點角色、工作流程、品質風險與工具現況，找出值得先試的場景及不該碰的邊界。</p><span class="tech-start-tag">先決定從哪裡開始</span></article>
@@ -95,17 +106,21 @@ breadcrumbs:
   </div>
 </section>
 
-<section class="tech-section" id="evidence">
+<section class="tech-section ent-evidence" id="evidence">
   <div class="tech-shell">
     <header class="tech-section-head">
-      <span class="tech-eyebrow">Public Evidence</span>
-      <h2>方法、實作與美感，都能公開驗證</h2>
-      <p>以下公開成果涵蓋複雜軟體、Agent 整合與生成式視覺，可直接操作或查閱。</p>
+      <span class="tech-eyebrow tech-eyebrow--gold">Track Record</span>
+      <h2>說的，都查得到</h2>
+      <p>AI 導入顧問目前還沒有可以公開的客戶案例，所以這裡只列查得到的資歷，能查的都附了連結。</p>
     </header>
-    <div class="tech-proof-grid">
-      <article class="tech-proof-card"><div class="tech-proof-media tech-proof-media--contain"><img src="{{ '/assets/img/human-design/og-relationship.jpg' | relative_url }}" alt="人類圖合盤工具與視覺化" loading="lazy"></div><div class="tech-proof-body"><span class="tech-proof-label">Complex Software</span><h3>人類圖引擎與合盤測試</h3><p>複雜規則、SVG 渲染與回歸驗證的公開軟體實作。</p><a class="tech-text-link" href="{{ '/human-design/relationship/' | relative_url }}">操作工具 <i class="bi bi-arrow-up-right"></i></a></div></article>
-      <article class="tech-proof-card"><div class="tech-proof-media"><img src="{{ '/assets/img/hermes-openrouter-video/hermes-openrouter-video-banner.jpg' | relative_url }}" alt="Hermes Agent 與 OpenRouter 影片產線" loading="lazy"><span class="tech-media-disclosure">AI 生成情境示意圖</span></div><div class="tech-proof-body"><span class="tech-proof-label">Agent Integration</span><h3>Hermes × OpenRouter</h3><p>Agent、API、非同步工作與產物驗證的完整實作紀錄。</p><a class="tech-text-link" href="{% post_url 2026-07-11-hermes-agent-openrouter-video-generation %}">閱讀紀錄 <i class="bi bi-arrow-up-right"></i></a></div></article>
-      <article class="tech-proof-card"><div class="tech-proof-media tech-proof-media--portrait"><img src="{{ '/assets/img/tarot/uniform/major-03.jpg' | relative_url }}" alt="制服女孩塔羅牌皇后牌面" loading="lazy"><span class="tech-media-disclosure">AI 協作生成牌面</span></div><div class="tech-proof-body"><span class="tech-proof-label">Generative Visuals</span><h3>制服女孩塔羅牌</h3><p>78 張一致角色、構圖轉譯與復古風格，結合生成式影像與攝影美感。</p><a class="tech-text-link" href="{{ '/tarot/compare/' | relative_url }}">查看牌組 <i class="bi bi-arrow-up-right"></i></a></div></article>
+    {% include technical/enterprise-evidence.html %}
+    <div class="ent-works">
+      <h3>公開作品實例</h3>
+      <p>個人公開的 AI 實作，可以直接操作或閱讀；它們不是企業客戶案例。</p>
+      <ul>
+        <li><a class="tech-text-link" href="{% post_url 2026-07-11-hermes-agent-openrouter-video-generation %}">Hermes × OpenRouter：Agent 串接外部服務與產物驗證 <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+        <li><a class="tech-text-link" href="{{ '/human-design/relationship/' | relative_url }}">人類圖合盤工具：複雜規則引擎與回歸測試 <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -125,8 +140,8 @@ breadcrumbs:
     <div class="tech-faq">
       <details><summary>一定要使用 Claude Code 嗎？</summary><div class="tech-faq-answer"><p>不用。會依現有技術環境、權限、成本與流程評估 Claude Code、Codex 或其他工具；方法與品質邊界比品牌重要。</p></div></details>
       <details><summary>顧問會直接修改我們的程式碼嗎？</summary><div class="tech-faq-answer"><p>小範圍試行可在另行約定的範圍內檢視與協作，但由你的團隊操作自己的程式碼庫（repo）。服務重點是導入方法、審查與驗證，不是代寫功能。</p></div></details>
-      <details><summary>完全沒有 AI Coding 經驗也能開始嗎？</summary><div class="tech-faq-answer"><p>可以。先用 Email 說明現況即可；後續通常從導入評估與非敏感範例開始，不必一開始就開放正式環境或大型程式碼庫。</p></div></details>
-      <details><summary>可以只辦一場工作坊嗎？</summary><div class="tech-faq-answer"><p>若目標是學習工具或建立共同認知，較適合 Agentic Engineering 企業培訓；顧問工作坊則必須連到組織的實際決策或工作流程。</p></div></details>
+      <details><summary>完全沒有 AI Coding 經驗也能開始嗎？</summary><div class="tech-faq-answer"><p>可以。先用 Email 說明現況即可；後續通常從 2–3 小時工作坊或導入評估開始，搭配非敏感範例，不必一開始就開放正式環境或大型程式碼庫。</p></div></details>
+      <details><summary>可以只辦一場工作坊嗎？</summary><div class="tech-faq-answer"><p>可以。2–3 小時的導入工作坊就是為此設計的入門方案：固定範圍、固定時數，帶團隊建立共同語言、盤點適合先試的工作流程。之後若要針對組織做出導入決策，再進入導入評估或小範圍試行。</p></div></details>
       <details><summary>如何處理權限與機密？</summary><div class="tech-faq-answer"><p>Email 不收機密。進入試行前才另行約定 NDA、資料處理、可接觸範圍、工具權限與人工核准點。</p></div></details>
     </div>
     <p style="margin:28px 0 0;"><a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}">如果需求是企業培訓，查看 Agentic Engineering 課程 <i class="bi bi-arrow-right"></i></a></p>
@@ -149,8 +164,12 @@ breadcrumbs:
 請勿在 Email 附上程式碼、架構圖、帳密或其他機密資料。{% endcapture %}
 <section class="tech-section tech-section--dark" id="contact">
   <div class="tech-shell">
-    <header class="tech-section-head tech-section-head--center"><span class="tech-eyebrow">Free Inquiry</span><h2>先用 Email 免費來信洽詢</h2><p>簡單說明目前遇到的問題與預計時程即可，不用先準備完整需求，也不要寄敏感資料。</p></header>
-    <div class="tech-cta-card tech-cta-card--ai" style="max-width:760px;margin:0 auto;"><h3>來信洽詢 AI Agent 導入</h3><p>我會先確認是否能協助，並回覆建議的下一步。深入需求分析、具體方案與合作規劃屬付費服務。</p><a class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_agent_consulting_page',service:'ai_agent_consulting',cta_position:'bottom',from_page:window.location.pathname});}" href="{{ '/contact/' | relative_url }}?service=ai_agent_consulting&from=bottom">用 Email 免費洽詢</a></div>
+    <header class="tech-section-head tech-section-head--center"><span class="tech-eyebrow">Free Inquiry</span><h2>從工作坊開始，或直接談導入</h2><p>簡單說明目前遇到的問題與預計時程即可，不用先準備完整需求，也不要寄敏感資料。第一封信免費。</p></header>
+    <div class="tech-cta-grid">
+      <article class="tech-cta-card tech-cta-card--ai"><h3>洽詢 2–3 小時導入工作坊</h3><p>適合想先讓團隊建立共同語言、挑出值得先試的工作流程。固定範圍、固定時數，價格於確認需求後提供。</p><a class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_agent_consulting_page',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}" href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from=consulting_bottom">洽詢工作坊</a></article>
+      <article class="tech-cta-card tech-cta-card--ai"><h3>來信洽詢 AI Agent 導入</h3><p>我會先確認是否能協助，並回覆建議的下一步。深入需求分析、具體方案與合作規劃屬付費服務。</p><a class="btn-cta" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_agent_consulting_page',service:'ai_agent_consulting',cta_position:'bottom',from_page:window.location.pathname});}" href="{{ '/contact/' | relative_url }}?service=ai_agent_consulting&from=bottom">免費來信洽詢</a></article>
+    </div>
+    {% include contact-fallback.html service="ai_agent_consulting" position="bottom" %}
   </div>
 </section>
 </main>

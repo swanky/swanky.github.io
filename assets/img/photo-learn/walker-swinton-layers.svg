@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">先給角色一個世界：三層景深</title>
+<desc id="d">側面示意，不是任何一張原作。左邊是相機；往右依序是前景的道具（虛線表示失焦）、中景戴著小皇冠的角色（最清楚）、背景搭出來的場景層架（略柔）。右側三步：先傳參考、寫一句角色、拍的時候讓對方加想法。底部重點：場景、服裝、道具都替同一個角色說話，模特兒才住得進去。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="1200" height="760" fill="#FFFFFF"/>
+
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">先給角色一個世界：三層景深</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">側面示意・不是原作的實際布景</text>
+<rect x="48" y="156" width="720" height="480" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<line x1="72" y1="544" x2="744" y2="544" stroke="#CBD5E1" stroke-width="4"/>
+<rect x="581" y="216" width="158" height="328" rx="10" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<line x1="593" y1="276" x2="727" y2="276" stroke="#2C5B8F" stroke-width="3"/>
+<rect x="603" y="250" width="22" height="26" rx="4" fill="#2C5B8F" opacity=".5"/>
+<circle cx="699" cy="263" r="12" fill="#2C5B8F" opacity=".4"/>
+<line x1="593" y1="365" x2="727" y2="365" stroke="#2C5B8F" stroke-width="3"/>
+<rect x="603" y="339" width="22" height="26" rx="4" fill="#2C5B8F" opacity=".5"/>
+<circle cx="699" cy="352" r="12" fill="#2C5B8F" opacity=".4"/>
+<line x1="593" y1="455" x2="727" y2="455" stroke="#2C5B8F" stroke-width="3"/>
+<rect x="603" y="429" width="22" height="26" rx="4" fill="#2C5B8F" opacity=".5"/>
+<circle cx="699" cy="442" r="12" fill="#2C5B8F" opacity=".4"/>
+<circle cx="429.6" cy="329.0" r="21.2" fill="#1F2937"/><path d="M403.4,356.5 L455.9,356.5 L443.4,424.0 L415.9,424.0 Z" fill="#1F2937"/><path d="M415.9,424.0 L443.4,424.0 L472.1,544.0 L377.1,544.0 Z" fill="#1F2937"/><polyline points="454.6,361.5 484.6,394.0 467.1,424.0" fill="none" stroke="#1F2937" stroke-width="11.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="404.6,361.5 379.6,324.0 412.1,299.0" fill="none" stroke="#1F2937" stroke-width="11.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M408,312 l8,-22 l10,14 l8,-18 l8,18 l10,-14 l8,22 z" fill="#E5A300"/>
+<rect x="196" y="394" width="92" height="150" rx="18" fill="#FDF3E7" stroke="#B45309" stroke-width="3" stroke-dasharray="10 8"/>
+<circle cx="242" cy="358" r="34" fill="#FDF3E7" stroke="#B45309" stroke-width="3" stroke-dasharray="10 8"/>
+<g transform="translate(118 434) rotate(0) scale(1.0)"><rect x="-40" y="-26" width="80" height="52" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><rect x="-16" y="-38" width="32" height="14" rx="3" fill="#374151"/><circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="0" cy="0" r="6" fill="#374151"/></g>
+<line x1="162" y1="434" x2="370" y2="414" stroke="#374151" stroke-width="3" stroke-dasharray="4 8"/>
+<text x="118" y="584" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">相機</text>
+<text x="242.4" y="584" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">前景・失焦</text>
+<text x="429.6" y="584" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5D00">中景・角色</text>
+<text x="660.0" y="584" font-size="24" font-weight="700" text-anchor="middle" fill="#2C5B8F">背景・場景</text>
+<text x="242.4" y="618" font-size="20" text-anchor="middle" fill="#4B5563">同一個故事的道具</text>
+<text x="429.6" y="618" font-size="20" text-anchor="middle" fill="#4B5563">最清楚</text>
+<text x="660.0" y="618" font-size="20" text-anchor="middle" fill="#4B5563">略柔</text>
+<rect x="796" y="156" width="356" height="148" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="840" cy="202" r="24" fill="#2C5B8F"/><text x="840" y="212.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="880" y="212" font-size="34" font-weight="700" fill="#1F2937">先傳參考</text>
+<text x="824" y="256" font-size="24" fill="#4B5563">三到五張圖，</text>
+<text x="824" y="288" font-size="24" fill="#4B5563">拍前先給對方看</text>
+<rect x="796" y="322" width="356" height="148" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="840" cy="368" r="24" fill="#E5A300"/><text x="840" y="378.08" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">2</text>
+<text x="880" y="378" font-size="34" font-weight="700" fill="#1F2937">寫一句角色</text>
+<text x="824" y="422" font-size="24" fill="#4B5563">「她是誰、</text>
+<text x="824" y="454" font-size="24" fill="#4B5563">在這裡做什麼」</text>
+<rect x="796" y="488" width="356" height="148" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="840" cy="534" r="24" fill="#2C5B8F"/><text x="840" y="544.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+<text x="880" y="544" font-size="34" font-weight="700" fill="#1F2937">邊拍邊加</text>
+<text x="824" y="588" font-size="24" fill="#4B5563">讓對方提想法，</text>
+<text x="824" y="620" font-size="24" fill="#4B5563">角色才是活的</text>
+<rect x="48" y="664" width="1104" height="72" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="600.0" y="710.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">場景、服裝、道具替<tspan fill="#8A5D00">同一個角色</tspan>說話，模特兒才住得進去</text>
+</svg>

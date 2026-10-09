@@ -5,7 +5,7 @@
 <script src="{{ '/assets/js/flickr-fallback.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/vendor/aos/aos.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' | relative_url }}" defer></script>
-{% if page.use_ai_learn %}<script src="{{ '/assets/js/ai-learn.js' | relative_url }}?v=20261008-9" defer></script>{% endif %}
+{% if page.use_ai_learn or page.learn_kit %}<script src="{{ '/assets/js/ai-learn.js' | relative_url }}?v=20261008-9" defer></script>{% endif %}
 {% if page.use_glightbox %}<script src="{{ '/assets/vendor/glightbox/js/glightbox.min.js' | relative_url }}" defer></script>{% endif %}
 {% if page.use_isotope %}<script src="{{ '/assets/vendor/isotope-layout/isotope.pkgd.min.js' | relative_url }}" defer></script>{% endif %}
 {% if page.use_purecounter %}<script src="{{ '/assets/vendor/purecounter/purecounter.js' | relative_url }}" defer></script>{% endif %}

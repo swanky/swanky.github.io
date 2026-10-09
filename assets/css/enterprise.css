@@ -1,0 +1,49 @@
+/* 企業證據列與入門工作坊（2026-10-09 草稿）
+   用在 /enterprise/ 與 /technical/ai-agent-consulting/，兩頁都掛 technical 家族（.technical-page）。
+   證據列沿用首頁 .works-list／.work-row 編輯索引列（style.css），這裡只補本元件的差異。
+   內容來源：_includes/technical/enterprise-evidence.html、_includes/technical/workshop-offer.html */
+
+.ent-evidence .works-list { margin-top: 8px; }
+.ent-evidence .work-row { align-items: flex-start; }
+.ent-evidence .work-row .w-num { padding-top: 2px; }
+.ent-evidence .work-row .w-title { margin: 2px 0 6px; font-size: var(--step-1); line-height: 1.35; }
+.ent-evidence .work-row .w-desc { max-width: 60ch; font-size: .95rem; }
+.ent-evidence .work-row .w-meta { min-width: 120px; }
+.ent-evidence .work-row .w-meta .bi { margin-left: 4px; }
+.ent-evidence .work-row--static:hover { background: none; padding-left: 10px; }
+.ent-evidence .work-row--static:hover .w-title { color: var(--c-ink); }
+.ent-kicker { display: block; color: var(--c-gold-deep); font-size: .74rem; font-weight: 800; letter-spacing: .12em; }
+.ent-note { max-width: 760px; margin: 26px 0 0; padding-left: 16px; border-left: 3px solid var(--c-gold); color: var(--c-muted); font-size: .92rem; line-height: 1.75; }
+
+.ent-workshop { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 56px; align-items: start; }
+.ent-workshop h2 { margin: 0 0 16px; color: var(--tech-ink); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.12; }
+.ent-workshop h2 em { color: var(--c-gold-deep); font-style: normal; white-space: nowrap; }
+.ent-workshop-lead { margin: 0 0 26px; color: var(--tech-muted); font-size: 1.05rem; line-height: 1.8; }
+.ent-workshop-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.ent-spec { margin: 0; border-top: 1px solid var(--c-line-2); }
+.ent-spec > div { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 18px 4px; border-bottom: 1px solid var(--c-line-2); }
+.ent-spec dt { padding-top: 3px; color: var(--c-gold-deep); font-size: .82rem; font-weight: 800; letter-spacing: .1em; }
+.ent-spec dd { margin: 0; color: var(--tech-ink); line-height: 1.75; }
+.ent-spec dd strong { font-weight: 800; }
+.ent-next { margin: 28px 0 0; color: var(--tech-muted); font-size: .95rem; line-height: 1.75; }
+.ent-next .tech-text-link { font-size: inherit; }
+
+.ent-contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.ent-contact .contact-fallback { color: rgba(255, 255, 255, .78); }
+.ent-contact .tech-cta-note { margin-top: 14px; }
+
+.ent-works { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--c-line-2); }
+.ent-works h3 { margin: 0 0 6px; color: var(--tech-ink); font-size: 1rem; font-weight: 800; }
+.ent-works p { margin: 0 0 12px; color: var(--c-muted); font-size: .9rem; line-height: 1.7; }
+.ent-works ul { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0; padding: 0; list-style: none; }
+
+@media (max-width: 991px) {
+  .ent-workshop { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 767px) {
+  .ent-spec > div { grid-template-columns: 1fr; gap: 4px; padding: 16px 2px; }
+  .ent-contact-actions .tech-btn { width: 100%; }
+}
+
+/* 企業入口 hero 標題：「AI Agent 導入」不拆在兩行（1440 寬時原本斷成「AI」／「Agent 導入」） */
+.ent-hero h1 em { white-space: nowrap; }

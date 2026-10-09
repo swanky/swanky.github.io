@@ -1,0 +1,11 @@
+{%- comment -%}
+  看懂寫真：判斷一個章節或筆記項目「現在看得到嗎」（資料層規則，docs/photography-study-zone-review-2026-10.md §3.5）。
+  用法：{% include photography/learn-visible.html item=ch %}　→　結果在 pl_vis（true／false），同一層版型直接拿 pl_vis 當 if 條件。
+  規則：status 是 published 就看得到；review（站主審閱中）只在非正式環境（本機預覽）看得到；一定要有 url。
+  其他狀態（soon、verify、pending…）沒有任何渲染路徑：看不到就整項不輸出，不寫「整理中」。
+{%- endcomment -%}
+{%- assign pl_vis = false -%}
+{%- if include.item.url -%}
+  {%- if include.item.status == 'published' -%}{%- assign pl_vis = true -%}{%- endif -%}
+  {%- if include.item.status == 'review' and jekyll.environment != 'production' -%}{%- assign pl_vis = true -%}{%- endif -%}
+{%- endif -%}

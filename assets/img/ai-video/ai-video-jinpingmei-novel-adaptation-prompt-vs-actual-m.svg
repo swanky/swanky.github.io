@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1300" width="600" height="1300" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">照畫面寫紀錄，不照提示詞寫</title>
+  <desc id="d">左邊是提示詞說的：三顆木球；右邊是畫面實際生出來的：兩顆。紀錄照畫面寫「實際兩顆」，再判斷影不影響劇情。下方是連戲檢查：包袱一開始用哪隻手提，後面出門的鏡頭也沿用同一隻手。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1300" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">照畫面寫紀錄，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">不照提示詞寫</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">提示詞說三顆，畫面只有兩顆</text>
+  <rect x="40" y="206" width="520" height="250" rx="24" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="70" y="256" font-size="30" font-weight="700" fill="#64748B">提示詞說的</text>
+  <rect x="90" y="282" width="420" height="100" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <g transform="translate(236.2 332) scale(1.1)"><circle r="22" fill="#B45309"/><path d="M-13,-7 a22,22 0 0 1 26,0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <g transform="translate(300.0 332) scale(1.1)"><circle r="22" fill="#B45309"/><path d="M-13,-7 a22,22 0 0 1 26,0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <g transform="translate(363.8 332) scale(1.1)"><circle r="22" fill="#B45309"/><path d="M-13,-7 a22,22 0 0 1 26,0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <text x="300" y="428" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">「三顆木球」</text>
+  <circle cx="300" cy="486" r="34" fill="#1F2937" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="300" y="498" font-size="36" font-weight="700" text-anchor="middle" fill="#FFFFFF">≠</text>
+  <rect x="40" y="516" width="520" height="260" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="70" y="566" font-size="30" font-weight="700" fill="#8A5D00">畫面實際有的</text>
+  <rect x="90" y="592" width="420" height="100" rx="14" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <g transform="translate(268.1 642) scale(1.1)"><circle r="22" fill="#B45309"/><path d="M-13,-7 a22,22 0 0 1 26,0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <g transform="translate(331.9 642) scale(1.1)"><circle r="22" fill="#B45309"/><path d="M-13,-7 a22,22 0 0 1 26,0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <rect x="187.0" y="712.0" width="226.0" height="44" rx="22.0" fill="#E5A300"/>
+  <text x="300" y="743" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">紀錄：實際兩顆</text>
+  <rect x="40" y="800" width="520" height="470" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="70" y="850" font-size="30" font-weight="700" fill="#2C5B8F">連戲檢查：</text>
+  <text x="70" y="892" font-size="30" font-weight="700" fill="#2C5B8F">包袱用同一隻手提</text>
+  <g transform="translate(150 978) scale(0.75)"><rect x="-80" y="-52" width="160" height="104" rx="10" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5"/><line x1="0" y1="-40" x2="0" y2="40" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="6 6"/><line x1="-66" y1="40" x2="66" y2="40" stroke="#CBD5E1" stroke-width="4"/><g transform="translate(40 2) scale(0.62)"><path d="M-40,-6 Q0,-34 40,-6 L46,40 Q0,54 -46,40 z" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/><path d="M-8,-20 Q0,-50 8,-20" fill="none" stroke="#2C5B8F" stroke-width="5"/><path d="M-14,-18 L0,-6 L14,-18" fill="none" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/></g></g>
+  <g transform="translate(220 944) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="260" y="987" font-size="26" fill="#4B5563">開場</text>
+  <g transform="translate(150 1090) scale(0.75)"><rect x="-80" y="-52" width="160" height="104" rx="10" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5"/><line x1="0" y1="-40" x2="0" y2="40" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="6 6"/><line x1="-66" y1="40" x2="66" y2="40" stroke="#CBD5E1" stroke-width="4"/><g transform="translate(40 2) scale(0.62)"><path d="M-40,-6 Q0,-34 40,-6 L46,40 Q0,54 -46,40 z" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/><path d="M-8,-20 Q0,-50 8,-20" fill="none" stroke="#2C5B8F" stroke-width="5"/><path d="M-14,-18 L0,-6 L14,-18" fill="none" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/></g></g>
+  <g transform="translate(220 1056) scale(1)"><circle r="16" fill="#0E7568"/><g transform="scale(0.36)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="260" y="1090" font-size="26" fill="#4B5563">後面出門：</text>
+  <text x="260" y="1126" font-size="24" fill="#4B5563">同一隻手</text>
+  <g transform="translate(150 1202) scale(0.75)"><rect x="-80" y="-52" width="160" height="104" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5"/><line x1="0" y1="-40" x2="0" y2="40" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="6 6"/><line x1="-66" y1="40" x2="66" y2="40" stroke="#CBD5E1" stroke-width="4"/><g transform="translate(-40 2) scale(0.62)"><path d="M-40,-6 Q0,-34 40,-6 L46,40 Q0,54 -46,40 z" fill="#FFFFFF" stroke="#B91C1C" stroke-width="5" stroke-linejoin="round"/><path d="M-8,-20 Q0,-50 8,-20" fill="none" stroke="#B91C1C" stroke-width="5"/><path d="M-14,-18 L0,-6 L14,-18" fill="none" stroke="#B91C1C" stroke-width="5" stroke-linejoin="round"/></g></g>
+  <g transform="translate(220 1168) scale(1)"><circle r="16" fill="#B91C1C"/><g transform="scale(0.36)"><line x1="-26" y1="-26" x2="26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/><line x1="26" y1="-26" x2="-26" y2="26" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/></g></g>
+  <text x="260" y="1202" font-size="26" font-weight="700" fill="#B91C1C">換了手</text>
+  <text x="260" y="1238" font-size="24" font-weight="700" fill="#B91C1C">就是穿幫（示意）</text>
+</svg>

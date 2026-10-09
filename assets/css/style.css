@@ -4497,7 +4497,7 @@ section.testimonials {
   line-height: 1.4;
 }
 
-/* --- Series nav（文末系列導覽框：Agentic 系列上一篇／下一篇＋AI 入門教材入口；_includes/series-nav.html）--- */
+/* --- Series nav（文末系列導覽框：Agentic 系列／AI 影片製作筆記的上一篇／下一篇＋AI 入門教材入口；_includes/series-nav.html）--- */
 .series-nav {
   max-width: 720px;
   margin: 2.5rem auto 0;
@@ -4584,6 +4584,11 @@ section.testimonials {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px dashed #ede9e3;
+}
+
+/* 同一篇同時在兩個系列：兩個框上下相連，第二個縮小間距 */
+.series-nav + .series-nav {
+  margin-top: 16px;
 }
 
 @media (max-width: 767px) {
@@ -6241,6 +6246,14 @@ main#main { scroll-margin-top: var(--header-h); }
 .article-card-img { border-radius: 0; }
 
 .card .card-body { padding: 20px 22px 24px; }
+
+/* 沒有封面的文章卡（_includes/article-card-grid.html 不輸出 .card-img）：樣板遺留的
+   .service-details .card-body { margin-top: -60px } 本來是要疊在封面圖上，少了封面就會把整塊內文
+   往上推出卡片、被上面 .card 的 overflow:hidden 裁掉標題上半截（2026-10-09 AI 影片系列草稿抓到）。
+   有編號（.card-step 圓牌）時再留出圓牌的高度，避免壓到標題。 */
+.service-details .card > .card-body:first-child,
+.service-details .card > .card-step + .card-body { margin-top: 0; }
+.service-details .card > .card-step + .card-body { padding-top: 58px; }
 
 .card .card-title {
   font-family: var(--font-sans);

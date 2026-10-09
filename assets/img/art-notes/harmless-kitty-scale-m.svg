@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">原作比你記憶中大：150 × 140 公分</title>
+  <desc id="d">以同一比例尺畫出《Harmless Kitty》原作尺寸（高 150 公分、寬 140 公分）與一位假設身高 170 公分的觀者。畫框只用色塊表示尺寸，不重畫作品；懸掛高度是示意，不是真實展場。</desc>
+  <rect width="600" height="850" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#1F2937">它比你記憶中的大</text>
+  <text x="40" y="118" font-size="24" fill="#4B5563">同一把尺：原作 150 × 140 公分，</text>
+  <text x="40" y="152" font-size="24" fill="#4B5563">旁邊站一位 170 公分的大人</text>
+  <g transform="translate(0 -110)">
+  <line x1="30" y1="780" x2="570" y2="780" stroke="#CDC1B1" stroke-width="3"/>
+  <!-- 人形（通用人體剪影，比例 2 px／公分） -->
+  <g transform="translate(130 440) translate(-241 -140)" fill="#B8AB98">
+    <circle cx="241" cy="166" r="26"/>
+    <path d="M220 198Q241 188 262 198L278 290Q283 309 272 313Q261 317 257 299L248 250L256 324L270 466Q271 480 258 480Q247 480 246 466L234 355L225 466Q224 480 211 480Q199 480 201 464L215 324L221 251L209 304Q206 318 195 314Q187 311 191 295L207 218Q211 203 220 198Z"/>
+  </g>
+  <path d="M60 440V780M50 440H70M50 780H70" stroke="#64748B" stroke-width="3" fill="none"/>
+  <text x="38" y="610" transform="rotate(-90 38 610)" text-anchor="middle" font-size="22" fill="#4B5563">假設身高 170 公分</text>
+  <!-- 畫作：色塊 -->
+  <rect x="234" y="354" width="292" height="312" rx="4" fill="#E7DDD0"/>
+  <rect x="240" y="360" width="280" height="300" fill="#F4F1E9" stroke="#D9CFC2" stroke-width="2"/>
+  <text x="380" y="502" text-anchor="middle" font-size="30" font-weight="700" fill="#8A5D00">原作畫布</text>
+  <text x="380" y="540" text-anchor="middle" font-size="22" fill="#4B5563">（色塊示意）</text>
+  <path d="M550 360V660M540 360H560M540 660H560" stroke="#B45309" stroke-width="3" fill="none"/>
+  <text x="578" y="510" transform="rotate(-90 578 510)" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">高 150 公分</text>
+  <path d="M240 696H520M240 686V706M520 686V706" stroke="#B45309" stroke-width="3" fill="none"/>
+  <text x="380" y="738" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">寬 140 公分</text>
+  <rect x="40" y="820" width="520" height="104" rx="18" fill="#FFF8E7"/>
+  <text x="300" y="862" text-anchor="middle" font-size="24" fill="#1F2937">人與畫的比例照官方尺寸；</text>
+  <text x="300" y="900" text-anchor="middle" font-size="24" font-weight="700" fill="#8A5D00">掛多高只是示意，不是展場實景</text>
+  </g>
+</svg>

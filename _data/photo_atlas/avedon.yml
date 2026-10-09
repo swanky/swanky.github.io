@@ -1,0 +1,194 @@
+id: avedon
+name: Richard Avedon
+life: 1923–2004
+place: 美國紐約
+theme: 讓人動起來，或把人放到白牆前
+view: 他前半生把時尚照從攝影棚帶到街頭、賭場和馬戲團，後來又把人收回一面白牆前，只剩姿態和表情。同一位攝影師，示範了兩種完全相反的拍人方法，很適合拿來對照自己習慣哪一種。
+portrait:
+  src: /assets/img/photo-learn/atlas/richard-avedon-portrait-2004.jpg
+  width: 450
+  height: 600
+  alt: Richard Avedon 晚年的照片，白髮、戴玳瑁色眼鏡，在工作室裡微笑
+  caption: Richard Avedon，2004 年在他的工作室。攝影：blaze6t9（Flickr），經 Wikimedia Commons 以 CC BY 2.0 授權，由原照裁切。
+bio: |
+  <p>1923 年生於紐約，十二歲加入猶太青年會（YMHA）的攝影社。二戰期間在美國商船隊當攝影士，工作是拍證件照；他說：「拍了大概十萬張臉之後，我才發現自己正在成為攝影師。」<sup><a href="#src-avedon">出處：Avedon 基金會</a></sup></p>
+  <p>二十二歲開始替《Harper's Bazaar》拍時尚照。雜誌一開始不給他用攝影棚，他就到街上、夜店、馬戲團和海灘去拍。1965 年離開《Harper's Bazaar》，轉到《Vogue》工作二十多年；1992 年成為《The New Yorker》第一位專任攝影師。<sup><a href="#src-avedon">出處：Avedon 基金會</a></sup></p>
+  <p>他也長期拍人像：民權運動、越戰，以及 1979 到 1985 年替 Amon Carter 美術館拍的《In the American West》。他說過一句很適合拍人像的人記住的話：「我的照片不往表面底下走。我非常相信表面，好的表面充滿線索。」2004 年在德州出任務時腦溢血過世。<sup><a href="#src-avedon">出處：Avedon 基金會</a></sup></p>
+works_intro: 依年代排。前半段是動起來的時尚照，後半段是白牆前的人像；建議照順序看，你會看到背景怎麼一步一步被拿掉。
+works:
+  - title: Renee, the New Look of Dior, Place de la Concorde, Paris
+    zh: 穿 Dior「新風貌」的 Renee，巴黎協和廣場
+    year: "1947"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O82835/
+    img: /assets/img/photo-learn/works/photographers-avedon/01-renee-new-look-dior.jpg
+    img_w: 450
+    img_h: 600
+    credit: "攝影：Richard Avedon｜© Victoria and Albert Museum, London / The Richard Avedon Foundation"
+    look: 她正走過廣場，裙擺整片甩開成一個圓弧，後面幾個路人照常走路。先看裙子的弧線，那是「動」才拍得到的形狀。
+  - title: Elise Daniels with Street Performers, Le Marais, Paris
+    zh: Elise Daniels 與街頭藝人，巴黎瑪黑區
+    year: "1948"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O82814/
+    img: /assets/img/photo-learn/works/photographers-avedon/02-elise-daniels-street-performers.jpg
+    img_w: 600
+    img_h: 450
+    credit: "攝影：Richard Avedon｜© Victoria and Albert Museum, London / The Richard Avedon Foundation"
+    look: 模特兒穿著 Balenciaga 套裝，站在正在表演的街頭藝人和圍觀人群中間。她穿得最正式，卻站在最熱鬧的地方，對比就是這張的重點。
+  - title: Sunny Harnett, evening dress by Grès
+    zh: 穿 Grès 晚禮服的 Sunny Harnett
+    year: 1954 年，刊於美國版《Harper's Bazaar》9 月號
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O82824/
+    img: /assets/img/photo-learn/works/photographers-avedon/03-sunny-harnett-gres.jpg
+    img_w: 473
+    img_h: 600
+    credit: "攝影：Richard Avedon｜© Victoria and Albert Museum, London / The Richard Avedon Foundation"
+    look: 場景是賭場的輪盤桌，四周擠滿穿黑色禮服的男人，只有她一身白。看他怎麼用一整群深色的人，把一個白色的人推到最前面。
+  - title: Dovima with Elephants, Evening Dress by Dior, Cirque d'Hiver, Paris
+    zh: Dovima 與大象，巴黎冬季馬戲團
+    year: 1955 年 8 月
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/221681/dovima-with-elephants-evening-dress-by-dior-cirque-d-hiver-paris
+    img: /assets/img/photo-learn/works/photographers-avedon/04-dovima-with-elephants.jpg
+    img_w: 481
+    img_h: 600
+    credit: "攝影：Richard Avedon｜Copyright © The Richard Avedon Foundation"
+    look: 館方說，那件禮服是十九歲的 Yves Saint Laurent 替 Dior 做的第一件設計；她的身體曲線和兩旁大象的輪廓互相呼應。看她伸出去的手臂和大象的鼻子。
+  - title: The Duke and Duchess of Windsor, New York City
+    zh: 溫莎公爵夫婦，紐約
+    year: "1957"
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/156003/the-duke-and-duchess-of-windsor-new-york-city
+    img: /assets/img/photo-learn/works/photographers-avedon/05-duke-duchess-of-windsor.jpg
+    img_w: 581
+    img_h: 600
+    credit: "攝影：Richard Avedon｜Copyright © The Richard Avedon Foundation"
+    look: 兩張臉擠在一個方框裡，近到幾乎貼在一起，底片的黑邊也留在畫面上。和前面幾張比，背景已經完全不見了。
+  - title: Carmen (Homage to Munkacsi), coat by Cardin, Place François-Premier, Paris
+    zh: 向 Munkácsi 致敬的 Carmen，巴黎
+    year: "1957"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O82823/
+    img: /assets/img/photo-learn/works/photographers-avedon/06-carmen-homage-to-munkacsi.jpg
+    img_w: 452
+    img_h: 600
+    credit: "攝影：Richard Avedon｜© Victoria and Albert Museum, London / The Richard Avedon Foundation"
+    look: 她撐著傘，一腳跨過街面，整個人停在半空。標題直接寫了「致敬」，提醒我們：好的拍法常常是從前輩那裡接過來、再做成自己的。
+  - title: Margot McKendry and China Machado with Members of the French Press
+    zh: 兩位模特兒與法國媒體，巴黎攝影棚
+    year: "1961"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O102538/
+    img: /assets/img/photo-learn/works/photographers-avedon/07-mckendry-machado-french-press.jpg
+    img_w: 600
+    img_h: 450
+    credit: "攝影：Richard Avedon｜© Victoria and Albert Museum, London / The Richard Avedon Foundation"
+    look: 館方說明：他讓兩位模特兒冷靜、像雕像，四周的記者卻吵鬧、忙亂，照片演的就是這個反差。看模特兒的靜和人群的動怎麼放在同一格裡。
+  - title: Penelope Tree, New York Studio
+    zh: Penelope Tree，紐約攝影棚
+    year: 1967 年 6 月
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O82828/
+    look: 只剩一面白底，她一腳往前、頭髮甩起來，像在跳舞的途中被停住。和 1947 年的 Renee 比：一樣在動，但這次什麼背景都沒有。
+  - title: Andy Warhol, Artist, New York City
+    zh: 藝術家 Andy Warhol，紐約
+    year: 1969 年 8 月 20 日
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/212068/andy-warhol-artist-new-york-city
+    look: 這張人像裡沒有臉，只有身體和拉開外套的手；畫面是上身的疤痕，點進去前請先知道。拿來想一個問題：一張人像，一定要拍臉嗎？
+  - title: The Chicago Seven, Chicago
+    zh: 芝加哥七人
+    year: 1969 年 9 月 25 日
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/159557/the-chicago-seven-chicago
+    img: /assets/img/photo-learn/works/photographers-avedon/10-chicago-seven.jpg
+    img_w: 600
+    img_h: 260
+    credit: "攝影：Richard Avedon｜Copyright © The Richard Avedon Foundation"
+    look: 三張照片拼成一長條，七個人在白底前一字排開。每個人的站姿、穿著、手放哪裡都不一樣，白底讓這些差別一眼就看得出來。
+  - title: The Mission Council, Saigon, South Vietnam
+    zh: 美國駐越南的「任務委員會」，西貢
+    year: 1971 年 4 月 28 日
+    where: 美國大都會藝術博物館
+    url: https://www.metmuseum.org/art/collection/search/284261
+    look: 好幾塊高約三公尺的大印相拼起來，拍的是主導越戰的美國將領、大使和政策官員。大都會說，素白的背景讓每一個人的存在感更鮮明。下面影音區的第一支，就是這件作品的布展過程。
+  - title: Ronald Fisher, Beekeeper, Davis, California
+    zh: 養蜂人 Ronald Fisher，加州戴維斯
+    year: 1981 年 5 月 9 日
+    where: 芝加哥藝術博物館
+    url: https://www.artic.edu/artworks/120869/ronald-fisher-beekeeper-davis-california
+    look: 白底前，一個人正面站著，身上爬滿蜜蜂。沒有任何場景說明，畫面上的「表面」就是全部的線索。
+works_after: |
+  <p class="atlas-note">Dovima 那張大象，紐約現代藝術博物館、大都會和 V&amp;A 也各收了一張印相，連結放在<a href="/photography/learn/models/#dovima">模特兒圖鑑的 Dovima</a>。</p>
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的 Kevin 裡也看得到類似的做法：他戴著白色安全帽、穿深色條紋襯衫，雙手扶著一台咖啡機，身後是一整面塞滿書和玻璃罐的書架。沒有多餘的說明，書架和咖啡機就是在告訴你他是什麼樣的人。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-avedon-own" data-type="image" href="/assets/img/sec/012_Kevin_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-012_Kevin_1-960.jpg" alt="戴白色安全帽的男子雙手扶著咖啡機，身後是塞滿書與玻璃罐的書架" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列。點圖放大。</figcaption>
+  </figure>
+  <p>拿它和 Avedon 的白底人像比，我的背景不是白牆，而是一面會說話的書架；共同點是：<strong>衣服、手上的東西、身後的物件，都是這個人的線索。</strong></p>
+videos:
+  - id: b2Hk4Mf2sI4
+    link_only: true
+    title: Avedon in Gallery
+    channel: The Met
+    channel_url: https://www.youtube.com/@metmuseum
+    length: 7 分 9 秒
+    lang: 英語（有英文字幕）
+    note: 大都會藝術博物館官方頻道。拍的是 2002 年回顧展布置〈The Mission Council〉的過程，可以看到這組照片實際有多大。點連結到 YouTube 看
+  - id: V_PVBGvcZBA
+    title: "Richard Avedon: Avedon's America at Henie Onstad Kunstsenter"
+    channel: Henie Onstad Kunstsenter
+    channel_url: https://www.youtube.com/@Kunstsenteret
+    length: 1 分 54 秒
+    lang: 英語
+    note: 挪威 Henie Onstad 藝術中心的展覽短片，由 Avedon 基金會執行長介紹這位攝影師，適合當入門。
+  - id: 5Ez-zCkoHzU
+    title: Avedon - Behind the Scenes
+    channel: Foam Fotografiemuseum Amsterdam
+    channel_url: https://www.youtube.com/@FoamOrg
+    length: 8 分 13 秒
+    lang: 英語
+    note: 阿姆斯特丹 Foam 攝影美術館的座談，請來和他合作過的人：大都會的研究員、模特兒 Veruschka 和他的前助理。想知道站在他鏡頭前是什麼感覺，看這支。
+take:
+  - 先決定背景要「說話」還是「閉嘴」。街頭、賭場、馬戲團讓背景一起說故事；一面白牆則讓姿態和表情自己撐場。拍之前先選一邊，不要兩邊都想要。
+  - 讓對方動起來再按快門。Renee、Carmen、Penelope Tree 都是動作中的一瞬間；與其擺好一個姿勢，不如請對方走、跨、轉身，你負責抓那一格。
+  - 把「表面」當線索。衣服、髮型、手放在哪裡都是資訊；拍白底人像時，這些就是你唯一能用的語言，拍前要和對方一起決定。
+related:
+  - unit: u3
+    title: Richard Avedon 與 Dovima：讓姿勢接住整個場景
+  - label: 模特兒圖鑑：Dovima
+    url: /photography/learn/models/#dovima
+    note: 從模特兒那一端看
+  - label: 下一位：Tim Walker
+    url: "#walker"
+    note: 他年輕時當過 Avedon 的助理
+sources:
+  - title: History（Richard Avedon 生平）
+    by: The Richard Avedon Foundation（Avedon 基金會）
+    url: https://www.avedonfoundation.org/new-folder-2
+    note: 出生、YMHA 攝影社、商船隊與「十萬張臉」、替《Harper's Bazaar》外拍、轉到《Vogue》、《The New Yorker》、《In the American West》、「相信表面」、過世
+  - title: Dovima with Elephants, Evening Dress by Dior, Cirque d'Hiver, Paris
+    by: The Art Institute of Chicago（芝加哥藝術博物館）
+    url: https://www.artic.edu/artworks/221681/dovima-with-elephants-evening-dress-by-dior-cirque-d-hiver-paris
+    note: 1946 到 1965 年是《Harper's Bazaar》專任攝影師；1955 年 9 月號專題；禮服是 Yves Saint Laurent 替 Dior 的第一件設計
+  - title: Margot McKendry and China Machado with Members of the French Press
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O102538/
+    note: 模特兒的冷靜與記者的忙亂形成反差
+  - title: The Mission Council, Saigon, South Vietnam
+    by: The Metropolitan Museum of Art（美國大都會藝術博物館）
+    url: https://www.metmuseum.org/art/collection/search/284261
+    note: 作品年份、尺寸與館藏資料
+  - title: Avedon in Gallery（影片說明）
+    by: The Met（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=b2Hk4Mf2sI4
+    note: 拍攝對象是主導越戰的美國將領、大使與政策專家；用素白背景凸顯每個人的存在
+  - title: Richard Avedon 2004（肖像照）
+    by: Wikimedia Commons（blaze6t9 攝，CC BY 2.0）
+    url: https://commons.wikimedia.org/wiki/File:Richard_Avedon_2004.jpg
+    note: 本頁肖像的來源與授權

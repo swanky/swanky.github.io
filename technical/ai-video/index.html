@@ -1,0 +1,213 @@
+---
+layout: home
+title: AI 影片製作筆記
+description: 給想用 AI 做影片、但不是影視本科出身的人：史旺基把實際做過的 AI 影片方法、怎麼看片驗收、成本怎麼控制與踩過的坑整理成一系列筆記，附一頁白話術語表。
+keywords: AI影片,AI影片製作,AI生成影片,分鏡,運鏡,影片驗收,成本控制,Seedance,史旺基,Swanky
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 技術顧問
+    url: /technical/
+  - name: AI 影片製作筆記
+    url: /technical/ai-video/
+# series_groups：系列名單唯一來源（文章底部系列導覽框 _includes/series-nav.html 也讀這裡）。
+# 值是文章網址最後一段的 slug；尚未發表的文章自動不顯示、不佔編號。
+series_groups:
+  - heading: 基礎 — 先聽懂影片在講什麼
+    intro: 鏡頭怎麼動、拍多近、提示詞怎麼寫才像在拍片。名詞卡住時，隨時翻術語表。
+    posts:
+      - ai-video-camera-language-prompt
+      - ai-video-basics-for-non-film
+  - heading: 方法 — 從挑模型到交件的每一關
+    intro: 怎麼公平比較模型、怎麼看片判定能不能用、錢花在哪裡、角色怎麼不走樣、聲音與權利怎麼檢查，以及哪些關卡一定要人來拍板。
+    posts:
+      - ai-video-model-comparison-method
+      - ai-video-quality-review-three-verdicts
+      - ai-video-cost-control
+      - ai-video-consistency-reference-previs
+      - ai-video-sound-rights-release-check
+      - ai-video-agent-human-gates
+  - heading: 案例 — 真的做過一遍之後
+    intro: 從彩排、舞蹈實驗、古典小說改編到比賽，把每一次實作的結果、失敗與花費攤開來看。
+    posts:
+      - ai-video-production-rehearsal-seedance-workflow
+      - clonex-bunny-dance-reference-bottleneck
+      - ai-video-jinpingmei-novel-adaptation
+      - ai-video-competition-rehearsal-to-finals
+      - ai-video-reference-breakdown
+# 延伸閱讀：相關但不屬於本系列，不編號、不進系列導覽。
+further_reading:
+  - hermes-agent-openrouter-video-generation
+  - production-ai-agent-control-planes
+  - ai-photographer-judgment-character-photobook
+  - ai-photography-virtual-agency
+# 縮圖開關：系列文章封面已全數補齊（2026-10-09），開啟縮圖。
+show_thumbs: true
+---
+{%- comment -%}
+  版面（2026-10-09 重設計：站主否決白卡格）：深藍身分帶（標題＋大圖＋「從這裡開始」）→ 導言 →
+  三組編輯索引列（沿用首頁／專欄頁的 .works-list／.work-row 語彙；基礎白底、方法暖灰帶、案例深色帶，
+  依 series_groups 的位置固定，不因哪組沒文章而換色）→ 術語表帶 → 延伸閱讀緊湊列表。
+  只列 site.posts 找得到的文章（published: false 的草稿不顯示、不佔編號），整組沒有文章就整組不出現。
+  縮圖：page.show_thumbs 為 true 時，有封面才顯示（優先用 tools/make-cover-thumbs.ps1 產生的 -card.jpg），沒有就不留空框；
+  封面補齊前 show_thumbs: false，整頁一律不顯示縮圖，避免有的列有圖、有的沒有。
+{%- endcomment -%}
+{% assign card_thumbs = site.static_files | where_exp: "f", "f.path contains '-card.jpg'" | map: "path" %}
+{% assign gloss_total = 0 %}
+{% for sec in site.data.ai_video_glossary.sections %}{% assign gloss_total = gloss_total | plus: sec.terms.size %}{% endfor %}
+{% assign first_post = nil %}
+{% assign series_total = 0 %}
+{% for group in page.series_groups %}
+  {% for slug in group.posts %}
+    {% assign needle = '/' | append: slug | append: '/' %}
+    {% assign match = site.posts | where_exp: "p", "p.url contains needle" | first %}
+    {% if match %}
+      {% assign series_total = series_total | plus: 1 %}
+      {% unless first_post %}{% assign first_post = match %}{% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign hero_src = '/assets/img/linkedin/ai-video-basics-for-non-film.jpg' %}
+
+  <main id="main">
+
+    <section class="tech-listing-band aiv-hero">
+      <div class="container aiv-hero-grid">
+        <div class="aiv-hero-copy">
+          <span class="tlb-eyebrow">AI Video Notes</span>
+          <h1>AI 影片製作筆記</h1>
+          <p class="aiv-hero-lead">不是影視本科，也能把 AI 影片做得像樣——實際做過的方法、看片驗收與成本教訓。</p>
+          <div class="aiv-start">
+            <span class="aiv-start-label">從這裡開始</span>
+            {% if first_post %}
+            <a class="aiv-start-link" href="{{ first_post.url | relative_url }}">
+              <span class="aiv-start-kicker">第 1 篇</span>
+              <span class="aiv-start-title">{{ first_post.title }}</span>
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+            <a class="aiv-start-link" href="{{ '/technical/ai-video/glossary/' | relative_url }}">
+              <span class="aiv-start-kicker">術語表</span>
+              <span class="aiv-start-title">AI 影片白話術語表：{{ gloss_total }} 個常見用語，一句話看懂</span>
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <figure class="aiv-hero-media">
+          <img src="{{ hero_src | relative_url }}"
+               srcset="{{ hero_src | replace: '.jpg', '-card.jpg' | relative_url }} 640w, {{ hero_src | relative_url }} 1536w"
+               sizes="(max-width: 991px) 100vw, 640px"
+               width="1536" height="1024" decoding="async" fetchpriority="high"
+               alt="成年水手服創作者站在環形製作室中央核對分鏡卡，身後一圈工作站從腳本、分鏡、生成、剪輯、聲音、字幕一路排到交件">
+          <figcaption class="tech-media-disclosure">AI 生成情境示意圖</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="aiv-intro">
+      <div class="container">
+        <p class="aiv-intro-lead">用 AI 做影片，最常見的誤會是「輸入一句話就有成片」。實際做下來，<strong>真正花時間的是看懂鏡頭、判斷哪一段能用、控制重做的次數和花費</strong>——這些都不需要影視學位，但需要一套方法。</p>
+        <p>這個系列寫給想用 AI 做影片、但不是影視本科的人，記錄我實際做過的流程。寫的是踩過的坑，不是工具廣告。</p>
+        <nav class="aiv-jump" aria-label="系列分組">
+          {% for group in page.series_groups %}
+            {% assign group_count = 0 %}
+            {% for slug in group.posts %}
+              {% assign needle = '/' | append: slug | append: '/' %}
+              {% assign match = site.posts | where_exp: "p", "p.url contains needle" | first %}
+              {% if match %}{% assign group_count = group_count | plus: 1 %}{% endif %}
+            {% endfor %}
+            {% if group_count > 0 %}
+            {% assign heading_parts = group.heading | split: ' — ' %}
+            <a href="#aiv-group-{{ forloop.index }}"><span>{{ heading_parts[0] }}</span><small>{{ group_count }} 篇</small></a>
+            {% endif %}
+          {% endfor %}
+          <a href="{{ '/technical/ai-video/glossary/' | relative_url }}"><span>術語表</span><small>{{ gloss_total }} 詞</small></a>
+        </nav>
+      </div>
+    </section>
+
+    {% assign step = 0 %}
+    {% for group in page.series_groups %}
+      {% assign group_posts = '' | split: '' %}
+      {% for slug in group.posts %}
+        {% assign needle = '/' | append: slug | append: '/' %}
+        {% assign match = site.posts | where_exp: "p", "p.url contains needle" | first %}
+        {% if match %}{% assign group_posts = group_posts | push: match %}{% endif %}
+      {% endfor %}
+      {% if group_posts.size > 0 %}
+      {% assign heading_parts = group.heading | split: ' — ' %}
+      {% case forloop.index %}{% when 2 %}{% assign tone = 'paper' %}{% when 3 %}{% assign tone = 'dark' %}{% else %}{% assign tone = 'light' %}{% endcase %}
+    <section class="aiv-group aiv-group--{{ tone }}" id="aiv-group-{{ forloop.index }}">
+      <div class="container aiv-group-grid">
+        <header class="aiv-group-head">
+          <span class="aiv-group-count">{{ group_posts.size }} 篇</span>
+          <h2><span class="aiv-group-name">{{ heading_parts[0] }}</span>{% if heading_parts[1] %}<span class="aiv-group-tag">{{ heading_parts[1] }}</span>{% endif %}</h2>
+          <p>{{ group.intro }}</p>
+        </header>
+        <ol class="works-list aiv-list">
+          {% for post in group_posts %}
+            {% assign step = step | plus: 1 %}
+            {% assign thumb_src = nil %}
+            {% if page.show_thumbs and post.cover_image %}
+              {% assign thumb_src = post.cover_image %}
+              {% assign card_thumb = thumb_src | replace: '.jpg', '-card.jpg' | replace: '.jpeg', '-card.jpg' | replace: '.JPG', '-card.jpg' %}
+              {% if card_thumb != thumb_src and card_thumbs contains card_thumb %}{% assign thumb_src = card_thumb %}{% endif %}
+            {% endif %}
+          <li>
+            <a class="work-row{% unless thumb_src %} work-row--text{% endunless %}" href="{{ post.url | relative_url }}">
+              <span class="w-num" aria-hidden="true">{% if step < 10 %}0{% endif %}{{ step }}</span>
+              <div class="w-body">
+                <h3 class="w-title">{{ post.title }}</h3>
+                {% if post.description %}<p class="w-desc">{{ post.description }}</p>{% endif %}
+              </div>
+              {% if thumb_src %}<span class="w-thumb"><img src="{{ thumb_src | relative_url }}" alt="" width="640" height="360" loading="lazy" decoding="async"></span>{% endif %}
+              <span class="w-meta">閱讀 <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+            </a>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+      {% endif %}
+    {% endfor %}
+
+    <section class="aiv-outro">
+      <div class="container">
+
+        <a class="hub-banner aiv-glossary-band" href="{{ '/technical/ai-video/glossary/' | relative_url }}">
+          <span class="aiv-glossary-mark" aria-hidden="true">詞</span>
+          <div class="hub-banner-text">
+            <h2>名詞卡住了？先翻白話術語表</h2>
+            <p>運鏡、景別、生成、剪輯與看片驗收，{{ gloss_total }} 個常見用語，每個一句白話，可以直接搜尋。</p>
+          </div>
+          <span class="btn-cta">翻術語表 <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        {% assign further = '' | split: '' %}
+        {% for slug in page.further_reading %}
+          {% assign needle = '/' | append: slug | append: '/' %}
+          {% assign match = site.posts | where_exp: "p", "p.url contains needle" | first %}
+          {% if match %}{% assign further = further | push: match %}{% endif %}
+        {% endfor %}
+        {% if further.size > 0 %}
+        <div class="aiv-further">
+          <div class="aiv-further-head">
+            <h2>延伸閱讀</h2>
+            <p>不屬於這個系列，但和 AI 影像製作直接相關：用 AI 代理生影片、管住 AI 代理的權限，以及 AI 攝影與虛擬模特兒的判斷。</p>
+          </div>
+          <div class="aiv-further-body">
+            <ul class="aiv-further-list">
+              {% for post in further %}
+              <li><a href="{{ post.url | relative_url }}"><span>{{ post.title }}</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+              {% endfor %}
+            </ul>
+            <p class="ai-video-further-link">想看完整作品與幕後流程？<a href="{{ '/jinpingmei/studio/' | relative_url }}">金瓶梅宇宙・影像工作室</a>公開了從選角、定裝、分鏡到十部成片的 AI 重製過程。</p>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1260" width="600" height="1260" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">換成文字：只說看得見的東西</title>
+<desc id="d">八張卡片（示意寫法）：距離、鏡頭、構圖、背景、光、色調與顆粒、姿態與時間感，以及不要寫的攝影師名字與某某風格。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="600" height="1260" fill="#FFFFFF"/>
+
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">換成文字：</text>
+<text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">只說看得見的東西</text>
+<text x="40" y="164" font-size="24" fill="#4B5563">七個元素＋一條禁區（示意寫法）</text>
+<rect x="40" y="192" width="250" height="228" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="78" cy="232" r="22" fill="#2C5B8F"/><text x="78" y="240.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="110" y="244" font-size="30" font-weight="700" fill="#2C5B8F">距離</text>
+<text x="165" y="318" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">約一臂遠</text>
+<text x="165" y="362" font-size="26" text-anchor="middle" fill="#4B5563">拍的人很近</text>
+<rect x="310" y="192" width="250" height="228" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="348" cy="232" r="22" fill="#2C5B8F"/><text x="348" y="240.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="380" y="244" font-size="30" font-weight="700" fill="#2C5B8F">鏡頭</text>
+<text x="435" y="318" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">廣角</text>
+<text x="435" y="362" font-size="26" text-anchor="middle" fill="#4B5563">背景被拉深</text>
+<rect x="40" y="442" width="250" height="228" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="78" cy="482" r="22" fill="#E5A300"/><text x="78" y="490.64" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">3</text>
+<text x="110" y="494" font-size="30" font-weight="700" fill="#8A5D00">構圖</text>
+<text x="165" y="568" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">一個部位</text>
+<text x="165" y="612" font-size="26" text-anchor="middle" fill="#4B5563">伸向鏡頭</text>
+<rect x="310" y="442" width="250" height="228" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="348" cy="482" r="22" fill="#2C5B8F"/><text x="348" y="490.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+<text x="380" y="494" font-size="30" font-weight="700" fill="#2C5B8F">背景</text>
+<text x="435" y="568" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">清楚可見</text>
+<text x="435" y="612" font-size="26" text-anchor="middle" fill="#4B5563">往後退很遠</text>
+<rect x="40" y="692" width="250" height="228" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="78" cy="732" r="22" fill="#0E7568"/><text x="78" y="740.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+<text x="110" y="744" font-size="30" font-weight="700" fill="#0E7568">光</text>
+<text x="165" y="818" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">自己決定</text>
+<text x="165" y="862" font-size="26" text-anchor="middle" fill="#4B5563">寫光從哪來</text>
+<rect x="310" y="692" width="250" height="228" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="348" cy="732" r="22" fill="#0E7568"/><text x="348" y="740.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">6</text>
+<text x="380" y="744" font-size="30" font-weight="700" fill="#0E7568">色調顆粒</text>
+<text x="435" y="818" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">黑白或彩色</text>
+<text x="435" y="862" font-size="26" text-anchor="middle" fill="#4B5563">灰階多不多</text>
+<rect x="40" y="942" width="250" height="228" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="78" cy="982" r="22" fill="#0E7568"/><text x="78" y="990.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">7</text>
+<text x="110" y="994" font-size="30" font-weight="700" fill="#0E7568">姿態時間</text>
+<text x="165" y="1068" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">放鬆直視</text>
+<text x="165" y="1112" font-size="26" text-anchor="middle" fill="#4B5563">像剛聊完天</text>
+<rect x="310" y="942" width="250" height="228" rx="22" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<circle cx="348" cy="982" r="22" fill="#B91C1C"/><text x="348" y="990.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">✕</text>
+<text x="380" y="994" font-size="30" font-weight="700" fill="#B91C1C">不要寫</text>
+<text x="435" y="1068" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">攝影師名字</text>
+<text x="435" y="1112" font-size="26" text-anchor="middle" fill="#4B5563">「某某風格」</text>
+<rect x="40" y="1196" width="520" height="56" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300" y="1234" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">描述畫面，<tspan fill="#8A5D00">不描述人名</tspan></text>
+</svg>

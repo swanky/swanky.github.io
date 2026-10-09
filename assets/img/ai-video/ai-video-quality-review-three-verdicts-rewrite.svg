@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">把形容詞，改成看得到的句子</title>
+  <desc id="d">左邊是驗不了的詞：電影感、8K、毛孔級細節、很悲傷，看完也無法打勾。右邊改寫成能對著畫面打勾的句子：數量是兔耳耳機一對、方向是光帶往上不往下、相對位置是能量柱在身後不遮臉、動作是雙臂真的展開、表演是先看向手中物件，停頓後才抬眼看向出口。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">把形容詞，改成看得到的句子</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">對著畫面能打勾或打叉，才驗得了</text>
+  <circle cx="130.0" cy="370.0" r="80.0" fill="#F1F5F9"/>
+  <circle cx="210.0" cy="310.0" r="95.0" fill="#F1F5F9"/>
+  <circle cx="310.0" cy="340.0" r="90.0" fill="#F1F5F9"/>
+  <circle cx="360.0" cy="410.0" r="70.0" fill="#F1F5F9"/>
+  <circle cx="260.0" cy="420.0" r="95.0" fill="#F1F5F9"/>
+  <circle cx="150.0" cy="440.0" r="70.0" fill="#F1F5F9"/>
+  <rect x="182.0" y="192.0" width="116.0" height="44" rx="22.0" fill="#B91C1C"/>
+  <text x="240" y="222.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">驗不了</text>
+  <text x="170" y="318" font-size="36" font-weight="700" text-anchor="middle" fill="#94A3B8">電影感</text>
+  <text x="320" y="330" font-size="36" font-weight="700" text-anchor="middle" fill="#94A3B8">8K</text>
+  <text x="230" y="392" font-size="32" font-weight="700" text-anchor="middle" fill="#94A3B8">毛孔級細節</text>
+  <text x="250" y="458" font-size="36" font-weight="700" text-anchor="middle" fill="#94A3B8">很悲傷</text>
+  <text x="240" y="546" font-size="24" text-anchor="middle" fill="#B91C1C">看完也無法打勾</text>
+  <line x1="440" y1="380" x2="530" y2="380" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="485" y="360" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">改寫</text>
+  <rect x="548" y="168" width="604" height="418" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <text x="580" y="214" font-size="28" font-weight="700" fill="#0E7568">驗得了</text>
+  <rect x="580" y="244" width="32" height="32" rx="7" fill="#FFFFFF" stroke="#0E7568" stroke-width="3"/>
+  <path d="M587,260 L594,268 L606,251" fill="none" stroke="#0E7568" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="626" y="242" width="68.0" height="36" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="660.0" y="268" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">數量</text>
+  <text x="770" y="270" font-size="26" fill="#1F2937">兔耳耳機一對</text>
+  <rect x="580" y="310" width="32" height="32" rx="7" fill="#FFFFFF" stroke="#0E7568" stroke-width="3"/>
+  <path d="M587,326 L594,334 L606,317" fill="none" stroke="#0E7568" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="626" y="308" width="68.0" height="36" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="660.0" y="334" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">方向</text>
+  <text x="770" y="336" font-size="26" fill="#1F2937">光帶往上，不往下</text>
+  <rect x="580" y="376" width="32" height="32" rx="7" fill="#FFFFFF" stroke="#0E7568" stroke-width="3"/>
+  <path d="M587,392 L594,400 L606,383" fill="none" stroke="#0E7568" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="626" y="374" width="112.0" height="36" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="682.0" y="400" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">相對位置</text>
+  <text x="770" y="402" font-size="26" fill="#1F2937">能量柱在身後、不遮臉</text>
+  <rect x="580" y="442" width="32" height="32" rx="7" fill="#FFFFFF" stroke="#0E7568" stroke-width="3"/>
+  <path d="M587,458 L594,466 L606,449" fill="none" stroke="#0E7568" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="626" y="440" width="68.0" height="36" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="660.0" y="466" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">動作</text>
+  <text x="770" y="468" font-size="26" fill="#1F2937">雙臂真的展開</text>
+  <rect x="580" y="508" width="32" height="32" rx="7" fill="#FFFFFF" stroke="#0E7568" stroke-width="3"/>
+  <path d="M587,524 L594,532 L606,515" fill="none" stroke="#0E7568" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="626" y="506" width="68.0" height="36" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="660.0" y="532" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">表演</text>
+  <text x="770" y="534" font-size="26" fill="#1F2937">先看向手中物件，停頓後</text>
+  <text x="770" y="572" font-size="26" fill="#1F2937">才抬眼看向出口</text>
+  <rect x="48" y="614" width="1104" height="80" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="664.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">驗不了的詞<tspan fill="#8A5D00">一律不列</tspan>；表演也要寫成看得到的動作</text>
+</svg>

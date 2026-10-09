@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">排行榜只能幫你縮名單</title>
+  <desc id="d">選模型的漏斗：最上層是排行榜，反映大量通用題目的平均偏好；第二層查規格，把平台上 24 個影片模型刷到 4 個；第三層用同一份考題對打，4 個只有 1 個通過；最後寫成哪類鏡頭交給誰的分工表。這是 2026 年 8 月的實測，排名請當歷史紀錄。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">排行榜只能幫你縮名單</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">2026 年 8 月我選模型的過程：一層一層篩下來</text>
+  <path d="M50,168 L730,168 L675,260 L105,260 z" fill="#F1F5F9" stroke="#64748B" stroke-width="3" stroke-linejoin="round"/>
+  <text x="390" y="208" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">排行榜</text>
+  <text x="390" y="244" text-anchor="middle" font-size="26" fill="#4B5563">大量通用題目的平均偏好</text>
+  <path d="M105,272 L675,272 L620,364 L160,364 z" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3" stroke-linejoin="round"/>
+  <text x="390" y="312" text-anchor="middle" font-size="32" font-weight="700" fill="#2C5B8F">查規格</text>
+  <text x="390" y="348" text-anchor="middle" font-size="26" font-weight="700" fill="#4B5563">24 個 → 4 個</text>
+  <path d="M160,376 L620,376 L565,468 L215,468 z" fill="#FDF3E7" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+  <text x="390" y="416" text-anchor="middle" font-size="32" font-weight="700" fill="#B45309">考題對打</text>
+  <text x="390" y="452" text-anchor="middle" font-size="26" font-weight="700" fill="#4B5563">4 個 → 1 個通過</text>
+  <path d="M215,480 L565,480 L510,572 L270,572 z" fill="#FFF8E7" stroke="#E5A300" stroke-width="5" stroke-linejoin="round"/>
+  <text x="390" y="520" text-anchor="middle" font-size="32" font-weight="700" fill="#8A5D00">分工表</text>
+  <text x="390" y="556" text-anchor="middle" font-size="26" fill="#1F2937">哪類鏡頭交給誰</text>
+  <text x="760" y="214" font-size="24" fill="#4B5563">回答「大家整體比較喜歡誰」，</text>
+  <text x="760" y="246" font-size="24" fill="#4B5563">不回答「這一鏡該交給誰」</text>
+  <circle cx="760" cy="296" r="7" fill="#2C5B8F"/>
+  <circle cx="777" cy="296" r="7" fill="#2C5B8F"/>
+  <circle cx="794" cy="296" r="7" fill="#2C5B8F"/>
+  <circle cx="811" cy="296" r="7" fill="#2C5B8F"/>
+  <circle cx="828" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="845" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="862" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="879" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="896" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="913" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="930" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="947" cy="296" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="760" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="777" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="794" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="811" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="828" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="845" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="862" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="879" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="896" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="913" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="930" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="947" cy="313" r="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <text x="980" y="312" font-size="24" font-weight="700" fill="#2C5B8F">規格不合就刷掉</text>
+  <circle cx="760" cy="412" r="9" fill="#0E7568"/>
+  <circle cx="786" cy="412" r="9" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="812" cy="412" r="9" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <circle cx="838" cy="412" r="9" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5"/>
+  <text x="880" y="420" font-size="24" font-weight="700" fill="#B45309">只有 1 支過關</text>
+  <text x="760" y="518" font-size="24" font-weight="700" fill="#8A5D00">結論不是冠軍，</text>
+  <text x="760" y="550" font-size="24" font-weight="700" fill="#8A5D00">是一張分工表</text>
+  <rect x="48" y="612" width="1104" height="86" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="80" y="665.8" font-size="30" font-weight="700" fill="#1F2937">排行榜縮名單，<tspan fill="#8A5D00">你的考題</tspan>才決定誰適合你的鏡頭</text>
+</svg>

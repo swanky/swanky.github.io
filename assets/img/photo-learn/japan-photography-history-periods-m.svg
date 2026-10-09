@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1576" width="600" height="1576" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">日本攝影 60 年：拍的人一步步走進照片（手機版）</title>
+<desc id="d">日本攝影從 1959 年到 1990 年代以後的六個節點，由左到右排在一條時間線上。1959 年 VIVO：從報導攝影出發，想做「個人的記錄」。1968 年《写真100年》：回頭清算戰爭時期的照片。1968 到 1970 年 Provoke：粗、晃、失焦，看得見拍的人在走動。1971 年私寫真：荒木經惟拍自己的婚禮和新婚旅行。1974 年 MoMA 展：東松照明、森山大道被海外美術館看見。1990 年代以後：女性攝影家與日常的照片。時間線上方標出拍的人站的位置，從旁觀、走近到在裡面；這是作者的讀法，每個節點的出處列在章末。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1576" fill="#FFFFFF"/>
+<text x="32" y="72" font-size="42" fill="#1F2937" font-weight="700">日本攝影 60 年：</text>
+<text x="32" y="124" font-size="42" fill="#1F2937" font-weight="700">拍的人走進照片</text>
+<text x="32" y="168" font-size="24" fill="#4B5563">六個節點（示意）；出處列在章末</text>
+<line x1="72" y1="220" x2="72" y2="1376" stroke="#374151" stroke-width="5" marker-end="url(#arr)"/>
+<circle cx="72" cy="260" r="15" fill="#2C5B8F" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="220" width="460" height="168" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="130" y="268" font-size="30" fill="#2C5B8F" font-weight="700">1959</text>
+<text x="300" y="268" font-size="28" fill="#1F2937" font-weight="700">VIVO</text>
+<text x="130" y="318" font-size="24" fill="#4B5563">從報導出發，想做「個人的記錄」</text>
+<text x="130" y="362" font-size="24" fill="#2C5B8F" font-weight="700">拍的人：旁觀</text>
+<circle cx="72" cy="456" r="15" fill="#2C5B8F" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="416" width="460" height="168" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="130" y="464" font-size="30" fill="#2C5B8F" font-weight="700">1968</text>
+<text x="300" y="464" font-size="28" fill="#1F2937" font-weight="700">《写真100年》</text>
+<text x="130" y="514" font-size="24" fill="#4B5563">回頭清算戰爭時期的照片</text>
+<text x="130" y="558" font-size="24" fill="#2C5B8F" font-weight="700">拍的人：旁觀</text>
+<circle cx="72" cy="652" r="15" fill="#B91C1C" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="612" width="460" height="168" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<text x="130" y="660" font-size="30" fill="#B91C1C" font-weight="700">1968–70</text>
+<text x="300" y="660" font-size="28" fill="#1F2937" font-weight="700">Provoke</text>
+<text x="130" y="710" font-size="24" fill="#4B5563">粗、晃、失焦：看得見拍的人在走動</text>
+<text x="130" y="754" font-size="24" fill="#B91C1C" font-weight="700">拍的人：走近</text>
+<circle cx="72" cy="848" r="15" fill="#B91C1C" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="808" width="460" height="168" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<text x="130" y="856" font-size="30" fill="#B91C1C" font-weight="700">1971</text>
+<text x="300" y="856" font-size="28" fill="#1F2937" font-weight="700">私寫真</text>
+<text x="130" y="906" font-size="24" fill="#4B5563">拍自己的婚禮和新婚旅行</text>
+<text x="130" y="950" font-size="24" fill="#B91C1C" font-weight="700">拍的人：走近</text>
+<circle cx="72" cy="1044" r="15" fill="#2C5B8F" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="1004" width="460" height="168" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="130" y="1052" font-size="30" fill="#2C5B8F" font-weight="700">1974</text>
+<text x="300" y="1052" font-size="28" fill="#1F2937" font-weight="700">MoMA 展</text>
+<text x="130" y="1102" font-size="24" fill="#4B5563">東松、森山被海外美術館看見</text>
+<text x="130" y="1146" font-size="24" fill="#2C5B8F" font-weight="700">拍的人：走近</text>
+<circle cx="72" cy="1240" r="15" fill="#E5A300" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="108" y="1200" width="460" height="168" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="130" y="1248" font-size="30" fill="#8A5D00" font-weight="700">1990s–</text>
+<text x="300" y="1248" font-size="28" fill="#1F2937" font-weight="700">日常</text>
+<text x="130" y="1298" font-size="24" fill="#4B5563">女性攝影家、日常的照片，到今天</text>
+<text x="130" y="1342" font-size="24" fill="#8A5D00" font-weight="700">拍的人：在裡面</text>
+<rect x="24" y="1406" width="552" height="132" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="300" y="1460" font-size="28" fill="#1F2937" font-weight="700" text-anchor="middle">讀照片時問一句：</text>
+<text x="300" y="1506" font-size="28" fill="#8A5D00" font-weight="700" text-anchor="middle">拍的人在畫面外，還是在裡面？</text>
+</svg>

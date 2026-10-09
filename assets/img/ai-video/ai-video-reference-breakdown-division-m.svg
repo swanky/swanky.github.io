@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1264" width="600" height="1264" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">拉片分工：尺量、眼判、人看</title>
+<desc id="d">拉片分三方。程式像尺：量切點、每鏡秒數、畫面動多少，最後對帳；要注意同色調的鏡頭可能漏刀，得調靈敏度。模型像眼睛：看代表畫格判斷景別、運鏡、畫面描述；讓它自己數切點、算秒數會數錯。人像心：抓漸變轉場、該動卻沒動、好不好看；切點與秒數不必自己數，交給程式。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker></defs>
+<rect width="600" height="1264" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="42" font-weight="700" fill="#1F2937">拉片分工</text>
+<text x="40" y="114" font-size="24" fill="#4B5563">尺量數字、眼判斷、人看好不好看</text>
+<rect x="40" y="146" width="520" height="304" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<g transform="translate(100,202) scale(0.7)"><rect x="-50" y="-18" width="100" height="36" rx="5" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><line x1="-40" y1="-18" x2="-40" y2="-4" stroke="#2C5B8F" stroke-width="3"/><line x1="-30" y1="-18" x2="-30" y2="-10" stroke="#2C5B8F" stroke-width="3"/><line x1="-20" y1="-18" x2="-20" y2="-4" stroke="#2C5B8F" stroke-width="3"/><line x1="-10" y1="-18" x2="-10" y2="-10" stroke="#2C5B8F" stroke-width="3"/><line x1="0" y1="-18" x2="0" y2="-4" stroke="#2C5B8F" stroke-width="3"/><line x1="10" y1="-18" x2="10" y2="-10" stroke="#2C5B8F" stroke-width="3"/><line x1="20" y1="-18" x2="20" y2="-4" stroke="#2C5B8F" stroke-width="3"/><line x1="30" y1="-18" x2="30" y2="-10" stroke="#2C5B8F" stroke-width="3"/><line x1="40" y1="-18" x2="40" y2="-4" stroke="#2C5B8F" stroke-width="3"/></g>
+<text x="160" y="214" font-size="34" font-weight="700" fill="#2C5B8F">程式＝尺</text>
+<rect x="64" y="253" width="64" height="34" rx="17" fill="#0E7568"/><text x="96" y="277" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">擅長</text>
+<text x="140" y="278" font-size="24" font-weight="700" fill="#1F2937">切點、每鏡秒數</text>
+<text x="64" y="314" font-size="24" font-weight="700" fill="#1F2937">畫面動多少、最後對帳</text>
+<line x1="64" y1="338" x2="536" y2="338" stroke="#2C5B8F" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="64" y="359" width="64" height="34" rx="17" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/><text x="96.0" y="383" text-anchor="middle" font-size="20" font-weight="700" fill="#B45309">注意</text>
+<text x="64" y="424" font-size="24" fill="#4B5563">同色調會漏刀要調靈敏度</text>
+<rect x="40" y="468" width="520" height="304" rx="22" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+<g transform="translate(100,524) scale(0.7)"><path d="M-46,0 Q0,-42 46,0 Q0,42 -46,0 Z" fill="#FFFFFF" stroke="#B45309" stroke-width="5"/><circle cx="0" cy="0" r="15" fill="#B45309"/><circle cx="5" cy="-5" r="5" fill="#FFFFFF"/></g>
+<text x="160" y="536" font-size="34" font-weight="700" fill="#B45309">模型＝眼</text>
+<rect x="64" y="575" width="64" height="34" rx="17" fill="#0E7568"/><text x="96" y="599" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">擅長</text>
+<text x="140" y="600" font-size="24" font-weight="700" fill="#1F2937">景別、運鏡、畫面描述</text>
+<text x="64" y="636" font-size="24" font-weight="700" fill="#1F2937">（看代表畫格）</text>
+<line x1="64" y1="660" x2="536" y2="660" stroke="#B45309" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="64" y="681" width="84" height="34" rx="17" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/><text x="106.0" y="705" text-anchor="middle" font-size="20" font-weight="700" fill="#B91C1C">做不到</text>
+<text x="64" y="746" font-size="24" fill="#4B5563">自己數切點、算秒數會數錯</text>
+<rect x="40" y="790" width="520" height="304" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<g transform="translate(100,846) scale(0.7)"><path d="M0,34 C-50,0 -40,-38 -14,-34 C-4,-32 0,-24 0,-18 C0,-24 4,-32 14,-34 C40,-38 50,0 0,34 Z" fill="#FFFFFF" stroke="#E5A300" stroke-width="5" stroke-linejoin="round"/></g>
+<text x="160" y="858" font-size="34" font-weight="700" fill="#8A5D00">人＝心</text>
+<rect x="64" y="897" width="64" height="34" rx="17" fill="#0E7568"/><text x="96" y="921" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">擅長</text>
+<text x="140" y="922" font-size="24" font-weight="700" fill="#1F2937">漸變轉場、該動卻沒動</text>
+<text x="64" y="958" font-size="24" font-weight="700" fill="#1F2937">好不好看</text>
+<line x1="64" y1="982" x2="536" y2="982" stroke="#E5A300" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="64" y="1003" width="84" height="34" rx="17" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/><text x="106.0" y="1027" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">不必做</text>
+<text x="64" y="1068" font-size="24" fill="#4B5563">切點與秒數交給程式</text>
+<rect x="40" y="1112" width="520" height="116" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="300.0" y="1162" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#1F2937">全部對得上，只代表</tspan></text><text x="300.0" y="1197" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">鏡頭表沒有自相矛盾</tspan></text>
+</svg>

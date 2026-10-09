@@ -1,0 +1,98 @@
+---
+layout: home
+title: 創作筆記
+seo_title: 史旺基創作筆記｜自己的拍法、寫真集製作與 AI 寫真
+description: 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。攝影史與其他攝影師另外整理在「看懂寫真」。
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影寫真
+    url: /photography/
+  - name: 創作筆記
+    url: /photography/notes/
+use_photography_author: true
+use_photo_learn: true
+# 2026-10-09 起本頁以站主自己的作品為主軸；攝影史、其他攝影師的研究移到「看懂寫真」（/photography/learn/）。
+# 〈日本攝影史一頁看懂〉〈看見「在場」〉的 notes_topic 仍是「看懂寫真」，但這組已不在 note_groups 裡，所以不會出現在本頁。
+# 每組一張代表圖：只用站上已公開的站主自家作品。
+# post：連到同站文章（依網址 slug 找，草稿不存在時不加連結）；href：連到固定頁面。
+notes_covers:
+  - group: 我的風格
+    src: /assets/img/photography/responsive/15262345956-960.jpg
+    width: 960
+    height: 960
+    alt: 窗邊椅子上的制服人像
+    caption: 〈窗邊的懸浮感〉，2014 年
+    href: https://www.flickr.com/photos/swanky-hsiao/15262345956/
+  - group: 寫真集製作
+    src: /assets/img/photography/jiang-yingxi-window-still-lit/cover-card.jpg
+    width: 640
+    height: 360
+    alt: 江映希《窗外還亮著》封面（AI 生成，非真人照片）
+    caption: 江映希寫真集《窗外還亮著》封面（AI 生成，非真人照片）
+    href: /photography/jiang-yingxi-window-still-lit/
+  - group: AI × 攝影
+    src: /assets/img/photography/lin-yuqing-send-today/cover-card.jpg
+    width: 640
+    height: 360
+    alt: 林予晴《把今天寄出去》封面（AI 生成，非真人照片）
+    caption: 林予晴寫真集《把今天寄出去》封面（AI 生成，非真人照片）
+    href: /photography/lin-yuqing-send-today/
+  - group: 早年隨筆
+    src: /assets/facebook-archive/photos/2018-08-18_10158075093130329_0-card.jpg
+    width: 640
+    height: 427
+    alt: 早年制服人像作品，模特兒嫺嫺
+    caption: 〈制服女孩嫺嫺〉，2018 年
+    post: uniform-girl-hsianhs
+# 待寫的篇章：還沒有文章時以「整理中」列出，不留空組。
+notes_planned:
+  - group: 我的風格
+    title: 我的七種拍法
+    note: 我自己常用的拍法，一種一種拆開說。
+  - group: 我的風格
+    title: 我想拍的人物特質
+    note: 我在找什麼樣的被攝者：表情、氣質，以及和鏡頭的距離。
+---
+{%- comment -%}
+  版面（2026-10-09 設計 QA 修正）：每組＝大標題＋索引列（左緣對齊），右側一張代表圖（窄螢幕排在標題下）。
+  組別明暗依「實際出現的組」交替（亮、暗、亮…），不因中間有空組而連續兩個亮帶；
+  頁尾洽詢帶跟最後一組相反：最後一組是暗帶就用淺色細帶，反之用深色帶。
+{%- endcomment -%}
+{% comment %}組別順序決定 #notes-group-N 錨點；「我的風格」是第 3 組，photography/learn/index.html 的模特兒入口連到 #notes-group-3，改順序時一併改。{% endcomment %}
+{% assign note_groups = "寫真集製作|AI × 攝影|我的風格|早年隨筆" | split: "|" %}
+{% assign all_notes = site.categories.photography | sort: "date" | reverse %}
+{% assign ai_pins = "ai-photographer-judgment-character-photobook|ai-photography-virtual-agency" | split: "|" %}
+{% assign shown_groups = 0 %}{% capture notes_body %}{% for group in note_groups %}{% capture group_items %}{% for note in all_notes %}{% assign topic = note.notes_topic | default: "早年隨筆" %}{% if topic == group %}{% include photography/notes-row.html note=note %}{% endif %}{% endfor %}{% if group == "AI × 攝影" %}{% for pin in ai_pins %}{% for p in site.posts %}{% if p.url contains pin %}{% unless p.categories contains "photography" %}{% include photography/notes-row.html note=p %}{% endunless %}{% endif %}{% endfor %}{% endfor %}{% endif %}{% assign planned = page.notes_planned | where: "group", group %}{% for item in planned %}<div class="photo-notes-row photo-notes-row--soon"><strong>{{ item.title }}</strong><span>{{ item.note }}</span><small>整理中</small></div>{% endfor %}{% endcapture %}{% assign group_items_trim = group_items | strip %}{% if group_items_trim != "" %}{% assign shown_groups = shown_groups | plus: 1 %}{% assign group_id = "notes-group-" | append: forloop.index %}{% assign cover = page.notes_covers | where: "group", group | first %}{% assign cover_href = nil %}{% if cover.href %}{% assign cover_href = cover.href | relative_url %}{% elsif cover.post %}{% assign cover_needle = "/" | append: cover.post | append: "/" %}{% assign cover_post = site.posts | where_exp: "p", "p.url contains cover_needle" | first %}{% if cover_post %}{% assign cover_href = cover_post.url | relative_url %}{% endif %}{% endif %}{% assign group_tone = shown_groups | modulo: 2 %}<section class="photo-author-section photo-notes-group{% if group_tone == 1 %} photo-author-light{% endif %}{% if cover %} has-cover{% endif %}" id="{{ group_id }}" data-notes-group><div class="photo-author-shell photo-notes-grid"><h2 class="photo-notes-title">{{ group }}。</h2>{% if cover %}<figure class="photo-notes-cover">{% if cover_href %}<a href="{{ cover_href }}">{% endif %}<img src="{{ cover.src | relative_url }}" width="{{ cover.width }}" height="{{ cover.height }}" alt="{{ cover.alt }}" decoding="async">{% if cover_href %}</a>{% endif %}<figcaption>{% if cover_href %}<a href="{{ cover_href }}">{{ cover.caption }}</a>{% else %}{{ cover.caption }}{% endif %}</figcaption></figure>{% endif %}<div class="photo-notes-list">{{ group_items_trim }}</div></div></section>{% endif %}{% endfor %}{% endcapture %}
+<main id="main" class="photo-author-page photo-author-subpage">
+  {% include photography/subpage-hero.html eyebrow="CREATIVE NOTES · 創作筆記" title="創作筆記" intro="史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。" %}
+  {% include photography/subpage-nav.html %}
+  <nav class="photo-notes-filter" aria-label="創作筆記分類"><div class="photo-author-shell"><span>跳到分類</span><div>{% for group in note_groups %}{% assign gid = "notes-group-" | append: forloop.index %}{% if notes_body contains gid %}<a href="#{{ gid }}">{{ group }}</a>{% endif %}{% endfor %}</div></div></nav>
+  {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}
+  {% assign learn = site.data.photo_learn %}
+  <aside class="photo-notes-learn" aria-label="攝影學習筆記入口">
+    <div class="photo-author-shell photo-notes-learn-grid">
+      <p><span class="photo-notes-learn-kicker">{{ learn.name }}・{{ learn.subtitle }}</span>攝影史、其他攝影師的拍法與寫真集導讀，我另外整理成一區。</p>
+      <a class="photo-author-text-link" href="{{ learn.url | relative_url }}">進入{{ learn.name }} →</a>
+    </div>
+  </aside>
+  {% endif %}
+  {{ notes_body }}
+  {% assign last_tone = shown_groups | modulo: 2 %}
+  <section class="photo-author-section photo-notes-cta{% if last_tone == 0 %} photo-author-light{% endif %}">
+    <div class="photo-author-shell photo-notes-cta-grid">
+      <div>
+        <h2>想看完整作品，或一起拍？</h2>
+        <p class="photo-notes-foot">想看 Web3 與寫真的結合，請到 <a class="photo-author-text-link" href="{{ '/nft/' | relative_url }}">Web3 寫真與 NFT 專區</a>。</p>
+      </div>
+      <div>
+        <div class="photo-author-actions">
+          <a class="photo-author-button" href="{{ '/photography/models/' | relative_url }}">看寫真集作品</a>
+          <a class="photo-author-button photo-author-button--ghost" href="{{ '/contact/' | relative_url }}?service=photography&from=photo_notes" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'photography_notes',service:'photography',cta_position:'photo_notes',from_page:window.location.pathname});}">攝影合作洽詢</a>
+        </div>
+        {% include contact-fallback.html service="photography" position="photo_notes" %}
+      </div>
+    </div>
+  </section>
+</main>

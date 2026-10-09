@@ -1218,3 +1218,50 @@
   .yx-index__list li { grid-template-columns: 3.8em minmax(0, 1fr); }
   .yx-index__flickr { grid-column: 2; margin-top: 6px; }
 }
+
+/* 創作筆記列表：索引列（標題＋一句描述＋日期），不用卡片格 */
+.photo-notes-filter { padding: 18px 0; border-bottom: 1px solid var(--photo-line); }
+.photo-notes-filter .photo-author-shell { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.photo-notes-filter span { color: var(--c-muted); font-size: .85rem; }
+.photo-notes-filter div { display: flex; flex-wrap: wrap; gap: 8px; }
+.photo-notes-filter a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 18px; border: 1px solid var(--photo-line); color: inherit; text-decoration: none; }
+.photo-notes-filter a:hover { border-color: #8a6921; }
+.photo-notes-list { display: flex; flex-direction: column; }
+.photo-notes-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 20px; padding: 16px 0; border-top: 1px solid #d0c9bc; color: inherit !important; text-decoration: none !important; }
+.photo-notes-row span { grid-column: 1; color: var(--c-muted); line-height: 1.55; }
+.photo-notes-row small { grid-column: 2; grid-row: 1; color: #926800; white-space: nowrap; }
+.photo-notes-row:hover strong { text-decoration: underline; }
+.photo-author-section:not(.photo-author-light) .photo-notes-row { border-top-color: var(--photo-line); color: #f5f1e8 !important; }
+.photo-author-section:not(.photo-author-light) .photo-notes-row span { color: #c1bcb2; }
+.photo-author-section:not(.photo-author-light) .photo-notes-row small { color: var(--photo-gold-light); }
+.photo-notes-foot { margin: 0; }
+@media (max-width: 720px) { .photo-notes-row { grid-template-columns: 1fr; } .photo-notes-row small { grid-column: 1; grid-row: auto; } }
+
+/* 創作筆記列表（2026-10-09 設計 QA 修正）：大標題與索引列同一左緣；每組右側一張代表圖（原比例、不裁切）；
+   組間距收小，單篇的組不再撐出大片空白；頁尾洽詢帶。 */
+.photo-author-section.photo-notes-group { padding: clamp(52px, 6vw, 92px) 0; scroll-margin-top: 70px; }
+.photo-notes-grid { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "list"; gap: clamp(20px, 2.6vw, 32px); }
+.photo-notes-group.has-cover .photo-notes-grid { grid-template-columns: minmax(0, 1fr) minmax(0, .74fr); grid-template-rows: auto 1fr; grid-template-areas: "title cover" "list cover"; column-gap: clamp(32px, 5vw, 84px); align-items: start; }
+.photo-notes-title { grid-area: title; margin: 0; color: inherit; font-family: var(--font-display); font-size: clamp(2.2rem, 4.2vw, 4.2rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.03em; }
+.photo-notes-grid > .photo-notes-list { grid-area: list; }
+.photo-notes-cover { grid-area: cover; margin: 0; }
+.photo-notes-cover a { color: inherit; }
+.photo-notes-cover img { display: block; width: 100%; height: auto; border: 1px solid rgba(0, 0, 0, .08); background: #fff; }
+.photo-notes-cover figcaption { margin-top: 10px; color: #c1bcb2; font-size: .85rem; line-height: 1.6; }
+.photo-notes-cover figcaption a { text-decoration: underline; text-decoration-color: rgba(201, 168, 96, .6); text-underline-offset: 3px; }
+.photo-notes-cover figcaption a:hover { color: var(--photo-gold-light); }
+.photo-author-light .photo-notes-cover figcaption { color: var(--c-muted); }
+.photo-author-light .photo-notes-cover figcaption a:hover { color: var(--c-gold-deep); }
+.photo-author-section.photo-notes-cta { padding: clamp(48px, 5vw, 76px) 0; }
+.photo-notes-cta.photo-author-light { border-top: 1px solid #d0c9bc; }
+.photo-notes-cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px clamp(32px, 5vw, 72px); align-items: center; }
+.photo-notes-cta h2 { margin: 0 0 10px; color: inherit; font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.4rem); font-weight: 400; line-height: 1.2; }
+.photo-notes-cta .photo-author-actions { margin-top: 0; }
+.photo-notes-cta .contact-fallback { margin: 12px 0 0; font-size: .85rem; opacity: .8; }
+@media (max-width: 720px) {
+  .photo-notes-group.has-cover .photo-notes-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "title" "cover" "list"; }
+  .photo-notes-cta-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.photo-author-light .photo-notes-foot .photo-author-text-link { color: var(--c-gold-deep) !important; }
+.photo-author-light .photo-notes-foot .photo-author-text-link:hover { color: #1a1917 !important; }
+.photo-notes-cta .contact-fallback { text-align: left; }

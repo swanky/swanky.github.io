@@ -1,0 +1,154 @@
+id: hosoe
+status: published
+name: Eikoh Hosoe
+zh: 細江英公
+zh_note: 名字照日文漢字；本名細江敏廣（Art Platform Japan）
+life: 1933–2024
+place: 日本，生於山形縣米澤市
+theme: 把人放進真實的地方，讓他演一個角色
+view: 他和舞者土方巽一起，把真的稻田、農舍和路過的村民變成舞台。照片看起來像紀錄，其實是一場演出。拍人像的人看他，學的是「不用搭景，去找一個真的地方，再讓人在裡面演」。
+bio: |
+  <p>1933 年生於山形縣米澤市，本名細江敏廣，2024 年在東京過世。<sup><a href="#src-hosoe">出處：Art Platform Japan</a></sup>1959 年，他和東松照明、川田喜久治、奈良原一高等人組成攝影師團體 VIVO；紐約現代藝術博物館說，這個團體是仿照 Magnum 圖片社的合作方式。<sup><a href="#src-hosoe">出處：SFMOMA、MoMA</a></sup>澳洲新南威爾斯美術館的展覽手冊說，他年輕時很快就放下了戰後主流的寫實紀錄路線。<sup><a href="#src-hosoe">出處：新南威爾斯美術館</a></sup></p>
+  <p>同樣在 1959 年，他認識了舞踏的創始人之一土方巽，後來一起做了好幾個系列，最有名的是 1969 年出版的《鎌鼬》。他想重演二戰時從東京疏散到鄉下的童年記憶，於是請土方在東北的稻田裡，演出傳說中出沒田間、像鼬鼠一樣的妖怪；兩人都出身東北。<sup><a href="#src-hosoe">出處：新南威爾斯美術館、SFMOMA</a></sup></p>
+  <p>他另一套名作《薔薇刑》拍的是作家三島由紀夫，1963 年以《Killed by Roses》成書，1970 年應三島的要求改名《Ordeal by Roses》。1970 年代，他又跟拍一位知名的扮裝者在東京各處遊走，這組《シモン・ある私風景》到 2012 年才出版。舊金山現代藝術博物館說，他對日本攝影最獨特的貢獻，是很早就和海外的攝影圈建立了聯繫。<sup><a href="#src-hosoe">出處：SFMOMA</a></sup></p>
+works_intro: 前六件是《鎌鼬》，依年份排；後面三件是 1970 年代的另外兩個系列。本站不放裸體和未成年人的照片，所以《鎌鼬》裡拍到村中孩子的幾張、以《薔薇刑》為首的裸體系列都不放圖；東京都寫真美術館的館藏只供線上瀏覽，那兩件只放連結；舊金山現代藝術博物館的頁面不得轉載，三件〈Kamaitachi〉也只放連結。
+works:
+  - title: "Kamaitachi #3"
+    zh: 《鎌鼬》#3
+    year: 1965 年拍，1971 年印
+    where: 舊金山現代藝術博物館（SFMOMA）／Sack Photographic Trust
+    url: https://www.sfmoma.org/artwork/ST2010.030/
+    look: 土方穿著敞開的白色和服，坐在昏暗屋裡的一張鐵椅上，前景有一片失焦的葉子。他沒有跳也沒有動，只是坐著直視鏡頭，整個屋子就跟著緊張起來。
+  - title: "Kamaitachi #11"
+    zh: 《鎌鼬》#11
+    year: "1965"
+    where: 舊金山現代藝術博物館（SFMOMA）／Sack Photographic Trust
+    url: https://www.sfmoma.org/artwork/ST2010.034/
+    look: 畫面幾乎全黑，只有架子上的木箱和他被光照到；他蹲在最上層的一格裡，雙手抱著頭。人被塞進倉庫的格子，像一件收起來的東西。
+  - title: Kamaitachi
+    zh: 《鎌鼬》（稻田）
+    year: "1968"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/51928
+    look: 收割後的稻田佔了大半張，他張開雙手從田中央衝過來，上方是一條壓得很低的暗色天空。人很小、土地很大，這就是《鎌鼬》的比例。
+  - title: "Kamaitachi #28"
+    zh: 《鎌鼬》#28
+    year: "1968"
+    where: 紐約現代藝術博物館（MoMA）
+    url: https://www.moma.org/collection/works/51949
+    img: /assets/img/photo-learn/works/atlas-hosoe/04-kamaitachi-28.jpg
+    img_w: 413
+    img_h: 600
+    credit: "攝影：Eikoh Hosoe｜© 2026 Eikoh Hosoe"
+    look: 穿新娘禮服的女子站在鋪著草簾的農舍牆邊，屋頂的角落卻蹲著一個人。先看到新娘，第二眼才發現屋頂上的他，這張的張力就在那一眼的時間差。
+  - title: "Kamaitachi #31"
+    zh: 《鎌鼬》#31
+    year: 1968 年拍，約 1969 年印
+    where: 休士頓美術館（MFAH）
+    url: https://emuseum.mfah.org/objects/119451/kamaitachi-31
+    img: /assets/img/photo-learn/works/atlas-hosoe/05-kamaitachi-31.jpg
+    img_w: 600
+    img_h: 395
+    credit: "攝影：Eikoh Hosoe｜館頁未列版權欄"
+    look: 四周壓成一圈黑，中間亮得發白，人只剩一個剪影，衣服在身後飛起來、正往前跑。看不見臉也沒關係，速度和方向已經把故事說完。
+  - title: "Kamaitachi #34"
+    zh: 《鎌鼬》#34
+    year: "1968"
+    where: 舊金山現代藝術博物館（SFMOMA）／Sack Photographic Trust
+    url: https://www.sfmoma.org/artwork/ST2010.033/
+    look: 鏡頭貼著地面往上拍，前景是一根根草穗，一個長髮的人站在草叢裡、一隻手高高舉起。草比人還搶眼，人反而像從草裡長出來的。
+  - title: Simon in Riverside Field
+    zh: 河邊草地上的シモン
+    year: "1971"
+    where: 休士頓美術館（MFAH）
+    url: https://emuseum.mfah.org/objects/41796/simon-in-riverside-field
+    img: /assets/img/photo-learn/works/atlas-hosoe/07-simon-riverside-field.jpg
+    img_w: 600
+    img_h: 464
+    credit: "攝影：Eikoh Hosoe｜館頁未列版權欄"
+    look: 一大片長草佔滿畫面，穿花紋和服的人坐在正中間，遠處是一條細細的地平線。拿來和《鎌鼬》的稻田比：一樣是人小地大，但這次是河邊的草地。
+  - title: 隅田川吾嬬橋（Azuma Bridge, the Sumida River, Tokyo）
+    zh: 《シモン・ある私風景》系列
+    year: "1971"
+    where: 東京都寫真美術館（館藏只供線上瀏覽，不放圖）
+    url: https://collection.topmuseum.jp/Publish/detailPage/37049/
+    look: 一張臉幾乎貼到鏡頭上咧嘴大笑，背後是隅田川的水面和遠方的橋。和上一件的遠景剛好相反，同一個系列裡，他也會靠到最近。
+  - title: "カサ・ミラ #82（Casa Mila #82）"
+    zh: 《ガウディの宇宙》系列
+    year: "1977"
+    where: 東京都寫真美術館（館藏只供線上瀏覽，不放圖）
+    url: https://collection.topmuseum.jp/Publish/detailPage/11411/
+    look: 他後來也拍建築：高第設計的米拉之家，屋頂上造型古怪的煙囪像一群站著的人。拍人拍久了，連建築都被他拍得像在演戲。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的 Viviana 裡也看得到類似的做法：她穿著紅白兩色的球衣、戴著白色安全帽，在一座真的戶外籃球場上運球往前衝，身後是籃框、圍網和高高的燈柱。球場沒有清場、也沒有布景，動作是她在這個地方本來就會做的事。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-hosoe-own" data-type="image" href="/assets/img/sec/024_Viviana_1.jpg">
+      <img src="/assets/img/photography/responsive-subpages/sec-024_Viviana_1-960.jpg" alt="For Your Safety — Viviana 人像攝影" width="960" height="960" loading="lazy" decoding="async">
+    </a>
+    <figcaption>史旺基作品，《For Your Safety》系列（Viviana）。點圖放大。</figcaption>
+  </figure>
+  <p>拿它和《鎌鼬》比，差別也很清楚：土方演的是傳說裡的妖怪，人和地方之間有一段距離；這張的角色和場地是同一回事。共同點是：<strong>人在一個真的地方，做一個有理由的動作。</strong></p>
+videos:
+  - id: LLg0AC0ivec
+    link_only: true
+    title: "Eikoh Hosoe: Does photography reflect truth?"
+    channel: San Francisco Museum of Modern Art
+    channel_url: https://www.youtube.com/@sfmoma
+    length: 4 分 1 秒
+    lang: 英語
+    note: 舊金山現代藝術博物館官方頻道。細江本人談《鎌鼬》：照片裡的表演和真實生活怎麼混在一起，適合當入門。點連結到 YouTube 看
+  - id: JoHaMFNywEY
+    link_only: true
+    title: "Rupture, Reconnection: The Photography of Eikoh Hosoe"
+    channel: Aperture
+    channel_url: https://www.youtube.com/@ApertureNewYork
+    length: 84 分 11 秒
+    lang: 英語
+    note: 攝影出版社 Aperture 的官方頻道，2013 年談他一生作品的座談，很長，適合想深入的人。點連結到 YouTube 看
+take:
+  - 找一個真的地方，不要急著搭景。稻田、農舍、河邊草地本身就有故事，人放進去就會跟環境對話；外拍前先花時間挑地點，比挑衣服更重要。
+  - 給對方一個角色，而不是一個姿勢。土方在《鎌鼬》裡演的是傳說中的妖怪，所以每個動作都有理由；拍之前先跟模特兒說好「你是誰、你在這裡做什麼」。
+  - 讓人小一點，讓地方大一點。稻田那張人只佔一小塊，土地的尺度反而讓動作更有力；不是每張人像都要把人拍滿。
+related:
+  - unit: u3
+    title: 細江英公與土方巽：把一座村子當成舞台
+  - unit: u1
+    title: 日本攝影史一頁看懂：從 VIVO 到日常寫真，拍的人怎麼走進照片
+sources:
+  - title: HOSOE Eikoh（Dictionary of Artists in Japan）
+    by: Art Platform Japan（文化廳、國立美術館）
+    url: https://artplatform.go.jp/artists/A1874
+    note: 本名細江敏廣、1933 年 3 月 18 日生於山形縣米澤市、2024 年 9 月 16 日在東京過世
+  - title: Eikoh Hosoe（作家頁）
+    by: San Francisco Museum of Modern Art（舊金山現代藝術博物館）
+    url: https://www.sfmoma.org/artist/Eikoh_Hosoe/
+    note: 1959 年共組 VIVO、《鎌鼬》1969 年出版與拍法、《薔薇刑》1963 成書與 1970 改名、《シモン・ある私風景》2012 年出版、和海外攝影圈的聯繫
+  - title: Tokyo 1955–1970：A New Avant-Garde（新聞稿，2012）
+    by: The Museum of Modern Art（紐約現代藝術博物館）
+    url: https://www.moma.org/documents/moma_press-release_389333.pdf
+    note: VIVO 1959 年由六位攝影師組成，仿照 Magnum 圖片社
+  - title: "Eikoh Hosoe: Theatre of Memory（展覽手冊，2011）"
+    by: Art Gallery of New South Wales（新南威爾斯美術館）
+    url: https://www.artgallery.nsw.gov.au/media/downloads/files/AGNSW_Hosoe.pdf
+    note: 1959 年結識土方巽、放下寫實紀錄路線、《鎌鼬》要重演戰時疏散的童年記憶
+  - title: "Kamaitachi #3／#11／#34（作品頁）"
+    by: San Francisco Museum of Modern Art（舊金山現代藝術博物館）
+    url: https://www.sfmoma.org/artwork/ST2010.030/
+    note: 作品年份、Sack Photographic Trust 收藏、© Eikoh Hosoe（#11、#34 見作品導覽連結）
+  - title: "Kamaitachi、Kamaitachi #28（作品頁）"
+    by: The Museum of Modern Art（紐約現代藝術博物館）
+    url: https://www.moma.org/collection/works/51928
+    note: 作品年份、藝術家捐贈、© 2026 Eikoh Hosoe
+  - title: "Kamaitachi #31、Simon in Riverside Field（作品頁）"
+    by: The Museum of Fine Arts, Houston（休士頓美術館）
+    url: https://emuseum.mfah.org/objects/119451/kamaitachi-31
+    note: 作品年份、館藏來源
+  - title: 収蔵品検索：細江英公
+    by: 東京都写真美術館
+    url: https://collection.topmuseum.jp/Publish/detailPage/37049/
+    note: 《シモン・ある私風景》《ガウディの宇宙》兩件的年份與館藏資料
+  - title: "Eikoh Hosoe: Does photography reflect truth?（影片說明）"
+    by: San Francisco Museum of Modern Art（YouTube 官方頻道）
+    url: https://www.youtube.com/watch?v=LLg0AC0ivec
+    note: 細江談《鎌鼬》與其中的表演

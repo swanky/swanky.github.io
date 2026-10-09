@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">拍之前，先講好誰決定什麼</title>
+<desc id="d">三欄分工示意。左欄攝影師：背景、取景、按快門的時機（這一欄是我的整理）。中欄一起決定：構圖、用光。右欄模特兒：姿勢、造型、化妝。中欄和右欄依瑞典女性傳記辭典對 Lisa Fonssagrives 的記載：她自己做造型和化妝，對構圖與用光有發言權。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">拍之前，先講好誰決定什麼</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">中、右兩欄依史料記載；左欄是我的整理</text>
+<rect x="48" y="160" width="328" height="410" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<g transform="translate(212 250) rotate(0) scale(1.1)"><rect x="-40" y="-26" width="80" height="52" rx="8" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><rect x="-16" y="-38" width="32" height="14" rx="3" fill="#2C5B8F"/><circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="4"/><circle cx="0" cy="0" r="6" fill="#2C5B8F"/></g>
+<text x="212" y="352" font-size="34" font-weight="700" text-anchor="middle" fill="#2C5B8F">攝影師</text>
+<text x="212" y="410" font-size="28" text-anchor="middle" fill="#1F2937">背景</text>
+<text x="212" y="456" font-size="28" text-anchor="middle" fill="#1F2937">取景</text>
+<text x="212" y="502" font-size="28" text-anchor="middle" fill="#1F2937">按快門的時機</text>
+<rect x="436" y="160" width="328" height="410" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="578" cy="250" r="34" fill="none" stroke="#2C5B8F" stroke-width="5"/><circle cx="622" cy="250" r="34" fill="none" stroke="#0E7568" stroke-width="5"/><path d="M600,224 Q614,250 600,276 Q586,250 600,224 Z" fill="#E5A300"/>
+<text x="600" y="352" font-size="34" font-weight="700" text-anchor="middle" fill="#8A5D00">一起決定</text>
+<text x="600" y="410" font-size="28" text-anchor="middle" fill="#1F2937">構圖</text>
+<text x="600" y="456" font-size="28" text-anchor="middle" fill="#1F2937">用光</text>
+<rect x="824" y="160" width="328" height="410" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="988" cy="220" r="20" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M952,290 Q952,246 988,246 Q1024,246 1024,290 Z" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/>
+<text x="988" y="352" font-size="34" font-weight="700" text-anchor="middle" fill="#0E7568">模特兒</text>
+<text x="988" y="410" font-size="28" text-anchor="middle" fill="#1F2937">姿勢</text>
+<text x="988" y="456" font-size="28" text-anchor="middle" fill="#1F2937">造型</text>
+<text x="988" y="502" font-size="28" text-anchor="middle" fill="#1F2937">化妝</text>
+<line x1="380" y1="365" x2="430" y2="365" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+<line x1="820" y1="365" x2="770" y2="365" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+<rect x="48" y="600" width="1104" height="86" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="600.0" y="653.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">她自己做造型、化妝，<tspan fill="#8A5D00">對構圖和用光也有發言權</tspan></text>
+</svg>

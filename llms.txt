@@ -17,6 +17,34 @@
 ## 攝影寫真 Photography
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
+- [看懂寫真](https://swanky.github.io/photography/learn/): 給喜歡人像與寫真的人：讀攝影師、寫真集與攝影史的筆記，每一篇都查過出處、附原作連結；從想拍出的感覺或想看懂的書進門，另有攝影師與模特兒圖鑑。
+- [攝影師圖鑑](https://swanky.github.io/photography/learn/photographers/): Avedon、Penn、Lindbergh、Tim Walker、柯錫杰、細江英公、荒木經惟：每一位都帶你到美術館的館藏頁看原作，說清楚先看哪裡、拍照的人能帶走什麼。
+- [模特兒圖鑑](https://swanky.github.io/photography/learn/models/): 從模特兒這一端看照片：同一個人，在不同攝影師面前怎麼變成不同的樣子。收錄 Dovima、Lisa Fonssagrives、Kate Moss，每一件作品都附美術館的作品頁或展覽頁。
+- [Deborah Turbeville：拍得霧一點、舊一點，照片就有了故事](https://swanky.github.io/photography/learn/style/deborah-turbeville/): 每張都要笑、要乾淨、要完美？拆解 Deborah Turbeville 的霧面、褪色、疏離感人像：哪些在現場做、哪些是拍完之後的處理，能借什麼、不能抄什麼，以及怎麼換成文字描述。
+- [Herb Ritts：走到太陽底下，讓影子替你畫線條](https://swanky.github.io/photography/learn/style/herb-ritts/): 一遇到大太陽就躲進樹蔭？拆解 Herb Ritts 的戶外強光人像：看什麼、硬光和柔光差在哪、能借的現場動作、不能抄什麼，以及怎麼換成文字描述。
+- [Jeanloup Sieff：靠近一點，人像就不一樣](https://swanky.github.io/photography/learn/style/jeanloup-sieff/): 照片總覺得隔著一層？拆解 Jeanloup Sieff 的廣角近距離人像：看什麼、站多近、能借什麼、不能抄什麼，以及怎麼換成文字描述。
+- [Viviane Sassen：影子和顏色，也能是照片的主角](https://swanky.github.io/photography/learn/style/viviane-sassen/): 照片顏色很多卻很平？拆解荷蘭攝影師 Viviane Sassen 的色塊、影子和「露一半、藏一半」：先看什麼、影子怎麼變清楚、能借什麼、不能抄什麼，以及怎麼換成文字描述。
+- [讓人感覺你就在那裡：荒木經惟、佐內正史、川島小鳥的「在場」](https://swanky.github.io/photography/learn/style/presence/): 拍日常，為什麼有些照片只拍一個路牌，卻讓人感覺拍的人就站在那裡？拆解荒木經惟、佐內正史、川島小鳥的「在場」：看什麼、能借什麼、不能抄什麼，並照實交代荒木與模特兒 KaoRi 的爭議。
+- [Irving Penn 與 Lisa Fonssagrives：模特兒也是作者](https://swanky.github.io/photography/learn/collaboration/penn-fonssagrives/): 一位學過舞蹈與雕塑的模特兒，自己做造型、化妝，還參與構圖和用光。從這段合作學會拍攝前怎麼分工、怎麼溝通。
+- [Helmut Newton 與 June Newton：兩位攝影師，鏡頭互相對著](https://swanky.github.io/photography/learn/collaboration/newton-june/): June Newton 不只是 Helmut Newton 的妻子和模特兒，她自己就是攝影師 Alice Springs。看兩位攝影師幾十年來怎麼合作、互相拍對方，也照實交代 Newton 裸體系列的爭議。
+- [柯錫杰與樊潔兮：攝影家和舞蹈家，怎麼一起拍下「一跳」](https://swanky.github.io/photography/learn/collaboration/ko-si-chi-fan-chieh-hsi/): 攝影家柯錫杰和舞蹈家樊潔兮一起設計翅膀、一起試跳，他的幻燈片也投回她的舞台。看這組台灣合作怎麼分工，整理成拍動作照前的溝通清單。
+- [細江英公與土方巽：把一座村子當成舞台](https://swanky.github.io/photography/learn/collaboration/hosoe-hijikata/): 攝影師細江英公和舞踏家土方巽合作的《鎌鼬》，在真的稻田和村子裡拍成。從兩人是誰、合作怎麼開始，到書上為什麼兩個人並列作者，整理成你拍攝前可以用的分工與溝通清單。
+- [Richard Avedon 與 Dovima：讓姿勢接住整個場景](https://swanky.github.io/photography/learn/collaboration/avedon-dovima/): 兩頭大象、一座馬戲團，大家記得的卻是她伸出去的手臂。看攝影師 Richard Avedon 和模特兒 Dovima 怎麼分工，學會在熱鬧的外景裡讓姿勢接住場景。
+- [Tim Walker 與 Tilda Swinton：先給角色一個世界](https://swanky.github.io/photography/learn/collaboration/walker-swinton/): 一位愛搭手工布景的攝影師，和一位能變成任何人的演員，合作了將近十五年。看他們怎麼先決定角色、再替角色蓋一個世界，學會拍角色照前怎麼準備與分工。
+- [《The Americans》：法文版與美國版差在哪](https://swanky.github.io/photography/learn/photobook/the-americans/): Robert Frank《The Americans》1958 年先在巴黎出法文版，1959 年才在美國出版。同一批照片，對頁放作家選文還是只放一行地名，讀起來完全不同。看兩個版本差在哪、怎麼讀，以及做自己的寫真集能借什麼。
+- [川內倫子《うたたね》：幾乎不說話的寫真集，怎麼讀](https://swanky.github.io/photography/learn/photobook/utatane/): 川內倫子 2001 年的寫真集《うたたね》幾乎沒有文字。從版本、跨頁編排、用字到翻閱方法，看一本「不說話」的書怎麼讓照片自己講故事，以及做自己的寫真集能借什麼。
+- [森山大道《写真よさようなら》：看不清的照片，和退到書末的字](https://swanky.github.io/photography/learn/photobook/shashin-yo-sayonara/): 森山大道 1972 年的寫真集《写真よさようなら》，很多照片模糊到認不出拍了什麼，文字幾乎全部退到書末的一場對談。從版本、編排、用字到翻閱方法，看一本「不好看懂」的書怎麼讀，以及做自己的寫真集能借什麼。
+- [自己印、自己賣：《The Afronauts》與《Sleeping by the Mississippi》](https://swanky.github.io/photography/learn/photobook/self-published/): 一本自己出錢印 1,000 本、一本先用印表機做 50 本送人，兩本後來都成了攝影書的經典。看這兩本書怎麼從自己手上走出去、書裡怎麼排照片與文字，以及做自己的寫真集能借什麼。
+- [台灣攝影的起點：鄧南光、張才、柯錫杰](https://swanky.github.io/photography/learn/asia/taiwan-beginnings/): 想認識台灣攝影史，從這三位開始：在東京學會街拍的鄧南光、在上海街頭與台南墓園留下代表作的張才，以及被稱為「台灣現代攝影第一人」的柯錫杰。作品都在國家攝影文化中心，點開就看得到。
+- [何藩：等一道光，把香港街頭變成舞台](https://swanky.github.io/photography/learn/asia/fan-ho/): 何藩用一部雙鏡頭相機，把 1950、60 年代香港的街市、樓梯和後巷拍成光與煙裡的舞台。認識他是誰、先看哪幾張、為什麼他會出現在 Tate Modern 談「畫意攝影」的展覽裡，以及拍人像能借什麼。
+- [榮榮與映里：兩個人互拍，把日子拍成作品](https://swanky.github.io/photography/learn/asia/rongrong-inri/): 中國攝影家榮榮和日本攝影家映里，從 2000 年起一起拍、一起署名。從北京東村、拆遷中的城市到三影堂，看兩個人怎麼把共同的生活拍成作品，以及拍情侶、拍朋友時能借什麼。
+- [김중만（Kim Jungman）：從時尚攝影棚，走到巷子裡那排樹](https://swanky.github.io/photography/learn/asia/kim-jungman/): 김중만（Kim Jungman）在法國學畫時愛上攝影，回韓國後成為頂尖的時尚與商業攝影師，2006 年離開商業，花十年拍工作室和家之間的一排行道樹。看他是誰、先看哪幾張，以及拍人像的人能借什麼。
+- [日本與歐美時尚攝影對照年表](https://swanky.github.io/photography/learn/history/japan-west-timeline/): 把日本與歐美的時尚攝影放上同一張年表，每個節點都附美術館、基金會或出版社的出處。看懂每個時期的攝影師在追問什麼，再用兩個問題替自己的照片找到位置。
+- [時尚攝影怎麼走向「真實」：1990 年代到今天](https://swanky.github.io/photography/learn/history/toward-real/): 1990 年代的時尚照片把相機帶進日常房間，找朋友和非職業模特兒入鏡，也引發了 Corinne Day 與 Kate Moss 的爭議。看懂這三十年在追問什麼，以及今天拍「真實感」時要記得的事。
+- [日本攝影史一頁看懂：從 VIVO 到日常寫真，拍的人怎麼走進照片](https://swanky.github.io/photography/learn/history/japan-photography-history/): 森山大道、荒木經惟、川內倫子……名字很多卻串不起來？一張圖、六個節點，從 1959 年的 VIVO 講到 1990 年代以後的日常寫真，每個節點都附美術館出處，再教你用一個問題讀照片。
+- [只用美術館與官方資料寫攝影史：我的查證方法](https://swanky.github.io/photography/learn/method/how-i-verify/): 寫攝影師、寫報告、做 AI 影像前想先查對資料？這一章用我自己踩過的四個例子，示範去哪裡找可靠來源、怎麼分辨事實和推論、說法不一致怎麼並列，以及怎麼讀美術館的圖片使用條款。
+- [怎麼讀一位攝影師](https://swanky.github.io/photography/learn/method/how-to-read-a-photographer/): 想自己讀懂一位攝影師、寫一份報告，或替 AI 影像查對參考資料？用六個步驟，從基本資料卡、館藏頁、看作品、讀本人說的話、放回時代，一路做到分得清事實和看法的筆記。
+- [奈良美智《Harmless Kitty》：無害，但不必乖巧](https://swanky.github.io/photography/learn/art/harmless-kitty/): 我從大學就喜歡奈良美智 1994 年的《Harmless Kitty》。這篇藝術筆記把作品資料、六個局部、構圖、原作尺寸與創作背景整理成一頁；事實與我的讀法分開寫，每條資料都附來源。
 - [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十一本概念寫真集，另有史旺基的 AI 助理形象小赫；全部由 AI 生成，並非真人照片。
 - [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
 - [史旺姬｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/swanky-ji/): 史旺姬｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，四本寫真集《藍色停留的那一小時》《月亮的失物招領》《把光留給日常》《她把風景打開》共 144 張影像。人物與場景皆由 AI 生成，並非真人實拍。
@@ -61,7 +89,8 @@
 ## 技術顧問 Technical Consulting
 
 - [技術顧問總覽](https://swanky.github.io/technical/): 協助企業把 AI Agent 與 Web3 從趨勢變成能判斷、能驗證、能推進的技術行動。提供 AI Agent 導入評估、小範圍實際試行，以及 Web3 可行性評估、顧問原型與架構審查。
-- [AI Agent 導入顧問](https://swanky.github.io/technical/ai-agent-consulting/): 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。提供導入評估、小範圍實際試行、團隊規範與持續優化；不綁定 Claude Code、Codex 或單一工具。
+- [AI Agent 導入顧問](https://swanky.github.io/technical/ai-agent-consulting/): 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。可從 2–3 小時導入工作坊開始，再進入導入評估、小範圍實際試行與團隊規範；不綁定 Claude Code、Codex 或單一工具。
+- [給企業：AI Agent 導入與團隊內訓](https://swanky.github.io/enterprise/): 給企業窗口的一頁說明：從 2–3 小時 AI 導入工作坊開始，附講師查得到的授課與演講紀錄，以及洽詢方式。
 - [Web3 技術顧問](https://swanky.github.io/technical/web3-consulting/): 接受廣義 Web3 與區塊鏈應用問題，協助企業從問題界定、技術可行性、架構與風險比較，到範圍明確的顧問原型及架構審查；不承接整包開發、發幣或投資建議。
 - [Agentic Engineering 系列](https://swanky.github.io/technical/agentic-engineering/): 史旺基的 Agentic Engineering 系列文章。從帶團隊導入 AI、ORID 引導法、SDD 規格驅動開發，到 Claude Code 實戰工作流——一套把 AI 當「高級實習生」帶領、用軟體工程紀律交付的完整方法。
 - [AI 視覺內容製作](https://swanky.github.io/technical/ai-visual-production/): 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。

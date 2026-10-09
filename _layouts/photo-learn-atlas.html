@@ -1,0 +1,255 @@
+---
+layout: home
+---
+{%- comment -%}
+  「看懂寫真」圖鑑版型（攝影師圖鑑、模特兒圖鑑共用；2026-10-09 樣本）。
+  做法是「少收、收深」：每一位都是一個小專題，資料全寫在頁面 front matter：
+    eyebrow / lead：首屏
+    curation：頁首策展說明 [{title, text}]（為什麼只收這幾位、怎麼挑、怎麼讀）
+    people_ids：人物 id 清單（順序＝頁面順序），每位的資料放 _data/photo_atlas/<id>.yml（一人一檔，
+      多個寫作 agent 可同時各寫一位；欄位說明見 _data/photo_atlas/README.md）。
+      相容：頁面若仍自帶 people[] 陣列（舊寫法）也能渲染；兩者並存時以 people_ids 為準。
+      人物檔可加 status：published（缺省）｜review。review 只在 jekyll.environment != 'production'
+      （本機預覽）渲染，正式站建置時整位略過（目錄與編號也不計入）。
+    每位人物（檔案內容＝以下欄位）：
+      id、name（原文）、zh（中文通行譯名，查得到館方用法才寫）、zh_note（譯名出處）、life、place、theme
+      view：一句策展視角（站主看法，畫面上標「我的看法」）
+      portrait：{src, width, height, alt, caption}（只用授權明確允許的圖；caption 寫作者與授權）
+      figure：{src, width, height, alt, caption}（正文裡的大圖，放在作品導覽前；只放公有領域或授權允許的圖）
+      bio：生平（HTML，只寫有出處的幾行，段末用 <sup><a href="#src-…">出處</a></sup>）
+      works_intro / works / works_after：作品導覽（works 交給 photography/learn-works.html；每件可加 img／img_w／img_h／credit 小圖，見該檔註解）
+      videos[]：{id, title, channel, channel_url, length, lang, note, thumb}；link_only: true 時只外連不嵌入；thumb: false 關掉官方縮圖封面
+      take[]：拍照的人可以帶走什麼（站主看法）
+      related[]：連到本專區章節時寫 {unit, url}（建議；url 為章節網址）、{unit, slug} 或舊寫法 {unit, title}——
+        比對順序 url ＞ slug ＞ title，只有看得到的章才輸出，顯示文字用 title（沒寫就用 _data/photo_learn.yml 的章名）；
+        只寫 {url, title}、沒有 label 的也當章節比對。一般連結寫 {label, url, note}。
+      sources[]：{title, by, url, note}
+    （沒有收進來的人不在頁面上列名單；路線圖放 docs/。）
+    sibling：{label, url}，另一本圖鑑
+  影片點了才載入的小程式在本檔最下面（和 _layouts/photo-learn-chapter.html 同一套）。
+{%- endcomment -%}
+{%- assign zone = site.data.photo_learn -%}
+{%- comment -%} 組出本頁要渲染的人物陣列 atlas_people：people_ids 優先，否則退回頁面內的 people[]；status: review 只在非 production 顯示。 {%- endcomment -%}
+{%- assign atlas_people = '' | split: ',' -%}
+{%- if page.people_ids -%}
+  {%- for pid in page.people_ids -%}
+    {%- assign pp = site.data.photo_atlas[pid] -%}
+    {%- if pp -%}
+      {%- if pp.status == 'review' and jekyll.environment == 'production' -%}{%- else -%}
+        {%- assign atlas_people = atlas_people | push: pp -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- for pp in page.people -%}
+    {%- if pp.status == 'review' and jekyll.environment == 'production' -%}{%- else -%}
+      {%- assign atlas_people = atlas_people | push: pp -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+<main id="main" class="photo-author-page photo-author-subpage photo-learn-page atlas-page">
+
+  <header class="pl-ch-hero atlas-hero">
+    <div class="photo-author-shell">
+      <nav class="pl-crumbs" aria-label="所在位置">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">主頁</a></li>
+          <li><a href="{{ '/photography/' | relative_url }}">攝影寫真</a></li>
+          <li><a href="{{ zone.url | relative_url }}">{{ zone.name }}</a></li>
+          <li aria-current="page">{{ page.title }}</li>
+        </ol>
+      </nav>
+      <div class="atlas-hero-grid">
+        <div>
+          <p class="photo-author-eyebrow">{{ page.eyebrow }}</p>
+          <h1>{{ page.title }}</h1>
+          <p class="pl-ch-lead">{{ page.lead }}</p>
+        </div>
+        <nav class="atlas-index" aria-label="這本圖鑑收了誰">
+          <p class="atlas-index-title">本冊收錄 {{ atlas_people.size }} 位</p>
+          <ol>
+            {%- for p in atlas_people %}
+            <li><a href="#{{ p.id }}"><span class="atlas-index-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><b>{% if p.zh %}{{ p.zh }} {% endif %}{{ p.name }}</b><small>{{ p.theme }}</small></span></a></li>
+            {%- endfor %}
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  {% if page.curation %}
+  <section class="photo-author-light atlas-curation" aria-labelledby="atlas-curation-title">
+    <div class="photo-author-shell">
+      <p class="photo-author-eyebrow">Curator's Note</p>
+      <h2 id="atlas-curation-title" class="atlas-section-title">這本圖鑑怎麼編</h2>
+      <ol class="atlas-curation-list">
+        {%- for c in page.curation %}
+        <li><b>{{ c.title }}</b><p>{{ c.text }}</p></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+  {% endif %}
+
+  {%- for p in atlas_people %}
+  {%- assign num = forloop.index | prepend: '0' | slice: -2, 2 -%}
+  <section class="photo-author-light atlas-person" id="{{ p.id }}" aria-labelledby="{{ p.id }}-name">
+    <div class="photo-author-shell">
+      <header class="atlas-person-head{% if p.portrait %} has-portrait{% endif %}">
+        <div class="atlas-person-id">
+          <p class="atlas-person-num" aria-hidden="true">{{ num }}</p>
+          <p class="atlas-person-theme">{{ p.theme }}</p>
+          <h2 id="{{ p.id }}-name">{% if p.zh %}{{ p.zh }}<span class="atlas-person-orig">{{ p.name }}</span>{% else %}{{ p.name }}{% endif %}</h2>
+          {%- if p.life or p.place or p.zh_note %}
+          <p class="atlas-person-meta">{{ p.life }}{% if p.life and p.place %}・{% endif %}{{ p.place }}{% if p.zh_note %}<span>{{ p.zh_note }}</span>{% endif %}</p>
+          {%- endif %}
+          <div class="pl-mine atlas-view"><b>為什麼值得看・我的看法</b><p>{{ p.view }}</p></div>
+        </div>
+        {% if p.portrait %}
+        <figure class="atlas-portrait">
+          <img src="{{ p.portrait.src | relative_url }}" width="{{ p.portrait.width }}" height="{{ p.portrait.height }}" alt="{{ p.portrait.alt }}" loading="lazy" decoding="async">
+          <figcaption>{{ p.portrait.caption }}</figcaption>
+        </figure>
+        {% endif %}
+      </header>
+
+      <div class="post-content pl-ch-body atlas-body">
+        <h3 class="atlas-h">生平：只寫查得到的</h3>
+        {{ p.bio }}
+
+        <h3 class="atlas-h">作品導覽<small>{{ p.works.size }} 件</small></h3>
+        {% if p.works_intro %}<p>{{ p.works_intro }}</p>{% endif %}
+        {% if p.figure %}
+        <figure class="atlas-figure">
+          <a class="portfolio-lightbox" data-gallery="atlas-{{ p.id }}" data-type="image" href="{{ p.figure.src | relative_url }}" data-description="{{ p.figure.caption | escape }}">
+            <img src="{{ p.figure.src | relative_url }}" width="{{ p.figure.width }}" height="{{ p.figure.height }}" alt="{{ p.figure.alt }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>{{ p.figure.caption }}{% if page.use_glightbox %}<span class="atlas-zoom">點圖放大</span>{% endif %}</figcaption>
+        </figure>
+        {% endif %}
+        {% include photography/learn-works.html works=p.works %}
+        {% if p.works_after %}{{ p.works_after }}{% endif %}
+
+        {% if p.videos %}
+        <h3 class="atlas-h">影音<small>{{ p.videos.size }} 支</small></h3>
+        <div class="atlas-videos">
+        {%- for v in p.videos %}
+          {%- if v.link_only %}
+        <p class="atlas-video-link"><a href="https://www.youtube.com/watch?v={{ v.id }}" target="_blank" rel="noopener"><i class="bi bi-play-circle" aria-hidden="true"></i>{{ v.title }}<span class="visually-hidden">（另開新頁）</span></a><small>{{ v.channel }}・{{ v.length }}・{{ v.lang }}{% if v.note %}。{{ v.note }}{% endif %}</small></p>
+          {%- else %}
+        {% include photography/learn-video.html id=v.id title=v.title channel=v.channel channel_url=v.channel_url length=v.length lang=v.lang note=v.note thumb=v.thumb %}
+          {%- endif %}
+        {%- endfor %}
+        </div>
+        {% endif %}
+
+        <h3 class="atlas-h">拍照的人可以帶走什麼</h3>
+        <div class="pl-mine atlas-take"><b>我的看法</b>
+          <ol>
+            {%- for t in p.take %}
+            <li>{{ t }}</li>
+            {%- endfor %}
+          </ol>
+        </div>
+
+        {%- capture rel_html -%}
+          {%- for r in p.related %}
+            {%- assign r_chapter = false -%}
+            {%- if r.unit or r.slug -%}{%- assign r_chapter = true -%}{%- elsif r.url and r.label == nil -%}{%- assign r_chapter = true -%}{%- endif -%}
+            {%- if r_chapter %}
+              {%- comment -%}章節比對：url（最穩，有寫就用）＞ slug ＞ title（舊寫法相容）。url 前後斜線不計；
+                有 unit 時只在該單元找，沒有 unit 時（只寫 slug）全部單元找。找到後一樣要「看得到」才輸出。{%- endcomment -%}
+              {%- assign hit = nil -%}{%- assign hit_unit = nil -%}
+              {%- assign r_url = '' -%}{%- if r.url -%}{%- assign r_url = r.url | split: '#' | first | remove_first: '/' | append: '/' | replace: '//', '/' -%}{%- endif -%}
+              {%- for u in zone.units -%}
+                {%- if r.unit == nil or u.id == r.unit -%}
+                  {%- for ch in u.chapters -%}
+                    {%- if hit == nil -%}
+                      {%- assign ch_url = ch.url | remove_first: '/' | append: '/' | replace: '//', '/' -%}
+                      {%- if r_url != '' -%}
+                        {%- if ch_url == r_url -%}{%- assign hit = ch -%}{%- assign hit_unit = u -%}{%- endif -%}
+                      {%- elsif r.slug -%}
+                        {%- if ch.slug == r.slug -%}{%- assign hit = ch -%}{%- assign hit_unit = u -%}{%- endif -%}
+                      {%- elsif ch.title == r.title -%}{%- assign hit = ch -%}{%- assign hit_unit = u -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- include photography/learn-visible.html item=hit -%}
+              {%- if pl_vis %}
+          <li><small>{{ hit_unit.title }}</small><a href="{{ hit.url | relative_url }}">{{ r.title | default: hit.title }}</a></li>
+              {%- endif %}
+            {%- else %}
+          {%- assign first = r.url | slice: 0 -%}
+          <li><small>{{ r.note }}</small><a href="{% if first == '#' %}{{ r.url }}{% else %}{{ r.url | relative_url }}{% endif %}">{{ r.label }}</a></li>
+            {%- endif %}
+          {%- endfor %}
+        {%- endcapture -%}
+        {%- assign rel_html = rel_html | strip -%}
+        {% if rel_html != '' %}
+        <h3 class="atlas-h">在這個專區繼續讀</h3>
+        <ul class="atlas-related">
+          {{ rel_html }}
+        </ul>
+        {% endif %}
+
+        <details class="atlas-sources" id="src-{{ p.id }}">
+          <summary>這一位的出處（{{ p.sources.size }} 筆）</summary>
+          <p>事實都來自下面這些頁面，每一條都實際打開核對過；標「我的看法」的是我自己的判斷。</p>
+          <ol>
+            {%- for s in p.sources %}
+            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{{ s.note }}{% endif %}</span></li>
+            {%- endfor %}
+          </ol>
+        </details>
+        <p class="atlas-back"><a href="#main">↑ 回到本冊目錄</a></p>
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+
+  <section class="photo-author-section pl-ch-next atlas-foot" aria-labelledby="atlas-foot-title">
+    <div class="photo-author-shell">
+      <div class="pl-ch-cta">
+        <div>
+          <p class="photo-author-eyebrow">Keep Reading</p>
+          <p class="pl-ch-cta-title" id="atlas-foot-title">看完圖鑑，回到專區繼續讀。</p>
+          <p>圖鑑只介紹人和作品；拍法拆解、合作故事和寫真集怎麼讀，放在各單元的章節裡。</p>
+        </div>
+        <div class="photo-author-actions">
+          {% if page.sibling %}<a class="photo-author-button" href="{{ page.sibling.url | relative_url }}">{{ page.sibling.label }}</a>{% endif %}
+          <a class="photo-author-button photo-author-button--ghost" href="{{ zone.url | relative_url }}">回到{{ zone.name }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script>
+/* 影片：點了才換成 youtube-nocookie 播放框（同 _layouts/photo-learn-chapter.html）。 */
+(function () {
+  /* 點「出處」上標時，把對應的出處清單展開 */
+  function openSrc(id) { var d = id && document.getElementById(id); if (d && d.tagName === 'DETAILS') d.open = true; }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#src-"]');
+    if (a) openSrc(a.getAttribute('href').slice(1));
+  });
+  if (location.hash.indexOf('#src-') === 0) openSrc(location.hash.slice(1));
+  document.querySelectorAll('[data-pl-video]').forEach(function (box) {
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + box.getAttribute('data-pl-video') + '?autoplay=1&rel=0';
+      f.title = box.getAttribute('data-title') || '影片';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      f.loading = 'eager';
+      btn.replaceWith(f);
+      box.classList.add('is-playing');
+    });
+  });
+})();
+</script>

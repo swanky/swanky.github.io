@@ -1,0 +1,51 @@
+# 企業證據：/enterprise/ 與 /technical/ai-agent-consulting/ 共用（改這裡，兩頁一起變）
+#
+# 硬規則（2026-10-09 站主核准的企業入口草稿）：
+# - 數字只照抄首頁 index.html 數據帶（8 年／7 場／3 屆），不得新增或換算。
+# - 區塊鏈計畫只寫「數位發展部」，不寫前雇主、不寫年份（memory: project_blockchain_project_attribution）。
+# - 職稱一律「大型電信業技術主管」，不出現雇主名。
+# - 企業內訓不具名，只寫產業別；Web3 授課場次不拿來冒充 AI 成效（education/index.html 的「資歷分開歸屬」）。
+#
+# 出處：
+# - training：index.html 數據帶「7 場・企業內訓講座」；產業別出自 docs/web3_enterprise_training_manual.md「企業內訓」列（科技、設計公司）
+# - soochow：index.html hero 佐證句「東吳大學區塊鏈課程兼任助理教授」＋數據帶「8 年・大學區塊鏈授課」
+# - jcconf：index.html 數據帶「3 屆・JCConf 技術年會講者」；演講影片在 technical/index.html #talks
+# - project：index.html「認識史旺基」段的計畫全名；實證項目照 technical/web3-consulting/index.html 證據 01
+# - role：index.html hero 身分句
+# - ai_share：education/agentic-engineering/index.html Evidence 段、education/ai/learn/ai-basics/ 頁尾
+rows:
+  - id: training
+    kicker: 企業內訓
+    title: 7 場企業內訓講座
+    desc: 對象是科技與設計公司，主題是區塊鏈與 Web3。它證明的是替企業授課、把新技術講清楚的經驗，不是 AI 導入成效。
+    meta: Web3 主題
+    url: /education/crypto/enterprise/
+  - id: soochow
+    kicker: 大學授課
+    title: 東吳大學區塊鏈課程兼任助理教授，8 年授課
+    desc: 長期把區塊鏈原理、錢包與交易、DeFi、NFT 與 Web3 應用整理成一學期的課，教學紀錄公開可查。
+    meta: 8 年
+    url: /education/crypto/soochow/
+  - id: jcconf
+    kicker: 技術年會
+    title: JCConf 技術年會 3 屆講者
+    desc: 從 Reactive Programming 到區塊鏈服務，三場演講的影片都公開可看。
+    meta: 3 屆
+    url: /technical/#talks
+  - id: project
+    kicker: 政府計畫
+    title: 曾擔任數位發展部「區塊鏈創新產業資料管理應用計畫」計畫主持人
+    desc: 推動 NFT 藝文集章、安心建築履歷與藝術品數位指紋存證等跨產業實證。
+    meta: 計畫主持人
+    url: /technical/web3-consulting/#evidence
+  - id: role
+    kicker: 現職
+    title: 大型電信業技術主管
+    desc: 從大型企業的技術管理、工程治理與跨部門協作角度，看新工具怎麼進到團隊的日常工作。
+    meta: 現職
+  - id: ai_share
+    kicker: AI 教學
+    title: 企業內部 AI 入門分享，教材已公開
+    desc: 教材設計成非工程背景也聽得懂，已改寫成免費自學網頁。想知道我怎麼教，可以先看這一份。
+    meta: 免費教材
+    url: /education/ai/learn/ai-basics/

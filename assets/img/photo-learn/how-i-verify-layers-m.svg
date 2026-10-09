@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1130" width="600" height="1130" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">資料分四層，只有第一層能寫成事實</title>
+<desc id="d">示意圖。資料來源分四層：第一層一手來源（館藏頁、基金會、出版社、國家圖書館、學術單位），可以寫成事實；第二層部分可用，只寫它撐得起的句子；第三層只當線索（百科、新聞、拍賣行、搜尋摘要、圖片檔名），拿來找下一頁；第四層不能用（打不開、內容對不上、找不到館方原始紀錄）。底部重點：看到說法先別寫，追到館方原始頁再寫。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1130" fill="#FFFFFF"/>
+<text x="28" y="62" font-size="40" font-weight="700" fill="#1F2937">資料分四層，</text>
+<text x="28" y="112" font-size="40" font-weight="700" fill="#1F2937">只有第一層能寫成事實</text>
+<text x="28" y="154" font-size="24" fill="#4B5563">寫進文章前，要追到第一層（示意）</text>
+<rect x="28" y="182" width="544" height="186" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="70" cy="222" r="22" fill="#0E7568"/><text x="70" y="231.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="106" y="234" font-size="34" font-weight="700" fill="#0E7568">一手來源</text>
+<rect x="358" y="202" width="194" height="42" rx="21" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<text x="455" y="231" font-size="22" font-weight="700" fill="#0E7568" text-anchor="middle">可以寫成事實</text>
+<text x="52" y="294" font-size="26" fill="#1F2937">館藏頁、基金會、出版社、</text>
+<text x="52" y="334" font-size="26" fill="#1F2937">國家圖書館、學術單位</text>
+<rect x="28" y="386" width="544" height="186" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="70" cy="426" r="22" fill="#2C5B8F"/><text x="70" y="435.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="106" y="438" font-size="34" font-weight="700" fill="#2C5B8F">部分可用</text>
+<rect x="358" y="406" width="194" height="42" rx="21" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+<text x="455" y="435" font-size="22" font-weight="700" fill="#2C5B8F" text-anchor="middle">只寫它撐得起的</text>
+<text x="52" y="498" font-size="26" fill="#1F2937">來源可靠，</text>
+<text x="52" y="538" font-size="26" fill="#1F2937">但只撐得起其中幾句</text>
+<rect x="28" y="590" width="544" height="186" rx="22" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+<circle cx="70" cy="630" r="22" fill="#B45309"/><text x="70" y="639.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="106" y="642" font-size="34" font-weight="700" fill="#B45309">只當線索</text>
+<rect x="358" y="610" width="194" height="42" rx="21" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+<text x="455" y="639" font-size="22" font-weight="700" fill="#B45309" text-anchor="middle">拿來找下一頁</text>
+<text x="52" y="702" font-size="26" fill="#1F2937">百科、新聞、拍賣行、</text>
+<text x="52" y="742" font-size="26" fill="#1F2937">搜尋摘要、圖片檔名</text>
+<rect x="28" y="794" width="544" height="186" rx="22" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<circle cx="70" cy="834" r="22" fill="#B91C1C"/><text x="70" y="843.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="106" y="846" font-size="34" font-weight="700" fill="#B91C1C">不能用</text>
+<rect x="358" y="814" width="194" height="42" rx="21" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<text x="455" y="843" font-size="22" font-weight="700" fill="#B91C1C" text-anchor="middle">不寫</text>
+<text x="52" y="906" font-size="26" fill="#1F2937">打不開、內容對不上、</text>
+<text x="52" y="946" font-size="26" fill="#1F2937">找不到館方原始紀錄</text>
+<rect x="28" y="1004" width="544" height="118" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300.0" y="1053" font-size="30" font-weight="700" fill="#1F2937" text-anchor="middle">看到說法先別寫，</text>
+<text x="300.0" y="1095" font-size="30" font-weight="700" fill="#1F2937" text-anchor="middle"><tspan fill="#8A5D00">追到館方原始頁再寫</tspan></text>
+</svg>

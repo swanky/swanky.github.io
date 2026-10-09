@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000" width="600" height="1000" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">「貼近畫面表層」是什麼意思</title>
+<desc id="d">光學示意，從側面看廣角站近。最靠近鏡頭的手被放大、貼著畫面前緣；臉在中間大小正常；背景的牆很遠，看起來又小又遠。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="600" height="1000" fill="#FFFFFF"/>
+
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">「貼近畫面表層」</text>
+<text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">是什麼意思</text>
+<text x="40" y="164" font-size="24" fill="#4B5563">從側面看廣角站近（光學示意）</text>
+<rect x="40" y="190" width="520" height="250" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<g transform="translate(80 320) rotate(90) scale(0.39)"><rect x="-40" y="-26" width="80" height="52" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><rect x="-16" y="-38" width="32" height="14" rx="3" fill="#374151"/><circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="0" cy="0" r="6" fill="#374151"/></g><line x1="95.6" y1="320" x2="548.0" y2="252.39999999999998" stroke="#94A3B8" stroke-width="3" stroke-dasharray="10 8"/><line x1="95.6" y1="320" x2="548.0" y2="387.6" stroke="#94A3B8" stroke-width="3" stroke-dasharray="10 8"/><ellipse cx="158.0" cy="335.6" rx="11.440000000000001" ry="20.8" fill="#E5A300" stroke="#8A5D00" stroke-width="3"/><circle cx="251.6" cy="294.0" r="15.600000000000001" fill="#1F2937"/><path d="M233.92,398.0 L236.0,314.8 Q251.6,307.52 267.2,314.8 L269.28,398.0 Z" fill="#1F2937"/><line x1="241.2" y1="322.08" x2="164.24" y2="331.44" stroke="#1F2937" stroke-width="6.24" stroke-linecap="round"/><rect x="548.0" y="252.39999999999998" width="9.36" height="135.20000000000002" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+<rect x="40" y="466" width="520" height="150" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="84" cy="510" r="22" fill="#E5A300"/><text x="84" y="519.36" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">1</text>
+<text x="122" y="522" font-size="34" font-weight="700" fill="#8A5D00">前：手</text>
+<text x="72" y="576" font-size="26" fill="#4B5563">被放大，貼著畫面前緣</text>
+<rect x="40" y="638" width="520" height="150" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="84" cy="682" r="22" fill="#2C5B8F"/><text x="84" y="691.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="122" y="694" font-size="34" font-weight="700" fill="#2C5B8F">中：臉</text>
+<text x="72" y="748" font-size="26" fill="#4B5563">大小正常，放中間附近</text>
+<rect x="40" y="810" width="520" height="150" rx="22" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+<circle cx="84" cy="854" r="22" fill="#64748B"/><text x="84" y="863.36" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+<text x="122" y="866" font-size="34" font-weight="700" fill="#64748B">後：背景</text>
+<text x="72" y="920" font-size="26" fill="#4B5563">變小、變遠，空間被拉深</text>
+</svg>

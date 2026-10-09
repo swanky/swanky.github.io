@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1220" width="600" height="1220" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">把舞者的一跳拍下來</title>
+<desc id="d">示意圖，從側面看，不是柯錫杰任何一張原作的實際拍法。一台幾乎貼地的相機往上看向正在跳起的人；人身後是素色背景；閃光燈從側前方照來，把動作凝住。下方四個步驟：一起決定造型、先試穿試動、試跳幾次找最高點、最高點按一次。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1220" fill="#FFFFFF"/>
+
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">把舞者的一跳拍下來</text>
+<text x="40" y="112" font-size="24" fill="#4B5563">從側面看・示意，不是原作的拍法</text>
+
+<rect x="40" y="140" width="520" height="560" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<rect x="436" y="250" width="100" height="380" rx="8" fill="#EDE7DD" stroke="#8A6F4D" stroke-width="3"/>
+<text x="486" y="290" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">素色</text>
+<text x="486" y="320" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">背景</text>
+<line x1="64" y1="630" x2="540" y2="630" stroke="#9CA3AF" stroke-width="4"/>
+<g stroke="#1F2937" stroke-width="10" stroke-linecap="round" fill="none">
+  <line x1="320" y1="380" x2="320" y2="470"/>
+  <line x1="320" y1="398" x2="276" y2="352"/>
+  <line x1="320" y1="398" x2="366" y2="350"/>
+  <line x1="320" y1="470" x2="270" y2="512"/>
+  <line x1="320" y1="470" x2="374" y2="506"/>
+</g>
+<circle cx="320" cy="352" r="20" fill="#FFFFFF" stroke="#1F2937" stroke-width="6"/>
+<line x1="320" y1="552" x2="320" y2="604" stroke="#B45309" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="336" y="586" font-size="22" fill="#B45309">離地高度</text>
+<rect x="70" y="586" width="70" height="40" rx="8" fill="#1F2937"/>
+<circle cx="140" cy="606" r="14" fill="#4B5563" stroke="#1F2937" stroke-width="4"/>
+<line x1="154" y1="600" x2="290" y2="368" stroke="#1F2937" stroke-width="3" stroke-dasharray="10 9"/>
+<line x1="154" y1="612" x2="392" y2="530" stroke="#1F2937" stroke-width="3" stroke-dasharray="10 9"/>
+<text x="64" y="560" font-size="24" font-weight="700" fill="#1F2937">相機放低</text>
+<rect x="150" y="300" width="60" height="40" rx="8" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<line x1="212" y1="322" x2="290" y2="372" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<line x1="212" y1="330" x2="290" y2="450" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<text x="64" y="192" font-size="24" font-weight="700" fill="#1F2937">閃光或高速快門</text>
+<text x="64" y="224" font-size="22" fill="#4B5563">把動作凝在最高點</text>
+<text x="64" y="680" font-size="22" fill="#6B7280">地面</text>
+
+<text x="40" y="770" font-size="30" font-weight="700" fill="#1F2937">拍之前，先一起做四件事</text>
+<g font-size="24" fill="#374151">
+  <circle cx="60" cy="826" r="20" fill="#1F2937"/><text x="60" y="834" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="94" y="820" font-weight="700" fill="#1F2937">一起決定造型</text>
+  <text x="94" y="852">衣服、道具誰來做</text>
+  <circle cx="60" cy="916" r="20" fill="#1F2937"/><text x="60" y="924" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="94" y="910" font-weight="700" fill="#1F2937">先試穿、試動</text>
+  <text x="94" y="942">看衣服跟著身體怎麼動</text>
+  <circle cx="60" cy="1006" r="20" fill="#1F2937"/><text x="60" y="1014" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="94" y="1000" font-weight="700" fill="#1F2937">試跳幾次</text>
+  <text x="94" y="1032">找到最高、最漂亮的那一刻</text>
+  <circle cx="60" cy="1096" r="20" fill="#B45309"/><text x="60" y="1104" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="94" y="1090" font-weight="700" fill="#B45309">最高點按一次</text>
+  <text x="94" y="1122">不行就回到第 3 步</text>
+</g>
+<text x="40" y="1186" font-size="22" fill="#374151">舞者負責「那一跳」，攝影師負責「那一刻」。</text>
+</svg>

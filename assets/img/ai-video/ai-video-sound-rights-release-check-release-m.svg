@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1370" width="600" height="1370" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">上傳前，三件事分開查</title>
+  <desc id="d">上傳前分開檢查三件事。一、AI 揭露：看起來真實的內容、AI 改動真實地點或事件、當重點的 AI 音樂，每次重查當天的官方規則。二、權利表：每層素材各占一列，狀態只用已驗證、有條件、擋下三種。三、上傳包：檔案與核准版同一份、縮圖取自核准成片、影音長度對齊、匯出後人工再看一次。三項都過了，最後由人在四個選項裡做決定：核准不公開上傳、核准公開發布、退回修改、停止。平台自動檢查或成功上傳，都不等於權利已確認。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1370" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">上傳前，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">三件事分開查</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">都過了，最後由人做決定</text>
+  <rect x="40" y="210" width="520" height="236" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="74" cy="246" r="22" fill="#2C5B8F"/>
+  <text x="74" y="255" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <g transform="translate(132 336.0) scale(0.72)"><path d="M-44,-30 h56 l32,30 l-32,30 h-56 z" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5" stroke-linejoin="round"/><circle cx="18" cy="0" r="7" fill="#2C5B8F"/><line x1="-30" y1="-8" x2="0" y2="-8" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/><line x1="-30" y1="10" x2="-6" y2="10" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="210" y="260" font-size="32" font-weight="700" fill="#2C5B8F">AI 揭露</text>
+  <text x="210" y="302" font-size="24" fill="#4B5563">看起來真實的內容</text>
+  <text x="210" y="338" font-size="24" fill="#4B5563">改動真實地點事件</text>
+  <text x="210" y="374" font-size="24" fill="#4B5563">當重點的 AI 音樂</text>
+  <rect x="200.0" y="386.0" width="220.0" height="40" rx="20.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="310" y="414" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">每次重查當天規則</text>
+  <rect x="40" y="466" width="520" height="200" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="74" cy="502" r="22" fill="#B45309"/>
+  <text x="74" y="511" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <g transform="translate(132 574.0) scale(0.72)"><rect x="-46" y="-40" width="92" height="84" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="5"/><rect x="-46" y="-40" width="92" height="22" rx="8" fill="#B45309"/><line x1="-46" y1="-14" x2="46" y2="-14" stroke="#B45309" stroke-width="4"/><line x1="-46" y1="6" x2="46" y2="6" stroke="#B45309" stroke-width="4"/><line x1="-46" y1="26" x2="46" y2="26" stroke="#B45309" stroke-width="4"/><line x1="-10" y1="-18" x2="-10" y2="44" stroke="#B45309" stroke-width="4"/></g>
+  <text x="210" y="516" font-size="32" font-weight="700" fill="#B45309">權利表</text>
+  <text x="210" y="558" font-size="24" fill="#4B5563">每層素材各占一列</text>
+  <text x="210" y="594" font-size="24" fill="#4B5563">狀態只用三種：</text>
+  <rect x="210.0" y="606.0" width="86.0" height="40" rx="20.0" fill="#0E7568"/>
+  <text x="253.0" y="634" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">已驗證</text>
+  <rect x="308.0" y="606.0" width="86.0" height="40" rx="20.0" fill="#B45309"/>
+  <text x="351.0" y="634" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">有條件</text>
+  <rect x="406.0" y="606.0" width="64.0" height="40" rx="20.0" fill="#B91C1C"/>
+  <text x="438.0" y="634" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">擋下</text>
+  <rect x="40" y="686" width="520" height="236" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="74" cy="722" r="22" fill="#0E7568"/>
+  <text x="74" y="731" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <g transform="translate(132 812.0) scale(0.72)"><path d="M-46,-14 L0,-38 L46,-14 L46,34 L0,54 L-46,34 z" fill="#FFFFFF" stroke="#0E7568" stroke-width="5" stroke-linejoin="round"/><polyline points="-46,-14 0,8 46,-14" fill="none" stroke="#0E7568" stroke-width="5" stroke-linejoin="round"/><line x1="0" y1="8" x2="0" y2="54" stroke="#0E7568" stroke-width="5"/></g>
+  <text x="210" y="736" font-size="32" font-weight="700" fill="#0E7568">上傳包</text>
+  <text x="210" y="778" font-size="24" fill="#4B5563">與核准版同一份</text>
+  <text x="210" y="814" font-size="24" fill="#4B5563">縮圖取自核准成片</text>
+  <text x="210" y="850" font-size="24" fill="#4B5563">影音長度對齊</text>
+  <text x="210" y="886" font-size="24" fill="#4B5563">匯出後人工再看</text>
+  <line x1="300" y1="928" x2="300" y2="960" stroke="#374151" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="40" y="970" width="520" height="250" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <g transform="translate(92 1028) scale(0.7)"><circle cx="0" cy="-26" r="20" fill="#8A5D00"/><path d="M-38,46 a38,40 0 0 1 76,0 z" fill="#8A5D00"/></g>
+  <text x="140" y="1022" font-size="30" font-weight="700" fill="#8A5D00">最後由人決定，</text>
+  <text x="140" y="1062" font-size="30" font-weight="700" fill="#8A5D00">只有四個選項</text>
+  <rect x="70.0" y="1097.0" width="204.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="172" y="1127" font-size="24" font-weight="700" text-anchor="middle" fill="#2C5B8F">核准不公開上傳</text>
+  <rect x="334.0" y="1097.0" width="180.0" height="42" rx="21.0" fill="#0E7568"/>
+  <text x="424" y="1127" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">核准公開發布</text>
+  <rect x="106.0" y="1155.0" width="132.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="172" y="1185" font-size="24" font-weight="700" text-anchor="middle" fill="#B45309">退回修改</text>
+  <rect x="382.0" y="1155.0" width="84.0" height="42" rx="21.0" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+  <text x="424" y="1185" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">停止</text>
+  <rect x="40" y="1240" width="520" height="100" rx="16" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+  <text x="300" y="1282" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">平台自動檢查或「成功上傳」，</text>
+  <text x="300" y="1318" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">都不等於權利已確認</text>
+</svg>

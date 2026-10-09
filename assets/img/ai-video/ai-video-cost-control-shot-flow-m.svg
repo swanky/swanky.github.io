@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1318" width="600" height="1318" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">一顆鏡頭，從報價到記帳</title>
+  <desc id="d">看報價單、人核准這一張報價、付費生成、判斷能不能剪進成片。能就記帳；不能就先寫失敗原因、改輸入再送第二次；第三次要新報價並由人單獨放行。失敗也要記帳。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1318" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">一顆鏡頭，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">從報價到記帳</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">每一次花錢之前有人點頭，</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">每一次花完都有一列帳</text>
+  <rect x="40" y="236" width="520" height="116" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="74" cy="266" r="20" fill="#2C5B8F"/>
+  <text x="74" y="274.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <g transform="translate(140 298) scale(0.5)"><rect x="-38" y="-46" width="76" height="98" rx="9" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="5"/><rect x="-20" y="-56" width="40" height="20" rx="5" fill="#2C5B8F"/><line x1="-22" y1="-14" x2="24" y2="-14" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/><line x1="-22" y1="6" x2="24" y2="6" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/><line x1="-22" y1="26" x2="24" y2="26" stroke="#2C5B8F" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="210" y="288" font-size="30" font-weight="700" fill="#2C5B8F">看報價單</text>
+  <text x="210" y="328" font-size="24" fill="#4B5563">模型、秒數、解析度、單價</text>
+  <line x1="300" y1="354" x2="300" y2="382" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="384" width="520" height="116" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <circle cx="74" cy="414" r="20" fill="#E5A300"/>
+  <text x="74" y="422.64" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">2</text>
+  <g transform="translate(140 446) scale(0.5)"><rect x="-14" y="-50" width="28" height="34" rx="8" fill="#E5A300"/><rect x="-40" y="-18" width="80" height="22" rx="6" fill="#E5A300"/><rect x="-48" y="10" width="96" height="10" rx="3" fill="#E5A300" opacity="0.45"/><path d="M-24,36 L-6,50 L26,26" fill="none" stroke="#E5A300" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="210" y="436" font-size="30" font-weight="700" fill="#8A5D00">人核准</text>
+  <text x="210" y="476" font-size="24" fill="#4B5563">只對這一張報價有效</text>
+  <line x1="300" y1="502" x2="300" y2="530" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="532" width="520" height="116" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <circle cx="74" cy="562" r="20" fill="#2C5B8F"/>
+  <text x="74" y="570.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <g transform="translate(140 594) scale(0.5)"><rect x="-50" y="-30" width="70" height="56" rx="8" fill="#2C5B8F"/><path d="M20,-14 L48,-30 L48,26 L20,10 z" fill="#2C5B8F"/><circle cx="-15" cy="-2" r="14" fill="#FFFFFF"/><circle cx="-15" cy="-2" r="6" fill="#2C5B8F"/></g>
+  <text x="210" y="584" font-size="30" font-weight="700" fill="#2C5B8F">付費生成</text>
+  <text x="210" y="624" font-size="24" fill="#4B5563">生成這顆鏡頭</text>
+  <line x1="300" y1="650" x2="300" y2="678" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <rect x="40" y="680" width="520" height="116" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <circle cx="74" cy="710" r="20" fill="#B45309"/>
+  <text x="74" y="718.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <path d="M140,710 L172,738 L140,766 L108,738 z" fill="#FFFFFF" stroke="#B45309" stroke-width="4"/>
+  <text x="140" y="748" font-size="26" font-weight="700" text-anchor="middle" fill="#B45309">?</text>
+  <text x="210" y="732" font-size="30" font-weight="700" fill="#B45309">能剪進成片？</text>
+  <text x="210" y="772" font-size="24" fill="#4B5563">看片後判斷</text>
+  <line x1="170" y1="798" x2="170" y2="846" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="150" y="830" font-size="24" font-weight="700" text-anchor="end" fill="#0E7568">能</text>
+  <line x1="430" y1="798" x2="430" y2="846" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="450" y="830" font-size="24" font-weight="700" fill="#B91C1C">不能</text>
+  <rect x="40" y="850" width="250" height="150" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <text x="165" y="900" font-size="30" font-weight="700" text-anchor="middle" fill="#0E7568">記帳</text>
+  <text x="165" y="940" font-size="24" text-anchor="middle" fill="#4B5563">實付＋</text>
+  <text x="165" y="974" font-size="24" text-anchor="middle" fill="#4B5563">用到的秒數</text>
+  <rect x="310" y="850" width="250" height="150" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="435" y="896" font-size="28" font-weight="700" text-anchor="middle" fill="#B91C1C">先寫失敗原因</text>
+  <text x="435" y="936" font-size="24" text-anchor="middle" fill="#4B5563">改輸入再送，</text>
+  <text x="435" y="970" font-size="24" text-anchor="middle" fill="#4B5563">回到第 3 步</text>
+  <line x1="435" y1="1002" x2="435" y2="1040" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <text x="455" y="1030" font-size="22" font-weight="700" fill="#B91C1C">最多兩次</text>
+  <rect x="40" y="1044" width="520" height="120" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="70" y="1094" font-size="30" font-weight="700" fill="#B45309">還要第 3 次？</text>
+  <text x="70" y="1136" font-size="24" fill="#4B5563">附新報價＋失敗原因，由人單獨放行</text>
+  <rect x="40" y="1194" width="520" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1235.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">失敗、被拒絕、下載不到，</text>
+  <text x="300.0" y="1272.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">也都要記帳</tspan></text>
+</svg>

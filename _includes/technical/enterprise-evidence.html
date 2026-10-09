@@ -1,0 +1,20 @@
+{%- comment -%}
+  企業證據列（/enterprise/ 與 /technical/ai-agent-consulting/ 共用）。
+  資料：_data/enterprise_evidence.yml（硬規則與每列出處寫在該檔開頭）。
+  樣式：assets/css/enterprise.css（頁面 front matter 以 extra_head 掛上）＋ style.css 的 .work-row。
+  用法：{% raw %}{% include technical/enterprise-evidence.html %}{% endraw %}，放在 .tech-shell 內、區塊標題之後。
+{%- endcomment -%}
+<div class="works-list">
+  {% for r in site.data.enterprise_evidence.rows %}
+  {% if r.url %}<a class="work-row" href="{{ r.url | relative_url }}">{% else %}<div class="work-row work-row--static">{% endif %}
+    <div class="w-num">{{ forloop.index | prepend: '0' }}</div>
+    <div class="w-body">
+      <span class="ent-kicker">{{ r.kicker }}</span>
+      <h3 class="w-title">{{ r.title }}</h3>
+      <p class="w-desc">{{ r.desc }}</p>
+    </div>
+    <div class="w-meta"><span class="w-year">{{ r.meta }}</span>{% if r.url %}查看紀錄<i class="bi bi-arrow-up-right" aria-hidden="true"></i>{% endif %}</div>
+  {% if r.url %}</a>{% else %}</div>{% endif %}
+  {% endfor %}
+</div>
+<p class="ent-note">企業內訓與大學授課的主題是區塊鏈與 Web3，證明的是替企業授課、把新技術講清楚的能力。AI 工作坊是另一門課，不拿那些場次當成 AI 的成效。</p>

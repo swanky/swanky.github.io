@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1242" width="600" height="1242" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">一顆鏡頭的錢，是怎麼疊高的</title>
+  <desc id="d">一顆 15 秒、720p 鏡頭實付約 3.48 美元，再疊上秒數、重抽、AI 助手重複送件三件事，花費就一層層變多。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1242" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">一顆鏡頭的錢，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">是怎麼疊高的</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">單看不貴，三件事一疊就變多</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">（硬幣只是示意，不代表比例）</text>
+  <rect x="40" y="236" width="520" height="168" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <ellipse cx="130" cy="374" rx="34" ry="11" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="130" cy="361" rx="34" ry="11" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="130" cy="348" rx="34" ry="11" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <text x="250" y="290" font-size="30" font-weight="700" fill="#64748B">看起來</text>
+  <text x="250" y="334" font-size="24" fill="#4B5563">15 秒、720p 一顆</text>
+  <text x="250" y="368" font-size="24" fill="#4B5563">實付約 US$3.48</text>
+  <text x="300" y="444" font-size="36" font-weight="700" text-anchor="middle" fill="#1F2937">＋</text>
+  <rect x="40" y="460" width="520" height="168" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <ellipse cx="130" cy="598" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="585" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="572" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="559" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="546" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="533" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="130" cy="520" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="250" y="514" font-size="30" font-weight="700" fill="#B45309">① 秒數</text>
+  <text x="250" y="558" font-size="24" fill="#4B5563">鏡頭拉長，</text>
+  <text x="250" y="592" font-size="24" fill="#4B5563">價格跟著往上</text>
+  <text x="300" y="668" font-size="36" font-weight="700" text-anchor="middle" fill="#1F2937">＋</text>
+  <rect x="40" y="684" width="520" height="168" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <ellipse cx="110" cy="822" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="809" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="796" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="783" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="770" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="757" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="110" cy="744" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="822" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="809" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="796" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="783" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="770" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="757" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <ellipse cx="140" cy="744" rx="34" ry="11" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="250" y="738" font-size="30" font-weight="700" fill="#B45309">② 重抽</text>
+  <text x="250" y="782" font-size="24" fill="#4B5563">不滿意再生一次，</text>
+  <text x="250" y="816" font-size="24" fill="#4B5563">每次都是全額</text>
+  <text x="300" y="892" font-size="36" font-weight="700" text-anchor="middle" fill="#1F2937">＋</text>
+  <rect x="40" y="908" width="520" height="168" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <ellipse cx="110" cy="1046" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="1033" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="1020" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="1007" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="994" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="981" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="110" cy="968" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="1046" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="1033" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="1020" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="1007" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="994" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="981" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="140" cy="968" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="1046" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="1033" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="1020" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="1007" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="994" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="981" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="170" cy="968" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="1046" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="1033" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="1020" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="1007" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="994" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="981" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="200" cy="968" rx="34" ry="11" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="250" y="962" font-size="30" font-weight="700" fill="#B91C1C">③ AI 助手</text>
+  <text x="250" y="1006" font-size="24" fill="#4B5563">沒有規則擋著，</text>
+  <text x="250" y="1040" font-size="24" fill="#4B5563">同一個錯再生好幾次</text>
+  <rect x="40" y="1112" width="520" height="104" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1155.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">別漏算</text>
+  <text x="300.0" y="1192.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">重來、失敗和沒人記得的那幾次</tspan></text>
+</svg>

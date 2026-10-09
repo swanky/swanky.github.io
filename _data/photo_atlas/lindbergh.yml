@@ -1,0 +1,142 @@
+id: lindbergh
+status: published
+name: Peter Lindbergh
+life: 1944–2019
+place: 生於波蘭，在德國 Duisburg 長大
+theme: 黑白、不修飾，把時尚照拍成真實的人
+view: 他的照片多半是黑白的，模特兒常常素著一張臉、頭髮被風吹亂，站在工廠、空地或街頭。看他，學的是怎麼讓一個人「不完美」地好看：不靠修圖，靠現場、光和對方真實的狀態。
+bio: |
+  <p>Getty 美術館的館藏紀錄寫他是德國攝影師，1944 年生於波蘭；杜塞道夫的 Kunstpalast 美術館說，他在德國 Duisburg 長大，2019 年 9 月過世。<sup><a href="#src-lindbergh">出處：Getty 美術館、Kunstpalast</a></sup></p>
+  <p>鹿特丹 Kunsthal 美術館稱他是過去四十年最有影響力的時尚攝影師之一，說他從 1980 年代起的純黑白照片，決定了時尚攝影的方向；館方的說法是，他「為攝影帶進一種新的寫實」，重新定義了美的標準。館方也引了他 2016 年的一句話：今天攝影師的責任，是讓女性、最後是每一個人，擺脫「對青春與完美的恐懼」。<sup><a href="#src-lindbergh">出處：Kunsthal 美術館</a></sup></p>
+  <p>他生前花了兩年，從自己的作品裡挑出 140 張照片，做成回顧展《Untold Stories》；漢堡 MK&amp;G 美術館說，這是他第一次親自策展的回顧展。展出的照片多半原本是替《Vogue》《Harper's Bazaar》等月刊拍的委託作品。展覽 2020 年 2 月在杜塞道夫 Kunstpalast 開幕，之後巡迴到漢堡、達姆施塔特和拿坡里。<sup><a href="#src-lindbergh">出處：Kunstpalast、MK&amp;G 美術館</a></sup></p>
+works_intro: 他的作品在美術館館藏頁上很少有圖，所以這裡除了 Getty 美術館的館藏頁，也用了三家美術館為他辦展時放在展覽頁上的照片；每一件的連結都通往那一頁。依年代排，可以看到他從工廠、空地、街頭一路拍到一張不修飾的臉。
+works:
+  - title: Lynne Koester for Comme des Garçons
+    zh: 模特兒 Lynne Koester，替 Comme des Garçons 拍，巴黎
+    year: "1984"
+    where: 英國 V&A 博物館
+    url: https://collections.vam.ac.uk/item/O1060397/
+    look: V&A 收了三張他在 1980 年代拍 Lynne Koester 的照片，館藏頁沒有放圖，但紀錄寫明這一張是替 Comme des Garçons 拍的。四年後下面那組工廠照，也是替同一個品牌拍的廣告。
+  - title: Michaela Bercu, Linda Evangelista, Kirsten Owen - Pont-à-Mousson, France
+    zh: 三位模特兒在法國 Pont-à-Mousson 的工廠
+    year: 1988 年拍攝，1997 年沖印
+    where: Getty 美術館
+    url: https://www.getty.edu/art/collection/object/109NKJ
+    img: /assets/img/photo-learn/works/atlas-lindbergh/02-pont-a-mousson-machine-hall.jpg
+    img_w: 600
+    img_h: 496
+    credit: "攝影：Peter Lindbergh｜© Estate of Peter Lindbergh"
+    look: 三位模特兒穿深色套裝，站在一座巨大的機器旁，四周飄著蒸氣。Kunsthal 美術館的圖說寫，這是 Comme des Garçons 1988 年春夏的廣告；衣服幾乎和機器融成一片，人反而像場景的一部分。
+  - title: Linda Evangelista, Michaela Bercu & Kirsten Owen, Pont-à-Mousson
+    zh: 同一次拍攝的另一張
+    year: "1988"
+    where: 漢堡 MK&G 美術館展覽頁
+    url: https://www.mkg-hamburg.de/en/exhibitions/peter-lindbergh
+    img: /assets/img/photo-learn/works/atlas-lindbergh/03-pont-a-mousson-hoods.jpg
+    img_w: 402
+    img_h: 600
+    alt: Peter Lindbergh 拍的三位模特兒包著黑色頭巾的近景（1988，漢堡 MK&G 美術館展覽頁）
+    credit: "攝影：Peter Lindbergh｜© Peter Lindbergh (Courtesy Peter Lindbergh, Paris)"
+    look: 鏡頭靠近，三個人包著黑色頭巾，身後是機器上的鉚釘。和上一張比，一張拍「人在場景裡」，一張拍「臉」；同一次拍攝，可以帶回兩種完全不同的照片。
+  - title: Naomi Campbell, Linda Evangelista, Tatjana Patitz, Christy Turlington & Cindy Crawford, New York
+    zh: 五位模特兒，紐約
+    year: "1990"
+    where: 鹿特丹 Kunsthal 美術館展覽頁
+    url: https://kunsthal.nl/en/exhibitions/peter-lindbergh/
+    img: /assets/img/photo-learn/works/atlas-lindbergh/04-five-models-new-york.jpg
+    img_w: 443
+    img_h: 600
+    alt: Peter Lindbergh 拍的五位模特兒在紐約街頭靠在一起的黑白照（1990，鹿特丹 Kunsthal 美術館展覽頁）
+    credit: "攝影：Peter Lindbergh｜© Peter Lindbergh (Courtesy of Peter Lindbergh, Paris / Gagosian Gallery)"
+    look: 五位模特兒擠在紐約街頭，頭髮被風吹亂，妝很淡，有人笑、有人直直看著鏡頭。她們靠得很近、互相搭著，看起來更像一群朋友，而不是排好隊形的廣告。
+  - title: Kristen McMenamy, Beauduc
+    zh: Kristen McMenamy，法國 Beauduc
+    year: 1990 年，刊於法國版《Vogue》
+    where: 鹿特丹 Kunsthal 美術館展覽頁
+    url: https://kunsthal.nl/en/exhibitions/peter-lindbergh/
+    img: /assets/img/photo-learn/works/atlas-lindbergh/05-kristen-mcmenamy-beauduc.jpg
+    img_w: 402
+    img_h: 600
+    alt: Peter Lindbergh 拍的 Kristen McMenamy 坐在空地木椅上踢腿的黑白照（1990，鹿特丹 Kunsthal 美術館展覽頁）
+    credit: "攝影：Peter Lindbergh｜© Peter Lindbergh (Courtesy of Peter Lindbergh, Paris / Gagosian Gallery)"
+    look: 一片空曠的泥地，遠處停著露營車，她坐在一張木椅上，一條腿高高踢向天空。整張照片靠的是一個誇張的動作，和身後什麼都沒有的空地。
+  - title: Claudia Schiffer, Santa Monica
+    zh: Claudia Schiffer，美國聖塔莫尼卡
+    year: "1997"
+    where: 杜塞道夫 Kunstpalast 美術館展覽頁
+    url: https://www.kunstpalast.de/en/event/peter-lindbergh-untold-stories-en/
+    img: /assets/img/photo-learn/works/atlas-lindbergh/06-claudia-schiffer-santa-monica.jpg
+    img_w: 401
+    img_h: 600
+    alt: Peter Lindbergh 拍的 Claudia Schiffer 臉部特寫黑白照（1997，杜塞道夫 Kunstpalast 美術館展覽頁）
+    credit: "攝影：Peter Lindbergh｜© Peter Lindbergh (Courtesy of Peter Lindbergh, Paris)"
+    look: 一張幾乎填滿畫面的臉，雀斑、細紋和被風吹亂的瀏海都留著。這就是 Kunsthal 美術館說的「新的寫實」：不把臉修到完美，反而讓人記得住。
+  - title: Kate Moss, Paris
+    zh: 回顧展專書《A Different Vision on Fashion Photography》的封面照
+    year: 2015 年，刊於義大利版《Vogue》
+    where: 鹿特丹 Kunsthal 美術館展覽頁
+    url: https://kunsthal.nl/en/exhibitions/peter-lindbergh/
+    img: /assets/img/photo-learn/works/atlas-lindbergh/07-kate-moss-book-cover.jpg
+    img_w: 423
+    img_h: 600
+    alt: Taschen 出版的 Peter Lindbergh 回顧展專書封面，封面照是 2015 年拍的 Kate Moss（鹿特丹 Kunsthal 美術館展覽頁）
+    credit: "攝影：Peter Lindbergh｜© Peter Lindbergh (Courtesy of Peter Lindbergh, Paris / Gagosian Gallery)"
+    look: Kunsthal 回顧展同名專書的封面，用的是他 2015 年替義大利版《Vogue》拍的 Kate Moss：夾著菸、頭髮往後梳，臉上的細紋和雀斑全留著。和 1990 年代那幾張比，二十多年過去，他對「臉」的態度沒有變。
+works_after: |
+  <h3 class="atlas-h">我的作品對照</h3>
+  <p>我拍的〈藍色跑道〉裡也看得到類似的做法：她直接坐在操場的跑道上，一手撐地、腿伸直，沒有笑，就這樣看著鏡頭。背景是真實的藍色跑道和白線，沒有任何布景；撐起畫面的，是她不擺笑容、很直接的那個眼神。</p>
+  <figure class="pl-own">
+    <a class="portfolio-lightbox" data-gallery="atlas-lindbergh-own" data-type="image" href="/assets/img/photography/selected/24350775633.jpg"><img src="/assets/img/photography/selected/24350775633.jpg" width="1600" height="1067" alt="坐在藍色操場跑道上、直視鏡頭的制服人像" loading="lazy" decoding="async"></a>
+    <figcaption>史旺基作品〈藍色跑道〉，2016 年。點圖放大。</figcaption>
+  </figure>
+videos:
+  - id: Jm9MVZj9A1I
+    title: Peter Lindbergh opening weekend at Kunsthal Rotterdam
+    channel: Kunsthal Rotterdam
+    channel_url: https://www.youtube.com/@KunsthalRotterdam
+    length: 4 分 21 秒
+    lang: 英語（自動字幕）
+    note: 鹿特丹 Kunsthal 美術館官方頻道。2016 年回顧展開幕週末的紀錄，看得到大幅黑白照片掛在牆上的樣子。
+  - id: UyvrC3c3l4s
+    title: Benjamin Lindbergh über „Untold Stories“
+    channel: Museum für Kunst und Gewerbe Hamburg
+    channel_url: https://www.youtube.com/@mkghamburg
+    length: 1 分 46 秒
+    lang: 有自動字幕
+    note: 漢堡 MK&amp;G 美術館官方頻道。他的兒子 Benjamin 談父親，以及《Untold Stories》這個展是怎麼做出來的。
+  - id: rKZfqoJmV8M
+    title: Trailer zur Ausstellung "Peter Lindbergh. Untold stories"
+    channel: Kunstpalast
+    channel_url: https://www.youtube.com/@museumkunstpalast
+    length: 38 秒
+    lang: 無字幕
+    note: 杜塞道夫 Kunstpalast 美術館官方頻道的展覽預告，很短，先感受一下他的黑白照片。
+take:
+  - 讓臉保持真實。Schiffer 那張留著雀斑和亂髮；拍前和對方說好，妝淡一點、修圖少一點，表情反而更有力。
+  - 場景粗糙一點沒關係。工廠、泥地、街頭都不漂亮，卻讓人和衣服更顯眼；找景時不一定要找「美」的地方，找有質感、有故事的地方。
+  - 多人照先讓大家靠近。五位模特兒那張靠得很近、互相搭著；拍團體時，先讓大家聊開、站近一點再按快門，比排好隊形自然。
+related:
+  - label: 對照：Irving Penn
+    url: "#penn"
+    note: 同一本圖鑑，一個把背景收掉，一個把人帶進真實場景
+sources:
+  - title: Michaela Bercu, Linda Evangelista, Kirsten Owen - Pont-à-Mousson, France
+    by: The J. Paul Getty Museum（Getty 美術館）
+    url: https://www.getty.edu/art/collection/object/109NKJ
+    note: 德國攝影師、1944 年生於波蘭、2019 年過世；作品 1988 年拍攝、1997 年沖印，模特兒穿深色套裝站在工業機器之間
+  - title: "Peter Lindbergh: Untold Stories"
+    by: Kunstpalast Düsseldorf（杜塞道夫 Kunstpalast 美術館）
+    url: https://www.kunstpalast.de/en/event/peter-lindbergh-untold-stories-en/
+    note: 在 Duisburg 長大、2019 年 9 月過世、140 張照片、多為月刊委託作品、2020 年 2 月 5 日到 9 月 27 日展期；Claudia Schiffer 一件的圖說
+  - title: "Peter Lindbergh: Untold Stories"
+    by: Museum für Kunst und Gewerbe Hamburg（漢堡 MK&amp;G 美術館）
+    url: https://www.mkg-hamburg.de/en/exhibitions/peter-lindbergh
+    note: 第一次由他親自策展、花兩年挑選、巡迴達姆施塔特與拿坡里；Pont-à-Mousson 一件的圖說
+  - title: "Peter Lindbergh: A Different Vision on Fashion Photography"
+    by: Kunsthal Rotterdam（鹿特丹 Kunsthal 美術館）
+    url: https://kunsthal.nl/en/exhibitions/peter-lindbergh/
+    note: 最有影響力的時尚攝影師之一、1980 年代起的黑白照片、「新的寫實」、2016 年引句；Comme des Garçons 1988 春夏廣告、五位模特兒、Kristen McMenamy、專書封面 Kate Moss 等圖說
+  - title: Photograph（Lynne Koester for Comme des Garçons）
+    by: Victoria and Albert Museum（英國 V&A 博物館）
+    url: https://collections.vam.ac.uk/item/O1060397/
+    note: 1984 年在巴黎替 Comme des Garçons 拍模特兒 Lynne Koester；館藏頁無影像

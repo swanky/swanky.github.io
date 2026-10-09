@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">檢查清單：一句只講一件事</title>
+  <desc id="d">示意範例：一顆變身鏡的檢查清單，共七條，每條都能對著畫面打勾，例如雙臂真的完整展開、環形光帶正好兩道、兔耳耳機一對。核心項是主動作和角色身分，用金色標出；核心項一條不成立，最好也只是僅概念參考。每鏡寫六到十二條，電影感、8K、毛孔級細節這種驗不了的詞不列。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="740" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">檢查清單：一句只講一件事</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">範例（示意）：一顆變身鏡的勾選清單，金色是核心項</text>
+  <rect x="48" y="176" width="652" height="532" rx="24" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <rect x="284" y="160" width="180" height="40" rx="10" fill="#2C5B8F"/>
+  <text x="374" y="188" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">變身鏡</text>
+  <rect x="68" y="230" width="612" height="56" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+  <rect x="88" y="243" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <path d="M94,258.0 L100.6,266 L113,249" fill="none" stroke="#E5A300" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="268" font-size="26" font-weight="700" fill="#1F2937">角色身分：臉和髮型像本人</text>
+  <rect x="598.0" y="240.0" width="68.0" height="36" rx="18.0" fill="#E5A300"/>
+  <text x="632" y="265.92" font-size="22" font-weight="700" text-anchor="middle" fill="#1F2937">核心</text>
+  <rect x="68" y="296" width="612" height="56" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+  <rect x="88" y="309" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+  <path d="M94,324.0 L100.6,332 L113,315" fill="none" stroke="#E5A300" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="334" font-size="26" font-weight="700" fill="#1F2937">雙臂真的完整展開</text>
+  <rect x="598.0" y="306.0" width="68.0" height="36" rx="18.0" fill="#E5A300"/>
+  <text x="632" y="331.92" font-size="22" font-weight="700" text-anchor="middle" fill="#1F2937">核心</text>
+  <rect x="88" y="375" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M94,390.0 L100.6,398 L113,381" fill="none" stroke="#2C5B8F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="400" font-size="26" fill="#4B5563">紅色光帶沿身體由下往上升</text>
+  <rect x="88" y="441" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M94,456.0 L100.6,464 L113,447" fill="none" stroke="#2C5B8F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="466" font-size="26" fill="#4B5563">環形光帶正好兩道</text>
+  <rect x="88" y="507" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M94,522.0 L100.6,530 L113,513" fill="none" stroke="#2C5B8F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="532" font-size="26" fill="#4B5563">水手服同一套，可破損不換裝</text>
+  <rect x="88" y="573" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M94,588.0 L100.6,596 L113,579" fill="none" stroke="#2C5B8F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="598" font-size="26" fill="#4B5563">兔耳耳機一對</text>
+  <rect x="88" y="639" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M94,654.0 L100.6,662 L113,645" fill="none" stroke="#2C5B8F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="138" y="664" font-size="26" fill="#4B5563">能量柱在身後、不遮臉</text>
+  <rect x="740" y="176" width="412" height="160" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="772" y="230" font-size="30" font-weight="700" fill="#8A5D00">核心項</text>
+  <text x="772" y="274" font-size="26" fill="#4B5563">主動作＋角色身分，</text>
+  <text x="772" y="310" font-size="26" fill="#4B5563">一條不成立→僅概念參考</text>
+  <rect x="740" y="362" width="412" height="160" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="772" y="416" font-size="30" font-weight="700" fill="#2C5B8F">每鏡 6 到 12 條</text>
+  <text x="772" y="460" font-size="26" fill="#4B5563">一句只講一件事，</text>
+  <text x="772" y="496" font-size="26" fill="#4B5563">對著畫面打勾或打叉</text>
+  <rect x="740" y="548" width="412" height="160" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="772" y="602" font-size="30" font-weight="700" fill="#B91C1C">驗不了的不列</text>
+  <text x="772" y="646" font-size="26" fill="#4B5563">電影感、8K、</text>
+  <text x="772" y="682" font-size="26" fill="#4B5563">毛孔級細節</text>
+  <path d="M690,262 C716,262 712,240 736,240" fill="none" stroke="#E5A300" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 6"/>
+</svg>

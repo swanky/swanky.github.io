@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">從哪裡進來，都先碰到揭露</title>
+  <desc id="d">五個標示位置，像五扇門上的門牌：作品頁開場、書末標示、每張放大圖的說明、相簿的內容分類、電子書封面。讀者不管從哪一扇門進來，都會在看照片之前先讀到揭露。圖說可以讓位給照片，揭露不行。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#2B2622">從哪裡進來，都先碰到揭露</text>
+  <text x="48" y="126" font-size="26" fill="#6B5E52">五個位置，讀者看照片之前就知道這是 AI 創作</text>
+  <rect x="48" y="166" width="200" height="392" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="82" cy="200" r="22" fill="#3A332D"/>
+  <text x="82" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <rect x="98" y="224" width="100" height="142" rx="10" fill="#EDE6DC"/>
+  <rect x="108" y="234" width="80" height="132" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="4"/>
+  <rect x="121" y="254" width="54" height="24" rx="4" fill="#E5A300"/>
+  <line x1="132" y1="266" x2="164" y2="266" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="174" cy="310" r="5" fill="#5C5248"/>
+  <line x1="86" y1="366" x2="210" y2="366" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="148" y="428" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">作品頁開場</text>
+  <text x="148" y="478" font-size="26" fill="#5C5248" text-anchor="middle">還沒看照片，</text>
+  <text x="148" y="516" font-size="26" fill="#5C5248" text-anchor="middle">就先知道</text>
+  <rect x="274" y="166" width="200" height="392" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="308" cy="200" r="22" fill="#3A332D"/>
+  <text x="308" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <rect x="324" y="224" width="100" height="142" rx="10" fill="#EDE6DC"/>
+  <rect x="334" y="234" width="80" height="132" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="4"/>
+  <rect x="347" y="254" width="54" height="24" rx="4" fill="#E5A300"/>
+  <line x1="358" y1="266" x2="390" y2="266" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="400" cy="310" r="5" fill="#5C5248"/>
+  <line x1="312" y1="366" x2="436" y2="366" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="374" y="428" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">書末標示</text>
+  <text x="374" y="478" font-size="26" fill="#5C5248" text-anchor="middle">看完整本，</text>
+  <text x="374" y="516" font-size="26" fill="#5C5248" text-anchor="middle">再說一次</text>
+  <rect x="500" y="166" width="200" height="392" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="534" cy="200" r="22" fill="#3A332D"/>
+  <text x="534" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <rect x="550" y="224" width="100" height="142" rx="10" fill="#EDE6DC"/>
+  <rect x="560" y="234" width="80" height="132" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="4"/>
+  <rect x="573" y="254" width="54" height="24" rx="4" fill="#E5A300"/>
+  <line x1="584" y1="266" x2="616" y2="266" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="626" cy="310" r="5" fill="#5C5248"/>
+  <line x1="538" y1="366" x2="662" y2="366" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="600" y="428" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">每張放大圖</text>
+  <text x="600" y="478" font-size="26" fill="#5C5248" text-anchor="middle">單張被分享，</text>
+  <text x="600" y="516" font-size="26" fill="#5C5248" text-anchor="middle">也跟著走</text>
+  <rect x="726" y="166" width="200" height="392" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="760" cy="200" r="22" fill="#3A332D"/>
+  <text x="760" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <rect x="776" y="224" width="100" height="142" rx="10" fill="#EDE6DC"/>
+  <rect x="786" y="234" width="80" height="132" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="4"/>
+  <rect x="799" y="254" width="54" height="24" rx="4" fill="#E5A300"/>
+  <line x1="810" y1="266" x2="842" y2="266" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="852" cy="310" r="5" fill="#5C5248"/>
+  <line x1="764" y1="366" x2="888" y2="366" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="826" y="428" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">相簿分類</text>
+  <text x="826" y="478" font-size="26" fill="#5C5248" text-anchor="middle">設成藝術類，</text>
+  <text x="826" y="516" font-size="26" fill="#5C5248" text-anchor="middle">讓人能濾掉</text>
+  <rect x="952" y="166" width="200" height="392" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="986" cy="200" r="22" fill="#3A332D"/>
+  <text x="986" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <rect x="1002" y="224" width="100" height="142" rx="10" fill="#EDE6DC"/>
+  <rect x="1012" y="234" width="80" height="132" rx="6" fill="#FFFFFF" stroke="#5C5248" stroke-width="4"/>
+  <rect x="1025" y="254" width="54" height="24" rx="4" fill="#E5A300"/>
+  <line x1="1036" y1="266" x2="1068" y2="266" stroke="#2B2622" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1078" cy="310" r="5" fill="#5C5248"/>
+  <line x1="990" y1="366" x2="1114" y2="366" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="1052" y="428" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">電子書封面</text>
+  <text x="1052" y="478" font-size="26" fill="#5C5248" text-anchor="middle">照片頁沒字，</text>
+  <text x="1052" y="516" font-size="26" fill="#5C5248" text-anchor="middle">封面留一行</text>
+  <rect x="48" y="590" width="1104" height="92" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="646.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">圖說可以讓位給照片，</tspan><tspan fill="#8A5D00">揭露不行</tspan></text>
+</svg>

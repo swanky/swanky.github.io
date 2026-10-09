@@ -1,0 +1,348 @@
+---
+layout: home
+title: 看懂寫真
+seo_title: 看懂寫真｜史旺基的攝影學習筆記：攝影師、模特兒與寫真集導讀
+description: 給喜歡人像與寫真的人：讀攝影師、寫真集與攝影史的筆記，每一篇都查過出處、附原作連結；從想拍出的感覺或想看懂的書進門，另有攝影師與模特兒圖鑑。
+keywords: 看懂寫真,攝影師圖鑑,模特兒圖鑑,寫真集導讀,攝影史,人像攝影,攝影學習,藝術筆記,史旺基
+permalink: /photography/learn/
+nav_active: photography
+use_photography_author: true
+use_photo_learn: true
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影寫真
+    url: /photography/
+  - name: 看懂寫真
+    url: /photography/learn/
+---
+{%- comment -%}
+  看懂寫真專區首頁（2026-10-09 策展改版；規格 docs/photography-study-zone-review-2026-10.md §3.4、§3.5）。
+  版面（明暗交錯）：墨色撐屏 hero（站主作品）→ 攝影區導覽 → 三個入口＋每入口 2～4 張章卡（亮紙）→
+  攝影師圖鑑帶＋模特兒圖鑑入口（深色）→ 書架＋最新加入（亮紙）→ 藝術筆記大卡（深色）→ 這區的規矩（亮紙）→ 看我怎麼用（深色收尾）。
+  資料：_data/photo_learn.yml（doors[].picks、chapters[].card／added、shelves、art_notes）；圖鑑名單讀兩本圖鑑頁 front matter 的 people_ids
+  與 _data/photo_atlas/<id>.yml（status: review 只在非正式環境顯示，規則同 _layouts/photo-learn-atlas.html）。
+  規則：章節／筆記只渲染「看得到的」（includes/photography/learn-visible.html）；任一區沒有可見項目就整區不輸出；
+  頁面不寫總章數、不寫「預計」或未完成的項目。入口章卡的圖只用該章示意圖（card），不用他人作品；
+  圖鑑帶與藝術筆記大卡的他人作品是評論引用小圖，一律附作品、館藏、版權標示與原作連結（規矩 01）。
+  錨點 #u1～#u6、#art-notes 有章節頁麵包屑連進來，改版時保留。
+{%- endcomment -%}
+{% assign zone = site.data.photo_learn %}
+{%- comment -%}先算哪些單元有可見章（vis_units 是 " id " 串）、哪些筆記可見。{%- endcomment -%}
+{%- assign vis_units = ' ' -%}{%- assign vis_unit_n = 0 -%}
+{%- for u in zone.units -%}
+  {%- assign u_n = 0 -%}
+  {%- for ch in u.chapters -%}{%- include photography/learn-visible.html item=ch -%}{%- if pl_vis -%}{%- assign u_n = u_n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+  {%- if u_n > 0 -%}{%- assign vis_units = vis_units | append: u.id | append: ' ' -%}{%- assign vis_unit_n = vis_unit_n | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- assign art = zone.art_notes -%}{%- assign art_n = 0 -%}
+{%- for n in art.notes -%}{%- include photography/learn-visible.html item=n -%}{%- if pl_vis -%}{%- assign art_n = art_n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- comment -%}圖鑑：頁面要存在（正式建置不含 published: false 的頁），且正式站要 photographers_status／models_status: published。{%- endcomment -%}
+{%- assign pg_pho = site.pages | where: "url", zone.photographers_url | first -%}
+{%- assign pg_mod = site.pages | where: "url", zone.models_url | first -%}
+{%- assign show_pho = false -%}{%- assign show_mod = false -%}
+{%- if pg_pho -%}{%- if zone.photographers_status == 'published' or jekyll.environment != 'production' -%}{%- assign show_pho = true -%}{%- endif -%}{%- endif -%}
+{%- if pg_mod -%}{%- if zone.models_status == 'published' or jekyll.environment != 'production' -%}{%- assign show_mod = true -%}{%- endif -%}{%- endif -%}
+{%- assign pho_people = '' | split: ',' -%}
+{%- if show_pho -%}{%- for pid in pg_pho.people_ids -%}{%- assign pp = site.data.photo_atlas[pid] -%}{%- if pp -%}
+  {%- if pp.status == 'review' and jekyll.environment == 'production' -%}{%- else -%}{%- assign pho_people = pho_people | push: pp -%}{%- endif -%}
+{%- endif -%}{%- endfor -%}{%- endif -%}
+{%- assign mod_people = '' | split: ',' -%}
+{%- if show_mod -%}{%- for pid in pg_mod.people_ids -%}{%- assign pp = site.data.photo_atlas[pid] -%}{%- if pp -%}
+  {%- if pp.status == 'review' and jekyll.environment == 'production' -%}{%- else -%}{%- assign mod_people = mod_people | push: pp -%}{%- endif -%}
+{%- endif -%}{%- endfor -%}{%- endif -%}
+{%- assign atlas_n = pho_people.size | plus: mod_people.size -%}
+{%- assign sec_n = 0 -%}
+<main id="main" class="photo-author-page photo-author-subpage photo-learn-page pl-home">
+
+  <section class="pl-hero" aria-labelledby="pl-title">
+    <div class="photo-author-shell pl-hero-grid">
+      <div class="pl-hero-copy">
+        <p class="pl-hero-status">免費閱讀・不用懂器材・每篇約 10 分鐘</p>
+        <p class="photo-author-eyebrow">Photography Study · {{ zone.subtitle }}</p>
+        <h1 id="pl-title">{{ zone.name }}</h1>
+        <p class="pl-hero-promise">看懂一位攝影師，<br>就多學會<em>一種拍法</em>。</p>
+        <p class="pl-hero-lead">每一篇都查過出處、附原作連結，看完就能用。這是我讀攝影師、讀寫真集、讀攝影史留下的筆記，寫給喜歡人像與寫真、想拍出某種感覺的人，也寫給逛展覽、翻寫真集，或站在鏡頭前的人。</p>
+        <div class="photo-author-actions">
+          {% if vis_unit_n > 0 %}<a class="photo-author-button" href="#doors">看精選</a>{% elsif art_n > 0 %}<a class="photo-author-button" href="#art-notes">看藝術筆記</a>{% endif %}
+          {% if atlas_n > 0 %}<a class="photo-author-button photo-author-button--ghost" href="#atlas">看圖鑑</a>{% endif %}
+        </div>
+      </div>
+      <figure class="pl-hero-media">
+        <a href="https://www.flickr.com/photos/swanky-hsiao/4624112041/" target="_blank" rel="noopener noreferrer" aria-label="在 Flickr 看〈車廂裡的光〉原作（另開新頁）">
+          <img {% include flickr/source.html image="/assets/img/photography/selected/4624112041.jpg" sizes="(max-width: 900px) calc(100vw - 32px), 40vw" %}
+            alt="車廂窗光環境人像" width="1600" height="1576" fetchpriority="high" decoding="async">
+        </a>
+        <figcaption>史旺基作品〈車廂裡的光〉，2010</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  {% include photography/subpage-nav.html %}
+
+  {%- comment -%}01 三個入口：每個入口直接列 picks 裡看得到的章（卡圖＝該章示意圖），另附通往書架的連結。{%- endcomment -%}
+  {%- if vis_unit_n > 0 %}{%- assign sec_n = sec_n | plus: 1 %}
+  <section class="photo-author-section photo-author-light pl-doors" id="doors" aria-labelledby="pl-doors-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">0{{ sec_n }} · Start Here</p>
+        <div>
+          <h2 id="pl-doors-title">從你的問題進門。</h2>
+          <p>不用照順序讀。挑一句最像你的話，先讀底下這幾篇；每一篇都是一個人、一本書或一段合作，讀完就有一招可以帶走。</p>
+        </div>
+      </header>
+      <p class="pl-swipe-hint" aria-hidden="true">每個入口的文章卡可以左右滑動 →</p>
+      <ol class="pl-door-list pl-door-list--picks">
+        {%- assign door_n = 0 -%}
+        {% for door in zone.doors %}
+        {%- capture picks_html -%}
+          {%- for purl in door.picks -%}
+            {%- assign hit = nil -%}{%- assign hit_unit = nil -%}
+            {%- for u in zone.units -%}{%- for ch in u.chapters -%}{%- if ch.url == purl -%}{%- assign hit = ch -%}{%- assign hit_unit = u -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+            {%- include photography/learn-visible.html item=hit -%}
+            {%- if pl_vis -%}
+            {%- assign pg = site.pages | where: "url", hit.url | first %}
+          <li class="pl-pick">
+            <a href="{{ hit.url | relative_url }}">
+              {%- if hit.card %}
+              <span class="pl-pick-fig"><img src="{{ hit.card | relative_url }}" width="1200" height="720" alt="" loading="lazy" decoding="async"></span>
+              {%- endif %}
+              <span class="pl-pick-kicker">{{ hit_unit.title }}{% if pg.minutes %}・約 {{ pg.minutes }} 分鐘{% endif %}</span>
+              <span class="pl-pick-title">{{ hit.title }}</span>
+              {%- if pg.one_line %}<span class="pl-pick-line">{{ pg.one_line }}</span>{% endif %}
+            </a>
+          </li>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- assign picks_html = picks_html | strip -%}
+        {%- if picks_html != '' -%}
+        {%- assign door_n = door_n | plus: 1 %}
+        <li class="pl-door pl-door--picks" id="door-{{ door.id }}">
+          <div class="pl-door-head">
+            <span class="pl-door-num" aria-hidden="true">0{{ door_n }}</span>
+            <div class="pl-door-body">
+              <h3 class="pl-door-ask">「{{ door.ask }}」</h3>
+              <p class="pl-door-who">{{ door.who }}</p>
+              <p class="pl-door-more">
+                {%- for uid in door.units -%}{%- assign needle = ' ' | append: uid | append: ' ' -%}{%- if vis_units contains needle -%}{%- assign u = zone.units | where: "id", uid | first %}
+                <a href="#{{ u.id }}">書架：{{ u.title }}<span aria-hidden="true">→</span></a>
+                {%- endif -%}{%- endfor -%}
+                {%- if door.id == 'model' and mod_people.size > 0 %}
+                <a href="{{ zone.models_url | relative_url }}">翻模特兒圖鑑<span aria-hidden="true">→</span></a>
+                {%- endif %}
+              </p>
+            </div>
+          </div>
+          <ul class="pl-picks" aria-label="「{{ door.ask }}」先讀這幾篇">
+          {{ picks_html }}
+          </ul>
+        </li>
+        {%- endif -%}
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- comment -%}02 圖鑑帶：每位一格（作品小圖＝評論引用，附作品、館藏、版權與原作連結），最後一格是模特兒圖鑑入口。{%- endcomment -%}
+  {%- if atlas_n > 0 %}{%- assign sec_n = sec_n | plus: 1 %}
+  <section class="photo-author-section pl-atlas-band" id="atlas" aria-labelledby="pl-atlas-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">0{{ sec_n }} · Atlas</p>
+        <div>
+          <h2 id="pl-atlas-title">先認識人，再看作品。</h2>
+          <p>攝影師圖鑑每一位都像一個小展覽：為什麼值得看、一件一件帶你到美術館看原作、拍照的人可以帶走什麼。這裡的作品都是縮小的評論引用，想看清楚請點「看原作」。</p>
+        </div>
+      </header>
+      <ol class="pl-atlas-people">
+        {%- for p in pho_people %}
+        {%- assign w = nil -%}{%- for x in p.works -%}{%- if w == nil and x.img -%}{%- assign w = x -%}{%- endif -%}{%- endfor %}
+        <li class="pl-atlas-person">
+          <a class="pl-atlas-person-link" href="{{ zone.photographers_url | relative_url }}#{{ p.id }}">
+            <span class="pl-atlas-mat">
+              {%- if w %}<img src="{{ w.img | relative_url }}" width="{{ w.img_w }}" height="{{ w.img_h }}" alt="{% if w.alt %}{{ w.alt | escape }}{% else %}{{ p.name }}〈{{ w.title | escape }}〉（{{ w.year }}，{{ w.where }}館藏）{% endif %}" loading="lazy" decoding="async">
+              {%- else %}<span class="pl-atlas-mat-text" aria-hidden="true">{{ p.name }}</span>{% endif -%}
+            </span>
+            <span class="pl-atlas-num" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <b class="pl-atlas-name">{% if p.zh %}{{ p.zh }}<small>{{ p.name }}</small>{% else %}{{ p.name }}{% endif %}</b>
+            <span class="pl-atlas-theme">{{ p.theme }}</span>
+          </a>
+          {%- if w %}
+          <p class="pl-atlas-credit">{{ w.title }}，{{ w.year }}。{{ w.where }}藏。{{ w.credit }}。<a href="{{ w.url }}" target="_blank" rel="noopener">看原作<span class="visually-hidden">（另開新頁）</span></a></p>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+        {%- if mod_people.size > 0 %}
+        <li class="pl-atlas-person pl-atlas-models">
+          <a class="pl-atlas-person-link" href="{{ zone.models_url | relative_url }}">
+            <span class="pl-atlas-models-kicker">另一本</span>
+            <b class="pl-atlas-name">模特兒圖鑑</b>
+            <span class="pl-atlas-theme">從站在鏡頭前的人這一端看照片：同一個人，在不同攝影師面前怎麼變成不同的樣子。</span>
+            <span class="pl-atlas-models-names">收錄 {% for m in mod_people %}{{ m.name }}{% unless forloop.last %}、{% endunless %}{% endfor %}</span>
+            <span class="pl-atlas-models-go">翻開模特兒圖鑑<span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        {%- endif %}
+      </ol>
+      {%- if pho_people.size > 0 %}
+      <div class="photo-author-actions pl-atlas-actions">
+        <a class="photo-author-button" href="{{ zone.photographers_url | relative_url }}">翻開攝影師圖鑑</a>
+      </div>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- comment -%}03 書架：依 shelves 順序分架，只列看得到的章；右上角「最新加入」取 added 最新的 3 篇（同日以本檔順序後者為新）。{%- endcomment -%}
+  {%- if vis_unit_n > 0 %}{%- assign sec_n = sec_n | plus: 1 %}
+  {%- assign latest_keys = '' | split: ',' -%}{%- assign seq = 0 -%}
+  {%- for u in zone.units -%}{%- for ch in u.chapters -%}
+    {%- assign seq = seq | plus: 1 -%}
+    {%- include photography/learn-visible.html item=ch -%}
+    {%- if pl_vis and ch.added -%}
+      {%- capture k -%}{{ ch.added | date: "%Y-%m-%d" }}|{{ seq | prepend: '000' | slice: -4, 4 }}|{{ ch.url }}|{{ ch.title }}{%- endcapture -%}
+      {%- assign latest_keys = latest_keys | push: k -%}
+    {%- endif -%}
+  {%- endfor -%}{%- endfor -%}
+  {%- for n in art.notes -%}
+    {%- assign seq = seq | plus: 1 -%}
+    {%- include photography/learn-visible.html item=n -%}
+    {%- if pl_vis and n.added -%}
+      {%- capture k -%}{{ n.added | date: "%Y-%m-%d" }}|{{ seq | prepend: '000' | slice: -4, 4 }}|{{ n.url }}|{{ n.title }}{%- endcapture -%}
+      {%- assign latest_keys = latest_keys | push: k -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign latest_keys = latest_keys | sort | reverse -%}
+  <section class="photo-author-section photo-author-light pl-shelf" id="shelf" aria-labelledby="pl-shelf-title">
+    <div class="photo-author-shell">
+      <header class="pl-shelf-head">
+        <div>
+          <p class="photo-author-eyebrow">0{{ sec_n }} · Bookshelf</p>
+          <h2 id="pl-shelf-title">書架。</h2>
+          <p>依主題分架，每一篇都讀得完。挑一架，從任何一篇開始。</p>
+        </div>
+        {%- comment -%}2026-10-10：全部章節同日加入，「最新加入」暫時隱藏；下一波新章填真實 added 日期後，把 show_latest 改 true。{%- endcomment -%}
+        {%- assign show_latest = false -%}
+        {%- if show_latest and latest_keys.size > 0 %}
+        <aside class="pl-latest" aria-labelledby="pl-latest-title">
+          <p class="pl-latest-title" id="pl-latest-title">最新加入</p>
+          <ol>
+            {%- for k in latest_keys limit: 3 %}{%- assign kp = k | split: '|' %}
+            <li><time datetime="{{ kp[0] }}">{{ kp[0] | replace: '-', '.' }}</time><a href="{{ kp[2] | relative_url }}">{{ kp[3] }}</a></li>
+            {%- endfor %}
+          </ol>
+        </aside>
+        {%- endif %}
+      </header>
+      <div class="pl-shelves">
+        {%- for uid in zone.shelves %}
+        {%- assign needle = ' ' | append: uid | append: ' ' -%}
+        {%- if vis_units contains needle %}{%- assign u = zone.units | where: "id", uid | first %}
+        <section class="pl-shelf-row" id="{{ u.id }}" aria-labelledby="{{ u.id }}-title">
+          <div class="pl-shelf-label">
+            <h3 id="{{ u.id }}-title">{{ u.title }}</h3>
+            <p><span>讀完你會</span>{{ u.gain }}</p>
+          </div>
+          <ol class="pl-shelf-books">
+            {%- for ch in u.chapters %}
+            {%- include photography/learn-visible.html item=ch -%}
+            {%- if pl_vis %}{%- assign pg = site.pages | where: "url", ch.url | first %}
+            <li><a href="{{ ch.url | relative_url }}"><span class="pl-shelf-book-title">{{ ch.title }}</span>{% if pg.minutes %}<small>約 {{ pg.minutes }} 分鐘</small>{% endif %}</a></li>
+            {%- endif %}
+            {%- endfor %}
+          </ol>
+        </section>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- comment -%}04 藝術筆記：第一篇看得到的做成大卡（作品圖要站主個別確認過才填 img，附版權標示），其餘列成索引列。
+    Kitty 頁麵包屑連到 #art-notes。{%- endcomment -%}
+  {%- if art_n > 0 %}{%- assign sec_n = sec_n | plus: 1 %}
+  <section class="photo-author-section pl-art-feature" id="art-notes" aria-labelledby="pl-art-title">
+    <div class="photo-author-shell">
+      {%- assign note_n = 0 -%}
+      {%- for n in art.notes -%}
+      {%- include photography/learn-visible.html item=n -%}
+      {%- if pl_vis -%}
+      {%- assign note_n = note_n | plus: 1 -%}
+      {%- assign pg = site.pages | where: "url", n.url | first -%}
+      {%- if note_n == 1 %}
+      <article class="pl-art-card{% if n.img %} has-img{% endif %}">
+        {%- if n.img %}
+        <figure class="pl-art-card-fig">
+          <a href="{{ n.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ n.img | relative_url }}" width="{{ n.img_w }}" height="{{ n.img_h }}" alt="{{ n.img_alt | escape }}" loading="lazy" decoding="async"></a>
+          <figcaption>{{ n.credit }}</figcaption>
+        </figure>
+        {%- endif %}
+        <div class="pl-art-card-copy">
+          <p class="photo-author-eyebrow">0{{ sec_n }} · Beyond Photography</p>
+          <p class="pl-art-card-kicker">不只攝影：{{ art.title }} 01</p>
+          <h2 id="pl-art-title"><a href="{{ n.url | relative_url }}">{{ n.title }}</a></h2>
+          {%- if pg.description %}<p class="pl-art-card-lead">{{ pg.description }}</p>{% else %}<p class="pl-art-card-lead">{{ art.gain }}</p>{% endif %}
+          <div class="photo-author-actions">
+            <a class="photo-author-button" href="{{ n.url | relative_url }}">讀這篇筆記</a>
+          </div>
+        </div>
+      </article>
+      {%- if art_n > 1 %}
+      <ol class="pl-art-more">
+      {%- endif %}
+      {%- else %}
+        <li><span aria-hidden="true">{{ note_n | prepend: '0' | slice: -2, 2 }}</span><a href="{{ n.url | relative_url }}">{{ n.title }}</a></li>
+      {%- endif %}
+      {%- endif -%}
+      {%- endfor %}
+      {%- if art_n > 1 %}
+      </ol>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- assign sec_n = sec_n | plus: 1 %}
+  <section class="photo-author-section photo-author-light pl-rules" aria-labelledby="pl-rules-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">0{{ sec_n }} · House Rules</p>
+        <div>
+          <h2 id="pl-rules-title">這區的四個規矩。</h2>
+        </div>
+      </header>
+      <ol class="pl-rule-list">
+        <li><b>他人作品只放小圖，當作評論用的引用。</b>每張圖都標明作者、作品、館藏與版權，並連到原作所在的美術館或官方頁面，想看清楚請點過去。</li>
+        <li><b>事實附出處，看法標清楚。</b>每一篇發表前都先核對美術館、基金會與出版社的公開資料；哪些是事實、哪些是我的看法，分開寫。</li>
+        <li><b>說法不一致的，並列不裁定。</b>生年、版本、年份有不同說法時，照實並列；查不到可靠來源的，就不寫。</li>
+        <li><b>權利人想移除，來信就撤。</b>權利人若希望移除他人作品的小圖，<a href="{{ '/contact/' | relative_url }}">請來信</a>，我當天撤圖。</li>
+      </ol>
+    </div>
+  </section>
+
+  {%- assign sec_n = sec_n | plus: 1 %}
+  <section class="photo-author-section pl-own" id="own-work" aria-labelledby="pl-own-title">
+    <div class="photo-author-shell pl-own-grid">
+      <figure class="pl-own-media">
+        <a href="https://www.flickr.com/photos/swanky-hsiao/1664024637/" target="_blank" rel="noopener noreferrer" aria-label="在 Flickr 看〈黑白與凝視〉原作（另開新頁）">
+          <img {% include flickr/source.html image="/assets/img/photography/selected/1664024637.jpg" sizes="(max-width: 900px) calc(100vw - 32px), 50vw" %}
+            alt="果子的黑白花飾人像" width="1600" height="1143" loading="lazy" decoding="async">
+        </a>
+        <figcaption>史旺基作品〈黑白與凝視〉，2007</figcaption>
+      </figure>
+      <div class="pl-own-copy">
+        <p class="photo-author-eyebrow">0{{ sec_n }} · From Study to Shooting</p>
+        <h2 id="pl-own-title">看我怎麼用在自己的作品。</h2>
+        <p>讀攝影師是為了拍。這裡記下我看見的，「創作筆記」記下我拿去拍了什麼：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。</p>
+        <div class="photo-author-actions">
+          <a class="photo-author-button" href="{{ '/photography/notes/' | relative_url }}">看創作筆記</a>
+          <a class="photo-author-button photo-author-button--ghost" href="{{ '/photography/gallery/' | relative_url }}">看作品與系列</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 930" width="600" height="930" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">改哪一刀，就從哪一站重做</title>
+  <desc id="d">三種修改牽動的範圍不同：改字幕錯字通常只動到後製；旁白的今天改成下週，可能牽動嘴型和片長，要回到素材製作；角色從短髮改成長髮，關鍵畫面和生成片段可能都要重做。已核准的檔案不覆寫，要改就出新版本、重新送審。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="600" height="930" fill="#FFFFFF"/>
+  <text x="40" y="66" font-size="40" font-weight="700" fill="#1F2937">改哪一刀，</text>
+  <text x="40" y="118" font-size="40" font-weight="700" fill="#1F2937">就從哪一站重做</text>
+  <text x="40" y="162" font-size="24" fill="#4B5563">核准後還能改，代價看得見</text>
+  <g transform="translate(267,208) scale(0.42)"><circle cx="-22" cy="22" r="13" fill="none" stroke="#0E7568" stroke-width="5"/><circle cx="22" cy="22" r="13" fill="none" stroke="#0E7568" stroke-width="5"/><path d="M-13,12 L20,-34 M13,12 L-20,-34" stroke="#0E7568" stroke-width="6" stroke-linecap="round"/></g>
+  <text x="267" y="258" text-anchor="middle" font-size="26" font-weight="700" fill="#0E7568">錯字</text>
+  <g transform="translate(383,208) scale(0.42)"><circle cx="-22" cy="22" r="13" fill="none" stroke="#B45309" stroke-width="5"/><circle cx="22" cy="22" r="13" fill="none" stroke="#B45309" stroke-width="5"/><path d="M-13,12 L20,-34 M13,12 L-20,-34" stroke="#B45309" stroke-width="6" stroke-linecap="round"/></g>
+  <text x="383" y="258" text-anchor="middle" font-size="26" font-weight="700" fill="#B45309">改日期</text>
+  <g transform="translate(499,208) scale(0.42)"><circle cx="-22" cy="22" r="13" fill="none" stroke="#B91C1C" stroke-width="5"/><circle cx="22" cy="22" r="13" fill="none" stroke="#B91C1C" stroke-width="5"/><path d="M-13,12 L20,-34 M13,12 L-20,-34" stroke="#B91C1C" stroke-width="6" stroke-linecap="round"/></g>
+  <text x="499" y="258" text-anchor="middle" font-size="26" font-weight="700" fill="#B91C1C">改髮型</text>
+  <text x="40" y="318" font-size="26" font-weight="700" fill="#1F2937">需求確認</text>
+  <rect x="214" y="286" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="286" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="286" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="380" font-size="26" font-weight="700" fill="#1F2937">腳本</text>
+  <rect x="214" y="348" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="348" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="348" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="442" font-size="26" font-weight="700" fill="#1F2937">分鏡</text>
+  <rect x="214" y="410" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="410" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="410" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="504" font-size="26" font-weight="700" fill="#1F2937">動態分鏡</text>
+  <rect x="214" y="472" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="472" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="472" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="566" font-size="26" font-weight="700" fill="#1F2937">關鍵畫面</text>
+  <rect x="214" y="534" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="534" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="534" width="106" height="48" rx="10" fill="#B91C1C"/>
+  <text x="499" y="567" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <text x="40" y="628" font-size="26" font-weight="700" fill="#1F2937">素材製作</text>
+  <rect x="214" y="596" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="596" width="106" height="48" rx="10" fill="#B45309"/>
+  <text x="383" y="629" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <rect x="446" y="596" width="106" height="48" rx="10" fill="#B91C1C"/>
+  <text x="499" y="629" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <text x="40" y="690" font-size="26" font-weight="700" fill="#1F2937">後製</text>
+  <rect x="214" y="658" width="106" height="48" rx="10" fill="#0E7568"/>
+  <text x="267" y="691" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <rect x="330" y="658" width="106" height="48" rx="10" fill="#B45309"/>
+  <text x="383" y="691" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <rect x="446" y="658" width="106" height="48" rx="10" fill="#B91C1C"/>
+  <text x="499" y="691" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">重做</text>
+  <text x="40" y="752" font-size="26" font-weight="700" fill="#1F2937">驗收交付</text>
+  <rect x="214" y="720" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="330" y="720" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="446" y="720" width="106" height="48" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="40" y="796" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="72" y="841.48" font-size="28" font-weight="700" fill="#1F2937">已核准的檔案<tspan fill="#8A5D00">不覆寫</tspan></text>
+  <text x="72" y="880.68" font-size="28" font-weight="700" fill="#1F2937">要改就出新版本，重新送審</text>
+</svg>

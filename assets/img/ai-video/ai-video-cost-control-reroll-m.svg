@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1180" width="600" height="1180" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">第二次之前，先寫下失敗原因</title>
+  <desc id="d">只換亂數重送等於同一張彩券買兩次；應該先寫下失敗原因，再改提示詞、首幀或秒數。問題在首幀就先修圖。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1180" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">第二次之前，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">先寫下失敗原因</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">同一顆鏡頭再送一次之前，</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">先想清楚錯在哪</text>
+  <rect x="40" y="236" width="520" height="340" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <g transform="rotate(-8 220 320)"><rect x="130" y="270" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/><line x1="258" y1="278" x2="258" y2="362" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 6"/><circle cx="170" cy="320" r="14" fill="#B91C1C" opacity="0.35"/><circle cx="210" cy="320" r="14" fill="#B91C1C" opacity="0.35"/><text x="284" y="332" font-size="34" font-weight="700" fill="#B91C1C" text-anchor="middle">?</text></g>
+  <g transform="rotate(6 310 354)"><rect x="220" y="304" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/><line x1="348" y1="312" x2="348" y2="396" stroke="#B91C1C" stroke-width="3" stroke-dasharray="6 6"/><circle cx="260" cy="354" r="14" fill="#B91C1C" opacity="0.35"/><circle cx="300" cy="354" r="14" fill="#B91C1C" opacity="0.35"/><text x="374" y="366" font-size="34" font-weight="700" fill="#B91C1C" text-anchor="middle">?</text></g>
+  <text x="300" y="470" font-size="32" font-weight="700" text-anchor="middle" fill="#B91C1C">只換亂數重送</text>
+  <text x="300" y="514" font-size="24" text-anchor="middle" fill="#4B5563">同一張彩券買兩次，</text>
+  <text x="300" y="550" font-size="24" text-anchor="middle" fill="#4B5563">每次都是全額</text>
+  <circle cx="300" cy="604" r="36" fill="#1F2937" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="300" y="615" font-size="30" font-weight="700" text-anchor="middle" fill="#FFFFFF">VS</text>
+  <rect x="40" y="632" width="520" height="400" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="260" cy="736" r="66" fill="#0E7568"/>
+  <circle cx="260" cy="736" r="47.519999999999996" fill="#FFFFFF"/>
+  <circle cx="260" cy="736" r="30.360000000000003" fill="#0E7568"/>
+  <circle cx="260" cy="736" r="13.200000000000001" fill="#FFFFFF"/>
+  <line x1="370" y1="666" x2="268" y2="732" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+  <path d="M268,732 l14,-20 l8,14 z" fill="#1F2937"/>
+  <path d="M364,662 l20,-6 l-4,18 z M372,670 l20,-6 l-4,18 z" fill="#1F2937"/>
+  <text x="300" y="864" font-size="32" font-weight="700" text-anchor="middle" fill="#0E7568">寫下原因，改輸入</text>
+  <rect x="66.0" y="889.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+  <text x="124.0" y="915.92" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">構圖不對</text>
+  <rect x="194.0" y="889.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+  <text x="252.0" y="915.92" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">角色走樣</text>
+  <rect x="322.0" y="889.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+  <text x="380.0" y="915.92" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">動作破綻</text>
+  <rect x="66.0" y="937.0" width="138.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+  <text x="135.0" y="963.92" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">首幀有問題</text>
+  <rect x="216.0" y="937.0" width="94.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+  <text x="263.0" y="963.92" font-size="22" font-weight="700" text-anchor="middle" fill="#0E7568">人數錯</text>
+  <text x="66" y="1006" font-size="24" font-weight="700" fill="#0E7568">→ 改提示詞、首幀或秒數</text>
+  <rect x="40" y="1058" width="520" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1099.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">問題在首幀，<tspan fill="#8A5D00">先修圖</tspan></text>
+  <text x="300.0" y="1136.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">比重生影片便宜很多</text>
+</svg>

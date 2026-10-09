@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">把舞者的一跳拍下來</title>
+<desc id="d">示意圖，從側面看，不是柯錫杰任何一張原作的實際拍法。左邊是一台放得很低、幾乎貼地的相機，視線往上看向畫面中間正在跳起的人；人身後是一面素色背景；一盞閃光燈從側前方照向人，旁邊寫著用閃光或高速快門把動作凝住。右側四個步驟：一起決定造型、先試穿試動、試跳幾次找最高點、最高點按一次。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="1200" height="760" fill="#FFFFFF"/>
+
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">把舞者的一跳拍下來</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">從側面看・示意，不是任何一張原作的拍法</text>
+
+<rect x="48" y="156" width="700" height="540" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<!-- 素色背景 -->
+<rect x="560" y="196" width="150" height="430" rx="8" fill="#EDE7DD" stroke="#8A6F4D" stroke-width="3"/>
+<text x="635" y="236" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">素色背景</text>
+<!-- 地面 -->
+<line x1="80" y1="626" x2="716" y2="626" stroke="#9CA3AF" stroke-width="4"/>
+<text x="96" y="666" font-size="22" fill="#6B7280">地面</text>
+<!-- 跳起的人：簡化成幾何線條 -->
+<g stroke="#1F2937" stroke-width="10" stroke-linecap="round" fill="none">
+  <line x1="440" y1="330" x2="440" y2="430"/>
+  <line x1="440" y1="350" x2="390" y2="300"/>
+  <line x1="440" y1="350" x2="492" y2="296"/>
+  <line x1="440" y1="430" x2="384" y2="476"/>
+  <line x1="440" y1="430" x2="500" y2="470"/>
+</g>
+<circle cx="440" cy="300" r="22" fill="#FFFFFF" stroke="#1F2937" stroke-width="6"/>
+<line x1="440" y1="530" x2="440" y2="596" stroke="#B45309" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="458" y="572" font-size="24" fill="#B45309">離地的高度</text>
+<!-- 相機：貼地 -->
+<rect x="104" y="580" width="78" height="44" rx="8" fill="#1F2937"/>
+<circle cx="182" cy="602" r="16" fill="#4B5563" stroke="#1F2937" stroke-width="4"/>
+<line x1="198" y1="598" x2="404" y2="318" stroke="#1F2937" stroke-width="3" stroke-dasharray="10 9"/>
+<line x1="198" y1="608" x2="520" y2="498" stroke="#1F2937" stroke-width="3" stroke-dasharray="10 9"/>
+<text x="100" y="556" font-size="26" font-weight="700" fill="#1F2937">相機放低</text>
+<text x="100" y="524" font-size="22" fill="#4B5563">從地面往上看</text>
+<!-- 閃光 -->
+<rect x="236" y="250" width="70" height="46" rx="8" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<line x1="308" y1="276" x2="396" y2="320" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<line x1="308" y1="286" x2="396" y2="400" stroke="#E5A300" stroke-width="4" stroke-dasharray="10 9"/>
+<text x="96" y="212" font-size="26" font-weight="700" fill="#1F2937">閃光或高速快門</text>
+<text x="96" y="244" font-size="22" fill="#4B5563">把動作凝在最高點</text>
+
+<!-- 右側步驟 -->
+<text x="790" y="200" font-size="30" font-weight="700" fill="#1F2937">拍之前，先一起做四件事</text>
+<g font-size="24" fill="#374151">
+  <circle cx="808" cy="258" r="20" fill="#1F2937"/><text x="808" y="266" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="840" y="252" font-weight="700" fill="#1F2937">一起決定造型</text>
+  <text x="840" y="284">衣服、道具誰來做</text>
+  <circle cx="808" cy="352" r="20" fill="#1F2937"/><text x="808" y="360" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="840" y="346" font-weight="700" fill="#1F2937">先試穿、試動</text>
+  <text x="840" y="378">看衣服跟著身體怎麼動</text>
+  <circle cx="808" cy="446" r="20" fill="#1F2937"/><text x="808" y="454" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="840" y="440" font-weight="700" fill="#1F2937">試跳幾次</text>
+  <text x="840" y="472">找到最高、最漂亮的那一刻</text>
+  <circle cx="808" cy="540" r="20" fill="#B45309"/><text x="808" y="548" font-size="22" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="840" y="534" font-weight="700" fill="#B45309">最高點按一次</text>
+  <text x="840" y="566">不行就回到第 3 步</text>
+</g>
+<rect x="790" y="604" width="362" height="92" rx="16" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="810" y="644" font-size="22" fill="#374151">舞者負責「那一跳」，</text>
+<text x="810" y="676" font-size="22" fill="#374151">攝影師負責「那一刻」。</text>
+</svg>

@@ -1,0 +1,1 @@
+<a class="photo-notes-row" href="{{ include.note.url | relative_url }}"><strong>{{ include.note.title }}</strong>{% if include.note.description and include.note.description contains include.note.title %}{% elsif include.note.description %}<span>{{ include.note.description }}</span>{% endif %}<small>{{ include.note.date | date: "%Y-%m-%d" }}</small></a>

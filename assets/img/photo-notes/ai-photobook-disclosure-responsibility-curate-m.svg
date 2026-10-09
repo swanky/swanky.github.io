@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1140" width="600" height="1140" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">一本寫真集，人的部分在選與排</title>
+  <desc id="d">由左到右四步：AI 一次生出很多張候選；人來選，決定哪張留、哪張退，退件也記下來；人來排，決定誰排在誰後面；最後成書，揭露句寫清楚人和 AI 的分工。中間兩步是人的工作。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="600" height="1140" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#2B2622">一本寫真集，</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#2B2622">人的部分在選與排</text>
+  <text x="40" y="164" font-size="24" fill="#6B5E52">哪張留、誰在誰後面，由人決定</text>
+  <rect x="40" y="210" width="520" height="150" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="74" cy="242" r="20" fill="#3A332D"/>
+  <text x="74" y="250.64" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <rect x="109.46" y="265.2" width="21.32" height="16.4" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="137.34" y="265.2" width="21.32" height="16.4" rx="3" fill="#EDE6DC" stroke="#5C5248" stroke-width="3"/>
+  <rect x="165.22" y="265.2" width="21.32" height="16.4" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="109.46" y="288.16" width="21.32" height="16.4" rx="3" fill="#EDE6DC" stroke="#5C5248" stroke-width="3"/>
+  <rect x="137.34" y="288.16" width="21.32" height="16.4" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="165.22" y="288.16" width="21.32" height="16.4" rx="3" fill="#EDE6DC" stroke="#5C5248" stroke-width="3"/>
+  <rect x="109.46" y="311.12" width="21.32" height="16.4" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="137.34" y="311.12" width="21.32" height="16.4" rx="3" fill="#EDE6DC" stroke="#5C5248" stroke-width="3"/>
+  <rect x="165.22" y="311.12" width="21.32" height="16.4" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <text x="236" y="272" font-size="34" font-weight="700" fill="#2B2622">AI 生成</text>
+  <text x="236" y="318" font-size="26" fill="#5C5248">一次生出很多張候選</text>
+  <line x1="300" y1="366" x2="300" y2="400" stroke="#5C5248" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="40" y="406" width="520" height="150" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <circle cx="74" cy="438" r="20" fill="#E5A300"/>
+  <text x="74" y="446.64" font-size="24" font-weight="700" fill="#2B2622" text-anchor="middle">2</text>
+  <path d="M102.08,469.4 L193.92,469.4 L159.48,510.4 L159.48,533.36 L136.52,533.36 L136.52,510.4 Z" fill="#FFFFFF" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="114.38" y="443.16" width="18.04" height="13.94" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="138.98" y="443.16" width="18.04" height="13.94" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="163.58" y="443.16" width="18.04" height="13.94" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <circle cx="148" cy="497.28" r="11.479999999999999" fill="#E5A300"/>
+  <path d="M143.408,497.28 L146.852,501.298 L153.166,493.262" fill="none" stroke="#2B2622" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="207.04" cy="518.6" r="10.66" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M202.563,514.123 L211.517,523.077 M211.517,514.123 L202.563,523.077" fill="none" stroke="#B91C1C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="236" y="468" font-size="34" font-weight="700" fill="#8A5D00">人來選</text>
+  <text x="236" y="514" font-size="26" fill="#5C5248">哪張留、哪張退</text>
+  <rect x="412" y="436" width="116" height="40" rx="20" fill="#E5A300"/>
+  <text x="470" y="463.92" font-size="22" font-weight="700" fill="#2B2622" text-anchor="middle">人的工作</text>
+  <line x1="300" y1="562" x2="300" y2="596" stroke="#5C5248" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="40" y="602" width="520" height="150" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <circle cx="74" cy="634" r="20" fill="#E5A300"/>
+  <text x="74" y="642.64" font-size="24" font-weight="700" fill="#2B2622" text-anchor="middle">3</text>
+  <rect x="98.8" y="681.8" width="29.52" height="24.6" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <text x="113.56" y="700.66" font-size="18" font-weight="700" fill="#5C5248" text-anchor="middle">1</text>
+  <rect x="133.24" y="681.8" width="29.52" height="24.6" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <text x="148" y="700.66" font-size="18" font-weight="700" fill="#5C5248" text-anchor="middle">2</text>
+  <rect x="167.68" y="681.8" width="29.52" height="24.6" rx="3" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <text x="182.44" y="700.66" font-size="18" font-weight="700" fill="#5C5248" text-anchor="middle">3</text>
+  <path d="M182.44,675.24 Q148,639.16 113.56,675.24" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrg)"/>
+  <text x="236" y="664" font-size="34" font-weight="700" fill="#8A5D00">人來排</text>
+  <text x="236" y="710" font-size="26" fill="#5C5248">誰排在誰後面</text>
+  <rect x="412" y="632" width="116" height="40" rx="20" fill="#E5A300"/>
+  <text x="470" y="659.92" font-size="22" font-weight="700" fill="#2B2622" text-anchor="middle">人的工作</text>
+  <line x1="300" y1="758" x2="300" y2="792" stroke="#5C5248" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <rect x="40" y="798" width="520" height="150" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="74" cy="830" r="20" fill="#3A332D"/>
+  <text x="74" y="838.64" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <g transform="translate(148,886) scale(0.738)"><path d="M0,-34 Q-24,-46 -56,-40 L-56,38 Q-24,32 0,44 Z" fill="#FFFFFF" stroke="#5C5248" stroke-width="4" stroke-linejoin="round"/><path d="M0,-34 Q24,-46 56,-40 L56,38 Q24,32 0,44 Z" fill="#FFFFFF" stroke="#5C5248" stroke-width="4" stroke-linejoin="round"/><line x1="-42" y1="-18" x2="-14" y2="-14" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="-14" x2="42" y2="-18" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/><line x1="-42" y1="-4" x2="-14" y2="0" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="0" x2="42" y2="-4" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/><line x1="-42" y1="10" x2="-14" y2="14" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="14" x2="42" y2="10" stroke="#5C5248" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="236" y="860" font-size="34" font-weight="700" fill="#2B2622">成書</text>
+  <text x="236" y="906" font-size="26" fill="#5C5248">揭露句寫清楚分工</text>
+  <rect x="40" y="978" width="520" height="130" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="1032.08" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">哪張留、哪張退、誰在誰後面，</tspan></text>
+  <text x="300" y="1074.08" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">是我真正在做的事</tspan></text>
+</svg>

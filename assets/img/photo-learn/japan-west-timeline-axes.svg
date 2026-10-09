@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">用兩個問題把照片放上地圖</title>
+<desc id="d">示意圖（我的讀法，不是史料）。橫軸是「在哪裡拍」：左邊攝影棚或搭景，右邊街頭與日常場景；縱軸是「人怎麼出現」：上面是擺好的姿勢，下面是抓到的瞬間。年表裡幾個時期的位置：1911 柔焦棚拍在左上；1930 廣告構成偏左上；1933 海灘奔跑在中間偏右；1950 年代走上街在右邊中間；1968 粗、晃、失焦在右下；1990 年代日常與真人在右下；今天的搭景幻想在左邊偏下（其實是擺好的，但看起來像故事裡的一刻）。金色的點是讀者自己的照片，請自己放。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="48" fill="#1F2937" font-weight="700">用兩個問題把照片放上地圖</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">示意・我的讀法，不是史料。點可以爭論，練習的是「問這兩個問題」</text>
+<rect x="150" y="170" width="760" height="480" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<line x1="530.0" y1="182" x2="530.0" y2="638" stroke="#D1D5DB" stroke-width="3"/>
+<line x1="162" y1="410.0" x2="898" y2="410.0" stroke="#D1D5DB" stroke-width="3"/>
+<circle cx="264" cy="259" r="11" fill="#2C5B8F"/>
+<text x="282" y="267" font-size="24" fill="#1F2937" font-weight="700" text-anchor="start">1911 柔焦棚拍</text>
+<circle cx="390" cy="351" r="11" fill="#B91C1C"/>
+<text x="408" y="359" font-size="24" fill="#1F2937" font-weight="700" text-anchor="start">1930 廣告構成</text>
+<circle cx="600" cy="393" r="11" fill="#2C5B8F"/>
+<text x="618" y="401" font-size="24" fill="#1F2937" font-weight="700" text-anchor="start">1933 海灘奔跑</text>
+<circle cx="740" cy="292" r="11" fill="#2C5B8F"/>
+<text x="722" y="300" font-size="24" fill="#1F2937" font-weight="700" text-anchor="end">1950 年代走上街</text>
+<circle cx="768" cy="595" r="11" fill="#B91C1C"/>
+<text x="750" y="603" font-size="24" fill="#1F2937" font-weight="700" text-anchor="end">1968 粗、晃、失焦</text>
+<circle cx="796" cy="494" r="11" fill="#2C5B8F"/>
+<text x="778" y="502" font-size="24" fill="#1F2937" font-weight="700" text-anchor="end">1990 年代日常與真人</text>
+<circle cx="292" cy="536" r="11" fill="#64748B"/>
+<text x="310" y="544" font-size="24" fill="#1F2937" font-weight="700" text-anchor="start">今天：搭景幻想</text>
+<circle cx="390" cy="460" r="16" fill="#E5A300" stroke="#FFFFFF" stroke-width="4"/>
+<text x="416" y="469" font-size="26" fill="#8A5D00" font-weight="700">你的照片？</text>
+<text x="544.0" y="210" font-size="22" fill="#4B5563" font-weight="700">↑ 擺好的姿勢</text>
+<text x="544.0" y="630" font-size="22" fill="#4B5563" font-weight="700">↓ 抓到的瞬間</text>
+<text x="150" y="690" font-size="24" fill="#4B5563" font-weight="700">← 攝影棚、搭景</text>
+<text x="910" y="690" font-size="24" fill="#4B5563" font-weight="700" text-anchor="end">街頭、日常場景 →</text>
+<rect x="950" y="170" width="222" height="480" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="972" y="222" font-size="30" fill="#8A5D00" font-weight="700">先問兩句</text>
+<text x="972" y="272" font-size="24" fill="#1F2937" font-weight="700">1. 在哪裡拍？</text>
+<text x="972" y="322" font-size="22" fill="#4B5563">棚裡、搭景，</text>
+<text x="972" y="358" font-size="22" fill="#4B5563">還是真的地方</text>
+<text x="972" y="394" font-size="24" fill="#1F2937" font-weight="700">2. 人怎麼出現？</text>
+<text x="972" y="444" font-size="22" fill="#4B5563">被擺好的，</text>
+<text x="972" y="480" font-size="22" fill="#4B5563">還是被抓到的</text>
+<text x="972" y="516" font-size="26" fill="#8A5D00" font-weight="700">答完，</text>
+<text x="972" y="566" font-size="26" fill="#8A5D00" font-weight="700">它就有位置了</text>
+</svg>

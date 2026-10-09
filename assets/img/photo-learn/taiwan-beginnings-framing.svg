@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">三種把人放進畫面的方法</title>
+<desc id="d">示意圖，三格構圖草圖，不是任何一張原作。第一格「隔著門框看」：畫面四周是深色門框，框裡遠處站著幾個小小的人。第二格「讓人擦身而過」：幾個人從畫面左邊往右走，最右邊一個人只進來半個身子，背後有一塊寫字的招牌。第三格「大色塊裡一個小人」：上面三分之二是一整片天空，下面是一條土地，地平線上只有一個很小的人。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">三種把人放進畫面的方法</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">構圖草圖・示意，不是任何一張原作</text>
+
+<!-- 1 門框 -->
+<rect x="48" y="170" width="352" height="264" fill="#EDE7DD"/>
+<path d="M48,170 H400 V434 H48 Z M98,214 V434 H350 V214 Z" fill="#374151" fill-rule="evenodd"/>
+<g fill="#1F2937">
+  <circle cx="180" cy="356" r="9"/><rect x="172" y="366" width="16" height="40" rx="6"/>
+  <circle cx="214" cy="352" r="9"/><rect x="206" y="362" width="16" height="44" rx="6"/>
+  <circle cx="262" cy="360" r="8"/><rect x="255" y="369" width="14" height="36" rx="6"/>
+</g>
+<line x1="98" y1="406" x2="350" y2="406" stroke="#8A6F4D" stroke-width="3"/>
+<text x="48" y="482" font-size="30" font-weight="700" fill="#1F2937">隔著門框看</text>
+<text x="48" y="518" font-size="22" fill="#4B5563">前景的框，替你決定</text>
+<text x="48" y="548" font-size="22" fill="#4B5563">讀者從哪裡往裡看</text>
+<text x="48" y="600" font-size="20" fill="#B45309">對照：鄧南光〈北埔街風情〉</text>
+
+<!-- 2 擦身而過 -->
+<rect x="424" y="170" width="352" height="264" fill="#F3F4F6"/>
+<rect x="452" y="190" width="150" height="56" rx="6" fill="#FFFFFF" stroke="#4B5563" stroke-width="3"/>
+<text x="527" y="226" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">招牌文字</text>
+<line x1="424" y1="410" x2="776" y2="410" stroke="#9CA3AF" stroke-width="3"/>
+<g fill="#1F2937">
+  <circle cx="486" cy="300" r="15"/><rect x="472" y="316" width="28" height="92" rx="10"/>
+  <circle cx="560" cy="296" r="15"/><rect x="546" y="312" width="28" height="96" rx="10"/>
+  <circle cx="634" cy="302" r="15"/><rect x="620" y="318" width="28" height="90" rx="10"/>
+  <circle cx="778" cy="298" r="15"/><rect x="764" y="314" width="28" height="94" rx="10"/>
+</g>
+<rect x="777" y="170" width="22" height="264" fill="#FFFFFF"/>
+<line x1="470" y1="270" x2="720" y2="270" stroke="#B45309" stroke-width="4" stroke-dasharray="12 10"/>
+<path d="M720,262 L736,270 L720,278 z" fill="#B45309"/>
+<text x="424" y="482" font-size="30" font-weight="700" fill="#1F2937">讓人擦身而過</text>
+<text x="424" y="518" font-size="22" fill="#4B5563">人在畫面裡交錯走過，</text>
+<text x="424" y="548" font-size="22" fill="#4B5563">背後的字說出時代和地點</text>
+<text x="424" y="600" font-size="20" fill="#B45309">對照：張才〈三洋婦人與中國男人〉</text>
+
+<!-- 3 大色塊 -->
+<rect x="800" y="170" width="352" height="196" fill="#BFE3DC"/>
+<rect x="800" y="366" width="352" height="68" fill="#D9C38F"/>
+<circle cx="1010" cy="352" r="5" fill="#1F2937"/><rect x="1006" y="356" width="9" height="12" rx="3" fill="#1F2937"/>
+<circle cx="1010" cy="352" r="22" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="1040" y="340" font-size="20" fill="#B45309">人只佔一點</text>
+<text x="976" y="236" font-size="24" text-anchor="middle" fill="#1F2937">一整片天</text>
+<text x="976" y="408" font-size="22" text-anchor="middle" fill="#1F2937">一條地</text>
+<text x="800" y="482" font-size="30" font-weight="700" fill="#1F2937">大色塊裡一個小人</text>
+<text x="800" y="518" font-size="22" fill="#4B5563">先把天、牆、地收成</text>
+<text x="800" y="548" font-size="22" fill="#4B5563">幾塊顏色，再等人走進來</text>
+<text x="800" y="600" font-size="20" fill="#B45309">對照：柯錫杰〈行，突尼西亞〉</text>
+
+<rect x="48" y="636" width="1104" height="56" rx="14" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="600" y="672" font-size="22" text-anchor="middle" fill="#374151">三種做法都在問同一件事：人和他身邊的世界，各佔多少畫面？</text>
+</svg>

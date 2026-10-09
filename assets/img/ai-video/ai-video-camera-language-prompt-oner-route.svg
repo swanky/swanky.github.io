@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">一鏡到底：寫出整條路線</title>
+  <desc id="d">一鏡到底不能只寫 one continuous take。以我做過的 30 秒例子，路線從雨夜街道出發，經過換景節拍到沙漠，再經過換景節拍到太空站，指令裡寫成逐秒時間軸。路線至少要寫：從哪裡開始、經過哪個門口、在哪裡轉彎、誰從背景穿過、光線在哪裡變色，服裝與道具全程不變。路線沒寫，模型就會偷偷瞬移。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">一鏡到底：寫出整條路線</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">以我做過的 30 秒例子：指令寫成逐秒時間軸，排進每一次換景</text>
+  <line x1="300" y1="251" x2="900" y2="251" stroke="#B45309" stroke-width="6" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <g transform="translate(60,176)"><rect width="240" height="150" rx="14" fill="#1F2937"/><rect x="20" y="60" width="40" height="90" fill="#334155"/><rect x="30" y="76" width="8" height="8" fill="#E5A300"/><rect x="70" y="30" width="40" height="120" fill="#334155"/><rect x="80" y="46" width="8" height="8" fill="#E5A300"/><rect x="150" y="70" width="40" height="80" fill="#334155"/><rect x="160" y="86" width="8" height="8" fill="#E5A300"/><rect x="195" y="40" width="40" height="110" fill="#334155"/><rect x="205" y="56" width="8" height="8" fill="#E5A300"/><path d="M18,14 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M44,28 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M70,42 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M96,14 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M122,28 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M148,42 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M174,14 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M200,28 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/><path d="M226,42 l-8,22" stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="180" y="366" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2937">雨夜街道</text>
+  <g transform="translate(480,176)"><rect width="240" height="150" rx="14" fill="#FDF3E7"/><circle cx="180" cy="44" r="22" fill="#E5A300"/><path d="M0,110 Q60,70 120,104 T240,100 L240,150 L0,150 z" fill="#E8C48A"/><path d="M0,132 Q80,100 160,130 T240,124 L240,150 L0,150 z" fill="#D9A55B"/></g>
+  <text x="600" y="366" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2937">沙漠</text>
+  <g transform="translate(900,176)"><rect width="240" height="150" rx="14" fill="#0F172A"/><circle cx="24" cy="22" r="2.5" fill="#FFFFFF"/><circle cx="60" cy="110" r="2.5" fill="#FFFFFF"/><circle cx="110" cy="30" r="2.5" fill="#FFFFFF"/><circle cx="200" cy="20" r="2.5" fill="#FFFFFF"/><circle cx="214" cy="120" r="2.5" fill="#FFFFFF"/><circle cx="150" cy="128" r="2.5" fill="#FFFFFF"/><circle cx="36" cy="70" r="2.5" fill="#FFFFFF"/><circle cx="120" cy="78" r="30" fill="#2C5B8F"/><ellipse cx="120" cy="78" rx="62" ry="14" fill="none" stroke="#E5A300" stroke-width="4"/><rect x="40" y="70" width="34" height="16" fill="#94A3B8"/><rect x="166" y="70" width="34" height="16" fill="#94A3B8"/></g>
+  <text x="1020" y="366" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2937">太空站</text>
+  <path d="M390,233 L408,251 L390,269 L372,251 z" fill="#B45309"/>
+  <text x="390" y="216" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">換景節拍</text>
+  <path d="M810,233 L828,251 L810,269 L792,251 z" fill="#B45309"/>
+  <text x="810" y="216" text-anchor="middle" font-size="24" font-weight="700" fill="#B45309">換景節拍</text>
+  <line x1="60" y1="420" x2="1140" y2="420" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="60" y1="408" x2="60" y2="432" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1140" y1="408" x2="1140" y2="432" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+  <text x="60" y="458" font-size="24" font-weight="700" fill="#4B5563">0 秒</text>
+  <text x="1140" y="458" text-anchor="end" font-size="24" font-weight="700" fill="#4B5563">30 秒</text>
+  <path d="M390,408 L402,420 L390,432 L378,420 z" fill="#B45309"/>
+  <path d="M810,408 L822,420 L810,432 L798,420 z" fill="#B45309"/>
+  <text x="600" y="458" text-anchor="middle" font-size="24" fill="#4B5563">逐秒寫出：每一次換景排在第幾秒</text>
+  <text x="48" y="528" font-size="26" font-weight="700" fill="#1F2937">路線至少寫：</text>
+  <rect x="210" y="497" width="144.6" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="282.3" y="526.92" text-anchor="middle" font-size="22" font-weight="700" fill="#B45309">從哪裡開始</text>
+  <rect x="364.6" y="497" width="167.92" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="448.56" y="526.92" text-anchor="middle" font-size="22" font-weight="700" fill="#B45309">經過哪個門口</text>
+  <rect x="542.52" y="497" width="144.6" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="614.82" y="526.92" text-anchor="middle" font-size="22" font-weight="700" fill="#B45309">在哪裡轉彎</text>
+  <rect x="697.12" y="497" width="167.92" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="781.08" y="526.92" text-anchor="middle" font-size="22" font-weight="700" fill="#B45309">誰從背景穿過</text>
+  <rect x="875.04" y="497" width="191.24" height="44" rx="22.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2"/>
+  <text x="970.66" y="526.92" text-anchor="middle" font-size="22" font-weight="700" fill="#B45309">光線在哪裡變色</text>
+  <text x="48" y="592" font-size="26" font-weight="700" fill="#1F2937">全程不變：</text>
+  <rect x="210" y="561" width="74.64" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="247.32" y="590.92" text-anchor="middle" font-size="22" font-weight="700" fill="#0E7568">服裝</text>
+  <rect x="294.64" y="561" width="74.64" height="44" rx="22.0" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+  <text x="331.96" y="590.92" text-anchor="middle" font-size="22" font-weight="700" fill="#0E7568">道具</text>
+  <rect x="48" y="640" width="1104" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <g transform="translate(98,690) scale(0.75)"><path d="M0,-30 L32,26 L-32,26 z" fill="#B91C1C" stroke="#B91C1C" stroke-width="6" stroke-linejoin="round"/><rect x="-3.5" y="-12" width="7" height="22" rx="3" fill="#FFFFFF"/><circle cx="0" cy="18" r="4" fill="#FFFFFF"/></g>
+  <text x="144" y="700.8" font-size="30" font-weight="700" fill="#1F2937">路線沒寫，模型就會<tspan fill="#8A5D00">偷偷瞬移</tspan></text>
+</svg>

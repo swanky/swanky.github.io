@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1460" width="600" height="1460" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">「一致」其實是兩件事</title>
+  <desc id="d">身分不能變、只認官方原圖；風格可以每張不同、衍生圖只能管風格。拿衍生圖當身分參考，每傳一手走樣一點，最後變成另一個人。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1460" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">「一致」其實是兩件事</text>
+  <text x="40" y="116" font-size="24" fill="#4B5563">身分只認官方原圖；</text>
+  <text x="40" y="150" font-size="24" fill="#4B5563">風格每張都可以不同</text>
+  <rect x="40" y="186" width="520" height="300" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <g transform="translate(100 250) scale(0.55)"><path d="M-24,-6 L-24,-28 A24,24 0 0 1 24,-28 L24,-6" fill="none" stroke="#2C5B8F" stroke-width="8"/><rect x="-38" y="-8" width="76" height="58" rx="10" fill="#2C5B8F"/><circle cy="16" r="8" fill="#FFFFFF"/><rect x="-3" y="18" width="6" height="16" fill="#FFFFFF"/></g>
+  <text x="150" y="246" font-size="32" font-weight="700" fill="#2C5B8F">身分：不能變</text>
+  <text x="150" y="284" font-size="24" fill="#4B5563">只認官方原圖</text>
+  <rect x="66.0" y="325.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="102.0" y="351.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">臉型</text>
+  <rect x="148.0" y="325.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="184.0" y="351.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">眼睛</text>
+  <rect x="230.0" y="325.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="266.0" y="351.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">髮型</text>
+  <rect x="66.0" y="375.0" width="138.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="135.0" y="401.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">膚質或材質</text>
+  <rect x="214.0" y="375.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="272.0" y="401.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">招牌配件</text>
+  <rect x="66.0" y="425.0" width="160.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="2"/>
+  <text x="146.0" y="451.92" font-size="22" font-weight="700" text-anchor="middle" fill="#2C5B8F">身形與頭身比</text>
+  <rect x="40" y="510" width="520" height="250" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <g transform="translate(100 574) scale(0.55)"><line x1="-46" y1="-30" x2="46" y2="-30" stroke="#B45309" stroke-width="5" stroke-linecap="round"/><circle cx="-18" cy="-30" r="10" fill="#FFFFFF" stroke="#B45309" stroke-width="5"/><line x1="-46" y1="0" x2="46" y2="0" stroke="#B45309" stroke-width="5" stroke-linecap="round"/><circle cx="20" cy="0" r="10" fill="#FFFFFF" stroke="#B45309" stroke-width="5"/><line x1="-46" y1="30" x2="46" y2="30" stroke="#B45309" stroke-width="5" stroke-linecap="round"/><circle cx="-4" cy="30" r="10" fill="#FFFFFF" stroke="#B45309" stroke-width="5"/></g>
+  <text x="150" y="570" font-size="32" font-weight="700" fill="#B45309">風格：可以變</text>
+  <text x="150" y="608" font-size="24" fill="#4B5563">衍生圖只能管這一邊</text>
+  <rect x="66.0" y="647.0" width="116.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="124.0" y="673.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">服裝變體</text>
+  <rect x="190.0" y="647.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="226.0" y="673.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">光線</text>
+  <rect x="270.0" y="647.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="306.0" y="673.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">媒材</text>
+  <rect x="350.0" y="647.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="386.0" y="673.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">色調</text>
+  <rect x="66.0" y="697.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="102.0" y="723.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">場景</text>
+  <rect x="146.0" y="697.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="182.0" y="723.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">姿勢</text>
+  <rect x="226.0" y="697.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="262.0" y="723.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">鏡頭</text>
+  <rect x="306.0" y="697.0" width="72.0" height="38" rx="19.0" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+  <text x="342.0" y="723.92" font-size="22" font-weight="700" text-anchor="middle" fill="#B45309">情緒</text>
+  <text x="40" y="810" font-size="26" font-weight="700" fill="#B91C1C">拿衍生圖當身分參考（示意）：</text>
+  <text x="40" y="846" font-size="26" font-weight="700" fill="#B91C1C">每傳一手，走樣一點</text>
+  <rect x="40" y="870" width="240" height="200" rx="18" fill="#F8FAFC" stroke="#2C5B8F" stroke-width="4"/>
+  <path d="M100.72,1017.2 C102.24000000000001,974.64 129.6,964.0 160,964.0 C190.4,964.0 217.76,974.64 219.28,1017.2 z" fill="#CBD5E1" stroke="#2C5B8F" stroke-width="3"/>
+  <ellipse cx="160" cy="926" rx="30.4" ry="30.4" fill="#E2E8F0" stroke="#2C5B8F" stroke-width="3"/>
+  <path d="M125.03999999999999,939.68 C122.0,884.96 198.0,884.96 194.96,939.68 L185.84,921.44 C172.16,909.28 147.84,909.28 134.16,921.44 z" fill="#2C5B8F"/>
+  <circle cx="132.64" cy="988.32" r="6.84" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="160" y="1056" font-size="24" font-weight="700" text-anchor="middle" fill="#2C5B8F">官方原圖</text>
+  <rect x="320" y="870" width="240" height="200" rx="18" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+  <path d="M380.72,1017.2 C382.24,974.64 409.6,964.0 440,964.0 C470.4,964.0 497.76,974.64 499.28,1017.2 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="440" cy="926" rx="34.96" ry="30.4" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M400.48,939.68 C397.44,884.96 482.56,884.96 479.52,939.68 L470.4,921.44 C453.984,909.28 426.016,909.28 409.6,921.44 z" fill="#64748B"/>
+  <circle cx="412.64" cy="988.32" r="6.84" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="440" y="1056" font-size="24" font-weight="700" text-anchor="middle" fill="#64748B">衍生圖</text>
+  <rect x="40" y="1130" width="240" height="200" rx="18" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+  <path d="M100.72,1277.2 C102.24000000000001,1234.64 129.6,1224.0 160,1224.0 C190.4,1224.0 217.76,1234.64 219.28,1277.2 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="160" cy="1186" rx="36.480000000000004" ry="30.4" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M117.44,1228.56 C112.88,1143.4399999999998 207.12,1143.4399999999998 202.56000000000003,1228.56 L193.44000000000003,1208.8 L191.92000000000002,1181.44 C174.592,1169.28 145.408,1169.28 128.07999999999998,1181.44 L126.56,1208.8 z" fill="#64748B"/>
+  <circle cx="187.36" cy="1248.32" r="6.84" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="160" y="1316" font-size="24" font-weight="700" text-anchor="middle" fill="#64748B">再傳一手</text>
+  <rect x="320" y="1130" width="240" height="200" rx="18" fill="#F8FAFC" stroke="#B91C1C" stroke-width="4"/>
+  <path d="M380.72,1277.2 C382.24,1234.64 409.6,1224.0 440,1224.0 C470.4,1224.0 497.76,1234.64 499.28,1277.2 z" fill="#CBD5E1" stroke="#B91C1C" stroke-width="3"/>
+  <ellipse cx="440" cy="1186" rx="38.0" ry="30.4" fill="#E2E8F0" stroke="#B91C1C" stroke-width="3"/>
+  <path d="M398.96,1186 L402.0,1155.6 L411.5,1143.4399999999998 L421.0,1155.6 L430.5,1143.4399999999998 L440.0,1155.6 L449.5,1143.4399999999998 L459.0,1155.6 L468.5,1143.4399999999998 L478.0,1155.6 L481.04,1186 C459.0,1170.8 421.0,1170.8 398.96,1186 z" fill="#B91C1C"/>
+  <text x="440" y="1316" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">另一個人</text>
+  <line x1="284" y1="970" x2="316" y2="970" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <path d="M440,1110 L440,1094 L160,1094 L160,1124" fill="none" stroke="#374151" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr)"/>
+  <line x1="284" y1="1230" x2="316" y2="1230" stroke="#374151" stroke-width="4" stroke-linecap="butt" marker-end="url(#arr)"/>
+  <g transform="translate(536 1146) scale(0.34)"><circle r="46" fill="#B91C1C"/><path d="M-17.48,-17.48 L17.48,17.48 M17.48,-17.48 L-17.48,17.48" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/></g>
+  <rect x="40" y="1386" width="520" height="60" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1426.08" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">衝突時，<tspan fill="#8A5D00">以官方原圖為準</tspan></text>
+</svg>

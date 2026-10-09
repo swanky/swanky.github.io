@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1154" width="600" height="1154" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">五道閘門，一道答不出來就停</title>
+  <desc id="d">每個聲音來源要過五道閘門：程式碼能不能用、模型能不能商用、成品有沒有額外限制、第三方元件有沒有另外的權利、這次用途是否包含公開發布。圖中示意：過了前兩道，第三道答不出來，亮紅燈「待確認」，不能推論成通過，後面兩道也不用再走。五題都答得出來，才走到「可以公開」。服務叫得動、帳號借得到，都不等於可以公開用。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+  </defs>
+  <rect width="600" height="1154" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">五道閘門，</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">一道答不出來就停</text>
+  <text x="40" y="164" font-size="24" fill="#4B5563">每個聲音來源，分開問五題</text>
+  <line x1="150" y1="246" x2="150" y2="662" stroke="#E5E7EB" stroke-width="12" stroke-linecap="round"/>
+  <rect x="40" y="206" width="520" height="86" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="76" cy="249" r="22" fill="#0E7568"/>
+  <text x="76" y="258" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <g transform="translate(156 252) scale(0.5)"><rect x="-52" y="-30" width="20" height="74" rx="4" fill="#0E7568"/><line x1="-40" y1="-10" x2="10" y2="-62" stroke="#0E7568" stroke-width="10" stroke-linecap="round"/><rect x="-60" y="40" width="36" height="10" rx="3" fill="#0E7568"/></g>
+  <text x="204" y="259" font-size="26" fill="#1F2937">程式碼能不能用？</text>
+  <rect x="40" y="310" width="520" height="86" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <circle cx="76" cy="353" r="22" fill="#0E7568"/>
+  <text x="76" y="362" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <g transform="translate(156 356) scale(0.5)"><rect x="-52" y="-30" width="20" height="74" rx="4" fill="#0E7568"/><line x1="-40" y1="-10" x2="10" y2="-62" stroke="#0E7568" stroke-width="10" stroke-linecap="round"/><rect x="-60" y="40" width="36" height="10" rx="3" fill="#0E7568"/></g>
+  <text x="204" y="363" font-size="26" fill="#1F2937">模型能不能商用？</text>
+  <rect x="40" y="414" width="520" height="86" rx="18" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <circle cx="76" cy="457" r="22" fill="#B91C1C"/>
+  <text x="76" y="466" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <g transform="translate(156 460) scale(0.5)"><rect x="-52" y="-30" width="20" height="74" rx="4" fill="#B91C1C"/><line x1="-40" y1="-10" x2="44" y2="-10" stroke="#B91C1C" stroke-width="10" stroke-linecap="round"/><rect x="-60" y="40" width="36" height="10" rx="3" fill="#B91C1C"/></g>
+  <text x="204" y="467" font-size="26" font-weight="700" fill="#1F2937">成品有沒有額外限制？</text>
+  <rect x="40" y="518" width="520" height="86" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+  <circle cx="76" cy="561" r="22" fill="#64748B"/>
+  <text x="76" y="570" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <g transform="translate(156 564) scale(0.5)"><rect x="-52" y="-30" width="20" height="74" rx="4" fill="#64748B"/><line x1="-40" y1="-10" x2="44" y2="-10" stroke="#64748B" stroke-width="10" stroke-linecap="round"/><rect x="-60" y="40" width="36" height="10" rx="3" fill="#64748B"/></g>
+  <text x="204" y="571" font-size="26" fill="#64748B">第三方元件另有權利？</text>
+  <rect x="40" y="622" width="520" height="86" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+  <circle cx="76" cy="665" r="22" fill="#64748B"/>
+  <text x="76" y="674" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <g transform="translate(156 668) scale(0.5)"><rect x="-52" y="-30" width="20" height="74" rx="4" fill="#64748B"/><line x1="-40" y1="-10" x2="44" y2="-10" stroke="#64748B" stroke-width="10" stroke-linecap="round"/><rect x="-60" y="40" width="36" height="10" rx="3" fill="#64748B"/></g>
+  <text x="204" y="675" font-size="26" fill="#64748B">用途包含公開發布？</text>
+  <rect x="40" y="734" width="520" height="128" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <g transform="translate(96 798) scale(0.8)"><rect x="-24" y="-50" width="48" height="100" rx="14" fill="#1F2937"/><circle cx="0" cy="-22" r="15" fill="#B91C1C"/><circle cx="0" cy="22" r="15" fill="#E5E7EB"/></g>
+  <text x="150" y="788" font-size="32" font-weight="700" fill="#B91C1C">答不出來＝待確認</text>
+  <text x="150" y="832" font-size="26" fill="#4B5563">不能推論成通過，先不用</text>
+  <rect x="40" y="882" width="520" height="110" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(96 937) scale(1)"><circle r="26" fill="#0E7568"/><g transform="scale(0.59)"><polyline points="-30,0 -8,24 32,-24" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <text x="150" y="930" font-size="30" font-weight="700" fill="#0E7568">五題都答得出來</text>
+  <text x="150" y="970" font-size="26" fill="#4B5563">才走到「可以公開」</text>
+  <rect x="40" y="1014" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1059" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">叫得動、借得到，</text>
+  <text x="300.0" y="1101" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">都不等於可以公開用</tspan></text>
+</svg>

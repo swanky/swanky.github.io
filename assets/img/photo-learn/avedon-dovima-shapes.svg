@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">讓身體去接場景裡的大形狀</title>
+<desc id="d">構圖示意，不是任何一張原作，也不畫原作裡的動物。畫面兩側各有一個很大的形狀，例如柱子、拱門或樹幹，畫得淡一點，表示背景略柔；人物站在正中間，兩隻手臂往兩側伸，金色虛線表示手臂的延伸線接到兩邊的形狀上；人物最清楚、表情最安靜。右側三步：先找形狀、再擺手臂、臉最安靜。底部重點：場景越大，人越要穩。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">讓身體去接場景裡的大形狀</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">正面構圖示意・不是原作，也不畫原作裡的動物</text>
+<rect x="48" y="156" width="720" height="440" rx="24" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<line x1="72" y1="536" x2="744" y2="536" stroke="#CBD5E1" stroke-width="4"/>
+<path d="M82,536 L82,323.2 A97.2,97.2 0 0 1 276.4,323.2 L276.4,536 Z" fill="#CBD5E1" stroke="#94A3B8" stroke-width="3" opacity=".75"/>
+<path d="M539.6,536 L539.6,353.2 A97.2,97.2 0 0 1 734.0,353.2 L734.0,536 Z" fill="#CBD5E1" stroke="#94A3B8" stroke-width="3" opacity=".75"/>
+<circle cx="408.0" cy="269.4" r="26.4" fill="#1F2937"/><path d="M375.4,303.5 L440.6,303.5 L425.1,387.2 L390.9,387.2 Z" fill="#1F2937"/><path d="M390.9,387.2 L425.1,387.2 L460.7,536.0 L342.9,536.0 Z" fill="#1F2937"/><polyline points="377.0,309.7 311.9,263.2 246.8,216.7" fill="none" stroke="#1F2937" stroke-width="14.0" stroke-linecap="round" stroke-linejoin="round"/><polyline points="439.0,309.7 510.3,288.0 578.5,263.2" fill="none" stroke="#1F2937" stroke-width="14.0" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="247" cy="217" r="16" fill="none" stroke="#E5A300" stroke-width="5"/>
+<circle cx="578" cy="263" r="16" fill="none" stroke="#E5A300" stroke-width="5"/>
+<text x="179.2" y="420.4" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">大形狀</text>
+<text x="636.8" y="450.4" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2937">大形狀</text>
+<text x="179.2" y="454.4" font-size="24" text-anchor="middle" fill="#4B5563">略柔</text>
+<text x="636.8" y="484.4" font-size="24" text-anchor="middle" fill="#4B5563">略柔</text>
+<text x="408.0" y="576" font-size="26" font-weight="700" text-anchor="middle" fill="#8A5D00">人在正中、最清楚、表情最安靜</text>
+<text x="488.0" y="200" font-size="26" font-weight="700" text-anchor="middle" fill="#8A5D00">手臂順著線，接到兩邊的形狀</text>
+<rect x="796" y="156" width="356" height="136" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="840" cy="200" r="24" fill="#2C5B8F"/><text x="840" y="210.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="880" y="210" font-size="34" font-weight="700" fill="#1F2937">先找形狀</text>
+<text x="824" y="252" font-size="24" fill="#4B5563">拱門、柱子、樹幹、</text>
+<text x="824" y="282" font-size="24" fill="#4B5563">一大片布料都可以</text>
+<rect x="796" y="308" width="356" height="136" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="840" cy="352" r="24" fill="#E5A300"/><text x="840" y="362.08" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">2</text>
+<text x="880" y="362" font-size="34" font-weight="700" fill="#1F2937">再擺手臂</text>
+<text x="824" y="404" font-size="24" fill="#4B5563">讓手和肩膀的線，</text>
+<text x="824" y="434" font-size="24" fill="#4B5563">指向那個形狀</text>
+<rect x="796" y="460" width="356" height="136" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="840" cy="504" r="24" fill="#2C5B8F"/><text x="840" y="514.08" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+<text x="880" y="514" font-size="34" font-weight="700" fill="#1F2937">臉最安靜</text>
+<text x="824" y="556" font-size="24" fill="#4B5563">場景越熱鬧，</text>
+<text x="824" y="586" font-size="24" fill="#4B5563">表情越要穩</text>
+<rect x="48" y="624" width="1104" height="72" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="600.0" y="670.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">場景越大，人越要穩；<tspan fill="#8A5D00">姿勢是把兩邊連起來的那條線</tspan></text>
+</svg>

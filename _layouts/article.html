@@ -20,7 +20,7 @@ layout: default
       </div>
       {% endif %}
 
-      <div class="post-content">
+      <div class="post-content{% if page.learn_kit %} ae-page{% endif %}">
         {%- comment -%}
         長文（≥5 個 h2）在中段自動插入輕量 CTA：scroll-90% 事件僅約 10% 頁面瀏覽觸及，
         只放頁尾的 CTA 大多數讀者看不到。front matter 設 mid_cta: false 可關閉。

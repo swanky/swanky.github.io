@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1354" width="600" height="1354" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">三種「在場」：怎麼讓看的人感覺你就在那裡（手機版）</title>
+<desc id="d">拍法示意，三欄並排。第一欄「我和你」：拍的人和被拍的人在同一個框裡，拍的人也是故事的一部分；做法是記下日期與兩人的關係、先談好界線。第二欄「我在這裡」：相機正面對著眼前一件普通的東西，高度和眼睛一樣；做法是站定、正面、不擺弄也不加意義。第三欄「我心動了」：一顆心連到快門；做法是心動就按、不先想理由，回家再挑。底部重點：在場，是讓看的人感覺到拍照的人當時就在那裡。這是作者的讀法，不是攝影家留下的方法。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1354" fill="#FFFFFF"/>
+<text x="32" y="72" font-size="42" fill="#1F2937" font-weight="700">三種「在場」</text>
+<text x="32" y="120" font-size="34" fill="#1F2937" font-weight="700">讓看的人感覺你就在那裡</text>
+<text x="32" y="162" font-size="24" fill="#4B5563">拍法示意（我的讀法）</text>
+<rect x="24" y="200" width="552" height="300" rx="20" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<circle cx="62" cy="238" r="22" fill="#B91C1C"/><text x="62" y="247" font-size="26" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<g transform="translate(300 310) scale(0.85)"><rect x="-110" y="-62" width="220" height="124" rx="14" fill="#FFFFFF" stroke="#B91C1C" stroke-width="4"/><circle cx="-40" cy="-22" r="16" fill="#B91C1C"/><path d="M-66,44 Q-40,-6 -14,44 Z" fill="#B91C1C"/><circle cx="40" cy="-22" r="16" fill="#B91C1C"/><path d="M14,44 Q40,-6 66,44 Z" fill="#B91C1C"/><rect x="-22" y="8" width="44" height="28" rx="5" fill="#FFFFFF" stroke="#374151" stroke-width="3"/><circle cx="0" cy="22" r="8" fill="#FFFFFF" stroke="#374151" stroke-width="3"/></g>
+<text x="300" y="414" font-size="30" fill="#B91C1C" font-weight="700" text-anchor="middle">我和你：拍的人也在故事裡</text>
+<text x="300" y="464" font-size="23" fill="#4B5563" text-anchor="middle">記下日期與關係・先談好界線・說好照片用在哪</text>
+<rect x="24" y="528" width="552" height="300" rx="20" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="62" cy="566" r="22" fill="#2C5B8F"/><text x="62" y="575" font-size="26" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<g transform="translate(300 638) scale(0.85)"><line x1="-70" y1="0" x2="58" y2="0" stroke="#374151" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arr)"/><rect x="-120" y="-20" width="52" height="40" rx="6" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="-94" cy="0" r="11" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><line x1="90" y1="-10" x2="90" y2="62" stroke="#374151" stroke-width="5"/><circle cx="90" cy="-26" r="30" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="7"/><line x1="70" y1="-46" x2="110" y2="-6" stroke="#2C5B8F" stroke-width="6"/></g>
+<text x="300" y="742" font-size="30" fill="#2C5B8F" font-weight="700" text-anchor="middle">我在這裡：站在眼前的東西前面</text>
+<text x="300" y="792" font-size="23" fill="#4B5563" text-anchor="middle">正面、平視・不擺弄・不加意義</text>
+<rect x="24" y="856" width="552" height="300" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<circle cx="62" cy="894" r="22" fill="#E5A300"/><text x="62" y="903" font-size="26" fill="#1F2937" font-weight="700" text-anchor="middle">3</text>
+<g transform="translate(300 966) scale(0.85)"><path d="M-60,-10 C-60,-48 -10,-52 -10,-18 C-10,-52 40,-48 40,-10 C40,22 -10,44 -10,58 C-10,44 -60,22 -60,-10 Z" fill="#E5A300"/><line x1="44" y1="10" x2="76" y2="10" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/><rect x="80" y="-14" width="44" height="48" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="102" cy="10" r="10" fill="#374151"/></g>
+<text x="300" y="1070" font-size="30" fill="#8A5D00" font-weight="700" text-anchor="middle">我心動了：先按快門再想理由</text>
+<text x="300" y="1120" font-size="23" fill="#4B5563" text-anchor="middle">心動就按・多拍、不刪・回家再挑</text>
+<rect x="24" y="1184" width="552" height="132" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="300" y="1238" font-size="28" fill="#1F2937" font-weight="700" text-anchor="middle">在場＝讓看的人感覺到：</text>
+<text x="300" y="1284" font-size="28" fill="#8A5D00" font-weight="700" text-anchor="middle">拍照的人當時就在那裡</text>
+</svg>

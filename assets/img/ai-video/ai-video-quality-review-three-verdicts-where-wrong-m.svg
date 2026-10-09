@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1060" width="600" height="1060" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">不能用？先看第一格</title>
+  <desc id="d">先打開首幀圖對照角色設定。第一格就錯了（道具、服裝、構圖、身分特徵不對）就先修圖；首幀對、動起來才錯（動作沒發生、方向相反或倒放、鏡頭亂動）才改指令重新生成。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1060" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">不能用？</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">先看第一格</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">單獨打開首幀圖，對照角色設定，</text>
+  <text x="40" y="202" font-size="24" fill="#4B5563">就知道錯在哪</text>
+  <rect x="120" y="236" width="354" height="96" rx="8" fill="#374151"/>
+  <rect x="134" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="134" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="152" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="152" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="170" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="170" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="188" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="188" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="130" y="256" width="76" height="56" rx="4" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <rect x="220" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="220" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="238" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="238" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="256" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="256" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="274" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="274" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="216" y="256" width="76" height="56" rx="4" fill="#E5E7EB"/>
+  <rect x="306" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="306" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="324" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="324" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="342" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="342" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="360" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="360" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="302" y="256" width="76" height="56" rx="4" fill="#E5E7EB"/>
+  <rect x="392" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="392" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="410" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="410" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="428" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="428" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="446" y="242" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="446" y="318" width="10" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="388" y="256" width="76" height="56" rx="4" fill="#E5E7EB"/>
+  <g transform="translate(86 278) scale(0.7)"><circle cx="-10" cy="-10" r="30" fill="#FFFFFF" stroke="#1F2937" stroke-width="7"/><line x1="12" y1="12" x2="40" y2="40" stroke="#1F2937" stroke-width="11" stroke-linecap="round"/></g>
+  <text x="168" y="362" font-size="22" font-weight="700" text-anchor="middle" fill="#8A5D00">首幀</text>
+  <rect x="40" y="392" width="520" height="270" rx="24" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+  <text x="70" y="444" font-size="32" font-weight="700" fill="#B91C1C">第一格就錯了</text>
+  <rect x="70.0" y="468.0" width="108.0" height="44" rx="22.0" fill="#B91C1C"/>
+  <text x="124" y="498.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">先修圖</text>
+  <circle cx="76" cy="547.84" r="6" fill="#B91C1C"/>
+  <text x="94" y="556" font-size="24" fill="#1F2937">道具、服裝不對</text>
+  <circle cx="76" cy="587.84" r="6" fill="#B91C1C"/>
+  <text x="94" y="596" font-size="24" fill="#1F2937">構圖或身分特徵不對</text>
+  <circle cx="76" cy="627.84" r="6" fill="#B91C1C"/>
+  <text x="94" y="636" font-size="24" fill="#1F2937">影片只會忠實放大錯誤</text>
+  <rect x="40" y="690" width="520" height="240" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="70" y="742" font-size="32" font-weight="700" fill="#2C5B8F">首幀對，動起來才錯</text>
+  <rect x="70.0" y="766.0" width="180.0" height="44" rx="22.0" fill="#2C5B8F"/>
+  <text x="160" y="796.64" font-size="24" font-weight="700" text-anchor="middle" fill="#FFFFFF">改指令再生成</text>
+  <circle cx="76" cy="845.84" r="6" fill="#2C5B8F"/>
+  <text x="94" y="854" font-size="24" fill="#1F2937">動作沒發生、方向相反或倒放</text>
+  <circle cx="76" cy="885.84" r="6" fill="#2C5B8F"/>
+  <text x="94" y="894" font-size="24" fill="#1F2937">鏡頭亂動</text>
+  <rect x="40" y="956" width="520" height="90" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="992.1800000000001" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">錯在圖上就<tspan fill="#8A5D00">先修圖</tspan></text>
+  <text x="300.0" y="1029.98" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">圖對了才改指令</text>
+</svg>

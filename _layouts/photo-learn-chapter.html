@@ -1,0 +1,140 @@
+---
+layout: home
+---
+{%- comment -%}
+  「看懂寫真」章節版型（2026-10-09 樣章建立，之後各章沿用）。
+  章節頁 front matter（除了一般的 title／seo_title／description／permalink／breadcrumbs）：
+    nav_active: photography、use_photography_author: true、use_photo_learn: true、learn_kit: true、use_glightbox: true
+    lead：首屏導言（從讀者卡在哪裡寫起）
+    minutes：約幾分鐘讀完
+    gains：「讀完你會…」2–4 點
+    one_line：章末「這一章只記一句」
+    sources：本章出處 [{title, by, url, note}]，每條都要親自打開驗證過
+  章節順序、單元名、上一章／下一章都從 _data/photo_learn.yml 取（用 page.url 對 chapters[].url）。
+  上一章／下一章只在「看得到的章」（published，或非正式環境的 review）之間找，沒有鄰章就回到單元地圖；沒有任何未完成狀態的渲染路徑。
+  正文容器必須是 .post-content.ae-page：learn-kit.css、ai-learn.js（測驗、翻牌、步驟）與 .ae-fig--wide 都綁這組 class。
+  正文裡可用的區塊 include：photography/learn-works.html（作品導覽）、photography/learn-video.html（點擊才載入的影片）。
+{%- endcomment -%}
+{%- assign zone = site.data.photo_learn -%}
+{%- comment -%}只在「看得到的章」之間算章序、上一章、下一章（規則見 _includes/photography/learn-visible.html）。{%- endcomment -%}
+{%- for u in zone.units -%}
+  {%- for ch in u.chapters -%}
+    {%- if ch.url == page.url -%}{%- assign unit = u -%}{%- assign cur = ch -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign vis_n = 0 -%}{%- assign cur_n = 0 -%}{%- assign prev_ch = nil -%}{%- assign next_ch = nil -%}{%- assign last_vis = nil -%}{%- assign seen_cur = false -%}
+{%- for ch in unit.chapters -%}
+  {%- include photography/learn-visible.html item=ch -%}
+  {%- if pl_vis -%}
+    {%- assign vis_n = vis_n | plus: 1 -%}
+    {%- if ch.url == page.url -%}{%- assign cur_n = vis_n -%}{%- assign prev_ch = last_vis -%}{%- assign seen_cur = true -%}
+    {%- elsif seen_cur and next_ch == nil -%}{%- assign next_ch = ch -%}{%- endif -%}
+    {%- assign last_vis = ch -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign unit_url = zone.url | append: '#' | append: unit.id -%}
+<main id="main" class="photo-author-page photo-author-subpage photo-learn-page pl-ch-page">
+
+  <header class="pl-ch-hero">
+    <div class="photo-author-shell">
+      <nav class="pl-crumbs" aria-label="所在位置">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">主頁</a></li>
+          <li><a href="{{ '/photography/' | relative_url }}">攝影寫真</a></li>
+          <li><a href="{{ zone.url | relative_url }}">{{ zone.name }}</a></li>
+          <li><a href="{{ unit_url | relative_url }}">{{ unit.code }} {{ unit.title }}</a></li>
+          <li aria-current="page">{{ cur.title | split: '：' | first }}</li>
+        </ol>
+      </nav>
+      <div class="pl-ch-hero-grid">
+        <div class="pl-ch-hero-copy">
+          <p class="pl-ch-badges"><span class="pl-ch-badge pl-ch-badge--unit">{{ unit.code }}・{{ unit.title }}</span><span class="pl-ch-badge">第 {{ cur_n }} 章</span>{% if page.minutes %}<span class="pl-ch-badge">約 {{ page.minutes }} 分鐘</span>{% endif %}</p>
+          <h1>{{ page.title }}</h1>
+          {% if page.lead %}<p class="pl-ch-lead">{{ page.lead }}</p>{% endif %}
+        </div>
+        {% if page.gains %}
+        <aside class="pl-ch-gain" aria-label="讀完你會">
+          <p class="pl-ch-gain-title">讀完你會</p>
+          <ol>
+            {% for g in page.gains %}<li>{{ g }}</li>{% endfor %}
+          </ol>
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <section class="photo-author-light pl-ch-main">
+    <div class="photo-author-shell">
+      <div class="post-content ae-page pl-ch-body">
+        {{ content }}
+
+        {% if page.one_line %}
+        <p class="ae-key pl-ch-oneline"><small>這一章只記一句</small>{{ page.one_line }}</p>
+        {% endif %}
+
+        {% if page.sources %}
+        <section class="pl-ch-sources" id="sources" aria-labelledby="pl-ch-sources-title">
+          <h2 id="pl-ch-sources-title">本章出處</h2>
+          <p class="pl-ch-sources-note">事實都來自下面這些頁面，每一條都實際打開核對過；標「我的看法」的段落，是我自己的判斷。他人作品只以小圖作評論引用，附原作連結與版權標示；權利人若希望移除，請來信。</p>
+          <ol>
+            {% for s in page.sources %}
+            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{{ s.note }}{% endif %}</span></li>
+            {% endfor %}
+          </ol>
+        </section>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-author-section pl-ch-next" aria-labelledby="pl-ch-next-title">
+    <div class="photo-author-shell">
+      <h2 id="pl-ch-next-title" class="visually-hidden">接下來讀什麼</h2>
+      <nav class="pl-ch-pager" aria-label="上一章與下一章">
+        {%- if prev_ch -%}
+          <a href="{{ prev_ch.url | relative_url }}"><small>← 上一章</small>{{ prev_ch.title }}</a>
+        {%- else -%}
+          <a href="{{ unit_url | relative_url }}"><small>← 回到單元</small>{{ unit.code }} {{ unit.title }}</a>
+        {%- endif -%}
+        {%- if next_ch -%}
+          <a class="is-next" href="{{ next_ch.url | relative_url }}"><small>下一章 →</small>{{ next_ch.title }}</a>
+        {%- else -%}
+          <a class="is-next" href="{{ unit_url | relative_url }}"><small>單元讀完了 →</small>回到{{ zone.name }}的單元地圖</a>
+        {%- endif -%}
+      </nav>
+      <div class="pl-ch-cta">
+        <div>
+          <p class="photo-author-eyebrow">From Study to Shooting</p>
+          <p class="pl-ch-cta-title">讀完了，去看我怎麼拍。</p>
+          <p>這裡記下我讀攝影師時看見的；「創作筆記」記下我拿去拍了什麼：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。</p>
+        </div>
+        <div class="photo-author-actions">
+          <a class="photo-author-button" href="{{ '/photography/notes/' | relative_url }}">看創作筆記</a>
+          <a class="photo-author-button photo-author-button--ghost" href="{{ zone.url | relative_url }}">回到{{ zone.name }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script>
+/* 影片：點了才換成 youtube-nocookie 播放框，平常只載一張官方縮圖，不拖慢頁面。 */
+(function () {
+  document.querySelectorAll('[data-pl-video]').forEach(function (box) {
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + box.getAttribute('data-pl-video') + '?autoplay=1&rel=0';
+      f.title = box.getAttribute('data-title') || '影片';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      f.loading = 'eager';
+      btn.replaceWith(f);
+      box.classList.add('is-playing');
+    });
+  });
+})();
+</script>

@@ -1,0 +1,145 @@
+/* 文章圖解工具包（front matter：learn_kit: true）
+   讓 AI 自學教材的 ae-* 互動元件（ai-learn.css／ai-learn.js）能放進一般文章（_layouts/article.html）。
+   article.html 在 learn_kit 時把 .post-content 加上 ae-page：教材的色票、元件樣式、無 JS 備援全部生效。
+   本檔只處理三件事，且只在文章裡生效（選擇器一律 .post-content.ae-page 開頭，教材頁不載入本檔）：
+   1. ai-learn.css 的 .ae-page 全域規則不該改到文章本身的排版（連結、行內程式碼）
+   2. style.css 的文章排版（h3 金色左線、li 間距、> p 邊界、figcaption）不該滲進元件
+   3. 教材是全寬版面，文章欄只有 720px：四、五欄的元件改成兩欄／直排
+   另外提供文章專用的 SVG 大圖框 .ae-fig（用法見工具包說明）。 */
+
+/* ===== 1. 還原文章本身的排版 ===== */
+.post-content.ae-page :is(p, li, td, span) > a:not([class]) { color: #8B5E00; font-weight: inherit; text-decoration-color: rgba(229, 163, 0, .5); }
+.post-content.ae-page :is(p, li, td, span) > a:not([class]):hover { color: #E5A300; text-decoration-color: #E5A300; }
+.post-content.ae-page code { color: #7A4F00; }
+.post-content.ae-page pre code { color: #f0e6d3; }
+
+/* ===== 2. 文章排版不滲進元件 ===== */
+/* 文章 h3 的金色左線與左內距，只屬於內文小標 */
+.post-content.ae-page :is(.ae-card, .ae-yn, .ae-flip__face, .ae-step, .ae-tl__card, .ae-widget, .ae-tabs, .ae-rag, .ae-chain__card, .ae-sort__item, .ae-dg) :is(h3, h4) { border-left: 0; padding-left: 0; }
+/* 元件裡的清單項目不吃文章 li 的下邊界 */
+.post-content.ae-page :is(.ae-quiz__opts, .ae-tl, .ae-numlist, .ae-iconlist, .ae-xlist, .ae-check, .ae-goals) > li { margin-bottom: 0; }
+/* .ae-key／.ae-tip 是 <p>，直接放在內文時會被 .post-content > p 的邊界蓋掉 */
+.post-content.ae-page > .ae-key { margin: 2rem 0; }
+.post-content.ae-page > .ae-tip { margin: 1.5rem 0; }
+.post-content.ae-page > .ae-source { margin: .75rem 0 1.5rem; }
+/* 若把 .ae-dg 寫成 <figure>，標題 figcaption 不要被文章圖說樣式（置中、小字、灰）蓋掉 */
+.post-content.ae-page .ae-dg__title { text-align: left; font-size: 1.05rem; color: var(--ae-navy); margin: 0 0 1.25rem; }
+/* 深色底上的粗體與連結 */
+.post-content.ae-page :is(.ae-quiz__q, .ae-flip__face--back) strong { color: inherit; }
+.post-content.ae-page .ae-quizband :is(.ae-quiz__q, .ae-quiz__hint) a:not([class]),
+.post-content.ae-page .ae-flip__face--back a:not([class]) { color: var(--ae-tip); }
+
+/* ===== 3. 720px 文章欄的版面 ===== */
+/* 小測驗：教材是全寬深藍帶，文章裡改成圓角深藍卡 */
+.post-content.ae-page .ae-quizband { margin: 2.25rem 0; padding: clamp(1.25rem, 4vw, 2rem); border-radius: 20px; }
+.post-content.ae-page .ae-quiz__q { font-size: clamp(1.12rem, 2.2vw, 1.3rem); }
+.post-content.ae-page .ae-quiz__opt { font-size: .98rem; }
+/* 圖解框與互動框：上下留白一致 */
+.post-content.ae-page > :is(.ae-dg, .ae-widget, .ae-grid, .ae-traits, .ae-tl, .ae-chain) { margin-top: 2rem; margin-bottom: 2rem; }
+/* 時間軸：文章欄一律用直排版（橫排五欄塞不下） */
+.post-content.ae-page .ae-tl { grid-template-columns: 1fr; gap: .9rem; padding: 0; }
+.post-content.ae-page .ae-tl::before { left: .8rem; right: auto; top: 0; bottom: 0; width: 5px; height: auto; transform: none; background: #d6dde6; }
+.post-content.ae-page .ae-tl li { min-height: 0; justify-content: flex-start; padding-left: 2.6rem; }
+.post-content.ae-page .ae-tl__dot { left: .9rem; top: 1.6rem; }
+.post-content.ae-page .ae-tl__card { min-height: 0; }
+.post-content.ae-page .ae-tl__card p { font-size: .95rem; }
+/* 文字接龍卡：最多兩欄 */
+.post-content.ae-page .ae-chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* 文章的接龍題目是整句話（教材是四個字）：字級與行高收小，換行時不會鬆成雙倍行距 */
+.post-content.ae-page .ae-chain__prompt { font-size: 1.15rem; line-height: 1.5; }
+.post-content.ae-page .ae-chain__box { line-height: 1.3; vertical-align: baseline; }
+@media (max-width: 575.98px) {
+  .post-content.ae-page .ae-chain__prompt { font-size: 1rem; }
+}
+/* 表格欄名：style.css 的 .75rem 大寫英文樣式，套在中文欄名上太小（品牌手冊下限 .8rem） */
+.post-content.ae-page table th { font-size: .85rem; letter-spacing: .04em; }
+/* 步驟的「回到第 N 步」：文章欄一律用文字版（教材的回頭線是照四欄位置畫的） */
+.post-content.ae-page .ae-loopback { display: block; height: auto; margin-top: 1rem; }
+.post-content.ae-page .ae-loopback::before, .post-content.ae-page .ae-loopback::after { display: none; }
+.post-content.ae-page .ae-loopback span { position: static; transform: none; display: block; text-align: center; }
+.post-content.ae-page .ae-loopback span::before { content: "↺ "; }
+@media (min-width: 768px) {
+  /* 只在平板以上改兩欄：手機沿用 ai-learn.css 的單欄直排（下箭頭） */
+  .post-content.ae-page .ae-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
+  .post-content.ae-page .ae-step:nth-child(2n+1)::before { display: none; }
+  .post-content.ae-page :is(.ae-traits, .ae-sort__items) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ===== 4. SVG 大圖框 ===== */
+.post-content.ae-page .ae-fig { margin: 2.25rem 0; }
+.post-content.ae-page .ae-fig > a { display: block; cursor: zoom-in; text-decoration: none; }
+.post-content.ae-page .ae-fig img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid #e7e2d8; box-shadow: 0 10px 30px rgba(16, 37, 61, .06); background: #fff; }
+.post-content.ae-page .ae-fig figcaption { margin-top: .7rem; font-size: .88rem; line-height: 1.7; color: #6b6459; text-align: center; }
+.post-content.ae-page .ae-fig__zoom { white-space: nowrap; color: #8B5E00; font-weight: 700; }
+/* 桌機：大圖撐出 720px 文字欄（最寬 1080px），1200 寬的圖字才夠大 */
+@media (min-width: 992px) {
+  .post-content.ae-page .ae-fig--wide { --fig-w: min(1080px, calc(100vw - 64px)); width: var(--fig-w); max-width: none; margin-left: calc((100% - var(--fig-w)) / 2); margin-right: calc((100% - var(--fig-w)) / 2); }
+}
+
+/* ===== 5. 2026-10-09 設計 QA 補充 ===== */
+/* 翻牌卡精簡版（卡面只有一兩個詞的猜謎卡）：手機也排兩欄，8 張不用拉成一長條 */
+@media (max-width: 767px) {
+  .post-content.ae-page .ae-traits--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .post-content.ae-page .ae-traits--compact .ae-flip__face { padding: .85rem .8rem; gap: .35rem; }
+  .post-content.ae-page .ae-traits--compact .ae-flip__face h3 { font-size: 1.02rem; line-height: 1.45; }
+  .post-content.ae-page .ae-traits--compact .ae-flip__face p { font-size: .9rem; line-height: 1.6; }
+  .post-content.ae-page .ae-traits--compact .ae-flip__num { width: 1.9rem; height: 1.9rem; }
+  .post-content.ae-page .ae-traits--compact .ae-flip__hint { font-size: .8rem !important; }
+}
+
+/* 表格：四欄以上的表，第一欄（類別名）不斷行 */
+.post-content.ae-page table:has(th:nth-child(4)) :is(th, td):first-child { white-space: nowrap; }
+@media (max-width: 767px) {
+  /* style.css 已讓表格在手機橫向捲動；這裡加左右陰影提示「還有內容」（捲到底陰影消失） */
+  .post-content.ae-page table {
+    background:
+      linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)) left center / 40px 100% no-repeat local,
+      linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0)) right center / 40px 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(16, 37, 61, .2), rgba(16, 37, 61, 0)) left center / 14px 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(16, 37, 61, .2), rgba(16, 37, 61, 0)) right center / 14px 100% no-repeat scroll;
+    background-color: #fff;
+  }
+  /* 四欄以上：每欄保底寬度，寧可橫向捲動也不要擠成一字一行 */
+  .post-content.ae-page table:has(th:nth-child(4)) :is(th, td) { min-width: 9em; }
+  .post-content.ae-page table:has(th:nth-child(4)) :is(th, td):first-child { min-width: 0; }
+}
+
+/* 案例卡（作者／學什麼／別信什麼） */
+.post-content.ae-page .ae-cases { align-items: stretch; }
+.post-content.ae-page .ae-case { display: flex; flex-direction: column; gap: .55rem; }
+.post-content.ae-page .ae-case p + p { margin-top: 0; }
+.post-content.ae-page .ae-case h3 { margin: 0; font-size: 1.12rem; line-height: 1.5; }
+.post-content.ae-page .ae-case__by { display: flex; align-items: center; gap: .55rem; margin-top: .2rem !important; color: var(--ae-muted); font-size: .86rem !important; font-weight: 700; overflow-wrap: anywhere; }
+.post-content.ae-page .ae-case__num { display: inline-grid; flex: none; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 9px; background: var(--ae-navy); color: #fff; font-size: .9rem; }
+.post-content.ae-page .ae-case__row b { display: block; margin-bottom: .1rem; color: #0E7568; font-size: .82rem; letter-spacing: .06em; }
+.post-content.ae-page .ae-case__row--warn b { color: #B91C1C; }
+.post-content.ae-page .ae-case__row { font-size: .95rem !important; line-height: 1.7 !important; }
+.post-content.ae-page .ae-case__link { margin-top: auto !important; padding-top: .35rem; font-size: .9rem !important; font-weight: 700; }
+.post-content.ae-page .ae-case__link .bi { font-size: .8em; }
+@media (max-width: 767px) {
+  .post-content.ae-page .ae-case { gap: .4rem; padding: 1rem 1rem .95rem; }
+  .post-content.ae-page .ae-case__link { padding-top: .1rem; }
+}
+
+/* 揭露句對照卡 */
+.post-content.ae-page .ae-discl { align-items: stretch; }
+.post-content.ae-page .ae-discl .ae-card { display: flex; flex-direction: column; gap: .5rem; }
+.post-content.ae-page .ae-discl .ae-card p + p { margin-top: 0; }
+.post-content.ae-page .ae-discl__book { margin-top: .2rem !important; color: var(--ae-muted) !important; font-size: .86rem !important; font-weight: 700; }
+.post-content.ae-page .ae-discl .ae-card h3 { margin: 0; }
+.post-content.ae-page blockquote.ae-discl__quote { margin: .25rem 0 0; padding: .8rem 1rem; border: 0; border-left: 4px solid #E5A300; border-radius: 0 10px 10px 0; background: #FFF8E7; color: #3b3328; font-size: .92rem; font-style: normal; line-height: 1.75; }
+.post-content.ae-page blockquote.ae-discl__quote::before, .post-content.ae-page blockquote.ae-discl__quote::after { display: none; content: none; }
+
+/* 影片封面列（站上已公開的成片封面，三張並排；手機一欄） */
+.post-content.ae-page .ae-epstrip { margin: 2rem 0; }
+.post-content.ae-page .ae-epstrip__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+.post-content.ae-page .ae-epstrip__item { display: block; color: inherit; text-decoration: none; }
+.post-content.ae-page .ae-epstrip__item img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid #e7e2d8; background: #f1ede6; transition: transform .2s ease, box-shadow .2s ease; }
+.post-content.ae-page .ae-epstrip__item:hover img { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(16, 37, 61, .14); }
+.post-content.ae-page .ae-epstrip__item span { display: block; overflow-wrap: anywhere; margin-top: .45rem; color: #3b3328; font-size: .85rem; font-weight: 700; line-height: 1.5; }
+.post-content.ae-page .ae-epstrip__item:hover span { color: #8B5E00; }
+.post-content.ae-page .ae-epstrip figcaption { margin-top: .7rem; color: #6b6459; font-size: .88rem; line-height: 1.7; text-align: center; }
+@media (max-width: 575.98px) {
+  .post-content.ae-page .ae-epstrip__row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem .6rem; }
+  .post-content.ae-page .ae-epstrip__item:first-child { grid-column: 1 / -1; }
+}

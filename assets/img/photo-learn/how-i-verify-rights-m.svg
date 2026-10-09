@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1290" width="600" height="1290" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">看得到，不等於能拿來用</title>
+<desc id="d">示意圖，實際以每件作品頁為準。四種常見的館方條款寫法：一、可以自由用：公有領域作品、標示 CC0，或寫沒有已知的出版限制，例如大都會、芝加哥藝術學院、國會圖書館；二、非商業可用：限非商業、限尺寸、限期間，原作版權可能另有人，例如 V&amp;A 線上 768 像素、最多 5 年；三、要找權利人：館方沒有這件的權利，要自己聯絡攝影師或遺產取得許可，例如英國國家肖像館；四、只能看：頁面只給看，不能放大、不能下載，例如大都會有版權的作品頁。底部重點：先找頁面上講權利的那一句，再決定放圖還是只放連結。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1290" fill="#FFFFFF"/>
+<text x="28" y="62" font-size="40" font-weight="700" fill="#1F2937">看得到，</text>
+<text x="28" y="112" font-size="40" font-weight="700" fill="#1F2937">不等於能拿來用</text>
+<text x="28" y="154" font-size="24" fill="#4B5563">四種常見的館方條款寫法（示意）</text>
+<rect x="28" y="182" width="544" height="224" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+<circle cx="70" cy="222" r="22" fill="#0E7568"/><text x="70" y="231.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="106" y="234" font-size="34" font-weight="700" fill="#0E7568">可以自由用</text>
+<text x="52" y="288" font-size="26" fill="#1F2937">公有領域、標示 CC0，</text>
+<text x="52" y="326" font-size="26" fill="#1F2937">或「沒有已知的出版限制」</text>
+<text x="52" y="372" font-size="22" font-weight="700" fill="#0E7568">例：大都會、芝加哥藝術學院、國會圖書館</text>
+<rect x="28" y="426" width="544" height="224" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<circle cx="70" cy="466" r="22" fill="#2C5B8F"/><text x="70" y="475.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="106" y="478" font-size="34" font-weight="700" fill="#2C5B8F">非商業可用</text>
+<text x="52" y="532" font-size="26" fill="#1F2937">限非商業、限尺寸、限期間；</text>
+<text x="52" y="570" font-size="26" fill="#1F2937">原作的版權可能另有人</text>
+<text x="52" y="616" font-size="22" font-weight="700" fill="#2C5B8F">例：V&amp;A 線上 768 像素、最多 5 年</text>
+<rect x="28" y="670" width="544" height="224" rx="22" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+<circle cx="70" cy="710" r="22" fill="#B45309"/><text x="70" y="719.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="106" y="722" font-size="34" font-weight="700" fill="#B45309">要找權利人</text>
+<text x="52" y="776" font-size="26" fill="#1F2937">館方沒有這件的權利，</text>
+<text x="52" y="814" font-size="26" fill="#1F2937">要自己聯絡攝影師或遺產</text>
+<text x="52" y="860" font-size="22" font-weight="700" fill="#B45309">例：英國國家肖像館</text>
+<rect x="28" y="914" width="544" height="224" rx="22" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<circle cx="70" cy="954" r="22" fill="#B91C1C"/><text x="70" y="963.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="106" y="966" font-size="34" font-weight="700" fill="#B91C1C">只能看</text>
+<text x="52" y="1020" font-size="26" fill="#1F2937">頁面只給看，</text>
+<text x="52" y="1058" font-size="26" fill="#1F2937">不能放大、不能下載</text>
+<text x="52" y="1104" font-size="22" font-weight="700" fill="#B91C1C">例：大都會有版權的作品頁</text>
+<rect x="28" y="1162" width="544" height="118" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300.0" y="1211" font-size="30" font-weight="700" fill="#1F2937" text-anchor="middle">先找講權利的那一句，</text>
+<text x="300.0" y="1253" font-size="30" font-weight="700" fill="#1F2937" text-anchor="middle"><tspan fill="#8A5D00">再決定放圖還是只放連結</tspan></text>
+</svg>

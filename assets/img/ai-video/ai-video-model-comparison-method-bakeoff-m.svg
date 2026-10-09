@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1278" width="600" height="1278" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">四個模型，同一份考題</title>
+  <desc id="d">模型對打：同一張首幀、同一段指令、同樣 5 秒 16:9、原生聲音關閉，考題是滑鏟過雷射加攝影機後退跟拍。Seedance 2.5 動作、物理、角色、運鏡都過，判為通過；Grok Imagine Video 1.5 滑鏟變成跌倒、Seedance 2.0 人物不像第一格、Hailuo 3 只是蹲下穿過雷射，三支都是僅概念參考。結論寫成分工表：動作鏡交給 Seedance 2.5，低動態短鏡交給 Grok。2026 年 8 月實測。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker>
+  </defs>
+  <rect width="600" height="1278" fill="#FFFFFF"/>
+  <text x="40" y="66" font-size="40" font-weight="700" fill="#1F2937">四個模型，</text>
+  <text x="40" y="118" font-size="40" font-weight="700" fill="#1F2937">同一份考題</text>
+  <text x="40" y="162" font-size="24" fill="#4B5563">只讓模型不同（2026 年 8 月實測）</text>
+  <rect x="40" y="190" width="520" height="250" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="300" y="236" text-anchor="middle" font-size="32" font-weight="700" fill="#8A5D00">同一份考題</text>
+  <g transform="translate(82,278) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="104" y="286" font-size="24" font-weight="700" fill="#1F2937">同一張首幀</text>
+  <g transform="translate(332,278) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="354" y="286" font-size="24" font-weight="700" fill="#1F2937">同一段指令</text>
+  <g transform="translate(82,324) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="104" y="332" font-size="24" font-weight="700" fill="#1F2937">同樣 5 秒、16:9</text>
+  <g transform="translate(332,324) scale(0.3)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="354" y="332" font-size="24" font-weight="700" fill="#1F2937">原生聲音關閉</text>
+  <text x="300" y="398" text-anchor="middle" font-size="22" fill="#4B5563">考題：滑鏟過雷射＋攝影機後退跟拍</text>
+  <line x1="300" y1="446" x2="300" y2="476" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+  <rect x="40" y="486" width="520" height="150" rx="20" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <g transform="translate(80,530) scale(0.45)"><circle r="40" fill="#FFFFFF" stroke="#0E7568" stroke-width="5"/><path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#0E7568" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="114" y="540" font-size="26" font-weight="700" fill="#1F2937">Seedance 2.5</text>
+  <text x="68" y="582" font-size="24" fill="#4B5563">動作、物理、角色、運鏡都過</text>
+  <rect x="68" y="593" width="86.64" height="38" rx="19.0" fill="#0E7568" stroke="#0E7568" stroke-width="2"/>
+  <text x="111.32" y="619.92" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">通過</text>
+  <rect x="40" y="650" width="520" height="150" rx="20" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(80,694) scale(0.45)"><rect x="-50" y="-38" width="100" height="76" rx="6" fill="#64748B"/><rect x="-40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-34" y="-18" width="68" height="36" rx="3" fill="#FFFFFF"/><path d="M-8,-11 L12,0 L-8,11 z" fill="#64748B"/></g>
+  <text x="114" y="704" font-size="26" font-weight="700" fill="#1F2937">Grok Imagine Video 1.5</text>
+  <text x="68" y="746" font-size="24" fill="#4B5563">畫面順，但滑鏟變成跌倒</text>
+  <rect x="68" y="757" width="156.6" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="146.3" y="783.92" text-anchor="middle" font-size="22" font-weight="700" fill="#64748B">僅概念參考</text>
+  <rect x="40" y="814" width="520" height="150" rx="20" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(80,858) scale(0.45)"><rect x="-50" y="-38" width="100" height="76" rx="6" fill="#64748B"/><rect x="-40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-34" y="-18" width="68" height="36" rx="3" fill="#FFFFFF"/><path d="M-8,-11 L12,0 L-8,11 z" fill="#64748B"/></g>
+  <text x="114" y="868" font-size="26" font-weight="700" fill="#1F2937">Seedance 2.0</text>
+  <text x="68" y="910" font-size="24" fill="#4B5563">有特技感，但人物不像第一格</text>
+  <rect x="68" y="921" width="156.6" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="146.3" y="947.92" text-anchor="middle" font-size="22" font-weight="700" fill="#64748B">僅概念參考</text>
+  <rect x="40" y="978" width="520" height="150" rx="20" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+  <g transform="translate(80,1022) scale(0.45)"><rect x="-50" y="-38" width="100" height="76" rx="6" fill="#64748B"/><rect x="-40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="8" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="24" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="-30" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="40" y="22" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="-34" y="-18" width="68" height="36" rx="3" fill="#FFFFFF"/><path d="M-8,-11 L12,0 L-8,11 z" fill="#64748B"/></g>
+  <text x="114" y="1032" font-size="26" font-weight="700" fill="#1F2937">Hailuo 3</text>
+  <text x="68" y="1074" font-size="24" fill="#4B5563">畫面沒問題，但只是蹲下穿過雷射</text>
+  <rect x="68" y="1085" width="156.6" height="38" rx="19.0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="146.3" y="1111.92" text-anchor="middle" font-size="22" font-weight="700" fill="#64748B">僅概念參考</text>
+  <rect x="40" y="1148" width="520" height="110" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="72" y="1193.48" font-size="28" font-weight="700" fill="#1F2937">動作鏡交給 <tspan fill="#8A5D00">Seedance 2.5</tspan></text>
+  <text x="72" y="1232.68" font-size="28" font-weight="700" fill="#1F2937">低動態短鏡交給 <tspan fill="#8A5D00">Grok</tspan></text>
+</svg>

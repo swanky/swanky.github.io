@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1330" width="600" height="1330" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">一半在現場，一半在拍完之後</title>
+<desc id="d">構圖與流程示意，不是某張作品的復原。上：現場的俯視圖，一間空房間，窗在上方，四個人分散、各自朝不同方向；相機在遠處角落用寬視角收進整個房間；焦點柔一點、讓窗邊亮部過曝。下：拍完之後的三步，印得淡一點偏褐色，把照片弄舊、抹掉一點，撕、剪、釘成拼貼。底部重點：現場給氣氛，弄舊與拼貼是拍完之後的事。</desc>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker>
+</defs>
+<rect width="600" height="1330" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">一半在現場，</text>
+<text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">一半在拍完之後</text>
+<text x="40" y="164" font-size="24" fill="#4B5563">構圖與流程示意，不是某張作品的復原</text>
+<rect x="40" y="196" width="520" height="500" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="68" y="246" font-size="32" font-weight="700" fill="#2C5B8F">現場：俯視一間空房間</text>
+<rect x="72" y="282" width="456" height="290" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="4"/>
+<rect x="180" y="276" width="240" height="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="300" y="322" text-anchor="middle" font-size="22" fill="#8A5D00">窗</text>
+<g fill="#475569">
+<circle cx="140" cy="362" r="20"/><circle cx="390" cy="352" r="20"/><circle cx="230" cy="482" r="20"/><circle cx="440" cy="472" r="20"/>
+</g>
+<g stroke="#475569" stroke-width="5" stroke-linecap="round">
+<line x1="140" y1="362" x2="112" y2="336"/><line x1="390" y1="352" x2="422" y2="330"/><line x1="230" y1="482" x2="202" y2="510"/><line x1="440" y1="472" x2="440" y2="436"/>
+</g>
+<g stroke="#2C5B8F" stroke-width="3" stroke-dasharray="8 8"><line x1="482" y1="544" x2="80" y2="294"/><line x1="500" y1="540" x2="520" y2="290"/></g>
+<rect x="482" y="530" width="48" height="34" rx="6" fill="#1F2937"/>
+<circle cx="494" cy="547" r="10" fill="#FFFFFF"/>
+<text x="68" y="620" font-size="26" fill="#1F2937">人分散、各看各的，不互動</text>
+<text x="68" y="660" font-size="26" fill="#1F2937">焦點柔一點，讓窗邊亮部過曝</text>
+<line x1="300" y1="700" x2="300" y2="742" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/>
+<rect x="40" y="748" width="520" height="440" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="68" y="798" font-size="32" font-weight="700" fill="#8A5D00">拍完之後：暗房與桌上</text>
+<rect x="64" y="820" width="472" height="104" rx="18" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<circle cx="106" cy="872" r="24" fill="#E5A300"/><text x="106" y="882" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">1</text>
+<text x="146" y="866" font-size="26" font-weight="700" fill="#1F2937">印得淡一點</text>
+<text x="146" y="902" font-size="22" fill="#4B5563">褪色的顏色、偏褐色調</text>
+<rect x="64" y="940" width="472" height="104" rx="18" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<circle cx="106" cy="992" r="24" fill="#E5A300"/><text x="106" y="1002" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">2</text>
+<text x="146" y="986" font-size="26" font-weight="700" fill="#1F2937">把照片弄舊</text>
+<text x="146" y="1022" font-size="22" fill="#4B5563">抹掉一點，不讓畫面完整</text>
+<rect x="64" y="1060" width="472" height="104" rx="18" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<circle cx="106" cy="1112" r="24" fill="#E5A300"/><text x="106" y="1122" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">3</text>
+<text x="146" y="1106" font-size="26" font-weight="700" fill="#1F2937">撕、剪、釘成拼貼</text>
+<text x="146" y="1142" font-size="22" fill="#4B5563">有些影像用負片重複</text>
+<rect x="40" y="1210" width="520" height="104" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300" y="1252" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">現場給氣氛，</text>
+<text x="300" y="1290" text-anchor="middle" font-size="26" font-weight="700" fill="#8A5D00">弄舊與拼貼是拍完之後的事</text>
+</svg>

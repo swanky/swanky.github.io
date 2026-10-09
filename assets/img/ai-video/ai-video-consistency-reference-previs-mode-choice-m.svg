@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1190" width="600" height="1190" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">先問自己：最在意什麼？</title>
+  <desc id="d">最在意精確構圖與人數走首幀模式；最在意很快保住長相走參考圖模式；空間站位複雜先用白模排練。參考圖是引導，不是精確的畫面錨點。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="600" height="1190" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">先問自己：</text>
+  <text x="40" y="122" font-size="40" font-weight="700" fill="#1F2937">最在意什麼？</text>
+  <text x="40" y="168" font-size="24" fill="#4B5563">首幀、參考圖、白模，各管一件事</text>
+  <path d="M40,196 L364,196 L400,231.0 L364,266 L40,266 z" fill="#2C5B8F"/>
+  <text x="64" y="241.08" font-size="28" font-weight="700" fill="#FFFFFF">精確構圖、人數</text>
+  <rect x="40" y="280" width="520" height="170" rx="24" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+  <text x="70" y="330" font-size="32" font-weight="700" fill="#2C5B8F">→ 首幀模式</text>
+  <g transform="translate(82 372) scale(0.3)"><circle r="46" fill="#0E7568"/><path d="M-20.7,0 L-4.6000000000000005,15.180000000000001 L22.08,-15.180000000000001" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="381" font-size="24" fill="#1F2937">最能鎖住人數、順序與構圖</text>
+  <g transform="translate(82 416) scale(0.3)"><circle r="46" fill="#B91C1C"/><path d="M-17.48,-17.48 L17.48,17.48 M17.48,-17.48 L-17.48,17.48" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/></g>
+  <text x="106" y="425" font-size="24" fill="#4B5563">首幀的缺點也會一起鎖住</text>
+  <path d="M40,486 L364,486 L400,521.0 L364,556 L40,556 z" fill="#0E7568"/>
+  <text x="64" y="531.08" font-size="28" font-weight="700" fill="#FFFFFF">很快保住長相</text>
+  <rect x="40" y="570" width="520" height="170" rx="24" fill="#E6F4F1" stroke="#0E7568" stroke-width="3"/>
+  <text x="70" y="620" font-size="32" font-weight="700" fill="#0E7568">→ 參考圖模式</text>
+  <g transform="translate(82 662) scale(0.3)"><circle r="46" fill="#0E7568"/><path d="M-20.7,0 L-4.6000000000000005,15.180000000000001 L22.08,-15.180000000000001" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="671" font-size="24" fill="#1F2937">靠角色圖保住長相，出片快</text>
+  <g transform="translate(82 706) scale(0.3)"><circle r="46" fill="#B91C1C"/><path d="M-17.48,-17.48 L17.48,17.48 M17.48,-17.48 L-17.48,17.48" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/></g>
+  <text x="106" y="715" font-size="24" fill="#4B5563">放棄逐格控制</text>
+  <path d="M40,776 L364,776 L400,811.0 L364,846 L40,846 z" fill="#B45309"/>
+  <text x="64" y="821.08" font-size="28" font-weight="700" fill="#FFFFFF">空間站位複雜</text>
+  <rect x="40" y="860" width="520" height="170" rx="24" fill="#FDF3E7" stroke="#B45309" stroke-width="3"/>
+  <text x="70" y="910" font-size="32" font-weight="700" fill="#B45309">→ 先用白模排練</text>
+  <g transform="translate(82 952) scale(0.3)"><circle r="46" fill="#0E7568"/><path d="M-20.7,0 L-4.6000000000000005,15.180000000000001 L22.08,-15.180000000000001" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="106" y="961" font-size="24" fill="#1F2937">先確認站位、運鏡拍得到</text>
+  <g transform="translate(82 996) scale(0.3)"><circle r="46" fill="#B91C1C"/><path d="M-17.48,-17.48 L17.48,17.48 M17.48,-17.48 L-17.48,17.48" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/></g>
+  <text x="106" y="1005" font-size="24" fill="#4B5563">還沒有實測證明省多少錢</text>
+  <rect x="40" y="1066" width="520" height="100" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300.0" y="1107.1799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">參考圖是引導，</text>
+  <text x="300.0" y="1144.9799999999998" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937"><tspan fill="#8A5D00">不是精確的畫面錨點</tspan></text>
+</svg>

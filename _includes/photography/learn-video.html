@@ -1,0 +1,28 @@
+{%- comment -%}
+  看懂寫真章節的影片：只用官方、美術館或基金會頻道的影片，而且要確認允許嵌入。
+  封面用 YouTube 官方縮圖（https://i.ytimg.com/vi/<id>/hqdefault.jpg）加暗化漸層，頻道名與片名疊在上面；
+  這是站主 2026-10-09 裁定（D2）：只限美術館、基金會、官方頻道的影片。
+  點了才由 _layouts/photo-learn-chapter.html／photo-learn-atlas.html 的小程式換成 youtube-nocookie 播放框。
+  thumb=false 可關掉縮圖，退回純文字封面（例如影片內容需要人工看過才放心的時候）。
+  用法：{% include photography/learn-video.html id="影片 ID" title="片名" channel="頻道名" channel_url="頻道網址" length="1:50" lang="英語" note="一句話說明" %}
+{%- endcomment -%}
+{%- assign vid_thumb = true -%}
+{%- if include.thumb == false or include.thumb == 'false' -%}{%- assign vid_thumb = false -%}{%- endif -%}
+<figure class="pl-video">
+  <div class="pl-video-frame" data-pl-video="{{ include.id }}" data-title="{{ include.title | escape }}">
+    <button type="button" class="pl-video-play{% if vid_thumb %} has-thumb{% endif %}" aria-label="播放影片：{{ include.title | escape }}（{{ include.channel }}）">
+      {%- if vid_thumb %}
+      <img class="pl-video-thumb" src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      {%- endif %}
+      <span class="pl-video-cover" aria-hidden="true"><small>{{ include.channel }}・{{ include.length }}</small><b>{{ include.title }}</b></span>
+      <span class="pl-video-icon" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+      <span class="pl-video-hint">點一下才載入影片（會連到 YouTube）</span>
+    </button>
+  </div>
+  <figcaption>
+    <b>{{ include.title }}</b>
+    <span>頻道：<a href="{{ include.channel_url }}" target="_blank" rel="noopener">{{ include.channel }}</a>・{{ include.length }}・{{ include.lang }}</span>
+    {% if include.note %}<span>{{ include.note }}</span>{% endif %}
+    <span><a href="https://www.youtube.com/watch?v={{ include.id }}" target="_blank" rel="noopener">到 YouTube 看</a></span>
+  </figcaption>
+</figure>

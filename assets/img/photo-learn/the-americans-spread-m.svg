@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1120" width="600" height="1120" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">同一張照片，對頁放什麼，它就變成什麼</title>
+<desc id="d">示意圖，不是原書的任何一頁。上面是 1958 年法文版的跨頁：依加拿大建築中心館藏書目的摘要，對頁印的是作家選文，照片像文字的插圖。下面是 Steidl 出版社頁書影看得到的跨頁：左頁幾乎全白，只在下方一行地名，右頁一張照片。底部重點：字放在哪裡，決定照片是插圖還是主角。</desc>
+<rect width="600" height="1120" fill="#FFFFFF"/>
+<text x="28" y="62" font-size="40" font-weight="700" fill="#1F2937">對頁放什麼，</text>
+<text x="28" y="112" font-size="40" font-weight="700" fill="#1F2937">照片就變成什麼</text>
+<text x="28" y="156" font-size="24" fill="#4B5563">示意，依館藏書目與出版社頁書影</text>
+
+<rect x="28" y="182" width="544" height="392" rx="22" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+<text x="300" y="226" text-anchor="middle" font-size="30" font-weight="700" fill="#374151">1958 法文版</text>
+<rect x="56" y="248" width="240" height="230" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3"/>
+<rect x="304" y="248" width="240" height="230" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3"/>
+<g stroke="#64748B" stroke-width="5" stroke-linecap="round">
+<line x1="78" y1="278" x2="274" y2="278"/><line x1="78" y1="304" x2="264" y2="304"/><line x1="78" y1="330" x2="274" y2="330"/><line x1="78" y1="356" x2="254" y2="356"/><line x1="78" y1="382" x2="274" y2="382"/><line x1="78" y1="408" x2="266" y2="408"/><line x1="78" y1="434" x2="244" y2="434"/>
+</g>
+<rect x="326" y="310" width="196" height="110" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+<text x="424" y="374" text-anchor="middle" font-size="24" fill="#374151">照片</text>
+<text x="300" y="516" text-anchor="middle" font-size="26" fill="#374151">對頁是作家選文</text>
+<text x="300" y="552" text-anchor="middle" font-size="28" font-weight="700" fill="#B91C1C">照片像文字的插圖</text>
+
+<circle cx="300" cy="604" r="32" fill="#1F2937" stroke="#FFFFFF" stroke-width="6"/>
+<text x="300" y="613" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">VS</text>
+
+<rect x="28" y="634" width="544" height="372" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="300" y="678" text-anchor="middle" font-size="28" font-weight="700" fill="#8A5D00">英文版（Steidl 書影所見）</text>
+<rect x="56" y="700" width="240" height="220" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3"/>
+<rect x="304" y="700" width="240" height="220" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3"/>
+<text x="76" y="872" font-size="22" fill="#64748B">一行地名</text>
+<line x1="76" y1="892" x2="196" y2="892" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+<rect x="318" y="752" width="212" height="128" fill="#1F2937"/>
+<text x="424" y="824" text-anchor="middle" font-size="24" fill="#FFFFFF">照片</text>
+<text x="300" y="958" text-anchor="middle" font-size="26" fill="#374151">左頁幾乎全白</text>
+<text x="300" y="992" text-anchor="middle" font-size="28" font-weight="700" fill="#8A5D00">照片自己是主角</text>
+
+<rect x="28" y="1024" width="544" height="84" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="300" y="1058" text-anchor="middle" font-size="26" font-weight="700" fill="#1F2937">字放在哪裡，決定照片是</text>
+<text x="300" y="1092" text-anchor="middle" font-size="26" font-weight="700" fill="#8A5D00">插圖還是主角</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">排成一整排，才看得到漂移</title>
+  <desc id="d">同一角色的五張圖用相同縮放、相同裁切排成一排（示意，簡化剪影）。用三條對齊線掃一遍：頭頂與髮量、眼睛高度、配件位置。第四張的金色別針從左邊換到右邊，單看沒問題，排在一起才看得出來。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">排成一整排，才看得到漂移</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">相同縮放、相同裁切（示意）；各自縮放的截圖不能當證據</text>
+  <rect x="222" y="176" width="168" height="340" rx="16" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M221.76,455.20000000000005 C223.92,394.72 262.8,379.6 306.0,379.6 C349.2,379.6 388.08000000000004,394.72 390.24,455.20000000000005 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="306.0" cy="325.6" rx="43.2" ry="43.2" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M256.32,345.04 C252.0,267.28000000000003 360.0,267.28000000000003 355.68,345.04 L342.71999999999997,319.12 C323.28,301.84000000000003 288.72,301.84000000000003 269.28000000000003,319.12 z" fill="#64748B"/>
+  <circle cx="267.12" cy="414.16" r="9.72" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="306.0" y="550" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">第 1 張</text>
+  <rect x="412" y="176" width="168" height="340" rx="16" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M411.76,455.20000000000005 C413.91999999999996,394.72 452.8,379.6 496.0,379.6 C539.2,379.6 578.08,394.72 580.24,455.20000000000005 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="496.0" cy="325.6" rx="43.2" ry="43.2" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M446.32,345.04 C442.0,267.28000000000003 550.0,267.28000000000003 545.6800000000001,345.04 L532.72,319.12 C513.28,301.84000000000003 478.72,301.84000000000003 459.28000000000003,319.12 z" fill="#64748B"/>
+  <circle cx="457.12" cy="414.16" r="9.72" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="496.0" y="550" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">第 2 張</text>
+  <rect x="602" y="176" width="168" height="340" rx="16" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M601.76,455.20000000000005 C603.92,394.72 642.8,379.6 686.0,379.6 C729.2,379.6 768.08,394.72 770.24,455.20000000000005 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="686.0" cy="325.6" rx="43.2" ry="43.2" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M636.3199999999999,345.04 C632.0,267.28000000000003 740.0,267.28000000000003 735.6800000000001,345.04 L722.72,319.12 C703.28,301.84000000000003 668.72,301.84000000000003 649.28,319.12 z" fill="#64748B"/>
+  <circle cx="647.12" cy="414.16" r="9.72" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="686.0" y="550" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">第 3 張</text>
+  <rect x="792" y="176" width="168" height="340" rx="16" fill="#F8FAFC" stroke="#B91C1C" stroke-width="5"/>
+  <path d="M791.76,455.20000000000005 C793.92,394.72 832.8,379.6 876.0,379.6 C919.2,379.6 958.08,394.72 960.24,455.20000000000005 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="876.0" cy="325.6" rx="43.2" ry="43.2" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M826.3199999999999,345.04 C822.0,267.28000000000003 930.0,267.28000000000003 925.6800000000001,345.04 L912.72,319.12 C893.28,301.84000000000003 858.72,301.84000000000003 839.28,319.12 z" fill="#64748B"/>
+  <circle cx="914.88" cy="414.16" r="9.72" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="876.0" y="550" font-size="22" font-weight="700" text-anchor="middle" fill="#B91C1C">第 4 張</text>
+  <text x="876.0" y="582" font-size="24" font-weight="700" text-anchor="middle" fill="#B91C1C">配件換邊</text>
+  <rect x="982" y="176" width="168" height="340" rx="16" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M981.76,455.20000000000005 C983.92,394.72 1022.8,379.6 1066.0,379.6 C1109.2,379.6 1148.08,394.72 1150.24,455.20000000000005 z" fill="#CBD5E1" stroke="#64748B" stroke-width="3"/>
+  <ellipse cx="1066.0" cy="325.6" rx="43.2" ry="43.2" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <path d="M1016.3199999999999,345.04 C1012.0,267.28000000000003 1120.0,267.28000000000003 1115.68,345.04 L1102.72,319.12 C1083.28,301.84000000000003 1048.72,301.84000000000003 1029.28,319.12 z" fill="#64748B"/>
+  <circle cx="1027.12" cy="414.16" r="9.72" fill="#E5A300" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1066.0" y="550" font-size="22" font-weight="700" text-anchor="middle" fill="#64748B">第 5 張</text>
+  <line x1="206" y1="264.40000000000003" x2="1160" y2="264.40000000000003" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <text x="48" y="272.40000000000003" font-size="22" font-weight="700" fill="#64748B">頭頂、髮量</text>
+  <line x1="206" y1="325.6" x2="1160" y2="325.6" stroke="#2C5B8F" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 7"/>
+  <text x="48" y="333.6" font-size="22" font-weight="700" fill="#2C5B8F">眼睛高度</text>
+  <line x1="206" y1="414.16" x2="1160" y2="414.16" stroke="#E5A300" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 7"/>
+  <text x="48" y="422.16" font-size="22" font-weight="700" fill="#8A5D00">配件位置</text>
+  <rect x="48" y="626" width="1104" height="70" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600.0" y="671.8" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2937">每張單看都沒問題，<tspan fill="#8A5D00">排在一起才看得出來</tspan></text>
+</svg>

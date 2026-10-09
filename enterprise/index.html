@@ -1,0 +1,88 @@
+---
+layout: home
+title: 給企業：AI Agent 導入與團隊內訓
+seo_title: 給企業：AI Agent 導入工作坊與團隊內訓
+permalink: /enterprise/
+description: 給企業窗口的一頁說明：從 2–3 小時 AI 導入工作坊開始，附講師查得到的授課與演講紀錄，以及洽詢方式。
+keywords: AI Agent導入,企業內訓,AI工作坊,Agentic Engineering,企業培訓,AI Coding,史旺基
+og_image: /assets/img/technical/ai-agent-consulting-hero.jpg
+og_image_alt: 水手服少女在明亮辦公室向團隊介紹牆面螢幕上的 AI 代理協作流程，AI 生成情境示意圖
+nav_active: technical
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 給企業
+    url: /enterprise/
+extra_head: |
+  <link href="/assets/css/enterprise.css?v=20261009-2" rel="stylesheet">
+extra_css: |
+  /* 企業入口頁（2026-10-09 草稿）：只放三件事——證據、入門工作坊、洽詢。共用元件樣式在 assets/css/enterprise.css */
+  .ent-hero .tech-hero-shot img { object-position: 28% 38%; }
+  .ent-byline { margin: 18px 0 0; color: rgba(255,255,255,.66); font-size: .9rem; line-height: 1.7; }
+  .ent-hero .contact-fallback { text-align: left; color: rgba(255,255,255,.78); }
+  @media (max-width: 767px) {
+    /* 首屏照片為 1:1 實拍；手機改 4:3 讓人與看板完整入鏡 */
+    .ent-hero .tech-hero-media { min-height: 0; aspect-ratio: 4 / 3; }
+  }
+---
+{% assign ws = site.data.courses.agentic_engineering.formats | first %}
+{% capture workshop_href %}{{ '/contact/' | relative_url }}?service=agentic_engineering_training{% endcapture %}
+{% capture consulting_href %}{{ '/contact/' | relative_url }}?service=ai_agent_consulting{% endcapture %}
+<main id="main" class="technical-page">
+
+<section class="tech-hero tech-hero--ai ent-hero">
+  <div class="tech-shell tech-hero-grid">
+    <div class="tech-hero-copy">
+      <span class="tech-hero-status">企業入口・可直接轉寄給團隊</span>
+      <span class="tech-eyebrow">For Organizations</span>
+      <h1>給企業：<em>AI Agent 導入</em>與團隊內訓</h1>
+      <p class="tech-hero-lead">工具已經發下去，團隊卻還沒有共同的做法？先用一場 {{ ws.duration }}的工作坊建立共同語言、挑出值得先試的工作流程，再決定要不要往下走。</p>
+      <p class="ent-byline">講師：史旺基 Swanky Hsiao｜大型電信業技術主管・東吳大學區塊鏈課程兼任助理教授・師大資工博士</p>
+      <div class="tech-hero-actions">
+        <a class="tech-btn tech-btn--primary" href="{{ workshop_href }}&from=enterprise_hero" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'enterprise_page',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}">洽詢 {{ ws.duration }}工作坊</a>
+        <a class="tech-btn tech-btn--ghost" href="#evidence">先看查得到的資歷</a>
+      </div>
+      {% include contact-fallback.html service="agentic_engineering_training" position="enterprise_hero" %}
+    </div>
+    <div class="tech-hero-media">
+      <figure class="tech-hero-shot tech-hero-shot--single">
+        <img src="{{ '/assets/img/education/community-jcconf-2017-b.jpg' | relative_url }}" alt="史旺基站在 JCConf Taiwan 2017 技術年會的活動看板旁" width="960" height="960">
+        <figcaption class="tech-hero-caption">JCConf Taiwan 2017 會場（活動實拍）</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="tech-section ent-evidence" id="evidence">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow tech-eyebrow--gold">Track Record</span>
+      <h2>說的，都查得到</h2>
+      <p>AI 導入顧問目前還沒有可以公開的客戶案例，所以這裡只列查得到的資歷，能查的都附了連結。</p>
+    </header>
+    {% include technical/enterprise-evidence.html %}
+  </div>
+</section>
+
+<section class="tech-section tech-section--paper" id="workshop">
+  {% capture ws_next %}工作坊之後想走得更深：可以接半天的完整流程實作課、9 堂完整培訓，或針對組織做決策的 <a class="tech-text-link" href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a>。{% endcapture %}
+  {% include technical/workshop-offer.html from="enterprise_workshop" cta_type="enterprise_page" next=ws_next %}
+</section>
+
+<section class="tech-section tech-section--dark ent-contact" id="contact">
+  <div class="tech-shell">
+    <header class="tech-section-head tech-section-head--center">
+      <span class="tech-eyebrow">Contact</span>
+      <h2>先說清楚團隊要解決什麼</h2>
+      <p>來信提供團隊角色、人數、希望的時數，以及目前卡在哪裡。第一封信免費，我會先確認能不能幫上忙，再建議從工作坊開始，或直接談導入評估。</p>
+    </header>
+    <div class="ent-contact-actions">
+      <a class="tech-btn tech-btn--primary" href="{{ workshop_href }}&from=enterprise_bottom" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'enterprise_page',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}">洽詢 {{ ws.duration }}工作坊</a>
+      <a class="tech-btn tech-btn--ghost" href="{{ consulting_href }}&from=enterprise_bottom" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'enterprise_page',service:'ai_agent_consulting',cta_position:'bottom',from_page:window.location.pathname});}">洽詢 AI Agent 導入顧問</a>
+    </div>
+    {% include contact-fallback.html service="agentic_engineering_training" position="enterprise_bottom" %}
+    <p class="tech-cta-note">請不要在信裡附上程式碼、帳號密碼或其他機密資料。</p>
+  </div>
+</section>
+
+</main>

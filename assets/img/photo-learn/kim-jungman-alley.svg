@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">同一排行道樹，景框一收就像森林</title>
+<desc id="d">示意圖，不是原作的拍攝紀錄。左半是巷子的側面：左邊是工作室，右邊是家，中間一棵行道樹，樹後有電線桿和電線，樹下地面是路面；相機站在樹下往上拍，一道虛線取景範圍只包住樹冠和天空。右半是取景框裡看到的畫面：只剩樹幹、枝條、幾隻飛過的鳥和天空，房子、電線、路面都在框外。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="44" font-weight="700" fill="#1F2937">同一排行道樹，景框一收就像森林</text>
+<text x="48" y="126" font-size="26" fill="#4B5563">拍法示意・不是原作的拍攝紀錄</text>
+
+<!-- 左：巷子側面 -->
+<rect x="48" y="160" width="560" height="380" fill="#F3F4F6"/>
+<rect x="48" y="250" width="130" height="250" fill="#C9C3B8"/>
+<rect x="68" y="276" width="34" height="40" fill="#F3F4F6"/><rect x="122" y="276" width="34" height="40" fill="#F3F4F6"/>
+<rect x="68" y="340" width="34" height="40" fill="#F3F4F6"/><rect x="122" y="340" width="34" height="40" fill="#F3F4F6"/>
+<text x="113" y="460" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">工作室</text>
+<rect x="478" y="230" width="130" height="270" fill="#C9C3B8"/>
+<path d="M478,232 L543,186 L608,232 Z" fill="#9C9284"/>
+<rect x="500" y="270" width="34" height="40" fill="#F3F4F6"/><rect x="552" y="270" width="34" height="40" fill="#F3F4F6"/>
+<text x="543" y="460" font-size="24" font-weight="700" text-anchor="middle" fill="#1F2937">家</text>
+<rect x="210" y="200" width="8" height="300" fill="#6B7280"/>
+<path d="M48,214 C160,240 300,236 478,210" stroke="#6B7280" stroke-width="3" fill="none"/>
+<path d="M48,228 C160,256 300,252 478,226" stroke="#6B7280" stroke-width="3" fill="none"/>
+<rect x="48" y="500" width="560" height="40" fill="#BDB7AC"/>
+<path d="M330,500 L332,330 M332,390 L290,320 M332,360 L378,300 M331,420 L370,380" stroke="#4B5563" stroke-width="10" fill="none" stroke-linecap="round"/>
+<g fill="#6E8B74" opacity=".85"><circle cx="290" cy="300" r="34"/><circle cx="334" cy="268" r="42"/><circle cx="382" cy="292" r="36"/><circle cx="356" cy="330" r="28"/><circle cx="308" cy="336" r="26"/></g>
+<rect x="398" y="476" width="40" height="26" rx="5" fill="#1F2937"/><circle cx="418" cy="489" r="8" fill="#9CA3AF"/>
+<path d="M418,476 L268,220 M418,476 L420,200" stroke="#B45309" stroke-width="3" stroke-dasharray="10 8" fill="none"/>
+<path d="M268,220 Q344,196 420,200" stroke="#B45309" stroke-width="3" stroke-dasharray="10 8" fill="none"/>
+<text x="48" y="584" font-size="28" font-weight="700" fill="#1F2937">巷子裡其實有</text>
+<text x="48" y="620" font-size="22" fill="#4B5563">房子、電線、路面，和一排沒人注意的樹</text>
+
+<!-- 箭頭 -->
+<path d="M628,350 L676,350" stroke="#B45309" stroke-width="5"/>
+<path d="M676,338 L698,350 L676,362 Z" fill="#B45309"/>
+
+<!-- 右：取景框裡 -->
+<rect x="726" y="160" width="270" height="380" fill="#111827"/>
+<rect x="740" y="176" width="242" height="348" fill="#D1D5DB"/>
+<path d="M870,524 L866,380 M866,430 L800,300 M866,404 L930,280 M868,460 L944,400 M800,300 L776,250 M930,280 L956,228 M832,360 L790,346 M902,330 L962,318" stroke="#1F2937" stroke-width="9" fill="none" stroke-linecap="round"/>
+<g fill="#1F2937"><path d="M800,214 l12,-8 l12,8 l-12,-3 z"/><path d="M842,232 l10,-7 l10,7 l-10,-3 z"/><path d="M928,206 l11,-7 l11,7 l-11,-3 z"/></g>
+<text x="1012" y="232" font-size="28" font-weight="700" fill="#1F2937">框裡只留</text>
+<text x="1012" y="274" font-size="22" fill="#4B5563">一棵樹</text>
+<text x="1012" y="306" font-size="22" fill="#4B5563">天空</text>
+<text x="1012" y="338" font-size="22" fill="#4B5563">風吹過的痕跡</text>
+<text x="1012" y="400" font-size="22" fill="#B45309">房子、電線、</text>
+<text x="1012" y="430" font-size="22" fill="#B45309">路面都在框外</text>
+<text x="726" y="584" font-size="28" font-weight="700" fill="#1F2937">對照：</text>
+<text x="726" y="620" font-size="22" fill="#4B5563">《Can You Hear the Wind Blow》</text>
+
+<text x="48" y="680" font-size="22" fill="#4B5563">不用換地方，換角度：抬頭、靠近、收緊景框，同一排樹就能拍成一整本書。</text>
+</svg>

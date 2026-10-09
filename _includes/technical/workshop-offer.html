@@ -1,0 +1,30 @@
+{%- comment -%}
+  入門方案：2–3 小時 AI 導入工作坊（/enterprise/ 與 /technical/ai-agent-consulting/ 共用）。
+  時數／對象／帶走直接讀 _data/courses/agentic_engineering.yml 的 formats 第一項，與培訓頁同一個來源。
+  不寫任何價格數字（站主尚未決定公開價格）；「價格於確認需求後提供」沿用 /education/agentic-engineering/ 既有措辭。
+  參數：from＝洽詢連結的 from 值；cta_type＝GA4 事件 cta_type；lead＝選填，覆寫導言。
+  樣式：assets/css/enterprise.css。
+{%- endcomment -%}
+{% assign ws = site.data.courses.agentic_engineering.formats | first %}
+<div class="tech-shell ent-workshop">
+  <div>
+    <span class="tech-eyebrow tech-eyebrow--gold">Starting Point</span>
+    <h2>入門方案：<em>{{ ws.duration }}</em> AI 導入工作坊</h2>
+    <p class="ent-workshop-lead">{{ include.lead | default: "不先塞一套九堂課給你。一場工作坊，讓主管、產品經理和工程師用同一套語言討論 AI Agent，再一起挑出團隊最值得先試的工作流程。" }}</p>
+    <div class="ent-workshop-actions">
+      <a class="tech-btn tech-btn--primary" href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&from={{ include.from }}" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'{{ include.cta_type }}',service:'agentic_engineering_training',cta_position:'workshop',from_page:window.location.pathname});}">洽詢工作坊</a>
+      <a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}#formats">比較三種培訓深度 <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div>
+    <dl class="ent-spec">
+      <div><dt>時數</dt><dd><strong>{{ ws.duration }}，一場</strong>：固定範圍、固定時數。</dd></div>
+      <div><dt>適合</dt><dd>{{ ws.audience }}</dd></div>
+      <div><dt>帶走</dt><dd>{{ ws.outcome }}</dd></div>
+      <div><dt>準備</dt><dd>不需要提供公司機密、密碼、金鑰或客戶資料；示範預設使用公開或練習專案。</dd></div>
+      <div><dt>工具</dt><dd>方法跨工具：以 Claude Code 為主要示範，補充 Codex 等工具的對照。</dd></div>
+      <div><dt>費用</dt><dd>價格於確認需求後提供。</dd></div>
+    </dl>
+    {% if include.next %}<p class="ent-next">{{ include.next }}</p>{% endif %}
+  </div>
+</div>

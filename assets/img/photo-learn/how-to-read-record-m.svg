@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1290" width="600" height="1290" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">一件館藏頁，要抄下哪幾欄</title>
+<desc id="d">示意圖，不是館方版面。以英國 V&amp;A 一件 1955 年作品的館藏頁為例，列出要抄的欄位：作品名 Dovima with the Elephants；拍攝 1955 年；刊登 Harper's Bazaar 1955 年 9 月號；印製 1981 年（這一張相片）；館藏號 PH.26-1985；權利 Copyright Richard Avedon。右側三個提醒：拍攝、刊登、印製是三個不同的年份；館藏號讓別人找得回同一件；權利那一行決定能不能放圖。底部重點：引用時寫哪一館、哪一號，別人才能打開核對。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1290" fill="#FFFFFF"/>
+<text x="28" y="62" font-size="40" font-weight="700" fill="#1F2937">一件館藏頁，</text>
+<text x="28" y="112" font-size="40" font-weight="700" fill="#1F2937">要抄下哪幾欄</text>
+<text x="28" y="154" font-size="24" fill="#4B5563">以 V&amp;A 一件 1955 年作品為例（示意）</text>
+<rect x="28" y="182" width="544" height="470" rx="22" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+<rect x="44" y="204" width="512" height="64" rx="10" fill="#FFFFFF"/>
+<text x="60" y="232" font-size="20" font-weight="700" fill="#4B5563">作品名</text>
+<text x="60" y="258" font-size="24" fill="#1F2937">Dovima with the Elephants</text>
+<rect x="44" y="276" width="512" height="64" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<text x="60" y="304" font-size="20" font-weight="700" fill="#4B5563">拍攝</text>
+<text x="60" y="330" font-size="24" fill="#1F2937">1955 年</text>
+<rect x="44" y="348" width="512" height="64" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<text x="60" y="376" font-size="20" font-weight="700" fill="#4B5563">刊登</text>
+<text x="60" y="402" font-size="24" fill="#1F2937">Harper's Bazaar 1955.9</text>
+<rect x="44" y="420" width="512" height="64" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="3"/>
+<text x="60" y="448" font-size="20" font-weight="700" fill="#4B5563">印製</text>
+<text x="60" y="474" font-size="24" fill="#1F2937">1981 年（這一張）</text>
+<rect x="44" y="492" width="512" height="64" rx="10" fill="#FFFFFF" stroke="#2C5B8F" stroke-width="3"/>
+<text x="60" y="520" font-size="20" font-weight="700" fill="#4B5563">館藏號</text>
+<text x="60" y="546" font-size="24" fill="#1F2937">PH.26-1985</text>
+<rect x="44" y="564" width="512" height="64" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="3"/>
+<text x="60" y="592" font-size="20" font-weight="700" fill="#4B5563">權利</text>
+<text x="60" y="618" font-size="24" fill="#1F2937">Copyright Richard Avedon …</text>
+<rect x="28" y="676" width="544" height="140" rx="22" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+<text x="52" y="724" font-size="32" font-weight="700" fill="#8A5D00">三個年份</text>
+<text x="52" y="768" font-size="26" fill="#1F2937">拍攝、刊登、印製</text>
+<text x="52" y="802" font-size="26" fill="#1F2937">是三件事，別混寫</text>
+<rect x="28" y="832" width="544" height="140" rx="22" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="3"/>
+<text x="52" y="880" font-size="32" font-weight="700" fill="#2C5B8F">館藏號</text>
+<text x="52" y="924" font-size="26" fill="#1F2937">換頁、換語言，</text>
+<text x="52" y="958" font-size="26" fill="#1F2937">都找得回同一件</text>
+<rect x="28" y="988" width="544" height="140" rx="22" fill="#FDECEC" stroke="#B91C1C" stroke-width="3"/>
+<text x="52" y="1036" font-size="32" font-weight="700" fill="#B91C1C">權利那一行</text>
+<text x="52" y="1080" font-size="26" fill="#1F2937">決定你能放圖，</text>
+<text x="52" y="1114" font-size="26" fill="#1F2937">還是只能放連結</text>
+<rect x="28" y="1148" width="544" height="118" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300.0" y="1197" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">引用時寫「哪一館、哪一號」，</text>
+<text x="300.0" y="1237" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle"><tspan fill="#8A5D00">別人才能打開核對</tspan></text>
+</svg>
