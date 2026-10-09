@@ -47,6 +47,13 @@ Codex desktop installer 把執行檔放在**每版不同的 hash 目錄**
 PowerShell 5.1 → `.cmd` → `.exe` 的中文引數傳遞已實測正常
 (全形冒號、逗號、「引號」原樣抵達,無亂碼無截斷),長 prompt 可直接傳。
 
+### codex 0.160 起會自行讀 repo 規範、要求提權（2026-10-09）
+
+codex 0.160.1 在 exec 模式下會主動讀 `AGENTS.md` 與本 skill、想跑 `git status` 並要求提權；exec 無法批准，整輪中止、不出圖。
+它把本 skill 內文印出來時會出現「You've hit your usage limit」字樣——**那是引用，不是真的額度用完**，要讀 rollout jsonl 的 `rate_limits.primary.used_percent` 確認。
+
+解法：呼叫時加 `-c approval_policy=never`，並在 prompt 開頭寫明「這是純生圖工作，不讀其他檔、不跑 git」。
+
 ### 額度是獨立的失敗模式
 
 codex 走 ChatGPT 訂閱額度。額度用盡時 session 起得來、sandbox 一切正常,
