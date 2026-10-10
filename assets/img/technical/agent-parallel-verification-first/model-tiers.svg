@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">貴的模型放頭尾，便宜的放中間</title>
+  <desc id="d">一個任務的分工：人定義需求與驗收標準；強模型寫設計文件、拆成小任務；便宜的子 Agent 照文件分頭執行並跑自動測試；強模型對照設計驗收；人負責抽查，以及登入、憑證、推上線這類身分動作。以 Claude Code 為例，子 Agent 沒指定模型、也沒設預設值時，會沿用主 Agent 的模型，所以分工要寫進設定。</desc>
+  <defs><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A5D00"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker></defs>
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <text x="48" y="72" font-size="44" font-weight="700" fill="#1F2937" text-anchor="start">貴的模型放頭尾，便宜的放中間</text>
+  <text x="48" y="116" font-size="26" font-weight="400" fill="#4B5563" text-anchor="start">原文的分工建議；身分動作一律留給人</text>
+  <rect x="48" y="170" width="184" height="270" rx="16" fill="#FFF8E7" stroke="#8A5D00" stroke-width="2.5"/>
+  <text x="68" y="216" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="start">人</text>
+  <text x="68" y="262" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">定義需求</text>
+  <text x="68" y="299" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">驗收標準</text>
+  <path d="M252,305 L274,305" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="278" y="170" width="184" height="270" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="298" y="216" font-size="30" font-weight="700" fill="#2C5B8F" text-anchor="start">強模型</text>
+  <text x="298" y="262" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">寫設計文件</text>
+  <text x="298" y="299" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">拆小任務</text>
+  <path d="M482,305 L504,305" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="524" y="154" width="184" height="270" rx="16" fill="#FFFFFF" stroke="#0E7568" stroke-width="2" opacity="0.6"/>
+  <rect x="516" y="162" width="184" height="270" rx="16" fill="#FFFFFF" stroke="#0E7568" stroke-width="2" opacity="0.6"/>
+  <rect x="508" y="170" width="184" height="270" rx="16" fill="#EAF6F3" stroke="#0E7568" stroke-width="2.5"/>
+  <text x="528" y="216" font-size="30" font-weight="700" fill="#0E7568" text-anchor="start">子 Agent</text>
+  <text x="528" y="262" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">便宜模型</text>
+  <text x="528" y="299" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">照文件做</text>
+  <text x="528" y="337" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">跑測試</text>
+  <path d="M712,305 L734,305" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="738" y="170" width="184" height="270" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="758" y="216" font-size="30" font-weight="700" fill="#2C5B8F" text-anchor="start">強模型</text>
+  <text x="758" y="262" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">對照設計</text>
+  <text x="758" y="299" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">驗收結果</text>
+  <path d="M942,305 L964,305" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="968" y="170" width="184" height="270" rx="16" fill="#FFF8E7" stroke="#8A5D00" stroke-width="2.5"/>
+  <text x="988" y="216" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="start">人</text>
+  <text x="988" y="262" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">抽查</text>
+  <text x="988" y="299" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">登入、憑證</text>
+  <text x="988" y="337" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">推上線</text>
+  <rect x="48" y="500" width="1104" height="150" rx="16" fill="#FFF4E5" stroke="#B45309" stroke-width="2.5"/>
+  <text x="72" y="550" font-size="30" font-weight="700" fill="#B45309" text-anchor="start">常見的坑：分工不會自己發生</text>
+  <text x="72" y="596" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">以 Claude Code 為例，子 Agent 沒指定模型、也沒設預設值時，會沿用主 Agent 的模型。</text>
+  <text x="72" y="633" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">結果是一群最貴的模型在做最機械的事。派工時要寫明用哪個模型。</text>
+</svg>

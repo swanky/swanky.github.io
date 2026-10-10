@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1220" width="600" height="1220" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">派出去之前，先問三個問題</title>
+  <desc id="d">派工前依序問三個問題。任務能不能自己驗收？不能就先補驗收條件再派。跟其他任務有沒有依賴？有就排隊依序做。會不會改到同一處？不會就在主線上一起改；會就各開獨立工作區（worktree），做完合併回主線，並刪掉工作區。</desc>
+  <defs><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A5D00"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker></defs>
+  <rect width="600" height="1220" fill="#FFFFFF"/>
+  <text x="32" y="64" font-size="38" font-weight="700" fill="#1F2937" text-anchor="start">派出去之前，先問三題</text>
+  <text x="32" y="104" font-size="24" font-weight="400" fill="#4B5563" text-anchor="start">卡在哪一關，先處理那一關</text>
+  <rect x="32" y="140" width="536" height="96" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="56" y="200" font-size="28" font-weight="700" fill="#2C5B8F" text-anchor="start">① 能自己驗收嗎？</text>
+  <path d="M120,236 L120,290 L192,290" fill="none" stroke="#B45309" stroke-width="3.5" marker-end="url(#a-orange)"/>
+  <text x="132" y="268" font-size="22" font-weight="700" fill="#B45309" text-anchor="start">不能</text>
+  <rect x="200" y="256" width="368" height="72" rx="16" fill="#FFF4E5" stroke="#B45309" stroke-width="2.5"/>
+  <text x="220" y="302" font-size="25" font-weight="700" fill="#1F2937" text-anchor="start">先補驗收條件，再派</text>
+  <path d="M60,240 L60,388" fill="none" stroke="#2C5B8F" stroke-width="3.5" marker-end="url(#a-blue)"/>
+  <text x="72" y="376" font-size="22" font-weight="700" fill="#2C5B8F" text-anchor="start">能</text>
+  <rect x="32" y="396" width="536" height="96" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="56" y="456" font-size="28" font-weight="700" fill="#2C5B8F" text-anchor="start">② 跟別的任務有依賴嗎？</text>
+  <path d="M120,492 L120,546 L192,546" fill="none" stroke="#B45309" stroke-width="3.5" marker-end="url(#a-orange)"/>
+  <text x="132" y="524" font-size="22" font-weight="700" fill="#B45309" text-anchor="start">有</text>
+  <rect x="200" y="512" width="368" height="72" rx="16" fill="#FFF4E5" stroke="#B45309" stroke-width="2.5"/>
+  <text x="220" y="558" font-size="25" font-weight="700" fill="#1F2937" text-anchor="start">排隊，依序做</text>
+  <path d="M60,496 L60,644" fill="none" stroke="#2C5B8F" stroke-width="3.5" marker-end="url(#a-blue)"/>
+  <text x="72" y="632" font-size="22" font-weight="700" fill="#2C5B8F" text-anchor="start">沒有</text>
+  <rect x="32" y="652" width="536" height="96" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="56" y="712" font-size="28" font-weight="700" fill="#2C5B8F" text-anchor="start">③ 會改到同一處嗎？</text>
+  <path d="M120,748 L120,802 L192,802" fill="none" stroke="#0E7568" stroke-width="3.5" marker-end="url(#a-green)"/>
+  <text x="132" y="780" font-size="22" font-weight="700" fill="#0E7568" text-anchor="start">不會</text>
+  <rect x="200" y="768" width="368" height="72" rx="16" fill="#EAF6F3" stroke="#0E7568" stroke-width="2.5"/>
+  <text x="220" y="814" font-size="25" font-weight="700" fill="#1F2937" text-anchor="start">直接在主線上一起改</text>
+  <path d="M60,752 L60,900" fill="none" stroke="#2C5B8F" stroke-width="3.5" marker-end="url(#a-blue)"/>
+  <text x="72" y="888" font-size="22" font-weight="700" fill="#2C5B8F" text-anchor="start">會</text>
+  <rect x="32" y="908" width="536" height="96" rx="16" fill="#FFF8E7" stroke="#8A5D00" stroke-width="2.5"/>
+  <text x="56" y="952" font-size="28" font-weight="700" fill="#8A5D00" text-anchor="start">各開獨立工作區</text>
+  <text x="56" y="988" font-size="22" font-weight="400" fill="#1F2937" text-anchor="start">（Git worktree）</text>
+  <path d="M300,1012 L300,1054" fill="none" stroke="#8A5D00" stroke-width="3.5" marker-end="url(#a-gold)"/>
+  <rect x="32" y="1062" width="536" height="96" rx="16" fill="#FFF8E7" stroke="#8A5D00" stroke-width="2.5"/>
+  <text x="56" y="1106" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">做完合併回主線</text>
+  <text x="56" y="1142" font-size="22" font-weight="400" fill="#1F2937" text-anchor="start">然後刪掉工作區（寫進規則）</text>
+</svg>

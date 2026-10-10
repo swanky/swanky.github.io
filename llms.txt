@@ -113,6 +113,7 @@
 - [AI 不是我的替身，而是我跨出邊界的方法](https://swanky.github.io/technical/ai-photography-virtual-agency/)
 - [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
 - [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
+- [同時派五個 Agent 之前，先讓它知道自己做錯了](https://swanky.github.io/technical/agent-parallel-verification-first/)
 - [Dario 說 AI 該慢一點：我支持驗證，但不想把規則也外包給供應商](https://swanky.github.io/technical/ai-frontier-pacing-verifiable-safety/)
 - [我讓五隻 CloneX 跳 KPOP：參考影片可能才是瓶頸](https://swanky.github.io/technical/clonex-bunny-dance-reference-bottleneck/)
 - [AI 影片不是輸入一句話就好：6 天彩排 3 支成片，我踩過的審核、參考圖與成本問題](https://swanky.github.io/technical/ai-video-production-rehearsal-seedance-workflow/)

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1290" width="600" height="1290" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">Agent 的工作環境：三件事</title>
+  <desc id="d">Agent 的工作環境由三件事組成：地圖讓它找得到路，回饋迴路讓它改完自己知道對錯，規則手冊讓它不重犯。Agent 先查地圖動手改，再用測試、原型等回饋自己檢查，沒過就自己修；人只做抽查，抽到的錯回寫成規則或自動檢查，下次直接跑不過。</desc>
+  <defs><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2C5B8F"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker><marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A5D00"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker></defs>
+  <rect width="600" height="1290" fill="#FFFFFF"/>
+  <text x="32" y="64" font-size="38" font-weight="700" fill="#1F2937" text-anchor="start">Agent 的工作環境</text>
+  <text x="32" y="104" font-size="24" font-weight="400" fill="#4B5563" text-anchor="start">改完自己知道對錯，錯過的不再重犯</text>
+  <rect x="32" y="140" width="536" height="150" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="56" y="190" font-size="30" font-weight="700" fill="#2C5B8F" text-anchor="start">① 地圖</text>
+  <text x="56" y="236" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">要做什麼，先讀哪裡</text>
+  <text x="56" y="273" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">模組、文件放在哪</text>
+  <rect x="32" y="310" width="536" height="150" rx="16" fill="#EAF6F3" stroke="#0E7568" stroke-width="2.5"/>
+  <text x="56" y="360" font-size="30" font-weight="700" fill="#0E7568" text-anchor="start">② 回饋迴路</text>
+  <text x="56" y="406" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">測試、原型、設計文件</text>
+  <text x="56" y="443" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">改完自己知道對錯</text>
+  <rect x="32" y="480" width="536" height="150" rx="16" fill="#FFF8E7" stroke="#8A5D00" stroke-width="2.5"/>
+  <text x="56" y="530" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="start">③ 規則手冊</text>
+  <text x="56" y="576" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">寫在 AGENTS.md</text>
+  <text x="56" y="613" font-size="25" font-weight="400" fill="#1F2937" text-anchor="start">硬規則＋自動檢查</text>
+  <text x="32" y="680" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">每次做事的順序</text>
+  <rect x="32" y="706" width="536" height="120" rx="16" fill="#F1F5FA" stroke="#2C5B8F" stroke-width="2.5"/>
+  <text x="56" y="754" font-size="28" font-weight="700" fill="#2C5B8F" text-anchor="start">Agent 動手改</text>
+  <text x="56" y="798" font-size="24" font-weight="400" fill="#1F2937" text-anchor="start">先查地圖，找到位置</text>
+  <path d="M300,832 L300,866" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="32" y="874" width="536" height="120" rx="16" fill="#EAF6F3" stroke="#0E7568" stroke-width="2.5"/>
+  <text x="56" y="922" font-size="28" font-weight="700" fill="#0E7568" text-anchor="start">自己跑檢查</text>
+  <text x="56" y="966" font-size="24" font-weight="400" fill="#1F2937" text-anchor="start">用回饋驗證，沒過就自己修</text>
+  <path d="M300,1000 L300,1034" fill="none" stroke="#64748B" stroke-width="3.5" marker-end="url(#a-gray)"/>
+  <rect x="32" y="1042" width="536" height="120" rx="16" fill="#FFF4E5" stroke="#B45309" stroke-width="2.5"/>
+  <text x="56" y="1090" font-size="28" font-weight="700" fill="#B45309" text-anchor="start">人抽查</text>
+  <text x="56" y="1134" font-size="24" font-weight="400" fill="#1F2937" text-anchor="start">抽到的錯，回寫進 ③ 規則手冊</text>
+  <text x="32" y="1214" font-size="23" font-weight="400" fill="#4B5563" text-anchor="start">規則越寫越多時，靠地圖指路：</text>
+  <text x="32" y="1248" font-size="23" font-weight="400" fill="#4B5563" text-anchor="start">做這件事，再讀那一段。</text>
+</svg>
