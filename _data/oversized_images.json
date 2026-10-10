@@ -1,0 +1,889 @@
+{
+ "/assets/img/redball.jpg": {
+  "src": "/assets/img/redball-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/redball-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/redball-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/redball-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1974,
+  "height": 1974
+ },
+ "/education/crypto/img/nft_nps_1.jpeg": {
+  "src": "/education/crypto/img/nft_nps_1-1206.jpg",
+  "srcset": [
+   {
+    "path": "/education/crypto/img/nft_nps_1-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/education/crypto/img/nft_nps_1-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/education/crypto/img/nft_nps_1-1206.webp",
+    "w": 1206
+   }
+  ],
+  "width": 1206,
+  "height": 3530
+ },
+ "/assets/img/class_1_1_nps.jpeg": {
+  "src": "/assets/img/class_1_1_nps-1044.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/class_1_1_nps-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/class_1_1_nps-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/class_1_1_nps-1044.webp",
+    "w": 1044
+   }
+  ],
+  "width": 1044,
+  "height": 2022
+ },
+ "/assets/img/class_1_2_nps.jpeg": {
+  "src": "/assets/img/class_1_2_nps-1044.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/class_1_2_nps-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/class_1_2_nps-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/class_1_2_nps-1044.webp",
+    "w": 1044
+   }
+  ],
+  "width": 1044,
+  "height": 1919
+ },
+ "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero.png": {
+  "src": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-941.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-941.webp",
+    "w": 941
+   }
+  ],
+  "width": 941,
+  "height": 1672
+ },
+ "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide.png": {
+  "src": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-941.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-941.webp",
+    "w": 941
+   }
+  ],
+  "width": 941,
+  "height": 1672
+ },
+ "/assets/img/uniform/ug3/制服女孩3見面會.jpg": {
+  "src": "/assets/img/uniform/ug3/制服女孩3見面會-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug3/制服女孩3見面會-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug3/制服女孩3見面會-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 5760,
+  "height": 3840
+ },
+ "/assets/img/uniform/ug1/制服女孩簽書見面會.jpg": {
+  "src": "/assets/img/uniform/ug1/制服女孩簽書見面會-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/制服女孩簽書見面會-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/制服女孩簽書見面會-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 4679,
+  "height": 3119
+ },
+ "/assets/img/uniform/高校制服戀物論_新書座談會.jpg": {
+  "src": "/assets/img/uniform/高校制服戀物論_新書座談會-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/高校制服戀物論_新書座談會-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/高校制服戀物論_新書座談會-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 5061,
+  "height": 3374
+ },
+ "/assets/img/uniform/ug1/簽書會_1_effected.jpg": {
+  "src": "/assets/img/uniform/ug1/簽書會_1_effected-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/簽書會_1_effected-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/簽書會_1_effected-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 3264,
+  "height": 2448
+ },
+ "/assets/img/uniform/books.jpg": {
+  "src": "/assets/img/uniform/books-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/books-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/books-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1268,
+  "height": 1151
+ },
+ "/assets/img/uniform/ug1/ug1_shih.jpg": {
+  "src": "/assets/img/uniform/ug1/ug1_shih-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/ug1_shih-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/ug1_shih-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1536,
+  "height": 2048
+ },
+ "/assets/img/uniform/ug1/10387089_10152518081238094_4120939190858956274_o.jpg": {
+  "src": "/assets/img/uniform/ug1/10387089_10152518081238094_4120939190858956274_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/10387089_10152518081238094_4120939190858956274_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/10387089_10152518081238094_4120939190858956274_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/uniform/ug1/10431423_10203991964789248_3453868355221491809_o.jpg": {
+  "src": "/assets/img/uniform/ug1/10431423_10203991964789248_3453868355221491809_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/10431423_10203991964789248_3453868355221491809_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/10431423_10203991964789248_3453868355221491809_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/uniform/ug1/10517349_10203991966389288_4929346200338332420_o.jpg": {
+  "src": "/assets/img/uniform/ug1/10517349_10203991966389288_4929346200338332420_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/10517349_10203991966389288_4929346200338332420_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/10517349_10203991966389288_4929346200338332420_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/uniform/ug1/1890570_10152221485610767_1841806395_o.jpg": {
+  "src": "/assets/img/uniform/ug1/1890570_10152221485610767_1841806395_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/1890570_10152221485610767_1841806395_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/1890570_10152221485610767_1841806395_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1366
+ },
+ "/assets/img/uniform/ug1/71584_10202220814414539_819263412_n.jpg": {
+  "src": "/assets/img/uniform/ug1/71584_10202220814414539_819263412_n-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug1/71584_10202220814414539_819263412_n-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug1/71584_10202220814414539_819263412_n-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 960,
+  "height": 641
+ },
+ "/assets/img/uniform/ug2/10679664_10152685819968094_605167657307133793_o.jpg": {
+  "src": "/assets/img/uniform/ug2/10679664_10152685819968094_605167657307133793_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug2/10679664_10152685819968094_605167657307133793_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug2/10679664_10152685819968094_605167657307133793_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/uniform/ug2/11025911_10204997839177581_232479791354786255_o.jpg": {
+  "src": "/assets/img/uniform/ug2/11025911_10204997839177581_232479791354786255_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug2/11025911_10204997839177581_232479791354786255_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug2/11025911_10204997839177581_232479791354786255_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1360
+ },
+ "/assets/img/uniform/ug2/11039253_10153136824453094_4015987053211649556_o.jpg": {
+  "src": "/assets/img/uniform/ug2/11039253_10153136824453094_4015987053211649556_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug2/11039253_10153136824453094_4015987053211649556_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug2/11039253_10153136824453094_4015987053211649556_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1360
+ },
+ "/assets/img/uniform/ug2/11043397_10153160867773094_5173811301970275670_o.jpg": {
+  "src": "/assets/img/uniform/ug2/11043397_10153160867773094_5173811301970275670_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug2/11043397_10153160867773094_5173811301970275670_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug2/11043397_10153160867773094_5173811301970275670_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1221
+ },
+ "/assets/img/uniform/ug2/11070834_10153161471958094_34429012719912683_o.jpg": {
+  "src": "/assets/img/uniform/ug2/11070834_10153161471958094_34429012719912683_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/ug2/11070834_10153161471958094_34429012719912683_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/ug2/11070834_10153161471958094_34429012719912683_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "/assets/img/old/ug3/cover.jpg": {
+  "src": "/assets/img/old/ug3/cover-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/cover-480.webp",
+    "w": 480
+   }
+  ],
+  "width": 767,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/author.jpg": {
+  "src": "/assets/img/old/ug3/author-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/author-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/author-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2448,
+  "height": 2448
+ },
+ "/assets/img/old/calendar_s_2016.jpg": {
+  "src": "/assets/img/old/calendar_s_2016-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/calendar_s_2016-480.webp",
+    "w": 480
+   }
+  ],
+  "width": 800,
+  "height": 580
+ },
+ "/assets/img/uniform/11221877_10153498930455329_9143763719781873441_o.jpg": {
+  "src": "/assets/img/uniform/11221877_10153498930455329_9143763719781873441_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/11221877_10153498930455329_9143763719781873441_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/11221877_10153498930455329_9143763719781873441_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "/assets/img/uniform/11538993_10153388996173094_1923924695849238883_o.jpg": {
+  "src": "/assets/img/uniform/11538993_10153388996173094_1923924695849238883_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/11538993_10153388996173094_1923924695849238883_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/11538993_10153388996173094_1923924695849238883_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "/assets/img/uniform/1493409_10152472461473094_7294494462771092776_o.jpg": {
+  "src": "/assets/img/uniform/1493409_10152472461473094_7294494462771092776_o-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/1493409_10152472461473094_7294494462771092776_o-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/1493409_10152472461473094_7294494462771092776_o-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1680,
+  "height": 622
+ },
+ "/assets/img/uniform/newspaper.jpg": {
+  "src": "/assets/img/uniform/newspaper-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/newspaper-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/newspaper-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "/assets/img/uniform/uniform_news.jpg": {
+  "src": "/assets/img/uniform/uniform_news-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/uniform_news-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/uniform/uniform_news-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1720,
+  "height": 1022
+ },
+ "/assets/img/uniform/yam_news.jpg": {
+  "src": "/assets/img/uniform/yam_news-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/uniform/yam_news-480.webp",
+    "w": 480
+   }
+  ],
+  "width": 500,
+  "height": 704
+ },
+ "/assets/img/old/ug3/sjpg/girls_1.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_1-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_1-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_1-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/sjpg/girls_2.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_2-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_2-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_2-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/sjpg/girls_3.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_3-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_3-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_3-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/sjpg/girls_4.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_4-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_4-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_4-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/sjpg/girls_5.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_5-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_5-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_5-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/ug3/sjpg/girls_6.jpg": {
+  "src": "/assets/img/old/ug3/sjpg/girls_6-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_6-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/ug3/sjpg/girls_6-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1575,
+  "height": 1050
+ },
+ "/assets/img/old/cal_2016/cal_2016_01.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_01-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_01-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_01-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_02.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_02-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_02-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_02-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_03.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_03-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_03-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_03-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_04.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_04-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_04-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_04-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_05.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_05-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_05-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_05-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_06.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_06-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_06-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_06-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_07.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_07-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_07-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_07-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_08.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_08-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_08-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_08-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_09.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_09-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_09-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_09-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_10.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_10-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_10-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_10-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_11.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_11-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_11-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_11-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/old/cal_2016/cal_2016_12.jpg": {
+  "src": "/assets/img/old/cal_2016/cal_2016_12-480.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_12-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/old/cal_2016/cal_2016_12-960.webp",
+    "w": 960
+   }
+  ],
+  "width": 1240,
+  "height": 886
+ },
+ "/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface.png": {
+  "src": "/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface-1348.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface-1348.webp",
+    "w": 1348
+   }
+  ],
+  "width": 1348,
+  "height": 610
+ },
+ "/assets/img/games/plum/hero-gameplay.jpg": {
+  "src": "/assets/img/games/plum/hero-gameplay-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/games/plum/hero-gameplay-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/games/plum/hero-gameplay-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/games/plum/hero-gameplay-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1920,
+  "height": 1080
+ },
+ "/assets/img/games/plum/rebuild/slice-battle.jpg": {
+  "src": "/assets/img/games/plum/rebuild/slice-battle-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1920,
+  "height": 1080
+ },
+ "/assets/img/games/plum/rebuild/slice-battle2.jpg": {
+  "src": "/assets/img/games/plum/rebuild/slice-battle2-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle2-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle2-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-battle2-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1920,
+  "height": 1080
+ },
+ "/assets/img/games/plum/rebuild/slice-hud.jpg": {
+  "src": "/assets/img/games/plum/rebuild/slice-hud-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-hud-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-hud-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/games/plum/rebuild/slice-hud-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1920,
+  "height": 1080
+ },
+ "/assets/img/hermes-openrouter-video/asset-selection-contact.jpg": {
+  "src": "/assets/img/hermes-openrouter-video/asset-selection-contact-1440.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/hermes-openrouter-video/asset-selection-contact-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/hermes-openrouter-video/asset-selection-contact-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/hermes-openrouter-video/asset-selection-contact-1440.webp",
+    "w": 1440
+   }
+  ],
+  "width": 1440,
+  "height": 1920
+ },
+ "/assets/img/photography/selected/24350775633.jpg": {
+  "src": "/assets/img/photography/selected/24350775633-1600.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/photography/selected/24350775633-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/photography/selected/24350775633-960.webp",
+    "w": 960
+   },
+   {
+    "path": "/assets/img/photography/selected/24350775633-1600.webp",
+    "w": 1600
+   }
+  ],
+  "width": 1600,
+  "height": 1067
+ },
+ "/nft/assets/images/NFT_pics_800.jpg": {
+  "src": "/assets/img/technical/uniform-girls-nft-debut/NFT_pics_800-800.jpg",
+  "srcset": [
+   {
+    "path": "/assets/img/technical/uniform-girls-nft-debut/NFT_pics_800-480.webp",
+    "w": 480
+   },
+   {
+    "path": "/assets/img/technical/uniform-girls-nft-debut/NFT_pics_800-800.webp",
+    "w": 800
+   }
+  ],
+  "width": 800,
+  "height": 800
+ }
+}

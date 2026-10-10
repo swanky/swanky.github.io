@@ -155,7 +155,7 @@ data-image-sha256:<digest>
 第三，重新選圖。最後保留形象照、制服女孩、比特幣女孩、五本出版作品、PX3 證書、兩張補充攝影作品，以及核准過的三支生成鏡頭；資訊量太高的月曆與拼貼先拿掉。
 
 <figure style="margin:1.8em auto;text-align:center;max-width:760px;">
-  <img src="{{ '/assets/img/hermes-openrouter-video/asset-selection-contact.jpg' | relative_url }}" alt="短影片候選素材 contact sheet：史旺基形象照、制服女孩、比特幣女孩、PX3 證書、出版書封與攝影作品" style="width:100%;height:auto;border-radius:10px;">
+  <img {% include flickr/source.html image='/assets/img/hermes-openrouter-video/asset-selection-contact.jpg' sizes="(max-width: 767px) 100vw, 700px" %} alt="短影片候選素材 contact sheet：史旺基形象照、制服女孩、比特幣女孩、PX3 證書、出版書封與攝影作品" style="width:100%;height:auto;border-radius:10px;">
   <figcaption style="font-size:0.85rem;color:#6b7280;margin-top:0.6em;">圖二：候選素材先做 contact sheet，才決定哪些值得佔用 35 秒</figcaption>
 </figure>
 

@@ -86,7 +86,7 @@ works_after: |
   <h3 class="atlas-h">我的作品對照</h3>
   <p>我拍的〈藍色跑道〉裡也看得到類似的做法：她直接坐在操場的跑道上，一手撐地、腿伸直，沒有笑，就這樣看著鏡頭。背景是真實的藍色跑道和白線，沒有任何布景；撐起畫面的，是她不擺笑容、很直接的那個眼神。</p>
   <figure class="pl-own">
-    <a class="portfolio-lightbox" data-gallery="atlas-lindbergh-own" data-type="image" href="/assets/img/photography/selected/24350775633.jpg"><img src="/assets/img/photography/selected/24350775633.jpg" width="1600" height="1067" alt="坐在藍色操場跑道上、直視鏡頭的制服人像" loading="lazy" decoding="async"></a>
+    <a class="portfolio-lightbox" data-gallery="atlas-lindbergh-own" data-type="image" href="/assets/img/photography/selected/24350775633.jpg"><picture><source type="image/webp" srcset="/assets/img/photography/selected/24350775633-480.webp 480w, /assets/img/photography/selected/24350775633-960.webp 960w, /assets/img/photography/selected/24350775633-1600.webp 1600w" sizes="(max-width: 767px) 100vw, 720px"><img src="/assets/img/photography/selected/24350775633-1600.jpg" width="1600" height="1067" alt="坐在藍色操場跑道上、直視鏡頭的制服人像" loading="lazy" decoding="async"></picture></a>
     <figcaption>史旺基作品〈藍色跑道〉，2016 年。點圖放大。</figcaption>
   </figure>
 videos:

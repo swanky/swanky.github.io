@@ -27,7 +27,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 - **對外文案從 TA（目標受眾）角度審查**：這是個人品牌／服務網站，不是給工程師看的。所有面向訪客的文字（按鈕、標題、說明、alt text）一律用 TA 看得懂的白話，不用工程師或領域內行術語——檔案格式（Markdown／JSON／PNG／.ics）、技術實作（localStorage／manifest／schema／render）、領域黑話一律換成「動作或效果」的說法（例：「存成文字檔」「下載完整備份」「加進行事曆提醒」）。功能名優先用中文，除非是既定品牌名（Cyber Tarot Lab、CloneX）或下方有中文大標的裝飾性英文小標。**寫的當下就做，別等交付後被使用者抓**（訪客平均互動僅約 11 秒，一個看不懂的詞就流失）。
 - **資產路徑**：一律 `{{ '/path' | relative_url }}`。
 - **RWA**：一律寫「現實世界資產」（絕不寫「真實世界資產」）；保留 RWA 縮寫與英文全名。
-- **個人稱謂**：站上文案一律「大型電信業技術主管」——絕不出現雇主公司名或內部職稱（品牌／雇主切割）；唯一例外是 `index.html` JSON-LD 的 `worksFor` 與 `description`（2026-07-04 決策：搜尋引擎結構化資料刻意保留；`jobTitle` 等其他欄位不得出現雇主名或內部職稱）。
+- **個人稱謂**：站上文案一律「大型電信業技術主管」——絕不出現雇主公司名或內部職稱（品牌／雇主切割）；**JSON-LD 等結構化資料也一樣**（2026-10-10 站主決定：撤銷 2026-07-04 保留 `worksFor`／`description` 雇主名的例外，`index.html` 已移除 `worksFor`）。
 - **兩位熊熊絕不混淆**：吳暐榕＝制服模特兒；卓毓彤＝一線藝人。
 - **版本學事實是資料，不是文案**：古典小說的底本、作者署名、成書年代、版本關係、來源與授權等書目事實，一律以 repo 內 metadata（`_data/books.yml`）與可驗證來源為準，**不得憑模型知識補寫或推斷**；metadata 沒有的標「待考」，有爭議的用「（傳）」等寫法保留不確定性；用字／忠實度陳述必須出自實測統計。細則見 `docs/novel-platform/architecture.md` §4。
 - **新增內容區塊時同步更新 `llms.txt`**：`llms.txt` 是寫給 AI 檢索器的站台脈絡地圖（這站有什麼、為什麼重要、從哪讀起），與 `sitemap.xml` 分工不同——sitemap 由外掛自動生成、管「爬得到」；`llms.txt` 是**手寫**的、管「知道那是什麼」，沒有任何機制會提醒它落後。因此新增內容區塊（新工具、新書、新課程頁、新專案子站）時，**同一筆改動裡一併更新 `llms.txt`**，否則 AI 爬得到頁面卻拿不到脈絡（2026-08-26 曾累積到只涵蓋 sitemap 876 條 URL 中的 118 條）。條目描述沿用該頁既有 `description` front matter 與 `_data/books.yml`，不自行改寫或補寫。
@@ -39,6 +39,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 - 文章放 `_posts/YYYY-MM-DD-slug.md`，`layout: article`；`categories: [technical]`（技術顧問）、`[claude-code]`（AI學習分享）或 `[photography]`（攝影作品）。
 - `cover_image` 一律 `.jpg`（PNG 來源先轉 JPEG）；列表卡片會把封面裁成 16:9，選圖／裁圖要預留。
 - 新增文章後跑一次 `pwsh -File tools/make-cover-thumbs.ps1`：為每張 .jpg／.jpeg 封面產生同名 `-card.jpg`（640px 寬）給列表卡片用；可重跑、只補缺的。卡片模板「有縮圖就用、沒有就退回原圖」，忘了跑不會壞，只是列表頁變重（2026-09-11 實測 63 張原圖一頁 4MB）。
+- **頁面／內文照片原圖 >500KB**（活動照、截圖等）：把路徑加進 `tools/build-oversized-images.py` 的 `SOURCES` 清單後執行 `python -X utf8 tools/build-oversized-images.py`（需 Pillow），會產生 webp／小 jpg 並寫入 `_data/oversized_images.json`；經 `_includes/flickr/source.html` 輸出的圖自動改用小圖。**banner 例外**（文章 `cover_image`、`assets/img/linkedin/`、檔名含 banner、`web3/*-anime`）：2026-10-10 站主決定一律原圖原畫質，腳本內建跳過規則。
 - 同步自 LinkedIn／X 的文章：設 `hero_image: true`；`source_url` 填 LinkedIn（一律 `www.` 子網域）、`source_url_x` 填 X。layout 會自動渲染單／雙來源連結。
 - Bootstrap Icons：使用前先確認 glyph class 存在於 vendored CSS（缺字渲染成空方塊——曾是正式站 bug）。
 - `hero_image: true` 只在封面是「設計過的 banner」時加；隨手圖或無封面就省略（單篇頁 banner 預設不顯示）。

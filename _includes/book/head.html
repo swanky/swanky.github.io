@@ -1,11 +1,13 @@
 {%- comment -%}
   古典小說通用層的共用 <head>。
-  參數：page_title（必填，完整 <title> 用）、description（必填）
+  參數：page_title（必填，完整 <title> 用）、description（必填）、
+  og_image／og_image_width／og_image_height／og_image_alt（選填；呼叫端可傳書目資料的封面，未傳退回站台預設圖）
   刻意不接受書名參數——書名一律由呼叫端從 _data/books.yml 查表後組好字串傳進來。
 {%- endcomment -%}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e0d0b">
+  {% include gtag.html %}
   <title>{{ include.page_title }} | {{ site.title }}</title>
   <meta name="description" content="{{ include.description }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -15,6 +17,28 @@
   <meta property="og:title" content="{{ include.page_title }}">
   <meta property="og:description" content="{{ include.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {%- if include.og_image %}
+  <meta property="og:image" content="{{ include.og_image | absolute_url }}">
+  {%- if include.og_image_width %}
+  <meta property="og:image:width" content="{{ include.og_image_width }}">
+  <meta property="og:image:height" content="{{ include.og_image_height }}">
+  {%- endif %}
+  {%- assign bk_og_alt = include.og_image_alt | default: include.page_title %}
+  {%- assign bk_og_image = include.og_image %}
+  {%- else %}
+  <meta property="og:image" content="{{ '/assets/img/og-default.jpg' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {%- assign bk_og_alt = '史旺基 Swanky Hsiao — 得獎攝影師 × 大型電信業技術主管 × Web3 教育者' %}
+  {%- assign bk_og_image = '/assets/img/og-default.jpg' %}
+  {%- endif %}
+  <meta property="og:image:alt" content="{{ bk_og_alt | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@swanky">
+  <meta name="twitter:title" content="{{ include.page_title }}">
+  <meta name="twitter:description" content="{{ include.description }}">
+  <meta name="twitter:image" content="{{ bk_og_image | absolute_url }}">
+  <meta name="twitter:image:alt" content="{{ bk_og_alt | escape }}">
   <link href="{{ '/assets/img/Swanky_logo_icon32.png' | relative_url }}" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -10,6 +10,7 @@ permalink: /games/plum/
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b0a">
+  {% include gtag.html %}
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description }}">
   <meta name="keywords" content="梅香境,PROJECT PLUM,戰棋,SRPG,策略角色扮演,單機遊戲,Steam,像素遊戲,劇情遊戲,東方奇幻,金瓶梅,經典十部曲,文學影像,金瓶異夢,十二花界">
@@ -169,7 +170,7 @@ permalink: /games/plum/
         <div class="gameplay-showcase">
           <figure class="gameplay-focus reveal">
             <button class="image-button tactical-window" type="button" data-tactical-scan data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" data-lightbox-alt="《梅香境》Godot 開發版戰鬥介面：體力、技能列與行動預覽">
-              <img src="{{ '/assets/img/games/plum/rebuild/slice-hud.jpg' | relative_url }}" alt="Godot 開發版實機戰鬥介面：體力、技能列與行動預覽" width="1920" height="1080" loading="lazy">
+              <img {% include flickr/source.html image='/assets/img/games/plum/rebuild/slice-hud.jpg' sizes="(max-width: 767px) 100vw, 900px" %} alt="Godot 開發版實機戰鬥介面：體力、技能列與行動預覽" width="1920" height="1080" loading="lazy">
               <span class="tactical-hud" aria-hidden="true"><i>MOVE RANGE</i><b>WAIT 07</b><em>GRID LOCKED</em></span>
               <span class="zoom-hint">放大戰鬥介面</span>
             </button>
@@ -187,7 +188,7 @@ permalink: /games/plum/
         </div>
         <figure class="gameplay-overview reveal">
           <button class="image-button" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" data-lightbox-alt="《梅香境》Godot 開發版完整實機戰鬥畫面">
-            <img src="{{ '/assets/img/games/plum/rebuild/slice-battle.jpg' | relative_url }}" alt="Godot 開發版完整實機畫面：等距戰場、火勢蔓延與多重目標" width="1920" height="1080" loading="lazy">
+            <img {% include flickr/source.html image='/assets/img/games/plum/rebuild/slice-battle.jpg' sizes="(max-width: 767px) 100vw, 900px" %} alt="Godot 開發版完整實機畫面：等距戰場、火勢蔓延與多重目標" width="1920" height="1080" loading="lazy">
             <span class="zoom-hint">查看完整戰場</span>
           </button>
           <figcaption><span>ENGINE CAPTURE</span> 可操作開發版本實機畫面；美術、字型與 HUD 正持續收斂。</figcaption>
@@ -214,7 +215,7 @@ permalink: /games/plum/
         <div class="runtime-gallery" aria-label="垂直切片實機截圖">
           <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" data-lightbox-alt="標題畫面——雨夜梅香境"><img src="{{ '/assets/img/games/plum/rebuild/slice-title.jpg' | relative_url }}" alt="標題畫面——雨夜梅香境" width="1920" height="1080" loading="lazy" decoding="async"><span>標題畫面——雨夜梅香境</span></button>
           <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" data-lightbox-alt="開場對話"><img src="{{ '/assets/img/games/plum/rebuild/slice-dialogue.jpg' | relative_url }}" alt="開場對話" width="1920" height="1080" loading="lazy" decoding="async"><span>開場對話</span></button>
-          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" data-lightbox-alt="火勢蔓延的後期戰局"><img src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" alt="火勢蔓延的後期戰局" width="1920" height="1080" loading="lazy" decoding="async"><span>火勢蔓延的後期戰局</span></button>
+          <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-battle2.jpg' | relative_url }}" data-lightbox-alt="火勢蔓延的後期戰局"><img {% include flickr/source.html image='/assets/img/games/plum/rebuild/slice-battle2.jpg' sizes="(max-width: 767px) 100vw, 900px" %} alt="火勢蔓延的後期戰局" width="1920" height="1080" loading="lazy" decoding="async"><span>火勢蔓延的後期戰局</span></button>
           <button class="runtime-shot reveal" type="button" data-lightbox-src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" data-lightbox-alt="結局結算"><img src="{{ '/assets/img/games/plum/rebuild/slice-result.jpg' | relative_url }}" alt="結局結算" width="1920" height="1080" loading="lazy" decoding="async"><span>結局結算</span></button>
         </div>
 
@@ -1075,7 +1076,7 @@ permalink: /games/plum/
     </section>
 
     <section class="final-cta" aria-labelledby="cta-title" data-scene="final" data-chapter="等待花開">
-      <img src="{{ '/assets/img/games/plum/hero-gameplay.jpg' | relative_url }}" alt="" width="1920" height="1080" loading="lazy">
+      <img {% include flickr/source.html image='/assets/img/games/plum/hero-gameplay.jpg' sizes="(max-width: 767px) 100vw, 900px" %} alt="" width="1920" height="1080" loading="lazy">
       <div class="final-shade"></div>
       <div class="shell final-content reveal">
         <p class="eyebrow">THE FIRE REMEMBERS</p>

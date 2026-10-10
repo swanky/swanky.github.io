@@ -33,7 +33,7 @@ keywords: NFT,制服女孩,OurSong,加密貨幣,區塊鏈,Web3,史旺基,Swanky 
 
 <figure>
   <a href="{{ '/nft/oursong/' | relative_url }}">
-    <img src="{{ '/nft/assets/images/NFT_pics_800.jpg' | relative_url }}" alt="2021 年制服女孩與加密女孩 NFT 作品選集" loading="lazy">
+    <img {% include flickr/source.html image='/nft/assets/images/NFT_pics_800.jpg' sizes="(max-width: 767px) 100vw, 720px" dims=true %} alt="2021 年制服女孩與加密女孩 NFT 作品選集" loading="lazy">
   </a>
   <figcaption>2021 年發行的制服女孩與加密女孩 NFT 選集；點圖可前往站內作品存檔。</figcaption>
 </figure>

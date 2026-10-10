@@ -2,8 +2,9 @@
 title: Swanky Studio 史旺基工作室
 email: swanky.hsiao@gmail.com
 description: >-
-  史旺基工作室介紹創辦人史旺基結合攝影與軟體專長，展示得獎人像作品、
-  敏捷技術顧問服務、專業教育訓練與NFT策展成果。
+  史旺基工作室提供 AI Agent 導入顧問、Agentic Engineering 企業培訓與
+  AI 視覺內容製作，並展示創辦人史旺基的得獎人像攝影、Web3 技術顧問、
+  教育訓練與 NFT 策展成果。
 baseurl: ""
 url: "https://swanky.github.io"
 github_username: swanky
@@ -16,6 +17,15 @@ future: true
 # Exclude from processing
 exclude:
   # Unreferenced archival images stay in git; decoded build references audited.
+  - "assets/img/uniform/ug3/制服女孩3見面會.jpg"
+  - "assets/img/uniform/ug1/制服女孩簽書見面會.jpg"
+  - "assets/img/uniform/高校制服戀物論_新書座談會.jpg"
+  - "assets/img/uniform/ug1/簽書會_1_effected.jpg"
+  - "assets/img/redball.jpg"
+  - "education/crypto/img/nft_nps_1.jpeg"
+  - "assets/img/class_1_1_nps.jpeg"
+  - "assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero.png"
+  - "assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide.png"
   - "assets/img/old/ug3/ug3_ad_1.jpg"
   - "assets/img/old/calendar_s_2015.jpg"
   - "assets/img/uniform_books_3.png"

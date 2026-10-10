@@ -129,6 +129,6 @@ vibe coding（憑感覺寫程式）這個詞是 Andrej Karpathy 提出的，原�
 
 這份指南值得你親自讀一遍：[Simon Willison《Agentic Engineering Patterns》原文](https://simonwillison.net/guides/agentic-engineering-patterns/)。
 
-如果你想把這套「用工程紀律駕馭 AI」的方法帶進自己的團隊，我也把帶團隊的完整經驗整理成了 [Agentic Engineering 系列文章](/technical/agentic-engineering/)，並濃縮成一門 [Claude Code 內訓課程（課綱完整公開）](/education/claude-code/)；需要導入顧問的話，也歡迎來 [信聊聊](/technical/)。
+如果你想把這套「用工程紀律駕馭 AI」的方法帶進自己的團隊，我也把帶團隊的完整經驗整理成了 [Agentic Engineering 系列文章](/technical/agentic-engineering/)，並濃縮成一門 [Claude Code 內訓課程（課綱完整公開）](/education/agentic-engineering/)；需要導入顧問的話，也歡迎來 [信聊聊](/technical/)。
 
 最後想問問你：**讀完這份指南，你最想先在自己團隊落地哪一條？**

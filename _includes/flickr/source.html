@@ -1,11 +1,15 @@
 {%- comment -%}只輸出 src／srcset（有 srcset 時再帶 sizes 參數）；alt、尺寸、loading 等屬性留給呼叫端。srcset 寬度用 Flickr 實際尺寸。
-對照不到 Flickr 時退回本地圖（有 480／960 兩檔才給 srcset）；沒有 srcset 就不輸出 sizes，免得留下無效屬性。{%- endcomment -%}
+對照不到 Flickr 時，先查 _data/oversized_images.json（tools/build-oversized-images.py 產生的超大原圖響應式版本：src 為小尺寸 jpg、srcset 為 webp），再退回本地圖（有 480／960 兩檔才給 srcset）；沒有 srcset 就不輸出 sizes，免得留下無效屬性。dims=true 時另外輸出 width／height（Flickr 用 bw／bh，本地用 manifest 的原圖尺寸），僅限 CSS 已有 height:auto 的呼叫端使用，避免圖被拉變形。dims_w=N：寬高改按 N 等比換算——呼叫端的 sizes 讓圖撐到 N 寬時用（width 屬性會成為圖的預設寬度，給原圖寬會把圖縮小）。{%- endcomment -%}
 {%- assign fs_id = include.id | default: site.data.flickr_image_paths[include.image] | append: '' -%}
 {%- assign fs_photo = site.data.flickr_static[fs_id] -%}
 {%- if fs_photo.src -%}
-src="{{ fs_photo.src }}" srcset="{{ fs_photo.srcset }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}
+src="{{ fs_photo.src }}" srcset="{{ fs_photo.srcset }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}{% if include.dims and fs_photo.bw and fs_photo.bh %}{% if include.dims_w %} width="{{ include.dims_w }}" height="{{ fs_photo.bh | times: include.dims_w | divided_by: fs_photo.bw }}"{% else %} width="{{ fs_photo.bw }}" height="{{ fs_photo.bh }}"{% endif %}{% endif %}
+{%- elsif site.data.oversized_images[include.image].src -%}
+{%- assign fs_big = site.data.oversized_images[include.image] -%}
+{%- capture fs_big_srcset -%}{%- for e in fs_big.srcset -%}{{ e.path | relative_url }} {{ e.w }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}{%- endcapture -%}
+src="{{ fs_big.src | relative_url }}" srcset="{{ fs_big_srcset }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}{% if include.dims %} width="{{ fs_big.width }}" height="{{ fs_big.height }}"{% endif %}
 {%- else -%}
 {%- assign fs_local = site.data.photography_image_manifest[include.image] -%}
 {%- assign fs_fallback = fs_local.src_960 | default: fs_local.src_480 | default: include.image -%}
-src="{{ fs_fallback | relative_url }}"{% if fs_local.src_480 and fs_local.src_960 %} srcset="{{ fs_local.src_480 | relative_url }} 480w, {{ fs_local.src_960 | relative_url }} 960w"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}{% endif %}
+src="{{ fs_fallback | relative_url }}"{% if fs_local.src_480 and fs_local.src_960 %} srcset="{{ fs_local.src_480 | relative_url }} 480w, {{ fs_local.src_960 | relative_url }} 960w"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}{% endif %}{% if include.dims and fs_local.width and fs_local.height %} width="{{ fs_local.width }}" height="{{ fs_local.height }}"{% endif %}
 {%- endif -%}

@@ -182,8 +182,8 @@ A 的角色圖幾乎填滿直式畫面。即使提示要求全身，伸手時還
 A2 把角色放小，補上匹配臉圖、調整手勢，再把四秒延長到八秒。規律取樣與首尾格中，兔耳、雙手和鞋子都留在畫內，人物外觀也比較合我的口味。
 
 <div class="study-pair">
-  <figure><img src="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero.png' | relative_url }}" loading="lazy" alt="A 使用的全身造型圖，兔耳接近頂端，鞋底與兩側的動作空間較少"><figcaption><strong>A 的原始造型圖</strong>人物幾乎填滿畫面。這張圖能說明構圖起點，不能單靠靜態圖判定影片手部是否出框。</figcaption></figure>
-  <figure><img src="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide.png' | relative_url }}" loading="lazy" alt="A2 使用的寬構圖造型圖，人物縮小，頭頂與腳下保留更多舞台空間"><figcaption><strong>A2 的寬構圖造型圖</strong>同為直式，全身周圍有更多餘量。「寬」指取景較鬆，不是改成橫片。生成時還增加臉圖與片長，非單因素測試。</figcaption></figure>
+  <figure><picture><source type="image/webp" srcset="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-480.webp' | relative_url }} 480w, {{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-941.webp' | relative_url }} 941w" sizes="(min-width: 700px) 340px, 100vw"><img src="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/hero-941.jpg' | relative_url }}" width="941" height="1672" loading="lazy" alt="A 使用的全身造型圖，兔耳接近頂端，鞋底與兩側的動作空間較少"></picture><figcaption><strong>A 的原始造型圖</strong>人物幾乎填滿畫面。這張圖能說明構圖起點，不能單靠靜態圖判定影片手部是否出框。</figcaption></figure>
+  <figure><picture><source type="image/webp" srcset="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-480.webp' | relative_url }} 480w, {{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-941.webp' | relative_url }} 941w" sizes="(min-width: 700px) 340px, 100vw"><img src="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/wide-941.jpg' | relative_url }}" width="941" height="1672" loading="lazy" alt="A2 使用的寬構圖造型圖，人物縮小，頭頂與腳下保留更多舞台空間"></picture><figcaption><strong>A2 的寬構圖造型圖</strong>同為直式，全身周圍有更多餘量。「寬」指取景較鬆，不是改成橫片。生成時還增加臉圖與片長，非單因素測試。</figcaption></figure>
 </div>
 
 但 A 的文字舞句跟 B／C 的指定舞步不同，A2 又同時改了多項條件。不能因此宣布「文字勝過深度」，更不能把改善歸功於某一句提示詞。

@@ -133,6 +133,29 @@ test('通用層不指向旗艦子站的專屬路徑', () => {
   }
 });
 
+test('通用 head 帶社群分享圖、Twitter 卡與 GA（退回站台預設圖）', () => {
+  const src = readFileSync('_includes/book/head.html', 'utf8');
+  for (const tag of ['og:image', 'og:image:width', 'og:image:height', 'og:image:alt',
+    'twitter:card', 'twitter:site', 'twitter:image']) {
+    assert.ok(src.includes(`"${tag}"`), `book/head.html 缺 ${tag}`);
+  }
+  assert.match(src, /twitter:card" content="summary_large_image"/);
+  assert.match(src, /\/assets\/img\/og-default\.jpg/);
+  assert.match(src, /\{% include gtag\.html %\}/, 'book/head.html 應載入共用 GA（含正式網域守門）');
+  const gtag = readFileSync('_includes/gtag.html', 'utf8');
+  assert.match(gtag, /location\.hostname === 'swanky\.github\.io'/);
+});
+
+test('非主底本章回的 <title> 加上底本簡稱，避免與主底本同回重複', () => {
+  const src = readFileSync('_layouts/book-chapter.html', 'utf8');
+  assert.match(src, /page\.edition_id != book\.primary_edition[\s\S]*?edition\.label \| split: '（' \| first/);
+  // 每部作品各底本的簡稱必須互不相同，否則補了也還是重複
+  for (const b of books) {
+    const shorts = b.editions.map((e) => e.label.split('（')[0]);
+    assert.equal(new Set(shorts).size, shorts.length, `${b.id} 底本簡稱重複：${shorts.join('、')}`);
+  }
+});
+
 test('每個非 planned 且無專屬子站的作品，都有作品頁與回目頁', () => {
   for (const b of books) {
     if (b.status === 'planned' || b.flagship_url) continue;

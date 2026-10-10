@@ -15,6 +15,11 @@
 {%- endif -%}
 {%- capture book_url %}/{{ book.id }}/{% endcapture -%}
 {%- capture page_title %}{{ page.title }}｜{{ book.title }}原文{% endcapture -%}
+{%- comment -%}非主底本：標題補上底本簡稱（label 全形括號前段，如「庚辰本」），免得與主底本同回的 <title> 重複。{%- endcomment -%}
+{%- if page.edition_id != book.primary_edition -%}
+  {%- assign edition_short = edition.label | split: '（' | first -%}
+  {%- capture page_title %}{{ page_title }}（{{ edition_short }}）{% endcapture -%}
+{%- endif -%}
 {%- assign seal = book.title | slice: 0, 1 -%}
 <head>
   {%- include book/head.html page_title=page_title description=page.description -%}

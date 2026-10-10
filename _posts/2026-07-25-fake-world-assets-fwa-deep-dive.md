@@ -72,7 +72,7 @@ FWA 的基本流程可以拆成四步。
 
 <figure style="margin:2em auto;text-align:center;max-width:1100px;">
   <a href="https://www.bankless.com/read/a-beginners-guide-to-fake-world-assets" target="_blank" rel="noopener noreferrer">
-    <img src="{{ '/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface.png' | relative_url }}" alt="FWA 實際獎池介面，中央以弧形卡片展示 NFT 部位，右側顯示購買操作與近期活動" loading="lazy" style="width:100%;height:auto;border-radius:14px;">
+    <img {% include flickr/source.html image='/assets/img/fake-world-assets-fwa-deep-dive/bankless-fwa-pool-interface.png' sizes="(max-width: 767px) 100vw, 700px" %} alt="FWA 實際獎池介面，中央以弧形卡片展示 NFT 部位，右側顯示購買操作與近期活動" loading="lazy" style="width:100%;height:auto;border-radius:14px;">
   </a>
   <figcaption style="font-size:0.85rem;color:#6b7280;margin-top:0.7em;">FWA 實際獎池介面：每張卡片同時呈現擔保金、稀有度與抽中機率，右側則是購買操作與近期活動。介面截圖來源：<a href="https://www.bankless.com/read/a-beginners-guide-to-fake-world-assets" target="_blank" rel="noopener noreferrer">Bankless〈A Beginner's Guide to Fake World Assets〉</a>；著作權歸原作者及平台所有，本文為評論與機制說明引用。</figcaption>
 </figure>
