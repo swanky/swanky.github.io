@@ -4,6 +4,7 @@ date: 2026-05-31 00:04:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-gold-tokenization.svg
+og_image: /assets/img/rwa/rwa-gold-tokenization-og.jpg
 hero_image: true
 seo_title: 黃金代幣化怎麼運作？從台灣黃金存摺到鏈上黃金 RWA 完整解析
 description: "黃金代幣化是 RWA 最直觀的應用。一文看懂實體黃金到鏈上黃金的信任轉移、台灣黃金存摺的角色、為何黃金只能「孿生」不能「原生」，以及 PAXG、XAUT 的國際借鏡。"
