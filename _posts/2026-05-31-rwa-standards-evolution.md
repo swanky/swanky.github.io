@@ -4,6 +4,7 @@ date: 2026-05-31 00:02:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/rwa/rwa-standards-evolution.svg
+og_image: /assets/img/rwa/rwa-standards-evolution-og.jpg
 hero_image: true
 seo_title: RWA 代幣化標準演進史｜ERC-1400・ERC-3643・CMTAT 全解
 description: "從 2014 年 Colored Coins 到 2024 年 ERC-3643 成為唯一 Final 證券代幣標準——一篇看懂 RWA 代幣化標準的十二年演進，以及 CMTAT 為何成為機構首選。"

@@ -4,6 +4,7 @@ date: 2026-05-31 00:13:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/web3/oracle-architecture-risks.svg
+og_image: /assets/img/web3/oracle-architecture-risks-og.jpg
 hero_image: true
 seo_title: 預言機是什麼？鏈外資料如何安全進鏈｜DeFi 預言機架構與五大風險
 description: "智能合約看不到區塊鏈以外的世界，預言機（Oracle）就是它的眼睛。一文看懂預言機在做什麼、鏈外資料進鏈的流程，以及預言機的五大風險與真實攻擊案例。DeFi 基礎建設必懂。"

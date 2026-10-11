@@ -4,6 +4,7 @@ date: 2026-05-31 00:11:00 +0800
 categories: [technical]
 layout: article
 cover_image: /assets/img/web3/defi-real-yield.svg
+og_image: /assets/img/web3/defi-real-yield-og.jpg
 hero_image: true
 seo_title: DeFi 真實收益 vs 代幣通膨陷阱｜年化 100% 是真的嗎？散戶必懂的收益來源辨識
 description: "DeFi 動輒「年化 100%」的收益是真的嗎？一文教你分辨「真實收益」與「代幣通膨收益」的差別，看懂收益的真正來源，避開高 APY 背後的龐氏陷阱。DeFi 風險教育必讀。"
