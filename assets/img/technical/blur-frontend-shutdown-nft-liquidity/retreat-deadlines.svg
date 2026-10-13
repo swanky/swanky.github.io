@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img" aria-labelledby="title desc">
+<title id="title">四個退出期限，四種安排</title><desc id="desc">2026 年預定安排｜不同服務要分開看；10 月 26 日｜Blast，一般網站提取入口截止，之後改用以太坊上的橋接合約；10 月 31 日｜Lisk，Lisk Chain 停止營運，團隊轉向企業財務作業服務；11 月 12 日｜Blur，停用網站與新貸款撮合，鏈上交易協議保留，借款需處理；12 月 15 日｜Abstract，預定停止鏈的營運，核對官方的資產移出與完成期限</desc>
+<rect width="1200" height="730" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" fill="#232020" font-weight="700">四個退出期限，四種安排</text>
+<text x="36" y="103" font-size="27" fill="#665e51" font-weight="400">2026 年預定安排｜不同服務要分開看</text>
+<path d="M36 142H1164" stroke="#d9d0bf"/>
+<text x="36" y="190" font-size="24" fill="#8a5d00" font-weight="700">10 月 26 日｜Blast</text>
+<text x="445" y="190" font-size="30" fill="#232020" font-weight="700">一般網站提取入口截止</text>
+<text x="445" y="236" font-size="26" fill="#232020" font-weight="400">之後改用以太坊上的橋接合約</text>
+<path d="M36 267H1164" stroke="#d9d0bf"/>
+<text x="36" y="315" font-size="24" fill="#8a5d00" font-weight="700">10 月 31 日｜Lisk</text>
+<text x="445" y="315" font-size="30" fill="#232020" font-weight="700">Lisk Chain 停止營運</text>
+<text x="445" y="361" font-size="26" fill="#232020" font-weight="400">團隊轉向企業財務作業服務</text>
+<path d="M36 392H1164" stroke="#d9d0bf"/>
+<text x="36" y="440" font-size="24" fill="#8a5d00" font-weight="700">11 月 12 日｜Blur</text>
+<text x="445" y="440" font-size="30" fill="#232020" font-weight="700">停用網站與新貸款撮合</text>
+<text x="445" y="486" font-size="26" fill="#232020" font-weight="400">鏈上交易協議保留，借款需處理</text>
+<path d="M36 517H1164" stroke="#d9d0bf"/>
+<text x="36" y="565" font-size="24" fill="#8a5d00" font-weight="700">12 月 15 日｜Abstract</text>
+<text x="445" y="565" font-size="30" fill="#232020" font-weight="700">預定停止鏈的營運</text>
+<text x="445" y="611" font-size="26" fill="#232020" font-weight="400">核對官方的資產移出與完成期限</text>
+<text x="36" y="704" font-size="24" fill="#665e51" font-weight="400">截至 2026.10.13｜不是公司破產日期</text>
+</g></svg>

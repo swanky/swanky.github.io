@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="605" viewBox="0 0 1200 605" role="img" aria-labelledby="title desc">
+<title id="title">關掉入口，留下協議</title><desc id="desc">2026 年 11 月 12 日的預定安排；停止，官方網站與新貸款撮合，平常交易、借款的入口收縮；保留，鏈上交易協議與治理角色，程式仍在，不保證服務有人接手；需要處理，既有借款與資產提取，依公告還款；後續提取工具待提供</desc>
+<rect width="1200" height="605" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" fill="#232020" font-weight="700">關掉入口，留下協議</text>
+<text x="36" y="103" font-size="27" fill="#665e51" font-weight="400">2026 年 11 月 12 日的預定安排</text>
+<path d="M36 142H1164" stroke="#d9d0bf"/>
+<text x="36" y="190" font-size="26" fill="#8a5d00" font-weight="700">停止</text>
+<text x="305" y="190" font-size="34" fill="#232020" font-weight="700">官方網站與新貸款撮合</text>
+<text x="305" y="236" font-size="28" fill="#232020" font-weight="400">平常交易、借款的入口收縮</text>
+<path d="M36 267H1164" stroke="#d9d0bf"/>
+<text x="36" y="315" font-size="26" fill="#8a5d00" font-weight="700">保留</text>
+<text x="305" y="315" font-size="34" fill="#232020" font-weight="700">鏈上交易協議與治理角色</text>
+<text x="305" y="361" font-size="28" fill="#232020" font-weight="400">程式仍在，不保證服務有人接手</text>
+<path d="M36 392H1164" stroke="#d9d0bf"/>
+<text x="36" y="440" font-size="26" fill="#8a5d00" font-weight="700">需要處理</text>
+<text x="305" y="440" font-size="34" fill="#232020" font-weight="700">既有借款與資產提取</text>
+<text x="305" y="486" font-size="28" fill="#232020" font-weight="400">依公告還款；後續提取工具待提供</text>
+<text x="36" y="579" font-size="24" fill="#665e51" font-weight="400">依 The Block 公告報導整理｜2026.10.13</text>
+</g></svg>

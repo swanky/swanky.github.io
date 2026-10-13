@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img" aria-labelledby="title desc">
+<title id="title">貸方想退出，接下來呢？</title><desc id="desc">Blend 接續借款的簡化分支；起點，貸方啟動接續借款競價，尋找願意接手這筆債務的新貸方；A｜借款人還款，借款人還清本息，借款結束，取回抵押品；B｜新貸方接手，新貸方接受競價條件，接續借款，利率可能改變；C｜失敗且未還款，原貸方可取得抵押品，沒有固定到期日，不等於不會清算</desc>
+<rect width="1200" height="730" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" fill="#232020" font-weight="700">貸方想退出，接下來呢？</text>
+<text x="36" y="103" font-size="27" fill="#665e51" font-weight="400">Blend 接續借款的簡化分支</text>
+<path d="M36 142H1164" stroke="#d9d0bf"/>
+<text x="36" y="190" font-size="26" fill="#8a5d00" font-weight="700">起點</text>
+<text x="420" y="190" font-size="30" fill="#232020" font-weight="700">貸方啟動接續借款競價</text>
+<text x="420" y="236" font-size="28" fill="#232020" font-weight="400">尋找願意接手這筆債務的新貸方</text>
+<path d="M36 267H1164" stroke="#d9d0bf"/>
+<text x="36" y="315" font-size="26" fill="#8a5d00" font-weight="700">A｜借款人還款</text>
+<text x="420" y="315" font-size="30" fill="#232020" font-weight="700">借款人還清本息</text>
+<text x="420" y="361" font-size="28" fill="#232020" font-weight="400">借款結束，取回抵押品</text>
+<path d="M36 392H1164" stroke="#d9d0bf"/>
+<text x="36" y="440" font-size="26" fill="#8a5d00" font-weight="700">B｜新貸方接手</text>
+<text x="420" y="440" font-size="30" fill="#232020" font-weight="700">新貸方接受競價條件</text>
+<text x="420" y="486" font-size="28" fill="#232020" font-weight="400">接續借款，利率可能改變</text>
+<path d="M36 517H1164" stroke="#d9d0bf"/>
+<text x="36" y="565" font-size="26" fill="#8a5d00" font-weight="700">C｜失敗且未還款</text>
+<text x="420" y="565" font-size="30" fill="#232020" font-weight="700">原貸方可取得抵押品</text>
+<text x="420" y="611" font-size="28" fill="#232020" font-weight="400">沒有固定到期日，不等於不會清算</text>
+<text x="36" y="704" font-size="24" fill="#665e51" font-weight="400">依 Paradigm 原始設計簡化｜非個別交易重建</text>
+</g></svg>

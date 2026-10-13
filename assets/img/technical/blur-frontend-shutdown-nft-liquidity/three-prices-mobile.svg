@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="770" viewBox="0 0 640 770" role="img" aria-labelledby="title desc">
+<title id="title">三個價格，三種意思</title><desc id="desc">收藏價值不會自動變成可成交的價格；地板價，賣方開的最低掛售價，想賣多少，不等於能立刻賣掉；買方出價，有人提出的購買條件，還要核對數量、期限與適用作品；收藏者估值，我願意為這件作品付多少，特徵、故事與社群，不是人人同價</desc>
+<rect width="640" height="770" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="32" fill="#232020" font-weight="700">三個價格，三種意思</text>
+<text x="36" y="103" font-size="23" fill="#665e51" font-weight="400">收藏價值不會自動變成可成交的價格</text>
+<path d="M36 142H604" stroke="#d9d0bf"/>
+<text x="36" y="182" font-size="23" fill="#8a5d00" font-weight="700">地板價</text>
+<text x="36" y="226" font-size="30" fill="#232020" font-weight="700">賣方開的最低掛售價</text>
+<text x="36" y="270" font-size="25" fill="#232020" font-weight="400">想賣多少，不等於能立刻賣掉</text>
+<path d="M36 322H604" stroke="#d9d0bf"/>
+<text x="36" y="362" font-size="23" fill="#8a5d00" font-weight="700">買方出價</text>
+<text x="36" y="406" font-size="30" fill="#232020" font-weight="700">有人提出的購買條件</text>
+<text x="36" y="450" font-size="25" fill="#232020" font-weight="400">還要核對數量、期限與適用作品</text>
+<path d="M36 502H604" stroke="#d9d0bf"/>
+<text x="36" y="542" font-size="23" fill="#8a5d00" font-weight="700">收藏者估值</text>
+<text x="36" y="586" font-size="30" fill="#232020" font-weight="700">我願意為這件作品付多少</text>
+<text x="36" y="630" font-size="25" fill="#232020" font-weight="400">特徵、故事與社群，不是人人同價</text>
+<text x="36" y="744" font-size="20" fill="#665e51" font-weight="400">概念示意｜未使用即時行情</text>
+</g></svg>
