@@ -87,9 +87,12 @@ Malfoid 是《哈利波特》Draco Malfoy 的粉絲性轉版本，不在書、�
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/timeline.svg' | relative_url }}">
-    <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/timeline.svg' | relative_url }}" alt="時間線：十五年零星同人，2026 年 9 月 22 日後三週內擴散到 AI 短片與 LoRA" width="1200" height="520" loading="lazy">
+    <picture>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/img/technical/malfoid-ai-character-consistency/timeline-m.svg' | relative_url }}">
+      <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/timeline.svg' | relative_url }}" width="1200" height="520" alt="時間線：十五年零星同人，2026 年 9 月 22 日後三週內擴散到 AI 短片與 LoRA" loading="lazy">
+    </picture>
   </a>
-  <figcaption>十五年累積，三週擴散。資料：Know Your Meme [1]、Fandom Pulse [2]。</figcaption>
+  <figcaption>圖 1：十五年累積，三週擴散。資料：Know Your Meme [1]、Fandom Pulse [2]。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
 這張表最值得注意的不是瀏覽數，而是 **9 月 22 日到 9 月 27 日之間的 5 天**：一個只存在於幾張同人圖裡的造型，已經被整理成訓練資料、做成可下載的 LoRA，觸發詞直接寫成「femdraco, blonde hair, ringed eyes, black hoop earrings, hogwarts school uniform…」。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)
@@ -132,9 +135,12 @@ Higgsfield 的 Soul ID 也屬於這一側：要求同一人 20–80 張、多角
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/reference-roles.svg' | relative_url }}">
-    <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/reference-roles.svg' | relative_url }}" alt="四種鎖角色做法依準備成本與跨鏡頭穩定度排列：單張參考、多參考輸入、元素庫、訓練身份與 LoRA" width="1200" height="640" loading="lazy">
+    <picture>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/img/technical/malfoid-ai-character-consistency/reference-roles-m.svg' | relative_url }}">
+      <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/reference-roles.svg' | relative_url }}" width="1200" height="640" alt="四種鎖角色做法依準備成本與跨鏡頭穩定度排列：單張參考、多參考輸入、元素庫、訓練身份與 LoRA" loading="lazy">
+    </picture>
   </a>
-  <figcaption>定性排序示意，非量測。不同做法可以疊加使用。資料：[6][7][8][10]。</figcaption>
+  <figcaption>圖 2：定性排序示意，非量測。不同做法可以疊加使用。資料：[6][7][8][10]。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
 我的實務心得是：**這兩條路線不是二選一，而是疊加**。LoRA 鎖住畫風與服裝語彙，參考特徵鎖住臉，文字負責場景與動作。三者打架時，最常見的症狀是「臉對了但姿勢僵」或「姿勢對了但臉變成另一個人」——我把它理解為身份保真與可編輯性（fidelity vs. editability）之間的取捨：條件訊號越強，文字能改動的空間越小。
@@ -154,9 +160,12 @@ Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/workflow.svg' | relative_url }}">
-    <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/workflow.svg' | relative_url }}" alt="五步工作流：參考表、鎖定身份、附參考圖的 prompt、影片模型、人工挑選；不合格回到生成" width="1200" height="600" loading="lazy">
+    <picture>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/img/technical/malfoid-ai-character-consistency/workflow-m.svg' | relative_url }}">
+      <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/workflow.svg' | relative_url }}" width="1200" height="600" alt="五步工作流：參考表、鎖定身份、附參考圖的 prompt、影片模型、人工挑選；不合格回到生成" loading="lazy">
+    </picture>
   </a>
-  <figcaption>創作者公開工作流的共同骨架。工具名稱依文件與報導，未逐一實測。</figcaption>
+  <figcaption>圖 3：創作者公開工作流的共同骨架。工具名稱依文件與報導，未逐一實測。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
 ## 它會在哪裡壞 {#break}
@@ -170,9 +179,12 @@ Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/what-got-cheaper.svg' | relative_url }}">
-    <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/what-got-cheaper.svg' | relative_url }}" alt="左欄變便宜：角色一致、圖轉短片、複製角色設定；右欄沒變便宜：好梗、細節品質、權利與觀感" width="1200" height="560" loading="lazy">
+    <picture>
+      <source media="(max-width: 767px)" srcset="{{ '/assets/img/technical/malfoid-ai-character-consistency/what-got-cheaper-m.svg' | relative_url }}">
+      <img src="{{ '/assets/img/technical/malfoid-ai-character-consistency/what-got-cheaper.svg' | relative_url }}" width="1200" height="560" alt="左欄變便宜：角色一致、圖轉短片、複製角色設定；右欄沒變便宜：好梗、細節品質、權利與觀感" loading="lazy">
+    </picture>
   </a>
-  <figcaption>作者整理判斷。</figcaption>
+  <figcaption>圖 4：作者整理判斷。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
 ## 如果是我，我會這樣做角色 {#me}
