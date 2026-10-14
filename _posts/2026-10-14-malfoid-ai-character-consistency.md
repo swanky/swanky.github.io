@@ -6,12 +6,13 @@ published: true
 categories: [technical]
 tags: [ai-video, character-consistency, diffusion, lora, fan-culture]
 layout: article
+learn_kit: true
 cover_image: /assets/img/linkedin/malfoid-ai-character-consistency.jpg
 cover_alt: "史旺姬在夕陽工作室把參考照片釘上軟木板，紅線串起同一角色的不同角度與表情，一張不像的被紅筆打叉"
 hero_image: true
 use_glightbox: true
 mid_cta: false
-cta_context: agentic
+cta_context: ai-visual
 related_posts:
   - ai-video-consistency-reference-previs
   - ai-video-reference-breakdown
@@ -32,7 +33,7 @@ keywords: Malfoid, 女版馬份, AI 角色一致性, IP-Adapter, LoRA, DreamBoot
   <span class="article-tldr-label">30 秒結論</span>
   <ul>
     <li><strong>點子不新，跟進成本新</strong>：性轉馬份流傳十五年，關鍵圖發布 5 天後，Civitai 上就有以它為基礎的 LoRA。</li>
-    <li><strong>角色一致性有兩條技術路線</strong>：改權重（DreamBooth、LoRA）或在推論時注入參考特徵（IP-Adapter、InstantID）；商用影片模型把後者包成「多參考輸入」與「元素庫」。</li>
+    <li><strong>角色一致性有兩條技術路線</strong>：改權重（DreamBooth、LoRA）或在推論時注入參考特徵（IP-Adapter、InstantID）；商用影片模型則把一致性包成「多參考輸入」「元素庫」與「訓練式身份」等功能。</li>
     <li><strong>門檻從畫功移到資料準備</strong>：參考圖的角度、光線、角色分工，現在比 prompt 文字更決定成敗。</li>
     <li><strong>沒被解決的是品質尾巴與權利</strong>：逐格瑕疵、身份與可編輯性的取捨、原作 IP 與名稱爭議，模型都不會替你處理。</li>
   </ul>
@@ -64,19 +65,23 @@ keywords: Malfoid, 女版馬份, AI 角色一致性, IP-Adapter, LoRA, DreamBoot
 
 ## Malfoid 是什麼，名字為什麼有爭議 {#what}
 
-Malfoid 是《哈利波特》Draco Malfoy 的粉絲性轉版本，不在書、電影或 HBO 影集裡。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 外型很快收斂成固定規格：鉑金長髮、史萊哲林制服、綠銀條紋領帶、圈形耳環；性格是嘲諷哈利、然後臉紅的傲嬌。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over)[[3]](https://malfoid.wiki/memes)
+Malfoid 是《哈利波特》Draco Malfoy 的粉絲性轉版本，不在書、電影或 HBO 影集裡。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 外型很快收斂成固定規格：鉑金長髮、史萊哲林制服、圈形耳環；性格是嘲諷哈利、然後臉紅的傲嬌。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over)[[3]](https://malfoid.wiki/memes)
+
+先看起點。這是 9 月 22 日 @redteneri 那張被各整理站視為浪潮起點的圖：
+
+<blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center"><p>@redteneri 的 Malfoid 關鍵圖（2026-09-22）</p>&mdash; <a href="https://twitter.com/redteneri/status/2102398387194626330">在 X 上看原貼文</a></blockquote>
 
 粉絲站把它比作 2018 年把庫巴畫成公主的 Bowsette：一個大家都認得的角色，被重畫成女生，一週內洗版。[[3]](https://malfoid.wiki/memes)
 
-名字本身是爭議點。Know Your Meme 解釋，這個詞是 Malfoy 加上 incel 社群貶低女性的「foid」（源自 femoid）。[[1]](https://knowyourmeme.com/memes/malfoid-female-draco-malfoy) 該站作者也寫到，這波使用看起來不是要貶低角色，比較像兩個字剛好好拼。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 我沿用這個詞，是因為它就是這個趨勢的檢索關鍵字；不代表我接受字源。
+名字本身是爭議點。Know Your Meme 解釋，這個詞是 Malfoy 加上 incel 社群貶低女性的「foid」（源自 femoid）。[[1]](https://knowyourmeme.com/memes/malfoid-female-draco-malfoy) Fandom Pulse 引述 Know Your Meme 編輯 Phillip Hamilton 的看法：這波用法看起來不是要貶低角色，比較像兩個字剛好拼得順。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 我沿用這個詞，是因為它就是這個趨勢的檢索關鍵字；不代表我接受字源。
 
-反應也明顯分裂。Bluesky 上有繪師因原作者相關爭議遭到抨擊，刪圖道歉後改貼到 X；另一邊則有人把它當成「傳統浪漫」來推崇。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 技術媒體的評論則集中在「AI slop」與單格錯誤。[[5]](https://templepc.com/articles/malfoid-divides-the-internet-fan-fun-or-more-ai-slop/) 這些立場我只轉述，不站隊；本文要談的是它在技術上說明了什麼。
+反應也明顯分裂。Bluesky 上有繪師因原作者相關爭議遭到抨擊，刪圖道歉後改貼到 X；另一邊則有人把它當成「傳統浪漫」來推崇。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) TemplePC 的評論則整理出「AI slop」與單格錯誤這類批評。[[5]](https://templepc.com/articles/malfoid-divides-the-internet-fan-fun-or-more-ai-slop/) 這些立場我只轉述，不站隊；本文要談的是它在技術上說明了什麼。
 
 ## 三週裡發生了什麼 {#speed}
 
-依 Know Your Meme 與 Fandom Pulse 的紀錄整理（數字為各頁記錄當下，社群數字會持續變動）：
+依 Know Your Meme 與 Fandom Pulse 的紀錄整理（日期皆為 2026 年；數字為各頁記錄當下，社群數字會持續變動）：
 
-| 日期（2026） | 事件 | 紀錄數字 |
+| 日期 | 事件 | 紀錄數字 |
 |---|---|---|
 | 1 月 10 日 | 「Malfoid」一詞首次被用在 Draco 身上（純文字推文） | — [[1]](https://knowyourmeme.com/memes/malfoid-female-draco-malfoy) |
 | 9 月 22 日 | @redteneri 發布關鍵圖 | 一週 8.9 萬讚；至 10/12 達 2,190 萬瀏覽、17.4 萬讚 [[1]](https://knowyourmeme.com/memes/malfoid-female-draco-malfoy)[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) |
@@ -95,19 +100,25 @@ Malfoid 是《哈利波特》Draco Malfoy 的粉絲性轉版本，不在書、�
   <figcaption>圖 1：十五年累積，三週擴散。資料：Know Your Meme [1]、Fandom Pulse [2]。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
-這張表最值得注意的不是瀏覽數，而是 **9 月 22 日到 9 月 27 日之間的 5 天**：一個只存在於幾張同人圖裡的造型，已經被整理成訓練資料、做成可下載的 LoRA，觸發詞直接寫成「femdraco, blonde hair, ringed eyes, black hoop earrings, hogwarts school uniform…」。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)
+這張表最值得注意的不是瀏覽數，而是 **9 月 22 日到 9 月 27 日之間的 5 天**：一個只存在於幾張同人圖裡的造型，已經被整理成訓練資料、做成可下載的 LoRA，觸發詞裡直接列著 `femdraco`、`blonde hair`、`ringed eyes`、`black hoop earrings`、`hogwarts school uniform` 等標籤。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)
 
 **換句話說，角色設定第一次以「可執行的權重檔」形式流通，而不只是一張圖。**
+
+一週後的 9 月 29 日，@masoq095 這張三個版本的圖，已經是在既定規格上做變化，而不是重新設計角色：
+
+<blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center"><p>@masoq095 的三版本 Malfoid（2026-09-29）</p>&mdash; <a href="https://twitter.com/masoq095/status/2105042738517295257">在 X 上看原貼文</a></blockquote>
 
 ## 為什麼是這個角色、這個時間點 {#why-now}
 
 我的判斷是三個條件同時成立，以下屬於分析而非量測：
 
-1. **角色規格低熵、高辨識**：鉑金長髮＋綠銀領帶＋黑袍，幾個屬性就能定義一個人。對生成模型來說，屬性越少、越對比，身份越容易被鎖住。
-2. **敘事單位剛好等於模型能撐的長度**：嘲諷、停頓、臉紅，一個情緒轉折。AutoWeeb 也觀察到，這些多是不到一分鐘的直式短片，「AI 影片終於能讓一張臉撐到微表情落地」。[[4]](https://autoweeb.com/blog/malfoid-anime-trend-explained)
+1. **角色規格低熵、高辨識**：鉑金長髮＋史萊哲林制服＋圈形耳環，幾個屬性就能定義一個人。對生成模型來說，屬性越少、越對比，身份越容易被鎖住。
+2. **敘事單位剛好等於模型能撐的長度**：嘲諷、停頓、臉紅，一個情緒轉折。AutoWeeb 也觀察到，這些多半是一分鐘內的直式短片，而 AI 影片已經能讓同一張臉停留得夠久，讓微表情被看見。[[4]](https://autoweeb.com/blog/malfoid-anime-trend-explained)
 3. **工具鏈在 2026 年已經成熟到「拿來就用」**：Seedance 2.5 一次可吃 30 張圖的參考，Kling 有元素庫，Higgsfield 有訓練式身份；社群又同步釋出 LoRA。[[6]](https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-create-and-use-a-soul-id-character)[[7]](https://runware.ai/docs/models/bytedance-seedance-2-5/guides/multi-reference-production)[[8]](https://kling.ai/quickstart/klingai-element-library-3-user-guide)
 
-2024 年 @grizz056 那次，第一點已經成立，缺的是第二、三點。
+2024 年 @grizz056 那次，第一點已經成立，缺的是第二、三點。對照一下就知道，造型早就在那裡了：
+
+<blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center"><p>If malfoy was a girl（@grizz056，2024-03-10）</p>&mdash; <a href="https://twitter.com/grizz056/status/1766771258178613565">在 X 上看原貼文</a></blockquote>
 
 ## 路線一：把角色寫進權重 {#weights}
 
@@ -117,7 +128,7 @@ Malfoid 是《哈利波特》Draco Malfoy 的粉絲性轉版本，不在書、�
 
 - **Textual Inversion**（Gal et al., 2022）：完全不動生成模型，只在文字編碼器的詞嵌入空間學一個新向量 `S*`，用 3–5 張圖讓「一個新字」代表這個概念。[[13]](https://arxiv.org/abs/2208.01618) 參數極少、可攜，但表達力有限，臉部細節常抓不穩。
 - **DreamBooth**（Ruiz et al., 2022）：微調整個 U-Net，把罕見 token 綁到主體上，並加入 **class-specific prior preservation loss**，用模型自己生成的同類別圖片做正則，避免「所有女生都長成她」的語言漂移與過擬合。[[14]](https://arxiv.org/abs/2208.12242) 保真度高，但每個角色都要一份完整權重。
-- **LoRA**（Hu et al., 2021）：原本為大型語言模型提出，凍結預訓練權重 `W`，只學低秩增量 `ΔW = BA`（秩 r 遠小於維度）。[[15]](https://arxiv.org/abs/2106.09685) 套用到擴散模型的注意力層後，一個角色的權重差異可以壓到上百 MB 級，正好符合 Civitai 上 Malfoid LoRA 的 66–218 MB 檔案大小。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)[[12]](https://civitai.com/models/2978006/malfoid)
+- **LoRA**（Hu et al., 2021）：原本為大型語言模型提出，凍結預訓練權重 `W`，只學低秩增量 `ΔW = BA`（秩 r 遠小於維度）。[[15]](https://arxiv.org/abs/2106.09685) 套用到擴散模型的注意力層後，一個角色從動輒數 GB 的完整模型，縮成幾十到兩百多 MB 的增量檔；Civitai 上這幾個 Malfoid LoRA 就是 66–218 MB。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)[[12]](https://civitai.com/models/2978006/malfoid)
 
 這條路線的取捨很清楚：**先付訓練成本，換來推論時不必再帶參考圖**。缺點是綁死基底模型——Civitai 上同一個角色就分別有 Anima、Illustrious、Krea 2 版本，因為 LoRA 不能跨架構直接共用。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter)[[11]](https://civitai.com/models/2981000/malfoid-or-draco-malfoy-or-meme-or-illustrious-xl)[[12]](https://civitai.com/models/2978006/malfoid)
 
@@ -131,7 +142,7 @@ Higgsfield 的 Soul ID 也屬於這一側：要求同一人 20–80 張、多角
 - **InstantID**（Wang et al., 2024）：專攻人臉。它不用 CLIP 那種偏語意的全域特徵，改用人臉辨識模型抽出的 **ID embedding** 加上臉部關鍵點，經過 IdentityNet 做空間條件控制，號稱單張圖、零訓練就能保留身份。[[17]](https://arxiv.org/abs/2401.07519)
 - **PhotoMaker**（Li et al., 2023）：把多張輸入照片的 ID embedding 堆疊成 **stacked ID embedding**，用多張圖互補單張圖的姿勢、光線偏差。[[18]](https://arxiv.org/abs/2312.04461)
 
-這條路線的優點是**零訓練、即插即用**；代價是每次都要帶參考圖，而且編碼器看到什麼，就只能保留什麼。CLIP 特徵偏語意，常保住「金髮、綠領帶」卻漏掉眼型；人臉 ID 特徵則對動漫臉、側臉與遮擋不穩，因為辨識模型主要是用真人照片訓練。
+這條路線的優點是**零訓練、即插即用**；代價是每次都要帶參考圖，而且編碼器看到什麼，就只能保留什麼。依我的理解，CLIP 特徵偏語意，常保住「金髮、綠領帶」卻漏掉眼型；人臉 ID 特徵則對動漫臉、側臉與遮擋不穩，因為辨識模型主要是用真人照片訓練。
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/reference-roles.svg' | relative_url }}">
@@ -143,7 +154,7 @@ Higgsfield 的 Soul ID 也屬於這一側：要求同一人 20–80 張、多角
   <figcaption>圖 2：定性排序示意，非量測。不同做法可以疊加使用。資料：[6][7][8][10]。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
 
-我的實務心得是：**這兩條路線不是二選一，而是疊加**。LoRA 鎖住畫風與服裝語彙，參考特徵鎖住臉，文字負責場景與動作。三者打架時，最常見的症狀是「臉對了但姿勢僵」或「姿勢對了但臉變成另一個人」——我把它理解為身份保真與可編輯性（fidelity vs. editability）之間的取捨：條件訊號越強，文字能改動的空間越小。
+我的判斷是：**這兩條路線不是二選一，而是疊加**。LoRA 鎖住畫風與服裝語彙，參考特徵鎖住臉，文字負責場景與動作。三者打架時，最常見的症狀是「臉對了但姿勢僵」或「姿勢對了但臉變成另一個人」——我把它理解為身份保真與可編輯性（fidelity vs. editability）之間的取捨：條件訊號越強，文字能改動的空間越小。
 
 ## 影片模型把這些包成產品 {#video}
 
@@ -153,10 +164,16 @@ Malfoid 短片用到的 Seedance、Kling、Higgsfield 是商用系統，**沒有
 |---|---|---|---|
 | Seedance 2.5（經 Runware） | 單次最多 30 圖、10 影片、10 音訊參考；以 `@Image1` 在 prompt 中指名 | 每張參考指派角色名；排在前面的參考身份保持最穩；最後加「保留臉、髮、服裝」條款 | 多個參考會互相平均，需要明確綁定 [[7]](https://runware.ai/docs/models/bytedance-seedance-2-5/guides/multi-reference-production) |
 | Kling 3.0 Element | 元素需 2–4 張圖（1 主＋最多 3 補充）；可跨鏡頭重複呼叫 | 多角度、多表情 | 身份是一個可重用的「資產」 [[8]](https://kling.ai/quickstart/klingai-element-library-3-user-guide) |
-| Kling 3.0 Motion Control | 參考圖＋參考動作影片；可綁 1 個臉部元素 | 角色需佔畫面 5% 以上、避免遮擋；動作影片最長 30 秒 | 動作與身份分開供應 [[9]](https://fal.ai/models/fal-ai/kling-video/v3/pro/motion-control/api) |
+| Kling 3.0 Motion Control | 參考圖＋參考動作影片；可綁 1 個臉部元素 | 參考圖中角色需佔畫面 5% 以上、避免遮擋；動作影片最長 30 秒（以影片定方向時；以圖片定方向為 10 秒） | 動作與身份分開供應 [[9]](https://fal.ai/models/fal-ai/kling-video/v3/pro/motion-control/api) |
 | Higgsfield Soul ID | 訓練式身份 | 20–80 張同一人照片、含全身照 | 用訓練換跨生成穩定 [[6]](https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-create-and-use-a-soul-id-character) |
 
-Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各自綁定角色名，會被模型「平均成一個合成臉」。[[7]](https://runware.ai/docs/models/bytedance-seedance-2-5/guides/multi-reference-production) 這跟 PhotoMaker 堆疊 ID embedding 時要處理的問題本質相同——多個身份訊號在條件空間裡混在一起。
+Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各自綁定角色名，會被模型平均成一個混合的結果。[[7]](https://runware.ai/docs/models/bytedance-seedance-2-5/guides/multi-reference-production) 這跟 PhotoMaker 的 stacked ID embedding 是同一件事的兩面：PhotoMaker 刻意把多張圖的身份特徵合併，論文甚至示範拿它混合不同人；[[18]](https://arxiv.org/abs/2312.04461) Runware 文件要防的，正是不同角色在沒被區分時被意外混在一起。
+
+實際成品可以看 @ZeyHashimoto 的系列短片。下面兩支相隔兩天：一支 30 秒、一支是 Fandom Pulse 提到的一分鐘舞會片段。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 帳號沒有公開完整工作流，這裡只當成品參考；值得看的是同一個角色換了場景、服裝和鏡頭之後，還剩多少「是她」。
+
+<blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center"><p>#Malfoid is NOT going with Potter.（@ZeyHashimoto，2026-10-10）</p>&mdash; <a href="https://twitter.com/ZeyHashimoto/status/2108978798024945704">在 X 上看原貼文</a></blockquote>
+
+<blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center"><p>Potter asked if she enjoyed the dance.（@ZeyHashimoto，2026-10-12）</p>&mdash; <a href="https://twitter.com/ZeyHashimoto/status/2109563994881024314">在 X 上看原貼文</a></blockquote>
 
 <figure class="ae-fig ae-fig--wide">
   <a class="portfolio-lightbox" data-gallery="malfoid-ai-character-consistency" data-type="image" href="{{ '/assets/img/technical/malfoid-ai-character-consistency/workflow.svg' | relative_url }}">
@@ -172,8 +189,8 @@ Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各
 
 把角色鎖住，不等於把片子做好。至少有四個尾巴還在：
 
-1. **逐格瑕疵與時間一致性**：TemplePC 整理的反應裡，最常見的批評就是單格錯誤與「AI slop」。[[5]](https://templepc.com/articles/malfoid-divides-the-internet-fan-fun-or-more-ai-slop/) 影片模型的身份保持是逐幀條件，長鏡頭、大轉頭、手部遮臉時最容易漂。
-2. **風格域外推**：InstantID、Soul ID 這類用真人照片訓練的身份系統，碰上動漫臉會失準；Soul ID 文件也承認極端風格轉換會帶來漂移。[[6]](https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-create-and-use-a-soul-id-character) 這就是為什麼 Malfoid 社群主要用動漫基底的 LoRA，而不是人臉身份模型。
+1. **逐格瑕疵與時間一致性**：TemplePC 整理的反應裡，就有單格錯誤與「AI slop」的批評，暫停畫面時特別明顯。[[5]](https://templepc.com/articles/malfoid-divides-the-internet-fan-fun-or-more-ai-slop/) 我推測最容易漂的是長鏡頭、大轉頭、手部遮臉這類畫面——參考圖沒涵蓋到的角度，模型只能自己補。
+2. **風格域外推**：InstantID 這類依賴人臉辨識特徵的做法，辨識模型多半用真人照片訓練，我預期碰上動漫臉會失準；Soul ID 文件也提醒，極端風格轉換或少見角度會帶來輕微漂移。[[6]](https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-create-and-use-a-soul-id-character) 這或許是 Malfoid 社群多用動漫基底 LoRA 的原因之一，雖然更直接的理由是這波內容本來就以動漫風為主。
 3. **權利沒有被降低**：這是未授權的《哈利波特》衍生創作。LoRA 把「誰的設計」也一併打包——Civitai 上那份模型名稱直接寫著「Based on Redteneri's Genderswap Draco」。[[10]](https://civitai.com/models/2967285/draco-malfoid-malfoy-redteneri-genderswap-femdraco-or-harry-potter) 原作 IP、二創繪師的設計、訓練資料的取得，三層權利都沒有因為工具變簡單而消失。
 4. **社群觀感**：同一張圖在 X 拿到十幾萬讚，在 Bluesky 卻讓繪師刪圖道歉。[[2]](https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over) 平台文化本身就是產品風險。
 
@@ -189,7 +206,7 @@ Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各
 
 ## 如果是我，我會這樣做角色 {#me}
 
-這個網站的 Banner 主角史旺姬，就是我每天在處理的同一個問題：模型不會記得她長什麼樣子，所以每一次生成都要附上同一組參考照。從 Malfoid 這波，我會帶走四個判準：
+這個網站的 Banner 主角史旺姬，就是我一直在處理的同一個問題：模型不會記得她長什麼樣子，所以每一次生成都要附上同一組參考照。從 Malfoid 這波，我會帶走四個判準：
 
 | 判準 | 具體做法 | 為什麼 |
 |---|---|---|
@@ -200,7 +217,9 @@ Runware 的文件有一段很有技術含量的觀察：三張人像若沒有各
 
 工具把「讓她一直是她」變成了一份資料準備工作。可是讓人想按讚的，還是那個「嘲諷完會臉紅」的念頭——那一步，到現在還沒有人能用 LoRA 打包。
 
-本文資料截點為 2026 年 10 月 14 日；社群數字依各來源記錄當下，原始 X 貼文未逐一直接讀取，以 Know Your Meme 與 Fandom Pulse 的轉述為準。
+本文資料截點為 2026 年 10 月 14 日；社群數字依各來源記錄當下，以 Know Your Meme 與 Fandom Pulse 的轉述為準。文中內嵌的 X 貼文版權屬原作者，已核對作者與發文日期。
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## 參考資料
 
