@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Noto Sans TC, sans-serif">
+<title>角色一致的 AI 短片工作流：鎖定在前，挑選在後</title>
+<desc>五步：角色參考表、鎖定身份（多圖參考、Soul ID、LoRA）、場景 prompt 加參考圖、影片模型生成、人工挑選與剪接；挑選不合格時回到生成。</desc>
+<rect width="1200" height="600" fill="#fbfaf7"/>
+<text x="60" y="64" font-size="30" font-weight="700" fill="#1f2a37">門檻降低的地方，是「讓同一個人一直是同一個人」</text>
+<g font-size="20" fill="#1f2a37">
+<rect x="40" y="150" width="200" height="170" rx="14" fill="#e8f3ee" stroke="#1a7f5a" stroke-width="2"/><text x="60" y="195" font-weight="700">① 角色參考表</text><text x="60" y="235" font-size="17">多角度、多表情</text><text x="60" y="262" font-size="17">社群公開分享</text>
+<rect x="270" y="150" width="200" height="170" rx="14" fill="#e8f3ee" stroke="#1a7f5a" stroke-width="2"/><text x="290" y="195" font-weight="700">② 鎖定身份</text><text x="290" y="235" font-size="17">多圖參考輸入</text><text x="290" y="262" font-size="17">Soul ID／LoRA</text>
+<rect x="500" y="150" width="200" height="170" rx="14" fill="#fff" stroke="#9aa5b1" stroke-width="2"/><text x="520" y="195" font-weight="700">③ 場景 prompt</text><text x="520" y="235" font-size="17">每次都附參考圖</text><text x="520" y="262" font-size="17">角色＋場景＋風格</text>
+<rect x="730" y="150" width="200" height="170" rx="14" fill="#fff" stroke="#9aa5b1" stroke-width="2"/><text x="750" y="195" font-weight="700">④ 影片模型</text><text x="750" y="235" font-size="17">Seedance、Kling、</text><text x="750" y="262" font-size="17">Minimax、Vidu</text>
+<rect x="960" y="150" width="200" height="170" rx="14" fill="#fdecea" stroke="#c0392b" stroke-width="2"/><text x="980" y="195" font-weight="700">⑤ 人工挑選</text><text x="980" y="235" font-size="17">手、臉漂移、長鏡頭</text><text x="980" y="262" font-size="17">串接成短片</text>
+</g>
+<g stroke="#52606d" stroke-width="3" fill="none"><path d="M240 235h28M470 235h28M700 235h28M930 235h28"/><path d="M1060 320 v80 H830 v-78" stroke-dasharray="8 6"/></g>
+<text x="860" y="430" font-size="18" fill="#c0392b">不合格 → 回到生成，不是回到畫圖</text>
+<text x="60" y="500" font-size="18" fill="#1f2a37">綠色兩格，過去要靠畫功或大量訓練；現在變成「準備好參考圖」這件事。</text>
+<text x="60" y="560" font-size="16" fill="#7b8794">資料：使用者提供素材整理之創作者公開工作流；工具名稱為素材記載，未逐一實測。</text>
+</svg>

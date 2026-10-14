@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Noto Sans TC, sans-serif">
+<title>變便宜的與沒變便宜的</title>
+<desc>變便宜：讓角色長得一樣、把一張圖做成會動的短片、複製別人的角色設定。沒變便宜：想出一個好梗、長鏡頭與細節品質、權利與名稱爭議、社群觀感。</desc>
+<rect width="1200" height="560" fill="#fbfaf7"/>
+<text x="60" y="62" font-size="30" font-weight="700" fill="#1f2a37">AI 拆掉的是製作門檻，不是全部門檻</text>
+<rect x="60" y="100" width="520" height="400" rx="16" fill="#e8f3ee" stroke="#1a7f5a" stroke-width="2"/>
+<text x="90" y="150" font-size="24" font-weight="700" fill="#1a7f5a">變便宜了</text>
+<g font-size="20" fill="#1f2a37"><text x="90" y="210">• 讓同一個角色長得一樣</text><text x="90" y="260">• 從一張圖做成會動的短片</text><text x="90" y="310">• 複製別人公開的角色設定（LoRA、參考表）</text><text x="90" y="360">• 一個人就能連載迷你劇情</text></g>
+<rect x="620" y="100" width="520" height="400" rx="16" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+<text x="650" y="150" font-size="24" font-weight="700" fill="#c0392b">沒有變便宜</text>
+<g font-size="20" fill="#1f2a37"><text x="650" y="210">• 想出「嘲諷完會臉紅」這種梗</text><text x="650" y="260">• 逐格瑕疵、長鏡頭穩定</text><text x="650" y="310">• 原作 IP 與名稱字源的爭議</text><text x="650" y="360">• 觀眾對「AI slop」的反感</text></g>
+<text x="60" y="540" font-size="15" fill="#7b8794">作者整理判斷；依據見文中引用 [1][2][5][6]。</text>
+</svg>

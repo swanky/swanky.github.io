@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Noto Sans TC, sans-serif">
+<title>Malfoid 從零星同人圖到 AI 短片的時間線</title>
+<desc>2011 Tumblr 性轉圖；2024-03-10 @grizz056；2026-01-10 首次出現 Malfoid 一詞；2026-09-22 @redteneri 關鍵圖；9/27–29 大量跟進並進入 r/dankmemes；9 月底到 10 月 AI 短片與 LoRA 出現。</desc>
+<rect width="1200" height="520" fill="#fbfaf7"/>
+<text x="60" y="64" font-size="30" font-weight="700" fill="#1f2a37">十五年的零星同人，三週變成 AI 影片題材</text>
+<line x1="80" y1="270" x2="1130" y2="270" stroke="#9aa5b1" stroke-width="4"/>
+<g font-size="20" fill="#1f2a37">
+<circle cx="110" cy="270" r="12" fill="#9aa5b1"/><text x="70" y="230" font-weight="700">2011</text><text x="70" y="320">Tumblr 性轉圖</text>
+<circle cx="290" cy="270" r="12" fill="#9aa5b1"/><text x="240" y="230" font-weight="700">2024-03</text><text x="240" y="320">@grizz056</text><text x="240" y="348" font-size="17" fill="#52606d">6 萬讚，未成潮流</text>
+<circle cx="470" cy="270" r="12" fill="#9aa5b1"/><text x="420" y="230" font-weight="700">2026-01</text><text x="420" y="320">「Malfoid」</text><text x="420" y="348" font-size="17" fill="#52606d">首次出現（純文字）</text>
+<circle cx="680" cy="270" r="18" fill="#1a7f5a"/><text x="630" y="210" font-weight="700" fill="#1a7f5a" font-size="24">9/22</text><text x="610" y="320" font-weight="700">@redteneri 關鍵圖</text><text x="610" y="348" font-size="17" fill="#52606d">一週 8.9 萬讚</text>
+<circle cx="860" cy="270" r="14" fill="#1a7f5a"/><text x="815" y="230" font-weight="700">9/27–29</text><text x="815" y="320">多位繪師跟進</text><text x="815" y="348" font-size="17" fill="#52606d">進入 r/dankmemes</text>
+<circle cx="1060" cy="270" r="14" fill="#c0392b"/><text x="985" y="230" font-weight="700">9 月底–10 月</text><text x="985" y="320">AI 短片、LoRA</text><text x="985" y="348" font-size="17" fill="#52606d">角色表、生成網站</text>
+</g>
+<text x="60" y="470" font-size="16" fill="#7b8794">資料：Know Your Meme（2026-10-08 更新）與使用者提供素材整理；按讚數為該頁記錄時數值。</text>
+</svg>

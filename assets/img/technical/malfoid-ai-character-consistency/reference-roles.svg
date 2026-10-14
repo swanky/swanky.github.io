@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" font-family="Noto Sans TC, sans-serif">
+<title>四種鎖角色的方法：準備成本與能鎖住的範圍</title>
+<desc>單張參考圖：零準備但跨多次生成會漂；多參考輸入（Seedance 2.5 最多 30 張圖）：每次附上、需指定角色；Element（Kling，2 到 4 張圖）：建一次重複用；訓練身份 Soul ID（20 到 80 張）與 LoRA：先付訓練成本，之後最穩。</desc>
+<rect width="1200" height="640" fill="#fbfaf7"/>
+<text x="60" y="62" font-size="30" font-weight="700" fill="#1f2a37">鎖角色的四種做法：先付多少準備，換多穩的臉</text>
+<line x1="120" y1="560" x2="1140" y2="560" stroke="#52606d" stroke-width="3"/><text x="960" y="600" font-size="18" fill="#52606d">準備成本 →</text>
+<line x1="120" y1="560" x2="120" y2="110" stroke="#52606d" stroke-width="3"/><text x="40" y="130" font-size="18" fill="#52606d">跨鏡頭</text><text x="40" y="154" font-size="18" fill="#52606d">穩定度</text>
+<g font-size="19" fill="#1f2a37">
+<rect x="150" y="430" width="230" height="100" rx="12" fill="#fff" stroke="#9aa5b1" stroke-width="2"/><text x="166" y="468" font-weight="700">單張參考圖</text><text x="166" y="500" font-size="16">零準備；多次生成會漂</text>
+<rect x="390" y="320" width="250" height="110" rx="12" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/><text x="406" y="358" font-weight="700">多參考輸入</text><text x="406" y="388" font-size="16">Seedance 2.5：一次最多 30 圖</text><text x="406" y="412" font-size="16">每張要指定「負責什麼」</text>
+<rect x="650" y="220" width="240" height="110" rx="12" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/><text x="666" y="258" font-weight="700">Element 元素庫</text><text x="666" y="288" font-size="16">Kling：2–4 張建一次</text><text x="666" y="312" font-size="16">之後用 @ 呼叫</text>
+<rect x="900" y="120" width="230" height="130" rx="12" fill="#e8f3ee" stroke="#1a7f5a" stroke-width="2"/><text x="916" y="158" font-weight="700">訓練身份／LoRA</text><text x="916" y="188" font-size="16">Soul ID：20–80 張</text><text x="916" y="212" font-size="16">LoRA：社群幾天內上架</text><text x="916" y="236" font-size="16">仍是「像」，不是複製</text>
+</g>
+<text x="60" y="625" font-size="15" fill="#7b8794">示意定性排序，非量測。資料：Runware Seedance 2.5 文件、Kling Element 使用指南、Higgsfield Soul ID 說明、Civitai 模型頁（2026-10 讀取）。</text>
+</svg>
