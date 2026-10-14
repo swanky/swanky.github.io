@@ -2,7 +2,7 @@
 title: "Malfoid 三週爆紅：AI 把「角色一致」從畫功變成資料準備"
 seo_title: "Malfoid 女版馬份爆紅解析：IP-Adapter、LoRA、DreamBooth 與多參考影片模型如何鎖住角色"
 date: 2026-10-14
-published: false
+published: true
 categories: [technical]
 tags: [ai-video, character-consistency, diffusion, lora, fan-culture]
 layout: article
