@@ -5,16 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e0d0b">
 
-  <!-- Google tag (gtag.js)：沿用站上既有 GA4 property，非新建 ID。
-       金瓶梅宇宙其餘頁面（layout: null／jinpingmei-character／jinpingmei-chapter）目前皆未掛 gtag，
-       但本批 Shorts 承接頁的核心目的就是量測導流成效，缺了這段所有 gtag 事件都會靜默失效。 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB1R6G61LY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SB1R6G61LY');
-  </script>
+  <!-- Google tag：Shorts 承接頁的核心目的就是量測導流成效，缺了這段所有 gtag 事件都會靜默失效。
+       走共用 include，沿用其正式網域守衛（本機預覽不寫進正式報表）。 -->
+  {% include gtag.html %}
 
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.description }}">
