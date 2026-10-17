@@ -1,0 +1,285 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/r1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+layout: ai-learn-chapter
+title: 原則：把要求說清楚的四招
+seo_title: Prompt 怎麼寫更清楚？官方文件教的四個原則｜Prompt 進階第二幕
+description: 六塊積木之外，Anthropic、OpenAI、Google、Microsoft 官方文件還教了四件事：規則附理由、指示和資料分開放、先定義怎樣算完成、讓 AI 先反問你。每個原則附一句可以直接抄的話與小測驗。
+keywords: Prompt技巧,提示詞原則,完成條件,Prompt三明治,XML標籤,讓AI反問,寫N個字,史旺基
+permalink: /education/ai/learn/prompt-writing/principles/
+nav_active: education
+use_ai_learn: true
+use_glightbox: true
+ai_module: prompt-writing
+ai_chapter: principles
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+  - name: 原則：把要求說清楚的四招
+    url: /education/ai/learn/prompt-writing/principles/
+lead: 上一幕說，框架只是檢查清單。那麼六塊積木之外，做 AI 的公司在官方文件裡還多教了什麼？整理下來是四件事，每一件都附一句可以直接抄的話。
+question: 四家大廠的官方文件都有提，但〈AI 入門〉還沒講的寫法是什麼？
+hero_illus:
+  code: R1
+  src: /assets/img/ai-learn/prompt-writing/r1.webp
+  width: 1536
+  height: 1024
+  alt: AI 生成插畫：科技大廳中央立著一座亮著紅綠燈的驗收閘門，胸口有藍色光球的小機器人捧著完成的文件走過來；史旺姬拿著打勾清單逐項核對，戴白色笑臉大帽的老師把手放在閘門拉桿上，等她點頭
+  desc: 交件前，先過驗收閘門
+outro: 第二幕到這裡：四個原則都在做同一件事——把要求說清楚。下一幕反過來看：網路上那些不說清楚、只靠情緒施壓的「咒語」，到底有沒有用？
+takeaways:
+  - 規則附理由：多寫一句「因為……」，AI 就能自己判斷沒寫到的情況。
+  - 指示和資料分開放：長文件用標籤框起來放上面，要它做的事寫在最後；一次交辦一件事，不同層次的要求拆開講。
+  - 先定義怎樣算完成：「好」要寫成可以打勾的條件，不要寫成形容詞；字數改成段數和句數這種一眼能驗收的要求。
+  - 讓 AI 先反問你：不確定自己漏了什麼時，請它一題一題問，每題附建議答案、每輪設上限。
+  - 與其每次答錯再追問，不如把追問的內容提前寫進 Prompt；改兩次還不對，就開新對話重寫。
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+{% assign basics = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section id="newhire" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-person-plus" aria-hidden="true"></i>第二幕開場</span>
+      <h2>還是那位聰明的新同事，只是這次要教他「為什麼」</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-prose">
+        <p>〈AI 入門〉說過，Anthropic 官方指南建議把 AI 當成一位<strong>聰明、但剛到職的新同事</strong>：他做得出來，只是不知道這個團隊的慣例和做事方式（複習：{% include ai-learn/chref.html module=basics slug="prompt" anchor="prompt" label="交辦給第一天上班的新同事" %}）。</p>
+        <p>有意思的是，做 AI 的公司自己也照這個方向改。Anthropic 的 Claude Code 團隊分享過：他們把產品內建、使用者看不到的那段系統提示詞，砍掉了大約八成；「不要做什麼」寫少一點，改成多給任務脈絡，也就是為什麼要做、現在的限制是什麼。</p>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-list-ol" aria-hidden="true"></i>這一幕的四個原則</div>
+        <ol class="ae-numlist">
+          <li><span><a href="#reason">規則要附理由</a></span></li>
+          <li><span><a href="#sandwich">指示和資料分開放</a></span></li>
+          <li><span><a href="#done">先定義怎樣算完成</a></span></li>
+          <li><span><a href="#askme">讓 AI 先反問你</a>（追問的升級版）</span></li>
+        </ol>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>新同事需要的是背景和理由，不是一長串禁令。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic〈Prompting best practices〉</a>；<a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/" target="_blank" rel="noopener">Simon Willison 記錄 Claude Code 團隊的分享 (2026-07-21)</a>；站上導讀：<a href="{{ '/technical/fable-field-guide/' | relative_url }}">Fable 田野指南</a>。</p>
+  </div>
+</section>
+
+<section id="reason" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-chat-square-quote" aria-hidden="true"></i>原則 1：規則附理由</span>
+      <h2>只給規則，AI 只改那一個字；附上理由，它會舉一反三</h2>
+    </div>
+    <div class="ae-prose">
+      <p>Anthropic 官方指南舉過一個例子：與其寫「絕對不要用刪節號」，不如寫「你的回答會交給語音朗讀引擎念出來，所以不要用刪節號，因為引擎不知道怎麼念它」。官方的說法是：<strong>AI 夠聰明，能從理由推到其他情況</strong>。</p>
+      <p>下面用一份公告示範（內容為虛構）：規則是「不要寫 ETA」。看 AI 是只避開那一個縮寫，還是連其他看不懂的縮寫也一起換掉。</p>
+    </div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-principles" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-reason.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-reason-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-reason.svg' | relative_url }}" width="1200" height="886" alt="同樣是不要寫 ETA。只給規則時，AI 寫出的公告一項正確（預計週五送達）、兩項錯誤（仍寫 SLA 達 99.9%、本季 KPI 已達標）；加上理由「因為讀者是剛加入的新人和長輩，看不懂英文縮寫」後，三項都正確：預計週五送達、服務正常運作率 99.9%、本季目標已達成">
+        </picture>
+      </a>
+      <figcaption>圖 1：只給規則 vs 附上理由（示意）。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「……，因為……」：每條規則後面，附一句理由。</p>
+    <p class="ae-key"><small>只記一句</small>多寫一句「因為……」，AI 就能自己判斷沒寫到的情況。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic〈Prompting best practices〉Add context to improve performance</a>；公告例為示意。</p>
+  </div>
+</section>
+
+<section id="camera" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-camera-reels" aria-hidden="true"></i>先看一例：拍影片的官方指南</span>
+      <h2>一個鏡頭，只放一個運鏡、一個動作</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-prose">
+        <p>進原則 2 之前，先看 OpenAI 給影片 AI「Sora 2」寫的官方提示指南。它說：<strong>動作往往是最難做對的部分，所以保持簡單</strong>。每個鏡頭只放一個明確的運鏡，加上主角一個明確的動作。</p>
+        <p>動作要拆成一拍一拍寫，例如「走四步到窗邊、停一下，最後一秒拉開窗簾」。片段也是越短越好控制：兩段 4 秒再剪在一起，常常比一段 8 秒穩。</p>
+      </div>
+      <div class="ae-grid" style="--cols:1">
+        <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>全塞進一句（示意）</h3><p>推軌、環繞、慢動作、轉身又奔跑，全寫在同一個鏡頭裡：AI 只好自己猜怎麼分。</p></div></div>
+        <div class="ae-yn" data-c="prompt"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>拆開來交辦</h3><p>一鏡一個運鏡、一個動作；兩人對話就拆成三個鏡頭，再剪起來。</p></div></div>
+      </div>
+    </div>
+    <p class="ae-tip"><b>寫信、做報表也一樣：</b>背景資料、規則、這次要做的事，分開放。這就是原則 2。想看兩人對話怎麼拆鏡，站上有一篇完整圖解：<a href="{{ '/technical/ai-video-camera-language-prompt/' | relative_url }}">先把鏡頭語言分成三層</a>。</p>
+    <p class="ae-key"><small>只記一句</small>一次交辦一件事；不同層次的要求，拆開來各自交代。</p>
+    <p class="ae-source">出處：<a href="https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide" target="_blank" rel="noopener">OpenAI〈Sora 2 Prompting Guide〉</a>。</p>
+  </div>
+</section>
+
+<section id="sandwich" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-diagram-3" aria-hidden="true"></i>原則 2：指示和資料分開放</span>
+      <h2>Prompt 三明治：資料框起來放上面，任務放最後</h2>
+    </div>
+    <div class="ae-prose"><p>貼一大段會議紀錄或客戶來信給 AI 時，最怕它分不清哪些是「要它讀的資料」、哪些是「要它照做的指示」。做法有兩個：<strong>用成對的標籤把資料框起來</strong>，例如 &lt;資料&gt;……&lt;/資料&gt;；再把<strong>這次要它做的事放在最後</strong>。這些符號直接打進對話框就好，AI 看得懂。</p></div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-principles" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-sandwich.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-sandwich-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-sandwich.svg' | relative_url }}" width="1200" height="826" alt="Prompt 三明治由上到下四層：最上面是資料（長文件、信件、會議紀錄），其次是範例（想要的成品長什麼樣子），再來是指示（規則與理由、格式、完成條件），最後一層是這次的任務">
+        </picture>
+      </a>
+      <figcaption>圖 2：Prompt 三明治（史旺基整理）。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <div class="ae-prose ae-mt"><p>三家的官方建議，大方向一致、細節不同。誠實地列出來：</p></div>
+    <div class="ae-datatable-wrap">
+      <table class="ae-datatable ae-datatable--text">
+        <thead><tr><th scope="col">誰說的</th><th scope="col">長文件放哪</th><th scope="col">指示放哪</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Anthropic</th><td>放最上面</td><td>問題放最後；官方內部測試，在複雜、多份文件的情況下，回答品質最多可提升約 30%。也建議用標籤把指示、背景、資料分開。</td></tr>
+          <tr><th scope="row">Google</th><td>先放背景資料</td><td>指示放在最後，並用清楚的分隔符號隔開。</td></tr>
+          <tr><th scope="row">OpenAI</th><td>—</td><td>建議在長文件的開頭和結尾各放一次指示；只放一處的話，放在資料上面效果較好。這和前兩家不同。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ae-tip"><b>怎麼選？</b>三家都同意「資料和指示要分開」。你常用哪家的 AI，就照那家的建議；不確定時，任務在最後再講一次，兩邊都顧到。</p>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「&lt;資料&gt;……&lt;/資料&gt;，請根據上面的資料……」：資料框起來，任務放最後。</p>
+    <p class="ae-key"><small>只記一句</small>貼長文件時：用標籤把資料框起來，任務寫在最後一段。</p>
+    <p class="ae-source">出處：<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic〈Prompting best practices〉Long context prompting、Use XML tags</a>；<a href="https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide" target="_blank" rel="noopener">OpenAI〈GPT-4.1 Prompting Guide〉</a>；<a href="https://ai.google.dev/gemini-api/docs/prompting-strategies" target="_blank" rel="noopener">Google〈Prompt design strategies〉</a>。</p>
+  </div>
+</section>
+
+<section id="wordcount" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-rulers" aria-hidden="true"></i>研究：台大李宏毅團隊（2025）</span>
+      <h2>叫 AI「寫 N 個字」，它真的寫得剛好嗎？</h2>
+    </div>
+    <div class="ae-prose"><p>進原則 3 之前，先猜一題。很多人交辦時最常寫的要求，就是「寫 300 字」。</p></div>
+    {% include ai-learn/illus.html src="/assets/img/ai-learn/prompt-writing/r2.webp" width="1536" height="1024" code="R2" alt="AI 生成插畫：低角度看過去，胸口有藍色光球的小機器人在控制台前開心打字，一條超長紙捲從台子湧出，斜斜鋪滿前景地板；史旺姬拉著紙捲尾端扳手指數，戴白色笑臉大帽的老師拿發光量尺貼著紙捲量長度" %}
+  </div>
+</section>
+
+<section class="ae-quizband">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="C">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-bullseye" aria-hidden="true"></i>小測驗 1／5：叫它寫 N 個字</span></div>
+      <p class="ae-quiz__q">研究者直接要求 GPT-4.1「嚴格符合指定長度」，它真的寫到指定長度的比例，大約是多少？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>九成以上，這種小事難不倒它</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>大約一半</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>不到三成</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>看心情，每次都不一樣，沒辦法統計</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 C：達標率<b>不到 30%</b>。模型常常寫太多或寫太少，因為它沒辦法可靠地在心裡數字數。
+        <ul class="ae-quiz__why">
+          <li>研究者改用「邊寫邊倒數還剩幾個字」的提示，才把達標率拉到 95% 以上（英文測試）。</li>
+          <li>另一份研究也發現：要求的長度一超過某個門檻，模型的表現就急速下滑。</li>
+          <li>所以別考它數數：把要求寫成一眼能驗收的樣子，例如「3 段、每段 2 句」，交件後自己數一次。</li>
+        </ul>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>C，不到三成；改成「3 段、每段 2 句」這種一眼能驗收的要求。</div></details>
+      <p class="ae-quiz__hint">先選定再看解答。出處：<a href="https://arxiv.org/abs/2508.13805" target="_blank" rel="noopener">Xie &amp; Lee, arXiv 2508.13805 (2025-08，預印本)</a>；<a href="https://arxiv.org/abs/2505.16234" target="_blank" rel="noopener">LIFEBench, arXiv 2505.16234</a>。</p>
+    </div>
+  </div>
+</section>
+
+<section id="done" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-clipboard-check" aria-hidden="true"></i>原則 3：先定義怎樣算完成</span>
+      <h2>交辦時就寫好驗收條件，讓 AI 交件前自己對一遍</h2>
+    </div>
+    <div class="ae-prose"><p>剛剛那題的教訓是：「寫 300 字」它做不準，但「3 段、每段 2 句」你一眼就能驗。把這個想法推廣到整份交辦，就是原則 3。Anthropic 的官方文件說得很直白：<strong>AI 覺得看起來做完了，就會停；沒有它能跑的檢查，你就成了驗收的人，每個錯都在等你發現。</strong></p></div>
+    <div class="ae-dg">
+      <p class="ae-dg__title"><i class="bi bi-arrow-repeat" aria-hidden="true"></i>完成條件怎麼轉起來</p>
+      <div class="ae-flow-row ae-flow-row--tight">
+        <div class="ae-node" data-c="prompt"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></span><b>交辦＋完成條件</b><span>任務之外，寫下 3～5 條可以打勾的條件。</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-cpu" aria-hidden="true"></i></span><b>AI 執行</b><span>照交辦做出初稿，先不急著交出來。</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">3</span><span class="ae-node__icon"><i class="bi bi-ui-checks" aria-hidden="true"></i></span><b>對照條件自查</b><span>逐條標「通過／不通過」，附上依據。</span></div>
+        <div class="ae-node" data-c="key"><span class="ae-num">4</span><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-wrench" aria-hidden="true"></i></span><b>不通過就修</b><span>改到全部通過才交；改不動的要說明。</span></div>
+      </div>
+    </div>
+    <div class="ae-grid ae-grid--start ae-mt" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-envelope-open" aria-hidden="true"></i>範例：客戶延期通知信（示意）</div>
+        <p style="margin:0 0 .5rem">寫完後用下面的條件逐項自我檢查，不通過就改到通過再給我：</p>
+        <ul class="ae-check">
+          <li><label><input type="checkbox"><span>300 字以內</span></label></li>
+          <li><label><input type="checkbox"><span>第一段就說出新的交期</span></label></li>
+          <li><label><input type="checkbox"><span>道歉只有一句</span></label></li>
+          <li><label><input type="checkbox"><span>結尾留聯絡窗口與電話</span></label></li>
+        </ul>
+      </div>
+      <div class="ae-grid" style="--cols:1">
+        <div class="ae-yn" data-c="key"><i class="bi bi-x-circle-fill" aria-hidden="true"></i><div><h3>不能打勾</h3><p>「寫好一點」「專業一點」「簡潔有力」：每個人心裡的標準都不一樣。</p></div></div>
+        <div class="ae-yn" data-c="prompt"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><div><h3>可以打勾</h3><p>「300 字以內」「第一段就說出新交期」：做到沒做到，一眼就知道。</p></div></div>
+      </div>
+    </div>
+    <p class="ae-tip"><b>先有標準，才有好 Prompt：</b>Anthropic 的提示工程總覽也是這個順序：動手寫 Prompt 之前，先定好「怎樣算成功」，以及要怎麼測。站上專欄寫過《Clean Code》作者 Uncle Bob 的同一個心得：<a href="{{ '/technical/uncle-bob-ai-software-fundamentals/' | relative_url }}">能讓機器檢查的，就交給檢查去擋</a>。</p>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「寫完後用下面的條件逐項檢查，不通過就改到通過再給我：……」</p>
+    <p class="ae-key"><small>只記一句</small>「好」要寫成可以打勾的條件，不要寫成形容詞。</p>
+    <p class="ae-source">出處：<a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic〈Best practices for Claude Code〉</a>；<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">Anthropic〈Prompt engineering overview〉</a>；延期通知信為示意。</p>
+  </div>
+</section>
+
+<section id="askme" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-person-check" aria-hidden="true"></i>原則 4：讓 AI 先反問你</span>
+      <h2>三段可以直接抄的「先問我」Prompt</h2>
+    </div>
+    <div class="ae-prose"><p>前三個原則都假設你知道自己要什麼。可是很多時候，連你自己都還沒想清楚。這時候別急著讓 AI 動手，先讓它把你腦袋裡的背景問出來。下面三段由淺到深，挑一段最接近你的情況：</p></div>
+    <div class="ae-grid ae-grid--start" style="--cols:3">
+      <p class="ae-copybox"><span class="ae-copybox__label">① 先追問，不准動手（示意）</span>我要替團隊做一份活動報名表單。請先追問目標對象、排除條件、要收哪些欄位、成功條件與個資風險，<mark>先不要開始做</mark>，因為範圍我還沒想清楚。<mark>每輪最多問 3 題。</mark></p>
+      <p class="ae-copybox"><span class="ae-copybox__label">② 指定它問的方向</span>我要做〔功能〕。請詳細訪談我：問做法、畫面、邊界情況、疑慮與取捨；<mark>不問顯而易見的，挖我沒想到的難處</mark>。問完寫成一頁規格。</p>
+      <p class="ae-copybox"><span class="ae-copybox__label">③ 非工程師版（示意）</span>我想做年終聚餐的企劃。在你動手寫之前，請一題一題問我，直到我們對這件事有共同理解。<mark>每一題都附上你建議的答案</mark>，我同意就回「好」；每輪最多 3 題。</p>
+    </div>
+    <div class="ae-grid ae-mt" style="--cols:4">
+      <div class="ae-card" data-c="prompt"><h3>① 先別動手</h3><p>明講「先不要開始做」，它才不會急著交一份猜出來的成品。</p></div>
+      <div class="ae-card" data-c="prompt"><h3>② 指定方向</h3><p>告訴它先問哪些、別問哪些，問題才問在刀口上。</p></div>
+      <div class="ae-card" data-c="prompt"><h3>③ 附建議答案</h3><p>每題附建議，你只要回「好」或改一句，省力很多。</p></div>
+      <div class="ae-card" data-c="key"><h3>設上限</h3><p>不設限，它一次可能問出幾十題；先講好「每輪最多 3 到 5 題」。</p></div>
+    </div>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「在你動手前，請一題一題問我，每題附上你建議的答案。」</p>
+    <p class="ae-key"><small>只記一句</small>不確定自己漏了什麼時，讓 AI 先把背景問出來。</p>
+    <p class="ae-source">出處：② 改寫自 <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic〈Best practices for Claude Code〉Let Claude interview you</a>；①③ 為示意。</p>
+  </div>
+</section>
+
+<section id="upgrade" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-lightning" aria-hidden="true"></i>原則 4 延伸：追問的升級版</span>
+      <h2>從「答不好再追問」，到「送出前就先做」</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-chat-dots" aria-hidden="true"></i>〈AI 入門〉：答不好再追問</div>
+        <ul class="ae-iconlist">
+          <li data-c="slate"><i class="bi bi-image" aria-hidden="true"></i><span>「照這個格式寫：……」</span></li>
+          <li data-c="slate"><i class="bi bi-patch-question" aria-hidden="true"></i><span>「開始前先問我 3 個問題」</span></li>
+          <li data-c="slate"><i class="bi bi-check2-square" aria-hidden="true"></i><span>「對照我的要求自我檢查」</span></li>
+          <li data-c="slate"><i class="bi bi-bullseye" aria-hidden="true"></i><span>「第 2 段太長，濃縮成 3 行」</span></li>
+        </ul>
+        <p style="margin:.75rem 0 0">完整八招：{% include ai-learn/chref.html module=basics slug="prompt" anchor="tips" label="8 招讓 AI 更聽話" %}</p>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-lightning" aria-hidden="true"></i>這一幕：送出前，一次寫齊</div>
+        <ul class="ae-iconlist">
+          <li data-c="prompt"><i class="bi bi-hand-index-thumb" aria-hidden="true"></i><span><b>先訪問我：</b>一題一題問到有共識，每題附建議答案（原則 4）。</span></li>
+          <li data-c="prompt"><i class="bi bi-ui-checks" aria-hidden="true"></i><span><b>事先寫好完成條件</b>（原則 3）。</span></li>
+          <li data-c="key"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i><span><b>改兩次還不對：</b>開新對話，把學到的寫進 Prompt 重來。舊對話裡堆滿失敗的嘗試，只會越修越亂。</span></li>
+          <li data-c="prompt"><i class="bi bi-stars" aria-hidden="true"></i><span><b>請 AI 幫你改 Prompt：</b>「這段交辦還缺什麼？幫我改寫。」OpenAI 和 Anthropic 都有官方的 Prompt 改寫工具。</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「這份交辦還缺什麼？請幫我改寫。」</p>
+    <p class="ae-key"><small>只記一句</small>與其每次答錯再追問，不如把追問的內容提前寫進 Prompt。</p>
+    <p class="ae-source">出處：<a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic〈Best practices for Claude Code〉</a>（讓 AI 訪問你、修正兩次不成就重開）；<a href="https://developers.openai.com/api/docs/guides/prompt-optimizer" target="_blank" rel="noopener">OpenAI〈Prompt optimizer〉</a>；<a href="https://claude.com/blog/prompt-improver" target="_blank" rel="noopener">Anthropic〈Improve your prompts in the developer console〉(2024-10-14)</a>。</p>
+  </div>
+</section>

@@ -819,6 +819,7 @@ a.ae-chapter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px r
 .ae-further__badge { align-self: flex-start; font-size: .8rem; font-weight: 700; letter-spacing: .04em; padding: .2rem .65rem; border-radius: 999px; background: #10253d; color: #fff; }
 .ae-further__item[data-kind="column"] .ae-further__badge { background: #fff4d6; color: #6b4a00; }
 .ae-further__item[data-kind="extra"] .ae-further__badge { background: #eef1f5; color: #3a4656; }
+.ae-further__item[data-kind="module"] .ae-further__badge { background: var(--ae-prompt-soft, #e0f4f7); color: var(--ae-prompt-ink, #00606e); }
 .ae-further__title { font-size: 1.05rem; line-height: 1.5; }
 .ae-further__meta { color: var(--ae-muted, #5b6573); font-size: .85rem; }
 .ae-further__note { color: var(--ae-body, #33404f); line-height: 1.75; font-size: .95rem; }
@@ -867,3 +868,25 @@ a.ae-chapter-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px r
 /* 四步驟：未輪到的步驟不用半透明（會讓字變淡、對比不足），改用淡底區分 */
 .ae-step { opacity: 1; background: #f8fafc; }
 .ae-step.is-active { background: var(--ae-llm-soft); }
+
+/* ===== 16. SVG 大圖框（2026-10-17，Prompt 進階單元）=====
+   照 learn-kit.css §4 搬來：教材頁沒有 .post-content，圖直接放在 .edu-container（最寬 1080px），不需要 --wide 的負邊距 */
+.ae-page .ae-fig { margin: 2rem 0 0; }
+.ae-page .ae-fig > a { display: block; cursor: zoom-in; text-decoration: none; }
+.ae-page .ae-fig img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid #e7e2d8; box-shadow: 0 10px 30px rgba(16, 37, 61, .06); background: #fff; }
+.ae-page .ae-fig figcaption { margin-top: .7rem; font-size: .88rem; line-height: 1.7; color: #6b6459; text-align: center; }
+.ae-page .ae-fig__zoom { white-space: nowrap; color: #8B5E00; font-weight: 700; }
+/* 資料對照表：窄螢幕可橫向捲動（只捲表格本身，不撐開頁面） */
+.ae-datatable-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: .75rem; }
+.ae-datatable { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; background: #fff; }
+.ae-datatable th, .ae-datatable td { padding: .55rem .7rem; border-bottom: 1px solid var(--ae-line, #d9dde3); text-align: left; vertical-align: top; line-height: 1.6; }
+.ae-datatable thead th { background: var(--ae-navy); color: #fff; font-weight: 800; white-space: nowrap; }
+.ae-datatable tbody th { color: var(--ae-navy); font-weight: 800; white-space: nowrap; }
+.ae-datatable td:not(:last-child) { color: var(--ae-accent-ink, #00798a); font-weight: 800; }
+.ae-datatable--text td:not(:last-child) { color: inherit; font-weight: 400; }
+/* 可以直接抄的 Prompt 範本框（保留換行，手機自動折行） */
+.ae-copybox { margin: 1rem 0 0; padding: 1rem 1.15rem; border-radius: 14px; border: 2px solid var(--ae-accent, #00afc7); border-left-width: 8px; background: #fff; white-space: pre-wrap; word-break: break-word; font-family: inherit; font-size: .98rem; line-height: 1.85; color: var(--ae-ink, #10253d); }
+.ae-copybox__label { display: block; margin: 0 0 .35rem; font-size: .82rem; font-weight: 800; letter-spacing: .04em; color: var(--ae-accent-ink, #00798a); }
+.ae-copybox mark { background: var(--ae-tip-soft, #fff4d6); color: inherit; padding: 0 .15rem; border-radius: 4px; }
+.ae-datatable--text { min-width: 0; }
+@media (max-width: 600px) { .ae-datatable--text th, .ae-datatable--text td { padding: .5rem .45rem; font-size: .88rem; } .ae-datatable--text tbody th { white-space: normal; } }

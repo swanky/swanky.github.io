@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1020" width="600" height="1020" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">從一次交辦，走到可重複的工作指示</title>
+  <desc id="d">從一次交辦到可重複的工作指示，五階階梯：第 1 階對話交辦（六塊積木＋理由）；第 2 階發現重複（這段話我講第三次了）；第 3 階做成模板（固定部分＋【變數】）；第 4 階團隊共用（固定部分整理成工作手冊）；第 5 階測試與改版（用真實任務反覆跑、再修）。這個單元走完前三階；第 4、5 階以紅色標示。</desc>
+  <rect width="600" height="1020" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#1F2937">從一次交辦，</text>
+  <text x="40" y="120" font-size="40" font-weight="700" fill="#1F2937">走到可重複的工作指示</text>
+  <text x="40" y="160" font-size="24" fill="#4B5563">一階一階往上：先把話講清楚，</text>
+  <text x="40" y="192" font-size="24" fill="#4B5563">再把重複的部分固定下來</text>
+  <text x="300" y="262" font-size="28" font-weight="700" text-anchor="middle" fill="#0B7A8C">這個單元走完前三階</text>
+  <rect x="56" y="290" width="384" height="128" rx="20" fill="#E0F4F7" stroke="#00AFC7" stroke-width="3"/>
+  <rect x="56" y="290" width="384" height="12" rx="6" fill="#00AFC7"/>
+  <circle cx="106" cy="356" r="24" fill="#00AFC7"/>
+  <text x="106" y="366" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif">1</text>
+  <text x="150" y="352" font-size="34" font-weight="700" fill="#1F2937">對話交辦</text>
+  <text x="150" y="390" font-size="26" fill="#1F2937">六塊積木＋理由</text>
+  <rect x="56" y="434" width="414" height="128" rx="20" fill="#E0F4F7" stroke="#00AFC7" stroke-width="3"/>
+  <rect x="56" y="434" width="414" height="12" rx="6" fill="#00AFC7"/>
+  <circle cx="106" cy="500" r="24" fill="#00AFC7"/>
+  <text x="106" y="510" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif">2</text>
+  <text x="150" y="496" font-size="34" font-weight="700" fill="#1F2937">發現重複</text>
+  <text x="150" y="534" font-size="26" fill="#1F2937">這段話我講第三次了</text>
+  <rect x="56" y="578" width="444" height="128" rx="20" fill="#E0F4F7" stroke="#00AFC7" stroke-width="3"/>
+  <rect x="56" y="578" width="444" height="12" rx="6" fill="#00AFC7"/>
+  <circle cx="106" cy="644" r="24" fill="#00AFC7"/>
+  <text x="106" y="654" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif">3</text>
+  <text x="150" y="640" font-size="34" font-weight="700" fill="#1F2937">做成模板</text>
+  <text x="150" y="678" font-size="26" fill="#1F2937">固定部分＋【變數】</text>
+  <rect x="56" y="722" width="474" height="128" rx="20" fill="#FCECE8" stroke="#F26D5B" stroke-width="3"/>
+  <rect x="56" y="722" width="474" height="12" rx="6" fill="#F26D5B"/>
+  <circle cx="106" cy="788" r="24" fill="#F26D5B"/>
+  <text x="106" y="798" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif">4</text>
+  <text x="150" y="784" font-size="34" font-weight="700" fill="#1F2937">團隊共用</text>
+  <text x="150" y="822" font-size="26" fill="#1F2937">固定部分整理成工作手冊</text>
+  <rect x="56" y="866" width="504" height="128" rx="20" fill="#FCECE8" stroke="#F26D5B" stroke-width="3"/>
+  <rect x="56" y="866" width="504" height="12" rx="6" fill="#F26D5B"/>
+  <circle cx="106" cy="932" r="24" fill="#F26D5B"/>
+  <text x="106" y="942" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif">5</text>
+  <text x="150" y="928" font-size="34" font-weight="700" fill="#1F2937">測試與改版</text>
+  <text x="150" y="966" font-size="26" fill="#1F2937">用真實任務反覆跑、再修</text>
+  <path d="M44,290 L28,290 L28,706 L44,706" fill="none" stroke="#00AFC7" stroke-width="4"/>
+</svg>

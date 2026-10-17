@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1073" width="600" height="1073" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">Prompt 縮寫字母湯</title>
+  <desc id="d">一大堆 Prompt 框架的縮寫像字母湯一樣擠在一起：RTF、CO-STAR、RISEN、CREATE、RACE、TAG、BAB、CARE、RISE、CRISPE、APE、ICIO、BROKE、SCOPE、TRACE、ROSES、ERA、PECRA、COAST、GRADE、CLEAR、RODES、RAPPEL、CRAFT、PTCF、GCES、RTGO、CLEVER、SPARK、STAR。名字很多，底下其實都是同幾塊積木。出處：史旺基整理。</desc>
+  <rect width="600" height="1073" fill="#FFFFFF"/>
+  <text x="40" y="74" font-size="42" font-weight="700" fill="#1F2937">Prompt 縮寫字母湯</text>
+  <text x="40" y="116" font-size="24" fill="#4B5563">框架名稱多到像一碗湯，</text>
+  <text x="40" y="148" font-size="24" fill="#4B5563">其實底下都是同幾塊積木</text>
+  <text x="143.1" y="230" font-size="32" font-weight="700" text-anchor="middle" fill="#173B5E" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 143.1 218.8)">GRADE</text>
+  <text x="300.0" y="230" font-size="35" font-weight="700" text-anchor="middle" fill="#2878D0" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(-8 300.0 217.8)">CRISPE</text>
+  <text x="456.9" y="230" font-size="32" font-weight="700" text-anchor="middle" fill="#657587" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 456.9 218.8)">SCOPE</text>
+  <text x="163.8" y="295" font-size="35" font-weight="700" text-anchor="middle" fill="#173B5E" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(8 163.8 282.8)">BROKE</text>
+  <text x="312.9" y="295" font-size="29" font-weight="700" text-anchor="middle" fill="#00AFC7" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 312.9 284.9)">RAPPEL</text>
+  <text x="449.1" y="295" font-size="35" font-weight="700" text-anchor="middle" fill="#A8741A" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 449.1 282.8)">ICIO</text>
+  <text x="116.8" y="360" font-size="29" font-weight="700" text-anchor="middle" fill="#10253D" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 116.8 349.9)">SPARK</text>
+  <text x="229.0" y="360" font-size="26" font-weight="700" text-anchor="middle" fill="#10253D" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 229.0 350.9)">CARE</text>
+  <text x="335.5" y="360" font-size="26" font-weight="700" text-anchor="middle" fill="#10253D" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(8 335.5 350.9)">RODES</text>
+  <text x="470.2" y="360" font-size="60" font-weight="700" text-anchor="middle" fill="#F26D5B" opacity="1" font-family="Arial, sans-serif" transform="rotate(0 470.2 339.0)">RTF</text>
+  <text x="233.8" y="450" font-size="38" font-weight="700" text-anchor="middle" fill="#53A88B" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 233.8 436.7)">APE</text>
+  <text x="352.2" y="450" font-size="38" font-weight="700" text-anchor="middle" fill="#00AFC7" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 352.2 436.7)">RISE</text>
+  <text x="300.0" y="518" font-size="57" font-weight="700" text-anchor="middle" fill="#F26D5B" opacity="1" font-family="Arial, sans-serif" transform="rotate(0 300.0 498.1)">CO-STAR</text>
+  <text x="170.5" y="605" font-size="51" font-weight="700" text-anchor="middle" fill="#F26D5B" opacity="1" font-family="Arial, sans-serif" transform="rotate(0 170.5 587.1)">RISEN</text>
+  <text x="351.4" y="605" font-size="45" font-weight="700" text-anchor="middle" fill="#F26D5B" opacity="1" font-family="Arial, sans-serif" transform="rotate(0 351.4 589.2)">RACE</text>
+  <text x="481.0" y="605" font-size="29" font-weight="700" text-anchor="middle" fill="#173B5E" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 481.0 594.9)">RTGO</text>
+  <text x="236.3" y="686" font-size="50" font-weight="700" text-anchor="middle" fill="#F26D5B" opacity="1" font-family="Arial, sans-serif" transform="rotate(0 236.3 668.5)">CREATE</text>
+  <text x="421.0" y="686" font-size="29" font-weight="700" text-anchor="middle" fill="#657587" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(4 421.0 675.9)">CLEAR</text>
+  <text x="126.4" y="766" font-size="38" font-weight="700" text-anchor="middle" fill="#00AFC7" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(-4 126.4 752.7)">ROSES</text>
+  <text x="275.9" y="766" font-size="32" font-weight="700" text-anchor="middle" fill="#2878D0" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(8 275.9 754.8)">CRAFT</text>
+  <text x="397.3" y="766" font-size="38" font-weight="700" text-anchor="middle" fill="#173B5E" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(-8 397.3 752.7)">TAG</text>
+  <text x="501.7" y="766" font-size="38" font-weight="700" text-anchor="middle" fill="#657587" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 501.7 752.7)">BAB</text>
+  <text x="152.0" y="834" font-size="35" font-weight="700" text-anchor="middle" fill="#A8741A" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(-8 152.0 821.8)">COAST</text>
+  <text x="268.9" y="834" font-size="29" font-weight="700" text-anchor="middle" fill="#2878D0" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(8 268.9 823.9)">ERA</text>
+  <text x="364.0" y="834" font-size="29" font-weight="700" text-anchor="middle" fill="#A8741A" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 364.0 823.9)">GCES</text>
+  <text x="469.9" y="834" font-size="29" font-weight="700" text-anchor="middle" fill="#00AFC7" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 469.9 823.9)">STAR</text>
+  <text x="145.3" y="899" font-size="29" font-weight="700" text-anchor="middle" fill="#53A88B" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(8 145.3 888.9)">PTCF</text>
+  <text x="278.5" y="899" font-size="38" font-weight="700" text-anchor="middle" fill="#53A88B" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 278.5 885.7)">PECRA</text>
+  <text x="433.2" y="899" font-size="29" font-weight="700" text-anchor="middle" fill="#657587" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 433.2 888.9)">CLEVER</text>
+  <text x="300.0" y="967" font-size="26" font-weight="700" text-anchor="middle" fill="#10253D" opacity="0.75" font-family="Arial, sans-serif" transform="rotate(0 300.0 957.9)">TRACE</text>
+  <text x="560" y="1043" font-size="22" text-anchor="end" fill="#64748B">出處：史旺基整理</text>
+</svg>

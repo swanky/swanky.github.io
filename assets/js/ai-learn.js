@@ -569,7 +569,7 @@
       var n = boxes.filter(function (b) { return b.checked; }).length;
       var total = boxes.length;
       var ratio = n / total;
-      var msg = ratio >= 0.85 ? '觀念通了！' : (ratio >= 0.65 ? '差一點：回到沒勾的那幾題，重讀旁邊標的那一幕。' : '先從上面那張「四個關鍵詞＋Agent」的圖，和各幕的「只記一句」重看起。');
+      var msg = ratio >= 0.85 ? '觀念通了！' : (ratio >= 0.65 ? '差一點：回到沒勾的那幾題，重讀旁邊標的那一幕。' : (box.getAttribute('data-ae-check-low') || '先從上面那張「四個關鍵詞＋Agent」的圖，和各幕的「只記一句」重看起。'));
       out.textContent = '';
       var s = document.createElement('strong');
       s.textContent = n + '／' + total + ' 題';

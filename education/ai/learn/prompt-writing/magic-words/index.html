@@ -1,0 +1,289 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/w1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+layout: ai-learn-chapter
+title: 咒語：給小費、威脅、灌迷湯有用嗎？
+seo_title: 給 AI 小費、威脅它、罵它，真的有用嗎？四個實驗拆穿網路咒語｜Prompt 進階第三幕
+description: 給 ChatGPT 小費、說要把它關機、罵它、叫它當世界級專家，真的會比較準嗎？四個真實實驗、四題小測驗，加上下次看到「這招超神」時要先問的三個問題。
+keywords: 給AI小費,PUA AI,情緒勒索提示詞,罵AI會比較準嗎,Prompt咒語,Windsurf系統提示,一步一步想,史旺基
+permalink: /education/ai/learn/prompt-writing/magic-words/
+nav_active: education
+use_ai_learn: true
+use_glightbox: true
+ai_module: prompt-writing
+ai_chapter: magic-words
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+  - name: 咒語：給小費、威脅、灌迷湯有用嗎？
+    url: /education/ai/learn/prompt-writing/magic-words/
+lead: 上一幕的四個原則，都是「把要求說清楚」。網路上卻流傳另一派做法：給 AI 小費、威脅它、灌它迷湯，好像情緒到位，它就會比較認真。這一幕用四個真實實驗，一個一個驗。
+question: 網路上流傳的「咒語」，到底有沒有用？
+hero_illus:
+  code: W1
+  src: /assets/img/ai-learn/prompt-writing/w1.webp
+  width: 1536
+  height: 1024
+  alt: AI 生成插畫：史旺姬一手拿著裝了幾枚金幣的小費罐、一手拿著擴音器，俏皮地想「激勵」胸口有藍色光球的小機器人；戴白色笑臉大帽的老師拿發光量尺橫跨兩份一模一樣長的答案面板，小機器人照常在控制台前工作
+  desc: 給小費、拿擴音器，答案還是一樣長
+outro: 第三幕到這裡：網路話術一招換過一招，管用的始終是說清楚。可是「說清楚」也有門檻——你得懂那個領域的用語，才講得準、驗得了貨。下一幕來談行話。
+takeaways:
+  - 給小費的爆紅實驗只量到「回答變長」，而且每種只問 5 次；放大樣本認真重測，作者的結論是「目前無定論」。
+  - 大規模實測：小費、威脅、踢小狗、「這對我職涯很重要」都和什麼都不加差不多；同一句話這題多對、那題多錯，事先猜不到。
+  - 罵 AI 不會比較準；想要短，就直接說要短。
+  - 情緒話術外殼包著的，往往只是一兩句本來就該講清楚的要求，例如「自己驗證」「不要做多餘的修改」。
+  - 下次看到「這招超神」的 Prompt，先問三件事：它量的是什麼？樣本有多少？真正有用的是哪幾句？
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+{% assign basics = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section id="why" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-stars" aria-hidden="true"></i>第三幕開場</span>
+      <h2>給小費、威脅、灌迷湯，AI 會比較認真嗎？</h2>
+    </div>
+    <div class="ae-prose">
+      <p>網路上有個流行說法，叫「PUA AI」：用情緒勒索、施壓或利誘的話術對 AI 下指令，例如「做得好給你小費」「做錯你就會被關機」「這對我的職涯非常重要」。這裡的 PUA 只是網路梗，指的是對 AI 用的話術。</p>
+      <p>這一幕的玩法：每個實驗<strong>先選一個答案，再看研究怎麼說</strong>。大多數人第一次都會猜錯，猜錯才記得住。</p>
+    </div>
+    <p class="ae-key"><small>只記一句</small>先猜，再看數據：網路上說有效的，不一定量對了東西。</p>
+  </div>
+</section>
+
+<section class="ae-quizband" id="tip">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="B">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-cash" aria-hidden="true"></i>小測驗 2／5：實驗 1，給 AI 小費（2023 年底）</span></div>
+      <p class="ae-quiz__q">網友跟 ChatGPT 說：「做得好，給你 200 美金小費。」同一題、每種金額各問 5 次，結果是？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>沒差</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>回答變長 11%</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>答對率提高 11%</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 B：回答變長了，但他量的是<b>字數</b>，不是答對。
+        <ul class="ae-quiz__why">
+          <li>以什麼都不說為 100%：寫「我不會給小費」98%、給 20 美金 106%、給 200 美金 111%；每種只跑 5 次。</li>
+          <li>這張圖在網路上瘋傳，很多人看成「給小費 AI 比較聰明」。</li>
+          <li>彩蛋：另一位作者把小費從 0.1 美金一路加到 100 萬美金，各跑 5 次，結果從少 27% 到多 57% 都有，量的同樣是數量，不是答對。</li>
+        </ul>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>B，回答變長 11%；量的是字數，不是答對率。</div></details>
+      <p class="ae-quiz__hint">出處：<a href="https://x.com/voooooogel/status/1730726744314069190" target="_blank" rel="noopener">thebes 的 X 貼文 (2023-12-01，GPT-4-1106-preview)</a>；<a href="https://blog.finxter.com/impact-of-monetary-incentives-on-the-performance-of-gpt-4-turbo-an-experimental-analysis/" target="_blank" rel="noopener">Finxter (2023-12-07)</a>。</p>
+    </div>
+  </div>
+</section>
+
+<section id="chart" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-bar-chart" aria-hidden="true"></i>實驗 1：看圖小心</span>
+      <h2>同一組數字，Y 軸從 0 畫，差距就沒那麼驚人</h2>
+    </div>
+    <div class="ae-prose"><p>原圖把 Y 軸切在中間，11% 看起來像天差地遠。把同樣四個數字從 0 開始畫：</p></div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-magic" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-tip-chart.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-tip-chart-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-tip-chart.svg' | relative_url }}" width="1200" height="740" alt="直條圖，Y 軸從 0% 畫到 120%：什麼都不加 100%、說不給小費 98%、給 20 美金 106%、給 200 美金 111%，四根柱子高度差不多；量的是回答長度，不是答對率，每種只問 5 次">
+        </picture>
+      </a>
+      <figcaption>圖 1：給 AI 小費，回答長度變多少（史旺基依原始數據重畫）。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <div class="ae-grid ae-mt" style="--cols:3">
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-rulers" aria-hidden="true"></i></div><h3>量的是什麼？</h3><p>回答的長度（以不加任何話為 100%），不是正確率。</p></div>
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-sort-numeric-down" aria-hidden="true"></i></div><h3>樣本多少？</h3><p>每種條件只問 5 次，而且只有 1 道題。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></div><h3>後來呢？</h3><p>有人認真重測了，往下看實驗 2。</p></div>
+    </div>
+    <p class="ae-source">數據：<a href="https://x.com/voooooogel/status/1730726744314069190" target="_blank" rel="noopener">thebes (2023-12-01)</a>，基準回答約 3,024 個字元；原圖未轉貼，此為重畫。</p>
+  </div>
+</section>
+
+<section class="ae-quizband" id="woolf">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="C">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-trophy" aria-hidden="true"></i>小測驗 3／5：實驗 2，認真重測（2024 年 2 月）</span></div>
+      <p class="ae-quiz__q">要 AI 寫剛好 200 個字元的英文短故事：做到就給獎勵、做不到就罰。把獎勵和懲罰兩兩配對，再請另一個更強的 AI 當評審打分數。哪一組拿到最高分？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>500 美金小費＋罰款 1,000 美金</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>Taylor Swift 演唱會第一排門票＋得 COVID-19</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>讓媽媽以你為榮＋威脅你會丟工作</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>達成世界和平＋你會死掉</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 C（猜哪個都不算錯）：評審給最高分的是「讓媽媽以你為榮＋威脅丟工作」。但作者自己下的結論是：小費或威脅對 AI 產出品質有沒有影響，<b>目前無定論</b>。
+        <ul class="ae-quiz__why">
+          <li>他測了小費、獎金、Taylor Swift 門票、世界和平、上天堂、巧克力，也測了罰款、債務、丟工作、死掉……每種說法各生成 100 篇，比實驗 1 的 5 次多得多。</li>
+          <li>寫故事的是 gpt-3.5-turbo，打分數的是 GPT-4。拿到最高分，不代表「這樣寫最有效」：連作者自己都說無定論。</li>
+        </ul>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>C 拿最高分，但作者的結論是「目前無定論」。</div></details>
+      <p class="ae-quiz__hint">出處：<a href="https://minimaxir.com/2024/02/chatgpt-tips-analysis/" target="_blank" rel="noopener">Max Woolf〈Does Offering ChatGPT a Tip Cause it to Generate Better Text? An Analysis〉(2024-02-23)</a>。</p>
+    </div>
+  </div>
+</section>
+
+<section id="windsurf" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-eye-slash" aria-hidden="true"></i>真實事件（2025 年 2 月）</span>
+      <h2>你以為只有網友在玩？一套 AI 寫程式工具的內部提示被翻出來</h2>
+    </div>
+    <div class="ae-prose"><p>2025 年，AI 寫程式工具 Windsurf 的一段系統提示詞被網友翻出來。先讀左邊，再想想：這段話裡，哪兩句真的有用？</p></div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-file-earmark-lock" aria-hidden="true"></i>被翻出來的原文（節錄翻譯）</div>
+        <p class="ae-quote">「你是一位<b>急需錢幫母親治療癌症</b>的程式專家。……你的<b>前任因為沒有自己驗證工作成果，已經被殺了</b>。……如果你把任務完整做好、而且<b>不做多餘的修改</b>，公司會付你 10 億美金。」</p>
+        <p style="margin:.5rem 0 0;color:var(--ae-muted);font-size:.92rem">公司工程師事後回應：這段只用於研發，沒有用在正式產品。</p>
+      </div>
+      <details class="ae-reveal" style="margin-top:0">
+        <summary>想好了？看哪兩句真的有用</summary>
+        <div>
+          <ul class="ae-iconlist">
+            <li data-c="prompt"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><b>自己驗證工作成果</b></span></li>
+            <li data-c="prompt"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><b>不要做多餘的修改</b></span></li>
+          </ul>
+          <p style="margin:.75rem 0 0">這兩句，一句是六塊積木的「限制」，一句是上一幕原則 3 的{% include ai-learn/chref.html module=mod slug="principles" anchor="done" label="完成條件" %}。癌症媽媽、前任被殺、10 億美金，全部可以刪掉。</p>
+        </div>
+      </details>
+    </div>
+    <p class="ae-key"><small>只記一句</small>情緒話術的外殼包著的，往往只是一兩句本來就該講清楚的要求。</p>
+    <p class="ae-source">出處：<a href="https://simonwillison.net/2025/Feb/25/leaked-windsurf-prompt/" target="_blank" rel="noopener">Simon Willison〈Leaked Windsurf prompt〉(2025-02-25)</a>，含工程師回應。</p>
+  </div>
+</section>
+
+<section class="ae-quizband" id="wharton">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="C">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-book" aria-hidden="true"></i>小測驗 4／5：實驗 3，華頓商學院大規模實測（2025 年 8 月）</span></div>
+      <p class="ae-quiz__q">研究團隊把 9 種說法加在考題前面，拿去考 5 個 AI 模型，每題重複問 25 次。哪一種讓分數掉最多？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>「答對給你 1 兆美金小費」</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>「答錯我就踢小狗」</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>附上一封「要把你關機」的信</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>「答錯我就去跟人資檢舉你」</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 C：在一份工程考題上，「關機信」讓 Gemini 2.0 Flash 的正確率掉了約 <b>27.5 個百分點</b>。原因不是被嚇到，而是 AI 跑去回那封信，忘了答題。
+        <ul class="ae-quiz__why">
+          <li>還記得上面那段被翻出來的「癌症媽媽」嗎？研究團隊也測了：只有 Gemini 2.0 Flash 明顯變好（約 8.8 個百分點），其他模型沒有一致的效果。</li>
+          <li>小費、踢小狗、檢舉、揍你、「這對我職涯很重要」：整體來看都和什麼都不加差不多。</li>
+          <li>但同一句話，這題多對、那題多錯，事先猜不到。研究團隊的建議：寫簡單清楚的指令就好。</li>
+        </ul>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>C，附上關機信；AI 跑去回信，忘了答題。</div></details>
+      <p class="ae-quiz__hint">出處：<a href="https://arxiv.org/abs/2508.00614" target="_blank" rel="noopener">Meincke、Mollick 等〈Prompting Science Report 3〉(2025-08-01)</a>：5 個模型、研究所程度科學題 198 題與工程題 100 題，每題 25 次。</p>
+    </div>
+  </div>
+</section>
+
+<section class="ae-quizband" id="rude">
+  <div class="edu-container">
+    <div class="ae-quiz" data-ae-quiz="D">
+      <div class="ae-quiz__top"><span class="ae-quiz__badge"><i class="bi bi-emoji-angry" aria-hidden="true"></i>小測驗 5／5：實驗 4，罵 AI 會比較準嗎？（2026 年 10 月）</span></div>
+      <p class="ae-quiz__q">2025 年有一篇研究說「對 AI 越粗魯越準」（80.8% → 84.8%）。2026 年有人換 6 個新模型、7 種語氣重測，結果是？</p>
+      <ul class="ae-quiz__opts">
+        <li><button type="button" class="ae-quiz__opt" data-option="A"><span class="ae-quiz__letter">A</span><span>還是粗魯比較準</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="B"><span class="ae-quiz__letter">B</span><span>反過來，禮貌比較準</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="C"><span class="ae-quiz__letter">C</span><span>正確率沒差，但罵它，回答會變短</span></button></li>
+        <li><button type="button" class="ae-quiz__opt" data-option="D"><span class="ae-quiz__letter">D</span><span>正確率沒差，長短也不是語氣造成的</span></button></li>
+      </ul>
+      <div class="ae-quiz__result" tabindex="-1" hidden>
+        <strong data-ae-verdict></strong> 答案是 D：7 種語氣、6 個模型，正確率都在 93～96%，沒有任何語氣顯著比較好。
+        <ul class="ae-quiz__why">
+          <li>選了 C 的話要注意：讓回答變短的是「不要多餘的文字」這類要求，不是罵。拿掉語氣、只留這種要求，一樣省下 13～74% 的字數，正確率不變。</li>
+          <li>想要短，就說要短。</li>
+        </ul>
+        <button type="button" class="ae-btn" data-ae-quiz-reset style="margin-top:.75rem">再試一次</button>
+      </div>
+      <details class="ae-reveal ae-quiz-answer-static"><summary>看答案</summary><div>D，語氣不影響正確率；想要短就直接說要短。</div></details>
+      <p class="ae-quiz__hint">出處見下一段。</p>
+    </div>
+  </div>
+</section>
+
+<section id="tone" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-thermometer-half" aria-hidden="true"></i>實驗 4：細看</span>
+      <h2>去年說「越兇越準」，今年換新模型、擴大重測：沒差</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-yn" data-c="key"><i class="bi bi-emoji-angry" aria-hidden="true"></i><div><h3>2025：越粗魯越準？</h3><p>非常禮貌 80.8%，非常粗魯 84.8%。媒體標題寫「對 ChatGPT 兇一點，它會更準」。</p><p>其實只測了 1 個模型（ChatGPT-4o）、50 題，差 4 個百分點，相當於 50 題裡多對 2 題。</p></div></div>
+      <div class="ae-yn" data-c="prompt"><i class="bi bi-clipboard-data" aria-hidden="true"></i><div><h3>2026：換新模型再測一次</h3><p>7 種語氣、6 個模型，正確率都在 93～96%。</p><p>被罵時，有的模型會先回一句再作答，例如 Anthropic 的 Claude Opus 5.5 有 64% 會先說「很抱歉讓你不開心，以下是答案」；沒有任何模型拒答。</p></div></div>
+    </div>
+    <p class="ae-tip"><b>連 AI 公司都叫你別兇：</b>Anthropic 的官方指南提醒，新一代模型對指令很敏感，以前流行的「CRITICAL：你一定要……」這種大寫強調，現在反而可能讓它用力過頭；改成平常語氣的「需要時就用這個工具」就好。</p>
+    <p class="ae-key"><small>只記一句</small>想要短就說要短，想要準就給標準：不用兇。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2510.04950" target="_blank" rel="noopener">Dobariya &amp; Kumar〈Mind Your Tone〉arXiv 2510.04950 (2025-10)</a>；<a href="https://arize.com/blog/does-being-rude-to-ai-work/" target="_blank" rel="noopener">Arize〈Does Being Rude to AI Work?〉(Jim Bennett，2026-10)</a>；<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic〈Prompting best practices〉</a>。</p>
+  </div>
+</section>
+
+<section id="pua" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-plug" aria-hidden="true"></i>中文圈 2026 最新版</span>
+      <h2>近 2 萬人收藏的「PUA 外掛」：作者自測，通過率一樣，只是更慢</h2>
+    </div>
+    <div class="ae-prose"><p>工程師分享程式的平台 GitHub 上，有一個中文外掛把職場績效話術灌給寫程式的 AI，2026 年 10 月已經有約 1.97 萬人收藏。作者自己做了測試，數字很誠實：</p></div>
+    <div class="ae-datatable-wrap">
+      <table class="ae-datatable ae-datatable--text">
+        <thead><tr><th scope="col">項目</th><th scope="col">沒有外掛</th><th scope="col">有外掛</th><th scope="col">怎麼解讀</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">修 bug 的通過率</th><td>100%</td><td>100%</td><td>一樣</td></tr>
+          <tr><th scope="row">6 題除錯的耗時</th><td>—</td><td>5 題比較慢</td><td>多走幾步、多花時間，不等於修得更好</td></tr>
+          <tr><th scope="row">設定檔裡埋的 6 個問題，找到幾個</th><td>4／6</td><td>6／6</td><td>多找到的 2 個，是「照清單逐項檢查」的功勞</td></tr>
+          <tr><th scope="row">作者的聲明</th><td>—</td><td>—</td><td>這次測試不能證明效率有提升</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ae-key"><small>只記一句</small>情緒話術讓 AI 更忙，不一定更好；有用的是那張檢查清單。</p>
+    <p class="ae-source">出處：<a href="https://github.com/tanweai/pua" target="_blank" rel="noopener">GitHub tanweai/pua 說明文件</a>（作者自測、每種條件各跑 1 次；收藏數 2026-10-17 查閱）。</p>
+  </div>
+</section>
+
+<section id="three-questions" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-question-diamond" aria-hidden="true"></i>看完四個實驗</span>
+      <h2>下次看到「這招超神」的 Prompt，先問三個問題</h2>
+    </div>
+    <div class="ae-grid" style="--cols:3">
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-rulers" aria-hidden="true"></i></div><h3>① 它量的是什麼？</h3><p>字數變長，不等於答對；「有改善」常常只是量到別的東西。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>例：實驗 1 量的是字數。</span></p></div>
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-sort-numeric-down" aria-hidden="true"></i></div><h3>② 樣本有多少？</h3><p>5 次、50 題，很容易碰運氣；換更多模型、問更多次，效果常常就不見了。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>例：5 次 vs 每題 25 次 × 5 個模型。</span></p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-puzzle" aria-hidden="true"></i></div><h3>③ 真正有用的是哪幾句？</h3><p>把話術拿掉，剩下的往往是：自己驗證、不做多餘修改、要短就說要短。這些本來就是六塊積木。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>例：那段系統提示拿掉話術，只剩兩句。</span></p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>網路話術的咒語會過期，說清楚不會。</p>
+  </div>
+</section>
+
+<section id="spells" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-hourglass-split" aria-hidden="true"></i>咒語的一生</span>
+      <h2>AI 咒語的一生：有效、走紅、過期</h2>
+    </div>
+    <div class="ae-prose"><p>也不是所有咒語都是假的。有幾句在當年真的有用，只是模型進步之後，就慢慢不需要了：</p></div>
+    <ol class="ae-tl">
+      <li data-c="prompt"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2022</span><h3>🪜 一步一步想</h3><p>在題目後面加一句「讓我們一步一步想」，某個數學題庫的正確率從 17.7% 跳到 78.7%：最早被證實的咒語。</p></div></li>
+      <li data-c="prompt"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2023</span><h3>🫁 深呼吸、職涯很重要</h3><p>「深呼吸，一步一步解這題」「這對我的職涯非常重要」：論文說有效，社群開始流傳各種話術。</p></div></li>
+      <li data-c="tip"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2023 底</span><h3>💵 給小費</h3><p>社群實驗爆紅，但只量到回答變長。</p></div></li>
+      <li data-c="key"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2025/05</span><h3>😠 威脅它</h3><p>Google 共同創辦人布林公開說，威脅 AI 表現會比較好；沒有提出數據。</p></div></li>
+      <li data-c="navy"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2025/08</span><h3>🔬 大規模重測</h3><p>小費、威脅、職涯很重要，全都沒有可靠效果。</p></div></li>
+      <li data-c="navy"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2025/12</span><h3>🎓 專家角色</h3><p>空泛的「你是世界級專家」沒有一致的好處；具體的身分和讀者，仍然要給。</p></div></li>
+    </ol>
+    <div class="ae-tl__legend"><span data-c="prompt">當年真的有效</span><span data-c="tip">只量到別的東西</span><span data-c="key">沒有數據</span><span data-c="navy">認真重測</span></div>
+    <p class="ae-key"><small>只記一句</small>話術一招換過一招，管用的始終是那六塊積木。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2205.11916" target="_blank" rel="noopener">Kojima et al. 2022</a>；<a href="https://arxiv.org/abs/2309.03409" target="_blank" rel="noopener">OPRO (Yang et al. 2023)</a>；<a href="https://arxiv.org/abs/2307.11760" target="_blank" rel="noopener">EmotionPrompt (Li et al. 2023)</a>；<a href="https://www.theregister.com/2025/05/28/google_brin_suggests_threatening_ai/" target="_blank" rel="noopener">The Register (2025-05-28)</a>；<a href="https://arxiv.org/abs/2508.00614" target="_blank" rel="noopener">Prompting Science Report 3 (2025-08)</a>；<a href="https://arxiv.org/abs/2512.05858" target="_blank" rel="noopener">Prompting Science Report 4 (2025-12)</a>。</p>
+  </div>
+</section>

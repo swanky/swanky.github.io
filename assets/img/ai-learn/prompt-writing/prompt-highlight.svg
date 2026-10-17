@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 662" width="1200" height="662" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">用螢光筆塗出 Prompt 的各個要素</title>
+  <desc id="d">同一段會議通知的 Prompt，用六種螢光色標出各個要素：你是團隊的專案助理（角色）；請寫一封會議通知 Email（任務）；下週三 14:00 要開 Q4 預算討論會，與會的是各組負責人，大家行程很滿（背景）；全文 150 字內，預算數字等會議上再談，信裡先不寫（限制）；主旨一行，內文條列時間、地點、要先準備的資料（格式）；語氣參考附上的上一封通知信（範例）。示範情境為虛構；標示法仿 Google《Gemini for Workspace Prompting Guide》以螢光色標出 Prompt 要素。</desc>
+  <rect width="1200" height="662" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#1F2937">用螢光筆塗出 Prompt 的各個要素</text>
+  <text x="48" y="126" font-size="26" fill="#4B5563">同一段話，每一句各是一塊積木</text>
+  <rect x="48" y="160" width="26" height="26" rx="6" fill="#173B5E"/>
+  <text x="84" y="182" font-size="24" font-weight="700" fill="#1F2937">角色</text>
+  <rect x="178" y="160" width="26" height="26" rx="6" fill="#00AFC7"/>
+  <text x="214" y="182" font-size="24" font-weight="700" fill="#1F2937">任務</text>
+  <rect x="308" y="160" width="26" height="26" rx="6" fill="#2878D0"/>
+  <text x="344" y="182" font-size="24" font-weight="700" fill="#1F2937">背景</text>
+  <rect x="438" y="160" width="26" height="26" rx="6" fill="#F26D5B"/>
+  <text x="474" y="182" font-size="24" font-weight="700" fill="#1F2937">限制</text>
+  <rect x="568" y="160" width="26" height="26" rx="6" fill="#53A88B"/>
+  <text x="604" y="182" font-size="24" font-weight="700" fill="#1F2937">格式</text>
+  <rect x="698" y="160" width="26" height="26" rx="6" fill="#F2B544"/>
+  <text x="734" y="182" font-size="24" font-weight="700" fill="#1F2937">範例</text>
+  <rect x="48" y="208" width="1104" height="360" rx="22" fill="#F7F7F3" stroke="#CFD8DF" stroke-width="2"/>
+  <rect x="80.0" y="240" width="280.0" height="46" rx="6" fill="#D7E8F3"/>
+  <line x1="80.0" y1="284" x2="360.0" y2="284" stroke="#173B5E" stroke-width="5"/>
+  <text x="80.0" y="270" font-size="28" fill="#1F2937" textLength="280.0" lengthAdjust="spacing" xml:space="preserve">你是團隊的專案助理，</text>
+  <rect x="360.0" y="240" width="338.8" height="46" rx="6" fill="#E0F4F7"/>
+  <line x1="360.0" y1="284" x2="698.8" y2="284" stroke="#00AFC7" stroke-width="5"/>
+  <text x="360.0" y="270" font-size="28" fill="#1F2937" textLength="338.8" lengthAdjust="spacing" xml:space="preserve">請寫一封會議通知 Email。</text>
+  <rect x="698.8" y="240" width="367.4" height="46" rx="6" fill="#E3EDFA"/>
+  <line x1="698.8" y1="284" x2="1066.2" y2="284" stroke="#2878D0" stroke-width="5"/>
+  <text x="698.8" y="270" font-size="28" fill="#1F2937" textLength="367.4" lengthAdjust="spacing" xml:space="preserve">下週三 14:00 要開 Q4 預算討</text>
+  <rect x="80.0" y="308" width="560.0" height="46" rx="6" fill="#E3EDFA"/>
+  <line x1="80.0" y1="352" x2="640.0" y2="352" stroke="#2878D0" stroke-width="5"/>
+  <text x="80.0" y="338" font-size="28" fill="#1F2937" textLength="560.0" lengthAdjust="spacing" xml:space="preserve">論會，與會的是各組負責人，大家行程很滿。</text>
+  <rect x="640.0" y="308" width="427.8" height="46" rx="6" fill="#FCE4DF"/>
+  <line x1="640.0" y1="352" x2="1067.8" y2="352" stroke="#F26D5B" stroke-width="5"/>
+  <text x="640.0" y="338" font-size="28" fill="#1F2937" textLength="427.8" lengthAdjust="spacing" xml:space="preserve">全文 150 字內，預算數字等會議上</text>
+  <rect x="80.0" y="376" width="252.0" height="46" rx="6" fill="#FCE4DF"/>
+  <line x1="80.0" y1="420" x2="332.0" y2="420" stroke="#F26D5B" stroke-width="5"/>
+  <text x="80.0" y="406" font-size="28" fill="#1F2937" textLength="252.0" lengthAdjust="spacing" xml:space="preserve">再談，信裡先不寫。</text>
+  <rect x="332.0" y="376" width="644.0" height="46" rx="6" fill="#E3F3EC"/>
+  <line x1="332.0" y1="420" x2="976.0" y2="420" stroke="#53A88B" stroke-width="5"/>
+  <text x="332.0" y="406" font-size="28" fill="#1F2937" textLength="644.0" lengthAdjust="spacing" xml:space="preserve">主旨一行；內文條列時間、地點、要先準備的資料。</text>
+  <rect x="976.0" y="376" width="112.0" height="46" rx="6" fill="#FFF1D2"/>
+  <line x1="976.0" y1="420" x2="1088.0" y2="420" stroke="#F2B544" stroke-width="5"/>
+  <text x="976.0" y="406" font-size="28" fill="#1F2937" textLength="112.0" lengthAdjust="spacing" xml:space="preserve">語氣參考</text>
+  <rect x="80.0" y="444" width="280.0" height="46" rx="6" fill="#FFF1D2"/>
+  <line x1="80.0" y1="488" x2="360.0" y2="488" stroke="#F2B544" stroke-width="5"/>
+  <text x="80.0" y="474" font-size="28" fill="#1F2937" textLength="280.0" lengthAdjust="spacing" xml:space="preserve">附上的上一封通知信。</text>
+  <text x="48" y="612" font-size="22" fill="#64748B">示範情境為虛構；標示法仿 Google《Gemini for Workspace Prompting Guide》</text>
+  <text x="48" y="642" font-size="22" fill="#64748B">以螢光色標出 Prompt 要素</text>
+</svg>

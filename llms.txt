@@ -146,6 +146,12 @@
 - [MCP：讓 AI 接上工具](https://swanky.github.io/education/ai/learn/ai-basics/mcp/): 用服務生寫點單和 USB-C 轉接線的比喻，白話看懂 AI 怎麼使用工具、MCP 的三個角色、接上行事曆和信箱後權限怎麼給，以及藏在資料裡的假交辦。附互動練習與小測驗。
 - [Skill：把經驗寫成一本手冊](https://swanky.github.io/education/ai/learn/ai-basics/skill/): 用「新人工作手冊」的比喻，白話看懂 Skill 是什麼、AI 為什麼用得上才翻開、它和 Prompt、MCP 怎麼分工，以及哪件工作最值得先寫成手冊。附互動練習與小測驗。
 - [Agent：大腦＋工具＋迴圈](https://swanky.github.io/education/ai/learn/ai-basics/agent/): 用排會議的例子，白話看懂 AI Agent 怎麼想、做、看、判斷，自己把事做完；分清聊天機器人、Workflow 與 Agent，用 AI 紅綠燈決定哪一步要人確認，再挑出第一件交給 AI 的工作。
+- [Prompt 進階：從一次交辦到可重複的工作指示](https://swanky.github.io/education/ai/learn/prompt-writing/): 讀過 AI 入門之後的下一步。免費自學教材，五幕看懂 Prompt 框架要不要背、官方文件教的四個原則、給小費和罵 AI 有沒有用、行話為什麼重要，最後把常做的事寫成可重複的模板。
+- [框架：字母湯不用背](https://swanky.github.io/education/ai/learn/prompt-writing/frameworks/): RTF、CO-STAR、RISEN、CREATE……坊間三十多個 Prompt 縮寫，拆開來看都是同幾塊積木。對照 Google、Microsoft 官方怎麼教，再看研究怎麼說：框架是檢查清單，不是咒語。
+- [原則：把要求說清楚的四招](https://swanky.github.io/education/ai/learn/prompt-writing/principles/): 六塊積木之外，Anthropic、OpenAI、Google、Microsoft 官方文件還教了四件事：規則附理由、指示和資料分開放、先定義怎樣算完成、讓 AI 先反問你。每個原則附一句可以直接抄的話與小測驗。
+- [咒語：給小費、威脅、灌迷湯有用嗎？](https://swanky.github.io/education/ai/learn/prompt-writing/magic-words/): 給 ChatGPT 小費、說要把它關機、罵它、叫它當世界級專家，真的會比較準嗎？四個真實實驗、四題小測驗，加上下次看到「這招超神」時要先問的三個問題。
+- [行話：先懂，才唸得出咒語](https://swanky.github.io/education/ai/learn/prompt-writing/domain/): 同一個 AI，內行人和外行人問出來差很多。用《哈利波特》的咒語當比喻，看寫 email、做簡報、做產品照、拍短影音、寫專利的行話與完成條件，以及不熟的領域怎麼先當學徒。
+- [模板：寫一次，重複用](https://swanky.github.io/education/ai/learn/prompt-writing/template/): 同一件事分幾次補，AI 表現平均掉 39%。把常做的交辦寫成「固定部分寫一次、會變的挖空」的模板，附會議摘要範本、自己練四步與合格標準，以及五句可以直接抄的話。
 
 ## 古典小說數位化 Classical Literature
 

@@ -1,0 +1,154 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/k1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+layout: ai-learn-chapter
+title: 模板：寫一次，重複用
+seo_title: 可重複的 Prompt 模板怎麼寫？固定部分＋挖空格｜Prompt 進階第五幕
+description: 同一件事分幾次補，AI 表現平均掉 39%。把常做的交辦寫成「固定部分寫一次、會變的挖空」的模板，附會議摘要範本、自己練四步與合格標準，以及五句可以直接抄的話。
+keywords: Prompt模板,可重複Prompt,提示詞範本,會議摘要Prompt,多輪對話,完成條件,史旺基
+permalink: /education/ai/learn/prompt-writing/template/
+nav_active: education
+use_ai_learn: true
+ai_module: prompt-writing
+ai_chapter: template
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+  - name: 模板：寫一次，重複用
+    url: /education/ai/learn/prompt-writing/template/
+lead: 還記得史旺姬每週一重講五遍的那段話嗎？前四幕學到的東西，在這一幕組合起來：把它寫成一份模板，下次只換一格，換人也接得住。
+question: 怎麼把一次寫好的交辦，變成下次、和別人都能直接用的指示？
+hero_illus:
+  code: K1
+  src: /assets/img/ai-learn/prompt-writing/k1.webp
+  width: 1536
+  height: 1024
+  alt: AI 生成插畫：一大片青色範本全息面板飄在後方，大部分區塊是實心的，只有一格用虛線挖空；胸口有藍色光球的小機器人剛把文件卡遞給史旺姬，她把卡片放進空格，戴白色笑臉大帽的老師指著實心區塊；旁邊疊著幾份打了綠勾的完成文件
+  desc: 固定的寫一次，會變的挖空
+outro: 五幕走完：框架不用背、四個原則說清楚、咒語別迷信、行話要先懂，最後寫成模板。下一步，把模板整理成團隊共用的工作手冊，那就是〈AI 入門〉裡的 Skill。
+takeaways:
+  - 「……，因為……」：每條規則附一句理由。
+  - 「&lt;資料&gt;……&lt;/資料&gt;，請根據上面的資料……」：資料框起來，任務放最後。
+  - 「寫完後用下面的條件逐項檢查，不通過就改到通過再給我」。
+  - 「在你動手前，請一題一題問我，每題附上你建議的答案」。
+  - 「這份交辦還缺什麼？請幫我改寫」：讓 AI 幫你改 Prompt。
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+{% assign basics = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section id="lost" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-graph-down" aria-hidden="true"></i>第五幕開場：研究（2025）</span>
+      <h2>同一件事分幾次補，AI 表現平均掉 39%</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-prose">
+        <p>Microsoft 與 Salesforce 的研究團隊做了一個實驗：同一道題，一種是一次講完，一種是拆成好幾段、分好幾輪慢慢補。</p>
+        <p>結果，分次補的時候，<strong>測試的頂尖模型表現全部變差，平均掉 39%</strong>，這是 20 萬次以上模擬對話的結果。主因是不穩定：前幾輪資訊還不夠，它就先自己猜、急著交答案，走錯了就回不來。</p>
+      </div>
+      <div class="ae-grid" style="--cols:1">
+        <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-sticky" aria-hidden="true"></i></div><h3>教訓 1：別分次補</h3><p>想到一句補一句的要求，很容易掉。整理成一段完整的交辦，一次給。</p></div>
+        <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-clipboard-check" aria-hidden="true"></i></div><h3>教訓 2：先試跑 2～3 件</h3><p>大批開跑前，先拿 2～3 件試做，照出錯的地方改好交辦，再跑全部（Anthropic 官方建議）。</p></div>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>要求要一次給齊，所以要把交辦寫成可以重複用的模板。</p>
+    <p class="ae-source">出處：<a href="https://arxiv.org/abs/2505.06120" target="_blank" rel="noopener">Laban et al.〈LLMs Get Lost In Multi-Turn Conversation〉arXiv 2505.06120 (2025-05)</a>；<a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic〈Best practices for Claude Code〉</a>。</p>
+  </div>
+</section>
+
+<section id="template" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-file-earmark-ruled" aria-hidden="true"></i>動手做模板</span>
+      <h2>可重複 Prompt 模板：固定的寫一次，會變的挖空</h2>
+    </div>
+    <div class="ae-prose"><p>拿史旺姬每週要整理的會議摘要當例子（示意）。注意看它用上了哪幾個原則：</p></div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div>
+        <p class="ae-copybox"><span class="ae-copybox__label">會議摘要模板（示意）</span><mark>&lt;資料&gt;【這次的會議筆記】&lt;/資料&gt;</mark>
+&lt;指示&gt;
+# 角色
+你是團隊的專案助理。
+# 背景與理由
+主管多半用手機看，所以要短、先講結論。
+# 限制
+- 300 字內
+- 人名、期限照筆記原文；沒寫到的填「待確認」
+# 格式
+三行摘要 → 決議清單 → 待辦表格（事項／負責人／期限）
+# 完成前自我檢查
+- 每個待辦都對得回筆記原文
+- 第一行就是結論
+- 待辦表格每列都有負責人和期限
+&lt;/指示&gt;
+把上面的會議筆記，整理成給主管看的摘要。</p>
+      </div>
+      <ol class="ae-numlist">
+        <li><span><b>固定部分：</b>角色、背景、限制、格式，每次都一樣，<b>寫一次就好</b>。&lt;指示&gt;、# 這些符號直接打進對話框，AI 看得懂。</span></li>
+        <li><span><b>理由：</b>{% include ai-learn/chref.html module=mod slug="principles" anchor="reason" label="原則 1" %}，規則旁邊附一句為什麼。寫了「主管用手機看」，AI 才知道該多短、為什麼先講結論。</span></li>
+        <li><span><b>完成條件：</b>{% include ai-learn/chref.html module=mod slug="principles" anchor="done" label="原則 3" %}，交件前它自己先對一遍；對不回筆記原文的待辦，要改到對得回才交。</span></li>
+        <li><span><b>【變數】：</b>每次會變的內容挖空，用的時候只換這一格。照{% include ai-learn/chref.html module=mod slug="principles" anchor="sandwich" label="原則 2" %}，資料放最上面，任務放在最後一行。</span></li>
+      </ol>
+    </div>
+    <p class="ae-tip"><b>和史旺姬的週一是同一件事：</b>這份模板存成一份文字檔，第 3 週不會再漏掉「300 字內」；第 5 週阿哲接手，打開檔案、貼上這週的筆記就能用。</p>
+    <p class="ae-key"><small>只記一句</small>固定部分寫一次就好；【變數】這一格每次換。</p>
+    <p class="ae-source">本模板為教材示意，情境虛構。</p>
+  </div>
+</section>
+
+<section id="practice" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-pencil-square" aria-hidden="true"></i>換你動手</span>
+      <h2>把你的任務寫成可重複的 Prompt：四步</h2>
+    </div>
+    <p class="ae-tip ae-tip--warn" style="margin:0 0 1.25rem"><i class="bi bi-shield-check" aria-hidden="true"></i><span><b>先守住一條線：</b>用你平常會用、單位允許的 AI 工具；只用虛構或可公開的資料練習，不貼個資、密碼、未公開數字。</span></p>
+    <div class="ae-dg">
+      <div class="ae-flow-row ae-flow-row--tight">
+        <div class="ae-node" data-c="prompt"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-bullseye" aria-hidden="true"></i></span><b>選題</b><span>〈AI 入門〉第六幕{% include ai-learn/chref.html module=basics slug="agent" anchor="pick" label="選題三問" %}挑出的那件重複工作；沒挑過的，就選你對 AI 講過三次以上的那件事。</span><span>例：每週整理會議摘要</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-pencil" aria-hidden="true"></i></span><b>填模板</b><span>照上面的模板：固定部分寫一次，會變的挖成【變數】；規則附理由、最後寫完成條件。</span><span>先填角色、限制、完成條件三段</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">3</span><span class="ae-node__icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><b>換資料跑兩次</b><span>用兩份不同的虛構資料，在同一個 AI 工具裡各跑一次：換資料，不換工具。看兩次品質穩不穩。</span><span>沒有資料？先請 AI 生兩份虛構的會議筆記</span></div>
+        <div class="ae-node" data-c="key"><span class="ae-num">4</span><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-pencil-fill" aria-hidden="true"></i></span><b>圈出固定部分</b><span>哪幾段兩次都沒改？那就是你可以一直重複用的工作指示。</span><span>存成一份文字檔，下次只換【變數】那一格</span></div>
+      </div>
+    </div>
+    <div class="ae-grid ae-grid--start ae-mt" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-ui-checks" aria-hidden="true"></i>合格標準：三格都勾到就過關</div>
+        <ul class="ae-check">
+          <li><label><input type="checkbox"><span>有挖空的【變數】格</span></label></li>
+          <li><label><input type="checkbox"><span>每條規則旁，都有一句「因為」</span></label></li>
+          <li><label><input type="checkbox"><span>最後有可以打勾的完成條件</span></label></li>
+        </ul>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-life-preserver" aria-hidden="true"></i>卡住時</div>
+        <p style="margin:0">把你的模板貼給 AI，問它：「這份交辦還缺什麼？請一題一題問我。」這就是第二幕的{% include ai-learn/chref.html module=mod slug="principles" anchor="askme" label="原則 4" %}，加上請 AI 幫你改 Prompt。</p>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>換兩份資料跑兩次，沒改到的段落，就是可以一直重複用的工作指示。</p>
+  </div>
+</section>
+
+<section id="next" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-ladder" aria-hidden="true"></i>下一步</span>
+      <h2>從一次交辦到可重複的工作指示：你已經走完前三階</h2>
+    </div>
+    <div class="ae-grid" style="--cols:3">
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></div><h3>第 1～3 階：這個單元</h3><p>把一次交辦說清楚、發現自己在重講、把它寫成模板。</p></div>
+      <div class="ae-card" data-c="slate"><div class="ae-card__icon"><i class="bi bi-people" aria-hidden="true"></i></div><h3>第 4 階：團隊共用</h3><p>把模板的固定部分整理成工作手冊，大家都能用：就是{% include ai-learn/chref.html module=basics slug="skill" label="〈AI 入門〉的 Skill" %}。</p></div>
+      <div class="ae-card" data-c="slate"><div class="ae-card__icon"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></div><h3>第 5 階：測試與改版</h3><p>用真實任務反覆跑、反覆改，讓手冊越用越準。</p></div>
+    </div>
+    <p class="ae-hint ae-mt" style="display:block">完整的五階圖：<a href="{{ mod.url | relative_url }}#ladder">回單元總覽看階梯圖</a>。</p>
+    <p class="ae-key"><small>只記一句</small>同一件事講到第三次，就是把它寫成可重複工作指示的時候。</p>
+  </div>
+</section>

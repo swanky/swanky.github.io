@@ -40,7 +40,7 @@ layout: home
       <div class="ae-further__list">
         {% for f in cur.further %}{% assign head = f.url | slice: 0, 4 %}
         <a class="ae-further__item" data-kind="{{ f.kind }}" href="{% if head == 'http' %}{{ f.url }}{% else %}{{ f.url | relative_url }}{% endif %}"{% if head == 'http' %} target="_blank" rel="noopener"{% endif %}>
-          <span class="ae-further__badge">{% case f.kind %}{% when 'official' %}官方{% when 'column' %}史旺基專欄{% else %}精選{% endcase %}</span>
+          <span class="ae-further__badge">{% case f.kind %}{% when 'official' %}官方{% when 'column' %}史旺基專欄{% when 'module' %}進階單元{% else %}精選{% endcase %}</span>
           <b class="ae-further__title">{{ f.title }}</b>
           <small class="ae-further__meta">{{ f.by }}・{{ f.meta }}</small>
           <span class="ae-further__note">{{ f.note }}</span>

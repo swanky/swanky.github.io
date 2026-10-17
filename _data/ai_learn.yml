@@ -11,6 +11,8 @@ modules:
     # 整門課的延伸學習起點（總覽頁）
     start_here: { title: "AI Fluency: Framework & Foundations", by: Anthropic, url: "https://anthropic.skilljar.com/ai-fluency-framework-foundations", meta: "免費線上課・英文・有結業證書", note: "Anthropic 官方給新手的 AI 素養課：生成式 AI 是什麼、能力與限制、怎麼有效交辦、怎麼判斷 AI 的輸出。" }
     origin: 整理自史旺基 2026 年 10 月的一場企業內部 AI 入門分享，改寫成可以自己讀、自己練的網頁版。
+    # 教育首頁單元列的六格縮圖（assets/img/ai-learn/<slug>/<代號>-768.webp）
+    mosaic: [a1, l1, p1, m1, s1, g1]
     # 八個最常見的誤會（總覽頁翻牌卡）：tag＝名詞膠囊、chapter＝決定顏色
     myths:
       - { tag: LLM, chapter: llm, said: AI 會記得我上次講過的話, truth: 模型本身不記得；是 App 每次把整段對話重送給它。開新對話就從零開始（除非 App 另外開了「記憶」功能）。 }
@@ -53,6 +55,7 @@ modules:
         # 延伸學習：official＝大廠官方、extra＝非官方精選、column＝史旺基專欄（站內網址）
         further:
           - { kind: official, title: "Prompting", by: "OpenAI", url: "https://learn.chatgpt.com/docs/prompting", meta: "英文文章", note: "把交辦拆成目標、背景、輸出、邊界，再用追問修正，和這一幕的三要素幾乎一樣；後段 Codex 的部分可以跳過。" }
+          - { kind: module, title: "Prompt 進階：從一次交辦到可重複的工作指示", by: "史旺基自學教材", url: "/education/ai/learn/prompt-writing/", meta: "免費・約 1.5 小時・五幕", note: "學會六塊積木之後的下一步：框架要不要背、官方教的四個原則、網路咒語有沒有用，最後把常做的事寫成模板。" }
       - slug: mcp
         act: 第四幕
         title: MCP：讓 AI 接上工具
@@ -86,6 +89,72 @@ modules:
           - { kind: official, title: "Building effective agents", by: "Anthropic", url: "https://www.anthropic.com/engineering/building-effective-agents", meta: "英文文章", note: "業界最常引用的「流程自動化 vs Agent」定義出處；讀開頭的定義段就好。" }
           - { kind: column, title: "設計循環，而不只是下提示：Claude Code 官方拆解四種代理人循環", by: "史旺基專欄", url: "/technical/claude-code-designing-loops/", meta: "進階，含工程術語", note: "「循環」怎麼定義、什麼時候停，對照這一幕的想、做、看、判斷。" }
           - { kind: column, title: "AI 寫程式很便宜，好程式沒有——Simon Willison《Agentic Engineering Patterns》導讀", by: "史旺基專欄", url: "/claude-code/agentic-engineering-patterns-guide/", meta: "進階，含工程術語", note: "看前兩節：「代理，就是在迴圈裡反覆呼叫工具、達成目標的東西」。" }
+
+  - slug: prompt-writing
+    title: Prompt 進階：從一次交辦到可重複的工作指示
+    subtitle: 同一件事不必每次從頭講：看懂坊間框架、學會四個原則、拆穿網路咒語，再把常做的事寫成可以重複用的模板
+    description: 讀過 AI 入門之後的下一步。五幕看懂 Prompt 框架要不要背、官方文件教的四個原則、給小費和罵 AI 有沒有用、行話為什麼重要，最後把常做的事寫成可重複的模板。
+    start_here: { title: "Prompting best practices", by: Anthropic, url: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices", meta: "官方文件・英文", note: "第二幕四個原則多數出自這份：把 AI 當聰明但剛到職的新同事、規則附理由、長文件資料放上面。寫給開發者，先讀開頭「Be clear and direct」和「Add context」兩節就好。" }
+    origin: 整理自史旺基 2026 年 10 月的一場企業內部分享，改寫成可以自己讀、自己練的網頁版。
+    mosaic: [h1, f1, r1, w1, d1, k1]
+    myths:
+      - { tag: 框架, chapter: frameworks, said: 要先背熟 RTF、CO-STAR 這些框架，才寫得好 Prompt, truth: 多數縮寫查不到提出者，也沒有研究證明哪個最好。有用的是把需求拆開來想：寫完用六塊積木檢查，缺哪塊補哪塊。 }
+      - { tag: 框架, chapter: frameworks, said: 網路上的神 Prompt 照抄，就能做出一樣的成果, truth: 抄得到那一句，抄不到背後的幾百次重抽、挑選和剪接。要放進你自己的需求、資料和驗收標準。 }
+      - { tag: 原則, chapter: principles, said: 叫它寫 300 字，它就會剛好寫 300 字, truth: AI 沒辦法在心裡可靠地數字數，直接要求嚴格長度，研究實測達標不到三成。改成「3 段、每段 2 句」這種一眼能驗收的寫法。 }
+      - { tag: 原則, chapter: principles, said: AI 會照我說的做，所以不用驗收, truth: 它覺得「看起來做完了」就會停。交辦時先寫好可以打勾的完成條件，讓它交件前自己對一遍，你再抽查。 }
+      - { tag: 咒語, chapter: magic-words, said: 給小費、威脅或罵它，AI 會比較認真, truth: 大規模重測都沒有可靠效果，同一句話這題多對、那題多錯。想要短就說要短，想要準就給標準。 }
+      - { tag: 咒語, chapter: magic-words, said: 先說「你是世界級專家」，AI 就會比較準, truth: 2025 年底的大規模實測：空泛的專家角色沒有一致的好處。要給的是具體的身分、讀者和用途。 }
+      - { tag: 行話, chapter: domain, said: 不懂這個領域沒關係，丟給 AI 就好, truth: 不懂行話，就說不清楚要什麼，也驗不出成品哪裡錯。先請 AI 當老師，教你最該懂的詞，再交辦。 }
+      - { tag: 模板, chapter: template, said: 一次講不完，就分幾次慢慢補, truth: 研究發現同一件事分幾次補，頂尖模型的表現平均掉 39%。把要求整理成一段完整的交辦，常做的事寫成模板。 }
+    url: /education/ai/learn/prompt-writing/
+    status: published
+    chapters:
+      - slug: frameworks
+        act: 第一幕
+        title: 框架：字母湯不用背
+        summary: RTF、CO-STAR、RISEN……三十多個縮寫拆開來看，都是同幾塊積木；再看大廠官方怎麼教，以及從神 Prompt 到設計流程的四年。
+        color: prompt
+        status: published
+        further:
+          - { kind: official, title: "Learn about Copilot prompts", by: "Microsoft（說明中心）", url: "https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5", meta: "官方說明・英文", note: "Microsoft 把 Prompt 拆成目標、背景、期望、來源四塊，同時說只要有清楚的目標就能開始：框架是檢查清單，不是必填表。" }
+          - { kind: column, title: "Loop Engineering：你不再提示 AI，而是設計一個「提示 AI 的系統」", by: "史旺基專欄", url: "/technical/loop-engineering-ai-system/", meta: "進階，含工程術語", note: "從 Prompt、Context 到 Loop 的完整脈絡，對照這一幕最後的時間軸。" }
+      - slug: principles
+        act: 第二幕
+        title: 原則：把要求說清楚的四招
+        summary: 規則附理由、指示和資料分開放、先定義怎樣算完成、讓 AI 先反問你：大廠官方文件都在教的四個寫法。
+        color: prompt
+        status: published
+        further:
+          - { kind: official, title: "Best practices for Claude Code", by: "Anthropic", url: "https://code.claude.com/docs/en/best-practices", meta: "官方文件・英文・含工程術語", note: "「沒有檢查，你就成了驗收的人」「讓 AI 訪問你」「改兩次還不對就重開」都出自這份；挑講驗收和訪談的段落看。" }
+          - { kind: column, title: "Fable 田野指南：當地圖展開，你要學會的不只是下 prompt", by: "史旺基專欄", url: "/technical/fable-field-guide/", meta: "進階，含工程術語", note: "Anthropic 把自家系統提示詞砍掉約八成的那一段：從限制清單改成任務脈絡。" }
+          - { kind: column, title: "寫了一堆「電影感」關鍵字，AI 影片還是拍不出來？先把鏡頭語言分成三層", by: "史旺基專欄", url: "/technical/ai-video-camera-language-prompt/", meta: "進階", note: "「一個鏡頭只放一個運鏡、一個動作」的完整版，附兩人對話拆鏡的圖解。" }
+      - slug: magic-words
+        act: 第三幕
+        title: 咒語：給小費、威脅、灌迷湯有用嗎？
+        summary: 四個實驗拆穿網路咒語：小費、懲罰、關機信和罵人，以及下次看到「這招超神」時要先問的三個問題。
+        color: prompt
+        status: published
+        further:
+          - { kind: extra, title: "Does Offering ChatGPT a Tip Cause it to Generate Better Text? An Analysis", by: "Max Woolf（非官方）", url: "https://minimaxir.com/2024/02/chatgpt-tips-analysis/", meta: "英文長文", note: "實驗 2 的原文：獎勵和懲罰兩兩配對、請另一個 AI 評分，作者自己下的結論是「目前無定論」。" }
+          - { kind: extra, title: "Prompting Science Report 3: I'll pay you or I'll kill you — but will you care?", by: "Meincke、Mollick 等（華頓商學院）", url: "https://arxiv.org/abs/2508.00614", meta: "英文研究報告・可免費下載", note: "實驗 3 的原始報告：九種說法、五個模型、每題問 25 次。" }
+      - slug: domain
+        act: 第四幕
+        title: 行話：先懂，才唸得出咒語
+        summary: 懂行話才說得準、也驗得了貨：用《哈利波特》的咒語，看寫信、做簡報、做圖、拍影片、寫專利的內行交辦。
+        color: prompt
+        status: published
+        further:
+          - { kind: column, title: "Malfoid 三週爆紅：AI 把「角色一致」從畫功變成資料準備", by: "史旺基專欄", url: "/technical/malfoid-ai-character-consistency/", meta: "進階，含工程術語", note: "女版馬份這個梗的來龍去脈，以及 AI 怎麼讓同一個角色一直長同一張臉。" }
+          - { kind: official, title: "WIPO Patent Drafting Manual（第二版）", by: "WIPO（世界智慧財產權組織）", url: "https://www.wipo.int/edocs/pubdocs/en/wipo-pub-867-23-en-wipo-patent-drafting-manual.pdf", meta: "英文 PDF・免費", note: "專利寫作入門：請求項、技術特徵和說明書怎麼互相支持。想替專利這一格補行話，從這裡查。" }
+      - slug: template
+        act: 第五幕
+        title: 模板：寫一次，重複用
+        summary: 同一件事分幾次補，表現平均掉 39%；把常做的事寫成「固定部分＋挖空格」的模板，換兩份資料跑一次驗收。
+        color: prompt
+        status: published
+        further:
+          - { kind: extra, title: "LLMs Get Lost In Multi-Turn Conversation", by: "Laban 等（Microsoft Research、Salesforce Research）", url: "https://arxiv.org/abs/2505.06120", meta: "英文論文", note: "本幕開頭那個 39% 的出處：20 萬次以上的模擬對話，看 AI 被分次交辦時怎麼走丟。" }
+          - { kind: official, title: "Improve your prompts in the developer console", by: "Anthropic", url: "https://claude.com/blog/prompt-improver", meta: "官方文章・英文・2024-10", note: "官方的 Prompt 改寫工具介紹：把寫好的模板丟給它，請它補上缺的段落。" }
 
 # 名詞小抄：module＋chapter 決定歸屬與連結；star＝必記關鍵詞
 glossary:
@@ -130,3 +199,25 @@ glossary:
   - { term: Chatbot, module: ai-basics, chapter: agent, text: 你問一句、它答一句的聊天程式。, metaphor: 客服電話 }
   - { term: Workflow, module: ai-basics, chapter: agent, text: 照事先寫好的路徑跑；中間可以有 LLM，但下一步不由它決定。, metaphor: 工廠生產線：每站固定做同一件事 }
   - { term: Agent／Agentic, star: true, module: ai-basics, chapter: agent, text: LLM 在迴圈裡用工具，直到完成目標（迴圈由 App 轉）。, metaphor: 會自己把事做完的同事 }
+  # prompt-writing（Prompt 進階）
+  - { term: Prompt 框架, module: prompt-writing, chapter: frameworks, text: 把 Prompt 要素縮成英文字母的口訣，例如 RTF（角色、任務、格式）；坊間至少三十多個，多數查不到提出者。, metaphor: 一碗字母湯 }
+  - { term: CO-STAR, module: prompt-writing, chapter: frameworks, text: 新加坡政府科技局（GovTech）整理的框架：背景、目標、文風、語氣、受眾、回覆格式。, metaphor: 特別在意語氣和讀者的檢查清單 }
+  - { term: Loop（流程設計）, module: prompt-writing, chapter: frameworks, text: 不再一句一句提示 AI，而是設計一套會自己檢查、記錄、回報的工作流程。, metaphor: 從親自交辦，變成設計交辦制度 }
+  - { term: 規則附理由, star: true, module: prompt-writing, chapter: principles, text: 每條規則後面加一句「因為……」，AI 就能自己判斷沒寫到的情況。, metaphor: 告訴新同事為什麼，不只告訴他不准 }
+  - { term: Prompt 三明治, star: true, module: prompt-writing, chapter: principles, text: 貼長文件時，資料用標籤框起來放上面，要它做的事寫在最後；各家建議的位置略有不同。, metaphor: 料夾在中間，指示壓在最上層 }
+  - { term: 標籤（分隔符號）, module: prompt-writing, chapter: principles, text: 用 &lt;資料&gt;……&lt;/資料&gt; 這類成對的標記，把指示、資料、範例分開，AI 才不會搞混。, metaphor: 文件夾上的分類標籤 }
+  - { term: 完成條件, star: true, module: prompt-writing, chapter: principles, text: 交辦時先寫好 3 到 5 條可以打勾的驗收標準，讓 AI 交件前自己逐條對一遍。, metaphor: 驗收單 }
+  - { term: 讓 AI 反問, module: prompt-writing, chapter: principles, text: 動手前請 AI 一題一題問你，每題附建議答案、每輪設上限，把你沒想到的背景問出來。, metaphor: 新同事開工前先來確認需求 }
+  - { term: Prompt 改寫工具, module: prompt-writing, chapter: principles, text: AI 公司提供的功能，請 AI 幫你檢查、補強一段 Prompt；也可以直接問「這份交辦還缺什麼？」。, metaphor: 請資深同事幫你看交辦單 }
+  - { term: 情緒話術（網路咒語）, module: prompt-writing, chapter: magic-words, text: 給小費、威脅、灌迷湯這類想讓 AI 比較認真的說法；大規模重測都沒有可靠效果。, metaphor: 會過期的偏方 }
+  - { term: 一步一步想, module: prompt-writing, chapter: magic-words, text: 2022 年最早被證實有效的咒語，讓模型先寫推理再作答；現在很多模型已經內建這個習慣。, metaphor: 考試先打草稿 }
+  - { term: 樣本數, module: prompt-writing, chapter: magic-words, text: 一個實驗重複測了幾次；只跑 5 次的結果很容易碰運氣，放大到 100 次差異常常就不見了。, metaphor: 擲五次硬幣不能斷定它偏一邊 }
+  - { term: 行話, star: true, module: prompt-writing, chapter: domain, text: 一個領域的內行用語，例如 email 的 BLUF、簡報的 MECE；講得出來，才說得準、也驗得了貨。, metaphor: 魔法世界的咒語 }
+  - { term: BLUF, module: prompt-writing, chapter: domain, text: Bottom Line Up Front，結論放第一段：要對方做什麼、什麼時候前，三句內講完。, metaphor: 先給答案再給理由 }
+  - { term: MECE, module: prompt-writing, chapter: domain, text: 分類時不重複、不遺漏，常和金字塔原理（先講結論，再分層給理由）一起用在簡報。, metaphor: 每個新生只進一個學院 }
+  - { term: 分鏡表, module: prompt-writing, chapter: domain, text: 影片的逐鏡規劃：鏡號、秒數、景別、運鏡、畫面、旁白、字幕、音效。, metaphor: 影片的施工圖 }
+  - { term: 先當學徒, module: prompt-writing, chapter: domain, text: 不熟的領域先請 AI 當老師，列出最該懂的詞與外行最常漏的條件，核對來源後再交辦。, metaphor: 先學咒語，再拿魔杖 }
+  - { term: 可重複模板, star: true, module: prompt-writing, chapter: template, text: 把常做的交辦分成兩部分：每次都一樣的寫一次，每次會變的挖成空格。, metaphor: 已經印好的表單，只填空格 }
+  - { term: 變數（挖空格）, module: prompt-writing, chapter: template, text: 模板裡每次要換的那一格，本教材寫成【這次的會議筆記】這種樣子。, metaphor: 表單上的填寫欄 }
+  - { term: 分次補要求, module: prompt-writing, chapter: template, text: 同一件事拆成好幾輪慢慢講；研究發現頂尖模型的表現平均掉 39%，因為前幾輪就先猜、走錯回不來。, metaphor: 便條一張一張遞，掉了好幾張 }
+  - { term: 試跑, module: prompt-writing, chapter: template, text: 大批開跑前，先拿 2 到 3 件試做，照出錯的地方改好模板，再跑全部。, metaphor: 先印一張樣張 }

@@ -1,0 +1,256 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/h1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+og_image_alt: "AI 生成插畫：科技大廳裡，史旺姬舉著手，第五次對胸口有藍色光球的小機器人講同一段話，身後飄著五個一模一樣的青色對話框；戴白色笑臉大帽的老師遞給她一張金邊的範本卡"
+layout: home
+title: Prompt 進階：從一次交辦到可重複的工作指示
+seo_title: Prompt 進階自學教材：框架、四個原則、網路咒語與可重複模板
+description: 讀過 AI 入門之後的下一步。免費自學教材，五幕看懂 Prompt 框架要不要背、官方文件教的四個原則、給小費和罵 AI 有沒有用、行話為什麼重要，最後把常做的事寫成可重複的模板。
+keywords: Prompt進階,Prompt框架,CO-STAR,Prompt模板,提示詞技巧,給AI小費,完成條件,AI自學,史旺基
+permalink: /education/ai/learn/prompt-writing/
+nav_active: education
+use_ai_learn: true
+use_glightbox: true
+course_name: Prompt 進階：從一次交辦到可重複的工作指示（免費自學教材）
+course_free: true
+course_workload: PT1H30M
+course_module: prompt-writing
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+{% assign basics = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+{% capture progress_keys %}{% for ch in mod.chapters %}{% if ch.status == 'published' %}{{ mod.slug }}/{{ ch.slug }},{% endif %}{% endfor %}{% endcapture %}
+<main id="main" class="education-page ae-page" data-act="prompt">
+  <section class="edu-hero">
+    <div class="edu-container edu-hero__grid">
+      <div class="edu-hero__content">
+        <span class="edu-hero__status">免費自學教材・讀過〈AI 入門〉之後的下一步・約 1.5 小時，可分幕讀</span>
+        <span class="edu-eyebrow">Prompt Writing</span>
+        <h1>{{ mod.title }}</h1>
+        <p class="edu-hero__lead">{{ mod.subtitle }}。</p>
+        <div class="ae-progress" data-ae-progress-bar="{{ progress_keys }}"><span class="ae-progress__track"><span class="ae-progress__fill"></span></span><span class="ae-progress__text">已讀完 0 幕</span></div>
+        <div class="edu-hero__actions">
+          <a class="edu-btn" href="#monday">先看一個故事</a>
+          <a class="edu-btn edu-btn--ghost" href="#chapters">直接選一幕開始</a>
+        </div>
+      </div>
+      {% include ai-learn/illus.html src="/assets/img/ai-learn/prompt-writing/h1.webp" width="1536" height="1024" eager=true code="H1" alt="AI 生成插畫：科技大廳裡，史旺姬舉著手，第五次對胸口有藍色光球的小機器人講同一段話，身後飄著五個一模一樣的青色對話框；戴白色笑臉大帽的老師遞給她一張金邊的範本卡" %}
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--compact">
+    <div class="edu-container">
+      <div class="edu-callout edu-callout--blue"><strong>這份教材怎麼來的？</strong>{{ mod.origin }}它接在〈<a href="{{ basics.url | relative_url }}">{{ basics.title }}</a>〉後面：那裡學會了「把一次交辦說清楚」，這裡要學「讓說清楚的交辦可以一直重複用」。</div>
+    </div>
+  </section>
+
+  <section id="monday" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">A Monday Story</span><h2>史旺姬的週一：同一段話，她已經講了五遍</h2><p>史旺姬（史旺基的原創虛擬角色，在這份教材裡是公司的實習生）在〈AI 入門〉學會了六塊積木。從此每週一早上，她都打開 AI，打同一段話：「幫我整理上週週報：給主管看、一頁以內、三段、待辦做成表格……」（故事為虛構）</p></header>
+      <ol class="ae-tl">
+        <li data-c="prompt"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">第 1 週</span><h3>😊 成果很滿意</h3><p>六塊積木都放了，AI 一次就交出主管要的週報。</p></div></li>
+        <li data-c="tip"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">第 3 週</span><h3>😵 趕時間漏了一句</h3><p>忘了講「一頁以內」，AI 寫了三頁。</p></div></li>
+        <li data-c="key"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">第 5 週</span><h3>🤷 換人就斷掉</h3><p>史旺姬請假，阿哲幫忙代班，完全不知道要交代這些。</p></div></li>
+      </ol>
+      <div class="ae-tl__legend"><span data-c="prompt">交辦說清楚了</span><span data-c="tip">每次重講，就有機會漏</span><span data-c="key">好的交辦只存在一個人的腦袋裡</span></div>
+      <div class="ae-question ae-mt"><strong><i class="bi bi-question-circle" aria-hidden="true"></i>這個單元要回答</strong><p>同一件事第五次交代 AI，你還要從頭講嗎？怎麼把一次寫好的交辦，變成下次、和別人都能直接用的指示？</p></div>
+      <p class="ae-tip"><b>先想 10 秒：</b>你有沒有一段話，已經對 AI 講過三次以上？把它記下來，讀到第五幕就用得上。還不熟六塊積木（角色、任務、背景、限制、格式、範例）的話，先回去看〈{% include ai-learn/chref.html module=basics slug="prompt" anchor="blocks" label="好 Prompt 的 6 塊積木" %}〉。</p>
+      <p class="ae-key"><small>只記一句</small>同一件事交代第二次之前，先把它寫成可以重複用的樣子。</p>
+    </div>
+  </section>
+
+  <section class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">How to Read</span><h2>這份教材怎麼看</h2><p>五幕各回答一個問題，可以照順序讀，也可以挑卡住的那一幕。只有 10 分鐘的話，先看下面的八個誤會，再讀各幕最後的「帶走這幾句」。</p></header>
+      <div class="ae-grid" style="--cols:4">
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-compass" aria-hidden="true"></i></div><h3>五幕，一條主線</h3><p>先拆穿框架和咒語的迷思，再學官方教的寫法、懂行話，最後做出一份模板。史旺姬和小機器人會陪你走完；插畫裡戴白色笑臉大帽的老師，是史旺基的數位分身。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-patch-check" aria-hidden="true"></i></div><h3>每個說法都有出處</h3><p>研究、官方文件和真實事件都附原始連結，可以自己點開核對。示範用的人名、公司與數字是虛構的，會另外標明。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-controller" aria-hidden="true"></i></div><h3>先猜，再看答案</h3><p>第二、三幕有五題小測驗，題目都是真實的實驗；先選一個，再看研究怎麼說。猜錯不要緊，大多數人第一次都猜錯。</p></div>
+        <div class="ae-card" data-c="tip"><div class="ae-card__icon"><i class="bi bi-clipboard-check" aria-hidden="true"></i></div><h3>五句可以直接抄</h3><p>每個原則都附一句可以直接貼進對話框的話；第五幕把它們組成一份模板，附自我檢核。</p></div>
+      </div>
+      <div class="ae-mt">
+        <p style="font-weight:800;color:var(--ae-navy);margin:0 0 .7rem">學完之後，你能做到這五件事：</p>
+        <ol class="ae-goals">
+          <li><b>1</b>看到新框架不慌，知道怎麼拆</li>
+          <li><b>2</b>用四個原則把要求說清楚</li>
+          <li><b>3</b>判斷「這招超神」靠不靠得住</li>
+          <li><b>4</b>用行話寫出內行的交辦</li>
+          <li><b>5</b>把常做的事寫成模板</li>
+        </ol>
+      </div>
+      <p class="ae-origin ae-mt">閱讀進度、勾選紀錄只存在你這台裝置的瀏覽器裡。</p>
+    </div>
+  </section>
+
+  <section id="chapters" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Five Acts</span><h2>五幕，從迷思走到模板</h2><p>前三幕把要求「說清楚」：框架怎麼看、官方教什麼、咒語靠不靠得住；後兩幕把它「說內行、說一次」：懂行話，再寫成模板。</p></header>
+      <ol class="ae-chapters">
+        {% for ch in mod.chapters %}
+        <li>
+          {% if ch.status == 'published' %}
+          <a class="ae-chapter-card" href="{{ mod.url | append: ch.slug | append: '/' | relative_url }}" data-c="{{ ch.color }}" data-ae-progress-key="{{ mod.slug }}/{{ ch.slug }}">
+            <span class="ae-chapter-card__act">{{ ch.act }}</span><h3>{{ ch.title }}</h3><p>{{ ch.summary }}</p><span class="ae-chapter-card__status">開始閱讀 →</span>
+          </a>
+          {% else %}
+          <div class="ae-chapter-card is-soon" data-c="{{ ch.color }}">
+            <span class="ae-chapter-card__act">{{ ch.act }}</span><h3>{{ ch.title }}</h3><p>{{ ch.summary }}</p><span class="ae-chapter-card__status">即將推出</span>
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="ladder" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">The Ladder</span><h2>從一次交辦，走到可重複的工作指示</h2><p>這個單元走完前三階：先把一次交辦說清楚，發現自己在重講，就把它寫成模板。第四、五階是之後的事：模板整理成團隊共用的工作手冊，再用真實任務反覆測、反覆改。</p></header>
+      <figure class="ae-fig">
+        <a class="portfolio-lightbox" data-gallery="prompt-writing-hub" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-ladder.svg' | relative_url }}">
+          <picture>
+            <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-ladder-m.svg' | relative_url }}">
+            <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-ladder.svg' | relative_url }}" width="1200" height="800" alt="五階階梯：第 1 階對話交辦（六塊積木加理由）、第 2 階發現重複（這段話我講第三次了）、第 3 階做成模板（固定部分加變數）、第 4 階團隊共用（整理成工作手冊）、第 5 階測試與改版（用真實任務反覆跑、再修）；這個單元走完前三階">
+          </picture>
+        </a>
+        <figcaption>圖：從一次交辦到可重複的工作指示。第四階的「工作手冊」，就是〈AI 入門〉裡的 Skill。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+      </figure>
+      <p class="ae-key"><small>只記一句</small>同一件事講到第三次，就是把它寫成可重複工作指示的時候。</p>
+      <p class="ae-source">階梯為史旺基整理。想直接往第四階走：{% include ai-learn/chref.html module=basics slug="skill" %}。</p>
+    </div>
+  </section>
+
+  <section id="myths" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Myths</span><h2>八個常見的誤會：你以為 vs. 其實是</h2><p>先看正面那句「你以為」，自己說說錯在哪，再點一下翻到背面對答案。提示：八句全都是誤會。</p></header>
+      <div class="ae-myths-tools"><button type="button" class="ae-btn" data-ae-flip-all="#myths" aria-pressed="false">全部翻開對答案</button></div>
+      <div class="ae-myths">
+        {% for m in mod.myths %}{% assign mch = mod.chapters | where: "slug", m.chapter | first %}
+        <div class="ae-flip" data-c="{{ mch.color }}"><div class="ae-flip__inner">
+          <div class="ae-flip__face"><span class="ae-myth__tag">{{ m.tag }}</span><span class="ae-myth__said">你以為</span><h3>「{{ m.said }}」</h3><p class="ae-flip__hint">錯在哪？翻面看答案 ↻</p></div>
+          <div class="ae-flip__face ae-flip__face--back"><span class="ae-myth__tag">{{ m.tag }}</span><p class="ae-myth__was">你以為：「{{ m.said }}」</p><h3>其實是</h3><p>{{ m.truth }}</p></div>
+        </div></div>
+        {% endfor %}
+      </div>
+      <p class="ae-source">出處：<a href="https://arxiv.org/abs/2603.29953" target="_blank" rel="noopener">arXiv 2603.29953 (2026-03，預印本)</a>；<a href="https://www.fxguide.com/fxfeatured/actually-using-sora/" target="_blank" rel="noopener">fxguide〈Actually Using SORA〉(2024-04-14)</a>；<a href="https://arxiv.org/abs/2508.13805" target="_blank" rel="noopener">Xie &amp; Lee, arXiv 2508.13805 (2025-08)</a>；<a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic〈Best practices for Claude Code〉</a>；<a href="https://arxiv.org/abs/2508.00614" target="_blank" rel="noopener">Prompting Science Report 3 (2025-08)</a>；<a href="https://arxiv.org/abs/2512.05858" target="_blank" rel="noopener">Prompting Science Report 4 (2025-12)</a>；<a href="https://arxiv.org/abs/2505.06120" target="_blank" rel="noopener">Laban et al., arXiv 2505.06120 (2025-05)</a>。各幕內文有完整說明。</p>
+    </div>
+  </section>
+
+  <section id="mentors" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Further Reading</span><h2>延伸閱讀：我追的四個人</h2><p>官方文件告訴你「可以怎麼做」；實務者會告訴你，他們踩過什麼坑、後來怎麼改口。這四位是史旺基每週在追的人，每人一句我學到的做法；他們的完整故事，寫在站上的專欄裡。</p></header>
+      <div class="ae-grid" style="--cols:4">
+        <a class="ae-card ae-card--link" data-c="prompt" href="{{ '/technical/matt-pocock-skills-ai-coding-workflow/' | relative_url }}"><div class="ae-card__icon"><i class="bi bi-hand-index-thumb" aria-hidden="true"></i></div><h3>Matt Pocock</h3><p>在 TypeScript 與 AI 寫程式圈很有影響力的教學者。</p><p><b>做法：</b>先叫 AI 一題一題反問我，問到我們對這件事有共同理解，再動手。</p><p class="ae-term__link">讀專欄：他的 Skills 使用教學 →</p></a>
+        <a class="ae-card ae-card--link" data-c="prompt" href="{{ '/technical/uncle-bob-ai-software-fundamentals/' | relative_url }}"><div class="ae-card__icon"><i class="bi bi-ui-checks" aria-hidden="true"></i></div><h3>Uncle Bob</h3><p>《Clean Code》作者。把一長串規則寫進提示詞，結果模型把它當成《神鬼奇航》的海盜守則：比較像參考建議。</p><p><b>做法：</b>把「好」寫成可以打勾的檢查表。</p><p class="ae-term__link">讀專欄：他和 Matt Pocock 的對談 →</p></a>
+        <a class="ae-card ae-card--link" data-c="prompt" href="{{ '/technical/dhh-pencils-down-ai-adoption/' | relative_url }}"><div class="ae-card__icon"><i class="bi bi-pencil" aria-hidden="true"></i></div><h3>DHH</h3><p>Ruby on Rails 作者，2026 年在大會上喊工程師「放下筆」，引發很大的反彈。</p><p><b>做法：</b>卡住時別重複抱怨，補背景、給範例，或換方法重來。</p><p class="ae-term__link">讀專欄：放下筆的那場演講 →</p></a>
+        <a class="ae-card ae-card--link" data-c="prompt" href="{{ '/technical/poteto-pstack-trust-before-scale/' | relative_url }}"><div class="ae-card__icon"><i class="bi bi-chat-left-quote" aria-hidden="true"></i></div><h3>poteto（Lauren Tan）</h3><p>以一個月合併 2,500 條程式修改出名的工程師；她的做法是先讓 AI 能自己驗證，再放手讓它多做。</p><p><b>做法：</b>常說「用你自己的話，重述我的目標和問題」。</p><p class="ae-term__link">讀專欄：2,500 條修改背後的方法 →</p></a>
+      </div>
+      <p class="ae-key"><small>只記一句</small>四個人的共同點：花力氣「定義什麼叫對」，而不是對 AI 喊口號。</p>
+      <p class="ae-source">四句「做法」是史旺基讀完他們的文章、演講與訪談後的整理，不是本人原話；原始出處見各篇專欄。</p>
+    </div>
+  </section>
+
+  <section id="glossary" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Cheat Sheet</span><h2>名詞小抄：一句話＋一個比喻</h2><p>標了星號的五個是必記的；其他是配角，聽過、知道回哪裡查就好。可以搜尋，也可以只看某一幕。</p></header>
+      <div data-ae-gloss>
+        <div class="ae-gloss__tools">
+          <input type="search" class="ae-gloss__search" placeholder="搜尋名詞或比喻，例如：三明治、BLUF" aria-label="搜尋名詞">
+          <button type="button" class="ae-gloss__filter" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="ae-gloss__filter" data-filter="star" aria-pressed="false" data-c="tip"><i class="bi bi-star-fill" aria-hidden="true"></i> 必記</button>
+          {% for ch in mod.chapters %}<button type="button" class="ae-gloss__filter" data-filter="{{ ch.slug }}" aria-pressed="false" data-c="{{ ch.color }}">{{ ch.title | split: '：' | first }}</button>{% endfor %}
+          <span class="ae-gloss__count" aria-live="polite"></span>
+        </div>
+        <div class="ae-gloss__list">
+          {% assign terms = site.data.ai_learn.glossary | where: "module", mod.slug %}
+          {% for g in terms %}{% assign gch = mod.chapters | where: "slug", g.chapter | first %}
+          <article class="ae-term" data-chapter="{{ g.chapter }}"{% if g.star %} data-star{% endif %} data-c="{{ gch.color }}">
+            <h3>{% if g.star %}<span class="star"><i class="bi bi-star-fill" aria-hidden="true"></i><span class="visually-hidden">必記</span></span> {% endif %}{{ g.term }}</h3>
+            <p>{{ g.text }}</p>
+            <p class="ae-term__metaphor">{{ g.metaphor }}</p>
+            {% if gch.status == 'published' %}<p class="ae-term__link"><a href="{{ mod.url | append: gch.slug | append: '/' | relative_url }}">在{{ gch.act }}讀更多 →</a></p>{% else %}<p class="ae-term__soon">{{ gch.act }}・即將推出</p>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="self-check" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Self Check</span><h2>自我檢核：我真的會了嗎？</h2><p>不看教材，你能做到這 8 件事嗎？做得到就打勾；不確定就打開參考答案對照，意思對就算過，不用一字不差。說不出來，就回到旁邊標的那一幕重讀。</p></header>
+      <div data-ae-check="{{ mod.slug }}" data-ae-check-low="先回到各幕最後的「帶走這幾句」，和每段的「只記一句」重看起。">
+      <ol class="ae-check">
+        <li><label><input type="checkbox"><span>🔤 說出為什麼不用背 Prompt 框架，以及寫完要怎麼檢查有沒有漏。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="frameworks" anchor="verdict" label="框架是檢查清單" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>多數縮寫查不到提出者，也沒有研究證明哪個最好；拆開來看都是同幾塊積木換字母重排。有用的是「把需求拆開來想」：寫完用六塊積木逐塊檢查，缺哪塊補哪塊。</div></details></li>
+        <li><label><input type="checkbox"><span>🧾 把一條規則加上理由，說出加了之後 AI 會多做對什麼。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="principles" anchor="reason" label="原則 1：規則附理由" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例：「不要用英文縮寫，因為讀者是剛加入的新人和長輩。」只給規則，它只會避開你點名的那個字；說了理由，它會自己把沒點名的縮寫也換成白話。</div></details></li>
+        <li><label><input type="checkbox"><span>📦 貼一份長文件給 AI 時，說出資料和任務各放哪裡、用什麼分開。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="principles" anchor="sandwich" label="原則 2：Prompt 三明治" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>資料用 &lt;資料&gt;……&lt;/資料&gt; 這類標籤框起來放上面，要它做的事寫在最後一段。各家建議略有不同（OpenAI 建議指示放頭尾各一次），但「資料和指示分開」是共同點。</div></details></li>
+        <li><label><input type="checkbox"><span>☑️ 把「寫好一點」改寫成 3 條可以打勾的完成條件。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="principles" anchor="done" label="原則 3：先定義怎樣算完成" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例（延期通知信）：300 字以內；第一段就說出新的交期；結尾留聯絡窗口與電話。每一條都能回答「有／沒有」，不能打勾的形容詞（好一點、專業一點）不算。</div></details></li>
+        <li><label><input type="checkbox"><span>🙋 寫一段請 AI 先反問你的 Prompt，記得設上限。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="principles" anchor="askme" label="原則 4：讓 AI 先反問你" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例：「我想做年終聚餐的企劃。在你動手寫之前，請一題一題問我，直到我們對這件事有共同理解；每題附上你建議的答案，每輪最多 3 題。」重點：先別動手、附建議答案、設上限。</div></details></li>
+        <li><label><input type="checkbox"><span>🪄 看到「給 AI 小費它會更認真」這種說法，說出要先問的三個問題。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="magic-words" anchor="three-questions" label="先問三個問題" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>① 它量的是什麼？（字數變長不等於答對）② 樣本有多少？（5 次很容易碰運氣）③ 真正有用的是哪幾句？（拿掉話術，常常只剩「自己驗證」「不要多改」這種本來就該講清楚的要求）</div></details></li>
+        <li><label><input type="checkbox"><span>🧙 挑一個你熟的領域，說出 3 個行話，再寫一條這個領域的完成條件。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="domain" anchor="checklist" label="各領域的完成條件" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>例（寫 email）：BLUF、主旨標籤、收件人與副本的角色；完成條件：「只讀主旨和第一段，就知道要誰在何時前做什麼。」</div></details></li>
+        <li><label><input type="checkbox"><span>🛠️ 把一件每週重複的交辦寫成模板：固定部分、挖空格、完成條件三樣都要有。</span></label>
+          <p class="ae-check__back">回去看 → {% include ai-learn/chref.html module=mod slug="template" anchor="template" label="可重複 Prompt 模板" %}</p>
+          <details class="ae-reveal"><summary>參考答案</summary><div>合格標準：① 有挖空的【變數】格 ② 每條規則旁有一句「因為」③ 最後有可以打勾的完成條件。用兩份不同的資料各跑一次，兩次都沒改到的段落，就是可以一直重複用的工作指示。</div></details></li>
+      </ol>
+      <div class="ae-check__score" aria-live="polite">0／8 題</div>
+      </div>
+      <div class="ae-stuck">
+        <h3><i class="bi bi-signpost-split" aria-hidden="true"></i> 卡關時翻這裡</h3>
+        <div class="ae-stuck__list">
+          <a href="#chapters">回到各幕重做小測驗（共 5 題）</a>
+          {% include ai-learn/chref.html module=mod slug="principles" anchor="wordcount" label="叫它寫 300 字卻寫了 800 字？" %}
+          {% include ai-learn/chref.html module=mod slug="principles" anchor="upgrade" label="追問三次還是不對？" %}
+          {% include ai-learn/chref.html module=mod slug="domain" anchor="apprentice" label="不熟的領域怎麼交辦？" %}
+          {% include ai-learn/chref.html module=mod slug="template" anchor="lost" label="一次講不完怎麼辦？" %}
+          {% include ai-learn/chref.html module=basics slug="prompt" anchor="stuck-paste" label="資料能不能貼？" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more" class="edu-section edu-section--compact edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Keep Learning</span><h2>讀完五幕，想再往下學？</h2><p>每一幕結尾都整理了「延伸學習」：官方文件、原始研究和站上的進階文章。想一次讀原文，先從這份官方指南開始。</p></header>
+      {% assign sh = mod.start_here %}
+      <a class="ae-further__item ae-further__item--feature" data-kind="official" href="{{ sh.url }}" target="_blank" rel="noopener">
+        <span class="ae-further__badge">官方・原文的起點</span>
+        <b class="ae-further__title">{{ sh.title }}</b>
+        <small class="ae-further__meta">{{ sh.by }}・{{ sh.meta }}</small>
+        <span class="ae-further__note">{{ sh.note }}</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="edu-section edu-section--dark">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">For Teams</span><h2>想讓團隊把交辦寫成共用的模板？</h2><p>這份教材來自一場企業內部分享。若你想替團隊安排 AI 導入課程，可以先看企業培訓的做法與時數。</p></header>
+      <div class="edu-hero__actions">
+        <a class="edu-btn edu-btn--light" href="{{ '/education/agentic-engineering/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'agentic_engineering_training',cta_position:'ai_learn_hub',from_page:'{{ page.url }}'});}">查看企業培訓方案</a>
+        <a class="edu-btn edu-btn--outline-light" href="{{ '/contact/' | relative_url }}?service=agentic_engineering_training&amp;from=ai_learn" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'ai_learn',service:'agentic_engineering_training',cta_position:'ai_learn_hub',from_page:'{{ page.url }}'});}">直接留下需求</a>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1582" width="600" height="1582" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">Prompt 三明治：資料在上，任務在最後</title>
+  <desc id="d">Prompt 三明治，由上到下疊四層：最上面是〈資料〉，放長文件、信件、會議紀錄這些最大塊的內容，例如會議紀錄.docx 與客戶來信.eml 兩份文件；其次是〈範例〉，放想要的成品長什麼樣子；再來是〈指示〉，放規則與理由、格式、完成條件；最後是任務，寫這次要它做什麼，放在最後。三個要點：一，用標籤把資料框起來，在對話框直接打 &lt;資料&gt; 和 &lt;/資料&gt; 夾住那段文字就行，框起來的句子比較不會被當成命令；二，長資料放上面，這次要做的任務放最後；三，指示自己一塊，改規則時不用翻資料。Anthropic 實測：長文件情境，任務放最後，品質最多提升約 30%（Anthropic 內部測試，只在長文件情境）。</desc>
+  <rect width="600" height="1582" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#1F2937">Prompt 三明治：</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#1F2937">資料在上，任務在最後</text>
+  <text x="40" y="160" font-size="24" fill="#4B5563">由上往下一層層疊起來</text>
+  <rect x="72" y="196" width="488" height="366" rx="20" fill="#EEF1F4" stroke="#64748B" stroke-width="3"/>
+  <text x="96" y="248" font-size="32" font-weight="700" fill="#475569" font-family="Consolas, Microsoft JhengHei, monospace">&lt;資料&gt;</text>
+  <text x="96" y="288" font-size="26" fill="#1F2937">長文件、信件、會議紀錄：</text>
+  <text x="96" y="322" font-size="26" fill="#1F2937">最大塊，放最上面</text>
+  <rect x="92" y="342" width="448" height="96" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="108" y="380" font-size="22" font-weight="700" fill="#475569" font-family="Consolas, Microsoft JhengHei, monospace">&lt;文件 來源="會議紀錄.docx"&gt;</text>
+  <rect x="110" y="384" width="412" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="110" y="398" width="337.84" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="110" y="412" width="267.8" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="92" y="450" width="448" height="96" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="108" y="488" font-size="22" font-weight="700" fill="#475569" font-family="Consolas, Microsoft JhengHei, monospace">&lt;文件 來源="客戶來信.eml"&gt;</text>
+  <rect x="110" y="492" width="412" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="110" y="506" width="337.84" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="110" y="520" width="267.8" height="8" rx="4" fill="#CBD5E1"/>
+  <rect x="72" y="576" width="488" height="90" rx="20" fill="#FFF5DF" stroke="#A8741A" stroke-width="3"/>
+  <text x="100" y="632.0" font-size="32" font-weight="700" fill="#8A5D00" font-family="Consolas, Microsoft JhengHei, monospace">&lt;範例&gt;</text>
+  <text x="222" y="630.0" font-size="26" fill="#1F2937">想要的成品長什麼樣子</text>
+  <rect x="72" y="680" width="488" height="90" rx="20" fill="#EAF1FA" stroke="#2878D0" stroke-width="3"/>
+  <text x="100" y="736.0" font-size="32" font-weight="700" fill="#2878D0" font-family="Consolas, Microsoft JhengHei, monospace">&lt;指示&gt;</text>
+  <text x="248" y="734.0" font-size="26" fill="#1F2937"></text>
+  <text x="222" y="720" font-size="26" fill="#1F2937">規則與理由、</text>
+  <text x="222" y="752" font-size="26" fill="#1F2937">格式、完成條件</text>
+  <rect x="72" y="784" width="488" height="100" rx="20" fill="#10253D"/>
+  <text x="96" y="846" font-size="32" font-weight="700" fill="#FFFFFF">任務</text>
+  <text x="182" y="844" font-size="26" fill="#FFFFFF">這次要它做什麼：放最後</text>
+  <line x1="36" y1="206" x2="36" y2="854" stroke="#F26D5B" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="36,882 20,854 52,854" fill="#F26D5B"/>
+  <text x="40" y="954" font-size="30" font-weight="700" fill="#1F2937">① 用標籤把資料框起來</text>
+  <text x="40" y="1000" font-size="26" fill="#1F2937">在對話框直接打 &lt;資料&gt; 和</text>
+  <text x="40" y="1034" font-size="26" fill="#1F2937">&lt;/資料&gt; 夾住那段文字就行；</text>
+  <text x="40" y="1068" font-size="26" fill="#1F2937">框起來的句子比較不會被當成命令</text>
+  <text x="40" y="1144" font-size="30" font-weight="700" fill="#1F2937">② 長資料放上面</text>
+  <text x="40" y="1190" font-size="26" fill="#1F2937">這次要做的任務放最後</text>
+  <text x="40" y="1258" font-size="30" font-weight="700" fill="#1F2937">③ 指示自己一塊</text>
+  <text x="40" y="1304" font-size="26" fill="#1F2937">改規則時不用翻資料</text>
+  <rect x="40" y="1352" width="520" height="190" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+  <text x="64" y="1398" font-size="26" font-weight="700" fill="#475569">Anthropic 實測：</text>
+  <text x="64" y="1434" font-size="26" fill="#1F2937">長文件情境，任務放最後</text>
+  <text x="64" y="1474" font-size="30" font-weight="700" fill="#1F2937">品質<tspan fill="#8A5D00">最多提升約 30%</tspan></text>
+  <text x="64" y="1516" font-size="22" fill="#64748B">註：Anthropic 內部測試，只在長文件情境</text>
+</svg>

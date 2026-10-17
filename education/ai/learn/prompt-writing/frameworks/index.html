@@ -1,0 +1,197 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/f1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+layout: ai-learn-chapter
+title: 框架：字母湯不用背
+seo_title: Prompt 框架要背嗎？RTF、CO-STAR、RISEN 拆開來看｜Prompt 進階第一幕
+description: RTF、CO-STAR、RISEN、CREATE……坊間三十多個 Prompt 縮寫，拆開來看都是同幾塊積木。對照 Google、Microsoft 官方怎麼教，再看研究怎麼說：框架是檢查清單，不是咒語。
+keywords: Prompt框架,RTF,CO-STAR,RISEN,CREATE,提示詞框架,Loop Engineering,史旺基
+permalink: /education/ai/learn/prompt-writing/frameworks/
+nav_active: education
+use_ai_learn: true
+use_glightbox: true
+ai_module: prompt-writing
+ai_chapter: frameworks
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+  - name: 框架：字母湯不用背
+    url: /education/ai/learn/prompt-writing/frameworks/
+lead: 網路上一堆 Prompt 縮寫框架：RTF、CO-STAR、RISEN……每篇文章都說自己那套最好用。先看坊間有多少個，再看它們其實在講同幾件事，最後看大廠官方怎麼教。
+question: 網路上這麼多 Prompt 縮寫框架，有哪一個是正確答案嗎？
+hero_illus:
+  code: F1
+  src: /assets/img/ai-learn/prompt-writing/f1.webp
+  width: 1536
+  height: 1024
+  alt: AI 生成插畫：剪接室裡，身後整面影像牆是幾十段氣球短片，氣球幾乎都是錯的顏色；史旺姬舉起唯一一段黃氣球的青色卡片，戴白色笑臉大帽的老師操作剪接台，胸口有藍色光球的小機器人抱著一堆剪掉的底片
+  desc: 照抄一句 Prompt，抄不到背後的幾百次重抽
+outro: 第一幕到這裡：字母記不住沒關係，寫完用六塊積木檢查一遍就好。可是六塊積木之外，大廠的官方文件還多教了幾件事——下一幕一次講清楚。
+takeaways:
+  - 照抄別人的神 Prompt，抄得到那一句，抄不到背後的重抽、挑選和剪接。
+  - 坊間 Prompt 縮寫至少三十多個，多數查不到提出者；拆開來看，大部分是同一組元素換字母重排。
+  - 沒有研究證明哪個框架最好；有用的是「把需求拆開來想」，六塊積木就是現成的拆法。
+  - Google、Microsoft 官方都只講三、四塊，也都說不必每塊填滿；寫完自己塗一次色，缺哪個顏色就補哪一塊。
+  - 這幾年的重點從「一句神 Prompt」移到「設計一個會自己檢查的流程」，說清楚的能力在每一階都用得上。
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+{% assign basics = site.data.ai_learn.modules | where: "slug", "ai-basics" | first %}
+
+<section id="copy" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-film" aria-hidden="true"></i>第一幕開場：真實故事</span>
+      <h2>300 比 1：照抄那一句 Prompt，抄不到背後的幾百次重抽</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-prose">
+        <p>2024 年，多倫多的影像團隊 shy kids 用 OpenAI 的影片 AI「Sora」做了一支短片〈Air Head〉：主角的頭是一顆黃色氣球。短片一出來，很多人想知道：他們到底下了什麼神 Prompt？</p>
+        <p>後製負責人受訪時說，素材和成片的比例，「我猜大約 <strong>300 比 1</strong>」。叫 AI 生黃氣球，有時生出來根本不是黃的，有時氣球上還冒出一張臉，只好在後製把氣球摳出來重新上色。</p>
+        <p>3 個人做了大約 1.5 到 2 週，最後剪出約一分半鐘的片。</p>
+      </div>
+      <div class="ae-grid" style="--cols:1">
+        <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-collection-play" aria-hidden="true"></i></div><h3>300：1</h3><p>拍出來的素材和最後用上的比例。每用一段，背後有幾百段被丟掉。</p></div>
+        <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-brush" aria-hidden="true"></i></div><h3>黃氣球不一定是黃的</h3><p>同一句 Prompt，AI 每次給的都不一樣；挑選和後製，才是成品的另一半。</p></div>
+      </div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>你抄得到那一句 Prompt，抄不到背後的重抽、挑選和剪接。</p>
+    <p class="ae-source">出處：<a href="https://www.fxguide.com/fxfeatured/actually-using-sora/" target="_blank" rel="noopener">fxguide〈Actually Using SORA〉(Mike Seymour 專訪 shy kids，2024-04-14)</a>。</p>
+  </div>
+</section>
+
+<section id="soup" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-fonts" aria-hidden="true"></i>坊間框架</span>
+      <h2>Prompt 縮寫字母湯：至少三十多個，而且還在增加</h2>
+    </div>
+    <div class="ae-prose"><p>既然抄句子沒用，很多人改抄「公式」：把好 Prompt 該有的要素縮成英文字母，方便記。問題是公式也越來越多。先猜猜看：下面這碗湯裡，你聽過幾個？</p></div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-frameworks" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-soup.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-soup-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-soup.svg' | relative_url }}" width="1200" height="720" alt="Prompt 框架縮寫像字母湯一樣擠在一起：最大的是 RTF、CO-STAR、RISEN、CREATE、RACE，其餘還有 TAG、BAB、CARE、CRISPE、APE、ICIO、BROKE、SCOPE、TRACE、ROSES、COAST、CLEAR、CRAFT、SPARK、STAR 等三十個">
+        </picture>
+      </a>
+      <figcaption>圖 1：Prompt 縮寫字母湯（史旺基 2026 年 10 月整理）。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <p class="ae-tip"><b>台灣最常看到的是哪幾個？</b>2026 年 9 月一篇談 Prompt 框架的台灣科技媒體文章，列出的是 CO-STAR、RCTCO、RACE、RISEN、RTF 五套。名字很多，但拆開來看，大部分都是同一組元素換字母重排。</p>
+    <p class="ae-key"><small>只記一句</small>名字很多，拆開來看，大部分是同一組元素換字母重排。</p>
+    <p class="ae-source">出處：<a href="https://www.bnext.com.tw/article/92388/better-question-better-answer-ai-prompt-frameworks" target="_blank" rel="noopener">數位時代 (2026-09-28)</a>；縮寫清單為史旺基整理。</p>
+  </div>
+</section>
+
+<section id="compare" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-bricks" aria-hidden="true"></i>拆開來比</span>
+      <h2>挑四個值得認識的框架，顏色對回六塊積木</h2>
+    </div>
+    <div class="ae-prose"><p>拿〈AI 入門〉學過的{% include ai-learn/chref.html module=basics slug="prompt" anchor="blocks" label="六塊積木" %}（角色、任務、背景、限制、格式、範例）當尺，把四個查得到來歷的框架拆開來對。</p></div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-frameworks" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-frameworks.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-frameworks-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-frameworks.svg' | relative_url }}" width="1200" height="798" alt="四個框架顏色對回六塊積木：RTF 是角色、任務、格式，最短最好記，出處不明；CO-STAR 是背景、目標、文風、語氣、受眾、回應格式，新加坡 GovTech 的框架；RISEN 是角色、指示、步驟、最終目標、限縮範圍；CREATE 是角色、請求、範例、調整、輸出類型、補充，最接近六塊積木">
+        </picture>
+      </a>
+      <figcaption>圖 2：四個框架，其實是同樣幾塊積木。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <details class="ae-reveal ae-mt">
+      <summary>看完整對照表：四個框架＋兩家官方，各涵蓋哪幾塊</summary>
+      <div>
+        <div class="ae-datatable-wrap">
+        <table class="ae-datatable">
+          <thead><tr><th scope="col">框架</th><th scope="col">角色</th><th scope="col">任務</th><th scope="col">背景</th><th scope="col">限制</th><th scope="col">格式</th><th scope="col">範例</th><th scope="col">多出來的</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">RTF</th><td>●</td><td>●</td><td></td><td></td><td>●</td><td></td><td></td></tr>
+            <tr><th scope="row">RISEN</th><td>●</td><td>●</td><td></td><td>●</td><td></td><td></td><td>步驟、最終目標</td></tr>
+            <tr><th scope="row">CO-STAR</th><td></td><td>●</td><td>●</td><td></td><td>●</td><td></td><td>文風、語氣、受眾</td></tr>
+            <tr><th scope="row">CREATE</th><td>●</td><td>●</td><td></td><td>●</td><td>●</td><td>●</td><td>補充</td></tr>
+            <tr><th scope="row">Google 官方</th><td>●</td><td>●</td><td>●</td><td></td><td>●</td><td></td><td></td></tr>
+            <tr><th scope="row">Microsoft 官方</th><td></td><td>●</td><td>●</td><td></td><td>●</td><td></td><td>資料來源</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p style="margin:.75rem 0 0">● 表示字母明確對應；「部分涵蓋」不標。看得出來：<strong>任務人人有，範例和限制最少見</strong>。沒有一個縮寫剛好等於六塊積木，你學過的那套，反而補上了多數框架漏掉的範例與限制。</p>
+      </div>
+    </details>
+    <div class="ae-grid ae-mt" style="--cols:4">
+      <div class="ae-card" data-c="prompt"><h3>RTF</h3><p>角色、任務、格式。最短、最好記，適合入門；提出者查不到。</p></div>
+      <div class="ae-card" data-c="prompt"><h3>CO-STAR</h3><p>新加坡政府科技局（GovTech）的框架，特別管文風、語氣和讀者。</p></div>
+      <div class="ae-card" data-c="prompt"><h3>RISEN</h3><p>Kyle Balmer 提出，多了「步驟」和「限縮範圍」，補上限制。</p></div>
+      <div class="ae-card" data-c="prompt"><h3>CREATE</h3><p>Dave Birss 提出，有範例、有調整，最接近六塊積木。</p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>哪個都不用背：框架是檢查清單，不是咒語。</p>
+    <p class="ae-source">出處：<a href="https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower" target="_blank" rel="noopener">GovTech Singapore (2025-04-03)</a>；<a href="https://thepromptwarrior.com/p/5-prompt-frameworks-level-prompts" target="_blank" rel="noopener">The Prompt Warrior：RISEN、RTF (2023-10-13)</a>；<a href="https://www.davebirss.com/courses/ai-unlocked-find-the-opportunities-for-ai-in-your-role/lessons/how-to-write-a-good-prompt/" target="_blank" rel="noopener">Dave Birss：CREATE</a>；對照表為史旺基整理。</p>
+  </div>
+</section>
+
+<section id="official" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-building" aria-hidden="true"></i>大廠官方怎麼教</span>
+      <h2>Google 的教法：把一句 Prompt 用螢光筆塗出各個要素</h2>
+    </div>
+    <div class="ae-grid ae-grid--start" style="--cols:2">
+      <div class="ae-yn" data-c="prompt"><i class="bi bi-google" aria-hidden="true"></i><div><h3>Google：四塊，不必都用</h3><p>Google 給 Gemini 使用者的官方指南只講四塊：角色（Persona）、任務（Task）、背景（Context）、格式（Format），並且明說不需要四塊都用上。</p></div></div>
+      <div class="ae-yn" data-c="prompt"><i class="bi bi-window" aria-hidden="true"></i><div><h3>Microsoft：有清楚的目標就夠了</h3><p>Microsoft 說 Copilot 的 Prompt 可以包含四個部分：目標、背景、期望、來源；但真正必要的，只有一個清楚的目標。</p></div></div>
+    </div>
+    <div class="ae-prose ae-mt"><p>Google 指南裡還有一個很實用的小動作：把寫好的 Prompt 用不同顏色塗出各個要素。下面用六塊積木的顏色，塗一段會議通知的交辦（情境為虛構）：</p></div>
+    <figure class="ae-fig">
+      <a class="portfolio-lightbox" data-gallery="prompt-frameworks" data-type="image" href="{{ '/assets/img/ai-learn/prompt-writing/prompt-highlight.svg' | relative_url }}">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ '/assets/img/ai-learn/prompt-writing/prompt-highlight-m.svg' | relative_url }}">
+          <img src="{{ '/assets/img/ai-learn/prompt-writing/prompt-highlight.svg' | relative_url }}" width="1200" height="662" alt="一段會議通知的 Prompt 用六種螢光色標出要素：你是團隊的專案助理（角色）；請寫一封會議通知 Email（任務）；下週三 14:00 要開 Q4 預算討論會，與會的是各組負責人，大家行程很滿（背景）；全文 150 字內，預算數字等會議上再談，信裡先不寫（限制）；主旨一行，內文條列時間、地點、要先準備的資料（格式）；語氣參考附上的上一封通知信（範例）">
+        </picture>
+      </a>
+      <figcaption>圖 3：用螢光筆塗出 Prompt 的各個要素（標示法仿 Google 官方指南）。 <span class="ae-fig__zoom">點圖放大</span></figcaption>
+    </figure>
+    <p class="ae-tip"><b>現在就試：</b>拿出你在總覽頁記下的那段「講過三次以上」的話，自己塗一次色。缺哪個顏色，就是少講了哪一塊。</p>
+    <p class="ae-key"><small>只記一句</small>寫完自己塗一次色：缺哪個顏色，就是少講了哪一塊。</p>
+    <p class="ae-source">出處：Google《Gemini for Google Workspace Prompting Guide 101》(2024 年 4 月版，<a href="https://it.chula.ac.th/wp-content/uploads/2024/09/gemini-prompting-guide.pdf" target="_blank" rel="noopener">朱拉隆功大學轉載的 PDF</a>)；<a href="https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5" target="_blank" rel="noopener">Microsoft〈Learn about Copilot prompts〉</a>。</p>
+  </div>
+</section>
+
+<section id="verdict" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-clipboard-check" aria-hidden="true"></i>誠實的結論</span>
+      <h2>框架是檢查清單，不是咒語</h2>
+    </div>
+    <div class="ae-grid" style="--cols:3">
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-search" aria-hidden="true"></i></div><h3>多數查不到出處</h3><p>三十多個縮寫，查得到提出者的只有少數，例如 CO-STAR、RISEN、CREATE；其他多半是互相轉貼的二手整理。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>名字別硬背。</span></p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div><h3>沒有研究說哪個最好</h3><p>一份非同儕審查的評測，拿八種框架和「不套框架」的對照組比：對照組持平，甚至勝過所有框架。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>別挑框架，花時間拆需求。</span></p></div>
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-puzzle" aria-hidden="true"></i></div><h3>有用的是「拆開來想」</h3><p>2026 年一篇預印本比較了幾種框架，分數相近；研究者推測，真正起作用的是「把需求拆成幾個面向」這個動作本身。</p><p class="ae-pass"><i class="bi bi-arrow-right" aria-hidden="true"></i><span>六塊積木就是現成的拆法。</span></p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>字母記不住沒關係：寫完用六塊積木檢查一遍，缺哪塊補哪塊。</p>
+    <p class="ae-source">出處：<a href="https://codesota.com/guides/prompting-techniques" target="_blank" rel="noopener">CodeSOTA〈Prompting techniques〉(2025-12，非同儕審查)</a>；<a href="https://arxiv.org/abs/2603.29953" target="_blank" rel="noopener">arXiv 2603.29953 (2026-03，預印本)</a>。</p>
+  </div>
+</section>
+
+<section id="loop" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-arrow-repeat" aria-hidden="true"></i>這幾年的變化</span>
+      <h2>從「一句神 Prompt」到「設計一個會自己檢查的流程」</h2>
+    </div>
+    <div class="ae-prose"><p>框架熱潮背後，是大家對 Prompt 的期待一直在變。這四年大致走過四個階段（2022 到 2025 年是史旺基的整理）：</p></div>
+    <ol class="ae-tl">
+      <li data-c="prompt"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2022 底</span><h3>✨ 神 Prompt 時代</h3><p>一句好 Prompt 能省你兩小時，但 AI 看不到你的資料。</p></div></li>
+      <li data-c="llm"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2024</span><h3>📚 給它資料</h3><p>把文件、背景交給 AI，讓它理解你的狀況。</p></div></li>
+      <li data-c="agent"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2025</span><h3>🤖 讓它動手</h3><p>AI 會自己查、自己改、自己用工具（{% include ai-learn/chref.html module=basics slug="agent" label="Agent" %}）。</p></div></li>
+      <li data-c="key"><span class="ae-tl__dot"></span><div class="ae-tl__card"><span class="ae-tl__year">2026</span><h3>🔁 設計流程</h3><p>不再一句一句提示 AI，而是設計一套會自己檢查、記錄的流程。</p></div></li>
+    </ol>
+    <div class="ae-tl__legend"><span data-c="prompt">讓 AI 回答</span><span data-c="llm">讓 AI 理解</span><span data-c="agent">讓 AI 動手</span><span data-c="key">讓工作轉起來</span></div>
+    <div class="ae-prose ae-mt"><p>2026 年那一格，出自 Google Chrome 團隊工程主管 Addy Osmani 的〈Loop Engineering〉：與其一直當那個提示 AI 的人，不如把自己換掉，<strong>設計一個替你做這件事的系統</strong>。不管走到哪一階，「把要求說清楚、寫成檢查得了的標準」都用得上，這正是下一幕要教的四個原則。</p></div>
+    <p class="ae-key"><small>只記一句</small>Prompt 讓 AI 回答，資料讓 AI 理解，檢查讓 AI 被驗收，流程讓工作轉起來。</p>
+    <p class="ae-source">出處：<a href="https://addyosmani.com/blog/loop-engineering/" target="_blank" rel="noopener">Addy Osmani〈Loop Engineering〉(2026-06-07)</a>；站上導讀：<a href="{{ '/technical/loop-engineering-ai-system/' | relative_url }}">Loop Engineering：你不再提示 AI，而是設計一個「提示 AI 的系統」</a>。</p>
+  </div>
+</section>

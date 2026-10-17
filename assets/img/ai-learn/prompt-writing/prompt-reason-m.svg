@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1668" width="600" height="1668" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">只給規則 vs 附上理由</title>
+  <desc id="d">同樣是「不要寫 ETA」。只給規則時，AI 寫出的公告有一項正確（預計週五送達）、兩項錯誤（SLA 達 99.9%、本季 KPI 已達標）；規則後面加上理由「因為讀者是剛加入的新人和長輩，看不懂英文縮寫」，AI 寫出的三項都正確：預計週五送達、服務正常運作率 99.9%、本季目標已達成。關鍵是說明為什麼。</desc>
+  <rect width="600" height="1668" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#1F2937">規則後面，</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#1F2937">多加一句理由</text>
+  <text x="40" y="160" font-size="24" fill="#4B5563">同樣是「不要寫 ETA」，</text>
+  <text x="40" y="192" font-size="24" fill="#4B5563">有沒有講理由，公告就不一樣</text>
+  <rect x="40" y="230" width="520" height="580" rx="22" fill="#F1F5F9"/>
+  <rect x="226.0" y="250" width="148" height="44" rx="22" fill="#64748B"/>
+  <text x="300.0" y="281" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">只給規則</text>
+  <rect x="64" y="322" width="472" height="178" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+  <text x="88" y="422.0" font-size="30" font-weight="700" fill="#1F2937">不要寫 ETA。</text>
+  <text x="64" y="540" font-size="24" font-weight="700" fill="#475569">AI 寫出來的公告：</text>
+  <rect x="64" y="560" width="472" height="214" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <polyline points="88,618 97,628 114,606" fill="none" stroke="#0E7568" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="136" y="626" font-size="28" font-weight="700" fill="#0E7568">預計週五送達</text>
+  <line x1="88" y1="670" x2="110" y2="692" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/>
+  <line x1="110" y1="670" x2="88" y2="692" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/>
+  <text x="136" y="690" font-size="28" font-weight="700" fill="#B91C1C">SLA 達 99.9%</text>
+  <line x1="88" y1="734" x2="110" y2="756" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/>
+  <line x1="110" y1="734" x2="88" y2="756" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/>
+  <text x="136" y="754" font-size="28" font-weight="700" fill="#B91C1C">本季 KPI 已達標</text>
+  <line x1="300" y1="824" x2="300" y2="868" stroke="#E5A300" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="300,890 284,868 316,868" fill="#E5A300"/>
+  <text x="340" y="870" font-size="26" font-weight="700" fill="#8A5D00">說明為什麼</text>
+  <rect x="40" y="908" width="520" height="580" rx="22" fill="#E6F4F1"/>
+  <rect x="213.0" y="928" width="174" height="44" rx="22" fill="#0E7568"/>
+  <text x="300.0" y="959" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">規則＋理由</text>
+  <rect x="64" y="1000" width="472" height="178" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+  <text x="88" y="1046" font-size="30" font-weight="700" fill="#1F2937">不要寫 ETA，</text>
+  <text x="88" y="1090" font-size="26" fill="#8A5D00">因為讀者是剛加入的新人和長輩，</text>
+  <text x="88" y="1134" font-size="26" fill="#8A5D00">看不懂英文縮寫。</text>
+  <text x="64" y="1218" font-size="24" font-weight="700" fill="#475569">AI 寫出來的公告：</text>
+  <rect x="64" y="1238" width="472" height="214" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <polyline points="88,1296 97,1306 114,1284" fill="none" stroke="#0E7568" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="136" y="1304" font-size="28" font-weight="700" fill="#0E7568">預計週五送達</text>
+  <polyline points="88,1360 97,1370 114,1348" fill="none" stroke="#0E7568" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="136" y="1368" font-size="28" font-weight="700" fill="#0E7568">服務正常運作率 99.9%</text>
+  <polyline points="88,1424 97,1434 114,1412" fill="none" stroke="#0E7568" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="136" y="1432" font-size="28" font-weight="700" fill="#0E7568">本季目標已達成</text>
+  <rect x="40" y="1518" width="520" height="120" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="1568" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">規則後面加上<tspan fill="#8A5D00">為什麼</tspan>，</text>
+  <text x="300" y="1610" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">AI 才知道規則的邊界在哪裡</text>
+</svg>

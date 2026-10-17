@@ -1,0 +1,248 @@
+---
+og_image: /assets/img/ai-learn/prompt-writing/d1-og.jpg
+og_image_width: 1200
+og_image_height: 630
+layout: ai-learn-chapter
+title: 行話：先懂，才唸得出咒語
+seo_title: 為什麼內行人問 AI 比較準？用行話寫 Prompt｜Prompt 進階第四幕
+description: 同一個 AI，內行人和外行人問出來差很多。用《哈利波特》的咒語當比喻，看寫 email、做簡報、做產品照、拍短影音、寫專利的行話與完成條件，以及不熟的領域怎麼先當學徒。
+keywords: Prompt行話,領域知識,BLUF,MECE,分鏡表,產品攝影Prompt,技術揭露書,哈利波特,史旺基
+permalink: /education/ai/learn/prompt-writing/domain/
+nav_active: education
+use_ai_learn: true
+ai_module: prompt-writing
+ai_chapter: domain
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: AI 學習分享
+    url: /education/ai/
+  - name: Prompt 進階：從一次交辦到可重複的工作指示
+    url: /education/ai/learn/prompt-writing/
+  - name: 行話：先懂，才唸得出咒語
+    url: /education/ai/learn/prompt-writing/domain/
+lead: 上一幕的「咒語」是照抄來的網路話術，所以會過期。這一幕要講另一種咒語：內行人的行話。它不會過期，但要先懂，才唸得出來。
+question: 為什麼同一個 AI，內行人和外行人問出來的差這麼多？
+hero_illus:
+  code: D1
+  src: /assets/img/ai-learn/prompt-writing/d1.webp
+  width: 1536
+  height: 1024
+  alt: AI 生成插畫：書桌高度看過去，桌上攤著一本發光的大書，書頁升起幾張青色圖示卡（相機鏡頭、場記板、信封、長條圖投影片、燈泡）；戴白色笑臉大帽的老師翻著書頁，史旺姬用發光筆指著其中一張卡解說，戴學士帽的小機器人捧著筆記本專心聽
+  desc: 每個領域都有自己的咒語書
+outro: 第四幕到這裡：行話讓你說得準，完成條件讓你驗得了貨。可是每次交辦都要重新想一遍行話和條件，還是很累——最後一幕，把它們寫成一份可以一直重複用的模板。
+takeaways:
+  - 魔杖人人拿得到，就像 AI 人人都能用；差別在你懂不懂這門魔法。
+  - 咒語就是行話：你說得出「BLUF」「MECE」「三點打光」，AI 才知道你要的是什麼。
+  - 懂行話，才驗得了貨：內行人寫 Prompt 的最後一行，一定是完成條件。
+  - 越專業的領域，AI 負責整理與起草，結論和簽核留給專業的人；圖片、影片要注意著作權、商標與肖像權。
+  - 不熟的領域，先當學徒：請 AI 教你最該懂的詞，核對來源後，再用行話交辦。
+---
+{% assign mod = site.data.ai_learn.modules | where: "slug", "prompt-writing" | first %}
+
+<section id="why" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-stars" aria-hidden="true"></i>第四幕開場：魔法要先懂</span>
+      <h2>沒學過魔法的人，拿到魔杖也施不了咒</h2>
+    </div>
+    <div class="ae-prose"><p>魔杖人人都拿得到，就像 AI 人人都能用；差別在你懂不懂這門魔法。先用《哈利波特》裡三句大家最熟的咒語暖身。看正面的故事，想想它跟寫 Prompt 有什麼關係，再點卡片翻面。</p></div>
+    <div class="ae-traits">
+      <div class="ae-flip"><div class="ae-flip__inner">
+        <div class="ae-flip__face"><span class="ae-flip__num">1</span><h3>溫咖癲啦唯啊薩</h3><p>魔咒課第一次學飄浮咒：榮恩唸錯音、亂揮魔杖，羽毛動也不動；妙麗唸對、揮對，羽毛就飄起來了。</p><p class="ae-flip__hint">跟 Prompt 有什麼關係？點我翻面 ↻</p></div>
+        <div class="ae-flip__face ae-flip__face--back"><h3>行話要講對</h3><p>差一個詞，結果就差很多。「好看的照片」和「淺景深的特寫」，AI 收到的是兩件事。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
+      </div></div>
+      <div class="ae-flip"><div class="ae-flip__inner">
+        <div class="ae-flip__face"><span class="ae-flip__num">2</span><h3>去去，武器走</h3><p>哈利面對敵人，要的是讓對方放下魔杖，不是傷人，所以他的招牌是繳械咒。</p><p class="ae-flip__hint">跟 Prompt 有什麼關係？點我翻面 ↻</p></div>
+        <div class="ae-flip__face ae-flip__face--back"><h3>先知道目的，才挑得對做法</h3><p>想清楚這次要的是什麼結果，才選得出對的寫法；目的不清楚，咒語唸得再標準也沒用。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
+      </div></div>
+      <div class="ae-flip"><div class="ae-flip__inner">
+        <div class="ae-flip__face"><span class="ae-flip__num">3</span><h3>疾疾，護法現身</h3><p>光唸咒語，只會冒出一縷銀煙；要有一段夠強的快樂記憶，護法才會現身。</p><p class="ae-flip__hint">跟 Prompt 有什麼關係？點我翻面 ↻</p></div>
+        <div class="ae-flip__face ae-flip__face--back"><h3>放進你自己的東西</h3><p>照抄別人的神 Prompt 沒用，要放進你自己的需求、資料和標準：這是第一幕黃氣球的同一個道理。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
+      </div></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>上一幕的咒語是照抄的網路話術，會過期；這一幕的咒語是內行人的行話，要先懂才唸得出來。</p>
+    <p class="ae-source">故事出自《哈利波特》系列小說（皇冠出版中文版）；咒語譯名依<a href="https://zh.wikipedia.org/zh-tw/%E5%93%88%E5%88%A9%E6%B3%A2%E7%89%B9%E4%B8%AD%E7%9A%84%E9%AD%94%E6%B3%95%E7%AC%A6%E5%92%92" target="_blank" rel="noopener">中文維基百科〈哈利波特中的魔法符咒〉</a>；魔法與 Prompt 的對應是史旺基的比喻。</p>
+  </div>
+</section>
+
+<section id="office" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-briefcase" aria-hidden="true"></i>每個領域都有自己的咒語書：辦公室篇</span>
+      <h2>寫信、做簡報、寫文件，也有咒語</h2>
+    </div>
+    <div class="ae-grid" style="--cols:3">
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-envelope" aria-hidden="true"></i></div><h3>寫 email：速速前</h3><p>🪄 召喚咒要專心想著你要的那樣東西，它才會飛過來。</p><p><b>行話：</b>BLUF（結論先講）、主旨標籤、收件人與副本的角色。</p></div>
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-easel" aria-hidden="true"></i></div><h3>簡報：四個學院</h3><p>🪄 每個新生只進一個學院：不重複、不遺漏。</p><p><b>行話：</b>MECE（不重複、不遺漏）、金字塔原理（先講結論，再分層給理由）、結論式標題（標題就是結論）。</p></div>
+      <div class="ae-card" data-c="prompt"><div class="ae-card__icon"><i class="bi bi-file-earmark-text" aria-hidden="true"></i></div><h3>文件：魔藥課本</h3><p>🪄 好的課本，照著步驟就做得出來，不用再去問老師。</p><p><b>行話：</b>目標讀者、文件類型、操作步驟。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-graph-up" aria-hidden="true"></i></div><h3>資料分析：辨認假記憶</h3><p>🪄 魔法世界也怕被竄改的記憶：來源錯了，看再多次也看不到真相。</p><p><b>行話：</b>指標定義、資料來源與粒度、相關不等於因果。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-file-earmark-medical" aria-hidden="true"></i></div><h3>合約：不破誓</h3><p>🪄 立誓時講定的每個條件，一字一句都算數，答應了就不能反悔。</p><p><b>行話：</b>責任上限、違約金、智財權歸屬。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-wallet2" aria-hidden="true"></i></div><h3>金融：巫師銀行</h3><p>🪄 進金庫之前，要先驗明正身。</p><p><b>行話：</b>KYC（認識客戶）、可疑交易申報、清算與結算。</p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>咒語就是行話：你會說「BLUF」「MECE」，AI 才知道你要的是什麼。</p>
+    <p class="ae-source">魔法與領域的對應是史旺基的比喻。</p>
+  </div>
+</section>
+
+<section id="pro" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-palette" aria-hidden="true"></i>每個領域都有自己的咒語書：創作與專業篇</span>
+      <h2>做圖、做影片、寫專利，各有各的咒語</h2>
+    </div>
+    <div class="ae-grid" style="--cols:3">
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-camera" aria-hidden="true"></i></div><h3>攝影：路摸思</h3><p>🪄 魔杖點亮哪裡，你就看得見哪裡：光決定畫面。</p><p><b>行話：</b>焦段、景深、三點打光（主光、補光、輪廓光）。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-film" aria-hidden="true"></i></div><h3>影片：叱叱，荒唐</h3><p>🪄 奈威要先在腦中清楚想像出那個好笑的畫面，咒語才有效。</p><p><b>行話：</b>分鏡表、景別、運鏡、前 3 秒的鉤子。</p></div>
+      <div class="ae-card" data-c="key"><div class="ae-card__icon"><i class="bi bi-gem" aria-hidden="true"></i></div><h3>品牌與智慧財產：雙雙製</h3><p>🪄 複製咒變出來的東西看起來一模一樣，但不是正版。</p><p><b>行話：</b>實質近似、商標混淆、授權範圍。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div><h3>專利：破心護</h3><p>🪄 屏障咒罩住多大，就擋多大；罩錯地方，等於沒擋（這是史旺基的延伸比喻）。</p><p><b>行話：</b>請求項、技術特徵、先前技術、新穎性與進步性。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-heart" aria-hidden="true"></i></div><h3>生物醫療：魔藥課</h3><p>🪄 材料差一點、步驟錯一步，整鍋就毀了。</p><p><b>行話：</b>PICO（對象、介入、對照、結果）、研究設計、信賴區間。</p></div>
+      <div class="ae-card" data-c="navy"><div class="ae-card__icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div><h3>程式開發：劫盜地圖</h3><p>🪄 開地圖、關地圖都有固定的說法；說「惡作劇完成」，地圖才會關上。</p><p><b>行話：</b>介面規格、錯誤處理、測試案例。</p></div>
+    </div>
+    <p class="ae-key"><small>只記一句</small>每一格的行話後面，都接著一條完成條件：內行人寫 Prompt 的最後一行，一定是完成條件。</p>
+    <p class="ae-source">魔法與領域的對應是史旺基的比喻。</p>
+  </div>
+</section>
+
+<section id="malfoid" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-image" aria-hidden="true"></i>史旺基的例子：女版馬份</span>
+      <h2>知道這個梗，才生得出這張圖</h2>
+    </div>
+    <div class="ae-prose"><p>2026 年 9 月底，網路突然流行「女版馬份」：把《哈利波特》裡的貴族反派學生，畫成女生版。想跟上這個梗，差別就在你懂不懂它：</p></div>
+    <div class="ae-grid ae-mt" style="--cols:2">
+      <div class="ae-yn" data-c="key"><i class="bi bi-emoji-neutral" aria-hidden="true"></i><div><h3>麻瓜版</h3><p>「畫一個魔法學院的女學生。」AI 只能亂猜，生出來的跟這個梗沒關係。</p></div></div>
+      <div class="ae-yn" data-c="prompt"><i class="bi bi-stars" aria-hidden="true"></i><div><h3>巫師版</h3><p>性別對調＋白金色長髮往後梳＋黑袍配綠銀條紋圍巾＋高傲的冷笑。抓 4～6 個對比強的特徵就夠，比寫一大段描述更穩。</p></div></div>
+    </div>
+    <p class="ae-tip"><b>公開發布前，先想清楚原作的智慧財產權：</b>課堂練習和自己玩沒問題，要公開發布或商用，就要退回原創設計：不寫角色名、不畫原作的徽章。這個梗的來龍去脈和完整圖例，寫在站上專欄：<a href="{{ '/technical/malfoid-ai-character-consistency/' | relative_url }}">Malfoid 三週爆紅：AI 把「角色一致」從畫功變成資料準備</a>。</p>
+    <p class="ae-key"><small>只記一句</small>懂梗、懂行話，才抓得到那幾個關鍵特徵。</p>
+    <p class="ae-source">出處：<a href="https://knowyourmeme.com/memes/malfoid-female-draco-malfoy" target="_blank" rel="noopener">Know Your Meme〈Malfoid〉</a>；<a href="https://www.fandompulse.com/p/malfoid-fan-art-trend-takes-over" target="_blank" rel="noopener">Fandom Pulse</a>。</p>
+  </div>
+</section>
+
+<section id="compare" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-arrow-left-right" aria-hidden="true"></i>麻瓜 vs 巫師</span>
+      <h2>同一件事，差在幾個行話和最後一行</h2>
+    </div>
+    <div class="ae-prose"><p>四組前後對比，例子都是虛構的。每組先看麻瓜版，想想你會補什麼，再打開巫師版對照。注意巫師版的最後一行。</p></div>
+    <div class="ae-grid ae-grid--start ae-mt" style="--cols:2">
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-camera" aria-hidden="true"></i>做圖片：同一張產品照</div>
+        <p class="ae-quote">麻瓜：「生成一張專業的產品照。」</p>
+        <p>角度？光線？背景？要不要留白放標題？AI 只能用它心中的「專業」去猜；典型成品是正面平視、四面都有影子的白底棚拍。退回重做時，你也只能說「再專業一點」。</p>
+        <details class="ae-reveal"><summary>看巫師版</summary><div>
+          <p style="margin:0 0 .4rem"><b>白色行動電源，放在淺灰水泥桌面上。</b></p>
+          <ul>
+            <li><b>景別：</b>特寫，主體約占畫面 60%</li>
+            <li><b>鏡頭：</b>100mm 微距、光圈 f/2.8、淺景深</li>
+            <li><b>光線：</b>三點打光（主光、補光、輪廓光）</li>
+            <li><b>構圖：</b>主體在右側三分線，左邊留白放標題</li>
+            <li><b>完成條件：</b>只有一組陰影、背景確實虛化</li>
+          </ul>
+        </div></details>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-envelope" aria-hidden="true"></i>寫 email：同一封延期通知</div>
+        <p class="ae-quote">麻瓜：「幫我寫一封信給合作部門，說我們系統要延期。」</p>
+        <p>給誰看？要對方做什麼？什麼時候前？AI 很可能寫成三段道歉、理由寫滿的長信，對方讀完回一句「所以要我做什麼？」，又多一輪。</p>
+        <details class="ae-reveal"><summary>看巫師版</summary><div>
+          <p style="margin:0 0 .4rem"><b>收件人：合作部門的主管；副本：我的主管（只需知悉）。</b></p>
+          <ul>
+            <li><b>主旨：</b>開頭加標籤【需決定】或【僅供參考】，一句話講完要對方決定什麼、期限</li>
+            <li><b>第一段 BLUF：</b>結論、要對方做的事、期限，三句內</li>
+            <li><b>語氣：</b>對跨部門的主管，正式但不卑屈</li>
+            <li><b>長度：</b>手機一個畫面讀得完</li>
+            <li><b>完成條件：</b>只讀主旨和第一段，就知道要做什麼、何時前要回</li>
+          </ul>
+        </div></details>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-film" aria-hidden="true"></i>做影片：同一支 30 秒短影音</div>
+        <p class="ae-quote">麻瓜：「幫我寫一支 30 秒的產品介紹影片腳本。」</p>
+        <p>直式還是橫式？給誰看？第幾秒要出現產品？典型成品是一段旁白稿，沒分鏡、沒秒數，拍攝的人不知道第幾秒拍什麼；改稿時只能說「再有趣一點」。</p>
+        <details class="ae-reveal"><summary>看巫師版</summary><div>
+          <p style="margin:0 0 .4rem"><b>30 秒直式（9:16）社群短影音，觀眾是上班族。</b></p>
+          <ul>
+            <li><b>分鏡表：</b>鏡號、秒數、景別、運鏡、畫面、旁白、字幕、音效</li>
+            <li><b>節奏：</b>前 3 秒是鉤子；每鏡 2～4 秒；最後 5 秒行動呼籲</li>
+            <li><b>運鏡與剪接：</b>開場推鏡；只用硬切和一次匹配剪接</li>
+            <li><b>完成條件：</b>秒數加總剛好 30 秒，旁白念得完</li>
+          </ul>
+        </div></details>
+      </div>
+      <div class="ae-widget ae-widget--flat">
+        <div class="ae-widget__label"><i class="bi bi-lightbulb" aria-hidden="true"></i>專利：同一個構想</div>
+        <p class="ae-quote">麻瓜：「幫我寫一份專利，題目是用 AI 自動對帳。」</p>
+        <p>AI 可能直接寫出一份像模像樣的申請書：格式很像，請求項卻包山包海，引用的「先前技術」也沒人檢索過。交給專利師前，你自己也不知道哪裡該改。</p>
+        <details class="ae-reveal"><summary>看巫師版</summary><div>
+          <p style="margin:0 0 .4rem"><b>準備技術揭露書草稿，交給智財部門與專利師評估。</b></p>
+          <ul>
+            <li>用「<b>問題—手段—功效</b>」整理構想，逐一列出技術特徵</li>
+            <li>列出要自己去專利資料庫檢索的中英文關鍵字與分類號</li>
+            <li>示意一個<b>獨立項</b>和三個<b>附屬項</b>，標出區別特徵</li>
+            <li><b>限制：</b>不要宣稱已檢索、不要列專利號碼；不確定就標「待專利師確認」</li>
+            <li><b>完成條件：</b>每個技術特徵，在說明裡都找得到對應段落</li>
+          </ul>
+        </div></details>
+      </div>
+    </div>
+    <p class="ae-tip"><b>BLUF 是什麼？</b>Bottom Line Up Front，結論放第一段。<b>越專業的領域</b>，AI 負責整理與起草，結論和簽核留給專業的人。</p>
+    <p class="ae-key"><small>只記一句</small>巫師版的最後一行，一定是完成條件。</p>
+    <p class="ae-source">四組例子的產品、部門與構想皆為虛構示意；專利寫作入門可參考 <a href="https://www.wipo.int/edocs/pubdocs/en/wipo-pub-867-23-en-wipo-patent-drafting-manual.pdf" target="_blank" rel="noopener">WIPO Patent Drafting Manual（第二版）</a>。</p>
+  </div>
+</section>
+
+<section id="checklist" class="ae-lesson ae-lesson--alt">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-ui-checks" aria-hidden="true"></i>懂詞彙，才驗得了貨</span>
+      <h2>各領域的完成條件：都要寫成可以打勾的句子</h2>
+    </div>
+    <div class="ae-datatable-wrap">
+      <table class="ae-datatable ae-datatable--text">
+        <thead><tr><th scope="col">領域</th><th scope="col">最關鍵的詞</th><th scope="col">驗收重點</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">寫 email</th><td>BLUF、主旨標籤、收件人角色</td><td>只讀主旨與第一段，就知道要誰在何時前做什麼</td></tr>
+          <tr><th scope="row">簡報</th><td>金字塔原理、結論式標題、MECE</td><td>所有頁標題連起來讀，就是完整的論證</td></tr>
+          <tr><th scope="row">文件</th><td>目標讀者、文件類型、操作步驟</td><td>找一位目標讀者照著做，不用問人就能做完</td></tr>
+          <tr><th scope="row">圖片：攝影</th><td>焦段、景深、三點打光</td><td>光影方向一致、背景虛化程度符合指定</td></tr>
+          <tr><th scope="row">圖片：品牌與智慧財產</th><td>實質近似、商標混淆、授權範圍</td><td>Prompt 和成品都沒有他人的智慧財產，別人盲看不會說「像某某」</td></tr>
+          <tr><th scope="row">影片</th><td>分鏡表、景別與運鏡、節奏</td><td>秒數加總正確，每一鏡拍得出來，配樂有授權</td></tr>
+          <tr><th scope="row">專利</th><td>請求項、技術特徵、先前技術</td><td>每個技術特徵在說明書都有支持</td></tr>
+          <tr><th scope="row">生物醫療</th><td>PICO、研究設計、信賴區間</td><td>每篇引用的文獻都點開核對過，結論交給專業人員</td></tr>
+          <tr><th scope="row">程式開發</th><td>介面規格、錯誤處理、測試案例</td><td>測試全部通過，每種錯誤情況都有對應處理</td></tr>
+          <tr><th scope="row">金融</th><td>KYC、可疑交易申報、清算與結算</td><td>門檻與期限都對照過法規原文</td></tr>
+          <tr><th scope="row">法律合約</th><td>責任上限、違約金、智財權歸屬</td><td>每個風險都指得出條號，立場沒有寫反</td></tr>
+          <tr><th scope="row">資料分析</th><td>指標定義、資料粒度、相關不等於因果</td><td>各分項加總等於總數，別人照做算得出一樣的結果</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ae-tip ae-tip--warn"><i class="bi bi-shield-exclamation" aria-hidden="true"></i><span><b>兩條紅線：</b>圖片、影片要注意著作權、商標、肖像權；專利、金融、醫療、合約，一定要專業人員把關，AI 的版本只是草稿。</span></p>
+    <p class="ae-key"><small>只記一句</small>完成條件要寫成可以打勾的句子，而且要用那個領域的行話寫。</p>
+    <p class="ae-source">對照表為史旺基整理（2026 年 10 月）。</p>
+  </div>
+</section>
+
+<section id="apprentice" class="ae-lesson">
+  <div class="edu-container">
+    <div class="ae-lesson__head">
+      <span class="ae-lesson__tag"><i class="bi bi-book" aria-hidden="true"></i>用 AI 擴大自己的專業</span>
+      <h2>先當學徒：不熟的領域，讓 AI 當你的魔法老師</h2>
+    </div>
+    <div class="ae-prose"><p>表格裡一定有你不熟的領域。不懂行話時，別硬著頭皮交辦，先把 AI 當老師，三步走：</p></div>
+    <div class="ae-dg">
+      <div class="ae-flow-row ae-flow-row--tight">
+        <div class="ae-node" data-c="prompt"><span class="ae-num">1</span><span class="ae-node__icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span><b>請 AI 當老師</b><span>先不叫它做事：「寫這類需求前，我最該懂的 10 個詞是什麼？外行最常漏講哪 5 個條件？」</span></div>
+        <div class="ae-node" data-c="prompt"><span class="ae-num">2</span><span class="ae-node__icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><b>用行話改寫需求</b><span>把白話需求交給它，用專業用語改寫，並列出它還需要你回答的問題；答不出來的，就是下一個要學的。</span></div>
+        <div class="ae-node" data-c="key"><span class="ae-num">3</span><span class="ae-node__icon ae-node__icon--solid"><i class="bi bi-search" aria-hidden="true"></i></span><b>核對來源、做成清單</b><span>到官方文件、法規資料庫、專業組織網站核對定義；再請它把完成條件整理成驗收清單，存下來下次用。</span></div>
+      </div>
+    </div>
+    <p class="ae-copybox"><span class="ae-copybox__label">可以直接抄</span>「我要請你幫忙做〔任務〕，但我不是這個領域的專業人員。開始前，請先列出我最該懂的 10 個專業詞彙，每個附上中英文、一句白話解釋，以及用了這個詞成品會有什麼不同。<mark>先不要開始做。</mark>」</p>
+    <p class="ae-key"><small>只記一句</small>先當學徒，再當巫師：學會行話，你就能指揮 AI 做原本不熟的事。</p>
+  </div>
+</section>
