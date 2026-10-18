@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 940" width="600" height="940" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">只換中間一張，故事就變了</title>
+  <desc id="d">選片示意，不是任何作品。兩排各三格，頭尾一樣是「出發」和「離開」。第一排中間是一張空椅子，讀起來像一個人在等；第二排只把中間換成兩杯飲料，讀起來像有人來過。在場感有一半，是在選片時決定的。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="600" height="940" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#2B2622">只換中間一張，</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#2B2622">故事就變了</text>
+  <text x="40" y="164" font-size="24" fill="#6B5E52">選片示意（不是任何作品）</text>
+  <text x="40" y="198" font-size="24" fill="#6B5E52">頭尾不變，只換中間</text>
+  <text x="115" y="248" font-size="26" font-weight="700" fill="#5C5248" text-anchor="middle">出發</text>
+  <text x="300" y="248" font-size="26" font-weight="700" fill="#5C5248" text-anchor="middle">途中</text>
+  <text x="485" y="248" font-size="26" font-weight="700" fill="#5C5248" text-anchor="middle">離開</text>
+  <rect x="40" y="266" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="95.5" y="296" width="39" height="60" rx="4" fill="#EDE6DC" stroke="#5C5248" stroke-width="4"/>
+  <path d="M95.5,296 L118,303.5 L118,363.5 L95.5,356 Z" fill="#FFFFFF" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M127,329 L154,329" fill="none" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr)"/>
+  <rect x="225" y="266" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <path d="M285,293 L285,356 M285,327.5 L318,327.5 L318,356" fill="none" stroke="#5C5248" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M285,293 L303,293" fill="none" stroke="#5C5248" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="410" y="266" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <path d="M447.5,356 L480.5,300.5 M522.5,356 L489.5,300.5" fill="none" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M485,351.5 L485,338 M485,327.5 L485,317" fill="none" stroke="#A8998A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="40" y="402" width="520" height="70" rx="18" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="300" y="447" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#5C5248">故事 A：</tspan><tspan fill="#2B2622">一個人在等</tspan></text>
+  <rect x="40" y="552" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <rect x="95.5" y="582" width="39" height="60" rx="4" fill="#EDE6DC" stroke="#5C5248" stroke-width="4"/>
+  <path d="M95.5,582 L118,589.5 L118,649.5 L95.5,642 Z" fill="#FFFFFF" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M127,615 L154,615" fill="none" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr)"/>
+  <rect x="225" y="552" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="5"/>
+  <rect x="268.5" y="595.5" width="22.5" height="33" rx="5" fill="#FFFFFF" stroke="#8A5D00" stroke-width="4"/>
+  <path d="M291,604.5 Q301.5,604.5 301.5,613.5 Q301.5,621 291,621" fill="none" stroke="#8A5D00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="301.5" y="595.5" width="22.5" height="33" rx="5" fill="#FFFFFF" stroke="#8A5D00" stroke-width="4"/>
+  <path d="M324,604.5 Q334.5,604.5 334.5,613.5 Q334.5,621 324,621" fill="none" stroke="#8A5D00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="255" y1="631.5" x2="345" y2="631.5" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <rect x="410" y="552" width="150" height="120" rx="10" fill="#FFFFFF" stroke="#5C5248" stroke-width="3"/>
+  <path d="M447.5,642 L480.5,586.5 M522.5,642 L489.5,586.5" fill="none" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M485,637.5 L485,624 M485,613.5 L485,603" fill="none" stroke="#A8998A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="40" y="688" width="520" height="70" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="300" y="733" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#5C5248">故事 B：</tspan><tspan fill="#8A5D00">有人來過</tspan></text>
+  <path d="M300,480 L300,544" fill="none" stroke="#E5A300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrg)"/>
+  <text x="320" y="522" font-size="24" font-weight="700" fill="#8A5D00">只換中間這張</text>
+  <rect x="40" y="800" width="520" height="120" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="848.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">在場感有一半，</tspan></text>
+  <text x="300" y="892.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">是在選片時決定的</tspan></text>
+</svg>

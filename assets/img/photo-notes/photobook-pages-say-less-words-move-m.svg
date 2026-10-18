@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1168" width="600" height="1168" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">照片頁的字，換了地方</title>
+<desc id="d">《窗外還亮著》36 張、8 章，改版只動版面，照片、順序、章節都不動。每張照片頁原本的編號、標題和一句圖說都拿掉，標題搬進書末的圖目錄，一句話留在網站版；章節頁從一段引文改成一行章名。全書字數從 1,661 字減到 559 字，少了約三分之二。只有一類字不搬：AI 創作的揭露，留在作品頁開場和書末，電子書封面也印一行。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker></defs>
+<rect width="600" height="1168" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="42" font-weight="700" fill="#1F2937">照片頁的字換了地方</text>
+<text x="40" y="114" font-size="24" fill="#4B5563">《窗外還亮著》只動版面</text>
+<rect x="40" y="150" width="100" height="144" rx="4" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/><text x="90.0" y="230.0" font-size="22" font-weight="700" text-anchor="middle" fill="#1F2937">章名</text><text x="90.0" y="324" font-size="22" text-anchor="middle" fill="#4B5563">章節頁</text><rect x="160" y="150" width="100" height="144" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/><rect x="172" y="164" width="76" height="74.88" rx="4" fill="#CBD5E1"/><circle cx="227" cy="186" r="8" fill="#F8FAFC"/><polygon points="172,238.88 199,198 219,222 231,209 248,231 248,238.88" fill="#94A3B8"/><rect x="172" y="251" width="76" height="43" rx="4" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="6 5"/><rect x="280" y="150" width="100" height="144" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/><rect x="292" y="164" width="76" height="74.88" rx="4" fill="#CBD5E1"/><circle cx="347" cy="186" r="8" fill="#F8FAFC"/><polygon points="292,238.88 319,198 339,222 351,209 368,231 368,238.88" fill="#94A3B8"/><rect x="292" y="251" width="76" height="43" rx="4" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="6 5"/><rect x="400" y="150" width="100" height="144" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/><rect x="412" y="164" width="76" height="74.88" rx="4" fill="#CBD5E1"/><circle cx="467" cy="186" r="8" fill="#F8FAFC"/><polygon points="412,238.88 439,198 459,222 471,209 488,231 488,238.88" fill="#94A3B8"/><rect x="412" y="251" width="76" height="43" rx="4" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="6 5"/><text x="330.0" y="324" font-size="22" text-anchor="middle" fill="#4B5563">照片頁（字都拿掉了）</text>
+<text x="520" y="230" font-size="36" font-weight="700" text-anchor="middle" fill="#4B5563">⋯</text>
+<line x1="300" y1="350" x2="300" y2="402" stroke="#E5A300" stroke-width="4" marker-end="url(#arrG)"/>
+<rect x="187" y="356" width="226" height="40" rx="20" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/><text x="300" y="384" text-anchor="middle" font-size="22" font-weight="700" fill="#8A5D00">每張的標題</text>
+<rect x="40" y="416" width="520" height="200" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+<text x="64" y="460" font-size="28" font-weight="700" fill="#1F2937">書末</text>
+<text x="140" y="460" font-size="22" fill="#4B5563">後記｜版權</text>
+<rect x="58" y="482" width="484" height="116" rx="12" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="80" y="520" font-size="28" font-weight="700" fill="#8A5D00">圖目錄</text>
+<text x="80" y="557" font-size="20" font-weight="700" fill="#8A5D00">1.</text>
+<line x1="110" y1="550" x2="338" y2="550" stroke="#C9A44C" stroke-width="6" stroke-linecap="round"/>
+<text x="80" y="583" font-size="20" font-weight="700" fill="#8A5D00">2.</text>
+<line x1="110" y1="576" x2="338" y2="576" stroke="#C9A44C" stroke-width="6" stroke-linecap="round"/>
+<rect x="40" y="636" width="520" height="190" rx="22" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+<text x="64" y="680" font-size="28" font-weight="700" fill="#1F2937">全書字數</text>
+<text x="64" y="728" font-size="22" font-weight="700" fill="#4B5563">改版前</text>
+<rect x="150" y="706" width="260" height="30" rx="8" fill="#94A3B8"/>
+<text x="420" y="728" font-size="24" font-weight="700" fill="#1F2937">1,661 字</text>
+<text x="64" y="774" font-size="22" font-weight="700" fill="#0E7568">發布版</text>
+<rect x="150" y="752" width="88" height="30" rx="8" fill="#0E7568"/>
+<text x="249.50150511739918" y="774" font-size="24" font-weight="700" fill="#0E7568">559 字</text>
+<text x="64" y="812" font-size="22" font-weight="700" fill="#0E7568">少了約三分之二</text>
+<rect x="40" y="846" width="520" height="150" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+<text x="64" y="890" font-size="28" font-weight="700" fill="#0E7568">這一類字不搬</text>
+<text x="64" y="932" font-size="22" fill="#1F2937">AI 創作的揭露：作品頁開場與</text>
+<text x="64" y="966" font-size="22" fill="#1F2937">書末各一次，電子書封面也印一行</text>
+<rect x="40" y="1016" width="520" height="116" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="300.0" y="1066" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#1F2937">照片頁一個字都沒有，</tspan></text><text x="300.0" y="1101" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">標題收進書末圖目錄</tspan></text>
+</svg>

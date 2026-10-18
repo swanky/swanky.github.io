@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">兩段旅程，收進同一本書</title>
+  <desc id="d">荒木經惟 1971 年自費出版《センチメンタルな旅》，拍和妻子陽子的蜜月旅行；後來他從陽子生病一直拍到她過世。1991 年出版《センチメンタルな旅・冬の旅》，把兩段放進同一本書。荒木形容這是「一趟走向生、一趟走向死」的旅行。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1200" height="650" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#2B2622">兩段旅程，收進同一本書</text>
+  <text x="48" y="126" font-size="26" fill="#6B5E52">荒木經惟：1971 年的蜜月，和後來陽子生病到離世</text>
+  <rect x="48" y="176" width="380" height="136" rx="24" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <text x="76" y="226" font-size="34" font-weight="700" fill="#2B2622">1971 年</text>
+  <text x="76" y="270" font-size="30" font-weight="700" fill="#5C5248">蜜月之旅</text>
+  <text x="408" y="268" font-size="24" fill="#5C5248" text-anchor="end">自費出版</text>
+  <rect x="48" y="340" width="380" height="136" rx="24" fill="#FFFFFF" stroke="#A8998A" stroke-width="3"/>
+  <text x="76" y="390" font-size="34" font-weight="700" fill="#2B2622">後來</text>
+  <text x="76" y="434" font-size="30" font-weight="700" fill="#5C5248">陽子生病，到離世</text>
+  <path d="M436,244 C620,244 640,300 772,316" fill="none" stroke="#E5A300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrg)"/>
+  <path d="M436,408 C620,408 640,352 772,336" fill="none" stroke="#E5A300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrg)"/>
+  <rect x="784" y="176" width="368" height="300" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <g transform="translate(968,250) scale(0.95)"><path d="M0,-34 Q-24,-46 -56,-40 L-56,38 Q-24,32 0,44 Z" fill="#FFFFFF" stroke="#8A5D00" stroke-width="4" stroke-linejoin="round"/><path d="M0,-34 Q24,-46 56,-40 L56,38 Q24,32 0,44 Z" fill="#FFFFFF" stroke="#8A5D00" stroke-width="4" stroke-linejoin="round"/><line x1="-42" y1="-18" x2="-14" y2="-14" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="-14" x2="42" y2="-18" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/><line x1="-42" y1="-4" x2="-14" y2="0" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="0" x2="42" y2="-4" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/><line x1="-42" y1="10" x2="-14" y2="14" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/><line x1="14" y1="14" x2="42" y2="10" stroke="#8A5D00" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="968" y="344" font-size="26" fill="#5C5248" text-anchor="middle">1991 年</text>
+  <text x="968" y="390" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="middle">《感傷之旅・冬之旅》</text>
+  <text x="968" y="434" font-size="26" fill="#5C5248" text-anchor="middle">兩段放進同一本</text>
+  <text x="600" y="526" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">荒木的形容：「一趟走向生、一趟走向死」的旅行</text>
+  <rect x="48" y="556" width="1104" height="74" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="603.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">照片的重量，來自</tspan><tspan fill="#8A5D00">很多年的時間</tspan></text>
+</svg>

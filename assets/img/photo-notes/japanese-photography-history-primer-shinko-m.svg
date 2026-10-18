@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1020" width="600" height="1020" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">新興寫真：相機自己能做什麼？</title>
+  <desc id="d">新興寫真在 1920 年代後半到 1930 年代中期最活躍，它不是單一風格，至少有三條路：把物件拍得客觀精準、記錄人們的生活、不用相機直接讓相紙感光或把照片剪貼組合。只用圖示表示，不描繪任何作品。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="600" height="1020" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#2B2622">新興寫真：</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#2B2622">相機自己能做什麼？</text>
+  <text x="40" y="164" font-size="24" fill="#6B5E52">1920 年代後半到 1930 年代中期</text>
+  <rect x="161" y="200" width="278" height="44" rx="22" fill="#E5A300"/>
+  <text x="300" y="231.36" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">只有相機做得到的事</text>
+  <line x1="64" y1="246" x2="64" y2="736" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="64" y1="356" x2="92" y2="356" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <rect x="98" y="270" width="462" height="172" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <path d="M138.48,331.52 L138.48,318.56 L151.44,318.56" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M138.48,380.48 L138.48,393.44 L151.44,393.44" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M233.52,331.52 L233.52,318.56 L220.56,318.56" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M233.52,380.48 L233.52,393.44 L220.56,393.44" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M186,334.4 L209.76,346.28 L186,358.16 L162.24,346.28 Z" fill="#FFFFFF" stroke="#3A332D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M162.24,346.28 L162.24,372.2 L186,384.08 L186,358.16 Z" fill="#EDE6DC" stroke="#3A332D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M209.76,346.28 L209.76,372.2 L186,384.08 L186,358.16 Z" fill="#A8998A" stroke="#3A332D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="280" y="336" font-size="32" font-weight="700" fill="#2B2622">精準拍物件</text>
+  <text x="280" y="382" font-size="26" fill="#5C5248">把物件拍得客觀又精準</text>
+  <line x1="64" y1="552" x2="92" y2="552" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <rect x="98" y="466" width="462" height="172" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <path d="M135.6,547.68 L167.28,518.88 L198.96,547.68" fill="none" stroke="#3A332D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="142.8" y="544.8" width="48.96" height="38.88" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/>
+  <rect x="160.08" y="562.08" width="14.4" height="21.6" fill="#E5A300"/>
+  <g transform="translate(220.56,554.88) scale(0.504)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <line x1="128.4" y1="585.12" x2="243.6" y2="585.12" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  <text x="280" y="532" font-size="32" font-weight="700" fill="#2B2622">記錄生活</text>
+  <text x="280" y="578" font-size="26" fill="#5C5248">拍下人們生活的樣子</text>
+  <line x1="64" y1="748" x2="92" y2="748" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <rect x="98" y="662" width="462" height="172" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <rect x="135.6" y="716.32" width="60.48" height="60.48" rx="4" fill="#3A332D"/>
+  <circle cx="160.08" cy="740.8" r="12.96" fill="#FFFFFF"/>
+  <rect x="154.32" y="755.2" width="11.52" height="17.28" fill="#FFFFFF"/>
+  <rect x="181.68" y="726.4" width="56.16" height="50.4" rx="4" fill="#FFFFFF" stroke="#5C5248" stroke-width="4" stroke-dasharray="10 6" transform="rotate(8 209.76 751.6)"/>
+  <circle cx="210.48" cy="749.44" r="10.08" fill="#E5A300"/>
+  <text x="280" y="728" font-size="32" font-weight="700" fill="#2B2622">不用相機的實驗</text>
+  <text x="280" y="774" font-size="26" fill="#5C5248">相紙直接感光、</text>
+  <text x="280" y="810" font-size="26" fill="#5C5248">照片剪貼組合</text>
+  <rect x="40" y="870" width="520" height="124" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="920.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">它不是單一風格，</tspan></text>
+  <text x="300" y="964.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">而是一起追問相機的可能</tspan></text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">站到對方那邊：跟著他看</title>
+  <desc id="d">俯視示意，不是作品。左邊是面對面：相機和被拍的人互相看著，視線撞在一起。右邊是站到對方旁邊：相機和人並肩，兩人的視線一起看向同一個遠方，例如朝陽。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#2B2622">站到對方那邊：跟著他看</text>
+  <text x="48" y="126" font-size="26" fill="#6B5E52">俯視示意：攝影師從面對面，走到對方身旁</text>
+  <rect x="48" y="166" width="494" height="400" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="76" y="220" font-size="34" font-weight="700" fill="#2B2622">面對面</text>
+  <g transform="translate(168,366) rotate(0) scale(1.1)"><rect x="-30" y="-22" width="44" height="44" rx="8" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><rect x="14" y="-12" width="22" height="24" rx="4" fill="#3A332D"/></g>
+  <g transform="translate(422,366) rotate(180) scale(1.1)" fill="#8A7F72"><ellipse cx="0" cy="0" rx="18" ry="38"/><circle cx="2" cy="0" r="17" fill="#3A332D"/><path d="M17,-6 L28,0 L17,6 Z" fill="#3A332D"/></g>
+  <line x1="218" y1="354" x2="283" y2="354" stroke="#E5A300" stroke-width="4" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <line x1="382" y1="378" x2="307" y2="378" stroke="#5C5248" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)"/>
+  <line x1="295" y1="340" x2="295" y2="322" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+  <line x1="277" y1="346" x2="265" y2="332" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+  <line x1="313" y1="346" x2="325" y2="332" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+  <text x="168" y="440" font-size="22" font-weight="700" fill="#5C5248" text-anchor="middle">相機</text>
+  <text x="422" y="440" font-size="22" font-weight="700" fill="#5C5248" text-anchor="middle">被拍的人</text>
+  <text x="295" y="518" font-size="26" fill="#5C5248" text-anchor="middle">視線撞在一起</text>
+  <rect x="658" y="166" width="494" height="400" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="686" y="220" font-size="34" font-weight="700" fill="#8A5D00">站到對方旁邊</text>
+  <circle cx="905" cy="266" r="20" fill="#E5A300"/>
+  <line x1="933" y1="266" x2="945" y2="266" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="924.799" y1="285.799" x2="933.284" y2="294.284" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="905" y1="294" x2="905" y2="306" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="885.201" y1="285.799" x2="876.716" y2="294.284" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="877" y1="266" x2="865" y2="266" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="885.201" y1="246.201" x2="876.716" y2="237.716" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="905" y1="238" x2="905" y2="226" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="924.799" y1="246.201" x2="933.284" y2="237.716" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(851,388) rotate(-90) scale(1.1)"><rect x="-30" y="-22" width="44" height="44" rx="8" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><rect x="14" y="-12" width="22" height="24" rx="4" fill="#3A332D"/></g>
+  <g transform="translate(959,388) rotate(-90) scale(1.1)" fill="#8A7F72"><ellipse cx="0" cy="0" rx="18" ry="38"/><circle cx="2" cy="0" r="17" fill="#3A332D"/><path d="M17,-6 L28,0 L17,6 Z" fill="#3A332D"/></g>
+  <line x1="851" y1="342" x2="885" y2="312" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" marker-end="url(#arrg)"/>
+  <line x1="959" y1="342" x2="925" y2="312" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" marker-end="url(#arrg)"/>
+  <text x="835" y="458" font-size="22" font-weight="700" fill="#5C5248" text-anchor="middle">相機</text>
+  <text x="985" y="458" font-size="22" font-weight="700" fill="#5C5248" text-anchor="middle">被拍的人</text>
+  <text x="905" y="518" font-size="26" fill="#5C5248" text-anchor="middle">一起看向同一個方向</text>
+  <line x1="552" y1="366" x2="648" y2="366" stroke="#E5A300" stroke-width="5" stroke-linecap="round" marker-end="url(#arrg)"/>
+  <text x="600" y="346" font-size="22" font-weight="700" fill="#8A5D00" text-anchor="middle">走過去</text>
+  <rect x="48" y="598" width="1104" height="90" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="653.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">不是面對面，</tspan><tspan fill="#8A5D00">而是站到旁邊，跟著他看</tspan></text>
+</svg>

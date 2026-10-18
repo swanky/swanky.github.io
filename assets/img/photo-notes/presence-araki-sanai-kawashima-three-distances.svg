@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">在場感，常常來自距離</title>
+  <desc id="d">三種日常距離，是我的讀法，不是攝影師自己的分類。荒木經惟在關係裡面：相機和被拍的人在同一個屋簷下，拍自己生活裡的人；佐內正史是路過的距離：相機沿著路經過，不刻意靠近也不刻意設計；川島小鳥站到對方那邊：相機在對方身旁，跟著對方的視線一起看向遠方。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#2B2622">在場感，常常來自距離</text>
+  <text x="48" y="126" font-size="26" fill="#6B5E52">三種日常距離（我的讀法，不是攝影師自己的分類）</text>
+  <rect x="48" y="166" width="336" height="404" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="82" cy="200" r="22" fill="#3A332D"/>
+  <text x="82" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <g transform="translate(48,176)">
+  <path d="M48,104 L168,30 L288,104" fill="none" stroke="#E5A300" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="66" y="96" width="204" height="138" rx="6" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+  <g transform="translate(124,186) rotate(0) scale(0.66)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#3A332D"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#3A332D"/></g>
+  <g transform="translate(212,192) scale(0.85)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  </g>
+  <text x="216" y="460" font-size="34" font-weight="700" fill="#2B2622" text-anchor="middle">在關係裡面</text>
+  <text x="216" y="500" font-size="26" font-weight="700" fill="#8A5D00" text-anchor="middle">荒木經惟</text>
+  <text x="216" y="542" font-size="26" fill="#5C5248" text-anchor="middle">拍自己生活裡的人</text>
+  <rect x="432" y="166" width="336" height="404" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="466" cy="200" r="22" fill="#3A332D"/>
+  <text x="466" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <g transform="translate(432,176)">
+  <line x1="24" y1="226" x2="312" y2="226" stroke="#A8998A" stroke-width="4" stroke-linecap="round" stroke-dasharray="4 12" marker-end="url(#arr)"/>
+  <path d="M40,212 L120,212" fill="none" stroke="#5C5248" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr)"/>
+  <g transform="translate(96,170) rotate(0) scale(0.62)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#3A332D"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#3A332D"/></g>
+  <line x1="130" y1="128" x2="142" y2="116" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="136" y1="146" x2="152" y2="146" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="130" y1="164" x2="142" y2="176" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(262,170) scale(0.85)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <line x1="132" y1="172" x2="222" y2="172" stroke="#A8998A" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>
+  </g>
+  <text x="600" y="460" font-size="34" font-weight="700" fill="#2B2622" text-anchor="middle">路過的距離</text>
+  <text x="600" y="500" font-size="26" font-weight="700" fill="#8A5D00" text-anchor="middle">佐內正史</text>
+  <text x="600" y="542" font-size="26" fill="#5C5248" text-anchor="middle">不刻意靠近或設計</text>
+  <rect x="816" y="166" width="336" height="404" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <circle cx="850" cy="200" r="22" fill="#3A332D"/>
+  <text x="850" y="209.36" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <g transform="translate(816,176)">
+  <circle cx="270" cy="54" r="18" fill="#E5A300"/>
+  <line x1="296" y1="54" x2="308" y2="54" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="288.385" y1="72.3848" x2="296.87" y2="80.8701" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="270" y1="80" x2="270" y2="92" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="251.615" y1="72.3848" x2="243.13" y2="80.8701" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="244" y1="54" x2="232" y2="54" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="251.615" y1="35.6152" x2="243.13" y2="27.1299" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="270" y1="28" x2="270" y2="16" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <line x1="288.385" y1="35.6152" x2="296.87" y2="27.1299" stroke="#E5A300" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(120,186) rotate(0) scale(0.62)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#3A332D"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#3A332D"/></g>
+  <g transform="translate(196,190) scale(0.85)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <path d="M132,150 Q170,90 238,64" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8" marker-end="url(#arrg)"/>
+  <path d="M204,140 Q222,96 248,74" fill="none" stroke="#E5A300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8" marker-end="url(#arrg)"/>
+  <line x1="30" y1="230" x2="306" y2="230" stroke="#A8998A" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="984" y="460" font-size="34" font-weight="700" fill="#2B2622" text-anchor="middle">站到對方那邊</text>
+  <text x="984" y="500" font-size="26" font-weight="700" fill="#8A5D00" text-anchor="middle">川島小鳥</text>
+  <text x="984" y="542" font-size="26" fill="#5C5248" text-anchor="middle">跟著對方的視線看</text>
+  <rect x="48" y="598" width="1104" height="90" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="653.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">照片看得出：</tspan><tspan fill="#8A5D00">拍的人站多近、是什麼關係</tspan></text>
+</svg>

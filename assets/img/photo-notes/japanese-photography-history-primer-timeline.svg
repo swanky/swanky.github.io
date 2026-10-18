@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">日本寫真五個轉折，五個問題</title>
+  <desc id="d">由左到右五個年代：1930 年代新興寫真問相機本身能做到什麼；1950 年代戰後寫實問拍人時攝影師站在哪裡；1959 年起 VIVO 問一群人能不能各拍各的；1968 年起《Provoke》問照片一定要清楚嗎；1970 年代問能不能只拍身邊和自己。每個年代下列代表攝影師。前後並列不代表誰影響了誰。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+  <text x="48" y="80" font-size="48" font-weight="700" fill="#2B2622">日本寫真五個轉折，五個問題</text>
+  <text x="48" y="126" font-size="26" fill="#6B5E52">每一代在回答不同的問題（前後並列，不代表誰影響誰）</text>
+  <line x1="60" y1="236" x2="1150" y2="236" stroke="#A8998A" stroke-width="5" stroke-linecap="round" marker-end="url(#arr)"/>
+  <text x="152" y="206" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">1930 年代</text>
+  <circle cx="152" cy="236" r="14" fill="#3A332D" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="48" y="264" width="208" height="360" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="152" y="312" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">新興寫真</text>
+  <rect x="56" y="334" width="192" height="104" rx="16" fill="#FFFFFF" stroke="#A8998A" stroke-width="2"/>
+  <text x="152" y="376" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">相機本身</text>
+  <text x="152" y="414" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">能做到什麼？</text>
+  <text x="152" y="486" font-size="24" fill="#5C5248" text-anchor="middle">野島康三</text>
+  <text x="152" y="520" font-size="24" fill="#5C5248" text-anchor="middle">中山岩太</text>
+  <text x="152" y="554" font-size="24" fill="#5C5248" text-anchor="middle">木村伊兵衛</text>
+  <text x="376" y="206" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">1950 年代</text>
+  <circle cx="376" cy="236" r="14" fill="#3A332D" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="272" y="264" width="208" height="360" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="376" y="312" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">戰後寫實</text>
+  <rect x="280" y="334" width="192" height="104" rx="16" fill="#FFFFFF" stroke="#A8998A" stroke-width="2"/>
+  <text x="376" y="376" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">拍人時，</text>
+  <text x="376" y="414" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">攝影師站哪？</text>
+  <text x="376" y="486" font-size="24" fill="#5C5248" text-anchor="middle">木村伊兵衛</text>
+  <text x="376" y="520" font-size="24" fill="#5C5248" text-anchor="middle">土門拳</text>
+  <text x="376" y="554" font-size="24" fill="#5C5248" text-anchor="middle">常盤とよ子</text>
+  <text x="600" y="206" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">1959 年起</text>
+  <circle cx="600" cy="236" r="14" fill="#3A332D" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="496" y="264" width="208" height="360" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="600" y="312" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">VIVO</text>
+  <rect x="504" y="334" width="192" height="104" rx="16" fill="#FFFFFF" stroke="#A8998A" stroke-width="2"/>
+  <text x="600" y="376" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">一群人一起，</text>
+  <text x="600" y="414" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">能各拍各的？</text>
+  <text x="600" y="486" font-size="24" fill="#5C5248" text-anchor="middle">東松照明</text>
+  <text x="600" y="520" font-size="24" fill="#5C5248" text-anchor="middle">細江英公</text>
+  <text x="600" y="554" font-size="24" fill="#5C5248" text-anchor="middle">川田喜久治</text>
+  <text x="824" y="206" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="middle">1968 年起</text>
+  <circle cx="824" cy="236" r="14" fill="#E5A300" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="720" y="264" width="208" height="360" rx="24" fill="#FFF8E7" stroke="#E5A300" stroke-width="5"/>
+  <text x="824" y="312" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="middle">Provoke</text>
+  <rect x="728" y="334" width="192" height="104" rx="16" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+  <text x="824" y="376" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">照片一定</text>
+  <text x="824" y="414" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">要清楚嗎？</text>
+  <text x="824" y="486" font-size="24" fill="#5C5248" text-anchor="middle">中平卓馬</text>
+  <text x="824" y="520" font-size="24" fill="#5C5248" text-anchor="middle">森山大道</text>
+  <text x="824" y="554" font-size="24" fill="#5C5248" text-anchor="middle">高梨豐</text>
+  <text x="1048" y="206" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">1970 年代</text>
+  <circle cx="1048" cy="236" r="14" fill="#3A332D" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="944" y="264" width="208" height="360" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="1048" y="312" font-size="30" font-weight="700" fill="#2B2622" text-anchor="middle">身邊與自己</text>
+  <rect x="952" y="334" width="192" height="104" rx="16" fill="#FFFFFF" stroke="#A8998A" stroke-width="2"/>
+  <text x="1048" y="376" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">能不能只拍</text>
+  <text x="1048" y="414" font-size="26" font-weight="700" fill="#2B2622" text-anchor="middle">身邊和自己？</text>
+  <text x="1048" y="486" font-size="24" fill="#5C5248" text-anchor="middle">荒木經惟</text>
+  <text x="1048" y="520" font-size="24" fill="#5C5248" text-anchor="middle">深瀬昌久</text>
+  <rect x="48" y="650" width="1104" height="86" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="600" y="703.8" font-size="30" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">看懂這一代在問什麼，</tspan><tspan fill="#8A5D00">照片就好懂很多</tspan></text>
+</svg>

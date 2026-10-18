@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1230" width="600" height="1230" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+  <title id="t">同樣拍人，站的位置不一樣</title>
+  <desc id="d">站位示意，不是作品畫面。左邊是木村伊兵衛的旁觀：用萊卡，從自由角度瞬間捕捉表情，相機可以在被拍的人周圍移動。右邊是土門拳的正面對峙：站在正前方徹底凝視對方，在緊張中按下快門。同一個寫實口號底下，站位完全不同。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5C5248"/></marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="600" height="1230" fill="#FFFFFF"/>
+  <text x="40" y="70" font-size="42" font-weight="700" fill="#2B2622">同樣拍人，</text>
+  <text x="40" y="120" font-size="42" font-weight="700" fill="#2B2622">站的位置不一樣</text>
+  <text x="40" y="164" font-size="24" fill="#6B5E52">1950 年代寫實攝影的兩種站法</text>
+  <text x="40" y="198" font-size="24" fill="#6B5E52">（站位示意，不是作品畫面）</text>
+  <rect x="40" y="240" width="520" height="400" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="68" y="294" font-size="34" font-weight="700" fill="#2B2622">旁觀</text>
+  <text x="532" y="292" font-size="26" font-weight="700" fill="#5C5248" text-anchor="end">木村伊兵衛</text>
+  <path d="M208,332 A 236 236 0 0 0 208,540" fill="none" stroke="#A8998A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
+  <g transform="translate(218,344) rotate(0) scale(0.6)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#A8998A"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#A8998A" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#A8998A" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#A8998A"/></g>
+  <g transform="translate(218,528) rotate(0) scale(0.6)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#A8998A"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#A8998A" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#A8998A" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#A8998A"/></g>
+  <g transform="translate(192,436) rotate(0) scale(0.8)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#3A332D"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#3A332D"/></g>
+  <line x1="232" y1="434" x2="382" y2="426" stroke="#5C5248" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8" marker-end="url(#arr)"/>
+  <text x="266" y="540" font-size="22" font-weight="700" fill="#5C5248">自由角度</text>
+  <g transform="translate(430,436) scale(1.15)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <text x="300" y="588" font-size="26" fill="#5C5248" text-anchor="middle">萊卡、自由角度，</text>
+  <text x="300" y="626" font-size="26" fill="#5C5248" text-anchor="middle">瞬間捕捉表情</text>
+  <rect x="40" y="702" width="520" height="400" rx="24" fill="#F6F2EC" stroke="#A8998A" stroke-width="3"/>
+  <text x="68" y="756" font-size="34" font-weight="700" fill="#2B2622">正面對峙</text>
+  <text x="532" y="754" font-size="26" font-weight="700" fill="#5C5248" text-anchor="end">土門拳</text>
+  <g transform="translate(250,888) rotate(0) scale(0.9)"><rect x="-14" y="-38" width="28" height="12" rx="3" fill="#3A332D"/><rect x="-40" y="-28" width="80" height="54" rx="10" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="15" fill="#FFFFFF" stroke="#3A332D" stroke-width="4"/><circle cx="0" cy="-1" r="5" fill="#3A332D"/></g>
+  <line x1="292" y1="887" x2="356" y2="887" stroke="#B45309" stroke-width="6" stroke-linecap="round"/>
+  <line x1="302" y1="865" x2="346" y2="865" stroke="#B45309" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 8"/>
+  <line x1="302" y1="909" x2="346" y2="909" stroke="#B45309" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 8"/>
+  <g transform="translate(400,898) scale(1.15)" fill="#8A7F72"><circle cx="0" cy="-36" r="18"/><path d="M-32,40 L-32,6 Q-32,-12 -14,-12 L14,-12 Q32,-12 32,6 L32,40 Z"/></g>
+  <text x="340" y="834" font-size="22" font-weight="700" fill="#B45309" text-anchor="middle">正面凝視</text>
+  <text x="300" y="1050" font-size="26" fill="#5C5248" text-anchor="middle">徹底凝視對方，</text>
+  <text x="300" y="1088" font-size="26" fill="#5C5248" text-anchor="middle">在緊張中按下快門</text>
+  <circle cx="300" cy="672" r="28" fill="#3A332D" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="300" y="682" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">VS</text>
+  <rect x="40" y="1128" width="520" height="80" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+  <text x="300" y="1178.08" font-size="28" font-weight="700" text-anchor="middle"><tspan fill="#2B2622">同一個口號，</tspan><tspan fill="#8A5D00">站位完全不同</tspan></text>
+</svg>
