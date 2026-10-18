@@ -161,7 +161,7 @@ Thariq 的結論是：**The only way out is through**——唯一的出口就是
 5. **讓模型反過來 quiz you。** 每次大型修改後被它考幾題，確認你真的理解這次變更。你可以不親手寫每一行，但不能不知道這些行在做什麼。
 6. **不要太早接受取捨。** 很多你以為「沒時間做」的事，現在可以先做個 prototype 看看。讓現實決定限制，別讓舊習慣先幫你把門關上。
 
-如果團隊已經走到「少數人用得很順，卻沒辦法複製到整個團隊」這一步，卡住的通常不是 prompt，而是先挑哪條工作流程試行、Agent 的權限怎麼劃、驗收由誰把關。這部分我整理在 [AI Agent 導入顧問](/technical/ai-agent-consulting/)，可以先從一條工作流程的小範圍試行開始。
+如果團隊已經走到「少數人用得很順，卻沒辦法複製到整個團隊」這一步，卡住的通常不是 prompt，而是先挑哪條工作流程試行、Agent 的權限怎麼劃、驗收由誰把關。這部分可以參考 <a href="{{ '/technical/ai-agent-consulting/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'ai_agent_consulting',cta_position:'inline',from_page:'{{ page.url }}'});}">AI Agent 導入顧問</a>，先從一條工作流程的小範圍試行開始就行。
 
 ## 結語：少一點合理，多一點探索
 
