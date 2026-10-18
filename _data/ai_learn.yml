@@ -103,7 +103,7 @@ modules:
       - { tag: 原則, chapter: principles, said: 叫它寫 300 字，它就會剛好寫 300 字, truth: AI 沒辦法在心裡可靠地數字數，直接要求嚴格長度，研究實測達標不到三成。改成「3 段、每段 2 句」這種一眼能驗收的寫法。 }
       - { tag: 原則, chapter: principles, said: AI 會照我說的做，所以不用驗收, truth: 它覺得「看起來做完了」就會停。交辦時先寫好可以打勾的完成條件，讓它交件前自己對一遍，你再抽查。 }
       - { tag: 咒語, chapter: magic-words, said: 給小費、威脅或罵它，AI 會比較認真, truth: 大規模重測都沒有可靠效果，同一句話這題多對、那題多錯。想要短就說要短，想要準就給標準。 }
-      - { tag: 咒語, chapter: magic-words, said: 先說「你是世界級專家」，AI 就會比較準, truth: 2025 年底的大規模實測：空泛的專家角色沒有一致的好處。要給的是具體的身分、讀者和用途。 }
+      - { tag: 咒語, chapter: magic-words, said: 先說「你是世界級專家」，AI 就會比較準, truth: 2025 年底的大規模實測：就算是對口的專家角色，也沒有一致提升答對率。身分、讀者和用途還是要給，但那是為了讓回答對口，不是為了更準。 }
       - { tag: 行話, chapter: domain, said: 不懂這個領域沒關係，丟給 AI 就好, truth: 不懂行話，就說不清楚要什麼，也驗不出成品哪裡錯。先請 AI 當老師，教你最該懂的詞，再交辦。 }
       - { tag: 模板, chapter: template, said: 一次講不完，就分幾次慢慢補, truth: 研究發現同一件事分幾次補，頂尖模型的表現平均掉 39%。把要求整理成一段完整的交辦，常做的事寫成模板。 }
     url: /education/ai/learn/prompt-writing/
