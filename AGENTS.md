@@ -41,6 +41,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 - `cover_image` 一律 `.jpg`（PNG 來源先轉 JPEG）；列表卡片會把封面裁成 16:9，選圖／裁圖要預留。
 - 新增文章後跑一次 `pwsh -File tools/make-cover-thumbs.ps1`：為每張 .jpg／.jpeg 封面產生同名 `-card.jpg`（640px 寬）給列表卡片用；可重跑、只補缺的。卡片模板「有縮圖就用、沒有就退回原圖」，忘了跑不會壞，只是列表頁變重（2026-09-11 實測 63 張原圖一頁 4MB）。
 - **頁面／內文照片原圖 >500KB**（活動照、截圖等）：把路徑加進 `tools/build-oversized-images.py` 的 `SOURCES` 清單後執行 `python -X utf8 tools/build-oversized-images.py`（需 Pillow），會產生 webp／小 jpg 並寫入 `_data/oversized_images.json`；經 `_includes/flickr/source.html` 輸出的圖自動改用小圖。**banner 例外**（文章 `cover_image`、`assets/img/linkedin/`、檔名含 banner、`web3/*-anime`）：2026-10-10 站主決定一律原圖原畫質，腳本內建跳過規則。
+- **新文章上線後附社群貼文草稿**（2026-10-18 站主決定）：負責產出並上線文章的 agent，在同一個工作裡一併起草 LinkedIn 與 X 貼文各一則，存到私有的 `docs/social-drafts/YYYY-MM-DD-<slug 或批次名>.md`，不自行發布，由站主決定發不發。草稿裡的網站連結一律帶 `?utm_source=linkedin|x&utm_medium=social&utm_campaign=<文章 slug>&utm_content=<claude|gpt|grok>`，讓 GA4 能比較各平台、各 agent 草稿的成效。文案照品牌手冊與上方 TA 規則；只寫原文有的內容，AI 創作的作品貼文裡也要標示。同步自 LinkedIn／X 的文章不用再起草。
 - 同步自 LinkedIn／X 的文章：設 `hero_image: true`；`source_url` 填 LinkedIn（一律 `www.` 子網域）、`source_url_x` 填 X。layout 會自動渲染單／雙來源連結。
 - Bootstrap Icons：使用前先確認 glyph class 存在於 vendored CSS（缺字渲染成空方塊——曾是正式站 bug）。
 - `hero_image: true` 只在封面是「設計過的 banner」時加；隨手圖或無封面就省略（單篇頁 banner 預設不顯示）。
