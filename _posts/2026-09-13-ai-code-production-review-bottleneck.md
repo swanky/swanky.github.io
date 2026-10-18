@@ -11,7 +11,7 @@ cover_alt: "水手服品牌主角檢查大量生成的零件，對照右側完�
 hero_image: true
 use_glightbox: true
 mid_cta: false
-cta_context: agentic
+cta_context: ai-agent
 related_posts:
   - ai-define-verify-problems
   - agentic-ai-coding-spec-oriented

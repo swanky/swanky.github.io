@@ -8,7 +8,7 @@ tags: [ai-agent, ai-coding, agent-harness, codex, claude-code, sdd, agent-skills
 layout: article
 cover_image: /assets/img/linkedin/scaffolding-thin-harness-agent-architecture.jpg
 cover_alt: "水手服少女從 AI 核心拆除糾纏的臨時線路，同時保留測試盾牌、核准閘門、證據筆記與乾淨執行軌道"
-cta_context: agentic
+cta_context: ai-agent
 related_posts:
   - production-ai-agent-control-planes
   - matt-pocock-skills-ai-coding-workflow

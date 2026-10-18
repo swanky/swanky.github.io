@@ -6,6 +6,7 @@ categories: [technical]
 tags: [claude-code]
 ai_learn: ai-basics/mcp
 layout: article
+cta_context: ai-agent
 cover_image: /assets/img/linkedin/ai-agent-a2a-mcp.svg
 og_image: /assets/img/linkedin/ai-agent-a2a-mcp-og.jpg
 hero_image: true

@@ -3,6 +3,7 @@ title: "AI 生圖的視覺疲勞，以及攝影還剩下什麼"
 date: 2023-03-02 20:00:00 +0800
 categories: [claude-code]
 layout: article
+cta_context: ai-visual
 nav_active: education
 cover_image: /assets/facebook-archive/photos/2023-03-02_642589511209186_0.jpg
 description: "玩了一個月 Stable Diffusion 之後，我開始對 AI 生圖感到視覺疲勞。這篇是那段時間的誠實反思：攝影在 AI 時代還剩下什麼？"

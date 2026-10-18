@@ -8,7 +8,7 @@ tags: [ai-agent, ai-coding, software-engineering, software-architecture, conways
 layout: article
 cover_image: /assets/img/linkedin/ai-agent-surgical-team.jpg
 cover_alt: "水手服少女擔任軟體外科手術團隊的主導者，帶領五個 AI Agent，把混亂的網狀溝通整理成星狀協作與鬆耦合模組"
-cta_context: agentic
+cta_context: ai-agent
 related_posts:
   - ai-executor-orchestrator
   - mid-manager-becomes-builder

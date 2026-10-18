@@ -8,7 +8,7 @@ tags: [hermes-agent, bot-mode, ai-agent, multi-agent, agentic-engineering, grok-
 layout: article
 cover_image: /assets/img/linkedin/hermes-bot-mode-persistent-ai-team.jpg
 cover_alt: "水手服 AI 系統工程師在自架控制室裡協調研究、開發、驗證與排程四個具名 Bot，並以安全邊界與人類核准 Gate 控制外部動作"
-cta_context: agentic
+cta_context: ai-agent
 related_posts:
   - ai-agent-surgical-team
   - matt-pocock-skills-ai-coding-workflow

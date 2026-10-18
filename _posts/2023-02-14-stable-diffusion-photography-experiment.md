@@ -3,6 +3,7 @@ title: "攝影師的 AI 生圖實驗——從「假裝學電繪」到 Stable Dif
 date: 2023-02-14 20:00:00 +0800
 categories: [claude-code]
 layout: article
+cta_context: ai-visual
 nav_active: education
 cover_image: /assets/facebook-archive/photos/2023-02-14_629017969233007_1.jpg
 description: "一個拍了十幾年制服女孩的攝影師，在 2023 年初認真玩了一個月 Stable Diffusion。這是那段時間的實驗筆記與反思。"

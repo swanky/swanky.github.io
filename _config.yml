@@ -238,6 +238,31 @@ defaults:
       path: "nft/oursong.html"
     values:
       sitemap: false
+  # 經典小說原文章節頁（_books、_jinpingmei collection，約 697 頁，網址為
+  # /xxx/text/NNN/）：公有領域原文與他站高度重複，移出 sitemap，讓收錄集中在
+  # 原創內容。defaults 的 path 比對來源路徑而非輸出網址，所以要用 collection
+  # type 指定；各書 /xxx/text/ 目錄頁是一般 page，不受影響，仍留在 sitemap。
+  - scope:
+      type: "books"
+    values:
+      sitemap: false
+  - scope:
+      type: "jinpingmei"
+    values:
+      sitemap: false
+  # 寫真書 PDF 下載檔與第三方授權聲明：保留可下載／可瀏覽，但不列入 sitemap。
+  - scope:
+      path: "assets/downloads"
+    values:
+      sitemap: false
+  - scope:
+      path: "jinpingmei/photobook/*/*.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "THIRD_PARTY_NOTICES.md"
+    values:
+      sitemap: false
 
 # Plugins
 plugins:
