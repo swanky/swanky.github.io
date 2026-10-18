@@ -37,6 +37,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 ## 內容慣例（文章與圖片）
 
 - 文章放 `_posts/YYYY-MM-DD-slug.md`，`layout: article`；`categories: [technical]`（技術顧問）、`[claude-code]`（AI學習分享）或 `[photography]`（攝影作品）。
+- **張貼日期與更新日期分開**（2026-10-13 站主確認）：文章首次發布後，`date` 與檔名日期保留原始張貼日期；修改文字、調整圖片、補充內容、重建或重新部署都不得改成當天日期，也不得藉改日期調整列表排序。需要記錄實質更新時另用 `last_modified_at`，不可取代列表、文章頁及 `datePublished` 使用的原始日期。只有查得原日期有誤時才依可驗證的原始發表紀錄更正；不得把檔案修改時間、Git 提交日或草稿排程直接當成原始張貼日。
 - `cover_image` 一律 `.jpg`（PNG 來源先轉 JPEG）；列表卡片會把封面裁成 16:9，選圖／裁圖要預留。
 - 新增文章後跑一次 `pwsh -File tools/make-cover-thumbs.ps1`：為每張 .jpg／.jpeg 封面產生同名 `-card.jpg`（640px 寬）給列表卡片用；可重跑、只補缺的。卡片模板「有縮圖就用、沒有就退回原圖」，忘了跑不會壞，只是列表頁變重（2026-09-11 實測 63 張原圖一頁 4MB）。
 - **頁面／內文照片原圖 >500KB**（活動照、截圖等）：把路徑加進 `tools/build-oversized-images.py` 的 `SOURCES` 清單後執行 `python -X utf8 tools/build-oversized-images.py`（需 Pillow），會產生 webp／小 jpg 並寫入 `_data/oversized_images.json`；經 `_includes/flickr/source.html` 輸出的圖自動改用小圖。**banner 例外**（文章 `cover_image`、`assets/img/linkedin/`、檔名含 banner、`web3/*-anime`）：2026-10-10 站主決定一律原圖原畫質，腳本內建跳過規則。
