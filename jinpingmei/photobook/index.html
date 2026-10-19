@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 寫真館｜金瓶梅角色寫真集
-description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、吳月娘等角色離開設定表、走進光線裡。全部影像皆為 AI 生成，並非真人照片。
+description: 金瓶梅宇宙的角色寫真館：潘金蓮、李瓶兒、吳月娘等角色離開設定表、走進光線裡。
 permalink: /jinpingmei/photobook/
 ---
 <!doctype html>
@@ -61,7 +61,7 @@ permalink: /jinpingmei/photobook/
         <div>
           <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真</span></p>
           <h1 class="act-title reveal">寫真館<small>走進光線裡的角色寫真集</small></h1>
-          <p class="act-lead reveal">定裝照管的是「像不像」，寫真管的是「有沒有戲」——經過原典考證定裝的角色，離開設定表，一位一位走進光線裡。每一幀都連得回她的角色檔案。全部影像皆為 <b>AI 生成</b>，並非真人照片。</p>
+          <p class="act-lead reveal">定裝照管的是「像不像」，寫真管的是「有沒有戲」——經過原典考證定裝的角色，離開設定表，一位一位走進光線裡。每一幀都連得回她的角色檔案。</p>
           <ul class="pb-count reveal" aria-label="收錄進度">
             <li>現收 <b>{% if npacks <= zhs.size %}{% assign ni = npacks | minus: 1 %}{{ zhs[ni] }}{% else %}{{ npacks }}{% endif %}</b> 輯</li>
             <li><b>{% if total <= zhs.size %}{% assign ti = total | minus: 1 %}{{ zhs[ti] }}{% else %}{{ total }}{% endif %}</b> 幀寫真</li>
@@ -123,7 +123,7 @@ permalink: /jinpingmei/photobook/
             {%- assign preview_name = s.image | replace: '.jpg', '-480.jpg' -%}
             {%- capture preview_src %}/assets/img/jinpingmei/photobook/{{ preview_name }}{% endcapture -%}
             <figure class="pb-print reveal"{% if forloop.index > 1 %} data-late="{{ forloop.index | minus: 1 }}"{% endif %}>
-              <a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-photobook" title="{{ s.alt }}（AI 生成，非真人照片）"><img src="{{ preview_src | relative_url }}" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a>
+              <a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-photobook" title="{{ s.alt }}"><img src="{{ preview_src | relative_url }}" alt="{{ s.alt }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async"></a>
               <figcaption><span class="fno">No.{% if fno < 10 %}0{% endif %}{{ fno }}</span><span class="fcap">{{ s.caption }}</span></figcaption>
             </figure>
             {%- endfor %}
@@ -180,7 +180,7 @@ permalink: /jinpingmei/photobook/
         <div class="paiji-frame">
           <p class="paiji-head" id="pb-paiji"><b>凡例</b><small>本館的誠實標示</small></p>
           <ul>
-            <li>寫真人物皆為《金瓶梅》書中角色，圖像全部 <b>AI 生成</b>，並非真人照片。</li>
+            <li>寫真人物皆為《金瓶梅》書中角色。</li>
             <li>寫真對象出自<a href="{{ '/jinpingmei/characters/' | relative_url }}">角色研究館</a>考證過的十九位角色，每一輯都連回她的角色檔案。</li>
             <li>全館<b>無裸露</b>；原典含成人內容，建議成年讀者。</li>
             <li>角色如何選角定裝，見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。</li>

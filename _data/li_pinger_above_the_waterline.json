@@ -6,10 +6,10 @@
   "subtitle": "把重量交給水",
   "date": "2026-10-07",
   "date_label": "編輯日期",
-  "description": "李瓶兒《水線以上》：把重量交給水共36幅AI生成影像。",
+  "description": "李瓶兒《水線以上》：把重量交給水共36幅影像。",
   "statement": "一日的重量\n進門時，身體帶著街上的步子。\n穿過木頭、白牆和日光，才慢慢來到水邊。\n水裡有伸展與停頓，也有向上的力氣。\n到了傍晚，衣服與鞋子回到身上。\n那些交出去的重量，沒有全數跟著回來。",
-  "disclosure": "李瓶兒為明確27歲的成年虛構角色。人物、造型、地點與事件均為AI創作，非真人實拍。史旺基 Swanky 企劃與編選，AI協作生成與編排。",
-  "fictional_location": "虛構游泳館與屋頂泳池",
+  "disclosure": "史旺基 Swanky 企劃與編選。",
+  "fictional_location": "游泳館與屋頂泳池",
   "count": 36,
   "chapters": [
     {
@@ -118,7 +118,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/01.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/01-960.webp",
-      "alt": "李瓶兒《水線以上》第01幅：門還沒有打開（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第01幅：門還沒有打開",
       "flickr_id": "55574319178",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574319178/"
     },
@@ -131,7 +131,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/02.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/02-960.webp",
-      "alt": "李瓶兒《水線以上》第02幅：向光走一步（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第02幅：向光走一步",
       "flickr_id": "55574210686",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210686/"
     },
@@ -144,7 +144,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/03.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/03-960.webp",
-      "alt": "李瓶兒《水線以上》第03幅：早晨停在肩上（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第03幅：早晨停在肩上",
       "flickr_id": "55573173562",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173562/"
     },
@@ -157,7 +157,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/04.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/04-960.webp",
-      "alt": "李瓶兒《水線以上》第04幅：跨過門檻（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第04幅：跨過門檻",
       "flickr_id": "55574210836",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574210836/"
     },
@@ -170,7 +170,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/05.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/05-960.webp",
-      "alt": "李瓶兒《水線以上》第05幅：木頭收住聲音（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第05幅：木頭收住聲音",
       "flickr_id": "55573173717",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173717/"
     },
@@ -183,7 +183,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/06.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/06-960.webp",
-      "alt": "李瓶兒《水線以上》第06幅：手心裡的深藍（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第06幅：手心裡的深藍",
       "flickr_id": "55574371884",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574371884/"
     },
@@ -196,7 +196,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/07.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/07-960.webp",
-      "alt": "李瓶兒《水線以上》第07幅：留在岸上的東西（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第07幅：留在岸上的東西",
       "flickr_id": "55574630705",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630705/"
     },
@@ -209,7 +209,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/08.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/08-960.webp",
-      "alt": "李瓶兒《水線以上》第08幅：回看一眼（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第08幅：回看一眼",
       "flickr_id": "55573173897",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173897/"
     },
@@ -222,7 +222,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/09.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/09-960.webp",
-      "alt": "李瓶兒《水線以上》第09幅：腳步先醒來（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第09幅：腳步先醒來",
       "flickr_id": "55573173962",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573173962/"
     },
@@ -235,7 +235,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/10.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/10-960.webp",
-      "alt": "李瓶兒《水線以上》第10幅：讓光穿過手臂（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第10幅：讓光穿過手臂",
       "flickr_id": "55574630870",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630870/"
     },
@@ -248,7 +248,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/11.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/11-960.webp",
-      "alt": "李瓶兒《水線以上》第11幅：坐下來呼吸（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第11幅：坐下來呼吸",
       "flickr_id": "55574630930",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574630930/"
     },
@@ -261,7 +261,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/12.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/12-960.webp",
-      "alt": "李瓶兒《水線以上》第12幅：肩膀鬆開以後（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第12幅：肩膀鬆開以後",
       "flickr_id": "55574631020",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574631020/"
     },
@@ -274,7 +274,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/13.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/13-960.webp",
-      "alt": "李瓶兒《水線以上》第13幅：水比人更大（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第13幅：水比人更大",
       "flickr_id": "55574372244",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372244/"
     },
@@ -287,7 +287,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/14.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/14-960.webp",
-      "alt": "李瓶兒《水線以上》第14幅：腳尖先知道（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第14幅：腳尖先知道",
       "flickr_id": "55574319963",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574319963/"
     },
@@ -300,7 +300,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/15.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/15-960.webp",
-      "alt": "李瓶兒《水線以上》第15幅：最後一級（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第15幅：最後一級",
       "flickr_id": "55573174277",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573174277/"
     },
@@ -313,7 +313,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/16.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/16-960.webp",
-      "alt": "李瓶兒《水線以上》第16幅：回頭的弧線（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第16幅：回頭的弧線",
       "flickr_id": "55574372434",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372434/"
     },
@@ -326,7 +326,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/17.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/17-960.webp",
-      "alt": "李瓶兒《水線以上》第17幅：不再握住什麼（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第17幅：不再握住什麼",
       "flickr_id": "55574372519",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574372519/"
     },
@@ -339,7 +339,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/18.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/18-960.webp",
-      "alt": "李瓶兒《水線以上》第18幅：向前交出重量（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第18幅：向前交出重量",
       "flickr_id": "55574211686",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574211686/"
     },
@@ -352,7 +352,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/19.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/19-960.webp",
-      "alt": "李瓶兒《水線以上》第19幅：藍色裡轉身（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第19幅：藍色裡轉身",
       "flickr_id": "55574320353",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574320353/"
     },
@@ -365,7 +365,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/20.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/20-960.webp",
-      "alt": "李瓶兒《水線以上》第20幅：聽不見的停頓（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第20幅：聽不見的停頓",
       "flickr_id": "55574211921",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574211921/"
     },
@@ -378,7 +378,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/21.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/21-960.webp",
-      "alt": "李瓶兒《水線以上》第21幅：朝亮處上升（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第21幅：朝亮處上升",
       "flickr_id": "55574212141",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212141/"
     },
@@ -391,7 +391,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/22.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/22-960.webp",
-      "alt": "李瓶兒《水線以上》第22幅：手掌的水紋（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第22幅：手掌的水紋",
       "flickr_id": "55574212236",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212236/"
     },
@@ -404,7 +404,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/23.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/23-960.webp",
-      "alt": "李瓶兒《水線以上》第23幅：換一片天空（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第23幅：換一片天空",
       "flickr_id": "55574373324",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574373324/"
     },
@@ -417,7 +417,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/24.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/24-960.webp",
-      "alt": "李瓶兒《水線以上》第24幅：把背交給水（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第24幅：把背交給水",
       "flickr_id": "55574212411",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212411/"
     },
@@ -430,7 +430,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/25.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/25-960.webp",
-      "alt": "李瓶兒《水線以上》第25幅：呼吸貼著波浪（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第25幅：呼吸貼著波浪",
       "flickr_id": "55574373454",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574373454/"
     },
@@ -443,7 +443,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/26.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/26-960.webp",
-      "alt": "李瓶兒《水線以上》第26幅：一條小小的線（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第26幅：一條小小的線",
       "flickr_id": "55574632100",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574632100/"
     },
@@ -456,7 +456,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/27.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/27-960.webp",
-      "alt": "李瓶兒《水線以上》第27幅：眼睛重新看見（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第27幅：眼睛重新看見",
       "flickr_id": "55574212626",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212626/"
     },
@@ -469,7 +469,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/28.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/28-960.webp",
-      "alt": "李瓶兒《水線以上》第28幅：把深藍放下（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第28幅：把深藍放下",
       "flickr_id": "55574212701",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212701/"
     },
@@ -482,7 +482,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/29.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/29-960.webp",
-      "alt": "李瓶兒《水線以上》第29幅：留住一點涼（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第29幅：留住一點涼",
       "flickr_id": "55574321358",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574321358/"
     },
@@ -495,7 +495,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/30.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/30-960.webp",
-      "alt": "李瓶兒《水線以上》第30幅：身體慢下來（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第30幅：身體慢下來",
       "flickr_id": "55574632380",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574632380/"
     },
@@ -508,7 +508,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/31.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/31-960.webp",
-      "alt": "李瓶兒《水線以上》第31幅：白色回來了（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第31幅：白色回來了",
       "flickr_id": "55574212941",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574212941/"
     },
@@ -521,7 +521,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/32.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/32-960.webp",
-      "alt": "李瓶兒《水線以上》第32幅：繫回日常（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第32幅：繫回日常",
       "flickr_id": "55573175892",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573175892/"
     },
@@ -534,7 +534,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/33.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/33-960.webp",
-      "alt": "李瓶兒《水線以上》第33幅：窗裡剩下的光（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第33幅：窗裡剩下的光",
       "flickr_id": "55574321643",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574321643/"
     },
@@ -547,7 +547,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/34.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/34-960.webp",
-      "alt": "李瓶兒《水線以上》第34幅：經過亮著的窗（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第34幅：經過亮著的窗",
       "flickr_id": "55574321758",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574321758/"
     },
@@ -560,7 +560,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/35.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/35-960.webp",
-      "alt": "李瓶兒《水線以上》第35幅：帶走的重量（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第35幅：帶走的重量",
       "flickr_id": "55573176092",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573176092/"
     },
@@ -573,7 +573,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-above-the-waterline/36.webp",
       "preview": "/assets/img/photography/li-pinger-above-the-waterline/36-960.webp",
-      "alt": "李瓶兒《水線以上》第36幅：走進晚風（AI生成影像）",
+      "alt": "李瓶兒《水線以上》第36幅：走進晚風",
       "flickr_id": "55574213306",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574213306/"
     }

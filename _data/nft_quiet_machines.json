@@ -6,10 +6,10 @@
   "subtitle": "九種空氣",
   "date": "2026-10-07",
   "date_label": "編輯日期",
-  "description": "CloneX #15162《風的練習簿》：九種空氣共36幅AI生成影像。",
+  "description": "CloneX #15162《風的練習簿》：九種空氣共36幅影像。",
   "statement": "用紙、草和薄金屬，\n替看不見的風留一點筆跡。\n九種空氣，沒有同一種答案。",
-  "disclosure": "以史旺基收藏的CloneX #15162圖像為身份來源；人類呈現為明確成年改編。人物與場景由AI生成，非真人實拍。史旺基 Swanky 企劃與編選，AI協作生成與編排。個人藝術創作展示，非NFT官方故事或合作。",
-  "fictional_location": "虛構城市與山海場景",
+  "disclosure": "以史旺基收藏的CloneX #15162圖像為身份來源。史旺基 Swanky 企劃與編選。個人藝術創作展示，非NFT官方故事或合作。",
+  "fictional_location": "城市與山海場景",
   "count": 36,
   "chapters": [
     {
@@ -125,7 +125,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/01.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/01-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第01幅：還沒開始（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第01幅：還沒開始",
       "flickr_id": "55573177492",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573177492/"
     },
@@ -138,7 +138,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/02.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/02-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第02幅：第一條風（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第02幅：第一條風",
       "flickr_id": "55573177522",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573177522/"
     },
@@ -151,7 +151,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/03.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/03-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第03幅：迎風的臉（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第03幅：迎風的臉",
       "flickr_id": "55574634190",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574634190/"
     },
@@ -164,7 +164,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/04.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/04-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第04幅：搬一個方向（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第04幅：搬一個方向",
       "flickr_id": "55574375799",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574375799/"
     },
@@ -177,7 +177,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/05.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/05-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第05幅：坐進草的高度（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第05幅：坐進草的高度",
       "flickr_id": "55574323478",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574323478/"
     },
@@ -190,7 +190,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/06.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/06-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第06幅：走過一條金線（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第06幅：走過一條金線",
       "flickr_id": "55574214966",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574214966/"
     },
@@ -203,7 +203,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/07.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/07-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第07幅：風停在眼睛裡（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第07幅：風停在眼睛裡",
       "flickr_id": "55574634400",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574634400/"
     },
@@ -216,7 +216,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/08.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/08-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第08幅：握住一穗（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第08幅：握住一穗",
       "flickr_id": "55574215051",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574215051/"
     },
@@ -229,7 +229,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/09.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/09-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第09幅：靠近一點聽（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第09幅：靠近一點聽",
       "flickr_id": "55574634470",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574634470/"
     },
@@ -242,7 +242,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/10.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/10-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第10幅：留一整排空位（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第10幅：留一整排空位",
       "flickr_id": "55573177827",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573177827/"
     },
@@ -255,7 +255,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/11.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/11-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第11幅：紙先坐下（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第11幅：紙先坐下",
       "flickr_id": "55574323723",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574323723/"
     },
@@ -268,7 +268,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/12.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/12-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第12幅：不用回答（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第12幅：不用回答",
       "flickr_id": "55574323768",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574323768/"
     },
@@ -281,7 +281,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/13.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/13-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第13幅：高窗下的一個人（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第13幅：高窗下的一個人",
       "flickr_id": "55574215286",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574215286/"
     },
@@ -294,7 +294,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/14.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/14-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第14幅：先壓住一角（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第14幅：先壓住一角",
       "flickr_id": "55574376294",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376294/"
     },
@@ -307,7 +307,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/15.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/15-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第15幅：紙上停了一個問題（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第15幅：紙上停了一個問題",
       "flickr_id": "55574376519",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376519/"
     },
@@ -320,7 +320,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/16.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/16-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第16幅：翻到空白（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第16幅：翻到空白",
       "flickr_id": "55574215636",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574215636/"
     },
@@ -333,7 +333,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/17.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/17-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第17幅：橙色指向那邊（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第17幅：橙色指向那邊",
       "flickr_id": "55574635075",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635075/"
     },
@@ -346,7 +346,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/18.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/18-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第18幅：只握住這一端（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第18幅：只握住這一端",
       "flickr_id": "55574376764",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376764/"
     },
@@ -359,7 +359,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/19.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/19-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第19幅：一小段堤（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第19幅：一小段堤",
       "flickr_id": "55574635195",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635195/"
     },
@@ -372,7 +372,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/20.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/20-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第20幅：水面寫了一行（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第20幅：水面寫了一行",
       "flickr_id": "55574635285",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635285/"
     },
@@ -385,7 +385,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/21.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/21-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第21幅：留出一整片天空（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第21幅：留出一整片天空",
       "flickr_id": "55574376879",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376879/"
     },
@@ -398,7 +398,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/22.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/22-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第22幅：影子先落地（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第22幅：影子先落地",
       "flickr_id": "55574635350",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635350/"
     },
@@ -411,7 +411,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/23.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/23-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第23幅：用短紙再試一次（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第23幅：用短紙再試一次",
       "flickr_id": "55574376924",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376924/"
     },
@@ -424,7 +424,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/24.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/24-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第24幅：把手放下（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第24幅：把手放下",
       "flickr_id": "55574376969",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574376969/"
     },
@@ -437,7 +437,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/25.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/25-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第25幅：坐在線的另一邊（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第25幅：坐在線的另一邊",
       "flickr_id": "55573178867",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573178867/"
     },
@@ -450,7 +450,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/26.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/26-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第26幅：一個結（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第26幅：一個結",
       "flickr_id": "55573178907",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573178907/"
     },
@@ -463,7 +463,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/27.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/27-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第27幅：跨過一格影子（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第27幅：跨過一格影子",
       "flickr_id": "55574324728",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574324728/"
     },
@@ -476,7 +476,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/28.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/28-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第28幅：網眼留住一點光（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第28幅：網眼留住一點光",
       "flickr_id": "55573178987",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573178987/"
     },
@@ -489,7 +489,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/29.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/29-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第29幅：先讓窗簾動（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第29幅：先讓窗簾動",
       "flickr_id": "55574635630",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635630/"
     },
@@ -502,7 +502,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/30.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/30-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第30幅：坐在暖的這一側（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第30幅：坐在暖的這一側",
       "flickr_id": "55574216256",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574216256/"
     },
@@ -515,7 +515,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/31.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/31-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第31幅：空手量一點風（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第31幅：空手量一點風",
       "flickr_id": "55574635690",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574635690/"
     },
@@ -528,7 +528,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/32.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/32-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第32幅：走廊盡頭的白（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第32幅：走廊盡頭的白",
       "flickr_id": "55573179127",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573179127/"
     },
@@ -541,7 +541,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/33.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/33-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第33幅：把銀色交出去（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第33幅：把銀色交出去",
       "flickr_id": "55574216671",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574216671/"
     },
@@ -554,7 +554,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-quiet-machines/34.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/34-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第34幅：還沒有天亮（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第34幅：還沒有天亮",
       "flickr_id": "55574377749",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574377749/"
     },
@@ -567,7 +567,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/35.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/35-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第35幅：蹲低一點看（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第35幅：蹲低一點看",
       "flickr_id": "55574325423",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574325423/"
     },
@@ -580,7 +580,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-quiet-machines/36.webp",
       "preview": "/assets/img/photography/nft-quiet-machines/36-960.webp",
-      "alt": "CloneX #15162《風的練習簿》第36幅：讓風繼續（AI生成影像）",
+      "alt": "CloneX #15162《風的練習簿》第36幅：讓風繼續",
       "flickr_id": "55574216761",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574216761/"
     }

@@ -2,7 +2,7 @@
 # 來源：novel-characters-lab / jinpingmei-full 的 visual-authority-cast v002
 #（_current/characters/reference-packs，站主逐張核准後匯入）
 # 用途：讓後續影像在不同鏡位、不同集數裡，維持同一位角色的五官與體型一致。
-# 全部圖像皆為 AI 生成，並非真人照片。轉檔工具：tools/convert_jinpingmei_reference.ps1
+# 站主 2026-10-19 起頁面不另標 AI 生成。轉檔工具：tools/convert_jinpingmei_reference.ps1
 #
 # angle_labels：角度代碼 → 站上顯示文字（圖組共用）
 angle_labels:

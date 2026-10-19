@@ -2,8 +2,8 @@
 layout: models
 title: 模特兒名單｜SWANKY MODELS
 seo_title: 模特兒名單｜SWANKY MODELS 虛擬模特兒經紀
-description: SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹，皆為 AI 生成的虛擬人物，並非真人。
-keywords: SWANKY MODELS,虛擬模特兒,模特兒名單,史旺姬,林予晴,江映希,李瓶兒,潘金蓮,AI 生成影像,虛擬人物
+description: SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹。
+keywords: SWANKY MODELS,虛擬模特兒,模特兒名單,史旺姬,林予晴,江映希,李瓶兒,潘金蓮,虛擬人物
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -32,7 +32,7 @@ permalink: /photography/models/talent/
   <header class="sm-pagehead" aria-labelledby="sm-list-title">
     <div class="sm-shell sm-pagehead__grid">
       <h1 id="sm-list-title">模特兒名單</h1>
-      <p>{{ m.home.disclosure }}</p>
+      {% if m.home.disclosure != '' %}<p>{{ m.home.disclosure }}</p>{% endif %}
     </div>
   </header>
 

@@ -46,7 +46,8 @@ test('Flickr mappings resolve existing assets to uncropped, correctly sized imag
 test('Seven Names preserves the approved release, all 42 photos, seven chapters and the a04 image', () => {
   const source = readFileSync(join(root, '_data/nft_seven_eight.json'));
   // 攝影 repo published-v2（2026-10-06 文字勘誤）：handoffs/nft-seven-eight-2026-09-26/published-v2/website.json
-  assert.equal(createHash('sha256').update(source).digest('hex'), 'bb118b9d41eecd414f0b8cb55f8ab168e426802dba3aa4480e7a981114cb89e3');
+  // 2026-10-19 網站端依 Owner 移除 AI／成年揭露，前後 SHA 見 docs/photography-handoffs/ai-disclosure-removal-2026-10-19/
+  assert.equal(createHash('sha256').update(source).digest('hex'), '0b59b515f8da677647dc906ce839e4a9811233366b1c228224dd3354dbca06c3');
   const book = JSON.parse(source);
   assert.equal(book.pdf_pages, 52);
   assert.equal(book.character_count, 7);
@@ -62,7 +63,7 @@ test('Seven Names preserves the approved release, all 42 photos, seven chapters 
     assert.equal(paths[p.image], p.flickr_id);
     assert.equal(paths[p.preview], p.flickr_id);
     assert.ok(photos[p.flickr_id].width >= p.width && photos[p.flickr_id].height >= p.height);
-    assert.ok(p.alt.includes('AI'));
+    assert.ok(p.alt && !/AI 生成|非真人/.test(p.alt));
   }
 });
 
@@ -76,6 +77,6 @@ test('Beyond the Frame alt text names who is in each frame (models/in-shot.html 
   // 多人合輯沒有逐張角色欄位，出鏡張數與角色頁選圖靠 alt 第一個「，」前的主詞判斷
   const book = JSON.parse(read('_data/beyond_the_frame.json'));
   const subjects = new Set(book.photos.map(p => p.alt.split('，')[0]));
-  assert.deepEqual([...subjects].sort(), ['場景細節', '成年虛構角色李瓶兒', '成年虛構角色李瓶兒與潘金蓮', '成年虛構角色潘金蓮'].sort());
+  assert.deepEqual([...subjects].sort(), ['場景細節', '李瓶兒', '李瓶兒與潘金蓮', '潘金蓮'].sort());
   assert.deepEqual(book.models, ['李瓶兒', '潘金蓮']);
 });

@@ -16,7 +16,7 @@
     {%- for angle in set.angles -%}
     {%- assign anglelabel = rp.angle_labels[angle] -%}
     {%- if set.kind == 'face' -%}{%- assign kindlabel = '五官參考' -%}{%- else -%}{%- assign kindlabel = '體型參考' -%}{%- endif -%}
-    {%- capture alttext %}{{ pack.name }}{{ kindlabel }}・{{ anglelabel }}（AI 生成，非真人照片）{% endcapture -%}
+    {%- capture alttext %}{{ pack.name }}{{ kindlabel }}・{{ anglelabel }}{% endcapture -%}
     {%- capture src %}/assets/img/jinpingmei/reference/{{ pack.slug }}-{{ set.kind }}-{{ angle }}.jpg{% endcapture -%}
     <figure><a href="{{ src | relative_url }}" class="jpm-zoom" data-gallery="jpm-reference" title="{{ alttext }}"><img src="{{ src | relative_url }}" alt="{{ alttext }}" width="{{ rp.width }}" height="{{ rp.height }}" loading="lazy" decoding="async"></a><figcaption>{{ anglelabel }}</figcaption></figure>
     {%- endfor %}

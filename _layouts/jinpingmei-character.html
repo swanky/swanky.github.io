@@ -58,8 +58,8 @@
           <p class="tagline reveal">{{ page.tagline }}</p>
         </div>
         <figure>
-          <a href="{{ page.turnaround | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）"><img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定（AI 生成，非真人照片）" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high"></a>
-          <figcaption>{{ page.turnaround_caption | default: '三視圖角色設定・AI 生成・以原典描寫為依據' }}</figcaption>
+          <a href="{{ page.turnaround | relative_url }}" class="jpm-zoom" data-gallery="jpm-character" title="{{ page.name }}三視圖角色設定"><img src="{{ page.turnaround | relative_url }}" alt="{{ page.name }}三視圖角色設定" width="{{ page.turnaround_w | default: 1536 }}" height="{{ page.turnaround_h | default: 1024 }}" fetchpriority="high"></a>
+          <figcaption>{{ page.turnaround_caption | default: '三視圖角色設定・以原典描寫為依據' }}</figcaption>
         </figure>
       </div>
     </section>
@@ -129,7 +129,7 @@
     <aside class="paiji paiji--note" aria-label="側寫說明">
       <div class="paiji-frame">
         <p class="paiji-head"><b>側寫說明</b><small>本檔案的整理原則</small></p>
-        <p>本頁人物側寫由 AI 依《金瓶梅詞話》（萬曆本）原典整理，標註「（推斷）」者為合理推測而非原文明載；所有人物圖像皆為 <b>AI 生成</b>，並非真人照片。製作方法見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。</p>
+        <p>本頁人物側寫由 AI 依《金瓶梅詞話》（萬曆本）原典整理，標註「（推斷）」者為合理推測而非原文明載。製作方法見<a href="{{ '/jinpingmei/studio/' | relative_url }}">影像工作室</a>。</p>
       </div>
     </aside>
   </main>

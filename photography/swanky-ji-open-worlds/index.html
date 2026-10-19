@@ -1,9 +1,9 @@
 ---
 layout: home
 title: 史旺姬《她把風景打開》
-seo_title: 史旺姬《她把風景打開》｜史旺基原創虛擬人物影像
-description: 史旺姬《她把風景打開》：36張原創虛擬人物影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
-keywords: 史旺姬,她把風景打開,虛擬人物,AI 生成影像,虛擬角色經紀公司,史旺基
+seo_title: 史旺姬《她把風景打開》｜史旺基影像
+description: 史旺姬《她把風景打開》：36張影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
+keywords: 史旺姬,她把風景打開,虛擬人物,虛擬角色經紀公司,史旺基
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -27,18 +27,17 @@ permalink: /photography/swanky-ji-open-worlds/
 版面沿用攝影區 photo-author 家族；橫幅跨兩欄、直幅兩兩成對、孤直幅置中（依移交預覽核准的橫直節奏）。
 {%- endcomment -%}
 {% assign book = site.data.swanky_ji_open_worlds %}
-{% assign ai_tag = '（AI 生成，非真人照片）' %}
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
-  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label="下載完整寫真集（約 32 MB）" %}
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label="下載完整寫真集（約 32 MB）" %}
   {% include photography/subpage-nav.html %}
 
   <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
     <div class="photo-author-shell">
       <p class="sjw-meta">{{ book.count }} 張原創影像 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
       <article class="photo-author-series-card sjw-cover">
-        <a href="{% include flickr/url.html image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjw-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
-          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+        <a href="{% include flickr/url.html image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjw-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
         </a>
         <div class="photo-author-series-copy">
           <p class="photo-author-eyebrow">STATEMENT · 封面 No.{{ cover.order }}</p>
@@ -89,8 +88,8 @@ permalink: /photography/swanky-ji-open-worlds/
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
-          <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="sjw-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
-            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="sjw-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption>
             <span class="sjw-no">No.{{ nn }}</span>
@@ -112,7 +111,6 @@ permalink: /photography/swanky-ji-open-worlds/
         <div>
           <h2 id="after-title">風景打開以後。</h2>
           <p>人物的視線、衣服的線條、手勢與場景的尺度，從一開始就一起安排。遠景讓環境展開，近景留住表情與觸感；畫面之間的距離，形成這本寫真的呼吸。</p>
-          <p>「未顯影的遠方」是一個詩性的場域名稱。從海岸、溫室到攝影劇場，三個世界皆為虛構。</p>
         </div>
       </header>
       <div class="photo-author-archive-grid">
@@ -133,15 +131,13 @@ permalink: /photography/swanky-ji-open-worlds/
         </a>
       </div>
       <aside class="sjw-notes" aria-labelledby="sjw-notes-title">
-        <p class="photo-author-eyebrow" id="sjw-notes-title">誠實標示</p>
+        <p class="photo-author-eyebrow" id="sjw-notes-title">作品說明</p>
         <ul>
-          <li>史旺姬為史旺基的原創虛擬人物。全冊 {{ book.count }} 張影像的角色與場景皆由 AI 生成，並非真人實拍。</li>
           <li>史旺基負責企劃、視覺統籌、選片與審定；創作保留攝影對人物、光線、動作與空間的安排。</li>
-          <li>「未顯影的遠方」是本系列的詩性場域名稱；海岸、溫室與攝影劇場三個場景均為虛構。</li>
           <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集共 {{ book.pdf_pages }} 頁，可免費下載。</li>
           <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
         </ul>
-        <p class="sjw-credit">史旺基 Swanky · 2026 · 原創虛擬人物影像 · 她把風景打開</p>
+        <p class="sjw-credit">史旺基 Swanky · 2026 · 她把風景打開</p>
       </aside>
     </div>
   </section>

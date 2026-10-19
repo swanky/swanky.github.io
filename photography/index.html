@@ -146,7 +146,7 @@ og_image: /assets/img/photography/selected/24350775633.jpg
           <p>{{ models.home.lead }}</p>
         </div>
       </header>
-      <p class="photo-author-section-note">{{ models.home.disclosure }}</p>
+      {% if models.home.disclosure != '' and models.home.disclosure %}<p class="photo-author-section-note">{{ models.home.disclosure }}</p>{% endif %}
 
       <div class="photo-author-agency">
         <div class="photo-author-agency-strip" aria-label="旗下模特兒">
@@ -156,7 +156,6 @@ og_image: /assets/img/photography/selected/24350775633.jpg
             {%- capture turl %}/photography/models/talent/{{ t.slug }}/{% endcapture -%}
           <a class="photo-author-agency-model" href="{{ turl | relative_url }}">
             {% if t.digital %}{% include models/digital.html t=t sizes="(max-width: 720px) calc(33vw - 14px), (max-width: 1000px) calc(33vw - 24px), 226px" %}{% else %}{% include models/photo.html book=ap.book kind=ap.kind n=ap.n sizes="(max-width: 720px) calc(33vw - 14px), (max-width: 1000px) calc(33vw - 24px), 226px" %}{% endif %}
-            <span class="photo-author-ai-badge" aria-hidden="true">AI 生成 · 非真人</span>
             <b>{{ t.name }}</b><small>{{ t.kind_label }}</small>
           </a>
           {% endfor %}

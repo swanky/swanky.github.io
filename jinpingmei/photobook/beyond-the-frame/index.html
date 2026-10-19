@@ -7,7 +7,6 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
 {%- comment -%}核准公開資料逐位元匯入；保留五章、36 張順序、完整構圖與圖說。{%- endcomment -%}
 {%- assign book = site.data.beyond_the_frame -%}
 {%- assign pdf_size = '約 21 MB' -%}
-{%- assign ai_tag = '（AI 生成，非真人照片）' -%}
 
 {%- assign cover = book.photos | where: "order", book.cover_photo | first -%}
 
@@ -30,18 +29,18 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
   <meta property="og:image" content="{{ book.og_image | absolute_url }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="900">
-  <meta property="og:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面，AI 生成的成年虛構角色影像">
+  <meta property="og:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ book.og_image | absolute_url }}">
-  <meta name="twitter:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面，AI 生成的成年虛構角色影像">
+  <meta name="twitter:image:alt" content="李瓶兒與潘金蓮《畫面之外》封面">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
     "name": {{ page.title | jsonify }},
-    "description": {{ page.description | append: ' ' | append: book.disclosure | jsonify }},
+    "description": {{ page.description | jsonify }},
     "url": {{ page.url | absolute_url | jsonify }},
     "image": {{ book.og_image | absolute_url | jsonify }},
     "datePublished": {{ book.published_date | jsonify }},
@@ -99,7 +98,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
         <div>
           <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真集</span></p>
           <h1 class="act-title reveal">{{ book.title }}<small>{{ book.subtitle }} · {{ book.count }} 張寫真</small></h1>
-          <p class="act-lead reveal">{{ book.statement[0] }}<br>{{ book.disclosure }}</p>
+          <p class="act-lead reveal">{{ book.statement[0] }}</p>
           <div class="act-cta-row reveal">
             <a class="act-cta" href="#photos">翻開 {{ book.count }} 張寫真<i aria-hidden="true">→</i></a>
             <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>{{ book.pdf_pages }} 頁 · {{ pdf_size }}</small></a>
@@ -107,7 +106,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
           <p class="lp-links reveal"><a href="{{ '/jinpingmei/photobook/' | relative_url }}">← 回寫真館</a><a href="{{ '/jinpingmei/characters/lipinger/' | relative_url }}">認識李瓶兒 →</a><a href="{{ '/jinpingmei/characters/panjinlian/' | relative_url }}">認識潘金蓮 →</a><a href="{{ book.flickr_album }}" target="_blank" rel="noopener">在 Flickr 看相簿 ↗</a></p>
         </div>
         <figure class="pb-print lp-cover reveal">
-          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
           <figcaption><span class="fno">封面</span><span class="fcap">{{ cover.title }}</span></figcaption>
         </figure>
       </div>
@@ -148,7 +147,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
           {%- capture nn %}{% if p.order < 10 %}0{% endif %}{{ p.order }}{% endcapture -%}
           {%- capture fig %}
             <figure class="pb-print lp-print lp-print--captioned" id="photo-{{ nn }}">
-              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="beyond-the-frame" title="No.{{ nn }} {{ p.caption }}{{ ai_tag }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 60px), 520px{% else %}(max-width: 720px) calc(100vw - 60px), (max-width: 1200px) calc(100vw - 100px), 1090px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="beyond-the-frame" title="No.{{ nn }} {{ p.caption }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 60px), 520px{% else %}(max-width: 720px) calc(100vw - 60px), (max-width: 1200px) calc(100vw - 100px), 1090px{% endif %}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async"></a>
               <figcaption>
                 <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.caption }}</span>
                 <a class="lp-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener">在 Flickr 檢視 ↗</a>
@@ -212,7 +211,7 @@ permalink: /jinpingmei/photobook/beyond-the-frame/
           <span class="paiji-seal" aria-hidden="true"><i>寫真集</i></span>
         </div>
       </aside>
-      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。圖像：AI 生成；場景為虛構。</p>
+      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。</p>
     </div>
   </main>
 

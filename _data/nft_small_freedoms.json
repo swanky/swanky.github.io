@@ -6,10 +6,10 @@
   "subtitle": "九次岔路",
   "date": "2026-10-07",
   "date_label": "編輯日期",
-  "description": "CloneX #17474《不必有用的午後》：九次岔路共35幅AI生成影像。",
+  "description": "CloneX #17474《不必有用的午後》：九次岔路共35幅影像。",
   "statement": "一位自帶光環的成年人，暫時不需要證明任何價值。\n九次岔路，九件不必完成的小事。\n午後沒有交出答案，夜色也沒有追問。",
-  "disclosure": "以史旺基收藏的CloneX #17474圖像為身份來源；人類呈現為明確成年改編。人物與場景由AI生成，非真人實拍。史旺基 Swanky 企劃與編選，AI協作生成與編排。個人藝術創作展示，非NFT官方故事或合作。",
-  "fictional_location": "虛構日常場景",
+  "disclosure": "以史旺基收藏的CloneX #17474圖像為身份來源。史旺基 Swanky 企劃與編選。個人藝術創作展示，非NFT官方故事或合作。",
+  "fictional_location": "日常場景",
   "count": 35,
   "chapters": [
     {
@@ -124,7 +124,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/01.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/01-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第01幅：折一座山（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第01幅：折一座山",
       "flickr_id": "55573169462",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573169462/"
     },
@@ -137,7 +137,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/02.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/02-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第02幅：沒有期限（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第02幅：沒有期限",
       "flickr_id": "55574626785",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574626785/"
     },
@@ -150,7 +150,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/03.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/03-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第03幅：把影子翻面（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第03幅：把影子翻面",
       "flickr_id": "55573169632",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573169632/"
     },
@@ -163,7 +163,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/04.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/04-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第04幅：留一張空桌（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第04幅：留一張空桌",
       "flickr_id": "55574368094",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368094/"
     },
@@ -176,7 +176,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/05.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/05-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第05幅：走一條沒有終點的線（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第05幅：走一條沒有終點的線",
       "flickr_id": "55574626920",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574626920/"
     },
@@ -189,7 +189,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/06.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/06-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第06幅：把晴天躺平（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第06幅：把晴天躺平",
       "flickr_id": "55574368204",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368204/"
     },
@@ -202,7 +202,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/07.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/07-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第07幅：借一點涼（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第07幅：借一點涼",
       "flickr_id": "55574207146",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207146/"
     },
@@ -215,7 +215,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/08.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/08-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第08幅：向上，一步（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第08幅：向上，一步",
       "flickr_id": "55574368274",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368274/"
     },
@@ -228,7 +228,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/09.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/09-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第09幅：一寸的距離（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第09幅：一寸的距離",
       "flickr_id": "55574368319",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368319/"
     },
@@ -241,7 +241,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/10.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/10-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第10幅：孔外的白色（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第10幅：孔外的白色",
       "flickr_id": "55573170062",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170062/"
     },
@@ -254,7 +254,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/11.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/11-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第11幅：笑給自己看（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第11幅：笑給自己看",
       "flickr_id": "55574368414",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368414/"
     },
@@ -267,7 +267,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/12.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/12-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第12幅：把球留在原地（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第12幅：把球留在原地",
       "flickr_id": "55574627200",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627200/"
     },
@@ -280,7 +280,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/13.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/13-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第13幅：綠色的走廊（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第13幅：綠色的走廊",
       "flickr_id": "55574627240",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627240/"
     },
@@ -293,7 +293,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/14.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/14-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第14幅：紙尖與葉尖（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第14幅：紙尖與葉尖",
       "flickr_id": "55574315803",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315803/"
     },
@@ -306,7 +306,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/15.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/15-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第15幅：留在盆邊（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第15幅：留在盆邊",
       "flickr_id": "55574627385",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627385/"
     },
@@ -319,7 +319,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/16.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/16-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第16幅：空手出門（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第16幅：空手出門",
       "flickr_id": "55573170342",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170342/"
     },
@@ -332,7 +332,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/17.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/17-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第17幅：穿過風（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第17幅：穿過風",
       "flickr_id": "55573170372",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170372/"
     },
@@ -345,7 +345,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/18.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/18-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第18幅：笑著看天空（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第18幅：笑著看天空",
       "flickr_id": "55574315958",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315958/"
     },
@@ -358,7 +358,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/19.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/19-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第19幅：把紅色交給風（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第19幅：把紅色交給風",
       "flickr_id": "55574627490",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627490/"
     },
@@ -371,7 +371,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/20.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/20-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第20幅：海沒有催我（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第20幅：海沒有催我",
       "flickr_id": "55574368804",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368804/"
     },
@@ -384,7 +384,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/21.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/21-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第21幅：選一顆石頭（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第21幅：選一顆石頭",
       "flickr_id": "55574316108",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316108/"
     },
@@ -397,7 +397,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/22.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/22-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第22幅：只疊到兩顆（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第22幅：只疊到兩顆",
       "flickr_id": "55574207671",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207671/"
     },
@@ -410,7 +410,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/23.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/23-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第23幅：空手走遠（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第23幅：空手走遠",
       "flickr_id": "55574316213",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316213/"
     },
@@ -423,7 +423,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/24.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/24-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第24幅：夜色留在窗外（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第24幅：夜色留在窗外",
       "flickr_id": "55573170637",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170637/"
     },
@@ -436,7 +436,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/25.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/25-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第25幅：還不必離開（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第25幅：還不必離開",
       "flickr_id": "55574316303",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316303/"
     },
@@ -449,7 +449,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/26.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/26-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第26幅：不用排整齊（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第26幅：不用排整齊",
       "flickr_id": "55573170712",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170712/"
     },
@@ -462,7 +462,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/27.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/27-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第27幅：杯裡的夜色（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第27幅：杯裡的夜色",
       "flickr_id": "55574369059",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574369059/"
     },
@@ -475,7 +475,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/28.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/28-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第28幅：停在黃線以前（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第28幅：停在黃線以前",
       "flickr_id": "55574627835",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627835/"
     },
@@ -488,7 +488,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/29.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/29-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第29幅：腳尖也能等待（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第29幅：腳尖也能等待",
       "flickr_id": "55574316463",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316463/"
     },
@@ -501,7 +501,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/30.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/30-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第30幅：霧靠近眼睛（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第30幅：霧靠近眼睛",
       "flickr_id": "55573170887",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170887/"
     },
@@ -514,7 +514,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/31.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/31-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第31幅：最後一段長廊（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第31幅：最後一段長廊",
       "flickr_id": "55574316543",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316543/"
     },
@@ -527,7 +527,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/32.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/32-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第32幅：先坐一會（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第32幅：先坐一會",
       "flickr_id": "55574208061",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574208061/"
     },
@@ -540,7 +540,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/33.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/33-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第33幅：畫完就散開（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第33幅：畫完就散開",
       "flickr_id": "55574208121",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574208121/"
     },
@@ -553,7 +553,7 @@
       "height": 1536,
       "image": "/assets/img/photography/nft-small-freedoms/34.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/34-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第34幅：水聲停下來（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第34幅：水聲停下來",
       "flickr_id": "55574369389",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574369389/"
     },
@@ -566,7 +566,7 @@
       "height": 1024,
       "image": "/assets/img/photography/nft-small-freedoms/35.webp",
       "preview": "/assets/img/photography/nft-small-freedoms/35-960.webp",
-      "alt": "CloneX #17474《不必有用的午後》第35幅：不需要帶回什麼（AI生成影像）",
+      "alt": "CloneX #17474《不必有用的午後》第35幅：不需要帶回什麼",
       "flickr_id": "55574369444",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574369444/"
     }

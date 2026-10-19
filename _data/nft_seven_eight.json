@@ -7,9 +7,9 @@
   "pdf_pages": 52,
   "character_count": 7,
   "presentation_count": 8,
-  "description": "七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。人物與場景由 AI 生成，可逐張觀看並下載完整寫真集。",
+  "description": "七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。可逐張觀看並下載完整寫真集。",
   "statement": "七個名字，並不只有七種站在世界裡的方法。帽飾需要替門框讓位，瓷紋碰見冰，方塊的手學著做圓；同一個名字，也能以兩種身體並肩走。42 張影像，從空間、碰觸與同行，走到光環也能下班的時刻。",
-  "disclosure": "七位角色以史旺基收藏的 NFT 圖像為身份來源，人物與場景由 AI 生成，非真人實拍。人類呈現為明確成年改編；Meebit 同時保留方塊與成年女性呈現，MAYC 保留猿類呈現。史旺基 Swanky 企劃、選片與審定。個人藝術創作展示，非 NFT 官方故事或合作。",
+  "disclosure": "七位角色以史旺基收藏的 NFT 圖像為身份來源；Meebit 同時保留方塊與女性呈現，MAYC 保留猿類呈現。史旺基 Swanky 企劃、選片與審定。個人藝術創作展示，非 NFT 官方故事或合作。",
   "chapters": [
     {
       "id": "01",
@@ -106,7 +106,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-01.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-01-960.webp",
-      "alt": "戴大型白色彩耳帽的角色坐在暗色房間裡，身旁散落圓球。（AI 生成影像）",
+      "alt": "戴大型白色彩耳帽的角色坐在暗色房間裡，身旁散落圓球。",
       "flickr_id": "55551559481",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551559481/"
     },
@@ -124,7 +124,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-02.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-02-960.webp",
-      "alt": "戴大型彩耳帽的角色坐在淺灰牆角，手掌扶牆，一膝抬起。（AI 生成影像）",
+      "alt": "戴大型彩耳帽的角色坐在淺灰牆角，手掌扶牆，一膝抬起。",
       "flickr_id": "55551946365",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551946365/"
     },
@@ -142,7 +142,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-03.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-03-960.webp",
-      "alt": "角色低頭扶著大帽子，跨過斑駁綠門。（AI 生成影像）",
+      "alt": "角色低頭扶著大帽子，跨過斑駁綠門。",
       "flickr_id": "55551669923",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551669923/"
     },
@@ -160,7 +160,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-04.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-04-960.webp",
-      "alt": "Bunny 邦妮穿深藍背心站在紅紫琴房，一手搭著鋼琴。（AI 生成影像）",
+      "alt": "Bunny 邦妮穿深藍背心站在紅紫琴房，一手搭著鋼琴。",
       "flickr_id": "55551669998",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551669998/"
     },
@@ -178,7 +178,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-05.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-05-960.webp",
-      "alt": "Bunny 邦妮穿黑色上衣站在粗糙牆前，陽光照出兔耳與髮絲的輪廓。（AI 生成影像）",
+      "alt": "Bunny 邦妮穿黑色上衣站在粗糙牆前，陽光照出兔耳與髮絲的輪廓。",
       "flickr_id": "55551560881",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551560881/"
     },
@@ -196,7 +196,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-06.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-06-960.webp",
-      "alt": "Bunny 邦妮雙手扶著透明椅背，一膝跪椅、另一足落地，身體傾斜。（AI 生成影像）",
+      "alt": "Bunny 邦妮雙手扶著透明椅背，一膝跪椅、另一足落地，身體傾斜。",
       "flickr_id": "55551560991",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551560991/"
     },
@@ -214,7 +214,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-07.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-07-960.webp",
-      "alt": "Bunny 邦妮蹲在冬日冰池旁，伸手觸碰冰面。（AI 生成影像）",
+      "alt": "Bunny 邦妮蹲在冬日冰池旁，伸手觸碰冰面。",
       "flickr_id": "55550535672",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550535672/"
     },
@@ -232,7 +232,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-08.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-08-960.webp",
-      "alt": "Bunny 邦妮雙手舉起滴水冰片，透過融化的邊緣望向鏡頭。（AI 生成影像）",
+      "alt": "Bunny 邦妮雙手舉起滴水冰片，透過融化的邊緣望向鏡頭。",
       "flickr_id": "55551561296",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551561296/"
     },
@@ -250,7 +250,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-09.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-09-960.webp",
-      "alt": "Bunny 邦妮扶住框架，手掌穿過虹彩薄膜，向前跨步。（AI 生成影像）",
+      "alt": "Bunny 邦妮扶住框架，手掌穿過虹彩薄膜，向前跨步。",
       "flickr_id": "55551733514",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551733514/"
     },
@@ -268,7 +268,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-10.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-10-960.webp",
-      "alt": "粉紅雙馬尾的 CloneX #15162 穿亮粉背心，一靴踏上階面。（AI 生成影像）",
+      "alt": "粉紅雙馬尾的 CloneX #15162 穿亮粉背心，一靴踏上階面。",
       "flickr_id": "55551670908",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551670908/"
     },
@@ -286,7 +286,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-11.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-11-960.webp",
-      "alt": "CloneX #15162 俯身向微縮街道吹氣，前景立著小風車。（AI 生成影像）",
+      "alt": "CloneX #15162 俯身向微縮街道吹氣，前景立著小風車。",
       "flickr_id": "55551561861",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551561861/"
     },
@@ -304,7 +304,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-12.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-12-960.webp",
-      "alt": "從上方觀看 CloneX #15162 在彩色球場上騰空，四肢伸向不同方向。（AI 生成影像）",
+      "alt": "從上方觀看 CloneX #15162 在彩色球場上騰空，四肢伸向不同方向。",
       "flickr_id": "55551947540",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551947540/"
     },
@@ -322,7 +322,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-13.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-13-960.webp",
-      "alt": "CloneX #15162 穿短西裝與長褲，在白色空間中擺臂邁步。（AI 生成影像）",
+      "alt": "CloneX #15162 穿短西裝與長褲，在白色空間中擺臂邁步。",
       "flickr_id": "55551562036",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562036/"
     },
@@ -340,7 +340,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-14.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-14-960.webp",
-      "alt": "CloneX #15162 行經雨夜街道，粉髮與藍黃光線的拖影交錯。（AI 生成影像）",
+      "alt": "CloneX #15162 行經雨夜街道，粉髮與藍黃光線的拖影交錯。",
       "flickr_id": "55551733954",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551733954/"
     },
@@ -359,7 +359,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-15.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-15-960.webp",
-      "alt": "Bunny 邦妮在木桌上抽積木，粉紅雙馬尾的夥伴伸手護住茶杯。（AI 生成影像）",
+      "alt": "Bunny 邦妮在木桌上抽積木，粉紅雙馬尾的夥伴伸手護住茶杯。",
       "flickr_id": "55551734079",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734079/"
     },
@@ -377,7 +377,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-16.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-16-960.webp",
-      "alt": "Sparky 坐在藍色瓷磚空池邊，雙手支撐身體，露出銀色牙飾。（AI 生成影像）",
+      "alt": "Sparky 坐在藍色瓷磚空池邊，雙手支撐身體，露出銀色牙飾。",
       "flickr_id": "55551947995",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551947995/"
     },
@@ -395,7 +395,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-17.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-17-960.webp",
-      "alt": "Sparky 的笑臉近像，銀色牙飾與藍色項鍊映著亮光。（AI 生成影像）",
+      "alt": "Sparky 的笑臉近像，銀色牙飾與藍色項鍊映著亮光。",
       "flickr_id": "55550536792",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550536792/"
     },
@@ -413,7 +413,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-18.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-18-960.webp",
-      "alt": "Sparky 在暗色背景前雙手握起銀箔，皺褶與牙飾彼此呼應。（AI 生成影像）",
+      "alt": "Sparky 在暗色背景前雙手握起銀箔，皺褶與牙飾彼此呼應。",
       "flickr_id": "55551562456",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562456/"
     },
@@ -431,7 +431,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-19.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-19-960.webp",
-      "alt": "Sparky 的臉跨在水線上下，水面波紋延伸到銀色笑容旁。（AI 生成影像）",
+      "alt": "Sparky 的臉跨在水線上下，水面波紋延伸到銀色笑容旁。",
       "flickr_id": "55550536932",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550536932/"
     },
@@ -449,7 +449,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-20.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-20-960.webp",
-      "alt": "Sparky 在灰色海堤前閉眼笑著，雙臂環抱，黑髮被風吹起。（AI 生成影像）",
+      "alt": "Sparky 在灰色海堤前閉眼笑著，雙臂環抱，黑髮被風吹起。",
       "flickr_id": "55550537047",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537047/"
     },
@@ -467,7 +467,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-21.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-21-960.webp",
-      "alt": "Sparky 穿棕色套裝躺在綠地右側，屈膝休息，左側留出大片空間。（AI 生成影像）",
+      "alt": "Sparky 穿棕色套裝躺在綠地右側，屈膝休息，左側留出大片空間。",
       "flickr_id": "55551734519",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734519/"
     },
@@ -485,7 +485,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-22.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-22-960.webp",
-      "alt": "方塊版 Meebit #10829 穿綠衣灰裙，站在日光照入的室內。（AI 生成影像）",
+      "alt": "方塊版 Meebit #10829 穿綠衣灰裙，站在日光照入的室內。",
       "flickr_id": "55551948430",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551948430/"
     },
@@ -503,7 +503,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-23.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-23-960.webp",
-      "alt": "Meebit #10829 的成年女性呈現穿綠色短上衣與灰裙，靠桌站立。（AI 生成影像）",
+      "alt": "Meebit #10829 的女性呈現穿綠色短上衣與灰裙，靠桌站立。",
       "flickr_id": "55551734694",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551734694/"
     },
@@ -521,7 +521,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-24.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-24-960.webp",
-      "alt": "小小的方塊 Meebit 站在土黃色空間中，遠處是一個白色大圓。（AI 生成影像）",
+      "alt": "小小的方塊 Meebit 站在土黃色空間中，遠處是一個白色大圓。",
       "flickr_id": "55551562951",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551562951/"
     },
@@ -539,7 +539,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-25.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-25-960.webp",
-      "alt": "方塊 Meebit 坐在陶輪前，以兩隻長方形手圍住中央陶器。（AI 生成影像）",
+      "alt": "方塊 Meebit 坐在陶輪前，以兩隻長方形手圍住中央陶器。",
       "flickr_id": "55551672043",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672043/"
     },
@@ -557,7 +557,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-26.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-26-960.webp",
-      "alt": "方塊 Meebit 在陶碗旁伸出方手，碗內留著方形痕跡。（AI 生成影像）",
+      "alt": "方塊 Meebit 在陶碗旁伸出方手，碗內留著方形痕跡。",
       "flickr_id": "55551948710",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551948710/"
     },
@@ -575,7 +575,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-27.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-27-960.webp",
-      "alt": "Meebit 的成年女性呈現一手托住陶碗，另一手輕觸碗緣。（AI 生成影像）",
+      "alt": "Meebit 的女性呈現一手托住陶碗，另一手輕觸碗緣。",
       "flickr_id": "55550537557",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537557/"
     },
@@ -593,7 +593,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-28.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-28-960.webp",
-      "alt": "Meebit 的成年女性與方塊呈現一起坐在陶桌旁，伸手靠近同一只碗。（AI 生成影像）",
+      "alt": "Meebit 的女性與方塊呈現一起坐在陶桌旁，伸手靠近同一只碗。",
       "flickr_id": "55551949050",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949050/"
     },
@@ -611,7 +611,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-29.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-29-960.webp",
-      "alt": "方塊 Meebit 在黑色背景前拍動雙手，粉塵從稜角之間散開。（AI 生成影像）",
+      "alt": "方塊 Meebit 在黑色背景前拍動雙手，粉塵從稜角之間散開。",
       "flickr_id": "55551735179",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735179/"
     },
@@ -629,7 +629,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-30.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-30-960.webp",
-      "alt": "方塊 Meebit 站在水中，平直身體映出曲折倒影，圓形水波向外散開。（AI 生成影像）",
+      "alt": "方塊 Meebit 站在水中，平直身體映出曲折倒影，圓形水波向外散開。",
       "flickr_id": "55551949230",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949230/"
     },
@@ -647,7 +647,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-31.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-31-960.webp",
-      "alt": "Meebit 的成年女性呈現把臉頰靠在方塊手上，真手扶著方塊前臂。（AI 生成影像）",
+      "alt": "Meebit 的女性呈現把臉頰靠在方塊手上，真手扶著方塊前臂。",
       "flickr_id": "55550537912",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550537912/"
     },
@@ -665,7 +665,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-32.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-32-960.webp",
-      "alt": "Meebit 的成年女性與方塊呈現背向鏡頭走入門內，兩者轉頭互相望向對方。（AI 生成影像）",
+      "alt": "Meebit 的女性與方塊呈現背向鏡頭走入門內，兩者轉頭互相望向對方。",
       "flickr_id": "55551735384",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735384/"
     },
@@ -683,7 +683,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-33.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-33-960.webp",
-      "alt": "MAYC #17854 以長頸猿類呈現坐在暖色空間裡，豹紋伴生物跨在肩上。（AI 生成影像）",
+      "alt": "MAYC #17854 以長頸猿類呈現坐在暖色空間裡，豹紋伴生物跨在肩上。",
       "flickr_id": "55551949440",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949440/"
     },
@@ -701,7 +701,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-34.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-34-960.webp",
-      "alt": "MAYC #17854 舉起黃傘，傘面罩向肩上的豹紋伴生物。（AI 生成影像）",
+      "alt": "MAYC #17854 舉起黃傘，傘面罩向肩上的豹紋伴生物。",
       "flickr_id": "55551672783",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672783/"
     },
@@ -719,7 +719,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-35.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-35-960.webp",
-      "alt": "雨後的 MAYC #17854 雙手握著收起的傘，肩上伴生物與牠一起停留。（AI 生成影像）",
+      "alt": "雨後的 MAYC #17854 雙手握著收起的傘，肩上伴生物與牠一起停留。",
       "flickr_id": "55551735609",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735609/"
     },
@@ -737,7 +737,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-36.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-36-960.webp",
-      "alt": "戴單一金色光環的 CloneX #17474 穿深藍服裝，站在金色環形建築前。（AI 生成影像）",
+      "alt": "戴單一金色光環的 CloneX #17474 穿深藍服裝，站在金色環形建築前。",
       "flickr_id": "55551672933",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672933/"
     },
@@ -755,7 +755,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-37.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-37-960.webp",
-      "alt": "CloneX #17474 穿黑衣低蹲，一手貼地、另一手搭在膝上。（AI 生成影像）",
+      "alt": "CloneX #17474 穿黑衣低蹲，一手貼地、另一手搭在膝上。",
       "flickr_id": "55551672968",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551672968/"
     },
@@ -773,7 +773,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-38.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-38-960.webp",
-      "alt": "CloneX #17474 在藍牆前靠著木凳坐下，銅色長裙向兩側攤開。（AI 生成影像）",
+      "alt": "CloneX #17474 在藍牆前靠著木凳坐下，銅色長裙向兩側攤開。",
       "flickr_id": "55551949750",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949750/"
     },
@@ -792,7 +792,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-39.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-39-960.webp",
-      "alt": "粉紅雙馬尾角色與戴金環角色站在風雨中，一人握著翻起的傘，另一人扶住夥伴。（AI 生成影像）",
+      "alt": "粉紅雙馬尾角色與戴金環角色站在風雨中，一人握著翻起的傘，另一人扶住夥伴。",
       "flickr_id": "55551735784",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551735784/"
     },
@@ -810,7 +810,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-40.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-40-960.webp",
-      "alt": "CloneX #17474 在暗處修理一座鐘，雙手靠著鐘身，金色光環懸在頭上。（AI 生成影像）",
+      "alt": "CloneX #17474 在暗處修理一座鐘，雙手靠著鐘身，金色光環懸在頭上。",
       "flickr_id": "55550538492",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550538492/"
     },
@@ -828,7 +828,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-41.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-41-960.webp",
-      "alt": "CloneX #17474 抬眼看向近旁飛蛾，金色光環在暗處映出暖色。（AI 生成影像）",
+      "alt": "CloneX #17474 抬眼看向近旁飛蛾，金色光環在暗處映出暖色。",
       "flickr_id": "55550538547",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55550538547/"
     },
@@ -846,7 +846,7 @@
       ],
       "image": "/assets/img/photography/nft-seven-eight/NSE-42.webp",
       "preview": "/assets/img/photography/nft-seven-eight/NSE-42-960.webp",
-      "alt": "CloneX #17474 在空車廂裡閉眼靠窗，手臂交疊在袋上，雙靴落地。（AI 生成影像）",
+      "alt": "CloneX #17474 在空車廂裡閉眼靠窗，手臂交疊在袋上，雙靴落地。",
       "flickr_id": "55551949995",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55551949995/"
     }

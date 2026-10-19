@@ -1,7 +1,7 @@
 ---
 layout: null
 title: 潘金蓮《今晚，由她開場》｜金瓶梅角色寫真集
-description: 潘金蓮《今晚，由她開場》：36 張虛擬人物影像，從遞票、拉幕到關燈與散場，讓她主動決定一夜的開始與結束。
+description: 潘金蓮《今晚，由她開場》：36 張影像，從遞票、拉幕到關燈與散場，讓她主動決定一夜的開始與結束。
 permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
 ---
 {%- comment -%}
@@ -11,7 +11,6 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
 {%- endcomment -%}
 {%- assign book = site.data.pan_jinlian_tonight_she_opens -%}
 {%- assign pdf_size = '約 24 MB' -%}
-{%- assign ai_tag = '（AI 生成，非真人照片）' -%}
 {%- capture curl %}/jinpingmei/characters/panjinlian/{% endcapture -%}
 {%- assign cover = book.photos | where: "order", book.cover_photo | first -%}
 {%- assign stills = book.photos | where: "still_life", true -%}
@@ -66,7 +65,7 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
         <div>
           <p class="act-no reveal"><b>金瓶梅宇宙</b><span>角色寫真集</span></p>
           <h1 class="act-title reveal">{{ book.title }}<small>{{ book.model }} · {{ book.setting }} · {{ book.count }} 張寫真</small></h1>
-          <p class="act-lead reveal">{{ book.statement[0] }}<br>{{ book.disclosure }}</p>
+          <p class="act-lead reveal">{{ book.statement[0] }}</p>
           <div class="act-cta-row reveal">
             <a class="act-cta" href="#photos">翻開 {{ book.count }} 張寫真<i aria-hidden="true">→</i></a>
             <a class="act-cta lp-cta-pdf" href="{{ book.pdf | relative_url }}" download>下載完整寫真集<small>PDF · {{ pdf_size }}</small></a>
@@ -75,7 +74,7 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
         </div>
         <figure class="pb-print lp-cover reveal">
           {%- assign cfid = cover.flickr_id | append: '' -%}{%- assign cfs = site.data.flickr_static[cfid] -%}
-          <img {% include flickr/source.html id=cover.flickr_id %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}{{ ai_tag }}" width="{% if cover.height > cover.width %}640{% else %}960{% endif %}" height="{% if cover.height > cover.width %}960{% else %}640{% endif %}" fetchpriority="high" decoding="async">
+          <img {% include flickr/source.html id=cover.flickr_id %} sizes="(max-width: 720px) 300px, 440px" alt="寫真集封面：{{ cover.alt }}" width="{% if cover.height > cover.width %}640{% else %}960{% endif %}" height="{% if cover.height > cover.width %}960{% else %}640{% endif %}" fetchpriority="high" decoding="async">
           <figcaption><span class="fno">封面</span><span class="fcap">{{ cover.title }}</span></figcaption>
         </figure>
       </div>
@@ -119,7 +118,7 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
 
           {%- capture fig %}
             <figure class="pb-print lp-print lp-print--captioned">
-              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="pnc36" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
+              <a href="{% include flickr/url.html image=p.image %}" class="jpm-zoom" data-gallery="pnc36" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}"><img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{% if p.height >= p.width %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) 50vw, 560px{% else %}(max-width: 720px) calc(100vw - 40px), (max-width: 1200px) calc(100vw - 80px), 1120px{% endif %}" alt="{{ p.alt }}" width="{{ pw }}" height="{{ ph }}" loading="lazy" decoding="async"></a>
               <figcaption>
                 <span class="fno">No.{{ nn }}</span><span class="fcap">{{ p.title }}</span>
                 <span class="lp-desc">{{ p.caption }}</span>
@@ -174,7 +173,6 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
           <p class="paiji-head" id="lp-paiji"><b>凡例</b><small>本輯的誠實標示</small></p>
           <ul>
             <li>{{ book.model }}是《金瓶梅》書中角色；{{ book.disclosure }}</li>
-            <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構；其中 {{ stills.size }} 幀沒有人物出鏡，同樣為 AI 生成影像。</li>
             <li>原典含成人內容，建議成年讀者。</li>
             <li>寫真對象出自<a href="{{ curl | relative_url }}">角色研究館</a>考證過的角色檔案；其他角色的寫真收在<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。</li>
             <li>每一幀都附 Flickr 連結，可對照原始上傳；本輯以數位形式公開，完整寫真集可免費下載。</li>
@@ -183,7 +181,7 @@ permalink: /jinpingmei/photobook/pan-jinlian-tonight-she-opens/
           <span class="paiji-seal" aria-hidden="true"><i>寫真集</i></span>
         </div>
       </aside>
-      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。圖像：AI 生成；場景為虛構。</p>
+      <p class="lp-credit">攝影企劃、視覺統籌、選片與審定：史旺基。</p>
     </div>
   </main>
 

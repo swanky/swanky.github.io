@@ -6,10 +6,10 @@
   "subtitle": "走過天氣，也走過自己的幾種樣子。",
   "date": "2026-10-07",
   "date_label": "編輯日期",
-  "description": "李瓶兒《雨停以前》：走過天氣，也走過自己的幾種樣子。共34幅AI生成影像。",
+  "description": "李瓶兒《雨停以前》：走過天氣，也走過自己的幾種樣子。共34幅影像。",
   "statement": "天氣不是一條直線。\n雨廊、工房、茶山、溫室；她在不同的光裡，換一種站法。\n這些片刻來自幾段交錯的午後，不急著假裝成同一天。\n一把舊傘仍在故事裡，更多時候，她的雙手是空著的。\n等夜晚亮起來，停下、走動和笑，都有了自己的位置。",
-  "disclosure": "李瓶兒為明確27歲的成年虛構角色。人物、造型、地點與事件均為AI創作，非真人實拍。史旺基 Swanky 企劃與編選，AI協作生成與編排。",
-  "fictional_location": "虛構雨城與茶山",
+  "disclosure": "史旺基 Swanky 企劃與編選。",
+  "fictional_location": "雨城與茶山",
   "count": 34,
   "chapters": [
     {
@@ -123,7 +123,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/01.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/01-960.webp",
-      "alt": "李瓶兒《雨停以前》第01幅：雨先到（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第01幅：雨先到",
       "flickr_id": "55573169457",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573169457/"
     },
@@ -136,7 +136,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/02.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/02-960.webp",
-      "alt": "李瓶兒《雨停以前》第02幅：跨過水光（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第02幅：跨過水光",
       "flickr_id": "55573169557",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573169557/"
     },
@@ -149,7 +149,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/03.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/03-960.webp",
-      "alt": "李瓶兒《雨停以前》第03幅：不屬於誰的傘（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第03幅：不屬於誰的傘",
       "flickr_id": "55574315228",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315228/"
     },
@@ -162,7 +162,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/04.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/04-960.webp",
-      "alt": "李瓶兒《雨停以前》第04幅：帶著一場雨（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第04幅：帶著一場雨",
       "flickr_id": "55574206976",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574206976/"
     },
@@ -175,7 +175,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/05.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/05-960.webp",
-      "alt": "李瓶兒《雨停以前》第05幅：沿著傘緣（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第05幅：沿著傘緣",
       "flickr_id": "55574368119",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368119/"
     },
@@ -188,7 +188,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/06.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/06-960.webp",
-      "alt": "李瓶兒《雨停以前》第06幅：線的去向（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第06幅：線的去向",
       "flickr_id": "55574315388",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315388/"
     },
@@ -201,7 +201,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/07.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/07-960.webp",
-      "alt": "李瓶兒《雨停以前》第07幅：一小片晴天（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第07幅：一小片晴天",
       "flickr_id": "55574207126",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207126/"
     },
@@ -214,7 +214,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/08.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/08-960.webp",
-      "alt": "李瓶兒《雨停以前》第08幅：鬆開肩膀（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第08幅：鬆開肩膀",
       "flickr_id": "55574368249",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368249/"
     },
@@ -227,7 +227,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/09.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/09-960.webp",
-      "alt": "李瓶兒《雨停以前》第09幅：風先轉身（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第09幅：風先轉身",
       "flickr_id": "55573169982",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573169982/"
     },
@@ -240,7 +240,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/10.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/10-960.webp",
-      "alt": "李瓶兒《雨停以前》第10幅：把一滴雨接住（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第10幅：把一滴雨接住",
       "flickr_id": "55573170042",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170042/"
     },
@@ -253,7 +253,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/11.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/11-960.webp",
-      "alt": "李瓶兒《雨停以前》第11幅：山把聲音收小（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第11幅：山把聲音收小",
       "flickr_id": "55574207246",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207246/"
     },
@@ -266,7 +266,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/12.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/12-960.webp",
-      "alt": "李瓶兒《雨停以前》第12幅：雨路彎了一下（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第12幅：雨路彎了一下",
       "flickr_id": "55574368459",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368459/"
     },
@@ -279,7 +279,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/13.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/13-960.webp",
-      "alt": "李瓶兒《雨停以前》第13幅：葉影讓開（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第13幅：葉影讓開",
       "flickr_id": "55574627230",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627230/"
     },
@@ -292,7 +292,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/14.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/14-960.webp",
-      "alt": "李瓶兒《雨停以前》第14幅：下一滴落下以前（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第14幅：下一滴落下以前",
       "flickr_id": "55574315718",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315718/"
     },
@@ -305,7 +305,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/15.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/15-960.webp",
-      "alt": "李瓶兒《雨停以前》第15幅：安靜也有形狀（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第15幅：安靜也有形狀",
       "flickr_id": "55573170242",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170242/"
     },
@@ -318,7 +318,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/16.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/16-960.webp",
-      "alt": "李瓶兒《雨停以前》第16幅：天台比房間大（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第16幅：天台比房間大",
       "flickr_id": "55573170292",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170292/"
     },
@@ -331,7 +331,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/17.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/17-960.webp",
-      "alt": "李瓶兒《雨停以前》第17幅：白色的浪（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第17幅：白色的浪",
       "flickr_id": "55574315898",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315898/"
     },
@@ -344,7 +344,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/18.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/18-960.webp",
-      "alt": "李瓶兒《雨停以前》第18幅：風從肩上過去（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第18幅：風從肩上過去",
       "flickr_id": "55574207511",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207511/"
     },
@@ -357,7 +357,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/19.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/19-960.webp",
-      "alt": "李瓶兒《雨停以前》第19幅：把重心放低（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第19幅：把重心放低",
       "flickr_id": "55574315973",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574315973/"
     },
@@ -370,7 +370,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/20.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/20-960.webp",
-      "alt": "李瓶兒《雨停以前》第20幅：晾在光裡（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第20幅：晾在光裡",
       "flickr_id": "55574316033",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316033/"
     },
@@ -383,7 +383,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/21.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/21-960.webp",
-      "alt": "李瓶兒《雨停以前》第21幅：熱杯沿（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第21幅：熱杯沿",
       "flickr_id": "55574368799",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368799/"
     },
@@ -396,7 +396,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/22.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/22-960.webp",
-      "alt": "李瓶兒《雨停以前》第22幅：等一陣風（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第22幅：等一陣風",
       "flickr_id": "55573170522",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170522/"
     },
@@ -409,7 +409,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/23.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/23-960.webp",
-      "alt": "李瓶兒《雨停以前》第23幅：黃昏的邊（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第23幅：黃昏的邊",
       "flickr_id": "55573170532",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170532/"
     },
@@ -422,7 +422,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/24.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/24-960.webp",
-      "alt": "李瓶兒《雨停以前》第24幅：終於不用躲（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第24幅：終於不用躲",
       "flickr_id": "55573170602",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170602/"
     },
@@ -435,7 +435,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/25.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/25-960.webp",
-      "alt": "李瓶兒《雨停以前》第25幅：雨停以後（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第25幅：雨停以後",
       "flickr_id": "55574316263",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316263/"
     },
@@ -448,7 +448,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/26.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/26-960.webp",
-      "alt": "李瓶兒《雨停以前》第26幅：先不決定方向（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第26幅：先不決定方向",
       "flickr_id": "55574368964",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574368964/"
     },
@@ -461,7 +461,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/27.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/27-960.webp",
-      "alt": "李瓶兒《雨停以前》第27幅：燈替雨留下來（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第27幅：燈替雨留下來",
       "flickr_id": "55573170727",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170727/"
     },
@@ -474,7 +474,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/28.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/28-960.webp",
-      "alt": "李瓶兒《雨停以前》第28幅：走過最後一格光（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第28幅：走過最後一格光",
       "flickr_id": "55574316383",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316383/"
     },
@@ -487,7 +487,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/29.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/29-960.webp",
-      "alt": "李瓶兒《雨停以前》第29幅：等候不是停住（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第29幅：等候不是停住",
       "flickr_id": "55573170822",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55573170822/"
     },
@@ -500,7 +500,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/30.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/30-960.webp",
-      "alt": "李瓶兒《雨停以前》第30幅：玻璃裡的藍（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第30幅：玻璃裡的藍",
       "flickr_id": "55574627900",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574627900/"
     },
@@ -513,7 +513,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/31.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/31-960.webp",
-      "alt": "李瓶兒《雨停以前》第31幅：把鞋留在門口（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第31幅：把鞋留在門口",
       "flickr_id": "55574207966",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574207966/"
     },
@@ -526,7 +526,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/32.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/32-960.webp",
-      "alt": "李瓶兒《雨停以前》第32幅：窗外沒有答案（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第32幅：窗外沒有答案",
       "flickr_id": "55574316538",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316538/"
     },
@@ -539,7 +539,7 @@
       "height": 1536,
       "image": "/assets/img/photography/li-pinger-before-the-rain/33.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/33-960.webp",
-      "alt": "李瓶兒《雨停以前》第33幅：一口熱的空白（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第33幅：一口熱的空白",
       "flickr_id": "55574316583",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316583/"
     },
@@ -552,7 +552,7 @@
       "height": 1024,
       "image": "/assets/img/photography/li-pinger-before-the-rain/34.webp",
       "preview": "/assets/img/photography/li-pinger-before-the-rain/34-960.webp",
-      "alt": "李瓶兒《雨停以前》第34幅：雨停以前（AI生成影像）",
+      "alt": "李瓶兒《雨停以前》第34幅：雨停以前",
       "flickr_id": "55574316648",
       "flickr_url": "https://www.flickr.com/photos/88607481@N00/55574316648/"
     }

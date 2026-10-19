@@ -1,9 +1,9 @@
 ---
 layout: home
 title: 史旺姬《把光留給日常》
-seo_title: 史旺姬《把光留給日常》｜史旺基原創虛擬人物影像
-description: 史旺姬《把光留給日常》：36 張原創虛擬人物影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
-keywords: 史旺姬,把光留給日常,虛擬人物,AI 生成影像,虛擬角色經紀公司,史旺基
+seo_title: 史旺姬《把光留給日常》｜史旺基影像
+description: 史旺姬《把光留給日常》：36 張影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
+keywords: 史旺姬,把光留給日常,虛擬人物,虛擬角色經紀公司,史旺基
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -29,10 +29,9 @@ permalink: /photography/swanky-ji-everyday-light/
 {%- endcomment -%}
 {% assign book = site.data.swanky_ji_everyday_light %}
 {% assign pdf_size = '約 22 MB' %}
-{% assign ai_tag = '（AI 生成，非真人照片）' %}
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 {% assign stills = book.photos | where: "still_life", true %}
-{% capture hero_intro %}史旺姬，史旺基的原創虛擬人物。{{ book.statement[0] }} {{ book.disclosure }}{% endcapture %}
+{% capture hero_intro %}史旺姬，史旺基的原創虛擬人物。{{ book.statement[0] }}{% endcapture %}
 {% capture pdf_label %}下載完整寫真集（{{ pdf_size }}）{% endcapture %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
   {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label=pdf_label %}
@@ -42,8 +41,8 @@ permalink: /photography/swanky-ji-everyday-light/
     <div class="photo-author-shell">
       <p class="sjw-meta">{{ book.count }} 張原創影像 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
       <article class="photo-author-series-card sjw-cover">
-        <a href="{% include flickr/url.html image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjl-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}{{ ai_tag }}">
-          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}{{ ai_tag }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
+        <a href="{% include flickr/url.html image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="sjl-cover" title="封面 No.{{ cover.order }} {{ cover.title }}｜{{ cover.caption }}">
+          <img {% include flickr/source.html id=cover.flickr_id image=cover.preview %} sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}" width="{{ cover.width }}" height="{{ cover.height }}" fetchpriority="high" decoding="async">
         </a>
         <div class="photo-author-series-copy">
           <p class="photo-author-eyebrow">STATEMENT · 封面 No.{{ cover.order }}</p>
@@ -95,8 +94,8 @@ permalink: /photography/swanky-ji-everyday-light/
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
-          <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="sjl-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
-            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+          <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="sjl-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}">
+            <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption>
             <span class="sjw-no">No.{{ nn }}</span>
@@ -118,7 +117,6 @@ permalink: /photography/swanky-ji-everyday-light/
         <div>
           <h2 id="after-title">翻到最後，仍有下一束光。</h2>
           <p>{{ book.statement | last }}</p>
-          <p>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</p>
         </div>
       </header>
       <div class="photo-author-archive-grid">
@@ -139,15 +137,14 @@ permalink: /photography/swanky-ji-everyday-light/
         </a>
       </div>
       <aside class="sjw-notes" aria-labelledby="sjw-notes-title">
-        <p class="photo-author-eyebrow" id="sjw-notes-title">誠實標示</p>
+        <p class="photo-author-eyebrow" id="sjw-notes-title">作品說明</p>
         <ul>
           <li>{{ book.disclosure }}</li>
-          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序與圖說依原作編排；其中 {{ stills.size }} 幀沒有人物出鏡，同樣為 AI 生成影像。</li>
-          <li>「{{ book.setting }}」為詩性場域名稱，所有場景皆為虛構。</li>
+          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序與圖說依原作編排；其中 {{ stills.size }} 幀沒有人物出鏡。</li>
           <li>每張影像都附 Flickr 連結，可對照原始上傳；完整寫真集共 {{ book.pdf_pages }} 頁，可免費下載。</li>
           <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
         </ul>
-        <p class="sjw-credit">{{ book.creator }} · 2026 · 原創虛擬人物影像 · {{ book.title }}</p>
+        <p class="sjw-credit">{{ book.creator }} · 2026 · {{ book.title }}</p>
       </aside>
     </div>
   </section>

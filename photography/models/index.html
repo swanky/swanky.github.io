@@ -2,8 +2,8 @@
 layout: models
 title: SWANKY MODELS｜虛擬模特兒經紀
 seo_title: SWANKY MODELS 虛擬模特兒經紀｜史旺基旗下 AI 虛擬人物與概念寫真
-description: SWANKY MODELS 虛擬模特兒經紀：史旺基旗下 AI 生成虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十一本概念寫真集，另有史旺基的 AI 助理形象小赫；全部由 AI 生成，並非真人照片。
-keywords: SWANKY MODELS,虛擬模特兒,虛擬模特兒經紀,虛擬人物,AI 生成影像,史旺姬,林予晴,江映希,李瓶兒,潘金蓮,史旺基
+description: SWANKY MODELS 虛擬模特兒經紀：史旺基旗下虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十五本概念寫真集，另有史旺基的 AI 助理形象小赫。
+keywords: SWANKY MODELS,虛擬模特兒,虛擬模特兒經紀,虛擬人物,史旺姬,林予晴,江映希,李瓶兒,潘金蓮,史旺基
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -44,7 +44,7 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
       {%- assign lead_b = lead_parts[1] | split: "：" -%}
       {%- assign claim_parts = lead_b[1] | split: "、" -%}
       <p class="sm-hero__claim">{% for cp in claim_parts %}<span class="sm-ph">{{ cp }}{% unless forloop.last %}、{% else %}。{% endunless %}</span>{% endfor %}</p>
-      <p class="sm-hero__standfirst">{{ lead_b[0] }}。這裡的人物不是真人。</p>
+      <p class="sm-hero__standfirst">{{ lead_b[0] }}。</p>
     </div>
     {%- assign hero_t = pub | where: "slug", "swanky-ji" | first -%}
     {%- assign hsp = hero_t.spread -%}{%- assign hbk = site.data[hsp.book] -%}{%- assign hsb = hero_t.books | where: "data", hsp.book | first -%}{%- assign hset = hbk.setting | default: hbk.subtitle -%}

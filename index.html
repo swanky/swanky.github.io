@@ -112,13 +112,13 @@ extra_css: |
           <div class="wc-head" data-aos="fade-up">
             <h3><span class="eyebrow">Creative Works</span>最新創作</h3>
             <span class="wc-rule" aria-hidden="true"></span>
-            <p>虛擬人物寫真與古典文學影像，畫面皆由 AI 生成、由史旺基企劃與審定。</p>
+            <p>虛擬人物寫真與古典文學影像，由史旺基企劃與審定。</p>
           </div>
 
           {% assign banner = site.data.selected_works.creative | first %}
           <a class="wc-banner" href="{{ banner.url | relative_url }}" data-aos="fade-up">
             <img loading="lazy" decoding="async" src="{{ banner.image | append: '-800.webp' | relative_url }}" srcset="{{ banner.image | append: '-800.webp' | relative_url }} 800w, {{ banner.image | append: '-1400.webp' | relative_url }} 1400w" sizes="(max-width: 1368px) calc(100vw - 24px), 1296px" alt="{{ banner.alt }}" width="{{ banner.width }}" height="{{ banner.height }}">
-            <span class="wc-ai">{{ banner.ai_note }}</span>
+            {% if banner.ai_note %}<span class="wc-ai">{{ banner.ai_note }}</span>{% endif %}
             <div class="wc-banner-text">
               <span class="wc-eyebrow">{{ banner.label }} · {{ banner.year }}</span>
               <h4 class="wc-title">{{ banner.title }}</h4>
@@ -133,7 +133,7 @@ extra_css: |
               <img loading="lazy" decoding="async" src="{{ c.image | append: '-360.webp' | relative_url }}" srcset="{{ c.image | append: '-360.webp' | relative_url }} 360w, {{ c.image | append: '-540.webp' | relative_url }} 540w" sizes="(max-width: 767px) 128px, 280px" alt="{{ c.alt }}" width="{{ c.width }}" height="{{ c.height }}">
             </div>
             <div class="wc-row-body">
-              <span class="wc-eyebrow">{{ c.label }} · {{ c.year }} · <span class="wc-ai-inline">{{ c.ai_note }}</span></span>
+              <span class="wc-eyebrow">{{ c.label }} · {{ c.year }}{% if c.ai_note %} · <span class="wc-ai-inline">{{ c.ai_note }}</span>{% endif %}</span>
               <h4 class="wc-row-title">{{ c.title }}</h4>
               <p class="wc-desc">{{ c.desc }}</p>
               <span class="wc-cta">{{ c.cta }} <i class="bi bi-arrow-right-short" aria-hidden="true"></i></span>

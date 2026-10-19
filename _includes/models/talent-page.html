@@ -140,15 +140,15 @@
     <div class="sm-shell">
       <header class="sm-section__head">
         <h2 id="character-shots-title">角色寫真 · {{ pack.shots.size }} 幀</h2>
-        <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。圖為 AI 生成，並非真人照片。</p>
+        <p>定裝照管的是「像不像」，寫真管的是「有沒有戲」——同一位{{ pack.name }}，離開設定表、走進光線裡的樣子。</p>
       </header>
       <div class="sm-digitals">
         {% for s in pack.shots %}
           {%- capture ds_src %}/assets/img/jinpingmei/photobook/{{ s.image }}{% endcapture -%}
           {%- capture ds_prev %}/assets/img/jinpingmei/photobook/{{ s.image | replace: '.jpg', '-480.jpg' }}{% endcapture -%}
         <figure class="sm-figure sm-figure--portrait">
-          <a href="{{ ds_src | relative_url }}" class="sm-media sm-media--portrait portfolio-lightbox" data-gallery="sm-character-shots" title="{{ s.caption }}｜{{ s.alt }}（AI 生成，非真人照片）">
-            <img src="{{ ds_prev | relative_url }}" srcset="{{ ds_prev | relative_url }} 480w, {{ ds_src | relative_url }} {{ s.width }}w" sizes="(max-width: 767px) calc(50vw - 20px), (max-width: 1100px) calc(33vw - 20px), 306px" alt="{{ s.alt }}（AI 生成，非真人照片）" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async">
+          <a href="{{ ds_src | relative_url }}" class="sm-media sm-media--portrait portfolio-lightbox" data-gallery="sm-character-shots" title="{{ s.caption }}｜{{ s.alt }}">
+            <img src="{{ ds_prev | relative_url }}" srcset="{{ ds_prev | relative_url }} 480w, {{ ds_src | relative_url }} {{ s.width }}w" sizes="(max-width: 767px) calc(50vw - 20px), (max-width: 1100px) calc(33vw - 20px), 306px" alt="{{ s.alt }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption>{{ s.caption }}</figcaption>
         </figure>

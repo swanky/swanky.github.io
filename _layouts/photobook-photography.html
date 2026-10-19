@@ -25,7 +25,6 @@ layout: home
           <p class="photo-author-eyebrow">STATEMENT · 創作說明</p>
           <h2 id="statement-title">{{ book.subtitle }}</h2>
           <p>{{ book.statement | escape | newline_to_br }}</p>
-          <p class="nse-disclosure">{{ book.disclosure }}</p>
           <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">前往 Flickr 相簿 ↗</a>
         </div>
       </article>
@@ -67,7 +66,7 @@ layout: home
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}" data-photo-order="{{ p.order }}">
-          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}（AI 生成影像）" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
             <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption><span class="sjw-no">No.{{ nn }}</span><span class="sjw-title">{{ p.title }}</span><a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a><p class="sjw-caption">{{ p.caption }}</p></figcaption>
@@ -87,7 +86,7 @@ layout: home
         <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer"><h3>前往 Flickr 相簿</h3><p>收錄 {{ book.flickr_total_count }} 張作品，包含 {{ book.flickr_extended_count }} 張延伸選片。</p><span>前往 Flickr ↗</span></a>
         <a href="{{ '/photography/models/talent/' | append: page.talent_slug | append: '/' | relative_url }}" class="photo-author-archive-card"><h3>認識{{ book.character }}</h3><p>看看這位角色的其他作品與介紹。</p><span>看角色介紹 →</span></a>
       </div>
-      <aside class="sjw-notes" aria-label="影像與角色說明"><p>{{ book.disclosure }}</p><p>場景「{{ book.fictional_location }}」為虛構。本冊為個人藝術創作展示。</p><p class="sjw-credit">史旺基 Swanky · 2026 · {{ book.title }}</p></aside>
+      <aside class="sjw-notes" aria-label="影像與角色說明"><p>{{ book.disclosure }}</p><p>本冊為個人藝術創作展示。</p><p class="sjw-credit">史旺基 Swanky · 2026 · {{ book.title }}</p></aside>
     </div>
   </section>
 </main>

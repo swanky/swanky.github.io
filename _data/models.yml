@@ -1,7 +1,7 @@
 # SWANKY MODELS｜虛擬模特兒經紀（/photography/models/；2026-09-24 立）——子站單一真相源。
 #
 # 規則：
-# - 旗下人物皆為 AI 生成的虛擬人物，不是真人；模板會替每張圖的 alt 補「（AI 生成，非真人照片）」並掛徽章。
+# - 站主 2026-10-19 起不在站上特別標示 AI 生成：alt 照資料原文、不補揭露尾綴，也不掛徽章。
 # - 介紹文字一律沿用作品資料既有文案（JSON 的 description／disclosure、yml 的 lead／note／quote），
 #   不另創背景設定，也不編身高、三圍等經紀卡規格——資料裡沒有的欄位就不出現。
 #   例外：攝影 repo 已核准的角色設定可逐字放進 quote／facts／traits；站主明確指定的設定值（如林予晴身高、三圍）要在註解寫明來源與日期。
@@ -21,18 +21,18 @@ group_photo:
   height: 1024
   slugs: [li-pinger, swanky-ji, pan-jinlian]
   alt: 李瓶兒、史旺姬、潘金蓮三人同棚合照：李瓶兒坐在木凳上，史旺姬站在她身後、手搭在她肩上，潘金蓮站在右側
-  note: 與名冊照同一組攝影棚設定生成。三人皆為 AI 生成的虛擬人物，並非真人照片。
+  note: 與名冊照同一組攝影棚設定生成。
 
 brand:
   name: SWANKY MODELS
   tagline: 虛擬模特兒經紀
-  claim: 旗下模特兒皆為 AI 生成的虛擬人物，並非真人。
+  claim: ""
   creator: 史旺基 Swanky 企劃、視覺統籌、選片與審定。
 
 home:
   eyebrow: VIRTUAL MODEL AGENCY · TAIPEI · 2026
-  lead: 這裡的人物不是真人，是史旺基企劃、視覺統籌、選片與審定的虛擬角色。攝影多年累積的眼光，換一種媒材繼續用：人物怎麼站、光從哪裡來、她和場景的關係是什麼。
-  disclosure: 以下角色與作品全部由 AI 生成，並非真人照片，也不是實拍紀錄；每一輯的作品頁都寫明製作方式與虛構場景。
+  lead: 這裡的人物，是史旺基企劃、視覺統籌、選片與審定的虛擬角色。攝影多年累積的眼光，換一種媒材繼續用：人物怎麼站、光從哪裡來、她和場景的關係是什麼。
+  disclosure: ""
   # 以下引文出自專欄〈AI 不是我的替身，而是我跨出邊界的方法〉，逐字沿用。
   statement_quote: 虛擬經紀公司首先應該是一個角色創作與管理的工作室，而不是無限生圖的資料夾。
   statement_quote_lines: [虛擬經紀公司首先應該是, 一個角色創作與管理的工作室，, 而不是無限生圖的資料夾。]
@@ -44,8 +44,8 @@ home:
     url: /technical/ai-photography-virtual-agency/
   # 首頁「寫真集」區的多人合輯卡片（依序顯示；張數與章數從該書資料讀取，網址以 talents[].books 為準——移交 JSON 的 permalink 不一定是上線網址）
   shared_books:
-    - { data: beyond_the_frame, url: /jinpingmei/photobook/beyond-the-frame/, image: /assets/img/photography/beyond-the-frame/cover-card.jpg, w: 640, h: 480, cast: 李瓶兒與潘金蓮, alt: "李瓶兒與潘金蓮《畫面之外》封面（AI 生成，成年虛構角色）" }
-    - { data: nft_seven_eight, url: /nft/photobook/seven-names-eight-presences/, image: /assets/img/photography/nft-seven-eight/cover-card.jpg, w: 640, h: 360, cast: NFT 七位角色, alt: "NFT 七位角色《七個名字，八種在場》封面（AI 生成）" }
+    - { data: beyond_the_frame, url: /jinpingmei/photobook/beyond-the-frame/, image: /assets/img/photography/beyond-the-frame/cover-card.jpg, w: 640, h: 480, cast: 李瓶兒與潘金蓮, alt: "李瓶兒與潘金蓮《畫面之外》封面" }
+    - { data: nft_seven_eight, url: /nft/photobook/seven-names-eight-presences/, image: /assets/img/photography/nft-seven-eight/cover-card.jpg, w: 640, h: 360, cast: NFT 七位角色, alt: "NFT 七位角色《七個名字，八種在場》封面" }
 
 # 合作原則：逐字取自同一篇專欄，站主的第一人稱保留。
 principles:
@@ -54,7 +54,7 @@ principles:
   title_lines: [兩種合作，, 各有各的紅線。]
   items:
     - title: 虛構角色
-      text: 包括原創人物，以及李瓶兒這類文學角色的改編。她可以有完整的外觀、性格與故事，但必須被清楚介紹為虛構人物，改編也要交代來源。
+      text: 包括原創人物，以及李瓶兒這類文學角色的改編。她可以有完整的外觀、性格與故事，改編角色要交代來源。
     - title: 真人的授權數位分身
       text: 她與一位真實的人相連，因此作品怎麼製作、在哪裡公開、是否用於商業合作，都不能只由我單方面決定。目前只是合作原則，不是已上線的服務。
     - title: 先小、再確認
@@ -110,14 +110,14 @@ talents:
     kind: original
     kind_label: 原創虛擬人物
     debut: 2026
-    intro: 23 歲，住在虛構的海港城市「南汐」；自由平面設計師，兼做小量手工版畫與紙品。她把散步時收集的顏色印成卡片，寄給很久沒見的人。
-    disclosure: 林予晴是 23 歲的原創虛構成人角色。人物、場景、旅程與手作情節由 AI 創作，非真人實拍；海邊、市場與工作室不指涉真實拍攝地點。史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    intro: 23 歲，住在海港城市「南汐」；自由平面設計師，兼做小量手工版畫與紙品。她把散步時收集的顏色印成卡片，寄給很久沒見的人。
+    disclosure: 史旺基 Swanky 企劃、視覺統籌、選片與審定。
     # 設定：quote／traits 與 facts 前三列逐字取自攝影 repo 已核准的 character-profile-v1.md／character-card-v2.json；
     # 身高與三圍原檔明寫「未定」，2026-10-08 站主指示「依據建議補上」——是角色設定值，不是量測。
     quote: 有一點歪，才知道是我做的。
     facts:
       - { label: 年齡, value: 23 歲 }
-      - { label: 居住地, value: 南汐（虛構海港城市） }
+      - { label: 居住地, value: 南汐 }
       - { label: 職業, value: 自由平面設計師、手工版畫與紙品創作者 }
       - { label: 身高, value: 162 公分 }
       - { label: 三圍, value: 80／60／86 公分 }
@@ -143,7 +143,7 @@ talents:
     kind_label: AI 助理形象
     debut: 2026
     intro: 史旺基日常工作用的 AI 助理（Hermes Agent），這是她的樣子，名字叫小赫。
-    disclosure: 小赫是 AI 助理的虛構形象，明確成年；人物由 AI 生成，並非真人照片。史旺基 Swanky 企劃與審定。
+    disclosure: 史旺基 Swanky 企劃與審定。
     digital: true
     books: []
 
@@ -157,7 +157,7 @@ talents:
       label: 角色研究館：李瓶兒
       url: /jinpingmei/characters/lipinger/
     pack: lipinger
-    disclosure: 李瓶兒為文學角色的虛構改編形象。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    disclosure: 李瓶兒取自《金瓶梅》文學角色。史旺基 Swanky 企劃、視覺統籌、選片與審定。
     portrait: { book: jinpingmei_photobook_vl20, kind: yml, n: 3 }
     hero: { book: jinpingmei_photobook_lp36, kind: yml, n: 4 }
     digital: true
@@ -180,7 +180,7 @@ talents:
       label: 角色研究館：潘金蓮
       url: /jinpingmei/characters/panjinlian/
     pack: panjinlian
-    disclosure: 潘金蓮為文學角色的虛構改編形象。人物與場景皆由 AI 生成，並非真人實拍；史旺基 Swanky 企劃、視覺統籌、選片與審定。
+    disclosure: 潘金蓮取自《金瓶梅》文學角色。史旺基 Swanky 企劃、視覺統籌、選片與審定。
     portrait: { book: pan_jinlian_she_sees_it_first, kind: json, n: 12 }
     hero: { book: pan_jinlian_she_sees_it_first, kind: json, n: 6 }
     digital: true
@@ -195,15 +195,15 @@ talents:
 
   # 江映希：2026-10-08 隨首冊《窗外還亮著》移交首次上站（攝影 repo characters/original/virtual-artist-2026-10-07，站主定名）。
   # 攝影端角色卡註明人物故事、身高與身形「未定」→ 不寫背景、不列規格；intro／disclosure 只取寫真集移交 JSON 的
-  # disclosure（22 歲原創成年虛構角色）與 description 原句。名冊照 2026-10-09 起改用同棚生成的 digitals/jiang-yingxi.webp（portrait 保留 No.29 作寫真集內備援）；首頁跨頁 2026-10-09 補上 No.36。
+  # description 原句（disclosure 自 2026-10-19 起只留署名）。名冊照 2026-10-09 起改用同棚生成的 digitals/jiang-yingxi.webp（portrait 保留 No.29 作寫真集內備援）；首頁跨頁 2026-10-09 補上 No.36。
   - slug: jiang-yingxi
     name: 江映希
     division: photobook
     kind: original
     kind_label: 原創虛擬人物
     debut: 2026
-    intro: 22 歲的原創成年虛構角色。窗外的城市，一盞一盞亮起來；首部寫真集《窗外還亮著》留下八段夜裡的片刻。
-    disclosure: 江映希為22歲原創成年虛構角色。人物、場景與事件由AI創作，非真人實拍；窗外城市為創作場景，不指涉真實拍攝地點。史旺基 Swanky 企劃、視覺統籌、選片與審定，AI協作生成與編排。
+    intro: 窗外的城市，一盞一盞亮起來；首部寫真集《窗外還亮著》留下八段夜裡的片刻。
+    disclosure: 史旺基 Swanky 企劃、視覺統籌、選片與審定。
     facts:
       - { label: 年齡, value: 22 歲 }
     portrait: { book: jiang_yingxi_window_still_lit, kind: json, n: 29 }
@@ -225,7 +225,7 @@ talents:
     kind_label: "CloneX #15755"
     debut: 2026
     intro: "史旺基持有的 CloneX #15755，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "Bunny 邦妮為史旺基持有的 CloneX #15755 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "Bunny 邦妮為史旺基持有的 CloneX #15755 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -247,7 +247,7 @@ talents:
     kind_label: "CloneX #9268"
     debut: 2026
     intro: "史旺基持有的 CloneX #9268，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "Sparky 為史旺基持有的 CloneX #9268 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "Sparky 為史旺基持有的 CloneX #9268 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -267,7 +267,7 @@ talents:
     kind_label: "CloneX"
     debut: 2026
     intro: "史旺基持有的 CloneX #15162，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "史旺基持有的 CloneX #15162 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "史旺基持有的 CloneX #15162 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -288,7 +288,7 @@ talents:
     kind_label: "CloneX"
     debut: 2026
     intro: "史旺基持有的 CloneX #17474，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "史旺基持有的 CloneX #17474 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "史旺基持有的 CloneX #17474 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     # 可切換形象：名冊照＋影片工作區核准的參考形象（站主 2026-09-25 指示；來源 C:\cc_home\swanky-ai-video\characters）
     presentations:
@@ -309,7 +309,7 @@ talents:
     kind_label: "CloneX"
     debut: 2026
     intro: "史旺基持有的 CloneX #17152，以官方角色圖為依據做成的攝影式改編形象；因造型含村上隆 IP，只作概念展示、不參與商業合作。"
-    disclosure: "史旺基持有的 CloneX #17152 的攝影式改編形象，人物由 AI 生成，並非真人；造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。"
+    disclosure: "史旺基持有的 CloneX #17152 的攝影式改編形象；造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。"
     # 站主 2026-09-25：公開列出，但含村上隆 IP（DOB 帽、Jellyfish Eyes 夾克），不參與商業合作
     commercial: false
     flag: 含村上隆 IP，不參與商業合作
@@ -334,7 +334,7 @@ talents:
       - { key: voxel, label: 方塊版, file: meebit-10829 }
       - { key: human, label: 擬真版, file: meebit-10829-human }
     intro: "史旺基持有的 Meebits #10829，有方塊與擬真兩種核准形象，可依場景選擇；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "史旺基持有的 Meebits #10829 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "史旺基持有的 Meebits #10829 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     books:
       - { data: meebit_city_out_of_fit, kind: json, url: /nft/photobook/city-out-of-fit/, pdf_size: 約 23 MB }
@@ -349,7 +349,7 @@ talents:
     kind_label: "MAYC"
     debut: 2026
     intro: "史旺基持有的 MAYC #17854，以官方角色圖為依據做成的攝影式改編形象；已參與寫真集《七個名字，八種在場》。"
-    disclosure: "史旺基持有的 MAYC #17854 的攝影式改編形象，人物由 AI 生成，並非真人；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
+    disclosure: "史旺基持有的 MAYC #17854 的攝影式改編形象；已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。"
     digital: true
     books:
       - { data: nft_seven_eight, kind: json, url: /nft/photobook/seven-names-eight-presences/, pdf_size: 約 27 MB }

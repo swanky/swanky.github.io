@@ -1,8 +1,8 @@
 ---
 layout: home
 title: 七個名字，八種在場｜NFT 七位角色寫真集
-description: 七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。人物與場景由 AI 生成，可逐張觀看並下載完整寫真集。
-keywords: 七個名字八種在場,CloneX,Meebits,MAYC,NFT角色,AI生成影像,史旺基
+description: 七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。可逐張觀看並下載完整寫真集。
+keywords: 七個名字八種在場,CloneX,Meebits,MAYC,NFT角色,史旺基
 nav_active: nft
 breadcrumbs:
   - name: 主頁
@@ -40,7 +40,6 @@ permalink: /nft/photobook/seven-names-eight-presences/
           <p class="photo-author-eyebrow">STATEMENT · 創作說明</p>
           <h2 id="statement-title">七個名字，並不只有七種在場。</h2>
           <p>{{ book.statement }}</p>
-          <p class="nse-disclosure">{{ book.disclosure }}</p>
           <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">前往 Flickr 相簿 ↗</a>
         </div>
       </article>
@@ -82,7 +81,7 @@ permalink: /nft/photobook/seven-names-eight-presences/
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
-          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}（AI 生成影像）" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="nse-book" title="No.{{ nn }} {{ p.title }}｜{{ p.caption }}" aria-label="放大第 {{ p.order }} 張：{{ p.title }}">
             <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption><span class="sjw-no">No.{{ nn }}</span><span class="sjw-title">{{ p.title }}</span><a class="photo-author-source sjw-flickr" href="{{ p.flickr_url }}" target="_blank" rel="noopener noreferrer">Flickr ↗</a><p class="sjw-caption">{{ p.caption }}</p></figcaption>
@@ -108,5 +107,5 @@ permalink: /nft/photobook/seven-names-eight-presences/
   </section>
 </main>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ImageGallery","name":{{ book.title | jsonify }},"description":{{ page.description | append: ' ' | append: book.disclosure | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ book.cover | absolute_url | jsonify }},"datePublished":{{ book.date | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"associatedMedia":[{% for p in book.photos %}{% capture public_image %}{% include flickr/url.html id=p.flickr_id image=p.image %}{% endcapture %}{"@type":"ImageObject","name":{{ p.title | jsonify }},"caption":{{ p.caption | jsonify }},"contentUrl":{{ public_image | strip | jsonify }},"width":{{ p.width }},"height":{{ p.height }},"sameAs":{{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasPart":{"@type":"Book","name":{{ book.title | jsonify }},"numberOfPages":{{ book.pdf_pages }},"url":{{ book.pdf | absolute_url | jsonify }},"inLanguage":"zh-TW"}}
+{"@context":"https://schema.org","@type":"ImageGallery","name":{{ book.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ book.cover | absolute_url | jsonify }},"datePublished":{{ book.date | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"associatedMedia":[{% for p in book.photos %}{% capture public_image %}{% include flickr/url.html id=p.flickr_id image=p.image %}{% endcapture %}{"@type":"ImageObject","name":{{ p.title | jsonify }},"caption":{{ p.caption | jsonify }},"contentUrl":{{ public_image | strip | jsonify }},"width":{{ p.width }},"height":{{ p.height }},"sameAs":{{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasPart":{"@type":"Book","name":{{ book.title | jsonify }},"numberOfPages":{{ book.pdf_pages }},"url":{{ book.pdf | absolute_url | jsonify }},"inLanguage":"zh-TW"}}
 </script>
