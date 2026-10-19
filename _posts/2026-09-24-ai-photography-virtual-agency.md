@@ -116,7 +116,7 @@ V&A 的收藏研究提到，1865 年的展覽目錄已經記錄肖像小畫受�
 
 <figure>
   <a href="{% include flickr/url.html image="/jinpingmei/photobook/li-pinger-no-hurry/images/LP36-04.webp" %}" class="portfolio-lightbox" data-gallery="virtual-agency-works" data-type="image">
-    <img sizes="(max-width: 767px) 100vw, 1100px" {% include flickr/source.html image="/jinpingmei/photobook/li-pinger-no-hurry/images/LP36-04-1080.webp" %} width="1536" height="1024" alt="李瓶兒穿白色背心倚在藍綠色窗臺，背景是咖啡館與虛構海港；AI 生成的成年虛構角色作品" loading="lazy">
+    <img sizes="(max-width: 767px) 100vw, 1100px" {% include flickr/source.html image="/jinpingmei/photobook/li-pinger-no-hurry/images/LP36-04-1080.webp" %} width="1536" height="1024" alt="李瓶兒穿白色背心倚在藍綠色窗臺，背景是咖啡館與海港" loading="lazy">
   </a>
   <figcaption>《不趕時間的你》〈風剛好經過〉。窗臺、視線與海港共同構成相遇感。<a href="{{ '/jinpingmei/photobook/li-pinger-no-hurry/' | relative_url }}">翻閱網站寫真集</a>／<a href="https://www.flickr.com/photos/swanky-hsiao/albums/72177720335581117/">看 Flickr 完整相簿</a>。<a href="https://swanky.github.io/jinpingmei/photobook/li-pinger-no-hurry/">[12]</a></figcaption>
 </figure>
@@ -125,7 +125,7 @@ V&A 的收藏研究提到，1865 年的展覽目錄已經記錄肖像小畫受�
 
 <figure>
   <a href="{% include flickr/url.html image="/jinpingmei/photobook/li-pinger-vessel-of-light/images/VL20-04.webp" %}" class="portfolio-lightbox" data-gallery="virtual-agency-works" data-type="image">
-    <img sizes="(max-width: 767px) 100vw, 1100px" {% include flickr/source.html image="/jinpingmei/photobook/li-pinger-vessel-of-light/images/VL20-04-1080.webp" %} width="1536" height="1024" alt="李瓶兒穿藕色緞面長禮服，俯身以金色水壺向花瓶注水，周圍是深紅牆面與古典陳設；AI 生成的成年虛構角色作品" loading="lazy">
+    <img sizes="(max-width: 767px) 100vw, 1100px" {% include flickr/source.html image="/jinpingmei/photobook/li-pinger-vessel-of-light/images/VL20-04-1080.webp" %} width="1536" height="1024" alt="李瓶兒穿藕色緞面長禮服，俯身以金色水壺向花瓶注水，周圍是深紅牆面與古典陳設" loading="lazy">
   </a>
   <figcaption>《瓶中有光》〈注水〉。人物的動作、水流與瓶口構成畫面的關係，而不只是更換背景。<a href="{{ '/jinpingmei/photobook/li-pinger-vessel-of-light/' | relative_url }}">翻閱網站寫真集</a>／<a href="https://www.flickr.com/photos/swanky-hsiao/albums/72177720335779143/">看 Flickr 完整相簿</a>。<a href="https://swanky.github.io/jinpingmei/photobook/li-pinger-vessel-of-light/">[13]</a></figcaption>
 </figure>

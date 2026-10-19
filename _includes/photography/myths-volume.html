@@ -7,6 +7,7 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
 {%- endcomment -%}
 {%- assign book = site.data[include.book] -%}
 {%- assign series = site.data.swanky_ji_myths -%}
+{%- assign talent = site.data.models.talents | where: "slug", "swanky-ji" | first -%}
 {%- assign vol_names = "一,二,三,四,五,六,七,八,九,十,十一,十二" | split: "," -%}
 {%- assign vol_idx = book.volume | minus: 1 -%}
 {%- capture vol_no %}{% if book.volume < 10 %}0{% endif %}{{ book.volume }}{% endcapture -%}
@@ -172,7 +173,16 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
           <span>看{{ book.model }}的檔案 →</span>
         </a>
       </div>
-      <p class="sjw-credit">{{ book.creator }} · {{ book.date | slice: 0, 4 }} · 《{{ series.title }}》第{{ vol_names[vol_idx] }}冊 · {{ book.title }}</p>
+      <aside class="sjw-notes" aria-labelledby="sjw-notes-title">
+        <p class="photo-author-eyebrow" id="sjw-notes-title">作品說明</p>
+        <ul>
+          <li>{{ talent.disclosure }}創作保留攝影對人物、光線、動作與空間的安排。</li>
+          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序依定稿編排；章末短句與書末的故事與改寫都出自這一冊。</li>
+          <li>每張影像都附 Flickr 連結，可對照原始上傳；本系列只在線上閱讀，不提供下載。</li>
+          <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
+        </ul>
+        <p class="sjw-credit">{{ book.creator }} · {{ book.date | slice: 0, 4 }} · 《{{ series.title }}》第{{ vol_names[vol_idx] }}冊 · {{ book.title }}</p>
+      </aside>
     </div>
   </section>
 </main>

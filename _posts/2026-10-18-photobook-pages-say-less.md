@@ -99,10 +99,10 @@ hero_image: true
 章名我刻意寫得很短，也不解釋：「雨靠近玻璃」「門後仍然有人」「把重量放下來」。它不告訴你她在想什麼，只告訴你接下來幾頁的天氣變了。
 
 <figure class="pbs-photo" id="last-photo">
-  <a href="{% include flickr/url.html id='55576936688' image='/assets/img/photography/jiang-yingxi-window-still-lit/36.webp' %}" class="portfolio-lightbox" data-gallery="pbs" title="No.36 窗外還亮著｜她坐回窗前。小燈與遠方，都還亮著。（AI 生成，非真人照片）">
-    <img {% include flickr/source.html id='55576936688' image='/assets/img/photography/jiang-yingxi-window-still-lit/36-960.webp' %} alt="江映希《窗外還亮著》，夜晚攤成一頁：窗外還亮著。（AI 生成，非真人照片）" width="1254" height="1254" loading="lazy" decoding="async">
+  <a href="{% include flickr/url.html id='55576936688' image='/assets/img/photography/jiang-yingxi-window-still-lit/36.webp' %}" class="portfolio-lightbox" data-gallery="pbs" title="No.36 窗外還亮著｜她坐回窗前。小燈與遠方，都還亮著。">
+    <img {% include flickr/source.html id='55576936688' image='/assets/img/photography/jiang-yingxi-window-still-lit/36-960.webp' %} alt="江映希《窗外還亮著》，夜晚攤成一頁：窗外還亮著。" width="1254" height="1254" loading="lazy" decoding="async">
   </a>
-  <figcaption>《窗外還亮著》最後一張。原本底下印著「她坐回窗前。小燈與遠方，都還亮著。」，現在這句話收在網站版的圖目錄。AI 生成，非真人照片。</figcaption>
+  <figcaption>《窗外還亮著》最後一張。原本底下印著「她坐回窗前。小燈與遠方，都還亮著。」，現在這句話收在網站版的圖目錄。</figcaption>
 </figure>
 
 這句話我還是很喜歡，所以沒有刪。只是讀者翻到最後一頁時，先看到的是她坐在窗前的樣子，而不是這句話。

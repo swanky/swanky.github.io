@@ -23,7 +23,6 @@ AI 視覺製作作品集（2026-10-07 由原服務頁改造：作品優先、只
 tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽詢」、不得出現新台幣價目。
 {%- endcomment -%}
 {% assign pf = site.data.ai_visual_portfolio %}
-{% assign ai_tag = '（AI 生成，非真人照片）' %}
 {% capture inquiry_subject %}[AI 視覺製作洽詢]{% endcapture %}
 {% capture inquiry_body %}您好，我想詢問 AI 視覺製作。
 公司／團隊與聯絡人：
@@ -49,11 +48,11 @@ tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽
           <a class="av-btn" href="#cases">看精選案例</a>
           <a class="av-btn av-btn--ghost" href="#contact">聯絡合作</a>
         </div>
-        <p class="av-hero__note">本頁作品皆為自主概念創作，非品牌委託；人物與場景由 AI 生成，並非真人實拍。</p>
+        <p class="av-hero__note">本頁作品皆為自主概念創作，非品牌委託；人物與場景由 AI 生成。</p>
       </div>
       <figure class="av-hero__media">
-        <a href="{% include flickr/url.html image=hero.image %}" class="portfolio-lightbox" data-gallery="av-hero" title="《{{ hero_book.title }}》No.{{ hero.order }} {{ hero.title }}{{ ai_tag }}">
-          <img {% include flickr/source.html id=hero.flickr_id image=hero.preview sizes="(max-width: 900px) calc(100vw - 32px), 760px" %} alt="{{ hero.alt }}{{ ai_tag }}" width="{{ hero.width }}" height="{{ hero.height }}" fetchpriority="high" decoding="async">
+        <a href="{% include flickr/url.html image=hero.image %}" class="portfolio-lightbox" data-gallery="av-hero" title="《{{ hero_book.title }}》No.{{ hero.order }} {{ hero.title }}">
+          <img {% include flickr/source.html id=hero.flickr_id image=hero.preview sizes="(max-width: 900px) calc(100vw - 32px), 760px" %} alt="{{ hero.alt }}" width="{{ hero.width }}" height="{{ hero.height }}" fetchpriority="high" decoding="async">
         </a>
         <figcaption>《{{ hero_book.title }}》No.{{ hero.order }}〈{{ hero.title }}〉，原創角色史旺姬</figcaption>
       </figure>
@@ -80,8 +79,8 @@ tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽
         </header>
 
         <figure class="av-case__lead">
-          <a href="{% include flickr/url.html image=lead.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ lead.order }} {{ lead.title }}｜{{ lead.caption }}{{ ai_tag }}">
-            <img {% include flickr/source.html id=lead.flickr_id image=lead.preview sizes="(max-width: 1180px) calc(100vw - 32px), 1080px" %} alt="{{ lead.alt }}{{ ai_tag }}" width="{{ lead.width }}" height="{{ lead.height }}" loading="lazy" decoding="async">
+          <a href="{% include flickr/url.html image=lead.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ lead.order }} {{ lead.title }}｜{{ lead.caption }}">
+            <img {% include flickr/source.html id=lead.flickr_id image=lead.preview sizes="(max-width: 1180px) calc(100vw - 32px), 1080px" %} alt="{{ lead.alt }}" width="{{ lead.width }}" height="{{ lead.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption>No.{{ lead.order }}〈{{ lead.title }}〉{{ lead.caption }}</figcaption>
         </figure>
@@ -89,7 +88,7 @@ tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽
         <div class="av-case__body">
           <dl class="av-facts">
             <div><dt>創作目標</dt><dd>{{ c.goal }}</dd></div>
-            <div><dt>我的工作</dt><dd>企劃、視覺統籌、選片與審定；人物與場景由 AI 生成。</dd></div>
+            <div><dt>我的工作</dt><dd>企劃、視覺統籌、選片與審定。</dd></div>
             <div><dt>畫面上看得到的設計</dt><dd>{{ c.observe }}</dd></div>
             <div><dt>最終成果</dt><dd>{{ c.result }}</dd></div>
             <div><dt>可以延伸討論的合作</dt><dd>{{ c.extend }}<span class="av-facts__aside">以上是可討論的方向，目前沒有已完成的商業案例。</span></dd></div>
@@ -108,8 +107,8 @@ tests/tarot/tarot-lab.test.mjs 鎖：「依範圍報價」「用 Email 免費洽
             {% assign p = book.photos | where: "order", n | first %}
             {% assign ratio = p.width | times: 1.0 | divided_by: p.height %}
             <figure class="av-fig {% if p.height > p.width %}av-fig--p{% else %}av-fig--l{% endif %}" style="--r: {{ ratio | round: 4 }}">
-              <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ p.order }} {{ p.title }}｜{{ p.caption }}{{ ai_tag }}">
-                <img {% include flickr/source.html id=p.flickr_id image=p.preview sizes="(max-width: 600px) calc(100vw - 32px), 540px" %} alt="{{ p.alt }}{{ ai_tag }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
+              <a href="{% include flickr/url.html image=p.image %}" class="portfolio-lightbox" data-gallery="av-{{ c.id }}" title="《{{ book.title }}》No.{{ p.order }} {{ p.title }}｜{{ p.caption }}">
+                <img {% include flickr/source.html id=p.flickr_id image=p.preview sizes="(max-width: 600px) calc(100vw - 32px), 540px" %} alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
               </a>
               <figcaption>No.{{ p.order }}〈{{ p.title }}〉</figcaption>
             </figure>

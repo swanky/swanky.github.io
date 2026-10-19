@@ -95,7 +95,7 @@ permalink: /nft/photobook/seven-names-eight-presences/
 
   <section class="photo-author-section photo-author-light sjw-closing" id="characters" aria-labelledby="characters-title">
     <div class="photo-author-shell">
-      <header class="photo-author-section-head"><p class="photo-author-eyebrow">SEVEN NAMES · EIGHT PRESENCES</p><div><h2 id="characters-title">七位角色，各自走進生活。</h2><p>Meebit 是同一位角色的方塊與成年女性呈現；本冊共七位角色、八個呈現。角色的身份、形象與合作範圍，請見各自的介紹。</p></div></header>
+      <header class="photo-author-section-head"><p class="photo-author-eyebrow">SEVEN NAMES · EIGHT PRESENCES</p><div><h2 id="characters-title">七位角色，各自走進生活。</h2><p>Meebit 是同一位角色的方塊與女性呈現；本冊共七位角色、八個呈現。角色的身份、形象與合作範圍，請見各自的介紹。</p></div></header>
       <nav class="photo-author-section-links" aria-label="七位角色">{% for character in book.characters %}<a class="photo-author-text-link" href="{{ character.talent_url | relative_url }}">{{ character.name }}</a>{% endfor %}</nav>
       <div class="photo-author-archive-grid">
         <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download><h3>下載完整寫真集</h3><p>{{ book.pdf_pages }} 頁、{{ book.count }} 張影像與創作說明，約 27 MB，可免費下載收藏。</p><span>下載整本 →</span></a>
