@@ -38,7 +38,7 @@
           {% if t.presentations %}<div><dt>形象</dt><dd>{% for pr in t.presentations %}{{ pr.label }}{% unless forloop.last %}、{% endunless %}{% endfor %}，依場景選擇</dd></div>{% endif %}
         </dl>
         {% if t.traits %}<dl class="sm-traits">{% for tr in t.traits %}<div><dt>{{ tr.label }}</dt><dd>{{ tr.text }}</dd></div>{% endfor %}</dl>{% endif %}
-        <p class="sm-disclosure">{{ t.disclosure }}</p>
+        {% if t.disclosure %}<p class="sm-disclosure">{{ t.disclosure }}</p>{% endif %}
         <div class="sm-actions">
           {% if t.books.size > 0 %}<a class="sm-btn" href="#portfolio">看作品集</a>{% endif %}
           <a class="sm-btn sm-btn--ghost" href="{{ '/photography/models/inquiry/' | relative_url }}">合作洽詢</a>
@@ -58,7 +58,7 @@
       {% for b in t.books %}
         {%- assign bk = site.data[b.data] -%}
         {%- if b.kind == 'json' -%}
-          {%- assign bk_setting = bk.setting -%}{%- assign bk_desc = bk.description -%}{%- assign bk_cover_n = bk.cover_photo -%}
+          {%- assign bk_setting = bk.setting -%}{%- assign bk_desc = bk.description | default: bk.lead -%}{%- assign bk_cover_n = bk.cover_photo -%}
           {%- capture bk_when %}{{ bk.date | slice: 0, 7 }}{% endcapture -%}
           {%- assign bk_pdf = bk.pdf -%}{%- assign bk_pdf_size = b.pdf_size -%}
         {%- else -%}

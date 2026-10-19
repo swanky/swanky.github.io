@@ -6,7 +6,7 @@ yml（寫真館：title／count／chapters／subtitle／lead／cover=檔名／vo
 {%- assign bc_b = include.b -%}
 {%- assign bc = site.data[bc_b.data] -%}
 {%- if bc_b.kind == 'json' -%}
-  {%- assign bc_setting = bc.setting | default: bc.subtitle -%}{%- assign bc_desc = bc.description -%}{%- assign bc_cover_n = bc.cover_photo -%}
+  {%- assign bc_setting = bc.setting | default: bc.subtitle -%}{%- assign bc_desc = bc.description | default: bc.lead -%}{%- assign bc_cover_n = bc.cover_photo -%}
   {%- capture bc_when %}{{ bc.date | slice: 0, 7 }}{% endcapture -%}
 {%- else -%}
   {%- assign bc_setting = bc.subtitle -%}{%- assign bc_desc = bc.lead -%}

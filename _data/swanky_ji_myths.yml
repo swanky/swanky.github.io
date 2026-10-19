@@ -1,0 +1,12 @@
+# 史旺姬《神話未完成》系列索引（2026-10-19 起）。系列入口頁、各冊作品頁的上下冊導覽都讀這裡。
+# 新冊上線：把移交的資料 JSON 放進 _data/、在 volumes 依冊號加一行（data＝_data 檔名、url＝作品頁），
+# 再建一個只有 front matter＋include 的頁面檔（複製 photography/swanky-ji-mending-sky/index.html 改資料鍵）。
+# 導言取第一冊資料的 series_statement／series_statement_en（第一行是系列名，其餘是導言）。
+title: 神話未完成
+title_en: Myths in the Making
+url: /photography/swanky-ji-myths-in-the-making/
+volumes:
+  - { data: swanky_ji_mending_sky, url: /photography/swanky-ji-mending-sky/ }
+  - { data: swanky_ji_dance_before_stillness, url: /photography/swanky-ji-dance-before-stillness/ }
+  - { data: swanky_ji_seven_gates, url: /photography/swanky-ji-seven-gates/ }
+  - { data: swanky_ji_inviting_the_sun, url: /photography/swanky-ji-inviting-the-sun/ }

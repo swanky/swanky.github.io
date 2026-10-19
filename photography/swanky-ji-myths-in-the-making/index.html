@@ -1,0 +1,95 @@
+---
+layout: home
+title: 史旺姬《神話未完成》
+seo_title: 史旺姬《神話未完成》｜神話改寫寫真系列
+description: 史旺姬《神話未完成》：史旺姬走進流傳至今的神話，留下它最核心的問題，讓它面對今天的生活。女媧補天、濕婆舞王、伊南娜下冥界、天照岩戶，每冊 36 張、六章，陸續出版。
+keywords: 史旺姬,神話未完成,Myths in the Making,補天的人,世界停下之前，再跳一次,走過七道門,把太陽請出來,神話改寫,虛擬模特兒,史旺基
+nav_active: photography
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 攝影作品
+    url: /photography/
+  - name: SWANKY MODELS 虛擬模特兒經紀
+    url: /photography/models/
+  - name: 史旺姬
+    url: /photography/models/talent/swanky-ji/
+  - name: 神話未完成
+    url: /photography/swanky-ji-myths-in-the-making/
+use_photography_author: true
+og_image: /assets/img/photography/swanky-ji-mending-sky/cover.jpg
+permalink: /photography/swanky-ji-myths-in-the-making/
+---
+{%- comment -%}
+史旺姬《神話未完成》系列入口（2026-10-19）。冊目全由 _data/swanky_ji_myths.yml 驅動，依冊號列卡片；新冊上線只加一行資料。
+導言取第一冊移交 JSON 的 series_statement／series_statement_en（第一行是系列名，其餘是導言），不另寫。
+{%- endcomment -%}
+{%- assign series = site.data.swanky_ji_myths -%}
+{%- assign first_book = site.data[series.volumes.first.data] -%}
+{%- assign intro_lines = first_book.series_statement | split: "
+" -%}
+{%- assign intro_en_lines = first_book.series_statement_en | split: "
+" -%}
+{%- assign vol_names = "一,二,三,四,五,六,七,八,九,十,十一,十二" | split: "," -%}
+{%- capture hero_eyebrow %}SWANKY JI · {{ series.title_en | upcase }} · {{ series.volumes.size }} VOLUMES{% endcapture -%}
+{%- capture hero_intro %}{% for line in intro_lines offset: 1 %}{{ line }}{% endfor %}{% endcapture -%}
+<main id="main" class="photo-author-page photo-author-subpage sjw-page smm-page">
+  {% include photography/subpage-hero.html eyebrow=hero_eyebrow title=series.title intro=hero_intro primary_url="#volumes" primary_label="從第一冊開始" %}
+  {% include photography/subpage-nav.html %}
+
+  <section class="photo-author-section" id="volumes" aria-labelledby="volumes-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">{{ series.title_en | upcase }}</p>
+        <div>
+          <h2 id="volumes-title">已出版 {{ series.volumes.size }} 冊，陸續加入。</h2>
+          <p lang="en">{% for line in intro_en_lines offset: 1 %}{{ line }}{% endfor %}</p>
+        </div>
+      </header>
+      <ol class="smm-volumes">
+        {% for v in series.volumes %}
+        {%- assign b = site.data[v.data] -%}
+        {%- capture vol_no %}{% if b.volume < 10 %}0{% endif %}{{ b.volume }}{% endcapture -%}
+        {%- assign vol_idx = b.volume | minus: 1 %}
+        <li class="smm-volume">
+          <a href="{{ v.url | relative_url }}">
+            <img src="{{ '/assets/img/photography/' | append: b.slug | append: '/cover-card.jpg' | relative_url }}" srcset="{{ '/assets/img/photography/' | append: b.slug | append: '/cover-card.jpg' | relative_url }} 640w, {{ b.og_image | relative_url }} 1600w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1100px) calc(50vw - 36px), 640px" alt="史旺姬《{{ b.title }}》封面" width="640" height="360"{% if forloop.index > 2 %} loading="lazy"{% endif %} decoding="async">
+            <span class="smm-volume__no">VOL.{{ vol_no }} · 第{{ vol_names[vol_idx] }}冊</span>
+            <span class="smm-volume__title">《{{ b.title }}》</span>
+            <span class="smm-volume__en" lang="en">{{ b.title_en }}</span>
+            <span class="smm-volume__lead">{{ b.lead }}</span>
+            <span class="smm-volume__meta">{{ b.count }} 張 · {{ b.chapters.size }} 章 · {{ b.setting }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section class="photo-author-section photo-author-light sjw-closing" id="after" aria-labelledby="after-title">
+    <div class="photo-author-shell">
+      <header class="photo-author-section-head">
+        <p class="photo-author-eyebrow">SWANKY JI × SWANKY</p>
+        <div>
+          <h2 id="after-title">每一冊都可以單獨讀。</h2>
+          <p>每冊 36 張、六章，照片依定稿順序排列；章末有一句短句，書末交代這則神話從哪裡來、改寫了什麼。每張都附 Flickr 連結。</p>
+        </div>
+      </header>
+      <div class="photo-author-archive-grid">
+        <a href="{{ series.volumes.first.url | relative_url }}" class="photo-author-archive-card">
+          <h3>從《{{ first_book.title }}》開始</h3>
+          <p>{{ first_book.lead }}</p>
+          <span>翻開第一冊 →</span>
+        </a>
+        <a href="{{ '/photography/models/talent/swanky-ji/' | relative_url }}" class="photo-author-archive-card">
+          <h3>SWANKY MODELS｜史旺姬</h3>
+          <p>史旺姬的個人介紹與其他寫真集，收在虛擬模特兒經紀子站。</p>
+          <span>看史旺姬的檔案 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CreativeWorkSeries","name":{{ series.title | jsonify }},"alternateName":{{ series.title_en | jsonify }},"description":{{ hero_intro | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"hasPart":[{% for v in series.volumes %}{% assign b = site.data[v.data] %}{"@type":"ImageGallery","name":{{ b.title | jsonify }},"alternateName":{{ b.title_en | jsonify }},"position":{{ b.volume }},"url":{{ v.url | absolute_url | jsonify }},"image":{{ b.og_image | absolute_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>

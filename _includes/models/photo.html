@@ -29,8 +29,9 @@ SWANKY MODELS 圖片解析（2026-09-24）：以 {book, kind, n} 參照既有作
   {%- assign mp_alt = mp_shot.alt -%}
   {%- assign mp_prev_w_p = 640 -%}{%- assign mp_prev_w_l = 960 -%}
 {%- endif -%}
-{%- comment -%}移交 alt 已自帶 AI 揭露（如 NFT「（AI 生成影像）」）就不再重複補{%- endcomment -%}
-{%- if mp_alt contains 'AI 生成' -%}{%- assign mp_ai = '' -%}{%- else -%}{%- assign mp_ai = '（AI 生成，非真人照片）' -%}{%- endif -%}
+{%- comment -%}移交 alt 已自帶 AI 揭露（如 NFT「（AI 生成影像）」）就不再重複補；站主 2026-10-19 起不強制 AI 標記：json 書的資料沒有 disclosure 就不補{%- endcomment -%}
+{%- assign mp_disc = mp_book.disclosure | default: '' -%}
+{%- if mp_alt contains 'AI 生成' -%}{%- assign mp_ai = '' -%}{%- elsif include.kind != 'yml' and mp_disc == '' -%}{%- assign mp_ai = '' -%}{%- else -%}{%- assign mp_ai = '（AI 生成，非真人照片）' -%}{%- endif -%}
 {%- assign mp_title = mp_shot.title -%}
 {%- assign mp_w = mp_shot.width -%}{%- assign mp_h = mp_shot.height -%}
 {%- if mp_h > mp_w -%}{%- assign mp_orient = 'portrait' -%}{%- else -%}{%- assign mp_orient = 'landscape' -%}{%- endif -%}
