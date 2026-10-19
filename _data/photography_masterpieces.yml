@@ -46,9 +46,9 @@ signature_works:
     image: /assets/img/flickr/309437621.jpg
     width: 1023
     height: 655
-    alt: 安達熙的黑白近景人像
+    alt: 安達熙側臉望向遠方的彩色近景人像，背景是綠色散景
     flickr_url: https://www.flickr.com/photos/swanky-hsiao/309437621/
-    theme: 黑白人像
+    theme: 早期自然光
   - photo_id: "1664024637"
     title: 黑白與凝視
     year: 2007
