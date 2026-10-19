@@ -112,7 +112,7 @@ V&A 的收藏研究提到，1865 年的展覽目錄已經記錄肖像小畫受�
 
 這個方向也不全停在想像。最近我以《金瓶梅》的李瓶兒為主角，完成了兩輯現代改編的數位寫真，收在網站的<a href="{{ '/jinpingmei/photobook/' | relative_url }}">寫真館</a>。**這裡的李瓶兒是 AI 生成的虛構成年角色，不是真人模特兒的數位分身，也不是原著情節的實景紀錄。**[[9]](https://swanky.github.io/jinpingmei/photobook/)
 
-第一輯《不趕時間的你》，把她放進虛構海濱小鎮，從街角、咖啡店一路走到海岸。36 張影像，想做的是一段有相遇感、也有停留感的觀看經驗。[[10]](https://www.flickr.com/photos/swanky-hsiao/albums/72177720335581117/)
+第一輯《不趕時間的你》，把她放進海邊小鎮，從街角、咖啡店一路走到海岸。36 張影像，想做的是一段有相遇感、也有停留感的觀看經驗。[[10]](https://www.flickr.com/photos/swanky-hsiao/albums/72177720335581117/)
 
 <figure>
   <a href="{% include flickr/url.html image="/jinpingmei/photobook/li-pinger-no-hurry/images/LP36-04.webp" %}" class="portfolio-lightbox" data-gallery="virtual-agency-works" data-type="image">
