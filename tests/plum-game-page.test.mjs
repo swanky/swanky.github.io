@@ -32,7 +32,8 @@ test('首頁創作區連向《金瓶異夢》十部曲、描述不再停在「�
   assert.match(selectedWorks, /title: 《金瓶異夢：十二花界》/);
   assert.match(selectedWorks, /url: "\/games\/plum\/#literary-cycle"/);
   assert.match(selectedWorks, /EP01 至 EP10 已全數公開/);
-  assert.match(selectedWorks, /ai_note: AI 生成影像與語音/);
+  // 2026-10-19 站主：首頁作品卡不強制顯示 AI 標記（遊戲頁內「AI 生成影像與語音／不是遊戲實機畫面」的區分照留）
+  assert.doesNotMatch(selectedWorks, /ai_note:/);
   assert.doesNotMatch(selectedWorks, /首集/);
   assert.doesNotMatch(selectedWorks, /youtube(?:-nocookie)?\.com\/embed/);
 });

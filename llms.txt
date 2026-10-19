@@ -17,9 +17,8 @@
 ## 攝影寫真 Photography
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
-- [創作筆記](https://swanky.github.io/photography/notes/): 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。攝影史與其他攝影師另外整理在「看懂寫真」。
+- [創作筆記](https://swanky.github.io/photography/notes/): 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及怎麼用 AI 做寫真。攝影史與其他攝影師另外整理在「看懂寫真」。
 - [好的寫真集，內頁很少說話](https://swanky.github.io/photography/photobook-pages-say-less/): 寫真集的照片頁要不要放圖說？我把一本寫真集從 1,661 字減到 559 字、照片頁不留字，整理字該搬去哪裡、節奏靠什麼撐。
-- [AI 寫真集，我怎麼標示、怎麼負責](https://swanky.github.io/photography/ai-photobook-disclosure-responsibility/): 做 AI 寫真集，要在哪裡標示、一句揭露要寫什麼？分享我在作品頁、相簿與電子書的標示做法，以及做虛構角色時給自己的三條原則。
 - [日本寫真為什麼粗粒、晃動、像日記？從 1930 年代讀起的前傳](https://swanky.github.io/photography/japanese-photography-history-primer/): 日本寫真為什麼粗粒、晃動、像日記？從 1930 年代新興寫真、1950 年代戰後寫實埋下的兩個問題讀起，再看 1968 年《Provoke》之後三位創辦人各走各的路。1959 年起的館藏作品，另有「看懂寫真」的章節。
 - [拍人要站多近？聽荒木經惟、佐內正史、川島小鳥自己說](https://swanky.github.io/photography/presence-araki-sanai-kawashima/): 人像要有「在場感」，關鍵常常不是表情，而是拍的人站多近。這篇只做一件事：聽荒木經惟、佐內正史、川島小鳥在訪談裡怎麼說距離，再整理成拍照時可以直接試的四個練習。
 - [看懂寫真](https://swanky.github.io/photography/learn/): 給喜歡人像與寫真的人：讀攝影師、寫真集與攝影史的筆記，每一篇都查過出處、附原作連結；從想拍出的感覺或想看懂的書進門，另有攝影師與模特兒圖鑑。

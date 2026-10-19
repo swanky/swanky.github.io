@@ -8,8 +8,6 @@ tags: [photobook, editing, layout, sequencing]
 layout: article
 learn_kit: true
 use_glightbox: true
-related_posts:
-  - ai-photobook-disclosure-responsibility
 description: "寫真集的照片頁要不要放圖說？我把一本寫真集從 1,661 字減到 559 字、照片頁不留字，整理字該搬去哪裡、節奏靠什麼撐。"
 keywords: 寫真集編排, 寫真集製作, 圖說, 攝影書, 照片排序, 青山裕企, young again, 窗外還亮著, 史旺基
 extra_css: |
@@ -75,9 +73,7 @@ hero_image: true
 
 ## 一本書，字少了三分之二 {#window-still-lit}
 
-我拿自己的寫真集《窗外還亮著》來試。這本 36 張、8 章，原本每張照片頁都有編號、標題和圖說。這是一本 AI 創作的寫真集，以下照抄作品頁上的揭露句：
-
-> 江映希為22歲原創成年虛構角色。人物、場景與事件由AI創作，非真人實拍；窗外城市為創作場景，不指涉真實拍攝地點。以方形、冷光與柔和層次轉譯中片幅觀看感，非真實底片拍攝。史旺基 Swanky 企劃、視覺統籌、選片與審定，AI協作生成與編排。
+我拿自己的寫真集《窗外還亮著》來試。這本 36 張、8 章，原本每張照片頁都有編號、標題和圖說。
 
 發布前，我只改版面：照片、順序、章節都不動，把字重新安排。前後對照如下：
 
@@ -94,7 +90,7 @@ hero_image: true
   <a class="portfolio-lightbox" data-gallery="photobook-pages-say-less" data-type="image" href="{{ '/assets/img/photo-notes/photobook-pages-say-less-words-move.svg' | relative_url }}">
     <picture>
       <source media="(max-width: 767px)" srcset="{{ '/assets/img/photo-notes/photobook-pages-say-less-words-move-m.svg' | relative_url }}">
-      <img src="{{ '/assets/img/photo-notes/photobook-pages-say-less-words-move.svg' | relative_url }}" width="1200" height="760" alt="《窗外還亮著》改版只動版面：照片頁的標題搬進書末圖目錄，全書字數從 1,661 字減到 559 字；只有 AI 創作的揭露不搬，留在作品頁開場與書末，電子書封面也印一行">
+      <img src="{{ '/assets/img/photo-notes/photobook-pages-say-less-words-move.svg' | relative_url }}" width="1200" height="760" alt="《窗外還亮著》改版只動版面：照片頁的標題搬進書末圖目錄，全書字數從 1,661 字減到 559 字；留下來的只有每章一行章名，和書末的署名與作品說明">
     </picture>
   </a>
   <figcaption>圖 2：照片頁不留字，標題搬到書末的圖目錄 <span class="ae-fig__zoom">點圖放大</span></figcaption>
@@ -119,7 +115,7 @@ hero_image: true
 - **點開放大時的說明**：看完照片、想多知道一點時才出現。
 - **圖片的替代文字**：給用螢幕閱讀器的讀者。
 
-只有一類字我不搬走：**AI 創作的揭露。**它在作品頁開場和書末各出現一次，電子書封面也印了一行。這是讀者在看之前就該知道的事，跟「讓照片自己說話」是兩回事。
+真正留下來的字只有兩種：**每章一行章名**，和**書末的署名與作品說明**。前者幫讀者換章，後者交代誰做了這本書，都不會擋在照片前面。
 
 ## 拿掉字以後，節奏靠什麼 {#rhythm}
 
@@ -149,7 +145,7 @@ hero_image: true
 
 「照片頁不放字」是我現在的預設，不是規定。這幾種情況我會留：
 
-- **揭露與版權。** 一定要有，放在封面、開場、書末這些讀者一定會經過的地方。
+- **署名與版權。** 一定要有，放在封面或書末這些讀者一定會經過的地方。
 - **字本身就是作品的一部分。** 有些攝影書刻意讓文字和照片對話。這時留字是創作決定，要在企劃時就想清楚為什麼，而不是版型剛好有一格。
 - **章節分隔。** 需要的話，一行就好。
 
@@ -200,7 +196,6 @@ hero_image: true
 - [江映希《窗外還亮著》作品頁]({{ '/photography/jiang-yingxi-window-still-lit/' | relative_url }})：照片下方不放字，標題與一句話收在書末圖目錄。
 - [川內倫子《うたたね》：幾乎不說話的寫真集，怎麼讀]({{ '/photography/learn/photobook/utatane/' | relative_url }})：一本真的這樣做的書，跨頁怎麼排、讀者怎麼翻。
 - [創作筆記：所有文章]({{ '/photography/notes/' | relative_url }})
-- [AI 寫真集，我怎麼標示、怎麼負責]({{ '/photography/ai-photobook-disclosure-responsibility/' | relative_url }})：為什麼揭露不跟著圖說一起搬走。
 
 ## 參考資料 {#references}
 

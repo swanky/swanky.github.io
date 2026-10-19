@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1168" width="600" height="1168" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
 <title id="t">照片頁的字，換了地方</title>
-<desc id="d">《窗外還亮著》36 張、8 章，改版只動版面，照片、順序、章節都不動。每張照片頁原本的編號、標題和一句圖說都拿掉，標題搬進書末的圖目錄，一句話留在網站版；章節頁從一段引文改成一行章名。全書字數從 1,661 字減到 559 字，少了約三分之二。只有一類字不搬：AI 創作的揭露，留在作品頁開場和書末，電子書封面也印一行。</desc>
+<desc id="d">《窗外還亮著》36 張、8 章，改版只動版面，照片、順序、章節都不動。每張照片頁原本的編號、標題和一句圖說都拿掉，標題搬進書末的圖目錄，一句話留在網站版；章節頁從一段引文改成一行章名。全書字數從 1,661 字減到 559 字，少了約三分之二。留下來的只有每章一行章名，和書末的署名與作品說明。</desc>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E5A300"/></marker></defs>
 <rect width="600" height="1168" fill="#FFFFFF"/>
 <text x="40" y="72" font-size="42" font-weight="700" fill="#1F2937">照片頁的字換了地方</text>
@@ -28,8 +28,8 @@
 <text x="249.50150511739918" y="774" font-size="24" font-weight="700" fill="#0E7568">559 字</text>
 <text x="64" y="812" font-size="22" font-weight="700" fill="#0E7568">少了約三分之二</text>
 <rect x="40" y="846" width="520" height="150" rx="22" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
-<text x="64" y="890" font-size="28" font-weight="700" fill="#0E7568">這一類字不搬</text>
-<text x="64" y="932" font-size="22" fill="#1F2937">AI 創作的揭露：作品頁開場與</text>
-<text x="64" y="966" font-size="22" fill="#1F2937">書末各一次，電子書封面也印一行</text>
+<text x="64" y="890" font-size="28" font-weight="700" fill="#0E7568">還留著的字</text>
+<text x="64" y="932" font-size="22" fill="#1F2937">每章一行章名，和書末的</text>
+<text x="64" y="966" font-size="22" fill="#1F2937">署名與作品說明</text>
 <rect x="40" y="1016" width="520" height="116" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/><text x="300.0" y="1066" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#1F2937">照片頁一個字都沒有，</tspan></text><text x="300.0" y="1101" font-size="26" font-weight="700" text-anchor="middle"><tspan fill="#8A5D00">標題收進書末圖目錄</tspan></text>
 </svg>

@@ -2,8 +2,10 @@
 layout: home
 title: 創作筆記
 seo_title: 史旺基創作筆記｜自己的拍法、寫真集製作與 AI 寫真
-description: 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。攝影史與其他攝影師另外整理在「看懂寫真」。
+description: 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及怎麼用 AI 做寫真。攝影史與其他攝影師另外整理在「看懂寫真」。
 nav_active: photography
+redirect_from:
+  - /photography/ai-photobook-disclosure-responsibility/
 breadcrumbs:
   - name: 主頁
     url: /
@@ -67,7 +69,7 @@ notes_planned:
 {% assign ai_pins = "ai-photographer-judgment-character-photobook|ai-photography-virtual-agency" | split: "|" %}
 {% assign shown_groups = 0 %}{% capture notes_body %}{% for group in note_groups %}{% capture group_items %}{% for note in all_notes %}{% assign topic = note.notes_topic | default: "早年隨筆" %}{% if topic == group %}{% include photography/notes-row.html note=note %}{% endif %}{% endfor %}{% if group == "AI × 攝影" %}{% for pin in ai_pins %}{% for p in site.posts %}{% if p.url contains pin %}{% unless p.categories contains "photography" %}{% include photography/notes-row.html note=p %}{% endunless %}{% endif %}{% endfor %}{% endfor %}{% endif %}{% assign planned = page.notes_planned | where: "group", group %}{% for item in planned %}<div class="photo-notes-row photo-notes-row--soon"><strong>{{ item.title }}</strong><span>{{ item.note }}</span><small>整理中</small></div>{% endfor %}{% endcapture %}{% assign group_items_trim = group_items | strip %}{% if group_items_trim != "" %}{% assign shown_groups = shown_groups | plus: 1 %}{% assign group_id = "notes-group-" | append: forloop.index %}{% assign cover = page.notes_covers | where: "group", group | first %}{% assign cover_href = nil %}{% if cover.href %}{% assign cover_href = cover.href | relative_url %}{% elsif cover.post %}{% assign cover_needle = "/" | append: cover.post | append: "/" %}{% assign cover_post = site.posts | where_exp: "p", "p.url contains cover_needle" | first %}{% if cover_post %}{% assign cover_href = cover_post.url | relative_url %}{% endif %}{% endif %}{% assign group_tone = shown_groups | modulo: 2 %}<section class="photo-author-section photo-notes-group{% if group_tone == 1 %} photo-author-light{% endif %}{% if cover %} has-cover{% endif %}" id="{{ group_id }}" data-notes-group><div class="photo-author-shell photo-notes-grid"><h2 class="photo-notes-title">{{ group }}。</h2>{% if cover %}<figure class="photo-notes-cover">{% if cover_href %}<a href="{{ cover_href }}">{% endif %}<img src="{{ cover.src | relative_url }}" width="{{ cover.width }}" height="{{ cover.height }}" alt="{{ cover.alt }}" decoding="async">{% if cover_href %}</a>{% endif %}<figcaption>{% if cover_href %}<a href="{{ cover_href }}">{{ cover.caption }}</a>{% else %}{{ cover.caption }}{% endif %}</figcaption></figure>{% endif %}<div class="photo-notes-list">{{ group_items_trim }}</div></div></section>{% endif %}{% endfor %}{% endcapture %}
 <main id="main" class="photo-author-page photo-author-subpage">
-  {% include photography/subpage-hero.html eyebrow="CREATIVE NOTES · 創作筆記" title="創作筆記" intro="史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及 AI 寫真怎麼標示、怎麼負責。" %}
+  {% include photography/subpage-hero.html eyebrow="CREATIVE NOTES · 創作筆記" title="創作筆記" intro="史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及怎麼用 AI 做寫真。" %}
   {% include photography/subpage-nav.html %}
   <nav class="photo-notes-filter" aria-label="創作筆記分類"><div class="photo-author-shell"><span>跳到分類</span><div>{% for group in note_groups %}{% assign gid = "notes-group-" | append: forloop.index %}{% if notes_body contains gid %}<a href="#{{ gid }}">{{ group }}</a>{% endif %}{% endfor %}</div></div></nav>
   {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}
