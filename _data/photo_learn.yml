@@ -21,8 +21,8 @@ launched: true    # 導覽列等全站入口的開關：false 時正式站不顯
 name: 看懂寫真
 subtitle: 史旺基的攝影學習筆記
 url: /photography/learn/
-photographers_url: /photography/learn/photographers/   # 2026-10-09 起暫不上線（published: false），首頁不連結
-models_url: /photography/learn/models/               # 2026-10-09 圖鑑格式樣本，published: false，首頁不連結
+photographers_url: /photography/learn/photographers/   # 目錄頁；每位攝影師一頁在 <此網址><id>/（2026-10-20 起）
+models_url: /photography/learn/models/               # 多人同頁
 
 # 三個入口：依讀者身分進門
 doors:

@@ -2,6 +2,7 @@
 
 一位人物 = 一個檔 `_data/photo_atlas/<id>.yml`，檔名（不含副檔名）要等於檔內的 `id`。
 頁面（`photography/learn/photographers/index.html`、`photography/learn/models/index.html`）只在 front matter 用 `people_ids: [a, b, c]` 列出要收的人（順序＝頁面順序）。
+攝影師圖鑑自 2026-10-20 起一人一頁：目錄頁加 `atlas_mode: index`，每位另有 `photography/learn/photographers/<id>/index.html`（front matter 寫 `atlas_person: <id>`、`atlas_parent: /photography/learn/photographers/`）；新增一位攝影師時，兩處都要加，並同步 `llms.txt`。模特兒圖鑑仍是多人同頁。
 版型：`_layouts/photo-learn-atlas.html`。各 agent 只改自己那一位的檔，不要動頁面 front matter、版型、CSS。
 （Jekyll 只讀 yml／json／csv 當資料，這份 .md 會被忽略，不會出錯。）
 

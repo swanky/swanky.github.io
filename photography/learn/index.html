@@ -3,6 +3,10 @@ layout: home
 title: 看懂寫真
 seo_title: 看懂寫真｜史旺基的攝影學習筆記：攝影師、模特兒與寫真集導讀
 description: 給喜歡人像與寫真的人：讀攝影師、寫真集與攝影史的筆記，每一篇都查過出處、附原作連結；從想拍出的感覺或想看懂的書進門，另有攝影師與模特兒圖鑑。
+og_image: /assets/img/photo-learn/og/learn.jpg
+og_image_width: 1200
+og_image_height: 630
+og_image_alt: "「看懂寫真」社群預覽圖：史旺基的攝影學習筆記"
 keywords: 看懂寫真,攝影師圖鑑,模特兒圖鑑,寫真集導讀,攝影史,人像攝影,攝影學習,藝術筆記,史旺基
 permalink: /photography/learn/
 nav_active: photography
@@ -160,7 +164,7 @@ breadcrumbs:
         {%- for p in pho_people %}
         {%- assign w = nil -%}{%- for x in p.works -%}{%- if w == nil and x.img -%}{%- assign w = x -%}{%- endif -%}{%- endfor %}
         <li class="pl-atlas-person">
-          <a class="pl-atlas-person-link" href="{{ zone.photographers_url | relative_url }}#{{ p.id }}">
+          <a class="pl-atlas-person-link" href="{{ zone.photographers_url | append: p.id | append: '/' | relative_url }}">
             <span class="pl-atlas-mat">
               {%- if w %}<img src="{{ w.img | relative_url }}" width="{{ w.img_w }}" height="{{ w.img_h }}" alt="{% if w.alt %}{{ w.alt | escape }}{% else %}{{ p.name }}〈{{ w.title | escape }}〉（{{ w.year }}，{{ w.where }}館藏）{% endif %}" loading="lazy" decoding="async">
               {%- else %}<span class="pl-atlas-mat-text" aria-hidden="true">{{ p.name }}</span>{% endif -%}

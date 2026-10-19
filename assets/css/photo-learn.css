@@ -930,3 +930,58 @@
   .pl-atlas-models .pl-atlas-person-link { min-height: 0; }
   .pl-art-card h2 { font-size: 1.8rem; overflow-wrap: anywhere; }
 }
+
+/* ══ 攝影師圖鑑一人一頁（2026-10-20）：目錄頁名冊、單人頁首屏、上一位／下一位 ══ */
+/* 單人頁首屏：名字＋一句主題＋年份地點（人物卡、生平、作品在下方 atlas-person 段） */
+.atlas-single-head { max-width: 52rem; }
+.atlas-single-head h1 { margin: 0; color: #fff; font-family: var(--font-display); font-size: clamp(2.3rem, 5.2vw, 4.4rem); font-weight: 600; line-height: 1.12; letter-spacing: -.015em; overflow-wrap: anywhere; }
+.atlas-title-orig { display: block; margin-top: 6px; color: #c8c3b9; font-size: .42em; font-weight: 400; letter-spacing: .02em; }
+.atlas-single-theme { margin: 22px 0 0; color: var(--photo-gold-light); font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-weight: 700; line-height: 1.6; }
+.atlas-single-meta { margin: 10px 0 0; color: #c8c3b9; font-size: .95rem; line-height: 1.7; }
+.atlas-single-meta span { display: block; color: #aaa69d; font-size: .85rem; }
+.atlas-person--single { background: var(--photo-paper); }
+.atlas-person--single .atlas-view { margin-top: 1rem; }
+
+/* 目錄頁名冊：一列一位，整列可點 */
+.atlas-roster-sec { padding: clamp(48px, 6vw, 84px) 0 clamp(56px, 7vw, 96px); }
+.atlas-roster-sec .atlas-section-title { color: #1a1917; }
+.atlas-roster { margin: 0; padding: 0; list-style: none; border-top: 2px solid #1a1917; counter-reset: none; }
+.atlas-roster-item { border-bottom: 1px solid #cfc7b8; scroll-margin-top: 90px; }
+.atlas-roster-link { display: grid; grid-template-columns: 4.2rem minmax(0, .9fr) minmax(0, 1.4fr); grid-template-areas: "num who view" "num who go"; gap: 6px clamp(20px, 3vw, 44px); padding: clamp(22px, 2.6vw, 32px) 12px; color: #1a1917; text-decoration: none; transition: background-color .2s ease; }
+.atlas-roster-link:hover, .atlas-roster-link:focus-visible { background: #ece6da; }
+.atlas-roster-num { grid-area: num; color: #8a6a00; font-family: var(--font-display); font-size: clamp(2rem, 3.4vw, 2.8rem); font-style: italic; line-height: 1; }
+.atlas-roster-who { grid-area: who; display: grid; align-content: start; gap: 4px; }
+.atlas-roster-theme { color: #7a5200; font-size: .82rem; font-weight: 700; letter-spacing: .08em; line-height: 1.6; }
+.atlas-roster-name { font-family: var(--font-display); font-size: clamp(1.45rem, 2.4vw, 2rem); font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.atlas-roster-name span { display: block; margin-top: 2px; color: #4f4c46; font-family: var(--font-sans); font-size: .9rem; font-weight: 400; }
+.atlas-roster-meta { color: #5d5a53; font-size: .88rem; line-height: 1.6; }
+.atlas-roster-view { grid-area: view; color: #3d3a35; line-height: 1.85; }
+.atlas-roster-view b { display: block; margin-bottom: 4px; color: #7a5200; font-size: .78rem; letter-spacing: .1em; }
+.atlas-roster-go { grid-area: go; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; padding-top: 8px; color: #5d5a53; font-size: .88rem; }
+.atlas-roster-go em { color: #8B5E00; font-style: normal; font-weight: 700; text-decoration: underline; text-decoration-color: #c99a1a; text-underline-offset: 4px; }
+.atlas-roster-link:hover .atlas-roster-go em { color: #1a1917; }
+@media (max-width: 767px) {
+  .atlas-roster-link { grid-template-columns: 2.8rem minmax(0, 1fr); grid-template-areas: "num who" "view view" "go go"; gap: 10px 14px; padding: 22px 4px; }
+  .atlas-roster-num { font-size: 1.8rem; }
+}
+
+/* 單人頁頁尾：上一位／下一位＋全冊目錄（深色帶） */
+.atlas-pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: clamp(32px, 4vw, 48px); }
+.atlas-pager-link { display: grid; gap: 4px; min-height: 44px; padding: 18px 20px; border: 1px solid var(--photo-line); background: var(--photo-surface); color: #ece7dd; text-decoration: none; }
+.atlas-pager-link:hover b { color: var(--photo-gold-light); }
+.atlas-pager-link small { color: var(--photo-gold-light); font-size: .8rem; font-weight: 700; letter-spacing: .1em; }
+.atlas-pager-link b { font-size: 1.08rem; line-height: 1.45; }
+.atlas-pager-link span { color: #aaa69d; font-size: .86rem; line-height: 1.6; }
+.atlas-pager-next { grid-column: 2; text-align: right; }
+.atlas-pager-empty { visibility: hidden; border: 0; background: none; }
+.atlas-index--foot { margin-bottom: clamp(36px, 5vw, 56px); }
+.atlas-index--foot ol { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 28px; }
+.atlas-index--foot li + li { border-top: 0; }
+.atlas-index--foot li { border-bottom: 1px solid #2b2b27; }
+.atlas-index--foot a[aria-current] b { color: var(--photo-gold-light); }
+.atlas-index--foot a[aria-current]::after { content: "這一頁"; margin-left: auto; color: #8d887f; font-size: .78rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .atlas-pager { grid-template-columns: minmax(0, 1fr); }
+  .atlas-pager-next { grid-column: 1; }
+  .atlas-pager-empty { display: none; }
+}
