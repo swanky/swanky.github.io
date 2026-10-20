@@ -22,7 +22,14 @@
 - [日本寫真為什麼粗粒、晃動、像日記？從 1930 年代讀起的前傳](https://swanky.github.io/photography/japanese-photography-history-primer/): 日本寫真為什麼粗粒、晃動、像日記？從 1930 年代新興寫真、1950 年代戰後寫實埋下的兩個問題讀起，再看 1968 年《Provoke》之後三位創辦人各走各的路。1959 年起的館藏作品，另有「看懂寫真」的章節。
 - [拍人要站多近？聽荒木經惟、佐內正史、川島小鳥自己說](https://swanky.github.io/photography/presence-araki-sanai-kawashima/): 人像要有「在場感」，關鍵常常不是表情，而是拍的人站多近。這篇只做一件事：聽荒木經惟、佐內正史、川島小鳥在訪談裡怎麼說距離，再整理成拍照時可以直接試的四個練習。
 - [看懂寫真](https://swanky.github.io/photography/learn/): 給喜歡人像與寫真的人：讀攝影師、寫真集與攝影史的筆記，每一篇都查過出處、附原作連結；從想拍出的感覺或想看懂的書進門，另有攝影師與模特兒圖鑑。
-- [攝影師圖鑑](https://swanky.github.io/photography/learn/photographers/): Avedon、Penn、Lindbergh、Tim Walker、柯錫杰、細江英公、荒木經惟：每一位都帶你到美術館的館藏頁看原作，說清楚先看哪裡、拍照的人能帶走什麼。
+- [攝影師圖鑑](https://swanky.github.io/photography/learn/photographers/): Avedon、Penn、Lindbergh、Tim Walker、柯錫杰、細江英公、荒木經惟：每一位都帶你到美術館的館藏頁看原作，說清楚先看哪裡、拍照的人能帶走什麼。一人一頁：
+  - [Richard Avedon](https://swanky.github.io/photography/learn/photographers/avedon/): 讓人動起來，或把人放到白牆前。他前半生把時尚照從攝影棚帶到街頭、賭場和馬戲團，後來又把人收回一面白牆前，只剩姿態和表情。同一位攝影師，示範了兩種完全相反的拍人方法，很適合拿來對照自己習慣哪一種。
+  - [蒂姆．沃克 Tim Walker](https://swanky.github.io/photography/learn/photographers/walker/): 先蓋一個世界，再請人住進去。他的照片常常是先搭好一整個場景，再請模特兒走進去「住」。看他，學的是場景、服裝、光怎麼一起替人物說故事；也看得到一張時尚照背後，布景師、造型師、髮妝和模特兒是怎麼一起工作的。
+  - [柯錫杰 Ko Si-chi](https://swanky.github.io/photography/learn/photographers/ko-si-chi/): 把人放進風景，把風景收成色塊。他拍過台灣鄉間的紀實、紐約的時尚雜誌，五十歲才把工作室關掉，到南歐和北非拍出被稱為「心象攝影」的作品。看他，是看一位攝影師怎麼把眼前的風景，拍成自己心裡的樣子；而且他的作品就在國家攝影文化中心，點開就看得到。
+  - [細江英公 Eikoh Hosoe](https://swanky.github.io/photography/learn/photographers/hosoe/): 把人放進真實的地方，讓他演一個角色。他和舞者土方巽一起，把真的稻田、農舍和路過的村民變成舞台。照片看起來像紀錄，其實是一場演出。拍人像的人看他，學的是「不用搭景，去找一個真的地方，再讓人在裡面演」。
+  - [荒木經惟 Nobuyoshi Araki](https://swanky.github.io/photography/learn/photographers/araki/): 把自己的生活拍成日記。他說是妻子陽子讓他成為攝影家，從新婚旅行一路拍到她過世，把私生活整個變成作品。這種拍法的力量和問題在同一個地方：鏡頭前的人，有沒有說話的份。所以這一位要同時看兩件事：他的照片，以及 2018 年模特兒 KaoRi 的公開陳述。
+  - [Irving Penn](https://swanky.github.io/photography/learn/photographers/penn/): 把背景收到最少，讓人和東西自己說話。他拍時尚、拍名人，也拍菸屁股、櫻桃和口紅，用的幾乎是同一套方法：一個牆角或一塊素布，畫面裡只留必要的東西。看他，學的是「拿掉」：背景拿掉之後還站得住的照片，才是真的構圖好。
+  - [Peter Lindbergh](https://swanky.github.io/photography/learn/photographers/lindbergh/): 黑白、不修飾，把時尚照拍成真實的人。他的照片多半是黑白的，模特兒常常素著一張臉、頭髮被風吹亂，站在工廠、空地或街頭。看他，學的是怎麼讓一個人「不完美」地好看：不靠修圖，靠現場、光和對方真實的狀態。
 - [模特兒圖鑑](https://swanky.github.io/photography/learn/models/): 從模特兒這一端看照片：同一個人，在不同攝影師面前怎麼變成不同的樣子。收錄 Dovima、Lisa Fonssagrives、Kate Moss，每一件作品都附美術館的作品頁或展覽頁。
 - [Deborah Turbeville：拍得霧一點、舊一點，照片就有了故事](https://swanky.github.io/photography/learn/style/deborah-turbeville/): 每張都要笑、要乾淨、要完美？拆解 Deborah Turbeville 的霧面、褪色、疏離感人像：哪些在現場做、哪些是拍完之後的處理，能借什麼、不能抄什麼，以及怎麼換成文字描述。
 - [Herb Ritts：走到太陽底下，讓影子替你畫線條](https://swanky.github.io/photography/learn/style/herb-ritts/): 一遇到大太陽就躲進樹蔭？拆解 Herb Ritts 的戶外強光人像：看什麼、硬光和柔光差在哪、能借的現場動作、不能抄什麼，以及怎麼換成文字描述。
