@@ -22,8 +22,13 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
 {%- capture hero_eyebrow %}MYTHS IN THE MAKING · VOL.{{ vol_no }} · {{ book.count }} PHOTOGRAPHS{% endcapture -%}
 {%- capture hero_intro %}《{{ series.title }}》第{{ vol_names[vol_idx] }}冊｜{{ book.title_en }}{% endcapture -%}
 {%- capture hero_primary %}開始閱讀 {{ book.count }} 張{% endcapture -%}
-{%- assign sources_zh = book.sources_zh | default: book.source_note_zh -%}
-{%- assign sources_en = book.sources_en | default: book.source_note_en -%}
+{%- comment -%} sources_* 與 source_note_* 可並存（第三冊）：先列來源，再列閱讀說明；只有其一就只列那一欄。 {%- endcomment -%}
+{%- assign src_blocks_zh = '' | split: ',' -%}
+{%- if book.sources_zh -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.sources_zh -%}{%- endif -%}
+{%- if book.source_note_zh -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.source_note_zh -%}{%- endif -%}
+{%- assign src_blocks_en = '' | split: ',' -%}
+{%- if book.sources_en -%}{%- assign src_blocks_en = src_blocks_en | push: book.sources_en -%}{%- endif -%}
+{%- if book.source_note_en -%}{%- assign src_blocks_en = src_blocks_en | push: book.source_note_en -%}{%- endif -%}
 {%- assign prev_v = nil -%}{%- assign next_v = nil -%}
 {%- for v in series.volumes -%}
   {%- if v.data == include.book -%}
@@ -114,19 +119,19 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
         <div class="smm-col">
           {% assign lines = book.story_zh | split: "
 " %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}
-          {% if sources_zh %}
+          {% if src_blocks_zh.size > 0 %}
           <h3>來源與參考</h3>
-          {% assign lines = sources_zh | split: "
-" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}
+          {% for block in src_blocks_zh %}{% assign lines = block | split: "
+" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}{% endfor %}
           {% endif %}
         </div>
         <div class="smm-col" lang="en">
           {% assign lines = book.story_en | split: "
 " %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}
-          {% if sources_en %}
+          {% if src_blocks_en.size > 0 %}
           <h3>Sources</h3>
-          {% assign lines = sources_en | split: "
-" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}
+          {% for block in src_blocks_en %}{% assign lines = block | split: "
+" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}{% endfor %}
           {% endif %}
         </div>
       </div>
