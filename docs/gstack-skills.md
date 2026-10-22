@@ -5,9 +5,11 @@
 
 ## 現況（2026-10-22 盤點）
 
-- 安裝版本 `1.62.0.0`（2026-08-14 升級），最新版是 `1.79.0.0`。`/gstack-upgrade` 目前關閉，要升級得先開啟它，或手動更新。
-- 開關在全域設定 `~/.claude/settings.json` 的 `skillOverrides`（影響所有專案；依 `docs/agents/maintenance.md` §1，改動前先問站主）。
-- **目前開啟的只有三個**：`/browse`、`/benchmark`、`/design-review`。其餘 gstack skill 都是 `off`，下方 Tier 2、Tier 3 的建議要用時，得先在 `skillOverrides` 開啟。
+- 安裝版本 `1.91.176.0`（2026-10-22 由 1.62 升級；需要 Bun 1.4.2 以上，本機已升到 1.4.4，Bun 太舊時 setup 會當掉）。`/gstack-upgrade` 關閉，手動升級：`cd ~/.claude/skills/gstack && git stash && git fetch origin && git reset --hard origin/main && ./setup < /dev/null`。
+- 開關在全域設定 `~/.claude/settings.json` 的 `skillOverrides`（影響所有專案；依 `docs/agents/maintenance.md` §1，改動前先問站主）。升級後原本的 off 設定仍在。
+- **開啟中**：`/browse`、`/benchmark`、`/design-review`，加上 1.91 新增、預設開啟的四個：`/deslop-shared-libs`（找可抽成共用的程式）、`/test-audit`（找低價值或重複的測試）、`/eval-plan`（規劃付費 eval，會花 API 費用）、`/connect-chrome`（啟動 gstack 自己的瀏覽器）。其餘 gstack skill 都是 `off`，下方 Tier 2、Tier 3 的建議要用時，得先在 `skillOverrides` 開啟。
+- 升級時 setup 自動在 `settings.json` 註冊了一個 Stop hook（`_gstack_source: gstack-timeline-stop`，每次回合結束跑一次本機 timeline 紀錄，失敗也不擋 session）。移除：`~/.claude/skills/gstack/bin/gstack-settings-hook remove-source --source gstack-timeline-stop`。
+- `/cso` 在本機不可用（缺 Visual Studio C++ Build Tools）。舊版 53 個 SKILL.md 被備份到 `~/.gstack/backups/skills/20261022T212715/`（內容與舊版 gstack 相同，不是站主改過的）。
 - 完整盤點：`docs/skills-audit-2026-10-22/user-skills-audit.md`（私有）。
 
 ## 使用前要知道的行為（與本專案規則衝突處）
