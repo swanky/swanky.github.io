@@ -14,7 +14,7 @@ Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep st
 
 Execute autonomously; start without asking. Read relevant code first; make reasonable assumptions and proceed. Do the full job (edit, test, build); prefer the smallest maintainable diff. Final report: files changed + why, verification output, remaining risks.
 
-- **派工（context 衛生）**: 派工是用 token 換 context 的交易，兩者都稀缺——不預設派、也不預設自己吞。預估讀 **>8 檔或 >1500 行**、**位置未知的開放式翻找**、批次改 **>2 檔**、或要**看任何圖檔**（使用者貼進對話的圖除外）→ 派 subagent，主線程只收結論＋file:line；**派工時 `model` 必填**（搜尋／機械修改用 haiku/sonnet，禁止繼承主線程模型），相關任務合併成一個 agent 派出（規則 `docs/agents/dispatch.md`，模板 `docs/agents/delegation-templates.md`）。已知位置的中量讀取主線程自己讀（吃 prompt cache 比派工便宜）。可能 >200 行的指令輸出一律截尾（`cmd 2>&1 | tail -30`）。
+- **派工（context 衛生）**: 派工是用 token 換 context 的交易，兩者都稀缺——不預設派、也不預設自己吞。預估讀 **>8 檔或 >1500 行**、**位置未知的開放式翻找**、批次改 **>2 檔**（先問能不能寫成腳本自己跑，寫不成才派）、或要**看任何圖檔**（使用者貼進對話的圖除外）→ 派 subagent，主線程只收結論＋file:line；**派工時 `model` 必填**（搜尋／機械修改用 haiku/sonnet，禁止繼承主線程模型），相關任務合併成一個 agent 派出（規則 `docs/agents/dispatch.md`，模板 `docs/agents/delegation-templates.md`）。已知位置的中量讀取主線程自己讀（吃 prompt cache 比派工便宜）。可能 >200 行的指令輸出一律截尾（`cmd 2>&1 | tail -30`）。
 - **Plan externalization**: ≥3 步驟的工作，開工前把步驟清單寫進 scratchpad 計畫檔，每完成一步立即更新；compaction 後第一動作＝重讀計畫檔。
 - **Done ＝ 改了＋驗了＋證據在手**: never report「已完成」without pasteable verification output——缺證據就寫「已改、未驗」。**Batch the verification**: during dev use cheap checks only (`npm test`, Grep on source, `git diff`, Read); run the one full `bundle exec jekyll build` + `_site/` grep (or browser) pass **once before push**, over all changes together. 完成判準與各類產物底線驗法：`docs/agents/judgment.md` R2/R5。
 - **Mid-task check-ins**: only for the stop-list in `docs/agents/judgment.md` R3 — delete data / modify production config / push to a remote / touch secrets / 對外商業決策（價格、稱謂、品牌語氣）/ 花錢。豁免：`docs/` nested repo 的 `git push dropbox`＝本機 Dropbox 同步、非對外，照既定慣例自動執行。其餘一律自主執行到完。
@@ -49,7 +49,11 @@ Precedence when rules conflict: **user's live instruction > CLAUDE.md（適配�
 
 ## Local Skills（正本 `.agents/skills/`，`.claude/skills/` 為同步鏡像——見 Adapter 段）
 
-- `/sync-social-article` — sync a LinkedIn Pulse / X post (or fuse both) into `_posts/`. **Always use it when given LinkedIn/X links** — it encodes the working extraction paths; WebFetch only returns paraphrases (unusable) and naive scraping hits login walls.
+- `/sync-social-article` — sync a LinkedIn Pulse / X post (or fuse both) verbatim into `_posts/`. **Always use it when given LinkedIn/X links to sync**（要改寫研究成專欄用 `/website-technical-column`） — it encodes the working extraction paths; WebFetch only returns paraphrases (unusable) and naive scraping hits login walls.
 - `/s2m` — slides (PPTX/PDF) → per-page Markdown.
 - `/codex-image` — 委派本機 codex CLI 生圖（文章 banner、插畫）。**本環境唯一的生圖管道**；有人物出鏡一律照 `AGENTS.md`「品牌角色形象」附參考圖。
+- `/website-technical-column` — 研究素材→寫專欄→Owner review→發布→社群草稿的全流程。
+- `/human-design-reader` — 用本機引擎排人類圖並產出可核對的繁中解讀。
+- `/site-verify` — 建置＋真瀏覽器驗證頁面（桌機／390px），含上線後 CDN 驗證。
+- `/blast-radius`、`/interrogate`、`/ketchup` — 改動波及分析、Claude＋codex 交叉審查、長任務後補進度並列出待站主決定的事（皆改編自 pstack）。
 - gstack skills: after a visual / Human-Design-engine / perf change, *offer* the matching skill (don't run unprompted) — see `docs/gstack-skills.md`.

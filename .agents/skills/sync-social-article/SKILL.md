@@ -1,6 +1,6 @@
 ---
 name: sync-social-article
-description: 將 LinkedIn Pulse 文章或 X（Twitter）貼文／長文同步到網站的技術專欄（/technical/articles/）。支援單一來源，或兩個連結同時提供時融合成一篇（front matter 同時記錄兩個來源網址）。擷取逐字全文、下載封面圖片，建立符合專案格式的 Jekyll 文章檔案。當使用者提供 LinkedIn 或 X 文章連結，或說「同步文章」、「把這篇加到網站」、「sync linkedin」、「sync x」時觸發。
+description: 將 LinkedIn Pulse 文章或 X（Twitter）貼文／長文同步到網站的技術專欄（/technical/articles/）。支援單一來源，或兩個連結同時提供時融合成一篇（front matter 同時記錄兩個來源網址）。擷取逐字全文、下載封面圖片，建立符合專案格式的 Jekyll 文章檔案。當使用者提供 LinkedIn 或 X 文章連結，或說「同步文章」、「把這篇加到網站」、「sync linkedin」、「sync x」時觸發。只做逐字原文同步；若要把貼文改寫、研究成新的專欄長文，改用 website-technical-column。
 ---
 
 # LinkedIn / X 文章同步到技術專欄
@@ -152,7 +152,7 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 ```
 
 格式要求：
-- title 加雙引號；date 用 YYYY-MM-DD；categories 固定 `[technical]`；layout 固定 `article`
+- title 加雙引號；date 用 YYYY-MM-DD；categories 預設 `[technical]`，內容屬 AI 學習分享（Claude Code 等 AI 工具的使用心得）時用 `[claude-code]`，拿不準就問站主；layout 固定 `article`
 - `hero_image: true` 僅在有設計過的封面圖時加（沒有封面或封面是隨手圖就省略——單篇頁 banner 預設不顯示）
 - 若要**自製** banner（來源沒有可用封面時），人物一律用站上的品牌角色形象——參考圖 `assets/img/brand/swanky-mascot-live-ref.jpg`，規範見 `AGENTS.md`「品牌角色形象」段。不得自行創作角色外觀
 - `source_url` / `source_url_x` 只填實際存在的來源，各自加雙引號；X URL 去除 query string（`?s=20` 等），用 `x.com` 域名
@@ -163,9 +163,10 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 
 本站的「文章系列」成員是硬編碼在各系列 hub 頁面 front matter 的 slug 清單，不是靠文章自身的 front matter。新文章預設不屬於任何系列，需在此步驟主動評估。
 
-1. **盤點現有系列 hub**（搜尋 `technical/*/index.html` 找出 front matter 含 `_groups:` 的頁面）。目前有兩個：
-   - `technical/agentic-engineering/index.html` — front matter `agentic_groups`（分組：心法 / 引導法 / 實戰工作流）
-   - `technical/rwa/index.html` — front matter `rwa_groups`（分組：總論 / 兩大資產 / 標準與基建 / 監管與在地觀點）
+1. **盤點現有系列 hub**（搜尋 `technical/*/index.html` 找出 front matter 含 `_groups:` 的頁面；以搜尋結果為準，下列只是 2026-10-22 的現況）：
+   - `technical/agentic-engineering/index.html` — front matter `agentic_groups`（文章底部系列導覽框也讀這份名單）
+   - `technical/ai-video/index.html` — front matter `series_groups`（AI 影片製作筆記；同樣供系列導覽框使用）
+   - `technical/rwa/index.html` — front matter `rwa_groups`（只用於 hub 頁本身）
 2. 讀取並檢查這些 hub 的 front matter，理解每個系列與各分組的 heading／intro／現有文章清單。
 3. 依新文章的 title、description、keywords、內文主題，判斷它是否明確屬於某個系列的某個分組。
 4. **若判斷相關 →（不要直接改）先向使用者提出建議並等待確認**：
@@ -174,11 +175,13 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 5. **若判斷不屬於任何現有系列** → 跳過，不修改任何 hub，於最後報告註明「已評估，暫不歸入任何系列」。
 6. 不擅自新增系列或新分組；如新文章自成新主題，於報告中向使用者提議，由使用者決定。
 
-## 第八步：本地驗證 + Git commit + push
+## 第八步：本地驗證 + Git commit，push 前問站主
 
-先驗證：
+先產生列表卡片縮圖並驗證：
 
 ```bash
+pwsh -File tools/make-cover-thumbs.ps1          # 產生 assets/img/linkedin/<slug>-card.jpg（可重跑、只補缺的）
+npm test 2>&1 | tail -8
 bundle exec jekyll build 2>&1 | tail -3   # 確認無錯
 ```
 
@@ -193,15 +196,16 @@ Windows／Git Bash 陷阱：若 `bundle` wrapper 報 `No such file or directory 
 再提交（Windows 環境下，git 操作一律走 POSIX shell，避免 PowerShell 引號跳脫造成 commit message 亂碼）：
 
 ```bash
-git add _posts/<date>-<slug>.md assets/img/linkedin/<slug>.jpg
+git add _posts/<date>-<slug>.md assets/img/linkedin/<slug>.jpg assets/img/linkedin/<slug>-card.jpg
 # 若第七步有歸入系列，一併加入被修改的 hub 頁面；若本次調整過 layout/CSS 也一併加入
 git commit -m "feat(technical): add <slug> article"
-git push origin master
 ```
+
+push 到 `master` 會自動部署，屬於對外動作：回報 commit 與驗證結果，**等站主說可以再 `git push origin master`**。站主在本次呼叫時已明說「直接上線」就照做。
 
 commit message 規則：
 - 第一行：`feat(technical): add <slug> article`
-- 結尾的 AI 共同作者署名依當場執行器的既定慣例附上（本 skill 不指定模型名，見 AGENTS.md 跨 agent 原則）
+- AI 共同作者署名由各執行器層（CLAUDE.md、使用者設定）決定，本 skill 不指定（見 AGENTS.md 跨 agent 原則）
 - 不要在 commit message 裡放中文標題（避免編碼問題）
 - 若 push 失敗，回報錯誤訊息，不要重試。
 
@@ -214,7 +218,7 @@ commit message 規則：
 - ✅ 融合模式時：說明融合取捨（主體版、短版融入了什麼）
 - ✅ 下載的封面圖片路徑（用了哪邊的封面）
 - 📚 系列評估結果（建議歸入哪個系列／分組待確認，或「已評估、未歸入」）
-- ✅ Git commit hash
+- ✅ Git commit hash，以及是否已 push（未 push 就寫「等站主確認」）
 - ⚠️ 任何需要手動確認的問題（圖片下載失敗、日期不確定、X 全文擷取失敗等）
 
 ## 注意事項

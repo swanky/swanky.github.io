@@ -1,8 +1,6 @@
 ---
 name: codex-image
 description: 委派本機 codex CLI(內建 image_gen)生成或微調點陣圖(簡報配圖/插畫/示意圖),由目前 AI agent 統籌風格規範與驗收,確保與簡報內容一致。當使用者要生成新的圖片／插畫／配圖，或要修改、重生、微調一張既有的 AI 圖時觸發（不論是否點名 codex）。
-argument-hint: <圖片需求描述> [輸出路徑]
-allowed-tools: PowerShell, Read
 ---
 
 # codex-image:委派 codex CLI 生圖(orchestrator 模式)
@@ -110,34 +108,53 @@ codex exec --skip-git-repo-check -C "<非 temp 的工作目錄>" -s workspace-wr
 - **輸出檔名**:必填。codex 母檔預設存 `~/.codex/generated_images/`,prompt 沒指定目的地就不會落到工作區。
 - 結尾固定加:「存成 <路徑>,回報實際存檔的完整路徑」。
 
-輸出路徑規則(本 repo):文章 banner／封面 → `assets/img/<專案或 slug>/`;
-試稿先生到 repo 內的暫存目錄(如 `assets/img/brand/wip/`)驗收完再轉正、刪暫存——
+輸出路徑規則(本 repo):技術專欄文章 banner → `assets/img/linkedin/<slug>.jpg`(與 website-technical-column 一致);
+其他專案封面 → `assets/img/<專案或 slug>/`。
+試稿先生到 repo 內的暫存目錄 `assets/img/brand/wip/`(沒有就建立)驗收完再轉正——
 **不要生到 scratchpad**,scratchpad 在 `$TMPDIR` 下會踩到下方的 sandbox 陷阱。
+wip 目錄不進 git:收尾時刪除整個 wip 目錄,並在回報列出刪了哪些檔。
 要當日後風格基準的參考圖才放 `assets/img/brand/`。
+
+**插畫與封面先送規格、再生圖**(站主 2026-10-08 裁決,`docs/brand-book.md` §4.2):
+生圖前把每張圖的用途、畫面、出鏡角色、關鍵道具、構圖、禁止元素列成規格表,
+連同參考圖路徑交給站主確認符合他的 IP 後才呼叫 codex;頁面先放佔位框,不讓生圖卡住進度。
+
+**畫風錨點**:標竿是技術專欄 banner 的半寫實 2.5D 精修數位繪(看得到筆觸、深鈷藍科技場景加霓虹光軌、
+角色大而且在動手操作)。主參考 `assets/img/linkedin/grok-bot-model-routing.jpg`,
+生圖前先看 3–5 張近期 banner 定風格常數。否決過的畫風(平塗卡通、Arcane 3D、照片感日光)不要再提。
 
 **有人物出鏡的圖不要自己定角色規格**——站上文章 banner 固定由同一位品牌角色
 (水手服少女)出鏡,規範在 `AGENTS.md`「品牌角色形象」段:
 prompt 一律附參考圖 `assets/img/brand/swanky-mascot-live-ref.jpg`
 並寫明「keep the EXACT same girl as in that reference」,不得自創或改動髮色、紅髮帶、水手服配色。
-角色的英文描述正本在 `tools/tarot-ai-style-universal.md` §1.2。
+角色的英文描述正本在 `tools/tarot-ai-style-universal.md` §1.2,但**那段原文是歷史紀錄,含未成年字眼,不可照抄**:
+她是成年人(站主 2026-10-09 裁定),prompt 第一行一律用
+`one wholesome adult Taiwanese young woman (clearly over 18), gentle and bright expression —`,
+外觀描述其餘照 §1.2;全文不得出現 high-school、teen、about 17 等字眼。
 
 實測有效的反制:圖內文字一律在 prompt 尾端寫死
 `STRICTLY NO text, NO letters, NO Chinese characters, NO numbers, NO watermark, NO logo`
 (中文字生成幾乎必為亂碼);需要「禁止」語意時用符號描述
 (`a glowing red prohibition symbol, a circle with a diagonal slash`)而不是要模型寫字。
 
-16:9 banner 的做法:codex 只吃 1024x1024／1536x1024／1024x1536,
-所以生 **1536x1024** 並在 prompt 註明「compose so all key subjects sit inside the central 16:9 band」,
-事後用 PowerShell WIC 裁成 1536x864 轉 JPEG(裁切 y 起點依人物位置調整,
-站姿全身圖切上緣、半身圖上下均分,避免切到鞋子或頭頂)。
+banner 的做法:codex 只吃 1024x1024／1536x1024／1024x1536,所以生 **1536x1024**,
+在 prompt 註明「compose so all key subjects sit inside the central 16:9 band」(列表卡片會裁成 16:9)。
+**只發網站的 banner 用原比例、原尺寸轉 JPG,不裁切、不放大、不壓畫質**(站主 2026-10-10 裁決)。
+只有站主表明要當 LinkedIn／X 文章封面時,才另外用 PowerShell WIC 裁一份 16:9
+(裁切 y 起點依人物位置調整,站姿全身圖切上緣、半身圖上下均分,避免切到鞋子或頭頂;不拉伸、不補邊)。
 
 ### 第二步:生成新圖
 
 ```powershell
 codex exec --skip-git-repo-check -C "<工作根目錄>" -s workspace-write `
+  -c approval_policy=never `
+  -c sandbox_workspace_write.exclude_tmpdir_env_var=true `
+  -c sandbox_workspace_write.exclude_slash_tmp=true `
   -o "<scratchpad>\codex-imagegen-last.txt" `
-  "<完整規格 prompt>。存成 <相對於工作根目錄的路徑>,回報實際存檔的完整路徑。"
+  "這是純生圖工作，不讀其他檔、不跑 git。<完整規格 prompt>。存成 <相對於工作根目錄的路徑>,回報實際存檔的完整路徑。"
 ```
+
+- 三個 `-c` 旗標一律帶:`approval_policy=never` 防 0.160 起的提權中止;兩個 `exclude_*` 是附參考圖時必要的 sandbox 收斂(品牌角色圖一定附參考圖)。
 
 - `-C` 指到輸出檔案所在的工作根目錄(repo 素材就指 repo 根目錄,路徑用相對路徑)。
 - `-s workspace-write` 必帶(exec 預設 read-only 寫不了檔)。
@@ -145,8 +162,14 @@ codex exec --skip-git-repo-check -C "<工作根目錄>" -s workspace-write `
 
 ### 第三步:驗收
 
-用 Read 直接讀生成的 PNG,逐項核對第一步的規格:主題、風格、構圖、圖內文字正確性、禁止項。
-通過 → 第五步;不通過 → 第四步。
+直接讀生成的 PNG,逐項核對第一步的規格:主題、風格、構圖、圖內文字正確性、禁止項。
+
+**blocker 只限這幾類**(站主 2026-10-09 裁決,過度審查曾白花額度):真正的性化(走光、內衣、挑逗姿勢、刻意特寫私密部位)、
+一般觀看尺寸就讀得出的文字或真實品牌 logo、第三方 IP、明顯畸形、角色不一致。
+要放大才看得到的假字、構圖品味、裙子或大腿入鏡、「看起來偏年輕」只記為瑕疵,不算 blocker。
+
+通過 → 第五步。有 blocker 或瑕疵 → 附原圖給站主看,**由站主決定要不要微調或重生**,不可自行花 codex 額度修;
+站主同意後才進第四步。
 
 ### 第四步:微調迭代(用 resume,不要重新生成)
 
@@ -154,8 +177,11 @@ codex exec --skip-git-repo-check -C "<工作根目錄>" -s workspace-write `
 
 ```powershell
 codex exec resume <session-id> --skip-git-repo-check `
+  -c approval_policy=never `
+  -c sandbox_workspace_write.exclude_tmpdir_env_var=true `
+  -c sandbox_workspace_write.exclude_slash_tmp=true `
   -o "<scratchpad>\codex-imagegen-last.txt" `
-  "只把 <單一修改點> 改成 <目標>,其他(構圖/風格/其餘元素)全部保持不變。存成 <絕對路徑>,回報實際存檔路徑。"
+  "這是純生圖工作，不讀其他檔、不跑 git。只把 <單一修改點> 改成 <目標>,其他(構圖/風格/其餘元素)全部保持不變。存成 <絕對路徑>,回報實際存檔路徑。"
 ```
 
 - **`resume` 沒有 `-C` 參數**,workdir = 呼叫當下的 cwd,所以輸出路徑**必須用絕對路徑**。
@@ -164,7 +190,8 @@ codex exec resume <session-id> --skip-git-repo-check `
 
 ### 第五步:收尾
 
-- 確認最終檔案在目標位置,刪除中間試稿(或留在 scratchpad)。
+- 確認最終檔案在目標位置,刪除 `assets/img/brand/wip/` 的中間試稿。
+- `~/.codex/generated_images/` 的母檔不在 repo 內,不自動刪;回報裡提一句累積數量,由站主決定是否清理。
 - 若是簡報素材,更新引用該圖的 HTML/Markdown。
 - 回報:最終檔案路徑、使用的 prompt 重點、session id(供之後跨對話再微調:session 檔在本機保留,`codex exec resume <uuid>` 隨時可接續)。
 
@@ -186,4 +213,4 @@ codex exec resume <session-id> --skip-git-repo-check `
 | 透明背景需求 | codex 走 chroma-key 去背流程;複雜主體(毛髮/玻璃/半透明)它會反問,簡單主體可直接要求 |
 | 逾時 | 4K 或高複雜度圖較久;timeout 拉滿 600000,仍逾時可改 `run_in_background` 再等通知 |
 | codex 回報成功但檔案不在 | 讀 `-o` 的 last-message 檔與 stdout,確認它實際存檔路徑;不要假設成功 |
-| 測試/試稿圖 | 放 scratchpad,不放 repo;repo 只進最終選用的素材 |
+| 測試/試稿圖 | 放 `assets/img/brand/wip/`(不放 scratchpad,會踩 sandbox 陷阱),收尾刪除;repo 只進最終選用的素材 |

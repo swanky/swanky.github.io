@@ -72,7 +72,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 
 ## 共用 skills
 
-- 可重用的多步驟程序正本放 `.agents/skills/<name>/SKILL.md`（目前：`s2m` 簡報轉 Markdown、`sync-social-article` LinkedIn／X 文章同步）。
+- 可重用的多步驟程序正本放 `.agents/skills/<name>/SKILL.md`（目前：`s2m` 簡報轉 Markdown、`sync-social-article` LinkedIn／X 文章逐字同步、`website-technical-column` 專欄全流程、`codex-image` 委派 codex 生圖、`human-design-reader` 人類圖解讀、`site-verify` 瀏覽器驗證、`blast-radius` 波及分析、`interrogate` 雙模型審查、`ketchup` 補進度與待決定事項）。
 - `.claude/skills/` 是由 `node tools/sync-agent-skills.mjs` 從正本產生的 Claude 相容鏡像——**兩邊都不要手動編輯鏡像**；改正本後重跑同步。drift 檢查：`node tools/sync-agent-skills.mjs --check`（已納入 `npm test`）。
 - Hermes 經使用者層設定的 `skills.external_dirs` 掃描 `.agents/skills/`。
 

@@ -1,6 +1,6 @@
 ---
 name: website-technical-column
-description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄，含圖表、水手服 Banner、社群轉貼文與上線驗證。當使用者提供文章、影片、論文、貼文、筆記或主題，要求改寫／研究成個人網站專欄時使用。
+description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄，含圖表、水手服 Banner、社群轉貼文與上線驗證。當使用者提供文章、影片、論文、貼文、筆記或主題，要求改寫／研究成個人網站專欄時使用。只想把 LinkedIn／X 原文逐字搬上網站時，改用 sync-social-article。
 ---
 
 # Swanky 個人網站技術專欄產線
@@ -89,6 +89,11 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 
 ### 2. 建立研究與證據鏈
 
+動手搜尋前先回答兩題（借自 pstack `sharpen`），答案寫進 ledger 開頭：
+
+- 這個領域最頂尖的人會從哪份**最原始的素材**開始，而不是別人整理過的摘要？（原始論文、規格、原始訪談全文、程式碼、資料集）
+- 除了你和站主，**什麼能獨立證明**這篇的核心判斷是對的？（官方數字、可重跑的實測、第二個獨立來源）
+
 1. 每篇文章建立獨立 citation ledger；取得來源時立刻登錄，不要寫完才憑記憶補 URL。
 2. 來源優先順序：
    - 官方文件、規格、原始論文、原始訪談、原始資料。
@@ -175,13 +180,13 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
    - `assets/img/brand/swanky-mascot-live-ref.jpg`
    - `assets/img/brand/swanky-mascot-anime-ref.jpg`
 2. 每次生成都真的附上參考圖；模型不會跨對話記住臉。
-3. 從文章萃取：核心決策、單一視覺隱喻、3–6 個主題物件、角色任務、避免清單。
+3. 從文章萃取：核心決策、單一視覺隱喻、3–6 個主題物件、角色任務、避免清單。把這份規格表（用途、畫面、出鏡角色、道具、構圖、禁止元素）先交 Owner 確認符合他的 IP，確認後才生圖；等待期間文章其他部分照常進行（`docs/brand-book.md` §4.2）。
 4. 主角固定是同一位**成年**水手服美少女，臉、栗棕直髮、齊瀏海、兩條細紅髮帶與制服配色不可漂移。
 5. 需要其他角色時，只用明確成年、外型亮眼、風格一致但臉孔可區分的美少女；每人都要有敘事任務，禁止複製臉、裝飾性站樁或小孩感。
 6. 使用 High 品質生成；master 不放文章標題、段落、浮水印與易壞的 UI 文字。
 7. 畫面要讓人不讀標題也能猜到主題。水手服少女要和主題物件互動，不是貼在通用科技背景前。
 8. 網站輸出用生圖原比例、原尺寸轉 JPG（例如 1536×1024），不裁切、不放大、不壓畫質，即使 >500KB 也不壓（2026-10-10 站主決定）。構圖仍要預留列表卡片裁成 16:9 的空間。只有站主表明要把這張圖當 LinkedIn／X 文章封面時，才另做 16:9、1920×1080 版本；做法依真實來源尺寸裁切，不得拉伸、中央壓縮、補邊、模糊延展或低清放大。
-9. 用 vision 檢查原圖與最終裁切：鎖臉、成年感、手指、肢體、髮帶、制服、視覺隱喻、四象限密度、邊緣裁切、亂碼與品牌誤導。任一 blocker 就退件或局部修正。
+9. 用 vision 檢查原圖與最終裁切：鎖臉、成年感、手指、肢體、髮帶、制服、視覺隱喻、四象限密度、邊緣裁切、亂碼與品牌誤導。blocker 只限：真正的性化（走光、內衣、挑逗姿勢、刻意特寫私密部位）、一般尺寸讀得出的文字或真實 logo、第三方 IP、明顯畸形、角色不一致；要放大才看得到的假字、構圖品味、裙子入鏡、「看起來偏年輕」只記瑕疵。有 blocker 或瑕疵時附原圖給 Owner，由 Owner 決定要不要重生，不自行花 codex 額度（站主 2026-10-09 裁決）。
 10. 寫 `cover_alt`；正文不要加入通用的「AI 圖片揭露／AI Banner 揭露」樣板段落。只有單張圖可能被誤認為實際事件證據時，才在該圖 `figcaption` 直接標示「概念圖／情境示意圖」，不要集中到文末。
 
 ### 7. 整合成 unpublished Jekyll 草稿
@@ -225,7 +230,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 1. 把 `published: false` 改成 `published: true`；納入 Owner 核准的系列 hub／測試變更。
 2. 重新跑完整 `npm test`、fresh Jekyll production build、built route／圖片／連結／marker 檢查、`git diff --check`。
 3. 只 `git add -- <explicit paths>`；核對 cached name-status、stat、diff、check，確認 scoped 檔案沒有漏 stage，也沒混入 unrelated dirty files。
-4. 使用 Conventional Commit，例如 `feat(technical): publish <slug> article`；不要自行加入 AI co-author。
+4. 使用 Conventional Commit，例如 `feat(technical): publish <slug> article`；AI 共同作者署名由各執行器層（CLAUDE.md、使用者設定）決定，本 skill 不指定。
 5. `git fetch origin` 後檢查 `origin/master...HEAD`。behind 不為 0 就停下處理，不 force、不重寫歷史。
 6. 一般 fast-forward `git push origin master`。
 7. 以 commit SHA 找正確 GitHub Actions run；確認 build 與 deploy 都成功。Pages 瞬態錯誤才可依 repo 規範重跑 failed jobs。
