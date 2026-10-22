@@ -5,7 +5,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 
 # Swanky 個人網站技術專欄產線
 
-把使用者提供的素材，研究、查核、轉譯成具備技術深度又容易讀懂的網站長文；用可稽核圖表與 Swanky 品牌水手服美少女 Banner 完成視覺敘事；通過 Owner review 後才 commit、push、驗證正式站，最後在桌面交付 LinkedIn 與 X 的可直接複製短文。
+把使用者提供的素材，研究、查核、轉譯成具備技術深度又容易讀懂的網站長文；用可稽核圖表與 Swanky 品牌水手服美少女 Banner 完成視覺敘事；通過 Owner review 後才 commit、push、驗證正式站，最後起草 LinkedIn 與 X 的社群貼文（存 `docs/social-drafts/`，另附桌面副本），由站主決定發不發。
 
 ## 必要依賴
 
@@ -22,16 +22,33 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 
 若上述技能、網站 `AGENTS.md` 或目前 repo 慣例衝突，以網站 repo 的最新 `AGENTS.md` 為準；涉及 Hermes 行為時，再以 Hermes 官方文件為準。
 
+不論用哪個 agent，一律再讀：
+
+- `docs/brand-book.md`（私有）：§3 語氣與寫作、§4 視覺識別、§5.1 文章及格線、§6 審稿清單。
+- `references/writing-craft.md`：句子層級修稿準則與文體判斷。
+
+上列 1–5 是 Hermes 的技能。在 Claude Code 等沒有這些技能的環境，改用 repo 內的對應：
+
+| Hermes 技能 | 替代 |
+|---|---|
+| `swanky_voice` | `docs/brand-book.md` §3＋`references/writing-craft.md` |
+| `research:grounded-citations` | 在本次工作目錄自建 ledger（claim → URL → 擷取日期）；每個 URL 填入前親自打開確認，subagent 回報的 URL 也要親驗 |
+| `creative:website-visual-storytelling` | `docs/design.md`、brand-book §4.6 內文圖解 |
+| `creative:swanky-sailor-uniform-article-covers` | `codex-image` 技能＋`AGENTS.md`「品牌角色形象」段 |
+
 ## 固定位置與輸出
 
 - 網站 repo：`C:\Users\swank\Desktop\swanky.github.io`
 - 文章：`_posts/YYYY-MM-DD-<slug>.md`
 - Banner：`assets/img/linkedin/<slug>.jpg`
 - 內文圖表／圖解：`assets/img/technical/<slug>/`
-- 社群轉貼文：
+- 列表卡片縮圖：`assets/img/linkedin/<slug>-card.jpg`（`pwsh -File tools/make-cover-thumbs.ps1` 產生）
+- 社群貼文草稿（正本，私有）：`docs/social-drafts/YYYY-MM-DD-<slug>.md`，LinkedIn 與 X 各一則，連結帶 UTM
+- 方便複製的桌面副本（同一份正文）：
   - `C:\Users\swank\Desktop\<slug>-linkedin.txt`
   - `C:\Users\swank\Desktop\<slug>-x.txt`
 - 桌面中文 TXT 一律 UTF-8 BOM。
+- `llms.txt`：新文章屬於新內容區塊或系列時，同一筆改動更新。
 
 若使用者在當次任務指定其他網站 repo、參考圖或輸出位置，以當次明確指示為準；不得自行「修正」路徑。
 
@@ -65,7 +82,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 2. 執行 `git status --short`、目前 branch、remote、ahead／behind；保存 dirty baseline，不碰不屬於本篇的既有變更。
 3. 讀至少兩篇同題材或最近的技術專欄，確認 front matter、長文元件、引用、CTA、圖表與圖片慣例。
 4. 搜尋 `_posts/`、系列 hub 與資產，排除同題重複、slug 衝突、失效 related posts。
-5. 建立本次 scope manifest：文章、Banner、內文視覺、必要 hub／測試，以及兩個桌面 TXT。禁止 `git add .`。
+5. 建立本次 scope manifest：文章、Banner 與 `-card.jpg`、內文視覺、必要 hub／`llms.txt`／測試，以及社群草稿（`docs/social-drafts/` 走私有 repo，桌面 TXT 不進 git）。禁止 `git add .`。
 6. 清點使用者素材：原始檔／URL、作者、日期、完整性、語言、是否有逐字稿、是否有第一手數據、是否有授權資訊。
 
 素材足夠時直接研究；只有在「缺少的資訊會改變核心結論或造成事實捏造」時才問。不要為標題、slug、圖表配色等低風險決策打斷工作。
@@ -123,6 +140,8 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 - 用第一人稱，但只寫可證實的閱讀、研究、實作或既有公開經驗。
 - 不寫中國用語、宏大敘事、假數字、假成效、雇主名或內部職稱。
 - CTA 只在與文章主題自然相連時加入，語氣平視、不強迫。
+- 動筆前先判斷文體：觀念文用上面的骨架；操作文（安裝、設定、照著做）改用 `references/writing-craft.md` 的操作文骨架。一篇只用一種。
+- 初稿完成後，照 `references/writing-craft.md` 修一輪：刪無作用的字、改中文 AI 腔、統一名稱、標題寫出重點。
 
 ### 5. 設計圖文敘事
 
@@ -161,7 +180,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 5. 需要其他角色時，只用明確成年、外型亮眼、風格一致但臉孔可區分的美少女；每人都要有敘事任務，禁止複製臉、裝飾性站樁或小孩感。
 6. 使用 High 品質生成；master 不放文章標題、段落、浮水印與易壞的 UI 文字。
 7. 畫面要讓人不讀標題也能猜到主題。水手服少女要和主題物件互動，不是貼在通用科技背景前。
-8. 網站輸出 16:9、1920×1080 JPG。依真實來源尺寸裁切；不得拉伸、中央壓縮、補邊、模糊延展或低清放大。
+8. 網站輸出用生圖原比例、原尺寸轉 JPG（例如 1536×1024），不裁切、不放大、不壓畫質，即使 >500KB 也不壓（2026-10-10 站主決定）。構圖仍要預留列表卡片裁成 16:9 的空間。只有站主表明要把這張圖當 LinkedIn／X 文章封面時，才另做 16:9、1920×1080 版本；做法依真實來源尺寸裁切，不得拉伸、中央壓縮、補邊、模糊延展或低清放大。
 9. 用 vision 檢查原圖與最終裁切：鎖臉、成年感、手指、肢體、髮帶、制服、視覺隱喻、四象限密度、邊緣裁切、亂碼與品牌誤導。任一 blocker 就退件或局部修正。
 10. 寫 `cover_alt`；正文不要加入通用的「AI 圖片揭露／AI Banner 揭露」樣板段落。只有單張圖可能被誤認為實際事件證據時，才在該圖 `figcaption` 直接標示「概念圖／情境示意圖」，不要集中到文末。
 
@@ -173,14 +192,14 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 - `categories: [technical]`、`layout: article`
 - `tags`、`cover_image`、`cover_alt`、`hero_image: true`
 - `cta_context`、三篇有效 `related_posts`
-- `description`、`keywords`
+- `description`（80 字以內，不誇大）、`keywords`
 - 有真實同步來源時才填 `source_url`／`source_url_x`
 
 再完成：
 
-1. 文章放 `_posts/YYYY-MM-DD-<slug>.md`；Banner 必須 `.jpg`。
+1. 文章放 `_posts/YYYY-MM-DD-<slug>.md`；Banner 必須 `.jpg`，放好後跑 `pwsh -File tools/make-cover-thumbs.ps1` 產生 `-card.jpg`。
 2. 站內資產一律用 `{{ '/path' | relative_url }}`。
-3. 評估現有系列 hub；相關時把建議納入 review scope，不擅自新增系列或分類。
+3. 評估現有系列 hub；相關時把建議納入 review scope，不擅自新增系列或分類。依 `AGENTS.md` 判斷是否要更新 `llms.txt`；條目描述沿用文章的 `description`，不另外改寫。
 4. 若文章需要新的共用 CSS／include／test，只做最小變更，不做順手重構。
 5. `published: false` 只隔離文章 route，不會隔離 `assets/`。核准前禁止 commit／push 草稿及資產；若同 branch 同時要發布別的內容，另外隔離草稿資產。
 
@@ -189,7 +208,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 先由 Agent 自己完成，不把半成品丟回使用者：
 
 1. 引用 ledger verify；檢查每個可查事實、數字、版本與引用。
-2. 掃描台灣用語、未知 placeholder、假資料、雇主／機密字樣。
+2. 掃描台灣用語、未知 placeholder、假資料、雇主／機密字樣；grep `references/writing-craft.md`「中文 AI 腔」表中的詞，逐處判斷要不要改；逐條勾 `docs/brand-book.md` §6 審稿清單。
 3. 驗 SVG XML、JPEG header／尺寸、所有圖片 natural dimensions 與 alt／caption。
 4. `npm test`、`git diff --check`。
 5. 建立兩個**全新** destination（固定放在本次工作目錄的 `build-prod`、`build-review`；重建前先刪同名目錄，不另開版本目錄）：
@@ -214,24 +233,29 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 9. 最後確認 local／remote SHA 一致、ahead／behind 為 `0 0`；停止本次啟動的 server／browser，不刪其他人的 preview 或 untracked 檔案。
 10. 執行「暫存與清理」段的收尾清理：刪除本次工作目錄中的 `build-prod`、`build-review`、試稿與下載暫存，回報刪除路徑與釋放大小。
 
-### 10. 產生桌面社群轉貼短文
+### 10. 產生社群貼文草稿
 
-正式網址驗證後才寫最終 TXT，避免留下錯誤 URL。
+正式網址驗證後才寫最終草稿，避免留下錯誤 URL。草稿只起草、不發布，由站主決定發不發（`AGENTS.md`「新文章上線後附社群貼文草稿」）。
+
+1. 正本寫到 `docs/social-drafts/YYYY-MM-DD-<slug>.md`：開頭列文章 URL、起草者、狀態「未發布，等站主決定」、配圖是否為 AI 生成；接著 `### X`、`### LinkedIn` 兩段正文。格式參考既有檔，例如 `docs/social-drafts/2026-10-18-pstack-six-skills-workday.md`。
+2. 正文裡的文章連結一律帶 UTM：`?utm_source=linkedin|x&utm_medium=social&utm_campaign=<slug>&utm_content=<claude|gpt|grok>`，`utm_content` 填起草的 agent。
+3. 同一份正文另存兩個桌面 TXT（UTF-8 BOM），方便站主直接複製。
+4. 在 `docs/` 私有 repo commit，並 `git push dropbox`。
 
 LinkedIn：
 
 - 約 180–450 個中文字元，3–6 個短段落。
 - 開頭先放一個反直覺判斷或具體問題；交代讀者能帶走什麼。
 - 保留一點 Swanky 的觀點與冷吐槽，不寫成公告或行銷文。
-- 一個正式文章 URL；hashtags 0–3 個。
+- 一個帶 UTM 的正式文章 URL；hashtags 0–3 個。
 
 X：
 
-- 單則可直接貼，含正式 URL，保守控制在 260 個 Unicode code points 內。
+- 單則可直接貼，含帶 UTM 的正式 URL，保守控制在 260 個 Unicode code points 內（X 把網址一律算 23 字，計算時照此換算）。
 - 一個鉤子、一個核心判斷、一個讀者收穫；hashtags 0–2 個。
 - 不把同一個句子硬切成 thread，也不塞滿標籤。
 
-兩個 TXT 只放可複製正文，不混入字數、備註、分隔線或替代版本。用 Python 實算字元數並驗 UTF-8 BOM；讀回確認內容與正式 URL。
+兩個桌面 TXT 只放可複製正文，不混入字數、備註、分隔線或替代版本。用 Python 實算字元數並驗 UTF-8 BOM；讀回確認內容、正式 URL 與 UTM 參數，並確認和 `docs/social-drafts/` 正本一致。
 
 ## 完成定義
 
@@ -243,7 +267,7 @@ X：
 - Desktop／390px 手機視覺 QA、測試、fresh build、連結與資產檢查都通過。
 - Owner 已看過最終預覽並明確核准。
 - scoped commit／push、GitHub Pages deploy 與 live page marker 均已驗證。
-- 兩份 UTF-8 BOM 社群 TXT 已寫到桌面並讀回驗證。
+- 社群草稿正本已寫到 `docs/social-drafts/`、連結帶 UTM、已在私有 repo commit＋push；兩份 UTF-8 BOM 桌面 TXT 已讀回驗證。
 - 本次的 build 目錄、試稿與下載暫存已刪除，並回報釋放的空間。
 
 若任一 Gate 未過，誠實回報「已做到哪裡、哪個證據缺失、下一個可執行修正」，不得以文章檔存在或 CI 綠燈代替完整交付。

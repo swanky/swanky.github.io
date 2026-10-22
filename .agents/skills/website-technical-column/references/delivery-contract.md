@@ -79,7 +79,7 @@ related_posts:
   - <existing-slug-2>
   - <existing-slug-3>
 hero_image: true
-description: "<不誇大的搜尋摘要>"
+description: "<不誇大的搜尋摘要，80 字以內>"
 keywords: <逗號分隔的主題詞與品牌詞>
 ---
 ```
@@ -184,13 +184,37 @@ Review URL：
 - mobile 390px：
 - assets／links：
 
-尚未執行：commit、push、正式部署、桌面最終社群 TXT。
+尚未執行：commit、push、正式部署、社群貼文草稿。
 請 Owner 只需要回答是否可發布，或指出要改的地方。
 ```
 
-## 8. 桌面 TXT 格式
+## 8. 社群貼文草稿格式
 
-檔名：
+正本：`docs/social-drafts/YYYY-MM-DD-<slug>.md`（私有 repo，commit 後 `git push dropbox`）
+
+```markdown
+# 社群貼文草稿：YYYY-MM-DD <文章短名>
+
+- 文章：<正式文章 URL>
+- 起草：<agent 名稱>（上線這篇的 agent）
+- 狀態：未發布，等站主決定
+- 同一份正文另存桌面（UTF-8 BOM，可直接複製）：`C:\Users\swank\Desktop\<slug>-linkedin.txt`、`C:\Users\swank\Desktop\<slug>-x.txt`
+- 配圖：<若附 AI 生成的封面或插圖，貼文或圖說要標示>
+
+---
+
+### X
+
+<X 正文>
+
+### LinkedIn
+
+<LinkedIn 正文>
+```
+
+正文裡的連結一律帶 `?utm_source=linkedin|x&utm_medium=social&utm_campaign=<slug>&utm_content=<claude|gpt|grok>`。
+
+桌面副本檔名：
 
 ```text
 C:\Users\swank\Desktop\<slug>-linkedin.txt
@@ -227,9 +251,11 @@ X TXT 只含：
 ```text
 已發布：<正式 URL>
 文章：<absolute path>
-Banner：<absolute path>（1920×1080 JPG，來源／生成說明）
+Banner：<absolute path>（原比例 JPG 與尺寸、來源／生成說明；-card.jpg 已產生）
 內文視覺：<數量與 paths>
-社群轉貼文：
+llms.txt：<已更新／不需更新與理由>
+社群貼文草稿：
+- <docs/social-drafts/... absolute path>（docs 私有 repo commit SHA）
 - <linkedin txt absolute path>
 - <x txt absolute path>
 
