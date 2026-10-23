@@ -32,6 +32,8 @@ for (const name of ['swanky_ji_open_worlds', 'swanky_ji_everyday_light', 'swanky
 for (const name of ['jinpingmei_photobook_vl20', 'jinpingmei_photobook_lp36']) {
   for (const m of readFileSync(join(root, '_data', `${name}.yml`), 'utf8').matchAll(/flickr_id:\s*"?(\d+)"?/g)) ids.add(m[1]);
 }
+// 「我的七種拍法」代表作（_data/photo_style_routes.yml，站主點名的 Flickr id）
+for (const m of readFileSync(join(root, '_data/photo_style_routes.yml'), 'utf8').matchAll(/"(\d{6,})"/g)) ids.add(m[1]);
 const pathsFile = join(root, '_data/flickr_image_paths.json');
 const paths = existsSync(pathsFile) ? JSON.parse(readFileSync(pathsFile, 'utf8')) : {};
 for (const id of Object.values(paths)) ids.add(String(id));

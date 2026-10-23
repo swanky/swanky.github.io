@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">變化度閘門的三個時間點</title>
+<desc id="d">流程圖。文字分鏡定稿前、試片擴批前、建審閱頁前，各填一次逐張變化帳本並跑閘門；任一時點不通過，就回頭改分鏡或換選片，再跑一次；三個時點都通過，才建審閱頁給我整本看。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B91C1C"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker></defs>
+<rect width="1200" height="620" fill="#FFFFFF"/>
+<rect x="40" y="170" width="190" height="96" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2.5"/>
+<text x="135.0" y="210" font-size="24" font-weight="700" fill="#2C5B8F" text-anchor="middle">文字分鏡</text>
+<text x="135.0" y="240" font-size="16" fill="#4B5563" text-anchor="middle">每一鏡先寫姿勢、手、朝向</text>
+<line x1="230" y1="218.0" x2="250" y2="218.0" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<polygon points="322,162.0 392,218.0 322,274.0 252,218.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2.5"/>
+<text x="322" y="210.0" font-size="21" font-weight="700" fill="#B45309" text-anchor="middle">時點 1</text>
+<text x="322" y="236.0" font-size="14" fill="#8A3F0A" text-anchor="middle">填帳本・跑閘門</text>
+<line x1="392" y1="218.0" x2="408" y2="218.0" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="410" y="170" width="190" height="96" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2.5"/>
+<text x="505.0" y="210" font-size="24" font-weight="700" fill="#2C5B8F" text-anchor="middle">試片</text>
+<text x="505.0" y="240" font-size="16" fill="#4B5563" text-anchor="middle">先做少量，看實際畫面</text>
+<line x1="600" y1="218.0" x2="620" y2="218.0" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<polygon points="692,162.0 762,218.0 692,274.0 622,218.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2.5"/>
+<text x="692" y="210.0" font-size="21" font-weight="700" fill="#B45309" text-anchor="middle">時點 2</text>
+<text x="692" y="236.0" font-size="14" fill="#8A3F0A" text-anchor="middle">填帳本・跑閘門</text>
+<line x1="762" y1="218.0" x2="778" y2="218.0" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="780" y="170" width="190" height="96" rx="14" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2.5"/>
+<text x="875.0" y="210" font-size="24" font-weight="700" fill="#2C5B8F" text-anchor="middle">整本成圖</text>
+<text x="875.0" y="240" font-size="16" fill="#4B5563" text-anchor="middle">36 張實圖重填帳本</text>
+<line x1="970" y1="218.0" x2="968" y2="218.0" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<polygon points="1040,162.0 1110,218.0 1040,274.0 970,218.0" fill="#FDF3E7" stroke="#B45309" stroke-width="2.5"/>
+<text x="1040" y="210.0" font-size="21" font-weight="700" fill="#B45309" text-anchor="middle">時點 3</text>
+<text x="1040" y="236.0" font-size="14" fill="#8A3F0A" text-anchor="middle">填帳本・跑閘門</text>
+<text x="322" y="152" font-size="18" fill="#6B7280" text-anchor="middle">分鏡定稿前</text>
+<text x="692" y="152" font-size="18" fill="#6B7280" text-anchor="middle">試片擴批前</text>
+<text x="1040" y="152" font-size="18" fill="#6B7280" text-anchor="middle">建審閱頁前</text>
+<path d="M322,274.0 V324 H135.0 V270" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrR)"/>
+<text x="149.0" y="350" font-size="17" fill="#B91C1C">不通過：改分鏡再跑</text>
+<path d="M692,274.0 V324 H505.0 V270" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrR)"/>
+<text x="519.0" y="350" font-size="17" fill="#B91C1C">不通過：換選片或改分鏡</text>
+<path d="M1040,274.0 V324 H875.0 V270" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrR)"/>
+<text x="889.0" y="350" font-size="17" fill="#B91C1C">不通過：撤重複張、補新鏡</text>
+<rect x="940" y="396" width="220" height="96" rx="14" fill="#E6F4F1" stroke="#0E7568" stroke-width="2.5"/>
+<text x="1050.0" y="436" font-size="24" font-weight="700" fill="#0E7568" text-anchor="middle">審閱頁</text>
+<text x="1050.0" y="466" font-size="16" fill="#4B5563" text-anchor="middle">三關都過，我才整本看</text>
+<path d="M1110,218.0 H1150 V394" fill="none" stroke="#0E7568" stroke-width="3" marker-end="url(#arrG)"/>
+<text x="1160" y="258.0" font-size="18" font-weight="700" fill="#0E7568" text-anchor="end">通過</text>
+<text x="40" y="64" font-size="36" font-weight="700" fill="#1F2937">變化度閘門：三個時間點，各擋一次</text>
+<text x="40" y="104" font-size="21" fill="#4B5563">帳本是人看過每一張之後填的；工具只負責把檢查變成可以重複跑的規則</text>
+<rect x="40" y="520" width="860" height="62" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="470" y="559" font-size="22" font-weight="700" fill="#1F2937" text-anchor="middle">任何一關不通過，<tspan fill="#8A5D00">都不能建審閱頁</tspan>；單張品質檢查過了也一樣</text>
+</svg>
