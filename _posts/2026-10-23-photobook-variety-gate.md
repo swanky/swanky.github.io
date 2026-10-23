@@ -7,6 +7,8 @@ categories: [technical]
 tags: [ai-visual, photography, workflow, quality-gate]
 layout: article
 permalink: /technical/photobook-variety-gate/
+cover_image: /assets/img/linkedin/photobook-variety-gate.jpg
+hero_image: true
 cta_context: ai-visual
 mid_cta: false
 use_glightbox: true
