@@ -4,6 +4,9 @@
 statement／statement_en 是創作理念，story_*、sources_*（或 source_note_*）是故事與改寫。
 站主 2026-10-19 裁決：線上策展、不提供 PDF；不放 AI／虛構揭露文字或徽章、alt 不補尾綴；照片之間不插說明文字，
 每張圖下只有編號與 Flickr 連結，章末短句放在該章照片之後。版面沿用 sjw- 家族：橫幅跨兩欄、直幅兩兩成對、孤直幅置中，不裁切。
+2026-10-23 第二批（05–09、11、12）起的欄位差異：chapters 可為空（第九冊 36 幅連續閱讀，不補造章名）、章末短句可為空字串、
+新增 subtitle／afterword／credit（空字串＝沒有；Liquid 空字串為真，一律用 != '' 判斷）、story／sources 可為空；
+chapters_note 是攝影端的內部備註，不輸出。statement 裡與 lead／afterword／story 逐字相同的段落只在各自的區塊出現一次。
 {%- endcomment -%}
 {%- assign book = site.data[include.book] -%}
 {%- assign series = site.data.swanky_ji_myths -%}
@@ -19,16 +22,25 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
 {%- assign statement_en_paras = book.statement_en | split: "
 
 " -%}
+{%- assign has_chapters = false -%}{%- if book.chapters.size > 0 -%}{%- assign has_chapters = true -%}{%- endif -%}
+{%- assign has_subtitle = false -%}{%- if book.subtitle and book.subtitle != '' -%}{%- assign has_subtitle = true -%}{%- endif -%}
+{%- assign has_afterword = false -%}{%- if book.afterword and book.afterword != '' -%}{%- assign has_afterword = true -%}{%- endif -%}
+{%- assign has_coda = false -%}{%- for c in book.chapters -%}{%- if c.text and c.text != '' -%}{%- assign has_coda = true -%}{%- endif -%}{%- endfor -%}
+{%- assign has_credit = false -%}{%- if book.credit and book.credit != '' and book.credit != talent.disclosure -%}{%- assign has_credit = true -%}{%- endif -%}
 {%- capture hero_eyebrow %}MYTHS IN THE MAKING · VOL.{{ vol_no }} · {{ book.count }} PHOTOGRAPHS{% endcapture -%}
 {%- capture hero_intro %}《{{ series.title }}》第{{ vol_names[vol_idx] }}冊｜{{ book.title_en }}{% endcapture -%}
 {%- capture hero_primary %}開始閱讀 {{ book.count }} 張{% endcapture -%}
+{%- if has_chapters -%}{%- assign hero_target = '#chapter-1' -%}{%- else -%}{%- assign hero_target = '#reading' -%}{%- endif -%}
 {%- comment -%} sources_* 與 source_note_* 可並存（第三冊）：先列來源，再列閱讀說明；只有其一就只列那一欄。 {%- endcomment -%}
 {%- assign src_blocks_zh = '' | split: ',' -%}
-{%- if book.sources_zh -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.sources_zh -%}{%- endif -%}
-{%- if book.source_note_zh -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.source_note_zh -%}{%- endif -%}
+{%- if book.sources_zh and book.sources_zh != '' -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.sources_zh -%}{%- endif -%}
+{%- if book.source_note_zh and book.source_note_zh != '' -%}{%- assign src_blocks_zh = src_blocks_zh | push: book.source_note_zh -%}{%- endif -%}
 {%- assign src_blocks_en = '' | split: ',' -%}
-{%- if book.sources_en -%}{%- assign src_blocks_en = src_blocks_en | push: book.sources_en -%}{%- endif -%}
-{%- if book.source_note_en -%}{%- assign src_blocks_en = src_blocks_en | push: book.source_note_en -%}{%- endif -%}
+{%- if book.sources_en and book.sources_en != '' -%}{%- assign src_blocks_en = src_blocks_en | push: book.sources_en -%}{%- endif -%}
+{%- if book.source_note_en and book.source_note_en != '' -%}{%- assign src_blocks_en = src_blocks_en | push: book.source_note_en -%}{%- endif -%}
+{%- assign has_story = false -%}
+{%- if book.story_zh and book.story_zh != '' -%}{%- assign has_story = true -%}{%- endif -%}
+{%- if src_blocks_zh.size > 0 -%}{%- assign has_story = true -%}{%- endif -%}
 {%- assign prev_v = nil -%}{%- assign next_v = nil -%}
 {%- for v in series.volumes -%}
   {%- if v.data == include.book -%}
@@ -37,39 +49,52 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
     {%- assign next_v = series.volumes[forloop.index] -%}
   {%- endif -%}
 {%- endfor -%}
+{%- if has_chapters -%}{%- assign groups = book.chapters -%}{%- else -%}{%- assign groups = 'all' | split: ',' -%}{%- endif -%}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page smm-page">
-  {% include photography/subpage-hero.html eyebrow=hero_eyebrow title=book.title intro=hero_intro primary_url="#chapter-1" primary_label=hero_primary secondary_url=series.url secondary_label="系列：神話未完成" %}
+  {% include photography/subpage-hero.html eyebrow=hero_eyebrow title=book.title intro=hero_intro primary_url=hero_target primary_label=hero_primary secondary_url=series.url secondary_label="系列：神話未完成" %}
   {% include photography/subpage-nav.html %}
 
   <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
     <div class="photo-author-shell">
-      <p class="sjw-meta">{{ book.count }} 張 · {{ book.chapters.size }} 章 · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
+      <p class="sjw-meta">{{ book.count }} 張 · {% if has_chapters %}{{ book.chapters.size }} 章{% else %}不分章，連續閱讀{% endif %} · 圖片可點開放大，用左右鍵逐張看 · 每張都附 Flickr 連結</p>
       <article class="photo-author-series-card sjw-cover">
         <a href="{% include flickr/url.html id=cover.flickr_id image=cover.image %}" class="photo-author-series-media portfolio-lightbox" data-gallery="smm-cover" title="封面 No.{{ cover_nn }}｜{{ cover.alt }}">
           <img src="{{ book.og_image | relative_url }}" srcset="{{ '/assets/img/photography/' | append: book.slug | append: '/cover-card.jpg' | relative_url }} 640w, {{ book.og_image | relative_url }} 1600w" sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) 54vw, 713px" alt="{{ cover.alt }}" width="1600" height="900" fetchpriority="high" decoding="async">
         </a>
         <div class="photo-author-series-copy">
           <p class="photo-author-eyebrow">創作理念 · STATEMENT</p>
+          {% if has_subtitle %}<p class="smm-subtitle">{{ book.subtitle }}</p>{% endif %}
           <h3 id="statement-title">{{ book.lead }}</h3>
-          {% for para in statement_paras %}{% unless forloop.first and para == book.lead %}<p>{{ para | escape | newline_to_br }}</p>{% endunless %}{% endfor %}
+          {% for para in statement_paras %}{% unless para == book.lead or para == book.afterword or para == book.story_zh or para == '' %}<p>{{ para | escape | newline_to_br }}</p>{% endunless %}{% endfor %}
           <details class="smm-en" lang="en">
             <summary>Read the statement in English</summary>
-            {% for para in statement_en_paras %}<p>{{ para | escape | newline_to_br }}</p>{% endfor %}
+            {% if book.subtitle_en and book.subtitle_en != '' %}<p><em>{{ book.subtitle_en | escape }}</em></p>{% endif %}
+            {% for para in statement_en_paras %}{% unless para == book.afterword_en or para == book.story_en or para == '' %}<p>{{ para | escape | newline_to_br }}</p>{% endunless %}{% endfor %}
           </details>
           <a href="{{ book.flickr_album }}" class="photo-author-text-link" target="_blank" rel="noopener noreferrer">在 Flickr 看完整相簿 ↗</a>
         </div>
       </article>
+      {% if has_chapters or has_afterword or has_story %}
       <nav class="sjw-toc" aria-label="章節目次">
-        {% for c in book.chapters %}<a href="#chapter-{{ c.number }}"><b>0{{ c.number }}</b>{{ c.title }}</a>{% endfor %}<a href="#story"><b>STORY</b>故事與改寫</a>
+        {% for c in book.chapters %}<a href="#chapter-{{ c.number }}"><b>0{{ c.number }}</b>{{ c.title }}</a>{% endfor %}{% if has_afterword %}<a href="#afterword"><b>AFTERWORD</b>後記</a>{% endif %}{% if has_story %}<a href="#story"><b>STORY</b>故事與改寫</a>{% endif %}
       </nav>
+      {% endif %}
     </div>
   </section>
 
-  {% for c in book.chapters %}
-  {% assign shots = book.photos | where: "chapter", c.number %}
-  <section class="photo-author-section sjw-chapter smm-chapter" id="chapter-{{ c.number }}" aria-labelledby="chapter-{{ c.number }}-title">
+  {% for c in groups %}
+  {%- if has_chapters -%}
+    {%- assign shots = book.photos | where: "chapter", c.number -%}
+    {%- capture sec_id %}chapter-{{ c.number }}{% endcapture -%}
+    {%- assign sec_label = c.title -%}
+  {%- else -%}
+    {%- assign shots = book.photos -%}
+    {%- assign sec_id = 'reading' -%}
+    {%- assign sec_label = book.title -%}
+  {%- endif %}
+  <section class="photo-author-section sjw-chapter smm-chapter" id="{{ sec_id }}"{% if has_chapters %} aria-labelledby="{{ sec_id }}-title"{% else %} aria-label="{{ book.title }}：{{ book.count }} 幅連續閱讀"{% endif %}>
     <div class="photo-author-shell">
-      <h2 class="yx-chapter-title smm-chapter-title" id="chapter-{{ c.number }}-title"><span>0{{ c.number }}</span>{{ c.title }}<small lang="en">{{ c.title_en }}</small></h2>
+      {% if has_chapters %}<h2 class="yx-chapter-title smm-chapter-title" id="{{ sec_id }}-title"><span>0{{ c.number }}</span>{{ c.title }}<small lang="en">{{ c.title_en }}</small></h2>{% endif %}
       <div class="sjw-grid">
         {%- assign pending = false -%}
         {%- for p in shots -%}
@@ -88,7 +113,7 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
           {%- assign sz = '(max-width: 720px) calc(100vw - 28px), (max-width: 1368px) calc(100vw - 48px), 1320px' -%}
         {%- endif %}
         <figure class="sjw-figure {{ cls }}" id="photo-{{ nn }}">
-          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="smm-book" title="No.{{ nn }}｜{{ c.title }}">
+          <a href="{% include flickr/url.html id=p.flickr_id image=p.image %}" class="portfolio-lightbox" data-gallery="smm-book" title="No.{{ nn }}｜{{ sec_label }}">
             <img {% include flickr/source.html id=p.flickr_id image=p.preview %} sizes="{{ sz }}" alt="{{ p.alt }}" width="{{ p.width }}" height="{{ p.height }}" loading="lazy" decoding="async">
           </a>
           <figcaption class="smm-caption">
@@ -98,21 +123,36 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
         </figure>
         {%- endfor %}
       </div>
+      {% if has_chapters and c.text and c.text != '' %}
       <blockquote class="smm-coda">
         <p>{{ c.text | escape | newline_to_br }}</p>
-        <p lang="en">{{ c.text_en | escape | newline_to_br }}</p>
+        {% if c.text_en and c.text_en != '' %}<p lang="en">{{ c.text_en | escape | newline_to_br }}</p>{% endif %}
       </blockquote>
+      {% endif %}
     </div>
   </section>
   {% endfor %}
 
+  {% if has_afterword %}
+  <section class="photo-author-section smm-afterword" id="afterword" aria-labelledby="afterword-title">
+    <div class="photo-author-shell">
+      <p class="photo-author-eyebrow" id="afterword-title">後記 · AFTERWORD</p>
+      <blockquote class="smm-coda smm-coda--afterword">
+        <p>{{ book.afterword | escape | newline_to_br }}</p>
+        {% if book.afterword_en and book.afterword_en != '' %}<p lang="en">{{ book.afterword_en | escape | newline_to_br }}</p>{% endif %}
+      </blockquote>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if has_story %}
   <section class="photo-author-section photo-author-light smm-story" id="story" aria-labelledby="story-title">
     <div class="photo-author-shell">
       <header class="photo-author-section-head">
         <p class="photo-author-eyebrow">STORY · 故事與改寫</p>
         <div>
           <h2 id="story-title">故事與改寫</h2>
-          <p>這一冊從哪一則神話出發，又改寫了什麼。</p>
+          <p>這一冊從哪一則故事出發，又改寫了什麼。</p>
         </div>
       </header>
       <div class="smm-bilingual">
@@ -137,6 +177,7 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
       </div>
     </div>
   </section>
+  {% endif %}
 
   <section class="photo-author-section photo-author-light sjw-closing" id="after" aria-labelledby="after-title">
     <div class="photo-author-shell">
@@ -144,7 +185,7 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
         <p class="photo-author-eyebrow">{{ book.model }} × SWANKY · {{ series.title_en | upcase }}</p>
         <div>
           <h2 id="after-title">繼續看下去。</h2>
-          <p>{{ book.count }} 張依定稿的 {{ book.chapters.size }} 章順序排列；可以到 Flickr 逐張看，也可以接著讀系列的其他冊。</p>
+          <p>{{ book.count }} 張依定稿順序排列{% if has_chapters %}，分 {{ book.chapters.size }} 章{% endif %}；可以到 Flickr 逐張看，也可以接著讀系列的其他冊。</p>
         </div>
       </header>
       <div class="photo-author-archive-grid">
@@ -182,10 +223,15 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
         <p class="photo-author-eyebrow" id="sjw-notes-title">作品說明</p>
         <ul>
           <li>{{ talent.disclosure }}創作保留攝影對人物、光線、動作與空間的安排。</li>
-          <li>全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序依定稿編排；章末短句與書末的故事與改寫都出自這一冊。</li>
+          {%- assign from_book = '' | split: ',' -%}
+          {%- if has_coda -%}{%- assign from_book = from_book | push: '章末短句' -%}{%- endif -%}
+          {%- if has_afterword -%}{%- assign from_book = from_book | push: '後記' -%}{%- endif -%}
+          {%- if has_story -%}{%- assign from_book = from_book | push: '書末的故事與改寫' -%}{%- endif %}
+          <li>{% if has_chapters %}全冊 {{ book.count }} 張分為 {{ book.chapters.size }} 章，順序依定稿編排{% else %}全冊 {{ book.count }} 張不分章，依定稿順序連續閱讀{% endif %}{% if from_book.size > 0 %}；{{ from_book | join: '、' }}{% if from_book.size > 1 %}都{% endif %}出自這一冊{% endif %}。</li>
           <li>每張影像都附 Flickr 連結，可對照原始上傳；本系列只在線上閱讀，不提供下載。</li>
           <li>想知道攝影師為什麼往虛擬角色創作走，可讀專欄〈<a href="{{ '/technical/ai-photography-virtual-agency/' | relative_url }}">AI 不是我的替身，而是我跨出邊界的方法</a>〉與〈<a href="{{ '/technical/ai-photographer-judgment-character-photobook/' | relative_url }}">攝影師現在可以怎麼用 AI 做作品？</a>〉。</li>
         </ul>
+        {% if has_credit %}<p class="sjw-credit">{{ book.credit }}</p>{% endif %}
         <p class="sjw-credit">{{ book.creator }} · {{ book.date | slice: 0, 4 }} · 《{{ series.title }}》第{{ vol_names[vol_idx] }}冊 · {{ book.title }}</p>
       </aside>
     </div>

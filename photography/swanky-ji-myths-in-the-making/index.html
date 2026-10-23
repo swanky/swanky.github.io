@@ -2,8 +2,8 @@
 layout: home
 title: 史旺姬《神話未完成》
 seo_title: 史旺姬《神話未完成》｜神話改寫寫真系列
-description: 史旺姬《神話未完成》：史旺姬走進流傳至今的神話，留下它最核心的問題，讓它面對今天的生活。女媧補天、濕婆舞王、伊南娜下冥界、天照岩戶，每冊 36 張、六章，陸續出版。
-keywords: 史旺姬,神話未完成,Myths in the Making,補天的人,世界停下之前，再跳一次,走過七道門,把太陽請出來,神話改寫,虛擬模特兒,史旺基
+description: 史旺姬《神話未完成》：史旺姬走進流傳至今的神話，留下它最核心的問題，讓它面對今天的生活。從女媧補天、濕婆舞王、伊南娜下冥界、天照岩戶開始，每冊 36 張，陸續出版。
+keywords: 史旺姬,神話未完成,Myths in the Making,補天的人,世界停下之前，再跳一次,走過七道門,把太陽請出來,把海上的人帶回家,用陰影回答光,聲音還沒有名字,她不是等待被救的人,把黑夜穿在身上,城市記得她,不替眾神織衣,神話改寫,虛擬模特兒,史旺基
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -58,7 +58,7 @@ permalink: /photography/swanky-ji-myths-in-the-making/
             <span class="smm-volume__title">《{{ b.title }}》</span>
             <span class="smm-volume__en" lang="en">{{ b.title_en }}</span>
             <span class="smm-volume__lead">{{ b.lead }}</span>
-            <span class="smm-volume__meta">{{ b.count }} 張 · {{ b.chapters.size }} 章 · {{ b.setting }}</span>
+            <span class="smm-volume__meta">{{ b.count }} 張 · {% if b.chapters.size > 0 %}{{ b.chapters.size }} 章{% else %}不分章{% endif %} · {{ b.setting }}</span>
           </a>
         </li>
         {% endfor %}
@@ -72,7 +72,7 @@ permalink: /photography/swanky-ji-myths-in-the-making/
         <p class="photo-author-eyebrow">SWANKY JI × SWANKY</p>
         <div>
           <h2 id="after-title">每一冊都可以單獨讀。</h2>
-          <p>每冊 36 張、六章，照片依定稿順序排列；章末有一句短句，書末交代這則神話從哪裡來、改寫了什麼。每張都附 Flickr 連結。</p>
+          <p>每冊 36 張，照片依定稿順序排列；章節分法依各冊書稿而定，有的冊附章末短句、後記或書末的故事與來源。每張都附 Flickr 連結。</p>
         </div>
       </header>
       <div class="photo-author-archive-grid">

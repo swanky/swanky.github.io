@@ -10,3 +10,11 @@ volumes:
   - { data: swanky_ji_dance_before_stillness, url: /photography/swanky-ji-dance-before-stillness/ }
   - { data: swanky_ji_seven_gates, url: /photography/swanky-ji-seven-gates/ }
   - { data: swanky_ji_inviting_the_sun, url: /photography/swanky-ji-inviting-the-sun/ }
+  # 05–09、11、12（2026-10-23 攝影端上 Flickr 後移交）；第 10 冊仍在修訂，之後再補。
+  - { data: swanky_ji_bringing_them_home, url: /photography/swanky-ji-bringing-them-home/ }
+  - { data: swanky_ji_answering_light, url: /photography/swanky-ji-answering-light/ }
+  - { data: swanky_ji_sound_without_a_name, url: /photography/swanky-ji-sound-without-a-name/ }
+  - { data: swanky_ji_weight_she_chooses, url: /photography/swanky-ji-weight-she-chooses/ }
+  - { data: swanky_ji_wearing_the_night, url: /photography/swanky-ji-wearing-the-night/ }
+  - { data: swanky_ji_city_remembers_her, url: /photography/swanky-ji-city-remembers-her/ }
+  - { data: swanky_ji_not_weaving_for_gods, url: /photography/swanky-ji-not-weaving-for-gods/ }

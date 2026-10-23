@@ -1226,11 +1226,15 @@
 .smm-coda { max-width: 40em; margin: clamp(40px, 6vw, 72px) auto 0; padding: 0; border: 0; text-align: center; }
 .smm-coda p { margin: 0; color: #f3efe6; font-family: var(--font-display); font-size: clamp(1.1rem, 1.7vw, 1.4rem); line-height: 1.8; }
 .smm-coda p[lang="en"] { margin-top: 12px; color: #8f8b82; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.7; }
+.smm-subtitle { margin: 0 0 10px; color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.92rem; letter-spacing: 0.04em; }
+.smm-afterword .photo-author-eyebrow { text-align: center; }
+.smm-coda--afterword { margin-top: 18px; }
 .smm-en { margin-top: 20px; color: #aaa69d; }
 .smm-en summary { cursor: pointer; color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; }
 .smm-en p { font-size: 0.95rem; line-height: 1.75; }
 .smm-bilingual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 56px; }
-.smm-col p { margin: 0 0 14px; color: #34322e; line-height: 1.9; }
+.smm-col { min-width: 0; }
+.smm-col p { margin: 0 0 14px; color: #34322e; line-height: 1.9; overflow-wrap: anywhere; }
 .smm-col[lang="en"] p { color: #4a4741; font-size: 0.95rem; line-height: 1.75; }
 .smm-col h3 { margin: 30px 0 12px; padding-top: 18px; border-top: 1px solid #cbc4b7; color: #1a1917; font-size: 1rem; letter-spacing: 0.06em; }
 .smm-volumes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 24px; margin: 0; padding: 0; list-style: none; }
