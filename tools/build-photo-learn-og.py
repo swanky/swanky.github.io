@@ -10,6 +10,7 @@
 用法（需要本機 Chrome 與 Pillow）：
   python -X utf8 tools/build-photo-learn-og.py            # 產生圖檔到 assets/img/photo-learn/og/
   python -X utf8 tools/build-photo-learn-og.py --write    # 另外把 og_image 等欄位寫進各頁 front matter
+  python -X utf8 tools/build-photo-learn-og.py --include-review --write --only <slug>   # 審稿中的章也先做
 可重跑；圖檔與 front matter 欄位都會覆寫成最新內容。
 """
 import argparse
@@ -129,14 +130,15 @@ def render(chrome, html_text, out_jpg, tmpdir):
     im.save(out_jpg, 'JPEG', quality=86, optimize=True, progressive=True)
 
 
-def jobs():
+def jobs(include_review=False):
+    ok = {'published', 'review'} if include_review else {'published'}
     zone = yaml.safe_load((ROOT / '_data' / 'photo_learn.yml').read_text(encoding='utf-8'))
     out = []
     n_ch = 0
     for i, u in enumerate(zone['units'], 1):
         unit_label = f"U{u['id'][1:]} {u['title']}" if re.match(r'u\d+$', u['id']) else u['title']
         for ch in u['chapters']:
-            if ch.get('status') != 'published' or not ch.get('url'):
+            if ch.get('status') not in ok or not ch.get('url'):
                 continue
             n_ch += 1
             page = ROOT / ch['url'].strip('/') / 'index.html'
@@ -152,7 +154,7 @@ def jobs():
             out.append(dict(slug=slug, page=page, kicker=unit_label, title=a, subtitle=b, photo=photo, alt=alt))
     # 藝術筆記（作品屬他人，只做文字卡）
     for note in zone.get('art_notes', {}).get('notes', []):
-        if note.get('status') != 'published' or not note.get('url'):
+        if note.get('status') not in ok or not note.get('url'):
             continue
         page = ROOT / note['url'].strip('/') / 'index.html'
         a, b = split_title(note['title'])
@@ -212,10 +214,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--write', action='store_true', help='把 og_image 欄位寫進各頁 front matter')
     ap.add_argument('--only', help='只做 slug 含這段字的')
+    ap.add_argument('--include-review', action='store_true', help='連 status 為 review（審稿中）的章也做，供上線前先備好預覽圖')
     args = ap.parse_args()
     chrome = find_chrome()
     with tempfile.TemporaryDirectory() as tmp:
-        for j in jobs():
+        for j in jobs(args.include_review):
             if args.only and args.only not in j['slug']:
                 continue
             assert '"' not in j['alt']

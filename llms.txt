@@ -18,6 +18,7 @@
 
 - [攝影寫真總覽](https://swanky.github.io/photography/): 攝影作品集首頁
 - [創作筆記](https://swanky.github.io/photography/notes/): 史旺基寫自己的作品：自己的拍法、寫真集怎麼做，以及怎麼用 AI 做寫真。攝影史與其他攝影師另外整理在「看懂寫真」。
+- [我的七種拍法：把二十年的照片攤開，整理出九條路線](https://swanky.github.io/photography/my-seven-ways-of-shooting/): 把 Flickr 上近五百張最受歡迎的人像攤開，我整理出七條彩色路線加兩種黑白。每條寫清楚它長什麼樣、我在現場怎麼拍、修圖時留什麼不碰什麼。
 - [好的寫真集，內頁很少說話](https://swanky.github.io/photography/photobook-pages-say-less/): 寫真集的照片頁要不要放圖說？我把一本寫真集從 1,661 字減到 559 字、照片頁不留字，整理字該搬去哪裡、節奏靠什麼撐。
 - [日本寫真為什麼粗粒、晃動、像日記？從 1930 年代讀起的前傳](https://swanky.github.io/photography/japanese-photography-history-primer/): 日本寫真為什麼粗粒、晃動、像日記？從 1930 年代新興寫真、1950 年代戰後寫實埋下的兩個問題讀起，再看 1968 年《Provoke》之後三位創辦人各走各的路。1959 年起的館藏作品，另有「看懂寫真」的章節。
 - [拍人要站多近？聽荒木經惟、佐內正史、川島小鳥自己說](https://swanky.github.io/photography/presence-araki-sanai-kawashima/): 人像要有「在場感」，關鍵常常不是表情，而是拍的人站多近。這篇只做一件事：聽荒木經惟、佐內正史、川島小鳥在訪談裡怎麼說距離，再整理成拍照時可以直接試的四個練習。
@@ -55,6 +56,7 @@
 - [日本攝影史一頁看懂：從 VIVO 到日常寫真，拍的人怎麼走進照片](https://swanky.github.io/photography/learn/history/japan-photography-history/): 森山大道、荒木經惟、川內倫子……名字很多卻串不起來？一張圖、六個節點，從 1959 年的 VIVO 講到 1990 年代以後的日常寫真，每個節點都附美術館出處，再教你用一個問題讀照片。
 - [只用美術館與官方資料寫攝影史：我的查證方法](https://swanky.github.io/photography/learn/method/how-i-verify/): 寫攝影師、寫報告、做 AI 影像前想先查對資料？這一章用我自己踩過的四個例子，示範去哪裡找可靠來源、怎麼分辨事實和推論、說法不一致怎麼並列，以及怎麼讀美術館的圖片使用條款。
 - [怎麼讀一位攝影師](https://swanky.github.io/photography/learn/method/how-to-read-a-photographer/): 想自己讀懂一位攝影師、寫一份報告，或替 AI 影像查對參考資料？用六個步驟，從基本資料卡、館藏頁、看作品、讀本人說的話、放回時代，一路做到分得清事實和看法的筆記。
+- [怎麼評一本寫真集：單張都好，整本為什麼還是退回](https://swanky.github.io/photography/learn/method/how-to-review-a-photobook/): 看寫真集時，常常每張都好看，整本翻完卻覺得平。這一章把我退回整本的理由、獎項和編輯公開說過的判準，整理成五個可以自己問的問題。
 - [奈良美智《Harmless Kitty》：無害，但不必乖巧](https://swanky.github.io/photography/learn/art/harmless-kitty/): 我從大學就喜歡奈良美智 1994 年的《Harmless Kitty》。這篇藝術筆記把作品資料、六個局部、構圖、原作尺寸與創作背景整理成一頁；事實與我的讀法分開寫，每條資料都附來源。
 - [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十五本概念寫真集，另有史旺基的 AI 助理形象小赫。
 - [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹。
@@ -128,12 +130,25 @@
 代表文章：
 
 - [AI 不是我的替身，而是我跨出邊界的方法](https://swanky.github.io/technical/ai-photography-virtual-agency/)
+- [單張都核准，整本卻退回：我給寫真集加了一道變化度閘門](https://swanky.github.io/technical/photobook-variety-gate/)
 - [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
 - [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
 - [同時派五個 Agent 之前，先讓它知道自己做錯了](https://swanky.github.io/technical/agent-parallel-verification-first/)
 - [Dario 說 AI 該慢一點：我支持驗證，但不想把規則也外包給供應商](https://swanky.github.io/technical/ai-frontier-pacing-verifiable-safety/)
 - [我讓五隻 CloneX 跳 KPOP：參考影片可能才是瓶頸](https://swanky.github.io/technical/clonex-bunny-dance-reference-bottleneck/)
 - [AI 影片不是輸入一句話就好：6 天彩排 3 支成片，我踩過的審核、參考圖與成本問題](https://swanky.github.io/technical/ai-video-production-rehearsal-seedance-workflow/)
+- [AI 影片製作筆記（系列入口）](https://swanky.github.io/technical/ai-video/): 給想用 AI 做影片、但不是影視本科出身的人：史旺基把實際做過的 AI 影片方法、怎麼看片驗收、成本怎麼控制與踩過的坑整理成一系列筆記，附一頁白話術語表。
+- [讓 AI 助手幫你做影片，又不會半夜亂花錢：五個把關做法](https://swanky.github.io/technical/ai-video-agent-human-gates/): AI 助手能送件、算帳、剪接，但「可以」只能由人說。整理讓它放手做事又不失控的五個做法。
+- [沒念過影視，也想做 AI 影片？先補這四個基本功，比挑模型更重要](https://swanky.github.io/technical/ai-video-basics-for-non-film/): 模型只是素材來源之一。非影視背景做 AI 影片，先補流程、核准點、分鏡寫法與交付規格，才交得出一支完整的片。
+- [寫了一堆「電影感」關鍵字，AI 影片還是拍不出來？先把鏡頭語言分成三層](https://swanky.github.io/technical/ai-video-camera-language-prompt/): 推軌、移焦、蒙太奇不是同一種東西。把常用鏡頭語言分成三層，就知道哪些能寫進指令、哪些要拆鏡或交給剪輯。
+- [限時 AI 影片比賽怎麼準備？我帶著五條停損線進到決賽八強](https://swanky.github.io/technical/ai-video-competition-rehearsal-to-finals/): 題目現場才公布、兩天就要交件，AI 影片比賽該怎麼準備？從賽前彩排、預算上限到交件前一晚的取捨，整理五條停損線。
+- [AI 影片的角色每一鏡都長得不一樣？五個做法讓角色不走樣](https://swanky.github.io/technical/ai-video-consistency-reference-previs/): 角色每一鏡都長得不太一樣？分清身分與風格、先核准兩張圖、排成一整排抓漂移，再用白模排站位。
+- [AI 影片的錢都花在哪？四個習慣讓預算不失控](https://swanky.github.io/technical/ai-video-cost-control/): AI 影片的錢，常常不是花在成片上，而是重新生成與失敗。四個習慣，加上我前後實付約 US$125 的帳本。
+- [想把小說拍成 AI 短劇？先別急著生影片：我用靜態圖做完十集《金瓶梅》的方法](https://swanky.github.io/technical/ai-video-jinpingmei-novel-adaptation/): 想把小說拍成 AI 短劇？十集《金瓶梅》只用生成圖片、旁白與剪輯完成。從鎖原典、先配音到人工把關，一步步拆給你看。
+- [排行榜第一名，不一定適合你的鏡頭：用同一張圖讓 AI 影片模型對打](https://swanky.github.io/technical/ai-video-model-comparison-method/): 排行榜只能幫你縮名單。用同一張圖、同一段指令、同樣秒數讓模型對打，才知道哪個模型適合你的鏡頭。
+- [AI 影片生出來，到底能不能用？用三種判定取代「感覺還可以」](https://swanky.github.io/technical/ai-video-quality-review-three-verdicts/): 每一鏡只給三種結論。先寫檢查清單再看片，拿不準就往保守判，畫質放大排在最後。
+- [看到厲害的 AI 影片想學？先別抄提示詞，拆清楚它到底做到了什麼](https://swanky.github.io/technical/ai-video-reference-breakdown/): 看到厲害的 AI 影片，先別急著抄提示詞。用四個問題拆解參考案例，再用程式量切點，分清哪些能學、哪些只是剪得好。
+- [AI 影片做完畫面只完成一半：聲音怎麼配，上傳前要查哪些事](https://swanky.github.io/technical/ai-video-sound-rights-release-check/): 觀眾最常抓到的問題常在聲音。整理配音、配樂與混音的做法，以及上傳前的授權與 AI 揭露檢查。
 - [Bot Mode 不是多開幾個聊天視窗：AI Agent 正從 Session 走向有名字的長期同事](https://swanky.github.io/technical/hermes-bot-mode-persistent-ai-team/)
 - [Matt Pocock × Uncle Bob：AI 寫程式愈快，軟體基本功愈不能省](https://swanky.github.io/technical/uncle-bob-ai-software-fundamentals/)
 - [「Scaffolding is coping」不是不要規範：AI Agent 架構該刪什麼、留下什麼](https://swanky.github.io/technical/scaffolding-thin-harness-agent-architecture/)
@@ -188,6 +203,7 @@
 - [新手導讀](https://swanky.github.io/jinpingmei/guide/): 第一次讀金瓶梅——版本怎麼選、從哪一回開始
 - [詞語小典](https://swanky.github.io/jinpingmei/glossary/): 明代老詞的白話解釋，可搜尋
 - [影像工作室](https://swanky.github.io/jinpingmei/studio/): AI 虛擬劇組如何重製金瓶梅
+- [改編筆記](https://swanky.github.io/jinpingmei/studio/behind/): 看完《金瓶梅》影像十部曲再翻原文，哪句台詞出自原書、哪句是改寫？以第八到第十集為例：原文與片中台詞逐句對照、拍之前回原文查證的四件事、春梅一路被標上的價錢，以及哪些情節刻意不拍、不替人物下判決。
 - [寫真館](https://swanky.github.io/jinpingmei/photobook/): 金瓶梅角色寫真集
 - [李瓶兒《不趕時間的你》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-no-hurry/): 金瓶梅宇宙角色寫真集：李瓶兒《不趕時間的你》——海邊的兩日，36 張現代時尚寫真，可線上翻閱、前後切換與下載完整寫真集。
 - [李瓶兒《瓶中有光》寫真集](https://swanky.github.io/jinpingmei/photobook/li-pinger-vessel-of-light/): 金瓶梅宇宙角色寫真集第二輯：李瓶兒《瓶中有光》——一個瓶子的五個狀態，五個房間、20 張以器物寫人的當代寫真，附雙語圖說，可線上翻閱、前後切換與下載完整寫真集。
@@ -223,6 +239,9 @@
 - [制服女孩 NFT 系列（OurSong，2021）](https://swanky.github.io/nft/oursong/): 2021 年 7 月在台灣平台 OurSong 發行的攝影 NFT 系列完整存檔——13 件作品的上架卡面與持有者解鎖內容、周邊物件、版權說明；平台已於 2024 年 11 月停止營運
 - [收藏展](https://swanky.github.io/nft/collection/): 史旺基 NFT 收藏的線上策展——七個展區：CloneX、藍籌與 PFP（MAYC、Meebits、MOAR）、村上隆（Murakami.Flowers、108 Flowers、招財貓）、潮流品牌（RTFKT × Nike、adidas、Moncler）、遊戲與元宇宙（The Sandbox、Aavegotchi）、亞洲藝術與社群（Akibahara、GEISAI）、自己的發行；每件連回 OpenSea
 - [Uniform CloneX（UCX）](https://swanky.github.io/nft/uniform-clonex/): CloneX 水手服女子團體的角色檔案頁——三位正團成員與兩位幕後角色的身分檔案、多視角視覺、世界觀故事與影像作品。制服女孩攝影系列的 Web3 世代延伸
+- [CloneX 世界觀與五位成員｜Uniform CloneX](https://swanky.github.io/nft/uniform-clonex/lore/): CloneX 官方設定其實只有一段起源故事和 DNA 分類。這頁分清哪些是官方原文、哪些是 UCX 的創作延伸，並逐一介紹五位成員的官方特徵、固定造型與在團裡的角色。
+- [REROLL 幕後｜Uniform CloneX](https://swanky.github.io/nft/uniform-clonex/reroll/): REROLL 幕後：一間「換世界、不換你」的試衣間，同一個故事拍成卡通與擬真兩版。看故事怎麼分段、兩版差在哪，以及做的時候學到的事。
+- [BUNNY AWAKENS 幕後｜Uniform CloneX](https://swanky.github.io/nft/uniform-clonex/bunny-awakens/): BUNNY AWAKENS 幕後：30 秒裡，CloneX #15755 Bunny 從人類樣子變回惡魔。看三種樣子的設定、每一秒的節拍，以及剪接與聲音改了哪些地方。
 - [《七個名字，八種在場》寫真集](https://swanky.github.io/nft/photobook/seven-names-eight-presences/): 七個名字，八種在場：七位 NFT 角色、八個呈現，42 張影像從空間、碰觸與同行走向休息。可逐張觀看並下載完整寫真集。
 
 ## 內容主題與專長 Topics & Expertise
