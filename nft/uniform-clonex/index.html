@@ -210,6 +210,13 @@
 			return (arr || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
 		}
 		function ext(url) { return /^https?:/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : ""; }
+		/* 延伸連結（幕後頁、世界觀頁）：JSON 給 links: [{ label, url }] 就出現，不給就沒有 */
+		function linksHTML(arr) {
+			if (!arr || !arr.length) { return ""; }
+			return '<p class="ucx-links">' + arr.map(function (l) {
+				return '<a href="' + esc(l.url) + '"' + ext(l.url) + ">" + esc(l.label) + ' <span aria-hidden="true">→</span></a>';
+			}).join("") + "</p>";
+		}
 
 		/* 人物索引：一眼看完本段有誰，點了跳到下面的完整檔案 */
 		function idxHTML(m, i) {
@@ -282,6 +289,7 @@
 				'<span class="pill">' + esc(m.role) + "</span>" +
 				'<div class="prose">' + paras(m.bio) + "</div>";
 			if (m.note) { h += '<p class="note">' + esc(m.note) + "</p>"; }
+			h += linksHTML(m.links);
 			if (m.dna_official) {
 				h += '<div class="dna"><span class="dna__lab">DNA（官方設定的族別）· ' + esc(m.dna) + "</span>" +
 					'<p class="dna__q">&ldquo;' + esc(m.dna_official) + '&rdquo;</p>' +
@@ -348,6 +356,7 @@
 				if (figs.length > 1) { figHTML = '<div class="ch__figs">' + figHTML + "</div>"; }
 				h += figHTML;
 				if (c.source) { h += '<p class="ch__src">' + esc(c.source) + "</p>"; }
+				h += linksHTML(c.links);
 				return h + "</article>";
 			}).join("");
 
@@ -373,6 +382,7 @@
 				h += '</div><h3 class="work__title">' + title + "</h3>" +
 					'<p class="work__desc">' + esc(w.desc) + "</p>";
 				if (w.todo) { h += '<p class="work__todo mono">' + esc(w.todo) + "</p>"; }
+				h += linksHTML(w.links);
 				return h + "</div></article>";
 			}).join("");
 

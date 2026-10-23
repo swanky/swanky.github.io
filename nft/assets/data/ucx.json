@@ -198,7 +198,13 @@
       "pfp": "pfp/clonex_15755.webp",
       "pfp_note": "RTFKT 官方 PFP",
       "token": "9245",
-      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9245"
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9245",
+      "links": [
+        {
+          "label": "官方設定與深度介紹",
+          "url": "lore/#clonex-15755"
+        }
+      ]
     },
     {
       "id": "17474",
@@ -358,7 +364,13 @@
       "pfp": "pfp/clonex_17474.webp",
       "pfp_note": "RTFKT 官方 PFP",
       "token": "15939",
-      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/15939"
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/15939",
+      "links": [
+        {
+          "label": "官方設定與深度介紹",
+          "url": "lore/#clonex-17474"
+        }
+      ]
     },
     {
       "id": "9268",
@@ -501,7 +513,13 @@
       "pfp": "pfp/clonex_9268.webp",
       "pfp_note": "RTFKT 官方 PFP",
       "token": "2692",
-      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/2692"
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/2692",
+      "links": [
+        {
+          "label": "官方設定與深度介紹",
+          "url": "lore/#clonex-9268"
+        }
+      ]
     }
   ],
   "crew": [
@@ -647,7 +665,13 @@
       "pfp": "pfp/clonex_15162.webp",
       "pfp_note": "RTFKT 官方 PFP",
       "token": "9023",
-      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9023"
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9023",
+      "links": [
+        {
+          "label": "官方設定與深度介紹",
+          "url": "lore/#clonex-15162"
+        }
+      ]
     },
     {
       "id": "17152",
@@ -806,7 +830,13 @@
       "pfp": "pfp/clonex_17152.webp",
       "pfp_note": "RTFKT 官方 PFP",
       "token": "9927",
-      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9927"
+      "opensea": "https://opensea.io/item/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/9927",
+      "links": [
+        {
+          "label": "官方設定與深度介紹",
+          "url": "lore/#clonex-17152"
+        }
+      ]
     }
   ],
   "story": [
@@ -819,7 +849,13 @@
         "官方沒有再寫下去——沒有漫畫、沒有劇集、沒有替任何一隻 Clone 取過名字。所以以下的故事是我們寫的。它不牴觸官方設定，因為官方在這裡留的是一片空白。"
       ],
       "source": "官方起源敘事，最初發布於 CloneX 官網。",
-      "image": null
+      "image": null,
+      "links": [
+        {
+          "label": "官方設定與 UCX 延伸怎麼分",
+          "url": "lore/"
+        }
+      ]
     },
     {
       "ch": 1,
@@ -880,7 +916,13 @@
         "她們穿同一套制服站在同一個舞台上，這件事本身就是這個世界最好的說明——在化身的世代，你從哪裡被召喚出來，決定不了你要站在哪裡。"
       ],
       "source": "DNA 引文為 RTFKT 官方 2021-12 pre-reveal 推文原句（Demon 與 Human 已透過網頁存檔覆核，Angel 為搜尋快照轉引）。",
-      "image": null
+      "image": null,
+      "links": [
+        {
+          "label": "五位成員的 DNA 對照",
+          "url": "lore/#dna"
+        }
+      ]
     }
   ],
   "works": [
@@ -893,7 +935,13 @@
       "desc": "同一個故事的兩種視覺語言之一。一間可以重抽外型的店。",
       "url": "https://youtu.be/9CxNWxmb5qY",
       "image": "works/reroll-photoreal.jpg",
-      "fit": "cover"
+      "fit": "cover",
+      "links": [
+        {
+          "label": "REROLL 幕後",
+          "url": "reroll/"
+        }
+      ]
     },
     {
       "date": "2026-08",
@@ -904,7 +952,13 @@
       "desc": "同一個 REROLL 故事，手繪質感的版本。",
       "url": "https://youtu.be/WO2lMCWzVNQ",
       "image": "works/reroll-cartoon.jpg",
-      "fit": "cover"
+      "fit": "cover",
+      "links": [
+        {
+          "label": "REROLL 幕後",
+          "url": "reroll/"
+        }
+      ]
     },
     {
       "date": "2026-08",
@@ -916,7 +970,13 @@
       "desc": "把 CloneX #15755 從一張頭像變成一個開始呼吸的角色。",
       "url": "https://youtu.be/lXnwBJBcbXY",
       "image": "works/bunny-awakens.jpg",
-      "fit": "cover"
+      "fit": "cover",
+      "links": [
+        {
+          "label": "BUNNY AWAKENS 幕後",
+          "url": "bunny-awakens/"
+        }
+      ]
     },
     {
       "date": "2026-07",
