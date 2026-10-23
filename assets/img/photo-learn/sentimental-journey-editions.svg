@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">同一批照片，出版了三次</title>
+<desc id="d">示意圖，不是原書的任何一頁。三個方框依年代排列：1971 年荒木經惟自費出版的私家版，24 × 24 公分、收 108 張、限定 1,000 部，另夾一張印著作者手寫文字的綠色紙；1991 年新潮社《センチメンタルな旅・冬の旅》，前段只選入 21 張，後面接記錄到妻子過世的〈冬の旅〉91 張；2016 年河出書房新社復刻，108 張重新完整出版。底部重點：張數一變，同一張照片的意思也跟著變。</desc>
+<rect width="1200" height="620" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937" text-anchor="start">同一批照片，出版了三次</text>
+<text x="48" y="128" font-size="24" font-weight="400" fill="#4B5563" text-anchor="start">示意，依國會圖書館、MoMA、東京都寫真美術館與出版社頁整理</text>
+<rect x="48" y="170" width="340" height="330" rx="22" fill="#FBF3E0" stroke="#B07D1A" stroke-width="3"/>
+<text x="218" y="222" font-size="40" font-weight="700" fill="#B07D1A" text-anchor="middle">1971</text>
+<text x="218" y="262" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">自費私家版</text>
+<text x="218" y="318" font-size="36" font-weight="700" fill="#1F2937" text-anchor="middle">108 張</text>
+<text x="218" y="370" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">24 × 24 公分</text>
+<text x="218" y="406" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">限定 1,000 部</text>
+<text x="218" y="442" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">另夾一張手寫文字</text>
+<rect x="430" y="170" width="340" height="330" rx="22" fill="#F1F5F9" stroke="#64748B" stroke-width="3"/>
+<text x="600" y="222" font-size="40" font-weight="700" fill="#1F2937" text-anchor="middle">1991</text>
+<text x="600" y="262" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">新潮社</text>
+<text x="600" y="318" font-size="36" font-weight="700" fill="#B91C1C" text-anchor="middle">21 張 ＋ 91 張</text>
+<text x="600" y="370" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">前段只選 21 張</text>
+<text x="600" y="406" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">後接〈冬の旅〉</text>
+<text x="600" y="442" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">記錄到妻子過世</text>
+<rect x="812" y="170" width="340" height="330" rx="22" fill="#FBF3E0" stroke="#B07D1A" stroke-width="3"/>
+<text x="982" y="222" font-size="40" font-weight="700" fill="#B07D1A" text-anchor="middle">2016</text>
+<text x="982" y="262" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">河出書房新社</text>
+<text x="982" y="318" font-size="36" font-weight="700" fill="#1F2937" text-anchor="middle">108 張</text>
+<text x="982" y="370" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">復刻</text>
+<text x="982" y="406" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">全部 108 張</text>
+<text x="982" y="442" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">重新完整出版</text>
+<line x1="392" y1="335" x2="426" y2="335" stroke="#64748B" stroke-width="4"/>
+<polygon points="426,335 411.6,342.0 411.6,328.0" fill="#64748B"/>
+<line x1="774" y1="335" x2="808" y2="335" stroke="#64748B" stroke-width="4"/>
+<polygon points="808,335 793.6,342.0 793.6,328.0" fill="#64748B"/>
+<text x="48" y="566" font-size="26" font-weight="700" fill="#1F2937" text-anchor="start">張數一變，同一張照片的意思也跟著變：1971 年是新婚紀錄，1991 年成了告別的開頭。</text>
+</svg>

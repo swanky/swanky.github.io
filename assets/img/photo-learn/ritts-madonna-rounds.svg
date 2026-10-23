@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 710" width="1200" height="710" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">兩個都懂影像的人，一來一往</title>
+<desc id="d">示意圖。中間是一來一往的循環：被攝者帶著新造型出現，攝影師用光和取景回應，被攝者再把它當成下一次的挑戰。左邊列出被攝者決定的：自己的形象怎麼被看見、這一次的新造型、照片要拿去哪裡用。右邊列出攝影師決定的：光從哪裡來、景框多大、快門時機和選片。下方提醒：先講好誰決定什麼，較勁才會變成作品。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="1200" height="710" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="44" fill="#1F2937" font-weight="700">兩個都懂影像的人，一來一往</text>
+<text x="48" y="126" font-size="24" fill="#4B5563">示意圖・依館方與評論者的描述整理，不是兩人的工作紀錄</text>
+<rect x="48" y="160" width="340" height="400" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="76" y="212" font-size="30" fill="#1F2937" font-weight="700">被攝者決定</text>
+<circle cx="80" cy="268" r="5" fill="#1F2937"/><text x="96" y="276" font-size="24" fill="#4B5563">自己的形象怎麼被看見</text>
+<circle cx="80" cy="338" r="5" fill="#1F2937"/><text x="96" y="346" font-size="24" fill="#4B5563">這一次的新造型</text>
+<circle cx="80" cy="408" r="5" fill="#1F2937"/><text x="96" y="416" font-size="24" fill="#4B5563">照片要拿去哪裡用</text>
+<circle cx="600" cy="360" r="120" fill="#FFF8E7" stroke="#E5A300" stroke-width="6" stroke-dasharray="14 10"/><path d="M480,360 A120,120 0 0 1 600,240" fill="none" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/><path d="M720,360 A120,120 0 0 1 600,480" fill="none" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/><text x="600" y="218" font-size="24" fill="#1F2937" font-weight="700" text-anchor="middle">新造型出現</text>
+<text x="600" y="520" font-size="24" fill="#1F2937" font-weight="700" text-anchor="middle">再挑戰一次</text>
+<text x="600" y="352" font-size="30" fill="#8A5D00" font-weight="700" text-anchor="middle">一來</text>
+<text x="600" y="392" font-size="30" fill="#8A5D00" font-weight="700" text-anchor="middle">一往</text>
+<rect x="812" y="160" width="340" height="400" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="840" y="212" font-size="30" fill="#1F2937" font-weight="700">攝影師決定</text>
+<circle cx="844" cy="268" r="5" fill="#1F2937"/><text x="860" y="276" font-size="24" fill="#4B5563">光從哪裡來</text>
+<circle cx="844" cy="338" r="5" fill="#1F2937"/><text x="860" y="346" font-size="24" fill="#4B5563">景框要多大</text>
+<circle cx="844" cy="408" r="5" fill="#1F2937"/><text x="860" y="416" font-size="24" fill="#4B5563">快門時機和選片</text>
+<rect x="48" y="590" width="1104" height="90" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="600" y="646" font-size="28" fill="#8A5D00" font-weight="700" text-anchor="middle">先講好誰決定什麼，你來我往的較勁才會變成作品。</text>
+</svg>

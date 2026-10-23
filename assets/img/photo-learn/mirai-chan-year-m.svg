@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1180" width="600" height="1180" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">《未来ちゃん》：三個固定、一個在變</title>
+<desc id="d">示意圖，依攝影師官網、出版社、國立國會圖書館與 IMA 訪談整理，不含書中任何影像。左邊是一個分成春夏秋冬四格的圓，代表全書的骨架是一年。中間是三個固定條件：同一個人、同一座島（寄住佐渡島）、同一台相機（Nikon F6）。右邊是兩個版本：2011 年初版 23 公分、2,000 円、不印頁碼；2024 年新裝版改名 Miraichan、A5 精裝 208 頁、新增 6 張照片。</desc>
+<rect width="600" height="1180" fill="#FFFFFF"/>
+<text x="24" y="62" font-size="38" font-weight="700" fill="#1F2937" text-anchor="start">三個固定，一個在變</text>
+<text x="24" y="102" font-size="22" fill="#4B5563" text-anchor="start">示意，依官網、出版社、國會圖書館</text>
+<text x="24" y="132" font-size="22" fill="#4B5563" text-anchor="start">書目與 IMA 訪談整理；不含書中影像</text>
+<path d="M300 320 L300.0 170.0 A150 150 0 0 1 450.0 320.0 Z" fill="#FFF8E7" stroke="#FFFFFF" stroke-width="6"/>
+<text x="370" y="262" font-size="34" font-weight="700" fill="#1F2937" text-anchor="middle">春</text>
+<path d="M300 320 L450.0 320.0 A150 150 0 0 1 300.0 470.0 Z" fill="#FDECC8" stroke="#FFFFFF" stroke-width="6"/>
+<text x="370" y="402" font-size="34" font-weight="700" fill="#1F2937" text-anchor="middle">夏</text>
+<path d="M300 320 L300.0 470.0 A150 150 0 0 1 150.0 320.0 Z" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="6"/>
+<text x="230" y="402" font-size="34" font-weight="700" fill="#1F2937" text-anchor="middle">秋</text>
+<path d="M300 320 L150.0 320.0 A150 150 0 0 1 300.0 170.0 Z" fill="#E2E8F0" stroke="#FFFFFF" stroke-width="6"/>
+<text x="230" y="262" font-size="34" font-weight="700" fill="#1F2937" text-anchor="middle">冬</text>
+<circle cx="300" cy="320" r="45" fill="#FFFFFF" stroke="#E5A300" stroke-width="4"/>
+<text x="300" y="331" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="middle">一年</text>
+<text x="300" y="512" font-size="24" fill="#374151" text-anchor="middle">骨架：島上的四季</text>
+<rect x="24" y="540" width="552" height="96" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="300" y="579" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">同一個人</text>
+<text x="300" y="613" font-size="22" fill="#374151" text-anchor="middle">一整年跟拍</text>
+<rect x="24" y="652" width="552" height="96" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="300" y="691" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">同一座島</text>
+<text x="300" y="725" font-size="22" fill="#374151" text-anchor="middle">寄住佐渡島</text>
+<rect x="24" y="764" width="552" height="96" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="300" y="803" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">同一台相機</text>
+<text x="300" y="837" font-size="22" fill="#374151" text-anchor="middle">只用 Nikon F6</text>
+<rect x="24" y="880" width="268" height="190" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="158" y="934" font-size="24" font-weight="700" fill="#1F2937" text-anchor="middle">2011 初版</text>
+<text x="158" y="966" font-size="20" fill="#374151" text-anchor="middle">23 公分</text>
+<text x="158" y="998" font-size="20" fill="#374151" text-anchor="middle">2,000 円</text>
+<text x="158" y="1030" font-size="20" fill="#374151" text-anchor="middle">不印頁碼</text>
+<rect x="308" y="880" width="268" height="190" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="442" y="934" font-size="24" font-weight="700" fill="#1F2937" text-anchor="middle">2024 新裝版</text>
+<text x="442" y="966" font-size="20" fill="#374151" text-anchor="middle">改名 Miraichan</text>
+<text x="442" y="998" font-size="20" fill="#374151" text-anchor="middle">A5 精裝 208 頁</text>
+<text x="442" y="1030" font-size="20" fill="#374151" text-anchor="middle">新增 6 張照片</text>
+<rect x="24" y="1092" width="552" height="64" rx="16" fill="#1F2937"/>
+<text x="300" y="1133" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">骨架越簡單，照片越自由</text>
+</svg>

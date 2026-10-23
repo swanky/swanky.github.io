@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">背景拿掉，地點搬進題名</title>
+<desc id="d">示意圖，不是 Avedon 的任何一張照片。左邊是一般的現場人像：人物背後有房子、道路與路牌，看背景就知道在哪裡。中間箭頭寫著拿掉。右邊是同一個人站在白色無縫背景前，畫面裡只剩臉、衣服和姿態。下方一行題名格式：姓名、職業、地點、日期，依 Amon Carter 美術館館藏的題名寫法。底部重點：地點沒有消失，只是從畫面搬到題名。</desc>
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937" text-anchor="start">背景拿掉，地點搬進題名</text>
+<text x="48" y="128" font-size="24" font-weight="400" fill="#4B5563" text-anchor="start">示意，不是原作；依 Amon Carter 美術館館藏頁整理</text>
+<rect x="48" y="160" width="440" height="380" rx="0" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+<polygon points="215.2,428 320.8,428 488,540 48,540" fill="#CBD5E1"/>
+<polygon points="72,310 142,246 212,310" fill="#94A3B8"/>
+<rect x="84" y="310" width="116" height="110" rx="0" fill="#CBD5E1" stroke="#94A3B8" stroke-width="2"/>
+<rect x="368" y="240" width="80" height="44" rx="0" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+<text x="408" y="270" font-size="22" font-weight="700" fill="#64748B" text-anchor="middle">66</text>
+<line x1="408" y1="284" x2="408" y2="428" stroke="#64748B" stroke-width="4"/>
+<circle cx="268" cy="260" r="26" fill="#475569"/>
+<path d="M228,410 L234,300 Q268,288 302,300 L308,410 Z" fill="#475569"/>
+<rect x="238" y="410" width="24" height="90" fill="#475569"/>
+<rect x="274" y="410" width="24" height="90" fill="#475569"/>
+<text x="268" y="578" font-size="24" font-weight="400" fill="#4B5563" text-anchor="middle">現場人像：看背景就知道在哪裡</text>
+<line x1="510" y1="350" x2="640" y2="350" stroke="#B07D1A" stroke-width="4"/>
+<polygon points="640,350 625.6,357.0 625.6,343.0" fill="#B07D1A"/>
+<text x="575" y="330" font-size="24" font-weight="700" fill="#B07D1A" text-anchor="middle">拿掉</text>
+<rect x="660" y="160" width="440" height="380" rx="0" fill="#FFFFFF" stroke="#111827" stroke-width="8"/>
+<circle cx="880" cy="260" r="26" fill="#1F2937"/>
+<path d="M840,410 L846,300 Q880,288 914,300 L920,410 Z" fill="#1F2937"/>
+<rect x="850" y="410" width="24" height="90" fill="#1F2937"/>
+<rect x="886" y="410" width="24" height="90" fill="#1F2937"/>
+<text x="880" y="578" font-size="24" font-weight="700" fill="#1F2937" text-anchor="middle">白色無縫背景：只剩臉、衣服、姿態</text>
+<rect x="660" y="604" width="440" height="50" rx="10" fill="#FBF3E0" stroke="#B07D1A" stroke-width="2"/>
+<text x="880" y="638" font-size="24" font-weight="700" fill="#B07D1A" text-anchor="middle">題名：姓名、職業、地點、日期</text>
+<text x="48" y="638" font-size="26" font-weight="700" fill="#1F2937" text-anchor="start">地點沒有消失，只是從畫面搬到題名。</text>
+</svg>

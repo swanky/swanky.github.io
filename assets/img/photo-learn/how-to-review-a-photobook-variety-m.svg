@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1096" width="600" height="1096" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">單張都好，整本還要「連貫但不單調」</title>
+<desc id="d">示意圖。上排「單調」：六張都是全身、站著、正面、雙手垂下，像同一張重複六次。下排「連貫但不單調」：同一位人物、同一個場景，但六張分別是環境遠景、走路、近臉、手部細節、側身坐、背面，景別、姿勢、朝向、手、視線都在變。底部重點：同一個動作只留最好的一張，每一張都要說得出留下的理由。</desc>
+<rect width="600" height="1096" fill="#FFFFFF"/>
+<text x="28" y="56" font-size="30" font-weight="700" fill="#1F2937">單張都好，整本還要</text>
+<text x="28" y="96" font-size="30" font-weight="700" fill="#1F2937">「連貫但不單調」</text>
+<text x="28" y="130" font-size="18" fill="#4B5563">六張一小段的兩種排法（示意）</text>
+<rect x="28" y="156" width="544" height="386" rx="16" fill="#FDECEC" stroke="#B91C1C" stroke-width="2"/>
+<text x="46" y="188" font-size="22" font-weight="700" fill="#B91C1C">單調：六張都一樣</text>
+<text x="46" y="214" font-size="16" fill="#4B5563">景別、姿勢、朝向、手都沒變</text>
+<rect x="46" y="228" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="126.0" cy="256" r="11" fill="#1F2937"/>
+<rect x="115.0" y="269" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M115.0,272 l-6,34 M137.0,272 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M120.0,309 l-4,40 M132.0,309 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="126.0" y="372" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="228" y="228" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="308.0" cy="256" r="11" fill="#1F2937"/>
+<rect x="297.0" y="269" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M297.0,272 l-6,34 M319.0,272 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M302.0,309 l-4,40 M314.0,309 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="308.0" y="372" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="410" y="228" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="490.0" cy="256" r="11" fill="#1F2937"/>
+<rect x="479.0" y="269" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M479.0,272 l-6,34 M501.0,272 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M484.0,309 l-4,40 M496.0,309 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="490.0" y="372" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="46" y="382" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="126.0" cy="410" r="11" fill="#1F2937"/>
+<rect x="115.0" y="423" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M115.0,426 l-6,34 M137.0,426 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M120.0,463 l-4,40 M132.0,463 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="126.0" y="526" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="228" y="382" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="308.0" cy="410" r="11" fill="#1F2937"/>
+<rect x="297.0" y="423" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M297.0,426 l-6,34 M319.0,426 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M302.0,463 l-4,40 M314.0,463 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="308.0" y="526" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="410" y="382" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<circle cx="490.0" cy="410" r="11" fill="#1F2937"/>
+<rect x="479.0" y="423" width="22" height="40" rx="6" fill="#1F2937"/>
+<path d="M479.0,426 l-6,34 M501.0,426 l6,34" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M484.0,463 l-4,40 M496.0,463 l4,40" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="490.0" y="526" font-size="18" fill="#4B5563" text-anchor="middle">全身・站・正面</text>
+<rect x="28" y="564" width="544" height="386" rx="16" fill="#E6F4F1" stroke="#0E7568" stroke-width="2"/>
+<text x="46" y="596" font-size="22" font-weight="700" fill="#0E7568">連貫但不單調</text>
+<text x="46" y="622" font-size="16" fill="#4B5563">每一張換了景別或動作，六張連起來是一小段</text>
+<rect x="46" y="636" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<rect x="62" y="658" width="34" height="76" fill="#CBD5E1"/>
+<rect x="104" y="682" width="26" height="52" fill="#E2E8F0"/>
+<rect x="152" y="670" width="38" height="64" fill="#CBD5E1"/>
+<circle cx="145.2" cy="700" r="5" fill="#1F2937"/>
+<rect x="140.2" y="706" width="10" height="16" rx="3" fill="#1F2937"/>
+<path d="M142.2,722 l-2,14 M148.2,722 l2,14" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+<text x="126.0" y="780" font-size="18" fill="#4B5563" text-anchor="middle">環境遠景</text>
+<rect x="228" y="636" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<circle cx="312.0" cy="664" r="11" fill="#1F2937"/>
+<rect x="299.0" y="677" width="20" height="40" rx="6" fill="#1F2937"/>
+<path d="M304.0,682 l-16,26 M316.0,682 l14,22" stroke="#1F2937" stroke-width="5" stroke-linecap="round"/>
+<path d="M304.0,717 l-18,38 M314.0,717 l16,36" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="308.0" y="780" font-size="18" fill="#4B5563" text-anchor="middle">全身・走</text>
+<rect x="410" y="636" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<circle cx="490.0" cy="696.0" r="34.8" fill="#1F2937"/>
+<rect x="463.6" y="727.2" width="52.8" height="22.799999999999997" rx="10" fill="#1F2937"/>
+<text x="490.0" y="780" font-size="18" fill="#4B5563" text-anchor="middle">近臉</text>
+<rect x="46" y="790" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<rect x="110.0" y="833.2" width="32" height="38" rx="6" fill="#B45309"/>
+<ellipse cx="100.0" cy="862.0" rx="14" ry="20" fill="#1F2937"/>
+<ellipse cx="152.0" cy="862.0" rx="14" ry="20" fill="#1F2937"/>
+<text x="126.0" y="934" font-size="18" fill="#4B5563" text-anchor="middle">手部細節</text>
+<rect x="228" y="790" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<rect x="348" y="804" width="26" height="92" fill="#DBEAFE"/>
+<circle cx="314.0" cy="826" r="13" fill="#1F2937"/>
+<path d="M294.0,840 h34 v34 h-20 v26 h-26 v-26 h12 z" fill="#1F2937"/>
+<text x="308.0" y="934" font-size="18" fill="#4B5563" text-anchor="middle">半身・坐</text>
+<rect x="410" y="790" width="160" height="120" rx="10" fill="#FFFFFF" stroke="#0E7568" stroke-width="2"/>
+<circle cx="490.0" cy="810" r="9" fill="#E5A300"/>
+<circle cx="490.0" cy="832" r="11" fill="#1F2937"/>
+<rect x="478.0" y="845" width="24" height="40" rx="6" fill="#1F2937"/>
+<path d="M483.0,885 l-3,34 M497.0,885 l3,34" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+<text x="490.0" y="934" font-size="18" fill="#4B5563" text-anchor="middle">全身・背面</text>
+<rect x="28" y="972" width="544" height="96" rx="16" fill="#FFF8E7" stroke="#E5A300" stroke-width="2"/>
+<text x="300" y="1012" font-size="21" font-weight="700" fill="#1F2937" text-anchor="middle">同一個動作只留最好的一張，</text>
+<text x="300" y="1044" font-size="21" font-weight="700" fill="#8A5D00" text-anchor="middle">每一張都要說得出留下的理由</text>
+</svg>

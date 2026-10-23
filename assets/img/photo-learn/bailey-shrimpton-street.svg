@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">攝影棚裡擺好，和跟著人走到街上</title>
+<desc id="d">示意圖，由上往下看，不是 Bailey 當年的實際拍攝配置。左邊是攝影棚：燈、背景、相機都固定，模特兒站在標好的位置。右邊是街頭：攝影師拿著輕便的小相機，跟著模特兒在真的街道上移動，路人和街景都進到畫面裡。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="44" fill="#1F2937" font-weight="700">攝影棚裡擺好，和跟著人走到街上</text>
+<text x="48" y="126" font-size="24" fill="#4B5563">由上往下看・示意，不是 Bailey 當年的配置</text>
+<rect x="48" y="160" width="520" height="420" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<rect x="152" y="230" width="312" height="16" rx="6" fill="#8A6F4D"/><text x="308" y="216" font-size="22" fill="#4B5563" text-anchor="middle">固定背景</text>
+<circle cx="308.0" cy="317.0" r="14.0" fill="#1F2937"/><rect x="292.0" y="333.0" width="32.0" height="52.0" rx="12.0" fill="#1F2937"/>
+<circle cx="308" cy="411" r="12" fill="none" stroke="#E5A300" stroke-width="4" stroke-dasharray="4 4"/><rect x="88" y="307" width="60" height="44" rx="8" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/><rect x="468" y="307" width="60" height="44" rx="8" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/><text x="118" y="383" font-size="22" fill="#8A5D00" font-weight="700" text-anchor="middle">燈</text>
+<text x="498" y="383" font-size="22" fill="#8A5D00" font-weight="700" text-anchor="middle">燈</text>
+<g transform="translate(308.0 479.2) scale(1.0)"><rect x="-34" y="-22" width="68" height="44" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="0" cy="0" r="13" fill="none" stroke="#374151" stroke-width="4"/><rect x="-14" y="-32" width="24" height="10" rx="3" fill="#374151"/></g>
+<line x1="282" y1="503" x2="264" y2="541" stroke="#374151" stroke-width="4"/><line x1="334" y1="503" x2="352" y2="541" stroke="#374151" stroke-width="4"/><text x="368" y="487" font-size="22" fill="#4B5563">三腳架</text>
+<rect x="632" y="160" width="520" height="420" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="1122" y="216" font-size="22" fill="#4B5563" text-anchor="end">真的街道</text>
+<rect x="672" y="236" width="90" height="34" rx="4" fill="#E5E7EB"/><rect x="782" y="236" width="90" height="34" rx="4" fill="#E5E7EB"/><rect x="892" y="236" width="90" height="34" rx="4" fill="#E5E7EB"/><rect x="1002" y="236" width="90" height="34" rx="4" fill="#E5E7EB"/><rect x="652" y="290" width="480" height="176" fill="#F3F4F6"/><circle cx="840.0" cy="338.0" r="14.0" fill="#1F2937"/><rect x="824.0" y="354.0" width="32.0" height="52.0" rx="12.0" fill="#1F2937"/>
+<text x="840" y="450" font-size="22" fill="#1F2937" font-weight="700" text-anchor="middle">模特兒</text>
+<circle cx="1048.0" cy="322.4" r="9.8" fill="#9CA3AF"/><rect x="1036.8" y="333.6" width="22.4" height="36.4" rx="8.4" fill="#9CA3AF"/>
+<text x="1048" y="399" font-size="20" fill="#4B5563" text-anchor="middle">路人</text>
+<line x1="882" y1="362" x2="965" y2="362" stroke="#374151" stroke-width="4" marker-end="url(#arr)"/><g transform="translate(746.4 512.8) scale(0.8)"><rect x="-34" y="-22" width="68" height="44" rx="8" fill="#FFFFFF" stroke="#374151" stroke-width="4"/><circle cx="0" cy="0" r="13" fill="none" stroke="#374151" stroke-width="4"/><rect x="-14" y="-32" width="24" height="10" rx="3" fill="#374151"/></g>
+<text x="786" y="521" font-size="22" fill="#4B5563">小相機，手持</text>
+<line x1="954" y1="513" x2="1079" y2="513" stroke="#374151" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arr)"/><text x="308" y="622" font-size="26" fill="#1F2937" font-weight="700" text-anchor="middle">攝影棚：人站定，光和背景都擺好</text>
+<text x="308" y="662" font-size="24" fill="#4B5563" text-anchor="middle">好控制，但人容易像在「被擺」</text>
+<text x="892" y="622" font-size="26" fill="#8A5D00" font-weight="700" text-anchor="middle">街上：小相機，跟著人一起走</text>
+<text x="892" y="662" font-size="24" fill="#4B5563" text-anchor="middle">路人和街景也進畫面，像一起散步</text>
+</svg>

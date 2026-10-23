@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1260" width="600" height="1260" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">同一位攝影師，兩種長度的合作</title>
+<desc id="d">示意圖：上排是篠山紀信與山口百惠，從 1974 年的雜誌連載、1977 年的偶像雜誌，到 1980 年的寫真集《百恵》，約六年，之後是 1986、2004、2011 年的重編；下排是篠山紀信與坂東玉三郎，從 1972 年的第一本寫真集、1978 年附舞台年譜的寫真集、1981 年由玉三郎寫文字的旅行書、2007 年兩人並列作者的兩卷本，到 2010 年由玉三郎帶路拍舊歌舞伎座，橫跨三十多年。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1260" fill="#FFFFFF"/>
+<text x="40" y="70" font-size="40" font-weight="700" fill="#1F2937">同一位攝影師，</text>
+<text x="40" y="120" font-size="40" font-weight="700" fill="#1F2937">兩種長度的合作</text>
+<text x="40" y="162" font-size="22" fill="#4B5563">依國會圖書館書目與館方新聞稿・示意</text>
+<rect x="40" y="190" width="520" height="490" rx="18" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="236" font-size="30" font-weight="700" fill="#1F2937">山口百惠</text>
+<text x="64" y="274" font-size="20" fill="#4B5563">集中約六年，以一本總結的寫真集收尾</text>
+<line x1="160" y1="310" x2="160" y2="650" stroke="#9CA3AF" stroke-width="4"/>
+<line x1="160" y1="327" x2="160" y2="378" stroke="#B45309" stroke-width="12" stroke-linecap="round"/>
+<circle cx="160" cy="327" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="334" font-size="20" text-anchor="end" fill="#4B5563">1974</text>
+<text x="186" y="335" font-size="22" font-weight="700" fill="#1F2937">雜誌連載</text>
+<circle cx="160" cy="352" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="360" font-size="20" text-anchor="end" fill="#4B5563">1977</text>
+<text x="186" y="360" font-size="22" font-weight="700" fill="#1F2937">偶像雜誌</text>
+<circle cx="160" cy="378" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="385" font-size="20" text-anchor="end" fill="#4B5563">1980</text>
+<text x="186" y="386" font-size="22" font-weight="700" fill="#1F2937">《百恵》</text>
+<circle cx="160" cy="429" r="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="4"/>
+<text x="136" y="436" font-size="20" text-anchor="end" fill="#6B7280">1986</text>
+<text x="186" y="437" font-size="22" fill="#6B7280">文庫</text>
+<circle cx="160" cy="582" r="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="4"/>
+<text x="136" y="589" font-size="20" text-anchor="end" fill="#6B7280">2004</text>
+<text x="186" y="590" font-size="22" fill="#6B7280">DVD</text>
+<circle cx="160" cy="642" r="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="4"/>
+<text x="136" y="648" font-size="20" text-anchor="end" fill="#6B7280">2011</text>
+<text x="186" y="650" font-size="22" fill="#6B7280">回憶書</text>
+<rect x="40" y="700" width="520" height="490" rx="18" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="746" font-size="30" font-weight="700" fill="#1F2937">坂東玉三郎</text>
+<text x="64" y="784" font-size="20" fill="#4B5563">三十多年，被拍的人也成了作者</text>
+<line x1="160" y1="820" x2="160" y2="1160" stroke="#9CA3AF" stroke-width="4"/>
+<line x1="160" y1="820" x2="160" y2="1143" stroke="#B45309" stroke-width="12" stroke-linecap="round"/>
+<circle cx="160" cy="820" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="827" font-size="20" text-anchor="end" fill="#4B5563">1972</text>
+<text x="186" y="828" font-size="22" font-weight="700" fill="#1F2937">第一本</text>
+<circle cx="160" cy="871" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="878" font-size="20" text-anchor="end" fill="#4B5563">1978</text>
+<text x="186" y="879" font-size="22" font-weight="700" fill="#1F2937">附年譜</text>
+<circle cx="160" cy="896" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="904" font-size="20" text-anchor="end" fill="#4B5563">1981</text>
+<text x="186" y="904" font-size="22" font-weight="700" fill="#1F2937">他寫文字</text>
+<circle cx="160" cy="1118" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="1124" font-size="20" text-anchor="end" fill="#4B5563">2007</text>
+<text x="186" y="1126" font-size="22" font-weight="700" fill="#1F2937">並列作者</text>
+<circle cx="160" cy="1143" r="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="5"/>
+<text x="136" y="1150" font-size="20" text-anchor="end" fill="#4B5563">2010</text>
+<text x="186" y="1151" font-size="22" font-weight="700" fill="#1F2937">帶路後台</text>
+<rect x="40" y="1226" width="36" height="10" rx="5" fill="#B45309"/>
+<text x="86" y="1238" font-size="20" fill="#4B5563">合作集中</text>
+<circle cx="230" cy="1231" r="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="4"/>
+<text x="248" y="1238" font-size="20" fill="#4B5563">之後的重編、回顧</text>
+</svg>

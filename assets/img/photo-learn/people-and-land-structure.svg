@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">《人與土地》：先定封面，再分四段</title>
+<desc id="d">示意圖，依《遠見》1987 年訪談整理。上排是做書的順序：先決定題目與封面，再從一千多卷底片、四萬多格影像裡精選照片，最後分成四部份。下排是四部份：成長、勞動、信仰、歸宿，連起來是每個人都會經歷的生老病死。底部重點：章名說的是人生的哪一段，不說哪個村子、哪一年。</desc>
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<text x="48" y="78" font-size="46" font-weight="700" fill="#1F2937" text-anchor="start">先定封面，再選片，再分四段</text>
+<text x="48" y="122" font-size="26" fill="#4B5563" text-anchor="start">示意，依《遠見》1987 年阮義忠訪談整理</text>
+<text x="48" y="186" font-size="30" font-weight="700" fill="#8A5D00" text-anchor="start">做書的順序</text>
+<rect x="48" y="204" width="330" height="130" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="213" y="259" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">1 題目與封面</text>
+<text x="213" y="295" font-size="24" fill="#374151" text-anchor="middle">最先決定</text>
+<path d="M386 263 l26 0 l0 -12 l20 18 l-20 18 l0 -12 l-26 0z" fill="#E5A300"/>
+<rect x="436" y="204" width="330" height="130" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="601" y="259" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">2 精選照片</text>
+<text x="601" y="295" font-size="24" fill="#374151" text-anchor="middle">一千多卷底片、四萬多格</text>
+<path d="M774 263 l26 0 l0 -12 l20 18 l-20 18 l0 -12 l-26 0z" fill="#E5A300"/>
+<rect x="824" y="204" width="328" height="130" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="4"/>
+<text x="988" y="259" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">3 分成四部份</text>
+<text x="988" y="295" font-size="24" fill="#374151" text-anchor="middle">一個詞一段</text>
+<text x="48" y="394" font-size="30" font-weight="700" fill="#334155" text-anchor="start">四部份（一個人的一生）</text>
+<rect x="48" y="412" width="252" height="130" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="174" y="467" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">成長</text>
+<text x="174" y="503" font-size="24" fill="#374151" text-anchor="middle">孩子在土地上</text>
+<path d="M304 471 l26 0 l0 -12 l20 18 l-20 18 l0 -12 l-26 0z" fill="#64748B"/>
+<rect x="330" y="412" width="252" height="130" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="456" y="467" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">勞動</text>
+<text x="456" y="503" font-size="24" fill="#374151" text-anchor="middle">靠土地養活自己</text>
+<path d="M586 471 l26 0 l0 -12 l20 18 l-20 18 l0 -12 l-26 0z" fill="#64748B"/>
+<rect x="612" y="412" width="252" height="130" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="738" y="467" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">信仰</text>
+<text x="738" y="503" font-size="24" fill="#374151" text-anchor="middle">環繞土地的信仰</text>
+<path d="M868 471 l26 0 l0 -12 l20 18 l-20 18 l0 -12 l-26 0z" fill="#64748B"/>
+<rect x="894" y="412" width="252" height="130" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="1020" y="467" font-size="28" font-weight="700" fill="#1F2937" text-anchor="middle">歸宿</text>
+<text x="1020" y="503" font-size="24" fill="#374151" text-anchor="middle">生於斯、死於斯</text>
+<rect x="48" y="600" width="1104" height="76" rx="16" fill="#1F2937"/>
+<text x="600" y="648" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">章名只說走到人生的哪一段，不說哪個村子、哪一年</text>
+</svg>

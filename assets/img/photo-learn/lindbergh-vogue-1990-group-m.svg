@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1170" width="600" height="1170" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">五個人同框：排隊形，還是靠在一起</title>
+<desc id="d">示意圖，不是原作的構圖。左邊五個人等距站成一排，像排好隊形的廣告。右邊五個人靠得很近、前後交錯、互相搭著，像一群朋友。下方提醒：群像的默契，多半是之前一次一次合作攢下來的。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1170" fill="#FFFFFF"/>
+<text x="32" y="64" font-size="38" fill="#1F2937" font-weight="700">五個人同框：</text>
+<text x="32" y="108" font-size="36" fill="#1F2937" font-weight="700">排隊形，還是靠在一起</text>
+<text x="32" y="146" font-size="22" fill="#4B5563">示意圖・不是原作的構圖</text>
+<rect x="24" y="170" width="552" height="320" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="116.0" cy="317.2" r="12.6" fill="#1F2937"/><rect x="101.6" y="331.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="208.0" cy="317.2" r="12.6" fill="#1F2937"/><rect x="193.6" y="331.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="300.0" cy="317.2" r="12.6" fill="#1F2937"/><rect x="285.6" y="331.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="392.0" cy="317.2" r="12.6" fill="#1F2937"/><rect x="377.6" y="331.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="484.0" cy="317.2" r="12.6" fill="#1F2937"/><rect x="469.6" y="331.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<line x1="54" y1="398" x2="546" y2="398" stroke="#D1D5DB" stroke-width="3"/><text x="300" y="532" font-size="24" fill="#1F2937" font-weight="700" text-anchor="middle">排隊形：等距、各站各的</text>
+<text x="300" y="568" font-size="22" fill="#4B5563" text-anchor="middle">整齊，但像五張單人照放在一起</text>
+<rect x="24" y="600" width="552" height="320" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<circle cx="200.6" cy="763.2" r="12.6" fill="#1F2937"/><rect x="186.2" y="777.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="255.8" cy="731.2" r="12.6" fill="#1F2937"/><rect x="241.4" y="745.6" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="305.5" cy="771.2" r="13.3" fill="#1F2937"/><rect x="290.3" y="786.4" width="30.4" height="49.4" rx="11.4" fill="#1F2937"/>
+<circle cx="355.2" cy="737.6" r="12.6" fill="#1F2937"/><rect x="340.8" y="752.0" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<circle cx="404.9" cy="766.4" r="12.6" fill="#1F2937"/><rect x="390.5" y="780.8" width="28.8" height="46.8" rx="10.8" fill="#1F2937"/>
+<path d="M206,779 Q228,741 250,754" fill="none" stroke="#E5A300" stroke-width="5"/><path d="M361,760 Q383,734 405,779" fill="none" stroke="#E5A300" stroke-width="5"/><text x="300" y="962" font-size="24" fill="#8A5D00" font-weight="700" text-anchor="middle">靠在一起：前後交錯、互相搭著</text>
+<text x="300" y="998" font-size="22" fill="#4B5563" text-anchor="middle">像一群朋友，看得出彼此熟</text>
+<rect x="24" y="1024" width="552" height="120" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="300" y="1074" font-size="26" fill="#8A5D00" font-weight="700" text-anchor="middle">群像的默契，多半是之前</text>
+<text x="300" y="1116" font-size="26" fill="#8A5D00" font-weight="700" text-anchor="middle">一次一次合作攢下來的。</text>
+</svg>

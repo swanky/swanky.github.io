@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200" width="600" height="1200" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">二十年，分成三段</title>
+<desc id="d">示意圖：一條從 2006 到 2026 年的時間線，標出 2026 年回顧展的三個年份標題：2006「憧れと畏怖のあいだ」（在憧憬與畏懼之間）、2018「ひとりの少女を撮り続けること」（持續拍一位少女）、2026「青春をとりもどせ」（把青春找回來）。下方寫著同一天推出的三件事：寫真集、展覽、網路媒體。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1200" fill="#FFFFFF"/>
+<text x="40" y="72" font-size="40" font-weight="700" fill="#1F2937">二十年，分成三段</text>
+<text x="40" y="112" font-size="24" fill="#4B5563">依作者官網與展覽報導・示意</text>
+<rect x="40" y="140" width="520" height="624" rx="18" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<line x1="96" y1="190" x2="96" y2="700" stroke="#9CA3AF" stroke-width="4"/>
+<line x1="96" y1="680" x2="96" y2="716" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<circle cx="96" cy="200" r="14" fill="#FFFFFF" stroke="#B45309" stroke-width="6"/>
+<text x="130" y="210" font-size="28" font-weight="700" fill="#B45309">2006</text>
+<text x="130" y="250" font-size="19" font-weight="700" fill="#1F2937">憧れと畏怖のあいだ</text>
+<text x="130" y="284" font-size="22" fill="#4B5563">在憧憬與畏懼之間</text>
+<circle cx="96" cy="464" r="14" fill="#FFFFFF" stroke="#B45309" stroke-width="6"/>
+<text x="130" y="474" font-size="28" font-weight="700" fill="#B45309">2018</text>
+<text x="130" y="514" font-size="19" font-weight="700" fill="#1F2937">ひとりの少女を撮り続けること</text>
+<text x="130" y="548" font-size="22" fill="#4B5563">持續拍一位少女</text>
+<circle cx="96" cy="640" r="14" fill="#FFFFFF" stroke="#B45309" stroke-width="6"/>
+<text x="130" y="650" font-size="28" font-weight="700" fill="#B45309">2026</text>
+<text x="130" y="690" font-size="19" font-weight="700" fill="#1F2937">青春をとりもどせ</text>
+<text x="130" y="724" font-size="22" fill="#4B5563">把青春找回來</text>
+<text x="40" y="822" font-size="26" font-weight="700" fill="#1F2937">2026 年 9 月 19 日，</text>
+<text x="40" y="860" font-size="26" font-weight="700" fill="#1F2937">同一天推出三件事</text>
+<rect x="40" y="884" width="520" height="84" rx="12" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="936" font-size="26" font-weight="700" fill="#1F2937">寫真集</text>
+<text x="220" y="934" font-size="20" fill="#4B5563">96 頁、200 部限定</text>
+<rect x="40" y="984" width="520" height="84" rx="12" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="1036" font-size="26" font-weight="700" fill="#1F2937">展覽</text>
+<text x="220" y="1034" font-size="20" fill="#4B5563">新畫廊的開幕展</text>
+<rect x="40" y="1084" width="520" height="84" rx="12" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="64" y="1136" font-size="26" font-weight="700" fill="#1F2937">網路媒體</text>
+<text x="220" y="1134" font-size="20" fill="#4B5563">同名，同時創刊</text>
+</svg>

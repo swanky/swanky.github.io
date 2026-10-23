@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1180" width="600" height="1180" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">《Santa Fe》的發行時間線</title>
+<desc id="d">示意圖，依國立國會圖書館書目與文春オンライン報導整理，不含書中任何影像。時間線：1991 年 4 月提案；5 月下旬在 Santa Fe 拍攝；10 月 13 日讀賣新聞整版廣告；10 月 14 日朝日新聞同一廣告；11 月 13 日發售，發售前預購 30 萬部（據文春報導）。下方對照兩種開本：1991 年初版 35 公分、4,500 円含稅；1999 年新版 20 公分、1,900 円。</desc>
+<rect width="600" height="1180" fill="#FFFFFF"/>
+<text x="24" y="62" font-size="38" font-weight="700" fill="#1F2937" text-anchor="start">書還沒上架，話題先到</text>
+<text x="24" y="102" font-size="22" fill="#4B5563" text-anchor="start">示意，依國會圖書館書目與文春報導</text>
+<text x="24" y="132" font-size="22" fill="#4B5563" text-anchor="start">整理；不含書中影像</text>
+<line x1="80" y1="200" x2="80" y2="620" stroke="#E5A300" stroke-width="6"/>
+<circle cx="80" cy="200" r="15" fill="#FFFFFF" stroke="#E5A300" stroke-width="5"/>
+<text x="120" y="210" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">1991.4</text>
+<text x="290" y="210" font-size="26" fill="#374151" text-anchor="start">提案</text>
+<circle cx="80" cy="305" r="15" fill="#FFFFFF" stroke="#E5A300" stroke-width="5"/>
+<text x="120" y="315" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">5 月下旬</text>
+<text x="290" y="315" font-size="26" fill="#374151" text-anchor="start">Santa Fe 拍攝</text>
+<circle cx="80" cy="410" r="15" fill="#E5A300" stroke="#E5A300" stroke-width="5"/>
+<text x="120" y="420" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">10.13</text>
+<text x="290" y="420" font-size="26" fill="#374151" text-anchor="start">讀賣整版廣告</text>
+<circle cx="80" cy="515" r="15" fill="#E5A300" stroke="#E5A300" stroke-width="5"/>
+<text x="120" y="525" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">10.14</text>
+<text x="290" y="525" font-size="26" fill="#374151" text-anchor="start">朝日同一廣告</text>
+<circle cx="80" cy="620" r="15" fill="#FFFFFF" stroke="#E5A300" stroke-width="5"/>
+<text x="120" y="630" font-size="28" font-weight="700" fill="#1F2937" text-anchor="start">11.13</text>
+<text x="290" y="630" font-size="26" fill="#374151" text-anchor="start">發售</text>
+<rect x="24" y="676" width="552" height="70" rx="14" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="300" y="722" font-size="24" font-weight="700" fill="#8A5D00" text-anchor="middle">發售前預購 30 萬部（據文春報導）</text>
+<text x="24" y="806" font-size="28" font-weight="700" fill="#334155" text-anchor="start">同一本書，兩種開本</text>
+<text x="24" y="840" font-size="22" fill="#4B5563" text-anchor="start">（國立國會圖書館書目）</text>
+<rect x="24" y="870" width="196" height="196" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="24" y="1104" font-size="26" font-weight="700" fill="#1F2937" text-anchor="start">1991 初版</text>
+<text x="24" y="1140" font-size="22" fill="#374151" text-anchor="start">35 公分・4,500 円</text>
+<rect x="330" y="954" width="112" height="112" fill="#F1F5F9" stroke="#64748B" stroke-width="4"/>
+<text x="330" y="1104" font-size="26" font-weight="700" fill="#1F2937" text-anchor="start">1999 新版</text>
+<text x="330" y="1140" font-size="22" fill="#374151" text-anchor="start">20 公分・1,900 円</text>
+</svg>

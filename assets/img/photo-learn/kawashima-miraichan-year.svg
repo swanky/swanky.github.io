@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">跟著一個人一整年</title>
+<desc id="d">示意圖：左邊一個圓代表一年，四周寫著春、夏、秋、冬，圓心寫著同一個人、同一台相機。右邊列出三件查得到的做法：借住在當地朋友家拍；因為孩子動作快，改用自動對焦相機，整本只用這一台；書名「未来ちゃん」是一個稱呼，不是本名。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<text x="48" y="82" font-size="48" font-weight="700" fill="#1F2937">跟著一個人一整年</text>
+<text x="48" y="128" font-size="26" fill="#4B5563">示意，不描寫書裡的任何一張照片</text>
+<rect x="48" y="160" width="480" height="480" rx="18" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="288" cy="400" r="160" fill="#FFFFFF" stroke="#B45309" stroke-width="6"/>
+<circle cx="288" cy="240" r="30" fill="#FAFAF7" stroke="#1F2937" stroke-width="3"/>
+<text x="288" y="250" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">春</text>
+<circle cx="448" cy="400" r="30" fill="#FAFAF7" stroke="#1F2937" stroke-width="3"/>
+<text x="448" y="410" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">夏</text>
+<circle cx="288" cy="560" r="30" fill="#FAFAF7" stroke="#1F2937" stroke-width="3"/>
+<text x="288" y="570" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">秋</text>
+<circle cx="128" cy="400" r="30" fill="#FAFAF7" stroke="#1F2937" stroke-width="3"/>
+<text x="128" y="410" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">冬</text>
+<text x="288" y="394" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2937">同一個人</text>
+<text x="288" y="434" font-size="24" text-anchor="middle" fill="#4B5563">同一台相機</text>
+<rect x="570" y="160" width="582" height="144" rx="14" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="616" cy="210" r="24" fill="#B45309"/>
+<text x="616" y="219" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="660" y="220" font-size="30" font-weight="700" fill="#1F2937">住下來</text>
+<text x="660" y="262" font-size="22" fill="#4B5563">借住在佐渡島的朋友家拍</text>
+<rect x="570" y="324" width="582" height="144" rx="14" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="616" cy="374" r="24" fill="#B45309"/>
+<text x="616" y="383" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="660" y="384" font-size="30" font-weight="700" fill="#1F2937">一台相機</text>
+<text x="660" y="426" font-size="22" fill="#4B5563">孩子動作快，改用自動對焦，整本只用這一台</text>
+<rect x="570" y="488" width="582" height="144" rx="14" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+<circle cx="616" cy="538" r="24" fill="#B45309"/>
+<text x="616" y="547" font-size="26" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+<text x="660" y="548" font-size="30" font-weight="700" fill="#1F2937">一個稱呼</text>
+<text x="660" y="590" font-size="22" fill="#4B5563">書名「未来ちゃん」不是本名</text>
+<text x="48" y="680" font-size="22" fill="#6B7280">依作者官網、IMA 訪談與 artscape 評論整理。</text>
+</svg>

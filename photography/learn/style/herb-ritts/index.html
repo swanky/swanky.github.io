@@ -171,6 +171,7 @@ sources:
   </div></div>
 </div>
 <p><button type="button" class="ae-btn" data-ae-flip-all=".ae-traits">四張全部翻開</button></p>
+{% assign pl_u3 = site.data.photo_learn.units | where: "id", "u3" | first %}{% assign pl_bl = pl_u3.chapters | where: "slug", "ritts-madonna" | first %}{% include photography/learn-visible.html item=pl_bl %}{% if pl_vis %}<p>他和 Madonna 怎麼一來一往地合作，另一章〈<a href="{{ pl_bl.url | relative_url }}">Herb Ritts 與 Madonna</a>〉從「攝影師和被拍的人怎麼分工」的角度整理。</p>{% endif %}
 <p class="ae-key"><small>只記一句</small>借他的光和形狀，不借他的人脈、他的沖印師和他的畫面。</p>
 
 <h2 id="describe"><span class="pl-step">第 5 步</span><br>換成文字怎麼描述</h2>

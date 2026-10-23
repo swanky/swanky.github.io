@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1120" width="600" height="1120" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">朋友式的拍法：多了什麼，也藏了什麼</title>
+<desc id="d">示意圖。左欄是朋友一起拍帶來的：在熟悉的地方拍、穿簡單的二手衣、不上濃妝也不擺假姿勢、拍的是她不是攝影師。右欄是親近藏著的壓力：工作機會和友情綁在一起、因為是朋友更難當場說不、不舒服的事多年後才說出口、照片成功不代表過程沒問題。下方結論：拍之前把範圍講好、寫下來，現場說不，也不影響下一次合作。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="600" height="1120" fill="#FFFFFF"/>
+<text x="32" y="64" font-size="38" fill="#1F2937" font-weight="700">朋友式的拍法</text>
+<text x="32" y="104" font-size="30" fill="#1F2937" font-weight="700">多了什麼，也藏了什麼</text>
+<text x="32" y="142" font-size="22" fill="#4B5563">示意圖・依 Day 自述與 Moss 的訪談整理</text>
+<rect x="24" y="170" width="552" height="360" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="48" y="220" font-size="30" fill="#1F2937" font-weight="700">朋友一起拍，多了</text>
+<circle cx="52" cy="270" r="5" fill="#1F2937"/><text x="68" y="278" font-size="24" fill="#4B5563">在熟悉的地方拍，像一起出門</text>
+<circle cx="52" cy="334" r="5" fill="#1F2937"/><text x="68" y="342" font-size="24" fill="#4B5563">穿簡單的、二手店挑的衣服</text>
+<circle cx="52" cy="398" r="5" fill="#1F2937"/><text x="68" y="406" font-size="24" fill="#4B5563">不上濃妝，也不擺假姿勢</text>
+<circle cx="52" cy="462" r="5" fill="#1F2937"/><text x="68" y="470" font-size="24" fill="#4B5563">拍的是她，不是攝影師自己</text>
+<rect x="24" y="556" width="552" height="360" rx="20" fill="#FAFAF7" stroke="#E5E7EB" stroke-width="2"/>
+<text x="48" y="606" font-size="30" fill="#1F2937" font-weight="700">親近，也藏著</text>
+<circle cx="52" cy="656" r="5" fill="#B45309"/><text x="68" y="664" font-size="24" fill="#4B5563">下一份工作機會握在朋友手上</text>
+<circle cx="52" cy="720" r="5" fill="#B45309"/><text x="68" y="728" font-size="24" fill="#4B5563">因為是朋友，更難當場說不</text>
+<circle cx="52" cy="784" r="5" fill="#B45309"/><text x="68" y="792" font-size="24" fill="#4B5563">不舒服的事，多年後才說出口</text>
+<circle cx="52" cy="848" r="5" fill="#B45309"/><text x="68" y="856" font-size="24" fill="#4B5563">照片成功，不代表過程沒問題</text>
+<rect x="24" y="944" width="552" height="150" rx="20" fill="#FFF8E7" stroke="#E5A300" stroke-width="3"/>
+<text x="300" y="1000" font-size="26" fill="#8A5D00" font-weight="700" text-anchor="middle">拍之前把範圍講好、寫下來；</text>
+<text x="300" y="1046" font-size="26" fill="#8A5D00" font-weight="700" text-anchor="middle">現場說「不」，也不影響下次合作。</text>
+</svg>
