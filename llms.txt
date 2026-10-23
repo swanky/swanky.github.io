@@ -57,6 +57,21 @@
 - [只用美術館與官方資料寫攝影史：我的查證方法](https://swanky.github.io/photography/learn/method/how-i-verify/): 寫攝影師、寫報告、做 AI 影像前想先查對資料？這一章用我自己踩過的四個例子，示範去哪裡找可靠來源、怎麼分辨事實和推論、說法不一致怎麼並列，以及怎麼讀美術館的圖片使用條款。
 - [怎麼讀一位攝影師](https://swanky.github.io/photography/learn/method/how-to-read-a-photographer/): 想自己讀懂一位攝影師、寫一份報告，或替 AI 影像查對參考資料？用六個步驟，從基本資料卡、館藏頁、看作品、讀本人說的話、放回時代，一路做到分得清事實和看法的筆記。
 - [怎麼評一本寫真集：單張都好，整本為什麼還是退回](https://swanky.github.io/photography/learn/method/how-to-review-a-photobook/): 看寫真集時，常常每張都好看，整本翻完卻覺得平。這一章把我退回整本的理由、獎項和編輯公開說過的判準，整理成五個可以自己問的問題。
+- [Corinne Day 與 Kate Moss：朋友拍朋友，照片多了真實，也多了壓力](https://swanky.github.io/photography/learn/collaboration/day-moss/): 讀完你會知道，朋友一起拍照為什麼能拍出真實感，又為什麼更需要事先講好界線。從 Corinne Day 與 Kate Moss 的合作，整理一份拍前溝通清單。
+- [David Bailey 與 Jean Shrimpton：把模特兒帶出攝影棚，走到街上](https://swanky.github.io/photography/learn/collaboration/bailey-shrimpton/): 讀完你會知道，帶著小相機跟人走到街上，照片會多出什麼；也會知道一段關係很近的合作，紀錄為什麼常常只剩一方的說法。
+- [Herb Ritts 與 Madonna：兩個都懂影像的人，一來一往](https://swanky.github.io/photography/learn/collaboration/ritts-madonna/): 讀完你會知道，當被拍的人自己很有主見，攝影師可以怎麼分工、怎麼把較勁變成作品。從 Herb Ritts 和 Madonna 的長期合作，整理一份拍前溝通清單。
+- [Peter Lindbergh 與 1990 年英國版《Vogue》封面：五個人的默契從哪裡來](https://swanky.github.io/photography/learn/collaboration/lindbergh-vogue-1990/): 讀完你會知道，一張好看的多人照，默契往往來自之前一次次的合作；也會知道拍群像前，可以怎麼和每個人溝通。
+- [深瀨昌久與洋子：拍最親近的人，紀錄只剩一半](https://swanky.github.io/photography/learn/collaboration/fukase-yoko/): 想拍伴侶或家人，卻不知道怎麼收尾？從深瀨昌久拍妻子洋子的發表順序，學會把長期拍攝排成連載、展覽到成書，也記得問對方想不想自己說話。
+- [篠山紀信與山口百惠、坂東玉三郎：一段六年，一段三十多年](https://swanky.github.io/photography/learn/collaboration/shinoyama-momoe-tamasaburo/): 拍表演者，是做一個階段的總結，還是陪一個人走很多年？對照篠山紀信和山口百惠、坂東玉三郎兩段合作，學會規劃合作的長度，也知道怎麼讓被拍的人一起當作者。
+- [川島小鳥與《未来ちゃん》：跟著一個孩子的一年](https://swanky.github.io/photography/learn/collaboration/kawashima-miraichan/): 想長時間跟拍一個人的日常？從川島小鳥《未来ちゃん》學會住進對方的生活、讓被拍的人決定器材，也弄清楚拍孩子時，哪些事一定要先和家人談。
+- [青山裕企與長期被攝者：二十年的照片，怎麼分成三段](https://swanky.github.io/photography/learn/collaboration/aoyama-long-term-subjects/): 拍了很多年，想回頭整理成一本書？從青山裕企 2026 年的回顧寫真集學會用年份把作品分段，也知道公開資料沒說的事，就不替被拍的人說。
+- [荒木經惟《センチメンタルな旅》：自己印 1,000 本的新婚旅行](https://swanky.github.io/photography/learn/photobook/sentimental-journey/): 讀完你會知道翻開《センチメンタルな旅》要看哪裡：108 張照片怎麼照旅程排、作者的話為什麼另外夾一張紙，以及同一批照片出版三次、意思跟著變。最後整理做自己的寫真集能借什麼、不能抄什麼。
+- [Richard Avedon《In the American West》：一面白牆，拍了 124 個人](https://swanky.github.io/photography/learn/photobook/in-the-american-west/): 讀完你會知道翻開《In the American West》要看什麼：每個人都站在同一面白牆前，地點從畫面搬進題名。也整理這本書開展時的批評與作者的回應，以及做自己的人像集能借什麼、不能抄什麼。
+- [Nan Goldin《The Ballad of Sexual Dependency》：從幻燈秀剪成一本書](https://swanky.github.io/photography/learn/photobook/ballad-of-sexual-dependency/): 讀完你會知道這本書怎麼從每次都不一樣的幻燈秀，剪成 127 張、順序固定的書：照歌單排、橫直交替、只放作者自己的文字。也整理做自己的寫真集能借什麼、不能抄什麼。
+- [阮義忠《人與土地》：四個詞撐起一本書](https://swanky.github.io/photography/learn/photobook/people-and-land/): 學會用四個詞替寫真集分章、先定封面再選片。看阮義忠《人與土地》怎麼從四萬多格底片排成四部份，以及它在台灣、日本重出的版本。
+- [篠山紀信《Santa Fe》：書還沒上架，話題先到](https://swanky.github.io/photography/learn/photobook/santa-fe/): 學會分開看一本寫真集的「內容」和「發行」。篠山紀信《Santa Fe》發售前一個月就在報上預告，據報導預購 30 萬部；看它怎麼發、能借什麼、不能抄什麼。
+- [川島小鳥《未来ちゃん》：一個人、一座島、一年](https://swanky.github.io/photography/learn/photobook/mirai-chan/): 學會用「一段時間」替寫真集搭骨架、用器材限制換來整本一致。看川島小鳥《未来ちゃん》怎麼出版、怎麼編排，以及 2024 年新裝版改了什麼。
+- [怎麼評一本寫真集：單張都好，整本為什麼還是退回](https://swanky.github.io/photography/learn/method/how-to-review-a-photobook/): 看寫真集時，常常每張都好看，整本翻完卻覺得平。這一章把我退回整本的理由、獎項和編輯公開說過的判準，整理成五個可以自己問的問題。
 - [奈良美智《Harmless Kitty》：無害，但不必乖巧](https://swanky.github.io/photography/learn/art/harmless-kitty/): 我從大學就喜歡奈良美智 1994 年的《Harmless Kitty》。這篇藝術筆記把作品資料、六個局部、構圖、原作尺寸與創作背景整理成一頁；事實與我的讀法分開寫，每條資料都附來源。
 - [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來二十五本概念寫真集，另有史旺基的 AI 助理形象小赫。
 - [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹。

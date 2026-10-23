@@ -160,49 +160,49 @@ units:
         added: 2026-10-09
       - title: Corinne Day 與 Kate Moss：朋友拍朋友，照片多了真實，也多了壓力
         slug: day-moss
-        status: review
+        status: published
         url: /photography/learn/collaboration/day-moss/
         card: /assets/img/photo-learn/day-moss-closeness.svg
         added: 2026-10-23
       - title: David Bailey 與 Jean Shrimpton：把模特兒帶出攝影棚，走到街上
         slug: bailey-shrimpton
-        status: review
+        status: published
         url: /photography/learn/collaboration/bailey-shrimpton/
         card: /assets/img/photo-learn/bailey-shrimpton-street.svg
         added: 2026-10-23
       - title: Herb Ritts 與 Madonna：兩個都懂影像的人，一來一往
         slug: ritts-madonna
-        status: review
+        status: published
         url: /photography/learn/collaboration/ritts-madonna/
         card: /assets/img/photo-learn/ritts-madonna-rounds.svg
         added: 2026-10-23
       - title: Peter Lindbergh 與 1990 年英國版《Vogue》封面：五個人的默契從哪裡來
         slug: lindbergh-vogue-1990
-        status: review
+        status: published
         url: /photography/learn/collaboration/lindbergh-vogue-1990/
         card: /assets/img/photo-learn/lindbergh-vogue-1990-group.svg
         added: 2026-10-23
       - title: 深瀨昌久與洋子：拍最親近的人，紀錄只剩一半
         slug: fukase-yoko
-        status: review
+        status: published
         url: /photography/learn/collaboration/fukase-yoko/
         card: /assets/img/photo-learn/fukase-yoko-rhythm.svg
         added: 2026-10-23
       - title: 篠山紀信與山口百惠、坂東玉三郎：一段六年，一段三十多年
         slug: shinoyama-momoe-tamasaburo
-        status: review
+        status: published
         url: /photography/learn/collaboration/shinoyama-momoe-tamasaburo/
         card: /assets/img/photo-learn/shinoyama-momoe-tamasaburo-two-paths.svg
         added: 2026-10-23
       - title: 川島小鳥與《未来ちゃん》：跟著一個孩子的一年
         slug: kawashima-miraichan
-        status: review
+        status: published
         url: /photography/learn/collaboration/kawashima-miraichan/
         card: /assets/img/photo-learn/kawashima-miraichan-year.svg
         added: 2026-10-23
       - title: 青山裕企與長期被攝者：二十年的照片，怎麼分成三段
         slug: aoyama-long-term-subjects
-        status: review
+        status: published
         url: /photography/learn/collaboration/aoyama-long-term-subjects/
         card: /assets/img/photo-learn/aoyama-long-term-sections.svg
         added: 2026-10-23
@@ -238,37 +238,37 @@ units:
         added: 2026-10-09
       - title: 荒木經惟《センチメンタルな旅》：自己印 1,000 本的新婚旅行
         slug: sentimental-journey
-        status: review
+        status: published
         url: /photography/learn/photobook/sentimental-journey/
         card: /assets/img/photo-learn/sentimental-journey-editions.svg
         added: 2026-10-23
       - title: Richard Avedon《In the American West》：一面白牆，拍了 124 個人
         slug: in-the-american-west
-        status: review
+        status: published
         url: /photography/learn/photobook/in-the-american-west/
         card: /assets/img/photo-learn/in-the-american-west-backdrop.svg
         added: 2026-10-23
       - title: Nan Goldin《The Ballad of Sexual Dependency》：從幻燈秀剪成一本書
         slug: ballad-of-sexual-dependency
-        status: review
+        status: published
         url: /photography/learn/photobook/ballad-of-sexual-dependency/
         card: /assets/img/photo-learn/ballad-of-sexual-dependency-cut.svg
         added: 2026-10-23
       - title: 阮義忠《人與土地》：四個詞撐起一本書
         slug: people-and-land
-        status: review
+        status: published
         url: /photography/learn/photobook/people-and-land/
         card: /assets/img/photo-learn/people-and-land-structure.svg
         added: 2026-10-23
       - title: 篠山紀信《Santa Fe》：書還沒上架，話題先到
         slug: santa-fe
-        status: review
+        status: published
         url: /photography/learn/photobook/santa-fe/
         card: /assets/img/photo-learn/santa-fe-release.svg
         added: 2026-10-23
       - title: 川島小鳥《未来ちゃん》：一個人、一座島、一年
         slug: mirai-chan
-        status: review
+        status: published
         url: /photography/learn/photobook/mirai-chan/
         card: /assets/img/photo-learn/mirai-chan-year.svg
         added: 2026-10-23
