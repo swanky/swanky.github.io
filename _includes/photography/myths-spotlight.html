@@ -1,0 +1,33 @@
+{%- comment -%}
+史旺姬《神話未完成》系列聚光區塊（2026-10-24 站主：系列入口藏太深、難找）。
+放在 /photography/ 與 /photography/gallery/「02 · SERIES」區塊最前面；冊目、封面、張數全由 _data/swanky_ji_myths.yml 驅動，新冊上線不用改這裡。
+封面用各冊 cover-card.jpg（640×360，與系列入口頁同一份）；導言取第一冊 series_statement 第二行，不另寫。
+不寫「最新一冊」：各冊 date 與冊號順序不一致，寫了就是編造。
+{%- endcomment -%}
+{%- assign pam = site.data.swanky_ji_myths -%}
+{%- assign pam_first = site.data[pam.volumes.first.data] -%}
+{%- assign pam_last = site.data[pam.volumes.last.data] -%}
+{%- assign pam_lines = pam_first.series_statement | split: "
+" -%}
+{%- assign pam_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八" | split: "," -%}
+{%- assign pam_total = 0 -%}{%- for v in pam.volumes -%}{%- assign pb = site.data[v.data] -%}{%- assign pam_total = pam_total | plus: pb.count -%}{%- endfor -%}
+{%- assign pam_last_idx = pam_last.volume | minus: 1 -%}
+<article class="pa-myths" aria-labelledby="pa-myths-title">
+  <div class="pa-myths__grid" role="list" aria-label="《神話未完成》各冊封面">
+    {%- for v in pam.volumes -%}
+    {%- assign pb = site.data[v.data] -%}{%- assign pb_idx = pb.volume | minus: 1 -%}
+    {%- capture pb_no %}{% if pb.volume < 10 %}0{% endif %}{{ pb.volume }}{% endcapture -%}
+    <a role="listitem" href="{{ v.url | relative_url }}" title="第{{ pam_names[pb_idx] }}冊《{{ pb.title }}》"><img src="{{ '/assets/img/photography/' | append: pb.slug | append: '/cover-card.jpg' | relative_url }}" alt="第{{ pam_names[pb_idx] }}冊《{{ pb.title }}》封面" width="640" height="360" loading="lazy" decoding="async"><span>VOL.{{ pb_no }}</span></a>
+    {%- endfor -%}
+  </div>
+  <div class="pa-myths__copy">
+    <p class="photo-author-eyebrow">史旺姬 · {{ pam.title_en | upcase }} · 已出版 {{ pam.volumes.size }} 冊</p>
+    <h3 id="pa-myths-title"><a href="{{ pam.url | relative_url }}">《{{ pam.title }}》</a></h3>
+    <p>{% for line in pam_lines offset: 1 %}{{ line }}{% endfor %}</p>
+    <p class="pa-myths__meta">{{ pam.volumes.size }} 冊 · {{ pam_total }} 張影像 · 從第一冊《{{ pam_first.title }}》到第{{ pam_names[pam_last_idx] }}冊《{{ pam_last.title }}》，每冊可以單獨讀</p>
+    <div class="photo-author-actions">
+      <a href="{{ pam.url | relative_url }}" class="photo-author-button">進入系列</a>
+      <a href="{{ pam.volumes.first.url | relative_url }}" class="photo-author-button photo-author-button--ghost">從第一冊開始</a>
+    </div>
+  </div>
+</article>

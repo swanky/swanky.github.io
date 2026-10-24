@@ -5,6 +5,8 @@
     <a href="{{ '/photography/gallery/' | relative_url }}"{% if page.url == '/photography/gallery/' %} class="is-active" aria-current="page"{% endif %}>作品與系列</a>
     <a href="{{ '/photography/personal-works/' | relative_url }}"{% if page.url == '/photography/personal-works/' %} class="is-active" aria-current="page"{% endif %}>人物作品</a>
     <a href="{{ '/photography/models/' | relative_url }}"{% if page.url contains '/photography/models/' %} class="is-active"{% endif %}>虛擬模特兒</a>
+    {%- assign spn_myths = site.data.swanky_ji_myths -%}{%- assign spn_myths_urls = spn_myths.volumes | map: "url" %}
+    <a href="{{ spn_myths.url | relative_url }}"{% if page.url == spn_myths.url %} class="is-active" aria-current="page"{% elsif spn_myths_urls contains page.url %} class="is-active"{% endif %}>神話未完成</a>
     <a href="{{ '/photography/notes/' | relative_url }}"{% if page.url == '/photography/notes/' %} class="is-active" aria-current="page"{% endif %}>創作筆記</a>
     {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}<a href="{{ '/photography/learn/' | relative_url }}"{% if page.url contains '/photography/learn/' %} class="is-active"{% endif %}>看懂寫真</a>{% endif %}
     <a href="{{ '/photography/commercial-works/' | relative_url }}"{% if page.url == '/photography/commercial-works/' %} class="is-active" aria-current="page"{% endif %}>委託與活動</a>
@@ -15,3 +17,4 @@
     <a href="{{ '/photography/archive/' | relative_url }}"{% if page.url == '/photography/archive/' %} class="is-active" aria-current="page"{% endif %}>完整歷程</a>
   </div>
 </nav>
+<script>(function(){var d=document.querySelector(".photo-author-quick-nav > div"),a=d&&d.querySelector("a.is-active");if(a&&d.scrollWidth>d.clientWidth){d.scrollLeft=a.getBoundingClientRect().left-d.getBoundingClientRect().left-14;}})();</script>

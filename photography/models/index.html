@@ -81,6 +81,7 @@ SWANKY MODELS 子站首頁（2026-09-25，v10；版型 _layouts/models.html 由�
   <section class="sm-spreads" aria-labelledby="sm-spreads-title">
     <h2 class="sm-shell sm-board__division" id="sm-spreads-title">寫真集</h2>
     <div class="sm-shell sm-cases">
+      {% include models/myths-series.html %}
       {% for sb in site.data.models.home.shared_books %}
       {%- assign shared = site.data[sb.data] -%}
       <article class="sm-case">

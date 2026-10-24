@@ -366,3 +366,22 @@ a.sm-media:hover img { transform: scale(1.015); }
 .sm-group__names a { color: var(--sm-ink) !important; font-family: var(--font-display); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .sm-group__names a:hover { color: var(--sm-gold-deep) !important; }
 @media (max-width: 767px) { .sm-group img { max-height: none; } .sm-group__cap { flex-direction: column; gap: 4px; margin-top: 10px; } }
+
+/* 《神話未完成》系列區塊（經紀首頁「寫真集」最前、史旺姬個人頁作品集；2026-10-24 站主：系列入口藏太深） */
+.sm-series { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--sm-s1) var(--sm-s2); align-items: center; padding: var(--sm-s1) 0; border-bottom: 1px solid var(--sm-line); }
+.sm-talent .sm-series { padding: var(--sm-s2) 0 var(--sm-s1); border-top: 1px solid var(--sm-ink); border-bottom: 0; }
+.sm-series__title { font-size: clamp(1.8rem, 3.2vw, 3rem); letter-spacing: -0.02em; line-height: 1.1; }
+.sm-series__title a { color: var(--sm-ink) !important; text-decoration: none !important; }
+.sm-series__title a:hover { color: var(--sm-gold-deep) !important; }
+.sm-series__meta { margin: 12px 0 0; color: var(--sm-muted); font-size: 0.86rem; }
+.sm-series__desc { max-width: 40rem; margin: 18px 0 0; color: var(--sm-body); line-height: 1.9; }
+.sm-series .sm-case__links { margin-top: 24px; }
+.sm-series__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.sm-series__grid a { position: relative; display: block; overflow: hidden; background: var(--sm-dark); text-decoration: none !important; border: 0 !important; }
+.sm-series__grid img { display: block; width: 100%; height: auto; transition: transform var(--dur-2, 0.25s) ease, opacity var(--dur-2, 0.25s) ease; }
+.sm-series__grid span { position: absolute; left: 7px; bottom: 5px; color: #fff; font-family: var(--font-sans); font-size: 0.64rem; letter-spacing: 0.1em; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75); }
+.sm-series__grid a:hover img, .sm-series__grid a:focus-visible img { transform: scale(1.04); opacity: 0.88; }
+@media (max-width: 900px) {
+  .sm-series { grid-template-columns: 1fr; gap: 28px; }
+  .sm-series__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+}

@@ -1,0 +1,32 @@
+{%- comment -%}
+史旺姬《神話未完成》系列區塊（SWANKY MODELS 子站版，2026-10-24 站主：系列入口藏太深）。
+用在經紀首頁「寫真集」區最前面、史旺姬個人頁作品集裡第一本系列冊之前；資料全由 _data/swanky_ji_myths.yml 驅動。
+封面用各冊 cover-card.jpg；導言取第一冊 series_statement 第二行。不寫「最新一冊」（冊號與 date 順序不一致）。
+{%- endcomment -%}
+{%- assign sms = site.data.swanky_ji_myths -%}
+{%- assign sms_first = site.data[sms.volumes.first.data] -%}
+{%- assign sms_last = site.data[sms.volumes.last.data] -%}
+{%- assign sms_lines = sms_first.series_statement | split: "
+" -%}
+{%- assign sms_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八" | split: "," -%}
+{%- assign sms_total = 0 -%}{%- for v in sms.volumes -%}{%- assign sb = site.data[v.data] -%}{%- assign sms_total = sms_total | plus: sb.count -%}{%- endfor -%}
+{%- assign sms_last_idx = sms_last.volume | minus: 1 -%}
+<article class="sm-series" id="series-{{ sms.url | split: '/' | last }}" aria-labelledby="sm-series-title">
+  <div class="sm-series__copy">
+    <p class="sm-eyebrow">系列 · 史旺姬 · 已出版 {{ sms.volumes.size }} 冊</p>
+    <h3 class="sm-series__title" id="sm-series-title"><a href="{{ sms.url | relative_url }}">《{{ sms.title }}》</a></h3>
+    <p class="sm-series__meta">{{ sms.volumes.size }} 冊 · {{ sms_total }} 張 · 從第一冊《{{ sms_first.title }}》到第{{ sms_names[sms_last_idx] }}冊《{{ sms_last.title }}》</p>
+    <p class="sm-series__desc">{% for line in sms_lines offset: 1 %}{{ line }}{% endfor %}</p>
+    <div class="sm-case__links">
+      <a class="sm-btn sm-btn--ghost" href="{{ sms.url | relative_url }}">看系列全部 {{ sms.volumes.size }} 冊</a>
+      <a class="sm-textlink" href="{{ sms.volumes.first.url | relative_url }}">從第一冊《{{ sms_first.title }}》開始</a>
+    </div>
+  </div>
+  <div class="sm-series__grid" role="list" aria-label="《神話未完成》各冊封面">
+    {%- for v in sms.volumes -%}
+    {%- assign sb = site.data[v.data] -%}{%- assign sb_idx = sb.volume | minus: 1 -%}
+    {%- capture sb_no %}{% if sb.volume < 10 %}0{% endif %}{{ sb.volume }}{% endcapture -%}
+    <a role="listitem" href="{{ v.url | relative_url }}" title="第{{ sms_names[sb_idx] }}冊《{{ sb.title }}》"><img src="{{ '/assets/img/photography/' | append: sb.slug | append: '/cover-card.jpg' | relative_url }}" alt="第{{ sms_names[sb_idx] }}冊《{{ sb.title }}》封面" width="640" height="360" loading="lazy" decoding="async"><span>VOL.{{ sb_no }}</span></a>
+    {%- endfor -%}
+  </div>
+</article>

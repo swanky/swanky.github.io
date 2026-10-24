@@ -55,7 +55,11 @@
         <p>每本只放封面與各章首張，完整內容請翻閱整本寫真集。全部為自主企劃的概念作品，不是商業委託。</p>
       </header>
 
+      {%- assign tb_myths = site.data.swanky_ji_myths.volumes | map: "data" -%}{%- assign tb_myths_shown = false -%}
       {% for b in t.books %}
+        {%- if tb_myths_shown == false and tb_myths contains b.data -%}{%- assign tb_myths_shown = true %}
+      {% include models/myths-series.html %}
+        {%- endif -%}
         {%- assign bk = site.data[b.data] -%}
         {%- if b.kind == 'json' -%}
           {%- assign bk_setting = bk.setting -%}{%- assign bk_desc = bk.description | default: bk.lead -%}{%- assign bk_cover_n = bk.cover_photo -%}

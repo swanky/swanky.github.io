@@ -1298,3 +1298,27 @@
 .photo-author-light .photo-notes-foot .photo-author-text-link { color: var(--c-gold-deep) !important; }
 .photo-author-light .photo-notes-foot .photo-author-text-link:hover { color: #1a1917 !important; }
 .photo-notes-cta .contact-fallback { text-align: left; }
+
+/* 《神話未完成》系列聚光區塊（/photography/、/photography/gallery/ 02 SERIES 最前；2026-10-24 站主：系列入口藏太深） */
+.pa-myths { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px 44px; align-items: center; margin: 0 0 48px; padding: 26px; border: 1px solid var(--photo-line); background: rgba(255, 255, 255, 0.03); }
+.pa-myths__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.pa-myths__grid a { position: relative; display: block; overflow: hidden; background: var(--photo-black); text-decoration: none !important; }
+.pa-myths__grid img { display: block; width: 100%; height: auto; transition: transform var(--dur-2) var(--ease-out), opacity var(--dur-2) ease; }
+.pa-myths__grid span { position: absolute; left: 7px; bottom: 5px; color: #fff; font-family: var(--font-sans); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75); }
+.pa-myths__grid a:hover img, .pa-myths__grid a:focus-visible img { transform: scale(1.04); opacity: 0.85; }
+.pa-myths__copy h3 { margin: 8px 0 14px; font-family: var(--font-display); font-size: clamp(1.7rem, 2.8vw, 2.4rem); font-weight: 400; line-height: 1.2; }
+.pa-myths__copy h3 a { color: #fff !important; text-decoration: none !important; }
+.pa-myths__copy h3 a:hover { color: var(--photo-gold-light) !important; }
+.pa-myths__copy > p { margin: 0 0 12px; color: #c9c4ba; line-height: 1.8; }
+.pa-myths__copy .pa-myths__meta { color: #8f8b82; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.04em; }
+.pa-myths__copy .photo-author-actions { margin-top: 22px; }
+.photo-author-light .pa-myths { border-color: #cbc4b7; background: rgba(255, 255, 255, 0.44); }
+.photo-author-light .pa-myths__copy h3 a { color: #1a1917 !important; }
+.photo-author-light .pa-myths__copy h3 a:hover { color: #8c6300 !important; }
+.photo-author-light .pa-myths__copy > p { color: #69665f; }
+.photo-author-light .pa-myths__copy .pa-myths__meta { color: #8a867d; }
+@media (max-width: 900px) {
+  .pa-myths { grid-template-columns: 1fr; gap: 20px; padding: 16px; }
+  .pa-myths__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .pa-myths__grid span { font-size: 0.58rem; left: 5px; bottom: 3px; }
+}
