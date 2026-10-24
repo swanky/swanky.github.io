@@ -63,8 +63,23 @@ chapters_note 是攝影端的內部備註，不輸出。statement 裡與 lead／
         </a>
         <div class="photo-author-series-copy">
           <p class="photo-author-eyebrow">創作理念 · STATEMENT</p>
-          {% if has_subtitle %}<p class="smm-subtitle">{{ book.subtitle }}</p>{% endif %}
-          <h3 id="statement-title">{{ book.lead }}</h3>
+          {%- comment -%}
+          大標只放短句（站主 2026-10-24：第二批冊的 lead 是整段導言，當大標會只剩大字沒有小字）：
+          有副標→副標當大標、整段 lead 回到小字；沒副標且 lead 超過 40 字→取第一句當大標、其餘句子回小字；lead 本來就短→照舊。
+          大標超過 24 字再降一級字級。資料檔不改，文字一字不減。
+          {%- endcomment -%}
+          {%- assign st_body = '' -%}
+          {%- if has_subtitle -%}
+            {%- assign st_head = book.subtitle -%}{%- assign st_body = book.lead -%}
+          {%- elsif book.lead.size > 40 and book.lead contains "。" -%}
+            {%- assign st_first = book.lead | split: "。" | first -%}
+            {%- capture st_head %}{{ st_first }}。{% endcapture -%}
+            {%- assign st_body = book.lead | remove_first: st_head | strip -%}
+          {%- else -%}
+            {%- assign st_head = book.lead -%}
+          {%- endif -%}
+          <h3 id="statement-title"{% if st_head.size > 24 %} class="smm-head--long"{% endif %}>{{ st_head }}</h3>
+          {% if st_body != '' %}<p>{{ st_body | escape | newline_to_br }}</p>{% endif %}
           {% for para in statement_paras %}{% unless para == book.lead or para == book.afterword or para == book.story_zh or para == '' %}<p>{{ para | escape | newline_to_br }}</p>{% endunless %}{% endfor %}
           <details class="smm-en" lang="en">
             <summary>Read the statement in English</summary>
