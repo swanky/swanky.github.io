@@ -105,6 +105,7 @@ talents:
       - { data: swanky_ji_sound_without_a_name, kind: json, url: /photography/swanky-ji-sound-without-a-name/ }
       - { data: swanky_ji_weight_she_chooses, kind: json, url: /photography/swanky-ji-weight-she-chooses/ }
       - { data: swanky_ji_wearing_the_night, kind: json, url: /photography/swanky-ji-wearing-the-night/ }
+      - { data: swanky_ji_abundance_without_coins, kind: json, url: /photography/swanky-ji-abundance-without-coins/ }   # 《神話未完成》10（2026-10-24，無 PDF）
       - { data: swanky_ji_city_remembers_her, kind: json, url: /photography/swanky-ji-city-remembers-her/ }
       - { data: swanky_ji_not_weaving_for_gods, kind: json, url: /photography/swanky-ji-not-weaving-for-gods/ }
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
