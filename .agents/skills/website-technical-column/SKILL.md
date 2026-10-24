@@ -57,7 +57,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 一篇專欄的 build 輸出約 0.9 GB；過去每篇留下多個版本的 build 目錄，單篇就累積 3–4 GB。規則：
 
 - 本次所有中間產物（build、試稿圖、下載的來源頁、截圖、ledger 草稿）只放在**一個**本次工作目錄 `<agent 暫存根>/<slug>-<YYYYMMDD>/`，不放 repo 內（`.hermes/` 也不要）、不散落到 `cache/`、`tmp/`。
-- build 目錄固定兩個：`build-prod`、`build-review`。「全新 build」的做法是**先刪掉同名目錄再重建**，不要另開 `-v2`、`-v3`。
+- build 目錄固定兩個：`build-prod`、`build-review`，整個任務期間保留、不另開 `-v2`、`-v3`。全站完整 build 一次約 7–9 分鐘（渲染近千頁＋複製約 0.9 GB 資產，目的地目錄存不存在都一樣慢），所以**審稿迭代用增量重建**：`bundle exec jekyll build --unpublished --incremental -d build-review`，只重做改到的頁，幾十秒內完成；只有「push 前的最後一次」才刪掉目錄做完整 build（站主 2026-10-24 決定：build 太慢，改增量）。增量模式是 Jekyll 的實驗功能，偶爾漏更新共用版型或列表頁；只要預覽結果與來源不符，就刪目錄重做一次完整 build。
 - 生圖試稿只留目前候選；被淘汰的版本當下刪除。採用的 master 原圖可保留一份到交付結束。
 - 結束時（不論是第 9 步完成、或停在第 8 步等待 Owner 超過本次對話）都要執行「收尾清理」：刪除 `build-prod`、`build-review`、試稿與下載暫存，只留 ledger、brief 等可續作的文字檔；回報實際刪了哪些目錄與釋放的大小。
 - 只刪本次自己建立的路徑；不刪其他任務、其他 agent 或使用者的檔案，也不刪 repo 內已追蹤的檔案。
@@ -216,11 +216,11 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 2. 掃描台灣用語、未知 placeholder、假資料、雇主／機密字樣；grep `references/writing-craft.md`「中文 AI 腔」表中的詞，逐處判斷要不要改；逐條勾 `docs/brand-book.md` §6 審稿清單。
 3. 驗 SVG XML、JPEG header／尺寸、所有圖片 natural dimensions 與 alt／caption。
 4. `npm test`、`git diff --check`。
-5. 建立兩個**全新** destination（固定放在本次工作目錄的 `build-prod`、`build-review`；重建前先刪同名目錄，不另開版本目錄）：
+5. 建立兩個 destination（固定放在本次工作目錄的 `build-prod`、`build-review`；第一次完整建，之後審稿迭代只對 `build-review` 用 `--incremental` 重建，見「暫存與清理」段）：
    - Normal Production Build：草稿 route／marker 不存在，另報告草稿靜態資產是否仍被複製。
    - Review Build（`--unpublished`）：文章、Banner、圖表、站內連結與來源連結都存在。
 6. 啟動只讀 static server；以桌機與真實 390px device metrics 做 browser QA：H1、TLDR、TOC、文章欄寬、圖文節奏、表格、SVG、console、HTTP 200、`scrollWidth <= innerWidth`。
-7. 最後一次改文章、front matter、Banner 或圖表後，重建到新的 destination；不得拿 stale build 當證據。
+7. 最後一次改文章、front matter、Banner 或圖表後，至少增量重建 `build-review` 並重跑 QA；不得拿 stale build 當證據。完整（刪目錄重做）的 build 留到第 9 步 push 前那一次。
 8. 檢查 git diff 只包含 scope manifest，且沒有覆蓋使用者原有 dirty files。
 
 全部通過後，交付 localhost review URL、正式網址預期路徑、scope manifest、測試摘要與尚未執行的 commit／push。明確等待 Owner 對這個最終畫面說「確認，可以發布」。
