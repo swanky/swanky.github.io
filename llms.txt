@@ -152,6 +152,7 @@
 
 - [AI 不是我的替身，而是我跨出邊界的方法](https://swanky.github.io/technical/ai-photography-virtual-agency/)
 - [單張都核准，整本卻退回：我給寫真集加了一道變化度閘門](https://swanky.github.io/technical/photobook-variety-gate/)
+- [我讓兩個 AI 在私有倉庫裡互相留言，幫我把作品發上 X](https://swanky.github.io/technical/grok-x-relay-experiment/)
 - [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
 - [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
 - [同時派五個 Agent 之前，先讓它知道自己做錯了](https://swanky.github.io/technical/agent-parallel-verification-first/)

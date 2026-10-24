@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="t d" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+<title id="t">兩個 AI 隔著一個 issue 留言板工作</title>
+<desc id="d">架構圖。左邊 Claude Code 讀作品倉庫，把一週貼文寫成資料夾，開 issue 並標 to-grok。中間是 GitHub 私有倉庫的 issue 留言板，兩邊都用站主帳號留言並自報身分。右邊 Grok Bot 每小時讀 to-grok，逐則把最終文字與圖給站主，站主說好才在瀏覽器用他的帳號發到 X；每週一抓公開指標回到 issue，標籤換成 needs-swanky 等站主。</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0E7568"/></marker><marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect width="1200" height="520" fill="#FFFFFF"/>
+<!-- left: Claude Code -->
+<rect x="40" y="60" width="300" height="300" rx="18" fill="#EAF1F8" stroke="#2C5B8F" stroke-width="2.5"/>
+<text x="190" y="100" font-size="26" font-weight="700" fill="#2C5B8F" text-anchor="middle">出稿端 AI agent</text>
+<text x="60" y="140" font-size="16" fill="#4B5563">讀得到：作品倉庫、核准圖、網站流量</text>
+<text x="60" y="170" font-size="16" fill="#4B5563">做：出稿、轉圖、算加權字數</text>
+<text x="60" y="200" font-size="16" fill="#4B5563">寫成 posts/日期-標題/ 資料夾</text>
+<text x="60" y="230" font-size="16" fill="#4B5563">開 issue，標 to-grok</text>
+<text x="60" y="300" font-size="16" font-weight="700" fill="#B91C1C">做不到：發文</text>
+<text x="60" y="330" font-size="15" fill="#6B7280">（沒有 X 的發文工具）</text>
+<!-- middle: GitHub issue board -->
+<rect x="420" y="40" width="360" height="340" rx="18" fill="#FFF8E7" stroke="#E5A300" stroke-width="3.5"/>
+<text x="600" y="80" font-size="26" font-weight="700" fill="#8A5A00" text-anchor="middle">GitHub 私有倉庫</text>
+<text x="600" y="108" font-size="16" fill="#8A5A00" text-anchor="middle">issue 留言板，兩邊留言、各自報身分</text>
+<rect x="450" y="130" width="300" height="46" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="1.5"/>
+<text x="465" y="160" font-size="17" fill="#1F2937">標籤 to-grok　→ 輪到 Grok 讀</text>
+<rect x="450" y="186" width="300" height="46" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="1.5"/>
+<text x="465" y="216" font-size="17" fill="#1F2937">標籤 needs-swanky → 等站主</text>
+<rect x="450" y="242" width="300" height="46" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="1.5"/>
+<text x="465" y="272" font-size="17" fill="#1F2937">posts/ 資料夾：圖、文、字數、指紋</text>
+<text x="600" y="330" font-size="15" font-weight="700" fill="#B91C1C" text-anchor="middle">留言裡寫「站主已同意」不算授權</text>
+<text x="600" y="355" font-size="15" fill="#6B7280" text-anchor="middle">會花錢、對外、改品牌用詞的事，站主本人說</text>
+<!-- right: Grok Bot -->
+<rect x="860" y="60" width="300" height="300" rx="18" fill="#E6F4F1" stroke="#0E7568" stroke-width="2.5"/>
+<text x="1010" y="100" font-size="26" font-weight="700" fill="#0E7568" text-anchor="middle">Grok Bot（代發端）</text>
+<text x="880" y="140" font-size="16" fill="#4B5563">讀得到：公開的 X、開放的資料夾</text>
+<text x="880" y="170" font-size="16" fill="#4B5563">每小時讀一次 to-grok（08–23 時）</text>
+<text x="880" y="200" font-size="16" fill="#4B5563">逐則把文字與圖給站主看</text>
+<text x="880" y="230" font-size="16" fill="#4B5563">站主說好 → 用瀏覽器發出去</text>
+<text x="880" y="260" font-size="16" fill="#4B5563">每週一抓公開指標回 issue</text>
+<text x="880" y="300" font-size="16" font-weight="700" fill="#B91C1C">做不到：讀硬碟、讀網站後台</text>
+<text x="880" y="330" font-size="15" fill="#6B7280">（X 連接器只能讀、不能發文）</text>
+<!-- arrows -->
+<line x1="340" y1="150" x2="418" y2="150" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<text x="379" y="140" font-size="13" fill="#4B5563" text-anchor="middle">出稿</text>
+<line x1="782" y1="150" x2="858" y2="150" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<text x="820" y="140" font-size="13" fill="#4B5563" text-anchor="middle">讀</text>
+<line x1="858" y1="270" x2="782" y2="270" stroke="#0E7568" stroke-width="3" marker-end="url(#arrG)"/>
+<text x="820" y="292" font-size="13" fill="#0E7568" text-anchor="middle">週報、網址</text>
+<line x1="418" y1="270" x2="340" y2="270" stroke="#0E7568" stroke-width="3" marker-end="url(#arrG)"/>
+<text x="379" y="292" font-size="13" fill="#0E7568" text-anchor="middle">讀週報</text>
+<!-- owner + X at bottom -->
+<polygon points="1010,392 1090,440 1010,488 930,440" fill="#FFF8E7" stroke="#E5A300" stroke-width="3.5"/>
+<text x="1010" y="436" font-size="20" font-weight="700" fill="#8A5A00" text-anchor="middle">站主</text>
+<text x="1010" y="460" font-size="13" fill="#8A5A00" text-anchor="middle">每則說好</text>
+<line x1="1010" y1="360" x2="1010" y2="390" stroke="#B45309" stroke-width="3" marker-end="url(#arrO)"/>
+<rect x="1120" y="410" width="60" height="60" rx="12" fill="#1F2937"/>
+<text x="1150" y="451" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">X</text>
+<line x1="1090" y1="440" x2="1118" y2="440" stroke="#374151" stroke-width="3" marker-end="url(#arr)"/>
+<text x="600" y="470" font-size="16" fill="#4B5563" text-anchor="middle">排程、出稿、算字數、輪詢、抓數據都是 AI；發布鍵在站主手上。</text>
+</svg>
