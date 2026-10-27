@@ -19,3 +19,13 @@ volumes:
   - { data: swanky_ji_abundance_without_coins, url: /photography/swanky-ji-abundance-without-coins/ }
   - { data: swanky_ji_city_remembers_her, url: /photography/swanky-ji-city-remembers-her/ }
   - { data: swanky_ji_not_weaving_for_gods, url: /photography/swanky-ji-not-weaving-for-gods/ }
+  # 13–21（2026-10-27 攝影端上 Flickr 後移交；16–21 只有中文）。
+  - { data: swanky_ji_when_the_wind_visits, url: /photography/swanky-ji-when-the-wind-visits/ }
+  - { data: swanky_ji_three_colours_home, url: /photography/swanky-ji-three-colours-home/ }
+  - { data: swanky_ji_before_the_rice_ripens, url: /photography/swanky-ji-before-the-rice-ripens/ }
+  - { data: swanky_ji_river_through_the_golden_city, url: /photography/swanky-ji-river-through-the-golden-city/ }
+  - { data: swanky_ji_sea_remembers_her_name, url: /photography/swanky-ji-sea-remembers-her-name/ }
+  - { data: swanky_ji_sun_returns_to_the_ridge, url: /photography/swanky-ji-sun-returns-to-the-ridge/ }
+  - { data: swanky_ji_long_stay_on_the_moon, url: /photography/swanky-ji-long-stay-on-the-moon/ }
+  - { data: swanky_ji_after_forever, url: /photography/swanky-ji-after-forever/ }
+  - { data: swanky_ji_roster_for_the_stars, url: /photography/swanky-ji-roster-for-the-stars/ }

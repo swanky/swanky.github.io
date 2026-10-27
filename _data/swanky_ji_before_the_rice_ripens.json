@@ -1,0 +1,555 @@
+{
+  "title": "稻穗成熟以前",
+  "title_en": "Before the Rice Ripens",
+  "series": "神話未完成",
+  "series_en": "Myths in the Making",
+  "volume": 15,
+  "model": "史旺姬",
+  "creator": "史旺基 Swanky",
+  "slug": "swanky-ji-before-the-rice-ripens",
+  "date": "2026-10-26",
+  "count": 36,
+  "cover_photo": 13,
+  "setting": "比人更高的稻林",
+  "subtitle": "照料不能省去等待生長的時間",
+  "subtitle_en": "Care cannot shorten the time of growth.",
+  "lead": "她走進比人更高的稻林，仍得等一株小苗慢慢長大。水流、風雨與倒伏讓照料有了重量；同伴伸出手，木柱接住稻莖，空掛鉤留下收成以外的地方。到了清晨，她重新坐在幼苗旁。",
+  "lead_en": "She enters rice taller than a person, yet must still wait for a small seedling to grow. Water, wind and fallen stalks give care its weight. A companion offers a hand, a wooden support holds a stem, and empty pegs mark what the harvest cannot fill. In the morning, she sits beside a seedling again.",
+  "statement_title": "",
+  "statement": "她走進比人更高的稻林，仍得等一株小苗慢慢長大。水流、風雨與倒伏讓照料有了重量；同伴伸出手，木柱接住稻莖，空掛鉤留下收成以外的地方。到了清晨，她重新坐在幼苗旁。\n\n我把稻放大，讓成熟的重量成為可以走進去的空間。她可以仰望穗頂，也會被倒伏的稻莖迫得彎下身；尺度改變了她的姿態，沒有替她取消勞動。手仍要扶盤、搬竹、把留下的穀物分享給另一個人。\n\n這本書從乾裂的土走到冷雨，再回到白牆邊的晨光。少量稻束與一排空鉤放在一起，讓成果與空缺都留下位置。最後的小苗沒有忽然長大：照料是一再回到它身邊，並且容許等待繼續。\n\n她沒有把田裡的損壞全部修好，也沒有把空鉤掛滿。留下一袋穀物、扶住一根稻莖、再看一次小苗，已經是今天能做的事。明天仍有自己的時間。",
+  "statement_en": "She enters rice taller than a person, yet must still wait for a small seedling to grow. Water, wind and fallen stalks give care its weight. A companion offers a hand, a wooden support holds a stem, and empty pegs mark what the harvest cannot fill. In the morning, she sits beside a seedling again.\n\nI enlarge the rice until the weight of ripeness becomes a space one can enter. She looks up toward the panicles and bends beneath fallen stalks. Scale changes her posture without removing the work. Hands must still steady a tray, carry bamboo and share the grain that remains.\n\nThe book moves from cracked soil through cold rain to morning beside a white wall. A few rice bundles share a frame with a long row of empty pegs, leaving room for both gain and absence. The final seedling does not suddenly grow. Care means returning to it, and allowing the wait to continue.\n\nShe has not repaired every fallen stalk or filled every empty peg. Saving a bag of grain, supporting a stem and looking at a seedling once more are what today allows. Tomorrow keeps its own time.",
+  "afterword": "她沒有把田裡的損壞全部修好，也沒有把空鉤掛滿。留下一袋穀物、扶住一根稻莖、再看一次小苗，已經是今天能做的事。明天仍有自己的時間。",
+  "afterword_en": "She has not repaired every fallen stalk or filled every empty peg. Saving a bag of grain, supporting a stem and looking at a seedling once more are what today allows. Tomorrow keeps its own time.",
+  "series_statement": "《神話未完成》\n史旺姬走進流傳至今的神話，留下它最核心的問題，讓它面對今天的生活。神話一直被講述、被使用，所以還沒有完成。",
+  "series_statement_en": "Myths in the Making\nSwanky Ji steps into myths that are still being told, keeps the question at their heart, and lets it meet the life we live now. A myth that is still told and still used is not yet finished.",
+  "story_zh": "創作起點為 C. M. Pleyte 於1913年刊出的《Vrouwe Kaoeng》第四冊所收巽他敘事及荷文改寫；本冊取其種植、照管、受損與恢復的線索，轉化為照料與等待的攝影敘事。巨大稻林、人物衣裝與空間安排是本作的視覺創作，不作原典場面的復原。",
+  "story_en": "The starting point is the Sundanese narrative and Dutch adaptation published in volume IV, Vrouwe Kaoeng, by C. M. Pleyte in 1913. Planting, care, damage and restoration become a photographic story of tending and waiting. The giant rice, clothing and spatial arrangements are visual inventions rather than reconstructions of scenes in the source.",
+  "sources_zh": "故事參考：Staatsbibliothek zu Berlin — PPN687600111, Pleyte 1913（https://content.staatsbibliothek-berlin.de/dc/PPN687600111.mets.xml）",
+  "sources_en": "Story references: Staatsbibliothek zu Berlin — PPN687600111, Pleyte 1913 (https://content.staatsbibliothek-berlin.de/dc/PPN687600111.mets.xml)",
+  "credit": "創作與攝影概念：史旺基 · 角色：史旺姬",
+  "credit_en": "Creative direction and photographic concept: Swanky · Character: Swanky Ji",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "裂土裡的一點綠",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "number": 2,
+      "title": "把幼苗交到手中",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "number": 3,
+      "title": "讓水走過黑石",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "number": 4,
+      "title": "長大仍需要時間",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "number": 5,
+      "title": "風轉向的時候",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "number": 6,
+      "title": "雨中留下的位置",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "number": 7,
+      "title": "把倒伏的扶住",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "number": 8,
+      "title": "收成少於空白",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "number": 9,
+      "title": "留給下一次生長",
+      "title_en": "",
+      "text": "",
+      "text_en": "",
+      "frames": [
+        33,
+        34,
+        35,
+        36
+      ]
+    }
+  ],
+  "chapters_note": "",
+  "photos": [
+    {
+      "order": 1,
+      "chapter": 1,
+      "alt": "史旺姬《稻穗成熟以前》第1幅，第1章「裂土裡的一點綠」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/01.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/01-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615521140",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615521140/"
+    },
+    {
+      "order": 2,
+      "chapter": 1,
+      "alt": "史旺姬《稻穗成熟以前》第2幅，第1章「裂土裡的一點綠」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/02.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/02-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615315139",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615315139/"
+    },
+    {
+      "order": 3,
+      "chapter": 1,
+      "alt": "史旺姬《稻穗成熟以前》第3幅，第1章「裂土裡的一點綠」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/03.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/03-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615106796",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615106796/"
+    },
+    {
+      "order": 4,
+      "chapter": 1,
+      "alt": "史旺姬《稻穗成熟以前》第4幅，第1章「裂土裡的一點綠」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/04.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/04-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615245893",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615245893/"
+    },
+    {
+      "order": 5,
+      "chapter": 2,
+      "alt": "史旺姬《稻穗成熟以前》第5幅，第2章「把幼苗交到手中」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/05.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/05-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615315499",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615315499/"
+    },
+    {
+      "order": 6,
+      "chapter": 2,
+      "alt": "史旺姬《稻穗成熟以前》第6幅，第2章「把幼苗交到手中」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/06.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/06-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615521590",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615521590/"
+    },
+    {
+      "order": 7,
+      "chapter": 2,
+      "alt": "史旺姬《稻穗成熟以前》第7幅，第2章「把幼苗交到手中」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/07.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/07-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615107236",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615107236/"
+    },
+    {
+      "order": 8,
+      "chapter": 2,
+      "alt": "史旺姬《稻穗成熟以前》第8幅，第2章「把幼苗交到手中」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/08.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/08-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55614097727",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55614097727/"
+    },
+    {
+      "order": 9,
+      "chapter": 3,
+      "alt": "史旺姬《稻穗成熟以前》第9幅，第3章「讓水走過黑石」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/09.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/09-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615107511",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615107511/"
+    },
+    {
+      "order": 10,
+      "chapter": 3,
+      "alt": "史旺姬《稻穗成熟以前》第10幅，第3章「讓水走過黑石」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/10.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/10-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615246443",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615246443/"
+    },
+    {
+      "order": 11,
+      "chapter": 3,
+      "alt": "史旺姬《稻穗成熟以前》第11幅，第3章「讓水走過黑石」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/11.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/11-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615522190",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615522190/"
+    },
+    {
+      "order": 12,
+      "chapter": 3,
+      "alt": "史旺姬《稻穗成熟以前》第12幅，第3章「讓水走過黑石」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/12.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/12-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615522330",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615522330/"
+    },
+    {
+      "order": 13,
+      "chapter": 4,
+      "alt": "史旺姬《稻穗成熟以前》第13幅，第4章「長大仍需要時間」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/13.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/13-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615107891",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615107891/"
+    },
+    {
+      "order": 14,
+      "chapter": 4,
+      "alt": "史旺姬《稻穗成熟以前》第14幅，第4章「長大仍需要時間」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/14.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/14-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615522535",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615522535/"
+    },
+    {
+      "order": 15,
+      "chapter": 4,
+      "alt": "史旺姬《稻穗成熟以前》第15幅，第4章「長大仍需要時間」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/15.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/15-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615522640",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615522640/"
+    },
+    {
+      "order": 16,
+      "chapter": 4,
+      "alt": "史旺姬《稻穗成熟以前》第16幅，第4章「長大仍需要時間」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/16.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/16-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55614098542",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55614098542/"
+    },
+    {
+      "order": 17,
+      "chapter": 5,
+      "alt": "史旺姬《稻穗成熟以前》第17幅，第5章「風轉向的時候」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/17.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/17-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615522860",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615522860/"
+    },
+    {
+      "order": 18,
+      "chapter": 5,
+      "alt": "史旺姬《稻穗成熟以前》第18幅，第5章「風轉向的時候」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/18.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/18-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615316789",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615316789/"
+    },
+    {
+      "order": 19,
+      "chapter": 5,
+      "alt": "史旺姬《稻穗成熟以前》第19幅，第5章「風轉向的時候」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/19.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/19-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615108576",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615108576/"
+    },
+    {
+      "order": 20,
+      "chapter": 5,
+      "alt": "史旺姬《稻穗成熟以前》第20幅，第5章「風轉向的時候」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/20.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/20-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615523250",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615523250/"
+    },
+    {
+      "order": 21,
+      "chapter": 6,
+      "alt": "史旺姬《稻穗成熟以前》第21幅，第6章「雨中留下的位置」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/21.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/21-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615108766",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615108766/"
+    },
+    {
+      "order": 22,
+      "chapter": 6,
+      "alt": "史旺姬《稻穗成熟以前》第22幅，第6章「雨中留下的位置」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/22.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/22-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615108871",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615108871/"
+    },
+    {
+      "order": 23,
+      "chapter": 6,
+      "alt": "史旺姬《稻穗成熟以前》第23幅，第6章「雨中留下的位置」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/23.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/23-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615523485",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615523485/"
+    },
+    {
+      "order": 24,
+      "chapter": 6,
+      "alt": "史旺姬《稻穗成熟以前》第24幅，第6章「雨中留下的位置」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/24.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/24-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55614099322",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55614099322/"
+    },
+    {
+      "order": 25,
+      "chapter": 7,
+      "alt": "史旺姬《稻穗成熟以前》第25幅，第7章「把倒伏的扶住」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/25.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/25-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615523625",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615523625/"
+    },
+    {
+      "order": 26,
+      "chapter": 7,
+      "alt": "史旺姬《稻穗成熟以前》第26幅，第7章「把倒伏的扶住」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/26.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/26-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615523700",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615523700/"
+    },
+    {
+      "order": 27,
+      "chapter": 7,
+      "alt": "史旺姬《稻穗成熟以前》第27幅，第7章「把倒伏的扶住」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/27.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/27-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615109266",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615109266/"
+    },
+    {
+      "order": 28,
+      "chapter": 7,
+      "alt": "史旺姬《稻穗成熟以前》第28幅，第7章「把倒伏的扶住」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/28.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/28-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615109366",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615109366/"
+    },
+    {
+      "order": 29,
+      "chapter": 8,
+      "alt": "史旺姬《稻穗成熟以前》第29幅，第8章「收成少於空白」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/29.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/29-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615523960",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615523960/"
+    },
+    {
+      "order": 30,
+      "chapter": 8,
+      "alt": "史旺姬《稻穗成熟以前》第30幅，第8章「收成少於空白」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/30.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/30-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615248373",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615248373/"
+    },
+    {
+      "order": 31,
+      "chapter": 8,
+      "alt": "史旺姬《稻穗成熟以前》第31幅，第8章「收成少於空白」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/31.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/31-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615109586",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615109586/"
+    },
+    {
+      "order": 32,
+      "chapter": 8,
+      "alt": "史旺姬《稻穗成熟以前》第32幅，第8章「收成少於空白」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/32.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/32-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55614100007",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55614100007/"
+    },
+    {
+      "order": 33,
+      "chapter": 9,
+      "alt": "史旺姬《稻穗成熟以前》第33幅，第9章「留給下一次生長」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/33.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/33-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615109826",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615109826/"
+    },
+    {
+      "order": 34,
+      "chapter": 9,
+      "alt": "史旺姬《稻穗成熟以前》第34幅，第9章「留給下一次生長」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/34.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/34-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615109941",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615109941/"
+    },
+    {
+      "order": 35,
+      "chapter": 9,
+      "alt": "史旺姬《稻穗成熟以前》第35幅，第9章「留給下一次生長」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/35.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/35-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615524530",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615524530/"
+    },
+    {
+      "order": 36,
+      "chapter": 9,
+      "alt": "史旺姬《稻穗成熟以前》第36幅，第9章「留給下一次生長」",
+      "image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/36.webp",
+      "preview": "/assets/img/photography/swanky-ji-before-the-rice-ripens/36-960.webp",
+      "width": 1536,
+      "height": 1024,
+      "flickr_id": "55615110126",
+      "flickr_url": "https://www.flickr.com/photos/88607481@N00/55615110126/"
+    }
+  ],
+  "flickr_album": "https://www.flickr.com/photos/88607481@N00/albums/72177720336346790/",
+  "flickr_album_title": "2026-10-26 史旺姬╳史旺基「稻穗成熟以前@比人更高的稻林」",
+  "pdf": null,
+  "og_image": "/assets/img/photography/swanky-ji-before-the-rice-ripens/cover.jpg",
+  "permalink": "/photography/swanky-ji-before-the-rice-ripens/",
+  "planned_url": "https://swanky.github.io/photography/swanky-ji-before-the-rice-ripens/"
+}

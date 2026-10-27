@@ -1227,6 +1227,10 @@
 .smm-coda p { margin: 0; color: #f3efe6; font-family: var(--font-display); font-size: clamp(1.1rem, 1.7vw, 1.4rem); line-height: 1.8; }
 .smm-coda p[lang="en"] { margin-top: 12px; color: #8f8b82; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.7; }
 .smm-subtitle { margin: 0 0 10px; color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.92rem; letter-spacing: 0.04em; }
+.smm-statement-title { margin: 14px 0 6px; font-weight: 700; }
+/* 只有中文的故事區（16–21 冊）：對齊上方標題那一欄，不留半邊空白 */
+.smm-bilingual.smm-bilingual--single { grid-template-columns: minmax(150px, 0.42fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 100px); }
+.smm-bilingual--single > .smm-col { grid-column: 2; max-width: 46em; }
 .photo-author-series-copy h3.smm-head--long { font-size: clamp(1.5rem, 2.6vw, 2.6rem); line-height: 1.3; }
 .smm-afterword .photo-author-eyebrow { text-align: center; }
 .smm-coda--afterword { margin-top: 18px; }
@@ -1251,6 +1255,8 @@
   .smm-chapter-title { flex-wrap: wrap; }
   .smm-chapter-title small { flex-basis: 100%; margin-left: 0; }
   .smm-bilingual, .smm-volumes { grid-template-columns: 1fr; }
+  .smm-bilingual.smm-bilingual--single { grid-template-columns: 1fr; }
+  .smm-bilingual--single > .smm-col { grid-column: auto; }
 }
 
 /* 創作筆記列表：索引列（標題＋一句描述＋日期），不用卡片格 */
