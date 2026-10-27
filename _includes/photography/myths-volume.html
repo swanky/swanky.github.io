@@ -8,12 +8,12 @@ statement／statement_en 是創作理念，story_*、sources_*（或 source_note
 新增 subtitle／afterword／credit（空字串＝沒有；Liquid 空字串為真，一律用 != '' 判斷）、story／sources 可為空；
 chapters_note 是攝影端的內部備註，不輸出。statement 裡與 lead／afterword／story 逐字相同的段落只在各自的區塊出現一次。
 2026-10-27 第三批（13–21）起：16–21 只有中文（_en 欄位刻意留空字串、不另譯）——英文理念、英文章名、英文故事欄空時整塊不輸出，
-故事區只剩中文時改單欄；新增 statement_title（理念短文標題，放在大標之下）；冊數到二十一。
+故事區只剩中文時改單欄；新增 statement_title（理念短文標題，放在大標之下）；冊數到二十四（22–24 同 16–21 只有中文）。
 {%- endcomment -%}
 {%- assign book = site.data[include.book] -%}
 {%- assign series = site.data.swanky_ji_myths -%}
 {%- assign talent = site.data.models.talents | where: "slug", "swanky-ji" | first -%}
-{%- assign vol_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八,十九,二十,二十一" | split: "," -%}
+{%- assign vol_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八,十九,二十,二十一,二十二,二十三,二十四" | split: "," -%}
 {%- assign vol_idx = book.volume | minus: 1 -%}
 {%- capture vol_no %}{% if book.volume < 10 %}0{% endif %}{{ book.volume }}{% endcapture -%}
 {%- assign cover = book.photos | where: "order", book.cover_photo | first -%}

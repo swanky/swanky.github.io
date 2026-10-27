@@ -9,7 +9,7 @@
 {%- assign pam_last = site.data[pam.volumes.last.data] -%}
 {%- assign pam_lines = pam_first.series_statement | split: "
 " -%}
-{%- assign pam_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八,十九,二十,二十一" | split: "," -%}
+{%- assign pam_names = "一,二,三,四,五,六,七,八,九,十,十一,十二,十三,十四,十五,十六,十七,十八,十九,二十,二十一,二十二,二十三,二十四" | split: "," -%}
 {%- assign pam_total = 0 -%}{%- for v in pam.volumes -%}{%- assign pb = site.data[v.data] -%}{%- assign pam_total = pam_total | plus: pb.count -%}{%- endfor -%}
 {%- assign pam_last_idx = pam_last.volume | minus: 1 -%}
 <article class="pa-myths" aria-labelledby="pa-myths-title">

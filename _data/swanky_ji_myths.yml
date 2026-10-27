@@ -29,3 +29,7 @@ volumes:
   - { data: swanky_ji_long_stay_on_the_moon, url: /photography/swanky-ji-long-stay-on-the-moon/ }
   - { data: swanky_ji_after_forever, url: /photography/swanky-ji-after-forever/ }
   - { data: swanky_ji_roster_for_the_stars, url: /photography/swanky-ji-roster-for-the-stars/ }
+  # 22–24（2026-10-27 第二批移交；只有中文）。
+  - { data: swanky_ji_city_night_shift, url: /photography/swanky-ji-city-night-shift/ }
+  - { data: swanky_ji_lighter_than_a_feather, url: /photography/swanky-ji-lighter-than-a-feather/ }
+  - { data: swanky_ji_solar_night_passage, url: /photography/swanky-ji-solar-night-passage/ }

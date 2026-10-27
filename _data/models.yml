@@ -117,6 +117,9 @@ talents:
       - { data: swanky_ji_long_stay_on_the_moon, kind: json, url: /photography/swanky-ji-long-stay-on-the-moon/ }
       - { data: swanky_ji_after_forever, kind: json, url: /photography/swanky-ji-after-forever/ }
       - { data: swanky_ji_roster_for_the_stars, kind: json, url: /photography/swanky-ji-roster-for-the-stars/ }
+      - { data: swanky_ji_city_night_shift, kind: json, url: /photography/swanky-ji-city-night-shift/ }   # 《神話未完成》22–24（2026-10-27，無 PDF）
+      - { data: swanky_ji_lighter_than_a_feather, kind: json, url: /photography/swanky-ji-lighter-than-a-feather/ }
+      - { data: swanky_ji_solar_night_passage, kind: json, url: /photography/swanky-ji-solar-night-passage/ }
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }

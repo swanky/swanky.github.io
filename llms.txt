@@ -72,9 +72,9 @@
 - [篠山紀信《Santa Fe》：書還沒上架，話題先到](https://swanky.github.io/photography/learn/photobook/santa-fe/): 學會分開看一本寫真集的「內容」和「發行」。篠山紀信《Santa Fe》發售前一個月就在報上預告，據報導預購 30 萬部；看它怎麼發、能借什麼、不能抄什麼。
 - [川島小鳥《未来ちゃん》：一個人、一座島、一年](https://swanky.github.io/photography/learn/photobook/mirai-chan/): 學會用「一段時間」替寫真集搭骨架、用器材限制換來整本一致。看川島小鳥《未来ちゃん》怎麼出版、怎麼編排，以及 2024 年新裝版改了什麼。
 - [奈良美智《Harmless Kitty》：無害，但不必乖巧](https://swanky.github.io/photography/learn/art/harmless-kitty/): 我從大學就喜歡奈良美智 1994 年的《Harmless Kitty》。這篇藝術筆記把作品資料、六個局部、構圖、原作尺寸與創作背景整理成一頁；事實與我的讀法分開寫，每條資料都附來源。
-- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來四十二本概念寫真集，另有史旺基的 AI 助理形象小赫。
+- [SWANKY MODELS 虛擬模特兒經紀](https://swanky.github.io/photography/models/): SWANKY MODELS 虛擬模特兒經紀：史旺基旗下虛擬人物的作品入口。史旺姬、林予晴、江映希、李瓶兒、潘金蓮與七位 NFT 角色（CloneX、Meebits、MAYC）共同帶來四十五本概念寫真集，另有史旺基的 AI 助理形象小赫。
 - [SWANKY MODELS 模特兒名單](https://swanky.github.io/photography/models/talent/): SWANKY MODELS 模特兒名單：史旺姬、林予晴與江映希（原創虛擬人物）、李瓶兒與潘金蓮（《金瓶梅》角色改編），史旺基持有的 NFT 角色（CloneX、Meebits、MAYC）改編形象，以及 AI 助理形象小赫。每位都有個人介紹。
-- [史旺姬｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/swanky-ji/): 史旺姬｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，二十五本寫真集：《神話未完成》系列《補天的人》《世界停下之前，再跳一次》《走過七道門》《把太陽請出來》《把海上的人帶回家》《用陰影回答光》《聲音還沒有名字》《她不是等待被救的人》《把黑夜穿在身上》《豐盛不是金幣》《城市記得她》《不替眾神織衣》《風來做客的日子》《三種顏色的歸途》《稻穗成熟以前》《河流穿過金色城市》《海記得她的名字》《太陽回到山脊》《月亮的長住客》《長生以後》《替星星排班》，以及《藍色停留的那一小時》《月亮的失物招領》《把光留給日常》《她把風景打開》，共 904 張影像。
+- [史旺姬｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/swanky-ji/): 史旺姬｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，二十八本寫真集：《神話未完成》系列《補天的人》《世界停下之前，再跳一次》《走過七道門》《把太陽請出來》《把海上的人帶回家》《用陰影回答光》《聲音還沒有名字》《她不是等待被救的人》《把黑夜穿在身上》《豐盛不是金幣》《城市記得她》《不替眾神織衣》《風來做客的日子》《三種顏色的歸途》《稻穗成熟以前》《河流穿過金色城市》《海記得她的名字》《太陽回到山脊》《月亮的長住客》《長生以後》《替星星排班》《城市夜班》《比羽毛更輕》《夜航太陽船》，以及《藍色停留的那一小時》《月亮的失物招領》《把光留給日常》《她把風景打開》，共 1012 張影像。
 - [林予晴｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/lin-yuqing/): 林予晴｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物，23 歲、住在海港城市「南汐」的自由平面設計師；寫真集《把今天寄出去》共 36 張影像。
 - [江映希｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/jiang-yingxi/): 江映希｜SWANKY MODELS 虛擬模特兒：史旺基的原創虛擬人物；首部寫真集《窗外還亮著》共 36 張影像。
 - [小赫｜SWANKY MODELS](https://swanky.github.io/photography/models/talent/xiao-he/): 小赫｜SWANKY MODELS：史旺基日常工作用的 AI 助理（Hermes Agent）形象；目前尚無寫真集作品。
@@ -87,7 +87,7 @@
 - [CloneX #17152｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/clonex-17152/): CloneX #17152｜SWANKY MODELS 虛擬模特兒：史旺基持有的 CloneX #17152 的攝影式改編形象，造型含村上隆 IP，不參與商業合作，僅作概念展示；已參與公開寫真集《七個名字，八種在場》。
 - [Meebit #10829｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/meebit-10829/): Meebit #10829｜SWANKY MODELS 虛擬模特兒：史旺基持有的 Meebits #10829 的攝影式改編形象，收錄《城市不合身》，並參與合輯《七個名字，八種在場》，為個人藝術創作展示。
 - [MAYC #17854｜SWANKY MODELS 虛擬模特兒](https://swanky.github.io/photography/models/talent/mayc-17854/): MAYC #17854｜SWANKY MODELS 虛擬模特兒：史旺基持有的 MAYC #17854 的攝影式改編形象，已參與公開寫真集《七個名字，八種在場》，為個人藝術創作展示。
-- [SWANKY MODELS 作品案例](https://swanky.github.io/photography/models/work/): SWANKY MODELS 作品案例：四十二本自主企劃的概念寫真集，包含史旺姬、林予晴、江映希、李瓶兒、潘金蓮的作品，以及七位 NFT 角色共同演出的《七個名字，八種在場》。全部影像可線上翻閱、對照 Flickr 相簿，部分可下載完整寫真集；個人藝術創作展示不代表全面商用授權。
+- [SWANKY MODELS 作品案例](https://swanky.github.io/photography/models/work/): SWANKY MODELS 作品案例：四十五本自主企劃的概念寫真集，包含史旺姬、林予晴、江映希、李瓶兒、潘金蓮的作品，以及七位 NFT 角色共同演出的《七個名字，八種在場》。全部影像可線上翻閱、對照 Flickr 相簿，部分可下載完整寫真集；個人藝術創作展示不代表全面商用授權。
 - [SWANKY MODELS 合作洽詢](https://swanky.github.io/photography/models/inquiry/): SWANKY MODELS 合作洽詢：目前為作品與概念階段，尚無商業委託案例。說明虛構角色與真人授權數位分身的合作原則、可以先聊的三件事，以及來信方式；真人模特兒合作另走攝影作品區。
 - [史旺姬《她把風景打開》](https://swanky.github.io/photography/swanky-ji-open-worlds/): 史旺姬《她把風景打開》：36張影像，從海風、玻璃屋走進可以觸碰的照片。人物與風景共同構成三個世界，可逐張觀看或下載完整寫真集。
 - [史旺姬《把光留給日常》](https://swanky.github.io/photography/swanky-ji-everyday-light/): 史旺姬《把光留給日常》：36 張影像，從窗邊閱讀、街角散步到安靜的黑白肖像，把一日微小的表情與光線留成四章。可逐張觀看或下載完整寫真集。
@@ -115,6 +115,9 @@
 - [史旺姬《月亮的長住客》](https://swanky.github.io/photography/swanky-ji-long-stay-on-the-moon/): 史旺姬《月亮的長住客》：《神話未完成》第十九冊。36 張影像、九章——她留下影子，也學會帶它一起走。
 - [史旺姬《長生以後》](https://swanky.github.io/photography/swanky-ji-after-forever/): 史旺姬《長生以後》：《神話未完成》第二十冊。36 張影像、三章——空著的座位，終於留給眼前的人。
 - [史旺姬《替星星排班》](https://swanky.github.io/photography/swanky-ji-roster-for-the-stars/): 史旺姬《替星星排班》：《神話未完成》第二十一冊。36 張影像、三章——光有次序，人也有自己的時間。
+- [史旺姬《城市夜班》](https://swanky.github.io/photography/swanky-ji-city-night-shift/): 史旺姬《城市夜班》：《神話未完成》第二十二冊。36 張影像、三章——夜裡，誰看著誰。
+- [史旺姬《比羽毛更輕》](https://swanky.github.io/photography/swanky-ji-lighter-than-a-feather/): 史旺姬《比羽毛更輕》：《神話未完成》第二十三冊。36 張影像、三章——有些事，不在秤盤裡。
+- [史旺姬《夜航太陽船》](https://swanky.github.io/photography/swanky-ji-solar-night-passage/): 史旺姬《夜航太陽船》：《神話未完成》第二十四冊。36 張影像、三章——路還看不見的時候。
 - [林予晴《把今天寄出去》](https://swanky.github.io/photography/lin-yuqing-send-today/): 林予晴《把今天寄出去》：36 幅影像，從工作桌出發，走過布市、曬布的小院與電車，把做好的小東西帶到海邊，再用一封信替今天找到新的去處。
 - [江映希《窗外還亮著》](https://swanky.github.io/photography/jiang-yingxi-window-still-lit/): 江映希《窗外還亮著》：36 幅影像。窗外的城市，一盞一盞亮起來。江映希在房間裡走動，分開麵包，靠近水聲，把頭髮理好，再找一個舒服的位置讀書。八段夜裡的片刻，讓光與身體一起留下來。
 - [出版攝影集](https://swanky.github.io/photography/photo-albums/): 《制服．女孩 × 史旺基》系列、《高校制服戀物論》
