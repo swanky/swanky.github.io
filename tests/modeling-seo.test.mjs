@@ -18,10 +18,16 @@ test('課程結構化資料標出台北實體課，但不放價格', () => {
 
 test('FAQ 畫面與 FAQPage 結構化資料吃同一份 front matter', () => {
   const questions = [...frontMatter.matchAll(/^  - q: (.+)$/gm)].map((m) => m[1]);
-  assert.equal(questions.length, 4);
+  assert.equal(questions.length, 5);
   assert.match(page, /\{% for item in page\.faq %\}/);
   assert.match(page, /\{% include faq-jsonld\.html faq=page\.faq %\}/);
   assert.doesNotMatch(page, /<summary>課程價格是多少？<\/summary>/, 'FAQ 不得再手寫一份，避免與結構化資料不同步');
+});
+
+test('上課地點：畫面與 FAQ 都寫台北為主、外縣市另議（站主 2026-10-28 確認）', () => {
+  assert.match(page, /上課地點以台北為主；外縣市可另行討論/);
+  assert.match(frontMatter, /^  - q: 在哪裡上課？可以到外縣市嗎？$/m);
+  assert.match(frontMatter, /a: 以台北為主。外縣市可另行討論/);
 });
 
 test('三期歷史課程維持「額滿」寫法', () => {
