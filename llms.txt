@@ -198,7 +198,7 @@
 ## 教育訓練 Education
 
 - [教育訓練總覽](https://swanky.github.io/education/): 史旺基提供 Agentic Engineering、Web3 企業培訓，以及女性模特兒鏡頭表現一對一課程。企業與個人分流，課程成果、狀態與洽詢方式清楚呈現。
-- [模特兒課程](https://swanky.github.io/education/modeling/): 攝影模特兒養成
+- [模特兒鏡頭表現一對一課程](https://swanky.github.io/education/modeling/): 史旺基為女性新手模特兒與內容創作者設計的鏡頭表現一對一課程，練習擺姿、鏡頭感與個人形象，包含正式拍攝與學員自選 5 張精修數位照片。
 - [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
 - [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
 - [企業 Web3 內訓](https://swanky.github.io/education/crypto/enterprise/): 企業版區塊鏈與加密資產課程

@@ -291,3 +291,4 @@ cover_alt: "白 T 恤牛仔褲的人站在高架橋下的長椅旁，一手高�
 
 - 想看別人怎麼拆解一位攝影師的拍法，「看懂寫真」的<a href="{{ '/photography/learn/#u2' | relative_url }}">風格拆解</a>單元用的是同一套問法：看什麼、能借什麼、不能抄什麼。
 - 距離這件事，我另外寫過〈<a href="{{ '/photography/presence-araki-sanai-kawashima/' | relative_url }}">拍人要站多近？</a>〉。
+- 想站到鏡頭前練習這些互動與手勢，可以看<a href="{{ '/education/modeling/' | relative_url }}">模特兒鏡頭表現一對一課程</a>。
