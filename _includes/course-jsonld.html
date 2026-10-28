@@ -11,6 +11,7 @@
     "alternateName": ["Swanky Hsiao", "蕭宇程"],
     "url": "https://swanky.github.io"
   },
+{%- comment %}付費課程不放 offers／價格（站上一律依需求報價）；course_mode／course_location 讓實體課標出上課地點。{% endcomment %}
 {%- if page.course_free %}
   "inLanguage": "zh-TW",
   "isAccessibleForFree": true,
@@ -28,6 +29,26 @@
 {%- endfor %}
   ],
 {%- endif %}
+{%- endif %}
+{%- if page.course_mode and page.course_free != true %}
+  "inLanguage": "zh-TW",
+{%- if page.og_image %}
+  "image": {{ page.og_image | absolute_url | jsonify }},
+{%- endif %}
+{%- if page.course_teaches %}
+  "teaches": {{ page.course_teaches | jsonify }},
+{%- endif %}
+{%- if page.course_audience %}
+  "audience": {"@type": "EducationalAudience", "audienceType": {{ page.course_audience | jsonify }}},
+{%- endif %}
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": {{ page.course_mode | jsonify }},
+{%- if page.course_location %}
+    "location": {"@type": "Place", "name": {{ page.course_location | jsonify }}, "address": {"@type": "PostalAddress", "addressLocality": {{ page.course_location | jsonify }}, "addressCountry": "TW"}},
+{%- endif %}
+    "instructor": {"@type": "Person", "name": "史旺基", "url": "https://swanky.github.io"}
+  },
 {%- endif %}
   "url": "{{ page.url | absolute_url }}"
 }

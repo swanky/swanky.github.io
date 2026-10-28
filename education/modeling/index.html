@@ -6,6 +6,25 @@ description: 史旺基為女性新手模特兒與內容創作者設計的鏡頭�
 course_name: 模特兒鏡頭表現一對一課程
 keywords: 模特兒課程,鏡頭表現,擺姿教學,女性模特兒,一對一課程,作品拍攝,史旺基
 nav_active: education
+og_image: /assets/img/portfolio/29528630897_7de2f3ac21_k.jpeg
+og_image_width: 2048
+og_image_height: 1365
+og_image_alt: 女性模特兒擺姿與鏡頭表現作品
+# 結構化資料（_includes/course-jsonld.html）：地點依站主 2026-10-28 決定寫台北；不放價格（依需求報價）
+course_mode: onsite
+course_location: 台北市
+course_teaches: [擺姿, 鏡頭感, 表情控制, 個人形象]
+course_audience: 女性新手模特兒或內容創作者
+# FAQ：畫面上的問答與 FAQPage 結構化資料共用這一份，避免兩邊內容不同步
+faq:
+  - q: 課程價格是多少？
+    a: 一對一與小班皆依時數、場地與需求洽詢報價，網站不公開固定價格。交付內容會在確認方案時寫清楚。
+  - q: 會提供全部毛片嗎？
+    a: 不會。每位學員從拍攝成品中自選 5 張精修數位照片。
+  - q: 高中生可以參加嗎？
+    a: 可以洽詢。未滿 18 歲者須由法定代理人同意並共同確認課程、拍攝與照片使用方式。
+  - q: 報名就會得到合作機會嗎？
+    a: 不會。合作人才庫採自願加入，未來有適合企劃時另行邀請並協議條件；不加入也不影響課程與照片交付。
 breadcrumbs:
   - name: 主頁
     url: /
@@ -77,12 +96,14 @@ breadcrumbs:
   </section>
 
   <section class="edu-section edu-section--tint">
-    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Trust</span><h2>攝影資歷與歷史合作回饋</h2><p>三本攝影作品書，作品曾刊登 TIME Magazine，並獲 PX3、IPA 攝影獎項。以下是攝影合作回饋，不是參加新一對一課程後的學員見證。</p></header><details class="edu-details"><summary>查看兩則歷史攝影合作回饋</summary><div class="edu-details__body"><div class="edu-testimonial-grid"><blockquote class="edu-testimonial"><p>回想之前跟史旺基學長合作的經驗，當時因為商業創作上的需求，商請史旺基協助拍攝正妹模特兒小立。拍攝過程中，小立說了一句話：「史旺基是最讓她覺得『很舒服』的攝影師」，這段話讓我魂飛魄散久久不能忘懷。看著制服女孩三，彷彿又讓我回到當時的情景了。</p><cite>王明仁｜師大美術博士、專業創作者</cite></blockquote><blockquote class="edu-testimonial"><p>之前與史旺基有過一兩次的合作，他對每次拍攝、每個女孩都非常盡心盡力，即使背景枯燥無味或平凡無色，出來的作品總是令人驚嘆。很快的制服女孩出到第三集了，從青春生活走到了友誼日常，穿著制服的年紀就是拋開書本上的豆芽和姐妹們相談甚歡！</p><cite>姍姍（Clara 皮卡姍）｜平面模特兒</cite></blockquote></div></div></details></div>
+    <div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">Trust</span><h2>攝影資歷與歷史合作回饋</h2><p><a href="{{ '/photography/photo-albums/' | relative_url }}">三本攝影作品書</a>，作品曾刊登 <a href="{{ '/press/' | relative_url }}">TIME Magazine</a>，並獲 <a href="{{ '/photography/awards/' | relative_url }}">PX3、IPA 攝影獎項</a>。以下是攝影合作回饋，不是參加新一對一課程後的學員見證。</p></header><details class="edu-details"><summary>查看兩則歷史攝影合作回饋</summary><div class="edu-details__body"><div class="edu-testimonial-grid"><blockquote class="edu-testimonial"><p>回想之前跟史旺基學長合作的經驗，當時因為商業創作上的需求，商請史旺基協助拍攝正妹模特兒小立。拍攝過程中，小立說了一句話：「史旺基是最讓她覺得『很舒服』的攝影師」，這段話讓我魂飛魄散久久不能忘懷。看著制服女孩三，彷彿又讓我回到當時的情景了。</p><cite>王明仁｜師大美術博士、專業創作者</cite></blockquote><blockquote class="edu-testimonial"><p>之前與史旺基有過一兩次的合作，他對每次拍攝、每個女孩都非常盡心盡力，即使背景枯燥無味或平凡無色，出來的作品總是令人驚嘆。很快的制服女孩出到第三集了，從青春生活走到了友誼日常，穿著制服的年紀就是拋開書本上的豆芽和姐妹們相談甚歡！</p><cite>姍姍（Clara 皮卡姍）｜平面模特兒</cite></blockquote></div></div></details></div>
   </section>
 
-  {% include education/instructor.html plain=true extra="我拍攝女性人像十多年。課程不要求你先會當模特兒，而是一起把鏡頭裡的不確定拆開，找到你能重複使用的方法。" %}
+  {% capture instructor_extra %}我拍攝<a href="{{ '/photography/personal-works/' | relative_url }}">女性人像</a>十多年。課程不要求你先會當模特兒，而是一起把鏡頭裡的不確定拆開，找到你能重複使用的方法。{% endcapture %}
+  {% include education/instructor.html plain=true extra=instructor_extra %}
 
-  <section class="edu-section edu-section--tint"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header><details class="edu-details"><summary>課程價格是多少？</summary><div class="edu-details__body">一對一與小班皆依時數、場地與需求洽詢報價，網站不公開固定價格。交付內容會在確認方案時寫清楚。</div></details><details class="edu-details"><summary>會提供全部毛片嗎？</summary><div class="edu-details__body">不會。每位學員從拍攝成品中自選 5 張精修數位照片。</div></details><details class="edu-details"><summary>高中生可以參加嗎？</summary><div class="edu-details__body">可以洽詢。未滿 18 歲者須由法定代理人同意並共同確認課程、拍攝與照片使用方式。</div></details><details class="edu-details"><summary>報名就會得到合作機會嗎？</summary><div class="edu-details__body">不會。合作人才庫採自願加入，未來有適合企劃時另行邀請並協議條件；不加入也不影響課程與照片交付。</div></details></div></section>
+  <section class="edu-section edu-section--tint"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header>{% for item in page.faq %}<details class="edu-details"><summary>{{ item.q }}</summary><div class="edu-details__body">{{ item.a }}</div></details>{% endfor %}</div></section>
+  {% include faq-jsonld.html faq=page.faq %}
 
   {% include education/cta.html title="先告訴我，你最怕鏡頭裡的哪一件事" text="來信確認是否已滿 18 歲，並說明想改善的鏡頭表現、偏好風格與可配合時段。我會依需求回覆一對一或小班的安排與報價。" href=inquiry_href label="洽詢模特兒一對一課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_bottom',service:'model_coaching',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/photography/" secondary_label="先看攝影作品" %}
 </main>
