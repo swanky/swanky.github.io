@@ -47,8 +47,10 @@
 {%- if page.course_workload %}
     "courseWorkload": {{ page.course_workload | jsonify }},
 {%- endif %}
+{%- comment %}course_location 可寫單一城市，或用 YAML 清單列多個城市（輸出多個 Place）。{% endcomment %}
 {%- if page.course_location %}
-    "location": {"@type": "Place", "name": {{ page.course_location | jsonify }}, "address": {"@type": "PostalAddress", "addressLocality": {{ page.course_location | jsonify }}, "addressCountry": "TW"}},
+{%- assign locs = page.course_location %}{% if locs.first == nil %}{% assign locs = page.course_location | split: "|" %}{% endif %}
+    "location": [{% for loc in locs %}{"@type": "Place", "name": {{ loc | jsonify }}, "address": {"@type": "PostalAddress", "addressLocality": {{ loc | jsonify }}, "addressCountry": "TW"}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
 {%- endif %}
     "instructor": {"@type": "Person", "name": "史旺基", "url": "https://swanky.github.io"}
   },

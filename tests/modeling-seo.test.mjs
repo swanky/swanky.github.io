@@ -10,7 +10,7 @@ const frontMatter = page.match(/^---\n([\s\S]*?)\n---/)[1];
 
 test('課程結構化資料標出台北實體課，但不放價格', () => {
   assert.match(frontMatter, /^course_mode: onsite$/m);
-  assert.match(frontMatter, /^course_location: 台北市$/m);
+  assert.match(frontMatter, /^course_location: \[新北市, 台北市\]$/m);
   assert.doesNotMatch(page, /NT\$|新台幣|\d+\s*元/);
   // 付費課程分支不得輸出 offers／price；只有免費課（course_free）才有 price: 0
   const paidBranch = courseJsonld.split('{%- if page.course_mode')[1];
