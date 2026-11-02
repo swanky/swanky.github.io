@@ -127,6 +127,7 @@ talents:
       - { data: swanky_ji_the_last_apple, kind: json, url: /photography/swanky-ji-the-last-apple/ }
       - { data: swanky_ji_fate_is_not_a_straight_line, kind: json, url: /photography/swanky-ji-fate-is-not-a-straight-line/ }
       - { data: swanky_ji_fire_kept_by_the_well, kind: json, url: /photography/swanky-ji-fire-kept-by-the-well/ }
+      - { data: swanky_ji_the_buyer_of_all_stories, kind: json, url: /photography/swanky-ji-the-buyer-of-all-stories/ }   # 《神話未完成》32（2026-11-03，無 PDF）
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }

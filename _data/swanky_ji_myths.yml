@@ -41,3 +41,5 @@ volumes:
   - { data: swanky_ji_the_last_apple, url: /photography/swanky-ji-the-last-apple/ }
   - { data: swanky_ji_fate_is_not_a_straight_line, url: /photography/swanky-ji-fate-is-not-a-straight-line/ }
   - { data: swanky_ji_fire_kept_by_the_well, url: /photography/swanky-ji-fire-kept-by-the-well/ }
+  # 32（2026-11-03 移交；無章節、有中英文）。
+  - { data: swanky_ji_the_buyer_of_all_stories, url: /photography/swanky-ji-the-buyer-of-all-stories/ }
