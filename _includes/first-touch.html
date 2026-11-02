@@ -1,0 +1,21 @@
+<script>
+  // 首次進站來源（issue swanky/rwa#21）：訪客常從 AI 搜尋或社群連結落在服務頁，再點進 /contact/。
+  // 這裡只記「本分頁第一次進站」的 utm 參數或外站來源網域＋落地頁路徑，存在 sessionStorage，
+  // 由 /contact/ 表單帶進隱藏欄位 fi-text-source。不寫 cookie、不跨分頁、不送任何第三方。
+  (function () {
+    try {
+      if (sessionStorage.getItem('first_touch')) return;
+      var q = new URLSearchParams(location.search), parts = [];
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
+        if (q.get(k)) parts.push(k + '=' + q.get(k).slice(0, 80));
+      });
+      if (!parts.length && document.referrer) {
+        var ref = new URL(document.referrer);
+        if (ref.hostname !== location.hostname) parts.push('referrer=' + ref.hostname);
+      }
+      if (!parts.length) parts.push('direct');
+      parts.push('landing=' + location.pathname);
+      sessionStorage.setItem('first_touch', parts.join('; '));
+    } catch (e) {}
+  })();
+</script>
