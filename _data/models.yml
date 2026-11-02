@@ -120,6 +120,13 @@ talents:
       - { data: swanky_ji_city_night_shift, kind: json, url: /photography/swanky-ji-city-night-shift/ }   # 《神話未完成》22–24（2026-10-27，無 PDF）
       - { data: swanky_ji_lighter_than_a_feather, kind: json, url: /photography/swanky-ji-lighter-than-a-feather/ }
       - { data: swanky_ji_solar_night_passage, kind: json, url: /photography/swanky-ji-solar-night-passage/ }
+      - { data: swanky_ji_the_tide_keeps_returning, kind: json, url: /photography/swanky-ji-the-tide-keeps-returning/ }   # 《神話未完成》25–31（2026-11-02，無 PDF）
+      - { data: swanky_ji_small_founders, kind: json, url: /photography/swanky-ji-small-founders/ }
+      - { data: swanky_ji_the_door_finally_opens, kind: json, url: /photography/swanky-ji-the-door-finally-opens/ }
+      - { data: swanky_ji_once_a_year, kind: json, url: /photography/swanky-ji-once-a-year/ }
+      - { data: swanky_ji_the_last_apple, kind: json, url: /photography/swanky-ji-the-last-apple/ }
+      - { data: swanky_ji_fate_is_not_a_straight_line, kind: json, url: /photography/swanky-ji-fate-is-not-a-straight-line/ }
+      - { data: swanky_ji_fire_kept_by_the_well, kind: json, url: /photography/swanky-ji-fire-kept-by-the-well/ }
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }

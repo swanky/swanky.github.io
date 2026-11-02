@@ -33,3 +33,11 @@ volumes:
   - { data: swanky_ji_city_night_shift, url: /photography/swanky-ji-city-night-shift/ }
   - { data: swanky_ji_lighter_than_a_feather, url: /photography/swanky-ji-lighter-than-a-feather/ }
   - { data: swanky_ji_solar_night_passage, url: /photography/swanky-ji-solar-night-passage/ }
+  # 25–31（2026-11-02 移交；無章節、有中英文）。
+  - { data: swanky_ji_the_tide_keeps_returning, url: /photography/swanky-ji-the-tide-keeps-returning/ }
+  - { data: swanky_ji_small_founders, url: /photography/swanky-ji-small-founders/ }
+  - { data: swanky_ji_the_door_finally_opens, url: /photography/swanky-ji-the-door-finally-opens/ }
+  - { data: swanky_ji_once_a_year, url: /photography/swanky-ji-once-a-year/ }
+  - { data: swanky_ji_the_last_apple, url: /photography/swanky-ji-the-last-apple/ }
+  - { data: swanky_ji_fate_is_not_a_straight_line, url: /photography/swanky-ji-fate-is-not-a-straight-line/ }
+  - { data: swanky_ji_fire_kept_by_the_well, url: /photography/swanky-ji-fire-kept-by-the-well/ }
