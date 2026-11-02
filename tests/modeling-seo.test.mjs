@@ -3,7 +3,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-const page = readFileSync(new URL('../education/modeling/index.html', import.meta.url), 'utf8');
+// Windows 工作副本（core.autocrlf=true）是 CRLF：先統一成 LF，否則 front matter 與 $ 錨點比對會假失敗
+const page = readFileSync(new URL('../education/modeling/index.html', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
 const courseJsonld = readFileSync(new URL('../_includes/course-jsonld.html', import.meta.url), 'utf8');
 const frontMatter = page.match(/^---\n([\s\S]*?)\n---/)[1];
 

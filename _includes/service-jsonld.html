@@ -1,0 +1,31 @@
+{%- comment -%}
+service-jsonld.html — 付費服務頁的 Service 結構化資料（2026-11-03，issue swanky/rwa#21）。
+由 front matter 的 service_name 觸發；service_type 選填。description 沿用頁面 description。
+不放 offers／價格（站上一律依需求報價）；provider 不寫雇主（AGENTS.md 品牌／雇主切割）。
+已有 Course 的課程頁不要再加 service_name，避免同一頁兩種型別。
+{%- endcomment -%}
+{% if page.service_name %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ page.service_name | jsonify }},
+{%- if page.service_type %}
+  "serviceType": {{ page.service_type | jsonify }},
+{%- endif %}
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "Person",
+    "name": "史旺基",
+    "alternateName": ["Swanky Hsiao", "蕭宇程"],
+    "url": "https://swanky.github.io"
+  },
+  "areaServed": {"@type": "Country", "name": "Taiwan"},
+  "availableLanguage": "zh-TW",
+{%- if page.og_image %}
+  "image": {{ page.og_image | absolute_url | jsonify }},
+{%- endif %}
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+{% endif %}

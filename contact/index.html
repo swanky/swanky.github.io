@@ -71,6 +71,7 @@ extra_css: |
         <option value="web3_training">Web3 課程與企業內訓</option>
         <option value="ai_crypto_research">AI 研究流程應用模組／合作主辦講座</option>
         <option value="model_coaching">模特兒課程</option>
+        <option value="commission_photography">委託拍攝／寫真書</option>
         <option value="photography">攝影或模特兒合作</option>
         <option value="general" selected>其他／還不確定</option>
       </select>
@@ -87,6 +88,7 @@ extra_css: |
     </div>
 
     <input type="hidden" name="fi-text-from_page" id="cf-from-page" value="">
+    <input type="hidden" name="fi-text-source" id="cf-source" value="">
 
     <button class="contact-submit" type="submit" id="cf-submit">送出</button>
     <p class="contact-status" id="cf-status" role="status" aria-live="polite"></p>
@@ -118,6 +120,8 @@ extra_css: |
     var service = params.get('service') || '';
     var position = params.get('from') || 'contact_page';
     document.getElementById('cf-from-page').value = params.get('page') || document.referrer || '';
+    // 首次進站來源（_includes/first-touch.html 記在本分頁）：知道詢問是從 AI 搜尋、社群還是直接打網址來的
+    try { document.getElementById('cf-source').value = sessionStorage.getItem('first_touch') || ''; } catch (e) {}
 
     // 各服務別的填寫提示：沿用各服務頁 mailto 版本裡本來就在問的問題，一字未改寫——
     // 那些問題是站主整理過的，換成表單不該把它們弄丟，否則訪客只會寫「想了解一下」。
@@ -128,6 +132,8 @@ extra_css: |
       web3_training: '團隊角色、人數、希望時數與目前想釐清的議題。',
       ai_crypto_research: '主辦單位、主要受眾、預估人數、希望形式與預計日期。',
       model_coaching: '是否已滿 18 歲、想改善的鏡頭表現、偏好風格與可配合時段。',
+      // 委託拍攝：問題沿用攝影合作頁（/photography/commercial-works/）原本請來信說明的項目
+      commission_photography: '用途：\n預計日期：\n地點：\n預計公開範圍：\n需要的影像：\n其他想先確認的事情：',
       photography: '想嘗試的主題／風格：\n可配合時段：\n公開作品或社群連結（模特兒合作請附）：\n其他想先確認的事情：'
     };
 
