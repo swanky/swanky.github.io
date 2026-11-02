@@ -44,6 +44,9 @@
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": {{ page.course_mode | jsonify }},
+{%- if page.course_workload %}
+    "courseWorkload": {{ page.course_workload | jsonify }},
+{%- endif %}
 {%- if page.course_location %}
     "location": {"@type": "Place", "name": {{ page.course_location | jsonify }}, "address": {"@type": "PostalAddress", "addressLocality": {{ page.course_location | jsonify }}, "addressCountry": "TW"}},
 {%- endif %}

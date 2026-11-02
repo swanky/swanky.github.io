@@ -15,10 +15,21 @@ course_mode: onsite
 course_location: 台北市
 course_teaches: [擺姿, 鏡頭感, 表情控制, 個人形象]
 course_audience: 女性新手模特兒或內容創作者
+course_workload: PT3H
 # FAQ：畫面上的問答與 FAQPage 結構化資料共用這一份，避免兩邊內容不同步
 faq:
   - q: 課程價格是多少？
     a: 一對一與小班皆依時數、場地與需求洽詢報價，網站不公開固定價格。交付內容會在確認方案時寫清楚。
+  - q: 怎麼預約？多久會回覆？
+    a: 填寫洽詢表單後，我會在 2 個工作天內回信並報價。確認日期後付訂金，餘款上課當天付清。
+  - q: 在哪裡上課？平日、假日都可以嗎？
+    a: 主要在台北市上課，平日與假日都可以安排。外縣市也可以討論，另收交通與通勤時間的費用。
+  - q: 一堂課多久？
+    a: 通常 3 小時，可以依想練習的內容調整。
+  - q: 服裝和化妝要自己準備嗎？
+    a: 要。更衣與梳化由學員自理，服裝方向可以在課前一起討論。
+  - q: 精修照片什麼時候拿到？
+    a: 拍攝後最晚兩週內交付 5 張精修數位照片。
   - q: 會提供全部毛片嗎？
     a: 不會。每位學員從拍攝成品中自選 5 張精修數位照片。
   - q: 高中生可以參加嗎？
@@ -52,12 +63,12 @@ breadcrumbs:
 
   <section class="edu-section">
     <div class="edu-container">
-      <header class="edu-section-head"><span class="edu-eyebrow">Process</span><h2>先練，再拍，不把課程變成一場趕時間的寫真</h2><p>一對一是主要形式。小班可依人數、時數與場地另行規劃，不預設固定上限。</p></header>
+      <header class="edu-section-head"><span class="edu-eyebrow">Process</span><h2>先練，再拍，不把課程變成一場趕時間的寫真</h2><p>一對一是主要形式，一次通常 3 小時，可依需求調整；小班可依人數、時數與場地另行規劃，不預設固定上限。主要在台北上課，平日、假日都可以；外縣市可討論，另收交通與通勤時間費用。</p></header>
       <div class="edu-timeline">
         <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 01</span><div><h3>課前了解需求</h3><p>確認經驗、想改善的問題、偏好風格與服裝方向。未滿 18 歲者由法定代理人共同確認。</p></div></div>
         <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 02</span><div><h3>鏡頭表現練習</h3><p>從站姿、重心、手部、視線到表情，一邊拍、一邊回看，找到問題真正出在哪裡。</p></div></div>
-        <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 03</span><div><h3>正式作品拍攝</h3><p>把剛練過的方法放進完整拍攝，不只是教室示範。場地與造型需求於洽詢時確認。</p></div></div>
-        <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 04</span><div><h3>選片與精修交付</h3><p>學員從拍攝成品中自選 5 張精修數位照片。交付方式與時程於方案確認時說明。</p></div></div>
+        <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 03</span><div><h3>正式作品拍攝</h3><p>把剛練過的方法放進完整拍攝，不只是教室示範。場地於洽詢時確認；更衣與梳化由學員自理。</p></div></div>
+        <div class="edu-timeline__item"><span class="edu-timeline__step">STEP 04</span><div><h3>選片與精修交付</h3><p>學員從拍攝成品中自選 5 張精修數位照片。精修照片最晚於拍攝後兩週內交付。</p></div></div>
       </div>
     </div>
   </section>
@@ -105,5 +116,5 @@ breadcrumbs:
   <section class="edu-section edu-section--tint"><div class="edu-container"><header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header>{% for item in page.faq %}<details class="edu-details"><summary>{{ item.q }}</summary><div class="edu-details__body">{{ item.a }}</div></details>{% endfor %}</div></section>
   {% include faq-jsonld.html faq=page.faq %}
 
-  {% include education/cta.html title="先告訴我，你最怕鏡頭裡的哪一件事" text="來信確認是否已滿 18 歲，並說明想改善的鏡頭表現、偏好風格與可配合時段。我會依需求回覆一對一或小班的安排與報價。" href=inquiry_href label="洽詢模特兒一對一課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_bottom',service:'model_coaching',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/photography/" secondary_label="先看攝影作品" %}
+  {% include education/cta.html title="先告訴我，你最怕鏡頭裡的哪一件事" text="來信確認是否已滿 18 歲，並說明想改善的鏡頭表現、偏好風格與可配合時段。我會在 2 個工作天內回覆一對一或小班的安排與報價。" href=inquiry_href label="洽詢模特兒一對一課程" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'model_coaching_bottom',service:'model_coaching',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/photography/" secondary_label="先看攝影作品" %}
 </main>

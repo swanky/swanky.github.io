@@ -19,7 +19,7 @@ test('課程結構化資料標出台北實體課，但不放價格', () => {
 
 test('FAQ 畫面與 FAQPage 結構化資料吃同一份 front matter', () => {
   const questions = [...frontMatter.matchAll(/^  - q: (.+)$/gm)].map((m) => m[1]);
-  assert.equal(questions.length, 4);
+  assert.equal(questions.length, 9);
   assert.match(page, /\{% for item in page\.faq %\}/);
   assert.match(page, /\{% include faq-jsonld\.html faq=page\.faq %\}/);
   assert.doesNotMatch(page, /<summary>課程價格是多少？<\/summary>/, 'FAQ 不得再手寫一份，避免與結構化資料不同步');
