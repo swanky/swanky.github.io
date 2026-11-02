@@ -42,6 +42,8 @@ jobs:
         run: |
           for i in $(seq 1 60); do
             read -r status commit <<<"$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.status + " " + .commit' 2>/dev/null || echo "unknown none")"
+            # Pages 可能已部署「checkout 之後才 push」的更新 commit；本機沒有它就判斷不了祖先關係，會空等到逾時（2026-11-03 連續 merge 兩個 PR 時發生）
+            if [ "$status" = "built" ] && ! git cat-file -e "${commit}^{commit}" 2>/dev/null; then git fetch -q origin master || true; fi
             if [ "$status" = "built" ] && { [ "$commit" = "$GITHUB_SHA" ] || git merge-base --is-ancestor "$GITHUB_SHA" "$commit" 2>/dev/null; }; then
               echo "Pages 已部署 $commit"; sleep 60; exit 0
             fi
