@@ -10,7 +10,7 @@ const frontMatter = page.match(/^---\n([\s\S]*?)\n---/)[1];
 
 test('課程結構化資料標出台北實體課，但不放價格', () => {
   assert.match(frontMatter, /^course_mode: onsite$/m);
-  assert.match(frontMatter, /^course_location: 台北市$/m);
+  assert.match(frontMatter, /^course_location: \[新北市, 台北市\]$/m);
   assert.doesNotMatch(page, /NT\$|新台幣|\d+\s*元/);
   // 付費課程分支不得輸出 offers／price；只有免費課（course_free）才有 price: 0
   const paidBranch = courseJsonld.split('{%- if page.course_mode')[1];
@@ -19,7 +19,7 @@ test('課程結構化資料標出台北實體課，但不放價格', () => {
 
 test('FAQ 畫面與 FAQPage 結構化資料吃同一份 front matter', () => {
   const questions = [...frontMatter.matchAll(/^  - q: (.+)$/gm)].map((m) => m[1]);
-  assert.equal(questions.length, 4);
+  assert.equal(questions.length, 9);
   assert.match(page, /\{% for item in page\.faq %\}/);
   assert.match(page, /\{% include faq-jsonld\.html faq=page\.faq %\}/);
   assert.doesNotMatch(page, /<summary>課程價格是多少？<\/summary>/, 'FAQ 不得再手寫一份，避免與結構化資料不同步');

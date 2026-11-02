@@ -36,7 +36,7 @@ extra_css: |
 
 <div class="contact-wrap">
   <h1>洽詢合作</h1>
-  <p class="contact-lead">不確定也沒關係。簡單說明目前遇到的問題與預計時程即可，不需要先交敏感資料。技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作都從這裡開始。</p>
+  <p class="contact-lead">不確定也沒關係。簡單說明目前遇到的問題與預計時程即可，不需要先交敏感資料；送出後 2 個工作天內回信。技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作都從這裡開始。</p>
 
   <form class="contact-form" id="contact-form" novalidate>
     {%- comment -%}
@@ -180,7 +180,7 @@ extra_css: |
           say('送出時出了點問題：' + (res.error.message || '請再試一次') + '。若一直不行，直接寫信到 {{ site.email }} 也可以。', 'err');
           return;
         }
-        say('已經送出了，謝謝你——我看到後會回信到你留的信箱。', 'ok');
+        say('已經送出了，謝謝你——我會在 2 個工作天內回信到你留的信箱。', 'ok');
         form.reset();
         if (window.gtag) {
           gtag('event', 'contact_form_submit', {
