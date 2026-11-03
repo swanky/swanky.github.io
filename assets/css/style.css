@@ -5470,6 +5470,8 @@ main#main { scroll-margin-top: 80px; }
   text-underline-offset: 3px;
 }
 .services .services-contact-line a:hover { color: #E5A300; }
+.services .icon-box .svc-secondary { display: inline-block; margin-top: 12px; color: #8B5E00; font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.services .icon-box .svc-secondary:hover { color: #E5A300; }
 
 /* 手機：hero 由固定 90vh 改為隨內容長（否則第三顆 CTA 與「先看代表作」會被 overflow:hidden 裁掉） */
 @media (max-width: 767px) {
