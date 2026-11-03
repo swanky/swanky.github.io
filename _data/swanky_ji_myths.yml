@@ -43,3 +43,5 @@ volumes:
   - { data: swanky_ji_fire_kept_by_the_well, url: /photography/swanky-ji-fire-kept-by-the-well/ }
   # 32（2026-11-03 移交；無章節、有中英文）。
   - { data: swanky_ji_the_buyer_of_all_stories, url: /photography/swanky-ji-the-buyer-of-all-stories/ }
+  # 33（2026-11-03 移交；無章節、有中英文）。
+  - { data: swanky_ji_maize_grows_into_the_sky, url: /photography/swanky-ji-maize-grows-into-the-sky/ }

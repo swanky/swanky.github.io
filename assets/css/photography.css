@@ -1242,6 +1242,8 @@
 .photo-author-series-copy h3.smm-head--long { font-size: clamp(1.5rem, 2.6vw, 2.6rem); line-height: 1.3; }
 .smm-afterword .photo-author-eyebrow { text-align: center; }
 .smm-coda--afterword { margin-top: 18px; }
+/* 多段後記（第 33 冊起）：中文段落之間留一行的距離 */
+.smm-coda--afterword p:not([lang]) + p:not([lang]) { margin-top: 1em; }
 .smm-en { margin-top: 20px; color: #aaa69d; }
 .smm-en summary { cursor: pointer; color: var(--photo-gold-light); font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; }
 .smm-en p { font-size: 0.95rem; line-height: 1.75; }
