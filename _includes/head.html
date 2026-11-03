@@ -6,13 +6,21 @@
 {% include gtag.html %}
 
 {% assign seo_title = page.seo_title | default: page.title %}
-<title>{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+{%- comment -%}
+  完整標題：搜尋結果約只顯示 30 個中文字。標題本身已有「史旺基」或「Swanky」時不再接站名，
+  避免重複品牌把關鍵字擠出顯示範圍（2026-11-03 整站健檢：標題中位數 52 字）。站名仍由 WebSite 結構化資料提供。
+{%- endcomment -%}
+{%- if seo_title -%}
+  {%- if seo_title contains "史旺基" or seo_title contains "Swanky" -%}{%- assign full_title = seo_title -%}
+  {%- else -%}{%- capture full_title -%}{{ seo_title }} | {{ site.title }}{%- endcapture -%}{%- endif -%}
+{%- else -%}{%- assign full_title = site.title -%}{%- endif %}
+<title>{{ full_title }}</title>
 <meta content="{{ page.description | default: site.description }}" name="description">
 {% if page.keywords %}<meta content="{{ page.keywords }}" name="keywords">{% endif %}
 
 <!-- Open Graph -->
 <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'article' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:title" content="{{ full_title }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
 <meta property="og:image" content="{{ page.og_image | absolute_url }}">
@@ -33,7 +41,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if seo_title %}{{ seo_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:title" content="{{ full_title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 {% if page.og_image %}
 <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">

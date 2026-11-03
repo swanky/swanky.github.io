@@ -130,21 +130,21 @@
 - [江映希《窗外還亮著》](https://swanky.github.io/photography/jiang-yingxi-window-still-lit/): 江映希《窗外還亮著》：36 幅影像。窗外的城市，一盞一盞亮起來。江映希在房間裡走動，分開麵包，靠近水聲，把頭髮理好，再找一個舒服的位置讀書。八段夜裡的片刻，讓光與身體一起留下來。
 - [出版攝影集](https://swanky.github.io/photography/photo-albums/): 《制服．女孩 × 史旺基》系列、《高校制服戀物論》
 - [攝影獎項](https://swanky.github.io/photography/awards/): 法國 PX3、美國 IPA、TIME Magazine 等紀錄
-- [個人作品](https://swanky.github.io/photography/personal-works/): 人像、紀實、藝術攝影個人創作
+- [個人作品](https://swanky.github.io/photography/personal-works/): 史旺基人物攝影作品：從早期自然光、城市移動、制服與青春文化，到角色造型與概念創作，也關心眼神、身體、環境與時代如何留在同一張照片裡。
 - [商業攝影作品](https://swanky.github.io/photography/commercial-works/): 史旺基公開的委託與活動攝影紀錄，包含音樂專輯、MV 側拍、劇照、企業活動、婚禮與展覽，每個案例標明當時負責的角色與交付目的。接受委託拍攝與寫真書洽詢：說明用途、日期、地點與公開範圍，確認適合後再討論工作方式與費用。
 - [作品精選](https://swanky.github.io/photography/gallery/): 跨年度精選作品集
 - [制服．女孩 × 史旺基](https://swanky.github.io/photography/uniform-girl/): 招牌制服攝影系列
 - [歷年記錄](https://swanky.github.io/photography/archive/): 時序歸檔
 
-- [李瓶兒《雨停以前》](https://swanky.github.io/jinpingmei/photobook/li-pinger-before-the-rain/): 李瓶兒《雨停以前》：走過天氣，也走過自己的幾種樣子。共34幅影像。
-- [潘金蓮《借來的白晝》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-daylight-on-loan/): 潘金蓮《借來的白晝》：一日的偏航共36幅影像。
-- [CloneX #17474《不必有用的午後》](https://swanky.github.io/nft/photobook/small-freedoms/): CloneX #17474《不必有用的午後》：九次岔路共35幅影像。
-- [潘金蓮《再轉一圈》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-one-more-turn/): 潘金蓮《再轉一圈》：城市不只一種速度共35幅影像。
-- [Meebit #10829《城市不合身》](https://swanky.github.io/nft/photobook/city-out-of-fit/): Meebit #10829《城市不合身》：九種尺度共36幅影像。
-- [李瓶兒《水線以上》](https://swanky.github.io/jinpingmei/photobook/li-pinger-above-the-waterline/): 李瓶兒《水線以上》：把重量交給水共36幅影像。
-- [潘金蓮《還沒寫好的舞台》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-unwritten-stage/): 潘金蓮《還沒寫好的舞台》：讓場所成為表演共36幅影像。
-- [CloneX #15162《風的練習簿》](https://swanky.github.io/nft/photobook/quiet-machines/): CloneX #15162《風的練習簿》：九種空氣共36幅影像。
-- [李瓶兒《岸還沒有名字》](https://swanky.github.io/jinpingmei/photobook/li-pinger-shore-without-a-name/): 李瓶兒《岸還沒有名字》：靠岸以後，才開始認識遠方。共36幅影像。
+- [李瓶兒《雨停以前》](https://swanky.github.io/jinpingmei/photobook/li-pinger-before-the-rain/): 李瓶兒《雨停以前》：走過天氣，也走過自己的幾種樣子。雨廊、工房、茶山、溫室，她在不同的光裡換一種站法，夜晚亮起來，停下、走動和笑都有位置。共34幅影像。
+- [潘金蓮《借來的白晝》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-daylight-on-loan/): 潘金蓮《借來的白晝》：一日的偏航。跑道要繞圈，車站要通行，座位留給等待；她借走一個白晝，路線沒有消失，只是這一天有了她自己的速度。共36幅影像。
+- [CloneX #17474《不必有用的午後》](https://swanky.github.io/nft/photobook/small-freedoms/): CloneX #17474《不必有用的午後》：一位自帶光環的成年人，暫時不需要證明任何價值；九次岔路，九件不必完成的小事。共35幅影像。
+- [潘金蓮《再轉一圈》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-one-more-turn/): 潘金蓮《再轉一圈》：城市不只一種速度。圓不只在輪鞋下面，也在窗框、坡道、唱片裡；滑行、步行，或只是坐著，幾個日子的片段接成一個圓。共35幅影像。
+- [Meebit #10829《城市不合身》](https://swanky.github.io/nft/photobook/city-out-of-fit/): Meebit #10829《城市不合身》：一副直角身體，試用一座現成的城市；九種尺度，九次與曲線相遇，不用改變形狀也能找到位置。共36幅影像。
+- [李瓶兒《水線以上》](https://swanky.github.io/jinpingmei/photobook/li-pinger-above-the-waterline/): 李瓶兒《水線以上》：把重量交給水。從游泳館到屋頂泳池，穿過木頭、白牆和日光來到水邊，水裡有伸展與停頓，也有向上的力氣。共36幅影像。
+- [潘金蓮《還沒寫好的舞台》](https://swanky.github.io/jinpingmei/photobook/pan-jinlian-unwritten-stage/): 潘金蓮《還沒寫好的舞台》：讓場所成為表演。她移開景片，走出空房，也走進土、石、水和夜色，每一個地方都接住不同的身體。共36幅影像。
+- [CloneX #15162《風的練習簿》](https://swanky.github.io/nft/photobook/quiet-machines/): CloneX #15162《風的練習簿》：用紙、草和薄金屬，替看不見的風留一點筆跡；九種空氣，沒有同一種答案。共36幅影像。
+- [李瓶兒《岸還沒有名字》](https://swanky.github.io/jinpingmei/photobook/li-pinger-shore-without-a-name/): 李瓶兒《岸還沒有名字》：靠岸以後，才開始認識遠方。夜裡出發，天亮時靠岸，她打開陌生房間的窗，在白色海灣轉身，走過空著的市場。共36幅影像。
 
 ## 技術顧問 Technical Consulting
 
@@ -260,15 +260,15 @@
 不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。所有工具皆為純前端計算，出生資料不離開使用者的瀏覽器；不預測吉凶、不做命定式斷語。
 
 - [自我探索實驗室總覽](https://swanky.github.io/explore/): 各工具的入口與使用說明
-- [免費人類圖生成器](https://swanky.github.io/human-design/): 輸入出生年月日時與地點，生成類型、內在權威、人生角色、定義、36 條通道與九大能量中心
+- [免費人類圖生成器](https://swanky.github.io/human-design/): 輸入出生年月日時與地點，立即生成你的人類圖：類型、內在權威、人生角色、定義、36 條通道與九大能量中心。天文計算在你的裝置上完成，出生資料不會上傳，並可加購職涯／團隊主題的深度解讀。
 - [人類圖合盤（關係合圖）](https://swanky.github.io/human-design/relationship/): 兩人關係的合圖分析
 - [Swanky Cyber Tarot Lab](https://swanky.github.io/tarot/): 兩套原創塔羅牌組、非占卜的反思工具，以及 78 張 AI 牌面的製作與驗收紀錄
 - [塔羅反思工具](https://swanky.github.io/tarot/draw/): 用牌卡作為反思與對話的引子
 - [原創塔羅牌組](https://swanky.github.io/tarot/decks/): 制服牌組與 CloneX 牌組
-- [易經問卦](https://swanky.github.io/iching/): 銅錢、數字或時間起卦，得到本卦、動爻與之卦，以及象徵、處境、反思與行動四段解讀
+- [易經問卦](https://swanky.github.io/iching/): 寫下你的問題，用銅錢、數字或時間起卦，得到本卦、動爻與之卦，以及象徵、處境、反思與行動四段解讀。整合梅花易數與六爻式起卦。在你的裝置上計算、資料不上傳、不預測吉凶。
 - [奇門策略地圖](https://swanky.github.io/qimen/): 以時間、方位、九宮、八門、九星、八神建立時空決策盤，觀察局勢、時機、資源與風險
 - [生命靈數](https://swanky.github.io/numerology/): 生命靈數（1-9 與主數 11/22/33）與生日數的主題、優勢與課題
-- [星座命盤（beta）](https://swanky.github.io/astrology/): 太陽、月亮、上升、行星星座與宮位、相位。beta——上升與宮位公式仍在交叉驗證中
+- [星座命盤（beta）](https://swanky.github.io/astrology/): 輸入出生年月日時與地點，產生你的星座命盤：太陽、月亮、上升、行星星座與宮位、相位。天文計算在你的裝置上完成、資料不上傳。目前為 beta——上升與宮位公式仍在與參考站交叉驗證中。
 - [八字排盤（beta）](https://swanky.github.io/bazi/): 四柱干支、藏干、十神、五行分布與大運。beta——日柱排法與真太陽時仍在交叉驗證中
 
 ## 媒體報導 Press
