@@ -1004,6 +1004,14 @@
 }
 .photo-subpage-details { margin-top: 48px; border: 1px solid var(--photo-line); }
 .photo-subpage-details summary { padding: 22px 26px; color: #f5f1e8; font-weight: 700; cursor: pointer; }
+/* 委託攝影頁：流程三格與 FAQ（2026-11-03，rwa#22 P2） */
+.photo-subpage-process { margin-top: 0; }
+.photo-subpage-process-note { margin: 24px 0 0; color: #aaa69d; line-height: 1.8; }
+.photo-subpage-process-note a { color: var(--photo-gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.photo-subpage-faq { max-width: 900px; }
+.photo-subpage-faq .photo-subpage-details { margin-top: 0; }
+.photo-subpage-faq .photo-subpage-details + .photo-subpage-details { border-top: 0; }
+.photo-subpage-faq .photo-subpage-details p { margin: 0; padding: 0 26px 22px; color: #c8c3b9; line-height: 1.85; }
 .photo-subpage-compact-grid,
 .photo-subpage-archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .photo-subpage-compact-grid { padding: 0 20px 20px; }

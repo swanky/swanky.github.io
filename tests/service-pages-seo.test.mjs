@@ -37,3 +37,15 @@ test('home／page layout 都引入 Service 結構化資料', () => {
     assert.match(src, /\{% include service-jsonld\.html %\}/);
   }
 });
+
+test('委託攝影頁 FAQ 與 FAQPage 共用一份，且不出現未核定的條款', () => {
+  const path = 'photography/commercial-works.html';
+  const src = readFileSync(new URL(`../${path}`, import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  const fm = frontMatterOf(path);
+  assert.ok([...fm.matchAll(/^  - q: /gm)].length >= 5);
+  assert.match(src, /\{% for item in page\.faq %\}/);
+  assert.match(src, /\{% include faq-jsonld\.html faq=page\.faq %\}/);
+  // 地點、交通費、訂金、價格數字、交付張數或天數都沒有核定（rwa#22 P2），別從模特兒課複製條款過來
+  const faqText = fm.split(/^faq:$/m)[1];
+  assert.doesNotMatch(faqText, /NT\$|新台幣|\d+\s*元|訂金|雙北|台北|交通|\d+\s*張|\d+\s*(天|週)內交/);
+});

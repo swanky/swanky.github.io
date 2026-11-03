@@ -3,7 +3,7 @@ redirect_from:
   - /photography/commercial-works.html
 layout: home
 title: 委託與活動攝影
-seo_title: 史旺基委託與活動攝影｜音樂、影視、活動與人生紀錄
+seo_title: 史旺基委託攝影與活動攝影｜MV 側拍、劇照、活動與婚禮紀錄
 description: 史旺基公開的委託與活動攝影紀錄，包含音樂專輯、MV 側拍、劇照、企業活動、婚禮與展覽，每個案例標明當時負責的角色與交付目的。接受委託拍攝與寫真書洽詢：說明用途、日期、地點與公開範圍，確認適合後再討論工作方式與費用。
 # 結構化資料（_includes/service-jsonld.html）：不放價格
 service_name: 委託與活動攝影
@@ -19,10 +19,38 @@ breadcrumbs:
   - name: 委託與活動
     url: /photography/commercial-works/
 use_photography_author: true
+# FAQ：畫面上的問答與 FAQPage 結構化資料共用這一份（2026-11-03，issue swanky/rwa#22 P2）。
+# 只寫已核定的說法：洽詢要說明的五件事、先確認是否適合、依個案報價、2 個工作天內回覆（全站洽詢表單的承諾）、
+# 隱私以當時約定為準。地點、交通費、訂金、交付張數與天數、寫真書規格都沒有核定，一律寫「報價時說清楚」，不得補數字。
+faq:
+  - q: 可以委託哪些拍攝？
+    a: 公開案例包含 MV 拍攝現場側拍、舞台劇照、系列活動攝影、婚禮紀錄與婚紗側拍、展覽紀錄；人像寫真、企業或個人形象與商業攝影也可以洽詢。
+  - q: 費用怎麼算？
+    a: 依個案報價，網站不公開固定價格。先了解用途、日期、地點與需要的影像，確認適合後再報價。
+  - q: 怎麼開始？多久會回覆？
+    a: 填寫洽詢表單，說明用途、日期、地點、預計公開範圍與需要的影像。送出後 2 個工作天內回覆。
+  - q: 會交付哪些照片？多久拿得到？
+    a: 每個案子的用途不同，交付內容與時程會在報價時一起寫清楚，確認後再開始。
+  - q: 可以做寫真書嗎？
+    a: 可以洽詢。內容、形式與規格依用途討論，會在報價時說清楚。
+  - q: 拍完的照片會公開嗎？
+    a: 完整成品與人物隱私以當時約定為準。這一頁只放已公開、能說清楚角色的作品；請在洽詢時說明你預計的公開範圍。
 ---
 <main id="main" class="photo-author-page photo-author-subpage">
   {% include photography/subpage-hero.html eyebrow="ASSIGNMENTS & EVENTS" title="先看我在案子裡負責什麼。" intro="這裡只放可公開、能說清楚角色的委託與活動紀錄，不用個人創作假裝商業案例。從 MV 現場、舞台演出與活動紀錄，到婚禮與展覽，每一類工作都有不同的觀看任務。" primary_url="#cases" primary_label="看公開案例" secondary_url="/contact/?service=commission_photography&from=commercial_works_hero" secondary_label="提出合作需求" %}
   {% include photography/subpage-nav.html %}
   <section class="photo-author-section" id="cases"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">01 · PUBLIC CASES</p><div><h2>角色、場景與交付目的。</h2><p>完整成品與人物隱私以當時約定為準；此處只呈現已公開的 Flickr 作品與可查記錄。</p></div></header><div class="photo-subpage-case-grid">{% for case in site.data.photography_commercial_cases %}{% assign case_photos = site.data.photography_commercial_photos[case.id] %}<article class="photo-subpage-case">{% if case_photos %}<div class="photo-subpage-case-media">{% for photo in case_photos %}<a href="{% include flickr/url.html image=photo.image %}" class="portfolio-lightbox" data-gallery="commercial-{{ case.id }}" title="{{ photo.alt }}">{% include photography/responsive-image.html image=photo.image alt=photo.alt class="photo-subpage-image" sizes="(max-width: 720px) calc(100vw - 28px), 34vw" %}</a>{% endfor %}</div>{% elsif case.image %}{% capture case_alt %}{{ case.title }}攝影紀錄{% endcapture %}{% include photography/responsive-image.html image=case.image alt=case_alt sizes="(max-width: 720px) calc(100vw - 28px), 50vw" %}{% endif %}<div class="photo-subpage-case-copy"><p class="photo-author-eyebrow">{{ case.year }} · {{ case.category }}</p><h2>{{ case.title }}</h2><strong>{{ case.role }}</strong><p>{{ case.description }}</p><a class="photo-author-text-link" href="{{ case.album_url }}" target="_blank" rel="noopener noreferrer">查看完整公開相簿 →</a>{% if case.secondary_url %}<a class="photo-author-text-link" href="{{ case.secondary_url }}" target="_blank" rel="noopener noreferrer">另一支 MV 拍攝紀錄 →</a>{% endif %}</div></article>{% endfor %}</div></div></section>
-  <section class="photo-author-collaboration"><div class="photo-author-shell"><p class="photo-author-eyebrow">WORK TOGETHER</p><h2>先說需求，再決定是不是適合一起做。</h2><p class="photo-author-collaboration-intro">請簡單說明用途、日期、地點、預計公開範圍與需要的影像；收到後會先確認是否適合，再討論工作方式與費用。</p><div class="photo-author-actions"><a class="photo-author-button" href="{{ '/contact/' | relative_url }}?service=commission_photography&amp;from=commercial_works_bottom">填表說明需求</a></div></div></section>
+  <section class="photo-author-section" id="process" aria-labelledby="process-title"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">02 · HOW IT WORKS</p><div><h2 id="process-title">委託攝影怎麼進行。</h2><p>不用先準備完整企劃，說清楚用途就能開始；適不適合，會在報價前先講明白。</p></div></header>
+    <div class="photo-author-collaboration-grid photo-subpage-process">
+      <article><h3>01 說明需求</h3><p>填表寫下用途、日期、地點、預計公開範圍與需要的影像。</p></article>
+      <article><h3>02 確認是否適合</h3><p>2 個工作天內回信，先確認這個案子適不適合一起做。</p></article>
+      <article><h3>03 報價與確認</h3><p>依個案報價，工作方式、交付內容與時程一起談清楚，確認後再開始。</p></article>
+    </div>
+    <p class="photo-subpage-process-note">也接受寫真書洽詢。想先了解我做過的出版，可以看<a href="{{ '/photography/' | relative_url }}#recognition">攝影出版與獲獎紀錄</a>。</p>
+  </div></section>
+  <section class="photo-author-section" id="faq" aria-labelledby="faq-title"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">03 · FAQ</p><div><h2 id="faq-title">委託拍攝常見問題。</h2></div></header>
+    <div class="photo-subpage-faq">{% for item in page.faq %}<details class="photo-subpage-details"><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>{% endfor %}</div>
+  </div></section>
+  {% include faq-jsonld.html faq=page.faq %}
+  <section class="photo-author-collaboration"><div class="photo-author-shell"><p class="photo-author-eyebrow">WORK TOGETHER</p><h2>先說需求，再決定是不是適合一起做。</h2><p class="photo-author-collaboration-intro">請簡單說明用途、日期、地點、預計公開範圍與需要的影像；收到後會先確認是否適合，再討論工作方式與費用。</p><div class="photo-author-actions"><a class="photo-author-button" href="{{ '/contact/' | relative_url }}?service=commission_photography&amp;from=commercial_works_bottom" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'commercial_works',service:'commission_photography',cta_position:'bottom',from_page:window.location.pathname});}">填表說明需求</a><a class="photo-author-button photo-author-button--ghost" href="#cases">再看一次公開案例</a></div>{% include contact-fallback.html service="commission_photography" position="bottom" %}</div></section>
 </main>
