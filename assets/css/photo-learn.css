@@ -520,6 +520,8 @@
 .pl-ch-cta-title { margin: 0 0 8px; color: #fff; font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.2; }
 .pl-ch-cta p:not(.photo-author-eyebrow):not(.pl-ch-cta-title) { max-width: 40rem; margin: 0; color: #c8c3b9; line-height: 1.85; }
 .pl-ch-cta .photo-author-actions { margin-top: 0; }
+.pl-ch-cta p.pl-ch-cta-coaching { margin-top: 12px; font-size: .95rem; }
+.pl-ch-cta-coaching a { color: var(--photo-gold-light); text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 900px) {
   .pl-ch-hero-grid, .pl-ch-cta { grid-template-columns: minmax(0, 1fr); }

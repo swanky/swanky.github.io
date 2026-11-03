@@ -475,8 +475,13 @@
 .method-links a:hover { border-color: var(--jpm-gold); background: var(--jpm-panel-2); }
 .method-links b { font-family: var(--jpm-serif); font-weight: 700; color: var(--jpm-paper); font-size: .98rem; }
 .method-links span { color: var(--jpm-muted); font-size: .8rem; }
-.method-service { margin-top: 1rem; }
-.method-service a { color: var(--jpm-gold); }
+.method-service { margin-top: clamp(28px, 4vw, 44px); padding: 1.3rem 1.4rem; border: 1px solid var(--jpm-gold); background: var(--jpm-panel); }
+.coda-method .method-service h3 { font-size: 1.1rem; margin-bottom: .4rem; }
+.method-service p { margin: 0 0 1rem; color: var(--jpm-muted); font-size: .9rem; line-height: 1.8; }
+.method-service-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.4rem; }
+.method-service-btn { display: inline-block; padding: .6rem 1.1rem; background: var(--jpm-gold); color: var(--jpm-ink, #0e0d0b); font-weight: 700; transition: background .3s; }
+.method-service-btn:hover { background: var(--jpm-gold-bright); color: var(--jpm-ink, #0e0d0b); }
+.method-service-link { color: var(--jpm-gold); }
 
 /* ══ 響應式 ══ */
 @media (max-width: 1100px) {

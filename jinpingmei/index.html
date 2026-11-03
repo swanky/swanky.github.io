@@ -28,8 +28,24 @@ permalink: /jinpingmei/
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20261009-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-hub.css' | relative_url }}?v=20261009-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-hub.css' | relative_url }}?v=20261103-1" rel="stylesheet">
   {% include jinpingmei/gtag.html %}
+  {%- comment -%}基本結構化資料（issue swanky/rwa#22 P3a）：本頁 layout: null，不經 home／page layout 的共用 JSON-LD。作者只寫「史旺基」，不放雇主。{%- endcomment -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "金瓶梅宇宙",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "url": "{{ page.url | absolute_url }}",
+    "inLanguage": "zh-TW",
+    "image": "{{ '/assets/img/jinpingmei/figures/overview-standard.jpg' | absolute_url }}",
+    "about": {"@type": "Book", "name": "金瓶梅詞話"},
+    "author": {"@type": "Person", "name": "史旺基", "alternateName": ["Swanky Hsiao", "蕭宇程"], "url": "https://swanky.github.io"},
+    "isPartOf": {"@type": "WebSite", "name": "Swanky Studio 史旺基工作室", "url": "https://swanky.github.io"}
+  }
+  </script>
   <noscript><style>.film-play{display:none}</style></noscript>
 </head>
 <body class="jpm jpm-hub">
@@ -399,7 +415,14 @@ permalink: /jinpingmei/
             <a href="{{ '/claude-code/jinpingmei-character-lab/' | relative_url }}"><b>用 AI 替一部百回小說建立全劇組角色設定</b><span>角色研究館的工作流</span></a>
             <a href="{{ '/technical/ai-moderation-jinpingmei/' | relative_url }}"><b>當 AI 拒絕金瓶梅</b><span>各家模型的邊界測試</span></a>
           </div>
-          <p class="method-service">相關服務：<a href="{{ '/technical/ai-visual-production/' | relative_url }}">AI 視覺內容製作</a></p>
+          <div class="method-service">
+            <h3>想替自己的原創角色做一套影像？</h3>
+            <p>同一位角色在不同場景、服裝與光線裡維持同一張臉，再選片、編排成一組能連續看下去的作品——這套做法也接受委託，依範圍報價。</p>
+            <div class="method-service-actions">
+              <a class="method-service-btn" href="{{ '/technical/ai-visual-production/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'ai_visual_production',cta_position:'jinpingmei_hub',from_page:window.location.pathname});}">看 AI 視覺內容製作</a>
+              <a class="method-service-link" href="{{ '/contact/' | relative_url }}?service=general&amp;from=jinpingmei_hub" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'jinpingmei_hub',service:'ai_visual_production',cta_position:'footer',from_page:window.location.pathname});}">直接留下需求 →</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
