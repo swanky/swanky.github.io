@@ -32,7 +32,11 @@
   eyebrow: Photography
   icon: bi-camera
   color: gold-1
-  description: 拍攝經驗豐富、風格清新自然，作品遍及人像寫真、活動紀錄、自助婚紗、企業/個人形象宣傳、商業攝影。
+  description: 拍攝經驗豐富、風格清新自然，作品遍及人像寫真、活動紀錄、自助婚紗、企業/個人形象宣傳、商業攝影。也開設女性模特兒鏡頭表現一對一課程，練擺姿與鏡頭感。
   url: /photography/
   cta_text: 欣賞作品集
+  # 次連結（2026-11-03 站主選「改寫現有攝影卡」，不新增卡片；issue swanky/rwa#22 P3c）
+  secondary_url: /education/modeling/
+  secondary_text: 看模特兒一對一課程
+  secondary_service: model_coaching
   aos_delay: 300
