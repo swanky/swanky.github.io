@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1010" viewBox="0 0 640 1010" role="img" aria-labelledby="title desc">
+<title id="title">公司收攤以後，還剩下什麼？</title><desc id="desc">網站入口：關閉，Blur 停用官方網站；POAP 停止維護，AI 最容易重做；圖片與資料：要有人備份，POAP 留下約 15 GB 的封存檔，有備份才能接手；鏈上紀錄：還在，代幣、持有與交易歷史留在鏈上，沒人能刪，也沒人能複製；整合與社群：不會自動跟過去，新平台用新合約，舊工具認不得，只能重新累積。</desc>
+<rect width="640" height="1010" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="32" y="54" font-size="34" fill="#232020" font-weight="700">公司收攤以後，</text>
+<text x="32" y="98" font-size="34" fill="#232020" font-weight="700">還剩下什麼？</text>
+<text x="32" y="140" font-size="24" fill="#665e51" font-weight="400">以 Blur 與 POAP 的收攤安排為例</text>
+<rect x="24" y="170" width="592" height="178" rx="10" fill="#f3efe7"/>
+<text x="44" y="216" font-size="29" fill="#232020" font-weight="700">網站入口</text>
+<text x="596" y="216" font-size="23" fill="#665e51" font-weight="700" text-anchor="end">關閉</text>
+<text x="44" y="268" font-size="25" fill="#232020" font-weight="400">Blur 停用官方網站；POAP 停止維護</text>
+<text x="44" y="330" font-size="22" fill="#665e51" font-weight="400">AI 最容易重做</text>
+<rect x="24" y="366" width="592" height="178" rx="10" fill="#f3efe7"/>
+<text x="44" y="412" font-size="29" fill="#232020" font-weight="700">圖片與資料</text>
+<text x="596" y="412" font-size="23" fill="#665e51" font-weight="700" text-anchor="end">要有人備份</text>
+<text x="44" y="464" font-size="25" fill="#232020" font-weight="400">POAP 留下約 15 GB 的封存檔</text>
+<text x="44" y="526" font-size="22" fill="#665e51" font-weight="400">有備份才能接手</text>
+<rect x="24" y="562" width="592" height="178" rx="10" fill="#fbf1d9"/>
+<text x="44" y="608" font-size="29" fill="#8a5d00" font-weight="700">鏈上紀錄</text>
+<text x="596" y="608" font-size="23" fill="#8a5d00" font-weight="700" text-anchor="end">還在</text>
+<text x="44" y="660" font-size="25" fill="#232020" font-weight="400">代幣、持有與交易歷史留在鏈上</text>
+<text x="44" y="722" font-size="22" fill="#665e51" font-weight="400">沒人能刪，也沒人能複製</text>
+<rect x="24" y="758" width="592" height="178" rx="10" fill="#fbf1d9"/>
+<text x="44" y="804" font-size="29" fill="#8a5d00" font-weight="700">整合與社群</text>
+<text x="596" y="804" font-size="23" fill="#8a5d00" font-weight="700" text-anchor="end">不會自動跟過去</text>
+<text x="44" y="856" font-size="25" fill="#232020" font-weight="400">新平台用新合約，舊工具認不得</text>
+<text x="44" y="918" font-size="22" fill="#665e51" font-weight="400">只能重新累積</text>
+<text x="32" y="980" font-size="20" fill="#665e51" font-weight="400">依 Blur 關站報導與區塊勢 #795 整理｜作者判斷</text>
+</g></svg>

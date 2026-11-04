@@ -37,6 +37,12 @@ const articles = [
     ],
   },
   {
+    file: '_posts/2026-11-05-you-cant-vibe-code-usdc.md',
+    slug: 'you-cant-vibe-code-usdc',
+    context: 'web3',
+    hubs: ['education/crypto/web3-essentials/index.html'],
+  },
+  {
     file: '_posts/2026-08-08-ai-moderation-jinpingmei.md',
     slug: 'ai-moderation-jinpingmei',
     context: 'ai-visual',

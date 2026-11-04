@@ -158,6 +158,7 @@
 - [洽詢合作](https://swanky.github.io/contact/): 技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作的單一洽詢入口
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
 - [Blur 要關站了：把 NFT 變得更好交易，然後呢？](https://swanky.github.io/technical/blur-frontend-shutdown-nft-liquidity/): 從 Blur 關站、4 隻變異猿 NFT 的清算經驗，到 Abstract、Blast 退場與 OpenSea 轉向，看懂資金效率為何沒換來長期需求。
+- [AI 可以幫你做出錢包，卻做不出 USDC：軟體變便宜以後，什麼還抄不走？](https://swanky.github.io/technical/you-cant-vibe-code-usdc/): AI 能複製介面和程式碼，做不出 USDC 背後的準備金、銀行與法律責任。從 a16z 論點、SVB 事件與 POAP 收攤，看什麼還抄不走。
 - [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
 
 服務主軸（AI Agent 導入優先、Web3 技術顧問其次）：

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">抄得走的，與抄不走的</title><desc id="desc">左欄是程式碼與介面，AI 可以重做：錢包 App 的畫面、API 與後端程式、智慧合約的原始碼、一枚代號叫 USDC 的代幣。右欄是狀態與責任，AI 做不出來：帳上的餘額與流動性、誰持有過、交易過的紀錄、準備金、銀行與兌付承諾、願意收它的交易所與服務。</desc>
+<rect width="1200" height="640" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" fill="#232020" font-weight="700">抄得走的，與抄不走的</text>
+<text x="36" y="103" font-size="26" fill="#665e51" font-weight="400">AI 讓左邊越來越便宜；右邊要靠時間與責任累積</text>
+<path d="M36 135H1164" stroke="#d9d0bf"/>
+<rect x="36" y="160" width="544" height="400" rx="14" fill="#e8f0fa"/>
+<text x="64" y="210" font-size="32" fill="#1f4f8a" font-weight="700">程式碼與介面</text>
+<text x="552" y="210" font-size="24" fill="#1f4f8a" font-weight="700" text-anchor="end">AI 可以重做</text>
+<path d="M64 232H552" stroke="#1f4f8a" stroke-opacity="0.35"/>
+<circle cx="76" cy="280" r="7" fill="#1f4f8a"/>
+<text x="98" y="290" font-size="29" fill="#232020" font-weight="400">錢包 App 的畫面</text>
+<circle cx="76" cy="350" r="7" fill="#1f4f8a"/>
+<text x="98" y="360" font-size="29" fill="#232020" font-weight="400">API 與後端程式</text>
+<circle cx="76" cy="420" r="7" fill="#1f4f8a"/>
+<text x="98" y="430" font-size="29" fill="#232020" font-weight="400">智慧合約的原始碼</text>
+<circle cx="76" cy="490" r="7" fill="#1f4f8a"/>
+<text x="98" y="500" font-size="29" fill="#232020" font-weight="400">一枚代號叫 USDC 的代幣</text>
+<rect x="620" y="160" width="544" height="400" rx="14" fill="#fbf1d9"/>
+<text x="648" y="210" font-size="32" fill="#8a5d00" font-weight="700">狀態與責任</text>
+<text x="1136" y="210" font-size="24" fill="#8a5d00" font-weight="700" text-anchor="end">AI 做不出來</text>
+<path d="M648 232H1136" stroke="#8a5d00" stroke-opacity="0.35"/>
+<circle cx="660" cy="280" r="7" fill="#8a5d00"/>
+<text x="682" y="290" font-size="29" fill="#232020" font-weight="400">帳上的餘額與流動性</text>
+<circle cx="660" cy="350" r="7" fill="#8a5d00"/>
+<text x="682" y="360" font-size="29" fill="#232020" font-weight="400">誰持有過、交易過的紀錄</text>
+<circle cx="660" cy="420" r="7" fill="#8a5d00"/>
+<text x="682" y="430" font-size="29" fill="#232020" font-weight="400">準備金、銀行與兌付承諾</text>
+<circle cx="660" cy="490" r="7" fill="#8a5d00"/>
+<text x="682" y="500" font-size="29" fill="#232020" font-weight="400">願意收它的交易所與服務</text>
+<text x="36" y="610" font-size="22" fill="#665e51" font-weight="400">依 a16z〈When software stops being the moat〉論點整理，加上作者判斷｜2026.11</text>
+</g></svg>
