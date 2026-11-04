@@ -14,7 +14,7 @@ keywords: Kent Beck,Nobody Knows,Still Burning,AI開發,軟體工程,增強式�
 
 最近花了很多時間研究 Claude Code，深深了解照這樣發展下去軟體工程這項技藝會變得跟過往所學有很大的不同，其實也很好奇世界級的軟工大師怎麼看待這樣的世界到來，剛好就聽到了 Kent Beck 的這個 Podcast，覺得蠻值得分享的，以下就透過AI快速翻譯了一下這些內容。
 
-原始影片在這裡: https://youtu.be/5htJ2ML7BKU
+原始影片在這裡: <https://youtu.be/5htJ2ML7BKU>
 
 ## 《Nobody Knows》整理稿
 

@@ -34,6 +34,15 @@ python -m http.server <port> --bind 127.0.0.1 --directory _site
 - `grep -c '<本次改動才有的字串>' _site/<頁面>/index.html` 大於 0。
 - port 是自己剛起的那個伺服器在回應。
 
+### 全站靜態檢查（建置後、開瀏覽器前跑一次）
+
+```bash
+python -X utf8 tools/check-bare-urls.py _site | tail -20
+```
+
+- 找出「畫面上看得到、卻不能點」的網址：讀者得自己複製才能開。截圖、HTTP 狀態、溢出檢查都抓不到這種錯，因為頁面看起來是正常的。
+- 結尾必須是 `pages: 0`（exit 0）；有命中就判 FAIL，回頭修資料或模板，不要只加 `overflow-wrap` 處理網址太長的表面症狀。
+
 ## 3. Drive：用瀏覽器打開頁面
 
 ```bash

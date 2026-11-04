@@ -1,0 +1,46 @@
+{%- comment -%}
+《神話未完成》來源一行 → 有網址就排成「標題即連結」清單，沒有網址照舊輸出段落。
+參數：line（一行來源文字）、lang（zh／en）。
+資料是攝影端移交的 SHA 契約檔，不改資料、在這裡解析。格式（tests/myths-source-format.test.mjs 守著）：
+  zh：故事參考：標題（https://…）；標題（https://…）
+  en：Story references: Title (https://…); Title (https://…)
+任何一段對不上格式就整行退回純文字段落，絕不吞字。
+{%- endcomment -%}
+{%- assign _ln = include.line -%}
+{%- if include.lang == 'en' -%}
+  {%- assign _open = ' (http' -%}{%- assign _close = ')' -%}{%- assign _sep = ';' -%}{%- assign _label_key = 'Story references: ' -%}{%- assign _newtab = '(opens in a new tab)' -%}
+{%- else -%}
+  {%- assign _open = '（http' -%}{%- assign _close = '）' -%}{%- assign _sep = '；' -%}{%- assign _label_key = '故事參考：' -%}{%- assign _newtab = '（另開新頁）' -%}
+{%- endif -%}
+{%- assign _ok = false -%}
+{%- if _ln contains _open -%}
+  {%- assign _chunks = _ln | split: _open -%}
+  {%- assign _ok = true -%}
+  {%- if _chunks.size < 2 -%}{%- assign _ok = false -%}{%- endif -%}
+  {%- for _c in _chunks offset: 1 -%}{%- unless _c contains _close -%}{%- assign _ok = false -%}{%- endunless -%}{%- endfor -%}
+{%- endif -%}
+{%- if _ok -%}
+  {%- assign _label = '' -%}
+  {%- assign _title = _chunks[0] -%}
+  {%- if _title contains _label_key -%}{%- assign _label = _label_key | strip -%}{%- assign _title = _title | remove_first: _label_key -%}{%- endif -%}
+  {%- assign _titles = '' | split: ',' -%}{%- assign _urls = '' | split: ',' -%}{%- assign _tail = '' -%}
+  {%- for _c in _chunks offset: 1 -%}
+    {%- assign _u = _c | split: _close | first -%}
+    {%- assign _titles = _titles | push: _title -%}
+    {%- assign _urls = _urls | push: _u -%}
+    {%- assign _rest = _c | remove_first: _u | remove_first: _close | strip -%}
+    {%- assign _first = _rest | slice: 0 -%}
+    {%- if _first == _sep -%}{%- assign _rest = _rest | remove_first: _sep | strip -%}{%- endif -%}
+    {%- assign _title = _rest -%}
+  {%- endfor -%}
+  {%- assign _tail = _title -%}
+  {%- if _label != '' %}<p>{{ _label | escape }}</p>{% endif %}
+          <ul class="smm-source-list">
+          {%- for _t in _titles %}
+            <li><a href="http{{ _urls[forloop.index0] | escape }}" target="_blank" rel="noopener noreferrer">{{ _t | strip | escape }}<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden">{{ _newtab }}</span></a></li>
+          {%- endfor %}
+          </ul>
+  {%- if _tail != '' %}<p>{{ _tail | escape }}</p>{% endif -%}
+{%- else -%}
+<p>{{ _ln | escape }}</p>
+{%- endif -%}

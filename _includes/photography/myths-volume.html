@@ -192,7 +192,7 @@ chapters_note 是攝影端的內部備註，不輸出。statement 裡與 lead／
           {% if src_blocks_zh.size > 0 %}
           <h3>來源與參考</h3>
           {% for block in src_blocks_zh %}{% assign lines = block | split: "
-" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}{% endfor %}
+" %}{% for line in lines %}{% if line != '' %}{% include photography/myths-source-line.html line=line lang='zh' %}{% endif %}{% endfor %}{% endfor %}
           {% endif %}
         </div>
         {% if has_story_en %}
@@ -202,7 +202,7 @@ chapters_note 是攝影端的內部備註，不輸出。statement 裡與 lead／
           {% if src_blocks_en.size > 0 %}
           <h3>Sources</h3>
           {% for block in src_blocks_en %}{% assign lines = block | split: "
-" %}{% for line in lines %}{% if line != '' %}<p>{{ line | escape }}</p>{% endif %}{% endfor %}{% endfor %}
+" %}{% for line in lines %}{% if line != '' %}{% include photography/myths-source-line.html line=line lang='en' %}{% endif %}{% endfor %}{% endfor %}
           {% endif %}
         </div>
         {% endif %}

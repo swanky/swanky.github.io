@@ -1,0 +1,17 @@
+{%- comment -%}
+附註文字裡的裸網址 → 可點的「label ↗」連結（讀者不必自己複製網址）。
+參數：text（附註文字，原樣輸出，與呼叫端既有行為一致）、label（連結文字，預設「館藏頁」）。
+網址在遇到空白、全形「；）」、「，」「、」或半形「)」時結束。
+{%- endcomment -%}
+{%- assign _txt = include.text -%}
+{%- if _txt contains '://' -%}
+{%- assign _lab = include.label | default: '館藏頁' -%}
+{%- assign _parts = _txt | split: 'http' -%}
+{%- for _p in _parts -%}
+{%- if forloop.first -%}{{ _p }}{%- else -%}
+{%- assign _u = _p | split: '；' | first | split: '）' | first | split: ')' | first | split: ' ' | first | split: '，' | first | split: '、' | first -%}
+{%- assign _r = _p | remove_first: _u -%}
+<a href="http{{ _u }}" target="_blank" rel="noopener">{{ _lab }}<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden">（另開新頁）</span></a>{{ _r }}
+{%- endif -%}
+{%- endfor -%}
+{%- else -%}{{ _txt }}{%- endif -%}

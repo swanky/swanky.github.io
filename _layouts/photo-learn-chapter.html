@@ -79,7 +79,7 @@ layout: home
           <p class="pl-ch-sources-note">事實都來自下面這些頁面，每一條都實際打開核對過；標「我的看法」的段落，是我自己的判斷。他人作品只以小圖作評論引用，附原作連結與版權標示；權利人若希望移除，請來信。</p>
           <ol>
             {% for s in page.sources %}
-            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{{ s.note }}{% endif %}</span></li>
+            <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{% include autolink-note.html text=s.note %}{% endif %}</span></li>
             {% endfor %}
           </ol>
         </section>

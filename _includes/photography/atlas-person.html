@@ -116,7 +116,7 @@
         <p>事實都來自下面這些頁面，每一條都實際打開核對過；標「我的看法」的是我自己的判斷。</p>
         <ol>
           {%- for s in p.sources %}
-          <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{{ s.note }}{% endif %}</span></li>
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a><span>{{ s.by }}{% if s.note %}｜{% include autolink-note.html text=s.note %}{% endif %}</span></li>
           {%- endfor %}
         </ol>
       </details>
