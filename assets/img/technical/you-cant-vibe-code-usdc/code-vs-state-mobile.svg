@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="1120" viewBox="0 0 640 1120" role="img" aria-labelledby="title desc">
-<title id="title">抄得走的，與抄不走的</title><desc id="desc">左欄是程式碼與介面，AI 可以重做：錢包 App 的畫面、API 與後端程式、智慧合約的原始碼、一枚代號叫 USDC 的代幣。右欄是狀態與責任，AI 做不出來：帳上的餘額與流動性、誰持有過、交易過的紀錄、準備金、銀行與兌付承諾、願意收它的交易所與服務。</desc>
+<title id="title">抄得走的，與抄不走的</title><desc id="desc">左欄是程式碼與介面，AI 可以重做：錢包 App 的畫面、API 與後端程式、智能合約的原始碼、一枚代號叫 USDC 的代幣。右欄是狀態與責任，AI 做不出來：帳上的餘額與流動性、誰持有過、交易過的紀錄、準備金、銀行與兌付承諾、願意收它的交易所與服務。</desc>
 <rect width="640" height="1120" fill="#fffdf9"/>
 <g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
 <text x="32" y="54" font-size="34" fill="#232020" font-weight="700">抄得走的，與抄不走的</text>
@@ -14,7 +14,7 @@
 <circle cx="68" cy="361" r="7" fill="#1f4f8a"/>
 <text x="88" y="370" font-size="27" fill="#232020" font-weight="400">API 與後端程式</text>
 <circle cx="68" cy="435" r="7" fill="#1f4f8a"/>
-<text x="88" y="444" font-size="27" fill="#232020" font-weight="400">智慧合約的原始碼</text>
+<text x="88" y="444" font-size="27" fill="#232020" font-weight="400">智能合約的原始碼</text>
 <circle cx="68" cy="509" r="7" fill="#1f4f8a"/>
 <text x="88" y="518" font-size="27" fill="#232020" font-weight="400">一枚代號叫 USDC 的代幣</text>
 <rect x="32" y="610" width="576" height="420" rx="14" fill="#fbf1d9"/>

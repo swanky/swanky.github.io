@@ -69,11 +69,11 @@ Vibe coding 是 Andrej Karpathy 在 2025 年 2 月提出的說法，指的是不
 
 先講 a16z 這篇在說什麼。作者 Daren Matsuoka 從開源講起：開源讓程式碼可以拿來組合，不用每次從零寫。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
 
-區塊鏈圈很早就用類似的話描述自己。以太坊官方文件把智慧合約比喻成樂高，每個合約都像公開的 API，任何人都能呼叫，也能接進自己的應用。[[3]](https://ethereum.org/developers/docs/smart-contracts/composability) a16z 舉的例子是 Uniswap：新應用可以直接用它池子裡現成的流動性，不必自己從頭養一個市場。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
+區塊鏈圈很早就用類似的話描述自己。以太坊官方文件把智能合約比喻成樂高，每個合約都像公開的 API，任何人都能呼叫，也能接進自己的應用程式。[[3]](https://ethereum.org/developers/docs/smart-contracts/composability) a16z 舉的例子是 Uniswap：新的應用程式可以直接用它池子裡現成的流動性，不必自己從頭養一個市場。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
 
 a16z 認為這個概念過去沒有紅起來，是因為實驗太貴。要懂合約、資安、稽核，願意下場的人不多。AI 把做原型的成本壓下來以後，實驗會變多，所以值得回頭重看 NFT、DAO、去中心化社群和鏈上遊戲。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
 
-整篇最關鍵的是下一段。AI 幾乎能重做任何應用：複製介面、改寫 API、幾分鐘生出新產品。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat) 到那時，「最好用的錢包」已經不稀缺；稀缺的是最深的流動性、最強的信用、最完整的身分關係，以及最被信任的結算網路。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
+整篇最關鍵的是下一段。AI 幾乎能重做任何應用程式：複製介面、改寫 API、幾分鐘生出新產品。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat) 到那時，「最好用的錢包」已經不稀缺；稀缺的是最深的流動性、最強的信用、最完整的身分關係，以及最被信任的結算網路。[[1]](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)
 
 <figure>
   <a href="{{ '/assets/img/technical/you-cant-vibe-code-usdc/code-vs-state.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="vibe-code-usdc" data-type="image">
@@ -192,7 +192,7 @@ AI Agent 開始自己付錢以後，第二題會變得更急。像 x402 這類�
 
 - **[1]** [a16z Frontier：When software stops being the moat](https://a16zfrontier.substack.com/p/when-software-stops-being-the-moat)（Daren Matsuoka，2026-11-04）。
 - **[2]** [Wikipedia：Vibe coding](https://en.wikipedia.org/wiki/Vibe_coding)（詞源與 Karpathy 的原始定義）。
-- **[3]** [ethereum.org：Smart contract composability](https://ethereum.org/developers/docs/smart-contracts/composability)（智慧合約可組合性與樂高比喻）。
+- **[3]** [ethereum.org：Smart contract composability](https://ethereum.org/developers/docs/smart-contracts/composability)（智能合約可組合性與樂高比喻）。
 - **[4]** [ethereum.org：ERC-20 Token Standard](https://ethereum.org/developers/docs/standards/tokens/erc-20)（代幣名稱與代號的標準欄位）。
 - **[5]** [Circle：Transparency & Stability](https://www.circle.com/transparency)（2026-11-05 查閱；準備金組成、揭露頻率與銀行通道）。
 - **[6]** [Circle：An Update on USDC and Silicon Valley Bank](https://web.archive.org/web/20230313023657/https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank)（2023-03，Wayback Machine 封存版；原網址已轉到部落格首頁）。
