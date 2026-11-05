@@ -7,7 +7,7 @@ categories: [technical]
 tags: [web3, ai-agent, stablecoin, usdc, composability, vibe-coding]
 layout: article
 cover_image: /assets/img/linkedin/you-cant-vibe-code-usdc.jpg
-cover_alt: "白色小機器人搖著複製機，複製出來的金幣和錢包手機像氣球一樣飄走、還破掉一顆；史旺姬抱著一枚沉甸甸的真金幣對它眨眼，金幣拉出金線，拴在金庫、銀行、帳本塔與一排店家上"
+cover_alt: "白色小機器人搖著複製機，複製出來的金幣和錢包手機像氣球一樣飄走、還破掉一顆；史旺姬抱著一枚沉甸甸的真金幣對它微笑，金幣拉出金線，拴在金庫、銀行、帳本塔與一排店家上"
 hero_image: true
 use_glightbox: true
 mid_cta: false
