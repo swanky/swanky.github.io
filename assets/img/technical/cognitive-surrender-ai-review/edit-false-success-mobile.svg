@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1120" viewBox="0 0 640 1120" role="img" aria-labelledby="title desc">
+<title id="title">AI 說改好了，其實沒改</title><desc id="desc">2026 年 6 月：AI 說改好了，檔案卻沒變，它的解釋是環境有問題，我們把這個解釋記進工作筆記。約三週後：追根才發現大多是 AI 自己編的，它在同一則回覆裡寫出了修改成功的結果。新規則：沒有證據不算完成，回報要附可以貼出來的檢查結果，沒有就寫已改、未驗。2026 年 9 月：這次檔案真的被改回去，檢查都過了，正式網站卻是舊版，拿正式網站對照才抓到。</desc>
+<rect width="640" height="1120" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="28" y="56" font-size="34" font-weight="700">AI 說改好了，其實沒改</text>
+<text x="28" y="98" font-size="23" fill="#665e51">我自己的一段放行紀錄</text>
+<path d="M28 124H612" stroke="#d9d0bf"/>
+<rect x="20" y="140" width="600" height="216" rx="10" fill="#f3efe7"/>
+<text x="40" y="182" font-size="23" font-weight="700" fill="#665e51">2026 年 6 月</text>
+<text x="40" y="224" font-size="27" font-weight="700">AI 說改好了，檔案卻沒變</text>
+<text x="40" y="266" font-size="22" fill="#665e51">它的解釋是「環境有問題」，</text>
+<text x="40" y="300" font-size="22" fill="#665e51">我們把這個解釋記進了</text>
+<text x="40" y="334" font-size="22" fill="#665e51">工作筆記</text>
+<rect x="20" y="372" width="600" height="216" rx="10" fill="#fbf1d9"/>
+<text x="40" y="414" font-size="23" font-weight="700" fill="#8a5d00">約三週後</text>
+<text x="40" y="456" font-size="27" font-weight="700">追根才發現，大多是 AI</text>
+<text x="40" y="492" font-size="27" font-weight="700">自己編的</text>
+<text x="40" y="534" font-size="22" fill="#665e51">它在同一則回覆裡，自己寫出了</text>
+<text x="40" y="568" font-size="22" fill="#665e51">「修改成功」的結果</text>
+<rect x="20" y="604" width="600" height="216" rx="10" fill="#f3efe7"/>
+<text x="40" y="646" font-size="23" font-weight="700" fill="#665e51">新規則</text>
+<text x="40" y="688" font-size="27" font-weight="700">沒有證據，不算完成</text>
+<text x="40" y="730" font-size="22" fill="#665e51">回報要附可以貼出來的檢查結果；</text>
+<text x="40" y="764" font-size="22" fill="#665e51">沒有，就寫「已改、未驗」</text>
+<rect x="20" y="836" width="600" height="216" rx="10" fill="#fbf1d9"/>
+<text x="40" y="878" font-size="23" font-weight="700" fill="#8a5d00">2026 年 9 月</text>
+<text x="40" y="920" font-size="27" font-weight="700">這次檔案真的被改回去了</text>
+<text x="40" y="962" font-size="22" fill="#665e51">檢查都過了，正式網站卻是舊版；</text>
+<text x="40" y="996" font-size="22" fill="#665e51">拿正式網站對照才抓到</text>
+<text x="28" y="1092" font-size="20" fill="#665e51">依作者的 AI 協作工作紀錄整理</text>
+</g></svg>

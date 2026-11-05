@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1060" viewBox="0 0 640 1060" role="img" aria-labelledby="title desc">
+<title id="title">看不完的時候，我改跟 AI 要這三樣</title><desc id="desc">AI 交回一大段說明、一堆改動和一句完成了。我不再假裝全部看完，改要三樣東西：可以核對的證據，例如檢查結果、截圖、和正式網站對照；看得懂的報告，用圖文並茂的網頁取代一長串文字；只列出要我決定的事，其他照規則處理。</desc>
+<rect width="640" height="1060" fill="#fffdf9"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a5d00"/></marker></defs>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="28" y="56" font-size="34" font-weight="700">看不完的時候，</text>
+<text x="28" y="100" font-size="34" font-weight="700">我改跟 AI 要這三樣</text>
+<text x="28" y="142" font-size="23" fill="#665e51">只看能快速核對的東西</text>
+<path d="M28 168H612" stroke="#d9d0bf"/>
+<rect x="20" y="186" width="600" height="116" rx="10" fill="#f3efe7"/>
+<text x="40" y="232" font-size="24">AI 交回：一大段說明、一堆改動，</text>
+<text x="40" y="270" font-size="24">加上一句「完成了」</text>
+<path d="M320 310V352" stroke="#8a5d00" stroke-width="3" marker-end="url(#a)"/>
+<rect x="20" y="366" width="600" height="190" rx="10" fill="#fbf1d9"/>
+<text x="40" y="412" font-size="28" font-weight="700" fill="#8a5d00">可以核對的證據</text>
+<text x="40" y="456" font-size="23">檢查跑出來的結果</text>
+<text x="40" y="492" font-size="23">改完的畫面截圖</text>
+<text x="40" y="528" font-size="23">和正式網站對照</text>
+<rect x="20" y="574" width="600" height="190" rx="10" fill="#fbf1d9"/>
+<text x="40" y="620" font-size="28" font-weight="700" fill="#8a5d00">看得懂的報告</text>
+<text x="40" y="664" font-size="23">圖文並茂的網頁</text>
+<text x="40" y="700" font-size="23">取代一長串文字</text>
+<text x="40" y="736" font-size="23">一眼看出改了什麼</text>
+<rect x="20" y="782" width="600" height="190" rx="10" fill="#fbf1d9"/>
+<text x="40" y="828" font-size="28" font-weight="700" fill="#8a5d00">只列我該決定的事</text>
+<text x="40" y="872" font-size="23">上線、花錢、對外文字</text>
+<text x="40" y="908" font-size="23">其他照規則處理</text>
+<text x="40" y="944" font-size="23">不用我逐行看</text>
+<text x="28" y="1004" font-size="20" fill="#665e51">作者的做法｜證據也可能騙人，</text>
+<text x="28" y="1034" font-size="20" fill="#665e51">關鍵的地方要兩端對照</text>
+</g></svg>

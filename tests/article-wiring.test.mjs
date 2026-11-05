@@ -37,6 +37,12 @@ const articles = [
     ],
   },
   {
+    file: '_posts/2026-11-05-cognitive-surrender-ai-review.md',
+    slug: 'cognitive-surrender-ai-review',
+    context: 'agentic',
+    hubs: ['technical/agentic-engineering/index.html'],
+  },
+  {
     file: '_posts/2026-11-05-you-cant-vibe-code-usdc.md',
     slug: 'you-cant-vibe-code-usdc',
     context: 'web3',

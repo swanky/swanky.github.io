@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img" aria-labelledby="title desc">
+<title id="title">AI 答對，你跟著對；AI 答錯，你跟著錯</title><desc id="desc">華頓商學院實驗一：和不能用 AI 的對照組相比，AI 給對答案時，受試者正確率高 25 個百分點；AI 給錯答案時，低 15 個百分點。超過一半的題目，受試者選擇先問 AI；用了 AI 的人信心更高，答錯時也一樣。</desc>
+<rect width="1200" height="580" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" font-weight="700">AI 答對，你跟著對；AI 答錯，你跟著錯</text>
+<text x="36" y="103" font-size="26" fill="#665e51">實驗一：和不能用 AI 的對照組相比，正確率的變化</text>
+<path d="M36 135H1164" stroke="#d9d0bf"/>
+<text x="36" y="214" font-size="30" font-weight="700">AI 給對答案</text>
+<rect x="560" y="176" width="400" height="56" rx="6" fill="#d9a43a"/>
+<text x="976" y="216" font-size="32" font-weight="700" fill="#8a5d00">+25 個百分點</text>
+<text x="36" y="320" font-size="30" font-weight="700">AI 給錯答案</text>
+<rect x="320" y="282" width="240" height="56" rx="6" fill="#b4532a"/>
+<text x="580" y="322" font-size="32" font-weight="700" fill="#b4532a">−15 個百分點</text>
+<path d="M560 160V360" stroke="#232020" stroke-width="3"/>
+<text x="560" y="392" font-size="22" fill="#665e51" text-anchor="middle">0＝不能用 AI 的對照組</text>
+<rect x="28" y="420" width="1144" height="96" rx="10" fill="#f3efe7"/>
+<text x="52" y="460" font-size="26">超過一半的題目，受試者選擇先問 AI。</text>
+<text x="52" y="498" font-size="26">用了 AI 的人信心更高，<tspan font-weight="700">答錯的時候也一樣。</tspan></text>
+<text x="36" y="556" font-size="20" fill="#665e51">來源：Shaw 與 Nave（2026），PsyArXiv 預印本，實驗一。三個實驗合計 1,372 人。</text>
+</g></svg>
