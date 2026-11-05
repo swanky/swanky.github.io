@@ -7,7 +7,7 @@ categories: [technical]
 tags: [web3, ai-agent, stablecoin, usdc, composability, vibe-coding]
 layout: article
 cover_image: /assets/img/linkedin/you-cant-vibe-code-usdc.jpg
-cover_alt: "史旺姬站在金庫大廳，舉起一枚金幣對著光看，金幣拉出光線連到金庫門、帳本書架與遠處店家；左邊另一位女子搖著複製機，吐出一堆沒有連線的金幣與錢包手機"
+cover_alt: "白色小機器人搖著複製機，複製出來的金幣和錢包手機像氣球一樣飄走、還破掉一顆；史旺姬抱著一枚沉甸甸的真金幣對它眨眼，金幣拉出金線，拴在金庫、銀行、帳本塔與一排店家上"
 hero_image: true
 use_glightbox: true
 mid_cta: false
@@ -36,8 +36,8 @@ Vibe coding 是 Andrej Karpathy 在 2025 年 2 月提出的說法，指的是不
   <span class="article-tldr-label">30 秒結論</span>
   <ul>
     <li><strong>AI 讓程式碼變便宜，稀缺的東西移到「狀態」</strong>：餘額、紀錄、流動性、信用，要靠時間累積，沒辦法重新生成。</li>
-    <li><strong>USDC 抄不走，最大的原因在鏈下</strong>：準備金、銀行、法規與稽核，才是它值一美元的理由。2023 年銀行出事時，它一度跌破 87 美分。</li>
-    <li><strong>上鏈真正換到的，是撐得過收攤</strong>：Blur、POAP 的網站關了，鏈上紀錄還在；但整合與社群不會自動跟著搬家。</li>
+    <li><strong>USDC 抄不走，最大的原因在鏈下</strong>：準備金、銀行、法規與稽核，才是它值一美元的理由。2023 年銀行出事時，它一度跌破 87 美分，疊在它上面的 DAI 也跟著跌。</li>
+    <li><strong>上鏈真正換到的，是撐得過收攤</strong>：Blur、POAP 的網站關了，鏈上紀錄還在；但整合與社群不會自動跟著搬家，而 USDC 的發行商也能凍結帳戶。</li>
     <li><strong>我會用三個問題盤點抄不走的東西</strong>：拿掉介面還剩什麼狀態、出事時誰負責、你明天消失別人能不能接手。</li>
   </ul>
 </div>
@@ -57,6 +57,7 @@ Vibe coding 是 Andrej Karpathy 在 2025 年 2 月提出的說法，指的是不
       <span class="article-toc-part-title">那上鏈到底換到什麼</span>
       <ol class="article-toc-items">
         <li><a href="#survive">網站關掉以後，帳本還在</a></li>
+        <li><a href="#freeze">能負責的人，也能按暫停</a></li>
         <li><a href="#saas">同一件事的金融版：舊軟體正在變便宜</a></li>
         <li><a href="#my-check">如果是我，我會先問這三個問題</a></li>
       </ol>
@@ -89,7 +90,7 @@ a16z 認為這個概念過去沒有紅起來，是因為實驗太貴。要懂合
 
 最上面是合約程式。這層真的抄得走：ERC-20 是公開標準，寫一份功能一樣的合約並不難。[[4]](https://ethereum.org/developers/docs/standards/tokens/erc-20)
 
-第二層是鏈上狀態，也就是哪個地址有多少 USDC、什麼時候轉給了誰。這層抄不走。合約可以複製，複製出來的卻是一本空帳本。
+第二層是鏈上狀態，也就是哪個地址有多少 USDC、什麼時候轉給了誰。這層抄不走。合約可以複製，複製出來的卻是一本空帳本。錢包和交易所認 USDC，認的是那份合約的地址，不是它自稱的名字；同名的代幣再多，有人在用的帳本只有一本。
 
 再往下，就離開區塊鏈了。
 
@@ -116,6 +117,10 @@ a16z 認為這個概念過去沒有紅起來，是因為實驗太貴。要懂合
 
 鏈上什麼都沒壞。合約照常執行，轉帳照常確認。出問題的是鏈下的銀行。
 
+骨牌沒有停在 USDC。DAI 是 MakerDAO 發行的穩定幣，常被當成「去中心化」的代表：不靠一家公司保管美元，靠鏈上的抵押品撐住價格。可是當時 DAI 有 54.5% 的擔保來自 USDC。[[13]](https://www.theblock.co/post/219039/makerdao-launches-emergency-proposal-to-limit-usdc-exposure) USDC 一跌，DAI 也跟著掉到 0.93 美元左右；MakerDAO 當天就提出緊急提案，壓低自己對 USDC 和其他高風險擔保品的曝險。[[13]](https://www.theblock.co/post/219039/makerdao-launches-emergency-proposal-to-limit-usdc-exposure)
+
+這是 a16z 樂高論的另一面：積木可以一塊疊一塊，風險也會跟著疊上去。DAI 的合約沒有寫錯任何一行，它只是接上了 USDC，也就一起接上了矽谷銀行。
+
 Circle 在同一份聲明裡寫得很直白：USDC 在鏈上可以全年無休地使用，但發行和贖回受美國銀行的營業時間限制。[[6]](https://web.archive.org/web/20230313023657/https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank)
 
 所以我的判斷是：**You can't vibe code USDC 這句話是對的，但讓它成立的那幾層，大多在鏈下。**
@@ -136,7 +141,7 @@ POAP 是更完整的例子。這個鏈上出席證明服務，今年 3 月進入
 
 這幾乎就是 a16z 論點的實地測試。AI 很快重做了軟體：網站、查詢、發行流程都有了，舊紀錄查得到，也能繼續發新的活動代幣。作者自己也追問了一句：這樣真的算通過「死亡考驗」嗎？[[9]](https://www.blocktrend.today/p/795)
 
-我的看法是，新平台發出的代幣，出自接手者自己的合約，不是原本 POAP 的合約。過去串接 POAP 的抽獎、驗證、會員工具，認的是原本那份合約，不會自動認得新代幣；願意來領取的社群，也要重新找回來。
+我的看法是，除非拿到原本合約的發行權限，接手者發的新代幣只能出自另一份合約。原文沒有交代這一點，但不管是哪一種，過去串接 POAP 的抽獎、驗證、會員工具，認的是原本那份合約，不會自動認得新代幣；願意來領取的社群，也要重新找回來。
 
 軟體可以重做，網路只能重新累積。
 
@@ -149,23 +154,33 @@ POAP 是更完整的例子。這個鏈上出席證明服務，今年 3 月進入
 
 所以我會把 a16z 那句話改一點：區塊鏈給狀態的，是**可以帶著走、可以驗證、不怕單一公司消失**。稀缺本身，它給不了。前提是有人備份了圖片和資料，也有人願意接手。
 
+## 能負責的人，也能按暫停 {#freeze}
+
+「不怕單一公司消失」這句話，放到 USDC 身上要打個折。
+
+2022 年 8 月，美國財政部制裁混幣服務 Tornado Cash。當天，USDC 的發行方就封鎖了被點名的錢包地址，至少 7.5 萬 USDC 從此動不了。[[14]](https://www.theblock.co/post/162172/circle-freezes-usdc-funds-in-tornado-cashs-us-treasury-sanctioned-wallets) Circle 的說法很簡單：它是受監管的公司，必須遵守制裁規定。[[14]](https://www.theblock.co/post/162172/circle-freezes-usdc-funds-in-tornado-cashs-us-treasury-sanctioned-wallets)
+
+這不是 bug。前面說 USDC 值一美元，是因為有人承諾兌付、有人稽核、有法律可以追；同一套安排，也讓發行商有能力、也有義務把某些帳戶停下來。你的餘額記在鏈上，誰都讀得到、也搬得走；能不能動，最後還是發行商說了算。
+
+所以用 USDC，是拿一部分控制權去換兌付承諾。這筆交換對大多數人划算，我自己也會這樣選。但要知道自己換了什麼：讓它抄不走的，和能讓你停下來的，是同一群人。
+
 ## 同一件事的金融版：舊軟體正在變便宜 {#saas}
 
 同一週，a16z 另一篇文章談私募股權。[[10]](https://www.a16z.news/p/is-private-equity-cooked) 它的立場是勸投資人少投收購基金、多投創投，這部分我不背書。但裡面有一段跟這篇有關。
 
 文章說，訂閱制軟體曾是私募最愛的收購標的：收入穩定、好預測，很適合拿來借錢。[[10]](https://www.a16z.news/p/is-private-equity-cooked) 而放款給這些公司的 Golub Capital，旗下軟體業借款人的營收成長，兩年內從 9% 掉到 3% 以下。[[10]](https://www.a16z.news/p/is-private-equity-cooked)
 
-我不會把這個數字全部算到 AI 頭上，原文也沒有這樣說。但方向是一致的：寫軟體越便宜，靠「我有一套軟體」收租的生意，就越難說服人。
+我不會把這個數字全部算到 AI 頭上，原文也沒有這樣說。但用這篇的框架看，私募買一家軟體公司，買的從來不只是程式碼，還有客戶名單、簽好的合約、每年續約的習慣，也就是狀態。寫軟體越便宜，程式碼那部分越不值錢；狀態很薄、只剩「我有一套軟體」的公司，最難說服人繼續付租金。
 
 ## 如果是我，我會先問這三個問題 {#my-check}
 
 不管是在做產品、導入 AI Agent，還是評估一個 Web3 專案，我會先問三個問題。
 
 1. **拿掉介面，你還握有什麼狀態？**客戶資料、交易紀錄、信用歷史、累積多年的作品。介面明天就能被複製，這些不行。
-2. **出事的時候，誰負責？**USDC 值一美元，是因為有人承諾兌付、有人稽核、有法律可以追。AI Agent 也一樣：它可以替你付款，但出錯時誰承擔，要先寫清楚。我在 [AI Agent 錢包權限]({% post_url 2026-08-07-ai-agent-wallet-permission-boundaries %})那篇談過額度、白名單與人工核准，處理的就是這一層。
+2. **出事的時候，誰負責？誰又能按暫停？**USDC 值一美元，是因為有人承諾兌付、有人稽核、有法律可以追；同一群人也能凍結帳戶。兩件事要一起問。AI Agent 也一樣：它可以替你付款，但出錯時誰承擔，要先寫清楚。我在 [AI Agent 錢包權限]({% post_url 2026-08-07-ai-agent-wallet-permission-boundaries %})那篇談過額度、白名單與人工核准，處理的就是這一層。
 3. **如果你明天消失，別人能不能接手？**資料能不能匯出、狀態能不能被別人讀到、服務能不能有人延續。POAP 能有人接手，是因為鏈上紀錄還在，官方也留下了封存。
 
-AI Agent 開始自己付錢以後，第二題會變得更急。像 x402 這類標準，讓伺服器在收到沒付款的請求時直接回應 HTTP 402，要求對方付款後再試一次。[[12]](https://www.x402.org) 付錢的不再是人，Agent 會選哪條結算路線？它看不到畫面漂不漂亮。我想它會選最多服務願意收、出問題時有人負責的那條。我在 [〈等 AI Agent 開始自己付錢〉]({% post_url 2026-05-31-ai-agent-payments-web3 %})寫過這個方向。
+AI Agent 開始自己付錢以後，第二題會變得更急。像 x402 這類標準，讓伺服器在收到沒付款的請求時直接回應 HTTP 402，要求對方付款後再試一次；官網直接寫，穩定幣付款是主要用途。[[12]](https://www.x402.org) 付錢的不再是人，Agent 會選哪條結算路線？它看不到畫面漂不漂亮。我想它會選最多服務願意收、出問題時有人負責的那條。我在 [〈等 AI Agent 開始自己付錢〉]({% post_url 2026-05-31-ai-agent-payments-web3 %})寫過這個方向。
 
 我在 Blur 那篇也寫過自己被清算掉的 4 隻 MAYC。合約把狀態記得很清楚：誰借款、何時清算、抵押品歸誰，一筆不差。它只是不記得我為什麼喜歡那幾隻猿。
 
@@ -187,3 +202,5 @@ AI Agent 開始自己付錢以後，第二題會變得更急。像 x402 這類�
 - **[10]** [a16z：Is Private Equity Cooked?](https://www.a16z.news/p/is-private-equity-cooked)（Jen Kha，2026-11-04；作者為創投方，立場需一併考量）。
 - **[11]** [a16z：Investment List](https://a16z.com/investment-list)（2026-11-05 查閱）。
 - **[12]** [x402：internet-native payments standard](https://www.x402.org)（HTTP 402 付款流程說明）。
+- **[13]** [The Block：MakerDAO launches emergency proposal to limit USDC exposure](https://www.theblock.co/post/219039/makerdao-launches-emergency-proposal-to-limit-usdc-exposure)（2023-03-11；DAI 的 USDC 擔保比例與當時價格）。
+- **[14]** [The Block：Circle freezes USDC funds in Tornado Cash's US Treasury-sanctioned wallets](https://www.theblock.co/post/162172/circle-freezes-usdc-funds-in-tornado-cashs-us-treasury-sanctioned-wallets)（2022-08-08）。
