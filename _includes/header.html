@@ -31,14 +31,19 @@
                 <li><a href="{{ '/photography/commercial-works/' | relative_url }}">商業</a></li>
                 <li><a href="{{ '/photography/swanky-ji-myths-in-the-making/' | relative_url }}">史旺姬《神話未完成》</a></li>
                 <li><a href="{{ '/photography/uniform-girl/' | relative_url }}">制服．女孩 × 史旺基</a></li>
-                <li><a href="{{ '/photography/archive/' | relative_url }}">歷年記錄</a></li>
               </ul>
             </li>
             <li><a href="{{ '/photography/models/' | relative_url }}">虛擬模特兒經紀</a></li>
             <li><a href="{{ '/photography/photo-albums/' | relative_url }}">出版</a></li>
             <li><a href="{{ '/photography/awards/' | relative_url }}">獎項</a></li>
-            {% if site.data.photo_learn.launched or jekyll.environment != 'production' %}<li><a href="{{ '/photography/learn/' | relative_url }}">看懂寫真</a></li>{% endif %}
-            <li><a href="{{ '/photography/notes/' | relative_url }}">創作筆記</a></li>
+            {%- comment -%} 閱讀：看懂寫真（教學）＋創作筆記（隨筆）合成一組；看懂寫真未上線時只剩創作筆記、父層改連筆記 {%- endcomment %}
+            {% assign learn_on = false %}{% if site.data.photo_learn.launched or jekyll.environment != 'production' %}{% assign learn_on = true %}{% endif %}
+            <li class="dropdown"><a href="{% if learn_on %}{{ '/photography/learn/' | relative_url }}{% else %}{{ '/photography/notes/' | relative_url }}{% endif %}"><span>閱讀</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                {% if learn_on %}<li><a href="{{ '/photography/learn/' | relative_url }}">看懂寫真</a></li>{% endif %}
+                <li><a href="{{ '/photography/notes/' | relative_url }}">創作筆記</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="dropdown"><a href="{{ '/technical/' | relative_url }}"{% if nav_active == 'technical' %} class=\"active\" aria-current=\"true\"{% endif %}><span>技術顧問</span> <i class="bi bi-chevron-down"></i></a>
