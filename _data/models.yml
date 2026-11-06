@@ -129,6 +129,9 @@ talents:
       - { data: swanky_ji_fire_kept_by_the_well, kind: json, url: /photography/swanky-ji-fire-kept-by-the-well/ }
       - { data: swanky_ji_the_buyer_of_all_stories, kind: json, url: /photography/swanky-ji-the-buyer-of-all-stories/ }   # 《神話未完成》32（2026-11-03，無 PDF）
       - { data: swanky_ji_maize_grows_into_the_sky, kind: json, url: /photography/swanky-ji-maize-grows-into-the-sky/ }   # 《神話未完成》33（2026-11-03，無 PDF）
+      - { data: swanky_ji_the_new_star_has_no_name_yet, kind: json, url: /photography/swanky-ji-the-new-star-has-no-name-yet/ }   # 《神話未完成》34（2026-11-03，無 PDF）
+      - { data: swanky_ji_the_day_gravity_rested, kind: json, url: /photography/swanky-ji-the-day-gravity-rested/ }   # 《神話未完成》35（2026-11-03，無 PDF）
+      - { data: swanky_ji_the_unsealed_box, kind: json, url: /photography/swanky-ji-the-unsealed-box/ }   # 《神話未完成》36（2026-11-03，無 PDF）
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }
