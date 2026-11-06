@@ -6037,6 +6037,24 @@ main#main { scroll-margin-top: var(--header-h); }
     border-radius: 8px;
   }
 
+  /* 第二層子選單（攝影寫真 › 作品、古典文學 › 金瓶梅宇宙）：桌機版 .navbar .dropdown .dropdown ul
+     的 visibility:hidden／translateX 特異性較高，手機展開後會佔位卻看不見——這裡蓋回來。 */
+  .navbar-mobile .dropdown .dropdown ul,
+  .navbar-mobile .dropdown .dropdown:hover > ul,
+  .navbar-mobile .dropdown .dropdown:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  .navbar-mobile .dropdown .dropdown > ul::before { display: none; }
+  .navbar-mobile .dropdown ul li { min-width: 0; }
+  /* 面板規則 .navbar-mobile ul 的 width:min(400px,88vw)／滑入動畫也會套到子選單，
+     縮排後子選單超出畫面右緣——子選單改隨父層寬度。 */
+  .navbar-mobile .dropdown ul { width: auto; animation: none; }
+
   .navbar-mobile .dropdown ul a:hover,
   .navbar-mobile .dropdown ul li:hover > a {
     color: #8a5d00;
