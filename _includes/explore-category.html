@@ -5,7 +5,8 @@
     letter:   A / B / C / D（區塊標記，選填）
     title:    區塊標題
     subtitle: 區塊副標（選填）
-{% endcomment %}{% assign cards = site.data.divination_services | where: 'category', include.category | where: 'visibility', 'public' %}{% if cards.size > 0 %}
+  coming-soon 的卡一律不渲染（2026-11-07 站主規則：不列「規劃中」佔位項目，上線了才出現）。
+{% endcomment %}{% assign cards = site.data.divination_services | where: 'category', include.category | where: 'visibility', 'public' | where_exp: 'c', "c.status != 'coming-soon'" %}{% if cards.size > 0 %}
 <div class="explore-cat" id="cat-{{ include.category }}">
   <div class="explore-cat-head">
     {% if include.letter %}<span class="explore-cat-letter">{{ include.letter }}</span>{% endif %}

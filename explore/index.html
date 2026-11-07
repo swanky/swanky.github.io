@@ -3,7 +3,7 @@ layout: home
 title: 自我探索實驗室
 seo_title: 自我探索工具館｜人類圖、塔羅、星座命盤、八字與奇門策略地圖
 description: Swanky 自我探索實驗室——不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。人類圖、職場塔羅、星座命盤、八字、奇門策略地圖等工具，所有計算都在你的裝置上完成、資料不會上傳，把象徵系統當成反思工具與決策輔助。
-keywords: 自我探索,線上排盤,人類圖,塔羅,星座命盤,八字,紫微斗數,奇門遁甲,易經,生命靈數,決策輔助
+keywords: 自我探索,線上排盤,人類圖,人類圖合盤,塔羅,星座命盤,八字,奇門遁甲,易經,生命靈數,決策輔助
 nav_active: explore
 use_silk: true
 breadcrumbs:
@@ -73,6 +73,9 @@ extra_css: |
   .explore-hd-primary { display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 10px; background: #E5A300; color: #111; font-size: .9rem; font-weight: 800; text-decoration: none; transition: .2s; }
   .explore-hd-primary:hover { background: #F5C53B; color: #111; transform: translateY(-1px); }
   .explore-hd-safe { color: #8b8273; font-size: .76rem; }
+  .explore-hd-main > p.explore-hd-pair { margin: 16px 0 0; font-size: .86rem; }
+  .explore-hd-pair a { color: #8B5E00; font-weight: 750; text-decoration: none; }
+  .explore-hd-pair a:hover { text-decoration: underline; }
   .explore-hd-report { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: #232020; color: #fff; }
   .explore-hd-report-label { margin: 0 0 7px; color: #F5C53B; font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
   .explore-hd-report h4 { margin: 0 0 9px; color: #fff; font-size: 1.16rem; line-height: 1.45; }
@@ -114,7 +117,7 @@ extra_head: |
     <div class="container">
       {% include tool-privacy.html style='pill' %}
       <h1>Swanky 自我探索實驗室</h1>
-      <p class="lead">不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。<br>這裡把人類圖、塔羅、星座、八字、奇門這些象徵系統，當成反思工具與決策輔助——由一位工程師打造，演算法透明、可驗證，未驗證的功能一律標示開發中。</p>
+      <p class="lead">不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。<br>這裡把人類圖、塔羅、星座、八字、奇門這些象徵系統，當成反思工具與決策輔助——由一位工程師打造，演算法透明、可驗證，未驗證的功能一律標示「測試中」。</p>
       <nav class="explore-hero-nav" aria-label="快速前往分類">
         <a href="#cat-birth-map">出生地圖</a>
         <a href="#cat-inquiry">當下問事</a>
@@ -144,6 +147,7 @@ extra_head: |
             <a class="explore-hd-primary" href="{{ '/human-design/#hd-form' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_funnel_entry_click',{source:'explore_feature',intent:'free_chart'});}">免費生成我的人類圖 →</a>
             <span class="explore-hd-safe">不用登入；出生資料只留在你的裝置。</span>
           </div>
+          <p class="explore-hd-pair">想看兩個人怎麼搭配？<a href="{{ '/human-design/relationship/' | relative_url }}" onclick="if(window.gtag){gtag('event','hd_goto_composite',{source:'explore_feature'});}">試試人類圖合盤 →</a></p>
         </div>
         <div class="explore-hd-report">
           <p class="explore-hd-report-label">生成後再決定</p>
@@ -161,37 +165,7 @@ extra_head: |
       {% include explore-category.html category='birth-map' letter='A' title='出生地圖' subtitle='根據出生資料，建立你的個人結構地圖' %}
       {% include explore-category.html category='inquiry' letter='B' title='當下問事' subtitle='針對當下的問題與時間，進行反思與觀察' %}
       {% include explore-category.html category='ritual' letter='C' title='行動儀式' subtitle='輕量、每日、可分享的小提醒' %}
-      {% include explore-category.html category='service' letter='D' title='商業與策略服務' subtitle='深度解讀與策略服務——已開放的可直接預約，規劃中的先在這裡登記需求' %}
-    </div>
-  </section>
-
-  <!-- ======= 產品藍圖 ======= -->
-  <section class="explore-section alt" data-aos="fade-up">
-    <div class="container">
-      <h2 class="explore-section-title">產品藍圖</h2>
-      <p class="explore-section-lead">這是一個有計畫的產品，不是玩具堆。我們先把整座實驗室的架構與藍圖端上來，再一個一個把工具從「規劃中」點亮成「立即使用」。</p>
-      <div class="explore-roadmap">
-        <div class="explore-roadmap-item is-done">
-          <span class="explore-roadmap-phase">已上線</span>
-          <span class="explore-roadmap-text"><b>人類圖</b>、<b>職場塔羅</b>、<b>易經問卦</b>、<b>生命靈數</b>，以及<b>今日一牌</b>、<b>今日五行</b>兩個每日儀式——都在你的裝置上完成計算，算法公開可驗證。</span>
-        </div>
-        <div class="explore-roadmap-item is-beta">
-          <span class="explore-roadmap-phase">測試版</span>
-          <span class="explore-roadmap-text"><b>星座命盤</b>與<b>八字排盤</b>已可使用；正在與權威參考站逐筆比對驗證，通過後移除「測試中」標示。</span>
-        </div>
-        <div class="explore-roadmap-item">
-          <span class="explore-roadmap-phase">接下來</span>
-          <span class="explore-roadmap-text">整合人類圖、星座與八字的<b>三重自我地圖</b>。</span>
-        </div>
-        <div class="explore-roadmap-item">
-          <span class="explore-roadmap-phase">規劃中</span>
-          <span class="explore-roadmap-text"><b>紫微斗數</b>、<b>今日鳥籤</b>，逐步點亮。</span>
-        </div>
-        <div class="explore-roadmap-item">
-          <span class="explore-roadmap-phase">教育內容</span>
-          <span class="explore-roadmap-text"><b>奇門策略地圖</b>以概念導讀與示意盤呈現；正式排盤需通過演算法驗證才會推出——我們不為自己無法驗證品質的科目提供人工解讀。</span>
-        </div>
-      </div>
+      {% include explore-category.html category='service' letter='D' title='商業與策略服務' subtitle='把免費結果延伸成可以帶進職涯與關係的深度報告' %}
     </div>
   </section>
 
@@ -226,7 +200,7 @@ extra_head: |
         <div class="explore-tech-item">
           <i class="bi bi-graph-up"></i>
           <h3>演算法透明、交叉驗證</h3>
-          <p>排盤邏輯與參考站逐筆交叉驗證；未驗證的功能一律標示「示意資料／開發中」。</p>
+          <p>排盤邏輯與參考站逐筆交叉驗證；未驗證的功能一律標示「測試中」或「示意內容」。</p>
         </div>
         <div class="explore-tech-item">
           <i class="bi bi-clipboard-data"></i>

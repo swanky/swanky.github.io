@@ -5,6 +5,7 @@
     live／manual-service 且有 route → 整卡連結到該頁
     manual-service 無 route      → 卡內「預約服務」mailto（人工收單）
     coming-soon 無 route         → <details> 展開說明＋「想先看到這個？」需求訊號 mailto＋gtag
+                                   （目前 explore-category 已濾掉 coming-soon，此分支保留給日後需要時用）
   visibility != public 的卡由 explore-category 先過濾掉，不會傳進來。
 {% endcomment %}{% assign it = include.item %}{% assign mail = 'swanky.hsiao@gmail.com' %}{% assign is_hd_entry = false %}{% if it.id == 'human-design' or it.id == 'human-design-report' %}{% assign is_hd_entry = true %}{% endif %}{% capture inner %}<span class="explore-card-ico"><i class="bi {{ it.icon }}"></i></span>
   <span class="explore-card-main">

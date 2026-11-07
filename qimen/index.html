@@ -113,7 +113,7 @@ extra_head: |
       <h2 class="qimen-section-title">九宮盤面長什麼樣子</h2>
       <p class="qimen-section-lead">下面是一張教學用的示意盤——點任一格看它的解讀。金色是有利窗口、灰藍是需謹慎、灰是中性；我們刻意不用紅色凶煞的視覺。</p>
       <div data-qimen-demo aria-label="奇門示意九宮格"></div>
-      <p class="qimen-grid-caption">⚠ 這是為了說明盤面怎麼讀而編排的示意資料，不代表任何真實時間的排盤結果。正式排盤工具開發中。</p>
+      <p class="qimen-grid-caption">⚠ 這是為了說明盤面怎麼讀而編排的示意資料，不代表任何真實時間的排盤結果。</p>
       <div style="max-width:820px; margin:26px auto 0;">
         {% include tool-method-note.html id='qimenMethod' title='這個盤怎麼讀？排盤規則說明' rules='目前為教育示意盤，不代表任何真實時間的排盤結果｜方位採傳統盤面「上南下北」，與現代地圖相反（南在上、北在下）｜每宮由八門、九星、八神與天干組成，中宮放問題的主體（用神）｜若未來推出正式排盤工具，將公開標示排盤規則與驗證方式' note='不同流派對排盤規則（拆補／置閏、轉盤／飛盤）可能有不同做法；若未來推出正式工具，會標明採用的規則與驗證方式。把規則寫明是我們的專業原則。' %}
       </div>
@@ -124,21 +124,14 @@ extra_head: |
   <section class="qimen-section tool-cta-dark">
     <div class="container">
       <h2 class="qimen-section-title">怎麼開始</h2>
-      <p class="qimen-section-lead">先自己看懂盤面怎麼讀；想先看到每日行動指南上線，也可以敲碗告訴我。</p>
+      <p class="qimen-section-lead">先自己看懂盤面怎麼讀，再決定要不要深入。</p>
       <div class="qimen-cta-grid">
 
         <div class="qimen-cta-card">
           <span class="qimen-cta-tag">免費探索</span>
           <h3>奇門示意工具</h3>
-          <p>看看奇門盤面的輸入與輸出長什麼樣子，理解每個元素怎麼讀。教育展示用途，正式排盤開發中。</p>
+          <p>看看奇門盤面的輸入與輸出長什麼樣子，理解每個元素怎麼讀。教育展示用途，不是正式排盤。</p>
           <a class="qimen-cta-btn" href="{{ '/qimen/tool/' | relative_url }}">查看示意工具 →</a>
-        </div>
-
-        <div class="qimen-cta-card">
-          <span class="qimen-cta-tag">每日輕量</span>
-          <h3>每日奇門行動指南</h3>
-          <p>每天告訴你適合把重要行動放在哪個時段、往哪個方向。規劃中，想先看到可以敲碗告訴我。</p>
-          <a class="qimen-cta-btn is-outline" href="mailto:swanky.hsiao@gmail.com?subject={{ '敲碗：每日奇門行動指南' | url_encode }}&body={{ '嗨 史旺基，我想先看到「每日奇門行動指南」上線。' | url_encode }}" onclick="if(window.gtag){gtag('event','explore_signal',{'tool':'qimen-daily'});}">敲碗 Coming Soon</a>
         </div>
 
       </div>

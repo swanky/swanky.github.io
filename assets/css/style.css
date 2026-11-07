@@ -5147,21 +5147,6 @@ a.explore-card.is-flagship:hover { box-shadow: 0 14px 34px rgba(229,163,0,0.18);
 .explore-signal { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--c-gold-deep); border-bottom: 1px dashed #e6c879; }
 .explore-signal:hover { color: var(--c-gold); }
 
-/* --- 產品藍圖 roadmap（縱向時間軸：線＋節點圓點）--- */
-.explore-roadmap { position: relative; max-width: 720px; margin: 0 auto; padding-left: 26px; }
-.explore-roadmap::before { content: ''; position: absolute; left: 3px; top: 8px; bottom: 8px; width: 2px; background: #eadfc4; }
-.explore-roadmap-item { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 14px; padding: 12px 0; border-bottom: 1px dashed #eadfc4; }
-.explore-roadmap-item:last-child { border-bottom: none; }
-.explore-roadmap-item::before {
-  content: ''; position: absolute; left: -23px; top: 18px;
-  width: 10px; height: 10px; border-radius: 50%; background: #cfc8ba; border: 2px solid #cfc8ba; box-sizing: border-box;
-}
-.explore-roadmap-item.is-done::before { background: var(--c-gold); border-color: var(--c-gold); }
-.explore-roadmap-item.is-beta::before { background: #fff; border-color: var(--c-gold); }
-.explore-roadmap-phase { flex-shrink: 0; width: 76px; font-size: 0.8rem; font-weight: 700; color: var(--c-gold-deep); }
-.explore-roadmap-text { flex: 1; min-width: 200px; font-size: 0.9rem; color: #555; line-height: 1.6; }
-.explore-roadmap-text b { color: #111; }
-
 /* --- 倫理邊界區（品牌差異化資產：全頁最強反差，深底反白＋金色大編號）--- */
 .explore-ethics { background: var(--c-ink); }
 .explore-ethics .explore-section-title { color: #fff; }
