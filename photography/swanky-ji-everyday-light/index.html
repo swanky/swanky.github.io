@@ -34,7 +34,8 @@ permalink: /photography/swanky-ji-everyday-light/
 {% capture hero_intro %}史旺姬，史旺基的原創虛擬人物。{{ book.statement[0] }}{% endcapture %}
 {% capture pdf_label %}下載完整寫真集（{{ pdf_size }}）{% endcapture %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
-  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label=pdf_label %}
+  {% capture pdf_url %}{% include photography/download-url.html path=book.pdf %}{% endcapture %}{% assign pdf_url = pdf_url | strip %}
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title=book.title intro=hero_intro primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=pdf_url secondary_label=pdf_label %}
   {% include photography/subpage-nav.html %}
 
   <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
@@ -120,7 +121,7 @@ permalink: /photography/swanky-ji-everyday-light/
         </div>
       </header>
       <div class="photo-author-archive-grid">
-        <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download>
+        <a href="{% include photography/download-url.html path=book.pdf %}" class="photo-author-archive-card" download>
           <h3>下載完整寫真集</h3>
           <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案{{ pdf_size }}，手機下載前請留意流量。</p>
           <span>下載整本 →</span>

@@ -82,6 +82,14 @@ exclude:
   # tests/deploy-size.test.mjs guards that no fallback points at these.
   - "assets/img/photography/*/[0-9][0-9].webp"
   - "assets/img/photography/*/[A-Z][A-Z][A-Z]-[0-9][0-9].webp"
+  # 2026-11-07: these six PDFs moved to Release photobooks-2026-11-07
+  # (_data/photography_downloads.json maps them); tests/deploy-size.test.mjs.
+  - "assets/downloads/swanky-ji-open-worlds/Swanky-Ji-Open-Worlds-36.pdf"
+  - "assets/downloads/nft-seven-eight/Seven-Names-Eight-Presences-42.pdf"
+  - "assets/downloads/pan-jinlian-tonight-she-opens/Pan-Jinlian-Tonight-She-Opens-36.pdf"
+  - "assets/downloads/swanky-ji-everyday-light/Swanky-Ji-Everyday-Light-36.pdf"
+  - "assets/downloads/pan-jinlian-she-sees-it-first/Pan-Jinlian-She-Sees-It-First-36.pdf"
+  - "assets/downloads/beyond-the-frame/Beyond-the-Frame-36.pdf"
   - "assets/downloads/li-pinger-before-the-rain/li-pinger-before-the-rain-34.pdf"
   - "assets/img/photography/li-pinger-before-the-rain/[0-9][0-9].webp"
   - "assets/downloads/pan-jinlian-daylight-on-loan/pan-jinlian-daylight-on-loan-36.pdf"

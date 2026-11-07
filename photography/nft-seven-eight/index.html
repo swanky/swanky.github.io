@@ -21,7 +21,8 @@ permalink: /nft/photobook/seven-names-eight-presences/
 {% assign book = site.data.nft_seven_eight %}
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page nse-page">
-  {% include photography/subpage-hero.html eyebrow="NFT CHARACTERS · 2026 · 42 PHOTOGRAPHS" title=book.title intro=book.description primary_url="#chapter-01" primary_label="開始閱讀 42 張" secondary_url=book.pdf secondary_label="下載完整寫真集" %}
+  {% capture pdf_url %}{% include photography/download-url.html path=book.pdf %}{% endcapture %}{% assign pdf_url = pdf_url | strip %}
+  {% include photography/subpage-hero.html eyebrow="NFT CHARACTERS · 2026 · 42 PHOTOGRAPHS" title=book.title intro=book.description primary_url="#chapter-01" primary_label="開始閱讀 42 張" secondary_url=pdf_url secondary_label="下載完整寫真集" %}
   <nav class="photo-author-quick-nav" aria-label="作品導覽"><span>NFT 寫真集</span><div>
     <a href="{{ '/nft/' | relative_url }}">NFT 策展</a>
     <a href="{{ '/photography/models/work/' | relative_url }}">全部寫真集</a>
@@ -98,7 +99,7 @@ permalink: /nft/photobook/seven-names-eight-presences/
       <header class="photo-author-section-head"><p class="photo-author-eyebrow">SEVEN NAMES · EIGHT PRESENCES</p><div><h2 id="characters-title">七位角色，各自走進生活。</h2><p>Meebit 是同一位角色的方塊與女性呈現；本冊共七位角色、八個呈現。角色的身份、形象與合作範圍，請見各自的介紹。</p></div></header>
       <nav class="photo-author-section-links" aria-label="七位角色">{% for character in book.characters %}<a class="photo-author-text-link" href="{{ character.talent_url | relative_url }}">{{ character.name }}</a>{% endfor %}</nav>
       <div class="photo-author-archive-grid">
-        <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download><h3>下載完整寫真集</h3><p>{{ book.pdf_pages }} 頁、{{ book.count }} 張影像與創作說明，約 27 MB，可免費下載收藏。</p><span>下載整本 →</span></a>
+        <a href="{% include photography/download-url.html path=book.pdf %}" class="photo-author-archive-card" download><h3>下載完整寫真集</h3><p>{{ book.pdf_pages }} 頁、{{ book.count }} 張影像與創作說明，約 27 MB，可免費下載收藏。</p><span>下載整本 →</span></a>
         <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer"><h3>前往 Flickr 相簿</h3><p>依書序收錄 {{ book.count }} 張公開作品，可逐張檢視。</p><span>前往 Flickr ↗</span></a>
         <a href="{{ '/photography/models/work/' | relative_url }}" class="photo-author-archive-card"><h3>其他概念寫真集</h3><p>在 SWANKY MODELS 繼續閱讀不同人物的創作。</p><span>看作品案例 →</span></a>
       </div>
@@ -107,5 +108,5 @@ permalink: /nft/photobook/seven-names-eight-presences/
   </section>
 </main>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ImageGallery","name":{{ book.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ book.cover | absolute_url | jsonify }},"datePublished":{{ book.date | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"associatedMedia":[{% for p in book.photos %}{% capture public_image %}{% include flickr/url.html id=p.flickr_id image=p.image %}{% endcapture %}{"@type":"ImageObject","name":{{ p.title | jsonify }},"caption":{{ p.caption | jsonify }},"contentUrl":{{ public_image | strip | jsonify }},"width":{{ p.width }},"height":{{ p.height }},"sameAs":{{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasPart":{"@type":"Book","name":{{ book.title | jsonify }},"numberOfPages":{{ book.pdf_pages }},"url":{{ book.pdf | absolute_url | jsonify }},"inLanguage":"zh-TW"}}
+{"@context":"https://schema.org","@type":"ImageGallery","name":{{ book.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ book.cover | absolute_url | jsonify }},"datePublished":{{ book.date | jsonify }},"inLanguage":"zh-TW","creator":{"@type":"Person","name":"史旺基 Swanky"},"associatedMedia":[{% for p in book.photos %}{% capture public_image %}{% include flickr/url.html id=p.flickr_id image=p.image %}{% endcapture %}{"@type":"ImageObject","name":{{ p.title | jsonify }},"caption":{{ p.caption | jsonify }},"contentUrl":{{ public_image | strip | jsonify }},"width":{{ p.width }},"height":{{ p.height }},"sameAs":{{ p.flickr_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasPart":{"@type":"Book","name":{{ book.title | jsonify }},"numberOfPages":{{ book.pdf_pages }},"url":{{ pdf_url | absolute_url | jsonify }},"inLanguage":"zh-TW"}}
 </script>

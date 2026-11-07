@@ -29,7 +29,8 @@ permalink: /photography/swanky-ji-open-worlds/
 {% assign book = site.data.swanky_ji_open_worlds %}
 {% assign cover = book.photos | where: "order", book.cover_photo | first %}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page">
-  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=book.pdf secondary_label="下載完整寫真集（約 32 MB）" %}
+  {% capture pdf_url %}{% include photography/download-url.html path=book.pdf %}{% endcapture %}{% assign pdf_url = pdf_url | strip %}
+  {% include photography/subpage-hero.html eyebrow="VIRTUAL TALENT · 2026 · 36 PHOTOGRAPHS" title="她把風景打開" intro="史旺姬，史旺基的原創虛擬人物。從海風、玻璃屋，到可以走進去的照片。史旺基 Swanky 企劃、視覺統籌、選片與審定。" primary_url="#chapter-1" primary_label="開始閱讀 36 張" secondary_url=pdf_url secondary_label="下載完整寫真集（約 32 MB）" %}
   {% include photography/subpage-nav.html %}
 
   <section class="photo-author-section" id="statement" aria-labelledby="statement-title">
@@ -114,7 +115,7 @@ permalink: /photography/swanky-ji-open-worlds/
         </div>
       </header>
       <div class="photo-author-archive-grid">
-        <a href="{{ book.pdf | relative_url }}" class="photo-author-archive-card" download>
+        <a href="{% include photography/download-url.html path=book.pdf %}" class="photo-author-archive-card" download>
           <h3>下載完整寫真集</h3>
           <p>{{ book.count }} 張影像裝成一本數位寫真集，共 {{ book.pdf_pages }} 頁，可免費下載收藏。檔案約 32 MB，手機下載前請留意流量。</p>
           <span>下載整本 →</span>
