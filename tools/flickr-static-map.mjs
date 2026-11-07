@@ -105,7 +105,8 @@ writeFileSync(out, JSON.stringify(Object.fromEntries(Object.keys(map).sort().map
 console.log(`cached=${Object.keys(map).length} failed=${failures.length}`);
 if (failures.length) process.exitCode = 1;
 
-// 備援對照：每個 id 取 flickr_image_paths.json 裡最大的本地副本（畫質最接近 Flickr 大圖）；同大小取路徑排序第一個。
+// 備援對照：每個 id 優先取 -960 預覽檔（2026-11-07 起寫真集原尺寸 webp 不部署——見 _config.yml exclude「Flickr 已託管的寫真集原尺寸」，
+// 部署產物曾達 1653MB、超過 GitHub Pages 1GB 準則而部署逾時）；沒有 -960 才取最大的本地副本；同條件取路徑排序第一個。
 const localCopies = {};
 const previewOnly = new Set(JSON.parse(readFileSync(join(root, '_data/photography_books_2026_10.json'), 'utf8')).flatMap(b => JSON.parse(readFileSync(join(root, '_data', b.data + '.json'), 'utf8')).photos.map(p => p.image)));
 for (const [path, id] of Object.entries(paths)) (localCopies[String(id)] ||= []).push(path);
@@ -114,7 +115,7 @@ const orphans = [];
 for (const id of Object.keys(map).sort()) {
   const best = (localCopies[id] || []).filter(p => !previewOnly.has(p) && existsSync(join(root, p)))
     .map(p => [p, statSync(join(root, p)).size])
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
+    .sort((a, b) => /-960\./.test(b[0]) - /-960\./.test(a[0]) || b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
   if (best) fallbackLines.push(`  ${JSON.stringify(id)}: ${JSON.stringify(best[0])}`);
   else orphans.push(id);
 }

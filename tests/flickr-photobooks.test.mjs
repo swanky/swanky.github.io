@@ -18,7 +18,8 @@ test('Flickr CDN failures resolve to reviewed local copies of every mapped photo
     assert.ok(existsSync(join(root, image)), `Missing fallback: ${image}`);
   }
   const book = JSON.parse(read('_data/nft_seven_eight.json'));
-  for (const p of book.photos) assert.equal(fallbacks[p.flickr_id], p.image);
+  // 2026-11-07 起原尺寸不部署，備援改用同一張照片的 -960 預覽（見 tests/deploy-size.test.mjs）。
+  for (const p of book.photos) assert.equal(fallbacks[p.flickr_id], p.image.replace(/\.webp$/, '-960.webp'));
 });
 
 test('Flickr mappings resolve existing assets to uncropped, correctly sized images of the same photo', () => {
