@@ -11,7 +11,7 @@ use_glightbox: true
 mid_cta: false
 cta_context: web3
 cover_image: /assets/img/linkedin/beeple-human-one-five-years.jpg
-cover_alt: "概念插畫：史旺姬站在美術館裡，一手舉著以光纖連到遠處伺服器的透明 NFT 卡片，一手拿著蠟封授權卷軸，身旁是四面螢幕的發光雕塑與打開的運輸木箱"
+cover_alt: "概念插畫：史旺姬在美術館展間裡，笑著抱住一支超大遙控器、作勢按下紅色按鈕，旁邊立著一座方柱形的螢幕雕塑"
 hero_image: true
 related_posts:
   - nft-token-standards

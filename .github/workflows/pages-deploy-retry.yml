@@ -7,7 +7,9 @@ name: Pages deploy retry
 
 on:
   workflow_run:
-    workflows: ["pages build and deployment"]
+    # 內建 Pages workflow 的名稱是 pages-build-deployment（run 清單上顯示的
+    # 「pages build and deployment」只是標題，拿它來比對不會觸發——2026-11-10 實測）。
+    workflows: ["pages-build-deployment"]
     types: [completed]
 
 permissions:
