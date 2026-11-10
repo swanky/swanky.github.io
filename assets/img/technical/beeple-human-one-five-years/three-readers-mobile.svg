@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1059" viewBox="0 0 640 1059" role="img" aria-labelledby="title desc">
+<title id="title">同一顆 token，五個讀法</title><desc id="desc">今天問合約與主機得到第七章；索引器快取仍是第二章；2021 年 12 月法律評析讀到 Crystal Night；舊網址今天查不到 DNS；鑄造時的 Arweave 網址本輪讀不到。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8c8577"/></marker></defs>
+<rect width="640" height="1059" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="32" font-weight="700">同一顆 token，五個讀法</text>
+<text x="36" y="94" font-size="22" fill="#665e51">你看到哪一版，取決於你問誰、什麼時候問</text>
+<rect x="36" y="114" width="18" height="18" rx="4" fill="#1f6f5c"/><text x="62" y="132" font-size="22" fill="#232020">即時</text>
+<rect x="129.8" y="114" width="18" height="18" rx="4" fill="#8a5d00"/><text x="155.8" y="132" font-size="22" fill="#232020">快取</text>
+<rect x="223.60000000000002" y="114" width="18" height="18" rx="4" fill="#2b5ea8"/><text x="249.60000000000002" y="132" font-size="22" fill="#232020">歷史紀錄</text>
+<rect x="359.20000000000005" y="114" width="18" height="18" rx="4" fill="#d9480f"/><text x="385.20000000000005" y="132" font-size="22" fill="#232020">讀不到</text>
+<path d="M36 158H604" stroke="#d9d0bf"/>
+<text x="52" y="202" font-size="22" fill="#1f6f5c" font-weight="700">今天問合約與主機</text>
+<text x="52" y="241" font-size="27" font-weight="700">第七章 Pre-Human Feedback</text>
+<text x="52" y="275" font-size="22" fill="#3d3a35">2026-11-10 三次讀取都是 HTTP 200，內容相同</text>
+<rect x="36" y="174" width="6" height="109" rx="3" fill="#1f6f5c"/>
+<path d="M36 297H604" stroke="#ece5d6"/>
+<text x="52" y="341" font-size="22" fill="#8a5d00" font-weight="700">今天問索引器快取</text>
+<text x="52" y="380" font-size="27" font-weight="700">第二章的烏克蘭場景</text>
+<text x="52" y="414" font-size="22" fill="#3d3a35">Blockscout 仍回傳 days_journeyed 為 320 的舊</text>
+<text x="52" y="448" font-size="22" fill="#3d3a35">metadata</text>
+<rect x="36" y="313" width="6" height="143" rx="3" fill="#8a5d00"/>
+<path d="M36 470H604" stroke="#ece5d6"/>
+<text x="52" y="514" font-size="22" fill="#2b5ea8" font-weight="700">2021 年 12 月的讀取</text>
+<text x="52" y="553" font-size="27" font-weight="700">Crystal Night 影片</text>
+<text x="52" y="587" font-size="22" fill="#3d3a35">Rimon Law 讀到 days_journeyed 57，網址在</text>
+<text x="52" y="621" font-size="22" fill="#3d3a35">human-one.xyz</text>
+<rect x="36" y="486" width="6" height="143" rx="3" fill="#2b5ea8"/>
+<path d="M36 643H604" stroke="#ece5d6"/>
+<text x="52" y="687" font-size="22" fill="#d9480f" font-weight="700">今天問舊網址</text>
+<text x="52" y="726" font-size="27" font-weight="700">什麼都沒有</text>
+<text x="52" y="760" font-size="22" fill="#3d3a35">metadata.human-one.xyz 在兩家公開 DNS 都查不到位</text>
+<text x="52" y="794" font-size="22" fill="#3d3a35">址</text>
+<rect x="36" y="659" width="6" height="143" rx="3" fill="#d9480f"/>
+<path d="M36 816H604" stroke="#ece5d6"/>
+<text x="52" y="860" font-size="22" fill="#d9480f" font-weight="700">鑄造時寫進鏈上的</text>
+<text x="52" y="899" font-size="27" font-weight="700">Arweave 上的初始 metadata</text>
+<text x="52" y="933" font-size="22" fill="#3d3a35">本輪 arweave.net 回 404、查無此交易；原因未驗證</text>
+<rect x="36" y="832" width="6" height="109" rx="3" fill="#d9480f"/>
+<path d="M36 955H604" stroke="#ece5d6"/>
+<text x="36" y="989" font-size="20" fill="#665e51">讀取時間 2026-11-10 19:58–20:04（台灣時間）。五個讀</text>
+<text x="36" y="1023" font-size="20" fill="#665e51">法是作者整理，不代表作品有五個正式版本。</text>
+</g>
+</svg>

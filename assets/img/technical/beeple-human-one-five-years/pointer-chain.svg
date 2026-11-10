@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1023" viewBox="0 0 1200 1023" role="img" aria-labelledby="title desc">
+<title id="title">你持有的是第一格，其他格在別人手上</title><desc id="desc">持有人用 9 位簽署者、門檻 5 的多簽錢包控制 token 轉移；合約記錄持有人；tokenURI 由藝術家端的合約管理者設定；metadata 與影片放在 beeple-collect.com 的中心化主機；實體雕塑有內建媒體伺服器，藝術家保留遠端存取。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8c8577"/></marker></defs>
+<rect width="1200" height="1023" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="40" font-weight="700">你持有的是第一格，其他格在別人手上</text>
+<text x="36" y="99" font-size="27" fill="#665e51">從錢包一路追到影片：HUMAN ONE token #1 在 2026-11-10 的讀取路徑</text>
+<rect x="36" y="122" width="18" height="18" rx="4" fill="#1f6f5c"/><text x="62" y="142" font-size="24" fill="#232020">持有人控制</text>
+<rect x="202.0" y="122" width="18" height="18" rx="4" fill="#b03a2e"/><text x="228.0" y="142" font-size="24" fill="#232020">藝術家控制</text>
+<rect x="368.0" y="122" width="18" height="18" rx="4" fill="#8a5d00"/><text x="394.0" y="142" font-size="24" fill="#232020">中心化主機</text>
+<rect x="534.0" y="122" width="18" height="18" rx="4" fill="#6b4fa0"/><text x="560.0" y="142" font-size="24" fill="#232020">實體</text>
+<path d="M36 168H1164" stroke="#d9d0bf"/>
+<text x="52" y="214" font-size="24" fill="#1f6f5c" font-weight="700">持有人</text>
+<text x="300" y="214" font-size="32" font-weight="700">多簽錢包</text>
+<text x="300" y="251" font-size="25" fill="#3d3a35">9 位簽署者、門檻 5；能決定 token 轉給誰</text>
+<rect x="36" y="184" width="6" height="75" rx="3" fill="#1f6f5c"/>
+<path d="M160 267V293" stroke="#8c8577" stroke-width="3" marker-end="url(#ah)"/>
+<text x="52" y="349" font-size="24" fill="#2b5ea8" font-weight="700">鏈上</text>
+<text x="300" y="349" font-size="32" font-weight="700">合約 HUMANS 的 ownerOf(1)</text>
+<text x="300" y="386" font-size="25" fill="#3d3a35">記錄誰持有；這一格只會因轉移而改變</text>
+<rect x="36" y="319" width="6" height="75" rx="3" fill="#2b5ea8"/>
+<path d="M160 402V428" stroke="#8c8577" stroke-width="3" marker-end="url(#ah)"/>
+<text x="52" y="484" font-size="24" fill="#b03a2e" font-weight="700">藝術家端</text>
+<text x="300" y="484" font-size="32" font-weight="700">tokenURI 字串</text>
+<text x="300" y="521" font-size="25" fill="#3d3a35">合約管理者可呼叫 setTokenURI；2021 與 2025 年各改過</text>
+<rect x="36" y="454" width="6" height="75" rx="3" fill="#b03a2e"/>
+<path d="M160 537V563" stroke="#8c8577" stroke-width="3" marker-end="url(#ah)"/>
+<text x="52" y="619" font-size="24" fill="#8a5d00" font-weight="700">中心化主機</text>
+<text x="300" y="619" font-size="32" font-weight="700">metadata：metadata.beeple-collect.com</text>
+<text x="300" y="656" font-size="25" fill="#3d3a35">雲端網頁服務回傳 JSON；目前內容是第七章</text>
+<rect x="36" y="589" width="6" height="75" rx="3" fill="#8a5d00"/>
+<path d="M160 672V698" stroke="#8c8577" stroke-width="3" marker-end="url(#ah)"/>
+<text x="52" y="754" font-size="24" fill="#8a5d00" font-weight="700">中心化主機</text>
+<text x="300" y="754" font-size="32" font-weight="700">影片：nft.beeple-collect.com</text>
+<text x="300" y="791" font-size="25" fill="#3d3a35">約 49 MB 的 mp4；伺服器標示的最後修改日是 2026-04-16（台灣時間）</text>
+<rect x="36" y="724" width="6" height="75" rx="3" fill="#8a5d00"/>
+<path d="M160 807V833" stroke="#8c8577" stroke-width="3" marker-end="url(#ah)"/>
+<text x="52" y="889" font-size="24" fill="#6b4fa0" font-weight="700">實體</text>
+<text x="300" y="889" font-size="32" font-weight="700">雕塑與內建媒體伺服器</text>
+<text x="300" y="926" font-size="25" fill="#3d3a35">條款寫明藝術家保留遠端存取，以維護或更新畫面</text>
+<rect x="36" y="859" width="6" height="75" rx="3" fill="#6b4fa0"/>
+<path d="M36 948H1164" stroke="#ece5d6"/>
+<text x="36" y="987" font-size="25" fill="#665e51">讀取時間 2026-11-10 19:58–20:04（台灣時間）；來源：公開 RPC、Blockscout、佳士得拍品條款。</text>
+</g>
+</svg>

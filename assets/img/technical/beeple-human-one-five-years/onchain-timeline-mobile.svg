@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1417" viewBox="0 0 640 1417" role="img" aria-labelledby="title desc">
+<title id="title">tokenURI 換過兩次家，都由藝術家端操作</title><desc id="desc">2021-10-28 鑄造並指向 Arweave，同日改為 metadata.human-one.xyz；2021-11-09 拍賣成交；成交後經幾次轉手進入 9 位簽署者、門檻 5 的多簽錢包；2023-03-02 設定 10% 版稅；2025-02-05 改指向 metadata.beeple-collect.com；2026-11-10 舊網域無 DNS 位址紀錄。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8c8577"/></marker></defs>
+<rect width="640" height="1417" fill="#fffdf9"/>
+<g font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="58" font-size="32" font-weight="700">tokenURI 換過兩次家，都由藝術家端</text>
+<text x="36" y="100" font-size="32" font-weight="700">操作</text>
+<text x="36" y="136" font-size="22" fill="#665e51">HUMAN ONE token #1 的鏈上紀錄（台灣時間）；拍賣</text>
+<text x="36" y="172" font-size="22" fill="#665e51">成交不在鏈上</text>
+<rect x="36" y="192" width="18" height="18" rx="4" fill="#b03a2e"/><text x="62" y="210" font-size="22" fill="#232020">藝術家端操作</text>
+<rect x="213.39999999999998" y="192" width="18" height="18" rx="4" fill="#1f6f5c"/><text x="239.39999999999998" y="210" font-size="22" fill="#232020">持有權轉移</text>
+<rect x="369.9" y="192" width="18" height="18" rx="4" fill="#665e51"/><text x="395.9" y="210" font-size="22" fill="#232020">鏈下事件</text>
+<rect x="36" y="228" width="18" height="18" rx="4" fill="#d9480f"/><text x="62" y="246" font-size="22" fill="#232020">本次讀取</text>
+<path d="M36 272H604" stroke="#d9d0bf"/>
+<text x="52" y="316" font-size="22" fill="#b03a2e" font-weight="700">2021-10-28</text>
+<text x="52" y="355" font-size="27" font-weight="700">鑄造，初始網址指向 Arweave</text>
+<text x="52" y="389" font-size="22" fill="#3d3a35">由合約管理者錢包呼叫 mintBase</text>
+<rect x="36" y="288" width="6" height="109" rx="3" fill="#b03a2e"/>
+<path d="M36 411H604" stroke="#ece5d6"/>
+<text x="52" y="455" font-size="22" fill="#b03a2e" font-weight="700">2021-10-28</text>
+<text x="52" y="494" font-size="27" font-weight="700">當晚改成 metadata.human-one.xyz/1</text>
+<text x="52" y="528" font-size="22" fill="#3d3a35">setTokenURI；拍賣頁、法律評析讀到的就是它</text>
+<rect x="36" y="427" width="6" height="109" rx="3" fill="#b03a2e"/>
+<path d="M36 550H604" stroke="#ece5d6"/>
+<text x="52" y="594" font-size="22" fill="#665e51" font-weight="700">2021-11-09</text>
+<text x="52" y="633" font-size="27" font-weight="700">佳士得夜拍成交 28,985,000 美元</text>
+<text x="52" y="667" font-size="22" fill="#3d3a35">鏈下事件；新聞稿只寫買家在瑞士</text>
+<rect x="36" y="566" width="6" height="109" rx="3" fill="#665e51"/>
+<path d="M36 689H604" stroke="#ece5d6"/>
+<text x="52" y="733" font-size="22" fill="#1f6f5c" font-weight="700">成交後</text>
+<text x="52" y="772" font-size="27" font-weight="700">經幾次轉手，進入現在的多簽錢包</text>
+<text x="52" y="806" font-size="22" fill="#3d3a35">2025 年改網址前已在多簽錢包；轉手各方是誰未驗證</text>
+<rect x="36" y="705" width="6" height="109" rx="3" fill="#1f6f5c"/>
+<path d="M36 828H604" stroke="#ece5d6"/>
+<text x="52" y="872" font-size="22" fill="#b03a2e" font-weight="700">2023-03-02</text>
+<text x="52" y="911" font-size="27" font-weight="700">設定版稅 10%</text>
+<text x="52" y="945" font-size="22" fill="#3d3a35">setRoyalties，接收者是鑄造錢包</text>
+<rect x="36" y="844" width="6" height="109" rx="3" fill="#b03a2e"/>
+<path d="M36 967H604" stroke="#ece5d6"/>
+<text x="52" y="1011" font-size="22" fill="#b03a2e" font-weight="700">2025-02-05</text>
+<text x="52" y="1050" font-size="27" font-weight="700">改指向 metadata.beeple-collect.com</text>
+<text x="52" y="1084" font-size="22" fill="#3d3a35">先改 base URI，再改 token #1；鏈上沒有發出更新事</text>
+<text x="52" y="1118" font-size="22" fill="#3d3a35">件</text>
+<rect x="36" y="983" width="6" height="143" rx="3" fill="#b03a2e"/>
+<path d="M36 1140H604" stroke="#ece5d6"/>
+<text x="52" y="1184" font-size="22" fill="#d9480f" font-weight="700">2026-11-10</text>
+<text x="52" y="1223" font-size="27" font-weight="700">舊的 metadata 網址已查不到</text>
+<text x="52" y="1257" font-size="22" fill="#3d3a35">metadata.human-one.xyz 兩家公開 DNS 都沒有位址紀</text>
+<text x="52" y="1291" font-size="22" fill="#3d3a35">錄</text>
+<rect x="36" y="1156" width="6" height="143" rx="3" fill="#d9480f"/>
+<path d="M36 1313H604" stroke="#ece5d6"/>
+<text x="36" y="1347" font-size="20" fill="#665e51">來源：Blockscout 交易解碼，並以 drpc 交易收據交叉確</text>
+<text x="36" y="1381" font-size="20" fill="#665e51">認；轉手各方是誰未驗證。</text>
+</g>
+</svg>

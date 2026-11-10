@@ -178,6 +178,7 @@
 - [AI 可以幫你做出錢包，卻做不出 USDC：軟體變便宜以後，什麼還抄不走？](https://swanky.github.io/technical/you-cant-vibe-code-usdc/): AI 能複製介面和程式碼，做不出 USDC 背後的準備金、銀行與法律責任。從 a16z 論點、SVB 事件與 POAP 收攤，看什麼還抄不走。
 - [AI 說「改好了」，你還會再看一眼嗎？時間一趕，我也常直接放行](https://swanky.github.io/technical/cognitive-surrender-ai-review/): AI 產出多到看不完、時間又趕，人就容易直接放行。從華頓的實驗、Addy Osmani 的提醒，和我自己被 AI 騙過的紀錄，看怎麼不把判斷交出去。
 - [AI 寫程式的錢花在哪？先別急著換模型，先看懂帳單](https://swanky.github.io/technical/ai-coding-cost-three-knobs/): 同一個模型只改 effort，花費可以差三倍多。從 Claude 新模型、官方選模指南和開發者實測，看 AI 寫程式的錢花在哪、怎麼量。
+- [HUMAN ONE 滿五年：你買到的是會一直被改的作品，那你到底擁有什麼？](https://swanky.github.io/technical/beeple-human-one-five-years/): Beeple 的 HUMAN ONE 滿五年。實際讀取鏈上紀錄後發現：tokenURI 換過兩次網址，持有人是多簽錢包，作品依條款是授權而非賣斷。看懂動態 NFT 你到底擁有什麼。
 - [完整文章 Atom feed](https://swanky.github.io/feed.xml): 全站專欄文章全文，含發布時間與分類
 
 服務主軸（AI Agent 導入優先、Web3 技術顧問其次）：
