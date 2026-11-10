@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="704" viewBox="0 0 1200 704" role="img" aria-labelledby="title desc">
+<title id="title">先驗證，再調 effort，最後才換模型</title><desc id="desc">Anthropic 建議的調整順序：第一步讓模型能檢查自己的成果，例如測試、建置、實際呼叫；第二步把 effort 調高一級；第三步才換大一號的模型，並從比原本低的 effort 開始。官方在自家程式題子集的測試：全部用 high 跑，通過率 95.3%、每題 0.29 美元；先全部用 low 跑、只把失敗的用 high 重跑，通過率約 97%、每題約 0.17 美元。前提是能自動判斷對錯。</desc>
+<rect width="1200" height="704" fill="#fffdf9"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a5d00"/></marker></defs>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="56" font-size="40" fill="#232020" font-weight="700">先驗證，再調 effort，最後才換模型</text>
+<text x="36" y="100" font-size="26" fill="#665e51">Anthropic 官方建議的順序</text>
+<path d="M36 126H1164" stroke="#d9d0bf"/>
+<rect x="36.0" y="160" width="336.0" height="190" rx="10" fill="#f3efe7" stroke="#E5A300" stroke-width="2"/>
+<circle cx="82.0" cy="212" r="26" fill="#E5A300"/>
+<text x="82.0" y="222" font-size="28" fill="#232020" font-weight="700" text-anchor="middle">1</text>
+<text x="122.0" y="223" font-size="28" fill="#232020" font-weight="700">讓它能檢查自己</text>
+<text x="64.0" y="278" font-size="23" fill="#665e51">測試、建置、</text>
+<text x="64.0" y="314" font-size="23" fill="#665e51">實際打一次服務</text>
+<path d="M380.0 255.0H420.0" stroke="#8a5d00" stroke-width="3" marker-end="url(#a)"/>
+<rect x="432.0" y="160" width="336.0" height="190" rx="10" fill="#f3efe7"/>
+<circle cx="478.0" cy="212" r="26" fill="#E5A300"/>
+<text x="478.0" y="222" font-size="28" fill="#232020" font-weight="700" text-anchor="middle">2</text>
+<text x="518.0" y="223" font-size="28" fill="#232020" font-weight="700">effort 調高一級</text>
+<text x="460.0" y="278" font-size="23" fill="#665e51">不會給它沒有的知識，</text>
+<text x="460.0" y="314" font-size="23" fill="#665e51">但會讓它想久一點</text>
+<path d="M776.0 255.0H816.0" stroke="#8a5d00" stroke-width="3" marker-end="url(#a)"/>
+<rect x="828.0" y="160" width="336.0" height="190" rx="10" fill="#f3efe7"/>
+<circle cx="874.0" cy="212" r="26" fill="#E5A300"/>
+<text x="874.0" y="222" font-size="28" fill="#232020" font-weight="700" text-anchor="middle">3</text>
+<text x="914.0" y="223" font-size="28" fill="#232020" font-weight="700">換大一號的模型</text>
+<text x="856.0" y="278" font-size="23" fill="#665e51">從比原本低的</text>
+<text x="856.0" y="314" font-size="23" fill="#665e51">effort 開始</text>
+<text x="36" y="414" font-size="30" fill="#232020" font-weight="700">便宜先跑、失敗才升級</text>
+<text x="36" y="448" font-size="22" fill="#665e51">Anthropic 在自家程式題子集（SWE-bench Pro）的測試</text>
+<text x="36" y="532" font-size="26" fill="#232020" font-weight="700">全部用 high</text>
+<rect x="376" y="494" width="588.0" height="54" rx="6" fill="#232020"/>
+<text x="392" y="531" font-size="24" fill="#ffffff" font-weight="700">每題 0.29 美元</text>
+<text x="1164" y="531" font-size="26" fill="#232020" font-weight="700" text-anchor="end">通過 95.3%</text>
+<text x="36" y="602" font-size="26" fill="#232020" font-weight="700">low 先跑，失敗再用 high</text>
+<rect x="376" y="564" width="344.7" height="54" rx="6" fill="#8a5d00"/>
+<text x="392" y="601" font-size="24" fill="#ffffff" font-weight="700">每題 0.17 美元</text>
+<text x="1164" y="601" font-size="26" fill="#8a5d00" font-weight="700" text-anchor="end">通過 約 97%</text>
+<text x="36" y="664" font-size="22" fill="#665e51">前提：能自動判斷對錯。不能自動判斷的工作，這招不成立。</text>
+</g>
+</svg>

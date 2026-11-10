@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">一件 AI coding 任務，錢大多花在「讀」</title><desc id="desc">上：Aakash Gupta 讓 Opus 5.5 在大型 Java 程式庫回答 4 個問題，帳單金額 85% 是快取寫入、9% 是快取讀取，輸出只占 6%，讀的部分合計 94%。下：一位開發者 148 次 Opus 5.5 長時間工作的中位數，6,040 萬 token 裡 98% 是模型重讀自己的對話內容。兩者口徑不同，上面是金額，下面是 token 數。</desc>
+<rect width="1200" height="680" fill="#fffdf9"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a5d00"/></marker></defs>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="56" font-size="40" fill="#232020" font-weight="700">一件 AI coding 任務，錢大多花在「讀」</text>
+<text x="36" y="100" font-size="26" fill="#665e51">寫出來的字最貴，但花最多錢的是讀</text>
+<path d="M36 126H1164" stroke="#d9d0bf"/>
+<text x="36" y="178" font-size="28" fill="#232020" font-weight="700">帳單金額</text>
+<text x="36" y="212" font-size="22" fill="#665e51">Opus 5.5 在大型 Java 程式庫回答 4 個問題（Aakash Gupta 實測）</text>
+<rect x="36.0" y="234" width="958.8" height="70" fill="#E5A300"/>
+<text x="515.4" y="279" font-size="28" fill="#232020" font-weight="700" text-anchor="middle">快取寫入 85%</text>
+<rect x="994.8" y="234" width="101.5" height="70" fill="#2f7f78"/>
+<text x="1045.6" y="279" font-size="28" fill="#ffffff" font-weight="700" text-anchor="middle">9%</text>
+<rect x="1096.3" y="234" width="67.7" height="70" fill="#232020"/>
+<text x="1130.2" y="279" font-size="28" fill="#ffffff" font-weight="700" text-anchor="middle">6%</text>
+<text x="36" y="338" font-size="22" fill="#665e51">金色：快取寫入　綠：快取讀取　黑：輸出（單價最高，卻只占 6%）</text>
+<path d="M36 356V370H1096.3V356" fill="none" stroke="#8a5d00" stroke-width="3"/>
+<text x="566.2" y="406" font-size="30" fill="#8a5d00" font-weight="700" text-anchor="middle">讀的部分合計 94%</text>
+<text x="36" y="476" font-size="28" fill="#232020" font-weight="700">token 數量</text>
+<text x="36" y="510" font-size="22" fill="#665e51">一位開發者 148 次 Opus 5.5 長時間工作的中位數：3.8 小時、167 輪、6,040 萬 token</text>
+<rect x="36" y="532" width="1105.4" height="70" fill="#E5A300"/>
+<rect x="1141.4" y="532" width="22.6" height="70" fill="#232020"/>
+<text x="588.7" y="577" font-size="28" fill="#232020" font-weight="700" text-anchor="middle">重讀自己的對話內容 98%</text>
+<text x="36" y="636" font-size="22" fill="#665e51">黑色那一小條：新的內容 2%</text>
+</g>
+</svg>

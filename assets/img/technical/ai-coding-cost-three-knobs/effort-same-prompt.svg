@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="638" viewBox="0 0 1200 638" role="img" aria-labelledby="title desc">
+<title id="title">同一個模型、同一個 prompt，只改 effort</title><desc id="desc">一位開發者用 Fable 5.2 跑同一個 prompt，只改 effort：high 花 24.31 美元、1 小時 5 分；高一級花 43.79 美元、3 小時 9 分；max 花 87.99 美元、3 小時 28 分。從 high 到 max，花費約 3.6 倍。單次實驗，不代表平均。</desc>
+<rect width="1200" height="638" fill="#fffdf9"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a5d00"/></marker></defs>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" fill="#232020">
+<text x="36" y="56" font-size="40" fill="#232020" font-weight="700">同一個模型、同一個 prompt，只改 effort</text>
+<text x="36" y="100" font-size="26" fill="#665e51">一位開發者用 Fable 5.2 的單次實驗</text>
+<path d="M36 126H1164" stroke="#d9d0bf"/>
+<text x="36" y="218" font-size="30" fill="#232020" font-weight="700">high</text>
+<rect x="186" y="176" width="159.7" height="62" rx="6" fill="#E5A300"/>
+<text x="361.7" y="218" font-size="28" fill="#232020" font-weight="700">24.31 美元</text>
+<text x="1164" y="218" font-size="24" fill="#665e51" text-anchor="end">1 小時 5 分</text>
+<text x="36" y="314" font-size="30" fill="#232020" font-weight="700">高一級</text>
+<rect x="186" y="272" width="287.7" height="62" rx="6" fill="#E5A300"/>
+<text x="489.7" y="314" font-size="28" fill="#232020" font-weight="700">43.79 美元</text>
+<text x="1164" y="314" font-size="24" fill="#665e51" text-anchor="end">3 小時 9 分</text>
+<text x="36" y="410" font-size="30" fill="#232020" font-weight="700">max</text>
+<rect x="186" y="368" width="578.0" height="62" rx="6" fill="#8a5d00"/>
+<text x="780.0" y="410" font-size="28" fill="#232020" font-weight="700">87.99 美元</text>
+<text x="1164" y="410" font-size="24" fill="#665e51" text-anchor="end">3 小時 28 分</text>
+<rect x="36" y="474" width="1128" height="84" rx="10" fill="#f3efe7"/>
+<text x="60" y="526" font-size="26" fill="#8a5d00" font-weight="700">從 high 到 max：花費約 3.6 倍，時間約 3.2 倍。他說 high 版漏畫了一道極光。</text>
+<text x="36" y="598" font-size="22" fill="#665e51">單次實驗，不代表平均；但數量級值得記住。</text>
+</g>
+</svg>
