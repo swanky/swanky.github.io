@@ -28,6 +28,15 @@
 {%- capture hero_primary %}開始閱讀 {{ book.count }} 張{% endcapture -%}
 {%- capture talent_url %}/photography/models/talent/{{ talent.slug }}/{% endcapture -%}
 {%- capture talent_label %}{{ talent.name }}的檔案{% endcapture -%}
+{%- comment -%}下一本：依 models.yml 該人物的作品順序；最後一本接回第一本（2026-11-10 加，讓讀完的人有下一步）。{%- endcomment -%}
+{%- assign next_b = nil -%}{%- assign next_found = false -%}
+{%- for tb in talent.books -%}
+  {%- if next_found -%}{%- assign next_b = tb -%}{%- break -%}{%- endif -%}
+  {%- if tb.data == include.book -%}{%- assign next_found = true -%}{%- endif -%}
+{%- endfor -%}
+{%- unless next_b -%}{%- assign next_b = talent.books | first -%}{%- endunless -%}
+{%- if next_b.data == include.book -%}{%- assign next_b = nil -%}{%- endif -%}
+{%- if next_b -%}{%- assign next_bk = site.data[next_b.data] -%}{%- endif -%}
 <main id="main" class="photo-author-page photo-author-subpage sjw-page smm-page">
   {% include photography/subpage-hero.html eyebrow=hero_eyebrow title=book.title intro=hero_intro primary_url="#reading" primary_label=hero_primary secondary_url=talent_url secondary_label=talent_label %}
   {% include photography/subpage-nav.html %}
@@ -106,6 +115,11 @@
         </div>
       </header>
       <div class="photo-author-archive-grid">
+        {% if next_b and next_bk.title %}<a href="{{ next_b.url | relative_url }}" class="photo-author-archive-card sjw-next">
+          <h3>下一本：《{{ next_bk.title }}》</h3>
+          <p>{{ talent.name }}的另一本寫真集{% if next_bk.count %}，{{ next_bk.count }} 張{% endif %}。</p>
+          <span>接著看 →</span>
+        </a>{% endif %}
         <a href="{{ book.flickr_album }}" class="photo-author-archive-card" target="_blank" rel="noopener noreferrer">
           <h3>在 Flickr 看完整相簿</h3>
           <p>{{ book.flickr_album_title }}。{{ book.count }} 張各自上傳，可逐張檢視。</p>

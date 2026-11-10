@@ -1,0 +1,31 @@
+# GitHub Pages 部署失敗時自動重跑（2026-11-10）。
+# 背景：11-02 起部署產物接近 1GB，deploy 在「syncing_files」階段偶發 10 分鐘逾時；
+# 同一份產物重跑通常就會過（例：run 42743011693 第 2 次、42325819063 第 3 次）。
+# 以前要人手動 `gh run rerun <id> --failed`，這裡改成自動，最多跑到第 3 次。
+# 只重跑失敗的 job（deploy），不重新建置。build 本身失敗時重跑也不會過，最多浪費兩次嘗試。
+name: Pages deploy retry
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions:
+  actions: write
+
+jobs:
+  retry:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 3 }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Wait a minute, then re-run failed jobs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+        run: |
+          echo "Pages run $RUN_ID attempt $ATTEMPT failed; re-running failed jobs in 60s."
+          sleep 60
+          gh run rerun "$RUN_ID" --failed

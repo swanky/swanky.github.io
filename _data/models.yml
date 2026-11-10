@@ -138,6 +138,13 @@ talents:
       - { data: swanky_ji_the_wind_can_wait, kind: json, url: /photography/swanky-ji-the-wind-can-wait/ }
       - { data: swanky_ji_the_city_is_lined_with_cloth, kind: json, url: /photography/swanky-ji-the-city-is-lined-with-cloth/ }
       - { data: swanky_ji_leave_a_little_blue, kind: json, url: /photography/swanky-ji-leave-a-little-blue/ }
+      - { data: swanky_ji_flowers_after_the_show, kind: json, url: /photography/swanky-ji-flowers-after-the-show/ }   # 單冊寫真集 7 冊（2026-11-10 移交；只有中文、不分章、無 PDF）
+      - { data: swanky_ji_nine_sittings_today, kind: json, url: /photography/swanky-ji-nine-sittings-today/ }
+      - { data: swanky_ji_the_last_box, kind: json, url: /photography/swanky-ji-the-last-box/ }
+      - { data: swanky_ji_last_ferry_today, kind: json, url: /photography/swanky-ji-last-ferry-today/ }
+      - { data: swanky_ji_light_crosses_the_house, kind: json, url: /photography/swanky-ji-light-crosses-the-house/ }
+      - { data: swanky_ji_white_town_at_noon, kind: json, url: /photography/swanky-ji-white-town-at-noon/ }
+      - { data: swanky_ji_fog_first_lamps_later, kind: json, url: /photography/swanky-ji-fog-first-lamps-later/ }
       - { data: swanky_ji_blue_hour_lingers, kind: json, url: /photography/swanky-ji-blue-hour-lingers/, pdf_size: 約 43 MB }
       - { data: swanky_ji_moon_lost_property, kind: json, url: /photography/swanky-ji-moon-lost-property/, pdf_size: 約 40 MB }
       - { data: swanky_ji_everyday_light, kind: json, url: /photography/swanky-ji-everyday-light/ }
@@ -251,6 +258,7 @@ talents:
     spread: { book: jiang_yingxi_window_still_lit, kind: json, n: 36 }   # 首頁跨頁：36「窗外還亮著」（與書名同題；方形整張不裁切，坐在窗邊望向遠城燈火，最能代表全書）
     books:
       - { data: jiang_yingxi_window_still_lit, kind: json, url: /photography/jiang-yingxi-window-still-lit/, pdf_size: 約 22 MB }
+      - { data: jiang_yingxi_rain_all_day, kind: json, url: /photography/jiang-yingxi-rain-all-day/ }   # 單冊寫真集（2026-11-10 移交；只有中文、無 PDF）
       - { data: swanky_ji_uniform_street, kind: json, url: /photography/swanky-ji-uniform-street/ }   # 與史旺姬合作（2026-11-06，無 PDF）
 
   # ── 角色 IP（2026-09-25 站主指示納入：五位 CloneX、Meebit、MAYC；身份依攝影工作區 approved-cast-r05 的核准呈現，名冊照為同棚生成）──

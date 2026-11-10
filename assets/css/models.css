@@ -385,3 +385,12 @@ a.sm-media:hover img { transform: scale(1.015); }
   .sm-series { grid-template-columns: 1fr; gap: 28px; }
   .sm-series__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
 }
+
+/* 作品目錄（作品超過 8 本的人物頁；2026-11-10）：書名多欄清單，點了跳到該本 */
+.sm-book-index { margin: 0 0 var(--sm-s2); padding: 22px 0 24px; border-top: 1px solid var(--sm-line); border-bottom: 1px solid var(--sm-line); }
+.sm-book-index ol { margin: 14px 0 0; padding: 0; list-style: none; columns: 4 13rem; column-gap: 28px; font-size: var(--sm-t4); line-height: 1.5; }
+.sm-book-index li { break-inside: avoid; }
+.sm-book-index li a { display: block; padding: 7px 0; color: var(--sm-ink) !important; text-decoration: none !important; }
+.sm-book-index li a:hover, .sm-book-index li a:focus-visible { color: var(--sm-gold-deep) !important; }
+.sm-book { scroll-margin-top: 24px; }
+@media (max-width: 767px) { .sm-book-index ol { columns: 2 8rem; column-gap: 18px; } }

@@ -1345,3 +1345,6 @@
   .pa-myths__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
   .pa-myths__grid span { font-size: 0.58rem; left: 5px; bottom: 3px; }
 }
+
+/* 單冊寫真集結尾的「下一本」：橫跨整列，放在其他出口之前（2026-11-10） */
+.photo-author-archive-card.sjw-next { grid-column: 1 / -1; min-height: 0; }

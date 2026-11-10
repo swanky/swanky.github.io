@@ -54,6 +54,15 @@
         <h2 id="portfolio-title">作品集</h2>
         <p>每本只放封面與各章首張，完整內容請翻閱整本寫真集。全部為自主企劃的概念作品，不是商業委託。</p>
       </header>
+      {% if t.books.size > 8 %}
+      <nav class="sm-book-index" aria-label="作品目錄">
+        <p class="sm-eyebrow">作品目錄 · {{ t.books.size }} 本 · 點書名跳到那一本</p>
+        <ol>
+          {% for b in t.books %}{% assign ix = site.data[b.data] %}<li><a href="#book-{{ ix.slug | default: b.data }}">{{ ix.title }}</a></li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
 
       {%- assign tb_myths = site.data.swanky_ji_myths.volumes | map: "data" -%}{%- assign tb_myths_shown = false -%}
       {% for b in t.books %}
