@@ -6,7 +6,7 @@ date: 2026-10-08
 published: true
 categories: [technical]
 tags: [ai-agent, grok-bot, model-routing, harness, claude-opus, agentic-engineering, llm-industry]
-description: "馬斯克宣布 Grok Bot 會依任務改用 Claude Opus 5.5、Midjourney、Suno 等最合適的後端。本文從原始貼文、官方文件與社群反應出發，拆解 Bot 的四代演化、代理人三層結構、對所有 LLM 廠商的六個影響，以及企業該怎麼看待「替你挑模型」的代理人。"
+description: "馬斯克宣布 Grok Bot 會依任務改用最合適的後端模型。拆解 Bot 的四代演化、對 LLM 廠商的影響，以及企業該怎麼看待「替你挑模型」的代理人。"
 keywords: "Grok Bot, 模型路由, model routing, Claude Opus 5.5, Midjourney, Suno, SpaceXAI, Elon Musk, AI Agent, harness, 代理人, Agentic Engineering, 史旺基"
 cover_image: /assets/img/linkedin/grok-bot-model-routing.jpg
 cover_alt: "水手服品牌主角在太空任務控制室裡拿著放大鏡與長帳單，追查 Grok Bot 機器人把工作接線分派給 Opus 5.5、Midjourney、Suno 三個工作站，左側的馬斯克漫畫肖像正拉下派工拉桿"

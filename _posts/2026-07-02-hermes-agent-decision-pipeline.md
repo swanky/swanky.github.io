@@ -7,7 +7,7 @@ layout: article
 cover_image: /assets/img/linkedin/hermes-agent-decision-pipeline.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E8%A3%9D%E4%BA%86-hermes-agent-%E4%B9%8B%E5%BE%8C%E6%88%91%E4%B8%80%E7%9B%B4%E5%9C%A8%E6%83%B3%E5%A5%B9%E9%81%A9%E5%90%88%E5%81%9A%E4%BB%80%E9%BA%BC%E7%AD%94%E6%A1%88%E6%98%AF%E5%B9%AB%E6%88%91%E8%84%AB%E5%96%AE-swanky-hsiao-yypdc"
-description: "互動式的 Claude Code 之外，排程自主型的 Hermes Agent 適合做什麼？我把它設成每日排程，讓它把「脫單」這個模糊的人生目標，拆成每天可以推進的行動——一場關於自主 Agent 與 AI decision pipeline 的實驗。"
+description: "排程自主型的 Hermes Agent 適合做什麼？我把它設成每日排程，把「脫單」這個模糊的人生目標，拆成每天可以推進的行動。"
 keywords: Hermes Agent, Nous Research, 自主 Agent, autonomous agent, Claude Code, AI Agent, agentic AI, decision pipeline, 排程自主, AI 工作流, INTJ, 脫單, 生成式AI, 史旺基, Swanky Hsiao, Swanky Studio
 ---
 

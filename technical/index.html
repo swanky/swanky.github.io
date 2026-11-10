@@ -289,10 +289,12 @@ breadcrumbs:
       </header>
       <div class="tech-article-grid">
         {% assign sorted_articles = site.categories.technical | sort: "date" | reverse %}
+        {%- comment -%} 列表卡片用 640px 的 -card.jpg 縮圖（有就用、沒有退回原圖），做法同 _includes/article-card-grid.html {%- endcomment -%}
+        {% assign card_thumbs = site.static_files | where_exp: "f", "f.path contains '-card.jpg'" | map: "path" %}
         {% for article in sorted_articles limit:6 %}
         <article class="tech-article-card">
           <a href="{{ article.url | relative_url }}">
-            {% if article.cover_image %}<div class="tech-article-media"><img src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy"></div>{% endif %}
+            {% if article.cover_image %}{% assign card_src = article.cover_image %}{% assign card_thumb = card_src | replace: '.jpg', '-card.jpg' | replace: '.jpeg', '-card.jpg' | replace: '.JPG', '-card.jpg' %}{% if card_thumb != card_src and card_thumbs contains card_thumb %}{% assign card_src = card_thumb %}{% endif %}<div class="tech-article-media"><img src="{{ card_src | relative_url }}" width="640" height="360" alt="{{ article.cover_alt | default: article.title }}" loading="lazy"></div>{% endif %}
             <div class="tech-article-body"><span class="tech-article-date">{{ article.date | date: "%Y-%m-%d" }}</span><h3>{{ article.title }}</h3></div>
           </a>
         </article>

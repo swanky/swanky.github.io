@@ -28,7 +28,7 @@ permalink: /jinpingmei/
   {% include jinpingmei/lightbox-css.html %}
   <link href="{{ '/assets/css/_reading-tokens.css' | relative_url }}?v=20260901-1" rel="stylesheet">
   <link href="{{ '/assets/css/jinpingmei.css' | relative_url }}?v=20261009-1" rel="stylesheet">
-  <link href="{{ '/assets/css/jinpingmei-hub.css' | relative_url }}?v=20261103-1" rel="stylesheet">
+  <link href="{{ '/assets/css/jinpingmei-hub.css' | relative_url }}?v=20261110-1" rel="stylesheet">
   {% include jinpingmei/gtag.html %}
   {%- comment -%}基本結構化資料（issue swanky/rwa#22 P3a）：本頁 layout: null，不經 home／page layout 的共用 JSON-LD。作者只寫「史旺基」，不放雇主。{%- endcomment -%}
   <script type="application/ld+json">
@@ -88,6 +88,11 @@ permalink: /jinpingmei/
           <p class="jpm-eyebrow">A VIRTUAL AI STUDIO REMAKES A 400-YEAR-OLD CLASSIC</p>
           <h1><span class="ot-name">金瓶梅</span><span class="ot-uni">宇宙</span></h1>
           <p class="overture-sub">四百年前，一部奇書寫盡人間慾望；四百年後，一個虛擬 AI 劇組把它重新製作成文字、影像與遊戲。文學顧問、選角導演、服裝考證、分鏡師——每個位置都由 AI 協作擔任，全部工作底稿公開。</p>
+          <p class="overture-cta">
+            <a class="act-cta" href="{{ '/jinpingmei/text/' | relative_url }}">讀原文<i aria-hidden="true">→</i></a>
+            <a class="act-cta" href="{{ '/jinpingmei/characters/' | relative_url }}">看角色<i aria-hidden="true">→</i></a>
+            <a class="act-cta" href="{{ '/jinpingmei/studio/' | relative_url }}">看影像<i aria-hidden="true">→</i></a>
+          </p>
           <span class="overture-seal" aria-hidden="true"><i>史旺</i><i>基製</i></span>
         </div>
         {% include jinpingmei/woodcut-figure.html id="jpm-c17-scene-06" class="overture-woodcut" zoom=true %}

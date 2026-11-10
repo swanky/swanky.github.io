@@ -14,7 +14,7 @@ related_posts:
   - matt-pocock-skills-ai-coding-workflow
   - ai-executor-orchestrator
 hero_image: true
-description: "Hermes Bot Mode 把 Profile 變成有名字、記憶、技能、模型與排程的長期 AI 角色。本文從底層架構、群組協作、安全邊界到 Grok Bot、Claude Code 與 Codex 的產品路線，分析 Identity-centric Agent 為什麼值得注意。"
+description: "Hermes Bot Mode 把 Profile 變成有名字、記憶、技能與排程的長期 AI 角色。從底層架構、群組協作到安全邊界，分析它為什麼值得注意。"
 keywords: Hermes Bot Mode, Hermes Agent, Grok Bot, Claude Code Agent Teams, Codex Goal Mode, AI Agent, Multi-Agent, Persistent Agent, Profile, Routine, 史旺基
 ---
 

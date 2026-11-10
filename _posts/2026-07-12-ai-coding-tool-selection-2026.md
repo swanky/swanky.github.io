@@ -7,7 +7,11 @@ tags: [claude-code, ai-coding, agentic-engineering, hermes-agent]
 layout: article
 cover_image: /assets/img/ai-coding-selection-2026/ai-coding-tool-selection-2026.jpg
 hero_image: true
-description: "AI Coding 選型已不是模型排行榜。本文用九層框架比較 Claude Code、Codex、Grok Build、Hermes Agent、Cursor、OpenCode 與 GitHub Copilot，拆解專案知識、OpenRouter、企業治理、CP 值與 30 天 pilot 方法。"
+related_posts:
+  - gstack-workflow-guide
+  - fable-field-guide
+  - agentic-engineering-patterns-guide
+description: "AI Coding 選型已不是模型排行榜。用九層框架比較 Claude Code、Codex、Cursor、Copilot 等工具，附 30 天 pilot 方法。"
 keywords: AI Coding 工具選擇, Claude Code, Codex, Grok Build, Hermes Agent, Cursor, OpenCode, GitHub Copilot, OpenRouter, AGENTS.md, AI Agent, agentic engineering, 企業 AI 導入, AI Coding ROI, 史旺基, Swanky Studio
 ---
 

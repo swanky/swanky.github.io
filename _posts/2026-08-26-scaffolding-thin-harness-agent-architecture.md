@@ -14,7 +14,7 @@ related_posts:
   - matt-pocock-skills-ai-coding-workflow
   - ai-agent-surgical-team
 hero_image: true
-description: "Tibo Sottiaux 說 Scaffolding is coping, not scaling，不代表不要規格、測試與安全邊界。本文拆解 Thin Harness、Capability Overhang、Artifact-driven Agent Workflow，以及 SDD 該如何調整。"
+description: "Scaffolding is coping 不代表不要規格、測試與安全邊界。拆解 Thin Harness 的意思，以及 SDD 該如何調整。"
 keywords: Scaffolding is coping, Thin Harness, AI Agent 架構, Agent Harness, Capability Overhang, SDD, Spec-Driven Development, Codex, Claude Code, Agent Skills, Multi-Agent, Context Engineering, 史旺基
 ---
 

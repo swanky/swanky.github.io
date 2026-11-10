@@ -7,7 +7,7 @@ tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/hermes-agent-mixture-of-agents.jpg
 hero_image: true
-description: "AI Agent 的競爭，正從「哪個模型最聰明」轉向「如何讓多模型、工具、記憶與工作流組成可靠系統」。本文從 Mixture of Agents（MoA）切入，解析 Nous Research 的 Hermes Agent 如何把 MoA 產品化成一個虛擬模型供應商，比較 LangGraph、CrewAI、AutoGen、OpenAI Agents SDK 等框架的差異，並附上研究論文清單與治理原則。"
+description: "AI Agent 的競爭，正從「哪個模型最聰明」轉向多模型如何組成可靠系統。從 Mixture of Agents 切入，解析 Hermes Agent 的做法。"
 keywords: Mixture of Agents, MoA, Hermes Agent, Nous Research, 多代理協作, multi-agent, AI Agent, agentic engineering, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, OpenRouter, Claude Code, aggregator, reference model, MoE, ReAct, GAIA, SWE-bench, AI runtime, 史旺基, Swanky Hsiao, Swanky Studio
 ---
 

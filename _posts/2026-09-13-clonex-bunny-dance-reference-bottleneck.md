@@ -14,7 +14,7 @@ cta_context: ai-visual
 related_posts:
   - ai-video-production-rehearsal-seedance-workflow
   - ucx-uniform-clonex-origin
-description: "看完 GPT‑6 Astra 的火箭建模與 3D 列印示範，我把 Blender 裝回來，想試試手上 NFT 提供的三維模型能否協助製作 AI 影片。從五隻 CloneX 群舞到 Bunny 的文字與深度比較，這篇用白話整理實測、失敗與尚未驗證的假設。"
+description: "我把 Blender 裝回來，試試 NFT 提供的三維模型能否協助製作 AI 影片。從五隻 CloneX 群舞到 Bunny 的比較，整理實測、失敗與未驗證的假設。"
 keywords: CloneX, Bunny, AI 舞蹈, Seedance, Blender, 深度參考, 文字編舞, KPOP, AI Agent, 史旺基
 ---
 

@@ -8,6 +8,10 @@ ai_learn: ai-basics/agent
 layout: article
 cover_image: /assets/img/linkedin/claude-code-designing-loops.jpg
 hero_image: true
+related_posts:
+  - loop-engineering-ai-system
+  - fable-field-guide
+  - gstack-workflow-guide
 description: "Claude Code 團隊把「設計循環」正式定義為：代理人重複執行工作循環，直到滿足停止條件。本文整理官方對回合制、目標導向、時間導向、主動式四種循環的分類，以及如何在維持程式碼品質的同時管好 token。"
 keywords: Designing Loops, 設計循環, Loop Engineering, Claude Code, agentic loop, 代理人循環, 回合制循環, 目標導向循環, 時間導向循環, 主動式循環, turn-based loop, goal-based loop, proactive loop, /goal, /loop, /schedule, dynamic workflows, auto mode, token 管理, Skills, 代理式開發, agentic engineering, 史旺基, Swanky Hsiao, Swanky Studio
 ---

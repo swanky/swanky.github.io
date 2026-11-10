@@ -138,10 +138,14 @@
 .overture-sub { margin: 0; color: var(--jpm-muted); max-width: 30em; font-size: 1rem; }
 .js-on .overture-title .jpm-eyebrow, .js-on .overture-title h1,
 .js-on .overture-title .overture-sub, .js-on .overture-title .overture-seal { opacity: 0; }
-.js-on .ov-ready .overture-title .jpm-eyebrow { animation: oq-in .9s ease forwards .9s; }
-.js-on .ov-ready .overture-title h1 { animation: oq-in 1.2s cubic-bezier(.22, .61, .36, 1) forwards 1.15s; }
-.js-on .ov-ready .overture-title .overture-sub { animation: oq-in 1s ease forwards 1.7s; }
-.js-on .ov-ready .overture-title .overture-seal { animation: seal-stamp .5s cubic-bezier(.2, 1.6, .35, 1) forwards 2.5s; }
+.js-on .ov-ready .overture-title .jpm-eyebrow { animation: oq-in .6s ease forwards .1s; }
+.js-on .ov-ready .overture-title h1 { animation: oq-in .8s cubic-bezier(.22, .61, .36, 1) forwards .2s; }
+.js-on .ov-ready .overture-title .overture-sub { animation: oq-in .7s ease forwards .45s; }
+.js-on .ov-ready .overture-title .overture-seal { animation: seal-stamp .5s cubic-bezier(.2, 1.6, .35, 1) forwards 1.2s; }
+
+/* 首屏續讀入口：讀原文／看角色／看影像。不做進場動畫，一進頁就看得到；右側留位給朱印 */
+.overture-cta { display: flex; flex-wrap: wrap; gap: .7rem .8rem; margin: 1.5rem 0 0; padding-right: 4.6rem; }
+.overture-cta .act-cta { padding: .62em 1.15em; font-size: .92rem; }
 
 /* 朱印「史旺基製」 */
 .overture-seal {
@@ -501,6 +505,7 @@
   .overture-title { text-align: left; }
   .overture-seal { position: static; display: inline-flex; margin-top: 1.4rem; transform: rotate(-3deg) scale(.82); transform-origin: left center; }
   .overture-cue { display: none; }
+  .overture-cta { padding-right: 0; }
   .triptych { grid-template-columns: 1fr; gap: 14px; }
   .tri { aspect-ratio: 3 / 4; }
   .tri img { object-position: 50% 8%; }
@@ -531,8 +536,8 @@
   /* 插圖加入後，序幕需要比全站標準版心更寬；三區各自保留最低可讀寬度，
      避免直排引文、大標與圖說跨欄互疊。 */
   .overture-inner {
-    width: min(1480px, calc(100% - 80px));
-    grid-template-columns: minmax(460px, .8fr) minmax(520px, 1.35fr) minmax(220px, .58fr);
+    width: min(1480px, calc(100% - 120px)); /* 兩側各 60px：右側章節導覽佔約 44px，不可壓到插圖 */
+    grid-template-columns: minmax(430px, .8fr) minmax(520px, 1.35fr) minmax(220px, .58fr);
     gap: clamp(36px, 4vw, 72px);
   }
   .overture-title { min-width: 0; }
@@ -543,7 +548,7 @@
   .overture-woodcut figcaption { display: block; }
   .overture-woodcut figcaption a { display: inline-block; margin-top: .35rem; }
   .js-on .overture-woodcut { opacity: 0; }
-  .js-on .ov-ready .overture-woodcut { animation: oq-in 1.2s ease forwards 2.2s; }
+  .js-on .ov-ready .overture-woodcut { animation: oq-in .9s ease forwards .7s; }
 }
 @media (max-width: 767px) {
   .overture-woodcut { display: block; max-width: 340px; margin: .4rem auto 0; }

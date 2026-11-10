@@ -186,6 +186,13 @@
 - [AI 不是我的替身，而是我跨出邊界的方法](https://swanky.github.io/technical/ai-photography-virtual-agency/)
 - [單張都核准，整本卻退回：我給寫真集加了一道變化度閘門](https://swanky.github.io/technical/photobook-variety-gate/)
 - [我讓兩個 AI 在私有倉庫裡互相留言，幫我把作品發上 X](https://swanky.github.io/technical/grok-x-relay-experiment/)
+- [Fable 田野指南：當地圖展開，你要學會的不只是下 prompt](https://swanky.github.io/technical/fable-field-guide/)
+- [gstack 教學：把 Claude Code 變成完整的 AI 開發工作流](https://swanky.github.io/claude-code/gstack-workflow-guide/)
+- [AI 寫程式很便宜，好程式沒有——Simon Willison《Agentic Engineering Patterns》導讀](https://swanky.github.io/claude-code/agentic-engineering-patterns-guide/): Simon Willison 把「代理式工程」整理成一份指南。我讀完全文，挑出對台灣技術團隊最有用的重點，並對照自己帶團隊導入 Claude Code 的經驗。
+- [Poteto 的 2,500 條 PR，真正值得學的是什麼？從 pstack 到能被信任的軟體工廠](https://swanky.github.io/technical/poteto-pstack-trust-before-scale/): 從 Lauren Tan 的演講與 Matt Pocock 訪談，拆解 pstack、信任階梯、Feature map、驗證 CLI、Dune 架構與雙迴圈：如何先建立可信環境，再擴大 agent 並行，並保留自動合併的風險邊界。
+- [pstack 六個指令，照一天的開發順序用一遍：從 /recall 到 /bro](https://swanky.github.io/technical/pstack-six-skills-workday/): pstack 有 24 條原則、23 套流程、30 個 skill。照一天寫程式的順序，拆解六個單獨用也好用的指令：各自交出什麼證據，以及原始規格裡比影片更嚴格的地方。
+- [Grok Bot 開始替你挑大腦：馬斯克那則貼文，是 AI 從「模型戰爭」走向「調度戰爭」的訊號](https://swanky.github.io/technical/grok-bot-model-routing/): 馬斯克宣布 Grok Bot 會依任務改用最合適的後端模型。拆解 Bot 的四代演化、對 LLM 廠商的影響，以及企業該怎麼看待「替你挑模型」的代理人。
+- [Malfoid 三週爆紅：AI 把「角色一致」從畫功變成資料準備](https://swanky.github.io/technical/malfoid-ai-character-consistency/): 一張女版馬份同人圖，三週內長成 AI 短片、LoRA 與生成網站。從 Textual Inversion、DreamBooth、LoRA、IP-Adapter 到商用多參考影片模型，拆解角色一致性怎麼被做出來、又在哪裡會壞。
 - [攝影師現在可以怎麼用 AI 做作品？從真人選片到虛擬角色寫真](https://swanky.github.io/technical/ai-photographer-judgment-character-photobook/)
 - [AI 寫得出程式，不代表產品上得了線：工程師的價值搬到哪裡？](https://swanky.github.io/technical/ai-code-production-review-bottleneck/)
 - [同時派五個 Agent 之前，先讓它知道自己做錯了](https://swanky.github.io/technical/agent-parallel-verification-first/)

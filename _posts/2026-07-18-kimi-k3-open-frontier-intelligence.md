@@ -8,7 +8,11 @@ tags: [kimi-k3, open-weight-llm, ai-agent, agentic-engineering]
 layout: article
 cover_image: /assets/img/kimi-k3-open-frontier/kimi-k3-open-frontier-banner.jpg
 hero_image: true
-description: "Kimi K3 以 2.8 兆參數、100 萬 token、原生視覺與長程 Agent 能力進入前沿模型第一梯隊，並在前端開發、程式與代理任務的部分評測超越閉源旗艦。本文拆解它的 MoE、KDA、AttnRes、API 成本、Harness 限制，以及『已上線但尚未開放權重』的關鍵差別。"
+related_posts:
+  - ai-model-wave-agentic-shift
+  - fable-field-guide
+  - ai-coding-tool-selection-2026
+description: "Kimi K3 在前端開發、程式與代理任務的部分評測超越閉源旗艦。拆解它的架構、API 成本與限制，以及「已上線但尚未開放權重」的關鍵差別。"
 keywords: Kimi K3, Moonshot AI, 月之暗面, 開放權重模型, 開源 LLM, Mixture of Experts, MoE, Kimi Delta Attention, Attention Residuals, 100萬 token, AI Agent, Agentic Engineering, Kimi Code, Artificial Analysis, Arena WebDev, 史旺基, Swanky Studio
 ---
 

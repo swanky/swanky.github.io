@@ -71,10 +71,12 @@ breadcrumbs:
         {% endif %}
       {% endfor %}
       {% assign sorted_articles = ai_articles | slice: 0, 12 %}
+      {%- comment -%} 列表卡片用 640px 的 -card.jpg 縮圖（有就用、沒有退回原圖），做法同 _includes/article-card-grid.html {%- endcomment -%}
+      {% assign card_thumbs = site.static_files | where_exp: "f", "f.path contains '-card.jpg'" | map: "path" %}
       <div class="edu-card-grid">
         {% for article in sorted_articles %}
         <article class="edu-card">
-          {% if article.cover_image %}<img class="edu-card__image" src="{{ article.cover_image | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
+          {% if article.cover_image %}{% assign card_src = article.cover_image %}{% assign card_thumb = card_src | replace: '.jpg', '-card.jpg' | replace: '.jpeg', '-card.jpg' | replace: '.JPG', '-card.jpg' %}{% if card_thumb != card_src and card_thumbs contains card_thumb %}{% assign card_src = card_thumb %}{% endif %}<img class="edu-card__image" src="{{ card_src | relative_url }}" alt="{{ article.cover_alt | default: article.title }}" loading="lazy">{% endif %}
           <div class="edu-badges"><span class="edu-badge edu-badge--muted">{{ article.date | date: "%Y-%m-%d" }}</span></div>
           <h3>{{ article.title }}</h3>
           {% if article.description %}<p>{{ article.description }}</p>{% endif %}

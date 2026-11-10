@@ -7,7 +7,7 @@ tags: [claude-code, hermes-agent, openrouter, video-generation]
 layout: article
 cover_image: /assets/img/hermes-openrouter-video/hermes-openrouter-video-banner.jpg
 hero_image: true
-description: "為了測試 GPT-5.6 Sol，我在 Windows 上替 Hermes Agent 加入本機 openrouter-video plugin，串接 OpenRouter 的非同步影片 API 與 Seedance 2.0 Fast，再用 FFmpeg、Pillow、Edge TTS 完成 35 秒攝影品牌短片。本文記錄設定、成本閘門、manifest、重試、素材解析度與人工驗收的完整過程。"
+description: "我替 Hermes Agent 串上 OpenRouter 的影片 API，完成 35 秒攝影品牌短片。記錄設定、成本閘門、重試與人工驗收的過程。"
 keywords: Hermes Agent, OpenRouter, Seedance 2.0 Fast, GPT-5.6 Sol, AI 影片生成, image to video, text to video, FFmpeg, Edge TTS, Hermes plugin, agentic workflow, AI Agent, 史旺基, Swanky Studio
 ---
 
