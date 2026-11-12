@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 
 const SERVICE_PAGES = [
   'photography/commercial-works.html',
+  'photography/personal-photobook.html',
   'technical/ai-agent-consulting/index.html',
   'technical/web3-consulting/index.html',
   'technical/ai-visual-production/index.html',
@@ -48,4 +49,15 @@ test('委託攝影頁 FAQ 與 FAQPage 共用一份，且不出現未核定的條
   // 地點、交通費、訂金、價格數字、交付張數或天數都沒有核定（rwa#22 P2），別從模特兒課複製條款過來
   const faqText = fm.split(/^faq:$/m)[1];
   assert.doesNotMatch(faqText, /NT\$|新台幣|\d+\s*元|訂金|雙北|台北|交通|\d+\s*張|\d+\s*(天|週)內交/);
+});
+
+test('寫真書委託頁：洽詢一律連回委託頁，不放表單、信箱或價格（2026-11-13）', () => {
+  const path = 'photography/personal-photobook.html';
+  const src = readFileSync(new URL(`../${path}`, import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  // 委託的聯絡入口只放在委託頁（站主規則）
+  assert.doesNotMatch(src, /\/contact\/|mailto:|contact-fallback|site\.email/);
+  assert.match(src, /\/photography\/commercial-works\/#contact/);
+  assert.match(src, /\{% include faq-jsonld\.html faq=page\.faq %\}/);
+  // 方案、價格、張數、頁數、交件天數都還沒核定
+  assert.doesNotMatch(src, /NT\$|新台幣|\d+\s*元|訂金|\d+\s*張精修|\d+\s*頁|\d+\s*(天|週)內交/);
 });

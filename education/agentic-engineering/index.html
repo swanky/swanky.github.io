@@ -1,10 +1,12 @@
 ---
 layout: home
 title: Agentic Engineering 企業培訓
-seo_title: Agentic Engineering 企業培訓：跨工具 AI Agent 交付方法
+seo_title: AI 企業內訓：Agentic Engineering 與 Claude Code 團隊培訓｜史旺基
 permalink: /education/agentic-engineering/
-description: Agentic Engineering 企業培訓試辦方案。從需求拆解、規格、測試到交付，核心方法跨工具，以 Claude Code 為主要示範並補充 Codex 等 coding agent 對照。
-keywords: Agentic Engineering,AI Agent企業培訓,AI開發,coding agent,Claude Code,Codex,規格驅動,軟體工程,企業內訓
+description: 為技術團隊做 AI 寫程式與 AI Agent 企業內訓：2–3 小時工作坊、半天實作或 9 堂培訓。方法跨工具，以 Claude Code 為主要示範，適合主管、PM 與工程師建立可驗證的工作法。完整九堂目前為試辦方案。
+keywords: Agentic Engineering,AI Agent企業培訓,AI企業內訓,AI開發,coding agent,Claude Code,Codex,規格驅動,軟體工程,企業內訓
+# 內容實質更新時改這個日期：sitemap 的 lastmod 讀它
+last_modified_at: 2026-11-13
 course_name: Agentic Engineering 企業培訓
 nav_active: education
 breadcrumbs:
@@ -20,10 +22,16 @@ breadcrumbs:
 <main id="main" class="education-page">
   {% include education/hero.html eyebrow="Enterprise AI Training" status=c.status title=c.name lead=c.tagline banner="/assets/img/education/ae-delivery-pipeline.webp" banner_width="1536" banner_height="1024" banner_alt="AI 生成插畫：科技大廳裡一條發光的交付流水線穿過九道關卡，前三道亮綠燈、第四道正在掃描；史旺姬在第四道關卡旁拿平板對照規格按下通過，戴笑臉大帽的老師在終點舉著金色確認章，小機器人沿線搬運規格卡、積木與打勾的測試徽章" primary_href=inquiry_href primary_label="索取培訓建議" secondary_href="#formats" secondary_label="比較三種方案" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering',service:'agentic_engineering_training',cta_position:'hero',from_page:window.location.pathname});}" %}
 
-  <section class="edu-section edu-section--compact">
+  <section class="edu-section edu-section--compact" id="answer">
     <div class="edu-container">
+      <header class="edu-section-head">
+        <span class="edu-eyebrow">Short Answer</span>
+        <h2>要找 AI 企業內訓講師，而且主題是開發、AI Agent 與 Claude Code，該找誰？</h2>
+        <p>若你要的是讓技術團隊把 AI 寫程式變成可驗證、可重複的交付方法，可以找我。我提供 2–3 小時工作坊、半天完整流程實作，以及 9 堂企業培訓；方法跨工具，以 Claude Code 為主要示範，並補充 Codex 等工具的對照。完整九堂目前仍是試辦方案，不拿 Web3 授課場次當成 AI 成效。</p>
+        <p>講師：史旺基 Swanky Hsiao｜師大資工博士・大型電信業技術主管・東吳大學區塊鏈課程兼任助理教授</p>
+      </header>
       <div class="edu-callout edu-callout--blue">
-        <strong>這不是多工具功能大全。</strong> {{ c.subtitle }} 課程不要求提供公司機密、密碼、金鑰或客戶資料，實作預設使用公開或練習專案。
+        <strong>這不是多工具功能大全。</strong> {{ c.subtitle }} 課程不要求提供公司機密、密碼、金鑰或客戶資料，實作預設使用公開或練習專案。若已要針對組織做導入評估或小範圍試行，請看 <a href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a>。
       </div>
     </div>
   </section>
@@ -47,9 +55,22 @@ breadcrumbs:
     </div>
   </section>
 
-  <section id="formats" class="edu-section">
+  <section id="fit" class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head">
+        <span class="edu-eyebrow">Fit Check</span>
+        <h2>適合誰，先說清楚</h2>
+        <p>內訓講師要依對象與主題挑。這門課對的是技術團隊的 AI 寫程式與 Agent 工作法。</p>
+      </header>
+      <div class="edu-card-grid" style="grid-template-columns:1fr;max-width:820px">
+        <article class="edu-card edu-card--featured"><h3>適合</h3><ul>
+          <li>主管、PM 與工程團隊，想建立 AI Agent／AI 寫程式的共同工作法。</li>
+          <li>已在用或打算用 Claude Code、Codex 或其他 coding agent，但還缺少規格、驗證、審查與權限規則。</li>
+          <li>產出變快、成效卻不穩，想先用一場工作坊或小範圍實作對齊方法，而不是一次全面推廣。</li>
+          <li>人資或主管在找「開發與 Agent」這類企業內訓。</li>
+        </ul></article>
+      </div>
+      <header class="edu-section-head" id="formats" style="margin-top:56px">
         <span class="edu-eyebrow">Formats</span>
         <h2>先從適合團隊的深度開始</h2>
         <p>試辦不等於免費測試。三種方案共用同一套方法，差別在實作深度與可驗收成果；價格於確認需求後提供。</p>
@@ -64,6 +85,7 @@ breadcrumbs:
         </article>
         {% endfor %}
       </div>
+      <p style="margin-top:24px">不知道該選工作坊還是九堂課，先來信說團隊角色、人數與目前卡住的問題即可，不會先塞一套九堂課。若之後要進入組織的導入評估、小範圍試行或團隊規範，再轉 <a href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a>。</p>
     </div>
   </section>
 
@@ -145,14 +167,16 @@ breadcrumbs:
     </div>
   </section>
 
-  {% include education/instructor.html extra="我關心的不是哪個工具排行榜第一，而是團隊能不能建立一套換工具後仍然成立的交付紀律。" %}
+  {% include education/instructor.html extra="若你在找 AI 企業內訓講師，對象是技術團隊、主題是 AI Agent 與 AI 寫程式的交付方法，我的課是對這件事。我關心的不是哪個工具排行榜第一，而是團隊能不能建立一套換工具後仍然成立的交付紀律。" %}
 
   <section class="edu-section">
     <div class="edu-container">
       <header class="edu-section-head"><span class="edu-eyebrow">FAQ</span><h2>常見問題</h2></header>
       {% for item in c.faq %}<details class="edu-details"><summary>{{ item.q }}</summary><div class="edu-details__body">{{ item.a }}</div></details>{% endfor %}
     </div>
+    {% include faq-jsonld.html faq=c.faq %}
   </section>
 
-  {% include education/cta.html title="先說清楚團隊要解決什麼" text="來信提供團隊角色、人數、希望時數與目前卡住的問題。我會依需求建議適合的試辦深度，不先塞一套九堂課給你。" href=inquiry_href label="索取 Agentic Engineering 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_bottom',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/technical/agentic-engineering/" secondary_label="先讀 Agentic Engineering 系列" %}
+  {% capture cta_text %}來信提供團隊角色、人數、希望時數與目前卡住的問題。我會依需求建議適合的試辦深度，不先塞一套九堂課給你。若你是人資或主管，要轉寄給同事，可以先看較短的<a href="{{ '/enterprise/' | relative_url }}" style="color:inherit;text-decoration:underline">企業入口</a>。{% endcapture %}
+  {% include education/cta.html title="先說清楚團隊要解決什麼" text=cta_text href=inquiry_href label="索取 Agentic Engineering 培訓建議" analytics="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'agentic_engineering_bottom',service:'agentic_engineering_training',cta_position:'bottom',from_page:window.location.pathname});}" secondary_href="/technical/agentic-engineering/" secondary_label="先讀 Agentic Engineering 系列" %}
 </main>

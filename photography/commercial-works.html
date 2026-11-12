@@ -9,7 +9,7 @@ description: 史旺基公開的委託與活動攝影紀錄，包含音樂專輯�
 service_name: 委託與活動攝影
 service_type: 攝影服務
 # 服務頁內容實質更新時改這個日期：sitemap 的 lastmod 與 article:modified_time 都讀它
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-13
 nav_active: photography
 breadcrumbs:
   - name: 主頁
@@ -32,7 +32,9 @@ faq:
   - q: 會交付哪些照片？多久拿得到？
     a: 每個案子的用途不同，交付內容與時程會在報價時一起寫清楚，確認後再開始。
   - q: 可以做寫真書嗎？
-    a: 可以洽詢。內容、形式與規格依用途討論，會在報價時說清楚。
+    a: 可以洽詢。個人寫真與寫真書另有一頁說明適合誰、怎麼進行；內容、形式與規格依用途討論，會在報價時說清楚。
+    link_url: /photography/personal-photobook/
+    link_label: 看個人寫真與寫真書委託
   - q: 拍完的照片會公開嗎？
     a: 完整成品與人物隱私以當時約定為準。這一頁只放已公開、能說清楚角色的作品；請在洽詢時說明你預計的公開範圍。
 ---
@@ -46,11 +48,11 @@ faq:
       <article><h3>02 確認是否適合</h3><p>2 個工作天內回信，先確認這個案子適不適合一起做。</p></article>
       <article><h3>03 報價與確認</h3><p>依個案報價，工作方式、交付內容與時程一起談清楚，確認後再開始。</p></article>
     </div>
-    <p class="photo-subpage-process-note">也接受寫真書洽詢。想先了解我做過的出版，可以看<a href="{{ '/photography/' | relative_url }}#recognition">攝影出版與獲獎紀錄</a>。</p>
+    <p class="photo-subpage-process-note">也接受個人寫真與寫真書洽詢，適合誰、怎麼進行見<a href="{{ '/photography/personal-photobook/' | relative_url }}" onclick="if(window.gtag){gtag('event','service_page_click',{service:'personal_photobook',cta_position:'commercial_works_process',from_page:window.location.pathname});}">個人寫真與寫真書委託</a>。想先了解我做過的出版，可以看<a href="{{ '/photography/' | relative_url }}#recognition">攝影出版與獲獎紀錄</a>。</p>
   </div></section>
   <section class="photo-author-section" id="faq" aria-labelledby="faq-title"><div class="photo-author-shell"><header class="photo-author-section-head"><p class="photo-author-eyebrow">03 · FAQ</p><div><h2 id="faq-title">委託拍攝常見問題。</h2></div></header>
-    <div class="photo-subpage-faq">{% for item in page.faq %}<details class="photo-subpage-details"><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>{% endfor %}</div>
+    <div class="photo-subpage-faq">{% for item in page.faq %}<details class="photo-subpage-details"><summary>{{ item.q }}</summary><p>{{ item.a }}{% if item.link_url %} <a href="{{ item.link_url | relative_url }}">{{ item.link_label }} →</a>{% endif %}</p></details>{% endfor %}</div>
   </div></section>
   {% include faq-jsonld.html faq=page.faq %}
-  <section class="photo-author-collaboration"><div class="photo-author-shell"><p class="photo-author-eyebrow">WORK TOGETHER</p><h2>先說需求，再決定是不是適合一起做。</h2><p class="photo-author-collaboration-intro">請簡單說明用途、日期、地點、預計公開範圍與需要的影像；收到後會先確認是否適合，再討論工作方式與費用。</p><div class="photo-author-actions"><a class="photo-author-button" href="{{ '/contact/' | relative_url }}?service=commission_photography&amp;from=commercial_works_bottom" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'commercial_works',service:'commission_photography',cta_position:'bottom',from_page:window.location.pathname});}">填表說明需求</a><a class="photo-author-button photo-author-button--ghost" href="#cases">再看一次公開案例</a></div>{% include contact-fallback.html service="commission_photography" position="bottom" %}</div></section>
+  <section class="photo-author-collaboration" id="contact"><div class="photo-author-shell"><p class="photo-author-eyebrow">WORK TOGETHER</p><h2>先說需求，再決定是不是適合一起做。</h2><p class="photo-author-collaboration-intro">請簡單說明用途、日期、地點、預計公開範圍與需要的影像；收到後會先確認是否適合，再討論工作方式與費用。</p><div class="photo-author-actions"><a class="photo-author-button" href="{{ '/contact/' | relative_url }}?service=commission_photography&amp;from=commercial_works_bottom" onclick="if(window.gtag){gtag('event','contact_cta_click',{cta_type:'commercial_works',service:'commission_photography',cta_position:'bottom',from_page:window.location.pathname});}">填表說明需求</a><a class="photo-author-button photo-author-button--ghost" href="#cases">再看一次公開案例</a></div>{% include contact-fallback.html service="commission_photography" position="bottom" %}</div></section>
 </main>

@@ -150,6 +150,7 @@
 - [攝影獎項](https://swanky.github.io/photography/awards/): 法國 PX3、美國 IPA、TIME Magazine 等紀錄
 - [個人作品](https://swanky.github.io/photography/personal-works/): 史旺基人物攝影作品：從早期自然光、城市移動、制服與青春文化，到角色造型與概念創作，也關心眼神、身體、環境與時代如何留在同一張照片裡。
 - [商業攝影作品](https://swanky.github.io/photography/commercial-works/): 史旺基公開的委託與活動攝影紀錄，包含音樂專輯、MV 側拍、劇照、企業活動、婚禮與展覽，每個案例標明當時負責的角色與交付目的。接受委託拍攝與寫真書洽詢：說明用途、日期、地點與公開範圍，確認適合後再討論工作方式與費用。
+- [個人寫真與寫真書委託](https://swanky.github.io/photography/personal-photobook/): 在台北委託個人寫真，或把照片做成一本自己的寫真書。主要在雙北地區拍攝，外縣市可以討論，另收交通與通勤時間的費用。先看作品與流程；內容、規格與費用確認需求後報價。
 - [作品精選](https://swanky.github.io/photography/gallery/): 跨年度精選作品集
 - [制服．女孩 × 史旺基](https://swanky.github.io/photography/uniform-girl/): 招牌制服攝影系列
 - [歷年記錄](https://swanky.github.io/photography/archive/): 時序歸檔
@@ -167,8 +168,8 @@
 ## 技術顧問 Technical Consulting
 
 - [技術顧問總覽](https://swanky.github.io/technical/): 協助企業把 AI Agent 與 Web3 從趨勢變成能判斷、能驗證、能推進的技術行動。提供 AI Agent 導入評估、小範圍實際試行，以及 Web3 可行性評估、顧問原型與架構審查。
-- [AI Agent 導入顧問](https://swanky.github.io/technical/ai-agent-consulting/): 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。可從 2–3 小時導入工作坊開始，再進入導入評估、小範圍實際試行與團隊規範；不綁定 Claude Code、Codex 或單一工具。
-- [給企業：AI Agent 導入與團隊內訓](https://swanky.github.io/enterprise/): 給企業窗口的一頁說明：從 2–3 小時 AI 導入工作坊開始，附講師查得到的授課與演講紀錄，以及洽詢方式。
+- [AI Agent 導入顧問](https://swanky.github.io/technical/ai-agent-consulting/): 協助技術團隊把 AI 寫程式納入可驗證、可重複的工程流程，而不是外包開發。提供導入評估、小範圍試行、團隊規範，以及 2–3 小時工作坊與企業內訓；不綁定 Claude Code、Codex 或單一工具。目前沒有公開的 AI 導入客戶案例，建議先從免費來信或一場工作坊開始。
+- [給企業：AI Agent 導入與團隊內訓](https://swanky.github.io/enterprise/): 給企業窗口的一頁說明：史旺基為技術團隊提供 AI Agent／Claude Code 企業內訓與導入工作坊。先用 2–3 小時建立共同語言，再決定要不要往下做實作課、九堂培訓或導入顧問。完整培訓目前為試辦；沒有公開的 AI 導入客戶案例。
 - [Web3 技術顧問](https://swanky.github.io/technical/web3-consulting/): 接受廣義 Web3 與區塊鏈應用問題，協助企業從問題界定、技術可行性、架構與風險比較，到範圍明確的顧問原型及架構審查；不承接整包開發、發幣或投資建議。
 - [Agentic Engineering 系列](https://swanky.github.io/technical/agentic-engineering/): 史旺基的 Agentic Engineering 系列文章。從帶團隊導入 AI、ORID 引導法、SDD 規格驅動開發，到 Claude Code 實戰工作流——一套把 AI 當「高級實習生」帶領、用軟體工程紀律交付的完整方法。
 - [AI 視覺內容製作](https://swanky.github.io/technical/ai-visual-production/): 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。
@@ -239,7 +240,7 @@
 - [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
 - [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
 - [企業 Web3 內訓](https://swanky.github.io/education/crypto/enterprise/): 企業版區塊鏈與加密資產課程
-- [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): Agentic Engineering 企業培訓試辦方案。從需求拆解、規格、測試到交付，核心方法跨工具，以 Claude Code 為主要示範並補充 Codex 等 coding agent 對照。
+- [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): 為技術團隊做 AI 寫程式與 AI Agent 企業內訓：2–3 小時工作坊、半天實作或 9 堂培訓。方法跨工具，以 Claude Code 為主要示範，適合主管、PM 與工程師建立可驗證的工作法。完整九堂目前為試辦方案。
 - [AI 研究流程應用模組](https://swanky.github.io/education/agentic-engineering/#ai-research): Agentic Engineering 企業培訓的應用情境模組，以加密市場研究為例，建立研究、交叉查證與風險檢查流程；也接受社群、場地或教育平台合作主辦 60–90 分鐘講座。不構成投資建議。
 - [AI 學習分享](https://swanky.github.io/education/ai/): 史旺基的 AI 學習分享，整理 Agentic Engineering、coding agent、規格、測試、治理與 Claude Code 實戰。這裡是免費內容入口，企業培訓另有獨立商品頁。
 - [AI 入門：四個關鍵詞](https://swanky.github.io/education/ai/learn/ai-basics/): 給非工程背景的免費 AI 入門自學教材。跟著六幕故事搞懂 LLM、Prompt、MCP、Skill 與 Agent，附互動小遊戲、名詞小抄與 9 題自我檢核。

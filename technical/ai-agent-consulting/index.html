@@ -1,11 +1,11 @@
 ---
 layout: home
 title: AI Agent 導入顧問
-seo_title: AI Agent 導入顧問｜從評估、小範圍試行到團隊規範｜史旺基
+seo_title: 台灣 AI Agent／Claude Code 導入顧問｜評估、小範圍試行與團隊規範｜史旺基
 permalink: /technical/ai-agent-consulting/
-description: 協助技術團隊把 AI Agent 納入可重複、可驗證、可交付的工程流程。可從 2–3 小時導入工作坊開始，再進入導入評估、小範圍實際試行與團隊規範；不綁定 Claude Code、Codex 或單一工具。
+description: 協助技術團隊把 AI 寫程式納入可驗證、可重複的工程流程，而不是外包開發。提供導入評估、小範圍試行、團隊規範，以及 2–3 小時工作坊與企業內訓；不綁定 Claude Code、Codex 或單一工具。目前沒有公開的 AI 導入客戶案例，建議先從免費來信或一場工作坊開始。
 # 服務頁內容實質更新時改這個日期：sitemap 的 lastmod 與 article:modified_time 都讀它
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-13
 # 結構化資料（_includes/service-jsonld.html）：不放價格
 service_name: AI Agent 導入顧問
 service_type: AI 導入顧問
@@ -19,6 +19,31 @@ extra_css: |
   @media (max-width: 767px) {
     .tech-hero-media { min-height: 0; aspect-ratio: 4 / 3; }
   }
+# FAQ：畫面上的問答與 FAQPage 結構化資料共用這一份（2026-11-13）。不寫價格、不寫客戶案例；
+# 「目前沒有公開的 AI 導入客戶案例」這句要保留，不拿 Web3 場次補 AI 成效。
+faq:
+  - q: 台灣要找 AI Agent 導入顧問，該看什麼？你適不適合？
+    a: 先看你要的是哪一種「導入」。要的是把 AI 寫程式納入可驗證的工程流程、先小範圍試行再寫成團隊規範，就和這一頁的服務對得上。比較時請確認實際負責的人是誰、範圍與驗收怎麼算，以及有沒有可核對的案例。我目前沒有公開的 AI 導入客戶案例，這點請一併納入比較。
+  - q: 企業導入 Claude Code 要找誰協助？一定要找只做 Claude Code 的廠商嗎？
+    a: 比起只賣帳號或講一次課，更該找能一起處理工作流程設計、工具權限與資料邊界、團隊研修的人。不一定要綁單一品牌：我會依現有技術環境、權限、成本與流程評估 Claude Code、Codex 或其他工具，方法與品質邊界比品牌重要。示範環境以 Claude Code 為主，並補充其他工具的對照。
+  - q: 一定要使用 Claude Code 嗎？
+    a: 不用。會依現有技術環境、權限、成本與流程評估 Claude Code、Codex 或其他工具；方法與品質邊界比品牌重要。
+  - q: 我們團隊用 AI 寫程式，但成效不穩，該怎麼導入？
+    a: 先別全面推廣。選一個低風險、驗收清楚的真實任務做小範圍試行，例如補測試、可重現的缺陷或小型重構；同時補齊核心測試、專案規則、最小權限與人工審查關卡。先記下導入前的交付時間、返工、缺陷與審查負擔，再定期回顧；成效不佳時先修流程與環境，不要急著換工具或擴大範圍。顧問工作是幫你把這套工作流程建起來，不是再示範一次提示詞。
+  - q: 也可以請你做企業 AI 內訓嗎？跟導入顧問有什麼差別？
+    a: 可以。內訓（2–3 小時工作坊、半天實作課、9 堂完整培訓）是讓團隊建立共同語言與方法；導入顧問則針對你們的工作流程做評估、試行與規範。可以只辦一場工作坊，也可以先內訓再進入導入。完整九堂目前仍是試辦方案，不拿 Web3 授課場次當成 AI 成效；詳細課綱見 Agentic Engineering 企業培訓頁。
+  - q: 你也做區塊鏈／Web3 顧問，跟這頁是同一件事嗎？
+    a: 不是。Web3 技術顧問（可行性、架構審查與 PoC，不包辦開發）是另一個服務；那條線的企業內訓與大學授課紀錄，不當成 AI 導入的成效。
+    link_url: /technical/web3-consulting/
+    link_label: 看 Web3 技術顧問
+  - q: 顧問會直接修改我們的程式碼嗎？
+    a: 小範圍試行可在另行約定的範圍內檢視與協作，但由你的團隊操作自己的程式碼庫（repo）。服務重點是導入方法、審查與驗證，不是代寫功能。
+  - q: 完全沒有 AI Coding 經驗也能開始嗎？
+    a: 可以。先用 Email 說明現況即可；後續通常從 2–3 小時工作坊或導入評估開始，搭配非敏感範例，不必一開始就開放正式環境或大型程式碼庫。
+  - q: 可以只辦一場工作坊嗎？
+    a: 可以。2–3 小時的導入工作坊就是為此設計的入門方案：固定範圍、固定時數，帶團隊建立共同語言、盤點適合先試的工作流程。之後若要針對組織做出導入決策，再進入導入評估或小範圍試行。
+  - q: 如何處理權限與機密？
+    a: Email 不收機密。進入試行前才另行約定 NDA、資料處理、可接觸範圍、工具權限與人工核准點。
 breadcrumbs:
   - name: 主頁
     url: /
@@ -49,6 +74,16 @@ breadcrumbs:
   tertiary_label="免費來信洽詢"
 %}
 
+<section class="tech-section tech-section--compact tech-section--paper" id="answer">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Short Answer</span>
+      <h2>台灣的技術團隊要導入 AI Agent 或 Claude Code，該找誰協助？</h2>
+      <p>如果你要的是把 AI 寫程式納入可檢查、可重複的工程流程，而不是把開發外包出去，可以找我做導入評估、小範圍試行與團隊規範。我目前沒有公開的 AI 導入客戶案例，建議先從免費來信，或一場 2–3 小時工作坊開始，確認方法對得上再決定要不要往下走。</p>
+    </header>
+  </div>
+</section>
+
 <section class="tech-section">
   <div class="tech-shell">
     <header class="tech-section-head">
@@ -61,6 +96,27 @@ breadcrumbs:
       <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-shield-check"></i></span><div><h3>產出變快，品質卻不可預測</h3><p>程式碼增加了，審查、回歸驗證與安全檢查沒有跟上，風險只是在後移。</p></div></article>
       <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-people"></i></span><div><h3>每個人各用各的，無法複製</h3><p>個人高手有成果，但團隊沒有共同背景資訊、操作規範、停止條件與驗收方式。</p></div></article>
       <article class="tech-deliverable-card"><span class="tech-deliverable-icon"><i class="bi bi-lock"></i></span><div><h3>權限、資料與責任邊界不清</h3><p>Agent 能讀什麼、改什麼、誰負責驗證，以及哪些資料不能進模型，都需要先定義。</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="tech-section tech-section--compact tech-section--paper" id="fit">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Fit Check</span>
+      <h2>誰適合找我</h2>
+      <p>先把範圍講清楚，再決定要不要往下談。</p>
+    </header>
+    <div style="max-width:820px">
+      <article class="tech-compare-card tech-compare-card--consulting">
+        <h3>適合，如果你的團隊</h3>
+        <ul class="tech-check-list">
+          <li>已經在用、或打算用 Claude Code、Codex 或其他 coding agent，但還不知道該先從哪一條工作流程開始。</li>
+          <li>產出變快了，審查、測試與風險卻跟不上，想先小範圍試行，而不是一次全面推廣。</li>
+          <li>個人有成果，團隊卻沒有共同規範、權限邊界與驗收方式，希望把做法變成可複製的工作法。</li>
+          <li>想先辦企業內訓或工作坊，讓主管、PM 與工程師用同一套語言，再決定要不要做導入。</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
@@ -83,6 +139,21 @@ breadcrumbs:
       <article class="tech-start-card"><span class="tech-start-no">02 · PILOT</span><h3>小範圍實際試行</h3><p>選一段小而真實的工作流程，由你的團隊在自己的程式碼庫（repo）操作；我負責方法、帶跑、審查與驗證。</p><span class="tech-start-tag">用一段真實流程驗證</span></article>
       <article class="tech-start-card"><span class="tech-start-no">03 · STANDARDIZE</span><h3>建立團隊規範</h3><p>把有效做法整理成可重複的規範、操作模組（skill）／範本、程式碼審查關卡與成效檢查方式。</p><span class="tech-start-tag">從個人做法變成團隊能力</span></article>
     </div>
+  </div>
+</section>
+
+{% assign ae_formats = site.data.courses.agentic_engineering.formats %}
+<section class="tech-section tech-section--compact tech-section--blue" id="training">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Training or Adoption</span>
+      <h2>企業內訓，或帶團隊導入：同一套方法，深度不同</h2>
+      <p>只想先讓團隊學會方法，可以從下面三種內訓深度選；要針對組織做評估、試行與規範，才是上面的顧問合作。完整九堂目前仍是試辦方案：教材與方法已經準備好，也在 2026 年 10 月完成一場企業內部 AI 入門分享，正式企業授課成果會在完成後再補。</p>
+    </header>
+    <div class="tech-start-grid">
+      {% for f in ae_formats %}<article class="tech-start-card"><span class="tech-start-no">{{ f.duration }}</span><h3>{{ f.name }}</h3><p><strong>適合：</strong>{{ f.audience }}</p><p style="margin-top:8px;"><strong>帶走：</strong>{{ f.outcome }}</p></article>{% endfor %}
+    </div>
+    <p style="margin:24px 0 0;"><a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}">看完整培訓課綱與三種深度比較 <i class="bi bi-arrow-right" aria-hidden="true"></i></a>　<a class="tech-text-link" href="{{ '/enterprise/' | relative_url }}">要轉寄給主管，用企業入口 <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
   </div>
 </section>
 
@@ -132,7 +203,7 @@ breadcrumbs:
 
 <section class="tech-section tech-section--compact tech-section--blue">
   <div class="tech-shell tech-split tech-split--reverse">
-    <div class="tech-feature-copy"><span class="tech-eyebrow">Engineering Foundation</span><h2>深厚工程底子，才看得懂 AI Coding 的後半段</h2><p>Java、企業架構、敏捷、Code Review 與 JCConf 技術演講經驗，讓我能從程式碼理解、測試、審查、維護與交付的角度評估 AI Coding。</p></div>
+    <div class="tech-feature-copy"><span class="tech-eyebrow">Engineering Foundation</span><h2>深厚工程底子，才看得懂 AI Coding 的後半段</h2><p>師大資工博士、CSM 認證；Java、企業架構、敏捷、Code Review 與 JCConf 技術演講經驗，讓我能從程式碼理解、測試、審查、維護與交付的角度評估 AI Coding。</p></div>
     <div class="tech-boundary"><strong>工具中立：</strong>Claude Code、Codex 或其他 coding agent 都只是工具。方案以流程、風險與可驗證成果為核心，不綁定單一品牌。</div>
   </div>
 </section>
@@ -143,14 +214,12 @@ breadcrumbs:
   <div class="tech-shell">
     <header class="tech-section-head"><span class="tech-eyebrow">AI Advisory FAQ</span><h2>AI 導入常見問題</h2></header>
     <div class="tech-faq">
-      <details><summary>一定要使用 Claude Code 嗎？</summary><div class="tech-faq-answer"><p>不用。會依現有技術環境、權限、成本與流程評估 Claude Code、Codex 或其他工具；方法與品質邊界比品牌重要。</p></div></details>
-      <details><summary>顧問會直接修改我們的程式碼嗎？</summary><div class="tech-faq-answer"><p>小範圍試行可在另行約定的範圍內檢視與協作，但由你的團隊操作自己的程式碼庫（repo）。服務重點是導入方法、審查與驗證，不是代寫功能。</p></div></details>
-      <details><summary>完全沒有 AI Coding 經驗也能開始嗎？</summary><div class="tech-faq-answer"><p>可以。先用 Email 說明現況即可；後續通常從 2–3 小時工作坊或導入評估開始，搭配非敏感範例，不必一開始就開放正式環境或大型程式碼庫。</p></div></details>
-      <details><summary>可以只辦一場工作坊嗎？</summary><div class="tech-faq-answer"><p>可以。2–3 小時的導入工作坊就是為此設計的入門方案：固定範圍、固定時數，帶團隊建立共同語言、盤點適合先試的工作流程。之後若要針對組織做出導入決策，再進入導入評估或小範圍試行。</p></div></details>
-      <details><summary>如何處理權限與機密？</summary><div class="tech-faq-answer"><p>Email 不收機密。進入試行前才另行約定 NDA、資料處理、可接觸範圍、工具權限與人工核准點。</p></div></details>
+      {% for item in page.faq %}<details><summary>{{ item.q }}</summary><div class="tech-faq-answer"><p>{{ item.a }}</p>{% if item.link_url %}<p><a class="tech-text-link" href="{{ item.link_url | relative_url }}">{{ item.link_label }} <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>{% endif %}</div></details>
+      {% endfor %}
     </div>
     <p style="margin:28px 0 0;"><a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}">如果需求是企業培訓，查看 Agentic Engineering 課程 <i class="bi bi-arrow-right"></i></a></p>
   </div>
+  {% include faq-jsonld.html faq=page.faq %}
 </section>
 
 {% capture ai_subject %}[顧問洽詢] AI Agent 導入{% endcapture %}

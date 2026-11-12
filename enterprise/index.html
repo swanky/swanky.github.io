@@ -1,10 +1,22 @@
 ---
 layout: home
 title: 給企業：AI Agent 導入與團隊內訓
-seo_title: 給企業：AI Agent 導入工作坊與團隊內訓
+seo_title: AI 企業內訓講師｜AI Agent 導入工作坊與團隊培訓｜史旺基
 permalink: /enterprise/
-description: 給企業窗口的一頁說明：從 2–3 小時 AI 導入工作坊開始，附講師查得到的授課與演講紀錄，以及洽詢方式。
-keywords: AI Agent導入,企業內訓,AI工作坊,Agentic Engineering,企業培訓,AI Coding,史旺基
+description: 給企業窗口的一頁說明：史旺基為技術團隊提供 AI Agent／Claude Code 企業內訓與導入工作坊。先用 2–3 小時建立共同語言，再決定要不要往下做實作課、九堂培訓或導入顧問。完整培訓目前為試辦；沒有公開的 AI 導入客戶案例。
+keywords: AI Agent導入,企業內訓,AI企業內訓,AI工作坊,Agentic Engineering,企業培訓,AI Coding,Claude Code,史旺基
+# 內容實質更新時改這個日期：sitemap 的 lastmod 讀它
+last_modified_at: 2026-11-13
+# FAQ：畫面上的問答與 FAQPage 結構化資料共用這一份（2026-11-13）。不寫價格；Web3 場次不當 AI 成效。
+faq:
+  - q: 你是 AI 企業內訓講師嗎？適合教誰？
+    a: 我接企業內訓與工作坊，對象是主管、PM 與工程團隊，主題是 AI Agent 與 AI 寫程式的交付方法。完整九堂目前為試辦；2026 年 10 月那場企業內部 AI 入門分享的教材已公開，可以先看我怎麼教，正式授課成果會在完成後再補。
+  - q: 企業導入 Claude Code 可以找你嗎？
+    a: 可以先從工作坊或培訓開始，以 Claude Code 作主要示範，方法不綁單一品牌。若要針對你們的環境做導入評估、小範圍試行或團隊規範，請看 AI Agent 導入顧問頁；只上一堂課不等於完成導入。
+  - q: 團隊用 AI 寫程式成效不穩，該怎麼開始？
+    a: 先別全面推廣。用一場工作坊對齊語言、挑一個低風險且驗收清楚的任務先試，同時補測試、專案規則與人工審查。詳細作法見企業培訓頁與導入顧問頁的小範圍試行說明。
+  - q: 為什麼資歷裡很多是 Web3？有公開的 AI 客戶案例嗎？
+    a: 7 場企業內訓與東吳大學 8 年授課，主題是區塊鏈與 Web3，證明的是把新技術講清楚、能進企業課堂的經驗，不是 AI 導入成效。AI 導入顧問目前沒有可以公開的客戶案例，這一點請一併納入評估。
 og_image: /assets/img/technical/ai-agent-consulting-hero.jpg
 og_image_alt: 水手服少女在明亮辦公室向團隊介紹牆面螢幕上的 AI 代理協作流程，AI 生成情境示意圖
 nav_active: technical
@@ -16,7 +28,7 @@ breadcrumbs:
 extra_head: |
   <link href="/assets/css/enterprise.css?v=20261009-2" rel="stylesheet">
 extra_css: |
-  /* 企業入口頁（2026-10-09 草稿）：只放三件事——證據、入門工作坊、洽詢。共用元件樣式在 assets/css/enterprise.css */
+  /* 企業入口頁（2026-10-09 草稿；2026-11-13 補直接回答、適合對象與 FAQ）：證據、入門工作坊、洽詢為主。共用元件樣式在 assets/css/enterprise.css */
   .ent-hero .tech-hero-shot img { object-position: 28% 38%; }
   .ent-byline { margin: 18px 0 0; color: rgba(255,255,255,.66); font-size: .9rem; line-height: 1.7; }
   .ent-hero .contact-fallback { text-align: left; color: rgba(255,255,255,.78); }
@@ -53,6 +65,26 @@ extra_css: |
   </div>
 </section>
 
+<section class="tech-section tech-section--compact tech-section--paper" id="answer">
+  <div class="tech-shell">
+    <header class="tech-section-head">
+      <span class="tech-eyebrow">Short Answer</span>
+      <h2>要辦 AI 企業內訓，或帶團隊導入 Claude Code，該找誰？</h2>
+      <p>若對象是主管、PM 與工程團隊，要的是 AI 寫程式與 AI Agent 的共同工作法，可以從我開始談。先用一場 {{ ws.duration }}的工作坊建立共同語言、挑出值得先試的工作流程，再決定要不要往下走，不會先塞一套九堂課。</p>
+    </header>
+    <div style="max-width:820px">
+      <article class="tech-compare-card tech-compare-card--consulting">
+        <h3>適合轉寄給</h3>
+        <ul class="tech-check-list">
+          <li>技術主管、PM、工程團隊，或正在替他們找「開發與 Agent／Claude Code」內訓的人資。</li>
+          <li>已在用 AI 寫程式但成效不穩，想先用工作坊對齊方法，而不是一次全面推廣的團隊。</li>
+        </ul>
+      </article>
+    </div>
+    <p style="margin:24px 0 0;"><a class="tech-text-link" href="{{ '/education/agentic-engineering/' | relative_url }}">詳細課綱、三種時數與九堂內容 <i class="bi bi-arrow-right" aria-hidden="true"></i></a>　<a class="tech-text-link" href="{{ '/technical/ai-agent-consulting/' | relative_url }}">要做導入評估或小範圍試行，看 AI Agent 導入顧問 <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+  </div>
+</section>
+
 <section class="tech-section ent-evidence" id="evidence">
   <div class="tech-shell">
     <header class="tech-section-head">
@@ -65,8 +97,19 @@ extra_css: |
 </section>
 
 <section class="tech-section tech-section--paper" id="workshop">
-  {% capture ws_next %}工作坊之後想走得更深：可以接半天的完整流程實作課、9 堂完整培訓，或針對組織做決策的 <a class="tech-text-link" href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a>。{% endcapture %}
+  {% capture ws_next %}工作坊之後想走得更深：可以接半天的完整流程實作課、9 堂完整培訓，或針對組織做決策的 <a class="tech-text-link" href="{{ '/technical/ai-agent-consulting/' | relative_url }}">AI Agent 導入顧問</a>。這場工作坊是研修與對齊方法；針對組織的導入評估、試行與規範屬顧問合作，會另談範圍。{% endcapture %}
   {% include technical/workshop-offer.html from="enterprise_workshop" cta_type="enterprise_page" next=ws_next %}
+</section>
+
+<section class="tech-section" id="faq">
+  <div class="tech-shell">
+    <header class="tech-section-head"><span class="tech-eyebrow">FAQ</span><h2>常見問題</h2></header>
+    <div class="tech-faq">
+      {% for item in page.faq %}<details><summary>{{ item.q }}</summary><div class="tech-faq-answer"><p>{{ item.a }}</p></div></details>
+      {% endfor %}
+    </div>
+  </div>
+  {% include faq-jsonld.html faq=page.faq %}
 </section>
 
 <section class="tech-section tech-section--dark ent-contact" id="contact">

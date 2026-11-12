@@ -1008,6 +1008,11 @@
 .photo-subpage-process { margin-top: 0; }
 .photo-subpage-process-note { margin: 24px 0 0; color: #aaa69d; line-height: 1.8; }
 .photo-subpage-process-note a { color: var(--photo-gold-light); text-decoration: underline; text-underline-offset: 3px; }
+/* 個人寫真與寫真書委託頁（2026-11-13）：適合／不適合兩欄清單；卡片內連結沿用流程說明的金色底線 */
+.photo-subpage-process ul { margin: 16px 0 0; padding-left: 1.1rem; color: #aaa69d; line-height: 1.75; }
+.photo-subpage-process li + li { margin-top: 8px; }
+.photo-subpage-process article a { color: var(--photo-gold-light); text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 721px) { .photo-subpage-fit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .photo-subpage-faq { max-width: 900px; }
 .photo-subpage-faq .photo-subpage-details { margin-top: 0; }
 .photo-subpage-faq .photo-subpage-details + .photo-subpage-details { border-top: 0; }
