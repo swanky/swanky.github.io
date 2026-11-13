@@ -61,6 +61,7 @@ Jekyll 靜態網站：史旺基工作室（Swanky Studio）的作品集與服務
 - PowerShell 對 git commit 訊息與路徑有 quoting／encoding 問題——**git 操作一律用 POSIX shell**（如 Git Bash）執行。
 - 每次重要寫入後，用獨立手段（diff、回讀、grep）確認寫入成功，再往下蓋。絕不敘述沒有實際收到的結果。
 - Python 輸出中文一律 `python -X utf8`（預設 cp950 會 UnicodeEncodeError）。Git Bash 的 `/tmp` 是 MSYS 虛擬路徑，原生 Windows 程式看不到——交換檔案用真實 Windows 路徑。
+- Ruby 裝在 `C:\Ruby33-x64`。先用裸 `bundle`；shell 找不到時用 `/c/Ruby33-x64/bin/bundle`，wrapper 報 `No such file or directory` 時改用 `'C:/Ruby33-x64/bin/bundle.bat'`（PowerShell 亦同）。不要重裝 Ruby。
 - 等待 CI 等長工時避免裸 `sleep`，用輪詢迴圈（until-loop）檢查狀態。
 
 ## 既知陷阱（Gotchas）

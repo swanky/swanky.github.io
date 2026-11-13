@@ -11,10 +11,10 @@ description: 用真的瀏覽器驗證 swanky.github.io 的頁面：本機建置�
 
 ```bash
 # 完整建置到 _site/（約 7–9 分鐘；輸出落檔再看尾巴）
-/c/Ruby33-x64/bin/bundle exec jekyll build > <工作目錄>/build.log 2>&1; tail -3 <工作目錄>/build.log
+bundle exec jekyll build > <工作目錄>/build.log 2>&1; tail -3 <工作目錄>/build.log
 ```
 
-- 在 Git Bash 裡 `bundle` 不在 PATH，用 `/c/Ruby33-x64/bin/bundle`（PowerShell 可用 `C:/Ruby33-x64/bin/bundle.bat`）。
+- `bundle` 找不到或報錯時的替代路徑見 `AGENTS.md`「環境事實」。
 - **不要用 `jekyll serve`**：殘留的 `--watch` 程序會在操作間隙回復工作目錄的檔案（`AGENTS.md`）。
 - 起只讀的靜態伺服器，**每次換一個沒用過的 port**（新 origin＝全新快取，避免瀏覽器吃舊 CSS）：
 

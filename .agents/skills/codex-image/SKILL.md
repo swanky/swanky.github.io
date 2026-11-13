@@ -101,7 +101,7 @@ codex exec --skip-git-repo-check -C "<非 temp 的工作目錄>" -s workspace-wr
 
 - **主題/主體**:畫什麼。
 - **風格/媒材**:扁平插畫、照片級、3D 等;同一批簡報素材必須帶同一段「風格常數」文字(見下方風格一致性)。
-- **構圖/比例**:方形 1024x1024、簡報橫圖 1536x1024、4K 3840x2160。
+- **構圖/比例**:方形 1024x1024、簡報橫圖 1536x1024、直圖 1024x1536。
 - **圖內文字**:需要文字時逐字引號指定;不需要時明寫「無文字、無浮水印」。
 - **輸出檔名**:必填。codex 母檔預設存 `~/.codex/generated_images/`,prompt 沒指定目的地就不會落到工作區。
 - 結尾固定加:「存成 <路徑>,回報實際存檔的完整路徑」。
@@ -209,6 +209,6 @@ codex exec resume <session-id> --skip-git-repo-check `
 | `resume` 存錯位置 | resume 用呼叫當下 cwd 當 workdir;prompt 內一律給絕對輸出路徑 |
 | prompt 沒指定輸出檔名 | 圖只留在 `~/.codex/generated_images/`,不會進工作區;規格必含檔名 |
 | 透明背景需求 | codex 走 chroma-key 去背流程;複雜主體(毛髮/玻璃/半透明)它會反問,簡單主體可直接要求 |
-| 逾時 | 4K 或高複雜度圖較久;timeout 拉滿 600000,仍逾時可改 `run_in_background` 再等通知 |
+| 逾時 | 高複雜度圖較久;timeout 拉滿 600000,仍逾時可改 `run_in_background` 再等通知 |
 | codex 回報成功但檔案不在 | 讀 `-o` 的 last-message 檔與 stdout,確認它實際存檔路徑;不要假設成功 |
 | 測試/試稿圖 | 放 `assets/img/brand/wip/`(不放 scratchpad,會踩 sandbox 陷阱),收尾刪除;repo 只進最終選用的素材 |

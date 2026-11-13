@@ -185,11 +185,7 @@ npm test 2>&1 | tail -8
 bundle exec jekyll build -d <本次工作目錄>/build 2>&1 | tail -3   # 確認無錯；輸出到本次新建的目錄
 ```
 
-Windows／Git Bash 陷阱：若 `bundle` wrapper 報 `No such file or directory -- /c/Ruby33-x64/bin/bundle`，不要重裝 Ruby；直接呼叫 Windows batch wrapper：
-
-```bash
-'C:/Ruby33-x64/bin/bundle.bat' exec jekyll build
-```
+`bundle` 找不到或 wrapper 報錯時的替代路徑見 `AGENTS.md`「環境事實」。
 
 發布驗證應輸出到本次新建的獨立 destination；不要覆寫使用者既有的 `_site-*` 或 preview 目錄。
 
