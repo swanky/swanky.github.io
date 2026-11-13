@@ -182,7 +182,7 @@ keywords: <逗號分隔，含技術術語、史旺基、Swanky Hsiao、Swanky St
 ```bash
 pwsh -File tools/make-cover-thumbs.ps1          # 產生 assets/img/linkedin/<slug>-card.jpg（可重跑、只補缺的）
 npm test 2>&1 | tail -8
-bundle exec jekyll build 2>&1 | tail -3   # 確認無錯
+bundle exec jekyll build -d <本次工作目錄>/build 2>&1 | tail -3   # 確認無錯；輸出到本次新建的目錄
 ```
 
 Windows／Git Bash 陷阱：若 `bundle` wrapper 報 `No such file or directory -- /c/Ruby33-x64/bin/bundle`，不要重裝 Ruby；直接呼叫 Windows batch wrapper：

@@ -25,8 +25,6 @@ prompt(主題、風格、色盤、構圖、尺寸、禁止項、輸出路徑)並
 - codex-cli **0.147.0-alpha.1.2**,`image_generation` feature = stable 且已啟用(內建工具,不需 `OPENAI_API_KEY`)。
 - `~/.codex/config.toml` 已設 `sandbox_workspace_write.network_access = true` 且保留 corporate proxy 環境變數,生圖網路可通。
 - 一張 1024x1024 約 1–2 分鐘;PowerShell 呼叫一律設 `timeout: 600000`。
-- **trusted projects**:`c:\cursorhome\rwa` 已在 `~/.codex/config.toml` 的 trusted 清單內
-  (2026-08-06 複驗),`-C` 指到本 repo 不會跳信任提示。
 
 ### codex 不在 PATH:走 `codex.cmd` shim(2026-08-06)
 

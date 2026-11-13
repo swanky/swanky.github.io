@@ -10,7 +10,7 @@ description: 用真的瀏覽器驗證 swanky.github.io 的頁面：本機建置�
 ## 1. Launch：建置並起伺服器
 
 ```bash
-# 完整建置到 _site/（約 1–3 分鐘；輸出落檔再看尾巴）
+# 完整建置到 _site/（約 7–9 分鐘；輸出落檔再看尾巴）
 /c/Ruby33-x64/bin/bundle exec jekyll build > <工作目錄>/build.log 2>&1; tail -3 <工作目錄>/build.log
 ```
 

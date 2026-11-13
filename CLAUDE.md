@@ -6,7 +6,7 @@ Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep st
 
 ## Claude Code Adapter
 
-- 共用專案規範的**單一真相來源是 `AGENTS.md`**（上行已匯入：建置／測試指令、內容規範、環境事實、gotchas、跨 agent 原則）——跨 agent 事實改那裡，不要加回本檔。本檔只放 Claude 適配：Commander mode、派工路由、harness 專屬環境規則。
+- 共用專案規範的**單一真相來源是 `AGENTS.md`**（上行已匯入：建置／測試指令、內容規範、環境事實、gotchas、跨 agent 原則）——跨 agent 事實改那裡，不要加回本檔。本檔只放 Claude 適配：工作方式（Working Style）、派工路由、harness 專屬環境規則。
 - Claude 專屬 permissions／hooks 在 `.claude/settings*.json`。
 - `.claude/skills/` 是由 `.agents/skills/`（正本）經 `node tools/sync-agent-skills.mjs` 產生的鏡像——**勿手動編輯鏡像**；改正本後重跑同步（drift 檢查已含在 `npm test`）。
 
@@ -15,7 +15,7 @@ Jekyll portfolio for Swanky Studio (史旺基工作室) on GitHub Pages. Deep st
 Execute autonomously; start without asking. Read relevant code first; make reasonable assumptions and proceed. Do the full job (edit, test, build); prefer the smallest maintainable diff. Final report: files changed + why, verification output, remaining risks.
 
 - **派工（context 衛生）**: 派工是用 token 換 context 的交易，兩者都稀缺——不預設派、也不預設自己吞。預估讀 **>8 檔或 >1500 行**、**位置未知的開放式翻找**、批次改 **>2 檔**（先問能不能寫成腳本自己跑，寫不成才派）、或要**看任何圖檔**（使用者貼進對話的圖除外）→ 派 subagent，主線程只收結論＋file:line；**派工時 `model` 必填**（搜尋／機械修改用 haiku/sonnet，禁止繼承主線程模型），相關任務合併成一個 agent 派出（規則 `docs/agents/dispatch.md`，模板 `docs/agents/delegation-templates.md`）。已知位置的中量讀取主線程自己讀（吃 prompt cache 比派工便宜）。可能 >200 行的指令輸出一律截尾（`cmd 2>&1 | tail -30`）。
-- **Plan externalization**: ≥3 步驟的工作，開工前把步驟清單寫進 scratchpad 計畫檔，每完成一步立即更新；compaction 後第一動作＝重讀計畫檔。
+- **Plan externalization**: 預期會跨 compaction 或多個 session 的長任務，把步驟清單寫進 scratchpad 計畫檔並隨進度更新；compaction 後第一動作＝重讀計畫檔。
 - **Done ＝ 改了＋驗了＋證據在手**: never report「已完成」without pasteable verification output——缺證據就寫「已改、未驗」。**Batch the verification**: during dev use cheap checks only (`npm test`, Grep on source, `git diff`, Read); run the one full `bundle exec jekyll build` + `_site/` grep (or browser) pass **once before push**, over all changes together. 完成判準與各類產物底線驗法：`docs/agents/judgment.md` R2/R5。
 - **Mid-task check-ins**: only for the stop-list in `docs/agents/judgment.md` R3 — delete data / modify production config / push to a remote / touch secrets / 對外商業決策（價格、稱謂、品牌語氣）/ 花錢。豁免：`docs/` nested repo 的 `git push dropbox`＝本機 Dropbox 同步、非對外，照既定慣例自動執行。其餘一律自主執行到完。
 

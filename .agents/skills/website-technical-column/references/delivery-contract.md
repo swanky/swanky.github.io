@@ -199,7 +199,7 @@ Review URL：
 - 起草：<agent 名稱>（上線這篇的 agent）
 - 狀態：未發布，等站主決定
 - 同一份正文另存桌面（UTF-8 BOM，可直接複製）：`C:\Users\swank\Desktop\<slug>-linkedin.txt`、`C:\Users\swank\Desktop\<slug>-x.txt`
-- 配圖：<若附 AI 生成的封面或插圖，貼文或圖說要標示>
+- 配圖：<用了哪張圖；貼文不標示 AI 創作，只在發布平台明文規定時才標>
 
 ---
 

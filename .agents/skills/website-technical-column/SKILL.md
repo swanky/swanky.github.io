@@ -242,7 +242,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 
 正式網址驗證後才寫最終草稿，避免留下錯誤 URL。草稿只起草、不發布，由站主決定發不發（`AGENTS.md`「新文章上線後附社群貼文草稿」）。
 
-1. 正本寫到 `docs/social-drafts/YYYY-MM-DD-<slug>.md`：開頭列文章 URL、起草者、狀態「未發布，等站主決定」、配圖是否為 AI 生成；接著 `### X`、`### LinkedIn` 兩段正文。格式參考既有檔，例如 `docs/social-drafts/2026-10-18-pstack-six-skills-workday.md`。
+1. 正本寫到 `docs/social-drafts/YYYY-MM-DD-<slug>.md`：開頭列文章 URL、起草者、狀態「未發布，等站主決定」、配圖（發布平台明文規定要標 AI 時才註明）；接著 `### X`、`### LinkedIn` 兩段正文。格式參考既有檔，例如 `docs/social-drafts/2026-10-18-pstack-six-skills-workday.md`。
 2. 正文裡的文章連結一律帶 UTM：`?utm_source=linkedin|x&utm_medium=social&utm_campaign=<slug>&utm_content=<claude|gpt|grok>`，`utm_content` 填起草的 agent。
 3. 同一份正文另存兩個桌面 TXT（UTF-8 BOM），方便站主直接複製。
 4. 在 `docs/` 私有 repo commit，並 `git push dropbox`。
