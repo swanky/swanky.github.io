@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-first-transfer" viewBox="0 0 440 868" role="img" aria-labelledby="dgp-first-transfer-title dgp-first-transfer-desc">
+  <title id="dgp-first-transfer-title">第一次轉帳照四步走，先小額試轉</title>
+  <desc id="dgp-first-transfer-desc">第一次轉帳的四個步驟（直式，由上而下）：一、開地址，接收端按儲值、選網路，複製收款地址；二、選同網路，兩端選同一個網路，以儲值頁寫的為準；三、核對頭尾，發送端貼上地址後核對前後 4 碼；四、先小額試轉，先轉最小金額試一次。全程只用輸得起的錢。</desc>
+  <style>
+      #dgp-first-transfer text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-first-transfer .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-first-transfer .m { dominant-baseline: central; }
+      #dgp-first-transfer .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-first-transfer .sm { font-size: 20px; font-weight: 500; }
+      #dgp-first-transfer .lg { font-size: 26px; font-weight: 700; }
+      #dgp-first-transfer .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-first-transfer .mute { fill: #5F5B53; }
+      #dgp-first-transfer .t-y { fill: #8A5D00; } #dgp-first-transfer .t-b { fill: #1F5F9C; } #dgp-first-transfer .t-g { fill: #1E7A41; } #dgp-first-transfer .t-r { fill: #B83232; }
+      #dgp-first-transfer .bar { fill: #E5A300; }
+      #dgp-first-transfer .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-first-transfer .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-first-transfer .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-first-transfer .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-first-transfer .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-first-transfer .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-first-transfer .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-first-transfer .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-first-transfer .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-first-transfer .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-first-transfer .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-first-transfer .b.solid > text { fill: #fff; }
+      #dgp-first-transfer .ic-y { color: #8A5D00; } #dgp-first-transfer .ic-b { color: #1F5F9C; } #dgp-first-transfer .ic-g { color: #1E7A41; }
+      #dgp-first-transfer .ic-r { color: #B83232; } #dgp-first-transfer .ic-n { color: #5F5B53; } #dgp-first-transfer .ic-k { color: #232020; }
+      #dgp-first-transfer .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-first-transfer .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-first-transfer .num.r > circle { fill: #D64545; }
+      #dgp-first-transfer .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-first-transfer .head { fill: #5F5B53; stroke: none; }
+      #dgp-first-transfer .y > .ln, #dgp-first-transfer .ln.y { stroke: #E5A300; } #dgp-first-transfer .y > .head { fill: #E5A300; }
+      #dgp-first-transfer .b3 > .ln, #dgp-first-transfer .ln.b3 { stroke: #4FA6D5; } #dgp-first-transfer .b3 > .head { fill: #4FA6D5; }
+      #dgp-first-transfer .g > .ln, #dgp-first-transfer .ln.g { stroke: #2E9E5B; } #dgp-first-transfer .g > .head { fill: #2E9E5B; }
+      #dgp-first-transfer .r > .ln, #dgp-first-transfer .ln.r { stroke: #D64545; } #dgp-first-transfer .r > .head { fill: #D64545; }
+      #dgp-first-transfer .dash { stroke-dasharray: 9 7; }
+      #dgp-first-transfer .thin { stroke-width: 2; }
+      #dgp-first-transfer .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-first-transfer .f-g { fill: #2E9E5B; } #dgp-first-transfer .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-first-transfer .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+      <symbol id="dgp-first-transfer-ic-w-chain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5h6v7h-6z"/><path d="M15.5 8.5h6v7h-6z"/><path d="M8.5 12h7"/></symbol>
+      <symbol id="dgp-first-transfer-ic-w-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c2.5 -4.4 5.7 -6.5 9.5 -6.5s7 2.1 9.5 6.5c-2.5 4.4 -5.7 6.5 -9.5 6.5s-7 -2.1 -9.5 -6.5"/><path d="M9.5 12a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0 -5 0"/></symbol>
+      <symbol id="dgp-first-transfer-ic-w-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.3 -4.2 -6.5 -7.8 -6.5 -11a6.5 6.5 0 0 1 13 0c0 3.2 -2.2 6.8 -6.5 11"/><path d="M9.8 10a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 0 0 -4.4 0"/></symbol>
+      <symbol id="dgp-first-transfer-ic-w-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5l-6.5 17l-3.2 -7.3l-7.3 -3.2z"/><path d="M10.8 13.2l9.7 -9.7"/></symbol>
+  </defs>
+  <text class="ttl" x="16" y="34">第一次轉帳照四步走，</text>
+  <text class="ttl" x="16" y="72">先小額試轉</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+  <g data-step="1">
+    <g class="b g"><rect x="8" y="120" width="424" height="134" rx="14"/><use href="#dgp-first-transfer-ic-w-pin" class="ic-g" x="66" y="132" width="48" height="48"/><text class="m lg" x="126" y="156">開地址</text><text class="m sm" x="28" y="202">按儲值、選網路</text><text class="m sm" x="28" y="230">複製收款地址</text></g>
+    <g class="b"><rect x="318" y="136" width="100" height="40" rx="20"/><text class="c sm t-g" x="368" y="156">接收端</text></g>
+    <g class="num"><circle cx="38" cy="156" r="17"/><text x="38" y="156">1</text></g>
+  </g>
+  <g data-step="2">
+    <g><path class="ln" d="M220 258V280"/><path class="head" d="M0 0l-13-7v14z" transform="translate(220 291) rotate(90)"/></g>
+    <g class="b y"><rect x="8" y="294" width="424" height="134" rx="14"/><use href="#dgp-first-transfer-ic-w-chain" class="ic-y" x="66" y="306" width="48" height="48"/><text class="m lg" x="126" y="330">選同網路</text><text class="m sm" x="28" y="376">兩端選同一個網路</text><text class="m sm" x="28" y="404">以儲值頁寫的為準</text></g>
+    <g class="b"><rect x="318" y="310" width="100" height="40" rx="20"/><text class="c sm t-y" x="368" y="330">兩端都要</text></g>
+    <g class="num"><circle cx="38" cy="330" r="17"/><text x="38" y="330">2</text></g>
+  </g>
+  <g data-step="3">
+    <g><path class="ln" d="M220 432V454"/><path class="head" d="M0 0l-13-7v14z" transform="translate(220 465) rotate(90)"/></g>
+    <g class="b b2"><rect x="8" y="468" width="424" height="134" rx="14"/><use href="#dgp-first-transfer-ic-w-eye" class="ic-b" x="66" y="480" width="48" height="48"/><text class="m lg" x="126" y="504">核對頭尾</text><text class="m sm" x="28" y="550">貼上地址後</text><text class="m sm" x="28" y="578">核對前後 4 碼</text></g>
+    <g class="b"><rect x="318" y="484" width="100" height="40" rx="20"/><text class="c sm t-b" x="368" y="504">發送端</text></g>
+    <g class="num"><circle cx="38" cy="504" r="17"/><text x="38" y="504">3</text></g>
+  </g>
+  <g data-step="4">
+    <g><path class="ln" d="M220 606V628"/><path class="head" d="M0 0l-13-7v14z" transform="translate(220 639) rotate(90)"/></g>
+    <g class="b b2"><rect x="8" y="642" width="424" height="134" rx="14"/><use href="#dgp-first-transfer-ic-w-send" class="ic-b" x="66" y="654" width="48" height="48"/><text class="m lg" x="126" y="678">先小額試轉</text><text class="m sm" x="28" y="724">先轉最小金額</text><text class="m sm" x="28" y="752">試一次</text></g>
+    <g class="b"><rect x="318" y="658" width="100" height="40" rx="20"/><text class="c sm t-b" x="368" y="678">發送端</text></g>
+    <g class="num"><circle cx="38" cy="678" r="17"/><text x="38" y="678">4</text></g>
+  </g>
+  <g><g class="b y"><rect x="8" y="800" width="424" height="56" rx="12"/><text class="c lg" x="220" y="828">全程只用輸得起的錢</text></g></g>
+</svg>
