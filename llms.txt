@@ -239,7 +239,6 @@
 - [模特兒鏡頭表現一對一課程](https://swanky.github.io/education/modeling/): 史旺基為女性新手模特兒與內容創作者設計的鏡頭表現一對一課程，練習擺姿、鏡頭感與個人形象，包含正式拍攝與學員自選 5 張精修數位照片。
 - [Web3 課程](https://swanky.github.io/education/crypto/): 加密貨幣交易、DeFi、NFT 教學
 - [東吳大學區塊鏈課程](https://swanky.github.io/education/crypto/soochow/): 連續 8 年大學授課
-- [加密貨幣錢包和交易所差在哪？](https://swanky.github.io/education/crypto/learn/wallet-and-exchange/): 買幣的地方和保管的地方不一樣。用白話講清楚私鑰與助記詞、託管與自己保管、冷錢包與熱錢包、台灣平台怎麼判斷，以及 USDT 選錯網路的後果，附小額試轉步驟與風險提醒。
 - [企業 Web3 內訓](https://swanky.github.io/education/crypto/enterprise/): 企業版區塊鏈與加密資產課程
 - [Agentic Engineering 企業培訓](https://swanky.github.io/education/agentic-engineering/): 為技術團隊做 AI 寫程式與 AI Agent 企業內訓：2–3 小時工作坊、半天實作或 9 堂培訓。方法跨工具，以 Claude Code 為主要示範，適合主管、PM 與工程師建立可驗證的工作法。完整九堂目前為試辦方案。
 - [AI 研究流程應用模組](https://swanky.github.io/education/agentic-engineering/#ai-research): Agentic Engineering 企業培訓的應用情境模組，以加密市場研究為例，建立研究、交叉查證與風險檢查流程；也接受社群、場地或教育平台合作主辦 60–90 分鐘講座。不構成投資建議。
