@@ -1,0 +1,268 @@
+---
+layout: home
+title: 加密貨幣錢包和交易所差在哪？先搞懂私鑰在誰手上
+seo_title: 加密貨幣錢包和交易所差在哪？冷錢包熱錢包、USDT 網路一次搞懂｜史旺基
+description: 買幣的地方和保管的地方不一樣。用白話講清楚私鑰與助記詞、託管與自己保管、冷錢包與熱錢包、台灣平台怎麼判斷，以及 USDT 選錯網路的後果，附小額試轉步驟與風險提醒。
+keywords: 加密貨幣錢包 交易所 差別,冷錢包 熱錢包 差別,USDT ERC20 TRC20 差別,私鑰,助記詞,託管錢包,虛擬資產服務法,KYC,史旺基
+permalink: /education/crypto/learn/wallet-and-exchange/
+nav_active: education
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 教育訓練
+    url: /education/
+  - name: Web3 教育
+    url: /education/crypto/
+  - name: 錢包和交易所差在哪？
+    url: /education/crypto/learn/wallet-and-exchange/
+faq:
+  - q: 加密貨幣錢包和交易所差在哪？
+    a: 交易所是「買賣的地方」，你的幣通常由平台代為保管，你手上是一個帳號和向平台提領的權利；錢包是「管理私鑰的工具」，私鑰在誰手上，資產就由誰動用。放在交易所＝託管，放在自己掌握私鑰的錢包＝自己保管。
+  - q: 冷錢包和熱錢包差在哪？
+    a: 看私鑰有沒有碰到網路。私鑰存在連網的手機或電腦上是熱錢包，方便但較容易被盜；私鑰存在平常不連網的裝置或紙上是冷錢包，較安全但操作麻煩。冷熱和「誰保管」是兩個不同的問題。
+  - q: 同樣是 USDT，ERC20 和 TRC20 差在哪？
+    a: 它們是同一種幣走在不同的鏈上：ERC20 走以太坊，收款地址通常 0x 開頭；TRC20 走 Tron 鏈，收款地址通常 T 開頭。發送端和收款端一定要選同一個網路，選錯可能找不回來。手續費與到帳時間依平台當下顯示為準。
+  - q: 助記詞可以截圖或存在雲端嗎？
+    a: 不要。助記詞能還原整個錢包，誰拿到誰就能把資產轉走。只用紙筆抄寫、離線保存；任何人來要，不管自稱客服、朋友或官方，一律拒絕。
+  - q: 第一次轉幣要注意什麼？
+    a: 先確認收款端支援的幣種與網路，複製地址後核對開頭與結尾幾碼，再用最小金額試轉一次，確認對方收到後才轉剩下的金額。只用輸得起的錢。
+---
+<main id="main" class="education-page">
+  {% include education/hero.html eyebrow="Free Learning" status="免費自學・入門到實務・約 20 分鐘" title="加密貨幣錢包和交易所差在哪？" lead="先搞懂一件事：私鑰在誰手上。買幣的地方和保管的地方不一定是同一個；分清楚以後，冷錢包、熱錢包、USDT 網路這些名詞就不難了。" image="/assets/img/illustrations/wallet-and-exchange.svg" alt="示意圖：左邊交易所把鑰匙鎖在平台保險庫，右邊使用者自己拿著鑰匙和手抄備份紙，兩邊共用同一本區塊鏈帳本" contain=true primary_href="#goals" primary_label="開始閱讀" secondary_href="/education/crypto/" secondary_label="返回 Web3 教育" %}
+
+  <section class="edu-section edu-section--compact">
+    <div class="edu-container">
+      <div class="edu-callout edu-callout--blue"><strong>這篇怎麼來的？</strong>改寫自我在東吳大學區塊鏈課程「錢包與交易所」那一堂的教材，只保留觀念與台灣情境。文中的法規與數字都標了查核日期（最後查核 2026-11-14）；查不到可靠來源的地方會寫「未驗證」。講者從事虛擬資產相關技術工作，本文不構成投資或開戶建議，也不推薦任何特定平台。</div>
+    </div>
+  </section>
+
+  <section id="goals" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Learning Goals</span><h2>讀完這篇，你能做到五件事</h2></header>
+      <div class="edu-outcome-grid">
+        <article class="edu-outcome"><i class="bi bi-key" aria-hidden="true"></i><h3>分清楚託管和冷熱</h3><p>託管看私鑰在誰手上；冷熱看私鑰有沒有碰到網路。</p></article>
+        <article class="edu-outcome"><i class="bi bi-shield-lock" aria-hidden="true"></i><h3>守住助記詞</h3><p>知道助記詞為什麼不能截圖、不能給任何人。</p></article>
+        <article class="edu-outcome"><i class="bi bi-building" aria-hidden="true"></i><h3>判斷平台</h3><p>知道台灣的平台要查什麼、本地與境外平台差在哪。</p></article>
+        <article class="edu-outcome"><i class="bi bi-signpost-split" aria-hidden="true"></i><h3>選對網路</h3><p>轉 USDT 時，兩端網路一致，第一次先小額試轉。</p></article>
+        <article class="edu-outcome"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i><h3>避開兩個大坑</h3><p>看懂槓桿怎麼讓本金歸零，認出要你交出助記詞的詐騙。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="wallet" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">01</span><h2>錢包不是存錢的地方</h2><p>很多人以為幣存在手機裡。其實幣記在區塊鏈這本公開帳本上，錢包只負責保管「能動用這筆帳的鑰匙」，也就是私鑰。</p></header>
+      <div class="edu-card-grid edu-card-grid--two">
+        <article class="edu-card"><h3>例子：手機壞了，幣還在嗎？</h3><p>在。只要你還留著助記詞，換一支手機、重裝錢包，輸入助記詞就能把同一個錢包找回來，帳上的幣一個都不會少。</p></article>
+        <article class="edu-card"><h3>反例：刪掉 App 就等於清空？</h3><p>不會。刪掉 App 只是丟掉工具，帳本上的紀錄還在。真正會讓你失去資產的，是<strong>鑰匙不見了</strong>（沒備份助記詞）或<strong>鑰匙被別人拿到</strong>。</p></article>
+      </div>
+      <p style="margin-top:1.25rem">三個名詞先記住：<strong>錢包地址</strong>像銀行帳號，可以給別人收款；<strong>私鑰</strong>像提款卡加密碼，每一筆轉出都要用它簽名；<strong>錢包 App</strong> 只是操作介面，它本身不決定安全與否，關鍵是私鑰放在哪。</p>
+    </div>
+  </section>
+
+  <section id="seed" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">02</span><h2>私鑰與助記詞：一組單字管住整個錢包</h2><p>私鑰是一長串亂碼，很難抄。所以多數錢包採用一套公開標準（BIP39），把它變成一組 12、15、18、21 或 24 個英文單字，也就是助記詞。</p></header>
+      <figure style="margin:0 0 1.5rem;background:#fff;border:1px solid var(--edu-line);border-radius:14px;padding:1rem">
+        <svg viewBox="0 0 760 150" width="100%" role="img" aria-labelledby="seedT" style="display:block;height:auto">
+          <title id="seedT">助記詞的產生順序：亂數、助記詞、種子、各把私鑰、各個地址</title>
+          <g font-family="sans-serif" font-size="15" text-anchor="middle">
+            <g fill="#faf5ea" stroke="#e5a300" stroke-width="2">
+              <rect x="8" y="40" width="120" height="56" rx="10"/><rect x="160" y="40" width="130" height="56" rx="10"/><rect x="322" y="40" width="110" height="56" rx="10"/><rect x="464" y="40" width="130" height="56" rx="10"/><rect x="626" y="40" width="126" height="56" rx="10"/>
+            </g>
+            <g fill="#232020" font-weight="700"><text x="68" y="74">隨機亂數</text><text x="225" y="74">助記詞</text><text x="377" y="74">種子</text><text x="529" y="74">許多把私鑰</text><text x="689" y="74">許多個地址</text></g>
+            <g fill="#5f5b53" font-size="13"><text x="225" y="122">12–24 個單字</text><text x="529" y="122">每把管一個地址</text><text x="689" y="122">可以公開收款</text></g>
+            <g stroke="#8a5d00" stroke-width="2.5" fill="#8a5d00"><line x1="128" y1="68" x2="152" y2="68"/><polygon points="152,62 160,68 152,74"/><line x1="290" y1="68" x2="314" y2="68"/><polygon points="314,62 322,68 314,74"/><line x1="432" y1="68" x2="456" y2="68"/><polygon points="456,62 464,68 456,74"/><line x1="594" y1="68" x2="618" y2="68"/><polygon points="618,62 626,68 618,74"/></g>
+            <text x="380" y="22" fill="#8a5d00" font-size="14">順序是單向的：有助記詞就能算出所有私鑰；反過來只看地址，算不回私鑰</text>
+          </g>
+        </svg>
+        <figcaption style="font-size:.9rem;color:var(--edu-muted);margin-top:.5rem">自製示意圖。依據 <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank" rel="noopener">BIP39</a> 與 <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" target="_blank" rel="noopener">BIP32</a> 規格簡化。</figcaption>
+      </figure>
+      <div class="edu-card-grid edu-card-grid--two">
+        <article class="edu-card"><h3>正確做法</h3><p>用紙筆抄下助記詞，核對一次，放在只有你知道、不怕潮濕的地方。重要資產可以抄兩份，分開放。</p></article>
+        <article class="edu-card"><h3>常見錯誤</h3><p>截圖、存在雲端相簿、傳 LINE 給自己、存在記事本 App。這些地方只要被駭或被別人看到，整個錢包就跟著不見。</p></article>
+      </div>
+      <div class="edu-callout" style="margin-top:1.25rem"><strong>一句話記住：</strong>誰拿到助記詞，誰就是這個錢包的主人。官方、客服、朋友都不會、也不該跟你要。</div>
+    </div>
+  </section>
+
+  <section id="custody" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">03</span><h2>託管與自己保管：你手上到底是什麼？</h2><p>把幣放在交易所，你看到的餘額，其實是平台欠你的一筆帳：你有權要求平台把幣還給你，但鑰匙在平台手上。自己保管則相反：沒有人能擋你，也沒有人能幫你。</p></header>
+      <p class="edu-table-hint">手機可左右滑動查看完整表格。</p>
+      <div class="edu-table-wrap"><table class="edu-table">
+        <thead><tr><th>面向</th><th>託管（放在平台）</th><th>自己保管（自己握私鑰）</th></tr></thead>
+        <tbody>
+          <tr><td><strong>私鑰在誰手上</strong></td><td>平台</td><td>你自己</td></tr>
+          <tr><td><strong>你手上有什麼</strong></td><td>帳號＋向平台提領的權利</td><td>直接動用鏈上資產的能力</td></tr>
+          <tr><td><strong>忘記密碼</strong></td><td>可以走客服流程重設</td><td>沒有客服；只能靠助記詞</td></tr>
+          <tr><td><strong>主要風險</strong></td><td>平台倒閉、被駭、被凍結、限制提領</td><td>助記詞弄丟或外流、自己操作出錯</td></tr>
+          <tr><td><strong>適合</strong></td><td>常買賣、金額小、還不熟操作</td><td>長期持有、願意自己負責備份</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin-top:1.25rem">沒有哪一種絕對安全，只是把風險放在不同地方：託管是把風險交給平台的經營與內控，自己保管是把風險留在自己的備份紀律上。</p>
+    </div>
+  </section>
+
+  <section id="cold-hot" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">04</span><h2>冷錢包與熱錢包：私鑰有沒有碰到網路</h2><p>冷熱和託管是兩個不同的問題，所以會組合出四種情況。交易所帳戶是「託管＋熱」；裝在手機上的錢包是「自己保管＋熱」；不連網的硬體錢包是「自己保管＋冷」。</p></header>
+      <figure style="margin:0;background:#fff;border:1px solid var(--edu-line);border-radius:14px;padding:1rem">
+        <svg viewBox="0 0 640 360" width="100%" role="img" aria-labelledby="mxT" style="display:block;height:auto;max-width:720px;margin:0 auto">
+          <title id="mxT">四格圖：橫軸是誰保管私鑰，縱軸是私鑰是否連網</title>
+          <g font-family="sans-serif" text-anchor="middle">
+            <text x="235" y="24" font-size="15" fill="#5f5b53">平台保管（託管）</text><text x="480" y="24" font-size="15" fill="#5f5b53">自己保管</text>
+            <text x="56" y="120" font-size="15" fill="#5f5b53">連網</text><text x="56" y="140" font-size="15" fill="#5f5b53">（熱）</text>
+            <text x="56" y="268" font-size="15" fill="#5f5b53">不連網</text><text x="56" y="288" font-size="15" fill="#5f5b53">（冷）</text>
+            <rect x="118" y="40" width="234" height="148" rx="12" fill="#e6f2f9" stroke="#4fa6d5" stroke-width="2"/>
+            <rect x="364" y="40" width="234" height="148" rx="12" fill="#faf5ea" stroke="#e5a300" stroke-width="2"/>
+            <rect x="118" y="200" width="234" height="148" rx="12" fill="#e6f2f9" stroke="#4fa6d5" stroke-width="2" stroke-dasharray="6 5"/>
+            <rect x="364" y="200" width="234" height="148" rx="12" fill="#faf5ea" stroke="#e5a300" stroke-width="2"/>
+            <text x="235" y="100" font-size="17" font-weight="700" fill="#232020">交易所帳戶</text><text x="235" y="128" font-size="14" fill="#5f5b53">買賣方便</text><text x="235" y="150" font-size="14" fill="#5f5b53">怕平台出事、被駭</text>
+            <text x="481" y="100" font-size="17" font-weight="700" fill="#232020">手機／瀏覽器錢包</text><text x="481" y="128" font-size="14" fill="#5f5b53">自己作主、隨時可用</text><text x="481" y="150" font-size="14" fill="#5f5b53">怕裝置中毒、點到假連結</text>
+            <text x="235" y="260" font-size="17" font-weight="700" fill="#232020">平台的離線金庫</text><text x="235" y="288" font-size="14" fill="#5f5b53">平台內部的保管方式</text><text x="235" y="310" font-size="14" fill="#5f5b53">你看不到，只能看揭露</text>
+            <text x="481" y="260" font-size="17" font-weight="700" fill="#232020">硬體錢包、紙本</text><text x="481" y="288" font-size="14" fill="#5f5b53">最難被遠端偷走</text><text x="481" y="310" font-size="14" fill="#5f5b53">怕自己弄丟、操作麻煩</text>
+          </g>
+        </svg>
+        <figcaption style="font-size:.9rem;color:var(--edu-muted);margin-top:.5rem">自製示意圖。左下格虛線：平台會把一部分客戶資產放在離線環境，但比例與做法依各平台揭露為準，使用者無法自行驗證。</figcaption>
+      </figure>
+      <div class="edu-card-grid edu-card-grid--two" style="margin-top:1.5rem">
+        <article class="edu-card"><h3>例子：零用錢包和保險箱</h3><p>熱錢包像隨身零用錢包：拿得快，也比較容易被偷。冷錢包像保險箱：安全，但每次開都麻煩。常見做法是日常小額放熱錢包，長期大額放冷錢包。</p></article>
+        <article class="edu-card"><h3>反例：用了硬體錢包就萬無一失？</h3><p>不是。私鑰放在硬體裡，遠端很難偷走；但如果你在假網站上按下「確認授權」，硬體錢包也會照你的指示簽名。冷錢包擋的是偷鑰匙，擋不住你自己被騙著簽字。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="counterparty" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">05</span><h2>交易所的對手方風險：平台出事時，你排在哪裡？</h2><p>放在交易所的幣，平台不一定一比一放著。平台如果挪用客戶資產、被駭或經營失敗，你的提領請求就可能拿不回來，或要等很久的清算程序。</p></header>
+      <div class="edu-callout edu-callout--rail"><strong>真實案例：FTX（2022 年）</strong>這家當時規模很大的國際交易所在 2022-11-09 停止處理提款，2022-11-11 在美國申請破產；後續調查指出客戶存款被轉到關係企業使用。來源：<a href="https://en.wikipedia.org/wiki/Bankruptcy_of_FTX" target="_blank" rel="noopener">Bankruptcy of FTX（Wikipedia，2026-11-14 查）</a>。</div>
+      <div class="edu-card-grid" style="margin-top:1.5rem">
+        <article class="edu-card"><h3>平台倒閉</h3><p>你的餘額變成一筆債權，要排隊等清算，拿回多少、多久拿回都不確定。</p></article>
+        <article class="edu-card"><h3>被駭或凍結</h3><p>平台被駭、被主管機關限制，或因為法遵理由暫停提領，你只能等。</p></article>
+        <article class="edu-card"><h3>規則改變</h3><p>平台可以下架幣種、調整提領網路或費用。長期不碰的資產，最好不要一直放在平台上。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="taiwan" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">06</span><h2>台灣情境：本地與境外平台怎麼判斷、KYC 與出入金</h2><p>台灣的規範正在從「洗錢防制登記」走向「專法許可」。下面是 2026-11-14 查核時的狀態。</p></header>
+      <p class="edu-table-hint">手機可左右滑動查看完整表格。</p>
+      <div class="edu-table-wrap"><table class="edu-table">
+        <thead><tr><th>時間</th><th>發生什麼事</th><th>對你的意義</th><th>來源（查核日）</th></tr></thead>
+        <tbody>
+          <tr><td>2024-11-30</td><td>洗錢防制法第 6 條施行：提供虛擬資產服務須先向金管會完成洗錢防制登記，未登記而營業最高可處 2 年有期徒刑</td><td>在台灣提供服務的平台，應該查得到登記紀錄</td><td><a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&amp;parentpath=0%2C2&amp;mcustomize=news_view.jsp&amp;dataserno=202412050004&amp;dtable=News" target="_blank" rel="noopener">金管會新聞稿 2024-12-05</a>（2026-11-14 查）</td></tr>
+          <tr><td>2026-06-30</td><td>立法院三讀通過《虛擬資產服務法》：交易平台、保管等服務改為許可制，並規範客戶資產分離保管</td><td>專法施行後，平台要拿到許可證照才能營業</td><td><a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&amp;parentpath=0&amp;mcustomize=news_view.jsp&amp;dataserno=202606300002&amp;dtable=News" target="_blank" rel="noopener">金管會新聞稿 2026-06-30</a>（2026-11-14 查）</td></tr>
+          <tr><td>施行日未定</td><td>施行日由行政院另定；金管會預估專法與子法最快 2027 年第一季同步上路。既有業者在施行後 12 個月內申請許可、21 個月內取得證照</td><td>在那之前，判斷依據仍是洗錢防制登記</td><td><a href="https://www.cna.com.tw/news/afe/202606300370.aspx" target="_blank" rel="noopener">中央社 2026-06-30</a>、<a href="https://n.yam.com/Article/20261111523655" target="_blank" rel="noopener">蕃新聞 2026-11-11</a>（2026-11-14 查）</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="edu-card-grid" style="margin-top:1.5rem">
+        <article class="edu-card"><h3>判斷平台：先查三件事</h3><ul><li>能不能在金管會的資料裡查到它已完成登記（專法施行後改看許可）。</li><li>公司在哪個國家，出事時適用哪裡的法律、你要去哪裡求償。</li><li>有沒有公開說明客戶資產怎麼保管、是否和公司資產分開。</li></ul></article>
+        <article class="edu-card"><h3>本地平台和境外平台</h3><p>本地平台通常能直接綁定本人台灣銀行帳戶，用台幣買賣，受台灣規範管轄。境外平台幣種和商品通常較多，但若沒有在台灣完成登記，出事時台灣法規能幫你的有限。本頁不推薦任何特定平台，請自己比較。</p></article>
+        <article class="edu-card"><h3>KYC 實名驗證</h3><p>KYC 是平台確認「帳戶背後真的是你本人」，用來防止洗錢與冒名開戶。常見要準備身分證件、自拍核對、綁定本人銀行帳戶，審核可能要幾個工作天。各平台規定不同（未驗證：以各平台當下公告為準）。通過 KYC 是平台檢查你，不代表平台本身安全。</p></article>
+      </div>
+      <div class="edu-callout" style="margin-top:1.25rem"><strong>出入金要注意：</strong>台幣進出盡量走平台綁定的本人銀行帳戶。跟陌生人直接買賣（使用者之間交易）時，如果對方付款的錢來自詐騙，你的帳戶可能被銀行列為警示帳戶；只跟有交易紀錄的對象交易，金額不要大。</div>
+    </div>
+  </section>
+
+  <section id="usdt-network" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">07</span><h2>同一個 USDT，不同網路：選錯的後果</h2><p>USDT 是價格設計成貼近美元的穩定幣，常被拿來轉帳和計價。同一種 USDT 可以走在不同的區塊鏈上，就像同一筆錢可以走不同銀行的匯款系統。發送端和收款端，一定要選同一個網路。</p></header>
+      <figure style="margin:0 0 1.5rem;background:#fff;border:1px solid var(--edu-line);border-radius:14px;padding:1rem">
+        <svg viewBox="0 0 720 230" width="100%" role="img" aria-labelledby="netT" style="display:block;height:auto">
+          <title id="netT">USDT 選網路示意：兩端都選 TRC20 會到帳；發送端選 ERC20、收款端只收 TRC20，就可能卡住或遺失</title>
+          <g font-family="sans-serif" text-anchor="middle">
+            <rect x="10" y="20" width="150" height="190" rx="12" fill="#faf5ea" stroke="#e5a300" stroke-width="2"/>
+            <text x="85" y="56" font-size="17" font-weight="700" fill="#232020">發送端</text><text x="85" y="84" font-size="14" fill="#5f5b53">轉出 USDT</text>
+            <rect x="560" y="20" width="150" height="190" rx="12" fill="#faf5ea" stroke="#e5a300" stroke-width="2"/>
+            <text x="635" y="56" font-size="17" font-weight="700" fill="#232020">收款端</text><text x="635" y="84" font-size="14" fill="#5f5b53">只開了 TRC20</text><text x="635" y="106" font-size="14" fill="#5f5b53">地址 T 開頭</text>
+            <line x1="160" y1="80" x2="552" y2="80" stroke="#2e8b57" stroke-width="4"/><polygon points="552,72 562,80 552,88" fill="#2e8b57"/>
+            <rect x="268" y="56" width="184" height="30" rx="15" fill="#fff" stroke="#2e8b57" stroke-width="2"/><text x="360" y="77" font-size="14" fill="#2e8b57" font-weight="700">兩端都選 TRC20：到帳</text>
+            <path d="M160 160 L 470 160" stroke="#c0392b" stroke-width="4" stroke-dasharray="10 7"/>
+            <g stroke="#c0392b" stroke-width="5"><line x1="478" y1="146" x2="506" y2="174"/><line x1="506" y1="146" x2="478" y2="174"/></g>
+            <rect x="200" y="136" width="230" height="30" rx="15" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="315" y="157" font-size="14" fill="#c0392b" font-weight="700">選了 ERC20：可能卡住或遺失</text>
+          </g>
+        </svg>
+        <figcaption style="font-size:.9rem;color:var(--edu-muted);margin-top:.5rem">自製示意圖。實際能不能找回，要看收款平台願不願意、能不能協助處理，通常要付費或等很久，也可能完全找不回來。</figcaption>
+      </figure>
+      <p class="edu-table-hint">手機可左右滑動查看完整表格。</p>
+      <div class="edu-table-wrap"><table class="edu-table">
+        <thead><tr><th>網路選項</th><th>走哪條鏈</th><th>收款地址開頭</th><th>手續費與到帳時間</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ERC20</strong></td><td>以太坊</td><td>0x</td><td rowspan="2">依平台轉出頁當下顯示為準；不同平台、不同時段差很多，本頁不列數字</td></tr>
+          <tr><td><strong>TRC20</strong></td><td>Tron 鏈（波場）</td><td>T</td></tr>
+        </tbody>
+      </table></div>
+      <div class="edu-card-grid edu-card-grid--two" style="margin-top:1.5rem">
+        <article class="edu-card"><h3>網路會變</h3><p>發行方會調整支援的鏈。例如 2025 年起，USDT 在幾條較舊的鏈上不再新發行或贖回（<a href="https://cointelegraph.com/news/tether-drops-plan-to-end-usdt-on-five-chains" target="_blank" rel="noopener">Cointelegraph</a>，2026-11-14 查）。每次轉帳都以兩端平台當下支援的網路為準。</p></article>
+        <article class="edu-card"><h3>USDT 可以被發行方凍結</h3><p>USDT 由公司發行，發行方可以凍結特定地址上的 USDT。例如 2026-01-11 曾在 Tron 鏈上凍結 5 個地址、合計超過 1.8 億美元的 USDT（<a href="https://www.theblock.co/post/385051/tether-freezes-182-million-usdt" target="_blank" rel="noopener">The Block 2026-01-12</a>，2026-11-14 查）。這代表「鏈上」不等於「沒有人能管」。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="test-transfer" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">08</span><h2>第一次轉帳：先小額試轉</h2><p>區塊鏈上的轉帳送出就改不回來，沒有銀行可以幫你攔。多花一次手續費做測試，比轉錯整筆便宜得多。</p></header>
+      <div class="edu-timeline">
+        <div class="edu-timeline__item"><span class="edu-timeline__step">1</span><div><h3>在收款端開好地址</h3><p>選幣種、選網路，確認收款端支援這個組合，再複製地址。</p></div></div>
+        <div class="edu-timeline__item"><span class="edu-timeline__step">2</span><div><h3>在發送端選同一個網路</h3><p>貼上地址後，用開頭字母再檢查一次網路：0x 走 ERC20、T 走 TRC20。</p></div></div>
+        <div class="edu-timeline__item"><span class="edu-timeline__step">3</span><div><h3>核對地址前後幾碼</h3><p>有些惡意程式會偷換剪貼簿裡的地址，送出前對照頭尾 4 碼。</p></div></div>
+        <div class="edu-timeline__item"><span class="edu-timeline__step">4</span><div><h3>先轉最小金額</h3><p>等收款端確認入帳，再轉剩下的金額。只用輸得起的錢。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="risks" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">09</span><h2>兩個大坑：槓桿與詐騙</h2><p>錢包和交易所搞懂之後，最常讓人一次賠光的，不是技術問題，而是這兩件事。</p></header>
+      <div class="edu-card-grid edu-card-grid--two">
+        <article class="edu-card" style="min-width:0"><h3>槓桿：賺賠都放大</h3><p>槓桿是用小本金開大部位。算術示範（未計手續費與平台保證金規則）：</p>
+          <div class="edu-table-wrap"><table class="edu-table"><thead><tr><th>本金</th><th>倍數</th><th>價格往反方向走</th><th>結果</th></tr></thead><tbody>
+            <tr><td>10,000 元</td><td>1 倍</td><td>10%</td><td>剩 9,000 元</td></tr>
+            <tr><td>10,000 元</td><td>5 倍</td><td>10%</td><td>剩 5,000 元</td></tr>
+            <tr><td>10,000 元</td><td>10 倍</td><td>10%</td><td>歸零</td></tr>
+          </tbody></table></div>
+          <p>實際上，保證金不夠時平台會更早強制幫你結清，常常還沒到 10% 就出場。這是算術示範，不是市場資料。</p></article>
+        <article class="edu-card"><h3>詐騙：多半從「交出來」開始</h3><ul>
+          <li><strong>要你的助記詞或私鑰</strong>：不管自稱客服、朋友、官方，一律是詐騙。</li>
+          <li><strong>假網站、假 App</strong>：網址自己輸入，App 只從官方商店下載。</li>
+          <li><strong>保證獲利的群組或老師</strong>：穩賺不賠就先懷疑。</li>
+          <li><strong>陌生空投與連結</strong>：不點、不連錢包、不簽任何授權。</li>
+        </ul><p>懷疑遇到詐騙，可以打 165 反詐騙諮詢專線。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="check" class="edu-section edu-section--tint">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Self Check</span><h2>自我檢核：五個常見問題</h2><p>先自己回答，再點開看解答。</p></header>
+      {% include faq-accordion.html faq=page.faq id='walletFaq' %}
+      {% include faq-jsonld.html faq=page.faq %}
+    </div>
+  </section>
+
+  <section id="further" class="edu-section">
+    <div class="edu-container">
+      <header class="edu-section-head"><span class="edu-eyebrow">Further Reading</span><h2>延伸閱讀</h2></header>
+      <div class="edu-card-grid">
+        <article class="edu-card"><h3>站內</h3><ul>
+          <li><a href="{{ '/technical/vasp-act-trust-war/' | relative_url }}">《虛擬資產服務法》三讀通過：交易所的競爭，正從流量戰走向信任戰</a></li>
+          <li><a href="{{ '/technical/claude-code-hot-wallet/' | relative_url }}">Claude Code 初體驗：不到兩小時，我做出了熱錢包前後端</a></li>
+          <li><a href="{{ '/technical/ai-agent-wallet-permission-boundaries/' | relative_url }}">AI Agent 真的開始替你管錢了：最重要的不是自動交易</a></li>
+          <li><a href="{{ '/education/crypto/trading/' | relative_url }}">加密貨幣交易入門（2017–2018 歷史課程頁，內容不再更新）</a></li>
+        </ul></article>
+        <article class="edu-card"><h3>站外</h3><ul>
+          <li><a href="https://darkhandbook.io/" target="_blank" rel="noopener">《區塊鏈黑暗森林自救手冊》</a>：慢霧安全團隊整理的錢包安全手冊，有簡體中文與英文版（2026-11-14 查）。</li>
+          <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank" rel="noopener">BIP39 規格原文</a>：助記詞的公開標準。</li>
+          <li><a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&amp;parentpath=0&amp;mcustomize=news_view.jsp&amp;dataserno=202606300002&amp;dtable=News" target="_blank" rel="noopener">金管會：《虛擬資產服務法》三讀新聞稿</a></li>
+        </ul></article>
+        <article class="edu-card"><h3>這堂課在哪裡</h3><p>本篇改寫自<a href="{{ '/education/crypto/soochow/' | relative_url }}">東吳大學區塊鏈課程</a>的第二個主題。更多入門文章見 <a href="{{ '/education/crypto/web3-essentials/' | relative_url }}">Web3 入門精選</a>。</p></article>
+      </div>
+      <p style="margin-top:1.5rem">若你要替公司判斷託管、支付或合規架構，可以參考 <a href="{{ '/technical/web3-consulting/' | relative_url }}">Web3 技術顧問</a>。</p>
+    </div>
+  </section>
+
+  {% include education/instructor.html extra="錢包和交易所的介面每年都在變，但「私鑰在誰手上」這個問題一直沒變。先把這件事想清楚，其他操作都只是細節。" %}
+</main>

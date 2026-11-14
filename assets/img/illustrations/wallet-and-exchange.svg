@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-labelledby="t d">
+  <title id="t">鑰匙在誰手上</title>
+  <desc id="d">示意圖：左邊是交易所大樓，鑰匙鎖在平台的保險庫裡，使用者手上只有帳號；右邊是使用者自己拿著鑰匙和一張手抄的備份紙。中間的區塊鏈帳本兩邊共用。</desc>
+  <rect width="800" height="450" fill="#fffdf9"/>
+  <rect x="0" y="372" width="800" height="78" fill="#faf5ea"/>
+  <line x1="0" y1="372" x2="800" y2="372" stroke="#e8dcc2" stroke-width="2"/>
+
+  <!-- chain ledger (shared) -->
+  <g transform="translate(250 34)">
+    <rect x="0" y="0" width="300" height="56" rx="10" fill="#fff" stroke="#e5a300" stroke-width="2"/>
+    <g fill="#faf5ea" stroke="#8a5d00" stroke-width="1.5">
+      <rect x="18" y="14" width="48" height="28" rx="4"/>
+      <rect x="86" y="14" width="48" height="28" rx="4"/>
+      <rect x="154" y="14" width="48" height="28" rx="4"/>
+      <rect x="222" y="14" width="48" height="28" rx="4"/>
+    </g>
+    <g stroke="#8a5d00" stroke-width="2"><line x1="66" y1="28" x2="86" y2="28"/><line x1="134" y1="28" x2="154" y2="28"/><line x1="202" y1="28" x2="222" y2="28"/></g>
+    <text x="150" y="84" text-anchor="middle" font-size="17" fill="#232020" font-family="sans-serif" font-weight="700">資產記在區塊鏈帳本上</text>
+  </g>
+  <g stroke="#c9b88f" stroke-width="2" stroke-dasharray="6 6" fill="none">
+    <path d="M300 128 C 260 150, 220 160, 200 190"/>
+    <path d="M500 128 C 540 150, 580 160, 600 190"/>
+  </g>
+
+  <!-- left: exchange custody -->
+  <g transform="translate(70 180)">
+    <polygon points="0,40 130,0 260,40" fill="#4fa6d5" opacity=".85"/>
+    <rect x="12" y="40" width="236" height="150" fill="#fff" stroke="#4fa6d5" stroke-width="2"/>
+    <g fill="#e6f2f9"><rect x="30" y="58" width="34" height="114"/><rect x="196" y="58" width="34" height="114"/></g>
+    <rect x="86" y="72" width="88" height="86" rx="8" fill="#232020"/>
+    <circle cx="130" cy="115" r="22" fill="none" stroke="#e5a300" stroke-width="4"/>
+    <g fill="#e5a300"><circle cx="130" cy="115" r="6"/><rect x="127" y="115" width="6" height="22"/></g>
+    <text x="130" y="222" text-anchor="middle" font-size="18" fill="#232020" font-family="sans-serif" font-weight="700">託管：鑰匙在平台手上</text>
+    <text x="130" y="246" text-anchor="middle" font-size="14" fill="#5f5b53" font-family="sans-serif">你手上的是「帳號」與提領請求權</text>
+  </g>
+
+  <!-- right: self custody -->
+  <g transform="translate(470 180)">
+    <circle cx="90" cy="50" r="30" fill="#f3d9a6"/>
+    <path d="M40 190 C 40 110, 140 110, 140 190 Z" fill="#4fa6d5"/>
+    <g transform="translate(150 70) rotate(-20)">
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#e5a300" stroke-width="7"/>
+      <rect x="18" y="-4" width="58" height="8" rx="2" fill="#e5a300"/>
+      <rect x="58" y="4" width="8" height="12" fill="#e5a300"/><rect x="70" y="4" width="6" height="9" fill="#e5a300"/>
+    </g>
+    <g transform="translate(170 120)">
+      <rect x="0" y="0" width="86" height="70" rx="4" fill="#fff" stroke="#8a5d00" stroke-width="1.5"/>
+      <g stroke="#c9b88f" stroke-width="2"><line x1="10" y1="16" x2="76" y2="16"/><line x1="10" y1="30" x2="70" y2="30"/><line x1="10" y1="44" x2="76" y2="44"/><line x1="10" y1="58" x2="56" y2="58"/></g>
+    </g>
+    <text x="130" y="222" text-anchor="middle" font-size="18" fill="#232020" font-family="sans-serif" font-weight="700">自託管：鑰匙在自己手上</text>
+    <text x="130" y="246" text-anchor="middle" font-size="14" fill="#5f5b53" font-family="sans-serif">備份紙弄丟，沒有人能幫你找回</text>
+  </g>
+</svg>
