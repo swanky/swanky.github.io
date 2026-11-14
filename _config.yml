@@ -16,6 +16,8 @@ future: true
 
 # Exclude from processing
 exclude:
+  # site-diagram 工作檔（HTML 原稿），上線的圖另外 inline 或放 assets/img/diagrams/
+  - "assets/diagrams"
   # Unreferenced archival images stay in git; decoded build references audited.
   - "assets/img/uniform/ug3/制服女孩3見面會.jpg"
   - "assets/img/uniform/ug1/制服女孩簽書見面會.jpg"

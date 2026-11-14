@@ -51,6 +51,7 @@ Precedence when rules conflict: **user's live instruction > CLAUDE.md（適配�
 
 - `/sync-social-article` — sync a LinkedIn Pulse / X post (or fuse both) verbatim into `_posts/`. **Always use it when given LinkedIn/X links to sync**（要改寫研究成專欄用 `/website-technical-column`） — it encodes the working extraction paths; WebFetch only returns paraphrases (unusable) and naive scraping hits login walls.
 - `/s2m` — slides (PPTX/PDF) → per-page Markdown.
+- `/site-diagram` — 教學圖解／技術圖表（ByteByteGo 式卡片＋圖示＋箭頭，桌機＋手機直式兩版 inline SVG；底層 vendored diagram-design）。插畫與 banner 不用它。
 - `/codex-image` — 委派本機 codex CLI 生圖（文章 banner、插畫）。**本環境唯一的生圖管道**；有人物出鏡一律照 `AGENTS.md`「品牌角色形象」附參考圖。
 - `/website-technical-column` — 研究素材→寫專欄→Owner review→發布→社群草稿的全流程。
 - `/human-design-reader` — 用本機引擎排人類圖並產出可核對的繁中解讀。
