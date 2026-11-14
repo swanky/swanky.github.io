@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-custody" viewBox="0 0 440 900" role="img" aria-labelledby="dgp-custody-title dgp-custody-desc">
+  <title id="dgp-custody-title">帳本是同一本，差別在私鑰在誰手上</title>
+  <desc id="dgp-custody-desc">託管與自己保管的對照（直式）：上方是託管，你沒有私鑰，私鑰由交易所管理、交易所的資料庫記你的餘額、由交易所簽名，交易所倒閉或被駭就失去資產；下方是自己保管，私鑰在你的錢包裡、你自己簽名，私鑰遺失就無法找回。中間是兩邊共用的同一本區塊鏈帳本。</desc>
+  <style>
+      #dgp-custody text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-custody .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-custody .m { dominant-baseline: central; }
+      #dgp-custody .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-custody .sm { font-size: 20px; font-weight: 500; }
+      #dgp-custody .lg { font-size: 26px; font-weight: 700; }
+      #dgp-custody .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-custody .mute { fill: #5F5B53; }
+      #dgp-custody .t-y { fill: #8A5D00; } #dgp-custody .t-b { fill: #1F5F9C; } #dgp-custody .t-g { fill: #1E7A41; } #dgp-custody .t-r { fill: #B83232; }
+      #dgp-custody .bar { fill: #E5A300; }
+      #dgp-custody .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-custody .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-custody .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-custody .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-custody .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-custody .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-custody .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-custody .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-custody .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-custody .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-custody .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-custody .b.solid > text { fill: #fff; }
+      #dgp-custody .ic-y { color: #8A5D00; } #dgp-custody .ic-b { color: #1F5F9C; } #dgp-custody .ic-g { color: #1E7A41; }
+      #dgp-custody .ic-r { color: #B83232; } #dgp-custody .ic-n { color: #5F5B53; } #dgp-custody .ic-k { color: #232020; }
+      #dgp-custody .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-custody .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-custody .num.r > circle { fill: #D64545; }
+      #dgp-custody .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-custody .head { fill: #5F5B53; stroke: none; }
+      #dgp-custody .y > .ln, #dgp-custody .ln.y { stroke: #E5A300; } #dgp-custody .y > .head { fill: #E5A300; }
+      #dgp-custody .b3 > .ln, #dgp-custody .ln.b3 { stroke: #4FA6D5; } #dgp-custody .b3 > .head { fill: #4FA6D5; }
+      #dgp-custody .g > .ln, #dgp-custody .ln.g { stroke: #2E9E5B; } #dgp-custody .g > .head { fill: #2E9E5B; }
+      #dgp-custody .r > .ln, #dgp-custody .ln.r { stroke: #D64545; } #dgp-custody .r > .head { fill: #D64545; }
+      #dgp-custody .dash { stroke-dasharray: 9 7; }
+      #dgp-custody .thin { stroke-width: 2; }
+      #dgp-custody .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-custody .f-g { fill: #2E9E5B; } #dgp-custody .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-custody .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+      <symbol id="dgp-custody-ic-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0"/><path d="M15 9h.01"/></symbol>
+      <symbol id="dgp-custody-ic-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></symbol>
+      <symbol id="dgp-custody-ic-w-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9.5 16h-19z"/><path d="M12 10v4.5"/><path d="M12 17.3h.01"/></symbol>
+      <symbol id="dgp-custody-ic-w-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 18h16"/><path d="M4 10h16"/><path d="M12 3l8 5h-16z"/><path d="M7 10v8"/><path d="M12 10v8"/><path d="M17 10v8"/></symbol>
+      <symbol id="dgp-custody-ic-w-chain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5h6v7h-6z"/><path d="M15.5 8.5h6v7h-6z"/><path d="M8.5 12h7"/></symbol>
+      <symbol id="dgp-custody-ic-w-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2"/><path d="M11 18h2"/></symbol>
+  </defs>
+  <text class="ttl" x="16" y="34">帳本是同一本，</text>
+  <text class="ttl" x="16" y="72">差別在私鑰在誰手上</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+
+  <rect class="zone b" x="8" y="112" width="424" height="262" rx="16"/>
+  <use href="#dgp-custody-ic-w-bank" class="ic-b" x="22" y="122" width="36" height="36"/><text class="m lg t-b" x="66" y="140">託管：交易所帳戶</text>
+  <use href="#dgp-custody-ic-user" class="ic-k" x="26" y="192" width="56" height="56"/><text class="c lg" x="54" y="266">你</text>
+  <g data-step="2">
+    <text class="m sm" x="24" y="176">把幣交給它顧</text>
+    <g class="b3"><path class="ln" d="M92 220H172"/><path class="head" d="M0 0l-13-7v14z" transform="translate(183 220)"/></g>
+    <text class="c sm t-r" x="54" y="294">沒有私鑰</text>
+    <g class="b b2"><rect x="186" y="162" width="232" height="126" rx="12"/><use href="#dgp-custody-ic-w-bank" class="ic-b" x="200" y="166" width="32" height="32"/><text class="m t-b" x="240" y="182">交易所</text><text class="c sm" x="302" y="268">資料庫記你的餘額</text></g>
+    <g class="b y"><rect x="202" y="202" width="200" height="46" rx="23"/><use href="#dgp-custody-ic-key" class="ic-y" x="226" y="211" width="28" height="28"/><text class="c lg" x="320" y="225">私鑰</text></g>
+  </g>
+  <g data-step="4">
+    <g class="b r"><rect x="22" y="312" width="296" height="48" rx="24"/><use href="#dgp-custody-ic-w-alert" class="ic-r" x="36" y="322" width="28" height="28"/><text class="m t-r" x="72" y="336">倒閉、被駭：失去資產</text></g>
+  </g>
+  <g data-step="3">
+    <g class="b3"><path class="ln" d="M372 292V420"/><path class="head" d="M0 0l-13-7v14z" transform="translate(372 431) rotate(90)"/></g>
+    <text class="e sm t-b" x="352" y="404">交易所簽名</text>
+  </g>
+
+  <g data-step="1">
+    <rect class="zone y" x="8" y="434" width="424" height="132" rx="16"/>
+    <use href="#dgp-custody-ic-w-chain" class="ic-y" x="22" y="444" width="34" height="34"/><text class="m lg" x="64" y="462">區塊鏈帳本</text>
+    <text class="e sm t-y" x="418" y="463">兩邊共用同一本</text>
+    <path class="ln thin" d="M104 505H124M210 505H230M316 505H336"/>
+    <g class="b"><rect x="18" y="486" width="86" height="38" rx="8"/><rect x="124" y="486" width="86" height="38" rx="8"/><rect x="230" y="486" width="86" height="38" rx="8"/><rect x="336" y="486" width="86" height="38" rx="8"/></g>
+    <path class="row" d="M30 499h62M30 511h40M136 499h62M136 511h40M242 499h62M242 511h40M348 499h62M348 511h40"/>
+    <text class="m sm" x="22" y="546">幣記在這裡，不在 App 裡</text>
+  </g>
+
+  <rect class="zone g" x="8" y="626" width="424" height="262" rx="16"/>
+  <use href="#dgp-custody-ic-w-phone" class="ic-g" x="22" y="636" width="36" height="36"/><text class="m lg t-g" x="66" y="654">自己保管：非託管錢包</text>
+  <use href="#dgp-custody-ic-user" class="ic-k" x="26" y="706" width="56" height="56"/><text class="c lg" x="54" y="780">你</text>
+  <g data-step="5">
+    <text class="m sm" x="24" y="690">鑰匙自己拿</text>
+    <g class="g"><path class="ln" d="M92 734H172"/><path class="head" d="M0 0l-13-7v14z" transform="translate(183 734)"/></g>
+    <text class="c sm t-g" x="54" y="808">握有私鑰</text>
+    <g class="b g"><rect x="186" y="676" width="232" height="126" rx="12"/><use href="#dgp-custody-ic-w-phone" class="ic-g" x="200" y="680" width="32" height="32"/><text class="m t-g" x="240" y="696">你的錢包</text><text class="c sm" x="302" y="782">資產直接在鏈上</text></g>
+    <g class="b y"><rect x="202" y="716" width="200" height="46" rx="23"/><use href="#dgp-custody-ic-key" class="ic-y" x="226" y="725" width="28" height="28"/><text class="c lg" x="320" y="739">私鑰</text></g>
+  </g>
+  <g data-step="6">
+    <g class="g"><path class="ln" d="M372 672V580"/><path class="head" d="M0 0l-13-7v14z" transform="translate(372 569) rotate(-90)"/></g>
+    <text class="e sm t-g" x="352" y="598">你自己簽名</text>
+  </g>
+  <g data-step="7">
+    <g class="b r"><rect x="22" y="826" width="276" height="48" rx="24"/><use href="#dgp-custody-ic-w-alert" class="ic-r" x="36" y="836" width="28" height="28"/><text class="m t-r" x="72" y="850">私鑰遺失：無法找回</text></g>
+  </g>
+</svg>

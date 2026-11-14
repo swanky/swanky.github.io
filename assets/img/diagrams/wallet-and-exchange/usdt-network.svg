@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-usdt-network" viewBox="0 0 440 820" role="img" aria-labelledby="dgp-usdt-network-title dgp-usdt-network-desc">
+  <title id="dgp-usdt-network-title">以儲值頁寫的網路為準，選錯可能送不出或遺失</title>
+  <desc id="dgp-usdt-network-desc">USDT 選網路（直式，由上而下）：同一個 USDT 可以走以太坊的 ERC20 或 Tron 鏈的 TRC20。0x 開頭的地址許多鏈共用，不能只看地址開頭判斷網路。收款方儲值頁寫 TRC20 時，發送端也選 TRC20 才會到帳；選成 ERC20，可能送不出去，或卡住、遺失。一律以收款方儲值頁寫的網路為準。</desc>
+  <style>
+      #dgp-usdt-network text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-usdt-network .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-usdt-network .mono { font-family: Consolas,'Cascadia Mono',monospace; }
+      #dgp-usdt-network .m { dominant-baseline: central; }
+      #dgp-usdt-network .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-usdt-network .sm { font-size: 20px; font-weight: 500; }
+      #dgp-usdt-network .lg { font-size: 26px; font-weight: 700; }
+      #dgp-usdt-network .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-usdt-network .mute { fill: #5F5B53; }
+      #dgp-usdt-network .t-y { fill: #8A5D00; } #dgp-usdt-network .t-b { fill: #1F5F9C; } #dgp-usdt-network .t-g { fill: #1E7A41; } #dgp-usdt-network .t-r { fill: #B83232; }
+      #dgp-usdt-network .bar { fill: #E5A300; }
+      #dgp-usdt-network .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-usdt-network .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-usdt-network .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-usdt-network .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-usdt-network .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-usdt-network .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-usdt-network .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-usdt-network .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-usdt-network .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-usdt-network .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-usdt-network .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-usdt-network .b.solid > text { fill: #fff; }
+      #dgp-usdt-network .ic-y { color: #8A5D00; } #dgp-usdt-network .ic-b { color: #1F5F9C; } #dgp-usdt-network .ic-g { color: #1E7A41; }
+      #dgp-usdt-network .ic-r { color: #B83232; } #dgp-usdt-network .ic-n { color: #5F5B53; } #dgp-usdt-network .ic-k { color: #232020; }
+      #dgp-usdt-network .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-usdt-network .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-usdt-network .num.r > circle { fill: #D64545; }
+      #dgp-usdt-network .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-usdt-network .head { fill: #5F5B53; stroke: none; }
+      #dgp-usdt-network .y > .ln, #dgp-usdt-network .ln.y { stroke: #E5A300; } #dgp-usdt-network .y > .head { fill: #E5A300; }
+      #dgp-usdt-network .b3 > .ln, #dgp-usdt-network .ln.b3 { stroke: #4FA6D5; } #dgp-usdt-network .b3 > .head { fill: #4FA6D5; }
+      #dgp-usdt-network .g > .ln, #dgp-usdt-network .ln.g { stroke: #2E9E5B; } #dgp-usdt-network .g > .head { fill: #2E9E5B; }
+      #dgp-usdt-network .r > .ln, #dgp-usdt-network .ln.r { stroke: #D64545; } #dgp-usdt-network .r > .head { fill: #D64545; }
+      #dgp-usdt-network .dash { stroke-dasharray: 9 7; }
+      #dgp-usdt-network .thin { stroke-width: 2; }
+      #dgp-usdt-network .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-usdt-network .f-g { fill: #2E9E5B; } #dgp-usdt-network .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-usdt-network .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+      <symbol id="dgp-usdt-network-ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5l10 -11"/></symbol>
+      <symbol id="dgp-usdt-network-ic-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></symbol>
+      <symbol id="dgp-usdt-network-ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6l-12 12"/></symbol>
+  </defs>
+  <text class="ttl" x="16" y="34">以儲值頁寫的網路為準，</text>
+  <text class="ttl" x="16" y="72">選錯：送不出或遺失</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+  <rect class="zone b" x="8" y="116" width="424" height="112" rx="16"/>
+  <use href="#dgp-usdt-network-ic-user" class="ic-b" x="22" y="126" width="36" height="36"/><text class="m lg t-b" x="66" y="144">發送端</text><text class="e sm t-b" x="418" y="145">提領時要選網路</text>
+  <g class="b y"><rect x="146" y="170" width="148" height="46" rx="23"/><text class="c lg" x="220" y="193">USDT</text></g>
+  <g data-step="1">
+    <rect class="zone" x="8" y="290" width="206" height="160" rx="16"/><text class="c lg" x="111" y="320">ERC20</text><text class="c sm mute" x="111" y="354">以太坊</text>
+    <rect class="zone" x="226" y="290" width="206" height="160" rx="16"/><text class="c lg" x="329" y="320">TRC20</text><text class="c sm mute" x="329" y="354">Tron 鏈（波場）</text>
+  </g>
+  <g data-step="2">
+    <g class="b"><rect x="20" y="384" width="182" height="48" rx="24"/><text class="c sm" x="111" y="408"><tspan class="mono">0x</tspan>：多鏈共用</text></g>
+    <g class="b"><rect x="238" y="384" width="182" height="48" rx="24"/><text class="c" x="329" y="408">地址 T 開頭</text></g>
+  </g>
+  <g data-step="5">
+    <g class="r"><path class="ln dash" d="M144 193H111V276"/><path class="head" d="M0 0l-13-7v14z" transform="translate(111 287) rotate(90)"/></g>
+    <path class="ln r dash" d="M111 454V480"/>
+    <g class="b r"><rect x="22" y="484" width="196" height="48" rx="24"/><use href="#dgp-usdt-network-ic-x" class="ic-r" x="38" y="498" width="20" height="20"/><text class="m sm t-r" x="66" y="508">送不出或遺失</text></g>
+  </g>
+  <rect class="zone g" x="8" y="574" width="424" height="160" rx="16"/>
+  <use href="#dgp-usdt-network-ic-user" class="ic-g" x="22" y="584" width="36" height="36"/><text class="m lg t-g" x="66" y="602">接收端</text>
+  <g data-step="3">
+    <text class="m sm t-g" x="24" y="652">儲值時選網路</text><text class="m lg t-g" x="24" y="690">TRC20</text>
+    <g class="b g"><rect x="226" y="622" width="192" height="98" rx="12"/><text class="c sm" x="322" y="652">收款地址</text><text class="c lg t-g" x="322" y="690">T 開頭</text></g>
+  </g>
+  <g data-step="4">
+    <g class="g"><path class="ln" d="M296 193H329V276"/><path class="head" d="M0 0l-13-7v14z" transform="translate(329 287) rotate(90)"/></g>
+    <g class="g"><path class="ln" d="M329 454V608"/><path class="head" d="M0 0l-13-7v14z" transform="translate(329 619) rotate(90)"/></g>
+    <g class="b g"><rect x="264" y="484" width="130" height="48" rx="24"/><use href="#dgp-usdt-network-ic-check" class="ic-g" x="282" y="496" width="24" height="24"/><text class="m lg t-g" x="316" y="508">到帳</text></g>
+  </g>
+  <g data-step="6"><g class="b y"><rect x="8" y="752" width="424" height="56" rx="12"/><text class="c lg" x="220" y="780">以收款方儲值頁的網路為準</text></g></g>
+</svg>

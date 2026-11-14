@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-leverage" viewBox="0 0 440 824" role="img" aria-labelledby="dgp-leverage-title dgp-leverage-desc">
+  <title id="dgp-leverage-title">價格反向 10%，10 倍槓桿本金歸零</title>
+  <desc id="dgp-leverage-desc">槓桿算術示範（直式）：本金 10,000 元、價格往反方向走 10%。虧損等於本金乘以倍數乘以反向幅度：1 倍虧 1,000、剩 9,000；5 倍虧 5,000、剩 5,000；10 倍虧 10,000、本金歸零。算術示範，未計手續費與保證金規則。</desc>
+  <style>
+      #dgp-leverage text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-leverage .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-leverage .m { dominant-baseline: central; }
+      #dgp-leverage .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-leverage .sm { font-size: 20px; font-weight: 500; }
+      #dgp-leverage .lg { font-size: 26px; font-weight: 700; }
+      #dgp-leverage .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-leverage .mute { fill: #5F5B53; }
+      #dgp-leverage .t-y { fill: #8A5D00; } #dgp-leverage .t-b { fill: #1F5F9C; } #dgp-leverage .t-g { fill: #1E7A41; } #dgp-leverage .t-r { fill: #B83232; }
+      #dgp-leverage .bar { fill: #E5A300; }
+      #dgp-leverage .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-leverage .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-leverage .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-leverage .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-leverage .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-leverage .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-leverage .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-leverage .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-leverage .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-leverage .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-leverage .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-leverage .b.solid > text { fill: #fff; }
+      #dgp-leverage .ic-y { color: #8A5D00; } #dgp-leverage .ic-b { color: #1F5F9C; } #dgp-leverage .ic-g { color: #1E7A41; }
+      #dgp-leverage .ic-r { color: #B83232; } #dgp-leverage .ic-n { color: #5F5B53; } #dgp-leverage .ic-k { color: #232020; }
+      #dgp-leverage .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-leverage .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-leverage .num.r > circle { fill: #D64545; }
+      #dgp-leverage .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-leverage .head { fill: #5F5B53; stroke: none; }
+      #dgp-leverage .y > .ln, #dgp-leverage .ln.y { stroke: #E5A300; } #dgp-leverage .y > .head { fill: #E5A300; }
+      #dgp-leverage .b3 > .ln, #dgp-leverage .ln.b3 { stroke: #4FA6D5; } #dgp-leverage .b3 > .head { fill: #4FA6D5; }
+      #dgp-leverage .g > .ln, #dgp-leverage .ln.g { stroke: #2E9E5B; } #dgp-leverage .g > .head { fill: #2E9E5B; }
+      #dgp-leverage .r > .ln, #dgp-leverage .ln.r { stroke: #D64545; } #dgp-leverage .r > .head { fill: #D64545; }
+      #dgp-leverage .dash { stroke-dasharray: 9 7; }
+      #dgp-leverage .thin { stroke-width: 2; }
+      #dgp-leverage .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-leverage .f-g { fill: #2E9E5B; } #dgp-leverage .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-leverage .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+
+  </defs>
+  <text class="ttl" x="16" y="34">價格反向 10%，</text>
+  <text class="ttl" x="16" y="72">10 倍槓桿本金歸零</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+  <g data-step="1">
+    <g class="b"><rect x="8" y="118" width="204" height="80" rx="12"/><text class="c sm mute" x="110" y="140">本金</text><text class="c lg" x="110" y="172">10,000 元</text></g>
+    <g class="b r"><rect x="228" y="118" width="204" height="80" rx="12"/><text class="c sm t-r" x="330" y="140">價格反向</text><text class="c lg t-r" x="330" y="172">10%</text></g>
+  </g>
+  <text class="c sm" x="220" y="226">虧損＝本金 × 倍數 × 反向幅度</text>
+  <g data-step="2">
+    <rect class="zone" x="8" y="250" width="424" height="132" rx="16"/>
+    <text class="m lg" x="24" y="278">1 倍</text><text class="e sm mute" x="416" y="279">10,000 × 1 × 10%</text>
+    <rect class="f-g" x="24" y="302" width="353" height="32"/><rect class="f-r" x="377" y="302" width="39" height="32"/><rect class="f-n" x="24" y="302" width="392" height="32"/>
+    <text class="m lg t-g" x="24" y="358">剩 9,000</text><text class="e t-r" x="416" y="358">虧 1,000</text>
+  </g>
+  <g data-step="3">
+    <rect class="zone" x="8" y="394" width="424" height="132" rx="16"/>
+    <text class="m lg" x="24" y="422">5 倍</text><text class="e sm mute" x="416" y="423">10,000 × 5 × 10%</text>
+    <rect class="f-g" x="24" y="446" width="196" height="32"/><rect class="f-r" x="220" y="446" width="196" height="32"/><rect class="f-n" x="24" y="446" width="392" height="32"/>
+    <text class="m lg t-g" x="24" y="502">剩 5,000</text><text class="e t-r" x="416" y="502">虧 5,000</text>
+  </g>
+  <g data-step="4">
+    <rect class="zone r" x="8" y="538" width="424" height="132" rx="16"/>
+    <text class="m lg t-r" x="24" y="566">10 倍</text><text class="e sm mute" x="416" y="567">10,000 × 10 × 10%</text>
+    <rect class="f-r" x="24" y="590" width="392" height="32"/><rect class="f-n" x="24" y="590" width="392" height="32"/>
+    <text class="m lg t-r" x="24" y="646">剩 0</text><text class="e t-r" x="416" y="646">虧 10,000</text>
+  </g>
+  <g data-step="5"><g class="b r"><rect x="8" y="690" width="424" height="56" rx="12"/><text class="c lg t-r" x="220" y="718">倍數越大，虧損放得越大</text></g></g>
+  <text class="c sm mute" x="220" y="772">算術示範</text><text class="c sm mute" x="220" y="800">未計手續費與保證金規則</text>
+</svg>

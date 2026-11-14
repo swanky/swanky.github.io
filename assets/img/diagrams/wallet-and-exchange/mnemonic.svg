@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-mnemonic" viewBox="0 0 440 924" role="img" aria-labelledby="dgp-mnemonic-title dgp-mnemonic-desc">
+  <title id="dgp-mnemonic-title">助記詞算得出所有私鑰，反過來算不回去</title>
+  <desc id="dgp-mnemonic-desc">助記詞的產生順序（直式，由上而下）：電腦先產生亂數，亂數編成 12 到 24 個單字的助記詞，助記詞算出種子，種子推導出許多私鑰，每把私鑰再算出地址。從地址、私鑰算不回助記詞；備份助記詞就等於備份整個錢包，所以誰拿到助記詞，誰就能動用資產。</desc>
+  <style>
+      #dgp-mnemonic text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-mnemonic .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-mnemonic .m { dominant-baseline: central; }
+      #dgp-mnemonic .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-mnemonic .sm { font-size: 20px; font-weight: 500; }
+      #dgp-mnemonic .lg { font-size: 26px; font-weight: 700; }
+      #dgp-mnemonic .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-mnemonic .mute { fill: #5F5B53; }
+      #dgp-mnemonic .t-y { fill: #8A5D00; } #dgp-mnemonic .t-b { fill: #1F5F9C; } #dgp-mnemonic .t-g { fill: #1E7A41; } #dgp-mnemonic .t-r { fill: #B83232; }
+      #dgp-mnemonic .bar { fill: #E5A300; }
+      #dgp-mnemonic .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-mnemonic .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-mnemonic .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-mnemonic .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-mnemonic .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-mnemonic .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-mnemonic .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-mnemonic .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-mnemonic .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-mnemonic .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-mnemonic .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-mnemonic .b.solid > text { fill: #fff; }
+      #dgp-mnemonic .ic-y { color: #8A5D00; } #dgp-mnemonic .ic-b { color: #1F5F9C; } #dgp-mnemonic .ic-g { color: #1E7A41; }
+      #dgp-mnemonic .ic-r { color: #B83232; } #dgp-mnemonic .ic-n { color: #5F5B53; } #dgp-mnemonic .ic-k { color: #232020; }
+      #dgp-mnemonic .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-mnemonic .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-mnemonic .num.r > circle { fill: #D64545; }
+      #dgp-mnemonic .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-mnemonic .head { fill: #5F5B53; stroke: none; }
+      #dgp-mnemonic .y > .ln, #dgp-mnemonic .ln.y { stroke: #E5A300; } #dgp-mnemonic .y > .head { fill: #E5A300; }
+      #dgp-mnemonic .b3 > .ln, #dgp-mnemonic .ln.b3 { stroke: #4FA6D5; } #dgp-mnemonic .b3 > .head { fill: #4FA6D5; }
+      #dgp-mnemonic .g > .ln, #dgp-mnemonic .ln.g { stroke: #2E9E5B; } #dgp-mnemonic .g > .head { fill: #2E9E5B; }
+      #dgp-mnemonic .r > .ln, #dgp-mnemonic .ln.r { stroke: #D64545; } #dgp-mnemonic .r > .head { fill: #D64545; }
+      #dgp-mnemonic .dash { stroke-dasharray: 9 7; }
+      #dgp-mnemonic .thin { stroke-width: 2; }
+      #dgp-mnemonic .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-mnemonic .f-g { fill: #2E9E5B; } #dgp-mnemonic .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-mnemonic .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+      <symbol id="dgp-mnemonic-ic-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0"/><path d="M15 9h.01"/></symbol>
+      <symbol id="dgp-mnemonic-ic-w-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/><path d="M8.5 8.5h.01" stroke-width="2.6"/><path d="M15.5 8.5h.01" stroke-width="2.6"/><path d="M12 12h.01" stroke-width="2.6"/><path d="M8.5 15.5h.01" stroke-width="2.6"/><path d="M15.5 15.5h.01" stroke-width="2.6"/></symbol>
+      <symbol id="dgp-mnemonic-ic-w-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.3 -4.2 -6.5 -7.8 -6.5 -11a6.5 6.5 0 0 1 13 0c0 3.2 -2.2 6.8 -6.5 11"/><path d="M9.8 10a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 0 0 -4.4 0"/></symbol>
+      <symbol id="dgp-mnemonic-ic-w-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 13c0 -3.6 -2.6 -5.6 -7 -5.6c0 3.6 2.6 5.6 7 5.6"/><path d="M12 10.5c0 -3.6 2.6 -5.6 7 -5.6c0 3.6 -2.6 5.6 -7 5.6"/><path d="M8 21h8"/></symbol>
+      <symbol id="dgp-mnemonic-ic-w-words" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1v-16a1 1 0 0 1 1 -1"/><path d="M8.5 8h2.5"/><path d="M13.5 8h2"/><path d="M8.5 12h2"/><path d="M13 12h2.5"/><path d="M8.5 16h2.5"/><path d="M13.5 16h2"/></symbol>
+      <symbol id="dgp-mnemonic-ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6l-12 12"/></symbol>
+  </defs>
+  <text class="ttl" x="16" y="34">助記詞算得出所有私鑰，</text>
+  <text class="ttl" x="16" y="72">反過來算不回去</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+  <g data-step="1">
+    <g class="b"><rect x="96" y="124" width="328" height="84" rx="12"/><use href="#dgp-mnemonic-ic-w-dice" class="ic-n" x="112" y="144" width="44" height="44"/><text class="m lg" x="172" y="151">亂數</text><text class="m sm mute" x="172" y="183">電腦產生</text></g>
+  </g>
+  <g data-step="2">
+    <g><path class="ln" d="M260 212V246"/><path class="head" d="M0 0l-13-7v14z" transform="translate(260 257) rotate(90)"/></g><text class="m sm" x="280" y="234">編成</text>
+    <g class="b y"><rect x="96" y="260" width="328" height="84" rx="12"/><use href="#dgp-mnemonic-ic-w-words" class="ic-y" x="112" y="280" width="44" height="44"/><text class="m lg" x="172" y="287">助記詞</text><text class="m sm" x="172" y="319">12–24 個單字</text></g>
+  </g>
+  <g data-step="3">
+    <g><path class="ln" d="M260 348V382"/><path class="head" d="M0 0l-13-7v14z" transform="translate(260 393) rotate(90)"/></g><text class="m sm" x="280" y="370">算出</text>
+    <g class="b"><rect x="96" y="396" width="328" height="84" rx="12"/><use href="#dgp-mnemonic-ic-w-sprout" class="ic-g" x="112" y="416" width="44" height="44"/><text class="m lg" x="172" y="423">種子</text><text class="m sm mute" x="172" y="455">總密碼</text></g>
+  </g>
+  <g data-step="4">
+    <g><path class="ln" d="M260 484V518"/><path class="head" d="M0 0l-13-7v14z" transform="translate(260 529) rotate(90)"/></g><text class="m sm" x="280" y="506">推導</text>
+    <g class="b y"><rect x="104" y="540" width="320" height="84" rx="12"/><rect x="100" y="536" width="320" height="84" rx="12"/><rect x="96" y="532" width="320" height="84" rx="12"/><use href="#dgp-mnemonic-ic-key" class="ic-y" x="112" y="552" width="44" height="44"/><text class="m lg" x="172" y="559">許多私鑰</text><text class="m sm" x="172" y="591">不能給別人</text></g>
+  </g>
+  <g data-step="5">
+    <g><path class="ln" d="M260 628V654"/><path class="head" d="M0 0l-13-7v14z" transform="translate(260 665) rotate(90)"/></g><text class="m sm" x="280" y="646">算出</text>
+    <g class="b b2"><rect x="104" y="676" width="320" height="84" rx="12"/><rect x="100" y="672" width="320" height="84" rx="12"/><rect x="96" y="668" width="320" height="84" rx="12"/><use href="#dgp-mnemonic-ic-w-pin" class="ic-b" x="112" y="688" width="44" height="44"/><text class="m lg" x="172" y="695">許多地址</text><text class="m sm" x="172" y="727">像帳號，可公開</text></g>
+  </g>
+  <g data-step="7">
+    <g class="r"><path class="ln dash" d="M44 756V287"/><path class="head" d="M0 0l-13-7v14z" transform="translate(44 276) rotate(-90)"/></g>
+    <rect x="30" y="462" width="28" height="148" fill="#fff"/>
+    <g class="b r"><rect x="22" y="408" width="44" height="44" rx="22"/><use href="#dgp-mnemonic-ic-x" class="ic-r" x="34" y="420" width="20" height="20"/></g>
+    <text class="c sm t-r" x="44" y="476">算</text><text class="c sm t-r" x="44" y="500">不</text><text class="c sm t-r" x="44" y="524">回</text><text class="c sm t-r" x="44" y="548">助</text><text class="c sm t-r" x="44" y="572">記</text><text class="c sm t-r" x="44" y="596">詞</text>
+  </g>
+  <g data-step="6"><g class="b y"><rect x="8" y="784" width="424" height="56" rx="12"/><text class="c lg" x="220" y="812">備份助記詞＝備份整個錢包</text></g></g>
+  <g data-step="8"><g class="b r"><rect x="8" y="854" width="424" height="56" rx="12"/><text class="c lg t-r" x="220" y="882">拿到助記詞＝能動用資產</text></g></g>
+</svg>

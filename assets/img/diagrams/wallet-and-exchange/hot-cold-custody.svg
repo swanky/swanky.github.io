@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="dgp-hot-cold-custody" viewBox="0 0 440 896" role="img" aria-labelledby="dgp-hot-cold-custody-title dgp-hot-cold-custody-desc">
+  <title id="dgp-hot-cold-custody-title">冷熱、託管交叉成四格，硬體錢包冷又自管</title>
+  <desc id="dgp-hot-cold-custody-desc">錢包四格（直式）：先依私鑰有沒有連網分成熱錢包與冷錢包兩組，每組再分託管與非託管。交易所帳戶是熱加託管，手機錢包是熱加非託管，平台離線金庫是冷加託管，硬體錢包是冷加非託管。</desc>
+  <style>
+      #dgp-hot-cold-custody text { font-family: 'Noto Sans TC','Microsoft JhengHei',sans-serif; font-size: 22px; font-weight: 600; fill: #232020; font-variant-numeric: lining-nums; }
+      #dgp-hot-cold-custody .c { text-anchor: middle; dominant-baseline: central; }
+      #dgp-hot-cold-custody .m { dominant-baseline: central; }
+      #dgp-hot-cold-custody .e { text-anchor: end; dominant-baseline: central; }
+      #dgp-hot-cold-custody .sm { font-size: 20px; font-weight: 500; }
+      #dgp-hot-cold-custody .lg { font-size: 26px; font-weight: 700; }
+      #dgp-hot-cold-custody .ttl { font-size: 28px; font-weight: 700; dominant-baseline: central; }
+      #dgp-hot-cold-custody .mute { fill: #5F5B53; }
+      #dgp-hot-cold-custody .t-y { fill: #8A5D00; } #dgp-hot-cold-custody .t-b { fill: #1F5F9C; } #dgp-hot-cold-custody .t-g { fill: #1E7A41; } #dgp-hot-cold-custody .t-r { fill: #B83232; }
+      #dgp-hot-cold-custody .bar { fill: #E5A300; }
+      #dgp-hot-cold-custody .zone { fill: #F4F5F7; stroke: #C9CED6; stroke-width: 2; stroke-dasharray: 8 6; }
+      #dgp-hot-cold-custody .zone.y { fill: #FAF5EA; stroke: #E5A300; } #dgp-hot-cold-custody .zone.b { fill: #F3F8FD; stroke: #4FA6D5; }
+      #dgp-hot-cold-custody .zone.g { fill: #F3FBF6; stroke: #2E9E5B; } #dgp-hot-cold-custody .zone.r { fill: #FEF5F5; stroke: #D64545; }
+      #dgp-hot-cold-custody .b > rect { fill: #fff; stroke: #C9CED6; stroke-width: 2; }
+      #dgp-hot-cold-custody .b.y > rect { fill: #FCF3DB; stroke: #E5A300; } #dgp-hot-cold-custody .b.b2 > rect { fill: #E6F2F9; stroke: #4FA6D5; }
+      #dgp-hot-cold-custody .b.g > rect { fill: #E9F7EF; stroke: #2E9E5B; } #dgp-hot-cold-custody .b.r > rect { fill: #FDECEC; stroke: #D64545; }
+      #dgp-hot-cold-custody .b.solid > rect { fill: #E5A300; stroke: #C98F00; } #dgp-hot-cold-custody .b.solid > text { fill: #fff; }
+      #dgp-hot-cold-custody .ic-y { color: #8A5D00; } #dgp-hot-cold-custody .ic-b { color: #1F5F9C; } #dgp-hot-cold-custody .ic-g { color: #1E7A41; }
+      #dgp-hot-cold-custody .ic-r { color: #B83232; } #dgp-hot-cold-custody .ic-n { color: #5F5B53; } #dgp-hot-cold-custody .ic-k { color: #232020; }
+      #dgp-hot-cold-custody .num > circle { fill: #E5A300; stroke: #fff; stroke-width: 2; }
+      #dgp-hot-cold-custody .num > text { fill: #fff; font-size: 20px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+      #dgp-hot-cold-custody .num.r > circle { fill: #D64545; }
+      #dgp-hot-cold-custody .ln { fill: none; stroke: #5F5B53; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      #dgp-hot-cold-custody .head { fill: #5F5B53; stroke: none; }
+      #dgp-hot-cold-custody .y > .ln, #dgp-hot-cold-custody .ln.y { stroke: #E5A300; } #dgp-hot-cold-custody .y > .head { fill: #E5A300; }
+      #dgp-hot-cold-custody .b3 > .ln, #dgp-hot-cold-custody .ln.b3 { stroke: #4FA6D5; } #dgp-hot-cold-custody .b3 > .head { fill: #4FA6D5; }
+      #dgp-hot-cold-custody .g > .ln, #dgp-hot-cold-custody .ln.g { stroke: #2E9E5B; } #dgp-hot-cold-custody .g > .head { fill: #2E9E5B; }
+      #dgp-hot-cold-custody .r > .ln, #dgp-hot-cold-custody .ln.r { stroke: #D64545; } #dgp-hot-cold-custody .r > .head { fill: #D64545; }
+      #dgp-hot-cold-custody .dash { stroke-dasharray: 9 7; }
+      #dgp-hot-cold-custody .thin { stroke-width: 2; }
+      #dgp-hot-cold-custody .row { fill: none; stroke: #C9CED6; stroke-width: 4; stroke-linecap: round; }
+      #dgp-hot-cold-custody .f-g { fill: #2E9E5B; } #dgp-hot-cold-custody .f-r { fill: #F8CFCF; stroke: #D64545; stroke-width: 2; stroke-dasharray: 6 5; } #dgp-hot-cold-custody .f-n { fill: none; stroke: #5F5B53; stroke-width: 2.5; }
+  </style>
+  <defs>
+      <symbol id="dgp-hot-cold-custody-ic-w-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9.5 16h-19z"/><path d="M12 10v4.5"/><path d="M12 17.3h.01"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 18h16"/><path d="M4 10h16"/><path d="M12 3l8 5h-16z"/><path d="M7 10v8"/><path d="M12 10v8"/><path d="M17 10v8"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-hw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 8v-5h5v5"/><path d="M7 8h10v11a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z"/><path d="M10 12h4"/><path d="M12 17h.01"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2"/><path d="M11 18h2"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-vault" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"/><path d="M9 11.5a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M12 8.5v-1"/><path d="M12 15.5v-1"/><path d="M15 11.5h1"/><path d="M8 11.5h1"/><path d="M6 19v2"/><path d="M18 19v2"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h.01"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><path d="M5.5 12.2a9.2 9.2 0 0 1 13 0"/><path d="M2.5 9a13.5 13.5 0 0 1 19 0"/></symbol>
+      <symbol id="dgp-hot-cold-custody-ic-w-wifi-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h.01"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><path d="M5.5 12.2a9.2 9.2 0 0 1 13 0"/><path d="M2.5 9a13.5 13.5 0 0 1 19 0"/><path d="M4 3l16 18"/></symbol>
+  </defs>
+  <text class="ttl" x="16" y="34">冷熱、託管交叉成四格，</text>
+  <text class="ttl" x="16" y="72">硬體錢包冷又自管</text>
+  <rect class="bar" x="16" y="98" width="64" height="6" rx="3"/>
+  <g data-step="2"><g class="b r"><rect x="8" y="116" width="424" height="52" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-wifi" class="ic-r" x="22" y="125" width="34" height="34"/><text class="m lg t-r" x="66" y="142">熱錢包</text><text class="e sm t-r" x="418" y="143">私鑰連網</text></g></g>
+  <g data-step="3"><g class="b"><rect x="8" y="180" width="424" height="150" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-bank" class="ic-r" x="24" y="196" width="48" height="48"/><text class="m lg" x="86" y="208">交易所帳戶</text><text class="m sm mute" x="86" y="238">託管：第三方握私鑰</text><text class="m" x="24" y="274">連網，交易快</text><use href="#dgp-hot-cold-custody-ic-w-alert" class="ic-r" x="24" y="293" width="26" height="26"/><text class="m t-r" x="58" y="306">風險：平台倒閉、被駭</text></g></g>
+  <g data-step="4"><g class="b"><rect x="8" y="342" width="424" height="150" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-phone" class="ic-r" x="24" y="358" width="48" height="48"/><text class="m lg" x="86" y="370">手機錢包</text><text class="m sm mute" x="86" y="400">非託管：自己握私鑰</text><text class="m" x="24" y="436">私鑰在連網的手機上</text><use href="#dgp-hot-cold-custody-ic-w-alert" class="ic-r" x="24" y="455" width="26" height="26"/><text class="m t-r" x="58" y="468">風險：較容易被駭</text></g></g>
+  <g data-step="2"><g class="b b2"><rect x="8" y="508" width="424" height="52" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-wifi-off" class="ic-b" x="22" y="517" width="34" height="34"/><text class="m lg t-b" x="66" y="534">冷錢包</text><text class="e sm t-b" x="418" y="535">私鑰不連網</text></g></g>
+  <g data-step="5"><g class="b"><rect x="8" y="572" width="424" height="150" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-vault" class="ic-b" x="24" y="588" width="48" height="48"/><text class="m lg" x="86" y="600">平台離線金庫</text><text class="m sm mute" x="86" y="630">託管：第三方握私鑰</text><text class="m" x="24" y="666">平台把幣離線保管</text><use href="#dgp-hot-cold-custody-ic-w-alert" class="ic-r" x="24" y="685" width="26" height="26"/><text class="m t-r" x="58" y="698">風險：仍要信任第三方</text></g></g>
+  <g data-step="6"><g class="b y"><rect x="8" y="734" width="424" height="150" rx="12"/><use href="#dgp-hot-cold-custody-ic-w-hw" class="ic-b" x="24" y="750" width="48" height="48"/><text class="m lg" x="86" y="762">硬體錢包</text><text class="m sm" x="86" y="792">非託管：自己握私鑰</text><text class="m" x="24" y="828">私鑰自己握、不連網</text><use href="#dgp-hot-cold-custody-ic-w-alert" class="ic-r" x="24" y="847" width="26" height="26"/><text class="m t-r" x="58" y="860">風險：弄丟或壞掉找不回</text></g></g>
+</svg>
