@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 462" width="400" height="462" role="img" aria-labelledby="repair-m-title repair-m-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+  <title id="repair-m-title">同一趟修車，從哪一刻算到哪一刻？</title>
+  <desc id="repair-m-desc">修車廠情境示意。依序記錄抵達、接待、交鑰匙、動工、完工。接待時間減抵達時間是到店後的等候，完工時間減動工時間則是動工後的經過時間。</desc>
+  <rect width="100%" height="100%" fill="#FFFDF9"/>
+  <text x="24" y="35" font-size="19" font-weight="700" fill="#8A5D00">修車廠　情境示意</text>
+  <path d="M59 83 V319" fill="none" stroke="#8E816A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="59" cy="84" r="6" fill="#275978"/>
+  <text x="80" y="91" font-size="21" font-weight="700" fill="#275978">抵達</text>
+  <circle cx="59" cy="139" r="6" fill="#275978"/>
+  <text x="80" y="146" font-size="21" font-weight="700" fill="#275978">接待</text>
+  <circle cx="59" cy="194" r="6" fill="#5F5B53"/>
+  <text x="80" y="201" font-size="21" font-weight="700" fill="#5F5B53">交鑰匙</text>
+  <circle cx="59" cy="249" r="6" fill="#8A5D00"/>
+  <text x="80" y="256" font-size="21" font-weight="700" fill="#8A5D00">動工</text>
+  <circle cx="59" cy="304" r="6" fill="#8A5D00"/>
+  <text x="80" y="311" font-size="21" font-weight="700" fill="#8A5D00">完工</text>
+  <path d="M157 84 h13 V139 h-13" fill="none" stroke="#275978" stroke-width="2" stroke-linecap="round"/>
+  <text x="189" y="106" font-size="21" font-weight="700" fill="#275978">到店等候多久？</text>
+  <text x="189" y="136" font-size="18" font-weight="400" fill="#232020">抵達到接待</text>
+  <path d="M157 249 h13 V304 h-13" fill="none" stroke="#8A5D00" stroke-width="2" stroke-linecap="round"/>
+  <text x="189" y="268" font-size="21" font-weight="700" fill="#8A5D00">動工後多久完工？</text>
+  <text x="189" y="297" font-size="18" font-weight="400" fill="#232020">動工到完工</text>
+  <rect x="24" y="353" width="352" height="81" rx="9" fill="#FAF5EA" stroke="#C6BDAC" stroke-width="1.5"/>
+  <text x="42" y="387" font-size="18" font-weight="400" fill="#5F5B53">比較兩段時間，</text>
+  <text x="42" y="415" font-size="18" font-weight="400" fill="#5F5B53">先分清客人等候與動工後的流程。</text>
+</svg>

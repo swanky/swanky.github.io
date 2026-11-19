@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 282" width="800" height="282" role="img" aria-labelledby="deposit-w-title deposit-w-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+  <title id="deposit-w-title">同一筆入金通知兩次，客戶帳只記一次</title>
+  <desc id="deposit-w-desc">作者教學示例。鏈上收到 1,000 USDC，同一個轉帳事件送達兩次通知，核對歸屬且符合放行條件後，客戶帳只記一次。</desc>
+  <rect width="100%" height="100%" fill="#FFFDF9"/>
+  <text x="24" y="36" font-size="19" fill="#8A5D00" font-weight="700">教學示例　1,000 USDC 入金</text>
+  <rect x="24" y="63" width="234" height="145" rx="8" fill="#F4F8FA" stroke="#AAC1CE" stroke-width="1.5"/>
+  <g transform="translate(38,77)" fill="none" stroke="#275978" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15 8h-5a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9m3-10v12"/></g>
+  <text x="74" y="98" font-size="20" fill="#275978" font-weight="700">鏈上轉帳</text>
+  <text x="42" y="151" font-size="35" fill="#275978" font-weight="700">1 筆</text>
+  <text x="42" y="183" font-size="17" fill="#232020" font-weight="400">實收 1,000 USDC</text>
+  <line x1="259" y1="137" x2="281" y2="137" stroke="#9A8051" stroke-width="2"/>
+  <rect x="282" y="63" width="234" height="145" rx="8" fill="#F4F8FA" stroke="#AAC1CE" stroke-width="1.5"/>
+  <g transform="translate(296,77)" fill="none" stroke="#275978" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="2" y="5" width="20" height="15" rx="2"/><path d="m3 7 9 7 9-7"/></g>
+  <text x="332" y="98" font-size="20" fill="#275978" font-weight="700">到帳通知</text>
+  <text x="300" y="151" font-size="35" fill="#275978" font-weight="700">2 次</text>
+  <text x="300" y="183" font-size="17" fill="#232020" font-weight="400">同一筆轉帳被通知兩次</text>
+  <line x1="517" y1="137" x2="539" y2="137" stroke="#9A8051" stroke-width="2"/>
+  <rect x="540" y="63" width="234" height="145" rx="8" fill="#FFF4D5" stroke="#D5AF51" stroke-width="1.5"/>
+  <g transform="translate(554,77)" fill="none" stroke="#8A5D00" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18m3-12h6m-6 4h6"/></g>
+  <text x="590" y="98" font-size="20" fill="#8A5D00" font-weight="700">客戶帳務</text>
+  <text x="558" y="151" font-size="35" fill="#8A5D00" font-weight="700">1 筆</text>
+  <text x="558" y="183" font-size="17" fill="#232020" font-weight="400">核對後記入 1,000 USDC</text>
+  <text x="24" y="254" font-size="18" fill="#5F5B53" font-weight="400">歸屬未明或確認不足，先列待查。</text>
+</svg>

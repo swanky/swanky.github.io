@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 265" width="800" height="265" role="img" aria-labelledby="repair-w-title repair-w-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+  <title id="repair-w-title">同一趟修車，從哪一刻算到哪一刻？</title>
+  <desc id="repair-w-desc">修車廠情境示意。依序記錄抵達、接待、交鑰匙、動工、完工。接待時間減抵達時間是到店後的等候，完工時間減動工時間則是動工後的經過時間。</desc>
+  <rect width="100%" height="100%" fill="#FFFDF9"/>
+  <text x="24" y="35" font-size="19" font-weight="700" fill="#8A5D00">修車廠　情境示意</text>
+  <path d="M77 88 H716" fill="none" stroke="#8E816A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="77" cy="88" r="6" fill="#275978"/>
+  <text x="57" y="119" font-size="21" font-weight="700" fill="#275978">抵達</text>
+  <circle cx="237" cy="88" r="6" fill="#275978"/>
+  <text x="217" y="119" font-size="21" font-weight="700" fill="#275978">接待</text>
+  <circle cx="397" cy="88" r="6" fill="#5F5B53"/>
+  <text x="367" y="119" font-size="21" font-weight="700" fill="#5F5B53">交鑰匙</text>
+  <circle cx="557" cy="88" r="6" fill="#8A5D00"/>
+  <text x="537" y="119" font-size="21" font-weight="700" fill="#8A5D00">動工</text>
+  <circle cx="716" cy="88" r="6" fill="#8A5D00"/>
+  <text x="696" y="119" font-size="21" font-weight="700" fill="#8A5D00">完工</text>
+  <path d="M77 137 v13 h160 v-13" fill="none" stroke="#275978" stroke-width="2" stroke-linecap="round"/>
+  <path d="M557 137 v13 h159 v-13" fill="none" stroke="#8A5D00" stroke-width="2" stroke-linecap="round"/>
+  <text x="65" y="190" font-size="23" font-weight="700" fill="#275978">到店等候多久？</text>
+  <text x="65" y="221" font-size="18" font-weight="400" fill="#232020">從抵達算到接待。</text>
+  <text x="531" y="190" font-size="23" font-weight="700" fill="#8A5D00">動工後多久完工？</text>
+  <text x="531" y="221" font-size="18" font-weight="400" fill="#232020">從動工算到完工。</text>
+</svg>

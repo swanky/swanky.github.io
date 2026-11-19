@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260" role="img" aria-labelledby="timeline-w-title timeline-w-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+  <title id="timeline-w-title">平台暫停提領後，鏈上仍有兩件事待處理</title>
+  <desc id="timeline-w-desc">台灣時間 10 月 30 日，幣安暫停提領後，先前廣播的最後一筆未授權交易於 07:56 完成，08:10 清除鏈上委派。</desc>
+  <rect width="100%" height="100%" fill="#FFFDF9"/>
+  <text x="24" y="36" font-size="18" fill="#8A5D00" font-weight="700">2026 年 10 月 30 日　台灣時間</text>
+  <rect x="24" y="61" width="752" height="49" rx="8" fill="#E6F2F9" stroke="#9DBACB" stroke-width="1.5"/>
+  <text x="44" y="92" font-size="21" fill="#275978" font-weight="700">平台已暫停提領</text>
+  <text x="245" y="92" font-size="18" fill="#275978" font-weight="400">先看平台狀態，再查正在鏈上執行的作業。</text>
+  <line x1="50" y1="143" x2="750" y2="143" stroke="#CCAE68" stroke-width="2"/>
+  <circle cx="52" cy="143" r="6" fill="#8A5D00"/>
+  <circle cx="442" cy="143" r="6" fill="#8A5D00"/>
+  <text x="48" y="180" font-size="32" fill="#8A5D00" font-weight="700">07:56</text>
+  <text x="48" y="212" font-size="21" fill="#232020" font-weight="700">最後一筆未授權轉帳完成</text>
+  <text x="48" y="238" font-size="17" fill="#5F5B53" font-weight="400">該筆轉帳先前已廣播。</text>
+  <text x="438" y="180" font-size="32" fill="#8A5D00" font-weight="700">08:10</text>
+  <text x="438" y="212" font-size="21" fill="#232020" font-weight="700">鏈上委派清除</text>
+  <text x="438" y="238" font-size="17" fill="#5F5B53" font-weight="400">幣安更新熱錢包帳戶的授權。</text>
+</svg>

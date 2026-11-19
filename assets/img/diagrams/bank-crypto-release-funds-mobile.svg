@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 382" width="400" height="382" role="img" aria-labelledby="funds-m-title funds-m-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+  <title id="funds-m-title">法院授權處置的金額，已包含在凍結總額內</title>
+  <desc id="funds-m-desc">美國司法部 2026 年 11 月 12 日公告，公私部門凍結逾 27 億美元，其中逾 12 億美元已獲法院授權扣押或限制處分。該公告未列實際返還金額。</desc>
+  <rect width="100%" height="100%" fill="#FFFDF9"/>
+  <text x="24" y="35" font-size="18" fill="#8A5D00" font-weight="700">美國司法部　2026 年 11 月 12 日</text>
+  <rect x="24" y="56" width="352" height="231" rx="8" fill="#E6F2F9" stroke="#84ADC3" stroke-width="1.5"/>
+  <text x="42" y="90" font-size="20" fill="#275978" font-weight="700">公私部門合力凍結</text>
+  <text x="42" y="128" font-size="30" fill="#232020" font-weight="700">逾 27 億美元</text>
+  <rect x="43" y="151" width="314" height="115" rx="8" fill="#FFF4D5" stroke="#D3A842" stroke-width="1.5"/>
+  <text x="61" y="181" font-size="17" fill="#8A5D00" font-weight="700">其中，法院已授權</text>
+  <text x="61" y="215" font-size="28" fill="#232020" font-weight="700">逾 12 億美元</text>
+  <text x="61" y="246" font-size="18" fill="#232020" font-weight="400">可扣押或限制處分</text>
+  <text x="24" y="326" font-size="18" fill="#232020" font-weight="700">該公告未列實際返還金額。</text>
+  <text x="24" y="356" font-size="17" fill="#5F5B53" font-weight="400">框線表示範圍，面積不代表比例。</text>
+</svg>
