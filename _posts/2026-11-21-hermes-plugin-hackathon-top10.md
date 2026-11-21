@@ -6,7 +6,9 @@ published: false
 categories: [technical]
 tags: [ai-agent, hermes-agent, agentic-engineering, hooks, permissions, claude-code, codex]
 layout: article
-cover_alt: "（Banner 待站主確認規格後補）"
+cover_image: /assets/img/linkedin/hermes-plugin-hackathon-top10.jpg
+cover_alt: "插畫：深藍色的控制室裡，一條輸送帶把發光方塊送向巨大的閘門，閘門前分成綠、藍、紅、金四條軌道；史旺姬站在右側控制台旁，一手伸向核准按鈕，一手拿平板核對清單。"
+hero_image: true
 use_glightbox: true
 cta_context: agentic
 extra_css: |
@@ -22,6 +24,7 @@ extra_css: |
   .post-content .hk-y { color: #1E6B41; font-weight: 700; }
   .post-content .hk-p { color: #8A5D00; font-weight: 700; }
   .post-content .hk-n { color: #9A958B; }
+  .post-content .hk-group-title { margin: 28px 0 4px; padding: 8px 14px; background: #E6F2F9; color: #1F5F85; font-weight: 800; border-radius: 8px; }
   .post-content .hk-note { font-size: 0.92em; color: #5F5B53; }
   .post-content .hk-table td:first-child, .post-content .hk-table th:first-child { min-width: 8.5em; word-break: keep-all; }
   .post-content .hk-table td { word-break: keep-all; overflow-wrap: anywhere; }
@@ -94,28 +97,124 @@ Nous Research 這次辦的 Hermes Agent 插件黑客松，前 10 名大多在處
 
 ## 十件作品，其實是兩種產品 {#ten}
 
-名次與作者以官方得獎串為準。[[2]](https://x.com/NousResearch/status/2123882430620733742) 「一句話」是我讀過各專案 README 與程式後的整理。
+名次與作者以官方得獎串為準。[[2]](https://x.com/NousResearch/status/2123882430620733742) 圖是我讀過各專案 README 與程式後畫的。
 
-<div class="hk-wrap">
-<table class="hk-table">
-  <caption>官方前 10 名。分組是我的歸類，不是官方分類。</caption>
-  <thead><tr><th scope="col">名次與作品</th><th scope="col">它在做什麼</th><th scope="col">它擋的是哪種失誤</th></tr></thead>
-  <tbody>
-    <tr class="hk-group"><td colspan="3">第一種：管住 AI 做的事，或查證它做了什麼</td></tr>
-    <tr><td>1. Foreman</td><td>commit、push、開 PR、合併前，讀真正會被提交的程式差異，擋下跳過測試、放寬檢查、塞進機密的修改；合併只能由人下指令</td><td>為了讓檢查變綠而動手腳</td></tr>
-    <tr><td>3. Plan Mode</td><td>規劃期間只給唯讀工具，人核准「這一版」計畫後才准改檔</td><td>還沒想清楚就動手</td></tr>
-    <tr><td>4. Seedguard</td><td>種子碼、私鑰、API key 在送出模型前換成代號；工具真的需要時，人限時、限工具放行</td><td>把祕密送到模型供應商</td></tr>
-    <tr><td>6. Mandate</td><td>先觀察排程工作實際做了什麼，整理成最小權限規則，人核准後擋掉範圍外的呼叫</td><td>半夜沒人看時被注入指令帶走</td></tr>
-    <tr><td>7. safe-swap</td><td>把 <code>git push --force</code> 換成較安全的版本，把 <code>rm -r</code> 改成搬進隔離區，可以復原</td><td>一行指令毀掉別人的成果</td></tr>
-    <tr><td>8. Promise Keeper</td><td>你用白話說「不要碰 prod」，它變成每次工具呼叫都會檢查的規則，而且只有人能開關</td><td>規則在長對話裡被忘掉</td></tr>
-    <tr><td>9. Hermes Canvas</td><td>計畫畫成畫布上的盒子，盒子亮不亮看真實寫檔與測試結果，不看模型自己說</td><td>沒做完卻說做完了</td></tr>
-    <tr><td>5. Ariadne</td><td>把真實對話錄下來，升級 Hermes 前離線重播，看新版行為有沒有變</td><td>升級後默默變了</td></tr>
-    <tr class="hk-group"><td colspan="3">第二種：把 Hermes 搬出筆電</td></tr>
-    <tr><td>2. Housemate</td><td>舊手機、筆電變成各房間的免持語音喇叭，危險指令可以口頭核准</td><td>（不是護欄，是新的使用場景）</td></tr>
-    <tr><td>10. Hermes Gadget SDK</td><td>把 ESP32 等開發板做成會說話、會顯示核准問題的實體小裝置</td><td>（不是護欄，是新的使用場景）</td></tr>
-  </tbody>
-</table>
-</div>
+名次依官方公告；分成兩組是我的歸類，不是官方分類。每張圖底下的紅色虛線框，是作者自己在 README 承認擋不到的地方。
+
+<p class="hk-group-title">第一種：管住 AI 做的事，或查證它做了什麼</p>
+
+### 1. Foreman：提交讀差異，合併只能由人
+
+它防的是 AI 為了讓檢查變綠而動手腳：跳過測試、放寬檢查、塞進機密。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p01-foreman.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p01-foreman-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p01-foreman.svg' | relative_url }}" alt="流程圖：Foreman 在 commit、push、開 PR 前讀真正會被提交的程式差異，沒問題放行、動手腳就擋下；AI 自己合併一律擋下，只有人輸入 /foreman merge 才合併" width="840" height="722" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Foreman README 與 gate.py；盲點為作者自列。<a href="https://github.com/PedValme/foreman/blob/f8d23a26f5dab94408f764bd347fe36f8e41c42a/plugin/README.md">[3]</a><a href="https://github.com/PedValme/foreman/blob/f8d23a26f5dab94408f764bd347fe36f8e41c42a/plugin/foreman/gate.py#L1116-L1119">[4]</a></figcaption>
+</figure>
+
+### 3. Plan Mode：先想清楚，人說好才動手
+
+它防的是還沒想清楚就動手。重點在人核准的是「這一版」計畫，改一個字就要重新核准。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p03-plan-mode.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p03-plan-mode-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p03-plan-mode.svg' | relative_url }}" alt="階段圖：Plan Mode 規劃期只放行唯讀工具，AI 只能送出計畫、不能核准，人核准綁住這一版後才進入可以改檔的執行期，而核准後擋 commit 只是盡力而為" width="840" height="662" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Plan Mode README 與 plugin.py。<a href="https://github.com/100yenadmin/hermes-plan-mode/blob/4619a8dca04451bf628f849897bddf0b90669eb2/README.md">[5]</a><a href="https://github.com/100yenadmin/hermes-plan-mode/blob/4619a8dca04451bf628f849897bddf0b90669eb2/plan_mode/plugin.py#L83">[31]</a></figcaption>
+</figure>
+
+### 4. Seedguard：祕密不出門，只給代號
+
+它防的是把種子碼、私鑰、API key 送到模型供應商那一側。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p04-seedguard.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p04-seedguard-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p04-seedguard.svg' | relative_url }}" alt="分區圖：Seedguard 在祕密送往模型供應商前換成代號，模型只看得到代號；工具要用真值時須人限時放行，否則在 pre_tool_call 擋下" width="840" height="686" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Seedguard README 與 hooks.py。<a href="https://github.com/Investorquab/Seedguard/blob/889dcb03308571a7a39af050bfacf7518d2d6fce/hooks.py#L195-L210">[9]</a><a href="https://github.com/Investorquab/Seedguard/blob/889dcb03308571a7a39af050bfacf7518d2d6fce/README.md#L213-L214">[35]</a></figcaption>
+</figure>
+
+### 6. Mandate：先看它做什麼，再只准它做這些
+
+它防的是半夜沒人看時，排程工作被注入的指令帶走。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p06-mandate.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p06-mandate-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p06-mandate.svg' | relative_url }}" alt="流程圖：Mandate 先觀察排程工作、整理成規則書、人核准後開始把關，每次呼叫比對規則書，範圍外、看不懂、規則書被改都擋下，排程時從不送人核准" width="840" height="636" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Mandate README。<a href="https://github.com/JoeProAI/mandate/blob/4313f6196b6b8f0ccf35fd3bf499182d7814a7bf/README.md">[8]</a></figcaption>
+</figure>
+
+### 7. safe-swap：不擋，只讓手滑可以救回
+
+它防的是一行指令毀掉別人的成果。注意它一種都不擋，作者自己說它不是護欄。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p07-safe-swap.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p07-safe-swap-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p07-safe-swap.svg' | relative_url }}" alt="對照圖：safe-swap 把 git push --force 換成 lease 版本、rm -r 換成搬進隔離區，git reset 等先拍快照再照跑，看不懂的照原樣跑並標明 NOT swapped，每一種都不擋" width="840" height="678" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 safe-swap README、shellscan.py、runtime.py。<a href="https://github.com/itsolaph/hermes-safe-swap/blob/6e66f5fe6651e25951fcd3592a7ac2e75787e7f6/README.md">[13]</a><a href="https://github.com/itsolaph/hermes-safe-swap/blob/6e66f5fe6651e25951fcd3592a7ac2e75787e7f6/shellscan.py#L1-L7">[14]</a><a href="https://github.com/itsolaph/hermes-safe-swap/blob/6e66f5fe6651e25951fcd3592a7ac2e75787e7f6/runtime.py#L150-L176">[30]</a></figcaption>
+</figure>
+
+### 8. Promise Keeper：說過的「不要碰」，變成每次都查的規則
+
+它防的是規則在長對話裡被忘掉，而且規則只有人能開關。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p08-promise-keeper.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p08-promise-keeper-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p08-promise-keeper.svg' | relative_url }}" alt="流程圖：白話的「不要碰 prod」經固定規則轉成提案，人確認後才啟用；之後每次工具呼叫，只讀放行、寫進禁區或看不懂就擋、「先問我」交給人，另有一條保護自己的內建規則" width="840" height="688" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Promise Keeper README、rules.py、detect.py。<a href="https://github.com/MokiMeow/promise-keeper/blob/ab91fee21f607d5515a8e007cf615fc285718dd0/README.md">[15]</a><a href="https://github.com/MokiMeow/promise-keeper/blob/ab91fee21f607d5515a8e007cf615fc285718dd0/__init__.py#L202-L221">[16]</a><a href="https://github.com/MokiMeow/promise-keeper/blob/ab91fee21f607d5515a8e007cf615fc285718dd0/promise_keeper/rules.py#L1">[32]</a><a href="https://github.com/MokiMeow/promise-keeper/blob/ab91fee21f607d5515a8e007cf615fc285718dd0/promise_keeper/detect.py#L1-L6">[33]</a></figcaption>
+</figure>
+
+### 9. Hermes Canvas：盒子亮燈，看的是做出來的東西
+
+它防的是沒做完卻說做完了：盒子亮不亮，看真實的寫檔與測試結果，不看模型自己說。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p09-canvas.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p09-canvas-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p09-canvas.svg' | relative_url }}" alt="示意圖：Hermes Canvas 的計畫盒子依真實寫檔與檢查指令的退出碼亮燈，檢查要一字不差才算，人刪掉的盒子不准再寫，收工前 pre_verify 最多催 3 次" width="840" height="646" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Hermes Canvas binding.py 與 Hermes 預設設定。<a href="https://github.com/0xbyt4/hermes-canvas/blob/d6eeff0d6f7ec653262537bdd7bb001cc6d3c7f8/canvas/binding.py#L369-L378">[17]</a><a href="https://github.com/NousResearch/hermes-agent/blob/8af19a9f30982abfaec61f9e62d660f4ab7d42f3/hermes_cli/config_defaults.py#L203-L204">[22]</a></figcaption>
+</figure>
+
+### 5. Ariadne：升級前，用你自己的對話重播一次
+
+它不攔任何東西，是驗證工具：防的是升級後行為默默變了。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p05-ariadne.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p05-ariadne-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p05-ariadne.svg' | relative_url }}" alt="流程圖：Ariadne 平常錄下真實對話，升級前在離線環境重播，模型回應與工具結果都用錄下的內容，只比對新版 Hermes 送出的請求有沒有變" width="840" height="634" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Ariadne README；盲點第二行是本文推論。<a href="https://github.com/miracle352/hermes-ariadne/blob/128c95967a0761ad24d3d224441d1502c43bbb69/README.md">[21]</a></figcaption>
+</figure>
+
+<p class="hk-group-title">第二種：把 Hermes 搬出筆電</p>
+
+### 2. Housemate：把 Hermes 搬進每個房間
+
+舊手機、筆電變成各房間的免持語音喇叭，危險指令可以口頭核准。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p02-housemate.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p02-housemate-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p02-housemate.svg' | relative_url }}" alt="資料流圖：房間裝置把聲音送到主機 hub、再交給 Hermes 回答；遇到危險指令，喇叭唸描述、螢幕顯示完整指令，人口頭說 approve 才算，含糊或沒回答就等 Hermes 逾時拒絕" width="840" height="702" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Housemate 的 CLAIMS.md、answers.py 與 Hermes 安全文件。<a href="https://github.com/RaYYeR220/housemate/blob/09c1a1d0a88bfa8762cee6b3ccf94271b0f172c5/CLAIMS.md">[19]</a><a href="https://github.com/RaYYeR220/housemate/blob/09c1a1d0a88bfa8762cee6b3ccf94271b0f172c5/core/answers.py#L1-L15">[20]</a><a href="https://github.com/NousResearch/hermes-agent/blob/8af19a9f30982abfaec61f9e62d660f4ab7d42f3/website/docs/user-guide/security.md">[24]</a></figcaption>
+</figure>
+
+### 10. Hermes Gadget SDK：把核准按鈕做成實體小裝置
+
+把 ESP32 等開發板做成會說話、會顯示核准問題的實體小裝置。
+
+<figure>
+  <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p10-gadget.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p10-gadget-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/p10-gadget.svg' | relative_url }}" alt="架構圖：小裝置經一條 WebSocket 連到主機上的 hub 與 Hermes；核准時按 TALK 只核准這一次、按 CANCEL 拒絕，指令顯示不全就只能拒絕或回主機核准" width="840" height="762" loading="lazy"></picture>
+  </a>
+  <figcaption>自製圖解，依 Hermes Gadget SDK 整合文件；裝置畫面為示意。<a href="https://github.com/Adolanium/hermes-gadget-sdk/blob/35dbae77f21c54519dde7fcd90ef5a92192c6f60/docs/hermes-integration.md">[23]</a></figcaption>
+</figure>
+
 
 第一組裡，前七件都掛在工具執行前的關口上。Ariadne 我放在最後，因為它不攔任何東西，它是驗證工具。但它回答的問題和其他七件一樣：**怎麼確定 AI 這次的行為，跟你以為的一樣。**
 
