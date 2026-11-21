@@ -156,3 +156,9 @@ test('computePillars：23:00 換日 → 日柱進位', () => {
   assert.equal(ZHI[late.pillars.hour.zhi], '子');
   assert.equal(ZHI[noSwitch.pillars.hour.zhi], '子');
 });
+
+// 均時差對照 Swiss Ephemeris time_equ（台灣中午，2024 年；值由 pyswisseph 2.10.03 算出）
+test('均時差與 Swiss Ephemeris 相差在 0.5 分鐘內', () => {
+  const ref = [[1, 1, -3.16], [2, 11, -14.19], [5, 14, 3.65], [7, 26, -6.55], [9, 1, 0.05], [11, 3, 16.45], [12, 25, -0.11]];
+  for (const [mo, d, v] of ref) assert.ok(Math.abs(equationOfTimeMin(2024, mo, d) - v) < 0.5, `${mo}/${d}: ${equationOfTimeMin(2024, mo, d).toFixed(2)} vs ${v}`);
+});

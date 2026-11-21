@@ -72,7 +72,7 @@ export function buildMingCard(chart, analysis, meta = {}) {
   const st = analysis.strength;
   body += `<text x="${padX}" y="${y}" font-size="13" fill="${INK}" style="${FONT}">日主${esc(analysis.dayGanName)}（${esc(analysis.dayWuxing)}）· 傾向：${esc(st.tendency)}</text>`;
   y += 22;
-  body += `<text x="${padX}" y="${y}" font-size="11" fill="${SUB}" style="${FONT}">結果供自我觀察與討論，不作命定判斷 · 日柱排法 beta 驗證中 · swanky.github.io</text>`;
+  body += `<text x="${padX}" y="${y}" font-size="11" fill="${SUB}" style="${FONT}">結果供自我觀察與討論，不作命定判斷 · swanky.github.io</text>`;
 
   const H = y + 24;
   return { svg: `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="八字命式卡"><rect width="${W}" height="${H}" fill="${PAPER}"/><rect x="6" y="6" width="${W - 12}" height="${H - 12}" rx="16" fill="none" stroke="#efe0c2" stroke-width="1.5"/>${body}</svg>`, w: W, h: H };

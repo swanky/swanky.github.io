@@ -5,7 +5,7 @@
 // 子時規則、真太陽時（進階選項，預設關）皆可切換。
 //
 // 誠實紅線（§7.3／§7.6）：日柱錨點 DAY_ANCHOR 以公認樣本自洽校準，仍待外部排盤站
-// 逐筆 golden 複核；未過 golden，頁面日柱標 beta，不宣稱正式。
+// 逐筆 golden 複核；2026-11-21 已通過 sxtwl＋Swiss Ephemeris golden（tests/bazi/golden.test.mjs）。
 import {
   GAN, ZHI, GAN_WUXING, ZHI_WUXING, GAN_YIN, ZHI_HIDDEN, NAYIN,
   ganOf, zhiOf, ganZhiToGz, tigerStartGan, ratStartGan,
@@ -35,12 +35,13 @@ export function dayGzFromCJDN(cjdn) {
   return ((cjdn + DAY_ANCHOR) % 60 + 60) % 60;
 }
 
-// 均時差（分鐘，視太陽時 − 平太陽時）低精度近似（NOAA/Spencer，誤差 <30 秒，符 §7.3 容差）。
+// 均時差（分鐘，視太陽時 − 平太陽時）：Spencer（1971）傅立葉級數，與紫微引擎同式。
+// 2026-11-21 對照 Swiss Ephemeris time_equ：誤差約 0.3 分鐘內（舊的三項式最多差 1.2 分鐘，已汰換）。
 // 純算術、可自驗；只在真太陽時進階選項開啟時使用。
 export function equationOfTimeMin(y, mo, d) {
-  const n = dayOfYear(y, mo, d);
-  const B = 2 * Math.PI * (n - 81) / 364;
-  return 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
+  const g = (2 * Math.PI / 365) * (dayOfYear(y, mo, d) - 1);
+  return 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g)
+    - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g));
 }
 
 function dayOfYear(y, mo, d) {

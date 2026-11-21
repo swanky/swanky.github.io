@@ -1,6 +1,6 @@
 // astro-ui.js — 星座命盤頁面入口（ES module）。
 // 流程：出生表單 → computeChartFromBirth（engine 內解時區）→ 渲染摘要/圓盤/落座表/解讀/相位。
-// beta：ASC/宮位公式尚未通過 astro.com golden 驗證，頁面明示「beta・待驗證」，不宣稱正式（誠實紅線）。
+// 2026-11-21：ASC／宮位／行星已通過 Swiss Ephemeris golden（tests/astrology/golden.test.mjs），頁面移除「測試中」。
 // 深度解讀為精簡版（星座特質庫），完整 172 條文案為後續。沿用 hd-ui/tarot-ui 防禦式 DOM 寫入。
 import { computeChartFromBirth, SIGNS, POINT_IDS, POINT_ZH, signOf } from './astro-chart.js';
 import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';

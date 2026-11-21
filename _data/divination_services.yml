@@ -67,7 +67,7 @@
   title: 星座命盤
   subtitle: 心理結構與關係模式的地圖
   category: birth-map
-  status: beta
+  status: live
   visibility: public
   priority: P0
   phase: Phase 2
@@ -77,15 +77,15 @@
   icon: bi-stars
   input_type: birth
   use_cases: [職涯定位, 關係模式, 溝通風格]
-  cta_label: 立即排盤（測試中）
-  note: 上升與宮位公式驗證中（測試中）；行星星座落點已可信賴。
+  cta_label: 立即排盤
+  note: 上升、宮位與行星位置已和國際標準天文計算逐筆比對。
   related: [human-design, bazi]
 
 - id: bazi
   title: 八字排盤
   subtitle: 五行結構與人生節奏的觀察
   category: birth-map
-  status: beta
+  status: live
   visibility: public
   priority: P0
   phase: Phase 3
@@ -95,8 +95,8 @@
   icon: bi-hourglass-split
   input_type: birth
   use_cases: [五行結構, 人生節奏, 職涯步調]
-  cta_label: 立即排盤（測試中）
-  note: 四柱五行十神大運已可排；日柱排法與真太陽時驗證中（測試中）。不做吉凶斷語與用神推薦。
+  cta_label: 立即排盤
+  note: 四柱已和獨立萬年曆逐筆比對；五行、十神、大運一次看完。不做吉凶斷語與用神推薦。
   related: [ziwei, human-design]
 
 - id: ziwei
@@ -114,7 +114,7 @@
   input_type: birth
   use_cases: [人生宮位, 職涯主題, 關係主題]
   cta_label: 立即排盤（測試中）
-  note: 依開源 iztro 演算法排盤，可點宮位看三方四正、一鍵整理成給 AI 的完整提問（測試中）。
+  note: 採用《紫微斗數全書》通行排法，可點宮位看三方四正、一鍵整理成給 AI 的完整提問（測試中）。
   related: [bazi, astrology]
 
 - id: numerology

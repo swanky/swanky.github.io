@@ -1,7 +1,7 @@
 // bazi-ui.js — 八字排盤頁面入口（ES module）。
 // 流程：出生表單 → computePillarsFromBirth（engine 內解時區）→ analyzeChart → 渲染
 //       命式卡（SVG）／摘要／日主小傳／五行解讀／十神表／大運／PNG。沿用防禦式 DOM 寫入。
-// beta（誠實紅線）：日柱排法待跨排盤站 golden 逐筆複核，頁面明示「beta・驗證中」，不宣稱正式。
+// 四柱已通過 golden 逐筆複核（2026-11-21），頁面不再標「測試中」；子時換日與夏令時間的流派差異仍在頁面說明。
 import { computePillarsFromBirth } from './bazi-pillars.js';
 import { analyzeChart, tenGod, TEN_GODS } from './bazi-shishen.js';
 import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf } from './bazi-data-texts.js';
