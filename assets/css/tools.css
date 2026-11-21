@@ -347,3 +347,32 @@
   width: 24px; height: 24px; border-radius: 50%;
   background: var(--c-gold); color: #fff; font-size: var(--step--1); flex: none;
 }
+
+/* ===== 帶著命盤去問 AI（core-ai-brief.js，紫微／星座／八字／人類圖共用）===== */
+.ai-brief-head h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--c-ink); margin: 6px 0 8px; }
+.ai-brief-head p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 0 0 16px; }
+.ai-brief-kicker { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; color: var(--c-gold-deep); background: var(--c-gold-tint); border-radius: 999px; padding: 4px 12px; }
+.ai-brief-step { margin-bottom: 14px; }
+.ai-brief-label { display: block; font-size: 0.86rem; font-weight: 700; color: var(--c-ink); margin-bottom: 8px; }
+.ai-brief-focus { display: flex; flex-wrap: wrap; gap: 8px; }
+.ai-brief-chip { position: relative; cursor: pointer; margin: 0; }
+.ai-brief-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.ai-brief-chip span { display: inline-block; border: 1.5px solid var(--c-line); border-radius: 999px; padding: 8px 16px; font-size: 0.88rem; color: #444; background: #fff; transition: all .15s; min-height: 40px; line-height: 1.5; }
+.ai-brief-chip input:checked + span { border-color: var(--c-gold); background: var(--c-gold-tint); color: var(--c-gold-deep); font-weight: 700; }
+.ai-brief-chip input:focus-visible + span { outline: 2px solid var(--c-gold); outline-offset: 2px; }
+.ai-brief-input { width: 100%; border: 1.5px solid var(--c-line); border-radius: 10px; padding: 11px 14px; font-size: 0.95rem; background: #fff; }
+.ai-brief-input:focus { outline: none; border-color: var(--c-gold); }
+.ai-brief-opts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 4px 0 12px; font-size: 0.86rem; }
+.ai-brief-preview { margin-bottom: 14px; }
+.ai-brief-preview summary { cursor: pointer; font-size: 0.86rem; color: var(--c-gold-deep); padding: 6px 0; }
+.ai-brief-out { width: 100%; font-size: 0.8rem; line-height: 1.6; border: 1px solid var(--c-line); border-radius: 10px; padding: 12px; background: #fdfaf2; color: #444; resize: vertical; margin-top: 8px; }
+.ai-brief-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.ai-brief-btn { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--c-gold); background: #fff; color: var(--c-gold-deep); font-weight: 700; font-size: 0.95rem; border-radius: 999px; padding: 11px 22px; cursor: pointer; min-height: 44px; }
+.ai-brief-btn.is-primary { background: var(--c-gold); border-color: var(--c-gold); color: #fff; }
+.ai-brief-btn:hover { filter: brightness(0.96); }
+.ai-brief-open { font-size: 0.84rem; color: var(--c-muted); margin: 12px 0 0; }
+.ai-brief-open a { color: var(--c-gold-deep); font-weight: 600; }
+.ai-brief-status { font-size: 0.86rem; color: #2e8b57; min-height: 1.2em; margin: 8px 0 0; }
+@media (max-width: 480px) { .ai-brief-btn { flex: 1 1 100%; justify-content: center; } }
+/* 排盤後捲到結果：避開固定導覽列 */
+#ziwei-result, #astro-result, #bazi-result { scroll-margin-top: 96px; }

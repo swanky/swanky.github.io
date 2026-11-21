@@ -72,6 +72,12 @@
 <script type="module" src="{{ '/assets/js/bazi/bazi-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_ziwei %}
+<!-- 紫微斗數：vendor UMD（iztro，掛在全域 self.iztro）先載，再 ES module -->
+<script src="{{ '/assets/vendor/iztro/iztro.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/ziwei/ziwei-ui.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.use_bazi_daily %}
 <!-- 今日五行：純日柱算術（不需天文引擎），純前端 ES module -->
 <script type="module" src="{{ '/assets/js/bazi/bazi-daily.js' | relative_url }}"></script>

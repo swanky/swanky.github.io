@@ -1,0 +1,171 @@
+---
+layout: home
+title: 紫微斗數（測試中）
+seo_title: 免費紫微斗數排盤・十二宮命盤與四化｜可帶去問 AI 的命盤解讀（測試中）
+description: 輸入出生年月日時與性別，排出你的紫微斗數命盤：十二宮、十四主星、生年四化、目前大限與流年。點任一宮位看三方四正與白話說明，還能把整張命盤整理成一段完整提問，帶去 ChatGPT、Claude 或 Gemini 追問。排盤在你的裝置上完成、資料不上傳。
+keywords: 紫微斗數,紫微斗數排盤,紫微命盤,免費排盤,十二宮,四化,大限,流年,命宮主星
+nav_active: ziwei
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 自我探索實驗室
+    url: /explore/
+  - name: 紫微斗數
+    url: /ziwei/
+use_ziwei: true
+use_tools_css: true
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "紫微斗數排盤（測試中）",
+    "url": "https://swanky.github.io/ziwei/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "description": "在你的裝置上排出的紫微斗數命盤：十二宮、十四主星、四化、大限與流年，可一鍵整理成給 AI 的完整提問。資料不上傳。",
+    "inLanguage": "zh-TW",
+    "author": { "@type": "Person", "name": "史旺基 Swanky Hsiao" }
+  }
+  </script>
+faq:
+  - q: "為什麼一定要選性別？"
+    a: "紫微斗數的大限（每十年的運勢走向）是依照出生年的陰陽和性別決定順行或逆行，性別不同，大限的順序就不同；命宮與十二宮的主星則不受影響。"
+  - q: "什麼是「真太陽時」，要不要勾？"
+    a: "時鐘上的時間是以時區統一的，但太陽實際走到正上方的時間會因經度和季節差幾分鐘到十幾分鐘。多數紫微排盤軟體預設不換算；如果你的出生時間接近兩個時辰的交界（例如 6:55），可以勾選和不勾選都排一次比較看看。"
+  - q: "為什麼標示「測試中」？"
+    a: "排盤採用《紫微斗數全書》的通行排法，十四主星與四化都逐項檢查過。但紫微斗數各派在星曜亮度、部分輔星的排法上本來就有差異，我們還沒和另一套獨立的排盤逐張比對，所以先標示測試中。這是我們的誠實原則：沒有比對過，就不裝作正式功能。"
+  - q: "「帶著命盤去問 AI」是什麼？"
+    a: "我們把你的整張命盤、各宮的對宮與三合、目前的大限流年，連同一套解讀規則（例如每個論點都要標明依據、不斷言吉凶、先問你近況再解讀）整理成一段文字。你只要複製，貼到 ChatGPT、Claude 或 Gemini，就能針對自己的處境一路追問，不用自己把命盤一格一格打進去。"
+  - q: "我的出生資料會上傳嗎？"
+    a: "不會。排盤和整理提問都在你的瀏覽器裡完成，出生資料不會傳送到任何伺服器。複製出去的文字貼到哪個 AI，就由那個服務的隱私政策規範；不想透露生日可以勾選「不附上生日與稱呼」（命盤本身仍可能被推算出大致生日）。"
+extra_css: |
+  .zw-result { max-width: 960px; margin: 30px auto 0; }
+  .zw-beta-note { background: var(--c-gold-tint); border: 1px solid #ecd9a8; color: var(--c-gold-deep); border-radius: 10px; padding: 13px 16px; font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
+  .zw-notes { background: #fff6e8; border-left: 4px solid var(--c-gold); border-radius: 8px; padding: 10px 16px; margin-bottom: 18px; font-size: 0.88rem; line-height: 1.7; color: #5a4a2a; }
+  .zw-notes p { margin: 4px 0; }
+  .zw-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+  .zw-card { background: #fff; border: 1px solid var(--c-line); border-radius: 14px; padding: 16px 18px; }
+  .zw-card-label { font-size: 0.74rem; font-weight: 700; color: var(--c-gold-deep); letter-spacing: 0.4px; }
+  .zw-card b { display: block; font-size: 1.25rem; color: var(--c-ink); margin: 4px 0 4px; }
+  .zw-card p { font-size: 0.84rem; color: #666; margin: 0; line-height: 1.6; }
+  .zw-panel { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 22px 24px; margin-bottom: 20px; }
+  .zw-panel > h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--c-ink); margin: 0 0 14px; }
+  .zw-board-wrap { display: flex; justify-content: center; }
+  .zw-board-wrap svg { width: 100%; max-width: 760px; height: auto; display: block; }
+  .zw-board-wrap .zw-cell:hover rect:first-child { filter: brightness(0.98); }
+  .zw-board-actions { text-align: center; margin-top: 14px; }
+  .zw-board-legend { font-size: 0.84rem; color: var(--c-muted); text-align: center; margin: 12px auto 0; max-width: 620px; line-height: 1.7; }
+  .zw-detail-head h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--c-ink); margin: 0 0 4px; }
+  .zw-detail-head h3 small { font-size: 0.82rem; font-weight: 500; color: var(--c-muted); margin-left: 10px; }
+  .zw-detail-head p { color: #555; font-size: 0.92rem; margin: 0 0 14px; }
+  .zw-star { border-left: 3px solid #e8d49a; padding: 4px 0 4px 14px; margin-bottom: 12px; }
+  .zw-star-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .zw-star-head b { font-size: 1.1rem; color: var(--c-ink); }
+  .zw-bright { font-size: 0.78rem; color: var(--c-muted); }
+  .zw-key { font-size: 0.78rem; color: var(--c-gold-deep); background: var(--c-gold-tint); border-radius: 999px; padding: 2px 10px; }
+  .zw-mut { display: inline-block; color: #fff; font-size: 0.76rem; font-weight: 700; border-radius: 6px; padding: 1px 7px; margin-right: 4px; }
+  .zw-star p { font-size: 0.9rem; color: #555; line-height: 1.75; margin: 0; }
+  .zw-star .zw-mut-text { color: var(--c-gold-deep); font-size: 0.86rem; margin-top: 2px; }
+  .zw-empty { font-size: 0.9rem; color: #555; line-height: 1.75; }
+  .zw-minor, .zw-sf { font-size: 0.88rem; color: #555; line-height: 1.8; }
+  .zw-minor > span:first-child { color: var(--c-muted); }
+  .zw-hint { font-size: 0.8rem; color: var(--c-muted); margin: 6px 0 0; }
+  .zw-sihua { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .zw-sihua li { background: #fdfaf2; border-radius: 10px; padding: 10px 14px; font-size: 0.9rem; color: #444; }
+  .zw-sihua li b { margin: 0 3px; color: var(--c-ink); }
+  .zw-sihua li small { display: block; color: var(--c-muted); font-size: 0.8rem; margin-top: 2px; }
+  .zw-fortune { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .zw-fortune-col h4 { font-size: 1rem; font-weight: 700; color: var(--c-ink); margin: 0 0 6px; }
+  .zw-fortune-col p { font-size: 0.88rem; color: #555; line-height: 1.7; }
+  .zw-mlist { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.88rem; }
+  .zw-mlist small { color: var(--c-muted); margin-left: 4px; }
+  .zw-gender { display: flex; gap: 18px; }
+  #ziwei-time-row .tool-check { display: none; }
+  @media (max-width: 768px) {
+    .zw-summary, .zw-fortune, .zw-sihua { grid-template-columns: 1fr; }
+    .zw-panel { padding: 18px 12px; }
+    .zw-board-panel { padding: 10px 4px; }
+  }
+---
+
+<main id="main">
+
+  <section class="astro-hero" data-aos="fade-up">
+    <div class="container">
+      <span class="astro-beta"><i class="bi bi-stars"></i> 測試中・採用通行排法</span>
+      <h1>紫微斗數</h1>
+      <p class="lead">十二宮看人生的十二個面向，十四主星看你的性格底色，四化看資源與課題流向哪裡。點任一宮位看三方四正，再把整張命盤帶去問 AI。</p>
+      {% include tool-privacy.html style='pill' %}
+    </div>
+  </section>
+
+  <section class="astro-section">
+    <div class="container">
+      {% capture ziwei_form_extra %}
+        <div class="tool-field">
+          <label>性別</label>
+          <div class="zw-gender" role="radiogroup" aria-label="性別">
+            <label class="tool-check"><input type="radio" name="ziwei-gender" value="male"> 男</label>
+            <label class="tool-check"><input type="radio" name="ziwei-gender" value="female"> 女</label>
+          </div>
+        </div>
+        <div class="tool-field">
+          <label class="tool-check"><input type="checkbox" id="ziwei-true-solar"> 依出生城市換算真太陽時（選填，說明見下方常見問題）</label>
+        </div>
+      {% endcapture %}
+      {% include birth-form.html prefix='ziwei'
+         time_unknown_label='不確定出生時間'
+         name_placeholder='會顯示在你的命盤上'
+         submit_label='排出我的紫微命盤'
+         extra=ziwei_form_extra %}
+
+      <div class="zw-result" id="ziwei-result" style="display:none;">
+        <div class="zw-beta-note"><b>⚠&#xFE0E; 測試中說明：</b>排盤採用《紫微斗數全書》的通行排法，十四主星與四化都逐項檢查過；不過各流派在星曜亮度與部分輔星上本來就有差異，還沒和另一套獨立排盤逐張比對前，先標示測試中。說明文字是傾向描述，不斷吉凶。</div>
+        <div class="zw-notes" id="ziwei-notes" style="display:none;"></div>
+        <div class="zw-summary" id="ziwei-summary"></div>
+
+        <div class="zw-panel zw-board-panel">
+          <h3>十二宮命盤</h3>
+          <div class="zw-board-wrap" id="ziwei-board"></div>
+          <p class="zw-board-legend">金框是命宮，藍框是你點選的宮位，金色虛框是它的對宮與三合（三方四正）。手機版的小金點代表目前走到的大限。</p>
+          <div class="zw-board-actions"><button type="button" class="ai-brief-btn" id="ziwei-share"><i class="bi bi-image"></i> 存成分享圖</button></div>
+        </div>
+
+        <div class="zw-panel" id="ziwei-detail" aria-live="polite"></div>
+
+        <div class="zw-panel">
+          <h3>生年四化：資源與課題流向哪裡</h3>
+          <ul class="zw-sihua" id="ziwei-sihua"></ul>
+        </div>
+
+        <div class="zw-panel" id="ziwei-fortune-panel">
+          <h3>目前運勢</h3>
+          <div class="zw-fortune" id="ziwei-fortune"></div>
+        </div>
+
+        <div class="zw-panel" id="ziwei-brief"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="astro-section" style="background:#fffaf0;">
+    <div class="container">
+      <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
+      {% include faq-accordion.html faq=page.faq id='ziweiFaq' %}
+      {% include faq-jsonld.html faq=page.faq %}
+    </div>
+  </section>
+
+  <section class="astro-section" style="padding-top:6px;">
+    <div class="container">
+      <div style="max-width:820px; margin:0 auto 18px;">
+        {% include tool-method-note.html id='ziweiMethod' title='排盤規則說明' rules='排盤演算法：開源 iztro 2.5.8（MIT 授權），全書通行排法｜時辰：23:00–00:59 為子時（23 點後算晚子時）｜四化：依出生年天干；大限四化依大限宮干；流年四化依當年天干｜真太陽時：選填，依出生城市經度與均時差換算｜說明文字：本站自行撰寫的白話，不引用任何老師的講課原文' note='紫微斗數是理解自己的一種框架，不是命定。各流派排法有差異，本頁採用其中一種通行排法。' %}
+      </div>
+      {% include tool-disclaimer.html %}
+      <p style="text-align:center; margin-top:20px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 回到自我探索實驗室</a></p>
+    </div>
+  </section>
+
+</main><!-- End #main -->

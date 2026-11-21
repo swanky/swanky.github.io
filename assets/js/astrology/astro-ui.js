@@ -4,13 +4,21 @@
 // 深度解讀為精簡版（星座特質庫），完整 172 條文案為後續。沿用 hd-ui/tarot-ui 防禦式 DOM 寫入。
 import { computeChartFromBirth, SIGNS, POINT_IDS, POINT_ZH, signOf } from './astro-chart.js';
 import { SIGN_TEXTS, POINT_FRAME, BIG_THREE_HINT } from './astro-text-signs.js';
-import { buildChartSvg } from './astro-svg.js';
+import { buildChartSvg, buildShareCardSvg } from './astro-svg.js';
+import { astroBriefData } from './astro-brief.js';
+import { mountAiBrief } from '../core/core-ai-brief.js';
+import { downloadPngFromSvg } from '../core/core-export.js';
 import { CITIES } from '../core/core-cities.js';
 import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
-const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
-const DEG = (d) => `${Math.floor(d)}°${String(Math.round((d % 1) * 60)).padStart(2, '0')}′`;
+const SIGN_GLYPH = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'].map((g) => g + '︎');
+const DEG = (d) => {
+  let deg = Math.floor(d);
+  let min = Math.round((d - deg) * 60);
+  if (min === 60) { deg += 1; min = 0; }
+  return `${deg}°${String(min).padStart(2, '0')}′`;
+};
 
 function collect() {
   const y = +$('astro-y').value;
@@ -26,6 +34,8 @@ function collect() {
 }
 
 let lastChart = null;
+let lastInput = null;
+let brief = null;
 
 function doCompute() {
   show('astro-error', false);
@@ -50,6 +60,7 @@ function doCompute() {
     return;
   }
   lastChart = chart;
+  lastInput = inp;
   render(chart, inp);
   gtag('event', 'astro_compute', { houseSystem: inp.houseSystem, timeUnknown: inp.timeUnknown });
   const res = $('astro-result');
@@ -73,7 +84,8 @@ function render(chart, inp) {
   setHTML('astro-big-three', ['sun', 'moon', 'asc'].map((id) => bigCard(id, chart)).join(''));
 
   // 圓盤
-  setHTML('astro-wheel', buildChartSvg(chart, 440));
+  setHTML('astro-wheel', buildChartSvg(chart));
+  setText('astro-wheel-title', inp.name ? `${inp.name}的命盤圓圖` : '命盤圓圖');
 
   // 落座表
   const rows = POINT_IDS.map((id) => {
@@ -102,17 +114,55 @@ function render(chart, inp) {
   // 相位精選（orb 最緊 8 條）
   const asp = chart.aspects.slice(0, 8);
   setHTML('astro-aspects', asp.length
-    ? `<ul class="astro-asp-list">${asp.map((a) => `<li><b>${POINT_ZH[a.a] || a.a} ${a.name} ${POINT_ZH[a.b] || a.b}</b><span>orb ${a.orb}°</span></li>`).join('')}</ul>`
+    ? `<ul class="astro-asp-list">${asp.map((a) => `<li><b>${POINT_ZH[a.a] || a.a} ${a.name} ${POINT_ZH[a.b] || a.b}</b><span>相差 ${a.orb}°</span></li>`).join('')}</ul>`
     : '<p class="astro-hint">沒有在容許度內的主要相位。</p>');
+
+  // 不確定時間：月亮以中午估算，靠近星座交界時提醒
+  const moon = chart.points.moon;
+  const moonEdge = inp.timeUnknown && (moon.degInSign < 7 || moon.degInSign > 23);
+  setText('astro-moon-note', moonEdge ? `你沒有填出生時間，月亮是用當天中午估算的。這次月亮落在${moon.signZh}座 ${Math.floor(moon.degInSign)}°，靠近星座交界，實際可能在隔壁星座。` : '');
+  show('astro-moon-note', moonEdge);
 
   show('astro-result', true);
   show('astro-beta-note', true);
+  if (!brief) {
+    brief = mountAiBrief($('astro-brief'), {
+      gaTool: 'astro',
+      system: '星座命盤',
+      focuses: ['overall', 'love', 'career', 'custom'],
+      getData: ({ hidePersonal }) => (lastChart ? astroBriefData(lastChart, briefBirth(), { hidePersonal }) : null),
+      getAge: () => (lastInput ? ageOf(lastInput) : null),
+    });
+  } else brief.refresh();
+}
+
+function briefBirth() {
+  const i = lastInput;
+  return { y: i.y, mo: i.mo, d: i.d, h: i.h, mi: i.mi, timeUnknown: i.timeUnknown, name: i.name, cityName: i.city ? i.city.zh : '' };
+}
+
+function ageOf(i) {
+  const now = new Date();
+  let age = now.getFullYear() - i.y;
+  if (now.getMonth() + 1 < i.mo || (now.getMonth() + 1 === i.mo && now.getDate() < i.d)) age -= 1;
+  return age;
+}
+
+function saveShareCard() {
+  if (!lastChart) return;
+  const c = lastChart;
+  const lines = [`太陽 ${c.points.sun.signZh}座・月亮 ${c.points.moon.signZh}座`];
+  if (c.points.asc) lines.push(`上升 ${c.points.asc.signZh}座`);
+  const card = buildShareCardSvg(c, { name: lastInput && lastInput.name, lines });
+  downloadPngFromSvg({ svg: card.svg, width: card.w, height: card.h, scale: 1, background: '#0f1424', filename: 'astrology-chart.png' });
+  gtag('event', 'astro_share_card', {});
 }
 
 function init() {
   fillBirthSelects('astro', { requireLatLon: true }); // 星座需經緯度算宮位
   if ($('astro-y')) $('astro-y').value = 1990;
   on('astro-compute', 'click', doCompute);
+  on('astro-share', 'click', saveShareCard);
   on('astro-time-unknown', 'change', () => {
     const u = $('astro-time-unknown').checked;
     show('astro-time-row', !u);

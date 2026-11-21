@@ -103,16 +103,18 @@
   title: 紫微斗數
   subtitle: 十二宮位看人生主題
   category: birth-map
-  status: coming-soon
+  status: beta
   visibility: public
   priority: P1
   phase: Phase 6
-  route: ''
+  route: /ziwei/
+  nav_order: 7
+  nav_label: 紫微斗數
   icon: bi-moon-stars
   input_type: birth
   use_cases: [人生宮位, 職涯主題, 關係主題]
-  cta_label: 規劃中
-  note: ''
+  cta_label: 立即排盤（測試中）
+  note: 依開源 iztro 演算法排盤，可點宮位看三方四正、一鍵整理成給 AI 的完整提問（測試中）。
   related: [bazi, astrology]
 
 - id: numerology

@@ -6,6 +6,8 @@ import { computePillarsFromBirth } from './bazi-pillars.js';
 import { analyzeChart, tenGod, TEN_GODS } from './bazi-shishen.js';
 import { DAY_MASTER, TEN_GOD, WUXING_LEAD, SEASON, STRENGTH, BALANCE, seasonOf } from './bazi-data-texts.js';
 import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
+import { baziBriefData } from './bazi-brief.js';
+import { mountAiBrief } from '../core/core-ai-brief.js';
 import { CITIES } from '../core/core-cities.js';
 import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
@@ -27,6 +29,8 @@ function collect() {
 
 let lastCard = null; // {svg,w,h}
 let lastPayload = null;
+let last = null; // { chart, analysis, inp }
+let brief = null;
 
 function doCompute() {
   show('bazi-error', false);
@@ -111,6 +115,19 @@ function render(chart, analysis, inp) {
 
   show('bazi-result', true);
   show('bazi-beta-note', true);
+  last = { chart, analysis, inp };
+  if (!brief) {
+    brief = mountAiBrief($('bazi-brief'), {
+      gaTool: 'bazi',
+      system: '八字',
+      getData: ({ hidePersonal }) => (last ? baziBriefData(last.chart, last.analysis, last.inp, { hidePersonal }) : null),
+      getAge: () => {
+        if (!last) return null;
+        const n = new Date(); const i = last.inp;
+        return n.getFullYear() - i.y - ((n.getMonth() + 1 < i.mo || (n.getMonth() + 1 === i.mo && n.getDate() < i.d)) ? 1 : 0);
+      },
+    });
+  } else brief.refresh();
 }
 
 function doDownload() {
