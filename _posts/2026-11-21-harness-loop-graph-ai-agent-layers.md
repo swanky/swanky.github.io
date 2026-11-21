@@ -2,7 +2,7 @@
 title: "AI Agent 又失敗了，先別改提示詞：問問是執行框架、迴圈，還是工作圖壞了"
 seo_title: "Harness、Loop、Graph 是什麼？AI Agent 三層架構、證據強度與失敗診斷表"
 date: 2026-11-21
-published: false
+published: true
 categories: [technical]
 tags: [ai-agent, agentic-engineering, harness-engineering, loop-engineering, graph-engineering, claude-code, codex]
 layout: article

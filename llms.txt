@@ -175,6 +175,8 @@
 - [AI 視覺內容製作](https://swanky.github.io/technical/ai-visual-production/): 史旺基的 AI 視覺製作作品集：以原創角色史旺姬完成的兩組自主概念作品，呈現同一人物跨場景的一致性，以及主題、造型、場景、光線與選片之間的關係。說明目前可承接的工作範圍與合作流程，依範圍報價。
 - [洽詢合作](https://swanky.github.io/contact/): 技術顧問、AI Agent 導入、Web3 與企業內訓、攝影與模特兒合作的單一洽詢入口
 - [專欄文章](https://swanky.github.io/technical/articles/): AI 工具、軟體管理、Web3 趨勢深度分析
+- [AI Agent 又失敗了，先別改提示詞：問問是執行框架、迴圈，還是工作圖壞了](https://swanky.github.io/technical/harness-loop-graph-ai-agent-layers/): AI Agent 失敗時，多數人改提示詞或換模型。Whitemon 把問題拆成執行框架、迴圈、工作圖三層；我補上證據強度、復原代價與六個實作限定。
+- [Hermes 插件黑客松前 10 名：評審選的不是功能，是不靠模型記得的關口](https://swanky.github.io/technical/hermes-plugin-hackathon-top10/): Hermes 插件黑客松前 10 名，多數把規則從提示詞搬到工具執行前的關口。我讀了十個專案的程式，拆它們怎麼擋、數字怎麼讀、哪裡擋不到。
 - [Blur 要關站了：把 NFT 變得更好交易，然後呢？](https://swanky.github.io/technical/blur-frontend-shutdown-nft-liquidity/): 從 Blur 關站、4 隻變異猿 NFT 的清算經驗，到 Abstract、Blast 退場與 OpenSea 轉向，看懂資金效率為何沒換來長期需求。
 - [AI 可以幫你做出錢包，卻做不出 USDC：軟體變便宜以後，什麼還抄不走？](https://swanky.github.io/technical/you-cant-vibe-code-usdc/): AI 能複製介面和程式碼，做不出 USDC 背後的準備金、銀行與法律責任。從 a16z 論點、SVB 事件與 POAP 收攤，看什麼還抄不走。
 - [AI 說「改好了」，你還會再看一眼嗎？時間一趕，我也常直接放行](https://swanky.github.io/technical/cognitive-surrender-ai-review/): AI 產出多到看不完、時間又趕，人就容易直接放行。從華頓的實驗、Addy Osmani 的提醒，和我自己被 AI 騙過的紀錄，看怎麼不把判斷交出去。

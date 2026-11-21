@@ -2,7 +2,7 @@
 title: "Hermes 插件黑客松前 10 名：評審選的不是功能，是不靠模型記得的關口"
 seo_title: "Hermes Agent Plugin Hackathon 前 10 名解析：Foreman、Plan Mode、Mandate 等插件怎麼管住 AI Agent"
 date: 2026-11-21
-published: false
+published: true
 categories: [technical]
 tags: [ai-agent, hermes-agent, agentic-engineering, hooks, permissions, claude-code, codex]
 layout: article
