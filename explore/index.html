@@ -30,7 +30,18 @@ extra_css: |
     background-size: 48px 48px;
   }
   .explore-hero > .container { position: relative; z-index: 1; }
-  .explore-hero h1 { font-size: var(--step-5); }
+  .explore-hero h1 { font-size: var(--step-5); text-wrap: balance; }
+  /* 品牌插畫：桌機右欄、手機置頂 2:1 小橫幅（首屏仍看得到分類鈕） */
+  .explore-hero-art { aspect-ratio: 2 / 1; max-height: 170px; margin: 0 auto 18px; }
+  .explore-hero-art img { object-position: 60% 40%; }
+  @media (min-width: 992px) {
+    .explore-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: center; }
+    .explore-hero-art { order: 2; aspect-ratio: 3 / 2; max-height: none; max-width: 520px; width: 100%; margin: 0; border-radius: 20px; }
+    .explore-hero-art img { object-position: 50% 50%; }
+    .explore-hero-copy { order: 1; text-align: left; }
+    .explore-hero-copy .lead { margin-left: 0; margin-right: 0; }
+    .explore-hero-nav { justify-content: flex-start; margin-left: 0; margin-right: 0; }
+  }
   .explore-hero-nav a { padding: 9px 20px; }
   .explore-section-title { font-size: var(--step-4); }
 
@@ -88,7 +99,7 @@ extra_css: |
   .explore-hd-interest a:hover { background: #E5A300; color: #111; }
   .explore-hd-interest small { flex-basis: 100%; color: var(--c-muted); }
   @media (max-width: 767px) {
-    .explore-hero { min-height: auto; padding: 52px 0 40px; }
+    .explore-hero { min-height: auto; padding: 20px 0 40px; }
     .explore-hd-feature { grid-template-columns: 1fr; border-radius: 14px; }
     .explore-hd-main, .explore-hd-report { padding: 23px 20px; }
     .explore-hd-primary { width: 100%; }
@@ -114,7 +125,9 @@ extra_head: |
 
   <!-- ======= Hero ======= -->
   <section class="explore-hero" data-aos="fade-up">
-    <div class="container">
+    <div class="container explore-hero-grid">
+      <div class="tool-art explore-hero-art" aria-hidden="true"><img src="{{ '/assets/img/explore/explore.jpg' | relative_url }}" srcset="{{ '/assets/img/explore/explore-768.jpg' | relative_url }} 768w, {{ '/assets/img/explore/explore.jpg' | relative_url }} 1536w" sizes="(min-width: 992px) 520px, 100vw" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
+      <div class="explore-hero-copy">
       {% include tool-privacy.html style='pill' %}
       <h1>Swanky 自我探索實驗室</h1>
       <p class="lead">不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。<br>這裡把人類圖、塔羅、星座、八字、奇門這些象徵系統，當成反思工具與決策輔助——由一位工程師打造，演算法透明、可驗證，未驗證的功能一律標示「測試中」。</p>
@@ -124,6 +137,7 @@ extra_head: |
         <a href="#cat-ritual">行動儀式</a>
         <a href="#cat-service">商業與策略服務</a>
       </nav>
+      </div>
     </div>
   </section>
 

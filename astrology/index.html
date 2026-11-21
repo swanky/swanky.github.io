@@ -85,6 +85,7 @@ extra_css: |
 
   <!-- ======= Hero ======= -->
   <section class="astro-hero" data-aos="fade-up">
+    <div class="tool-art tool-hero-art" aria-hidden="true"><img src="{{ '/assets/img/explore/astrology-768.jpg' | relative_url }}" alt="" width="768" height="512" decoding="async"></div>
     <div class="container">
       <span class="astro-beta"><i class="bi bi-stars"></i> 測試中・上升與宮位驗證中</span>
       <h1>星座命盤</h1>
@@ -155,6 +156,7 @@ extra_css: |
   <!-- ======= FAQ ======= -->
   <section class="astro-section" style="background:#fffaf0;">
     <div class="container">
+      <div class="tool-art tool-art-band" aria-hidden="true"><img src="{{ '/assets/img/explore/astrology-768.jpg' | relative_url }}" alt="" width="768" height="512" loading="lazy" decoding="async"></div>
       <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
       {% include faq-accordion.html faq=page.faq id='astroFaq' %}
       {% include faq-jsonld.html faq=page.faq %}

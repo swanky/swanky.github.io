@@ -376,3 +376,24 @@
 @media (max-width: 480px) { .ai-brief-btn { flex: 1 1 100%; justify-content: center; } }
 /* 排盤後捲到結果：避開固定導覽列 */
 #ziwei-result, #astro-result, #bazi-result { scroll-margin-top: 96px; }
+
+/* ---------- 品牌插畫版位（自我探索區）：深色插畫裝在金框「夜空窗」裡，不貼在奶油底上 ---------- */
+.tool-art { display: block; border: 1px solid #E5A300; border-radius: 16px; overflow: hidden; background: #1b2140; box-shadow: 0 14px 38px rgba(108, 78, 10, .10); }
+.tool-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* 工具頁 hero 右側小窗：只在寬螢幕顯示、不佔版面流，不把表單往下推 */
+.astro-hero > .tool-hero-art, .bazi-hero > .tool-hero-art { display: none; }
+@media (min-width: 1200px) {
+  .astro-hero > .tool-hero-art, .bazi-hero > .tool-hero-art {
+    display: block; position: absolute; z-index: 1;
+    right: max(16px, calc((100% - 1140px) / 2 + 12px)); top: 50%; transform: translateY(-50%);
+    height: calc(100% - 24px); max-height: 168px; aspect-ratio: 3 / 2;
+  }
+  /* 有右側小窗時，說明文字跟標題一起靠左，避免三條左緣 */
+  .astro-hero:has(> .tool-hero-art) .lead, .bazi-hero:has(> .tool-hero-art) .lead { margin-left: 0; margin-right: 0; max-width: 40em; }
+}
+@media (min-width: 1400px) {
+  .astro-hero > .tool-hero-art, .bazi-hero > .tool-hero-art { right: max(16px, calc((100% - 1320px) / 2 + 12px)); }
+}
+/* 窄螢幕：同一張圖放在表單與結果之後，當作頁尾前的品牌橫幅 */
+.tool-art-band { max-width: 760px; margin: 8px auto 26px; aspect-ratio: 2 / 1; }
+@media (min-width: 1200px) { .tool-art-band { display: none; } }

@@ -93,6 +93,7 @@ extra_css: |
 <main id="main">
 
   <section class="astro-hero" data-aos="fade-up">
+    <div class="tool-art tool-hero-art" aria-hidden="true"><img src="{{ '/assets/img/explore/ziwei-768.jpg' | relative_url }}" alt="" width="768" height="512" decoding="async"></div>
     <div class="container">
       <span class="astro-beta"><i class="bi bi-stars"></i> 測試中・採用通行排法</span>
       <h1>紫微斗數</h1>
@@ -152,6 +153,7 @@ extra_css: |
 
   <section class="astro-section" style="background:#fffaf0;">
     <div class="container">
+      <div class="tool-art tool-art-band" aria-hidden="true"><img src="{{ '/assets/img/explore/ziwei-768.jpg' | relative_url }}" alt="" width="768" height="512" loading="lazy" decoding="async"></div>
       <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
       {% include faq-accordion.html faq=page.faq id='ziweiFaq' %}
       {% include faq-jsonld.html faq=page.faq %}
