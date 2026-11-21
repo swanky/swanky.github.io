@@ -2,7 +2,7 @@
 // 從 hd-ui.js 抽出：年月日時分選單、手動 UTC 偏移、城市搜尋（searchCities autocomplete）、
 // 未知時間 checkbox 的時分停用鉤。DOM id 以 prefix 參數化：單人頁 'hd'（hd-year…），
 // 合盤頁 'hd-a'／'hd-b'（hd-a-year…）。每實例自有 tz/cityLabel 狀態（原 hd-ui 模組級 state 局部化）。
-import { searchCities } from './hd-cities.js';
+import { searchCities, matchCity } from './hd-cities.js';
 import { $, setVal, on, gtag } from '../core/core-dom.js';
 
 function fillSelect(sel, items) {
@@ -80,7 +80,11 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
       if (!list.classList.contains('is-open')) return;
       if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, results.length - 1); render(); }
       else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); render(); }
-      else if (e.key === 'Enter') { e.preventDefault(); if (activeIdx >= 0) pick(results[activeIdx]); }
+      else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (activeIdx >= 0) pick(results[activeIdx]);
+        else { const m = matchCity(input.value); if (m) pick(m); }
+      }
       else if (e.key === 'Escape') close();
     });
     list.addEventListener('mousedown', (e) => {
@@ -109,8 +113,9 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
     on(eid('year'), 'change', refreshDays);
     on(eid('month'), 'change', refreshDays);
 
-    fillSelect(el('manual-tz'), MANUAL_OFFSETS.map((o) => ({ v: o, t: offsetLabel(o) })));
-    setVal(eid('manual-tz'), 480);
+    // 預設「不指定」：選單和稱呼／時間誤差同在一個折疊區，不能用「有展開」判斷要不要採用
+    fillSelect(el('manual-tz'), [{ v: '', t: '不指定（依出生地點）' }, ...MANUAL_OFFSETS.map((o) => ({ v: o, t: offsetLabel(o) }))]);
+    setVal(eid('manual-tz'), '');
 
     // 未知時間：停用時分（固定正午取樣由引擎層處理）
     on(eid('unknown-time'), 'change', (e) => {
@@ -130,10 +135,18 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
 
   function resolveTz() {
     if (state.tz) return state.tz;
-    // 城市未選但展開了手動偏移
-    const field = el('city-search')?.closest('.hd-field');
-    const adv = field ? field.querySelector('.hd-advanced') : null;
-    if (adv && adv.open) return { offsetMinutes: +(el('manual-tz')?.value || 0) };
+    // 城市未選但手動指定了時區
+    const manual = el('manual-tz')?.value;
+    if (manual !== undefined && manual !== '') return { offsetMinutes: +manual };
+    // 打了字但沒點清單：能明確對到城市（或候選全同時區）就自動帶入
+    const input = el('city-search');
+    const typed = matchCity(input?.value || '');
+    if (typed) {
+      state.tz = typed.tz; state.cityLabel = typed.zh;
+      input.value = typed.zh;
+      el('city-list')?.classList.remove('is-open');
+      return state.tz;
+    }
     return null;
   }
 
@@ -145,9 +158,8 @@ export function createBirthForm({ prefix = 'hd' } = {}) {
   function setTime(h, mi) { setVal(eid('hour'), h); setVal(eid('minute'), mi); }
   function setCity(tz, label) { state.tz = tz; state.cityLabel = label || null; const inp = el('city-search'); if (inp && label) inp.value = label; }
   function setManualOffset(o) {
-    const field = el('city-search')?.closest('.hd-field');
-    const adv = field ? field.querySelector('.hd-advanced') : null;
-    if (adv) adv.open = true;
+    const details = el('manual-tz')?.closest('details');
+    if (details) details.open = true;
     setVal(eid('manual-tz'), o);
   }
   function setUnknownTime(b) {

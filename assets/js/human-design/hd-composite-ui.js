@@ -64,7 +64,14 @@ function onSubmit() {
     const input = s.form.readInput();
     if (!input.day) { showError(`${s.label}：請完整選擇出生日期。`); return; }
     const tz = s.form.resolveTz();
-    if (!tz) { showError(`${s.label}：請輸入出生地點並從清單中選擇，或展開「手動指定時區」。`); return; }
+    if (!tz) {
+      const typed = ($(`hd-${s.key}-city-search`)?.value || '').trim();
+      gtag('event', 'hd_form_validation_error', { field: 'birthplace', reason: typed ? 'unmatched' : 'empty', form: 'relationship', from_page: '/human-design/relationship/' });
+      showError(typed
+        ? `${s.label}：對不到「${typed}」，請從跳出來的清單點選城市；清單沒有的話，選同一個國家的大城市，或打開「手動時區與稱呼」指定時區。`
+        : `${s.label}：請輸入出生地點並從清單點選，或打開「手動時區與稱呼」指定時區。`);
+      return;
+    }
     const unknown = s.form.isUnknownTime();
     const eff = unknown ? { ...input, hour: 12, minute: 0 } : input;
     try {

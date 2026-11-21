@@ -295,7 +295,7 @@
 不是算命，而是把人生問題變成可以觀察、提問與行動的地圖。所有工具皆為純前端計算，出生資料不離開使用者的瀏覽器；不預測吉凶、不做命定式斷語。
 
 - [自我探索實驗室總覽](https://swanky.github.io/explore/): 各工具的入口與使用說明
-- [免費人類圖生成器](https://swanky.github.io/human-design/): 輸入出生年月日時與地點，立即生成你的人類圖：類型、內在權威、人生角色、定義、36 條通道與九大能量中心。天文計算在你的裝置上完成，出生資料不會上傳，並可加購職涯／團隊主題的深度解讀。
+- [免費人類圖生成器](https://swanky.github.io/human-design/): 免費、免註冊，出生資料不會上傳。輸入出生年月日時與地點，立即生成你的人類圖：類型、內在權威、人生角色、定義、36 條通道與九大能量中心，並可加購職涯／團隊主題的深度解讀。
 - [人類圖合盤（關係合圖）](https://swanky.github.io/human-design/relationship/): 兩人關係的合圖分析
 - [Swanky Cyber Tarot Lab](https://swanky.github.io/tarot/): 兩套原創塔羅牌組、非占卜的反思工具，以及 78 張 AI 牌面的製作與驗收紀錄
 - [塔羅反思工具](https://swanky.github.io/tarot/draw/): 用牌卡作為反思與對話的引子

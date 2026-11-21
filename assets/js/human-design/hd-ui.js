@@ -68,8 +68,11 @@ function onSubmit() {
   const input = form.readInput();
   const tz = form.resolveTz();
   if (!tz) {
-    gtag('event', 'hd_form_validation_error', { field: 'birthplace', from_page: '/human-design/' });
-    showError('請輸入出生地點並從清單中選擇，或展開「手動指定時區」。');
+    const typed = ($('hd-city-search')?.value || '').trim();
+    gtag('event', 'hd_form_validation_error', { field: 'birthplace', reason: typed ? 'unmatched' : 'empty', from_page: '/human-design/' });
+    showError(typed
+      ? `對不到「${typed}」，請從跳出來的清單點選城市；清單沒有的話，選同一個國家的大城市，或打開「更多選項」手動指定時區。`
+      : '請輸入出生地點並從清單點選，或打開「更多選項」手動指定時區。');
     return;
   }
   const unknownTime = form.isUnknownTime();

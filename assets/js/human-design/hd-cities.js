@@ -122,3 +122,29 @@ export function searchCities(query, limit = 12) {
   hits.sort((a, b) => (a.group === '台灣' ? 0 : 1) - (b.group === '台灣' ? 0 : 1));
   return hits.slice(0, limit);
 }
+
+// 訪客打了城市名卻沒從清單點選就送出時，用來自動帶入（GA4 hd_form_validation_error 主因）。
+// 只在不會算錯時才回傳：①名稱完全相同（含去掉「市／縣」、英文、別名）；
+// ②台灣縣市：以縣市名開頭（「台北市大安區」「taipei city」）或候選全在台灣（全台同一時區，排盤只用時區）。
+// 國外城市只認完全相同——子字串太鬆（「san」會對到洛杉磯、「漢」對到首爾），寧可請訪客點清單。
+const TAIWAN = { zh: '台灣', en: 'Taiwan', aliases: [], tz: 'Asia/Taipei', group: '台灣' };
+export function matchCity(query) {
+  const q = normalize(query || '');
+  if (!q) return null;
+  if (q === '台灣' || q === 'taiwan') return TAIWAN;
+  const bare = (s) => normalize(s).replace(/[市縣]$/, '');
+  const exact = CITIES.find((c) =>
+    normalize(c.zh) === q || bare(c.zh) === q || normalize(c.en) === q ||
+    c.aliases.some((a) => normalize(a) === q || bare(a) === q));
+  if (exact) return exact;
+  const tw = CITIES.filter((c) => c.group === '台灣');
+  const keys = (c) => [bare(c.zh), normalize(c.en), ...c.aliases.map(bare)].filter((k) => k.length >= 2);
+  const prefix = tw
+    .map((c) => ({ c, len: Math.max(0, ...keys(c).filter((k) => q.startsWith(k)).map((k) => k.length)) }))
+    .filter((x) => x.len > 0)
+    .sort((a, b) => b.len - a.len)[0];
+  if (prefix) return prefix.c;
+  const hits = searchCities(query, CITIES.length);
+  if (q.length >= 2 && hits.length && hits.every((c) => c.group === '台灣')) return hits[0]; // 單字（「台」「中」）帶出的地名會誤導
+  return null;
+}
