@@ -73,8 +73,8 @@ export function buildZiweiSvg(chart, opts = {}) {
   // 四化圖例
   const legend = ['祿', '權', '科', '忌'];
   if (opts.compact) {
-    const lw = 76; const lx0 = mid - (lw * 4) / 2;
-    legend.forEach((m, i) => { s += mutagenBadge(lx0 + i * lw + 14, ty, `化${m}`, 26); });
+    const lw = 92; const lx0 = mid - (lw * 4) / 2;
+    legend.forEach((m, i) => { s += mutagenBadge(lx0 + i * lw + 8, ty + 6, `化${m}`, 36); });
   } else {
     const lw = 74; const lx0 = mid - (lw * 4) / 2;
     legend.forEach((m, i) => {
@@ -97,8 +97,9 @@ export function buildZiweiSvg(chart, opts = {}) {
     const isDec = h && h.decadal.palaceIndex === p.index;
     const isYear = h && h.yearly.palaceIndex === p.index;
     const fill = inSF ? T.cellAlt : T.cell;
-    const stroke = isSel ? T.sel : (p.isSoul ? T.soul : (inSF ? T.sf : T.line));
-    const sw = isSel ? 4 : (p.isSoul ? 3.5 : (inSF ? 2.5 : 1.5));
+    // 點選的剛好是命宮：維持金框（加粗），不讓藍框蓋掉「金框＝命宮」
+    const stroke = isSel && !p.isSoul ? T.sel : (p.isSoul ? T.soul : (inSF ? T.sf : T.line));
+    const sw = isSel ? (p.isSoul ? 5 : 4) : (p.isSoul ? 3.5 : (inSF ? 2.5 : 1.5));
     const dash = inSF && !isSel && !p.isSoul ? ' stroke-dasharray="9 6"' : '';
     s += `<g class="zw-cell" data-idx="${p.index}" style="cursor:pointer">`;
     s += `<rect x="${x + 3}" y="${y + 3}" width="${C - 6}" height="${C - 6}" rx="10" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"${dash}/>`;
