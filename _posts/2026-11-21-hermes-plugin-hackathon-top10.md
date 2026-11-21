@@ -23,6 +23,9 @@ extra_css: |
   .post-content .hk-p { color: #8A5D00; font-weight: 700; }
   .post-content .hk-n { color: #9A958B; }
   .post-content .hk-note { font-size: 0.92em; color: #5F5B53; }
+  .post-content .hk-table td:first-child, .post-content .hk-table th:first-child { min-width: 8.5em; word-break: keep-all; }
+  .post-content .hk-table td { word-break: keep-all; overflow-wrap: anywhere; }
+  @media (max-width: 600px) { .post-content .hk-table caption::after { content: "（表格可以左右滑動）"; display: block; color: #8A5D00; font-weight: 700; margin-top: 4px; } .post-content .hk-table td:first-child, .post-content .hk-table th:first-child { min-width: 7em; } }
 related_posts:
   - production-ai-agent-control-planes
   - ai-agent-wallet-permission-boundaries
@@ -203,7 +206,6 @@ issue 裡請我至少比五件事：關口還是提示、人為核准、最小�
 </table>
 </div>
 
-<p class="hk-note">手機上可以左右滑動表格。</p>
 
 橫著看，我看到三件比個別功能更重要的事。
 
@@ -219,7 +221,7 @@ issue 裡請我至少比五件事：關口還是提示、人為核准、最小�
 
 <figure>
   <a href="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/deny-or-allow.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-hackathon" data-type="image">
-    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/deny-or-allow-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/deny-or-allow.svg' | relative_url }}" alt="三欄對照：預設擋下的有 Plan Mode、Seedguard、Mandate、Promise Keeper；交給人的有 Foreman；預設放行的有 safe-swap 與 Hermes Canvas。下方註明平台本身也不一致：Hermes 的 pre_tool_call 出錯會擋，middleware 出錯會放行，Codex hook 回傳不支援的欄位時照樣執行" width="840" height="452"></picture>
+    <picture><source media="(max-width: 600px)" srcset="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/deny-or-allow-mobile.svg' | relative_url }}"><img src="{{ '/assets/img/technical/hermes-plugin-hackathon-top10/deny-or-allow.svg' | relative_url }}" alt="三欄對照：預設擋下的有 Plan Mode、Seedguard、Mandate、Promise Keeper；交給人的有 Foreman；預設放行的有 safe-swap 與 Hermes Canvas。下方註明平台本身也不一致：Hermes 的 pre_tool_call 出錯會擋，middleware 出錯會放行，Codex hook 回傳不支援的欄位時照樣執行" width="840" height="502"></picture>
   </a>
   <figcaption>自製圖解。依各專案程式與 README、Hermes 與 Codex 官方文件整理。</figcaption>
 </figure>
