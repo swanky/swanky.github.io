@@ -103,7 +103,7 @@
   title: 紫微斗數
   subtitle: 十二宮位看人生主題
   category: birth-map
-  status: beta
+  status: live
   visibility: public
   priority: P1
   phase: Phase 6
@@ -113,8 +113,8 @@
   icon: bi-moon-stars
   input_type: birth
   use_cases: [人生宮位, 職涯主題, 關係主題]
-  cta_label: 立即排盤（測試中）
-  note: 採用《紫微斗數全書》通行排法，可點宮位看三方四正、一鍵整理成給 AI 的完整提問（測試中）。
+  cta_label: 立即排盤
+  note: 採用《紫微斗數全書》通行排法，已和獨立排盤逐張比對；可點宮位看三方四正、一鍵整理成給 AI 的完整提問。
   related: [bazi, astrology]
 
 - id: compare

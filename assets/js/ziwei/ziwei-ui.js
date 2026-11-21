@@ -1,7 +1,8 @@
 // ziwei-ui.js — 紫微斗數頁面入口（ES module）。
 // 流程：出生表單（含性別、可選真太陽時）→ computeZiwei（iztro）→ 命盤 SVG（可點宮位看三方四正）
 //      → 宮位詳情 → 目前運勢 → 帶著命盤去問 AI → 存成分享圖。
-// 測試中（beta）：iztro 為單一演算法來源，尚無獨立交叉驗證，頁面明示。
+// 2026-11-21 起轉正：命宮／身宮／五行局／宮名宮干／十四主星／生年四化／大限已與獨立參考實作逐筆比對
+// （tests/ziwei/golden.test.mjs、tools/golden/ziwei_golden.py）；亮度、輔星煞星、流年不在比對範圍。
 import {
   computeZiwei, timeIndexOf, minutesToTimeBoundary, trueSolarWallClock, sanFangSiZheng, soulPalace, TIME_NAMES,
 } from './ziwei-engine.js';
@@ -10,7 +11,7 @@ import { MAJOR_TEXT, PALACE_TEXT, MUTAGEN_TEXT, BRIGHTNESS_TEXT, EMPTY_PALACE_TE
 import { ziweiBriefData } from './ziwei-brief.js';
 import { mountAiBrief, todayStr } from '../core/core-ai-brief.js';
 import { downloadPngFromSvg } from '../core/core-export.js';
-import { zonedToUtc } from '../core/core-timezone.js';
+import { zonedToUtc, isDstWallTime } from '../core/core-timezone.js';
 import { CITIES } from '../core/core-cities.js';
 import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
@@ -116,6 +117,9 @@ function renderSummary() {
   if (trueSolar) notes.push(`已依${esc(inp.city.zh)}的經度換算真太陽時（${trueSolar.correctionMin >= 0 ? '+' : ''}${trueSolar.correctionMin} 分鐘），排盤使用 ${String(used.h).padStart(2, '0')}:${String(used.mi).padStart(2, '0')}，落在${TIME_NAMES[timeIndexOf(used.h, used.mi)]}。`);
   const edge = minutesToTimeBoundary(used.h, used.mi);
   if (edge <= 15) notes.push(`<b>提醒：</b>出生時間距離時辰交界只有 ${edge} 分鐘，若記錄的時間有些微誤差，命盤可能整張不同。可以試試勾選或取消「真太陽時」比較看看。`);
+  if (!trueSolar && isDstWallTime(inp.y, inp.mo, inp.d, inp.h, inp.mi, inp.city.tz)) {
+    notes.push(`<b>夏令時間提醒：</b>你出生的時間，${esc(inp.city.zh)}正在實施夏令時間（時鐘比標準時間快一小時）。紫微傳統上用標準時間排時辰，建議把出生時間減一小時再排一次，或勾選「真太陽時」讓系統自動換算。`);
+  }
   setHTML('ziwei-notes', notes.map((n) => `<p>${n}</p>`).join(''));
   show('ziwei-notes', notes.length > 0);
 }

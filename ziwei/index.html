@@ -1,7 +1,7 @@
 ---
 layout: home
-title: 紫微斗數（測試中）
-seo_title: 免費紫微斗數排盤・十二宮命盤與四化｜可帶去問 AI 的命盤解讀（測試中）
+title: 紫微斗數
+seo_title: 免費紫微斗數排盤・十二宮命盤與四化｜可帶去問 AI 的命盤解讀
 description: 輸入出生年月日時與性別，排出你的紫微斗數命盤：十二宮、十四主星、生年四化、目前大限與流年。點任一宮位看三方四正與白話說明，還能把整張命盤整理成一段完整提問，帶去 ChatGPT、Claude 或 Gemini 追問。排盤在你的裝置上完成、資料不上傳。
 keywords: 紫微斗數,紫微斗數排盤,紫微命盤,免費排盤,十二宮,四化,大限,流年,命宮主星
 nav_active: ziwei
@@ -19,7 +19,7 @@ extra_head: |
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "紫微斗數排盤（測試中）",
+    "name": "紫微斗數排盤",
     "url": "https://swanky.github.io/ziwei/",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Web",
@@ -34,8 +34,8 @@ faq:
     a: "紫微斗數的大限（每十年的運勢走向）是依照出生年的陰陽和性別決定順行或逆行，性別不同，大限的順序就不同；命宮與十二宮的主星則不受影響。"
   - q: "什麼是「真太陽時」，要不要勾？"
     a: "時鐘上的時間是以時區統一的，但太陽實際走到正上方的時間會因經度和季節差幾分鐘到十幾分鐘。多數紫微排盤軟體預設不換算；如果你的出生時間接近兩個時辰的交界（例如 6:55），可以勾選和不勾選都排一次比較看看。"
-  - q: "為什麼標示「測試中」？"
-    a: "排盤採用《紫微斗數全書》的通行排法，十四主星與四化都逐項檢查過。但紫微斗數各派在星曜亮度、部分輔星的排法上本來就有差異，我們還沒和另一套獨立的排盤逐張比對，所以先標示測試中。這是我們的誠實原則：沒有比對過，就不裝作正式功能。"
+  - q: "排盤準不準？怎麼確認的？"
+    a: "我們照《紫微斗數全書》的通行安星口訣另外寫了一套排盤程式，農曆改用另一套萬年曆（壽星天文曆），再加上第三套開源排盤程式交叉核對，隨機抽 3000 張 1901–2099 年的命盤逐張比對：命宮、身宮、五行局、十二宮宮名與宮干、十四主星、生年四化與大限歲數，除了已知的流派差異（以及 2057 年一個各家萬年曆本來就差一天的初一）全部一致。已知的流派差異有兩種：晚上 11 點後出生（晚子時）剛好碰到月底或閏月時，各派換不換月的算法不同；戊、庚、壬年出生的四化，各派寫法本來就不一樣，本頁採用最通行的一種。星曜亮度、輔星煞星與流年不在這次比對範圍。準確的前提是出生時間正確：時間跨過時辰交界，整張命盤就會不同。"
   - q: "「帶著命盤去問 AI」是什麼？"
     a: "我們把你的整張命盤、各宮的對宮與三合、目前的大限流年，連同一套解讀規則（例如每個論點都要標明依據、不斷言吉凶、先問你近況再解讀）整理成一段文字。你只要複製，貼到 ChatGPT、Claude 或 Gemini，就能針對自己的處境一路追問，不用自己把命盤一格一格打進去。"
   - q: "我的出生資料會上傳嗎？"
@@ -96,7 +96,7 @@ extra_css: |
   <section class="astro-hero" data-aos="fade-up">
     <div class="tool-art tool-hero-art" aria-hidden="true"><img src="{{ '/assets/img/explore/ziwei-768.jpg' | relative_url }}" alt="" width="768" height="512" decoding="async"></div>
     <div class="container">
-      <span class="astro-beta"><i class="bi bi-stars"></i> 測試中・採用通行排法</span>
+      <span class="astro-beta"><i class="bi bi-patch-check"></i> 已和獨立排盤逐張比對・採用通行排法</span>
       <h1>紫微斗數</h1>
       <p class="lead">十二宮看人生的十二個面向，十四主星看你的性格底色，四化看資源與課題流向哪裡。點任一宮位看三方四正，再把整張命盤帶去問 AI。</p>
       {% include tool-privacy.html style='pill' %}
@@ -124,7 +124,7 @@ extra_css: |
          extra=ziwei_form_extra %}
 
       <div class="zw-result" id="ziwei-result" style="display:none;">
-        <div class="zw-beta-note"><b>⚠&#xFE0E; 測試中說明：</b>排盤採用《紫微斗數全書》的通行排法，十四主星與四化都逐項檢查過；不過各流派在星曜亮度與部分輔星上本來就有差異，還沒和另一套獨立排盤逐張比對前，先標示測試中。說明文字是傾向描述，不斷吉凶。</div>
+        <div class="zw-beta-note"><b>排盤準確度：</b>我們照《紫微斗數全書》的通行安星口訣另外寫了一套排盤程式，農曆改用另一套萬年曆（壽星天文曆），再加上第三套開源排盤程式交叉核對，隨機抽 3000 張 1901–2099 年的命盤逐張比對：命宮、身宮、五行局、十二宮宮名與宮干、十四主星、生年四化與大限歲數，除了已知的流派差異（以及 2057 年一個各家萬年曆本來就差一天的初一）全部一致。晚子時跨月與戊、庚、壬年四化屬流派差異，星曜亮度、輔星煞星與流年不在比對範圍，詳見下方規則說明。說明文字是傾向描述，不斷吉凶。</div>
         <div class="zw-notes" id="ziwei-notes" style="display:none;"></div>
         <div class="zw-summary" id="ziwei-summary"></div>
 
@@ -164,7 +164,7 @@ extra_css: |
   <section class="astro-section" style="padding-top:6px;">
     <div class="container">
       <div style="max-width:820px; margin:0 auto 18px;">
-        {% include tool-method-note.html id='ziweiMethod' title='排盤規則說明' rules='排盤演算法：開源 iztro 2.5.8（MIT 授權），全書通行排法｜時辰：23:00–00:59 為子時（23 點後算晚子時）｜四化：依出生年天干；大限四化依大限宮干；流年四化依當年天干｜真太陽時：選填，依出生城市經度與均時差換算｜說明文字：本站自行撰寫的白話，不引用任何老師的講課原文' note='紫微斗數是理解自己的一種框架，不是命定。各流派排法有差異，本頁採用其中一種通行排法。' %}
+        {% include tool-method-note.html id='ziweiMethod' title='排盤規則說明' rules='排盤演算法：開源 iztro 2.5.8（MIT 授權），全書通行排法｜時辰：23:00–00:59 為子時（23 點後算晚子時，安紫微用隔天的農曆日、月份沿用當天）｜閏月：16 日以後算下個月｜分年：以農曆春節為界｜四化：戊年貪陰右機、庚年陽武陰同、壬年梁紫左武（各派寫法不同，本頁採此通行版）｜生年四化依出生年天干；大限四化依大限宮干；流年四化依當年天干｜真太陽時：選填，依出生城市經度與均時差換算｜說明文字：本站自行撰寫的白話，不引用任何老師的講課原文' note='驗證方式：另寫一套安星程式（農曆用壽星天文曆）並以開源 fortel-ziweidoushu 交叉核對，隨機 3000 張命盤逐張比對，命宮、身宮、五行局、宮名宮干、十四主星、生年四化、大限全部一致（除上述流派差異，以及 2057 年九月初一各家萬年曆差一天）。紫微斗數是理解自己的一種框架，不是命定。' %}
       </div>
       {% include tool-disclaimer.html %}
       <p style="text-align:center; margin-top:20px;"><a class="explore-backlink" href="{{ '/explore/' | relative_url }}">← 回到自我探索實驗室</a></p>

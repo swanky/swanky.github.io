@@ -7,7 +7,7 @@ import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
 const TOOL_LINK = { hd: '/human-design/', astro: '/astrology/', bazi: '/bazi/', ziwei: '/ziwei/' };
-const BETA = { ziwei: '排盤測試中' }; // 與 _data/divination_services.yml 的 status: beta 同步
+const BETA = {}; // 系統 id → 標記文字；與 _data/divination_services.yml 的 status: beta 同步（2026-11-21 起四套皆已轉正）
 let last = null;
 let brief = null;
 

@@ -6,6 +6,7 @@
 |---|---|---|
 | `astro_golden.py` | Swiss Ephemeris（pyswisseph，Moshier 星曆、真交點、宮位 `W`／`E`） | `tests/astrology/fixtures-golden.mjs` |
 | `bazi_golden.py` | sxtwl（壽星天文曆）＋ Swiss Ephemeris 太陽黃經交叉月支 | `tests/bazi/fixtures-golden.mjs` |
+| `ziwei_golden.py` | 依《紫微斗數全書》安星口訣另寫的參考實作＋sxtwl 農曆（流派設定寫在檔頭） | `tests/ziwei/fixtures-golden.mjs` |
 
 ## 重跑
 
@@ -14,6 +15,10 @@ uv venv --python 3.11 .venv-golden
 uv pip install --python .venv-golden --only-binary :all: -r tools/golden/requirements.txt
 .venv-golden/Scripts/python -X utf8 tools/golden/astro_golden.py > astro.json
 .venv-golden/Scripts/python -X utf8 tools/golden/bazi_golden.py  > bazi.json
+.venv-golden/Scripts/python -X utf8 tools/golden/ziwei_golden.py > ziwei.json
+.venv-golden/Scripts/python -X utf8 tools/golden/ziwei_golden.py --random 3000 > ziwei-random.json  # 大量比對用，不進 repo
 ```
 
 把 JSON 陣列的 `label`／`input`／`expected` 貼回對應 fixtures（`utc`、`sunLon` 是除錯欄位，可省略）。**不得手改 expected**；要加案例就改腳本裡的 `CASES` 重跑。案例只用公開城市與虛構時間，不放任何真人出生資料。
+
+紫微另用第三套開源實作 fortel-ziweidoushu 1.3.4（MIT，中州派、自帶曆法，不依賴 iztro）交叉核對差異的歸因；它和本站流派不同（晚子時不換日、戊庚壬年四化），只當佐證，不當 expected。

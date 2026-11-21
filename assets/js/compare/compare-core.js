@@ -194,7 +194,6 @@ export function compareBriefData(r, { hidePersonal = false } = {}) {
   const caveats = [];
   for (const [name, data] of subs) for (const c of data.caveats || []) caveats.push(`${name}：${c}`);
   caveats.push('「本站整理的對照」只取各系統最接近的單一指標做大方向分類，請把它當線索，以四套系統的原始資料為準。');
-  caveats.push('紫微排盤在本站仍標示測試中，命宮與各宮主星請以專業排盤核對。');
   return {
     system: '四套系統對照（人類圖、西洋占星、八字、紫微斗數）',
     title: `${b.name && !hidePersonal ? b.name + '的' : '我的'}四套地圖對照`,
