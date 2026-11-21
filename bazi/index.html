@@ -35,7 +35,7 @@ faq:
   - q: "我的出生資料會上傳嗎？"
     a: "不會。所有排盤計算都在你的瀏覽器內完成，出生年月日、時間與地點不會傳送到任何伺服器，也不會被記錄。"
   - q: "排盤準不準？怎麼確認的？"
-    a: "我們用另一套獨立的萬年曆（壽星天文曆）加上國際標準天文計算（Swiss Ephemeris），逐筆比對 14 張命盤，連立春前後、節氣交接當天、晚上 11 點換日、1901 年與 2050 年這些最容易排錯的情況，四柱全部一致。要注意的是各派規則本來就不同：本頁預設晚上 11 點換日（子時算隔天），出生在 23:00–01:00 的人，換到別的排盤站可能看到不同的日柱；夏令時間出生的人，請先把時間撥回標準時間再排。"
+    a: "我們用另一套獨立的萬年曆（壽星天文曆）加上占星界通用的天文計算（Swiss Ephemeris），逐筆比對 14 張命盤，連立春前後、節氣交接當天、晚上 11 點換日、1901 年與 2050 年這些最容易排錯的情況，四柱全部一致；真太陽時與大運起運歲數不在這次比對範圍。要注意的是各派規則本來就不同：本頁預設晚上 11 點換日（子時算隔天），出生在 23:00–01:00 的人，換到別的排盤站可能看到不同的日柱；夏令時間出生的人，請先把時間撥回標準時間再排。"
   - q: "用真太陽時嗎？子時怎麼換日？"
     a: "預設採用標準時間（與多數線上排盤一致）、以 23:00 換日。你可以在「進階選項」切換真太陽時（經度差＋均時差校正）與晚子時規則。不同流派做法可能不同，頁面會標示採用的規則。"
   - q: "會告訴我五行缺什麼、要補什麼嗎？"
@@ -48,6 +48,7 @@ extra_css: |
   .bazi-adv .tool-field { margin: 10px 0; }
   .bazi-result { max-width: 900px; margin: 30px auto 0; }
   .bazi-beta-note { background: var(--c-gold-soft); border: 1px solid #ecd9a8; color: var(--c-gold-deep); border-radius: 10px; padding: 13px 16px; font-size: 0.86rem; line-height: 1.7; margin-bottom: 22px; }
+  .bazi-dst-note { background: #fdeee0; border: 1px solid #f0c9a4; color: #8a4310; border-radius: 10px; padding: 12px 16px; font-size: 0.88rem; line-height: 1.7; margin-bottom: 18px; }
   .bazi-mingpan-wrap { display: flex; justify-content: center; margin: 4px 0 18px; }
   .bazi-mingpan-wrap svg { max-width: 100%; width: 640px; height: auto; border-radius: var(--r-lg); box-shadow: var(--shadow-1); }
   .bazi-dl-row { text-align: center; margin-bottom: 24px; }
@@ -133,9 +134,10 @@ extra_css: |
       <!-- 結果 -->
       <div class="bazi-result" id="bazi-result" style="display:none;">
         <div class="bazi-beta-note" id="bazi-beta-note" style="display:none;">
-          <b>排盤準確度：</b>我們用另一套獨立的萬年曆（壽星天文曆）加上國際標準天文計算（Swiss Ephemeris），逐筆比對 14 張命盤，連立春前後、節氣交接當天、晚上 11 點換日、1901 年與 2050 年這些最容易排錯的情況，四柱全部一致。出生在晚上 11 點到凌晨 1 點、或夏令時間期間，請看下方規則說明。深度解讀為精簡版，完整版撰寫中。此工具不做吉凶斷語、用神推薦或命定預測。
+          <b>排盤準確度：</b>我們用另一套獨立的萬年曆（壽星天文曆）加上占星界通用的天文計算（Swiss Ephemeris），逐筆比對 14 張命盤，連立春前後、節氣交接當天、晚上 11 點換日、1901 年與 2050 年這些最容易排錯的情況，四柱全部一致（真太陽時與大運起運歲數不在這次比對範圍）。出生在晚上 11 點到凌晨 1 點、或夏令時間期間，請看下方規則說明。此工具不做吉凶斷語、用神推薦或命定預測。
         </div>
 
+        <div class="bazi-dst-note" id="bazi-dst" style="display:none;" role="note"></div>
         <div class="bazi-mingpan-wrap" id="bazi-mingpan"></div>
         <div class="bazi-dl-row">
           <button class="bazi-dl-btn" id="bazi-download"><i class="bi bi-download"></i> 下載命式卡（PNG）</button>

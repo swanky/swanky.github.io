@@ -1,13 +1,13 @@
 // fixtures-golden.mjs — 八字四柱 golden 案例（獨立參考：sxtwl＋Swiss Ephemeris）。
 //
 // 來源（2026-11-21 改採，取代原訂「≥3 個排盤站人工抄錄」）：
-//   年／月／日／時柱：sxtwl 2.x（壽星天文曆，許劍偉演算法；與本站 iztro／lunar 系的 6tail 血緣不同）以腳本算出。
+//   年／月／日／時柱：sxtwl 2.x（壽星天文曆，許劍偉演算法；與本站 iztro／lunar 系的 6tail 血緣不同）以 tools/golden/bazi_golden.py 算出（版本見 tools/golden/requirements.txt）。
 //   節氣當日：依 sxtwl 給的節氣精確時刻判斷生在節前或節後；月支再用 pyswisseph 2.10.03 的太陽視黃經
 //   （寅月＝315° 起每 30°）逐筆交叉，兩者一致才入檔。日柱與時柱採 23:00 換日（zi23，本站預設）。
 //   本站引擎（太陽黃經用 astronomy-engine、日柱用儒略日算術）與上述兩套為不同實作。
 // 常識抽查：1949-10-01＝甲子日、2000-01-01＝戊午日，與公認一致。
 // 首次比對（14 筆，含立春前後、驚蟄前後、23 點換日、早子時、1901／2050）：四柱全數一致。
-// ⚠ 不得手改 expected；要加案例就重跑產生腳本（設定如上，可重現）。夏令時間與真太陽時不在本檔範圍。
+// ⚠ 不得手改 expected；要加案例就改 tools/golden/bazi_golden.py 重跑。夏令時間與真太陽時不在本檔範圍。
 //
 // input:    { year, month, day, hour, minute, tz, gender }
 // expected: { year, month, day, hour }（干支字串）

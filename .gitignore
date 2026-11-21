@@ -30,3 +30,4 @@ tools/_render/
 .hermes-tmp.*/
 # agent 驗證截圖：一律留在暫存區，別散落 repo 根目錄（網站圖片放 assets/ 底下）
 /*.png
+.venv-golden/

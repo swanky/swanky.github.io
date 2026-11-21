@@ -1,12 +1,12 @@
 // fixtures-golden.mjs — 星座命盤 golden 案例（獨立參考：Swiss Ephemeris）。
 //
 // 來源（2026-11-21 改採，取代原訂「人工從 astro.com 抄錄」）：
-//   pyswisseph 2.10.03（Swiss Ephemeris，astro.com 背後就是同一套引擎）以腳本算出，未經本站程式碼。
+//   pyswisseph 2.10.03（Swiss Ephemeris，astro.com 背後就是同一套引擎）以 tools/golden/astro_golden.py 算出，未經本站程式碼（版本見 tools/golden/requirements.txt）。
 //   設定：回歸黃道、視位置（真黃道、含章動與光行差）、Moshier 星曆、北交點＝真交點；
 //   宮位 whole＝swe 'W'、equal＝swe 'E'；牆鐘時間以 Python zoneinfo（IANA）換成 UTC。
 //   本站引擎是 astronomy-engine（Don Cross），與 Swiss Ephemeris 為不同實作，比對有獨立性。
 // 首次比對（12 筆）：最大誤差 ASC 0.0041°、MC 0.0006°、行星 0.0049°、北交點 0.0056°。
-// ⚠ 不得手改 expected；要加案例就重跑產生腳本（scripts 不進 repo，設定如上，可重現）。
+// ⚠ 不得手改 expected；要加案例就改 tools/golden/astro_golden.py 重跑。
 //
 // input:    { year, month, day, hour, minute, tz, lat, lon, houseSystem }
 // expected: { asc, mc, cusps: [12 個黃經度數], planets: { sun..pluto, northNode } }

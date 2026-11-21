@@ -135,7 +135,7 @@ export function buildChartSvg(chart, opts = {}) {
       const next = cusps[(i + 1) % 12];
       const mid = c + norm(next - c) / 2;
       const [hx, hy] = P((rAsp + rHouseOut) / 2, mid);
-      s += `<text x="${f(hx)}" y="${f(hy)}" text-anchor="middle" dominant-baseline="central" font-size="19" font-weight="700" fill="${T.sub}" class="astro-house">${i + 1}</text>`;
+      s += `<text x="${f(hx)}" y="${f(hy)}" text-anchor="middle" dominant-baseline="central" font-size="19" font-weight="700" fill="${T.sub}" stroke="${T.inner}" stroke-width="4" stroke-linejoin="round" paint-order="stroke" class="astro-house">${i + 1}</text>`;
     });
   }
   s += `<circle cx="${cx}" cy="${cy}" r="${rAsp}" fill="none" stroke="${T.line}" stroke-width="1.8"/>`;
@@ -187,7 +187,7 @@ export function buildChartSvg(chart, opts = {}) {
       const [dx, dy] = P(degR[id], dl);
       const deg = opts.showDegrees !== false ? `<tspan class="astro-deg">${Math.floor(p.degInSign)}°</tspan>` : '';
       const retro = p.retro ? '<tspan fill="#d0453a" font-weight="800">R</tspan>' : '';
-      s += `<text x="${f(dx)}" y="${f(dy)}" text-anchor="middle" dominant-baseline="central" font-size="13" fill="${T.sub}" class="astro-degr">${deg}${retro}</text>`;
+      s += `<text x="${f(dx)}" y="${f(dy)}" text-anchor="middle" dominant-baseline="central" font-size="13" fill="${T.sub}" stroke="${T.inner}" stroke-width="4" stroke-linejoin="round" paint-order="stroke" class="astro-degr">${deg}${retro}</text>`;
     }
   }
 

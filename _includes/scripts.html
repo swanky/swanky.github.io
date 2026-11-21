@@ -78,6 +78,13 @@
 <script type="module" src="{{ '/assets/js/ziwei/ziwei-ui.js' | relative_url }}"></script>
 {% endif %}
 
+{% if page.use_compare %}
+<!-- 四套地圖對照：天文引擎與 iztro 兩個 vendor UMD 先載，再 ES module -->
+<script src="{{ '/assets/vendor/astronomy-engine/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/vendor/iztro/iztro.min.js' | relative_url }}" defer></script>
+<script type="module" src="{{ '/assets/js/compare/compare-ui.js' | relative_url }}"></script>
+{% endif %}
+
 {% if page.use_bazi_daily %}
 <!-- 今日五行：純日柱算術（不需天文引擎），純前端 ES module -->
 <script type="module" src="{{ '/assets/js/bazi/bazi-daily.js' | relative_url }}"></script>

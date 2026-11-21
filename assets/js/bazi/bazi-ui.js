@@ -9,6 +9,7 @@ import { buildMingCard, exportMingCardPng } from './bazi-svg.js';
 import { baziBriefData } from './bazi-brief.js';
 import { mountAiBrief } from '../core/core-ai-brief.js';
 import { CITIES } from '../core/core-cities.js';
+import { isDstWallTime } from '../core/core-timezone.js';
 import { fillBirthSelects } from '../core/core-form.js';
 import { $, setHTML, setText, show, on, gtag, esc } from '../core/core-dom.js';
 
@@ -112,6 +113,11 @@ function render(chart, analysis, inp) {
     return `<div class="bazi-luck-card"><span class="bazi-luck-age">${s.startAge} 歲</span><b class="bazi-luck-gz">${esc(s.ganName)}${esc(s.zhiName)}</b><span class="bazi-luck-god">${esc(god)}</span></div>`;
   }).join('');
   setHTML('bazi-luck', `<p class="bazi-luck-head">${luckHead}</p><div class="bazi-luck-track">${steps}</div>`);
+
+  // 夏令時間提醒：本頁用你填的時鐘時間排時柱；八字傳統用標準時間，夏令期間時鐘快一小時
+  const dst = !inp.timeUnknown && isDstWallTime(inp.y, inp.mo, inp.d, inp.h, inp.mi, inp.city.tz);
+  setHTML('bazi-dst', dst ? `<b>你出生的時間，${esc(inp.city.zh)}正在實施夏令時間</b>（時鐘比標準時間快一小時）。八字傳統上用標準時間排時柱，建議把出生時間減一小時再排一次，兩張對照看看。` : '');
+  show('bazi-dst', dst);
 
   show('bazi-result', true);
   show('bazi-beta-note', true);

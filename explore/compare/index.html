@@ -1,0 +1,158 @@
+---
+layout: home
+title: 四套地圖對照
+seo_title: 免費四套命盤對照・人類圖×星座×八字×紫微｜看哪裡一致、哪裡矛盾
+description: 輸入一次出生資料，同時排出人類圖、星座命盤、八字與紫微斗數，並排看四套系統各自怎麼描述你、哪裡說法一致、哪裡互相矛盾，再整理成一段完整提問帶去問 AI。所有計算都在你的裝置上完成、資料不上傳。
+keywords: 命盤對照,人類圖,星座命盤,八字,紫微斗數,免費排盤,自我探索,AI 解讀
+nav_active: explore
+breadcrumbs:
+  - name: 主頁
+    url: /
+  - name: 自我探索實驗室
+    url: /explore/
+  - name: 四套地圖對照
+    url: /explore/compare/
+use_compare: true
+use_tools_css: true
+extra_head: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "四套地圖對照",
+    "url": "https://swanky.github.io/explore/compare/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+    "description": "一次輸入出生資料，並排看人類圖、星座、八字、紫微斗數的重點，以及四套系統哪裡一致、哪裡矛盾。資料不上傳。",
+    "inLanguage": "zh-TW",
+    "author": { "@type": "Person", "name": "史旺基 Swanky Hsiao" }
+  }
+  </script>
+faq:
+  - q: "四套系統說法不一樣，是哪一套不準嗎？"
+    a: "不一定。四套系統的出發點本來就不同：人類圖看能量運作與做決定的方式，星座看心理特質，八字看五行結構與人生節奏，紫微看十二個人生面向。說法分歧往往是在描述不同層面，例如天生傾向和後天習慣、工作狀態和感情狀態。最好的用法是拿分歧的地方回頭觀察自己，看哪一種描述比較貼近你。"
+  - q: "「說法一致」「說法分歧」是怎麼判斷的？"
+    a: "每個面向，我們只取各系統裡傳統意思最接近的一個指標做大方向分類，例如「行動起點」看人類圖類型、太陽到土星 7 顆行星落在火象風象的數量、八字日主強弱、紫微命宮是不是殺破狼或機月同梁。接著看票數：有傾向的系統全部同向標「說法一致」；多數同向會寫出票數，例如「3 套偏主動、1 套偏觀察」；票數相同才標「說法分歧」；有傾向的不到兩套就寫「線索不夠，先不下結論」。每一格都附上依據，你可以自己判斷合不合理。這是本站整理的對照方式，不是任何一派的正式理論。"
+  - q: "為什麼有些格子寫「沒有明顯傾向」？"
+    a: "那代表這套系統在這個面向落在中間，例如火象風象行星不多也不少、日主強弱中和，或命宮主星不屬於傳統分類。我們寧可照實寫，也不硬湊出一致。"
+  - q: "「同一主題，四套各自怎麼說」為什麼沒有判定一致或矛盾？"
+    a: "因為四套系統談工作的角度本來就不一樣：人類圖講做決定的方式，星座看天頂代表的事業方向，八字看十神，紫微看官祿宮的主星。硬把它們歸成同一把尺會失真，所以這一區只把各自原本的說法並排給你看，讓你自己對照。"
+  - q: "一定要知道出生時間嗎？"
+    a: "要。人類圖、星座上升與紫微命宮都需要出生時間，時間差一個時辰，紫微命宮就可能換到另一格。不確定時間的話，建議先分別到各工具頁試算。"
+  - q: "我的出生資料會上傳嗎？"
+    a: "不會。四套排盤和整理提問都在你的瀏覽器裡完成，出生資料不會傳送到任何伺服器。複製出去的文字貼到哪個 AI，就由那個服務的隱私政策規範。"
+extra_css: |
+  .cmp-result { max-width: 1000px; margin: 30px auto 0; }
+  .cmp-panel { background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 22px 24px; margin-bottom: 20px; }
+  .cmp-panel > h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--c-ink); margin: 0 0 6px; }
+  .cmp-panel > .cmp-sub { color: var(--c-muted); font-size: 0.88rem; margin: 0 0 16px; line-height: 1.7; }
+  .cmp-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cmp-card { border: 1px solid var(--c-line); border-radius: 14px; padding: 14px 16px; background: #fffdf8; display: flex; flex-direction: column; }
+  .cmp-card h4 { font-size: 0.8rem; font-weight: 800; color: var(--c-gold-deep); letter-spacing: .06em; margin: 0 0 8px; }
+  .cmp-card dl { margin: 0 0 10px; }
+  .cmp-card dt { font-size: 0.74rem; color: var(--c-muted); }
+  .cmp-card dd { font-size: 1.02rem; font-weight: 700; color: var(--c-ink); margin: 0 0 6px; }
+  .cmp-card a { margin-top: auto; font-size: 0.82rem; font-weight: 700; color: #8B5E00; text-decoration: none; }
+  .cmp-card a:hover { text-decoration: underline; }
+  .cmp-dim { border: 1px solid var(--c-line); border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+  .cmp-dim-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 4px; }
+  .cmp-dim-head b { font-size: 1.08rem; color: var(--c-ink); }
+  .cmp-poles { font-size: 0.84rem; color: var(--c-muted); }
+  .cmp-verdict { font-size: 0.78rem; font-weight: 800; border-radius: 999px; padding: 3px 12px; }
+  .cmp-verdict.is-agree { background: #e5f3ea; color: #1f6b3f; }
+  .cmp-verdict.is-lean { background: #eef3e2; color: #4a6420; }
+  .cmp-verdict.is-split { background: #fdeee0; color: #9a4a12; }
+  .cmp-verdict.is-weak { background: #efede8; color: #625b50; }
+  .cmp-dim-hint { font-size: 0.86rem; color: #625b50; margin: 0 0 10px; }
+  .cmp-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .cmp-rows li { display: grid; grid-template-columns: 4.5em 9em 1fr; gap: 10px; align-items: baseline; font-size: 0.88rem; background: #fdfaf2; border-radius: 10px; padding: 8px 12px; }
+  .cmp-rows .cmp-sys { font-weight: 800; color: var(--c-ink); }
+  .cmp-rows .cmp-pole { font-weight: 700; }
+  .cmp-rows .cmp-pole.is-none { color: var(--c-muted); font-weight: 500; }
+  .cmp-rows .cmp-basis { color: #5f574c; line-height: 1.6; }
+  .cmp-beta { margin-left: 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0; color: #9a4a12; background: #fdeee0; border-radius: 999px; padding: 1px 8px; vertical-align: 1px; }
+  .cmp-beta-mark { color: #9a4a12; font-weight: 800; margin-left: 1px; }
+  .cmp-topic { display: grid; gap: 10px; }
+  .cmp-topic-row { display: grid; grid-template-columns: 4.5em 1fr; gap: 12px; background: #fdfaf2; border-radius: 10px; padding: 12px 14px; }
+  .cmp-topic-sys { font-weight: 800; color: var(--c-ink); font-size: 0.92rem; }
+  .cmp-topic-ind { display: block; font-size: 0.95rem; color: var(--c-ink); margin-bottom: 4px; }
+  .cmp-topic-row p { margin: 0; font-size: 0.88rem; color: #5f574c; line-height: 1.7; }
+  .cmp-dst-note { background: #fdeee0; border: 1px solid #f0c9a4; color: #8a4310; border-radius: 10px; padding: 12px 16px; font-size: 0.88rem; line-height: 1.7; margin-bottom: 18px; }
+  .cmp-method { font-size: 0.84rem; color: var(--c-muted); line-height: 1.75; margin: 6px 0 0; }
+  .cmp-gender { display: flex; gap: 18px; }
+  #cmp-time-row .tool-check { display: none; }
+  @media (max-width: 860px) { .cmp-cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    .cmp-panel { padding: 18px 12px; }
+    .cmp-rows li { grid-template-columns: 4em 1fr; }
+    .cmp-rows .cmp-basis { grid-column: 1 / -1; }
+    .cmp-topic-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+---
+
+<main id="main">
+
+  <section class="astro-hero" data-aos="fade-up">
+    <div class="container">
+      <span class="astro-beta"><i class="bi bi-intersect"></i> 一次輸入・四套並排</span>
+      <h1>四套地圖對照</h1>
+      <p class="lead">別的網站只給你一套說法，這裡讓四套互相對質：同一份出生資料，人類圖、星座、八字、紫微各自怎麼描述你？哪裡說法一致、哪裡互相矛盾？矛盾的地方，往往最值得拿來認識自己。</p>
+      {% include tool-privacy.html style='pill' %}
+    </div>
+  </section>
+
+  <section class="astro-section">
+    <div class="container">
+      {% capture cmp_form_extra %}
+        <div class="tool-field">
+          <label>性別</label>
+          <div class="cmp-gender" role="radiogroup" aria-label="性別">
+            <label class="tool-check"><input type="radio" name="cmp-gender" value="male"> 男</label>
+            <label class="tool-check"><input type="radio" name="cmp-gender" value="female"> 女</label>
+          </div>
+        </div>
+      {% endcapture %}
+      {% include birth-form.html prefix='cmp'
+         time_unknown_label='不確定出生時間'
+         name_placeholder='會顯示在給 AI 的提問裡'
+         submit_label='一次排出四套命盤'
+         extra=cmp_form_extra %}
+
+      <div class="cmp-result" id="cmp-result" style="display:none;">
+        <div class="cmp-dst-note" id="cmp-dst" style="display:none;" role="note"></div>
+        <div class="cmp-panel">
+          <h3>四套系統的重點</h3>
+          <p class="cmp-sub">每套只列三個最核心的指標；想看完整命盤，點卡片下方的連結到各自的工具頁。</p>
+          <div class="cmp-cards" id="cmp-cards"></div>
+        </div>
+
+        <div class="cmp-panel">
+          <h3>哪裡一致、哪裡矛盾</h3>
+          <p class="cmp-sub">每個面向只取各系統傳統意思最接近的一個指標，並附上依據。線索不夠就照實說，不硬湊一致。</p>
+          <div id="cmp-dims"></div>
+          <p class="cmp-method">判斷方式看票數：有傾向的系統全部同向是「說法一致」，多數同向會寫出幾套對幾套，票數相同才是「說法分歧」，有傾向的不到兩套就先不下結論。這是本站整理的大方向分類，不是任何一派的正式理論；更細的比較，交給下方的完整提問讓 AI 逐點對照。＊紫微排盤在本站仍標示測試中。</p>
+        </div>
+
+        <div class="cmp-panel">
+          <h3 id="cmp-topic-title">同一主題，四套各自怎麼說</h3>
+          <p class="cmp-sub">四套系統談工作的角度不同，這裡不判定一致或矛盾，只把各自原本的指標與站上的白話說明並排，讓你自己對照。</p>
+          <div class="cmp-topic" id="cmp-topic"></div>
+        </div>
+
+        <div class="cmp-panel" id="cmp-brief"></div>
+      </div>
+
+      {% include tool-disclaimer.html %}
+    </div>
+  </section>
+
+  <section class="astro-section" style="background:#fffaf0;">
+    <div class="container">
+      <h2 style="font-size:1.4rem; font-weight:700; color:#111; text-align:center; margin-bottom:24px;">常見問題</h2>
+      {% include faq-accordion.html faq=page.faq id='cmpFaq' %}
+      {% include faq-jsonld.html faq=page.faq %}
+    </div>
+  </section>
+
+</main>

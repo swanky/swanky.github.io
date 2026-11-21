@@ -141,3 +141,14 @@ function offsetLabel(offsetMin, dst) {
   const mm = String(abs % 60).padStart(2, '0');
   return `UTC${sign}${hh}:${mm}${dst ? '（夏令時間）' : ''}`;
 }
+
+// 出生牆鐘時間是否落在當地夏令時間（含春季撥快的不存在時段）。給八字／紫微等「用牆鐘時辰排盤」的工具提醒訪客。
+// 時區無法解析時回 false（寧可不提醒，也不誤報）。
+export function isDstWallTime(y, mo, d, h, mi, tzId) {
+  try {
+    const r = zonedToUtc(y, mo, d, h, mi, tzId);
+    return r.status === 'gap' || /夏令/.test(r.labelZh || '');
+  } catch {
+    return false;
+  }
+}

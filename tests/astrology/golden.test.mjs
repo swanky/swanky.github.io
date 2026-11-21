@@ -6,7 +6,7 @@ import '../_setup-astronomy.mjs';
 import { computeChartFromBirth } from '../../assets/js/astrology/astro-chart.js';
 import { GOLDEN_ASTRO } from './fixtures-golden.mjs';
 
-const TOL = 0.05;
+const TOL = 0.01; // 與頁面宣稱「誤差 0.01 度以內」一致（expected 已四捨五入到 0.001°）
 
 // 黃經環狀差（處理 359.9 vs 0.1）
 function degDiff(a, b) {

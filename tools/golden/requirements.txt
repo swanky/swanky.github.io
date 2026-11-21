@@ -1,0 +1,4 @@
+# 產生 tests/*/fixtures-golden.mjs 的獨立參考套件（釘死版本；Python 3.11，3.14 尚無 wheel）
+pyswisseph==2.10.3.2
+sxtwl==2.0.7
+tzdata==2026.6

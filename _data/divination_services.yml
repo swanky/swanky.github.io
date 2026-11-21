@@ -78,7 +78,7 @@
   input_type: birth
   use_cases: [職涯定位, 關係模式, 溝通風格]
   cta_label: 立即排盤
-  note: 上升、宮位與行星位置已和國際標準天文計算逐筆比對。
+  note: 上升、宮位與行星位置已和占星界通用的天文計算（Swiss Ephemeris）逐筆比對。
   related: [human-design, bazi]
 
 - id: bazi
@@ -116,6 +116,22 @@
   cta_label: 立即排盤（測試中）
   note: 採用《紫微斗數全書》通行排法，可點宮位看三方四正、一鍵整理成給 AI 的完整提問（測試中）。
   related: [bazi, astrology]
+
+- id: compare
+  title: 四套地圖對照
+  subtitle: 人類圖×星座×八字×紫微，看哪裡一致、哪裡矛盾
+  category: birth-map
+  status: live
+  visibility: public
+  priority: P1
+  phase: Phase 6
+  route: /explore/compare/
+  icon: bi-intersect
+  input_type: birth
+  use_cases: [整合比較, 自我觀察, 帶去問 AI]
+  cta_label: 一次排出四套
+  note: 一次輸入出生資料，並排看四套系統的重點與說法異同，再整理成一段完整提問帶去問 AI。
+  related: [human-design, astrology, bazi, ziwei]
 
 - id: numerology
   title: 生命靈數

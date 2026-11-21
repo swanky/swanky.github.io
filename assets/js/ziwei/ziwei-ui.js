@@ -166,7 +166,17 @@ function saveShare() {
   gtag('event', 'ziwei_share_card', {});
 }
 
+// 手機上命盤在畫面中時，暫時藏起右下「回到頂端」浮鈕，避免它壓住右下角的宮位（CSS 只在窄螢幕生效）
+function watchBoardForFloatingButton() {
+  const board = $('ziwei-board');
+  if (!board || typeof IntersectionObserver === 'undefined') return;
+  new IntersectionObserver((entries) => {
+    for (const e of entries) document.body.classList.toggle('zw-board-inview', e.isIntersecting);
+  }, { threshold: 0, rootMargin: '-15% 0px -15% 0px' }).observe(board); // 盤面任何一部分進入畫面中段就算在看
+}
+
 function init() {
+  watchBoardForFloatingButton();
   fillBirthSelects('ziwei', { requireLatLon: false });
   if ($('ziwei-y')) $('ziwei-y').value = 1990;
   on('ziwei-compute', 'click', doCompute);
