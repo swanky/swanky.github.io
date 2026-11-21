@@ -23,13 +23,14 @@ test('四套系統都算得出來', () => {
 });
 
 test('判定規則看票數：一致／多數／分歧／線索不夠', () => {
-  const P = { a: '偏主動', b: '偏觀察' };
+  const P = { a: '主動', b: '觀察' };
   const v = (...ps) => verdictOf(ps.map((pole) => ({ pole })), P);
   assert.equal(v('a', 'a', null).kind, 'agree');
-  assert.equal(v('a', 'a', 'a', 'a').label, '說法一致：4 套都偏主動');
+  assert.equal(v('a', 'a', 'a', 'a').label, '說法一致：4 套都偏「主動」');
   const lean = v('a', 'a', 'a', 'b');
   assert.equal(lean.kind, 'lean');
-  assert.equal(lean.label, '多數偏主動：3 套偏主動、1 套偏觀察');
+  assert.equal(lean.label, '多數偏「主動」（3 套對 1 套）');
+  assert.equal(v('a', 'a', 'b', 'b').label, '說法分歧（2 套對 2 套）');
   assert.equal(v('b', 'b', 'a', null).pole, 'b');
   assert.equal(v('a', 'b').kind, 'split');
   assert.equal(v('a', 'a', 'b', 'b').kind, 'split');

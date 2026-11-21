@@ -95,12 +95,12 @@ export function verdictOf(rows, poles = { a: '傾向 A', b: '傾向 B' }) {
   const a = ps.filter((p) => p === 'a').length;
   const b = ps.length - a;
   if (ps.length < 2) return { kind: 'weak', label: '線索不夠，先不下結論', a, b };
-  if (!a || !b) { const pole = a ? 'a' : 'b'; return { kind: 'agree', label: `說法一致：${ps.length} 套都${poles[pole]}`, pole, a, b }; }
+  if (!a || !b) { const pole = a ? 'a' : 'b'; return { kind: 'agree', label: `說法一致：${ps.length} 套都偏「${poles[pole]}」`, pole, a, b }; }
   if (a !== b) {
     const pole = a > b ? 'a' : 'b'; const other = pole === 'a' ? 'b' : 'a';
-    return { kind: 'lean', label: `多數${poles[pole]}：${Math.max(a, b)} 套${poles[pole]}、${Math.min(a, b)} 套${poles[other]}`, pole, a, b };
+    return { kind: 'lean', label: `多數偏「${poles[pole]}」（${Math.max(a, b)} 套對 ${Math.min(a, b)} 套）`, pole, other, a, b };
   }
-  return { kind: 'split', label: `說法分歧：${a} 套${poles.a}、${b} 套${poles.b}`, a, b };
+  return { kind: 'split', label: `說法分歧（${a} 套對 ${b} 套）`, a, b };
 }
 
 export function compareDimensions(r) {
