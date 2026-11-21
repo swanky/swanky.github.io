@@ -83,6 +83,8 @@ extra_css: |
   .hd-error { background: #fdecec; border: 1px solid #f5c6c6; color: #b53636; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; margin-top: 14px; display: none; }
   .hd-error.is-show { display: block; }
   #hd-result { display: none; }
+  .hd-brief-panel { max-width: 1000px; margin: 26px auto 6px; background: #fff; border: 1px solid var(--c-line); border-radius: 16px; padding: 22px 24px; }
+  @media (max-width: 600px) { .hd-brief-panel { padding: 18px 12px; } }
   #hd-result.is-show { display: block; }
   .hd-result-meta { text-align: center; font-size: 0.9rem; color: var(--c-muted); margin-bottom: 26px; }
   .hd-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px; }
@@ -756,6 +758,9 @@ extra_css: |
           </div>
         </details>
       </aside>
+
+      <!-- 帶著人類圖去問 AI（共用 core-ai-brief；放在付費報告之後，GA 事件 ai_brief tool=hd 觀察是否影響報告申請） -->
+      <div class="hd-brief-panel" id="hd-brief"></div>
 
       <!-- Layer 2：通道 / 中心 / 輪迴交叉 / 行星細節（v2 摺疊預設收合；v1 攤平） -->
       <details class="hd-layer2" id="hd-layer2">

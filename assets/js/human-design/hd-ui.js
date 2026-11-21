@@ -12,6 +12,8 @@ import { TYPES, AUTHORITIES, PROFILES, DEFINITIONS, CROSS_ANGLES, PLANETS, TYPE_
 import { GATES } from './hd-data-gates.js';
 import { exportBodygraphSvg, exportTransparentPng, exportBrandCard, exportSocialCard } from './hd-export-v2.js';
 import { $, setHTML, setText, on, gtag } from '../core/core-dom.js';
+import { mountAiBrief } from '../core/core-ai-brief.js';
+import { hdBriefData } from './hd-brief.js';
 
 const state = {
   lastChart: null,
@@ -92,6 +94,24 @@ function onSubmit() {
 }
 
 // ---- 結果渲染 ----
+let hdBrief = null;
+function mountHdBrief() {
+  if (hdBrief) { hdBrief.refresh(); return; }
+  hdBrief = mountAiBrief($('hd-brief'), {
+    gaTool: 'hd',
+    system: '人類圖',
+    focuses: ['overall', 'career', 'love', 'custom'],
+    getData: ({ hidePersonal }) => (state.lastChart ? hdBriefData(state.lastChart, {
+      name: ($('hd-name')?.value || '').trim(), cityLabel: form.cityLabel || '', timeUnknown: form.isUnknownTime(), hidePersonal,
+    }) : null),
+    getAge: () => {
+      const c = state.lastChart; if (!c) return null;
+      const n = new Date(); const i = c.input;
+      return n.getFullYear() - i.year - ((n.getMonth() + 1 < i.month || (n.getMonth() + 1 === i.month && n.getDate() < i.day)) ? 1 : 0);
+    },
+  });
+}
+
 function renderResult(chart, stability) {
   state.lastChart = chart;
   state.reportOfferViewed = false;
@@ -202,6 +222,8 @@ function renderResult(chart, stability) {
 
   // 進階：完整行星位置與啟動閘門（可收合）
   setHTML('hd-planets-advanced', renderPlanetsAdvanced(chart));
+
+  mountHdBrief();
 
   // 顯示並捲動
   const res = $('hd-result');
