@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -52,4 +52,24 @@ test('Flickr CDN-error fallbacks are not listed in _config.yml exclude', () => {
   const fallbacks = JSON.parse(read('assets/data/flickr-fallbacks.json'));
   const bad = Object.values(fallbacks).filter((p) => excluded.has(p));
   assert.deepEqual(bad, [], `備援指向不部署的檔：${bad.slice(0, 5).join(', ')}`);
+});
+
+test('built pages never reference an assets/img/old image that is excluded from the deploy', { skip: existsSync(join(ROOT, '_site/index.html')) ? false : '未驗證：本機沒有 _site/，先跑 bundle exec jekyll build 再測' }, () => {
+  // 2026-11-24：assets/img/old/ 內沒有被引用的舊圖移出部署。之後若有頁面重新用到其中一張，要把 _config.yml 對應那行拿掉。
+  const site = join(ROOT, '_site');
+  const missing = new Set();
+  const walk = (dir) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) { walk(full); continue; }
+      if (!/\.(html|css|js|json|xml)$/.test(entry.name)) continue;
+      for (const match of readFileSync(full, 'utf8').matchAll(/assets\/img\/old\/[^"'\s)<>,?#\\]+/g)) {
+        let path = match[0];
+        try { path = decodeURIComponent(path); } catch { /* 保留原樣 */ }
+        if (!existsSync(join(site, path))) missing.add(path);
+      }
+    }
+  };
+  walk(site);
+  assert.deepEqual([...missing], [], `頁面引用了不部署的舊圖：${[...missing].slice(0, 10).join(', ')}`);
 });

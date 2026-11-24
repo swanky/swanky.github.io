@@ -118,6 +118,36 @@ exclude:
   - node_modules
   - vendor
   - docs
+  # assets/img/old/ 內沒有任何頁面、樣式、腳本或資料檔引用的舊圖（2026-11-24 以建置產物盤點：
+  # 70 張、約 26 MB）。檔案留在 git 存檔，只是不進部署。之後若有頁面要用，把對應那一行拿掉即可。
+  # Flickr 備援（assets/data/flickr-fallbacks.json）指到的圖不在此列，tests/deploy-size.test.mjs 會把關。
+  - "assets/img/old/for_your_safety"
+  - "assets/img/old/ug3/logo"
+  - "assets/img/old/2016-02-10/img_00001-card.jpg"
+  - "assets/img/old/2016-02-10/img_00045.jpg"
+  - "assets/img/old/2016-03-10/img_00001-card.jpg"
+  - "assets/img/old/500_uniform.jpg"
+  - "assets/img/old/8-55869-13_IPA_Doraemon.jpg"
+  - "assets/img/old/cal_2016/cal_2016_00.jpg"
+  - "assets/img/old/ebook_school_girl.jpg"
+  - "assets/img/old/ebook_ug_1_big.jpg"
+  - "assets/img/old/ipa_2012.jpg"
+  - "assets/img/old/logo.png"
+  - "assets/img/old/px3_2011.jpg"
+  - "assets/img/old/px3_2013_1.jpg"
+  - "assets/img/old/px3_2013_2.jpg"
+  - "assets/img/old/px3_2014.jpg"
+  - "assets/img/old/ug3/author.jpg"
+  - "assets/img/old/ug3/cover.jpg"
+  - "assets/img/old/uniform-fetishism_cover.jpg"
+  - "assets/img/old/uniform-girl-1_cover.jpg"
+  - "assets/img/old/uniform-girl-2_cover.jpg"
+  # /nft/assets/ 的範本殘留頁（買來的版型附的示範頁與圖示字型說明頁，站內沒有任何連結指向它們）：
+  # 原始檔留在 git，不進部署。
+  - "nft/assets/categories.html"
+  - "nft/assets/main.html"
+  - "nft/assets/fonts/flaticon/font/flaticon.html"
+  - "nft/assets/fonts/icomoon/demo.html"
   # Facebook archive: keep photos accessible (referenced from posts), exclude
   # 500+ markdown files that would otherwise inflate the sitemap to 585 URLs
   # (87% archived FB posts). Photos directory stays in _site for image refs.

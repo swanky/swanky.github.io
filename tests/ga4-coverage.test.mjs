@@ -14,7 +14,10 @@ const GTAG_SCRIPT = /<script\s+async\s+src="https:\/\/www\.googletagmanager\.com
 const BUILT_PAGES_WITHOUT_GA4 = [
   // 第三方圖示字型的示範頁（assets/vendor 不手動修改）
   'assets/vendor/bootstrap-icons/index.html',
-  // /nft/ 是沒有 front matter 的獨立靜態子站，用不了 include（2026-11-24 盤點：7 個正式頁＋4 個範本殘留頁）
+];
+
+// /nft/ 是沒有 front matter 的獨立靜態子站，用不了 include：7 個正式頁直接貼上展開後的 GA4 片段。
+const NFT_PAGES = [
   'nft/index.html',
   'nft/collection/index.html',
   'nft/oursong/index.html',
@@ -22,6 +25,10 @@ const BUILT_PAGES_WITHOUT_GA4 = [
   'nft/uniform-clonex/bunny-awakens/index.html',
   'nft/uniform-clonex/lore/index.html',
   'nft/uniform-clonex/reroll/index.html',
+];
+
+// 買來的版型附的範本殘留頁：_config.yml 已排除於建置之外，不補 GA4。
+const NFT_TEMPLATE_LEFTOVERS = [
   'nft/assets/categories.html',
   'nft/assets/main.html',
   'nft/assets/fonts/flaticon/font/flaticon.html',
@@ -30,7 +37,7 @@ const BUILT_PAGES_WITHOUT_GA4 = [
 
 // 自己就是完整 HTML 文件（不套版型）卻不載入 GA4 的來源檔。
 const STANDALONE_SOURCES_WITHOUT_GA4 = [
-  /^nft\//,
+  ...NFT_TEMPLATE_LEFTOVERS.map((leftover) => ({ test: (path) => path === leftover })),
   /^assets\/vendor\//,
   /^assets\/diagrams\//, // site-diagram 工作檔，_config.yml 已排除於建置之外
 ];
@@ -95,12 +102,40 @@ test('不套版型的完整 HTML 頁自己要引入 gtag.html（例外寫死）'
     if (!/<html[\s>]/i.test(text)) continue;
     if (/<meta\s+http-equiv=["']refresh["']/i.test(text)) continue; // 手寫轉址頁：訪客不會停留
     const fm = frontMatter(text);
-    if (fm === null) { missing.push(`${path}（沒有 front matter，Jekyll 不會處理 include）`); continue; }
+    if (fm === null) { // 沒有 front matter：Jekyll 不處理 include，頁面必須自己帶著展開後的 script 標籤
+      if (!GTAG_SCRIPT.test(text)) missing.push(`${path}（沒有 front matter，要直接貼上 GA4 片段）`);
+      continue;
+    }
     const layout = frontMatterValue(fm, 'layout');
     const hasLayout = layout && !['null', 'none', '~', ''].includes(layout);
     if (hasLayout ? !layoutLoadsGtag(layout) && !loadsGtagDirectly(text) : !loadsGtagDirectly(text)) missing.push(path);
   }
   assert.deepEqual(missing, [], `這些獨立頁沒有載入 GA4：\n${missing.join('\n')}`);
+});
+
+test('/nft/ 七個正式頁的 GA4 片段與 gtag.html 展開後逐字相同', () => {
+  // 每行去掉縮排後比對：子站用 tab 縮排，片段內容本身不能有任何出入。
+  const lines = (text) => text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).join('\n');
+  const expected = lines(expandIncludes(read('_includes/gtag.html')));
+  assert.match(expected, GTAG_SCRIPT);
+  assert.doesNotMatch(expected, /\{%|\{\{/, 'gtag.html 展開後不該殘留 Liquid 語法（子站頁面不經 Jekyll 處理）');
+  for (const path of NFT_PAGES) {
+    const page = lines(read(path));
+    assert.ok(page.includes(expected), `${path} 的 GA4 片段與 _includes/gtag.html 不一致，請重新貼上展開後的內容`);
+    assert.equal(page.split('googletagmanager.com/gtag/js').length - 1, 1, `${path} 的 gtag.js 只能載入一次`);
+  }
+});
+
+test('/nft/assets/ 的範本殘留頁不進建置，站內也沒有連結指向它們', () => {
+  const config = read('_config.yml');
+  for (const path of NFT_TEMPLATE_LEFTOVERS) {
+    assert.ok(config.includes(`  - "${path}"`), `_config.yml 的 exclude 少了 ${path}`);
+    assert.ok(!GTAG_SCRIPT.test(read(path)), `${path} 是範本殘留頁，不補 GA4`);
+  }
+  const linkers = trackedFiles()
+    .filter((path) => /\.(html|md|yml|json|xml|txt)$/.test(path) && !/^(docs|tests|tools|assets\/vendor|\.)/.test(path) && !NFT_TEMPLATE_LEFTOVERS.includes(path))
+    .filter((path) => { let text; try { text = read(path); } catch { return false; } return /nft\/assets\/(categories|main)\.html|flaticon\.html|icomoon\/demo\.html/.test(text) && path !== '_config.yml'; });
+  assert.deepEqual(linkers, [], `這些檔案還連到範本殘留頁：${linkers.join(', ')}`);
 });
 
 test('建置產物：除了寫死的例外，每一頁都有 gtag.js 的 script 標籤', { skip: hasSite ? false : NO_SITE_REASON }, () => {
