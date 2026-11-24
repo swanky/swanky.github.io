@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { hasSite, NO_SITE_REASON } from './_site-audit.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const read = (relativePath) => readFileSync(join(ROOT, relativePath), 'utf8');
@@ -54,7 +55,7 @@ test('Flickr CDN-error fallbacks are not listed in _config.yml exclude', () => {
   assert.deepEqual(bad, [], `備援指向不部署的檔：${bad.slice(0, 5).join(', ')}`);
 });
 
-test('built pages never reference an assets/img/old image that is excluded from the deploy', { skip: existsSync(join(ROOT, '_site/index.html')) ? false : '未驗證：本機沒有 _site/，先跑 bundle exec jekyll build 再測' }, () => {
+test('建置產物：頁面引用的 assets/img/old 圖都有部署（沒有引用到被排除的舊圖）', { skip: hasSite ? false : NO_SITE_REASON }, () => {
   // 2026-11-24：assets/img/old/ 內沒有被引用的舊圖移出部署。之後若有頁面重新用到其中一張，要把 _config.yml 對應那行拿掉。
   const site = join(ROOT, '_site');
   const missing = new Set();
