@@ -31,6 +31,9 @@
     .jpm-crossbook-chapters { display: flex; flex-wrap: wrap; gap: .5rem; margin: .2rem 0 0; padding: 0; list-style: none; }
     .jpm-crossbook-chapters a { display: block; padding: .3rem .7rem; border: 1px solid var(--jpm-line); font-size: .84rem; color: var(--jpm-paper); text-decoration: none; }
     .jpm-crossbook-chapters a:hover { color: var(--jpm-gold-bright); }
+    /* 「視覺版本」的圖由 img-dimensions.html 補上 width／height 屬性；高度要跟著寬度等比，否則會被 height 屬性拉變形。
+       規則放在這裡而不是 jinpingmei.css，讓它跟頁面一起更新，不受舊樣式快取影響。 */
+    .jpm-versions img { height: auto; }
   </style>
   {% include jinpingmei/gtag.html %}
 </head>
@@ -64,7 +67,8 @@
       </div>
     </section>
 
-    {{ content }}
+    {%- comment -%}內文由 tools/build_jinpingmei_characters.py 產生；圖片寬高在這裡統一補，不必改產生器或逐頁改產物。{%- endcomment %}
+    {% include img-dimensions.html html=content %}
 
     {%- comment -%}
       以下皆為資料驅動的附加區塊——只有對應 _data 檔收錄的角色會輸出。

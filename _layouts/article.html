@@ -33,7 +33,7 @@ layout: default
 
       {% if page.hero_image and page.cover_image %}
       <div class="article-cover">
-        <img {% include flickr/source.html image=page.cover_image sizes="(max-width: 767px) 100vw, 700px" %} alt="{{ page.cover_alt | default: page.title }}">
+        <img {% include flickr/source.html image=page.cover_image sizes="(max-width: 767px) 100vw, 700px" dims=true %} alt="{{ page.cover_alt | default: page.title }}">
       </div>
       {% endif %}
 
@@ -42,7 +42,9 @@ layout: default
         長文（≥5 個 h2）在中段自動插入輕量 CTA：scroll-90% 事件僅約 10% 頁面瀏覽觸及，
         只放頁尾的 CTA 大多數讀者看不到。front matter 設 mid_cta: false 可關閉。
         {%- endcomment -%}
-        {% assign h2_parts = content | split: '<h2' %}
+        {%- comment -%}內文圖片依 _data/image_dimensions.json 補上 width／height（.post-content img 已設 height:auto）。{%- endcomment -%}
+        {%- capture article_body -%}{% include img-dimensions.html html=content %}{%- endcapture -%}
+        {% assign h2_parts = article_body | split: '<h2' %}
         {% if page.mid_cta != false and h2_parts.size >= 6 %}
           {% assign mid_index = h2_parts.size | divided_by: 2 %}
           {%- for part in h2_parts -%}
@@ -51,7 +53,7 @@ layout: default
               <h2{% endunless %}{{ part }}
           {%- endfor -%}
         {% else %}
-        {{ content }}
+        {{ article_body }}
         {% endif %}
       </div>
 

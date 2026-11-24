@@ -1,0 +1,28 @@
+{%- comment -%}
+替一段已轉成 HTML 的內文補上圖片寬高：把每個還沒寫 width／height 的 <img>，依 src 到
+_data/image_dimensions.json（tools/build-image-dimensions.mjs 產生）查原圖尺寸，查到才補；
+查不到（站外圖、沒登記的圖）原樣輸出。除了多出 width／height 兩個屬性，輸出與輸入逐字相同。
+用法：{% include img-dimensions.html html=content %}
+只能用在 CSS 已對圖片設 height:auto 的容器（例如 .post-content），否則圖會被拉變形。
+{%- endcomment -%}
+{%- assign imgdim_parts = include.html | split: '<img ' -%}
+{%- for imgdim_part in imgdim_parts -%}
+{%- if forloop.first -%}
+{{- imgdim_part -}}
+{%- else -%}
+{%- assign imgdim_tag = imgdim_part | split: '>' | first | prepend: ' ' -%}
+{%- assign imgdim_size = nil -%}
+{%- unless imgdim_tag contains ' width=' or imgdim_tag contains ' height=' -%}
+{%- assign imgdim_src = imgdim_tag | split: ' src="' -%}
+{%- if imgdim_src.size > 1 -%}
+{%- assign imgdim_key = imgdim_src[1] | split: '"' | first -%}
+{%- assign imgdim_size = site.data.image_dimensions[imgdim_key] -%}
+{%- unless imgdim_size -%}
+{%- assign imgdim_key = imgdim_key | url_decode -%}
+{%- assign imgdim_size = site.data.image_dimensions[imgdim_key] -%}
+{%- endunless -%}
+{%- endif -%}
+{%- endunless -%}
+<img {% if imgdim_size %}width="{{ imgdim_size[0] }}" height="{{ imgdim_size[1] }}" {% endif %}{{ imgdim_part -}}
+{%- endif -%}
+{%- endfor -%}
