@@ -1,5 +1,8 @@
 // 站台稽核測試的共用工具（2026-11-24）。
-// 來源層檢查一律跑；建置產物層檢查只在本機有 _site/ 時跑，沒有就明確標示「未驗證」而不是假裝通過。
+// 來源層檢查在 npm test 一律跑。
+// 建置產物層檢查（名稱以「建置產物」開頭）不在 npm test 內跑：改完檔案或合併當下，本機 _site/ 還是舊產物，
+// 拿舊產物驗新原始碼會誤報。建置後用 npm run audit:site 跑（tools/audit-site.mjs 會設 SITE_AUDIT=1）。
+// 略過時一律寫明原因，不會假裝通過。
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -7,8 +10,11 @@ import { fileURLToPath } from 'node:url';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export const SITE = join(ROOT, '_site');
-export const hasSite = existsSync(join(SITE, 'index.html'));
-export const NO_SITE_REASON = '未驗證：本機沒有 _site/，先跑 bundle exec jekyll build 再測';
+const siteAuditRequested = process.env.SITE_AUDIT === '1';
+export const hasSite = siteAuditRequested && existsSync(join(SITE, 'index.html'));
+export const NO_SITE_REASON = siteAuditRequested
+  ? '未驗證：本機沒有 _site/，先跑 bundle exec jekyll build 再測'
+  : '未驗證：建置產物檢查不在 npm test 內，建置後請跑 npm run audit:site';
 
 export const read = (relativePath) => readFileSync(join(ROOT, relativePath), 'utf8');
 
