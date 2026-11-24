@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/nft-museum-collection/
 title: "當博物館開始收藏 NFT，那不是潮流，而是歷史定位的轉折點"
 date: 2025-12-21
 categories: [technical]

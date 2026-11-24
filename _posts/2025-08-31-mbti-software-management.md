@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/mbti-software-management/
 title: "用 MBTI 看見差異：從溫伯格的軟體管理學談軟體團隊管理"
 date: 2025-08-31
 categories: [technical]

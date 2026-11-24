@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/rwa-stablecoin-earthquake/
 title: "金融震央逼近：天才法案、新台幣穩定幣與 RWA 引爆的產業地震"
 date: 2025-08-09
 categories: [technical]

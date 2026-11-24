@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/break-too-busy-curse/
 title: "打破「太忙」的詛咒：從軟工大師到AI時代的正向循環"
 date: 2025-10-03
 categories: [technical]
