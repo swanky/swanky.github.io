@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/solana-seeker-airdrop/
 title: "Web3 的下個入口在手機？解析 Solana Seeker 如何用「硬體＋空投」改寫用戶分發邏輯"
 date: 2026-01-22
 categories: [technical]

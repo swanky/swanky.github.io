@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/etherfi-crypto-cashflow/
 title: "從「資產價格」到「資產負債表」：如何用 ether.fi 把加密資產變成可用的現金流"
 date: 2026-01-10
 categories: [technical]

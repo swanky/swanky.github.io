@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/claude-code-hot-wallet/
 title: "Claude Code 初體驗：不到兩小時，我做出了熱錢包前後端"
 date: 2026-03-07
 categories: [technical]

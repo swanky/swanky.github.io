@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /articles/enterprise-culture-dilemma/
 title: "當同仁對我說：「主管，不如你自己下來寫 Code 吧？」— 談那些掛在牆上卻沒用的企業文化"
 date: 2026-02-01
 categories: [technical]
