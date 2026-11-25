@@ -14,7 +14,7 @@ related_posts:
   - mid-manager-becomes-builder
   - matt-pocock-skills-ai-coding-workflow
 hero_image: true
-description: "AI Coding Agent 讓一個有判斷力的人，開始具備過去一支小型團隊才有的交付能力。但執行變快之後，真正的限制仍是問題定義、概念完整性與人腦能維持的系統模型。"
+description: "AI 代理擴大個人的交付能力，也讓問題定義、設計一致性與人能掌握的系統範圍更值得檢查。"
 keywords: AI Agent, Coding Agent, 外科手術團隊, 人月神話, 康威定律, Harlan Mills, Fred Brooks, Claude Code, Codex, 軟體架構, 組織設計, 史旺基
 ---
 
@@ -184,12 +184,12 @@ AI Agent 讓 Mills 與 Brooks 當年的外科手術團隊，第一次有機會�
 
 ## 參考資料
 
-[1] [Chief Programmer Teams — Harlan D. Mills 1971](https://www.historicprojects.com/Harlan_Mills.html)
+- **[1]** [Chief Programmer Teams — Harlan D. Mills 1971](https://www.historicprojects.com/Harlan_Mills.html)
 
-[2] [The Harlan D. Mills Collection — University of Tennessee](https://voljournals.utk.edu/utk_harlan/)
+- **[2]** [The Harlan D. Mills Collection — University of Tennessee](https://voljournals.utk.edu/utk_harlan/)
 
-[3] [Melvin E. Conway, How Do Committees Invent?](https://www.melconway.com/Home/Committees_Paper.html)
+- **[3]** [Melvin E. Conway, How Do Committees Invent?](https://www.melconway.com/Home/Committees_Paper.html)
 
-[4] [寶玉：AI Agent 與外科手術團隊](https://x.com/dotey/status/2091662478425899254)
+- **[4]** [寶玉：AI Agent 與外科手術團隊](https://x.com/dotey/status/2091662478425899254)
 
-[5] Frederick P. Brooks Jr., *The Mythical Man-Month: Essays on Software Engineering*, Anniversary Edition, Addison-Wesley, 1995.
+- **[5]** [Frederick P. Brooks Jr.：The Mythical Man-Month: Essays on Software Engineering](https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-9780201835953), Anniversary Edition, Addison-Wesley, 1995.

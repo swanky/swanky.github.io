@@ -10,6 +10,14 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%95%B6%E5%8D%9A%E7%89%A9%E9%A4%A8%E9%96%8B%E5%A7%8B%E6%94%B6%E8%97%8F-nft%E9%82%A3%E4%B8%8D%E6%98%AF%E6%BD%AE%E6%B5%81%E8%80%8C%E6%98%AF%E6%AD%B7%E5%8F%B2%E5%AE%9A%E4%BD%8D%E7%9A%84%E8%BD%89%E6%8A%98%E9%BB%9E-swanky-hsiao-bg8mc"
 description: "從 MoMA 將 CryptoPunks 與 Chromie Squiggle 納入永久館藏，解析 NFT 的藝術史定位與長期收藏判斷標準。"
 keywords: NFT,博物館,MoMA,CryptoPunks,Web3,數位藝術,史旺基,Swanky Studio
+cover_alt: "水手服角色指著展板上的 CryptoPunks 像素頭像與彩色曲線作品。"
+seo_title: "當博物館開始收藏 NFT，那不是潮流，而是歷史定位的轉折點"
+cta_context: technical
+tags: ["NFT", "博物館"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 2025 年 12 月 20 日，紐約現代藝術博物館（MoMA） 正式將兩個 NFT 系列納入永久館藏：

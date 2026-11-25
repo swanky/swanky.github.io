@@ -7,8 +7,16 @@ cover_image: /assets/img/linkedin/product-naming-community-memory.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%94%A2%E5%93%81%E5%91%BD%E5%90%8D%E4%B8%8D%E6%98%AF%E8%AA%9E%E6%84%9F%E5%95%8F%E9%A1%8C%E6%98%AF%E7%A4%BE%E7%BE%A4%E8%A8%98%E6%86%B6%E5%95%8F%E9%A1%8C%E5%BE%9E-gpt-56-%E7%9A%84-sol-terra-luna-%E8%AB%87%E8%B5%B7-swanky-hsiao-r2rec"
 source_url_x: "https://x.com/swanky/status/2073162520383426885"
-description: "OpenAI 將 GPT-5.6 系列命名為 Sol、Terra、Luna，在幣圈眼中卻是 2022 崩盤的集體記憶。命名不只是 branding，也是語義風險管理。"
+description: "從 Sol、Terra、Luna 喚起的加密社群記憶，看產品命名如何撞上另一群使用者熟悉的歷史。"
 keywords: 產品命名, GPT-5.6, OpenAI, Terra, Luna, 語義風險, 社群記憶, 品牌命名, branding, Web3, 幣圈, 加密貨幣, 風險管理, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "三位角色分別捧著太陽、地球和月球，右側紅色折線標出 2022 年的下跌。"
+seo_title: "產品命名不是語感問題，是社群記憶問題：從 GPT-5.6 的 Sol / Terra / Luna 談起"
+cta_context: technical
+tags: ["產品命名", "GPT-5.6"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 > Terra / Luna 不是每個人都會想到宇宙

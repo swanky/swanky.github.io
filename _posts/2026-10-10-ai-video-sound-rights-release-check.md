@@ -35,6 +35,28 @@ hero_image: true
 
 以下例子來自我用自己持有的 CloneX 角色做的彩排，屬於非參賽、非商業的練習。這部分是製作流程上的關卡，不是法律意見。
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">旁白與混音</span>
+      <ol class="article-toc-items">
+        <li><a href="#timing">先量旁白，再排畫面</a></li>
+        <li><a href="#stems">聲音拆開來混，重要的才聽得見</a></li>
+        <li><a href="#bunny-teaser">實例：30 秒預告，鏡頭一次過，聲音改了好幾版</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">授權與上傳</span>
+      <ol class="article-toc-items">
+        <li><a href="#rights">授權：一項一項查，不知道就是不行</a></li>
+        <li><a href="#release">上傳前，三件事分開查</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 先量旁白，再排畫面 {#timing}
 
 做聲音之前，先回答一個問題：**畫面長度還能不能動？**

@@ -7,8 +7,15 @@ cover_image: /assets/img/web3/nft-token-standards.svg
 og_image: /assets/img/web3/nft-token-standards-og.jpg
 hero_image: true
 seo_title: NFT 怎麼存在區塊鏈上？ERC-721 vs ERC-1155 與 IPFS 技術堆疊完整解析
-description: "你買的 NFT 到底「存」在哪裡？一文看懂 NFT 的技術堆疊：ERC-721、ERC-1155 代幣標準的差別、tokenURI 與 IPFS 如何運作，以及為什麼圖片其實不在鏈上。NFT 技術入門。"
+description: "你買的 NFT 存在哪裡？從 ERC-721、ERC-1155 到 IPFS，看懂代幣紀錄、作品網址與圖片的關係。"
 keywords: NFT,ERC-721,ERC-1155,ERC-20,IPFS,tokenURI,metadata,代幣標準,NFT 技術,區塊鏈,Web3,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「NFT 技術堆疊」，右側堆疊四層方框，從代幣到 IPFS 圖片。"
+cta_context: technical
+tags: ["NFT", "ERC-721"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 「我買了一張 NFT，那張圖到底存在哪裡？是存在區塊鏈裡嗎？」

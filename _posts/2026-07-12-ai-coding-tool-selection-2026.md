@@ -11,8 +11,10 @@ related_posts:
   - gstack-workflow-guide
   - fable-field-guide
   - agentic-engineering-patterns-guide
-description: "AI Coding 選型已不是模型排行榜。用九層框架比較 Claude Code、Codex、Cursor、Copilot 等工具，附 30 天 pilot 方法。"
+description: "用九層框架比較 Claude Code、Codex、Cursor 等開發工具，並設計 30 天團隊試用計畫。"
 keywords: AI Coding 工具選擇, Claude Code, Codex, Grok Build, Hermes Agent, Cursor, OpenCode, GitHub Copilot, OpenRouter, AGENTS.md, AI Agent, agentic engineering, 企業 AI 導入, AI Coding ROI, 史旺基, Swanky Studio
+cover_alt: "三位水手服角色檢視程式碼與圖表，中央畫面將多種工具連向一個勾號。"
+cta_context: agentic
 ---
 
 我最近整理自己的 AI Coding 工具時，發現桌面上已經不是「選一套 IDE」那麼簡單。
@@ -24,6 +26,43 @@ Claude Code、Codex、Cursor、OpenCode、Hermes Agent，各自有自己的設�
 這個問題在 2026 年已經不太有用了。**真正的選擇單位不是單一模型，也不是單一 CLI，而是一整套能把需求安全地變成可接受變更的工作系統。**
 
 > 本文資料整理至 2026 年 7 月 12 日。這個市場以週為單位變動，價格、方案額度、模型名稱與指令，採購或部署當天仍應回官方頁面核對。
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>從模型、工具、權限和工作流程分開比較，才能把不同產品放在同一張表上。</li>
+    <li>預算要算到每個驗收通過的任務，並計入重試與人工接手。</li>
+    <li>用團隊自己的任務跑 30 天試用，再決定哪些工具進入正式流程。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">工具與使用情境</span>
+      <ol class="article-toc-items">
+        <li><a href="#先給結論工具不需要唯一但責任必須唯一">先給結論：工具不需要唯一，但責任必須唯一</a></li>
+        <li><a href="#模型只是九層裡的一層">模型只是九層裡的一層</a></li>
+        <li><a href="#採用很快信任沒有同步上升">採用很快，信任沒有同步上升</a></li>
+        <li><a href="#七款工具我會怎麼定位">七款工具，我會怎麼定位</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">企業評選與試用</span>
+      <ol class="article-toc-items">
+        <li><a href="#個人和企業不該共用同一張排行榜">個人和企業，不該共用同一張排行榜</a></li>
+        <li><a href="#企業選型先淘汰再評分">企業選型先淘汰，再評分</a></li>
+        <li><a href="#agentsmd-可以共用但安全邊界不能寫在-markdown-裡">AGENTS.md 可以共用，但安全邊界不能寫在 Markdown 裡</a></li>
+        <li><a href="#openrouter-與本機模型自由度不是免費午餐">OpenRouter 與本機模型：自由度不是免費午餐</a></li>
+        <li><a href="#cp-值不是月費而是-accepted-task-economics">CP 值不是月費，而是 accepted-task economics</a></li>
+        <li><a href="#benchmark-用來篩選內部-eval-才能決策">Benchmark 用來篩選，內部 eval 才能決策</a></li>
+        <li><a href="#一個-30-天企業-pilot">一個 30 天企業 Pilot</a></li>
+        <li><a href="#我會怎麼選">我會怎麼選</a></li>
+        <li><a href="#真正該留下來的不是工具名稱">真正該留下來的，不是工具名稱</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先給結論：工具不需要唯一，但責任必須唯一
 
@@ -346,16 +385,16 @@ AI Coding 選型最危險的兩個極端，一個是每週追排行榜，另一�
 
 ## 參考資料
 
-- [Pragmatic Engineer：AI tooling survey 2026](https://newsletter.pragmaticengineer.com/p/ai-tooling-2026)
-- [Stack Overflow Developer Survey 2025：AI](https://survey.stackoverflow.co/2025/ai)
-- [DORA 2025 report](https://dora.dev/research/2025/dora-report/)
-- [METR 2025 RCT](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) 與 [2026 方法更新](https://metr.org/blog/2026-02-24-uplift-update/)
-- [Anthropic：Claude Code and expertise](https://www.anthropic.com/research/claude-code-expertise)
-- Claude Code：[commands](https://code.claude.com/docs/en/commands)、[memory](https://code.claude.com/docs/en/memory)、[LLM gateway](https://code.claude.com/docs/en/llm-gateway)、[pricing](https://claude.com/pricing)
-- Codex：[slash commands](https://developers.openai.com/codex/cli/slash-commands)、[`AGENTS.md`](https://developers.openai.com/codex/agent-configuration/agents-md)、[advanced configuration](https://developers.openai.com/codex/config-advanced)、[pricing](https://developers.openai.com/codex/pricing)
-- Grok Build：[CLI](https://x.ai/cli)、[commands](https://docs.x.ai/build/modes-and-commands)、[enterprise](https://docs.x.ai/build/enterprise)
-- Hermes Agent：[官方文件](https://hermes-agent.nousresearch.com/docs/)、[providers](https://hermes-agent.nousresearch.com/docs/integrations/providers)、[security](https://hermes-agent.nousresearch.com/docs/user-guide/security)
-- Cursor：[rules](https://cursor.com/docs/rules)、[pricing](https://cursor.com/pricing)、[security](https://cursor.com/security)
-- OpenCode：[providers](https://opencode.ai/docs/providers/)、[models](https://opencode.ai/docs/models/)、[rules](https://opencode.ai/docs/rules/)
-- GitHub Copilot：[plans](https://github.com/features/copilot/plans)、[enterprise agent management](https://docs.github.com/copilot/concepts/agents/enterprise-management)
-- OpenRouter：[provider routing](https://openrouter.ai/docs/guides/routing/provider-selection)、[data collection](https://openrouter.ai/docs/guides/privacy/data-collection)、[ZDR](https://openrouter.ai/docs/guides/features/zdr)、[pricing](https://openrouter.ai/pricing)
+- **[1]** [Pragmatic Engineer：AI tooling survey 2026](https://newsletter.pragmaticengineer.com/p/ai-tooling-2026)
+- **[2]** [Stack Overflow Developer Survey 2025：AI](https://survey.stackoverflow.co/2025/ai)
+- **[3]** [DORA 2025 report](https://dora.dev/research/2025/dora-report/)
+- **[4]** [METR 2025 RCT](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) 與 [2026 方法更新](https://metr.org/blog/2026-02-24-uplift-update/)
+- **[5]** [Anthropic：Claude Code and expertise](https://www.anthropic.com/research/claude-code-expertise)
+- **[6]** Claude Code：[commands](https://code.claude.com/docs/en/commands)、[memory](https://code.claude.com/docs/en/memory)、[LLM gateway](https://code.claude.com/docs/en/llm-gateway)、[pricing](https://claude.com/pricing)
+- **[7]** Codex：[slash commands](https://developers.openai.com/codex/cli/slash-commands)、[`AGENTS.md`](https://developers.openai.com/codex/agent-configuration/agents-md)、[advanced configuration](https://developers.openai.com/codex/config-advanced)、[pricing](https://developers.openai.com/codex/pricing)
+- **[8]** Grok Build：[CLI](https://x.ai/cli)、[commands](https://docs.x.ai/build/modes-and-commands)、[enterprise](https://docs.x.ai/build/enterprise)
+- **[9]** Hermes Agent：[官方文件](https://hermes-agent.nousresearch.com/docs/)、[providers](https://hermes-agent.nousresearch.com/docs/integrations/providers)、[security](https://hermes-agent.nousresearch.com/docs/user-guide/security)
+- **[10]** Cursor：[rules](https://cursor.com/docs/rules)、[pricing](https://cursor.com/pricing)、[security](https://cursor.com/security)
+- **[11]** OpenCode：[providers](https://opencode.ai/docs/providers/)、[models](https://opencode.ai/docs/models/)、[rules](https://opencode.ai/docs/rules/)
+- **[12]** GitHub Copilot：[plans](https://github.com/features/copilot/plans)、[enterprise agent management](https://docs.github.com/copilot/concepts/agents/enterprise-management)
+- **[13]** OpenRouter：[provider routing](https://openrouter.ai/docs/guides/routing/provider-selection)、[data collection](https://openrouter.ai/docs/guides/privacy/data-collection)、[ZDR](https://openrouter.ai/docs/guides/features/zdr)、[pricing](https://openrouter.ai/pricing)

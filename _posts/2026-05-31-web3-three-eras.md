@@ -7,8 +7,15 @@ cover_image: /assets/img/web3/web3-three-eras.svg
 og_image: /assets/img/web3/web3-three-eras-og.jpg
 hero_image: true
 seo_title: Web3 是什麼？三時代演進：唯讀、讀寫、擁有｜Web1 Web2 Web3 一次看懂
-description: "Web3 到底是什麼？用「唯讀、讀寫、擁有」三個時代，一次看懂從 Web1 到 Web2 再到 Web3 的演進邏輯，以及為什麼「所有權」是這次網路變革的關鍵。Web3 入門第一課。"
+description: "從唯讀、讀寫到擁有，回顧 Web1、Web2 與 Web3 的差異，看懂網路上的所有權改變了什麼。"
 keywords: Web3,Web1,Web2,區塊鏈,所有權,去中心化,讀寫擁有,加密貨幣,NFT,Web3 入門,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「Web3 三時代」，右側由下往上排列讀、寫、擁有三層方框。"
+cta_context: technical
+tags: ["Web3", "Web1"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 我在大學兼課與企業內訓講 Web3 已經第八年，最常被問的第一個問題永遠是：「**Web3 到底是什麼？**」

@@ -17,7 +17,7 @@ related_posts:
   - nft-token-standards
   - nft-museum-collection
   - nft-new-uses-market-reality
-description: "Beeple 的 HUMAN ONE 滿五年。實際讀取鏈上紀錄後發現：tokenURI 換過兩次網址，持有人是多簽錢包，作品依條款是授權而非賣斷。看懂動態 NFT 你到底擁有什麼。"
+description: "Beeple 的 HUMAN ONE 滿五年。對照鏈上紀錄與作品條款，看動態 NFT 的持有人取得哪些權利。"
 keywords: HUMAN ONE, Beeple, 動態 NFT, dynamic NFT, tokenURI, metadata, 佳士得, Christie's, ERC-721, ERC-4906, 數位藝術, 所有權, 史旺基
 ---
 

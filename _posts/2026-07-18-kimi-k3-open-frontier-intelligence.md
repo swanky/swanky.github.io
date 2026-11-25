@@ -14,6 +14,8 @@ related_posts:
   - ai-coding-tool-selection-2026
 description: "Kimi K3 在前端開發、程式與代理任務的部分評測超越閉源旗艦。拆解它的架構、API 成本與限制，以及「已上線但尚未開放權重」的關鍵差別。"
 keywords: Kimi K3, Moonshot AI, 月之暗面, 開放權重模型, 開源 LLM, Mixture of Experts, MoE, Kimi Delta Attention, Attention Residuals, 100萬 token, AI Agent, Agentic Engineering, Kimi Code, Artificial Analysis, Arena WebDev, 史旺基, Swanky Studio
+cover_alt: "多位角色駕著標有 Kimi、DeepSeek 等模型名稱的賽車，在霓虹賽道上競速。"
+cta_context: technical
 ---
 
 在上一篇[〈別再只看排行榜第一名：Artificial Analysis 與 2026 LLM 評估方法全解析〉]({% post_url 2026-07-17-artificial-analysis-llm-evaluation-2026 %})裡，我把模型能力、Agent 任務、速度、成本與私有評估拆成不同層次。結論很簡單：排行榜能幫你找到候選，不能替你做最後的選型。
@@ -27,6 +29,40 @@ keywords: Kimi K3, Moonshot AI, 月之暗面, 開放權重模型, 開源 LLM, Mi
 **K3 真正重要的地方，不是它全面贏了——它沒有。重要的是，閉源模型在所有高價值工作上理所當然領先的假設，已經失效。開放模型陣營不再只是追趕通用平均分，而是開始在前端開發、工具操作、長流程研究與部分程式任務裡，先把旗子插到閉源模型前面。**
 
 這個轉折，比「第幾名」有意思得多。
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>比較 K3 的能力時要保留評測條件，也要區分服務可用與權重開放。</li>
+    <li>成本取決於實際工作量與快取，模型主動採取的額外步驟也要算進去。</li>
+    <li>先拿團隊熟悉的工作小規模試用，觀察速度、成本與人工接手次數。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">架構與評測</span>
+      <ol class="article-toc-items">
+        <li><a href="#先給結論開放模型已經局部超車但-k3-現在還不能直接叫開源">先給結論：開放模型已經局部超車，但 K3 現在還不能直接叫開源</a></li>
+        <li><a href="#kimi-k3-到底是什麼不是-28-兆參數一起上班">Kimi K3 到底是什麼：不是 2.8 兆參數一起上班</a></li>
+        <li><a href="#開放模型開始領先閉源證據在哪裡">開放模型開始領先閉源，證據在哪裡？</a></li>
+        <li><a href="#開源這兩個字現在還不能寫得太順手">「開源」這兩個字，現在還不能寫得太順手</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">部署限制與試用</span>
+      <ol class="article-toc-items">
+        <li><a href="#價格不算低快取才是-k3-經濟學的核心">價格不算低，快取才是 K3 經濟學的核心</a></li>
+        <li><a href="#k3-最容易被忽略的限制它不是可以隨便熱插拔的模型">K3 最容易被忽略的限制：它不是可以隨便熱插拔的模型</a></li>
+        <li><a href="#另一個限制更像-agent-的性格問題過度主動">另一個限制更像 Agent 的性格問題：過度主動</a></li>
+        <li><a href="#誰現在應該測-k3">誰現在應該測 K3？</a></li>
+        <li><a href="#一個務實的-k3-pilot">一個務實的 K3 Pilot</a></li>
+        <li><a href="#最後判斷閉源不再是能力保證開放也不是免費午餐">最後判斷：閉源不再是能力保證，開放也不是免費午餐</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先給結論：開放模型已經局部超車，但 K3 現在還不能直接叫開源
 
@@ -337,12 +373,12 @@ Kimi K3 沒有終結 Claude，也沒有把 GPT 送進博物館。
 
 ## 參考資料
 
-- [Kimi：Kimi K3 Tech Blog——Open Frontier Intelligence](https://www.kimi.com/blog/kimi-k3)
-- [Kimi API：Kimi K3 模型、思考歷史、視覺輸入、快取與限制](https://platform.kimi.com/docs/guide/kimi-k3-quickstart)
-- [Kimi API：Kimi K3 價格與帳戶流量限制](https://platform.kimi.ai/docs/pricing/limits)
-- [Artificial Analysis：Kimi K3 Intelligence、Speed、Price 與技術規格](https://artificialanalysis.ai/models/kimi-k3)
-- [Artificial Analysis：Kimi K3 Provider 速度、延遲與混合價格](https://artificialanalysis.ai/models/kimi-k3/providers)
-- [Arena：WebDev AI Leaderboard](https://arena.ai/leaderboard/code/webdev?rankBy=labs)
-- [Z.ai：GLM-5.2——MIT 授權與長程 Agent 技術說明](https://z.ai/blog/glm-5.2)
-- [Open Source Initiative：Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
-- [Reuters：Moonshot unveils Kimi K3](https://www.reuters.com/world/china/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-us-rivals-2026-07-17/)
+- **[1]** [Kimi：Kimi K3 Tech Blog——Open Frontier Intelligence](https://www.kimi.com/blog/kimi-k3)
+- **[2]** [Kimi API：Kimi K3 模型、思考歷史、視覺輸入、快取與限制](https://platform.kimi.com/docs/guide/kimi-k3-quickstart)
+- **[3]** [Kimi API：Kimi K3 價格與帳戶流量限制](https://platform.kimi.ai/docs/pricing/limits)
+- **[4]** [Artificial Analysis：Kimi K3 Intelligence、Speed、Price 與技術規格](https://artificialanalysis.ai/models/kimi-k3)
+- **[5]** [Artificial Analysis：Kimi K3 Provider 速度、延遲與混合價格](https://artificialanalysis.ai/models/kimi-k3/providers)
+- **[6]** [Arena：WebDev AI Leaderboard](https://arena.ai/leaderboard/code/webdev?rankBy=labs)
+- **[7]** [Z.ai：GLM-5.2——MIT 授權與長程 Agent 技術說明](https://z.ai/blog/glm-5.2)
+- **[8]** [Open Source Initiative：Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
+- **[9]** [Reuters：Moonshot unveils Kimi K3](https://www.reuters.com/world/china/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-us-rivals-2026-07-17/)

@@ -16,6 +16,7 @@ description: "把 Flickr 上近五百張最受歡迎的人像攤開，我整理�
 keywords: 史旺基, 拍法, 人像攝影, 攝影風格, 窗光, 方幅, 黑白人像, 選片, Flickr, 創作筆記
 cover_image: /assets/img/flickr/7837922470.jpg
 cover_alt: "白 T 恤牛仔褲的人站在高架橋下的長椅旁，一手高舉，頭頂是木色的橋底"
+cta_context: photography
 ---
 
 <div class="article-tldr">
@@ -30,6 +31,33 @@ cover_alt: "白 T 恤牛仔褲的人站在高架橋下的長椅旁，一手高�
 拍了快二十年，朋友問我「你的風格是什麼」，我一直答不好。說「自然」太空，說「日系」又不準，因為翻開舊照片，明明有好幾種完全不同的做法同時存在。
 
 2026 年 9 月，我把 Flickr 上「最受歡迎」那份清單裡的近五百張照片全部攤開，一張一張分類，最後整理出七條彩色路線和兩種黑白。這篇就是那份整理的白話版。
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">拍攝原則與彩色路線</span>
+      <ol class="article-toc-items">
+        <li><a href="#先講清楚這份整理是什麼">先講清楚這份整理是什麼</a></li>
+        <li><a href="#九條路線之前先有五件共通的事">九條路線之前，先有五件共通的事</a></li>
+        <li><a href="#s01清亮鮮色近距離的互動人像">S01｜清亮鮮色，近距離的互動人像</a></li>
+        <li><a href="#s02柔亮高調窗光與日光寫真">S02｜柔亮高調，窗光與日光寫真</a></li>
+        <li><a href="#s03場景敘事方幅與日常空間">S03｜場景敘事，方幅與日常空間</a></li>
+        <li><a href="#s04冷青低彩偏灰白的人像處理">S04｜冷青低彩，偏灰白的人像處理</a></li>
+        <li><a href="#s05濃色室內造型與裝飾性人像">S05｜濃色室內，造型與裝飾性人像</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">其他路線與回顧</span>
+      <ol class="article-toc-items">
+        <li><a href="#s06極簡背景方向光肖像">S06｜極簡背景，方向光肖像</a></li>
+        <li><a href="#s07方幅復古快拍偏色與暗角">S07｜方幅復古快拍，偏色與暗角</a></li>
+        <li><a href="#兩種黑白">兩種黑白</a></li>
+        <li><a href="#拍人的時候我在看什麼">拍人的時候，我在看什麼</a></li>
+        <li><a href="#給想用-ai-的人路線不是濾鏡">給想用 AI 的人：路線不是濾鏡</a></li>
+        <li><a href="#延伸閱讀">延伸閱讀</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先講清楚這份整理是什麼
 

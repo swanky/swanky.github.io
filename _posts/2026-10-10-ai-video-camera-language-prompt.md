@@ -33,16 +33,26 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#where">先問一句：這個技法發生在哪裡？</a></li>
-    <li><a href="#layer-shot">第一層：一個鏡頭之內，寫進指令</a></li>
-    <li><a href="#layer-storyboard">第二層：鏡頭之間的事，拆鏡或交給剪輯</a></li>
-    <li><a href="#layer-style">第三層：整支片的世界觀，定一次就好</a></li>
-    <li><a href="#checks">付費生成前的五個自查</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">辨認鏡頭動作</span>
+      <ol class="article-toc-items">
+        <li><a href="#where">先問一句：這個技法發生在哪裡？</a></li>
+        <li><a href="#layer-shot">第一層：一個鏡頭之內，寫進指令（14 招）</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">從提示到剪接</span>
+      <ol class="article-toc-items">
+        <li><a href="#layer-storyboard">第二層：鏡頭之間的事，拆鏡或交給剪輯（6 招）</a></li>
+        <li><a href="#layer-style">第三層：整支片的世界觀，定一次就好</a></li>
+        <li><a href="#checks">付費生成前的五個自查</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 ## 先問一句：這個技法發生在哪裡？ {#where}
@@ -258,7 +268,7 @@ hero_image: true
 
 ## 參考資料
 
-- [VVSVS：Cinematique 電影技法提示詞資料庫](https://vvsvs.pro/cinematique)
-- [Cinematique：Dolly Shot 推軌技法頁](https://vvsvs.pro/cinematique/dolly-shot)
-- [Cinematique：Rack Focus 移焦技法頁](https://vvsvs.pro/cinematique/rack-focus)
-- [Cinematique：One-er 一鏡到底技法頁](https://vvsvs.pro/cinematique/one-er)
+- **[1]** [VVSVS：Cinematique 電影技法提示詞資料庫](https://vvsvs.pro/cinematique)
+- **[2]** [Cinematique：Dolly Shot 推軌技法頁](https://vvsvs.pro/cinematique/dolly-shot)
+- **[3]** [Cinematique：Rack Focus 移焦技法頁](https://vvsvs.pro/cinematique/rack-focus)
+- **[4]** [Cinematique：One-er 一鏡到底技法頁](https://vvsvs.pro/cinematique/one-er)

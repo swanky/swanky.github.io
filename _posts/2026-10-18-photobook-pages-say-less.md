@@ -17,6 +17,11 @@ extra_css: |
 cover_image: /assets/img/photo-notes/photobook-pages-say-less-cover.jpg
 cover_alt: "俯看寫真集編排桌：成年水手服創作者雙手把一張跨頁照片推進排好的順序裡，頁面上沒有任何圖說，只留白邊，桌角放著收起來的文字卡、裁紙機和裝訂機"
 hero_image: true
+cta_context: photography
+related_posts:
+  - my-seven-ways-of-shooting
+  - presence-araki-sanai-kawashima
+  - japanese-photography-history-primer
 ---
 
 <div class="article-tldr">
@@ -45,6 +50,29 @@ hero_image: true
   </a>
   <figcaption>圖 1：同一組照片的兩種版面（示意） <span class="ae-fig__zoom">點圖放大</span></figcaption>
 </figure>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">照片頁的取捨</span>
+      <ol class="article-toc-items">
+        <li><a href="#what-captions-do">圖說其實在替照片做三件事</a></li>
+        <li><a href="#window-still-lit">一本書，字少了三分之二</a></li>
+        <li><a href="#web-version">網頁上也一樣：先看照片，想知道再讀字</a></li>
+        <li><a href="#rhythm">拿掉字以後，節奏靠什麼</a></li>
+        <li><a href="#young-again">一行字，可以分開二十年</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">編輯與練習</span>
+      <ol class="article-toc-items">
+        <li><a href="#when-to-keep">什麼時候應該留字</a></li>
+        <li><a href="#for-you">自己試一次：五個步驟</a></li>
+        <li><a href="#further-reading">接著讀</a></li>
+        <li><a href="#references">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 圖說其實在替照片做三件事 {#what-captions-do}
 
@@ -199,6 +227,6 @@ hero_image: true
 
 ## 參考資料 {#references}
 
-- [青山裕企官方：133rd 写真集『young again』](https://yukiao.jp/books/20260919/11173)：書目、頁數、裝訂與 2006–2026 回顧內容。
-- [ユカイハンズパブリッシング：写真集『young again』特別版](https://www.yukaihands-publishing.net/product-page/yhp-48)：出版社商品頁。
-- [GENIC：青山裕企 写真展「young again 青春をとりもどせ」](https://genic-web.com/articles/9586390)：展期、展場與三個年代標題。
+- **[1]** [青山裕企官方：133rd 写真集『young again』](https://yukiao.jp/books/20260919/11173)：書目、頁數、裝訂與 2006–2026 回顧內容。
+- **[2]** [ユカイハンズパブリッシング：写真集『young again』特別版](https://www.yukaihands-publishing.net/product-page/yhp-48)：出版社商品頁。
+- **[3]** [GENIC：青山裕企 写真展「young again 青春をとりもどせ」](https://genic-web.com/articles/9586390)：展期、展場與三個年代標題。

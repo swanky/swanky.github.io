@@ -27,7 +27,25 @@ Lauren Tan（@poteto）在〈Automate Anything with Grok Bot〉裡，把這道�
 <li>把客戶的回饋接回同一筆服務紀錄，才有線索改善流程。工作何時自動啟動，是最後才要回答的問題。</li>
 </ul></div>
 
-<nav class="article-toc article-toc--outline" aria-label="本文大綱"><span class="article-toc-label">本文大綱</span><ol><li><a href="#pie">從一個蘋果派開始</a></li><li><a href="#potato">讓 Potato 把工作說回來</a></li><li><a href="#booking">一筆預約有兩端要對上</a></li><li><a href="#repair">「等太久」是等在哪裡？</a></li><li><a href="#routine">什麼時候才讓它自己開始？</a></li></ol></nav>
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">交代目標與判斷</span>
+      <ol class="article-toc-items">
+        <li><a href="#pie">從一個蘋果派開始</a></li>
+        <li><a href="#potato">讓 Potato 把工作說回來</a></li>
+        </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">讓工作接得起來</span>
+      <ol class="article-toc-items">
+        <li><a href="#booking">一筆預約有兩端要對上</a></li>
+        <li><a href="#repair">「等太久」是等在哪裡？</a></li>
+        <li><a href="#routine">什麼時候才讓它自己開始？</a></li>
+        <li><a href="#references">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 從一個蘋果派開始
 {: #pie}
@@ -82,4 +100,8 @@ Lauren 從烤派談起。買蘋果、備料、組裝、進烤箱，最後還得�
 
 回頭看開場那封信，一個懂店務的助手，即使還不知道正確時間，至少知道它在等哪位客人、哪一筆預約、哪一個答案。等客人回信時，它接得上。這樣的一件小事，才值得每天自動發生。
 
-原文為 Lauren Tan（@poteto）的〈Automate Anything with Grok Bot〉。本文依原文重述其方法與假設情境，兩張圖解為依文意重繪。[閱讀 Lauren Tan 原文](https://x.com/poteto/status/2123159537016533493)
+原文為 Lauren Tan（@poteto）的〈Automate Anything with Grok Bot〉。本文依原文重述其方法與假設情境，兩張圖解為依文意重繪。
+
+## 參考資料 {#references}
+
+- **[1]** [Lauren Tan：Automate Anything with Grok Bot](https://x.com/poteto/status/2123159537016533493)

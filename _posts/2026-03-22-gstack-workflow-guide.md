@@ -12,8 +12,11 @@ related_posts:
   - pstack-six-skills-workday
   - matt-pocock-skills-ai-coding-workflow
   - fable-field-guide
-description: "gstack 不是一包 prompt，而是一套把 AI 開發流程角色化、階段化的工作流。從需求定義、工程規劃、PR 審查、QA 測試、資安稽核到部署驗證，每個階段都有明確分工的 slash commands。2026 年 8 月依 v1.60.2.0 更新。"
+description: "依 gstack v1.60.2.0 整理需求、規劃、審查、測試與部署各階段的指令分工，從一個功能走完交付流程。"
 keywords: gstack,Claude Code,AI工作流,開發流程,AI工具,AI學習,autoplan,cso,land-and-deploy,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「把 AI 變成開發工作流」，右側搭配終端機畫面。"
+cta_context: agentic
+tags: ["gstack", "Claude Code"]
 ---
 
 <div class="article-tldr">
@@ -621,7 +624,7 @@ gstack 最值得學的地方，不是它有幾顆指令，也不是哪一顆最�
 
 以下連結於 2026 年 8 月 8 日重新核對，對照版本為 gstack v1.60.2.0。
 
-- [gstack README — 安裝、技能列表、Troubleshooting](https://github.com/garrytan/gstack/blob/main/README.md)
-- [gstack ARCHITECTURE — persistent browser 與長駐 Chromium daemon 設計](https://github.com/garrytan/gstack/blob/main/ARCHITECTURE.md)
-- [gstack docs/skills — `/plan-eng-review`、`/plan-design-review`、`/review` 定位與方法](https://github.com/garrytan/gstack/blob/main/docs/skills.md)
-- [gstack AGENTS.md — 以 SKILL.md 組成的 AI engineering workflow](https://github.com/garrytan/gstack/blob/main/AGENTS.md)
+- **[1]** [gstack README — 安裝、技能列表、Troubleshooting](https://github.com/garrytan/gstack/blob/main/README.md)
+- **[2]** [gstack ARCHITECTURE — persistent browser 與長駐 Chromium daemon 設計](https://github.com/garrytan/gstack/blob/main/ARCHITECTURE.md)
+- **[3]** [gstack docs/skills — `/plan-eng-review`、`/plan-design-review`、`/review` 定位與方法](https://github.com/garrytan/gstack/blob/main/docs/skills.md)
+- **[4]** [gstack AGENTS.md — 以 SKILL.md 組成的 AI engineering workflow](https://github.com/garrytan/gstack/blob/main/AGENTS.md)

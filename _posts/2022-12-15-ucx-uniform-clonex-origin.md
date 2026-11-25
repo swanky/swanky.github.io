@@ -5,9 +5,46 @@ categories: [technical]
 layout: article
 nav_active: technical
 cover_image: /assets/facebook-archive/photos/2022-12-15_576144351187036_1.jpg
-description: "從 2021 年的第一個制服女孩 NFT，到 2022 年底 UCX（Uniform CloneX）社群正式出道——這是一段用 Web3 工具實踐攝影 IP 的真實紀錄。"
+description: "從 2021 年第一個制服女孩 NFT 到 2022 年底 UCX 社群出道，回顧攝影作品如何成為共同創作的角色。"
 keywords: NFT,UCX,Uniform CloneX,Web3,區塊鏈,制服女孩,史旺基,Swanky Studio
+cover_alt: "一名男子站在金髮人偶旁合影。"
+seo_title: "UCX 的誕生：一個攝影師如何在 Web3 世界創建制服女孩社群"
+cta_context: technical
+tags: ["NFT", "UCX"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>制服女孩的第一批 NFT 是起點，CloneX 讓參與者有了共同的角色語言。</li>
+    <li>第一次線下聚會，把原先只在線上認識的人帶到同一個現場。</li>
+    <li>UCX 在 2022 年底出道，也讓攝影師多了一份經營社群的工作。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">從作品到社群</span>
+      <ol class="article-toc-items">
+        <li><a href="#起點制服女孩遇上-nft">起點：制服女孩遇上 NFT</a></li>
+        <li><a href="#clonex-的出現">CloneX 的出現</a></li>
+        <li><a href="#第一次線下聚從虛擬到真實">第一次線下聚：從虛擬到真實</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">UCX 的形成</span>
+      <ol class="article-toc-items">
+        <li><a href="#ucx-出道2022-12-15">UCX 出道：2022-12-15</a></li>
+        <li><a href="#從攝影師到社群建立者">從攝影師到社群建立者</a></li>
+        <li><a href="#後記">後記</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 起點：制服女孩遇上 NFT
 

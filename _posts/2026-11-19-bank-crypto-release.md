@@ -28,6 +28,27 @@ keywords: 銀行虛擬資產保管, 入金確認數, 提幣告警, 帳務核對,
 
 <div class="article-tldr"><span class="article-tldr-label">30 秒結論</span><ul><li>收到一筆交易，先核對資產、收款地址與客戶歸屬，再決定何時開放使用。</li><li>批准提幣時，要有人能獨立核對這次簽署究竟會轉錢，還是會改變錢包權限。</li><li>事故後分別列出資金流向與客戶缺口。追到、凍結、返還和公司墊補，各有不同憑據。</li></ul></div>
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">交易與簽署</span>
+      <ol class="article-toc-items">
+        <li><a href="#一張寫著0-eth的收據怎麼會收到-1000-usdc">一張寫著「0 ETH」的收據，怎麼會收到 1,000 USDC？</a></li>
+        <li><a href="#那麼入金到底要等幾個確認">那麼，入金到底要等幾個確認？</a></li>
+        <li><a href="#三個人都簽了誰看過那筆真正要送出的指示">三個人都簽了，誰看過那筆真正要送出的指示？</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">告警、復原與查核</span>
+      <ol class="article-toc-items">
+        <li><a href="#提幣告警該設多少先決定響了以後誰能攔">提幣告警該設多少？先決定響了以後誰能攔</a></li>
+        <li><a href="#追錢有一本帳恢復服務還要另一份證據">追錢有一本帳，恢復服務還要另一份證據</a></li>
+        <li><a href="#回到台灣銀行可以承諾哪一段">回到台灣，銀行可以承諾哪一段？</a></li>
+        <li><a href="#原始資料與查核方式">原始資料與查核方式</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 一張寫著「0 ETH」的收據，怎麼會收到 1,000 USDC？
 
 先看一筆誰都能查的普通轉帳。2025 年 11 月 9 日，Ethereum 主網第 23,761,457 個區塊裡，有一張狀態成功的收據。打開交易頁，原生幣金額寫著 **0 ETH**，互動對象是一個合約。單看這兩欄，很容易以為沒有錢進來。[〔4〕](https://etherscan.io/tx/0xd9638e6799d58646a3716261a456e0550e9ca637bf0e629b24284d005f279fba)
@@ -90,25 +111,25 @@ keywords: 銀行虛擬資產保管, 入金確認數, 提幣告警, 帳務核對,
 
 本文查核至 2026 年 11 月 19 日，事件當夜均採台灣時間。幣安的事件順序與金額依該公司初報，兩筆委派另查公開區塊時間。1,000 USDC 的轉帳來自公開收據，客戶分戶帳與重送通知是教學示例。各段可直接開啟對應原始資料。
 
-1. [幣安 11 月 3 日初報](https://www.binance.com/en/blog/community/3229153443759566763)
-2. [建立委派的區塊紀錄](https://eth.blockscout.com/api/v2/transactions/0xad99264d5532ae0dd04b2004eebda05f25657e70dacb764f7ac8d4ccd051298b)
-3. [清除委派的區塊紀錄](https://eth.blockscout.com/api/v2/transactions/0xafbf94c92a8d749988411669fa14d4f8866d9b4420b4ebd299f28e958dac7209)
-4. [Etherscan 公開交易紀錄](https://etherscan.io/tx/0xd9638e6799d58646a3716261a456e0550e9ca637bf0e629b24284d005f279fba)
-5. [Circle 公布的 USDC 合約地址](https://developers.circle.com/stablecoins/usdc-contract-addresses)
-6. [Blockscout 代幣移轉收據](https://eth.blockscout.com/api/v2/transactions/0xd9638e6799d58646a3716261a456e0550e9ca637bf0e629b24284d005f279fba/logs)
-7. [韓國金融委員會 2 月公告](https://www.fsc.go.kr/eng/pr010101/86230)
-8. [韓國金融委員會 4 月檢查結果](https://www.fsc.go.kr/eng/pr010101/86638)
-9. [Coinbase 的 ETC 鏈重組紀錄](https://www.coinbase.com/en-ca/blog/deep-chain-reorganization-detected-on-ethereum-classic-etc)
-10. [Bitcoin 開發者收款指南](https://developer.bitcoin.org/devguide/payment_processing.html)
-11. [Ethereum 權益證明說明](https://ethereum.org/developers/docs/consensus-mechanisms/pos/)
-12. [BIS 金融市場基礎設施準則](https://www.bis.org/publications/principles-financial-market-infrastructures)
-13. [Bybit 的鑑識更新](https://www.bybit.com/en/press/post/bybit-confirms-security-integrity-amid-safe-wallet-incident-no-compromise-in-infrastructure-blt9986889e919da8d2)
-14. [星展銀行的保管說明](https://www.dbs.com/newsroom/DBS_to_launch_crypto_options_trading_and_structured_notes_for_institutional_investors_and_wealth_clients)
-15. [Coinbase 向美國 SEC 申報](https://www.sec.gov/Archives/edgar/data/1679788/000167978825000094/coin-20250514.htm)
-16. [FBI 生成式 AI 金融詐騙公告](https://www.ic3.gov/PSA/2024/PSA241203)
-17. [Ronin 跨鏈橋重新開放公告](https://blog.roninchain.com/p/the-ronin-bridge-is-open-)
-18. [FATF 虛擬資產警示指標](https://www.fatf-gafi.org/en/publications/methodsandtrends/documents/virtual-assets-red-flag-indicators.html)
-19. [Ethereum EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)
-20. [美國司法部 11 月 12 日公告](https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency)
-21. [金管會《虛擬資產服務法》](https://law.fsc.gov.tw/LawContent.aspx?id=GL004301)
-22. [金管會保管業務試辦說明](https://www.fsc.gov.tw/uploaddowndoc?file=20160223020901%2F202507211128401.pdf&filedisplay=uploaddowndoc+%282%29.pdf&flag=doc)
+- **[1]** [幣安 11 月 3 日初報](https://www.binance.com/en/blog/community/3229153443759566763)
+- **[2]** [建立委派的區塊紀錄](https://eth.blockscout.com/api/v2/transactions/0xad99264d5532ae0dd04b2004eebda05f25657e70dacb764f7ac8d4ccd051298b)
+- **[3]** [清除委派的區塊紀錄](https://eth.blockscout.com/api/v2/transactions/0xafbf94c92a8d749988411669fa14d4f8866d9b4420b4ebd299f28e958dac7209)
+- **[4]** [Etherscan 公開交易紀錄](https://etherscan.io/tx/0xd9638e6799d58646a3716261a456e0550e9ca637bf0e629b24284d005f279fba)
+- **[5]** [Circle 公布的 USDC 合約地址](https://developers.circle.com/stablecoins/usdc-contract-addresses)
+- **[6]** [Blockscout 代幣移轉收據](https://eth.blockscout.com/api/v2/transactions/0xd9638e6799d58646a3716261a456e0550e9ca637bf0e629b24284d005f279fba/logs)
+- **[7]** [韓國金融委員會 2 月公告](https://www.fsc.go.kr/eng/pr010101/86230)
+- **[8]** [韓國金融委員會 4 月檢查結果](https://www.fsc.go.kr/eng/pr010101/86638)
+- **[9]** [Coinbase 的 ETC 鏈重組紀錄](https://www.coinbase.com/en-ca/blog/deep-chain-reorganization-detected-on-ethereum-classic-etc)
+- **[10]** [Bitcoin 開發者收款指南](https://developer.bitcoin.org/devguide/payment_processing.html)
+- **[11]** [Ethereum 權益證明說明](https://ethereum.org/developers/docs/consensus-mechanisms/pos/)
+- **[12]** [BIS 金融市場基礎設施準則](https://www.bis.org/publications/principles-financial-market-infrastructures)
+- **[13]** [Bybit 的鑑識更新](https://www.bybit.com/en/press/post/bybit-confirms-security-integrity-amid-safe-wallet-incident-no-compromise-in-infrastructure-blt9986889e919da8d2)
+- **[14]** [星展銀行的保管說明](https://www.dbs.com/newsroom/DBS_to_launch_crypto_options_trading_and_structured_notes_for_institutional_investors_and_wealth_clients)
+- **[15]** [Coinbase 向美國 SEC 申報](https://www.sec.gov/Archives/edgar/data/1679788/000167978825000094/coin-20250514.htm)
+- **[16]** [FBI 生成式 AI 金融詐騙公告](https://www.ic3.gov/PSA/2024/PSA241203)
+- **[17]** [Ronin 跨鏈橋重新開放公告](https://blog.roninchain.com/p/the-ronin-bridge-is-open-)
+- **[18]** [FATF 虛擬資產警示指標](https://www.fatf-gafi.org/en/publications/methodsandtrends/documents/virtual-assets-red-flag-indicators.html)
+- **[19]** [Ethereum EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)
+- **[20]** [美國司法部 11 月 12 日公告](https://www.justice.gov/opa/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency)
+- **[21]** [金管會《虛擬資產服務法》](https://law.fsc.gov.tw/LawContent.aspx?id=GL004301)
+- **[22]** [金管會保管業務試辦說明](https://www.fsc.gov.tw/uploaddowndoc?file=20160223020901%2F202507211128401.pdf&filedisplay=uploaddowndoc+%282%29.pdf&flag=doc)

@@ -16,7 +16,7 @@ related_posts:
 hero_image: true
 use_glightbox: true
 mid_cta: false
-description: "解讀 Dario Amodei 的 AI 控速倡議，對照 METR 事故調查、Anthropic 威脅報告與隱私條款，分清已觀察的越權、能力外推與政策選擇，整理台灣開發者與企業導入 AI 該要求的驗證。"
+description: "對照 Dario Amodei 的控速倡議、METR 調查與 Anthropic 報告，分辨已知事故與風險推估。"
 keywords: Dario Amodei, We Must Pace the Frontier, AI 控速, 駐點評估, METR, Anthropic, AI 隱私, 開放權重, AI Agent 治理, 史旺基
 ---
 

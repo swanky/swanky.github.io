@@ -8,6 +8,14 @@ cover_image: /assets/facebook-archive/photos/2019-07-09_10159101519745329_0.jpg
 cover_position: "50% 12%"
 description: "當年全面投入區塊鏈開發、同時研究敏捷的攝影師，把每天都在翻的《Head First Agile》和制服女孩放在一起拍；模特兒李婷婷。"
 keywords: 制服女孩,人像攝影,區塊鏈,敏捷,攝影作品,史旺基,Swanky Studio
+cover_alt: "穿牛仔短褲的女子坐在紅色花紋座椅上，身邊放著書和提袋。"
+seo_title: "讀 Head First Agile 的區塊鏈工程師"
+cta_context: photography
+tags: ["制服女孩", "人像攝影"]
+related_posts:
+  - my-seven-ways-of-shooting
+  - presence-araki-sanai-kawashima
+  - japanese-photography-history-primer
 ---
 
 那年我剛從 Java 工程師的身份全面投入區塊鏈開發，同時也在研究敏捷方法。

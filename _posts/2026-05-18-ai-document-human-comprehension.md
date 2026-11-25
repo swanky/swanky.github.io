@@ -9,6 +9,13 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E6%88%91%E5%80%91%E4%B8%8D%E7%BC%BA-ai-%E5%AF%AB%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%91%E5%80%91%E7%BC%BA%E9%A1%98%E6%84%8F%E8%A2%AB%E8%AE%80%E5%AE%8C%E7%9A%84%E6%96%87%E4%BB%B6-swanky-hsiao-69xzc"
 description: "AI 時代文件的核心問題不是產生速度，而是人類理解效率。Markdown 應作工作流底稿，HTML 應成審查儀表板，重點是建立更好的「人機理解介面」。"
 keywords: AI 文件生成, Markdown vs HTML, 審查介面, 人類理解, Agentic Engineering, Example Mapping, OpenSpec, Claude Code, 史旺基, Swanky Studio, 軟體工程效率, 技術文檔, 工作流自動化
+cover_alt: "角色指向螢幕上的文件流程，桌面另有筆記、圖表與兩台電腦。"
+seo_title: "我們不缺 AI 寫的文件，我們缺願意被讀完的文件"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 ### 從 AI 生成文件，到人類理解介面

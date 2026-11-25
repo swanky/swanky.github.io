@@ -7,8 +7,15 @@ cover_image: /assets/img/rwa/rwa-infrastructure-hsm-pqc.svg
 og_image: /assets/img/rwa/rwa-infrastructure-hsm-pqc-og.jpg
 hero_image: true
 seo_title: HSM 與後量子密碼學：RWA 資產代幣化的隱形基建｜私鑰保管與量子威脅
-description: "RWA 把現實世界資產搬上鏈，但真正撐住信任的是看不見的基礎建設：HSM 硬體保管與後量子密碼學（PQC）。一文看懂 Mt. Gox 的教訓、FIPS 140-3 等級、量子威脅與 NIST PQC 標準。"
+description: "從 Mt. Gox、硬體金鑰保管到後量子密碼學，看現實世界資產代幣化仰賴哪些安全措施。"
 keywords: HSM,硬體安全模組,後量子密碼學,PQC,FIPS 140-3,ML-DSA,ML-KEM,NIST,私鑰保管,RWA,資產代幣化,量子計算,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「RWA 的隱形基建」，三個節點圍繞一把金色鎖頭。"
+cta_context: technical
+tags: ["HSM", "硬體安全模組"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 在我的 [RWA 系列]({{ '/technical/rwa/' | relative_url }})裡，前面幾篇談的都是「看得見」的東西——[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[合規型代幣標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})。但任何一套金融基礎設施，真正撐住它的，往往是「看不見」的那一層。

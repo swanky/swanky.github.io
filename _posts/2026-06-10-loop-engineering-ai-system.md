@@ -9,6 +9,13 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/loop-engineering%E4%BD%A0%E4%B8%8D%E5%86%8D%E6%8F%90%E7%A4%BA-ai%E8%80%8C%E6%98%AF%E8%A8%AD%E8%A8%88%E4%B8%80%E5%80%8B%E6%8F%90%E7%A4%BA-ai-%E7%9A%84%E7%B3%BB%E7%B5%B1-swanky-hsiao-najic"
 description: "Addy Osmani 定名 Loop Engineering：不再由人提示 AI，而是設計一個提示 AI 的系統。補完從 Prompt 到 Loop 的脈絡。"
 keywords: Loop Engineering, Prompt Engineering, Context Engineering, Agentic Engineering, Claude Code, Spec-Driven Development, SDD, OpenSpec, TDD, Example Mapping, Addy Osmani, AI Coding, 代理式開發, 軟體工程, 工程治理, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "水手服角色指著白板上的循環流程，桌邊同伴對照筆電和筆記。"
+seo_title: "Loop Engineering：你不再提示 AI，而是設計一個「提示 AI 的系統」"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 上週日（6/7），Google Chrome 團隊的工程主管 Addy Osmani 發表了一篇文章，幫 AI 協作開發的下一個階段定了名：**[Loop Engineering](https://addyosmani.com/blog/loop-engineering/)**。

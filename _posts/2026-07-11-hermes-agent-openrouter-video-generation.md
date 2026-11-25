@@ -9,6 +9,12 @@ cover_image: /assets/img/hermes-openrouter-video/hermes-openrouter-video-banner.
 hero_image: true
 description: "我替 Hermes Agent 串上 OpenRouter 的影片 API，完成 35 秒攝影品牌短片。記錄設定、成本閘門、重試與人工驗收的過程。"
 keywords: Hermes Agent, OpenRouter, Seedance 2.0 Fast, GPT-5.6 Sol, AI 影片生成, image to video, text to video, FFmpeg, Edge TTS, Hermes plugin, agentic workflow, AI Agent, 史旺基, Swanky Studio
+cover_alt: "水手服女子與團隊在夜景前操作發光控制桌，桌面顯示影像縮圖與流程。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 早上本來只是想測一個新的 GPT 模型。
@@ -18,6 +24,38 @@ keywords: Hermes Agent, OpenRouter, Seedance 2.0 Fast, GPT-5.6 Sol, AI 影片生
 不知道為什麼，最後我得到的不是一份 benchmark，而是一支 35 秒的攝影品牌短片，外加一個能讓 Hermes 呼叫 OpenRouter 生成影片的本機 plugin。
 
 這件事有點微妙。因為「叫 AI 生一支影片」聽起來像一句 prompt，實際做下去，真正麻煩的部分幾乎都不在 prompt。
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>把規劃、生成與審片分開，讓 Hermes Agent 透過 OpenRouter 呼叫影片服務。</li>
+    <li>從 42 秒修到 35 秒的過程，要同時顧及預算、重試與剪接。</li>
+    <li>最後看成片的解析度與實際畫面，才能決定這支品牌短片能否使用。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">模型與設定</span>
+      <ol class="article-toc-items">
+        <li><a href="#先把模型分工拆清楚">先把模型分工拆清楚</a></li>
+        <li><a href="#設定到底改了什麼">設定到底改了什麼</a></li>
+        <li><a href="#為什麼要自己做-plugin">為什麼要自己做 plugin</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">成片與驗收</span>
+      <ol class="article-toc-items">
+        <li><a href="#我怎麼規劃這支影片">我怎麼規劃這支影片</a></li>
+        <li><a href="#從-42-秒修到-35-秒">從 42 秒修到 35 秒</a></li>
+        <li><a href="#最後踩到的坑低解析度不是小事">最後踩到的坑：低解析度不是小事</a></li>
+        <li><a href="#這次真正測到的是什麼">這次真正測到的是什麼</a></li>
+        <li><a href="#文章素材">文章素材</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先把模型分工拆清楚
 
@@ -205,9 +243,9 @@ Seedance 負責生成四秒鐘的光影與動作。Hermes 負責把工作拆開�
 
 ## 參考資料
 
-- [Hermes Agent 官方文件](https://hermes-agent.nousresearch.com/docs/)
-- [Hermes Agent：Plugins](https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins)
-- [Hermes Agent：Build a Hermes Plugin](https://hermes-agent.nousresearch.com/docs/guides/build-a-hermes-plugin)
-- [OpenRouter：Video Generation](https://openrouter.ai/docs/guides/overview/multimodal/video-generation)
-- [OpenRouter Cookbook：Generate and Download a Video from Text](https://openrouter.ai/docs/cookbook/video-generation/text-to-video)
-- [OpenRouter：Seedance 2.0 Fast](https://openrouter.ai/bytedance/seedance-2.0-fast)
+- **[1]** [Hermes Agent 官方文件](https://hermes-agent.nousresearch.com/docs/)
+- **[2]** [Hermes Agent：Plugins](https://hermes-agent.nousresearch.com/docs/user-guide/features/plugins)
+- **[3]** [Hermes Agent：Build a Hermes Plugin](https://hermes-agent.nousresearch.com/docs/guides/build-a-hermes-plugin)
+- **[4]** [OpenRouter：Video Generation](https://openrouter.ai/docs/guides/overview/multimodal/video-generation)
+- **[5]** [OpenRouter Cookbook：Generate and Download a Video from Text](https://openrouter.ai/docs/cookbook/video-generation/text-to-video)
+- **[6]** [OpenRouter：Seedance 2.0 Fast](https://openrouter.ai/bytedance/seedance-2.0-fast)

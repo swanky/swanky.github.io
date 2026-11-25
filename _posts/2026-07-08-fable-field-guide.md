@@ -13,8 +13,10 @@ related_posts:
   - claude-code-designing-loops
   - scaffolding-thin-harness-agent-architecture
   - gstack-workflow-guide
-description: "Anthropic 技術團隊成員 Thariq Shihipar 在 AI Engineer 大會的演講〈Field Guide to Fable〉，把新一代模型 Fable 形容成 RPG 從新手村走進開放世界。本文整理演講四大主題——解除 Claude 的束縛、找出你的未知、面對開發手感的失落、學會不那麼合理——並補上台灣技術團隊的六個實戰落地方法。"
+description: "從 Thariq Shihipar 的 Fable 演講，看開發者如何探索新能力、面對手感改變，並在團隊試行六種做法。"
 keywords: Fable, Field Guide to Fable, Thariq Shihipar, Anthropic, Claude Code, capability overhang, unhobbling, agentic workflow, 代理式開發, prompt engineering, reference engineering, blind spot pass, unknown unknowns, implementation notes, quiz me, tradeoffs are not real, AI Engineer, AI 協作開發, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "角色們在書房中研究從筆電向外延伸的發光地圖，沿途散布城堡與節點。"
+cta_context: agentic
 ---
 
 > 地圖不是領土（The map is not the territory）。你腦中的計畫、spec 與 prompt 都是地圖；真實的 code base、團隊慣例、歷史包袱與部署限制，才是領土。

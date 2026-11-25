@@ -7,8 +7,15 @@ cover_image: /assets/img/rwa/rwa-global-regulation.svg
 og_image: /assets/img/rwa/rwa-global-regulation-og.jpg
 hero_image: true
 seo_title: 全球 RWA 監管地圖｜Project Guardian・Project Ensemble・美國 DTC・台灣 STO 全解
-description: "RWA 沒有國界，但監理有。一文看懂全球資產代幣化的監管版圖：新加坡 Project Guardian、香港 Project Ensemble、美國 DTC 試點、歐盟 DORA，以及台灣 STO 的教訓與機會。"
+description: "從新加坡、香港、美國與歐盟的案例，看現實世界資產代幣化的監管差異，以及台灣 STO 的經驗。"
 keywords: RWA 監管,Project Guardian,Project Ensemble,DTC,Canton Network,GENIUS Act,DORA,STO,金管會,CBDC,資產代幣化,MAS,HKMA,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「全球 RWA 監管地圖」，各地區以圓點分布在環形圖上。"
+cta_context: technical
+tags: ["RWA 監管", "Project Guardian"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 在這個 [RWA 系列]({{ '/technical/rwa/' | relative_url }})裡，我談過[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[合規標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})與[隱形基建]({{ '/technical/rwa-infrastructure-hsm-pqc/' | relative_url }})。但有一條主線貫穿所有篇章卻還沒正面談過：**監管**。

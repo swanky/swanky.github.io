@@ -33,17 +33,27 @@ AI 影片的生成服務回「完成」，只代表它交了一個檔案給你�
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#verdicts">三種結論，各代表什麼</a></li>
-    <li><a href="#checklist">看片前：先寫檢查清單</a></li>
-    <li><a href="#rules">看片時的五條規則</a></li>
-    <li><a href="#unsure">拿不準怎麼辦：往保守降級</a></li>
-    <li><a href="#reroll">判了不能用之後：先找原因，再決定要不要重新生成</a></li>
-    <li><a href="#upscale">最後才考慮畫質放大</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">看片與判定</span>
+      <ol class="article-toc-items">
+        <li><a href="#verdicts">三種結論，各代表什麼</a></li>
+        <li><a href="#checklist">看片前：先寫檢查清單</a></li>
+        <li><a href="#rules">看片時的五條規則</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">修改與交付</span>
+      <ol class="article-toc-items">
+        <li><a href="#unsure">拿不準怎麼辦：往保守降級</a></li>
+        <li><a href="#reroll">判了不能用之後：先找原因，再決定要不要重新生成</a></li>
+        <li><a href="#upscale">最後才考慮畫質放大</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 ## 三種結論，各代表什麼 {#verdicts}
@@ -262,4 +272,4 @@ AI 放大（超解析度）的白話意思是：用模型去「猜」放大後�
 
 ## 參考資料
 
-- [SeedVR：官方說明（Notice 段）](https://github.com/ByteDance-Seed/SeedVR/blob/main/readme.md)
+- **[1]** [SeedVR：官方說明（Notice 段）](https://github.com/ByteDance-Seed/SeedVR/blob/main/readme.md)

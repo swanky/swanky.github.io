@@ -10,11 +10,12 @@ cta_context: agentic
 cover_image: /assets/img/linkedin/notch-claude-game-engine.jpg
 cover_alt: "概念插畫：Notch 拉下礦坑拉桿，工作台吐出成堆發光方塊，史旺姬接住一塊，比對橋面的缺口。"
 hero_image: true
+use_glightbox: true
 related_posts:
   - ai-faster-engineer-misconception
   - ai-coding-design-boundaries
   - all-code-is-slop-verification-evidence
-description: "Minecraft 創作者 Notch 從拒絕 AI 到向 Anthropic 加購額度。沿著地圖工具、舊引擎展示與開發者實驗，看懂他為什麼願意付錢，以及誰來驗收。"
+description: "Minecraft 創作者 Notch 從拒絕 AI 到詢問 Claude 額度。沿著舊引擎與開發實驗，看懂誰出題、誰驗收。"
 keywords: "Minecraft, Notch, Markus Persson, Claude, 遊戲引擎, AI 輔助開發, Levers and Chests, METR"
 ---
 
@@ -22,7 +23,41 @@ Minecraft 創作者 Markus「Notch」Persson 有個奇妙的購物需求。11 �
 
 我對中間那一週最感興趣。七月，Notch 才剛叫大家拒絕 AI，就碰上一件遊戲工作室很平常的事：他需要一套地圖編輯器，人卻一直找不齊。到了十一月，他拿來考 Claude 的題目，已經換成自己以前寫過的遊戲引擎。這兩道題，恰好說明我會在什麼時候把工作交給 AI。[七月的工具構想][1]、[十一月的引擎展示][3]
 
-## 地圖編輯器讓他鬆了口
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li><strong>先有一個缺人做的工具。</strong>七月的 Notch 想試做地圖編輯器，到了十一月，他已能拿自己寫過的舊引擎考 Claude。</li>
+    <li><strong>會描述，也要會驗收。</strong>Notch 能指出畫面的接縫。ETH 的實驗也發現，看不到原始碼時，學生的資工與寫作成績都能預測功能做對多少。</li>
+    <li><strong>加購前，先量整件工作。</strong>把等回應、試玩和修錯都算進去，才知道團隊缺的是更多額度，還是一套能重現問題的測試。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">Notch 怎麼改變了主意</span>
+      <ol class="article-toc-items">
+        <li><a href="#地圖編輯器讓他鬆了口">七月，從地圖編輯器鬆口</a></li>
+        <li><a href="#九月他已經拿方塊世界做壓力測試">九月，測試方塊世界</a></li>
+        <li><a href="#十一月出題的人寫過原版">十一月，讓 Claude 重做舊引擎</a></li>
+        <li><a href="#從一段引擎影片到一個笑臉和一張徵人啟事">從詢價貼文到徵人啟事</a></li>
+        <li><a href="#一個閃了好幾年的像素怎樣才算修好">追查閃了好幾年的像素</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">怎麼判斷 AI 幫了多少忙</span>
+      <ol class="article-toc-items">
+        <li><a href="#把原始碼遮起來寫過程式的人還有優勢嗎">看不到原始碼的開發實驗</a>
+          <span class="article-toc-sub"><a href="#學生眼前究竟有什麼">實驗畫面與三題得分</a></span></li>
+        <li><a href="#工程師覺得省了時間碼表怎麼說">工程師的體感與實際工時</a></li>
+        <li><a href="#亞洲和美國的差距問卷到底問了什麼">亞洲與美國的 AI 態度調查</a></li>
+        <li><a href="#我會先拿一道門試額度">用一道地牢的門評估額度</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
+## 地圖編輯器讓他鬆了口 {#地圖編輯器讓他鬆了口}
 
 二月時，Notch 的批評已經指向寫程式這項工作。他把鼓吹 AI 寫程式的人說得相當難聽。等到七月，他把立場壓成一句可以被任何人轉貼的口號。這也給幾個月後的讀者留下了一張現成的對照圖：左邊放七月的拒絕，右邊放十一月的詢價，連註解都省了。[二月與七月發言紀錄][1]
 
@@ -34,7 +69,7 @@ Minecraft 創作者 Markus「Notch」Persson 有個奇妙的購物需求。11 �
 
 <figure><img src="{{ '/assets/img/technical/notch-claude-game-engine/timeline.svg' | relative_url }}" alt="7 月 14 日拒絕 AI，7 月 21 日考慮試做工具，11 月 20 日展示舊引擎，11 月 23 日詢問額度與速度。" style="width:100%;height:auto"><figcaption>七月還在列想做的工具，十一月已經拿得出畫面。兩段發言相隔四個月。</figcaption></figure>
 
-## 九月，他已經拿方塊世界做壓力測試
+## 九月，他已經拿方塊世界做壓力測試 {#九月他已經拿方塊世界做壓力測試}
 
 七月還只有一張工具願望清單，9 月 8 日已經有畫面可看了。Notch 貼出一段立體場景，說自己在測一套畫出方塊世界的程式，隨後又特地補一則，說明這是透過對話讓 AI 寫出來的。兩則貼文放在一起才有意思：前一則講他想逼出什麼效果，後一則講他用什麼方法做。[Notch 同日補充開發方式](https://x.com/notch/status/2097181292408287681)
 
@@ -44,7 +79,7 @@ Minecraft 創作者 Markus「Notch」Persson 有個奇妙的購物需求。11 �
 
 Notch 說這次連每一輪畫面怎麼算都不用逐步交代。但請留意他已經替模型做了哪些決定：世界要怎麼表示、資料從哪裡來、這次要把細節推到什麼程度。他可以少寫一大段實作，仍然掌握這個實驗要考什麼。這讓我重新理解他七月說的「試試看」：到了九月，他挑的題目已經足夠具體，做壞了自己看得出來。
 
-## 十一月，出題的人寫過原版
+## 十一月，出題的人寫過原版 {#十一月出題的人寫過原版}
 
 11 月 20 日，Notch 展示一個由立體小格子組成的世界。他說，他把以前一套引擎能做什麼描述給 Claude 聽，請它從頭實作，連當年來不及做的功能也一起交代。他解釋，這些位在格子裡的物件可以用來表現樹、風車或火焰。他也提醒觀眾，畫面還有接縫問題。[展示內容整理][2]、[India Today 交叉報導][3]
 
@@ -52,7 +87,7 @@ Notch 說這次連每一輪畫面怎麼算都不用逐步交代。但請留意�
 
 三天後，Notch 開口要買更多額度，也要更快的回應。Token 是模型讀寫文字時切分的小單位。多給用量，長時間來回修改比較不容易被迫中斷；回得更快，才會縮短每一輪等候。對一個正盯著風車接縫、想立刻試下一版的人，這兩項服務各有價值。至於他正在做的地牢遊戲《Levers and Chests》，可以從個人簡介確認；那則詢價貼文本身沒有點名專案，也沒有公布開發工時。[詢價原文轉錄][2]、[專案背景][3]
 
-## 從一段引擎影片，到一個笑臉和一張徵人啟事
+## 從一段引擎影片，到一個笑臉和一張徵人啟事 {#從一段引擎影片到一個笑臉和一張徵人啟事}
 
 回頭看 11 月 20 日的原貼文，還有一個很容易在轉述時消失的細節。Notch 說，匯入方塊模型檔案的功能已經做過，這一次重寫沒有包含它。這直接影響怎麼看影片。假設你要接手這個專案，畫面中出現一棵樹，你還會想知道它怎麼讀進來、換一棵樹能不能用、哪些舊工具仍要保留。把影片拿來看效果很合適，要據此估算移植工作量，就得先問清楚邊界。
 
@@ -70,7 +105,7 @@ Notch 說這次連每一輪畫面怎麼算都不用逐步交代。但請留意�
 
 <blockquote class="twitter-tweet" data-dnt="true" data-lang="zh-tw" data-align="center" data-conversation="none"><p>11 月 25 日，Notch 談自己成了新聞，也公開邀人一起工作。</p>&mdash; Notch（@notch） <a href="https://twitter.com/notch/status/2125506271835046211">在 X 上看原貼文</a></blockquote>
 
-## 一個閃了好幾年的像素，怎樣才算修好？
+## 一個閃了好幾年的像素，怎樣才算修好？ {#一個閃了好幾年的像素怎樣才算修好}
 
 Notch 還講了一件比詢價更接近工程現場的事。他說，舊程式裡有個像素會閃的老毛病，Claude 從頭寫的版本竟然也有，後來才讓它修好。他高興到請 Claude 做成有局部放大圖、用紅圈圈出問題的報告，接著自己補一句，大概永遠不會讀。這是他的除錯紀錄；光憑貼文，我們看不到修改前後在各種裝置上的表現。[Notch 的除錯回憶](https://x.com/notch/status/2125533997908578459)
 
@@ -78,7 +113,7 @@ Notch 還講了一件比詢價更接近工程現場的事。他說，舊程式�
 
 如果是我的團隊接手，我會把紅圈報告改成一段誰都能重跑的鏡頭移動。同一座風車、同一段路，先錄下原版閃爍的位置，再讓新舊版本各走一遍。接著換個距離和角度，看修正會不會換個地方又閃起來。這些是我會加的驗收步驟。它也說明，能指揮 AI 寫新功能，和能證明某個老問題終於消失，實際上要準備不同的材料。
 
-## 把原始碼遮起來，寫過程式的人還有優勢嗎？
+## 把原始碼遮起來，寫過程式的人還有優勢嗎？ {#把原始碼遮起來寫過程式的人還有優勢嗎}
 
 Notch 後來直接回了一句「Yeah, I changed my mind.」他在另一則回覆裡也舉了一個例子：畫面要把資料送給顯示卡，他對 Claude 把資料位置寫成固定數字的做法有意見。這個細節比一句表態更能說清楚他現在的立場。今天的位置寫死了，明天資料排列一改，就得有人知道該回頭找哪幾個數字。[Notch 的公開回覆紀錄][8]
 
@@ -88,9 +123,9 @@ Notch 後來直接回了一句「Yeah, I changed my mind.」他在另一則回�
 
 回到風車，我會這樣區分兩種本事。看出「轉動視角才會露縫」，需要想得到該試哪個動作；把「畫面怪怪的」改寫成「站在風車背面，向左移一格，葉片與軸心之間會透光」，需要把觀察說清楚。這是我設想的回報範例。即使兩個人手上有一模一樣的 Claude 額度，他們能帶回去修的線索，也可能差很多。
 
-### 學生眼前究竟有什麼？
+### 學生眼前究竟有什麼？ {#學生眼前究竟有什麼}
 
-<figure><a href="{{ '/assets/img/technical/notch-claude-game-engine/eth-study-interface.webp' | relative_url }}"><img src="{{ '/assets/img/technical/notch-claude-game-engine/eth-study-interface.webp' | relative_url }}" width="3099" height="1699" style="width:100%;height:auto" alt="ETH 實驗平台的對話與應用程式預覽畫面。學生輸入要求、操作產出，再決定下一輪要改什麼。"></a><figcaption>點圖可放大查看實驗介面。Sverrir Thorgeirsson、Theo B. Weidmann、Zhendong Su，<a href="https://arxiv.org/html/2603.14133v1#S5.F4">論文圖 4</a>，依 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 使用，僅轉換圖片格式。</figcaption></figure>
+<figure><a class="portfolio-lightbox" data-gallery="notch-claude" data-type="image" href="{{ '/assets/img/technical/notch-claude-game-engine/eth-study-interface.webp' | relative_url }}"><img src="{{ '/assets/img/technical/notch-claude-game-engine/eth-study-interface.webp' | relative_url }}" width="3099" height="1699" style="width:100%;height:auto" alt="ETH 實驗平台的對話與應用程式預覽畫面。學生輸入要求、操作產出，再決定下一輪要改什麼。"></a><figcaption>點圖可放大查看實驗介面。Sverrir Thorgeirsson、Theo B. Weidmann、Zhendong Su，<a href="https://arxiv.org/html/2603.14133v1#S5.F4">論文圖 4</a>，依 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 使用，僅轉換圖片格式。</figcaption></figure>
 
 看這張介面，比讀「自然語言開發」六個字容易。學生可以拿自己的成品來操作，再回對話欄要求修改。想像你交出一個週末餐點規劃器：選餐後看見熱量總數變了，還得再把餐點移除，看數字會不會回去。倘若只交代「照著做一個差不多的」，模型可能畫得很像，直到有人取消一餐，才發現帳根本算不回來。這個操作例子是我的，研究者實際採用的則是預先訂好的功能評分規準。[論文第 3、7 節][7]
 
@@ -100,7 +135,7 @@ Notch 後來直接回了一句「Yeah, I changed my mind.」他在另一則回�
 
 論文裡還有一個容易被誤讀的數字：資工的獨立解釋量約是寫作的兩倍。這句話值得拆開讀。研究者先把寫作成績放進模型，再加資工分數，多解釋了約 12.5 個百分點的表現差異；把加入的順序反過來，寫作多解釋約 5.9 個百分點。這個比值不能當成面試評分權重。真要觀察一位應徵者，我反而想拿同一個壞掉的場景給他，看他先試哪一步，又怎麼向下一個同事描述自己看到的錯誤。[論文第 8.2 節][7]
 
-## 工程師覺得省了時間，碼表怎麼說？
+## 工程師覺得省了時間，碼表怎麼說？ {#工程師覺得省了時間碼表怎麼說}
 
 研究機構 METR 做過一個很像樣的對照。2025 年上半年，16 位熟悉自家開源專案的開發者，拿出 246 件原本就要做的工作，隨機分派哪些可以用 AI。動手前，大家預期能少花 24% 的時間；做完再問，他們仍估計省了 20%。實際記錄下來，允許用 AI 的任務平均多花了 19% 的時間。這批人主要用 Cursor 搭配當時的 Claude 3.5 或 3.7 Sonnet。[METR 實驗設計與結果][4]
 
@@ -110,13 +145,13 @@ Notch 後來直接回了一句「Yeah, I changed my mind.」他在另一則回�
 
 把這兩次實驗擺回 Notch 身邊，我會保留兩個判斷。第一，他願意付錢，足以說明多試幾次對他有價值。第二，若團隊要拿這個故事編下一季人力預算，仍得量自己的工時。受試者修的是成熟專案裡的問題，Notch 展示的是重建中的引擎。兩邊連「做完」的條件都不一樣。
 
-## 亞洲和美國的差距，問卷到底問了什麼？
+## 亞洲和美國的差距，問卷到底問了什麼？ {#亞洲和美國的差距問卷到底問了什麼}
 
 Ipsos 在 2026 年 3 月 20 日至 4 月 3 日訪問 32 國共 23,532 名成人，請他們表態：「使用 AI 的產品和服務讓我感到興奮。」中國受訪者有 83% 同意，印度 79%，美國 33%。同一份問卷裡，印度也有 63% 同意這類產品讓自己緊張。這兩題分開統計，無法從總數認出哪些人兩題都勾了同意。[Ipsos 原始問卷與各國表格][6]
 
 這讓我對「亞洲人務實，美國人反 AI」這種解讀有所保留。買工具的開發者、評價遊戲美術的玩家、回答問卷的消費者，各自在回答不同的問題。同一個人完全可能期待地圖編輯器幫忙，又很在乎遊戲裡的畫是誰畫的。從一串留言猜整個地區的態度，比從一張風車截圖猜整套引擎的品質還難。
 
-## 我會先拿一道門試額度
+## 我會先拿一道門試額度 {#我會先拿一道門試額度}
 
 如果我要替小團隊決定要不要多買一個月，我會先挑一個真的有人在等的工具，例如前面那個地圖編輯器。請關卡設計者留一張舊地圖，寫下三件他明天就要做的事：開舊檔、挪一扇門、存檔重開。再請開發者留一張故意缺資料的地圖，看工具能不能指出哪裡壞了，同時保住原檔。
 
@@ -126,16 +161,26 @@ Ipsos 在 2026 年 3 月 20 日至 4 月 3 日訪問 32 國共 23,532 名成人�
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## 參考資料
+## 參考資料 {#參考資料}
 
-1. [七月的兩次發言與開發工具][1]
-2. [十一月引擎展示與額度貼文][2]
-3. [引擎展示交叉查核][3]
-4. [METR 初次實驗][4]
-5. [METR 後續招募與選擇偏差][5]
-6. [Ipsos 各國同題調查][6]
-7. [CHI 2026：資工與寫作能力如何預測 AI 輔助開發表現][7]
-8. [Notch 談改變想法與圖形程式的實作細節（公開貼文鏡像）][8]
+- **\[1\]** [bunpav：Notch 從拒絕 AI 到考慮用它開發地圖工具（2026-07）][1]
+- **\[2\]** [RuntimeWire：Minecraft 創作者向 Anthropic 詢問更高用量（2026-11-24）][2]
+- **\[3\]** [India Today：Notch 展示重做的遊戲引擎並詢問額度（2026-11-24）][3]
+- **\[4\]** [METR：資深開源開發者使用 AI 的工時實驗（2025-07-10）][4]
+- **\[5\]** [METR：後續工時實驗的招募與樣本限制（2026-02-24）][5]
+- **\[6\]** [Ipsos：《AI Monitor 2026》跨國調查與各國答題分布（2026）][6]
+- **\[7\]** [Thorgeirsson、Weidmann、Su：資工與寫作能力如何預測 AI 輔助開發表現（CHI 2026）][7]
+- **\[8\]** [Sotwe：Notch 談改變想法與圖形程式的實作細節（X 公開貼文鏡像）][8]
+- **[9]** [X：Notch，Reject AI.（2026-07-14）](https://x.com/notch/status/2076994141628547245)
+- **[10]** [X：Notch，方塊場景的繪圖壓力測試（2026-09-08）](https://x.com/notch/status/2097178507465969692)
+- **[11]** [X：Notch，補充測試場景的開發方式（2026-09-08）](https://x.com/notch/status/2097181292408287681)
+- **[12]** [X：Notch，請 Claude 重做舊引擎（2026-11-20）](https://x.com/notch/status/2123893577873010869)
+- **[13]** [X：Notch，向 Anthropic 詢問用量與速度（2026-11-23）](https://x.com/notch/status/2124956108687298792)
+- **[14]** [X：Elon Musk，回覆 Notch 的詢價貼文（2026-11-24）](https://x.com/elonmusk/status/2125268089361035505)
+- **[15]** [X：Notch，Yeah, I changed my mind.（2026-11-24）](https://x.com/notch/status/2125326211559661640)
+- **[16]** [X：Notch，回應新聞報導並公開徵人（2026-11-25）](https://x.com/notch/status/2125506271835046211)
+- **[17]** [X：Notch，回顧像素閃爍問題（2026-11-25）](https://x.com/notch/status/2125533997908578459)
+- **[18]** [X：Notch，補述閃爍的技術原因（2026-11-25）](https://x.com/notch/status/2125534981954978278)
 
 [1]: https://bunpav.com/blog/notch-vibe-coding-reversal-levers-and-chests
 [2]: https://runtimewire.com/article/minecraft-creator-asks-anthropic-for-more-claude-tokens-than-its-plans-will-sell

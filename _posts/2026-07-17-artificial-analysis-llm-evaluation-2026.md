@@ -8,8 +8,14 @@ tags: [artificial-analysis, llm-evaluation, ai-agent, modelops]
 layout: article
 cover_image: /assets/img/artificial-analysis-llm-evaluation-2026/artificial-analysis-llm-evaluation-banner.jpg
 hero_image: true
-description: "排行榜只能幫你縮小候選，不能替你做採購與架構決策。本文拆解 Artificial Analysis Intelligence Index v4.1、Agentic Benchmark、速度與成本，並建立可落地的私有評估與模型路由方法。"
+description: "從 Artificial Analysis 排行榜、回應速度與成本，建立適合自己任務的模型評估方法。"
 keywords: Artificial Analysis, LLM 評估, Intelligence Index, Benchmark, AI Agent, Agentic Engineering, ModelOps, TTFT, TTFA, Cost per Task, 私有評估集, 模型路由, 史旺基, Swanky Studio
+cover_alt: "女子一手拿著評量表，一手調整控制台旋鈕，周圍螢幕顯示模型比較圖。"
+cta_context: technical
+related_posts:
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
+  - poteto-work-handoff
 ---
 
 每次新模型發布，大家第一個問題通常都是：「它排第幾名？」
@@ -23,6 +29,40 @@ Artificial Analysis 有價值的地方，不是再做一張更長的排行榜，
 但它仍然不能替企業回答最後一題：**哪一套模型系統，能在可接受的成本、延遲、人工介入與風險下，穩定完成我的工作？**
 
 這篇文章要處理的，就是從公開排行榜走到實際選型，中間那段最容易被省略的路。
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>先分清模型能力與供應商的服務表現，兩者各有不同量法。</li>
+    <li>同時看回應速度、整件事花多久，以及每件成功任務的成本。</li>
+    <li>用公開排行榜挑候選，再用自己的任務與驗收門檻決定部署。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">排行榜衡量什麼</span>
+      <ol class="article-toc-items">
+        <li><a href="#先給結論排行榜是雷達不是方向盤">先給結論：排行榜是雷達，不是方向盤</a></li>
+        <li><a href="#artificial-analysis-的定位把模型強不強與服務好不好拆開">Artificial Analysis 的定位：把「模型強不強」與「服務好不好」拆開</a></li>
+        <li><a href="#intelligence-index-v412026-年開始更像工作測驗不只像考卷">Intelligence Index v4.1：2026 年開始更像工作測驗，不只像考卷</a></li>
+        <li><a href="#2026-llm-評估地圖從公開訊號走向部署決策">2026 LLM 評估地圖：從公開訊號走向部署決策</a></li>
+        <li><a href="#不要把速度延遲與任務時間混成一個數字">不要把速度、延遲與任務時間混成一個數字</a></li>
+        <li><a href="#從-token-price-升級到-cost-per-successful-task">從 Token Price 升級到 Cost per Successful Task</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">從分數到部署</span>
+      <ol class="article-toc-items">
+        <li><a href="#常見-benchmark-的分工每一把尺都有自己的形狀">常見 Benchmark 的分工：每一把尺都有自己的形狀</a></li>
+        <li><a href="#公開排行榜的七個常見陷阱">公開排行榜的七個常見陷阱</a></li>
+        <li><a href="#建立私有評估集把需求變成能重跑的測試">建立私有評估集：把需求變成能重跑的測試</a></li>
+        <li><a href="#最後的決策不是一名冠軍而是一套路由">最後的決策不是一名冠軍，而是一套路由</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先給結論：排行榜是雷達，不是方向盤
 
@@ -271,8 +311,8 @@ API 接受一百萬 token，不代表模型能可靠召回遠端資訊、整合�
 
 ## 參考資料
 
-- [Artificial Analysis：Intelligence Benchmarking Methodology](https://artificialanalysis.ai/methodology/intelligence-benchmarking)
-- [Artificial Analysis：Language Model API Performance Benchmarking](https://artificialanalysis.ai/methodology/performance-benchmarking)
-- [Artificial Analysis：Intelligence Index v4.1 Announcement](https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1)
-- [Artificial Analysis：General Benchmarking Methodology](https://artificialanalysis.ai/methodology)
-- [LMArena：Arena-Rank Methodology](https://lmarena.ai/blog/arena-rank/)
+- **[1]** [Artificial Analysis：Intelligence Benchmarking Methodology](https://artificialanalysis.ai/methodology/intelligence-benchmarking)
+- **[2]** [Artificial Analysis：Language Model API Performance Benchmarking](https://artificialanalysis.ai/methodology/performance-benchmarking)
+- **[3]** [Artificial Analysis：Intelligence Index v4.1 Announcement](https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1)
+- **[4]** [Artificial Analysis：General Benchmarking Methodology](https://artificialanalysis.ai/methodology)
+- **[5]** [LMArena：Arena-Rank Methodology](https://lmarena.ai/blog/arena-rank/)

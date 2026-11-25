@@ -7,8 +7,16 @@ nav_active: education
 cover_image: /assets/img/linkedin/claude-code-governance.svg
 og_image: /assets/img/linkedin/claude-code-governance-og.jpg
 hero_image: true
-description: "Claude Code 不是聊天機器人，是一套可以治理的工程代理系統。深入解析六層架構、上下文工程、Skills/Hooks/Subagents 設計，以及 Prompt Caching 與驗證閉環。"
+description: "從六層架構看 Claude Code 如何取得上下文、分派工作、快取提示，並用測試確認每次修改。"
 keywords: Claude Code,AI治理,工程代理,AI coding,技術管理,AI學習,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「你不知道的 Claude Code」，右側視窗列出多項設定。"
+seo_title: "你不知道的 Claude Code：從聊天工具到工程代理，你真正該學的是治理"
+cta_context: agentic
+tags: ["Claude Code", "AI治理"]
+related_posts:
+  - jinpingmei-character-lab
+  - agentic-engineering-patterns-guide
+  - claude-code-s2m-skill
 ---
 
 很多人第一次用 Claude Code，都用 ChatBot 的直覺在操作：
@@ -22,6 +30,46 @@ keywords: Claude Code,AI治理,工程代理,AI coding,技術管理,AI學習,史�
 這篇文章的目標，是把 Claude Code 從「看起來很會寫程式的聊天視窗」，還原成一套可以治理、可以驗證、可以長期維護的工程工作系統。
 
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>把 Claude Code 看作反覆讀取環境、呼叫工具與檢查結果的代理。</li>
+    <li>規則、技能、工具和獨立工作階段各有用途，尤其要管好誰能讀取哪些資料。</li>
+    <li>把可重複檢查的要求交給驗證程序，並記錄失敗時如何恢復。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">代理與工作環境</span>
+      <ol class="article-toc-items">
+        <li><a href="#一底層是代理循環不是對話回應">底層是代理循環，不是對話回應</a></li>
+        <li><a href="#二六層架構治理-claude-code-的完整框架">六層架構：治理 Claude Code 的完整框架</a></li>
+        <li><a href="#三先把名詞切清楚">先把名詞切清楚</a></li>
+        <li><a href="#四上下文工程最重要的系統約束">上下文工程：最重要的系統約束</a></li>
+        <li><a href="#五plan-mode-的工程價值">Plan Mode 的工程價值</a></li>
+        <li><a href="#六skills-設計不是模板庫是按需載入的工作流">Skills 設計：不是模板庫，是按需載入的工作流</a></li>
+        <li><a href="#七tool-設計不是功能越多越好">Tool 設計：不是功能越多越好</a></li>
+        <li><a href="#八hooks把不該靠記憶的事收回確定性流程">Hooks：把不該靠記憶的事收回確定性流程</a></li>
+        <li><a href="#九subagents最大的價值不是平行而是隔離">Subagents：最大的價值不是平行，而是隔離</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">驗證與治理</span>
+      <ol class="article-toc-items">
+        <li><a href="#十prompt-caching很少人講但非常重要">Prompt Caching：很少人講，但非常重要</a></li>
+        <li><a href="#十一verifiers沒有驗證就沒有工程級代理">Verifiers：沒有驗證，就沒有工程級代理</a></li>
+        <li><a href="#十二高頻命令一覽">高頻命令一覽</a></li>
+        <li><a href="#十三claudemd-正確寫法協作契約不是知識庫">CLAUDE.md 正確寫法：協作契約，不是知識庫</a></li>
+        <li><a href="#十四建議的專案目錄結構">建議的專案目錄結構</a></li>
+        <li><a href="#十五最常見的反模式">最常見的反模式</a></li>
+        <li><a href="#十六給初學者的實作順序不要一次全上">給初學者的實作順序：不要一次全上</a></li>
+        <li><a href="#結語三個階段">結語：三個階段</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 一、底層是代理循環，不是對話回應
 

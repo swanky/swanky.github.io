@@ -14,7 +14,8 @@ cta_context: ai-visual
 related_posts:
   - ai-video-production-rehearsal-seedance-workflow
   - ucx-uniform-clonex-origin
-description: "我把 Blender 裝回來，試試 NFT 提供的三維模型能否協助製作 AI 影片。從五隻 CloneX 群舞到 Bunny 的比較，整理實測、失敗與未驗證的假設。"
+  - ai-video-camera-language-prompt
+description: "從五隻 CloneX 群舞到 Bunny 的比較，記錄我用 Blender 模型輔助 AI 影片製作的嘗試與限制。"
 keywords: CloneX, Bunny, AI 舞蹈, Seedance, Blender, 深度參考, 文字編舞, KPOP, AI Agent, 史旺基
 ---
 
@@ -79,6 +80,28 @@ NFT 可以先理解成用區塊鏈記錄持有關係的數位收藏。我這裡�
     <figcaption id="cap-a2"><strong>後來：A2 文字編舞，八秒</strong>取樣可見側踏、展臂與交叉步，四周留出更多空間。但角色圖、臉部參考、動作提示與片長都變了，不能單押一個原因。無音軌。<a href="{{ '/assets/img/technical/clonex-bunny-dance-reference-bottleneck/a2.mp4' | relative_url }}">開啟完整試片</a>。</figcaption>
   </figure>
 </div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">把角色送上舞台</span>
+      <ol class="article-toc-items">
+        <li><a href="#models">載入成功，離登台還很遠</a></li>
+        <li><a href="#repairs">先把褲子穿回來，再談畫面升級</a></li>
+        <li><a href="#first-results">Seedance 成功了，我卻不想留下那支片</a></li>
+        <li><a href="#reference-roles">參考不是丟越多越好，而是要知道誰管什麼</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">比較畫面與下一輪實驗</span>
+      <ol class="article-toc-items">
+        <li><a href="#matched-test">真正值得放在一起看的，是 B 和 C</a></li>
+        <li><a href="#framing">A2 改善了構圖，不代表找到一句神咒</a></li>
+        <li><a href="#next-hypothesis">下一輪，我想換的是表演，不只是提示詞</a></li>
+        <li><a href="#costs">附錄：花了多少，哪些數字不能混在一起</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 載入成功，離登台還很遠 {#models}
 
@@ -280,15 +303,15 @@ Bunny 的鞋款來源是 **TennisShoes（punkduck_tennis_shoes）**，作者 **p
 
 以下則是原研究期間的引用，並非把所有頁面重新測過一次；第三方示範影片與教學全文不在本站重散布。
 
-1. [BerserkiKun：aespa KISS N TELL 免費身體 VMD](https://www.patreon.com/Berserkikun/posts/47-free-aespa-n-166592131)；[作者影片說明](https://www.youtube.com/watch?v=t-RQCVwRK7Y)。原研究查閱：2026-09-12。
-2. MakeHuman Community：[shoes01](https://static.makehumancommunity.org/assets/assetpacks/shoes01.html)、[shoes02](https://static.makehumancommunity.org/assets/assetpacks/shoes02.html)、[shoes03](https://static.makehumancommunity.org/assets/assetpacks/shoes03.html)。原研究查閱：2026-09-12。
-3. [abulu8：角色圖與舞蹈影片的分工](https://x.com/abulu8/status/2093404851174805661)，2026-08-28。
-4. [Zeto：連續 KPOP 舞句模板](https://x.com/ZetoGroovin/status/2098003565373522328)，2026-09-10。
-5. [Zeto：Seedance 2.0 深度影片參考](https://x.com/ZetoGroovin/status/2077718690817290261)，2026-07-16。
-6. [Zeto：綠幕素體與編舞交付](https://x.com/ZetoGroovin/status/2055619464469844296)，2026-05-16。
-7. APOB：[8 月 25 日文章](https://x.com/apob_ai/status/2092199846459711739)、[8 月 17 日文章](https://x.com/apob_ai/status/2089272831066652923)、[8 月 10 日文章](https://x.com/apob_ai/status/2086762672804986954)。共用正文不能重複計為獨立證據。
-8. [Video Depth Anything：影片深度估算專案](https://github.com/DepthAnything/Video-Depth-Anything)。原研究查閱：2026-09-13；本次未用於真人轉深度。
-9. [OpenRouter：Seedance 2.5 模型頁](https://openrouter.ai/bytedance/seedance-2.5)。原研究規格快照：2026-09-12。
-10. [ByteDance Seed：Introducing Seedance 2.5](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5)，2026-07-31。
+- **[1]** [BerserkiKun：aespa KISS N TELL 免費身體 VMD](https://www.patreon.com/Berserkikun/posts/47-free-aespa-n-166592131)；[作者影片說明](https://www.youtube.com/watch?v=t-RQCVwRK7Y)。原研究查閱：2026-09-12。
+- **[2]** MakeHuman Community：[shoes01](https://static.makehumancommunity.org/assets/assetpacks/shoes01.html)、[shoes02](https://static.makehumancommunity.org/assets/assetpacks/shoes02.html)、[shoes03](https://static.makehumancommunity.org/assets/assetpacks/shoes03.html)。原研究查閱：2026-09-12。
+- **[3]** [abulu8：角色圖與舞蹈影片的分工](https://x.com/abulu8/status/2093404851174805661)，2026-08-28。
+- **[4]** [Zeto：連續 KPOP 舞句模板](https://x.com/ZetoGroovin/status/2098003565373522328)，2026-09-10。
+- **[5]** [Zeto：Seedance 2.0 深度影片參考](https://x.com/ZetoGroovin/status/2077718690817290261)，2026-07-16。
+- **[6]** [Zeto：綠幕素體與編舞交付](https://x.com/ZetoGroovin/status/2055619464469844296)，2026-05-16。
+- **[7]** APOB：[8 月 25 日文章](https://x.com/apob_ai/status/2092199846459711739)、[8 月 17 日文章](https://x.com/apob_ai/status/2089272831066652923)、[8 月 10 日文章](https://x.com/apob_ai/status/2086762672804986954)。共用正文不能重複計為獨立證據。
+- **[8]** [Video Depth Anything：影片深度估算專案](https://github.com/DepthAnything/Video-Depth-Anything)。原研究查閱：2026-09-13；本次未用於真人轉深度。
+- **[9]** [OpenRouter：Seedance 2.5 模型頁](https://openrouter.ai/bytedance/seedance-2.5)。原研究規格快照：2026-09-12。
+- **[10]** [ByteDance Seed：Introducing Seedance 2.5](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5)，2026-07-31。
 
 </div>

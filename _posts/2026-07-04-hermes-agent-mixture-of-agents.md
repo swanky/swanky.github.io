@@ -7,8 +7,14 @@ tags: [claude-code]
 layout: article
 cover_image: /assets/img/linkedin/hermes-agent-mixture-of-agents.jpg
 hero_image: true
-description: "AI Agent 的競爭，正從「哪個模型最聰明」轉向多模型如何組成可靠系統。從 Mixture of Agents 切入，解析 Hermes Agent 的做法。"
+description: "從 Mixture of Agents 看 Hermes Agent 如何組合不同模型，以及多模型分工的可靠性問題。"
 keywords: Mixture of Agents, MoA, Hermes Agent, Nous Research, 多代理協作, multi-agent, AI Agent, agentic engineering, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, OpenRouter, Claude Code, aggregator, reference model, MoE, ReAct, GAIA, SWE-bench, AI runtime, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "多位角色用筆電分工，研究、校對等工作透過發光連線匯入中央。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 > 2026 年的 AI Agent 競爭，不再只是模型智商競賽，而是 runtime、記憶、工具、安全與評估方法的系統設計競賽。
@@ -22,6 +28,42 @@ Nous Research 的 Hermes Agent 是這個轉向中很值得研究的開源專案�
 這篇文章會從四個角度來談：MoA 的研究脈絡與 Hermes 的產品化實作、Hermes Agent 作為個人常駐型 AI runtime 的架構價值、它與主流框架的差異，以及我自己打算怎麼把它放進研究與內容生產的工作流。
 
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>Mixture of Agents 讓多個模型提供候選答案，再彙整結果。</li>
+    <li>模型變多也增加等待與費用，值得先挑需要比較觀點的任務試做。</li>
+    <li>要放進實際工作流程，還得指定哪些結論需要驗證、誰負責做最後決定。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">多模型怎麼分工</span>
+      <ol class="article-toc-items">
+        <li><a href="#為什麼-2026-年還值得研究-hermes-agent">為什麼 2026 年還值得研究 Hermes Agent？</a></li>
+        <li><a href="#moa-是什麼和-moe-有什麼不同">MoA 是什麼？和 MoE 有什麼不同？</a></li>
+        <li><a href="#hermes-如何把-moa-產品化">Hermes 如何把 MoA 產品化？</a></li>
+        <li><a href="#一個-moa-設定範例">一個 MoA 設定範例</a></li>
+        <li><a href="#moa-的價值不是更多模型而是更好的決策流程">MoA 的價值：不是更多模型，而是更好的決策流程</a></li>
+        <li><a href="#hermes-agent-的架構價值">Hermes Agent 的架構價值</a></li>
+        <li><a href="#和主流-ai-agent-框架比較">和主流 AI Agent 框架比較</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">部署與治理</span>
+      <ol class="article-toc-items">
+        <li><a href="#把-hermes-moa-放進真實工作流">把 Hermes MoA 放進真實工作流</a></li>
+        <li><a href="#部署與使用建議">部署與使用建議</a></li>
+        <li><a href="#值得一讀的-agent-研究論文">值得一讀的 Agent 研究論文</a></li>
+        <li><a href="#風險與治理agent-越像員工越需要管理制度">風險與治理：Agent 越像員工，越需要管理制度</a></li>
+        <li><a href="#我的結論">我的結論</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 為什麼 2026 年還值得研究 Hermes Agent？
 
@@ -400,12 +442,12 @@ MoA 則是 Hermes 中很有代表性的設計：它不是取代 agent loop，而
 
 ## 參考資料
 
-- [Nous Research，Hermes Agent GitHub README](https://github.com/NousResearch/hermes-agent)。
-- [Hermes Agent 官方文件：Mixture of Agents](https://hermes-agent.nousresearch.com/docs/user-guide/features/mixture-of-agents)。
-- [Wang et al., 2024, *Mixture-of-Agents Enhances Large Language Model Capabilities*](https://arxiv.org/abs/2406.04692)。
-- [Li et al., 2025, *Rethinking Mixture-of-Agents: Is Mixing Different Large Language Models Beneficial?*](https://arxiv.org/abs/2502.00674)。
-- [Yao et al., 2022, *ReAct: Synergizing Reasoning and Acting in Language Models*](https://arxiv.org/abs/2210.03629)。
-- [Mialon et al., 2023, *GAIA: A Benchmark for General AI Assistants*](https://arxiv.org/abs/2311.12983)。
-- [Jimenez et al., 2023, *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*](https://arxiv.org/abs/2310.06770)。
-- [Belcak et al., 2025, *Small Language Models are the Future of Agentic AI*](https://arxiv.org/abs/2506.02153)。
-- [Zhong and Zhu, 2026, *AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents*](https://arxiv.org/abs/2605.13357)。
+- **[1]** [Nous Research，Hermes Agent GitHub README](https://github.com/NousResearch/hermes-agent)。
+- **[2]** [Hermes Agent 官方文件：Mixture of Agents](https://hermes-agent.nousresearch.com/docs/user-guide/features/mixture-of-agents)。
+- **[3]** [Wang et al., 2024, *Mixture-of-Agents Enhances Large Language Model Capabilities*](https://arxiv.org/abs/2406.04692)。
+- **[4]** [Li et al., 2025, *Rethinking Mixture-of-Agents: Is Mixing Different Large Language Models Beneficial?*](https://arxiv.org/abs/2502.00674)。
+- **[5]** [Yao et al., 2022, *ReAct: Synergizing Reasoning and Acting in Language Models*](https://arxiv.org/abs/2210.03629)。
+- **[6]** [Mialon et al., 2023, *GAIA: A Benchmark for General AI Assistants*](https://arxiv.org/abs/2311.12983)。
+- **[7]** [Jimenez et al., 2023, *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*](https://arxiv.org/abs/2310.06770)。
+- **[8]** [Belcak et al., 2025, *Small Language Models are the Future of Agentic AI*](https://arxiv.org/abs/2506.02153)。
+- **[9]** [Zhong and Zhu, 2026, *AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents*](https://arxiv.org/abs/2605.13357)。

@@ -10,6 +10,12 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E5%BE%9E%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80%E5%88%B0-agentic-ai-coding-agentai-%E6%99%82%E4%BB%A3%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E6%AD%A3%E5%9C%A8%E8%AE%8A%E6%88%90%E4%BB%80%E9%BA%BC-swanky-hsiao-kiuyc/"
 description: "可維護、可稽核、可擴充——AI 寫得快，不代表它寫得對。探討 AI 時代程式設計的典範轉移，從手寫實作細節轉向定義行為、約束邊界、驗證結果。"
 keywords: AgenticAI,ClaudeCode,SpecOrientedProgramming,TDD,Playwright,軟體工程,程式設計,技術顧問,史旺基,Swanky Studio
+cover_alt: "三位角色用電腦、手繪筆記與白板討論，後方陳列著不同年代的電腦。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 前幾天同事問我：「可以給我你那個功能的資料庫結構嗎？我要對接。」

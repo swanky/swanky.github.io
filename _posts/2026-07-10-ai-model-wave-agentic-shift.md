@@ -13,8 +13,10 @@ related_posts:
   - fable-field-guide
   - ai-coding-tool-selection-2026
   - kimi-k3-open-frontier-intelligence
-description: "Grok 4.5、GPT-5.6 與 Muse Spark 1.1 在 48 小時內接連發布。從實踐者視角，解讀這波發布潮的分工與 benchmark 的口徑陷阱。"
+description: "Grok、GPT 與 Muse Spark 接連推出更新。從任務分工與評測條件，看懂同一波發布的不同用途。"
 keywords: GPT-5.6, Grok 4.5, Muse Spark, Claude Fable 5, Codex, ChatGPT Classic, agentic coding, model routing, SWE-Bench, Terminal-Bench, Claude Code, Hermes Agent, agentic engineering, AI agent, 史旺基, Swanky Studio
+cover_alt: "多位角色在夜間工作室操作發光地圖，四周螢幕顯示圖表與任務進度。"
+cta_context: agentic
 ---
 
 7 月 8 日 Grok 4.5，7 月 9 日 GPT-5.6 和 Muse Spark 1.1。48 小時、三家公司、一整排新名字，發布密度高到像在清庫存。

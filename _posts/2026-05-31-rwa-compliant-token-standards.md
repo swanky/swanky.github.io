@@ -7,8 +7,15 @@ cover_image: /assets/img/rwa/rwa-compliant-token-standards.svg
 og_image: /assets/img/rwa/rwa-compliant-token-standards-og.jpg
 hero_image: true
 seo_title: ERC-3643 vs ERC-1404 設計哲學｜合規型代幣標準與 CMTAT 解析
-description: "ERC-3643 與 ERC-1404 代表 RWA 合規型代幣的兩種哲學：整合派框架 vs 簡化派介面。一文看懂兩者的取捨、gas 與授權差異，以及 CMTAT 為何選擇同時支援兩者。"
+description: "比較 ERC-3643 與 ERC-1404 的授權、使用成本與整合取捨，看懂 CMTAT 同時支援兩者的原因。"
 keywords: ERC-3643,ERC-1404,CMTAT,合規型代幣,證券代幣標準,RWA,T-REX,RuleEngine,ONCHAINID,智能合約,區塊鏈,史旺基
+cover_alt: "黑底封面寫著「合規型代幣標準」，以兩欄對照 ERC-1404 與 ERC-3643。"
+cta_context: technical
+tags: ["ERC-3643", "ERC-1404"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 這是我 RWA 系列裡技術含量最高的一篇，寫給正在評估證券代幣架構的工程師與技術主管。如果你還不熟悉 RWA 標準的整體脈絡，建議先讀 [〈RWA 代幣化標準演進史〉]({{ '/technical/rwa-standards-evolution/' | relative_url }})，再回來看這篇的設計細節。

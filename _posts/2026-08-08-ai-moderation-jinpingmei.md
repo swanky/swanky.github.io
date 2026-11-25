@@ -14,7 +14,7 @@ related_posts:
   - stable-diffusion-photography-experiment
   - ai-visual-fatigue-photography-authenticity
 hero_image: true
-description: "拿《金瓶梅》這部公共領域的文學經典去測各家 AI：閉源模型對情色文學的攔截、Grok 的寬鬆邊界、開源模型的自由度——一個技術顧問對「AI 道德審查」與開源閉源之爭的第一手觀察。"
+description: "以《金瓶梅》測試不同模型，記錄閉源與開源模型如何處理古典文學中的情色內容，以及審查差異。"
 keywords: AI 內容審查, content moderation, 金瓶梅, 開源 AI, 閉源 AI, LLM, Stable Diffusion, Grok, 道德邊界, 技術選型, 史旺基, Swanky Studio
 ---
 
@@ -26,6 +26,25 @@ keywords: AI 內容審查, content moderation, 金瓶梅, 開源 AI, 閉源 AI, 
     <li><strong>觀點</strong>：內容邊界是真實的技術選型維度。供應商把自家價值觀寫進產品，但使用者的合法需求不會因此消失——這正是開源與閉源之爭裡最少被誠實討論的一塊。</li>
   </ul>
 </div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">用古典小說測模型</span>
+      <ol class="article-toc-items">
+        <li><a href="#為什麼是金瓶梅">為什麼是金瓶梅</a></li>
+        <li><a href="#第一手觀察同一部經典各家反應不同">第一手觀察：同一部經典，各家反應不同</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">產品選擇與限制</span>
+      <ol class="article-toc-items">
+        <li><a href="#這不是安全問題是產品決策">這不是安全問題，是產品決策</a></li>
+        <li><a href="#開源-vs-閉源最少被誠實討論的一塊">開源 vs 閉源：最少被誠實討論的一塊</a></li>
+        <li><a href="#給選型者的建議">給選型者的建議</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 為什麼是金瓶梅
 

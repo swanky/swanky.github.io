@@ -9,8 +9,14 @@ nav_active: education
 cover_image: /assets/img/linkedin/claude-code-40-practices.svg
 og_image: /assets/img/linkedin/claude-code-40-practices-og.jpg
 hero_image: true
-description: "40 個 Claude Code 最值得先學起來的最佳實踐，從基礎設定、工作流加速、上下文管理，到自動化驗證與平行多代理協作，幫你把 AI 開發工具從補字工具升級為完整的協作作業系統。"
+description: "從專案設定、工作流程到自動驗證與平行開發，整理 40 個可直接練習的 Claude Code 用法。"
 keywords: Claude Code,AI coding,最佳實踐,開發加速,工作流優化,技術顧問,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「40 個實戰技巧」，右側終端機呈現彩色指令文字。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 很多人用 Claude Code，還停留在「幫我補這個 function」、「幫我改一段錯誤」的層次。
@@ -30,6 +36,37 @@ keywords: Claude Code,AI coding,最佳實踐,開發加速,工作流優化,技術
 如果你平常有在用 Claude Code、Cursor、CLI 型 AI 開發工具，這篇很值得存起來。
 
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>從專案規則和工作區設定開始，讓每次對話都有可用的起點。</li>
+    <li>整理提示與上下文，把反覆執行的工作和檢查做成固定流程。</li>
+    <li>需要平行開發時隔離工作環境，再驗證結果能否合併。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">設定與工作流程</span>
+      <ol class="article-toc-items">
+        <li><a href="#一基礎設定先把工作台搭好效率才會開始放大">基礎設定：先把工作台搭好，效率才會開始放大</a></li>
+        <li><a href="#二工作流加速不是更努力是少摩擦">工作流加速：不是更努力，是少摩擦</a></li>
+        <li><a href="#三上下文與-prompt-管理清不清楚比長不長更重要">上下文與 prompt 管理：清不清楚，比長不長更重要</a></li>
+        <li><a href="#四自動化工具與驗證讓它不只會寫還會自己檢查">自動化、工具與驗證：讓它不只會寫，還會自己檢查</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">驗證與分工</span>
+      <ol class="article-toc-items">
+        <li><a href="#五claudemd-與規則管理不是越多越好是越準越好">CLAUDE.md 與規則管理：不是越多越好，是越準越好</a></li>
+        <li><a href="#六進階玩法平行工作分身代理隔離環境">進階玩法：平行工作、分身代理、隔離環境</a></li>
+        <li><a href="#真正該優化的不只是程式碼還有你的-ai-工作流">真正該優化的，不只是程式碼，還有你的 AI 工作流</a></li>
+        <li><a href="#建議你這週就先做的-5-件事">建議你這週就先做的 5 件事</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 一、基礎設定：先把工作台搭好，效率才會開始放大
 

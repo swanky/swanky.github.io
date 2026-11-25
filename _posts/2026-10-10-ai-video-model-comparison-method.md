@@ -33,18 +33,28 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#why">為什麼排行榜不夠用</a></li>
-    <li><a href="#specs">步驟一：先查規格，刷掉不能用的</a></li>
-    <li><a href="#test">步驟二：出一道會失敗的考題</a></li>
-    <li><a href="#control">步驟三：只留一個變因</a></li>
-    <li><a href="#judge">步驟四：由要負責的人判，記下失敗類型</a></li>
-    <li><a href="#cost">步驟五：記實付，算每秒可用畫面的成本</a></li>
-    <li><a href="#assign">步驟六：把結論寫成分工表</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">設計比較方式</span>
+      <ol class="article-toc-items">
+        <li><a href="#why">為什麼排行榜不夠用</a></li>
+        <li><a href="#specs">步驟一：先查規格，刷掉不能用的</a></li>
+        <li><a href="#test">步驟二：出一道會失敗的考題</a></li>
+        <li><a href="#control">步驟三：只留一個變因</a></li>
+        <li><a href="#judge">步驟四：由要負責的人判，記下失敗類型</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">計算成本與分工</span>
+      <ol class="article-toc-items">
+        <li><a href="#cost">步驟五：記實付，算每秒可用畫面的成本</a></li>
+        <li><a href="#assign">步驟六：把結論寫成分工表</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 ## 為什麼排行榜不夠用 {#why}
@@ -239,4 +249,4 @@ hero_image: true
 
 ## 參考資料
 
-- [Artificial Analysis：Image-to-Video Leaderboard](https://artificialanalysis.ai/video/leaderboard/image-to-video)（排名會變動；本文引用 2026 年 8 月 23 日的讀取結果）
+- **[1]** [Artificial Analysis：Image-to-Video Leaderboard](https://artificialanalysis.ai/video/leaderboard/image-to-video)（排名會變動；本文引用 2026 年 8 月 23 日的讀取結果）

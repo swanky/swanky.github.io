@@ -37,6 +37,28 @@ AI 助手越來越能幹：它可以幫你寫提示詞、生圖、送出影片�
 
 背後的架構想法，我在〈[可上線的 AI Agent，不是更會自主]({{ '/technical/production-ai-agent-control-planes/' | relative_url }})〉寫過。這篇只看它落到影片製作時長什麼樣子。
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">誰能決定送件</span>
+      <ol class="article-toc-items">
+        <li><a href="#roles">做法一：先寫下哪些事 AI 不能替你決定</a></li>
+        <li><a href="#gates">做法二：把關卡放在花錢與發布之前</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">審片與留存紀錄</span>
+      <ol class="article-toc-items">
+        <li><a href="#review">做法三：審片頁，只讓人看需要用眼睛判斷的</a></li>
+        <li><a href="#submit-lock">做法四：付費工作送出後，絕不重送</a></li>
+        <li><a href="#records">做法五：每個產物都留一張「身分證」</a></li>
+        <li><a href="#machine-vs-human">別忘了：機器檢查不等於人的判斷</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 做法一：先寫下哪些事 AI 不能替你決定 {#roles}
 
 AI 助手可以提建議、準備草稿、執行已核准的工作。但這四件事，它不能替我說「好了」：

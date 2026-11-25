@@ -8,6 +8,14 @@ cover_image: /assets/facebook-archive/photos/2020-03-08_10160006143465329_0.jpg
 cover_position: "50% 38%"
 description: "2020 年春天，台北街頭，制服、單車與春日光線剛好疊在一起：UBike 已是台北街景的一部分，不需要特別佈景，街頭就是最好的舞台。"
 keywords: 制服女孩,人像攝影,台北攝影,YouBike,攝影作品,史旺基,Swanky Studio
+cover_alt: "一名女子騎著黃色自行車，沿林蔭道向前行。"
+seo_title: "制服女孩騎 UBike"
+cta_context: photography
+tags: ["制服女孩", "人像攝影"]
+related_posts:
+  - my-seven-ways-of-shooting
+  - presence-araki-sanai-kawashima
+  - japanese-photography-history-primer
 ---
 
 台北的 UBike 已經成為街景的一部分。

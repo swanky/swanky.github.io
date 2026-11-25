@@ -10,6 +10,14 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%95%B6%E5%90%8C%E4%BB%81%E5%B0%8D%E6%88%91%E8%AA%AA%E4%B8%BB%E7%AE%A1%E4%B8%8D%E5%A6%82%E4%BD%A0%E8%87%AA%E5%B7%B1%E4%B8%8B%E4%BE%86%E5%AF%AB-code-%E5%90%A7-%E8%AB%87%E9%82%A3%E4%BA%9B%E6%8E%9B%E5%9C%A8%E7%89%86%E4%B8%8A%E5%8D%BB%E6%B2%92%E7%94%A8%E7%9A%84%E4%BC%81%E6%A5%AD%E6%96%87%E5%8C%96-swanky-hsiao-mgz0c"
 description: "從真實的團隊管理場景出發，結合《哈佛商業評論》的文化兩難測試，探討如何打造可落實的企業文化。"
 keywords: 企業文化,軟體管理,技術領導,敏捷,哈佛商業評論,史旺基,Swanky Studio
+cover_alt: "西裝女子站在岔路口，一條路通往獨處的小房間，另一條通往玻璃會議室。"
+seo_title: "當同仁對我說：「主管，不如你自己下來寫 Code 吧？」— 談那些掛在牆上卻沒用的企業文化"
+cta_context: technical
+tags: ["企業文化", "軟體管理"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 前幾天，我在帶領團隊時經歷了兩個真實的場景。那一刻的衝擊，讓我整整思考了好幾天。

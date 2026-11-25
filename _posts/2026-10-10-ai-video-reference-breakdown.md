@@ -33,17 +33,26 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#fields">每個案例只寫四件事</a></li>
-    <li><a href="#risk">最有用的一欄是「哪裡不能信」</a></li>
-    <li><a href="#cases">六個值得拆的案例</a></li>
-    <li><a href="#breakdown">拉片：程式量切點，模型只判斷</a></li>
-    <li><a href="#prompt-vs-cut">提示詞說在 3.5 秒切，片子沒有</a></li>
-    <li><a href="#consistency">量尺，不是評審</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">挑例子與記錄</span>
+      <ol class="article-toc-items">
+        <li><a href="#fields">每個案例只寫四件事</a></li>
+        <li><a href="#risk">最有用的一欄是「哪裡不能信」</a></li>
+        <li><a href="#cases">六個值得拆的案例</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">拆鏡與實測</span>
+      <ol class="article-toc-items">
+        <li><a href="#breakdown">拉片：程式量切點，模型只判斷</a></li>
+        <li><a href="#prompt-vs-cut">提示詞說在 3.5 秒切，片子沒有</a></li>
+        <li><a href="#consistency">量尺，不是評審</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 ## 每個案例只寫四件事 {#fields}

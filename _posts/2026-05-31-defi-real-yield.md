@@ -7,8 +7,15 @@ cover_image: /assets/img/web3/defi-real-yield.svg
 og_image: /assets/img/web3/defi-real-yield-og.jpg
 hero_image: true
 seo_title: DeFi 真實收益 vs 代幣通膨陷阱｜年化 100% 是真的嗎？散戶必懂的收益來源辨識
-description: "DeFi 動輒「年化 100%」的收益是真的嗎？一文教你分辨「真實收益」與「代幣通膨收益」的差別，看懂收益的真正來源，避開高 APY 背後的龐氏陷阱。DeFi 風險教育必讀。"
+description: "DeFi 的高年化報酬從哪裡來？區分業務收入與代幣增發，辨認收益來源及補貼消退後的風險。"
 keywords: DeFi,真實收益,real yield,代幣通膨,APY,年化收益,計息穩定幣,流動性挖礦,DeFi 風險,Web3,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「DeFi 真實收益」，金額符號和百分比符號分別配上向上與向下箭頭。"
+cta_context: technical
+tags: ["DeFi", "真實收益"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 每隔一陣子，就會有人拿著手機問我：「這個 DeFi 協議寫年化 120%，是真的嗎？我該不該存？」

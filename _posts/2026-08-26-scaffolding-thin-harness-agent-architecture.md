@@ -16,6 +16,7 @@ related_posts:
 hero_image: true
 description: "Scaffolding is coping 不代表不要規格、測試與安全邊界。拆解 Thin Harness 的意思，以及 SDD 該如何調整。"
 keywords: Scaffolding is coping, Thin Harness, AI Agent 架構, Agent Harness, Capability Overhang, SDD, Spec-Driven Development, Codex, Claude Code, Agent Skills, Multi-Agent, Context Engineering, 史旺基
+use_glightbox: true
 ---
 
 <div class="article-tldr">
@@ -88,7 +89,7 @@ Tibo 把這種情況叫做 **Capability Overhang**：模型能力已經跳升，
 說穿了，你辛苦蓋的 Agent Architecture，可能不是系統的外骨骼，而是一件小兩號的盔甲。
 
 <figure>
-  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/scaffolding-decay-matrix.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/scaffolding-decay-matrix.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="scaffolding-thin-harness-agent-architecture" data-type="image">
     <img src="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/scaffolding-decay-matrix.svg' | relative_url }}" alt="AI Agent 架構折舊矩陣：Prompt hack、固定 Router、人工 Context 壓縮與 Retry spaghetti 容易隨模型進步折舊；規格、測試、權限、版本與決策紀錄則會繼續放大更強模型的能力" loading="lazy">
   </a>
   <figcaption>真正要問的不是「要不要工程」，而是模型升級後，這項工程會放大能力，還是繼續把模型鎖在舊假設裡。點圖可開啟原尺寸。</figcaption>
@@ -98,7 +99,7 @@ Tibo 把這種情況叫做 **Capability Overhang**：模型能力已經跳升，
 
 這也是整個討論最容易被偷換概念的地方。
 
-`AGENTS.md` 並沒有突然變成落後做法。Codex 官方文件現在仍明確寫著，它會在開始工作前讀取 `AGENTS.md`，並依全域、Repository 與目錄層級組合指引。[[9]](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+`AGENTS.md` 並沒有突然變成落後做法。Codex 官方文件現在仍明確寫著，它會在開始工作前讀取 `AGENTS.md`，並依全域、Repository 與目錄層級組合指引。[[7]](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 但一份好的 `AGENTS.md`，應該告訴 Agent 專案的客觀事實與邊界：
 
@@ -124,9 +125,9 @@ Tibo 把這種情況叫做 **Capability Overhang**：模型能力已經跳升，
 
 ## Thin Harness 不是空殼 {#thin-harness}
 
-OpenAI 在 8 月 19 日公開 Codex 的 Open Agent Harness 時，把 Harness 定義得很具體：它要維持對話狀態、管理 Context、呼叫工具、處理失敗、套用 Sandbox 與 Approval Policy，還要讓工作跨 Turn 延續。[[7]](https://developers.openai.com/blog/codex-as-a-platform)
+OpenAI 在 8 月 19 日公開 Codex 的 Open Agent Harness 時，把 Harness 定義得很具體：它要維持對話狀態、管理 Context、呼叫工具、處理失敗、套用 Sandbox 與 Approval Policy，還要讓工作跨 Turn 延續。[[5]](https://developers.openai.com/blog/codex-as-a-platform)
 
-官方同時公布一項自家測試：在 ARC-AGI-3 上，retained reasoning 加上 Context Compaction，讓 GPT-5.6 Sol 從 13.3% 提升到 38.3%，而 Output Token 降為原本的六分之一。這是 OpenAI 自己的 Benchmark 結果，不該被當成所有任務都會複製的獨立量測；但它至少說明一件事：**Harness 的設計仍然可以大幅改變模型表現。**[[7]](https://developers.openai.com/blog/codex-as-a-platform)
+官方同時公布一項自家測試：在 ARC-AGI-3 上，retained reasoning 加上 Context Compaction，讓 GPT-5.6 Sol 從 13.3% 提升到 38.3%，而 Output Token 降為原本的六分之一。這是 OpenAI 自己的 Benchmark 結果，不該被當成所有任務都會複製的獨立量測；但它至少說明一件事：**Harness 的設計仍然可以大幅改變模型表現。**[[5]](https://developers.openai.com/blog/codex-as-a-platform)
 
 所以「Strong Model + Thin Harness」裡的 Thin，指的是：
 
@@ -143,7 +144,7 @@ OpenAI 在 8 月 19 日公開 Codex 的 Open Agent Harness 時，把 Harness 定
 - 不留 Evidence。
 
 <figure>
-  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/thin-harness-stack.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/thin-harness-stack.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="scaffolding-thin-harness-agent-architecture" data-type="image">
     <img src="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/thin-harness-stack.svg' | relative_url }}" alt="薄 Harness 三層架構：應用層提供真實工作介面、業務脈絡、工具與權限；Harness 管理狀態、Context、工具迴圈、Sandbox、核准、失敗與證據；模型理解任務並自己決定路徑" loading="lazy">
   </a>
   <figcaption>Thin Harness 是減少脆弱假設，不是拿掉測試、安全、核准與稽核。點圖可開啟原尺寸。</figcaption>
@@ -162,7 +163,7 @@ OpenAI 在 8 月 19 日公開 Codex 的 Open Agent Harness 時，把 Harness 定
 3. 在開始前等待人類審查與核准。
 4. 執行時記下 Command、Output 與判讀。
 5. 把死路、取捨與「下次要怎麼做」一起留在 Notebook。
-6. 產生可被搜尋的 Markdown Index，讓後續 Agent 找得到先前經驗。[[6]](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
+6. 產生可被搜尋的 Markdown Index，讓後續 Agent 找得到先前經驗。[[4]](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
 
 這套流程不薄嗎？
 
@@ -174,7 +175,7 @@ OpenAI 在 8 月 19 日公開 Codex 的 Open Agent Harness 時，把 Harness 定
 
 ## Memory 不該困在 Session 裡 {#memory}
 
-OpenAI 那篇文章裡，我覺得最值得注意的不是 Notebook 本身，而是這句設計：把意圖、動作、決策與結果放進同一個 Artifact。[[6]](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
+OpenAI 那篇文章裡，我覺得最值得注意的不是 Notebook 本身，而是這句設計：把意圖、動作、決策與結果放進同一個 Artifact。[[4]](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
 
 這會把 Agent Memory 從「它好像還記得我」改成比較工程化的問題：
 
@@ -191,7 +192,7 @@ OpenAI 那篇文章裡，我覺得最值得注意的不是 Notebook 本身，而
 真正 model-agnostic 的 Memory，通常很樸素：Repository 裡的 Markdown、版本化 Spec、測試輸出、Runbook、Notebook、決策紀錄與系統產生的收據。它們不性感，但下一個 Agent 可以讀，下一個人也可以查。
 
 <figure>
-  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/artifact-driven-agent-loop.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/artifact-driven-agent-loop.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="scaffolding-thin-harness-agent-architecture" data-type="image">
     <img src="{{ '/assets/img/technical/scaffolding-thin-harness-agent-architecture/artifact-driven-agent-loop.svg' | relative_url }}" alt="Artifact-driven Agent 工作循環：從持久 Goal 與 Spec 產生 Agent Plan，只在高影響決策卡人工核准，執行後保存測試證據、決策紀錄與可搜尋 Artifact，再供下一次執行重用" loading="lazy">
   </a>
   <figcaption>Memory 不只是在聊天視窗裡「記得你」。工作型 Memory 要能被搜尋、驗證、比較與重跑。點圖可開啟原尺寸。</figcaption>
@@ -199,13 +200,13 @@ OpenAI 那篇文章裡，我覺得最值得注意的不是 Notebook 本身，而
 
 ## Skills 跟 Strong Model 並不衝突 {#skills}
 
-Tibo 在 Matthew Berman 的新訪談裡談到，熟練的 Coding Agent 使用者現在還得自己管理 Skill Files、Memory、Sub-agent 與一小群 Agent Network；每當這些機制失靈，使用者面前那個「懂你的完整夥伴」幻覺就會破掉。他理想中的產品，不該讓人一直處理這些 Implementation Detail。[[8]](https://www.youtube.com/watch?v=4qjEgPojjzM)
+Tibo 在 Matthew Berman 的新訪談裡談到，熟練的 Coding Agent 使用者現在還得自己管理 Skill Files、Memory、Sub-agent 與一小群 Agent Network；每當這些機制失靈，使用者面前那個「懂你的完整夥伴」幻覺就會破掉。他理想中的產品，不該讓人一直處理這些 Implementation Detail。[[6]](https://www.youtube.com/watch?v=4qjEgPojjzM)
 
 這不代表 Skill、Memory 與 Sub-agent 在技術上會消失。
 
 比較可能的情況是：**它們會從使用者要手動管理的 UI 概念，退到 Agent 自己使用的底層能力。**
 
-Anthropic 現在的 Agent Skills 正好可以用來理解這件事。它採取 Progressive Disclosure：平常只載入名稱與描述；符合需求時才讀 `SKILL.md`；Reference 與 Script 則在真正需要時再取用。[[5]](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+Anthropic 現在的 Agent Skills 正好可以用來理解這件事。它採取 Progressive Disclosure：平常只載入名稱與描述；符合需求時才讀 `SKILL.md`；Reference 與 Script 則在真正需要時再取用。[[3]](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
 
 這跟「把全部規則塞進 System Prompt」不是同一件事。
 
@@ -222,7 +223,7 @@ Anthropic 現在的 Agent Skills 正好可以用來理解這件事。它採取 P
 
 INSIDE 把 Tibo 過去談過的方向整理成「Single Agent → Multi-Agent Network」。這個判斷放在後端架構上未必錯，但新訪談又補了一個很有意思的修正。
 
-Matthew Berman 說，他現在因為 Agent 慢，會同時開 10 到 15 個；如果 Ultra Fast 模型把回應大幅加快，也許反而只需要同時處理 3 到 4 個。這兩個數字是主持人描述自己的工作流，不是 Tibo 提出的通用最佳實踐。Tibo 回應的重點，是產品必須尊重人的注意力與 Context Switching 成本。[[8]](https://www.youtube.com/watch?v=4qjEgPojjzM)
+Matthew Berman 說，他現在因為 Agent 慢，會同時開 10 到 15 個；如果 Ultra Fast 模型把回應大幅加快，也許反而只需要同時處理 3 到 4 個。這兩個數字是主持人描述自己的工作流，不是 Tibo 提出的通用最佳實踐。Tibo 回應的重點，是產品必須尊重人的注意力與 Context Switching 成本。[[6]](https://www.youtube.com/watch?v=4qjEgPojjzM)
 
 這跟我前面寫的 [AI Agent 外科手術團隊]({% post_url 2026-08-24-ai-agent-surgical-team %})其實是同一個瓶頸：執行頻寬可以突然放大，人的決策頻寬不會同比例成長。
 
@@ -232,7 +233,7 @@ Matthew Berman 說，他現在因為 Agent 慢，會同時開 10 到 15 個；�
 
 我更看好的是：一個更強、更快、更懂脈絡的 Agent，在底下自己決定要不要平行探索、叫多少 Worker、何時合併結果。使用者看到的是一個責任邊界；平行化是 Implementation Detail。
 
-Tibo 同一場訪談也說，ChatGPT 與 Codex 的合併方向來自同一個想法：底層是相同的技術與 Harness，介面再依個人的工作調整。[[8]](https://www.youtube.com/watch?v=4qjEgPojjzM)
+Tibo 同一場訪談也說，ChatGPT 與 Codex 的合併方向來自同一個想法：底層是相同的技術與 Harness，介面再依個人的工作調整。[[6]](https://www.youtube.com/watch?v=4qjEgPojjzM)
 
 這表示 Coding Agent 可能不是一個永遠獨立的物種。更像是 General Agent 第一個被攻破、又最容易用 Test 與 Git 驗證的高價值工作領域。
 
@@ -319,8 +320,8 @@ Tibo 同一場訪談也說，ChatGPT 與 Codex 的合併方向來自同一個想
 
 - **[1]** [INSIDE：別再用一堆規範綁住 AI！OpenAI 產品負責人 Tibo 談 Agent 願景與時間線](https://www.inside.com.tw/article/42193-tibo-sottiaux-ai-agent-vision-timeline)
 - **[2]** [Dev Interrupted：Scaffolding is coping, not scaling](https://podscan.fm/podcasts/dev-interrupted/episodes/scaffolding-is-coping-not-scaling-and-other-lessons-from-codex-openais-thibault-sottiaux)
-- **[5]** [Anthropic：Agent Skills Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
-- **[6]** [OpenAI：Automating repetitive work at OpenAI with Codex](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
-- **[7]** [OpenAI：Codex as a platform](https://developers.openai.com/blog/codex-as-a-platform)
-- **[8]** [Matthew Berman：How to Understand the Next Wave of AI Before Everyone Else｜Tibo Interview](https://www.youtube.com/watch?v=4qjEgPojjzM)
-- **[9]** [OpenAI Codex：Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+- **[3]** [Anthropic：Agent Skills Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+- **[4]** [OpenAI：Automating repetitive work at OpenAI with Codex](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
+- **[5]** [OpenAI：Codex as a platform](https://developers.openai.com/blog/codex-as-a-platform)
+- **[6]** [Matthew Berman：How to Understand the Next Wave of AI Before Everyone Else｜Tibo Interview](https://www.youtube.com/watch?v=4qjEgPojjzM)
+- **[7]** [OpenAI Codex：Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)

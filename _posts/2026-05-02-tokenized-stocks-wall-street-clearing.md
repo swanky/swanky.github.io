@@ -8,6 +8,14 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%BE%8E%E8%82%A1%E4%B8%8A%E9%8F%88%E4%BA%86%E5%97%8E%E5%85%B6%E5%AF%A6%E6%98%AF%E8%8F%AF%E7%88%BE%E8%A1%97%E6%8A%8A%E5%8D%80%E5%A1%8A%E9%8F%88%E8%A3%9D%E9%80%B2%E6%B8%85%E7%AE%97%E5%BE%8C%E5%8F%B0-swanky-hsiao-vk7kc/"
 description: "華爾街採納代幣化技術並非去中心化革命，而是把區塊鏈拆解後挑走零件，裝進自己的清算後台。"
 keywords: 區塊鏈, 代幣化證券, RWA, DTC, 華爾街, 金融基礎設施, tokenized securities, 清算系統, Web3, 金融科技, 史旺基, Swanky Studio, Swanky Hsiao
+cover_alt: "水手服角色在交易所場景指向標有 DTC 的發光圖示，後方螢幕列出市場機構。"
+seo_title: "美股上鏈了嗎？其實是華爾街把區塊鏈裝進清算後台"
+cta_context: technical
+tags: ["區塊鏈", "代幣化證券"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 鏈上華爾街：清算後台的新引擎

@@ -7,8 +7,15 @@ cover_image: /assets/img/rwa/rwa-standards-evolution.svg
 og_image: /assets/img/rwa/rwa-standards-evolution-og.jpg
 hero_image: true
 seo_title: RWA 代幣化標準演進史｜ERC-1400・ERC-3643・CMTAT 全解
-description: "從 2014 年 Colored Coins 到 2024 年 ERC-3643 成為唯一 Final 證券代幣標準——一篇看懂 RWA 代幣化標準的十二年演進，以及 CMTAT 為何成為機構首選。"
+description: "從 Colored Coins 到 ERC-3643，回顧現實世界資產代幣標準的演變，以及 CMTAT 的設計取捨。"
 keywords: RWA,代幣化,ERC-3643,CMTAT,ERC-1400,ERC-1404,證券代幣,STO,T-REX,區塊鏈,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「標準演進史」，右側以垂直時間軸串起各年標準。"
+cta_context: technical
+tags: ["RWA", "代幣化"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 如果你熟悉 ERC-20，你知道它的核心其實很簡單：一張餘額對照表，加上一個 `transfer` 函數。任何人可以把代幣轉給任何人，不問原因、不查身分。這在加密貨幣的世界裡運作得很好——但當你試圖把一張**真正的債券**、一檔**真正的基金**、或一塊**真正的黃金**放上鏈時，問題就來了。

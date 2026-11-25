@@ -11,11 +11,13 @@ use_glightbox: true
 related_posts:
   - presence-araki-sanai-kawashima
   - photobook-pages-say-less
-description: "日本寫真為什麼粗粒、晃動、像日記？從 1930 年代新興寫真、1950 年代戰後寫實埋下的兩個問題讀起，再看 1968 年《Provoke》之後三位創辦人各走各的路。1959 年起的館藏作品，另有「看懂寫真」的章節。"
+  - photobook-variety-gate
+description: "從日本新興寫真、戰後寫實到《Provoke》，看粗粒、晃動與私日記式影像如何成為不同的攝影選擇。"
 keywords: 日本攝影史, 新興寫真, 光画, 戰後寫實, 木村伊兵衛, 土門拳, 常盤とよ子, Provoke, アレ・ブレ・ボケ, 私寫真, 深瀬昌久, 史旺基
 cover_image: /assets/img/photo-notes/japanese-photography-history-primer-cover.jpg
 cover_alt: "成年水手服創作者在紅色安全燈下的暗房，用夾子從顯影盤提起一張粗粒、晃動的黑白相紙，身後架上由舊到新排著五台不同年代的相機，晾片繩上夾著顆粒感的照片"
 hero_image: true
+cta_context: photography
 ---
 
 <div class="article-tldr">
@@ -32,6 +34,29 @@ hero_image: true
 我剛開始讀日本攝影史時也有一樣的疑問。後來發現，這些照片看起來「不完美」，是因為每一代攝影師都在回答一個不同的問題。把問題找出來，照片就好懂很多。
 
 想看 1959 年之後、附美術館館藏的整理，請讀「看懂寫真」的〈[日本攝影史一頁看懂：從 VIVO 到日常寫真]({{ '/photography/learn/history/japan-photography-history/' | relative_url }})〉。這篇是我自己往前讀的筆記：先補那一章沒寫的 1930 與 1950 年代，再看《Provoke》之後的事。這裡不轉貼任何人的作品，可以去看原作的館方頁面列在文末。
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">新興寫真到戰後</span>
+      <ol class="article-toc-items">
+        <li><a href="#overview">先看一張圖</a></li>
+        <li><a href="#shinko-shashin">1930 年代：相機自己能做什麼？</a></li>
+        <li><a href="#realism">1950 年代：拍人時，你站在哪裡？</a></li>
+        <li><a href="#vivo">1959 年之後：「看懂寫真」那一章接手</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">從 Provoke 到私攝影</span>
+      <ol class="article-toc-items">
+        <li><a href="#provoke">1968 年《Provoke》，然後呢？</a></li>
+        <li><a href="#private">1970 年代：鏡頭轉回自己</a></li>
+        <li><a href="#tips">下次翻日本寫真集，可以注意這幾件事</a></li>
+        <li><a href="#further-reading">接著讀</a></li>
+        <li><a href="#references">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先看一張圖 {#overview}
 
@@ -158,13 +183,13 @@ hero_image: true
 
 ## 參考資料 {#references}
 
-- [東京都寫真美術館：The Magazine and the New Photography: Koga and Japanese Modernism（2018 展覽新聞稿 PDF）](https://topmuseum.jp/upload/2/3022/Press%20Release_0301.pdf)：新興寫真的定義與三種類型、《光画》1932–1933 與三位創辦人、《福助足袋》1930。
-- [日本博物館協會：木村伊兵衛と土門拳展](https://www.museum.or.jp/event/14424)：兩人拍法的對照、1952 年起共同擔任《カメラ》月例評審。
-- [MoMA post：The Empathetic Gaze: Toyoko Tokiwa's Dangerous Poisonous Flowers](https://post.moma.org/the-empathetic-gaze-toyoko-tokiwas-dangerous-poisonous-flowers-and-the-female-photographic-subject-in-postwar-japan/)：常盤とよ子與《危険な毒花》。
-- [SFMOMA：Shomei Tomatsu](https://www.sfmoma.org/artist/Shomei_Tomatsu/)：VIVO 六位成員、兩年後解散。
-- [東京國立近代美術館：Nakahira Takuma: Burn—Overflow](https://www.momat.go.jp/en/exhibitions/556)：《Provoke》創辦成員、三期、アレ・ブレ・ボケ、1973 年的自我批判。
-- [Tate：Photobooks: Provoke](https://www.tate.org.uk/visit/tate-modern/display/artist-and-society/photobooks-provoke)：「一種新的攝影語言」。
-- [森山大道官方網站：Biography](https://www.moriyamadaido.com/en/biography/)：1968、1972 年的出版。
-- [卡提耶－布列松基金會：Yutaka Takanashi（2012 展覽）](https://www.henricartierbresson.org/en/expositions/yuka-takanashi-2/)：高梨豐是《Provoke》創辦成員，卻沒有走向刻意模糊的浪漫放任。
-- [MoMA：Nobuyoshi Araki, Untitled from "Sentimental Journey, Winter Journey"](https://www.moma.org/collection/works/128437)：1971 年作品館藏。
-- [深瀬昌久官方網站：Ravens](https://masahisafukase.com/ravens-2018/)：《鴉》1975–1986 年拍攝、1986 年初版。
+- **[1]** [東京都寫真美術館：The Magazine and the New Photography: Koga and Japanese Modernism（2018 展覽新聞稿 PDF）](https://topmuseum.jp/upload/2/3022/Press%20Release_0301.pdf)：新興寫真的定義與三種類型、《光画》1932–1933 與三位創辦人、《福助足袋》1930。
+- **[2]** [日本博物館協會：木村伊兵衛と土門拳展](https://www.museum.or.jp/event/14424)：兩人拍法的對照、1952 年起共同擔任《カメラ》月例評審。
+- **[3]** [MoMA post：The Empathetic Gaze: Toyoko Tokiwa's Dangerous Poisonous Flowers](https://post.moma.org/the-empathetic-gaze-toyoko-tokiwas-dangerous-poisonous-flowers-and-the-female-photographic-subject-in-postwar-japan/)：常盤とよ子與《危険な毒花》。
+- **[4]** [SFMOMA：Shomei Tomatsu](https://www.sfmoma.org/artist/Shomei_Tomatsu/)：VIVO 六位成員、兩年後解散。
+- **[5]** [東京國立近代美術館：Nakahira Takuma: Burn—Overflow](https://www.momat.go.jp/en/exhibitions/556)：《Provoke》創辦成員、三期、アレ・ブレ・ボケ、1973 年的自我批判。
+- **[6]** [Tate：Photobooks: Provoke](https://www.tate.org.uk/visit/tate-modern/display/artist-and-society/photobooks-provoke)：「一種新的攝影語言」。
+- **[7]** [森山大道官方網站：Biography](https://www.moriyamadaido.com/en/biography/)：1968、1972 年的出版。
+- **[8]** [卡提耶－布列松基金會：Yutaka Takanashi（2012 展覽）](https://www.henricartierbresson.org/en/expositions/yuka-takanashi-2/)：高梨豐是《Provoke》創辦成員，卻沒有走向刻意模糊的浪漫放任。
+- **[9]** [MoMA：Nobuyoshi Araki, Untitled from "Sentimental Journey, Winter Journey"](https://www.moma.org/collection/works/128437)：1971 年作品館藏。
+- **[10]** [深瀬昌久官方網站：Ravens](https://masahisafukase.com/ravens-2018/)：《鴉》1975–1986 年拍攝、1986 年初版。

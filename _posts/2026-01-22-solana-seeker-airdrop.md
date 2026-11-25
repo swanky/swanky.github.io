@@ -10,6 +10,14 @@ hero_image: true
 source_url: "https://www.linkedin.com/pulse/web3-%E7%9A%84%E4%B8%8B%E5%80%8B%E5%85%A5%E5%8F%A3%E5%9C%A8%E6%89%8B%E6%A9%9F%E8%A7%A3%E6%9E%90-solana-seeker-%E5%A6%82%E4%BD%95%E7%94%A8%E7%A1%AC%E9%AB%94%E7%A9%BA%E6%8A%95%E6%94%B9%E5%AF%AB%E7%94%A8%E6%88%B6%E5%88%86%E7%99%BC%E9%82%8F%E8%BC%AF-swanky-hsiao-tcjxc"
 description: "從預購 Solana Seeker 到收到 SKR 空投的兩年實驗覆盤，解析硬體＋空投＋代幣治理的 Web3 商業模式。"
 keywords: Solana,Seeker,空投,Web3,加密貨幣,區塊鏈,史旺基,Swanky Studio
+cover_alt: "水手服角色拿著手機，周圍有寶箱、金幣與區塊鏈圖案。"
+seo_title: "Web3 的下個入口在手機？解析 Solana Seeker 如何用「硬體＋空投」改寫用戶分發邏輯"
+cta_context: technical
+tags: ["Solana", "Seeker"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 【我用 450 美金預購手機，結果空投先把手機錢賺回來了】

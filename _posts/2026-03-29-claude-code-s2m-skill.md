@@ -10,8 +10,14 @@ nav_active: education
 cover_image: /assets/img/linkedin/claude-code-s2m-skill.svg
 og_image: /assets/img/linkedin/claude-code-s2m-skill-og.jpg
 hero_image: true
-description: "自製 Claude Code Skill：s2m（slides-to-markdown），一句指令將 PPTX 或 PDF 簡報逐頁截圖、AI 解讀、Mermaid 圖表還原，產出完整 Markdown 文件。含安裝教學與技術解析。"
+description: "用自製 s2m 技能將簡報逐頁轉成圖文文件，保留頁面截圖、解讀與流程圖，附安裝方法。"
 keywords: Claude Code,Skill,簡報轉Markdown,PPTX,PDF,Mermaid,slides-to-markdown,AI工具,史旺基
+cover_alt: "黑底封面寫著「一鍵把簡報變成文件」，右側以箭頭連起簡報與文字視窗。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 每次開完會、上完課，你手上多了一份 30 頁的簡報 PDF。
@@ -33,6 +39,37 @@ keywords: Claude Code,Skill,簡報轉Markdown,PPTX,PDF,Mermaid,slides-to-markdow
 這篇文章會完整介紹這個 Skill 的功能、安裝方式、技術設計，以及我在設計過程中做的取捨。
 
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>s2m 逐頁保留簡報截圖，讓讀者可以對照原畫面和文字解讀。</li>
+    <li>遇到流程或圖形時，把關係整理成可以修改的圖表。</li>
+    <li>本文附上安裝方式、使用情境與完整技能定義，方便自行重用。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">安裝與使用</span>
+      <ol class="article-toc-items">
+        <li><a href="#一什麼是-claude-code-skill">什麼是 Claude Code Skill？</a></li>
+        <li><a href="#二s2m-功能總覽">s2m 功能總覽</a></li>
+        <li><a href="#三安裝與下載">安裝與下載</a></li>
+        <li><a href="#四使用方式">使用方式</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">設計與案例</span>
+      <ol class="article-toc-items">
+        <li><a href="#五技術設計解析">技術設計解析</a></li>
+        <li><a href="#六實際使用情境">實際使用情境</a></li>
+        <li><a href="#結語">結語</a></li>
+        <li><a href="#附錄完整-skillmd-原始碼">附錄：完整 SKILL.md 原始碼</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 一、什麼是 Claude Code Skill？
 

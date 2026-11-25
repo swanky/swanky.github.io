@@ -8,8 +8,15 @@ nav_active: technical
 cover_image: /assets/img/linkedin/kent-beck-nobody-knows.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%ABai-%E6%99%82%E4%BB%A3%E7%9A%84%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8Bkent-becknobody-knows%E9%87%8D%E9%BB%9E%E7%BF%BB%E8%AD%AF%E8%88%87%E7%9C%81%E6%80%9D-swanky-hsiao-ukzac"
-description: "Kent Beck 在 Podcast《Still Burning》首集《Nobody Knows》中，談 AI 時代軟體工程的巨變：精細雕琢程式碼的時代已過，適應力、低成本實驗與社群共學才是關鍵。"
+description: "從 Kent Beck 的《Nobody Knows》訪談，看工程師如何透過小型實驗和社群共學適應 AI 開發。"
 keywords: Kent Beck,Nobody Knows,Still Burning,AI開發,軟體工程,增強式開發,Claude Code,史旺基,Swanky Studio
+cover_alt: "三位水手服角色披著毯子圍坐在營火旁，手上拿著筆記本和平板交談。"
+seo_title: "【好文分享】AI 時代的軟體工程：Kent Beck《Nobody Knows》重點翻譯與省思"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 最近花了很多時間研究 Claude Code，深深了解照這樣發展下去軟體工程這項技藝會變得跟過往所學有很大的不同，其實也很好奇世界級的軟工大師怎麼看待這樣的世界到來，剛好就聽到了 Kent Beck 的這個 Podcast，覺得蠻值得分享的，以下就透過AI快速翻譯了一下這些內容。

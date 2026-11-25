@@ -33,17 +33,26 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#boundary">先說這篇不會出現什麼</a></li>
-    <li><a href="#rehearsal">賽前：只準備流程，不預做作品</a></li>
-    <li><a href="#budget">開賽：先小測，再設預算上限</a></li>
-    <li><a href="#seams">一段一段生成，接起來會「跳一下」</a></li>
-    <li><a href="#stoploss">交件前一晚：今晚不要修什麼</a></li>
-    <li><a href="#critic">AI 評分沒過，我也沒採用它的修改</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">賽前準備</span>
+      <ol class="article-toc-items">
+        <li><a href="#boundary">先說這篇不會出現什麼</a></li>
+        <li><a href="#rehearsal">賽前：只準備流程，不預做作品</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">比賽現場的取捨</span>
+      <ol class="article-toc-items">
+        <li><a href="#budget">開賽：先小測，再設預算上限</a></li>
+        <li><a href="#seams">一段一段生成，接起來會「跳一下」</a></li>
+        <li><a href="#stoploss">交件前一晚：今晚不要修什麼</a></li>
+        <li><a href="#critic">AI 評分沒過，我也沒採用它的修改</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 ## 先說這篇不會出現什麼 {#boundary}

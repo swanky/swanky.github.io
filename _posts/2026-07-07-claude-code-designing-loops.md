@@ -12,8 +12,10 @@ related_posts:
   - loop-engineering-ai-system
   - fable-field-guide
   - gstack-workflow-guide
-description: "Claude Code 團隊把「設計循環」正式定義為：代理人重複執行工作循環，直到滿足停止條件。本文整理官方對回合制、目標導向、時間導向、主動式四種循環的分類，以及如何在維持程式碼品質的同時管好 token。"
+description: "從回合、目標、時間與主動式四種循環，整理 Claude Code 任務的停止條件與用量控制。"
 keywords: Designing Loops, 設計循環, Loop Engineering, Claude Code, agentic loop, 代理人循環, 回合制循環, 目標導向循環, 時間導向循環, 主動式循環, turn-based loop, goal-based loop, proactive loop, /goal, /loop, /schedule, dynamic workflows, auto mode, token 管理, Skills, 代理式開發, agentic engineering, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "水手服角色坐在筆電前舉起食指，白板上的循環圖從簡單逐漸變複雜。"
+cta_context: agentic
 ---
 
 > 不是所有任務都需要複雜的循環。先從最簡單、能動的方案開始，再選擇性地加上這些模式。
@@ -21,6 +23,34 @@ keywords: Designing Loops, 設計循環, Loop Engineering, Claude Code, agentic 
 前陣子我寫過一篇 [Loop Engineering：你不再提示 AI，而是設計一個「提示 AI 的系統」]({% post_url 2026-06-10-loop-engineering-ai-system %})，談 Addy Osmani 為 AI 協作開發的下一階段定名的概念。這幾天，Claude Code 官方開發者帳號（[@ClaudeDevs](https://x.com/ClaudeDevs/status/2074208949205881033)，作者 @delba_oliveira）發了一篇貼文，把「設計循環」（designing loops）從一個抽象概念，拆解成可以直接動手的實務地圖。
 
 我把它整理、翻譯，並加上自己對台灣技術團隊的落地觀點，寫成這篇。原文請見文末連結；以下是我的解讀。
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>先決定任務應該因為哪個條件停止，再挑合適的循環方式。</li>
+    <li>回合、目標、時間和主動觸發，適合的任務與檢查時點各不相同。</li>
+    <li>把用量限制和成果檢查放進循環，避免代理持續執行卻沒有進展。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">循環的選擇</span>
+      <ol class="article-toc-items">
+        <li><a href="#為什麼大家開始談循環而不是提示">為什麼大家開始談「循環」，而不是「提示」</a></li>
+        <li><a href="#官方怎麼分類循環">官方怎麼分類循環</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">品質與用量</span>
+      <ol class="article-toc-items">
+        <li><a href="#品質來自循環周圍的系統">品質，來自循環周圍的「系統」</a></li>
+        <li><a href="#把-token-花在刀口上">把 token 花在刀口上</a></li>
+        <li><a href="#怎麼開始挑一個你自己就是瓶頸的任務">怎麼開始：挑一個「你自己就是瓶頸」的任務</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 為什麼大家開始談「循環」，而不是「提示」
 

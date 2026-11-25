@@ -9,7 +9,44 @@ og_image: /assets/img/linkedin/claude-code-design-system-og.jpg
 hero_image: true
 description: "透過三層設計裝備系統（Skills、Canvas、Inspiration）與 Claude Code，任何工程師都能穩定交付高品質、具備專業感的產品介面。"
 keywords: Claude Code,設計系統,AI coding,前端設計,AI學習,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「從工程師到設計通才」，右側並列三層設計工具。"
+seo_title: "從工程師到設計通才：利用 Claude Code 與三層架構打造 AI 設計系統全攻略"
+cta_context: agentic
+tags: ["Claude Code", "設計系統"]
+related_posts:
+  - jinpingmei-character-lab
+  - agentic-engineering-patterns-guide
+  - claude-code-s2m-skill
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>把設計任務拆成可重複使用的技能、可調整的畫布與視覺參考。</li>
+    <li>用 Impeccable 檢查介面，先定位問題，再把改動寫成規範。</li>
+    <li>給 AI 清楚的限制與參考，才能逐步修正偏離產品目的的畫面。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">設計工具與分工</span>
+      <ol class="article-toc-items">
+        <li><a href="#1-數位產品開發的新範式ai-賦能的設計無感轉型">數位產品開發的新範式：AI 賦能的設計無感轉型</a></li>
+        <li><a href="#2-三層設計裝備系統the-harness-framework深度解析">三層設計裝備系統（The Harness Framework）深度解析</a></li>
+        <li><a href="#3-claude-code-實戰impeccable-技能的深度應用">Claude Code 實戰：Impeccable 技能的深度應用</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">把規範用進介面</span>
+      <ol class="article-toc-items">
+        <li><a href="#4-高效能設計工作流從診斷到規範的標準路徑">高效能設計工作流：從診斷到規範的標準路徑</a></li>
+        <li><a href="#5-實戰防禦機制約束條件與常見失誤規避">實戰防禦機制：約束條件與常見失誤規避</a></li>
+        <li><a href="#6-結語當-google-stitch-遇上-figma設計的未來是什麼">結語：當 Google Stitch 遇上 Figma，設計的未來是什麼？</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 1. 數位產品開發的新範式：AI 賦能的設計無感轉型
 

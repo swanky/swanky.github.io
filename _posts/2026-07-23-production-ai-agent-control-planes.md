@@ -14,8 +14,9 @@ related_posts:
   - matt-pocock-skills-ai-coding-workflow
   - hermes-agent-openrouter-video-generation
 hero_image: true
-description: "AI Agent 從 Demo 走到正式環境，難題不是模型能不能呼叫工具，而是指令能否版控、結論能否回指證據、任務能否中斷續跑，以及高風險動作是否真的受權限控制。本文以四層控制面建立可驗收的 Production Agent 架構。"
+description: "從指令版本、證據、任務中斷與權限四個面向，檢查 AI 代理是否具備上線所需的控制措施。"
 keywords: AI Agent, Production AI Agent, Agentic Engineering, Context Engineering, Evidence Layer, Agent State, Human Approval, AI Agent 治理, Completion Contract, AI Agent 導入, 史旺基, Swanky Studio
+use_glightbox: true
 ---
 
 一個 AI Agent 在展示環境裡，通常只需要做一件事：看起來很聰明。
@@ -30,6 +31,40 @@ ByteByteGo 在 2026 年 7 月發表的[〈Best Practices for Building AI Agents 
 
 這不是替原文換四個英文名詞。原文主要在說 Agent 如何穩定運作；我想處理的是另一個問題：**當 Agent 說它完成了，我們憑什麼相信；當它想採取行動，系統憑什麼允許。**
 
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>指令和上下文要有版本，成果也要能追到可檢查的證據。</li>
+    <li>任務狀態需要保存在對話外，才有機會在中斷後恢復。</li>
+    <li>高風險動作由模型外部控制權限，並留下交給人處理的入口。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">指令與證據</span>
+      <ol class="article-toc-items">
+        <li><a href="#先給結論正式環境要控制的不是模型而是四個介面">先給結論：正式環境要控制的不是模型，而是四個介面</a></li>
+        <li><a href="#為什麼我要重排-bytebytego-的四個原則">為什麼我要重排 ByteByteGo 的四個原則</a></li>
+        <li><a href="#第一層instructioncontext-不是一份愈寫愈長的-prompt">第一層：Instruction／Context 不是一份愈寫愈長的 Prompt</a></li>
+        <li><a href="#第二層evidence-把我覺得完成改成我能證明完成">第二層：Evidence 把「我覺得完成」改成「我能證明完成」</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">狀態與權限</span>
+      <ol class="article-toc-items">
+        <li><a href="#第三層state-不能寄生在對話紀錄裡">第三層：State 不能寄生在對話紀錄裡</a></li>
+        <li><a href="#第四層permission-必須由模型外部強制">第四層：Permission 必須由模型外部強制</a></li>
+        <li><a href="#control-flow-的核心外圈確定內圈才交給模型">Control Flow 的核心：外圈確定，內圈才交給模型</a></li>
+        <li><a href="#scope-與-human-handoff-不是失敗處理是正常路徑">Scope 與 Human Handoff 不是失敗處理，是正常路徑</a></li>
+        <li><a href="#一份可以拿去做-pilot-的最小驗收表">一份可以拿去做 Pilot 的最小驗收表</a></li>
+        <li><a href="#最後判斷production-agent-的成熟度看它如何被約束">最後判斷：Production Agent 的成熟度，看它如何被約束</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 先給結論：正式環境要控制的不是模型，而是四個介面
 
 1. **Instruction／Context：它依什麼規則工作？** Prompt、技能、工具說明與執行期脈絡必須可組合、可版控、可測試。
@@ -40,7 +75,7 @@ ByteByteGo 在 2026 年 7 月發表的[〈Best Practices for Building AI Agents 
 Scope 仍然重要，但我把它視為包住四層的外框：每個 Agent 都要有單一責任、清楚停止條件，以及可交給人或其他 Agent 的交接格式。
 
 <figure style="margin:2em auto;text-align:center;max-width:1100px;">
-  <a href="{{ '/assets/img/production-ai-agent-control-planes/four-control-planes.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/production-ai-agent-control-planes/four-control-planes.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="production-ai-agent-control-planes" data-type="image">
     <img src="{{ '/assets/img/production-ai-agent-control-planes/four-control-planes.svg' | relative_url }}" alt="Production AI Agent 四層控制面架構：Instruction 與 Context 管理可執行規則，Evidence 保存來源與驗收證據，State 保存任務與 checkpoint，Permission 控制工具、資源與人工核准；四層共同約束確定性 Orchestrator 與模型決策" style="width:100%;height:auto;border-radius:14px;">
   </a>
   <figcaption style="font-size:0.85rem;color:#6b7280;margin-top:0.7em;">圖一：四層控制面不是塞進 System Prompt 的四段文字，而是模型外部可被檢查與強制執行的系統元件；點圖可開啟原尺寸</figcaption>
@@ -158,7 +193,7 @@ ByteByteGo 原文主張把計畫、進度、工具結果與 checkpoint 外部化
 - checkpoint 與最後一次成功提交時間。
 
 <figure style="margin:2em auto;text-align:center;max-width:1100px;">
-  <a href="{{ '/assets/img/production-ai-agent-control-planes/production-agent-runtime-loop.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/production-ai-agent-control-planes/production-agent-runtime-loop.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="production-ai-agent-control-planes" data-type="image">
     <img src="{{ '/assets/img/production-ai-agent-control-planes/production-agent-runtime-loop.svg' | relative_url }}" alt="Production AI Agent 執行迴圈：載入版本化指令與狀態，模型提出動作，系統驗證證據與權限，通過後執行工具並保存收據，再依 Completion Contract 決定繼續、等待人工核准、交接或完成" style="width:100%;height:auto;border-radius:14px;">
   </a>
   <figcaption style="font-size:0.85rem;color:#6b7280;margin-top:0.7em;">圖二：模型負責提出判斷；確定性 Orchestrator 負責順序、狀態轉移、重試上限與停止條件；點圖可開啟原尺寸</figcaption>
@@ -199,7 +234,7 @@ Hermes Agent v0.19.0 的公開 Release 把 smart approvals、Bitwarden／1Passwo
 我先前在[〈我讓 Hermes Agent 串上 OpenRouter 生影片〉]({% post_url 2026-07-11-hermes-agent-openrouter-video-generation %})的實作裡，也踩過這條界線。當時付費提交前有人工核准流程，但 plugin 的 `submit()` 本身沒有 approval token；若有人繞過工作流直接呼叫，API 仍會送出。那套流程適合個人受控實驗，若要變成多人服務，就必須把核准從「流程紀律」升級成「程式 hard gate」。
 
 <figure style="margin:2em auto;text-align:center;max-width:1100px;">
-  <a href="{{ '/assets/img/production-ai-agent-control-planes/risk-approval-handoff-matrix.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+  <a href="{{ '/assets/img/production-ai-agent-control-planes/risk-approval-handoff-matrix.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="production-ai-agent-control-planes" data-type="image">
     <img src="{{ '/assets/img/production-ai-agent-control-planes/risk-approval-handoff-matrix.svg' | relative_url }}" alt="AI Agent 動作風險、核准與人工交接矩陣：讀取分析、本機可逆修改、對外共享寫入、不可逆或金錢動作分別對應不同自動化範圍、證據、核准與失敗處理" style="width:100%;height:auto;border-radius:14px;">
   </a>
   <figcaption style="font-size:0.85rem;color:#6b7280;margin-top:0.7em;">圖三：自主程度應跟動作風險走，不該跟模型能力或使用者對它的好感走；點圖可開啟原尺寸</figcaption>
@@ -313,7 +348,7 @@ next_allowed_action: "等待核准；不可發布"
 
 ## 參考資料
 
-- [ByteByteGo：Best Practices for Building AI Agents That Work in Production（2026-07-22）](https://blog.bytebytego.com/p/best-practices-for-building-ai-agents)
-- [Google Developers Blog：Building scalable AI agents with modular prompt transpilation（2026-07-16）](https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/)
-- [Anthropic：Claude Science, an AI workbench for scientists, is now available（2026-06-30）](https://www.anthropic.com/news/claude-science-ai-workbench)
-- [Nous Research：Hermes Agent v0.19.0 Release Notes（2026-07-20）](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20)
+- **[1]** [ByteByteGo：Best Practices for Building AI Agents That Work in Production（2026-07-22）](https://blog.bytebytego.com/p/best-practices-for-building-ai-agents)
+- **[2]** [Google Developers Blog：Building scalable AI agents with modular prompt transpilation（2026-07-16）](https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/)
+- **[3]** [Anthropic：Claude Science, an AI workbench for scientists, is now available（2026-06-30）](https://www.anthropic.com/news/claude-science-ai-workbench)
+- **[4]** [Nous Research：Hermes Agent v0.19.0 Release Notes（2026-07-20）](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20)

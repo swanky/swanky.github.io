@@ -1815,8 +1815,11 @@ Clean Code、測試、模組化、架構方向與小步回饋仍然重要，不�
 
 ## 來源與翻譯說明 {#sources}
 
-- 原始影片：[LIVE: Uncle Bob on Software Fundamentals in the Age of AI](https://www.youtube.com/watch?v=zcLPGC-tvgk)
-- 對談者：Robert C. Martin（Uncle Bob）、Matt Pocock
-- 本文依使用者提供的英文逐字稿與正體中文翻譯 HTML 整理。
-- 主文中的流程建議與判斷是我的整理，不是逐字引述；完整翻譯區則依原始順序保留全部 133 段。
+- **[1]** 原始影片：[LIVE: Uncle Bob on Software Fundamentals in the Age of AI](https://www.youtube.com/watch?v=zcLPGC-tvgk)
+
+對談者：Robert C. Martin（Uncle Bob）、Matt Pocock
+
+本文依使用者提供的英文逐字稿與正體中文翻譯 HTML 整理。
+
+主文中的流程建議與判斷是我的整理，不是逐字引述；完整翻譯區則依原始順序保留全部 133 段。
 影片與英文內容的權利歸原作者與原發布頻道所有。本譯文供中文讀者學習、研究與討論。

@@ -8,8 +8,15 @@ nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-engineer-types.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E7%95%B6%E5%B7%A5%E7%A8%8B%E5%9C%98%E9%9A%8A%E9%96%8B%E5%A7%8B%E5%B0%8E%E5%85%A5-claude-code16-%E5%9E%8B%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%9C%9F%E5%AF%A6%E5%8F%8D%E6%87%89%E5%9C%96%E9%91%91-swanky-hsiao-cvpjc"
-description: "AI 工具導入這件事，表面是工具選型，骨子裡其實是人格測試、風險偏好測試、組織成熟度測試。同樣一套 Claude Code，對 16 型工程師來說根本不是同一件事。"
+description: "同一套 Claude Code，16 型工程師的使用方式有何不同？從風險偏好、工作習慣與團隊成熟度看工具導入。"
 keywords: Claude Code,MBTI,工程師,AI導入,技術管理,技術顧問,史旺基,Swanky Studio
+cover_alt: "五位水手服角色在工程團隊辦公室工作，白板上畫著流程圖。"
+seo_title: "當工程團隊開始導入 Claude Code：16 型工程師的真實反應圖鑑"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 ## 不是每個人都在抗拒 AI，有些人只是用不同方式捍衛專業

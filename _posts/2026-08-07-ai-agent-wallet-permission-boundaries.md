@@ -14,7 +14,7 @@ related_posts:
   - ai-agent-payments-web3
   - claude-code-hot-wallet
 hero_image: true
-description: "Coinbase for Agents 與 MetaMask Agent Wallet 讓 AI 代理從建議者變成金融執行者。真正值得看的不是自動交易，而是資金隔離、額度、白名單、人工核准與交易收據如何成為硬邊界。"
+description: "比較 Coinbase 與 MetaMask 的代理錢包，看資金隔離、額度、核准與交易收據如何限制代理權限。"
 keywords: AI Agent, Coinbase for Agents, MetaMask Agent Wallet, x402, Agentic Finance, AI 代理支付, AI 自動交易, 權限控管, 人工核准, Web3, 史旺基, Swanky Studio
 ---
 
@@ -33,6 +33,36 @@ keywords: AI Agent, Coinbase for Agents, MetaMask Agent Wallet, x402, Agentic Fi
 但我的結論也比當時更保守：
 
 > **AI Agent 能不能替你交易，已經不是最難的問題。真正難的是，它拿得到多少錢、可以碰什麼、什麼情況必須停，以及出事時誰負責。**
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>先區分提供建議、簽署交易及移動資金，三種行為需要不同的權限。</li>
+    <li>把資金隔離、額度與目的地限制寫進工具，為需要人工核准的交易設關。</li>
+    <li>從受限試行開始，逐筆保留交易收據，再決定要開放哪些操作。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">錢包與權限</span>
+      <ol class="article-toc-items">
+        <li><a href="#先分清楚三種東西">先分清楚三種東西</a></li>
+        <li><a href="#真正的產品不是錢包是-permission-layer">真正的產品不是錢包，是 Permission Layer</a></li>
+        <li><a href="#區塊鏈替-agent-解決了什麼又沒解決什麼">區塊鏈替 Agent 解決了什麼，又沒解決什麼</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">試行與驗收</span>
+      <ol class="article-toc-items">
+        <li><a href="#如果是我做-pilot我會先把-agent-綁得很不自由">如果是我做 pilot，我會先把 Agent 綁得很不自由</a></li>
+        <li><a href="#對企業真正有價值的不一定是自動炒幣">對企業真正有價值的，不一定是自動炒幣</a></li>
+        <li><a href="#最後判斷agent-有錢不代表-agent-長大了">最後判斷：Agent 有錢，不代表 Agent 長大了</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先分清楚三種東西
 
@@ -167,9 +197,9 @@ AI 可以提出動作，錢包可以簽名，區塊鏈可以結算。
 
 ## 參考資料
 
-- [Coinbase：Coinbase for Agents](https://www.coinbase.com/zh-tw/blog/coinbase-for-agents)
-- [Coinbase Developer Documentation：Coinbase for Agents（CLI／MCP）](https://docs.cdp.coinbase.com/coinbase-for-agents/overview)
-- [Coinbase Developer Documentation：Comparing our Agentic Tools](https://docs.cdp.coinbase.com/get-started/build-with-ai/comparing-agentic-tools)
-- [Coinbase Developer Documentation：x402 Buyer Quickstart](https://docs.cdp.coinbase.com/x402/buyer/quickstart)
-- [MetaMask：Introducing MetaMask Agent Wallet（2026-08-06）](https://metamask.io/news/introducing-metamask-agent-wallet)
-- [動區動趨：Coinbase for Agents 正式上線（2026-06-12）](https://www.blocktempo.com/coinbase-agents-ai-trading-payments-mcp-cli-agentkit-x402/)
+- **[1]** [Coinbase：Coinbase for Agents](https://www.coinbase.com/zh-tw/blog/coinbase-for-agents)
+- **[2]** [Coinbase Developer Documentation：Coinbase for Agents（CLI／MCP）](https://docs.cdp.coinbase.com/coinbase-for-agents/overview)
+- **[3]** [Coinbase Developer Documentation：Comparing our Agentic Tools](https://docs.cdp.coinbase.com/get-started/build-with-ai/comparing-agentic-tools)
+- **[4]** [Coinbase Developer Documentation：x402 Buyer Quickstart](https://docs.cdp.coinbase.com/x402/buyer/quickstart)
+- **[5]** [MetaMask：Introducing MetaMask Agent Wallet（2026-08-06）](https://metamask.io/news/introducing-metamask-agent-wallet)
+- **[6]** [動區動趨：Coinbase for Agents 正式上線（2026-06-12）](https://www.blocktempo.com/coinbase-agents-ai-trading-payments-mcp-cli-agentkit-x402/)

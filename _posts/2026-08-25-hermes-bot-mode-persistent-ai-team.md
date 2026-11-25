@@ -16,6 +16,7 @@ related_posts:
 hero_image: true
 description: "Hermes Bot Mode 把 Profile 變成有名字、記憶、技能與排程的長期 AI 角色。從底層架構、群組協作到安全邊界，分析它為什麼值得注意。"
 keywords: Hermes Bot Mode, Hermes Agent, Grok Bot, Claude Code Agent Teams, Codex Goal Mode, AI Agent, Multi-Agent, Persistent Agent, Profile, Routine, 史旺基
+use_glightbox: true
 ---
 
 <div class="article-tldr">
@@ -146,7 +147,7 @@ Bot 的生命週期也和一般 Session 不一樣。右鍵可以 Duplicate、Hid
 這裡還要補一個版本陷阱。Hermes 線上文件追蹤 `main`，而 8 月下旬的 structured `message_agent`、完整跨 Gateway relay 與 typed failure reasons，有些是在當時最新正式 release 之後才合併。以下分析的是 2026 年 8 月 25 日官方文件呈現的 current design；實際操作前，仍要以安裝版本與 release notes 為準。把 `main` 上的文件直接當成每台舊 Desktop 都已經有，會是另一種很 Agentic 的自信錯誤。
 
 <figure>
-  <a href="{{ '/assets/img/technical/hermes-bot-mode/bot-profile-anatomy.svg' | relative_url }}">
+  <a href="{{ '/assets/img/technical/hermes-bot-mode/bot-profile-anatomy.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-bot-mode-persistent-ai-team" data-type="image">
     <img src="{{ '/assets/img/technical/hermes-bot-mode/bot-profile-anatomy.svg' | relative_url }}" alt="Hermes Desktop 與 CLI 共用 Bot Profile；Profile 內包含身份、模型、SOUL、記憶、Skills、Tools、MCP、Bot Chat 與 Routines。Profile 分開狀態但 OAuth 或 token pool 可能共享，而且不構成檔案系統沙箱" loading="lazy">
   </a>
   <figcaption>Bot Mode 是既有 Profile 的控制面。點圖可開啟原尺寸；最下方的安全邊界比上面的可愛 roster 更重要。</figcaption>
@@ -224,7 +225,7 @@ Bot 的 Routine 本質上就是 Hermes Cron job。Desktop 會把它顯示在 Bot
 但「Bot 還在 roster」與「工作能永遠跑」是兩件事。Hermes 不會憑空替你提供一台永不關機的主機；Gateway、scheduler 與所在機器仍要運作。跨機器 DM 若走 Desktop relay，也需要同時認得兩端的 Desktop 保持連線；真正 always-on 的 peer-to-peer 路徑，則要另外設定 Gateway API、網路可達性與強金鑰。[[1]](https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode#messaging-across-connected-machines-the-desktop-relay)
 
 <figure>
-  <a href="{{ '/assets/img/technical/hermes-bot-mode/safe-collaboration-loop.svg' | relative_url }}">
+  <a href="{{ '/assets/img/technical/hermes-bot-mode/safe-collaboration-loop.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-bot-mode-persistent-ai-team" data-type="image">
     <img src="{{ '/assets/img/technical/hermes-bot-mode/safe-collaboration-loop.svg' | relative_url }}" alt="作者建議的 Bot Mode 控制架構：人類先定義風險，讓具名 Bot 依工作選擇直接交接、有限回合群組討論或排程；輸出再通過確定性檢查、證據與獨立審查，以及人類核准" loading="lazy">
   </a>
   <figcaption>作者建議的控制架構，並非 Hermes 內建強制流程。長期身份保存脈絡、責任與能力設定，但本身不構成權限或核准邊界。點圖可放大。</figcaption>
@@ -237,7 +238,7 @@ Bot 的 Routine 本質上就是 Hermes Cron job。Desktop 會把它顯示在 Bot
 我覺得更有用的問題仍然是：**系統主要把什麼當成長期存在的第一級物件？**
 
 <figure>
-  <a href="{{ '/assets/img/technical/hermes-bot-mode/identity-vs-task-model.svg' | relative_url }}">
+  <a href="{{ '/assets/img/technical/hermes-bot-mode/identity-vs-task-model.svg' | relative_url }}" class="portfolio-lightbox" data-gallery="hermes-bot-mode-persistent-ai-team" data-type="image">
     <img src="{{ '/assets/img/technical/hermes-bot-mode/identity-vs-task-model.svg' | relative_url }}" alt="截至 2026 年 8 月 25 日，作者依主要產品入口把 Grok Bot 與 Hermes 歸為 Identity-first，把 Claude Code 與 Codex 歸為 Work-first；這是定性分組，不是能力排行或等距尺度" loading="lazy">
   </a>
   <figcaption>作者依 2026 年 8 月 25 日的產品入口做定性分組；位置不代表分數或距離。四者都有重疊能力，也仍在快速互相靠近。點圖可開啟原尺寸。</figcaption>
@@ -415,34 +416,34 @@ Hermes Bot Mode 不是 Claude Code Subagent 的另一個名字，也不只是 Gr
 
 ## 參考資料
 
-[1] [Nous Research：Hermes Agent Bot Mode](https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode)
+- **[1]** [Nous Research：Hermes Agent Bot Mode](https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode)
 
-[2] [Nous Research：Profiles — Running Multiple Agents](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
+- **[2]** [Nous Research：Profiles — Running Multiple Agents](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
 
-[3] [Hermes Agent v0.20.3 Release Notes](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2)
+- **[3]** [Hermes Agent v0.20.3 Release Notes](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2)
 
-[4] [xAI：Grok Bot Overview](https://docs.x.ai/grok-bot/overview)
+- **[4]** [xAI：Grok Bot Overview](https://docs.x.ai/grok-bot/overview)
 
-[5] [xAI：Grok Bot Skills and Routines](https://docs.x.ai/grok-bot/skills-routines-and-automations)
+- **[5]** [xAI：Grok Bot Skills and Routines](https://docs.x.ai/grok-bot/skills-routines-and-automations)
 
-[6] [xAI：Grok Bot Approvals, Security, and Privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)
+- **[6]** [xAI：Grok Bot Approvals, Security, and Privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)
 
-[7] [Anthropic：Claude Code Custom Subagents](https://code.claude.com/docs/en/sub-agents)
+- **[7]** [Anthropic：Claude Code Custom Subagents](https://code.claude.com/docs/en/sub-agents)
 
-[8] [Anthropic：Claude Code Agent Teams](https://code.claude.com/docs/en/agent-teams)
+- **[8]** [Anthropic：Claude Code Agent Teams](https://code.claude.com/docs/en/agent-teams)
 
-[9] [OpenAI：Codex Long-running Work and Goal Mode](https://developers.openai.com/codex/long-running-work)
+- **[9]** [OpenAI：Codex Long-running Work and Goal Mode](https://developers.openai.com/codex/long-running-work)
 
-[10] [OpenAI：Codex Subagents](https://developers.openai.com/codex/subagents)
+- **[10]** [OpenAI：Codex Subagents](https://developers.openai.com/codex/subagents)
 
-[11] [Google Cloud：2024 DORA Report](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report)
+- **[11]** [Google Cloud：2024 DORA Report](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report)
 
-[12] [METR：Early-2025 AI and Experienced Open-Source Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
+- **[12]** [METR：Early-2025 AI and Experienced Open-Source Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
 
-[13] [Nous Research：Hermes Cron Scheduling](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron)
+- **[13]** [Nous Research：Hermes Cron Scheduling](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron)
 
-[14] [xAI：Grok Bot Use the Computer and Apps](https://docs.x.ai/grok-bot/computer-and-apps)
+- **[14]** [xAI：Grok Bot Use the Computer and Apps](https://docs.x.ai/grok-bot/computer-and-apps)
 
-[15] [METR：We Are Changing Our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/)
+- **[15]** [METR：We Are Changing Our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/)
 
-[16] [OpenAI：Codex Memories](https://learn.chatgpt.com/docs/customization/memories)
+- **[16]** [OpenAI：Codex Memories](https://learn.chatgpt.com/docs/customization/memories)

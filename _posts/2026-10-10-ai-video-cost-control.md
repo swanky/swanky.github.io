@@ -33,6 +33,28 @@ hero_image: true
   </ul>
 </div>
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">錢花在哪裡</span>
+      <ol class="article-toc-items">
+        <li><a href="#why">錢為什麼會不知不覺花掉</a></li>
+        <li><a href="#quote">習慣一：送出前，先看到一張報價單</a></li>
+        <li><a href="#rolls">習慣二：每顆鏡頭最多兩次</a></li>
+        <li><a href="#failures">習慣三：失敗也要記帳</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">控制重試成本</span>
+      <ol class="article-toc-items">
+        <li><a href="#usable">習慣四：比單價，不如比「每可用秒成本」</a></li>
+        <li><a href="#books">我的帳本長這樣</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 錢為什麼會不知不覺花掉 {#why}
 
 影片生成多半依秒數或運算量計價。2026 年 8 月我用 Seedance 2.5 生成一顆 15 秒、720p 的鏡頭，實付約 US$3.48。單看不貴，但有三件事會疊加：

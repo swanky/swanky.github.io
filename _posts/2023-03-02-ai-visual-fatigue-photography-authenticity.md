@@ -8,6 +8,13 @@ nav_active: education
 cover_image: /assets/facebook-archive/photos/2023-03-02_642589511209186_0.jpg
 description: "玩了一個月 Stable Diffusion 之後，我開始對 AI 生圖感到視覺疲勞。這篇是那段時間的誠實反思：攝影在 AI 時代還剩下什麼？"
 keywords: AI生圖,視覺疲勞,攝影,真實感,Stable Diffusion,AI學習,史旺基,Swanky Studio
+cover_alt: "穿白色上衣的女子在窗前扶著欄杆望向鏡頭。"
+seo_title: "AI 生圖的視覺疲勞，以及攝影還剩下什麼"
+tags: ["AI生圖", "視覺疲勞"]
+related_posts:
+  - jinpingmei-character-lab
+  - agentic-engineering-patterns-guide
+  - claude-code-s2m-skill
 ---
 
 ## 視覺疲勞

@@ -15,7 +15,7 @@ related_posts:
   - poteto-pstack-trust-before-scale
   - claude-code-kent-beck-tdd
   - matt-pocock-skills-ai-coding-workflow
-description: "pstack 有 24 條原則、23 套流程、30 個 skill。照一天寫程式的順序，拆解六個單獨用也好用的指令：各自交出什麼證據，以及原始規格裡比影片更嚴格的地方。"
+description: "依一天的開發順序拆解 pstack 的六個指令，逐一看它們交出什麼證據，以及原始規格還要求什麼。"
 keywords: "pstack, poteto-mode, Lauren Tan, poteto, /recall, /tdd, /interrogate, /no-comments, /create-verification-skill, /bro, Claude Code, AI Coding, 驗證, 史旺基"
 ---
 

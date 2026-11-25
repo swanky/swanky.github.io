@@ -16,7 +16,7 @@ related_posts:
   - ai-code-production-review-bottleneck
   - ai-define-verify-problems
   - production-ai-agent-control-planes
-description: "DHH 的停筆宣言為何引發反彈？從 Rails World 2026 演講與 AI 導入經驗，談為什麼我把 AI First 當成合作前提，卻不把盲信產出當成專業。"
+description: "從 DHH 的 Rails World 演講與導入經驗，看工程師對 AI 的不同立場，以及如何驗證產出。"
 keywords: DHH, pencils down, Rails World 2026, AI 接受度, AI 寫程式, 手寫程式, Agentic Engineering, 37signals, 企業 AI 導入, 史旺基
 ---
 

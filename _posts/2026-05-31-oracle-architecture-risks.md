@@ -7,8 +7,15 @@ cover_image: /assets/img/web3/oracle-architecture-risks.svg
 og_image: /assets/img/web3/oracle-architecture-risks-og.jpg
 hero_image: true
 seo_title: 預言機是什麼？鏈外資料如何安全進鏈｜DeFi 預言機架構與五大風險
-description: "智能合約看不到區塊鏈以外的世界，預言機（Oracle）就是它的眼睛。一文看懂預言機在做什麼、鏈外資料進鏈的流程，以及預言機的五大風險與真實攻擊案例。DeFi 基礎建設必懂。"
+description: "預言機如何把鏈外資料送進智能合約？用實例拆解資料來源、傳遞流程與五種可能失準的風險。"
 keywords: 預言機,Oracle,Chainlink,DeFi,鏈外資料,預言機攻擊,價格操縱,智能合約,區塊鏈,Web3,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「預言機 Oracle」，三個資料來源經中央節點連向智慧合約。"
+cta_context: technical
+tags: ["預言機", "Oracle"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 智能合約有一個違反直覺的「先天缺陷」：**它看不到區塊鏈以外的世界。**

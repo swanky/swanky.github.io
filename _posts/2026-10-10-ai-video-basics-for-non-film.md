@@ -33,15 +33,24 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#pipeline">基本功一：看懂整條流程</a></li>
-    <li><a href="#approval">基本功二：把核准點當成「改動價目表」</a></li>
-    <li><a href="#storyboard">基本功三：分鏡每格回答七件事</a></li>
-    <li><a href="#delivery">基本功四：交付規格先寫下來</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">先補製作流程</span>
+      <ol class="article-toc-items">
+        <li><a href="#pipeline">基本功一：看懂整條流程</a></li>
+        <li><a href="#approval">基本功二：把核准點當成「改動價目表」</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">分鏡與交付</span>
+      <ol class="article-toc-items">
+        <li><a href="#storyboard">基本功三：分鏡每格回答七件事</a></li>
+        <li><a href="#delivery">基本功四：交付規格先寫下來</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 這篇整理自一份接案教學手冊，加上我自己踩過的坑。手冊的核心主張只有一句：**先學會交付，再擴充工具。**手冊裡的數字都標明是教學假設或練習起點，不是市場行情，我引用時也照標。

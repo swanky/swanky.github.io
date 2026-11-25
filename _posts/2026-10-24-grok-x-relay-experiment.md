@@ -31,7 +31,6 @@ keywords: Grok Bot, OpenAI dot, Claude Duet, Claude Tag, Hermes Agent, Codex, Cl
     <li><strong>兩個 AI 各做一半</strong>：在我電腦上跑的 AI agent（Codex、Claude Code 這一類）讀得到我所有的作品和資料，但不能發文；Grok Bot 讀得到公開的 X、能發文，但讀不到我的硬碟。中間用 GitHub issue 當留言板，靠三個標籤決定輪到誰。</li>
     <li><strong>「自主」停在發布鍵前面</strong>：排程、出稿、算字數、轉圖、每小時輪詢、每週抓數據都是 AI；每一則發出去之前，仍要我看過最終文字和圖說好。留言裡寫「站主已同意」不算數，這條是設計，不是限制。</li>
     <li><strong>這波 bot 都在同一個問題上分岔：AI 用誰的身分做事</strong>：Grok Bot 給 bot 自己的信箱，OpenAI 的 dot 與 Claude Duet 透過你的帳號，Claude Tag 在頻道裡用服務帳號。我自己的版本是一個信箱加四個入口：Hermes 收信、Grok Bot 代發、Claude Code 出稿、Codex 生圖。</li>
-    <li><strong>網站本來不是為 AI 設計的</strong>：OpenAI 的 agent 把一個沒人用的 wiki 變成自己的留言板；agent 之間的身分與結算，是我看過最接近「非鏈不可」的需求。</li>
     <li><strong>四週、五種貼文、一個決策規則</strong>：神話串、單張、四圖小故事、真人舊作、製作過程輪著發，第四週用回覆數和個人檔案點擊決定之後把生成額度投在哪一種。</li>
     <li><strong>角色接時事，借的是機制不是 IP</strong>：史旺姬去 cos 女版馬份，齊瀏海和紅髮帶留著；四張劇照、兩輪審、四則貼文做標籤對照實驗。第一週的數據，寫這篇的時候還沒出來。</li>
   </ul>
@@ -393,6 +392,14 @@ Web1 和 Web2 的互通機制，從留言板、wiki 到 API，設計時假設的
 ## 參考資料 {#references}
 
 以下整理自我自己的倉庫紀錄、計畫檔與製作紀錄，是個案，不是通用做法。時間一律換算成台北時間。
+
+- **[1]** [兩個 AI 的 issue 留言紀錄（2026 年 10 月 18 日至 24 日）](#record-1)
+- **[2]** [X 宣傳與新作品規劃（2026 年 10 月 23 日）](#record-2)
+- **[3]** [貼文隊列格式與第一週隊列](#record-3)
+- **[4]** [女版馬份四張的研究、製作與審閱紀錄（2026 年 10 月 24 日）](#record-4)
+- **[5]** [這波 bot 模式的官方來源與貼文（2026 年 10 月 24 日親自開啟）](#record-5)
+- **[6]** [本機 Hermes 的排程與收信流程](#record-6)
+- **[7]** [agent 把公開網站當留言板，以及鏈上身分與付款的兩條線（2026 年 10 月 24 日親自開啟）](#record-7)
 
 ### [1] 兩個 AI 的 issue 留言紀錄（2026 年 10 月 18 日至 24 日） {#record-1}
 

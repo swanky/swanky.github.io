@@ -7,8 +7,15 @@ layout: article
 cover_image: /assets/img/linkedin/peon-ping-attention-management.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/%E6%88%91%E8%AB%8B%E6%98%9F%E6%B5%B7%E7%88%AD%E9%9C%B8%E7%9A%84%E5%87%B1%E8%8E%89%E6%A0%B9%E5%B9%AB%E6%88%91%E7%9B%AF-claude-code-swanky-hsiao-l1u3c"
-description: "多 session 平行開發讓注意力成為新瓶頸。peon-ping 把 RTS 音效設計搬進 agentic coding，用遊戲角色語音幫你盯住每一條 AI 戰線。"
+description: "同時開幾個 AI 開發工作階段，怎麼知道哪一個需要你？用 peon-ping 的遊戲語音分辨通知。"
 keywords: peon-ping, Claude Code, 注意力管理, agentic coding, AI 協作, 多工調度, RTS 音效, 星海爭霸, 凱莉根, CESP, 開發者體驗, context switch, 通知系統, Agentic Engineering, 史旺基, Swanky Hsiao, Swanky Studio
+cover_alt: "綁著長辮的奇幻角色坐在多個工作視窗前，畫面上有喇叭通知和遊戲角色頭像。"
+seo_title: "我請星海爭霸的凱莉根，幫我盯 Claude Code"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 > 一小時做出來的玩具，十萬工程師在用：peon-ping 與 AI 時代的注意力管理

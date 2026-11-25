@@ -35,6 +35,28 @@ hero_image: true
 
 以下的例子，都來自我用自己持有的 CloneX 角色做的彩排，屬於非參賽、非商業的練習。
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">角色與參考圖</span>
+      <ol class="article-toc-items">
+        <li><a href="#two-axes">做法一：分清「是誰」和「長什麼樣」</a></li>
+        <li><a href="#sheet-and-key">做法二：先核准兩張圖，再開始量產</a></li>
+        <li><a href="#reference-mode">做法三：知道參考圖能做什麼、不能做什麼</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">試排與檢查</span>
+      <ol class="article-toc-items">
+        <li><a href="#drift">做法四：排成一整排，才看得到漂移</a></li>
+        <li><a href="#previs">做法五：空間複雜的鏡頭，先用白模排練</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+        <li><a href="#參考資料">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 做法一：分清「是誰」和「長什麼樣」 {#two-axes}
 
 寫提示詞之前，我會先替每個角色寫兩張清單：

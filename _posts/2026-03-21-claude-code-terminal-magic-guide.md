@@ -11,7 +11,43 @@ og_image: /assets/img/linkedin/claude-code-magic-guide-og.jpg
 hero_image: true
 description: "從對話品質管理、成本優化到跨裝置協作，以顧問實戰視角整理 Claude Code 最值得掌握的進階用法。"
 keywords: Claude Code,終端機,AI coding,開發加速,AI工具,AI學習,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「終端機魔法書」，右側終端機視窗列出多個指令。"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>先整理對話中的任務和決定，讓下一次修改還找得到上下文。</li>
+    <li>依任務分配用量，長工作可以分支或接續，保留已驗證的結果。</li>
+    <li>跨裝置接手與終端機快捷操作，解決的是日常開發裡反覆出現的小等待。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">對話與用量</span>
+      <ol class="article-toc-items">
+        <li><a href="#真正的差距從來不在工具本身">真正的差距，從來不在工具本身</a></li>
+        <li><a href="#一先把對話管好才能把任務做好">先把對話管好，才能把任務做好</a></li>
+        <li><a href="#二資源是有限的智慧地分配它">資源是有限的，智慧地分配它</a></li>
+        <li><a href="#三讓思路可以分叉讓工作可以延續">讓思路可以分叉，讓工作可以延續</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">接續與操作</span>
+      <ol class="article-toc-items">
+        <li><a href="#四打破空間限制把工作帶著走">打破空間限制，把工作帶著走</a></li>
+        <li><a href="#五操作層的效率從快捷鍵開始">操作層的效率，從快捷鍵開始</a></li>
+        <li><a href="#工具快心態要更穩">工具快，心態要更穩</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 真正的差距，從來不在工具本身
 

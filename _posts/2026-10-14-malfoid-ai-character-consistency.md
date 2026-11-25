@@ -17,7 +17,7 @@ related_posts:
   - ai-video-consistency-reference-previs
   - ai-video-reference-breakdown
   - ai-video-sound-rights-release-check
-description: "一張女版馬份同人圖，三週內長成 AI 短片、LoRA 與生成網站。從 Textual Inversion、DreamBooth、LoRA、IP-Adapter 到商用多參考影片模型，拆解角色一致性怎麼被做出來、又在哪裡會壞。"
+description: "從女版馬份同人圖到短片與生成網站，拆解 LoRA、多張參考圖與影片模型維持角色一致性的做法。"
 keywords: Malfoid, 女版馬份, AI 角色一致性, IP-Adapter, LoRA, DreamBooth, InstantID, Seedance 2.5, Kling Element, Soul ID, 史旺基
 ---
 

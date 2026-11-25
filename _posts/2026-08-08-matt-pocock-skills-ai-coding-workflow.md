@@ -15,7 +15,7 @@ related_posts:
   - production-ai-agent-control-planes
   - agentic-engineering-patterns-guide
 hero_image: true
-description: "完整解析 Matt Pocock 的 AI Coding Skills：從需求追問、共同語言、規格與垂直切票，到 TDD、Code Review 與團隊導入風險。"
+description: "從 Matt Pocock 的開發技能看需求追問、工作切分、測試與審查，整理團隊採用時的取捨。"
 keywords: Matt Pocock, AI Skills, Agent Skills, grill-me, grill-with-docs, implement, AI Coding, Claude Code, Codex, Agentic Engineering, 軟體工程, 史旺基, Swanky Studio
 ---
 
@@ -394,16 +394,16 @@ Matt 這套不會是唯一答案。它有太多追問、文件漂移、Git 自�
 
 ## 參考資料
 
-[1] <https://www.aihero.dev/skills/for-your-team> — AI Skills for Real Engineering Teams
+- **[1]** [AI Skills for Real Engineering Teams](https://www.aihero.dev/skills/for-your-team)
 
-[2] <https://docs.google.com/presentation/d/12WTK21TZQrTffYdZg206dWuy_CWICD7Eud8pZVWzItA/edit> — Skills for Real Engineers 簡報
+- **[2]** [Skills for Real Engineers 簡報](https://docs.google.com/presentation/d/12WTK21TZQrTffYdZg206dWuy_CWICD7Eud8pZVWzItA/edit)
 
-[3] <https://github.com/mattpocock/skills> — mattpocock/skills
+- **[3]** [mattpocock/skills](https://github.com/mattpocock/skills)
 
-[4] <https://www.aihero.dev/skills-grill-me> — The /grill-me Skill
+- **[4]** [The /grill-me Skill](https://www.aihero.dev/skills-grill-me)
 
-[5] <https://www.aihero.dev/skills-implement> — The /implement Skill
+- **[5]** [The /implement Skill](https://www.aihero.dev/skills-implement)
 
-[6] <https://www.aihero.dev/skills-grill-with-docs> — The /grill-with-docs Skill
+- **[6]** [The /grill-with-docs Skill](https://www.aihero.dev/skills-grill-with-docs)
 
-[7] <https://www.skills.sh/mattpocock/skills> — mattpocock/skills on skills.sh
+- **[7]** [mattpocock/skills on skills.sh](https://www.skills.sh/mattpocock/skills)

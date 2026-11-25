@@ -25,6 +25,7 @@ description: 研究素材並製作、審稿、發布 Swanky 網站技術專欄�
 不論用哪個 agent，一律再讀：
 
 - `docs/brand-book.md`（私有）：§3 語氣與寫作、§4 視覺識別、§5.1 文章及格線、§6 審稿清單。
+- `references/delivery-contract.md` §3–5：起稿時直接套用正文、圖片放大與參考資料樣板。建置後執行 `bundle exec ruby tools/check-article-format.rb`，批次核對文章的摘要、分組目錄、章節跳轉及來源編號；修正後再發布。
 - `references/writing-craft.md`：句子層級修稿準則與文體判斷。
 
 上列 1–5 是 Hermes 的技能。在 Claude Code 等沒有這些技能的環境，改用 repo 內的對應：

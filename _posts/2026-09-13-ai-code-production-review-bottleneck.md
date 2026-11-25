@@ -16,7 +16,7 @@ related_posts:
   - ai-define-verify-problems
   - agentic-ai-coding-spec-oriented
   - production-ai-agent-control-planes
-description: "從寶玉、響馬與 Gergely Orosz 的公開討論，拆解 AI 寫程式與產品上線的差距：編碼成本下降之後，團隊該如何處理審查瓶頸、設計驗收證據，以及重新分配工程師與領域專家的責任。"
+description: "從寶玉、響馬與 Gergely Orosz 的討論，看 AI 開發如何改變審查、驗收與工程師的責任。"
 keywords: AI 取代工程師, 寶玉, Gergely Orosz, 程式碼審查, AI 軟體開發, Agentic Engineering, AI Native, 產品交付, 驗收標準, 史旺基
 ---
 

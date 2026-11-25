@@ -7,8 +7,15 @@ cover_image: /assets/img/web3/depin-explained.svg
 og_image: /assets/img/web3/depin-explained-og.jpg
 hero_image: true
 seo_title: DePIN 是什麼？去中心化實體基礎設施網路完整入門｜六大類別與三重飛輪
-description: "DePIN（去中心化實體基礎設施網路）是 Web3 最被低估的賽道之一。一文看懂 DePIN 的定義、六大類別、三重飛輪成長邏輯，以及為什麼它被視為加密與真實世界最有感的交集。"
+description: "從六種去中心化實體基礎設施網路，看 DePIN 如何用代幣獎勵協調設備、供給與使用需求。"
 keywords: DePIN,去中心化實體基礎設施,加密激勵,Helium,飛輪效應,Web3,區塊鏈,DePIN 是什麼,史旺基,Swanky Studio
+cover_alt: "黑底封面寫著「DePIN」，右側數個節點相連成網。"
+cta_context: technical
+tags: ["DePIN", "去中心化實體基礎設施"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 在 Web3 一堆抽象難懂的概念裡，**DePIN** 大概是最「接地氣」的一個——因為它連接的不是虛擬世界，而是你看得見、摸得到的真實基礎設施：無線網路、伺服器、感測器、充電樁。

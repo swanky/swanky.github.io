@@ -6,7 +6,7 @@ date: 2026-10-07
 published: true
 categories: [technical]
 tags: [ai-agent, agentic-engineering, pstack, software-engineering, verification, poteto]
-description: "從 Lauren Tan 的演講與 Matt Pocock 訪談，拆解 pstack、信任階梯、Feature map、驗證 CLI、Dune 架構與雙迴圈：如何先建立可信環境，再擴大 agent 並行，並保留自動合併的風險邊界。"
+description: "從 Lauren Tan 的演講與訪談，看 pstack 如何用功能地圖和驗證工具支撐代理分工與合併審查。"
 keywords: "Poteto, Lauren Tan, Matt Pocock, pstack, verification skill, trust ladder, Grok Bot, software factory, AI 軟體工廠, Agentic Engineering"
 cover_image: /assets/img/linkedin/poteto-pstack-trust-before-scale.jpg
 cover_alt: "制服品牌主角與 Lauren Tan、Matt Pocock 在概念軟體工廠中檢查成果，周圍大量 Grok 機器人分工開發、驗證與攔截錯誤"

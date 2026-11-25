@@ -8,8 +8,15 @@ nav_active: technical
 cover_image: /assets/img/linkedin/claude-code-kent-beck.jpg
 hero_image: true
 source_url: "https://www.linkedin.com/pulse/claude-code-%E6%99%82%E4%BB%A3kent-beck-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%8F%90%E9%86%92%E6%88%91%E5%80%91%E4%B8%8D%E8%A6%81%E5%8F%AA%E7%9C%8B80-%E5%AE%8C%E6%88%90-swanky-hsiao-wuf3c"
-description: "從 Kent Beck 對 TDD 的觀點出發，探討在 Claude Code 與 AI coding 工具時代，為何測試與規格比以往更加重要，80% 完成的系統不等於可交付的系統。"
+description: "從 Kent Beck 的測試驅動開發觀點，看 Claude Code 寫完程式後，團隊怎麼用規格與測試判斷能否交付。"
 keywords: Claude Code,TDD,Kent Beck,AI coding,軟體工程,技術顧問,史旺基,Swanky Studio
+cover_alt: "戴貓耳髮飾的角色操作筆電，旁邊螢幕顯示綠色的測試通過訊息。"
+seo_title: "Claude Code 時代，Kent Beck 為什麼提醒我們不要只看「80% 完成」"
+cta_context: agentic
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
 
 最近看到 Kent Beck 一段話，我覺得非常值得在今天這個 Claude Code 與 AI coding 工具快速普及的時代，再重新讀一次。

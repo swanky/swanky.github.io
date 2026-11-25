@@ -28,6 +28,27 @@ keywords: AI 角色設定, 角色卡, 金瓶梅, 三視圖, character design, AI
   </ul>
 </div>
 
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">原典與角色海選</span>
+      <ol class="article-toc-items">
+        <li><a href="#起點一部小說能不能長出一個劇組">起點：一部小說，能不能長出一個劇組？</a></li>
+        <li><a href="#第一步全文入庫">第一步：全文入庫</a></li>
+        <li><a href="#第二步海選以及海選的殘酷現實">第二步：海選——以及海選的殘酷現實</a></li>
+        <li><a href="#第三步角色卡每一句側寫都要有出處">第三步：角色卡——每一句側寫都要有出處</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">形象與品質檢查</span>
+      <ol class="article-toc-items">
+        <li><a href="#第四步形象與聲音把證據翻譯成指令">第四步：形象與聲音——把證據翻譯成指令</a></li>
+        <li><a href="#第五步品質關卡圖像觀察-vs-原典證據-vs-裁決">第五步：品質關卡——圖像觀察 vs 原典證據 vs 裁決</a></li>
+        <li><a href="#心得ai-的價值在流程不在單次輸出">心得：AI 的價值在流程，不在單次輸出</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+
 ## 起點：一部小說，能不能長出一個劇組？
 
 假設今天要把《金瓶梅》拍成影集或做成遊戲，第一件事不是寫劇本，而是回答一連串基本問題：這本書裡到底有哪些人？誰重要？他們長什麼樣子、說話什麼調性、彼此是什麼關係？傳統做法是文學顧問讀書做筆記，以月為單位計。

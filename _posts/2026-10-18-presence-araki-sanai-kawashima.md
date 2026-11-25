@@ -11,11 +11,13 @@ use_glightbox: true
 related_posts:
   - japanese-photography-history-primer
   - photobook-pages-say-less
+  - photobook-variety-gate
 description: "人像要有「在場感」，關鍵常常不是表情，而是拍的人站多近。這篇只做一件事：聽荒木經惟、佐內正史、川島小鳥在訪談裡怎麼說距離，再整理成拍照時可以直接試的四個練習。"
 keywords: 拍攝距離, 人像攝影, 在場感, 荒木經惟, 佐內正史, 川島小鳥, 私寫真, 明星, 訪談, 寫真集, 史旺基
 cover_image: /assets/img/photo-notes/presence-araki-sanai-kawashima-cover.jpg
 cover_alt: "成年水手服創作者站在攝影書店的走道中央，雙手舉起相機對著看的人取景，腳邊地板亮著近、中、遠三圈光環，代表三種拍照距離"
 hero_image: true
+cta_context: photography
 ---
 
 <div class="article-tldr">
@@ -32,6 +34,28 @@ hero_image: true
 我把這種感覺叫做**在場感**：看照片的人感覺得到，按快門的人當時就在現場，而且跟被拍的人有某種關係。
 
 這三位是誰、館藏作品在哪、能借什麼、不能抄什麼，以及荒木經惟與模特兒 KaoRi 的爭議，「看懂寫真」的〈[讓人感覺你就在那裡：荒木經惟、佐內正史、川島小鳥的「在場」]({{ '/photography/learn/style/presence/' | relative_url }})〉那一章已經拆過了。這篇不重複，只做一件事：**聽三個人自己怎麼講距離**，再把它變成四個可以直接試的練習。這是我自己的讀法，不是三位攝影師的分類；他們的原話，我會標清楚出處。
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">三位攝影師的距離</span>
+      <ol class="article-toc-items">
+        <li><a href="#overview">先看一張圖、一張表</a></li>
+        <li><a href="#araki">荒木經惟：在關係裡面拍</a></li>
+        <li><a href="#sanai">佐內正史：路過的距離</a></li>
+        <li><a href="#kawashima">川島小鳥：站到對方那邊</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">回到拍攝現場</span>
+      <ol class="article-toc-items">
+        <li><a href="#practice">把距離帶回你的拍攝</a></li>
+        <li><a href="#tips">下次看人像或自己拍照時，可以注意這幾件事</a></li>
+        <li><a href="#further-reading">接著讀</a></li>
+        <li><a href="#references">參考資料</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 先看一張圖、一張表 {#overview}
 
@@ -124,7 +148,7 @@ hero_image: true
 
 下面是我自己會用的練習，不是三位攝影師的方法：
 
-<div class="ae-traits" id="practice">
+<div class="ae-traits">
   <div class="ae-flip"><div class="ae-flip__inner">
     <div class="ae-flip__face"><span class="ae-flip__num">1</span><h3>在關係裡面拍</h3><p>從對方生活裡的一件東西開始。</p><p class="ae-flip__hint">點我看練習 ↻</p></div>
     <div class="ae-flip__face ae-flip__face--back"><h3>在關係裡面拍</h3><p>請對方選一件跟自己有關的東西，拍「人在」和「人不在、只剩那件東西」兩張。再拍不同日子的光，不要全部調成同一種色。</p><p class="ae-flip__hint">再點一次翻回去</p></div>
@@ -197,11 +221,11 @@ hero_image: true
 
 ## 參考資料 {#references}
 
-- [MoMA：Nobuyoshi Araki, Untitled from "Sentimental Journey, Winter Journey"](https://www.moma.org/collection/works/128437)：1971 年作品館藏。
-- [SFMOMA：Nobuyoshi Araki, Journey through life and death](https://www.sfmoma.org/watch/nobuyoshi-araki-journey-through-life-and-death/)：荒木談《センチメンタルな旅・冬の旅》（1991）的訪談影片；「有相機這件事本身就是感傷的」。
-- [Tokyo Review：#MeToo Hits Japan's Most Famous Photographer](https://www.tokyoreview.net/2018/04/metoo-japan-famous-photographer/)：2018 年模特兒的公開指控。
-- [青幻舎新聞稿：佐内正史『生きている』復刊（PR TIMES，2026-07-14）](https://prtimes.jp/main/html/rd/p/000000069.000008640.html)：1997 年 4 月初版、2007 年最後一次再版、2026 年 9 月復刊；「誰都沒看過的一群照片」。
-- [中村一義官方：佐內正史訪談](https://www.jvcmusic.co.jp/nakamura_kazuyoshi/20th/interview.html)：佐內談長期合作、選片與「ぽん、と撮っただけ」的照片。
-- [川島小鳥官方：明星](https://kawashimakotori.com/347/)：2014 年 12 月出版、整整三年、三十次以上的台灣採訪與裝訂方式。
-- [川島小鳥官方：道](https://kawashimakotori.com/971/)：2017 年出版，約一年記下演員太賀每天變化的表情。
-- [IMA：川島小鳥インタヴュー「被写体と"ぐるん"となる感覚からポートレイトが生まれる」（2019）](https://imaonline.jp/articles/interview/20190611kotori-kawashima/)：「ぐるん」、太賀與朝陽、「1 毫米」、「走到哪算到哪」。
+- **[1]** [MoMA：Nobuyoshi Araki, Untitled from "Sentimental Journey, Winter Journey"](https://www.moma.org/collection/works/128437)：1971 年作品館藏。
+- **[2]** [SFMOMA：Nobuyoshi Araki, Journey through life and death](https://www.sfmoma.org/watch/nobuyoshi-araki-journey-through-life-and-death/)：荒木談《センチメンタルな旅・冬の旅》（1991）的訪談影片；「有相機這件事本身就是感傷的」。
+- **[3]** [Tokyo Review：#MeToo Hits Japan's Most Famous Photographer](https://www.tokyoreview.net/2018/04/metoo-japan-famous-photographer/)：2018 年模特兒的公開指控。
+- **[4]** [青幻舎新聞稿：佐内正史『生きている』復刊（PR TIMES，2026-07-14）](https://prtimes.jp/main/html/rd/p/000000069.000008640.html)：1997 年 4 月初版、2007 年最後一次再版、2026 年 9 月復刊；「誰都沒看過的一群照片」。
+- **[5]** [中村一義官方：佐內正史訪談](https://www.jvcmusic.co.jp/nakamura_kazuyoshi/20th/interview.html)：佐內談長期合作、選片與「ぽん、と撮っただけ」的照片。
+- **[6]** [川島小鳥官方：明星](https://kawashimakotori.com/347/)：2014 年 12 月出版、整整三年、三十次以上的台灣採訪與裝訂方式。
+- **[7]** [川島小鳥官方：道](https://kawashimakotori.com/971/)：2017 年出版，約一年記下演員太賀每天變化的表情。
+- **[8]** [IMA：川島小鳥インタヴュー「被写体と"ぐるん"となる感覚からポートレイトが生まれる」（2019）](https://imaonline.jp/articles/interview/20190611kotori-kawashima/)：「ぐるん」、太賀與朝陽、「1 毫米」、「走到哪算到哪」。

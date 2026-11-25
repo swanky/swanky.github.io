@@ -7,7 +7,43 @@ nav_active: technical
 cover_image: /assets/facebook-archive/photos/2021-07-17_197165862418222_0.jpg
 description: "2021 年，我在 OurSong 發行第一批制服女孩 NFT。平台後來停止服務，這篇更新記錄當年的實驗、後續修正，以及目前仍可瀏覽的作品存檔。"
 keywords: NFT,制服女孩,OurSong,加密貨幣,區塊鏈,Web3,史旺基,Swanky Studio
+cover_alt: "穿白襯衫、灰裙的女子坐在公園長椅上微笑。"
+seo_title: "制服女孩上鏈：攝影作品踏入 NFT 世界的第一步"
+cta_context: technical
+tags: ["NFT", "制服女孩"]
+related_posts:
+  - notch-claude-game-engine
+  - hermes-plugin-hackathon-top10
+  - harness-loop-graph-ai-agent-layers
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>從制服攝影挑出作品，嘗試讓收藏者在 OurSong 取得 NFT。</li>
+    <li>平台後來停止服務，作品與當年發行的紀錄要分開保存。</li>
+    <li>文末整理目前仍可查看的作品存檔。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">第一次發行</span>
+      <ol class="article-toc-items">
+        <li><a href="#為什麼要把攝影作品做成-nft">為什麼要把攝影作品做成 NFT？</a></li>
+        <li><a href="#oursong-與第一批作品">OurSong 與第一批作品</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">平台之後</span>
+      <ol class="article-toc-items">
+        <li><a href="#發行之後">發行之後</a></li>
+        <li><a href="#學到的事">學到的事</a></li>
+        <li><a href="#那之後">那之後</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 為什麼要把攝影作品做成 NFT？
 

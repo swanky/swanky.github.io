@@ -33,16 +33,25 @@ hero_image: true
   </ul>
 </div>
 
-<nav class="article-toc" aria-label="文章大綱">
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
   <span class="article-toc-label">本文大綱</span>
-  <ul>
-    <li><a href="#why-stills">先問：畫面真的需要動嗎？</a></li>
-    <li><a href="#gates">十道關卡，兩條規則</a></li>
-    <li><a href="#canon">第一步：鎖住原典和敏感邊界</a></li>
-    <li><a href="#narration">「我有點看不懂」：最有價值的一句審核意見</a></li>
-    <li><a href="#check">讀音、道具與資料外傳，都要有人點頭</a></li>
-    <li><a href="#start">你可以這樣開始</a></li>
-  </ul>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">原典到分鏡</span>
+      <ol class="article-toc-items">
+        <li><a href="#why-stills">先問：畫面真的需要動嗎？</a></li>
+        <li><a href="#gates">十道關卡，兩條規則</a></li>
+        <li><a href="#canon">第一步：鎖住原典和敏感邊界</a></li>
+        <li><a href="#narration">「我有點看不懂」：最有價值的一句審核意見</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">製作與驗收</span>
+      <ol class="article-toc-items">
+        <li><a href="#check">讀音、道具與資料外傳，都要有人點頭</a></li>
+        <li><a href="#start">你可以這樣開始</a></li>
+        <li><a href="#這個系列接著讀">這個系列接著讀</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
 
 素材是公共領域的《金瓶梅詞話》（萬曆本），全文收錄在站上的<a href="{{ '/jinpingmei/text/' | relative_url }}">原文書房</a>；十集成片、選角與角色參考圖組，都在<a href="{{ '/jinpingmei/studio/' | relative_url }}">金瓶梅影像工作室</a>。

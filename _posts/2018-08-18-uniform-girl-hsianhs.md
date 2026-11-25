@@ -7,6 +7,14 @@ nav_active: photography
 cover_image: /assets/facebook-archive/photos/2018-08-18_10158075093130329_0.jpg
 description: "制服女孩人像攝影，模特兒嫺嫺：照片拍完先放了一段時間，某天重新打開才覺得時機到了；同一張照片今天修和半年後修，結果會不一樣。"
 keywords: 制服女孩,人像攝影,攝影作品,台灣攝影師,史旺基,Swanky Studio
+cover_alt: "穿白襯衫和藍裙的女子坐在教室裡，俯身整理白鞋。"
+seo_title: "制服女孩嫺嫺"
+cta_context: photography
+tags: ["制服女孩", "人像攝影"]
+related_posts:
+  - my-seven-ways-of-shooting
+  - presence-araki-sanai-kawashima
+  - japanese-photography-history-primer
 ---
 
 有些照片，拍完之後會先放著。

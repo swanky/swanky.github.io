@@ -8,7 +8,42 @@ nav_active: education
 cover_image: /assets/facebook-archive/photos/2023-02-14_629017969233007_1.jpg
 description: "一個拍了十幾年制服女孩的攝影師，在 2023 年初認真玩了一個月 Stable Diffusion。這是那段時間的實驗筆記與反思。"
 keywords: Stable Diffusion,AI生圖,攝影師,AI繪圖,AI學習,史旺基,Swanky Studio
+cover_alt: "戴皇冠的金髮女子身穿金色服裝，坐在紅色座椅上。"
+seo_title: "攝影師的 AI 生圖實驗——從「假裝學電繪」到 Stable Diffusion 四週筆記"
+tags: ["Stable Diffusion", "AI生圖"]
+related_posts:
+  - jinpingmei-character-lab
+  - agentic-engineering-patterns-guide
+  - claude-code-s2m-skill
 ---
+
+<div class="article-tldr">
+  <span class="article-tldr-label">30 秒結論</span>
+  <ul>
+    <li>從把生成當成電繪練習開始，第二週的成果讓我想追究它怎麼做到。</li>
+    <li>換模型組合之後，畫面比例和人物風格也跟著改變。</li>
+    <li>第四週的視覺疲勞，讓我重新思考攝影師在看一張圖時究竟在乎什麼。</li>
+  </ul>
+</div>
+
+<nav class="article-toc article-toc--outline" aria-label="文章大綱">
+  <span class="article-toc-label">本文大綱</span>
+  <ol class="article-toc-parts">
+    <li class="article-toc-part"><span class="article-toc-part-title">前兩週的嘗試</span>
+      <ol class="article-toc-items">
+        <li><a href="#第一週假裝在學電繪">第一週：假裝在學電繪</a></li>
+        <li><a href="#第二週效果太好開始認真研究">第二週：效果太好，開始認真研究</a></li>
+      </ol>
+    </li>
+    <li class="article-toc-part"><span class="article-toc-part-title">模型與攝影眼光</span>
+      <ol class="article-toc-items">
+        <li><a href="#第三週stable-diffusion--模型組合">第三週：Stable Diffusion + 模型組合</a></li>
+        <li><a href="#第四週九頭身美少女與視覺疲勞">第四週：九頭身美少女與視覺疲勞</a></li>
+        <li><a href="#結語攝影師怎麼看-ai-生圖">結語：攝影師怎麼看 AI 生圖</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
 
 ## 第一週：假裝在學電繪
 
