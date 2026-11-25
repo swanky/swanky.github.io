@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 285" role="img" aria-labelledby="title desc">
+  <title id="title">同一套 AI，三種開發任務</title>
+  <desc id="desc">一百名學生的平均功能得分，滿分一百分。重做範例四十六分，增加功能五十五分，還原未知規則三十四分。</desc>
+  <rect width="440" height="285" rx="14" fill="#faf6ec"/>
+  <g font-family="system-ui,sans-serif" fill="#342e23">
+    <text x="22" y="38" font-size="24" font-weight="700">同一套 AI，三種開發任務</text>
+    <text x="22" y="65" font-size="16">100 名學生・平均功能得分・滿分 100</text>
+    <g fill="#e8dfcf">
+      <rect x="22" y="108" width="396" height="9" rx="4"/>
+      <rect x="22" y="175" width="396" height="9" rx="4"/>
+      <rect x="22" y="242" width="396" height="9" rx="4"/>
+    </g>
+    <g fill="#956216">
+      <rect x="22" y="108" width="182.16" height="9" rx="4"/>
+      <rect x="22" y="175" width="217.8" height="9" rx="4"/>
+      <rect x="22" y="242" width="134.64" height="9" rx="4"/>
+    </g>
+    <g font-size="18"><text x="22" y="99">重做範例</text><text x="22" y="166">在既有程式增加功能</text><text x="22" y="233">觀察介面，還原未知規則</text></g>
+    <g text-anchor="end" font-weight="700" font-size="21"><text x="418" y="99">46 分</text><text x="418" y="166">55 分</text><text x="418" y="233">34 分</text></g>
+  </g>
+</svg>

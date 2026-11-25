@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 244" role="img" aria-labelledby="title desc">
+  <title id="title">完成工作要花多久？</title><desc id="desc">基準 100。事前預估 76、事後體感 80、實測 119。</desc>
+  <rect width="380" height="244" rx="12" fill="#faf6ec"/>
+  <g fill="#302c24" font-family="system-ui, sans-serif" font-size="18"><text x="22" y="37" font-size="23" font-weight="bold">完成工作要花多久？</text>
+  <text x="22" y="64" font-size="15">不用 AI 的工時 ＝ 100</text><text x="22" y="102">事前預估</text><rect x="115" y="85" width="125.39999999999999" height="22" rx="3" fill="#beb29d"/><text x="248.39999999999998" y="103">76</text><text x="22" y="151">事後體感</text><rect x="115" y="134" width="132" height="22" rx="3" fill="#beb29d"/><text x="255" y="152">80</text><text x="22" y="200">實際記錄</text><rect x="115" y="183" width="196.35" height="22" rx="3" fill="#885d12"/><text x="319.35" y="201">119</text><path d="M280 75 V215" stroke="#393632" stroke-dasharray="3 3"/>
+  </g>
+</svg>

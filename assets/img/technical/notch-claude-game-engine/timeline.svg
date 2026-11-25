@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 244" role="img" aria-labelledby="title desc">
+  <title id="title">Notch 把哪些工作交給 AI？</title><desc id="desc">四次公開表態，從拒絕到展示與詢價。</desc>
+  <rect width="380" height="244" rx="12" fill="#faf6ec"/>
+  <g fill="#302c24" font-family="system-ui, sans-serif" font-size="18"><text x="22" y="37" font-size="23" font-weight="bold">Notch 把哪些工作交給 AI？</text>
+  <path d="M48 66 V220" fill="none" stroke="#c79c43" stroke-width="3"/><circle cx="48" cy="70" r="7" fill="#896017"/><text x="68" y="77" font-weight="bold">07.14</text><text x="142" y="77">公開寫下「Reject AI.」</text><circle cx="48" cy="118" r="7" fill="#896017"/><text x="68" y="125" font-weight="bold">07.21</text><text x="142" y="125">考慮試做地圖工具</text><circle cx="48" cy="166" r="7" fill="#896017"/><text x="68" y="173" font-weight="bold">11.20</text><text x="142" y="173">展示重做的舊引擎</text><circle cx="48" cy="214" r="7" fill="#896017"/><text x="68" y="221" font-weight="bold">11.23</text><text x="142" y="221">詢問更多額度與速度</text>
+  </g>
+</svg>
