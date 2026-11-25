@@ -13,10 +13,6 @@ keywords: AI,職場技能,AI工具,技術管理,Orchestrator,Executor,史旺基,
 cover_alt: "水手服角色在桌上繪圖，旁邊螢幕顯示方框與連線組成的工作流程。"
 seo_title: "AI 時代，職場真正的分水嶺，已經不是 Junior / Senior，而是 Executor / Orchestrator"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 以前我們用 Junior / Senior 區分職場階級，背後的邏輯很直觀：做得久、懂得多、出錯少，就是資深。

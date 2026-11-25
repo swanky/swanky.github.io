@@ -12,10 +12,6 @@ cover_alt: "多位角色在戶外用筆電與白板協作，天空中浮著 AI�
 seo_title: "等 AI Agent 開始自己付錢，它們就會回頭找上 Web3"
 cta_context: technical
 tags: ["AI Agent", "Web3"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > Web3 的人都在學 AI，AI 的人卻不學 Web3——這條單行道，撐不過 Agent 經濟。

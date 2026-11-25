@@ -18,10 +18,6 @@ cover_image: /assets/img/photo-notes/photobook-pages-say-less-cover.jpg
 cover_alt: "俯看寫真集編排桌：成年水手服創作者雙手把一張跨頁照片推進排好的順序裡，頁面上沒有任何圖說，只留白邊，桌角放著收起來的文字卡、裁紙機和裝訂機"
 hero_image: true
 cta_context: photography
-related_posts:
-  - my-seven-ways-of-shooting
-  - presence-araki-sanai-kawashima
-  - japanese-photography-history-primer
 ---
 
 <div class="article-tldr">

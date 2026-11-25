@@ -13,10 +13,6 @@ cover_alt: "三位角色分別捧著太陽、地球和月球，右側紅色折�
 seo_title: "產品命名不是語感問題，是社群記憶問題：從 GPT-5.6 的 Sol / Terra / Luna 談起"
 cta_context: technical
 tags: ["產品命名", "GPT-5.6"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > Terra / Luna 不是每個人都會想到宇宙

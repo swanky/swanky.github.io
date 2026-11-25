@@ -12,10 +12,6 @@ keywords: RWA,代幣化,ERC-3643,CMTAT,ERC-1400,ERC-1404,證券代幣,STO,T-REX,
 cover_alt: "黑底封面寫著「標準演進史」，右側以垂直時間軸串起各年標準。"
 cta_context: technical
 tags: ["RWA", "代幣化"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 如果你熟悉 ERC-20，你知道它的核心其實很簡單：一張餘額對照表，加上一個 `transfer` 函數。任何人可以把代幣轉給任何人，不問原因、不查身分。這在加密貨幣的世界裡運作得很好——但當你試圖把一張**真正的債券**、一檔**真正的基金**、或一塊**真正的黃金**放上鏈時，問題就來了。

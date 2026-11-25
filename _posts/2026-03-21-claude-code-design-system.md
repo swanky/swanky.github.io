@@ -13,10 +13,6 @@ cover_alt: "黑底封面寫著「從工程師到設計通才」，右側並列�
 seo_title: "從工程師到設計通才：利用 Claude Code 與三層架構打造 AI 設計系統全攻略"
 cta_context: agentic
 tags: ["Claude Code", "設計系統"]
-related_posts:
-  - jinpingmei-character-lab
-  - agentic-engineering-patterns-guide
-  - claude-code-s2m-skill
 ---
 
 <div class="article-tldr">

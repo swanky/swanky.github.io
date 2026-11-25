@@ -12,10 +12,6 @@ keywords: 債券代幣化,RWA,DvP,券款對付,公債,台灣債券市場,櫃買�
 cover_alt: "黑底封面寫著「債券代幣化」，以雙向箭頭連接債券與現金。"
 cta_context: technical
 tags: ["債券代幣化", "RWA"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 如果黃金是 RWA（現實世界資產代幣化）裡最直觀的應用，那債券就是最重要的**主戰場**。BlackRock、UBS、富蘭克林坦伯頓最早拿來代幣化的，幾乎都是債券或債券型基金。為什麼？因為債券有一個黃金沒有的特質：**它的價值來自一串清清楚楚、可以寫進程式的現金流。** 這讓它天生就適合智能合約。

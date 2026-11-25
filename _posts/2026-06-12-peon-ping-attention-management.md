@@ -12,10 +12,6 @@ keywords: peon-ping, Claude Code, 注意力管理, agentic coding, AI 協作, �
 cover_alt: "綁著長辮的奇幻角色坐在多個工作視窗前，畫面上有喇叭通知和遊戲角色頭像。"
 seo_title: "我請星海爭霸的凱莉根，幫我盯 Claude Code"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > 一小時做出來的玩具，十萬工程師在用：peon-ping 與 AI 時代的注意力管理

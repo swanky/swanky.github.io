@@ -12,10 +12,6 @@ keywords: NFT,ERC-721,ERC-1155,ERC-20,IPFS,tokenURI,metadata,代幣標準,NFT �
 cover_alt: "黑底封面寫著「NFT 技術堆疊」，右側堆疊四層方框，從代幣到 IPFS 圖片。"
 cta_context: technical
 tags: ["NFT", "ERC-721"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 「我買了一張 NFT，那張圖到底存在哪裡？是存在區塊鏈裡嗎？」

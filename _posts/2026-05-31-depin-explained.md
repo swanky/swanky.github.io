@@ -12,10 +12,6 @@ keywords: DePIN,去中心化實體基礎設施,加密激勵,Helium,飛輪效應,
 cover_alt: "黑底封面寫著「DePIN」，右側數個節點相連成網。"
 cta_context: technical
 tags: ["DePIN", "去中心化實體基礎設施"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在 Web3 一堆抽象難懂的概念裡，**DePIN** 大概是最「接地氣」的一個——因為它連接的不是虛擬世界，而是你看得見、摸得到的真實基礎設施：無線網路、伺服器、感測器、充電樁。

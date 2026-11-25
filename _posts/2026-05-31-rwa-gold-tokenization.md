@@ -12,10 +12,6 @@ keywords: 黃金代幣化,黃金存摺,RWA,代幣化黃金,PAXG,XAUT,鏈上黃�
 cover_alt: "黑底封面寫著「黃金代幣化」，右側以金條輪廓連向黃金代幣。"
 cta_context: technical
 tags: ["黃金代幣化", "黃金存摺"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在所有 RWA（現實世界資產代幣化）的應用裡，黃金大概是最容易理解、卻又藏著最微妙設計問題的一種。它不像債券有複雜的現金流，也不像股票牽涉公司治理——黃金就是黃金，一塊金屬。但正因為它是「實體」，把它搬上鏈時會遇到一個債券不會遇到的根本問題：**那塊金屬，到底放在哪裡？**

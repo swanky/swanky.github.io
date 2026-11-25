@@ -13,10 +13,6 @@ keywords: Claude Code,MBTI,工程師,AI導入,技術管理,技術顧問,史旺�
 cover_alt: "五位水手服角色在工程團隊辦公室工作，白板上畫著流程圖。"
 seo_title: "當工程團隊開始導入 Claude Code：16 型工程師的真實反應圖鑑"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 ## 不是每個人都在抗拒 AI，有些人只是用不同方式捍衛專業

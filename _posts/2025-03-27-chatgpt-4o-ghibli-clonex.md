@@ -11,10 +11,6 @@ keywords: ChatGPT,GPT-4o,吉卜力,CloneX,AI生圖,NFT,AI學習,史旺基,Swanky
 cover_alt: "女子坐在陽光灑入的教室裡，伸手搭著鄰座椅背。"
 seo_title: "ChatGPT 4o 圖像革命：吉卜力重繪、CloneX IP，以及那些我曾經費盡苦心做到的事"
 tags: ["ChatGPT", "GPT-4o"]
-related_posts:
-  - jinpingmei-character-lab
-  - agentic-engineering-patterns-guide
-  - claude-code-s2m-skill
 ---
 
 ## 指令：「以吉卜力動畫風格重畫這張圖片」

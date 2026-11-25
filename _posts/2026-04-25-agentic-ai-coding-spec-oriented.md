@@ -12,10 +12,6 @@ description: "可維護、可稽核、可擴充——AI 寫得快，不代表它
 keywords: AgenticAI,ClaudeCode,SpecOrientedProgramming,TDD,Playwright,軟體工程,程式設計,技術顧問,史旺基,Swanky Studio
 cover_alt: "三位角色用電腦、手繪筆記與白板討論，後方陳列著不同年代的電腦。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 前幾天同事問我：「可以給我你那個功能的資料庫結構嗎？我要對接。」

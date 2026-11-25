@@ -16,10 +16,6 @@ source_url: "https://www.linkedin.com/pulse/ai-agent-%E5%8D%94%E4%BD%9C%E7%9A%84
 description: "解析 Google A2A 與 Anthropic MCP 兩大協議如何讓 AI Agent 跨組織協作，建構多代理人系統的未來。"
 keywords: AI Agent,A2A,MCP,Anthropic,Google,AI協作,技術顧問,史旺基,Swanky Studio
 cover_alt: "黑底金線圖以 AI Agent 為中心，左右連接 A2A 與 MCP。"
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 隨著生成式 AI 應用不斷擴展，單一模型已無法應對所有複雜任務。未來的方向是「多代理協作」——讓 AI Agents 更聰明、分工更清楚、協作更無縫。

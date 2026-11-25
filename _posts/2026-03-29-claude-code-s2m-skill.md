@@ -14,10 +14,6 @@ description: "用自製 s2m 技能將簡報逐頁轉成圖文文件，保留頁�
 keywords: Claude Code,Skill,簡報轉Markdown,PPTX,PDF,Mermaid,slides-to-markdown,AI工具,史旺基
 cover_alt: "黑底封面寫著「一鍵把簡報變成文件」，右側以箭頭連起簡報與文字視窗。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 每次開完會、上完課，你手上多了一份 30 頁的簡報 PDF。

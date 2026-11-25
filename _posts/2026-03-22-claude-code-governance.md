@@ -13,10 +13,6 @@ cover_alt: "黑底封面寫著「你不知道的 Claude Code」，右側視窗�
 seo_title: "你不知道的 Claude Code：從聊天工具到工程代理，你真正該學的是治理"
 cta_context: agentic
 tags: ["Claude Code", "AI治理"]
-related_posts:
-  - jinpingmei-character-lab
-  - agentic-engineering-patterns-guide
-  - claude-code-s2m-skill
 ---
 
 很多人第一次用 Claude Code，都用 ChatBot 的直覺在操作：

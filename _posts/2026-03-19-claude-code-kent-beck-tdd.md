@@ -13,10 +13,6 @@ keywords: Claude Code,TDD,Kent Beck,AI coding,軟體工程,技術顧問,史旺�
 cover_alt: "戴貓耳髮飾的角色操作筆電，旁邊螢幕顯示綠色的測試通過訊息。"
 seo_title: "Claude Code 時代，Kent Beck 為什麼提醒我們不要只看「80% 完成」"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 最近看到 Kent Beck 一段話，我覺得非常值得在今天這個 Claude Code 與 AI coding 工具快速普及的時代，再重新讀一次。

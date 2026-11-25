@@ -15,10 +15,6 @@ keywords: Claude Code,Spring Boot,熱錢包,區塊鏈,AI coding,技術顧問,史
 cover_alt: "戴眼鏡的水手服角色看著錢包管理畫面，桌上浮現以太幣符號。"
 seo_title: "Claude Code 初體驗：不到兩小時，我做出了熱錢包前後端"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 最近公司在推行 Claude Code，趁著周末的下午也抽空訂閱試用了一下。順便下周開工時說一下我的體驗順便給部門裡的 TPM 與工程師們一點壓力。

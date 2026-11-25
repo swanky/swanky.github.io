@@ -12,10 +12,6 @@ keywords: Loop Engineering, Prompt Engineering, Context Engineering, Agentic Eng
 cover_alt: "水手服角色指著白板上的循環流程，桌邊同伴對照筆電和筆記。"
 seo_title: "Loop Engineering：你不再提示 AI，而是設計一個「提示 AI 的系統」"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 上週日（6/7），Google Chrome 團隊的工程主管 Addy Osmani 發表了一篇文章，幫 AI 協作開發的下一個階段定了名：**[Loop Engineering](https://addyosmani.com/blog/loop-engineering/)**。

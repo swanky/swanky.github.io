@@ -12,10 +12,6 @@ keywords: AI Coding, Claude Code, 軟體工程, 設計邊界, 代碼品質, TDD,
 cover_alt: "四位角色在筆電與流程白板前討論，旁邊螢幕顯示機器人對話介面。"
 seo_title: "AI 寫 Code 越快，守住設計邊界的工程師越貴"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 ### 核心論點

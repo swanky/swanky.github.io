@@ -14,10 +14,6 @@ cover_alt: "西裝男子與同事的漫畫群像，人物上方標有 ENFP、ISF
 seo_title: "用 MBTI 看見差異：從溫伯格的軟體管理學談軟體團隊管理"
 cta_context: technical
 tags: ["MBTI", "軟體管理"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 之前為了更進一步了解團隊成員，我設計了一個 Persona 資料範本，裡面除了角色定位、工作動機，也放進了 MBTI。原本只是想幫大家增加一點自我覺察與交流的切入點，沒想到今天翻讀 溫伯格的《軟體管理學》第三卷〈關照全局的管理作為〉，發現他早就完整討論過這個主題，還講得比我嚴肅許多。於是，我決定把這兩者結合，整理出一些對軟體團隊管理有用的啟發。

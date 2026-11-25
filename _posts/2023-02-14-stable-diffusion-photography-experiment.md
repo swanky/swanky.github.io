@@ -11,10 +11,6 @@ keywords: Stable Diffusion,AI生圖,攝影師,AI繪圖,AI學習,史旺基,Swanky
 cover_alt: "戴皇冠的金髮女子身穿金色服裝，坐在紅色座椅上。"
 seo_title: "攝影師的 AI 生圖實驗——從「假裝學電繪」到 Stable Diffusion 四週筆記"
 tags: ["Stable Diffusion", "AI生圖"]
-related_posts:
-  - jinpingmei-character-lab
-  - agentic-engineering-patterns-guide
-  - claude-code-s2m-skill
 ---
 
 <div class="article-tldr">

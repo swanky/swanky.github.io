@@ -13,10 +13,6 @@ description: "從專案設定、工作流程到自動驗證與平行開發，整
 keywords: Claude Code,AI coding,最佳實踐,開發加速,工作流優化,技術顧問,史旺基,Swanky Studio
 cover_alt: "黑底封面寫著「40 個實戰技巧」，右側終端機呈現彩色指令文字。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 很多人用 Claude Code，還停留在「幫我補這個 function」、「幫我改一段錯誤」的層次。

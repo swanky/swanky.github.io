@@ -13,10 +13,6 @@ cover_alt: "黑底封面寫著「VASP 三讀通過」，幾個節點環繞中央
 seo_title: "《虛擬資產服務法》三讀通過：交易所的競爭，正從流量戰走向信任戰"
 cta_context: technical
 tags: ["虛擬資產服務法", "VASP"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 台灣 VASP 進入許可制時代：合規、保管、穩定幣與 RWA，會是下一輪關鍵戰場

@@ -12,10 +12,6 @@ keywords: RWA,現實世界資產,資產代幣化,台灣金融,金融科技,區�
 cover_alt: "黑底封面寫著「當資產開始上鏈」，圓圈內的金色方塊向上排列成箭頭。"
 cta_context: technical
 tags: ["RWA", "現實世界資產"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 這是我 [RWA 系列]({{ '/technical/rwa/' | relative_url }})的最後一篇，也是唯一一篇純觀點文。前面幾篇我盡量保持中立、把[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})、[基建]({{ '/technical/rwa-infrastructure-hsm-pqc/' | relative_url }})與[全球監管]({{ '/technical/rwa-global-regulation/' | relative_url }})講清楚。這一篇，我想直接回答一個我最常被問到的問題：

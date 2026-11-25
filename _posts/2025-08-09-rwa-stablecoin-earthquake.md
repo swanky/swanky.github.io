@@ -14,10 +14,6 @@ cover_alt: "漫畫中，閃電隔開金幣與銀行，兩側人物的表情一�
 seo_title: "金融震央逼近：天才法案、新台幣穩定幣與 RWA 引爆的產業地震"
 cta_context: technical
 tags: ["RWA", "穩定幣"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 穩定幣，曾經只是加密貨幣市場的避險工具，如今正逼近全球金融的核心。它掛鉤法幣、價格穩定、跨境秒傳，全年無休——這些特性，對傳統金融來說，不只是挑戰，而是潛在的顛覆力量。

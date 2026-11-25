@@ -12,10 +12,6 @@ keywords: RWA,現實世界資產,資產代幣化,代幣化,tokenization,區塊�
 cover_alt: "黑底封面寫著「RWA 是什麼？」，多種資產以環形節點連到中央的 RWA。"
 cta_context: technical
 tags: ["RWA", "現實世界資產"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 過去兩年，我花了大量時間沉浸在一個主題裡：**RWA（Real World Assets，現實世界資產代幣化）**。它是 2026 年整個金融科技領域最熱的關鍵字之一，BlackRock、UBS、摩根大通都在做，台灣金管會也成立了專門小組。但對大多數人來說，「RWA」三個字母仍然抽象。

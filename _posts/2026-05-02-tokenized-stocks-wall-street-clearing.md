@@ -12,10 +12,6 @@ cover_alt: "水手服角色在交易所場景指向標有 DTC 的發光圖示，
 seo_title: "美股上鏈了嗎？其實是華爾街把區塊鏈裝進清算後台"
 cta_context: technical
 tags: ["區塊鏈", "代幣化證券"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 鏈上華爾街：清算後台的新引擎

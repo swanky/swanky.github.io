@@ -12,10 +12,6 @@ description: "使用 Claude Code 的成功關鍵不在技術能力，而在系�
 keywords: AgenticEngineering,ClaudeCode,Cursor,ORID,專案管理,軟體工程,工作流程,團隊協作,AI工具導入,技術顧問,史旺基,Swanky Studio
 cover_alt: "四位角色圍桌討論軟體開發，白板將問題、想法、分析和行動分欄整理。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 最近在公司推 Claude Code，我觀察到一個有點違反直覺的現象。

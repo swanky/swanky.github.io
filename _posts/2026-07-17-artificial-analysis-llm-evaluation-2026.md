@@ -12,10 +12,6 @@ description: "從 Artificial Analysis 排行榜、回應速度與成本，建立
 keywords: Artificial Analysis, LLM 評估, Intelligence Index, Benchmark, AI Agent, Agentic Engineering, ModelOps, TTFT, TTFA, Cost per Task, 私有評估集, 模型路由, 史旺基, Swanky Studio
 cover_alt: "女子一手拿著評量表，一手調整控制台旋鈕，周圍螢幕顯示模型比較圖。"
 cta_context: technical
-related_posts:
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
-  - poteto-work-handoff
 ---
 
 每次新模型發布，大家第一個問題通常都是：「它排第幾名？」

@@ -12,10 +12,6 @@ keywords: AI Crypto,去中心化算力,DCN,GPU 共享,開源 AI,Bittensor,AI 推
 cover_alt: "黑底封面寫著「AI × 加密」，金色 AI 節點向外連接四個方塊。"
 cta_context: technical
 tags: ["AI Crypto", "去中心化算力"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 過去兩年，科技圈最熱的兩個詞——「**AI**」與「**加密（Crypto）**」——開始頻繁地出現在同一個句子裡。這不是行銷蹭熱度，而是因為它們之間有一個真實、互補的交集：**AI 渴求海量算力，而加密最擅長「協調大量陌生人貢獻資源」。**

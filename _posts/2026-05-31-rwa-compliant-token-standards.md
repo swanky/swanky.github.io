@@ -12,10 +12,6 @@ keywords: ERC-3643,ERC-1404,CMTAT,合規型代幣,證券代幣標準,RWA,T-REX,R
 cover_alt: "黑底封面寫著「合規型代幣標準」，以兩欄對照 ERC-1404 與 ERC-3643。"
 cta_context: technical
 tags: ["ERC-3643", "ERC-1404"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 這是我 RWA 系列裡技術含量最高的一篇，寫給正在評估證券代幣架構的工程師與技術主管。如果你還不熟悉 RWA 標準的整體脈絡，建議先讀 [〈RWA 代幣化標準演進史〉]({{ '/technical/rwa-standards-evolution/' | relative_url }})，再回來看這篇的設計細節。
@@ -78,7 +74,7 @@ ERC-3643（前身是 Tokeny 的 T-REX，2024 年成為唯一 Final 的證券代�
 
 CMTAT v3.0.0 同時實作了 ERC-1404、ERC-3643（部分介面）、以及最新的 ERC-7943（uRWA）。所以對外部觀察者，同一個 CMTAT 代幣會同時暴露：
 
-- `detectTransferRestriction(from, to, value) → uint8`（ERC-1404 介面）
+- `detectTransferRestriction(from, to, value) → uint8`{:.text-wrap}（ERC-1404 介面）
 - `canTransfer(from, to, value) → bool`（ERC-3643 介面）
 
 這兩個函數內部其實呼叫**同一條檢查鏈**（部分凍結餘額 → 暫停／凍結狀態 → RuleEngine 自訂規則），只是回傳格式不同。也就是說，不論對接方支援哪個介面，CMTAT 都能溝通。

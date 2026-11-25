@@ -13,10 +13,6 @@ description: "從對話品質管理、成本優化到跨裝置協作，以顧問
 keywords: Claude Code,終端機,AI coding,開發加速,AI工具,AI學習,史旺基,Swanky Studio
 cover_alt: "黑底封面寫著「終端機魔法書」，右側終端機視窗列出多個指令。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 <div class="article-tldr">

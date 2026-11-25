@@ -11,10 +11,6 @@ keywords: AI生圖,視覺疲勞,攝影,真實感,Stable Diffusion,AI學習,史�
 cover_alt: "穿白色上衣的女子在窗前扶著欄杆望向鏡頭。"
 seo_title: "AI 生圖的視覺疲勞，以及攝影還剩下什麼"
 tags: ["AI生圖", "視覺疲勞"]
-related_posts:
-  - jinpingmei-character-lab
-  - agentic-engineering-patterns-guide
-  - claude-code-s2m-skill
 ---
 
 ## 視覺疲勞

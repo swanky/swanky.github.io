@@ -14,10 +14,6 @@ description: "Simon Willison 把「代理式工程」整理成一份指南。我
 keywords: Agentic Engineering,Simon Willison,Claude Code,vibe coding,AI coding,coding agent,subagents,TDD,提示詞,技術領導,團隊導入AI,史旺基,Swanky Studio
 cover_alt: "黑底封面寫著「Agentic Engineering Patterns 實戰指南導讀」，右側終端機列出書中主題。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 關於 AI 寫程式的內容，現在多到爆炸。但老實說，大部分都是技巧型的——這個快捷鍵、那個外掛、某個 prompt 模板——很實用，可是過幾個月工具一改版就半數失效。

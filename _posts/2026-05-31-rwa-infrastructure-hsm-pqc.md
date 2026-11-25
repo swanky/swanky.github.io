@@ -12,10 +12,6 @@ keywords: HSM,硬體安全模組,後量子密碼學,PQC,FIPS 140-3,ML-DSA,ML-KEM
 cover_alt: "黑底封面寫著「RWA 的隱形基建」，三個節點圍繞一把金色鎖頭。"
 cta_context: technical
 tags: ["HSM", "硬體安全模組"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在我的 [RWA 系列]({{ '/technical/rwa/' | relative_url }})裡，前面幾篇談的都是「看得見」的東西——[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[合規型代幣標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})。但任何一套金融基礎設施，真正撐住它的，往往是「看不見」的那一層。

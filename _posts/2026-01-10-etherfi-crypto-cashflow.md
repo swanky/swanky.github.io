@@ -14,10 +14,6 @@ cover_alt: "制服角色在店內舉起卡片，另一人拿著手機，周圍�
 seo_title: "從「資產價格」到「資產負債表」：如何用 ether.fi 把加密資產變成可用的現金流"
 cta_context: technical
 tags: ["DeFi", "ether.fi"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在 Web3 的世界裡，我們常開玩笑說自己是「帳面富翁」。你看著錢包裡的資產隨著市場波動起伏，但當你想在轉角咖啡廳買杯拿鐵，或是支付每個月的電費時，那些數字往往顯得遙不可及。

@@ -12,10 +12,6 @@ keywords: Web3,Web1,Web2,區塊鏈,所有權,去中心化,讀寫擁有,加密貨
 cover_alt: "黑底封面寫著「Web3 三時代」，右側由下往上排列讀、寫、擁有三層方框。"
 cta_context: technical
 tags: ["Web3", "Web1"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 我在大學兼課與企業內訓講 Web3 已經第八年，最常被問的第一個問題永遠是：「**Web3 到底是什麼？**」

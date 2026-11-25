@@ -14,10 +14,6 @@ cover_alt: "水手服角色拿著手機，周圍有寶箱、金幣與區塊鏈�
 seo_title: "Web3 的下個入口在手機？解析 Solana Seeker 如何用「硬體＋空投」改寫用戶分發邏輯"
 cta_context: technical
 tags: ["Solana", "Seeker"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 【我用 450 美金預購手機，結果空投先把手機錢賺回來了】

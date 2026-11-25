@@ -12,10 +12,6 @@ keywords: AI代碼生成, 軟體工程, 工程治理, Claude Code, Example Mappi
 cover_alt: "四位角色在工作桌前討論，白板列出問題、假設與條件，螢幕呈現檢驗結果。"
 seo_title: "AI 正在改寫軟體開發的瓶頸：從「誰會寫 code」到「誰能定義與驗證問題」"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > AI 讓開發變快，但決定團隊走多遠的，是「可被信任的速度」

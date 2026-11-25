@@ -12,10 +12,6 @@ keywords: RWA 監管,Project Guardian,Project Ensemble,DTC,Canton Network,GENIUS
 cover_alt: "黑底封面寫著「全球 RWA 監管地圖」，各地區以圓點分布在環形圖上。"
 cta_context: technical
 tags: ["RWA 監管", "Project Guardian"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在這個 [RWA 系列]({{ '/technical/rwa/' | relative_url }})裡，我談過[黃金]({{ '/technical/rwa-gold-tokenization/' | relative_url }})、[債券]({{ '/technical/rwa-bond-tokenization/' | relative_url }})、[合規標準]({{ '/technical/rwa-compliant-token-standards/' | relative_url }})與[隱形基建]({{ '/technical/rwa-infrastructure-hsm-pqc/' | relative_url }})。但有一條主線貫穿所有篇章卻還沒正面談過：**監管**。

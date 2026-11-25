@@ -14,10 +14,6 @@ cover_alt: "西裝女子站在岔路口，一條路通往獨處的小房間，�
 seo_title: "當同仁對我說：「主管，不如你自己下來寫 Code 吧？」— 談那些掛在牆上卻沒用的企業文化"
 cta_context: technical
 tags: ["企業文化", "軟體管理"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 前幾天，我在帶領團隊時經歷了兩個真實的場景。那一刻的衝擊，讓我整整思考了好幾天。

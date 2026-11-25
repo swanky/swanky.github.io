@@ -12,10 +12,6 @@ keywords: 中階主管, AI 時代職場, 建造者與衡量者, Matthew Prince, 
 cover_alt: "水手服角色在筆電前寫筆記，身後以兩幕插畫對照衡量者與建造者的工作。"
 seo_title: "我也是 Prince 口中那種「該被裁掉」的中階主管—所以決定重新變回建造者"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 今天滑到 [Fox 分享的一篇文章](https://www.instagram.com/p/DYnAClDkrFZ/)，是 Cloudflare 執行長 Matthew Prince 寫的，讀完有點刺耳，但很值得想一想。

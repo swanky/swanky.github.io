@@ -12,10 +12,6 @@ cover_alt: "一名女子騎著黃色自行車，沿林蔭道向前行。"
 seo_title: "制服女孩騎 UBike"
 cta_context: photography
 tags: ["制服女孩", "人像攝影"]
-related_posts:
-  - my-seven-ways-of-shooting
-  - presence-araki-sanai-kawashima
-  - japanese-photography-history-primer
 ---
 
 台北的 UBike 已經成為街景的一部分。

@@ -11,10 +11,6 @@ description: "從 Mixture of Agents 看 Hermes Agent 如何組合不同模型，
 keywords: Mixture of Agents, MoA, Hermes Agent, Nous Research, 多代理協作, multi-agent, AI Agent, agentic engineering, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, OpenRouter, Claude Code, aggregator, reference model, MoE, ReAct, GAIA, SWE-bench, AI runtime, 史旺基, Swanky Hsiao, Swanky Studio
 cover_alt: "多位角色用筆電分工，研究、校對等工作透過發光連線匯入中央。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > 2026 年的 AI Agent 競爭，不再只是模型智商競賽，而是 runtime、記憶、工具、安全與評估方法的系統設計競賽。

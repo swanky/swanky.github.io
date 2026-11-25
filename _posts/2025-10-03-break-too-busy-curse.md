@@ -14,10 +14,6 @@ cover_alt: "西裝女子指向紅藍循環圖，對照工作太忙與騰出時�
 seo_title: "打破「太忙」的詛咒：從軟工大師到AI時代的正向循環"
 cta_context: technical
 tags: ["軟體工程", "敏捷"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 在專案壓力的戰場上，我最常聽到的，是這句古老的藉口： 「太忙了，沒時間寫測試。」 「太忙了，沒時間學AI。」 這些話就像Bug一樣，會自動複製，直到佔滿整個團隊的記憶體。

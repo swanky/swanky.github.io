@@ -11,10 +11,6 @@ description: "我替 Hermes Agent 串上 OpenRouter 的影片 API，完成 35 �
 keywords: Hermes Agent, OpenRouter, Seedance 2.0 Fast, GPT-5.6 Sol, AI 影片生成, image to video, text to video, FFmpeg, Edge TTS, Hermes plugin, agentic workflow, AI Agent, 史旺基, Swanky Studio
 cover_alt: "水手服女子與團隊在夜景前操作發光控制桌，桌面顯示影像縮圖與流程。"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 早上本來只是想測一個新的 GPT 模型。

@@ -12,10 +12,6 @@ keywords: DeFi,真實收益,real yield,代幣通膨,APY,年化收益,計息穩�
 cover_alt: "黑底封面寫著「DeFi 真實收益」，金額符號和百分比符號分別配上向上與向下箭頭。"
 cta_context: technical
 tags: ["DeFi", "真實收益"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 每隔一陣子，就會有人拿著手機問我：「這個 DeFi 協議寫年化 120%，是真的嗎？我該不該存？」

@@ -31,7 +31,9 @@ posts.each do |path|
   end
   errors << "#{route} description exceeds 80 characters" if fields["description"].to_s.size > 80
   related = Array(fields["related_posts"])
-  errors << "#{route} invalid related posts" unless related.uniq.size == 3 && (related - slugs).empty? && !related.include?(slug)
+  errors << "#{route} invalid related posts" unless related.empty? || (related.uniq.size == 3 && (related - slugs).empty? && !related.include?(slug))
+  cards = page.css(".related-posts .card-title a").map { |link| link["href"] }
+  errors << "#{route} expected three distinct related cards" unless cards.uniq.size == 3 && !cards.include?(route)
   %w[.article-meta .share-buttons .author-bio .article-cta .related-posts .article-footer-nav].each do |selector|
     errors << "#{route} missing #{selector}" unless page.at_css(selector)
   end

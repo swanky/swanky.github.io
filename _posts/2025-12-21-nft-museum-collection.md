@@ -14,10 +14,6 @@ cover_alt: "水手服角色指著展板上的 CryptoPunks 像素頭像與彩色�
 seo_title: "當博物館開始收藏 NFT，那不是潮流，而是歷史定位的轉折點"
 cta_context: technical
 tags: ["NFT", "博物館"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 2025 年 12 月 20 日，紐約現代藝術博物館（MoMA） 正式將兩個 NFT 系列納入永久館藏：

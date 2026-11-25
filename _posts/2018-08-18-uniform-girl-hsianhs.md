@@ -11,10 +11,6 @@ cover_alt: "穿白襯衫和藍裙的女子坐在教室裡，俯身整理白鞋�
 seo_title: "制服女孩嫺嫺"
 cta_context: photography
 tags: ["制服女孩", "人像攝影"]
-related_posts:
-  - my-seven-ways-of-shooting
-  - presence-araki-sanai-kawashima
-  - japanese-photography-history-primer
 ---
 
 有些照片，拍完之後會先放著。

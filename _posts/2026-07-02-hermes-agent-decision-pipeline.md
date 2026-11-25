@@ -12,10 +12,6 @@ keywords: Hermes Agent, Nous Research, 自主 Agent, autonomous agent, Claude Co
 cover_alt: "水手服角色坐在書桌前指向鏡頭，身旁浮著藍色虛擬助手，後方掛著地圖。"
 seo_title: "裝了 Hermes Agent 之後，我一直在想她適合做什麼。答案是：幫我脫單"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 > Claude Code 幫我寫程式，Hermes Agent 幫我脫單

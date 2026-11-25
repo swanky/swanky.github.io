@@ -12,10 +12,6 @@ keywords: 預言機,Oracle,Chainlink,DeFi,鏈外資料,預言機攻擊,價格操
 cover_alt: "黑底封面寫著「預言機 Oracle」，三個資料來源經中央節點連向智慧合約。"
 cta_context: technical
 tags: ["預言機", "Oracle"]
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 智能合約有一個違反直覺的「先天缺陷」：**它看不到區塊鏈以外的世界。**

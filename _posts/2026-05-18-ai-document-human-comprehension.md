@@ -12,10 +12,6 @@ keywords: AI 文件生成, Markdown vs HTML, 審查介面, 人類理解, Agentic
 cover_alt: "角色指向螢幕上的文件流程，桌面另有筆記、圖表與兩台電腦。"
 seo_title: "我們不缺 AI 寫的文件，我們缺願意被讀完的文件"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 ### 從 AI 生成文件，到人類理解介面

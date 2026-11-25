@@ -12,10 +12,6 @@ keywords: Claude Code, Agentic AI, 工程紀律, Example Mapping, OpenSpec, TDD,
 cover_alt: "多位角色在地圖和白板前討論，桌上以引擎和道路模型呈現軟體開發工具。"
 seo_title: "把 AI 當成「更快的工程師」，是 IT 團隊最貴的誤解"
 cta_context: agentic
-related_posts:
-  - notch-claude-game-engine
-  - hermes-plugin-hackathon-top10
-  - harness-loop-graph-ai-agent-layers
 ---
 
 ### 核心論點
