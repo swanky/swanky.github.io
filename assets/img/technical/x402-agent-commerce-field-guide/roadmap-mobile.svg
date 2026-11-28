@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 908" width="400" height="908" role="img" aria-labelledby="rm-m-title rm-m-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+<title id="rm-m-title">接上 x402 的五個階段</title>
+<desc id="rm-m-desc">作者規劃的五個階段與過關條件：測試網付第一筆、私有內容與訂單、NFT 授權、讓 Agent 找得到、正式主網；目前在第 1 階段，賣方程式已在本機回出 402 與正確報價，還沒付過任何一筆。先證明一筆，再往上疊。</desc>
+<defs><marker id="rm-m-a" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#5F5B53"/></marker><marker id="rm-m-acc" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#E5A300"/></marker><marker id="rm-m-gray" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#8F8A80"/></marker><marker id="rm-m-blue" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#4FA6D5"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFDF9"/>
+<text x="24" y="40" font-size="20" font-weight="700" fill="#232020">先證明一筆，再往上疊。</text>
+<rect x="292" y="22" width="80" height="28" rx="14" fill="#FDF4DC" stroke="#E5A300" stroke-width="1.2"/>
+<text x="332.0" y="41.04" font-size="14" font-weight="700" fill="#8A5D00" text-anchor="middle">作者規劃</text>
+<rect x="24" y="62" width="84" height="30" rx="15" fill="#E5A300" stroke="#E5A300" stroke-width="1.2"/>
+<text x="66.0" y="82.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">目前進度</text>
+<line x1="44" y1="154" x2="44" y2="364" stroke="#5F5B53" stroke-width="2" marker-end="url(#rm-m-a)"/>
+<line x1="44" y1="402" x2="44" y2="500" stroke="#5F5B53" stroke-width="2" marker-end="url(#rm-m-a)"/>
+<line x1="44" y1="538" x2="44" y2="636" stroke="#5F5B53" stroke-width="2" marker-end="url(#rm-m-a)"/>
+<line x1="44" y1="674" x2="44" y2="772" stroke="#5F5B53" stroke-width="2" marker-end="url(#rm-m-a)"/>
+<rect x="76" y="108" width="300" height="120" rx="10" fill="#FDF4DC" stroke="#E5A300" stroke-width="2"/>
+<circle cx="44" cy="136" r="16" fill="#E5A300"/>
+<text x="44" y="141.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">1</text>
+<g transform="translate(340,122) scale(0.916667)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1"/><path d="M12 7v10"/></g>
+<text x="92" y="142" font-size="18" font-weight="700" fill="#232020">測試網付第一筆</text>
+<text x="92" y="170" font-size="15" font-weight="700" fill="#8A5D00">過關條件</text>
+<text x="92" y="194" font-size="15" font-weight="400" fill="#232020">沒付錢得到 402，付了得到 200，</text>
+<text x="92" y="216" font-size="15" font-weight="400" fill="#232020">鏈上查得到轉帳</text>
+<rect x="76" y="356" width="300" height="120" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="44" cy="384" r="16" fill="#232020"/>
+<text x="44" y="389.4" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<g transform="translate(340,370) scale(0.916667)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></g>
+<text x="92" y="390" font-size="18" font-weight="700" fill="#232020">私有內容與訂單</text>
+<text x="92" y="418" font-size="15" font-weight="700" fill="#5F5B53">過關條件</text>
+<text x="92" y="442" font-size="15" font-weight="400" fill="#232020">付費內容沒有公開的繞道，</text>
+<text x="92" y="464" font-size="15" font-weight="400" fill="#232020">付款後可再查詢、可對帳</text>
+<rect x="76" y="492" width="300" height="120" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="44" cy="520" r="16" fill="#232020"/>
+<text x="44" y="525.4" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<g transform="translate(340,506) scale(0.916667)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.8 4.5v9l-7.8 4.5l-7.8 -4.5v-9z"/><path d="M12 8l3.5 2v4l-3.5 2l-3.5 -2v-4z"/></g>
+<text x="92" y="526" font-size="18" font-weight="700" fill="#232020">NFT 授權</text>
+<text x="92" y="554" font-size="15" font-weight="700" fill="#5F5B53">過關條件</text>
+<text x="92" y="578" font-size="15" font-weight="400" fill="#232020">一張訂單只發一次憑證，</text>
+<text x="92" y="600" font-size="15" font-weight="400" fill="#232020">重試不會重複發</text>
+<rect x="76" y="628" width="300" height="120" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="44" cy="656" r="16" fill="#232020"/>
+<text x="44" y="661.4" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<g transform="translate(340,642) scale(0.916667)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /> <path d="M12 2v2" /> <path d="M9 12v9" /> <path d="M15 12v9" /> <path d="M5 16l4 -2" /> <path d="M15 14l4 2" /> <path d="M9 18h6" /> <path d="M10 8v.01" /> <path d="M14 8v.01" /></g>
+<text x="92" y="662" font-size="18" font-weight="700" fill="#232020">讓 Agent 找得到</text>
+<text x="92" y="690" font-size="15" font-weight="700" fill="#5F5B53">過關條件</text>
+<text x="92" y="714" font-size="15" font-weight="400" fill="#232020">至少兩種不同的 Agent 工具</text>
+<text x="92" y="736" font-size="15" font-weight="400" fill="#232020">能完成整個購買</text>
+<rect x="76" y="764" width="300" height="120" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="44" cy="792" r="16" fill="#232020"/>
+<text x="44" y="797.4" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<g transform="translate(340,778) scale(0.916667)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21v-17"/><path d="M5 4h11l-2 4l2 4h-11"/></g>
+<text x="92" y="798" font-size="18" font-weight="700" fill="#232020">正式主網</text>
+<text x="92" y="826" font-size="15" font-weight="700" fill="#5F5B53">過關條件</text>
+<text x="92" y="850" font-size="15" font-weight="400" fill="#232020">收款、限額、條款、監控</text>
+<text x="92" y="872" font-size="15" font-weight="400" fill="#232020">都驗收過</text>
+<rect x="76" y="240" width="300" height="100" rx="8" fill="#FDF4DC" stroke="#E5A300" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text x="90" y="268" font-size="15" font-weight="700" fill="#8A5D00">目前進度（2026-11-28 本機實測）</text>
+<text x="90" y="296" font-size="15" font-weight="400" fill="#232020">賣方程式已在本機回出 402</text>
+<text x="90" y="320" font-size="15" font-weight="400" fill="#232020">與正確報價；還沒付過任何一筆。</text>
+</svg>

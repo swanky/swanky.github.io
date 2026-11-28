@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 828 954" width="828" height="954" role="img" aria-labelledby="ly-w-title ly-w-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+<title id="ly-w-title">Agent 付款的四層：各管一層還是互相競爭</title>
+<desc id="ly-w-desc">四層由上到下。第 1 層找商品與下單（Agent 怎麼看懂店裡有什麼、怎麼下單）：ACP（OpenAI、Stripe）、UCP（Google、Shopify）、Copilot Checkout（Microsoft）、PayPal Store Sync。第 2 層授權（人同意它買什麼、最多花多少）：AP2 的授權憑證（Google，已捐給 FIDO Alliance，兩邊都接）、Verifiable Intent（Mastercard）、Shared Payment Token（Stripe，兩邊都接）。第 3 層身分（這個 Agent 是誰、可不可信）：Trusted Agent Protocol（Visa）、Web Bot Auth（Cloudflare）、ERC-8004（以太坊，草案）、KYAPay（Skyfire，草案），這三張不分付款方式。第 4 層付款與結算（錢實際怎麼過去）：卡網路（Visa、Mastercard、American Express）、x402（穩定幣）、MPP（Stripe、Tempo；卡與穩定幣，兩邊都接）。卡片顏色區分卡與平台路線、穩定幣路線、兩邊都接，以及不分付款方式。多數方案各管一層；同一層正面較勁的只有少數幾組。分層是作者的整理，不是官方分類。</desc>
+<defs><marker id="ly-w-a" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#5F5B53"/></marker><marker id="ly-w-acc" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#E5A300"/></marker><marker id="ly-w-blue" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#4FA6D5"/></marker><marker id="ly-w-gray" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#8F8A80"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFDF9"/>
+<text x="24" y="46" font-size="22" font-weight="700" fill="#232020">多數方案各管一層；同一層正面較勁的只有少數幾組。</text>
+<rect x="24" y="71" width="28" height="20" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="24" y="71" width="6" height="20" rx="3" fill="#4FA6D5"/>
+<text x="60" y="86" font-size="15" font-weight="700" fill="#1F6E99">卡與平台路線</text>
+<rect x="178" y="71" width="28" height="20" rx="8" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+<rect x="178" y="71" width="6" height="20" rx="3" fill="#E5A300"/>
+<text x="214" y="86" font-size="15" font-weight="700" fill="#8A5D00">穩定幣路線</text>
+<rect x="317" y="71" width="28" height="20" rx="4" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="321" y="75" width="20" height="12" rx="2" fill="none" stroke="#E5A300" stroke-width="2"/>
+<text x="353" y="86" font-size="15" font-weight="700" fill="#232020">兩邊都接</text>
+<rect x="441" y="71" width="28" height="20" rx="8" fill="#F1EEE8" stroke="#8F8A80" stroke-width="2"/>
+<text x="477" y="86" font-size="15" font-weight="700" fill="#5F5B53">不分付款方式</text>
+<text x="40" y="130" font-size="15" font-weight="700" fill="#5F5B53">這一層回答什麼問題</text>
+<text x="232" y="130" font-size="15" font-weight="700" fill="#5F5B53">這一層的方案</text>
+<rect x="24" y="146" width="780" height="196" rx="10" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<text x="40" y="176" font-size="15" font-weight="700" fill="#5F5B53">第 1 層</text>
+<text x="40" y="204" font-size="20" font-weight="700" fill="#232020">找商品與下單</text>
+<text x="40" y="232" font-size="15" font-weight="400" fill="#5F5B53">Agent 怎麼看懂店裡</text>
+<text x="40" y="254" font-size="15" font-weight="400" fill="#5F5B53">有什麼、怎麼下單</text>
+<rect x="232" y="162" width="272" height="76" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="232" y="162" width="6" height="76" rx="3" fill="#4FA6D5"/>
+<text x="250" y="192" font-size="18" font-weight="700" fill="#232020">ACP</text>
+<text x="250" y="214" font-size="15" font-weight="400" fill="#5F5B53">OpenAI、Stripe</text>
+<rect x="516" y="162" width="272" height="76" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="516" y="162" width="6" height="76" rx="3" fill="#4FA6D5"/>
+<text x="534" y="192" font-size="18" font-weight="700" fill="#232020">UCP</text>
+<text x="534" y="214" font-size="15" font-weight="400" fill="#5F5B53">Google、Shopify</text>
+<rect x="232" y="250" width="272" height="76" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="232" y="250" width="6" height="76" rx="3" fill="#4FA6D5"/>
+<text x="250" y="280" font-size="18" font-weight="700" fill="#232020">Copilot Checkout</text>
+<text x="250" y="302" font-size="15" font-weight="400" fill="#5F5B53">Microsoft</text>
+<rect x="516" y="250" width="272" height="76" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="516" y="250" width="6" height="76" rx="3" fill="#4FA6D5"/>
+<text x="534" y="280" font-size="18" font-weight="700" fill="#232020">PayPal Store Sync</text>
+<rect x="24" y="354" width="780" height="166" rx="10" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<text x="40" y="384" font-size="15" font-weight="700" fill="#5F5B53">第 2 層</text>
+<text x="40" y="412" font-size="20" font-weight="700" fill="#232020">授權</text>
+<text x="40" y="440" font-size="15" font-weight="400" fill="#5F5B53">人同意它買什麼、</text>
+<text x="40" y="462" font-size="15" font-weight="400" fill="#5F5B53">最多花多少</text>
+<rect x="232" y="370" width="176" height="134" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="237" y="375" width="166" height="124" rx="5" fill="none" stroke="#E5A300" stroke-width="2"/>
+<text x="250" y="400" font-size="18" font-weight="700" fill="#232020">AP2 的授權憑證</text>
+<text x="250" y="422" font-size="15" font-weight="400" fill="#5F5B53">Google，已捐給</text>
+<text x="250" y="444" font-size="15" font-weight="400" fill="#5F5B53">FIDO Alliance</text>
+<rect x="316" y="468" width="80" height="27" rx="4" fill="#FDF4DC" stroke="#4FA6D5" stroke-width="1.5"/>
+<text x="356" y="488" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">兩邊都接</text>
+<rect x="422" y="370" width="176" height="134" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="422" y="370" width="6" height="134" rx="3" fill="#4FA6D5"/>
+<text x="440" y="400" font-size="18" font-weight="700" fill="#232020">Verifiable</text>
+<text x="440" y="424" font-size="18" font-weight="700" fill="#232020">Intent</text>
+<text x="440" y="446" font-size="15" font-weight="400" fill="#5F5B53">Mastercard</text>
+<rect x="612" y="370" width="176" height="134" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="617" y="375" width="166" height="124" rx="5" fill="none" stroke="#E5A300" stroke-width="2"/>
+<text x="630" y="400" font-size="18" font-weight="700" fill="#232020">Shared</text>
+<text x="630" y="424" font-size="18" font-weight="700" fill="#232020">Payment Token</text>
+<text x="630" y="446" font-size="15" font-weight="400" fill="#5F5B53">Stripe</text>
+<rect x="696" y="468" width="80" height="27" rx="4" fill="#FDF4DC" stroke="#4FA6D5" stroke-width="1.5"/>
+<text x="736" y="488" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">兩邊都接</text>
+<rect x="24" y="532" width="780" height="196" rx="10" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<text x="40" y="562" font-size="15" font-weight="700" fill="#5F5B53">第 3 層</text>
+<text x="40" y="590" font-size="20" font-weight="700" fill="#232020">身分</text>
+<text x="40" y="618" font-size="15" font-weight="400" fill="#5F5B53">這個 Agent 是誰、</text>
+<text x="40" y="640" font-size="15" font-weight="400" fill="#5F5B53">可不可信</text>
+<rect x="232" y="548" width="272" height="76" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="232" y="548" width="6" height="76" rx="3" fill="#4FA6D5"/>
+<text x="250" y="578" font-size="18" font-weight="700" fill="#232020">Trusted Agent Protocol</text>
+<text x="250" y="600" font-size="15" font-weight="400" fill="#5F5B53">Visa</text>
+<rect x="516" y="548" width="272" height="76" rx="8" fill="#F1EEE8" stroke="#8F8A80" stroke-width="2"/>
+<text x="534" y="578" font-size="18" font-weight="700" fill="#232020">Web Bot Auth</text>
+<text x="534" y="600" font-size="15" font-weight="400" fill="#5F5B53">Cloudflare</text>
+<rect x="232" y="636" width="272" height="76" rx="8" fill="#F1EEE8" stroke="#8F8A80" stroke-width="2"/>
+<text x="250" y="666" font-size="18" font-weight="700" fill="#232020">ERC-8004</text>
+<text x="250" y="688" font-size="15" font-weight="400" fill="#5F5B53">以太坊，草案</text>
+<rect x="516" y="636" width="272" height="76" rx="8" fill="#F1EEE8" stroke="#8F8A80" stroke-width="2"/>
+<text x="534" y="666" font-size="18" font-weight="700" fill="#232020">KYAPay</text>
+<text x="534" y="688" font-size="15" font-weight="400" fill="#5F5B53">Skyfire，草案</text>
+<rect x="24" y="740" width="780" height="164" rx="10" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<text x="40" y="770" font-size="15" font-weight="700" fill="#5F5B53">第 4 層</text>
+<text x="40" y="798" font-size="20" font-weight="700" fill="#232020">付款與結算</text>
+<text x="40" y="826" font-size="15" font-weight="400" fill="#5F5B53">錢實際怎麼過去</text>
+<rect x="232" y="756" width="176" height="132" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="232" y="756" width="6" height="132" rx="3" fill="#4FA6D5"/>
+<text x="250" y="786" font-size="18" font-weight="700" fill="#232020">卡網路</text>
+<text x="250" y="808" font-size="15" font-weight="400" fill="#5F5B53">Visa、</text>
+<text x="250" y="830" font-size="15" font-weight="400" fill="#5F5B53">Mastercard、</text>
+<text x="250" y="852" font-size="15" font-weight="400" fill="#5F5B53">American Express</text>
+<rect x="422" y="756" width="176" height="132" rx="8" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+<rect x="422" y="756" width="6" height="132" rx="3" fill="#E5A300"/>
+<text x="440" y="786" font-size="18" font-weight="700" fill="#232020">x402</text>
+<text x="440" y="808" font-size="15" font-weight="400" fill="#5F5B53">穩定幣</text>
+<rect x="612" y="756" width="176" height="132" rx="8" fill="#FFFFFF" stroke="#4FA6D5" stroke-width="2"/>
+<rect x="617" y="761" width="166" height="122" rx="5" fill="none" stroke="#E5A300" stroke-width="2"/>
+<text x="630" y="786" font-size="18" font-weight="700" fill="#232020">MPP</text>
+<text x="630" y="808" font-size="15" font-weight="400" fill="#5F5B53">Stripe、Tempo；</text>
+<text x="630" y="830" font-size="15" font-weight="400" fill="#5F5B53">卡與穩定幣</text>
+<rect x="696" y="852" width="80" height="27" rx="4" fill="#FDF4DC" stroke="#4FA6D5" stroke-width="1.5"/>
+<text x="736" y="872" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">兩邊都接</text>
+<text x="804" y="930" font-size="15" font-weight="400" fill="#5F5B53" text-anchor="end">分層是作者的整理，不是官方分類。</text>
+</svg>

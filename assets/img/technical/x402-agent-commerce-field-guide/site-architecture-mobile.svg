@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1284" width="400" height="1284" role="img" aria-labelledby="sa-m-title sa-m-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+<title id="sa-m-title">個人網站接上 x402 的規劃架構</title>
+<desc id="sa-m-desc">作者規劃：現有的展示站維持不動，只放一個連結；另外部署在 Cloudflare Workers 上的付費服務有健康檢查、公開目錄、付費資料三個入口，AI Agent 直接呼叫它；付費服務透過代驗代結服務在區塊鏈上以 USDC 收款到賣方的收款地址，賣方服務只需要公開的收款地址、不放私鑰。訂單與收據資料庫、私有儲存空間、NFT 合約、給 Agent 用的服務入口是之後才加的模組。</desc>
+<defs><marker id="sa-m-a" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#5F5B53"/></marker><marker id="sa-m-acc" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#E5A300"/></marker><marker id="sa-m-gray" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#8F8A80"/></marker><marker id="sa-m-blue" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#4FA6D5"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFDF9"/>
+<text x="24" y="40" font-size="20" font-weight="700" fill="#232020">展示站不動，收款另外放。</text>
+<rect x="292" y="22" width="80" height="28" rx="14" fill="#FDF4DC" stroke="#E5A300" stroke-width="1.2"/>
+<text x="332.0" y="41.04" font-size="14" font-weight="700" fill="#8A5D00" text-anchor="middle">作者規劃</text>
+<line x1="106" y1="196" x2="106" y2="250" stroke="#5F5B53" stroke-width="2" marker-end="url(#sa-m-a)"/>
+<text x="118" y="228" font-size="15" font-weight="500" fill="#5F5B53">只放一個連結</text>
+<line x1="294" y1="196" x2="294" y2="250" stroke="#4FA6D5" stroke-width="2" marker-end="url(#sa-m-blue)"/>
+<line x1="200" y1="540" x2="200" y2="586" stroke="#5F5B53" stroke-width="2" marker-end="url(#sa-m-a)"/>
+<text x="212" y="568" font-size="15" font-weight="500" fill="#5F5B53">驗證與結算</text>
+<line x1="200" y1="660" x2="200" y2="698" stroke="#5F5B53" stroke-width="2" marker-end="url(#sa-m-a)"/>
+<line x1="200" y1="764" x2="200" y2="802" stroke="#5F5B53" stroke-width="2" marker-end="url(#sa-m-a)"/>
+<rect x="24" y="64" width="164" height="132" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(40,80)" fill="none" stroke="#232020" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M3.6 9h16.8" /> <path d="M3.6 15h16.8" /> <path d="M11.5 3a17 17 0 0 0 0 18" /> <path d="M12.5 3a17 17 0 0 1 0 18" /></g>
+<text x="72" y="99" font-size="18" font-weight="700" fill="#232020">展示站</text>
+<text x="40" y="132" font-size="15" font-weight="400" fill="#232020">現有的個人網站</text>
+<text x="40" y="156" font-size="15" font-weight="400" fill="#232020">放免費文章與作品</text>
+<text x="40" y="180" font-size="15" font-weight="700" fill="#5F5B53">維持不動</text>
+<rect x="212" y="64" width="164" height="132" rx="10" fill="#E6F2F9" stroke="#4FA6D5" stroke-width="1.5"/>
+<g transform="translate(228,80)" fill="none" stroke="#232020" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /> <path d="M12 2v2" /> <path d="M9 12v9" /> <path d="M15 12v9" /> <path d="M5 16l4 -2" /> <path d="M15 14l4 2" /> <path d="M9 18h6" /> <path d="M10 8v.01" /> <path d="M14 8v.01" /></g>
+<text x="260" y="99" font-size="18" font-weight="700" fill="#232020">AI Agent</text>
+<text x="228" y="132" font-size="15" font-weight="400" fill="#232020">帶錢包</text>
+<text x="228" y="156" font-size="15" font-weight="400" fill="#232020">直接呼叫付費服務</text>
+<text x="228" y="180" font-size="15" font-weight="400" fill="#232020">不經過展示站</text>
+<rect x="24" y="252" width="352" height="288" rx="10" fill="#FFFFFF" stroke="#E5A300" stroke-width="2"/>
+<g transform="translate(40,268)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3" /> <path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2" /> <path d="M7 8l0 .01" /> <path d="M7 16l0 .01" /></g>
+<text x="74" y="288" font-size="18" font-weight="700" fill="#232020">付費服務</text>
+<text x="40" y="320" font-size="15" font-weight="400" fill="#232020">另外部署的一支小程式</text>
+<text x="40" y="344" font-size="15" font-weight="400" fill="#5F5B53">跑在 Cloudflare Workers 上</text>
+<rect x="40" y="364" width="320" height="44" rx="8" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(52,376) scale(0.833333)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l16 0" /> <path d="M4 15l4 -6l4 2l4 -5l4 4" /></g>
+<text x="84" y="392" font-size="17" font-weight="700" fill="#232020">健康檢查</text>
+<rect x="40" y="420" width="320" height="44" rx="8" fill="#FAF5EA" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(52,432) scale(0.833333)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></g>
+<text x="84" y="448" font-size="17" font-weight="700" fill="#232020">公開目錄</text>
+<rect x="40" y="476" width="320" height="44" rx="8" fill="#FDF4DC" stroke="#E5A300" stroke-width="1.5"/>
+<g transform="translate(52,488) scale(0.833333)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></g>
+<text x="84" y="504" font-size="17" font-weight="700" fill="#232020">付費資料</text>
+<rect x="24" y="588" width="352" height="72" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(40,612)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M9 12l2 2l4 -4"/></g>
+<text x="76" y="620" font-size="18" font-weight="700" fill="#232020">代驗代結服務</text>
+<text x="76" y="645" font-size="15" font-weight="400" fill="#5F5B53" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">Facilitator</text>
+<rect x="24" y="700" width="352" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(40,720)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5a1.5 1.5 0 0 1 1.5 -1.5h4a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-4a1.5 1.5 0 0 1 -1.5 -1.5z"/><path d="M14 9.5a1.5 1.5 0 0 1 1.5 -1.5h4a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-4a1.5 1.5 0 0 1 -1.5 -1.5z"/><path d="M10 12h4"/></g>
+<text x="76" y="739" font-size="18" font-weight="700" fill="#232020">區塊鏈上的 USDC</text>
+<rect x="24" y="804" width="352" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(40,824)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12"/><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"/></g>
+<text x="76" y="843" font-size="18" font-weight="700" fill="#232020">賣方的收款地址</text>
+<rect x="24" y="889" width="3" height="44" fill="#E5A300"/>
+<text x="36" y="904" font-size="15" font-weight="400" fill="#232020">賣方服務只需要一個公開的</text>
+<text x="36" y="927" font-size="15" font-weight="400" fill="#232020">收款地址，不放私鑰。</text>
+<rect x="24" y="960" width="352" height="256" rx="10" fill="#F7F5F0" stroke="#8F8A80" stroke-width="1.5" stroke-dasharray="6,5"/>
+<rect x="40" y="946" width="80" height="28" rx="14" fill="#FFFDF9" stroke="#8F8A80" stroke-width="1.2"/>
+<text x="80.0" y="965.04" font-size="14" font-weight="700" fill="#5F5B53" text-anchor="middle">之後才加</text>
+<rect x="40" y="988" width="156" height="100" rx="10" fill="#FFFFFF" stroke="#8F8A80" stroke-width="1.5" stroke-dasharray="6,5"/>
+<g transform="translate(54,1002)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" /> <path d="M4 6v6a8 3 0 0 0 16 0v-6" /> <path d="M4 12v6a8 3 0 0 0 16 0v-6" /></g>
+<text x="54" y="1050" font-size="17" font-weight="700" fill="#232020">資料庫</text>
+<text x="54" y="1074" font-size="15" font-weight="400" fill="#5F5B53">訂單與收據</text>
+<rect x="204" y="988" width="156" height="100" rx="10" fill="#FFFFFF" stroke="#8F8A80" stroke-width="1.5" stroke-dasharray="6,5"/>
+<g transform="translate(218,1002)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7a8 4 0 1 0 16 0a8 4 0 1 0 -16 0" /> <path d="M4 7c0 .664 .088 1.324 .263 1.965l2.737 10.035c.5 1.5 2.239 2 5 2s4.5 -.5 5 -2c.333 -1 1.246 -4.345 2.737 -10.035a7.45 7.45 0 0 0 .263 -1.965" /></g>
+<text x="218" y="1050" font-size="17" font-weight="700" fill="#232020">私有儲存空間</text>
+<text x="218" y="1074" font-size="15" font-weight="400" fill="#5F5B53">放正式內容</text>
+<rect x="40" y="1100" width="156" height="100" rx="10" fill="#FFFFFF" stroke="#8F8A80" stroke-width="1.5" stroke-dasharray="6,5"/>
+<g transform="translate(54,1114)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.8 4.5v9l-7.8 4.5l-7.8 -4.5v-9z"/><path d="M12 8l3.5 2v4l-3.5 2l-3.5 -2v-4z"/></g>
+<text x="54" y="1162" font-size="17" font-weight="700" fill="#232020">NFT 合約</text>
+<text x="54" y="1186" font-size="15" font-weight="400" fill="#5F5B53">權利憑證</text>
+<rect x="204" y="1100" width="156" height="100" rx="10" fill="#FFFFFF" stroke="#8F8A80" stroke-width="1.5" stroke-dasharray="6,5"/>
+<g transform="translate(218,1114)" fill="none" stroke="#5F5B53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4"/><path d="M15 3v4"/><path d="M6 7h12v3a6 6 0 0 1 -12 0z"/><path d="M12 16v5"/></g>
+<text x="218" y="1162" font-size="17" font-weight="700" fill="#232020">Agent 服務入口</text>
+<text x="218" y="1186" font-size="15" font-weight="400" fill="#5F5B53" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">MCP</text>
+<line x1="24" y1="1252" x2="64" y2="1252" stroke="#5F5B53" stroke-width="2"/>
+<text x="76" y="1258" font-size="15" font-weight="400" fill="#5F5B53">第一階段就需要</text>
+<line x1="212" y1="1252" x2="252" y2="1252" stroke="#8F8A80" stroke-width="2" stroke-dasharray="6,5"/>
+<text x="264" y="1258" font-size="15" font-weight="400" fill="#5F5B53">之後才加</text>
+</svg>

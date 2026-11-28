@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1144" width="400" height="1144" role="img" aria-labelledby="pf-m-title pf-m-desc" font-family="'Noto Sans TC','Microsoft JhengHei UI','Microsoft JhengHei','PingFang TC',sans-serif">
+<title id="pf-m-title">一次 x402 付款的八個步驟</title>
+<desc id="pf-m-desc">買方的 AI Agent 先要資料，賣方回 402 需要付款並附報價單；買方錢包簽一張付款授權後帶著它再要一次，賣方請代驗代結服務驗證、再請它把 USDC 從買方轉到賣方，最後回 200，資料在回應內容，結算結果在表頭。第一次拿報價，第二次帶付款授權；沒有結帳頁。</desc>
+<defs><marker id="pf-m-a" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#5F5B53"/></marker><marker id="pf-m-acc" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#E5A300"/></marker><marker id="pf-m-gray" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#8F8A80"/></marker><marker id="pf-m-blue" viewBox="0 0 10 8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 4L0 8z" fill="#4FA6D5"/></marker></defs>
+<rect width="100%" height="100%" fill="#FFFDF9"/>
+<text x="24" y="38" font-size="20" font-weight="700" fill="#232020">第一次拿報價，</text>
+<text x="24" y="66" font-size="20" font-weight="700" fill="#232020">第二次帶付款授權；沒有結帳頁。</text>
+<rect x="24" y="94" width="172" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(36,114)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /> <path d="M12 2v2" /> <path d="M9 12v9" /> <path d="M15 12v9" /> <path d="M5 16l4 -2" /> <path d="M15 14l4 2" /> <path d="M9 18h6" /> <path d="M10 8v.01" /> <path d="M14 8v.01" /></g>
+<text x="70" y="122" font-size="17" font-weight="700" fill="#232020">買方</text>
+<text x="70" y="144" font-size="15" font-weight="400" fill="#5F5B53">AI Agent＋錢包</text>
+<rect x="204" y="94" width="172" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(216,114)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3" /> <path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2" /> <path d="M7 8l0 .01" /> <path d="M7 16l0 .01" /></g>
+<text x="250" y="122" font-size="17" font-weight="700" fill="#232020">賣方服務</text>
+<text x="250" y="144" font-size="15" font-weight="400" fill="#5F5B53">提供資料</text>
+<rect x="24" y="170" width="172" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(36,190)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M9 12l2 2l4 -4"/></g>
+<text x="70" y="198" font-size="17" font-weight="700" fill="#232020">代驗代結服務</text>
+<text x="70" y="220" font-size="15" font-weight="400" fill="#5F5B53" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">Facilitator</text>
+<rect x="204" y="170" width="172" height="64" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<g transform="translate(216,190)" fill="none" stroke="#8A5D00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5a1.5 1.5 0 0 1 1.5 -1.5h4a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-4a1.5 1.5 0 0 1 -1.5 -1.5z"/><path d="M14 9.5a1.5 1.5 0 0 1 1.5 -1.5h4a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-4a1.5 1.5 0 0 1 -1.5 -1.5z"/><path d="M10 12h4"/></g>
+<text x="250" y="198" font-size="17" font-weight="700" fill="#232020">區塊鏈</text>
+<text x="250" y="220" font-size="15" font-weight="400" fill="#5F5B53">USDC 轉帳</text>
+<rect x="24" y="266" width="352" height="96" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="292" r="14" fill="#E5A300"/>
+<text x="52" y="297.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">1</text>
+<text x="78" y="297" font-size="15" font-weight="700" fill="#5F5B53">買方 → 賣方</text>
+<text x="40" y="328" font-size="17" font-weight="700" fill="#232020">要一份資料</text>
+<text x="40" y="352" font-size="15" font-weight="400" fill="#5F5B53">一般的 HTTP 請求</text>
+<rect x="24" y="374" width="352" height="96" rx="10" fill="#FDF4DC" stroke="#E5A300" stroke-width="2"/>
+<circle cx="52" cy="400" r="14" fill="#E5A300"/>
+<text x="52" y="405.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">2</text>
+<text x="78" y="405" font-size="15" font-weight="700" fill="#8A5D00">賣方 → 買方</text>
+<text x="40" y="436" font-size="17" font-weight="700" fill="#232020">回 402「需要付款」＋報價單</text>
+<text x="40" y="460" font-size="15" font-weight="400" fill="#8A5D00" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">PAYMENT-REQUIRED</text>
+<rect x="24" y="482" width="352" height="96" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="508" r="14" fill="#E5A300"/>
+<text x="52" y="513.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">3</text>
+<text x="78" y="513" font-size="15" font-weight="700" fill="#5F5B53">買方自己</text>
+<text x="40" y="544" font-size="17" font-weight="700" fill="#232020">錢包簽一張付款授權</text>
+<text x="40" y="568" font-size="15" font-weight="400" fill="#5F5B53">只簽名，不自己送交易</text>
+<rect x="24" y="590" width="352" height="96" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="616" r="14" fill="#E5A300"/>
+<text x="52" y="621.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">4</text>
+<text x="78" y="621" font-size="15" font-weight="700" fill="#5F5B53">買方 → 賣方</text>
+<text x="40" y="652" font-size="17" font-weight="700" fill="#232020">帶著授權再要一次</text>
+<text x="40" y="676" font-size="15" font-weight="400" fill="#5F5B53" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">PAYMENT-SIGNATURE</text>
+<rect x="24" y="698" width="352" height="96" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="724" r="14" fill="#E5A300"/>
+<text x="52" y="729.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">5</text>
+<text x="78" y="729" font-size="15" font-weight="700" fill="#5F5B53">賣方 → 代驗代結服務</text>
+<text x="40" y="760" font-size="17" font-weight="700" fill="#232020">請它驗證這張授權</text>
+<text x="40" y="784" font-size="15" font-weight="400" fill="#5F5B53">對方回覆「有效」</text>
+<rect x="24" y="806" width="352" height="72" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="832" r="14" fill="#E5A300"/>
+<text x="52" y="837.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">6</text>
+<text x="78" y="837" font-size="15" font-weight="700" fill="#5F5B53">賣方自己</text>
+<text x="40" y="868" font-size="17" font-weight="700" fill="#232020">準備要給的內容</text>
+<rect x="24" y="890" width="352" height="96" rx="10" fill="#FFFFFF" stroke="rgba(66,52,32,0.22)" stroke-width="1.5"/>
+<circle cx="52" cy="916" r="14" fill="#E5A300"/>
+<text x="52" y="921.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">7</text>
+<text x="78" y="921" font-size="15" font-weight="700" fill="#5F5B53">賣方 → 代驗代結服務 → 區塊鏈</text>
+<text x="40" y="952" font-size="17" font-weight="700" fill="#232020">請它結算</text>
+<text x="40" y="976" font-size="15" font-weight="400" fill="#5F5B53">USDC 從買方轉到賣方</text>
+<rect x="24" y="998" width="352" height="122" rx="10" fill="#FDF4DC" stroke="#E5A300" stroke-width="2"/>
+<circle cx="52" cy="1024" r="14" fill="#E5A300"/>
+<text x="52" y="1029.4" font-size="15" font-weight="700" fill="#232020" text-anchor="middle">8</text>
+<text x="78" y="1029" font-size="15" font-weight="700" fill="#8A5D00">賣方 → 買方</text>
+<text x="40" y="1060" font-size="17" font-weight="700" fill="#232020">回 200：資料在回應內容，</text>
+<text x="40" y="1086" font-size="17" font-weight="700" fill="#232020">結算結果在表頭</text>
+<text x="40" y="1110" font-size="15" font-weight="400" fill="#8A5D00" font-family="Consolas,'Cascadia Mono','Segoe UI Mono',monospace">PAYMENT-RESPONSE</text>
+</svg>
